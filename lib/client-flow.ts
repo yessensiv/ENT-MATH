@@ -3,6 +3,19 @@ export class RequestError extends Error {
   constructor(message: string, status: number) { super(message); this.status = status; }
 }
 
+/** Some browsers ship incomplete Kazakh month names. Numeric timezone parts
+ * plus explicit translations keep the study date readable on those devices. */
+export function studyDate(language: 'ru' | 'kk', now = new Date()) {
+  const parts = new Intl.DateTimeFormat('en-GB', { timeZone: 'Asia/Qyzylorda', day: 'numeric', month: 'numeric' }).formatToParts(now);
+  const day = String(Number(parts.find(p => p.type === 'day')!.value));
+  const month = Number(parts.find(p => p.type === 'month')!.value) - 1;
+  const names = {
+    ru: ['января','февраля','марта','апреля','мая','июня','июля','августа','сентября','октября','ноября','декабря'],
+    kk: ['қаңтар','ақпан','наурыз','сәуір','мамыр','маусым','шілде','тамыз','қыркүйек','қазан','қараша','желтоқсан'],
+  };
+  return `${day} ${names[language][month]}`;
+}
+
 /** A network failure must never turn a saved account into demo data. */
 export async function requestJson<T extends Record<string, unknown> = Record<string, unknown>>(url: string, body?: Record<string, unknown>, transport: typeof fetch = fetch) {
   const controller = new AbortController();

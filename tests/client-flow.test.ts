@@ -1,7 +1,15 @@
 import { test } from 'node:test';
 import assert from 'node:assert/strict';
 // @ts-expect-error Node's native TS runner requires the explicit extension.
-import { createWriteQueue, requestJson, RequestError, returnedToChallenge, examSkillBreakdown, completeAnswer } from '../lib/client-flow.ts';
+import { createWriteQueue, requestJson, RequestError, returnedToChallenge, examSkillBreakdown, completeAnswer, studyDate } from '../lib/client-flow.ts';
+
+test('study dates use all translated months and the Kazakhstan day boundary', () => {
+  const kazakh = ['қаңтар','ақпан','наурыз','сәуір','мамыр','маусым','шілде','тамыз','қыркүйек','қазан','қараша','желтоқсан'];
+  for(let month=0;month<12;month++) assert.equal(studyDate('kk',new Date(Date.UTC(2026,month,6,3))),`6 ${kazakh[month]}`);
+  assert.equal(studyDate('kk',new Date('2026-10-05T20:30:00Z')),'6 қазан');
+  assert.equal(studyDate('ru',new Date('2026-10-05T20:30:00Z')),'6 октября');
+  assert.equal(studyDate('kk',new Date('2026-12-31T20:00:00Z')),'1 қаңтар');
+});
 
 test('HTTP authentication is distinguishable from a broken connection or invalid response', async () => {
   await assert.rejects(requestJson('/api/state', undefined, (async () => new Response('{"error":"Войди"}', {status:401})) as typeof fetch), (e: RequestError) => e.status === 401);

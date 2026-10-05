@@ -1,0 +1,2 @@
+import { publishedContent, response, failure } from "@/lib/server-store";
+export async function GET(request: Request) { try { const { topics } = await publishedContent(); const topic = new URL(request.url).searchParams.get("topic"); return response({ topics: topics.filter(t => !topic || topic === t.id).map(({ tasks: _tasks, ...safe }) => { void _tasks; return safe; }) }); } catch(e) { return failure(e); } }

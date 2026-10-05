@@ -1,4 +1,4 @@
-import { sqliteTable, text, integer } from "drizzle-orm/sqlite-core";
+import { sqliteTable, text, integer, primaryKey } from "drizzle-orm/sqlite-core";
 
 // One independent aggregate per authenticated learner. Revisions prevent lost updates.
 export const learnerStates = sqliteTable("learner_states", {
@@ -8,6 +8,13 @@ export const learnerStates = sqliteTable("learner_states", {
   revision: integer("revision").notNull().default(0),
   updatedAt: text("updated_at").notNull(),
 });
+
+export const learnerStateChunks = sqliteTable("learner_state_chunks", {
+  userId: text("user_id").notNull(),
+  token: text("token").notNull(),
+  chunkIndex: integer("chunk_index").notNull(),
+  data: text("data").notNull(),
+}, table => [primaryKey({ columns: [table.userId, table.token, table.chunkIndex] })]);
 
 export const contentOverrides = sqliteTable("content_overrides", {
   id: text("id").primaryKey(),

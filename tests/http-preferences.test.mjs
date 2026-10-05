@@ -22,7 +22,7 @@ test("voluntary ranking, honest streak metadata and reserved reviews", async t =
       if (!before.streak.recoveryAvailable) { assert.equal((await call("/api/state", { action: "streak-recover" })).status, 400); const after = (await call("/api/state")).data; assert.deepEqual(after.streakDays, before.streakDays); assert.equal(after.xp, before.xp); assert.deepEqual(after.progress, before.progress); }
     });
     await t.test("four fresh tasks are reserved, and cannot be consumed before due review", async () => {
-      const result = (await call("/api/tasks?topic=linear")).data, reserved = result.tasks.filter(t => t.reviewReserved); assert.equal(reserved.length, 4); assert.ok(reserved.every(t => !t.modelExample)); assert.deepEqual(reserved.map(t => t.level).sort(), [1, 2, 2, 3]);
+      const result = (await call("/api/tasks?topic=linear")).data, reserved = result.tasks.filter(t => t.reviewReserved && /^linear-\d+$/.test(t.id)); assert.equal(reserved.length, 4); assert.ok(reserved.every(t => !t.modelExample)); assert.deepEqual(reserved.map(t => t.level).sort(), [1, 2, 2, 3]);
       const before = (await call("/api/state")).data, task = tasks.find(t => t.id === reserved[0].id);
       assert.equal((await call("/api/state", { action: "attempt", taskId: task.id, answer: task.answer })).status, 400); assert.equal((await call("/api/state")).data.attempts.length, before.attempts.length);
       const future = before.reviews.find(r => r.topicId === "linear" && !r.completed && Date.parse(r.due) > Date.now()); if (future) assert.equal((await call(`/api/tasks?topic=linear&reviewId=${future.id}`)).status, 400);

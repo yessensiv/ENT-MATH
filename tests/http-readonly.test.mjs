@@ -41,5 +41,5 @@ test("both exam metadata endpoints report versioned official scoring and platfor
   const profile = await request("/api/exams?track=profile"), literacy = await request("/api/exams?track=literacy");
   assert.equal(profile.status, 200); assert.equal(profile.data.questionCount, 40); assert.equal(profile.data.maxScore, 50); assert.equal(profile.data.durationMinutes, 80);
   assert.equal(literacy.status, 200); assert.equal(literacy.data.questionCount, 10); assert.equal(literacy.data.maxScore, 10); assert.equal(literacy.data.durationMinutes, 20);
-  assert.ok(profile.data.rules.source.includes("adilet")); assert.equal(profile.data.rules.checkedAt, "2026-10-05");
+  assert.ok(profile.data.rules.source.includes("adilet")); assert.equal(profile.data.rules.checkedAt, "2026-10-06");
 });

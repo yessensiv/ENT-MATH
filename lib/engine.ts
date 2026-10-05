@@ -10,17 +10,17 @@ export type Task = {
   domain?: string; context?: LocalText; tolerance?: number; [key: string]: unknown;
 };
 export type Topic = { id: string; title: LocalText; track: Track; prerequisites?: string[]; minutes?: number; [key: string]: unknown };
-export type Profile = { name: string; grade: string; track: Track; examDate: string; target: number; dailyMinutes: number; language: Language };
-export type Progress = { attempts: number; correct: number; independent: number; mastered: boolean; reviewPassed?: boolean; independentTaskIds: string[]; lastAt?: string };
+export type Profile = { name: string; grade: string; track: Track; examDate: string; target: number; targets?: Partial<Record<Track, number>>; dailyMinutes: number; language: Language };
+export type Progress = { attempts: number; correct: number; independent: number; mastered: boolean; reviewPassed?: boolean; independentTaskIds: string[]; confirmationTaskIds?: string[]; masteryRewarded?: boolean; lastAt?: string };
 export type Attempt = { id: string; taskId: string; topicId: string; track: Track; answer: Answer; steps: string; correct: boolean; assisted: boolean; at: string; category: string };
 export type Review = { id: string; topicId: string; due: string; interval: number; completed: boolean; taskId?: string };
 export type ErrorEntry = { id: string; taskId: string; topicId: string; answer: Answer; steps: string; category: string; explanation: LocalText; at: string; resolved: boolean; exerciseIds: string[]; prompt?: LocalText; solution?: Task["solution"]; hints?: Task["hints"]; correctAnswer?: Answer };
-export type Exam = { id: string; track: Track; variant: number; startedAt: string; durationMinutes: number; questions: Task[]; answers: Record<string, Answer>; flagged: number[]; finishedAt?: string; score?: number; maxScore?: number; results?: { taskId: string; topicId: string; answer: Answer; correct: boolean; points: number; max: number; solution: Task["solution"]; correctAnswer: Answer }[]; rules: typeof EXAM_RULES };
-export type LearnerState = { profile: Profile | null; progress: Record<string, Progress>; attempts: Attempt[]; errors: ErrorEntry[]; reviews: Review[]; exams: Exam[]; diagnostics: { id: string; track: Track; at: string; score: number; total: number; strengths: string[]; gaps: string[] }[]; xp: number; lessonResume: { topicId: string; stage: number } | null; plan: PlanItem[]; activeExam: Exam | null; revision: number; planReason?: LocalText; practiceStartedAt?: string; streakDays: string[]; preferences?: { leaderboard: boolean }; streakRecoveries?: { day: string; at: string; week: string }[]; [key: string]: unknown };
+export type Exam = { id: string; track: Track; variant: number; startedAt: string; durationMinutes: number; questions: Task[]; answers: Record<string, Answer>; flagged: number[]; answerUpdatedAt?: Record<string, number>; currentIndex?: number; currentIndexUpdatedAt?: number; finishedAt?: string; finishReason?: "submitted" | "time"; score?: number; maxScore?: number; results?: { taskId: string; topicId: string; answer: Answer; correct: boolean; points: number; max: number; prompt?: LocalText; context?: LocalText; solution: Task["solution"]; correctAnswer: Answer }[]; rules: typeof EXAM_RULES };
+export type LearnerState = { profile: Profile | null; progress: Record<string, Progress>; attempts: Attempt[]; errors: ErrorEntry[]; reviews: Review[]; exams: Exam[]; diagnostics: { id: string; track: Track; at: string; score: number; total: number; strengths: string[]; gaps: string[]; taskIds?: string[] }[]; xp: number; lessonResume: { topicId: string; stage: number } | null; plan: PlanItem[]; activeExam: Exam | null; revision: number; planReason?: LocalText; practiceStartedAt?: string; streakDays: string[]; preferences?: { leaderboard: boolean }; streakRecoveries?: { day: string; at: string; week: string }[]; [key: string]: unknown };
 export type PlanItem = { topicId: string; title: LocalText; reason: LocalText; type: "lesson" | "review" | "repair"; minutes: number; day: number };
 
 export const EXAM_RULES = {
-  year: 2026, checkedAt: "2026-10-05", version: "Пункт 18, редакция 28.02.2024 № 92",
+  year: 2026, checkedAt: "2026-10-06", version: "Пункт 18, редакция 28.02.2024 № 92",
   source: "https://old.adilet.zan.kz/rus/docs/V1700015173", trainingMinutes: { profile: 80, literacy: 20 },
   note: { ru: "Время отдельного предмета — настройка платформы. Баллы — по пункту 18 правил ЕНТ. Это авторский тренировочный вариант, не официальный тест НЦТ.", kk: "Жеке пән уақыты — платформаның баптауы. Ұпай ЕНТ ережелерінің 18-тармағымен есептеледі. Бұл авторлық жаттығу нұсқасы, ҰТО-ның ресми тесті емес." },
 } as const;
@@ -54,7 +54,7 @@ export function recoverStreak(state: LearnerState, now = new Date()) {
 export function isModelExample(task: Task, topic?: Topic): boolean {
   if (task.modelExample === true) return true;
   const lessonBank = topic && Array.isArray(topic.tasks) ? topic.tasks as { id: string }[] : [];
-  return [0, 1, 5, 10].some(i => lessonBank[i]?.id === task.id);
+  return [0, 1, 2, 5, 10].some(i => lessonBank[i]?.id === task.id);
 }
 export function reservedReviewIds(topic: Topic | undefined) {
   const lessonBank = topic && Array.isArray(topic.tasks) ? topic.tasks as Task[] : [];
@@ -67,8 +67,43 @@ export function reservedReviewIds(topic: Topic | undefined) {
   return chosen;
 }
 
+export function seenTaskIds(state: LearnerState) {
+  return new Set([...state.attempts.map(a => a.taskId), ...state.errors.map(e => e.taskId), ...state.exams.flatMap(e => e.questions.map(t => t.id)), ...(Array.isArray(state.assistedTaskIds) ? state.assistedTaskIds as string[] : []), ...state.diagnostics.flatMap(d => Array.isArray(d.taskIds) ? d.taskIds as string[] : [])]);
+}
+export function taskFingerprint(task: Task) {
+  const clean = (value: string) => value.toLowerCase().replace(/\s+/g, "").replace(/−/g, "-").replace(/,/g, ".");
+  return JSON.stringify({ topicId: task.topicId, ru: clean(task.prompt.ru), kk: clean(task.prompt.kk), context: task.context ? [clean(task.context.ru), clean(task.context.kk)] : null, left: task.pairs?.map(p => clean(p.left)).sort() || [] });
+}
+export function deliverTask(task: Task, state?: LearnerState) {
+  const seen = Boolean(state && seenTaskIds(state).has(task.id)) || Boolean(task.modelExample);
+  const assisted = Boolean(task.modelExample) || Boolean(state && Array.isArray(state.assistedTaskIds) && state.assistedTaskIds.includes(task.id));
+  return { ...sanitizeTask(task), seen, assisted, practiceEligible: !seen && !assisted };
+}
+export function confirmationCount(p: Progress | undefined) { return p ? p.confirmationTaskIds?.length ?? p.independent : 0; }
+
 // Restricted arithmetic parser. No eval, Function, executable JavaScript or property access.
-export function calculate(source: string, x = 0): number {
+type Polynomial = number[];
+function trimPolynomial(p: Polynomial) { while (p.length > 1 && Math.abs(p[p.length - 1]) < 1e-14) p.pop(); return p; }
+function polynomialValue(p: Polynomial, x: number) { return p.reduceRight((n, c) => n * x + c, 0); }
+function polynomialRoots(input: Polynomial): number[] {
+  const p = trimPolynomial([...input]), degree = p.length - 1;
+  if (!degree || degree > 12) return [];
+  if (degree === 1) return [-p[0] / p[1]];
+  const bound = Math.min(1e9, 1 + Math.max(...p.slice(0, -1).map(c => Math.abs(c / p[degree]))));
+  const stationary = polynomialRoots(p.slice(1).map((c, i) => c * (i + 1))).filter(x => x > -bound && x < bound);
+  const points = [-bound, ...stationary.sort((a, b) => a - b), bound], roots: number[] = [];
+  const close = (x: number) => Math.abs(polynomialValue(p, x)) <= 1e-10 * Math.max(1, p.reduce((sum, c, i) => sum + Math.abs(c * x ** i), 0));
+  for (const x of stationary) if (close(x)) roots.push(x);
+  for (let i = 1; i < points.length; i++) {
+    let left = points[i - 1], right = points[i], f = polynomialValue(p, left);
+    if (f === 0) roots.push(left);
+    if (f * polynomialValue(p, right) >= 0) continue;
+    for (let j = 0; j < 90; j++) { const mid = (left + right) / 2, value = polynomialValue(p, mid); if (f * value <= 0) right = mid; else { left = mid; f = value; } }
+    roots.push((left + right) / 2);
+  }
+  return roots.filter(Number.isFinite);
+}
+export function calculate(source: string, x = 0, criticalPoints?: Set<number>): number {
   const input = source.trim().toLowerCase().replace(/\u2212/g, "-").replace(/х/g, "x").replace(/π/g, "pi").replace(/²/g, "^2").replace(/³/g, "^3").replace(/√\s*\(/g, "sqrt(").replace(/√\s*(\d+(?:[.,]\d+)?|x)/g, "sqrt($1)").replace(/\|([^|]+)\|/g, "abs($1)").replace(/[×·]/g, "*").replace(/÷/g, "/").replace(/,/g, ".").replace(/\s+/g, "");
   if (input.length > 300 || !input.length) throw new Error("Invalid expression");
   const numberToken = /^(?:\d+(?:\.\d*)?|\.\d+)(?:e[+-]?\d+)?$/;
@@ -83,40 +118,60 @@ export function calculate(source: string, x = 0): number {
     tokens.push(token);
   });
   let pos = 0, depth = 0;
+  type Value = { n: number; p: Polynomial | null };
+  const constant = (n: number): Value => ({ n, p: [n] });
+  const restrict = (p: Polynomial | null) => { if (p && criticalPoints) polynomialRoots(p).forEach(v => criticalPoints.add(v)); };
+  function combine(a: Polynomial | null, b: Polynomial | null, op: string): Polynomial | null {
+    if (!a || !b) return null;
+    if (op === "/") return b.length === 1 && b[0] !== 0 ? a.map(n => n / b[0]) : null;
+    if (op === "*") { if (a.length + b.length > 14) return null; const p = Array(a.length + b.length - 1).fill(0); a.forEach((v, i) => b.forEach((w, j) => { p[i + j] += v * w; })); return trimPolynomial(p); }
+    return trimPolynomial(Array.from({ length: Math.max(a.length, b.length) }, (_, i) => (a[i] || 0) + (op === "+" ? 1 : -1) * (b[i] || 0)));
+  }
   const peek = () => tokens[pos];
-  function atom(): number {
+  function atom(): Value {
     if (++depth > 30) throw new Error("Too deeply nested");
     const token = tokens[pos++];
-    let n: number;
-    if (token === "(") { n = sum(); if (tokens[pos++] !== ")") throw new Error("Unclosed bracket"); }
-    else if (token === "x") n = x;
-    else if (token === "pi") n = Math.PI;
-    else if (token === "e") n = Math.E;
+    let value: Value;
+    if (token === "(") { value = sum(); if (tokens[pos++] !== ")") throw new Error("Unclosed bracket"); }
+    else if (token === "x") value = { n: x, p: [0, 1] };
+    else if (token === "pi") value = constant(Math.PI);
+    else if (token === "e") value = constant(Math.E);
     else if (/^(sqrt|sin|cos|tan|ln|log|abs)$/.test(token || "")) {
       if (tokens[pos++] !== "(") throw new Error("Function requires parentheses");
       const arg = sum(); if (tokens[pos++] !== ")") throw new Error("Unclosed function");
       const functions: Record<string, (n: number) => number> = { sqrt: Math.sqrt, sin: Math.sin, cos: Math.cos, tan: Math.tan, ln: Math.log, log: Math.log10, abs: Math.abs };
-      n = functions[token](arg);
-    } else if (numberToken.test(token || "")) n = Number(token);
+      if (["sqrt", "ln", "log"].includes(token)) restrict(arg.p);
+      if (token === "tan" && Math.abs(Math.cos(arg.n)) < 1e-12) throw new Error("Tangent outside domain");
+      const n = functions[token](arg.n); value = { n, p: arg.p?.length === 1 ? [n] : null };
+    } else if (numberToken.test(token || "")) value = constant(Number(token));
     else throw new Error("Unknown term");
-    depth--; return n;
+    if (!Number.isFinite(value.n)) throw new Error("Expression outside domain");
+    depth--; return value;
   }
-  function power(): number { const a = atom(); return peek() === "^" ? (pos++, Math.pow(a, unary())) : a; }
-  function unary(): number { if (peek() === "+") { pos++; return unary(); } if (peek() === "-") { pos++; return -unary(); } return power(); }
-  function product(): number { let n = unary(); while (peek() === "*" || peek() === "/") { const op = tokens[pos++], b = unary(); n = op === "*" ? n * b : n / b; } return n; }
-  function sum(): number { let n = product(); while (peek() === "+" || peek() === "-") { const op = tokens[pos++], b = product(); n = op === "+" ? n + b : n - b; } return n; }
-  const result = sum(); if (pos !== tokens.length || !Number.isFinite(result)) throw new Error("Expression outside domain");
-  return result;
+  function power(): Value { const a = atom(); if (peek() !== "^") return a; pos++; const b = unary(), n = Math.pow(a.n, b.n); if (!Number.isInteger(b.n) || b.n < 0) restrict(a.p); let p: Polynomial | null = [1]; if (b.p?.length === 1 && Number.isInteger(b.n) && b.n >= 0 && b.n <= 12) { for (let i = 0; i < b.n; i++) p = combine(p, a.p, "*"); } else p = null; return { n, p }; }
+  function unary(): Value { if (peek() === "+") { pos++; return unary(); } if (peek() === "-") { pos++; const v = unary(); return { n: -v.n, p: v.p?.map(c => -c) || null }; } return power(); }
+  function product(): Value { let a = unary(); while (peek() === "*" || peek() === "/") { const op = tokens[pos++], b = unary(); if (op === "/") { restrict(b.p); const scale = b.p?.reduce((sum, c, i) => sum + Math.abs(c * x ** i), 0) || 1; if (b.n === 0 || (b.p && b.p.length > 1 && Math.abs(b.n) <= 1e-12 * scale)) throw new Error("Division outside domain"); } a = { n: op === "*" ? a.n * b.n : a.n / b.n, p: combine(a.p, b.p, op) }; } return a; }
+  function sum(): Value { let a = product(); while (peek() === "+" || peek() === "-") { const op = tokens[pos++], b = product(); a = { n: op === "+" ? a.n + b.n : a.n - b.n, p: combine(a.p, b.p, op) }; } return a; }
+  const result = sum(); if (pos !== tokens.length || !Number.isFinite(result.n)) throw new Error("Expression outside domain");
+  return result.n;
 }
 
 const normalize = (s: string) => s.trim().replace(/\s+/g, "").replace(/−/g, "-").replace(/,/g, ".").toLowerCase();
 export function equivalent(a: string, b: string, precision?: number, absoluteTolerance?: number): boolean {
   if (!a.trim()) return false;
-  if (normalize(a) === normalize(b)) return true;
+  if (normalize(a) === normalize(b)) {
+    if (/^[\d\s+\-*/^().,a-zхπ²³√|×·÷]+$/i.test(a)) {
+      for (const x of /[xх]/i.test(a) ? [-1e6, -1000, -100, -10, -1, 0, 0.17, 1, 10, 100, 1000, 1e6] : [0]) { try { calculate(a, x); return true; } catch { /* Seek a real defined value, rather than accepting an always-undefined expression. */ } }
+      return false;
+    }
+    return true;
+  }
   try {
     const tolerance = absoluteTolerance ?? (precision === undefined ? 1e-8 : 0.5 * 10 ** -precision + 1e-10);
     const variable = /[xх]/i.test(a + b);
+    const critical = new Set<number>();
     const points = variable ? [-9.7, -3, -1, -0.2, 0, 0.17, 0.5, 1, 2, 4.3, 11] : [0];
+    if (variable) { for (const source of [a, b]) { for (const x of [0, 0.17, 1, 4.3]) { try { calculate(source, x, critical); } catch { /* Restrictions are collected even when evaluation is outside domain. */ } } } points.push(...critical); }
     let valid = 0;
     for (const x of points) {
       let av: number | null = null, bv: number | null = null;
@@ -147,6 +202,17 @@ export function grade(task: Task, answer: Answer): boolean {
   return equivalent(cleaned, task.answer, task.precision, task.tolerance);
 }
 
+export function answerFitsTask(task: Task, answer: Answer, exam = false) {
+  if (task.type === "multiple" || task.type === "matching") {
+    if (!Array.isArray(answer)) return false;
+    if (task.type === "matching" && answer.length > (Array.isArray(task.answer) ? task.answer.length : 1)) return false;
+    if (task.type === "multiple" && new Set(answer.map(normalize)).size !== answer.length) return false;
+    return !task.options || answer.every(value => (task.type === "matching" && value === "") || task.options!.some(option => normalize(option) === normalize(value)));
+  }
+  if (Array.isArray(answer)) return false;
+  return !(exam && task.type === "single" && answer.trim()) || !task.options || task.options.some(option => normalize(option) === normalize(answer));
+}
+
 export function classifyError(steps: string): { category: string; explanation: LocalText } {
   if (!steps.trim()) return { category: "unknown", explanation: { ru: "По одному ответу нельзя определить причину. Запиши ход решения: найдём первый переход, который нужно исправить.", kk: "Тек жауаппен қатенің себебін анықтай алмаймыз. Шешу жолын жаз: түзететін алғашқы қадамды табамыз." } };
   if (/2\s*[xх]\s*[=]\s*14/.test(steps) && /2\s*[xх]\s*\+\s*3\s*=\s*11/.test(steps)) return { category: "sign", explanation: { ru: "В переходе к 2x = 14 знак изменён неверно. Чтобы убрать +3, вычти 3 из обеих частей: 2x + 3 − 3 = 11 − 3. Получается 2x = 8. Теперь раздели обе части на 2.", kk: "2x = 14 қадамында таңба қате. +3-ті жою үшін екі жақтан да 3-ті азайт: 2x + 3 − 3 = 11 − 3. Сонда 2x = 8. Енді екі жағын 2-ге бөл." } };
@@ -167,8 +233,8 @@ export function makePlan(state: LearnerState, topics: Topic[], now = new Date())
   const byId = new Map(topics.map(t => [t.id, t]));
   const latestDiagnostic = [...state.diagnostics].reverse().find(d => d.track === track);
   const gaps = new Set(latestDiagnostic?.gaps || []);
-  const foundationStrengths = new Set((latestDiagnostic?.strengths || []).filter(id => byId.get(id)?.track === "base"));
-  const ready = (id: string) => Boolean(state.progress[id]?.mastered || (state.progress[id]?.independent || 0) >= 3 || foundationStrengths.has(id));
+  const foundationStrengths = new Set((latestDiagnostic?.strengths || []).filter(id => byId.get(id)?.track === "base" && !state.errors.some(e => e.topicId === id && !e.resolved && e.at > (latestDiagnostic?.at || ""))));
+  const ready = (id: string) => Boolean(state.progress[id]?.mastered || confirmationCount(state.progress[id]) >= 3 || foundationStrengths.has(id));
   const futureReview = (id: string) => state.reviews.some(r => r.topicId === id && !r.completed && Date.parse(r.due) > now.getTime());
   const reachable = new Set<string>();
   function include(topic: Topic) { if (reachable.has(topic.id)) return; reachable.add(topic.id); for (const id of topic.prerequisites || []) { const p = byId.get(id); if (p) include(p); } }
@@ -202,7 +268,7 @@ export function makePlan(state: LearnerState, topics: Topic[], now = new Date())
   });
   for (const topic of [...weak, ...selected]) {
     if (state.progress[topic.id]?.mastered) continue;
-    if ((state.progress[topic.id]?.independent || 0) >= 3 && futureReview(topic.id)) continue;
+    if (confirmationCount(state.progress[topic.id]) >= 3 && futureReview(topic.id)) continue;
     if (foundationStrengths.has(topic.id) && !weak.includes(topic)) continue;
     prerequisite(topic);
     const needsRepair = weak.includes(topic);
@@ -216,7 +282,8 @@ export function makePlan(state: LearnerState, topics: Topic[], now = new Date())
 
 export function recordAttempt(state: LearnerState, task: Task, topic: Topic, input: { answer: Answer; steps?: string; assisted?: boolean; reviewId?: string }, tasks: Task[], now = new Date()) {
   const correct = grade(task, input.answer), at = now.toISOString();
-  const previousSame = state.attempts.some(a => a.taskId === task.id);
+  const confirmationsBefore = confirmationCount(state.progress[task.topicId]);
+  const previousSame = seenTaskIds(state).has(task.id);
   const assignedReview = input.reviewId ? state.reviews.find(r => r.id === input.reviewId && r.topicId === task.topicId && !r.completed) : undefined;
   if (input.reviewId && (!assignedReview || new Date(assignedReview.due) > now || previousSame)) throw new Error("Повторение ещё не назначено или задача уже решалась");
   const assisted = Boolean(input.assisted) || previousSame || isModelExample(task, topic);
@@ -226,33 +293,42 @@ export function recordAttempt(state: LearnerState, task: Task, topic: Topic, inp
   const p = state.progress[task.topicId] ||= { attempts: 0, correct: 0, independent: 0, mastered: false, independentTaskIds: [] };
   p.attempts++; p.correct += Number(correct); p.lastAt = at;
   p.independentTaskIds ||= [];
-  if (correct && !assisted && !p.independentTaskIds.includes(task.id)) { p.independentTaskIds.push(task.id); p.independent = p.independentTaskIds.length; state.xp += 10; }
+  p.confirmationTaskIds ||= [...p.independentTaskIds];
+  p.masteryRewarded ||= p.mastered;
+  if (correct && !assisted && !p.independentTaskIds.includes(task.id)) { p.independentTaskIds.push(task.id); p.confirmationTaskIds.push(task.id); p.independent = p.independentTaskIds.length; state.xp += 10; }
   const day = dayKey(now);
   if (!state.streakDays.includes(day)) state.streakDays.push(day);
   if (!correct) {
     scheduleErrorReview(state, task.topicId, now);
     state.errors.push({ id: attempt.id, taskId: task.id, topicId: task.topicId, answer: input.answer, steps: input.steps || "", category: mistake.category, explanation: mistake.explanation, at, resolved: false, exerciseIds: tasks.filter(t => t.topicId === task.topicId && t.id !== task.id).slice(0, 3).map(t => t.id), prompt: task.prompt, solution: task.solution, hints: task.hints, correctAnswer: task.answer });
-  } else if (!assisted) {
-    for (const error of state.errors.filter(e => e.topicId === task.topicId && !e.resolved && e.taskId !== task.id)) { error.resolved = true; state.xp += 5; }
+  } else if (!assisted && confirmationCount(p) >= 3) {
+    const corrected = state.errors.filter(e => e.topicId === task.topicId && !e.resolved && e.taskId !== task.id);
+    for (const error of corrected) error.resolved = true;
+    if (corrected.length) state.xp += 5;
   }
   if (input.reviewId) {
     const review = assignedReview!;
     if (correct && !assisted) {
       review.completed = true; review.taskId = task.id;
-      p.reviewPassed = true;
-      const intervals = [1, 3, 7, 14], next = intervals[intervals.indexOf(review.interval) + 1];
+      p.reviewPassed = confirmationsBefore >= 3;
+      const intervals = [1, 3, 7, 14], next = p.reviewPassed ? intervals[intervals.indexOf(review.interval) + 1] : 1;
       if (next) state.reviews.push({ id: crypto.randomUUID(), topicId: task.topicId, due: new Date(now.getTime() + next * 86400000).toISOString(), interval: next, completed: false });
     } else { p.reviewPassed = false; review.due = new Date(now.getTime() + 86400000).toISOString(); review.interval = 1; }
   }
-  if (p.independent >= 3 && !state.reviews.some(r => r.topicId === task.topicId)) state.reviews.push({ id: crypto.randomUUID(), topicId: task.topicId, due: new Date(now.getTime() + 86400000).toISOString(), interval: 1, completed: false });
+  if (!p.reviewPassed && confirmationsBefore < 3 && confirmationCount(p) >= 3) {
+    const pending = state.reviews.find(r => r.topicId === task.topicId && !r.completed);
+    if (pending) { pending.due = new Date(Math.max(Date.parse(pending.due), now.getTime() + 86400000)).toISOString(); pending.interval = 1; }
+  }
+  if (confirmationCount(p) >= 3 && !state.reviews.some(r => r.topicId === task.topicId && !r.completed) && !p.reviewPassed) state.reviews.push({ id: crypto.randomUUID(), topicId: task.topicId, due: new Date(now.getTime() + 86400000).toISOString(), interval: 1, completed: false });
   const wasMastered = p.mastered;
-  p.mastered = p.independent >= 3 && Boolean(p.reviewPassed);
-  if (!wasMastered && p.mastered) state.xp += 50;
+  p.mastered = confirmationCount(p) >= 3 && Boolean(p.reviewPassed);
+  if (!wasMastered && p.mastered && !p.masteryRewarded) { state.xp += 50; p.masteryRewarded = true; }
   state.lessonResume = { topicId: task.topicId, stage: 3 };
   return { correct, solution: task.solution, hints: task.hints, errorCategory: mistake.category, explanation: mistake.explanation, answer: task.answer, independentEligible: !assisted, verification: task.type === "expression" ? "sampled-domain-check" : "verified-answer" };
 }
 
 function scheduleErrorReview(state: LearnerState, topicId: string, now: Date) {
+  const p = state.progress[topicId]; if (p) { p.masteryRewarded ||= p.mastered; p.mastered = false; p.reviewPassed = false; p.confirmationTaskIds = []; }
   const scheduled = state.reviews.find(r => r.topicId === topicId && !r.completed), due = new Date(now.getTime() + 86400000).toISOString();
   if (scheduled) { scheduled.due = due; scheduled.interval = 1; }
   else state.reviews.push({ id: crypto.randomUUID(), topicId, due, interval: 1, completed: false });
@@ -279,6 +355,7 @@ export function diagnosticTasks(track: Track, topics: Topic[], tasks: Task[]) {
 
 export function scoreExamTask(task: Task, answer: Answer) {
   const max = task.type === "multiple" || task.type === "matching" ? 2 : 1;
+  if (!answerFitsTask(task, answer, true)) return { points: 0, max };
   if (grade(task, answer)) return { points: max, max };
   if (max === 1) return { points: 0, max };
   const expected = Array.isArray(task.answer) ? task.answer : [task.answer];
@@ -324,7 +401,7 @@ function contextTask(index: number, variant: number, difficulty: number, topicId
 
 export function makeExam(track: Track, variant: number, topics: Topic[], tasks: Task[], now = new Date()): Exam {
   if (!Number.isInteger(variant) || variant < 1 || variant > 5 || !["profile", "literacy"].includes(track)) throw new Error("Выберите направление и вариант 1–5");
-  const topicIds = new Set(topics.filter(t => t.track === track).map(t => t.id));
+  const topicIds = new Set(topics.filter(t => t.track === track && t.spec !== null).map(t => t.id));
   const byTopic = new Map(topics.map(t => [t.id, t]));
   const bank = tasks.filter(t => topicIds.has(t.topicId) && !isModelExample(t, topics.find(p => p.id === t.topicId))), used = new Set<string>(), questions: Task[] = [];
   const eligible = (t: Task, type: "single" | "multiple" | "matching", d: number) => t.difficulty === d && !used.has(t.id) && (type === "single" ? ["number", "single"].includes(t.type) : t.type === type && Array.isArray(t.answer) && t.answer.length > 0 && t.answer.length <= 3);
@@ -334,8 +411,8 @@ export function makeExam(track: Track, variant: number, topics: Topic[], tasks: 
     if (coverageSize !== questions.length) {
       coverageSize = questions.length; sectionCounts.clear(); topicCounts.clear(); moduleCounts.clear(); ranks.clear();
       for (const q of questions) {
-        const t = byTopic.get(q.topicId), section = officialSection(t), module = String(t?.module || "misc");
-        sectionCounts.set(section, (sectionCounts.get(section) || 0) + 1); topicCounts.set(q.topicId, (topicCounts.get(q.topicId) || 0) + 1); moduleCounts.set(module, (moduleCounts.get(module) || 0) + 1);
+        const t = byTopic.get(q.topicId), section = officialSection(t), moduleName = String(t?.module || "misc");
+        sectionCounts.set(section, (sectionCounts.get(section) || 0) + 1); topicCounts.set(q.topicId, (topicCounts.get(q.topicId) || 0) + 1); moduleCounts.set(moduleName, (moduleCounts.get(moduleName) || 0) + 1);
       }
     }
     const cached = ranks.get(task.id); if (cached) return cached;
@@ -382,7 +459,9 @@ export function makeExam(track: Track, variant: number, topics: Topic[], tasks: 
 
 export function finishExam(exam: Exam, state: LearnerState, now = new Date()) {
   if (exam.finishedAt) return exam;
-  exam.finishedAt = now.toISOString(); exam.score = 0; exam.maxScore = 0;
+  const deadline = Date.parse(exam.startedAt) + exam.durationMinutes * 60000;
+  exam.finishReason = now.getTime() >= deadline ? "time" : "submitted";
+  exam.finishedAt = new Date(Math.min(now.getTime(), deadline)).toISOString(); exam.score = 0; exam.maxScore = 0;
   exam.results = exam.questions.map((task, i) => {
     const answer = exam.answers[String(i)] || (Array.isArray(task.answer) ? [] : ""), { points, max } = scoreExamTask(task, answer);
     exam.score! += points; exam.maxScore! += max;
@@ -390,11 +469,16 @@ export function finishExam(exam: Exam, state: LearnerState, now = new Date()) {
     const p = state.progress[task.topicId] ||= { attempts: 0, correct: 0, independent: 0, mastered: false, independentTaskIds: [] };
     p.attempts++; p.correct += Number(correct);
     if (!correct) { scheduleErrorReview(state, task.topicId, now); state.errors.push({ id: crypto.randomUUID(), taskId: task.id, topicId: task.topicId, answer, steps: "", category: "unknown", explanation: classifyError("").explanation, at: now.toISOString(), resolved: false, exerciseIds: [], prompt: task.prompt, solution: task.solution, hints: task.hints, correctAnswer: task.answer }); }
-    return { taskId: task.id, topicId: task.topicId, answer, correct, points, max, solution: task.solution, correctAnswer: task.answer };
+    return { taskId: task.id, topicId: task.topicId, answer, correct, points, max, prompt: task.prompt, context: task.context, solution: task.solution, correctAnswer: task.answer };
   });
   state.exams.push(exam); state.activeExam = null;
   state.planReason = { ru: "План обновлён по результатам пробного экзамена: сначала закрепим навыки, в которых были ошибки.", kk: "Сынақ емтиханының нәтижесімен жоспар жаңартылды: алдымен қате кеткен дағдыларды бекітеміз." };
   return exam;
+}
+
+export function expireExam(state: LearnerState, now = new Date()) {
+  const exam = state.activeExam;
+  return exam && now.getTime() >= Date.parse(exam.startedAt) + exam.durationMinutes * 60000 ? finishExam(exam, state, now) : null;
 }
 
 export function sanitizeExam(exam: Exam | null) { return exam ? { ...exam, questions: exam.questions.map((q, index) => ({ ...sanitizeTask(q), index })) } : null; }

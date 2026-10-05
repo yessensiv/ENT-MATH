@@ -1,12 +1,13 @@
 import { env } from "cloudflare:workers";
-import { eq, and, sql, lt } from "drizzle-orm";
+import { eq, and, sql, lt, asc } from "drizzle-orm";
 import { getChatGPTUser, type ChatGPTUser } from "@/app/chatgpt-auth";
 import { getDb } from "@/db";
-import { learnerStates, contentOverrides, contentReports, tutorUsage } from "@/db/schema";
+import { learnerStates, learnerStateChunks, contentOverrides, contentReports, tutorUsage } from "@/db/schema";
+import { encodeState, decodeState, statePointer, stateSaveStatements } from "@/lib/state-codec";
 import * as curriculum from "@/lib/content";
-import { emptyState, sanitizeExam, makePlan, isModelExample, reservedReviewIds, calculate, streakInfo, type LearnerState, type Topic, type Task } from "@/lib/engine";
+import { emptyState, sanitizeExam, makePlan, isModelExample, reservedReviewIds, calculate, streakInfo, expireExam, diagnosticTasks, type LearnerState, type Topic, type Task } from "@/lib/engine";
 
-export class ApiError extends Error { constructor(message: string, public status = 400) { super(message); } }
+export class ApiError extends Error { constructor(message: string, public status = 400, public code?: string) { super(message); } }
 export function configuration() { return env as unknown as { DB?: D1Database; ADMIN_EMAILS?: string; TUTOR_API_KEY?: string; TUTOR_BASE_URL?: string; TUTOR_MODEL?: string; TUTOR_DAILY_LIMIT?: string }; }
 export const isAdmin = (user: ChatGPTUser) => (configuration().ADMIN_EMAILS || "").split(",").map(s => s.trim().toLowerCase()).filter(Boolean).includes(user.email.toLowerCase());
 export async function authenticate() { const user = await getChatGPTUser(); if (!user) throw new ApiError("Войдите через ChatGPT, чтобы сохранять учебный прогресс.", 401); return user; }
@@ -44,22 +45,52 @@ export async function loadState(user: ChatGPTUser): Promise<LearnerState> {
     row = await db.select().from(learnerStates).where(eq(learnerStates.userId, user.userId)).get();
   }
   if (!row) throw new ApiError("Не удалось открыть учебный профиль.", 503);
-  return { ...emptyState(), ...JSON.parse(row.data), revision: row.revision };
+  let decoded: Record<string, unknown> | undefined;
+  for (let retry = 0; retry < 3; retry++) {
+    try {
+      const pointer = statePointer(row.data), chunks = pointer ? await db.select({ chunkIndex: learnerStateChunks.chunkIndex, data: learnerStateChunks.data }).from(learnerStateChunks).where(and(eq(learnerStateChunks.userId, user.userId), eq(learnerStateChunks.token, pointer.token))).orderBy(asc(learnerStateChunks.chunkIndex)) : [];
+      decoded = await decodeState(row.data, chunks); break;
+    } catch {
+      const latest = await db.select().from(learnerStates).where(eq(learnerStates.userId, user.userId)).get();
+      if (!latest || latest.revision === row.revision || retry === 2) throw new ApiError("Не удалось проверить целостность сохранения. Не начинайте занятие заново; обратитесь к администратору.", 503, "STATE_INTEGRITY");
+      row = latest;
+    }
+  }
+  if (!decoded) throw new ApiError("Не удалось прочитать сохранённый профиль.", 503);
+  const state = { ...emptyState(), ...decoded, revision: row.revision } as LearnerState;
+  if (state.diagnostics.some(d => !d.taskIds)) { const content = baseContent(); for (const diagnostic of state.diagnostics) diagnostic.taskIds ||= diagnosticTasks(diagnostic.track, content.topics, content.tasks).map(t => t.id); }
+  return state;
 }
 
 export async function saveState(user: ChatGPTUser, state: LearnerState) {
   const revision = state.revision;
-  const result = await getDb().update(learnerStates).set({ data: JSON.stringify({ ...state, revision: revision + 1 }), revision: revision + 1, email: user.email, updatedAt: new Date().toISOString() }).where(and(eq(learnerStates.userId, user.userId), eq(learnerStates.revision, revision))).returning({ id: learnerStates.userId });
-  if (!result.length) throw new ApiError("Данные изменились в другой вкладке. Обновите страницу и повторите действие.", 409);
+  let bundle;
+  try { bundle = await encodeState({ ...state, revision: revision + 1 }, crypto.randomUUID()); }
+  catch (e) { if (e instanceof Error && e.message === "STATE_CAPACITY") throw new ApiError("История достигла лимита хранилища этого выпуска. Последнее занятие ещё не сохранено. Администратору нужно перенести историю в архив; прежние записи сохранены.", 507, "STATE_CAPACITY"); throw e; }
+  const db = configuration().DB!, statements = stateSaveStatements(user.userId, user.email, revision, bundle, new Date().toISOString());
+  const results = await db.batch(statements.map(s => db.prepare(s.sql).bind(...s.params)));
+  if (!results[0].results?.length) throw new ApiError("Данные изменились в другой вкладке. Обновите страницу и повторите действие.", 409, "STATE_CONFLICT");
   state.revision++;
+}
+
+export async function loadCurrentState(user: ChatGPTUser) {
+  for (let attempt = 0; attempt < 3; attempt++) {
+    const state = await loadState(user), result = expireExam(state);
+    if (!result) return { state, expired: null };
+    updatePlan(state, (await publishedContent()).topics);
+    try { await saveState(user, state); return { state, expired: result }; }
+    catch (e) { if (!(e instanceof ApiError && e.code === "STATE_CONFLICT") || attempt === 2) throw e; }
+  }
+  throw new ApiError("Обновите страницу, чтобы получить сохранённый результат.", 409, "STATE_CONFLICT");
 }
 
 export function clientState(user: ChatGPTUser, state: LearnerState) {
   const testIdentity = user.userId === "local_seedy" && user.email === "seedy@sites.test";
-  return { ...state, streak: streakInfo(state), activeExam: sanitizeExam(state.activeExam), isAdmin: isAdmin(user), aiConfigured: Boolean(configuration().TUTOR_API_KEY), user: { id: user.userId, email: user.email, name: user.displayName }, storage: "cloudflare-d1", demo: false, testIdentity, identityNotice: testIdentity ? { ru: "Локальный тестовый аккаунт. Здесь сохраняются результаты ваших проверок; это не реальная регистрация через ChatGPT.", kk: "Жергілікті сынақ аккаунты. Мұнда тексеру нәтижелері сақталады; бұл ChatGPT арқылы нақты тіркелу емес." } : null };
+  const { generatedTasks: _generated, reviewSerials: _serials, ...safe } = state; void _generated; void _serials;
+  return { ...safe, serverNow: Date.now(), streak: streakInfo(state), activeExam: sanitizeExam(state.activeExam), isAdmin: isAdmin(user), aiConfigured: Boolean(configuration().TUTOR_API_KEY), user: { id: user.userId, email: user.email, name: user.displayName }, storage: "cloudflare-d1", demo: false, testIdentity, identityNotice: testIdentity ? { ru: "Локальный тестовый аккаунт. Здесь сохраняются результаты ваших проверок; это не реальная регистрация через ChatGPT.", kk: "Жергілікті сынақ аккаунты. Мұнда тексеру нәтижелері сақталады; бұл ChatGPT арқылы нақты тіркелу емес." } : null };
 }
 export function response(data: unknown, status = 200) { return Response.json(data, { status, headers: { "Cache-Control": "no-store", "X-Content-Type-Options": "nosniff" } }); }
-export function failure(error: unknown) { return response({ error: error instanceof ApiError ? error.message : "Не удалось выполнить запрос. Попробуйте ещё раз; ваш сохранённый прогресс не потерян." }, error instanceof ApiError ? error.status : 500); }
+export function failure(error: unknown) { return response({ error: error instanceof ApiError ? error.message : "Не удалось выполнить запрос. Попробуйте ещё раз; ваш сохранённый прогресс не потерян.", ...(error instanceof ApiError && error.code ? { code: error.code, retryable: error.code === "STATE_CONFLICT" } : {}) }, error instanceof ApiError ? error.status : 500); }
 export async function parseBody(request: Request): Promise<Record<string, unknown>> {
   const origin = request.headers.get("origin");
   if (origin && origin !== new URL(request.url).origin) throw new ApiError("Недопустимый источник запроса.", 403);
@@ -91,6 +122,17 @@ export async function recordReport(user: ChatGPTUser, taskId: string, message: s
 export async function adminData() {
   const [overrides, reports] = await Promise.all([getDb().select().from(contentOverrides), getDb().select().from(contentReports)]);
   return { ...baseContent(), overrides: overrides.map(r => ({ ...r, data: JSON.parse(r.data), history: JSON.parse(r.history) })), reports };
+}
+
+export async function editableContent(kind: "task" | "topic", id: string) {
+  const content = baseContent(), base = (kind === "task" ? content.tasks : content.topics).find(t => t.id === id);
+  if (!base) throw new ApiError("Материал не найден.", 404);
+  const saved = await getDb().select({ data: contentOverrides.data, status: contentOverrides.status }).from(contentOverrides).where(and(eq(contentOverrides.id, id), eq(contentOverrides.kind, kind))).get();
+  if (!saved) return { material: base, status: "published" };
+  let data: Record<string, unknown>;
+  try { data = JSON.parse(saved.data); if (!data || typeof data !== "object" || Array.isArray(data)) throw new Error(); }
+  catch { throw new ApiError("Черновик повреждён. Обратитесь к администратору; опубликованный материал доступен ученикам.", 503); }
+  return { material: { ...base, ...data, id }, status: saved.status };
 }
 
 export async function updateContent(user: ChatGPTUser, input: Record<string, unknown>) {

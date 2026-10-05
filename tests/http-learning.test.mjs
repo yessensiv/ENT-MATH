@@ -3,7 +3,7 @@
 import { test } from "node:test";
 import assert from "node:assert/strict";
 import { topics, tasks as sourceTasks } from "../lib/content.ts";
-import { makeExam, officialSection, reservedReviewIds } from "../lib/engine.ts";
+import { makeExam, officialSection, reservedReviewIds, seenTaskIds } from "../lib/engine.ts";
 const base = process.env.ENT_TEST_BASE_URL || "http://127.0.0.1:5173";
 const bank = sourceTasks.map(t => ({ ...t, difficulty: t.level, units: t.unit }));
 let cookie = "", state, originalLanguage, pendingExam;
@@ -17,9 +17,9 @@ async function post(body, path = "/api/state") {
 }
 async function update(body) { const result = await post(body); assert.equal(result.status, 200, JSON.stringify(result.data)); state = result.data; return state; }
 function unseen(topicId) {
-  const topic = topics.find(t => t.id === topicId), models = [0, 1, 5, 10].map(i => topic.tasks[i].id);
+  const topic = topics.find(t => t.id === topicId), models = [0, 1, 2, 5, 10].map(i => topic.tasks[i].id);
   const reserved = reservedReviewIds(topic);
-  return bank.filter(t => t.topicId === topicId && !models.includes(t.id) && !reserved.includes(t.id) && !state.assistedTaskIds?.includes(t.id) && !state.attempts.some(a => a.taskId === t.id));
+  const seen = seenTaskIds(state); return bank.filter(t => t.topicId === topicId && !models.includes(t.id) && !reserved.includes(t.id) && !seen.has(t.id));
 }
 
 test("authenticated learning, grading, tutor, durable progress and exam flow", async t => {

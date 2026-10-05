@@ -947,3 +947,42 @@ ol.friendly-list li::before { content: counter(friendly); width: 20px; height: 2
 .ranking-panel th { color:var(--muted);font-weight:600; }
 .preference-toggle { display:flex;align-items:center;gap:12px;min-height:48px;font-size:14px;cursor:pointer; }
 .preference-toggle input { width:22px;height:22px;accent-color:var(--green); }
+
+/* Recovery messages and the expanded learning and exam material. */
+.service-error { display:grid;grid-template-columns:22px minmax(0,1fr) auto 44px;align-items:start;gap:14px;padding:18px 20px;margin-bottom:22px;border:1px solid #ecd6b9;border-radius:14px;background:#fff8ec;color:#785c20; }
+.service-error>svg { margin-top:3px;flex-shrink:0; }
+.service-error>div { min-width:0;overflow-wrap:anywhere; }
+.service-error strong { display:block;font-size:14px;line-height:1.5; }
+.service-error p { font-size:14px;line-height:1.65;margin:5px 0 6px; }
+.service-error small { display:block;font-size:12px;line-height:1.7; }
+.service-error>.secondary { align-self:center;max-width:225px;white-space:normal; }
+.service-error>.icon-button { margin-top:-5px;color:#785c20; }
+.service-error>.icon-button:hover { background:#faecd0; }
+.save-status { display:flex;align-items:flex-start;gap:8px;color:var(--green);font-size:13px;line-height:1.7;margin:0 0 18px;overflow-wrap:anywhere; }
+.save-status>svg { margin-top:4px;flex-shrink:0; }
+.lesson-blocks { display:flex;flex-direction:column;gap:22px;margin:24px 0; }
+.lesson-blocks section { min-width:0;padding-bottom:22px;border-bottom:1px solid var(--line); }
+.lesson-blocks section:last-child { padding-bottom:0;border-bottom:0; }
+.lesson-blocks h3 { font-size:17px;line-height:1.45;margin-bottom:10px; }
+.lesson-blocks .lesson-prose { margin-bottom:0;font-size:15px;line-height:1.9;white-space:pre-line;overflow-wrap:anywhere; }
+.checkpoint { border:1px solid #ded8ec;border-radius:13px;background:#f7f4fc;padding:20px;margin:24px 0;color:var(--ink); }
+.checkpoint h3,.checkpoint>strong { display:block;font-size:16px;line-height:1.5;margin-bottom:10px; }
+.checkpoint p { font-size:14px;line-height:1.8;white-space:pre-line;overflow-wrap:anywhere; }
+.checkpoint>.primary,.checkpoint>.secondary { margin-top:6px;margin-right:8px;max-width:100%;white-space:normal; }
+.checkpoint>.primary:last-child,.checkpoint>.secondary:last-child { margin-right:0; }
+.checkpoint>p:last-child { margin:16px 0 0; }
+.exam-navigation .checkpoint { margin:18px 0 0;padding:16px; }
+.exam-navigation .checkpoint h3,.exam-navigation .checkpoint>strong { font-size:14px; }
+.exam-navigation .checkpoint p { color:var(--muted);font-size:13px;line-height:1.75; }
+.exam-navigation .checkpoint>button { width:100%;margin:8px 0 0;font-size:13px; }
+.exam-breakdown { margin:28px 0;text-align:left;padding:22px;border:1px solid var(--line);border-radius:13px;background:#f8fbf9; }
+.exam-breakdown h3 { font-size:16px;margin-bottom:7px; }
+.exam-breakdown .skill-row { display:grid;grid-template-columns:minmax(0,1fr) 64px minmax(130px,.7fr);align-items:start;gap:16px;font-size:14px;line-height:1.6;color:var(--ink); }
+.exam-breakdown .skill-row:last-child { border-bottom:0;padding-bottom:0; }
+.exam-breakdown .skill-row>span:first-child { min-width:0;overflow-wrap:anywhere; }
+.exam-breakdown .skill-row>strong { color:var(--green);white-space:nowrap; }
+.exam-breakdown .skill-row .muted { display:block;font-size:12px;line-height:1.8;color:var(--muted); }
+.notice.error { background:#fff3ed;border:1px solid #edcfc3;color:#8e4934; }
+@media(max-width:1100px){.service-error{grid-template-columns:22px minmax(0,1fr) 44px}.service-error>.secondary{grid-column:2;grid-row:2;justify-self:start;max-width:none}.service-error>.icon-button{grid-column:3;grid-row:1}.exam-breakdown .skill-row{grid-template-columns:minmax(0,1fr) 64px;gap:7px 14px}.exam-breakdown .skill-row .muted{grid-column:1 / -1}}
+@media(max-width:480px){.service-error{padding:16px;gap:10px;grid-template-columns:20px minmax(0,1fr) 44px}.service-error>svg{width:20px}.service-error>.secondary{grid-column:1 / -1;justify-self:stretch}.service-error strong,.service-error p{font-size:13px}.service-error small{font-size:12px}.service-error>.icon-button{margin-top:-5px;margin-right:-7px}.lesson-blocks{gap:20px}.lesson-blocks .lesson-prose{font-size:14px}.checkpoint{padding:17px}.checkpoint>.primary,.checkpoint>.secondary{width:100%;margin:8px 0 0}.exam-breakdown{padding:17px}.exam-breakdown .skill-row{font-size:13px}}
+@media(forced-colors:active){.service-error,.checkpoint,.exam-breakdown,.notice.error{border-color:CanvasText}}

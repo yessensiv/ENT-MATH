@@ -4,6 +4,8 @@ import { schoolTopicIds } from "./school-curriculum.ts";
 import { proveRationalIdentity, type Verdict } from './algebra-proof.ts';
 // @ts-expect-error Native Node tests.
 import{checkStructuredAnswer,type AnswerFormat}from'./structured-answer.ts';
+// @ts-expect-error Native Node tests.
+import{fitWeeklyBudget}from'./weekly-plan.ts';
 export type Language = "ru" | "kk";
 export type Track = "base" | "profile" | "literacy";
 export type LocalText = { ru: string; kk: string };
@@ -23,7 +25,7 @@ export type Review = { id: string; topicId: string; due: string; interval: numbe
 export type ErrorEntry = { id: string; taskId: string; topicId: string; answer: Answer; steps: string; category: string; explanation: LocalText; at: string; resolved: boolean; exerciseIds: string[]; prompt?: LocalText; solution?: Task["solution"]; hints?: Task["hints"]; correctAnswer?: Answer;repairRequired?:number;repairPassedTaskIds?:string[];repairVersion?:string;repairSkill?:LocalText;repairedAt?:string };
 export type Exam = { id: string; track: Track; variant: number; startedAt: string; durationMinutes: number; questions: Task[]; answers: Record<string, Answer>; flagged: number[]; answerUpdatedAt?: Record<string, number>; currentIndex?: number; currentIndexUpdatedAt?: number; finishedAt?: string; finishReason?: "submitted" | "time"; score?: number; maxScore?: number; results?: { taskId: string; topicId: string; answer: Answer; correct: boolean; points: number; max: number; prompt?: LocalText; context?: LocalText; solution: Task["solution"]; correctAnswer: Answer }[]; rules: typeof EXAM_RULES };
 export type LearnerState = { profile: Profile | null; progress: Record<string, Progress>; attempts: Attempt[]; errors: ErrorEntry[]; reviews: Review[]; exams: Exam[]; diagnostics: { id: string; schoolGrade?: string; schoolPathway?:'natural-math'|'humanitarian'; track: Track; at: string; score: number; total: number; strengths: string[]; gaps: string[]; taskIds?: string[] }[]; xp: number; lessonResume: { topicId: string; stage: number } | null; plan: PlanItem[]; activeExam: Exam | null; revision: number; planReason?: LocalText; practiceStartedAt?: string; streakDays: string[]; preferences?: { leaderboard: boolean }; streakRecoveries?: { day: string; at: string; week: string }[]; [key: string]: unknown };
-export type PlanItem = { topicId: string; title: LocalText; reason: LocalText; type: "lesson" | "review" | "repair"; minutes: number; day: number };
+export type PlanItem = { topicId: string; title: LocalText; reason: LocalText; type: "lesson" | "review" | "repair" | "practice"; minutes: number; day: number };
 
 export const EXAM_RULES = {
   year: 2026, checkedAt: "2026-10-06", version: "Пункт 18, редакция 28.02.2024 № 92",
@@ -318,7 +320,8 @@ export function makePlan(state: LearnerState, topics: Topic[], now = new Date())
       kk: needsRepair ? (nearExam ? "Емтихан жақын: алдымен ең айқын олқылықты түзетіп, кейін бағдарламаны жалғастырамыз." : gaps.has(topic.id) ? "Диагностика олқылықты көрсетті: келесі тақырыптардан бұрын осы дағдыны қалпына келтіреміз." : "Бекіту қостық: соңғы тапсырмаларда қиындық болды.") : "Қажетті негіздерді ескеретін бағдарламаның келесі шағын қадамы.",
     });
   }
-  return planned;
+  if(!planned.length&&selected.length)add(selected[0],'practice',{ru:'Темы маршрута пройдены или ожидают повторения. Поддержим самостоятельное решение новой практикой.',kk:'Бағыт тақырыптары өтілді немесе қайталауды күтуде. Жаңа практика арқылы өздік шешуді сақтаймыз.'});
+  return fitWeeklyBudget(planned,state.profile?.dailyMinutes||20);
 }
 
 export function recordAttempt(state: LearnerState, task: Task, topic: Topic, input: { answer: Answer; steps?: string; assisted?: boolean; reviewId?: string; submissionId?:string }, tasks: Task[], now = new Date()) {

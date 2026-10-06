@@ -38,14 +38,19 @@ export default function ContentFields({ json, onChange, lang }: ContentFieldsPro
 
   const valueAt = (path: string[]): unknown => {
     let current: unknown = material;
-    for (const key of path) current = isObject(current) ? current[key] : undefined;
+    for (const key of path) current = Array.isArray(current) ? current[Number(key)] : isObject(current) ? current[key] : undefined;
     return current;
   };
   const changeAt = (path: string[], value: unknown) => {
-    const update = (current: Material, keys: string[]): Material => {
+    const update = (current: Material | unknown[], keys: string[]): Material | unknown[] => {
       const [key, ...rest] = keys;
+      if (Array.isArray(current)) {
+        const copy=[...current], index=Number(key), child=copy[index];
+        copy[index]=rest.length?update(isObject(child)||Array.isArray(child)?child:{},rest):value;
+        return copy;
+      }
       if (!rest.length) return { ...current, [key]: value };
-      const child = isObject(current[key]) ? current[key] : {};
+      const child = isObject(current[key]) || Array.isArray(current[key]) ? current[key] as Material | unknown[] : {};
       return { ...current, [key]: update(child, rest) };
     };
     onChange(JSON.stringify(update(material, path), null, 2));
@@ -92,6 +97,21 @@ export default function ContentFields({ json, onChange, lang }: ContentFieldsPro
         {textField(['lesson', 'formula', language], tr('Формулы и условия применения', 'Формулалар және қолдану шарттары'), language, 3,
           tr('Можно вводить обычные математические знаки: √, π, ≤, x².', 'Кәдімгі математикалық таңбаларды енгізуге болады: √, π, ≤, x².'))}
         {textField(['lesson', 'terms', language], tr('Термины и обозначения', 'Терминдер және белгілеулер'), language, 3)}
+        {isObject(lesson.enrichment)&&<details className="guided-step"><summary>{tr('Подробный урок, лайфхаки и пример из жизни','Толық сабақ, пайдалы тәсілдер және өмірден мысал')}</summary>
+          {textField(['lesson','enrichment','intuition',language],tr('Главная мысль','Негізгі ой'),language)}
+          {Array.isArray(lesson.enrichment.details)&&lesson.enrichment.details.map((_,i)=><div key={`detail-${i}`}>
+            {textField(['lesson','enrichment','details',String(i),'title',language],`${tr('Пояснение','Түсіндірме')} ${i+1} · ${tr('заголовок','атауы')}`,language,1)}
+            {textField(['lesson','enrichment','details',String(i),'body',language],tr('Подробное объяснение','Толық түсіндірме'),language,5)}
+          </div>)}
+          {Array.isArray(lesson.enrichment.hacks)&&lesson.enrichment.hacks.map((_,i)=><div key={`hack-${i}`}>
+            {textField(['lesson','enrichment','hacks',String(i),'title',language],`${tr('Полезный приём','Пайдалы тәсіл')} ${i+1}`,language,1)}
+            {textField(['lesson','enrichment','hacks',String(i),'body',language],tr('Как применять','Қалай қолдану керек'),language,4)}
+            {textField(['lesson','enrichment','hacks',String(i),'caution',language],tr('Условия и ограничения','Шарттар мен шектеулер'),language,3)}
+          </div>)}
+          {(['title','connection','problem','takeaway'] as const).map((field,i)=>textField(['lesson','enrichment','life',field,language],[tr('Название жизненного примера','Өмірлік мысал атауы'),tr('Связь с темой','Тақырыппен байланысы'),tr('Условие жизненной задачи','Өмірлік есептің шарты'),tr('Практический вывод','Практикалық қорытынды')][i],language,field==='title'?1:4))}
+          <label className="field"><span>{tr('Шаги жизненного примера · один на строку','Өмірлік мысал қадамдары · әр жолға біреу')}</span><textarea lang={language} rows={6} value={Array.isArray(valueAt(['lesson','enrichment','life','steps',language]))?(valueAt(['lesson','enrichment','life','steps',language]) as string[]).join('\n'):''} onChange={e=>changeAt(['lesson','enrichment','life','steps',language],e.target.value.split('\n'))}/></label>
+          {textField(isObject(lesson.enrichment.life)&&isObject(lesson.enrichment.life.answerText)?['lesson','enrichment','life','answerText',language]:['lesson','enrichment','life','answer'],tr('Ответ жизненной задачи с единицами','Өмірлік есеп жауабы және бірлігі'),language,1)}
+        </details>}
       </> : <>
         {textField(['prompt', language], tr('Условие задачи', 'Есептің шарты'), language, 5)}
         {stepsField('solution', language, tr('Решение по шагам', 'Қадамдық шешім'))}

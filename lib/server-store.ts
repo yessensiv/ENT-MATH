@@ -9,6 +9,8 @@ import { schoolTopics, schoolTasks } from "@/lib/school-content";
 import {schoolExtensionTopics,schoolExtensionTasks} from '@/lib/school-extension-content';
 import {schoolAdvancedTopics,schoolAdvancedTasks} from '@/lib/school-advanced-content';
 import * as curriculum from "@/lib/content";
+import {withLessonEnrichment,validLessonEnrichment} from '@/lib/lesson-enrichment';
+import type {Topic as AuthoredTopic} from '@/lib/content';
 import { emptyState, sanitizeExam, makePlan, isModelExample, reservedReviewIds, calculate, streakInfo, expireExam, diagnosticTasks, type LearnerState, type Topic, type Task } from "@/lib/engine";
 
 export class ApiError extends Error { constructor(message: string, public status = 400, public code?: string) { super(message); } }
@@ -20,7 +22,7 @@ export async function adminAuthenticate() { const user = await authenticate(); i
 type ContentExports = { topics?: unknown[]; tasks?: unknown[]; allTasks?: unknown[]; getTasks?: (topicId?: string) => unknown[] };
 export function baseContent() {
   const data = curriculum as unknown as ContentExports;
-  const topics = [...(data.topics || []), ...[...schoolTopics,...schoolExtensionTopics,...schoolAdvancedTopics].map(t=>({...t,schoolOnly:true}))] as Topic[];
+  const topics = ([...(data.topics || []), ...[...schoolTopics,...schoolExtensionTopics,...schoolAdvancedTopics].map(t=>({...t,schoolOnly:true}))] as AuthoredTopic[]).map(withLessonEnrichment) as unknown as Topic[];
   const rawTasks = data.tasks || data.allTasks || (data.getTasks ? topics.flatMap(t => data.getTasks!(t.id)) : topics.flatMap(t => Array.isArray(t.tasks) ? t.tasks : []));
   const tasks = [...rawTasks, ...schoolTasks,...schoolExtensionTasks,...schoolAdvancedTasks].map(raw => { const t = raw as Task & { level?: number; unit?: string }; const topic = topics.find(p => p.id === t.topicId); return { ...t, difficulty: t.difficulty || t.level || 1, units: t.units || t.unit, modelExample: isModelExample(t, topic), reviewReserved: reservedReviewIds(topic).includes(t.id) }; }) as Task[];
   return { topics, tasks };
@@ -37,7 +39,7 @@ export async function publishedContent() {
       if (row.kind === "task" && taskMap.has(row.id)) { const merged = { ...taskMap.get(row.id)!, ...data, id: row.id }; merged.difficulty = Number(data.level || data.difficulty || merged.difficulty); merged.units = data.unit || data.units || merged.units; taskMap.set(row.id, merged); }
     } catch { /* A corrupt draft must not break a learner session. */ }
   }
-  return { topics: [...topicMap.values()], tasks: [...taskMap.values()] };
+  return { topics: [...topicMap.values()].map(t=>withLessonEnrichment(t as unknown as AuthoredTopic)) as unknown as Topic[], tasks: [...taskMap.values()] };
 }
 
 export async function loadState(user: ChatGPTUser): Promise<LearnerState> {
@@ -157,7 +159,8 @@ export async function updateContent(user: ChatGPTUser, input: Record<string, unk
   if (!["draft", "review", "published"].includes(String(status))) throw new ApiError("Неверный статус.");
   if (!input.data || typeof input.data !== "object" || Array.isArray(input.data)) throw new ApiError("Требуется объект материала.");
   const data = input.data as Record<string, unknown>;
-  if (JSON.stringify(data).length > 30000) throw new ApiError("Материал слишком большой.");
+  // Expanded bilingual lessons include their existing tasks; the request stays below parseBody's 50k bound.
+  if (JSON.stringify(data).length > (kind === 'topic' ? 40000 : 30000)) throw new ApiError("Материал слишком большой.");
   const base = baseContent(), existingTask = base.tasks.find(t => t.id === id);
   if ((kind === "task" && !existingTask) || (kind === "topic" && !base.topics.some(t => t.id === id))) throw new ApiError("Материал не найден.", 404);
   if (status === "published" && (typeof input.reviewNote !== "string" || !input.reviewNote.trim())) throw new ApiError("Для публикации требуется запись о математической и языковой проверке.");
@@ -168,6 +171,7 @@ export async function updateContent(user: ChatGPTUser, input: Record<string, unk
     const lesson = merged.lesson as Record<string, unknown>;
     const exampleValid = (value: unknown) => { const v = value as { problem?: unknown; steps?: unknown; answer?: unknown }; return v && bilingualText(v.problem) && bilingualSteps(v.steps) && typeof v.answer === "string" && v.answer.trim(); };
     if (!bilingualText(merged.title) || !lesson || !["goal", "explanation", "simpler", "formula", "terms"].every(key => bilingualText(lesson[key])) || !bilingualSteps(lesson.mistakes) || !bilingualSteps(lesson.recap) || !Array.isArray(lesson.examples) || lesson.examples.length < 3 || !lesson.examples.every(exampleValid) || !exampleValid(lesson.guided)) throw new ApiError("Перед публикацией заполните весь урок: теория, термины, три примера, совместное решение и памятка на двух языках.");
+    if(!validLessonEnrichment(lesson.enrichment))throw new ApiError("Заполните подробное объяснение, полезный приём с ограничениями и жизненный пример с тремя шагами на русском и казахском.");
     if (!Array.isArray(merged.prerequisites) || merged.prerequisites.some(p => typeof p !== "string" || !base.topics.some(t => t.id === p)) || !["base", "profile", "literacy"].includes(merged.track)) throw new ApiError("Проверьте направление и зависимости темы.");
     const current = (await publishedContent()).topics.map(t => t.id === id ? merged as Topic : t), visiting = new Set<string>(), visited = new Set<string>();
     const visit = (topicId: string) => { if (visiting.has(topicId)) throw new ApiError("В зависимостях тем возник цикл. Исправьте порядок изучения."); if (visited.has(topicId)) return; visiting.add(topicId); for (const p of current.find(t => t.id === topicId)?.prerequisites || []) visit(p); visiting.delete(topicId); visited.add(topicId); };

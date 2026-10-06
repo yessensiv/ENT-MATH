@@ -12,8 +12,9 @@ export interface Task {
   unit?: string; tolerance?: number;
   generation?: {version:'review-2026.2';serial:number;templateIndex:number;param:number;kind:string};
 }
-export interface Example { problem: Bilingual; steps: BilingualSteps; answer: string; }
+export interface Example { problem: Bilingual; steps: BilingualSteps; answer: string; answerText?: Bilingual; }
 export interface Lesson {
+  enrichment?: import('./lesson-enrichment-types').LessonEnrichment;
   goal: Bilingual; explanation: Bilingual; simpler: Bilingual; formula: Bilingual; terms: Bilingual;
   examples: Example[]; mistakes: BilingualSteps; recap: BilingualSteps; guided: Example;
   blocks:{title:Bilingual;body:Bilingual}[];
@@ -24,7 +25,7 @@ export interface Topic {
   prerequisites: string[]; minutes: number; description: Bilingual; lesson: Lesson; tasks: Task[];
 }
 export const programVersion = {
-  year: 2026, checkedAt: '2026-10-06', contentVersion: 'ent-math-2026.2',
+  year: 2026, checkedAt: '2026-10-06', contentVersion: 'ent-math-2026.3',
   profileSource: 'https://testcenter.kz/wp-content/uploads/2025/10/10_%D0%9C%D0%B0%D1%82%D0%B5%D0%BC%D0%B0%D1%82%D0%B8%D0%BA%D0%B0_%D1%80%D1%83%D1%81.pdf',
   literacySource: 'https://testcenter.kz/wp-content/uploads/2025/10/08_%D0%9C%D0%B0%D1%82%D0%B5%D0%BC%D0%B0%D1%82%D0%B8%D1%87%D0%B5%D1%81%D0%BA%D0%B0%D1%8F-%D0%B3%D1%80%D0%B0%D0%BC%D0%BE%D1%82%D0%BD%D0%BE%D1%81%D1%82%D1%8C.pdf',
   mathematicalValidation: 'deterministic arithmetic and substitution checks',

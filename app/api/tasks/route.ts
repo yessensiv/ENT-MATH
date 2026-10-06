@@ -3,14 +3,24 @@ import { publishedContent, response, failure, loadCurrentState, saveState, ApiEr
 import { deliverTask, seenTaskIds, type Task } from "@/lib/engine";
 import { fillFreshTasks } from "@/lib/fresh-tasks";
 import {reviewGenerator} from '@/lib/review-generator';
+import{assignErrorRepairs}from'@/lib/error-repair';
 export async function GET(request: Request) {
   try {
-    const params = new URL(request.url).searchParams, topic = params.get("topic"), reviewId = params.get("reviewId"), { topics, tasks } = await publishedContent();
+    const params = new URL(request.url).searchParams, topic = params.get("topic"), reviewId = params.get("reviewId"), errorId=params.get('errorId'), { topics, tasks } = await publishedContent();
     if (!topic || !topics.some(t => t.id === topic)) throw new ApiError("Тема не найдена.", 404);
     const user = await getChatGPTUser();
-    if (!user) { if (reviewId) throw new ApiError("Войдите для повторения.", 401); return response({ tasks: tasks.filter(t => t.topicId === topic).map(t => deliverTask(t)) }); }
+    if (!user) { if (reviewId||errorId) throw new ApiError("Войдите для повторения.", 401); return response({ tasks: tasks.filter(t => t.topicId === topic).map(t => deliverTask(t)) }); }
+    if(errorId&&reviewId)throw new ApiError('Закрепление ошибки и отложенная проверка запускаются отдельно.');
     for (let retry = 0; retry < 3; retry++) {
       const { state } = await loadCurrentState(user); assertStudyAllowed(state);
+      if(errorId){
+        const error=state.errors.find(e=>e.id===errorId&&e.topicId===topic);
+        if(!error)throw new ApiError('Ошибка не найдена.',404);
+        const repair=assignErrorRepairs(state,error,tasks,reviewGenerator);
+        if(repair.changed){try{await saveState(user,state);}catch(e){if(e instanceof ApiError&&e.code==='STATE_CONFLICT'&&retry<2)continue;throw e;}}
+        const notice=repair.status==='unmapped'?{ru:'Для этой версии задачи ещё не проверена точная связь с упражнениями закрепления. Можно изучить разбор и повторить урок; случайное упражнение не закроет ошибку.',kk:'Осы тапсырма нұсқасының бекіту жаттығуларымен нақты байланысы әлі тексерілмеген. Талдауды қарап, сабақты қайталауға болады; кездейсоқ жаттығу қатені жаппайды.'}:repair.status==='complete'?{ru:'Эта ошибка уже закреплена. Следующий шаг — повторение спустя время.',kk:'Бұл қате бойынша бекіту аяқталды. Келесі қадам — уақыт өткеннен кейін қайталау.'}:repair.status==='exhausted'?{ru:'Запас новых проверенных условий этого навыка закончился. Сохранённые результаты остаются; редактору нужно расширить банк.',kk:'Осы дағдының жаңа тексерілген тапсырмалары таусылды. Сақталған нәтижелер қалады; редактор банкке жаңа тапсырма қосуы керек.'}:{ru:`Проверим: ${error.repairSkill?.ru}. Два новых самостоятельных ответа закрепят именно эту ошибку. Причину ошибки уточняем по шагам решения.`,kk:`Тексереміз: ${error.repairSkill?.kk}. Екі жаңа өздік жауап осы қатені бекітеді. Қатенің себебін шешу қадамдары арқылы анықтаймыз.`};
+        return response({tasks:repair.tasks.map(t=>deliverTask(t,state)),notice,repair:{errorId,status:repair.status,required:2,passed:error.repairPassedTaskIds?.length||0}});
+      }
       const review = reviewId ? state.reviews.find(r => r.id === reviewId && r.topicId === topic && !r.completed) : undefined;
       if (reviewId && !review) throw new ApiError("Повторение не найдено.", 404);
       if (review && Date.parse(review.due) > Date.now()) throw new ApiError("Для проверки спустя время дождитесь назначенной даты. Сегодня доступна обычная практика.");

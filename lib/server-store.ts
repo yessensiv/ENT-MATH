@@ -41,7 +41,7 @@ export async function publishedContent() {
     try {
       const data = publishedSnapshot(row); if(!data)continue;
       if (row.kind === "topic" && topicMap.has(row.id)) topicMap.set(row.id, { ...topicMap.get(row.id)!, ...data, id: row.id });
-      if (row.kind === "task" && taskMap.has(row.id)) { const merged = { ...taskMap.get(row.id)!, ...data, id: row.id }; merged.difficulty = Number(data.level || data.difficulty || merged.difficulty); merged.units = typeof data.unit==='string'?data.unit:typeof data.units==='string'?data.units:merged.units; taskMap.set(row.id, merged); }
+      if (row.kind === "task" && taskMap.has(row.id)) { const merged:Task = { ...taskMap.get(row.id)!, ...data, id: row.id }; merged.difficulty = Number(data.level || data.difficulty || merged.difficulty); merged.units = typeof data.unit==='string'?data.unit:typeof data.units==='string'?data.units:merged.units; delete merged.repairSkillId; delete merged.methodFamily; delete merged.skillIds; taskMap.set(row.id, merged); }
     } catch { /* A corrupt draft must not break a learner session. */ }
   }
   return { topics: [...topicMap.values()].map(t=>withLessonEnrichment(t as unknown as AuthoredTopic)) as unknown as Topic[], tasks: [...taskMap.values()] };

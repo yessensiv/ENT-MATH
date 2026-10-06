@@ -20,7 +20,7 @@ export type Profile = { name: string; grade: string; learningMode?: "school" | "
 export type Progress = { attempts: number; correct: number; independent: number; mastered: boolean; reviewPassed?: boolean; independentTaskIds: string[]; confirmationTaskIds?: string[]; masteryRewarded?: boolean; lastAt?: string; masteryVersion?:string; masteryReadyAt?:string; masteryPending?:boolean;needsRecovery?:boolean;recoveryTaskIds?:string[]; evidence?:Record<string,{difficulty:number;methodFamily:string|null}> };
 export type Attempt = { id: string; taskId: string; topicId: string; track: Track; answer: Answer; steps: string; correct: boolean; assisted: boolean; at: string; category: string;taskVersion?:string;checkingVersion?:string;taskSnapshot?:Pick<Task,'prompt'|'answer'|'solution'|'domain'|'type'|'units'|'precision'|'difficulty'> };
 export type Review = { id: string; topicId: string; due: string; interval: number; completed: boolean; taskId?: string };
-export type ErrorEntry = { id: string; taskId: string; topicId: string; answer: Answer; steps: string; category: string; explanation: LocalText; at: string; resolved: boolean; exerciseIds: string[]; prompt?: LocalText; solution?: Task["solution"]; hints?: Task["hints"]; correctAnswer?: Answer };
+export type ErrorEntry = { id: string; taskId: string; topicId: string; answer: Answer; steps: string; category: string; explanation: LocalText; at: string; resolved: boolean; exerciseIds: string[]; prompt?: LocalText; solution?: Task["solution"]; hints?: Task["hints"]; correctAnswer?: Answer;repairRequired?:number;repairPassedTaskIds?:string[];repairVersion?:string;repairSkill?:LocalText;repairedAt?:string };
 export type Exam = { id: string; track: Track; variant: number; startedAt: string; durationMinutes: number; questions: Task[]; answers: Record<string, Answer>; flagged: number[]; answerUpdatedAt?: Record<string, number>; currentIndex?: number; currentIndexUpdatedAt?: number; finishedAt?: string; finishReason?: "submitted" | "time"; score?: number; maxScore?: number; results?: { taskId: string; topicId: string; answer: Answer; correct: boolean; points: number; max: number; prompt?: LocalText; context?: LocalText; solution: Task["solution"]; correctAnswer: Answer }[]; rules: typeof EXAM_RULES };
 export type LearnerState = { profile: Profile | null; progress: Record<string, Progress>; attempts: Attempt[]; errors: ErrorEntry[]; reviews: Review[]; exams: Exam[]; diagnostics: { id: string; schoolGrade?: string; schoolPathway?:'natural-math'|'humanitarian'; track: Track; at: string; score: number; total: number; strengths: string[]; gaps: string[]; taskIds?: string[] }[]; xp: number; lessonResume: { topicId: string; stage: number } | null; plan: PlanItem[]; activeExam: Exam | null; revision: number; planReason?: LocalText; practiceStartedAt?: string; streakDays: string[]; preferences?: { leaderboard: boolean }; streakRecoveries?: { day: string; at: string; week: string }[]; [key: string]: unknown };
 export type PlanItem = { topicId: string; title: LocalText; reason: LocalText; type: "lesson" | "review" | "repair"; minutes: number; day: number };
@@ -59,6 +59,8 @@ export function recoverStreak(state: LearnerState, now = new Date()) {
 
 export function isModelExample(task: Task, topic?: Topic): boolean {
   if (task.modelExample === true) return true;
+  const lesson=topic?.lesson as {guided?:{problem?:LocalText};examples?:{problem?:LocalText}[]}|undefined;
+  if([lesson?.guided,...(lesson?.examples||[])].some(e=>e?.problem?.ru===task.prompt.ru&&e?.problem?.kk===task.prompt.kk))return true;
   const lessonBank = topic && Array.isArray(topic.tasks) ? topic.tasks as { id: string }[] : [];
   return [0, 1, 2, 5, 10].some(i => lessonBank[i]?.id === task.id);
 }
@@ -351,11 +353,16 @@ export function recordAttempt(state: LearnerState, task: Task, topic: Topic, inp
   if (!correct) {
     scheduleErrorReview(state, task, now);
     state.errors.push({ id: attempt.id, taskId: task.id, topicId: task.topicId, answer: input.answer, steps: input.steps || "", category: mistake.category, explanation: mistake.explanation, at, resolved: false, exerciseIds: tasks.filter(t => t.topicId === task.topicId && t.id !== task.id).slice(0, 3).map(t => t.id), prompt: task.prompt, solution: task.solution, hints: task.hints, correctAnswer: task.answer });
-  } else if (!assisted && confirmationCount(p) >= 3) {
+  } else if (!assisted) {
     // An unrelated success in the same broad topic cannot prove that this
     // particular mistake is repaired. Assignments must explicitly target it.
-    const corrected = state.errors.filter(e => e.topicId === task.topicId && !e.resolved && e.taskId !== task.id && e.exerciseIds.includes(task.id) && Array.isArray(task.repairsTaskIds) && task.repairsTaskIds.includes(e.taskId));
-    for (const error of corrected) error.resolved = true;
+    const eligible = state.errors.filter(e => e.topicId === task.topicId && !e.resolved && e.taskId !== task.id && e.exerciseIds.includes(task.id) && Array.isArray(task.repairsTaskIds) && task.repairsTaskIds.includes(e.taskId) && (!task.repairForErrorId || task.repairForErrorId===e.id));
+    const corrected:ErrorEntry[]=[];
+    for (const error of eligible) {
+      if(error.repairRequired){error.repairPassedTaskIds=[...new Set([...(error.repairPassedTaskIds||[]),task.id])];if(error.repairPassedTaskIds.length<error.repairRequired)continue;}
+      else if(confirmationCount(p)<3)continue;
+      error.resolved=true;error.repairedAt=at;corrected.push(error);
+    }
     if(corrected.length&&p.needsRecovery){p.recoveryTaskIds=(p.recoveryTaskIds||[]).filter(id=>state.errors.some(e=>e.taskId===id&&!e.resolved));p.needsRecovery=p.recoveryTaskIds.length>0;}
     if (corrected.length) state.xp += 5;
   }
@@ -392,7 +399,7 @@ function scheduleErrorReview(state: LearnerState, task:Task, now: Date) {
 }
 
 export function sanitizeTask(task: Task) {
-  return { id: task.id, topicId: task.topicId, prompt: task.prompt, type: task.type, answerFormat:task.answerFormat,difficulty: task.difficulty, level: task.difficulty, options: task.options, pairs: task.pairs?.map(p => ({ left: p.left, right: "" })), skill: task.skill, skillIds:task.skillIds,curriculumSection:task.curriculumSection,units: task.units, unit: task.units, precision: task.precision, domain: task.domain, context: task.context, modelExample: Boolean(task.modelExample), reviewReserved: Boolean(task.reviewReserved) };
+  return { id: task.id, topicId: task.topicId, prompt: task.prompt, type: task.type, answerFormat:task.answerFormat,difficulty: task.difficulty, level: task.difficulty, options: task.options, pairs: task.pairs?.map(p => ({ left: p.left, right: "" })), skill: task.skill, skillIds:task.skillIds,curriculumSection:task.curriculumSection,units: task.units, unit: task.units, precision: task.precision, domain: task.domain, context: task.context, modelExample: Boolean(task.modelExample), reviewReserved: Boolean(task.reviewReserved),repairForErrorId:task.repairForErrorId };
 }
 
 export function diagnosticTasks(track: Track, topics: Topic[], tasks: Task[], schoolGrade?: string,schoolPathway?:'natural-math'|'humanitarian') {

@@ -49,7 +49,7 @@ export async function POST(request: Request) {
           if (input.assisted !== undefined && typeof input.assisted !== "boolean") throw new ApiError("Некорректный статус подсказок.");
           const reviewId = input.reviewId === undefined ? undefined : textValue(input.reviewId, 100);
           if (reviewId && !state.reviews.some(r => r.id === reviewId && r.topicId === task.topicId && !r.completed)) throw new ApiError("Повторение не найдено.", 404);
-          state.practiceDraft = { topicId: task.topicId, taskId, answer: answerValue(input.answer ?? ""), steps: textValue(input.steps ?? "", 4000), assisted: Boolean(input.assisted), ...(reviewId ? { reviewId } : {}), updatedAt: new Date().toISOString() };
+          state.practiceDraft = { topicId: task.topicId, taskId, ...(typeof task.repairForErrorId==='string'?{errorId:task.repairForErrorId}:{}), answer: answerValue(input.answer ?? ""), steps: textValue(input.steps ?? "", 4000), assisted: Boolean(input.assisted), ...(reviewId ? { reviewId } : {}), updatedAt: new Date().toISOString() };
         } else {
           const track = trackValue(input.track || state.profile?.track), expected = assignedDiagnostic(state,track,topics,content.tasks)??diagnosticTasks(track, topics, content.tasks, state.profile?.learningMode === "school" ? state.profile.grade : undefined, state.profile?.schoolPathway), allowed = new Set(expected.map(t => t.id));
           if (!Array.isArray(input.answers) || input.answers.length > expected.length) throw new ApiError("Некорректные ответы диагностики.");
@@ -117,7 +117,8 @@ export async function POST(request: Request) {
         if((state.diagnosticSession as {taskIds?:string[]}|undefined)?.taskIds?.includes(task.id))throw new ApiError('Завершите диагностику, чтобы открыть проверку этого вопроса.',409,'DIAGNOSTIC_ACTIVE');
         let submittedAt: number; try { submittedAt = snapshotTime(input.draftUpdatedAt); } catch(e) { throw new ApiError(e instanceof Error ? e.message : "Неверное время сохранения."); }
         const topic = topics.find(t => t.id === task.topicId); if (!topic) throw new ApiError("Тема не найдена.", 404);
-        if (task.reviewReserved && !input.reviewId) throw new ApiError("Эта новая задача сохранена для повторения после перерыва. Для обычной практики выберите другую задачу.");
+        const assignedRepair=typeof task.repairForErrorId==='string'&&state.errors.some(e=>e.id===task.repairForErrorId&&!e.resolved&&e.exerciseIds.includes(task.id));
+        if (task.reviewReserved && !input.reviewId && !assignedRepair) throw new ApiError("Эта новая задача сохранена для повторения после перерыва. Для обычной практики выберите другую задачу.");
         if (input.reviewId) {
           const review = state.reviews.find(r => r.id === input.reviewId && r.topicId === task.topicId && !r.completed);
           if (!review || new Date(review.due).getTime() > Date.now() || seenTaskIds(state).has(task.id)) throw new ApiError("Для повторения выберите новую задачу после назначенной даты.");

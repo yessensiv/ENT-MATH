@@ -16,8 +16,8 @@ const compiled=ts.transpileModule(readFileSync(new URL('../components/lesson-rea
 function harness(sourceTopic=topics.find(t=>t.id==='fractions')){
   const state=[],refs=[];let cursor=0,refIndex=0;
   const topic=withLessonEnrichment(sourceTopic);
-  const calls={practice:0,stage:[],tutor:[]};
-  const props={topic,curriculum:topics,lang:'ru',stage:0,onStage:n=>{calls.stage.push(n);props.stage=n;},onBack(){},backLabel:'К карте',originLabel:'Школьная программа',onPractice:()=>calls.practice++,onTutor:m=>calls.tutor.push(m),onVisual(){},onPrerequisite(){},simple:false,onSimple:v=>props.simple=v,exampleIndex:0,onExample:n=>props.exampleIndex=n,mastered:false};
+  const calls={practice:0,stage:[],tutor:[],selection:[]};
+  const props={topic,curriculum:topics,lang:'ru',stage:0,onStage:n=>{calls.stage.push(n);props.stage=n;},onBack(){},backLabel:'К карте',originLabel:'Школьная программа',onPractice:()=>calls.practice++,onTutor:(m,s)=>{calls.tutor.push(m);calls.selection.push(s);},onVisual(){},onPrerequisite(){},simple:false,onSimple:v=>props.simple=v,exampleIndex:0,onExample:n=>props.exampleIndex=n,mastered:false};
   const hooks={...React,useState:initial=>{const i=cursor++;if(!(i in state))state[i]=initial;return [state[i],v=>state[i]=typeof v==='function'?v(state[i]):v];},useRef:initial=>refs[refIndex++]??(refs[refIndex-1]={current:initial})};
   const ctx=createContext({exports:{},require:id=>id==='react'?hooks:id==='./math-input'?{default:p=>React.createElement('input',{'aria-label':'Учебный ответ',value:p.value,onChange:e=>p.onChange(e.target.value)})}:id==='./solution-steps'?{default:p=>React.createElement('textarea',{'aria-label':'Учебные шаги',value:p.value,onChange:e=>p.onChange(e.target.value)})}:require(id),requestAnimationFrame:f=>f()});
   runInContext(compiled,ctx);
@@ -49,6 +49,15 @@ test('guided help is progressive, preserves learner work, and reveals solution o
 test('why a step is valid passes the selected example and the actual step to tutor',()=>{
   const h=harness();h.props.stage=1;h.props.exampleIndex=2;const ex=h.props.topic.lesson.examples[2];h.find(h.render(),'button',/Почему так/).props.onClick();
   assert.ok(h.calls.tutor[0].includes(ex.problem.ru));assert.ok(h.calls.tutor[0].includes(ex.steps.ru[0]));
+  assert.equal(h.calls.selection[0].kind,'example');assert.equal(h.calls.selection[0].index,2);assert.equal(h.calls.selection[0].stepIndex,0);
+});
+
+test('guided learner input survives leaving for help and remounting the lesson',()=>{
+  let draft={answer:'',steps:''};
+  const mount=()=>{const h=harness();h.props.stage=2;h.props.guidedDraft=draft;h.props.onGuidedDraft=d=>{draft=d;h.props.guidedDraft=d;};return h;};
+  const first=mount();let tree=first.render();first.walk(tree).find(n=>typeof n.type==='function'&&'numeric' in n.props).props.onChange('3/4');
+  tree=first.render();first.walk(tree).find(n=>typeof n.type==='function'&&'onChange' in n.props&&!('numeric' in n.props)).props.onChange('1/2 = 2/4');
+  const second=mount();tree=second.render();assert.ok(second.walk(tree).some(n=>n.props.value==='3/4'));assert.ok(second.walk(tree).some(n=>n.props.value==='1/2 = 2/4'));
 });
 test('practice starts only from its explicit action, and page changes retain examples',()=>{
   const h=harness();h.props.stage=3;let tree=h.render();assert.equal(h.calls.practice,0);assert.match(h.html(),/Просмотр урока не означает освоение/);

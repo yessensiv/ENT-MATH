@@ -41,6 +41,10 @@ export const contentReports = sqliteTable("content_reports", {
   createdAt: text("created_at").notNull(),
 });
 
+export const helpTickets=sqliteTable('help_tickets',{
+ id:text('id').primaryKey(),userId:text('user_id').notNull(),category:text('category').notNull(),status:text('status').notNull(),data:text('data').notNull(),revision:integer('revision').notNull().default(0),createdAt:text('created_at').notNull(),updatedAt:text('updated_at').notNull(),
+},t=>[index('help_tickets_user_date').on(t.userId,t.createdAt),index('help_tickets_status_date').on(t.status,t.updatedAt)]);
+
 export const tutorUsage = sqliteTable("tutor_usage", {
   id: text("id").primaryKey(),
   userId: text("user_id").notNull(),

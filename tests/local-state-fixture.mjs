@@ -14,8 +14,10 @@ function transaction(db, statements) { db.exec("BEGIN IMMEDIATE"); try { const v
 export async function beginLocalFixture(makeState) {
   const db = localDatabase(), row = db.prepare("SELECT * FROM learner_states WHERE user_id=?").get("local_seedy"); assert.ok(row);
   const backupChunks = db.prepare("SELECT token,chunk_index,data FROM learner_state_chunks WHERE user_id=? ORDER BY token,chunk_index").all("local_seedy"), pointer = statePointer(row.data);
+  const backupRows=db.prepare('SELECT * FROM learner_backups WHERE user_id=?').all('local_seedy');
+  const backupParts=db.prepare('SELECT c.* FROM learner_backup_chunks c JOIN learner_backups b ON b.id=c.backup_id WHERE b.user_id=?').all('local_seedy');
   const backupDir = resolve(".sites-runtime/tests/backups"); mkdirSync(backupDir, { recursive: true });
-  writeFileSync(resolve(backupDir, `${Date.now()}-${crypto.randomUUID()}.json`), JSON.stringify({ userId: "local_seedy", row, chunks: backupChunks }));
+  writeFileSync(resolve(backupDir, `${Date.now()}-${crypto.randomUUID()}.json`), JSON.stringify({ userId: "local_seedy", row, chunks: backupChunks,backups:backupRows,backupParts }));
   const original = await decodeState(row.data, pointer ? backupChunks.filter(r => r.token === pointer.token).map(r => ({ chunkIndex: r.chunk_index, data: r.data })) : []);
   const state = { ...makeState(original), revision: row.revision + 1, localIntegrationFixture: true };
   const bundle = await encodeState(state, `local-fixture-${crypto.randomUUID()}`);
@@ -26,6 +28,10 @@ export async function beginLocalFixture(makeState) {
       const changed = db.prepare("UPDATE learner_states SET data=?,revision=revision+1,email=?,updated_at=? WHERE user_id=? AND revision=?").run(row.data, row.email, new Date().toISOString(), "local_seedy", expectedRevision); assert.equal(changed.changes, 1, "Another writer intervened; fixture restoration must not overwrite it");
       db.prepare("DELETE FROM learner_state_chunks WHERE user_id=?").run("local_seedy");
       for (const part of backupChunks) db.prepare("INSERT INTO learner_state_chunks VALUES(?,?,?,?)").run("local_seedy", part.token, part.chunk_index, part.data);
+      db.prepare('DELETE FROM learner_backup_chunks WHERE backup_id IN (SELECT id FROM learner_backups WHERE user_id=?)').run('local_seedy');
+      db.prepare('DELETE FROM learner_backups WHERE user_id=?').run('local_seedy');
+      for(const b of backupRows)db.prepare('INSERT INTO learner_backups VALUES(?,?,?,?,?)').run(b.id,b.user_id,b.head,b.revision,b.created_at);
+      for(const b of backupParts)db.prepare('INSERT INTO learner_backup_chunks VALUES(?,?,?)').run(b.backup_id,b.chunk_index,b.data);
       db.exec("COMMIT");
     } catch(e) { db.exec("ROLLBACK"); throw e; } finally { db.close(); }
   } };

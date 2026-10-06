@@ -1,8 +1,8 @@
 import { getChatGPTUser } from "@/app/chatgpt-auth";
 import { publishedContent, response, failure, loadCurrentState, saveState, ApiError, assertStudyAllowed } from "@/lib/server-store";
 import { deliverTask, seenTaskIds, type Task } from "@/lib/engine";
-import { fillFreshTasks, type ReviewGenerator } from "@/lib/fresh-tasks";
-import * as curriculum from "@/lib/content";
+import { fillFreshTasks } from "@/lib/fresh-tasks";
+import {reviewGenerator} from '@/lib/review-generator';
 export async function GET(request: Request) {
   try {
     const params = new URL(request.url).searchParams, topic = params.get("topic"), reviewId = params.get("reviewId"), { topics, tasks } = await publishedContent();
@@ -15,7 +15,7 @@ export async function GET(request: Request) {
       if (reviewId && !review) throw new ApiError("Повторение не найдено.", 404);
       if (review && Date.parse(review.due) > Date.now()) throw new ApiError("Для проверки спустя время дождитесь назначенной даты. Сегодня доступна обычная практика.");
       const desiredLevel = review?.interval === 14 ? 3 : review && review.interval !== 1 ? 2 : 1;
-      const supply = fillFreshTasks(state, topic, tasks, curriculum as unknown as ReviewGenerator, Boolean(review), desiredLevel, review ? 1 : 3);
+      const supply = fillFreshTasks(state, topic, tasks, reviewGenerator, Boolean(review), desiredLevel, review ? 1 : 3);
       if (supply.changed) { try { await saveState(user, state); } catch (e) { if (e instanceof ApiError && e.code === "STATE_CONFLICT" && retry < 2) continue; throw e; } }
       const all = [...tasks, ...(state.generatedTasks as Task[] || [])].filter(t => t.topicId === topic), seen = seenTaskIds(state);
       const selected = review ? all.filter(t => !t.modelExample && !seen.has(t.id)).sort((a, b) => Math.abs(a.difficulty - desiredLevel) - Math.abs(b.difficulty - desiredLevel) || Number(Boolean(b.reviewReserved)) - Number(Boolean(a.reviewReserved))) : all;

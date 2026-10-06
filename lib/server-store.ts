@@ -2,14 +2,17 @@ import { env } from "cloudflare:workers";
 import { eq, and, sql, lt, asc } from "drizzle-orm";
 import { getChatGPTUser, type ChatGPTUser } from "@/app/chatgpt-auth";
 import { getDb } from "@/db";
-import { learnerStates, learnerStateChunks, contentOverrides, contentReports, tutorUsage } from "@/db/schema";
+import { learnerStates, learnerStateChunks, contentOverrides, contentReports, tutorUsage,editorialReviews } from "@/db/schema";
+import { contentDigest,reviewCoverage } from '@/lib/material-review';
 import { encodeState, decodeState, statePointer, stateSaveStatements } from "@/lib/state-codec";
 import { schoolTopics, schoolTasks } from "@/lib/school-content";
+import {schoolExtensionTopics,schoolExtensionTasks} from '@/lib/school-extension-content';
+import {schoolAdvancedTopics,schoolAdvancedTasks} from '@/lib/school-advanced-content';
 import * as curriculum from "@/lib/content";
 import { emptyState, sanitizeExam, makePlan, isModelExample, reservedReviewIds, calculate, streakInfo, expireExam, diagnosticTasks, type LearnerState, type Topic, type Task } from "@/lib/engine";
 
 export class ApiError extends Error { constructor(message: string, public status = 400, public code?: string) { super(message); } }
-export function configuration() { return env as unknown as { DB?: D1Database; ADMIN_EMAILS?: string; TUTOR_API_KEY?: string; TUTOR_BASE_URL?: string; TUTOR_MODEL?: string; TUTOR_DAILY_LIMIT?: string }; }
+export function configuration() { return env as unknown as { DB?: D1Database; ADMIN_EMAILS?: string; TUTOR_API_KEY?: string; TUTOR_BASE_URL?: string; TUTOR_MODEL?: string; TUTOR_VISION_MODEL?: string; TUTOR_DAILY_LIMIT?: string; TUTOR_DAILY_TOKEN_LIMIT?:string }; }
 export const isAdmin = (user: ChatGPTUser) => (configuration().ADMIN_EMAILS || "").split(",").map(s => s.trim().toLowerCase()).filter(Boolean).includes(user.email.toLowerCase());
 export async function authenticate() { const user = await getChatGPTUser(); if (!user) throw new ApiError("Войдите через ChatGPT, чтобы сохранять учебный прогресс.", 401); return user; }
 export async function adminAuthenticate() { const user = await authenticate(); if (!isAdmin(user)) throw new ApiError("Доступ разрешён только администратору.", 403); return user; }
@@ -17,9 +20,9 @@ export async function adminAuthenticate() { const user = await authenticate(); i
 type ContentExports = { topics?: unknown[]; tasks?: unknown[]; allTasks?: unknown[]; getTasks?: (topicId?: string) => unknown[] };
 export function baseContent() {
   const data = curriculum as unknown as ContentExports;
-  const topics = [...(data.topics || []), ...schoolTopics.map(t=>({...t,schoolOnly:true}))] as Topic[];
+  const topics = [...(data.topics || []), ...[...schoolTopics,...schoolExtensionTopics,...schoolAdvancedTopics].map(t=>({...t,schoolOnly:true}))] as Topic[];
   const rawTasks = data.tasks || data.allTasks || (data.getTasks ? topics.flatMap(t => data.getTasks!(t.id)) : topics.flatMap(t => Array.isArray(t.tasks) ? t.tasks : []));
-  const tasks = [...rawTasks, ...schoolTasks].map(raw => { const t = raw as Task & { level?: number; unit?: string }; const topic = topics.find(p => p.id === t.topicId); return { ...t, difficulty: t.difficulty || t.level || 1, units: t.units || t.unit, modelExample: isModelExample(t, topic), reviewReserved: reservedReviewIds(topic).includes(t.id) }; }) as Task[];
+  const tasks = [...rawTasks, ...schoolTasks,...schoolExtensionTasks,...schoolAdvancedTasks].map(raw => { const t = raw as Task & { level?: number; unit?: string }; const topic = topics.find(p => p.id === t.topicId); return { ...t, difficulty: t.difficulty || t.level || 1, units: t.units || t.unit, modelExample: isModelExample(t, topic), reviewReserved: reservedReviewIds(topic).includes(t.id) }; }) as Task[];
   return { topics, tasks };
 }
 export async function publishedContent() {
@@ -59,7 +62,7 @@ export async function loadState(user: ChatGPTUser): Promise<LearnerState> {
   }
   if (!decoded) throw new ApiError("Не удалось прочитать сохранённый профиль.", 503);
   const state = { ...emptyState(), ...decoded, revision: row.revision } as LearnerState;
-  if (state.diagnostics.some(d => !d.taskIds)) { const content = baseContent(); for (const diagnostic of state.diagnostics) diagnostic.taskIds ||= diagnosticTasks(diagnostic.track, content.topics, content.tasks).map(t => t.id); }
+  if (state.diagnostics.some(d => !d.taskIds)) { const content = baseContent(); for (const diagnostic of state.diagnostics) diagnostic.taskIds ||= diagnosticTasks(diagnostic.track, content.topics, content.tasks,diagnostic.schoolGrade,diagnostic.schoolPathway).map(t => t.id); }
   return state;
 }
 
@@ -69,8 +72,17 @@ export async function saveState(user: ChatGPTUser, state: LearnerState) {
   try { bundle = await encodeState({ ...state, revision: revision + 1 }, crypto.randomUUID()); }
   catch (e) { if (e instanceof Error && e.message === "STATE_CAPACITY") throw new ApiError("История достигла лимита хранилища этого выпуска. Последнее занятие ещё не сохранено. Администратору нужно перенести историю в архив; прежние записи сохранены.", 507, "STATE_CAPACITY"); throw e; }
   const db = configuration().DB!, statements = stateSaveStatements(user.userId, user.email, revision, bundle, new Date().toISOString());
-  const results = await db.batch(statements.map(s => db.prepare(s.sql).bind(...s.params)));
-  if (!results[0].results?.length) throw new ApiError("Данные изменились в другой вкладке. Обновите страницу и повторите действие.", 409, "STATE_CONFLICT");
+  const backupId=`${user.userId}:${new Intl.DateTimeFormat('en-CA',{timeZone:'Asia/Qyzylorda'}).format(new Date())}`;
+  // One snapshot of the previous saved state per day. Head and all old chunks
+  // are copied in the same transaction before the normal chunk cleanup.
+  const backup=[
+    db.prepare("INSERT OR IGNORE INTO learner_backups(id,user_id,head,revision,created_at) SELECT ?,user_id,data,revision,? FROM learner_states WHERE user_id=? AND revision=? AND json_type(data,'$.profile')='object'").bind(backupId,new Date().toISOString(),user.userId,revision),
+    db.prepare("INSERT OR IGNORE INTO learner_backup_chunks(backup_id,chunk_index,data) SELECT ?,c.chunk_index,c.data FROM learner_state_chunks c JOIN learner_backups b ON b.id=? JOIN learner_states s ON s.user_id=b.user_id WHERE c.user_id=? AND c.token=json_extract(b.head,'$._entStorage.token') AND b.revision=s.revision AND s.revision=?").bind(backupId,backupId,user.userId,revision),
+  ];
+  const oldest=new Date(Date.now()-7*86400000).toISOString();
+  const cleanup=[db.prepare('DELETE FROM learner_backup_chunks WHERE backup_id IN (SELECT id FROM learner_backups WHERE user_id=? AND created_at<?)').bind(user.userId,oldest),db.prepare('DELETE FROM learner_backups WHERE user_id=? AND created_at<?').bind(user.userId,oldest)];
+  const results = await db.batch([...backup,...statements.map(s => db.prepare(s.sql).bind(...s.params)),...cleanup]);
+  if (!results[2].results?.length) throw new ApiError("Данные изменились в другой вкладке. Обновите страницу и повторите действие.", 409, "STATE_CONFLICT");
   state.revision++;
 }
 
@@ -104,12 +116,13 @@ export function trackValue(value: unknown): "base" | "profile" | "literacy" { if
 export function assertStudyAllowed(state: LearnerState) { if (state.activeExam) throw new ApiError("Во время экзамена подсказки и тренажёр закрыты. Завершите экзамен, чтобы открыть разбор.", 409); }
 export function updatePlan(state: LearnerState, topics: Topic[]) { state.plan = makePlan(state, topics); }
 
-export async function consumeTutorBudget(user: ChatGPTUser) {
+export async function consumeTutorBudget(user: ChatGPTUser, reservation=8000) {
   const day = new Intl.DateTimeFormat("en-CA", { timeZone: "Asia/Qyzylorda" }).format(new Date());
   const id = `${user.userId}:${day}`, limit = Math.max(1, Math.min(200, Number(configuration().TUTOR_DAILY_LIMIT || 30) || 30));
   const db = getDb();
   await db.insert(tutorUsage).values({ id, userId: user.userId, day, requests: 0 }).onConflictDoNothing();
-  const rows = await db.update(tutorUsage).set({ requests: sqlIncrement() }).where(and(eq(tutorUsage.id, id), lessThanLimit(limit))).returning({ count: tutorUsage.requests });
+  const tokenLimit=Math.max(8000,Math.min(2000000,Number(configuration().TUTOR_DAILY_TOKEN_LIMIT||120000)||120000));
+  const rows = await db.update(tutorUsage).set({ requests: sqlIncrement(),reservedTokens:sql`${tutorUsage.reservedTokens}+${reservation}` }).where(and(eq(tutorUsage.id, id), lessThanLimit(limit),sql`${tutorUsage.reservedTokens}+${reservation}<=${tokenLimit}`)).returning({ count: tutorUsage.requests });
   if (!rows.length) throw new ApiError("Сегодня лимит ИИ достигнут. Учебные материалы, практика и обычные подсказки доступны.", 429);
   return { used: rows[0].count, limit };
 }
@@ -173,6 +186,12 @@ export async function updateContent(user: ChatGPTUser, input: Record<string, unk
     if (merged.type === "number") { try { if (/[xх]/i.test(answer as string)) throw new Error(); calculate(answer as string); } catch { throw new ApiError("Числовой ответ должен быть конечным числом или проверяемым числовым выражением."); } }
   }
   if (kind === "rules" && status === "published") throw new ApiError("Правила экзамена имеют версию в коде. Сохраните проект правил для проверки и обновите движок после сверки официального источника.");
+  if(status==='published'&&(kind==='topic'||kind==='task')){
+    const material={...(kind==='topic'?base.topics:base.tasks).find(t=>t.id===id)!,...data,id};
+    const reviews=await getDb().select().from(editorialReviews).where(eq(editorialReviews.materialId,id));
+    const coverage=reviewCoverage(reviews,await contentDigest(material));
+    if(!Object.values(coverage).every(Boolean))throw new ApiError('Сначала сохраните черновик и получите три актуальные проверки: математика, методика и казахский язык. Изменение текста отменяет прежние заключения.');
+  }
   const db = getDb(), previous = await db.select().from(contentOverrides).where(eq(contentOverrides.id, id)).get();
   const history = previous ? JSON.parse(previous.history) : [];
   history.push({ at: new Date().toISOString(), by: user.email, status, previousData: previous ? JSON.parse(previous.data) : null, note: typeof input.reviewNote === "string" ? input.reviewNote : "" });

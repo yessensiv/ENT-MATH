@@ -39,6 +39,11 @@ test("single and multiple grading reject extra answers and respect units", () =>
   assert.equal(grade(t, ["2", "4", "8"]), false);
   assert.equal(grade(t, ["2", "2"]), false);
 });
+test('textual choice keys are selected literally rather than parsed as arithmetic',()=>{
+ const t={...task('proof','SSS','single'),options:['SSS','SAS','AAA','SSA']};
+ assert.equal(grade(t,'SSS'),true);assert.equal(grade(t,'AAA'),false);assert.equal(grade({...t,answer:'A',options:['A','B']},'A'),true);
+ assert.equal(grade({...t,answer:'4',options:['4','8']},'8/2'),true);
+});
 test("official p18 partial credit covers all three answer counts", () => {
   assert.equal(scoreExamTask(task("a", ["a"], "multiple"), ["a", "b"]).points, 1);
   assert.equal(scoreExamTask(task("a", ["a"], "multiple"), ["a", "b", "c"]).points, 0);

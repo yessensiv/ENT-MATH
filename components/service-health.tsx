@@ -1,0 +1,12 @@
+"use client";
+import {useCallback,useEffect,useRef,useState} from 'react';
+import {requestJson} from '@/lib/client-flow';
+type Issue={code:string;page:string;count:number;latest:string};
+export default function ServiceHealth({lang}:{lang:'ru'|'kk'}){
+ const tr=(ru:string,kk:string)=>lang==='ru'?ru:kk;
+ const [issues,setIssues]=useState<Issue[]>([]),[error,setError]=useState(''),[loaded,setLoaded]=useState(false),[busy,setBusy]=useState(false);
+ const sequence=useRef({value:0});
+ const load=useCallback(async()=>{const id=++sequence.current.value;setBusy(true);try{const value=await requestJson<{issues:Issue[]}>('/api/issues');if(id===sequence.current.value){setIssues(value.issues);setLoaded(true);setError('');}}catch(e){if(id===sequence.current.value)setError((e as Error).message);}finally{if(id===sequence.current.value)setBusy(false);}},[]);
+ useEffect(()=>{const fence=sequence.current;const id=++sequence.current.value;void requestJson<{issues:Issue[]}>('/api/issues').then(value=>{if(id===sequence.current.value){setIssues(value.issues);setLoaded(true);}}).catch(e=>{if(id===sequence.current.value)setError(e.message);});return()=>{fence.value++;};},[]);
+ return <section className="editorial-checks"><h3>{tr('Состояние платформы','Платформа күйі')}</h3><p>{tr('Журнал за 30 дней содержит только код сбоя и страницу. Ответы, сообщения и фото в него не попадают.','30 күндік журналда тек ақау коды мен бет бар. Жауаптар, хабарлар және фото оған кірмейді.')}</p><button className="secondary" disabled={busy} onClick={()=>void load()}>{tr('Обновить журнал','Журналды жаңарту')}</button>{error&&<p role="alert">{error}</p>}{!loaded&&!error&&<p role="status">{tr('Загружаем журнал…','Журналды жүктейміз…')}</p>}{loaded&&(issues.length?issues.map(i=><p key={i.code+i.page}>{i.code} · {i.page} · {i.count}<br/><small>{new Date(i.latest).toLocaleString()}</small></p>):!error&&<p>{tr('Зарегистрированных сбоев нет.','Тіркелген ақаулар жоқ.')}</p>)}</section>;
+}

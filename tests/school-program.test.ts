@@ -8,8 +8,12 @@ import { schoolTopics, schoolTasks, validateSchoolContent } from '../lib/school-
 import { topics, tasks } from '../lib/content.ts';
 // @ts-expect-error Native Node tests use explicit extensions.
 import { emptyState, makePlan, diagnosticTasks, makeExam, grade, type Topic, type Task } from '../lib/engine.ts';
-const combined=[...topics,...schoolTopics.map(t=>({...t,schoolOnly:true}))] as unknown as Topic[];
-const bank=[...tasks,...schoolTasks].map(t=>({...t,difficulty:t.level})) as unknown as Task[];
+// @ts-expect-error Native Node tests use explicit extensions.
+import {schoolExtensionTopics,schoolExtensionTasks} from '../lib/school-extension-content.ts';
+// @ts-expect-error Native Node tests use explicit extensions.
+import {schoolAdvancedTopics,schoolAdvancedTasks} from '../lib/school-advanced-content.ts';
+const combined=[...topics,...[...schoolTopics,...schoolExtensionTopics,...schoolAdvancedTopics].map(t=>({...t,schoolOnly:true}))] as unknown as Topic[];
+const bank=[...tasks,...schoolTasks,...schoolExtensionTasks,...schoolAdvancedTasks].map(t=>({...t,difficulty:t.level})) as unknown as Task[];
 test('school curriculum covers all seven grades with real bilingual lessons and valid dependencies',()=>{
  assert.deepEqual(schoolCourses.map(c=>c.grade),[5,6,7,8,9,10,11]);
  for(const c of schoolCourses){const ids=schoolTopicIds(c.grade);assert.ok(ids.length>=8);assert.equal(ids.length,new Set(ids).size);for(const id of ids){const topic=combined.find(t=>t.id===id);assert.ok(topic,`${c.grade}: ${id}`);for(const p of topic.prerequisites??[])assert.ok(combined.some(t=>t.id===p),p);}}

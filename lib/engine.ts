@@ -12,13 +12,13 @@ export type Task = {
   domain?: string; context?: LocalText; tolerance?: number; [key: string]: unknown;
 };
 export type Topic = { id: string; title: LocalText; track: Track; prerequisites?: string[]; minutes?: number; [key: string]: unknown };
-export type Profile = { name: string; grade: string; learningMode?: "school" | "ent"; track: Track; examDate: string; target: number; targets?: Partial<Record<Track, number>>; dailyMinutes: number; language: Language };
+export type Profile = { name: string; grade: string; learningMode?: "school" | "ent"; schoolPathway?:'natural-math'|'humanitarian'; track: Track; examDate: string; target: number; targets?: Partial<Record<Track, number>>; dailyMinutes: number; language: Language };
 export type Progress = { attempts: number; correct: number; independent: number; mastered: boolean; reviewPassed?: boolean; independentTaskIds: string[]; confirmationTaskIds?: string[]; masteryRewarded?: boolean; lastAt?: string };
 export type Attempt = { id: string; taskId: string; topicId: string; track: Track; answer: Answer; steps: string; correct: boolean; assisted: boolean; at: string; category: string };
 export type Review = { id: string; topicId: string; due: string; interval: number; completed: boolean; taskId?: string };
 export type ErrorEntry = { id: string; taskId: string; topicId: string; answer: Answer; steps: string; category: string; explanation: LocalText; at: string; resolved: boolean; exerciseIds: string[]; prompt?: LocalText; solution?: Task["solution"]; hints?: Task["hints"]; correctAnswer?: Answer };
 export type Exam = { id: string; track: Track; variant: number; startedAt: string; durationMinutes: number; questions: Task[]; answers: Record<string, Answer>; flagged: number[]; answerUpdatedAt?: Record<string, number>; currentIndex?: number; currentIndexUpdatedAt?: number; finishedAt?: string; finishReason?: "submitted" | "time"; score?: number; maxScore?: number; results?: { taskId: string; topicId: string; answer: Answer; correct: boolean; points: number; max: number; prompt?: LocalText; context?: LocalText; solution: Task["solution"]; correctAnswer: Answer }[]; rules: typeof EXAM_RULES };
-export type LearnerState = { profile: Profile | null; progress: Record<string, Progress>; attempts: Attempt[]; errors: ErrorEntry[]; reviews: Review[]; exams: Exam[]; diagnostics: { id: string; schoolGrade?: string; track: Track; at: string; score: number; total: number; strengths: string[]; gaps: string[]; taskIds?: string[] }[]; xp: number; lessonResume: { topicId: string; stage: number } | null; plan: PlanItem[]; activeExam: Exam | null; revision: number; planReason?: LocalText; practiceStartedAt?: string; streakDays: string[]; preferences?: { leaderboard: boolean }; streakRecoveries?: { day: string; at: string; week: string }[]; [key: string]: unknown };
+export type LearnerState = { profile: Profile | null; progress: Record<string, Progress>; attempts: Attempt[]; errors: ErrorEntry[]; reviews: Review[]; exams: Exam[]; diagnostics: { id: string; schoolGrade?: string; schoolPathway?:'natural-math'|'humanitarian'; track: Track; at: string; score: number; total: number; strengths: string[]; gaps: string[]; taskIds?: string[] }[]; xp: number; lessonResume: { topicId: string; stage: number } | null; plan: PlanItem[]; activeExam: Exam | null; revision: number; planReason?: LocalText; practiceStartedAt?: string; streakDays: string[]; preferences?: { leaderboard: boolean }; streakRecoveries?: { day: string; at: string; week: string }[]; [key: string]: unknown };
 export type PlanItem = { topicId: string; title: LocalText; reason: LocalText; type: "lesson" | "review" | "repair"; minutes: number; day: number };
 
 export const EXAM_RULES = {
@@ -195,6 +195,7 @@ export function grade(task: Task, answer: Answer): boolean {
     return task.type === "matching" ? expected.every((v, i) => normalize(v) === normalize(provided[i] || "")) : expected.every(v => provided.some(a => normalize(a) === normalize(v)));
   }
   if (Array.isArray(answer) || Array.isArray(task.answer)) return false;
+  if(task.type==='single'&&normalize(answer)===normalize(task.answer))return true;
   let cleaned = answer.trim();
   if (task.units) {
     const escaped = task.units.replace(/[.*+?^${}()|[\]\\]/g, "\\$&");
@@ -232,10 +233,10 @@ export function classifyError(steps: string): { category: string; explanation: L
 export function makePlan(state: LearnerState, topics: Topic[], now = new Date()): PlanItem[] {
   const track = state.profile?.track || "profile";
   const schoolGrade = state.profile?.learningMode === "school" ? state.profile.grade : undefined;
-  const courseIds = schoolGrade ? schoolTopicIds(schoolGrade) : null;
+  const courseIds = schoolGrade ? schoolTopicIds(schoolGrade,state.profile?.schoolPathway) : null;
   const selected = courseIds ? courseIds.map(id => topics.find(t => t.id === id)).filter((t): t is Topic => Boolean(t)) : topics.filter(t => t.track === track && !t.schoolOnly);
   const byId = new Map(topics.map(t => [t.id, t]));
-  const latestDiagnostic = [...state.diagnostics].reverse().find(d => d.track === track && d.schoolGrade === schoolGrade);
+  const latestDiagnostic = [...state.diagnostics].reverse().find(d => d.track === track && d.schoolGrade === schoolGrade && (!schoolGrade || Number(schoolGrade)<10 || (d.schoolPathway??'natural-math')===(state.profile?.schoolPathway??'natural-math')));
   const gaps = new Set(latestDiagnostic?.gaps || []);
   const foundationStrengths = new Set((latestDiagnostic?.strengths || []).filter(id => byId.get(id)?.track === "base" && !state.errors.some(e => e.topicId === id && !e.resolved && e.at > (latestDiagnostic?.at || ""))));
   const ready = (id: string) => Boolean(state.progress[id]?.mastered || confirmationCount(state.progress[id]) >= 3 || foundationStrengths.has(id));
@@ -342,8 +343,8 @@ export function sanitizeTask(task: Task) {
   return { id: task.id, topicId: task.topicId, prompt: task.prompt, type: task.type, difficulty: task.difficulty, level: task.difficulty, options: task.options, pairs: task.pairs?.map(p => ({ left: p.left, right: "" })), skill: task.skill, units: task.units, unit: task.units, precision: task.precision, domain: task.domain, context: task.context, modelExample: Boolean(task.modelExample), reviewReserved: Boolean(task.reviewReserved) };
 }
 
-export function diagnosticTasks(track: Track, topics: Topic[], tasks: Task[], schoolGrade?: string) {
-  const ids = schoolGrade ? schoolTopicIds(schoolGrade) : null;
+export function diagnosticTasks(track: Track, topics: Topic[], tasks: Task[], schoolGrade?: string,schoolPathway?:'natural-math'|'humanitarian') {
+  const ids = schoolGrade ? schoolTopicIds(schoolGrade,schoolPathway) : null;
   const relevant = ids ? ids.map(id => topics.find(t => t.id === id)).filter((t): t is Topic => Boolean(t)) : topics.filter(t => !t.schoolOnly && (t.track === track || (track === "profile" && t.track === "base")));
   const result: Task[] = [];
   for (let i = 0; i < relevant.length && result.length < 10; i += Math.max(1, Math.floor(relevant.length / 10))) {

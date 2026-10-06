@@ -2,6 +2,8 @@ import { test } from 'node:test';
 import assert from 'node:assert/strict';
 import { tasks } from '../lib/content.ts';
 import { schoolTasks } from '../lib/school-content.ts';
+import {schoolExtensionTasks} from '../lib/school-extension-content.ts';
+import {schoolAdvancedTasks} from '../lib/school-advanced-content.ts';
 import { schoolTopicIds } from '../lib/school-curriculum.ts';
 const base=process.env.ENT_TEST_BASE_URL||'http://127.0.0.1:5173';
 let cookie='';
@@ -19,7 +21,7 @@ test('grades 5–11 and the school goal survive re-login without erasing progres
    const restored=(await call('/api/state')).data;assert.equal(restored.profile.grade,grade);assert.deepEqual(restored.progress,initial.progress);assert.equal(restored.xp,initial.xp);assert.equal(restored.attempts.length,initial.attempts.length);assert.ok(restored.plan.length);
   }
   assert.equal((await call('/api/state',{action:'profile',grade:'5',learningMode:'school',track:'base'})).status,200);
-  const questions=(await call('/api/diagnostic?track=base')).data.tasks,bank=[...tasks,...schoolTasks];
+  const questions=(await call('/api/diagnostic?track=base')).data.tasks,bank=[...tasks,...schoolTasks,...schoolExtensionTasks,...schoolAdvancedTasks];
   const checked=await call('/api/state',{action:'diagnostic',track:'base',answers:questions.map((q,i)=>({taskId:q.id,answer:i===0?'999999':bank.find(t=>t.id===q.id).answer}))});assert.equal(checked.status,200);assert.equal(checked.data.diagnostic.schoolGrade,'5');assert.equal(checked.data.diagnostic.gaps.length,1);
   assert.equal((await call('/api/state',{action:'resume',topicId:'school-decimals',stage:1})).status,200);
   const practice=(await call('/api/tasks?topic=school-decimals')).data.tasks,first=practice.find(t=>t.practiceEligible&&!t.reviewReserved&&!t.modelExample);assert.ok(first);

@@ -1,9 +1,10 @@
+import {reservedExam} from "../lib/exam-bank.ts";
 // Writes only the starter's explicitly labelled local test account.
 // Keep its results so persistence and notebook records can be inspected afterwards.
 import { test } from "node:test";
 import assert from "node:assert/strict";
 import { topics, tasks as sourceTasks } from "../lib/content.ts";
-import { makeExam, officialSection, reservedReviewIds, seenTaskIds } from "../lib/engine.ts";
+import { officialSection, reservedReviewIds, seenTaskIds } from "../lib/engine.ts";
 const base = process.env.ENT_TEST_BASE_URL || "http://127.0.0.1:5173";
 const bank = sourceTasks.map(t => ({ ...t, difficulty: t.level, units: t.unit }));
 let cookie = "", state, originalLanguage, pendingExam;
@@ -77,7 +78,7 @@ test("authenticated learning, grading, tutor, durable progress and exam flow", a
     await t.test("report is saved for editorial review and learner cannot open administration", async () => {
       const next = await update({ action: "report", taskId: "linear-2", message: "[Локальная проверка API] Проверка передачи сообщения редактору; задание математически верно." }); assert.equal(next.report.status, "review"); assert.equal((await get("/api/admin")).status, 403);
     });
-    const expected = makeExam("profile", 5, topics, bank);
+    const expected = reservedExam("profile", 5);
     await t.test("exam snapshot has broad official coverage and exposes no answer keys", async () => {
       assert.equal(state.activeExam, null);
       await update({ action: "exam-start", track: "profile", variant: 5 }); pendingExam = state.activeExam.id;

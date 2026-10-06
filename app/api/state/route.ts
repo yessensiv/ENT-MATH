@@ -1,11 +1,12 @@
 import { getChatGPTUser } from "@/app/chatgpt-auth";
 import { authenticate, loadCurrentState, saveState, clientState, publishedContent, response, failure, parseBody, textValue, answerValue, trackValue, ApiError, assertStudyAllowed, updatePlan, recordReport, updateContent } from "@/lib/server-store";
-import { diagnosticTasks, checkAnswer, recordAttempt, makeExam, finishExam, sanitizeExam, recoverStreak, streakInfo, seenTaskIds, answerFitsTask, type Profile, type Task } from "@/lib/engine";
+import { diagnosticTasks, checkAnswer, recordAttempt, finishExam, sanitizeExam, recoverStreak, streakInfo, seenTaskIds, answerFitsTask, type Profile, type Task } from "@/lib/engine";
 import { applyExamSnapshot } from "@/lib/exam-snapshot";
 import { snapshotTime, beginDraftSnapshot, finishDraftSnapshot } from "@/lib/draft-snapshot";
 import{submissionIdentity,submissionPayload}from'@/lib/submission';
 import{validateLessonWork,saveLessonWork,type LessonWork}from'@/lib/lesson-work';
 import{assignedDiagnostic}from'@/lib/diagnostic-session';
+import{reservedExam}from'@/lib/exam-bank';
 
 export async function GET() {
   try {
@@ -141,8 +142,8 @@ export async function POST(request: Request) {
       case "exam-start": {
         if (state.activeExam) { extra = { activeExam: sanitizeExam(state.activeExam) }; break; }
         const track = trackValue(input.track || state.profile?.track), variant = Number(input.variant ?? 1);
-        if (track === "base" || !Number.isInteger(variant) || variant < 1 || variant > 5) throw new ApiError("Выберите экзаменационное направление и вариант 1–5.");
-        state.activeExam = makeExam(track, variant, topics, content.tasks); break;
+        if (track === "base" || !Number.isInteger(variant) || variant < 1 || variant > 10) throw new ApiError("Выберите экзаменационное направление и вариант 1–10.");
+        state.activeExam = reservedExam(track, variant, state); break;
       }
       case "exam-answer": {
         const exam = state.activeExam; if (!exam || exam.id !== input.examId) throw new ApiError("Активный экзамен не найден.", 404);

@@ -7,7 +7,8 @@ import type{ReviewGenerator}from'./fresh-tasks.ts';
 /** Assign new verified conditions of an explicitly reviewed method. A task
  * match checks the skill; it does not diagnose why the learner was wrong. */
 export function assignErrorRepairs(state:LearnerState,error:ErrorEntry,bank:Task[],generator:ReviewGenerator){
- const generated=(state.generatedTasks||[]) as Task[],all=[...bank,...generated];
+ const completedReserve=state.exams.filter(e=>e.finishedAt&&e.bankVersion).flatMap(e=>e.questions.filter(t=>t.purpose==='exam'));
+ const generated=(state.generatedTasks||[]) as Task[],all=[...bank,...generated,...completedReserve];
  const original=all.find(t=>t.id===error.taskId),skillId=original?.repairSkillId;
  if(!original||!repairSkillTitle(skillId)||!error.prompt||JSON.stringify(error.prompt)!==JSON.stringify(original.prompt)||JSON.stringify(error.correctAnswer)!==JSON.stringify(original.answer)||JSON.stringify(error.solution)!==JSON.stringify(original.solution))return{changed:false,tasks:[] as Task[],status:'unmapped' as const};
  const seen=seenTaskIds(state),passed=new Set(error.repairPassedTaskIds||[]),needed=Math.max(0,2-passed.size);

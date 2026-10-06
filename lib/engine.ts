@@ -1,3 +1,6 @@
+// @ts-expect-error Native Node tests.
+import {EXAM_RULES,resolveExamScoring,selectionCredit,scoreExplanation,type ExamRuleSnapshot} from './exam-rules.ts';
+export {EXAM_RULES};
 // @ts-expect-error Native Node tests need explicit extensions.
 import { schoolTopicIds } from "./school-curriculum.ts";
 // @ts-expect-error Native Node tests need explicit extensions.
@@ -23,15 +26,9 @@ export type Progress = { attempts: number; correct: number; independent: number;
 export type Attempt = { id: string; taskId: string; topicId: string; track: Track; answer: Answer; steps: string; correct: boolean; assisted: boolean; at: string; category: string;taskVersion?:string;checkingVersion?:string;taskSnapshot?:Pick<Task,'prompt'|'answer'|'solution'|'domain'|'type'|'units'|'precision'|'difficulty'> };
 export type Review = { id: string; topicId: string; due: string; interval: number; completed: boolean; taskId?: string };
 export type ErrorEntry = { id: string; taskId: string; topicId: string; answer: Answer; steps: string; category: string; explanation: LocalText; at: string; resolved: boolean; exerciseIds: string[]; prompt?: LocalText; solution?: Task["solution"]; hints?: Task["hints"]; correctAnswer?: Answer;repairRequired?:number;repairPassedTaskIds?:string[];repairVersion?:string;repairSkill?:LocalText;repairedAt?:string };
-export type Exam = { id: string; track: Track; variant: number; startedAt: string; durationMinutes: number; questions: Task[]; answers: Record<string, Answer>; flagged: number[]; answerUpdatedAt?: Record<string, number>; currentIndex?: number; currentIndexUpdatedAt?: number; finishedAt?: string; finishReason?: "submitted" | "time"; score?: number; maxScore?: number; results?: { taskId: string; topicId: string; answer: Answer; correct: boolean; points: number; max: number; prompt?: LocalText; context?: LocalText; solution: Task["solution"]; correctAnswer: Answer }[]; rules: typeof EXAM_RULES };
+export type Exam = { id: string; track: Track; variant: number; startedAt: string; durationMinutes: number; questions: Task[]; answers: Record<string, Answer>; flagged: number[]; answerUpdatedAt?: Record<string, number>; currentIndex?: number; currentIndexUpdatedAt?: number; finishedAt?: string; finishReason?: "submitted" | "time"; score?: number; maxScore?: number; results?: { taskId: string; topicId: string; answer: Answer; correct: boolean; points: number; max: number; prompt?: LocalText; context?: LocalText; solution: Task["solution"]; correctAnswer: Answer; scoringExplanation?:LocalText; gradingRuleId?:string }[]; rules: ExamRuleSnapshot;bankVersion?:string;familiarQuestionIds?:string[] };
 export type LearnerState = { profile: Profile | null; progress: Record<string, Progress>; attempts: Attempt[]; errors: ErrorEntry[]; reviews: Review[]; exams: Exam[]; diagnostics: { id: string; schoolGrade?: string; schoolPathway?:'natural-math'|'humanitarian'; track: Track; at: string; score: number; total: number; strengths: string[]; gaps: string[]; taskIds?: string[] }[]; xp: number; lessonResume: { topicId: string; stage: number } | null; plan: PlanItem[]; activeExam: Exam | null; revision: number; planReason?: LocalText; practiceStartedAt?: string; streakDays: string[]; preferences?: { leaderboard: boolean }; streakRecoveries?: { day: string; at: string; week: string }[]; [key: string]: unknown };
 export type PlanItem = { topicId: string; title: LocalText; reason: LocalText; type: "lesson" | "review" | "repair" | "practice"; minutes: number; day: number };
-
-export const EXAM_RULES = {
-  year: 2026, checkedAt: "2026-10-06", version: "Пункт 18, редакция 28.02.2024 № 92",
-  source: "https://old.adilet.zan.kz/rus/docs/V1700015173", trainingMinutes: { profile: 80, literacy: 20 },
-  note: { ru: "Время отдельного предмета — настройка платформы. Баллы — по пункту 18 правил ЕНТ. Это авторский тренировочный вариант, не официальный тест НЦТ.", kk: "Жеке пән уақыты — платформаның баптауы. Ұпай ЕНТ ережелерінің 18-тармағымен есептеледі. Бұл авторлық жаттығу нұсқасы, ҰТО-ның ресми тесті емес." },
-} as const;
 
 export function emptyState(): LearnerState {
   return { profile: null, progress: {}, attempts: [], errors: [], reviews: [], exams: [], diagnostics: [], xp: 0, lessonResume: null, plan: [], activeExam: null, revision: 0, streakDays: [], preferences: { leaderboard: false }, streakRecoveries: [] };
@@ -433,19 +430,18 @@ export function diagnosticTasks(track: Track, topics: Topic[], tasks: Task[], sc
   return result;
 }
 
-export function scoreExamTask(task: Task, answer: Answer) {
-  const max = task.type === "multiple" || task.type === "matching" ? 2 : 1;
-  if (!answerFitsTask(task, answer, true)) return { points: 0, max };
-  if (grade(task, answer)) return { points: max, max };
-  if (max === 1) return { points: 0, max };
-  const expected = Array.isArray(task.answer) ? task.answer : [task.answer];
-  const values = Array.isArray(answer) ? answer : (answer ? [answer] : []);
-  if (task.type === "multiple" && new Set(values).size !== values.length) return { points: 0, max };
-  const provided = task.type === "matching" ? values : [...new Set(values)];
-  const hits = task.type === "matching" ? provided.filter((v, i) => v === expected[i]).length : provided.filter(v => expected.includes(v)).length;
-  const wrong = provided.filter((v, i) => task.type === "matching" ? v !== expected[i] : !expected.includes(v)).length;
-  const partial = wrong < 2 && (expected.length === 1 ? hits === 1 : expected.length === 2 ? hits >= 1 : hits >= 2);
-  return { points: partial ? 1 : 0, max };
+export function scoreExamTask(task: Task, answer: Answer, rules: ExamRuleSnapshot = EXAM_RULES) {
+  const scoring=resolveExamScoring(rules),selection=task.type==='multiple'||task.type==='matching';
+  const max=selection?scoring.selectionMax:scoring.singleMax;
+  if(!answerFitsTask(task,answer,true))return{points:0,max,explanation:{ru:'Ответ не соответствует формату вопроса: 0 баллов.',kk:'Жауап сұрақ форматына сәйкес емес: 0 балл.'},ruleId:scoring.id};
+  const full=grade(task,answer);
+  if(!selection){const points=full?max:0;return{points,max,explanation:scoreExplanation(points,max),ruleId:scoring.id};}
+  const expected=(Array.isArray(task.answer)?task.answer:[task.answer]).map(normalize);
+  const values=(Array.isArray(answer)?answer:answer?[answer]:[]).map(normalize);
+  const hits=task.type==='matching'?values.filter((v,i)=>v&&v===expected[i]).length:values.filter(v=>expected.includes(v)).length;
+  const wrong=values.filter((v,i)=>v&&(task.type==='matching'?v!==expected[i]:!expected.includes(v))).length;
+  const points=selectionCredit(expected.length,hits,wrong,full,scoring);
+  return{points,max,explanation:scoreExplanation(points,max,hits,wrong),ruleId:scoring.id};
 }
 
 function hash(s: string) { let h = 2166136261; for (const c of s) h = Math.imul(h ^ c.charCodeAt(0), 16777619); h ^= h >>> 16; h = Math.imul(h, 0x85ebca6b); h ^= h >>> 13; h = Math.imul(h, 0xc2b2ae35); return (h ^ h >>> 16) >>> 0; }
@@ -480,7 +476,7 @@ function contextTask(index: number, variant: number, difficulty: number, topicId
 }
 
 export function makeExam(track: Track, variant: number, topics: Topic[], tasks: Task[], now = new Date()): Exam {
-  if (!Number.isInteger(variant) || variant < 1 || variant > 5 || !["profile", "literacy"].includes(track)) throw new Error("Выберите направление и вариант 1–5");
+  if (!Number.isInteger(variant) || variant < 1 || variant > 10 || !["profile", "literacy"].includes(track)) throw new Error("Выберите направление и вариант 1–10");
   const topicIds = new Set(topics.filter(t => t.track === track && t.spec !== null).map(t => t.id));
   const byTopic = new Map(topics.map(t => [t.id, t]));
   const bank = tasks.filter(t => topicIds.has(t.topicId) && !isModelExample(t, topics.find(p => p.id === t.topicId))), used = new Set<string>(), questions: Task[] = [];
@@ -533,22 +529,25 @@ export function makeExam(track: Track, variant: number, topics: Topic[], tasks: 
     [1, 1, 1, 2, 3].forEach((d, i) => {const id=contextTopicIds[i];if(!byTopic.has(id))throw new Error(`Missing context skill: ${id}`);questions.push({...contextTask(i, variant, d, id),skillIds:[id],assessmentTrack:'profile',curriculumSection:'13'});});
     select("multiple", [3, 1, 1]); select("matching", [2, 2, 1]);
   }
-  return { id: crypto.randomUUID(), track, variant, startedAt: now.toISOString(), durationMinutes: track === "profile" ? 80 : 20, questions, answers: {}, flagged: [], rules: EXAM_RULES };
+  return { id: crypto.randomUUID(), track, variant, startedAt: now.toISOString(), durationMinutes: track === "profile" ? 80 : 20, questions, answers: {}, flagged: [], rules: structuredClone(EXAM_RULES) };
 }
 
 export function finishExam(exam: Exam, state: LearnerState, now = new Date()) {
   if (exam.finishedAt) return exam;
+  // Resolve and grade the entire saved version before changing any history.
+  resolveExamScoring(exam.rules);
+  const graded=exam.questions.map((task,i)=>scoreExamTask(task,exam.answers[String(i)] || (Array.isArray(task.answer)?[]:""),exam.rules));
   const deadline = Date.parse(exam.startedAt) + exam.durationMinutes * 60000;
   exam.finishReason = now.getTime() >= deadline ? "time" : "submitted";
   exam.finishedAt = new Date(Math.min(now.getTime(), deadline)).toISOString(); exam.score = 0; exam.maxScore = 0;
   exam.results = exam.questions.map((task, i) => {
-    const answer = exam.answers[String(i)] || (Array.isArray(task.answer) ? [] : ""), { points, max } = scoreExamTask(task, answer);
+    const answer = exam.answers[String(i)] || (Array.isArray(task.answer) ? [] : ""), { points, max,explanation,ruleId } = graded[i];
     exam.score! += points; exam.maxScore! += max;
     const correct = grade(task, answer);
     const p = state.progress[task.topicId] ||= { attempts: 0, correct: 0, independent: 0, mastered: false, independentTaskIds: [] };
     p.attempts++; p.correct += Number(correct);
     if (!correct) { scheduleErrorReview(state, task, now); state.errors.push({ id: crypto.randomUUID(), taskId: task.id, topicId: task.topicId, answer, steps: "", category: "unknown", explanation: classifyError("").explanation, at: now.toISOString(), resolved: false, exerciseIds: [], prompt: task.prompt, solution: task.solution, hints: task.hints, correctAnswer: task.answer }); }
-    return { taskId: task.id, topicId: task.topicId, answer, correct, points, max, prompt: task.prompt, context: task.context, solution: task.solution, correctAnswer: task.answer };
+    return { taskId: task.id, topicId: task.topicId, answer, correct, points, max, prompt: task.prompt, context: task.context, solution: task.solution, correctAnswer: task.answer,scoringExplanation:explanation,gradingRuleId:ruleId };
   });
   state.exams.push(exam); state.activeExam = null;
   state.planReason = { ru: "План обновлён по результатам пробного экзамена: сначала закрепим навыки, в которых были ошибки.", kk: "Сынақ емтиханының нәтижесімен жоспар жаңартылды: алдымен қате кеткен дағдыларды бекітеміз." };

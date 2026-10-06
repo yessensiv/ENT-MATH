@@ -42,6 +42,6 @@ test('starting a literacy exam uses the selected exam direction while retaining 
   let start;
   function find(node){if(ts.isVariableDeclaration(node)&&node.name.getText(ast)==='startExam')start=node.initializer;ts.forEachChild(node,find);}find(ast);
   const requests=[],profile={learningMode:'school',grade:'5',track:'base'};
-  const context=createContext({state:{profile},examTrack:'literacy',track:'base',setOnboard(){},setExamReview(){},setExamIndex(){},setTimeLeft(){},setFinishConfirm(){},expiredHandled:{current:''},savedExamSignature:{current:''},act:async body=>requests.push(body)});
+  const context=createContext({state:{profile},examTrack:'literacy',track:'base',setOnboard(){},setExamReview(){},setExamIndex(){},setTimeLeft(){},setTimerExam(){},setFinishConfirm(){},expiredHandled:{current:''},savedExamSignature:{current:''},act:async body=>requests.push(body)});
   run(context,`var start=${start.getText(ast)};`);await context.start(3);assert.equal(requests[0].track,'literacy');assert.equal(requests[0].variant,3);assert.equal(profile.learningMode,'school');assert.equal(profile.track,'base');
 });

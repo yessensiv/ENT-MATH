@@ -4,6 +4,7 @@ import { getChatGPTUser, type ChatGPTUser } from "@/app/chatgpt-auth";
 import { getDb } from "@/db";
 import { learnerStates, learnerStateChunks, contentOverrides, contentReports, tutorUsage } from "@/db/schema";
 import { encodeState, decodeState, statePointer, stateSaveStatements } from "@/lib/state-codec";
+import { schoolTopics, schoolTasks } from "@/lib/school-content";
 import * as curriculum from "@/lib/content";
 import { emptyState, sanitizeExam, makePlan, isModelExample, reservedReviewIds, calculate, streakInfo, expireExam, diagnosticTasks, type LearnerState, type Topic, type Task } from "@/lib/engine";
 
@@ -16,9 +17,9 @@ export async function adminAuthenticate() { const user = await authenticate(); i
 type ContentExports = { topics?: unknown[]; tasks?: unknown[]; allTasks?: unknown[]; getTasks?: (topicId?: string) => unknown[] };
 export function baseContent() {
   const data = curriculum as unknown as ContentExports;
-  const topics = (data.topics || []) as Topic[];
+  const topics = [...(data.topics || []), ...schoolTopics.map(t=>({...t,schoolOnly:true}))] as Topic[];
   const rawTasks = data.tasks || data.allTasks || (data.getTasks ? topics.flatMap(t => data.getTasks!(t.id)) : topics.flatMap(t => Array.isArray(t.tasks) ? t.tasks : []));
-  const tasks = rawTasks.map(raw => { const t = raw as Task & { level?: number; unit?: string }; const topic = topics.find(p => p.id === t.topicId); return { ...t, difficulty: t.difficulty || t.level || 1, units: t.units || t.unit, modelExample: isModelExample(t, topic), reviewReserved: reservedReviewIds(topic).includes(t.id) }; }) as Task[];
+  const tasks = [...rawTasks, ...schoolTasks].map(raw => { const t = raw as Task & { level?: number; unit?: string }; const topic = topics.find(p => p.id === t.topicId); return { ...t, difficulty: t.difficulty || t.level || 1, units: t.units || t.unit, modelExample: isModelExample(t, topic), reviewReserved: reservedReviewIds(topic).includes(t.id) }; }) as Task[];
   return { topics, tasks };
 }
 export async function publishedContent() {

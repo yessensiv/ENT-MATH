@@ -37,7 +37,7 @@ export async function POST(request: Request) {
           if (reviewId && !state.reviews.some(r => r.id === reviewId && r.topicId === task.topicId && !r.completed)) throw new ApiError("Повторение не найдено.", 404);
           state.practiceDraft = { topicId: task.topicId, taskId, answer: answerValue(input.answer ?? ""), steps: textValue(input.steps ?? "", 4000), assisted: Boolean(input.assisted), ...(reviewId ? { reviewId } : {}), updatedAt: new Date().toISOString() };
         } else {
-          const track = trackValue(input.track || state.profile?.track), expected = diagnosticTasks(track, topics, content.tasks), allowed = new Set(expected.map(t => t.id));
+          const track = trackValue(input.track || state.profile?.track), expected = diagnosticTasks(track, topics, content.tasks, state.profile?.learningMode === "school" ? state.profile.grade : undefined), allowed = new Set(expected.map(t => t.id));
           if (!Array.isArray(input.answers) || input.answers.length > expected.length) throw new ApiError("Некорректные ответы диагностики.");
           const answers = input.answers.map(a => { if (!a || typeof a !== "object" || Array.isArray(a)) throw new ApiError("Некорректный ответ диагностики."); const item = a as Record<string, unknown>, taskId = textValue(item.taskId, 120); if (!allowed.has(taskId)) throw new ApiError("Вопрос диагностики не найден."); return { taskId, answer: answerValue(item.answer) }; });
           if (new Set(answers.map(a => a.taskId)).size !== answers.length) throw new ApiError("Вопросы диагностики повторяются.");
@@ -60,20 +60,26 @@ export async function POST(request: Request) {
       case "onboard": case "profile": {
         const p = (input.profile && typeof input.profile === "object" ? input.profile : input) as Record<string, unknown>;
         const name = textValue(p.name ?? state.profile?.name ?? user.displayName, 80).trim(), grade = String(p.grade ?? state.profile?.grade ?? "11");
-        if (!["9", "10", "11", "graduate"].includes(grade)) throw new ApiError("Укажите 9–11 класс или выпускник.");
+        if (!["5", "6", "7", "8", "9", "10", "11", "graduate"].includes(grade)) throw new ApiError("Укажите 5–11 класс или выпускник.");
+        const learningMode = p.learningMode ?? state.profile?.learningMode ?? (Number(grade) < 9 ? "school" : "ent");
+        if (learningMode !== "school" && learningMode !== "ent" || learningMode === "school" && grade === "graduate") throw new ApiError("Для школьной программы выберите класс 5–11.");
         const language = p.language ?? state.profile?.language ?? "ru"; if (language !== "ru" && language !== "kk") throw new ApiError("Выберите русский или казахский язык.");
         const track = trackValue(p.track ?? state.profile?.track ?? "profile"), targets = { ...(state.profile?.targets || {}) };
         if (state.profile) targets[state.profile.track] = state.profile.target;
         const dailyMinutes = Number(p.dailyMinutes ?? state.profile?.dailyMinutes ?? 20), target = Number(p.target ?? targets[track] ?? (track === "literacy" ? 8 : 40)), examDate = String(p.examDate ?? state.profile?.examDate ?? "2027-06-01");
         if (!name || !Number.isFinite(dailyMinutes) || dailyMinutes < 5 || dailyMinutes > 240 || !Number.isInteger(target) || target < 1 || target > (track === "literacy" ? 10 : 50) || !/^\d{4}-\d{2}-\d{2}$/.test(examDate) || !Number.isFinite(new Date(examDate).getTime()) || new Date(examDate).toISOString().slice(0, 10) !== examDate) throw new ApiError("Проверьте цель, дату и время занятий.");
         targets[track] = target;
-        state.profile = { name, grade, track, examDate, target, targets, dailyMinutes, language } as Profile;
+        if ((p.learningMode !== undefined && learningMode !== (state.profile?.learningMode ?? "ent")) || grade !== state.profile?.grade) {
+          const previous = (state.draftUpdatedAt as {diagnostic?:number}|undefined)?.diagnostic ?? 0;
+          finishDraftSnapshot(state, "diagnostic", Math.max(Date.now(), previous));
+        }
+        state.profile = { name, grade, learningMode, track, examDate, target, targets, dailyMinutes, language } as Profile;
         break;
       }
       case "diagnostic": {
         assertStudyAllowed(state);
         let submittedAt: number; try { submittedAt = snapshotTime(input.draftUpdatedAt); } catch(e) { throw new ApiError(e instanceof Error ? e.message : "Неверное время сохранения."); }
-        const track = trackValue(input.track || state.profile?.track), expected = diagnosticTasks(track, topics, tasks);
+        const track = trackValue(input.track || state.profile?.track), expected = diagnosticTasks(track, topics, tasks, state.profile?.learningMode === "school" ? state.profile.grade : undefined);
         if (!Array.isArray(input.answers) || input.answers.length !== expected.length) throw new ApiError("Завершите все вопросы диагностики.");
         const byId = new Map((input.answers as Record<string, unknown>[]).map(a => { if (!a || typeof a !== "object" || Array.isArray(a)) throw new ApiError("Некорректный ответ диагностики."); return [textValue(a.taskId, 120), answerValue(a.answer)] as const; }));
         if (byId.size !== expected.length || expected.some(t => !byId.has(t.id))) throw new ApiError("Вопросы диагностики не совпадают.");
@@ -83,7 +89,7 @@ export async function POST(request: Request) {
           (correct ? strengths : gaps).push(task.topicId);
           const p = state.progress[task.topicId] ||= { attempts: 0, correct: 0, independent: 0, mastered: false, independentTaskIds: [] }; p.attempts++; p.correct += Number(correct);
         }
-        const result = { id: crypto.randomUUID(), track, at: new Date().toISOString(), score, total: expected.length, strengths, gaps, taskIds: expected.map(t => t.id) };
+        const result = { id: crypto.randomUUID(), schoolGrade: state.profile?.learningMode === "school" ? state.profile.grade : undefined, track, at: new Date().toISOString(), score, total: expected.length, strengths, gaps, taskIds: expected.map(t => t.id) };
         finishDraftSnapshot(state, "diagnostic", submittedAt);
         state.diagnostics.push(result); state.planReason = { ru: "Первая неделя составлена по диагностике. Вернёмся к нужным основам и проверим их в новых заданиях.", kk: "Алғашқы апта диагностика бойынша құрылды. Қажетті негізге оралып, жаңа тапсырмаларда тексереміз." }; extra = { diagnostic: result }; break;
       }

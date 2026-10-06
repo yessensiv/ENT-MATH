@@ -2,8 +2,8 @@ import type { Metadata } from "next";
 import "./globals.css";
 
 export const metadata: Metadata = {
-  title: "ENT Math — твой путь к уверенному результату",
-  description: "Математика ЕНТ: понятные уроки, личный план, практика и разбор ошибок. На русском и казахском языках.",
+  title: "ENT Math — математика 5–11 классов и ЕНТ",
+  description: "Математика 5–11 классов и подготовка к ЕНТ: понятные уроки, личный план, практика и разбор ошибок. На русском и казахском языках.",
   icons: {
     icon: "/favicon.svg",
     shortcut: "/favicon.svg",

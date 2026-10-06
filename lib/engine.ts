@@ -1,3 +1,5 @@
+// @ts-expect-error Native Node tests need explicit extensions.
+import { schoolTopicIds } from "./school-curriculum.ts";
 export type Language = "ru" | "kk";
 export type Track = "base" | "profile" | "literacy";
 export type LocalText = { ru: string; kk: string };
@@ -10,13 +12,13 @@ export type Task = {
   domain?: string; context?: LocalText; tolerance?: number; [key: string]: unknown;
 };
 export type Topic = { id: string; title: LocalText; track: Track; prerequisites?: string[]; minutes?: number; [key: string]: unknown };
-export type Profile = { name: string; grade: string; track: Track; examDate: string; target: number; targets?: Partial<Record<Track, number>>; dailyMinutes: number; language: Language };
+export type Profile = { name: string; grade: string; learningMode?: "school" | "ent"; track: Track; examDate: string; target: number; targets?: Partial<Record<Track, number>>; dailyMinutes: number; language: Language };
 export type Progress = { attempts: number; correct: number; independent: number; mastered: boolean; reviewPassed?: boolean; independentTaskIds: string[]; confirmationTaskIds?: string[]; masteryRewarded?: boolean; lastAt?: string };
 export type Attempt = { id: string; taskId: string; topicId: string; track: Track; answer: Answer; steps: string; correct: boolean; assisted: boolean; at: string; category: string };
 export type Review = { id: string; topicId: string; due: string; interval: number; completed: boolean; taskId?: string };
 export type ErrorEntry = { id: string; taskId: string; topicId: string; answer: Answer; steps: string; category: string; explanation: LocalText; at: string; resolved: boolean; exerciseIds: string[]; prompt?: LocalText; solution?: Task["solution"]; hints?: Task["hints"]; correctAnswer?: Answer };
 export type Exam = { id: string; track: Track; variant: number; startedAt: string; durationMinutes: number; questions: Task[]; answers: Record<string, Answer>; flagged: number[]; answerUpdatedAt?: Record<string, number>; currentIndex?: number; currentIndexUpdatedAt?: number; finishedAt?: string; finishReason?: "submitted" | "time"; score?: number; maxScore?: number; results?: { taskId: string; topicId: string; answer: Answer; correct: boolean; points: number; max: number; prompt?: LocalText; context?: LocalText; solution: Task["solution"]; correctAnswer: Answer }[]; rules: typeof EXAM_RULES };
-export type LearnerState = { profile: Profile | null; progress: Record<string, Progress>; attempts: Attempt[]; errors: ErrorEntry[]; reviews: Review[]; exams: Exam[]; diagnostics: { id: string; track: Track; at: string; score: number; total: number; strengths: string[]; gaps: string[]; taskIds?: string[] }[]; xp: number; lessonResume: { topicId: string; stage: number } | null; plan: PlanItem[]; activeExam: Exam | null; revision: number; planReason?: LocalText; practiceStartedAt?: string; streakDays: string[]; preferences?: { leaderboard: boolean }; streakRecoveries?: { day: string; at: string; week: string }[]; [key: string]: unknown };
+export type LearnerState = { profile: Profile | null; progress: Record<string, Progress>; attempts: Attempt[]; errors: ErrorEntry[]; reviews: Review[]; exams: Exam[]; diagnostics: { id: string; schoolGrade?: string; track: Track; at: string; score: number; total: number; strengths: string[]; gaps: string[]; taskIds?: string[] }[]; xp: number; lessonResume: { topicId: string; stage: number } | null; plan: PlanItem[]; activeExam: Exam | null; revision: number; planReason?: LocalText; practiceStartedAt?: string; streakDays: string[]; preferences?: { leaderboard: boolean }; streakRecoveries?: { day: string; at: string; week: string }[]; [key: string]: unknown };
 export type PlanItem = { topicId: string; title: LocalText; reason: LocalText; type: "lesson" | "review" | "repair"; minutes: number; day: number };
 
 export const EXAM_RULES = {
@@ -229,9 +231,11 @@ export function classifyError(steps: string): { category: string; explanation: L
 
 export function makePlan(state: LearnerState, topics: Topic[], now = new Date()): PlanItem[] {
   const track = state.profile?.track || "profile";
-  const selected = topics.filter(t => t.track === track);
+  const schoolGrade = state.profile?.learningMode === "school" ? state.profile.grade : undefined;
+  const courseIds = schoolGrade ? schoolTopicIds(schoolGrade) : null;
+  const selected = courseIds ? courseIds.map(id => topics.find(t => t.id === id)).filter((t): t is Topic => Boolean(t)) : topics.filter(t => t.track === track && !t.schoolOnly);
   const byId = new Map(topics.map(t => [t.id, t]));
-  const latestDiagnostic = [...state.diagnostics].reverse().find(d => d.track === track);
+  const latestDiagnostic = [...state.diagnostics].reverse().find(d => d.track === track && d.schoolGrade === schoolGrade);
   const gaps = new Set(latestDiagnostic?.gaps || []);
   const foundationStrengths = new Set((latestDiagnostic?.strengths || []).filter(id => byId.get(id)?.track === "base" && !state.errors.some(e => e.topicId === id && !e.resolved && e.at > (latestDiagnostic?.at || ""))));
   const ready = (id: string) => Boolean(state.progress[id]?.mastered || confirmationCount(state.progress[id]) >= 3 || foundationStrengths.has(id));
@@ -239,10 +243,10 @@ export function makePlan(state: LearnerState, topics: Topic[], now = new Date())
   const reachable = new Set<string>();
   function include(topic: Topic) { if (reachable.has(topic.id)) return; reachable.add(topic.id); for (const id of topic.prerequisites || []) { const p = byId.get(id); if (p) include(p); } }
   selected.forEach(include);
-  const date = state.profile?.examDate;
+  const date = schoolGrade ? undefined : state.profile?.examDate;
   const daysLeft = date ? Math.ceil((Date.parse(`${date}T00:00:00Z`) - Date.parse(`${dayKey(now)}T00:00:00Z`)) / 86400000) : null;
   const nearExam = daysLeft !== null && daysLeft >= 0 && daysLeft <= 21;
-  const maximum = track === "literacy" ? 10 : 50, target = state.profile?.target;
+  const maximum = track === "literacy" ? 10 : 50, target = schoolGrade ? undefined : state.profile?.target;
   const ambitiousGoal = target !== undefined && target >= maximum * 0.8;
   const context: LocalText = target === undefined ? { ru: "", kk: "" } : {
     ru: ` Цель: ${target}/${maximum}.${daysLeft === null ? "" : daysLeft >= 0 ? ` До экзамена ${daysLeft} дн.` : " Дата экзамена прошла — обновите её в настройках."}`,
@@ -338,14 +342,15 @@ export function sanitizeTask(task: Task) {
   return { id: task.id, topicId: task.topicId, prompt: task.prompt, type: task.type, difficulty: task.difficulty, level: task.difficulty, options: task.options, pairs: task.pairs?.map(p => ({ left: p.left, right: "" })), skill: task.skill, units: task.units, unit: task.units, precision: task.precision, domain: task.domain, context: task.context, modelExample: Boolean(task.modelExample), reviewReserved: Boolean(task.reviewReserved) };
 }
 
-export function diagnosticTasks(track: Track, topics: Topic[], tasks: Task[]) {
-  const relevant = topics.filter(t => t.track === track || (track === "profile" && t.track === "base"));
+export function diagnosticTasks(track: Track, topics: Topic[], tasks: Task[], schoolGrade?: string) {
+  const ids = schoolGrade ? schoolTopicIds(schoolGrade) : null;
+  const relevant = ids ? ids.map(id => topics.find(t => t.id === id)).filter((t): t is Topic => Boolean(t)) : topics.filter(t => !t.schoolOnly && (t.track === track || (track === "profile" && t.track === "base")));
   const result: Task[] = [];
   for (let i = 0; i < relevant.length && result.length < 10; i += Math.max(1, Math.floor(relevant.length / 10))) {
     const task = tasks.find(t => t.topicId === relevant[i].id && t.difficulty === 1 && t.type === "single") || tasks.find(t => t.topicId === relevant[i].id && t.difficulty === 1);
     if (task) result.push(task);
   }
-  if (track === "profile") {
+  if (track === "profile" && !schoolGrade) {
     // Explicitly sample foundations rather than relying on where they occur in the topic order.
     const foundations = ["numbers", "fractions", "negatives", "percentages"].map(id => tasks.find(t => t.topicId === id && t.difficulty === 1 && t.type === "single") || tasks.find(t => t.topicId === id && t.difficulty === 1)).filter((t): t is Task => Boolean(t));
     return [...foundations, ...result.filter(t => !foundations.some(f => f.topicId === t.topicId))].slice(0, 10);

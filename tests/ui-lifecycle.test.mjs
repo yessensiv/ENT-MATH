@@ -56,7 +56,7 @@ function harness(screen = 'exams') {
   const api = (url, body) => new Promise((resolve, reject) => requests.push({ url, body: body && structuredClone(body), resolve, reject }));
   const globals = () => ({
     ...model, ...refs, activeExam: model.state.activeExam, question: model.state.activeExam?.questions?.[model.examIndex], questions: model.state.activeExam?.questions ?? [],
-    setState: set('state'), setExamAnswerDraft: set('examAnswerDraft'), setBusy: set('busy'), setServiceError: set('serviceError'), setSaveStatus: set('saveStatus'), setScreen: set('screen'), setMenu: set('menu'), setOnboard: set('onboard'), setLang: set('lang'), setTrack: set('track'), setLoading: set('loading'), setFeedback: set('feedback'), setExamReview: set('examReview'), setExamIndex: set('examIndex'), setDiagnosticAnswers: set('diagnosticAnswers'), setDiagnosticDone: set('diagnosticDone'), setTaskIndex: set('taskIndex'), setAnswer: set('answer'), setNotice: set('notice'),
+    setSchoolGrade: set('schoolGrade'), setLessonOrigin: set('lessonOrigin'), setState: set('state'), setExamAnswerDraft: set('examAnswerDraft'), setBusy: set('busy'), setServiceError: set('serviceError'), setSaveStatus: set('saveStatus'), setScreen: set('screen'), setMenu: set('menu'), setOnboard: set('onboard'), setLang: set('lang'), setTrack: set('track'), setLoading: set('loading'), setFeedback: set('feedback'), setExamReview: set('examReview'), setExamIndex: set('examIndex'), setDiagnosticAnswers: set('diagnosticAnswers'), setDiagnosticDone: set('diagnosticDone'), setTaskIndex: set('taskIndex'), setAnswer: set('answer'), setNotice: set('notice'),
     api, RequestError, Date: ClockDate, tr: ru => ru,
     location: { hash: `#${model.screen}` }, window: { scrollTo() {} },
     setTimeout: (callback, delay) => { const id = ++timerId; timers.set(id, { callback, due: now + delay }); return id; },
@@ -260,3 +260,19 @@ for (const screen of ['practice', 'diagnostic']) {
     assert.equal(h.refs.draftStamp.current.at, nextTask.updatedAt);
   });
 }
+import React from 'react';
+import { renderToStaticMarkup } from 'react-dom/server';
+test('school registration offers every grade without demanding ENT date or score',()=>{
+ let onboarding;
+ walk(ast,node=>{if(ts.isJsxElement(node)&&node.openingElement.tagName.getText(ast)==='form'&&node.getText(ast).includes("action: 'onboard'"))onboarding=node;});
+ assert.ok(onboarding);
+ const context=createContext({exports:{},React,ArrowRight:()=>React.createElement("svg")});
+ const code=ts.transpileModule(`exports.renderForm=(form,tr,busy,lang,tracks,setForm)=>(${onboarding.getText(ast)});`,{fileName:"school-form.tsx",compilerOptions:{target:ts.ScriptTarget.ES2022,module:ts.ModuleKind.CommonJS,jsx:ts.JsxEmit.React}}).outputText;
+ runInContext(code,context);
+ const props={name:'Test',grade:'5',learningMode:'school',track:'base',examDate:'2027-06-01',target:40,dailyMinutes:20};
+ const render=mode=>renderToStaticMarkup(context.exports.renderForm({...props,learningMode:mode},ru=>ru,false,'ru',{base:{ru:'Base',kk:'Base'}},()=>{}));
+ const school=render('school'),ent=render('ent');
+ assert.equal(school.includes('type="date"'),false);assert.equal(school.includes('type="number"'),false);
+ assert.ok(ent.includes('type="date"'));assert.ok(ent.includes('type="number"'));
+ for(const g of ['5','6','7','8','9','10','11'])assert.ok(school.includes(`value="${g}"`));
+});

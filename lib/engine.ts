@@ -1,7 +1,7 @@
 // @ts-expect-error Native Node tests need explicit extensions.
 import { schoolTopicIds } from "./school-curriculum.ts";
 // @ts-expect-error Native Node tests need explicit extensions.
-import { proveRationalIdentity, type Verdict } from './algebra-proof.ts';
+import { proveRationalIdentity, proveLinearEquationStep, type Verdict } from './algebra-proof.ts';
 // @ts-expect-error Native Node tests.
 import{checkStructuredAnswer,type AnswerFormat}from'./structured-answer.ts';
 // @ts-expect-error Native Node tests.
@@ -252,8 +252,20 @@ export function answerFitsTask(task: Task, answer: Answer, exam = false) {
 
 export function classifyError(steps: string): { category: string; explanation: LocalText } {
   if (!steps.trim()) return { category: "unknown", explanation: { ru: "По одному ответу нельзя определить причину. Запиши ход решения: найдём первый переход, который нужно исправить.", kk: "Тек жауаппен қатенің себебін анықтай алмаймыз. Шешу жолын жаз: түзететін алғашқы қадамды табамыз." } };
-  if (/2\s*[xх]\s*[=]\s*14/.test(steps) && /2\s*[xх]\s*\+\s*3\s*=\s*11/.test(steps)) return { category: "sign", explanation: { ru: "В переходе к 2x = 14 знак изменён неверно. Чтобы убрать +3, вычти 3 из обеих частей: 2x + 3 − 3 = 11 − 3. Получается 2x = 8. Теперь раздели обе части на 2.", kk: "2x = 14 қадамында таңба қате. +3-ті жою үшін екі жақтан да 3-ті азайт: 2x + 3 − 3 = 11 − 3. Сонда 2x = 8. Енді екі жағын 2-ге бөл." } };
+  const signError = { category: "sign", explanation: { ru: "В переходе к 2x = 14 знак изменён неверно. Чтобы убрать +3, вычти 3 из обеих частей: 2x + 3 − 3 = 11 − 3. Получается 2x = 8. Теперь раздели обе части на 2.", kk: "2x = 14 қадамында таңба қате. +3-ті жою үшін екі жақтан да 3-ті азайт: 2x + 3 − 3 = 11 − 3. Сонда 2x = 8. Енді екі жағын 2-ге бөл." } };
+  let previousEquation:string|undefined;
   for (const line of steps.split(/\n|→|=>/)) {
+    const equation=line.trim();
+    if(/[xх]/i.test(equation)&&equation.split('=').length===2){
+      if(previousEquation&&proveLinearEquationStep(previousEquation,equation)==='incorrect'){
+        const normalized=(s:string)=>s.replace(/\s/g,'').replace(/х/g,'x');
+        if(normalized(previousEquation)==='2x+3=11'&&normalized(equation)==='2x=14')return signError;
+        return{category:'method',explanation:{ru:`Переход «${previousEquation} → ${equation}» изменил решения уравнения. К обеим частям нужно применять одно и то же допустимое действие. Вернись к предыдущей строке: что ты сделал слева и справа? Делить можно только на ненулевое число.`,kk:`«${previousEquation} → ${equation}» ауысуы теңдеудің шешімдерін өзгертті. Екі жаққа да бірдей рұқсат етілген амал қолдану керек. Алдыңғы жолға орал: сол және оң жақта не істедің? Тек нөл емес санға бөлуге болады.`}};
+      }
+      previousEquation=proveLinearEquationStep(equation,equation)==='correct'?equation:undefined;
+      continue;
+    }
+    if(/[a-zа-яәғқңөұүһі]/i.test(line))previousEquation=undefined;
     const pieces = line.trim().split("=");
     if (pieces.length !== 2 || /[a-zа-я]/i.test(line)) continue;
     try {

@@ -46,6 +46,20 @@ export function exactRationalNumber(source:string):{n:bigint;d:bigint}{
  if(value.n.length!==1||value.d.length!==1||value.excluded.length!==1)throw Error('unsupported number');
  return div(value.n[0],value.d[0]);
 }
+/** Exact solution sets for affine equations with constant, nonzero denominators.
+ * Variable denominators and nonlinear equations deliberately require review. */
+export function proveLinearEquationStep(before:string,after:string):Verdict{
+ const solve=(line:string):{kind:'all'|'none'|'one';root?:Q}=>{
+  const sides=line.split('=');if(sides.length!==2||!/[xх]/i.test(line))throw Error('not a linear equation');
+  const a=parse(sides[0]),b=parse(sides[1]);
+  if(a.d.length!==1||b.d.length!==1||a.excluded.length!==1||b.excluded.length!==1)throw Error('domain requires review');
+  const difference=sum(product(a.n,b.d),product(b.n,a.d),true);
+  if(difference.length>2)throw Error('nonlinear');
+  if(difference.length===1)return{kind:difference[0].n?'none':'all'};
+  return{kind:'one',root:div(neg(difference[0]),difference[1])};
+ };
+ try{const a=solve(before),b=solve(after);if(a.kind!==b.kind)return'incorrect';if(a.kind!=='one')return'correct';return a.root!.n===b.root!.n&&a.root!.d===b.root!.d?'correct':'incorrect';}catch{return'review';}
+}
 export function proveRationalIdentity(a:string,b:string,domain?:string):Verdict {
  try {
   const x=parse(a),y=parse(b);let domainExcluded:P=[one];

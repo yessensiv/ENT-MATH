@@ -1,4 +1,4 @@
-export const TUTOR_PROMPT_VERSION='ent-tutor-2026-10-06.2';
+export const TUTOR_PROMPT_VERSION='ent-tutor-2026-10-06.3';
 export type TutorGeneration={id:string;fingerprint:string;context:string;startedAt:string;status:'pending'|'completed';result?:Record<string,unknown>;model?:string;promptVersion:string;inputTokens?:number;outputTokens?:number;latencyMs?:number;selection?:{kind:string;index?:number;stepIndex?:number};materialVersion?:string};
 export type TutorMessage={id:string;generationId:string;context:string;role:'user'|'assistant';content:string;at:string};
 export type TutorHistoryState={tutorGenerations?:Record<string,TutorGeneration>;tutorMessages?:TutorMessage[]};

@@ -1,3 +1,5 @@
+// @ts-expect-error Native Node tests.
+import{evidenceAnalytics}from'./evidence-analytics.ts';
 // Aggregates are computed from complete history before the browser receives a page.
 // @ts-expect-error Native Node regression tests require explicit extensions.
 import{dayKey,weekStart,type LearnerState}from'./engine.ts';
@@ -10,5 +12,5 @@ export function historySummary(state:LearnerState,now=new Date()){
   if(Number.isFinite(Date.parse(a.at))&&dayKey(new Date(a.at))>=week&&Date.parse(a.at)<=now.getTime()){weekly.attempts++;if(a.correct&&!a.assisted)weekly.independentCorrect++;}
   const recent=recentByTopic[a.topicId]||[];recent.push(a.correct);recentByTopic[a.topicId]=recent.slice(-3);
  }
- return{version:1,tracks,weekly,needsRest:Object.fromEntries(Object.entries(recentByTopic).map(([id,list])=>[id,list.length===3&&list.every(v=>!v)])),returnedToChallenge:returnedToChallenge(state.attempts)};
+ return{version:2,evidence:evidenceAnalytics(state,now),tracks,weekly,needsRest:Object.fromEntries(Object.entries(recentByTopic).map(([id,list])=>[id,list.length===3&&list.every(v=>!v)])),returnedToChallenge:returnedToChallenge(state.attempts)};
 }

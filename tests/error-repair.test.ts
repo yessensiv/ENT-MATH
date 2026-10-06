@@ -3,7 +3,8 @@ import{test}from'node:test';import assert from'node:assert/strict';
 import{recordAttempt,emptyState,makePlan,type Task}from'../lib/engine.ts';
 test('ERR-01: simple successes never close an unrelated complex mistake',()=>{
  const state=emptyState(),topic={id:'fractions',track:'base' as const,title:{ru:'Дроби',kk:'Бөлшектер'}};
- const task=(id:string,difficulty:number):Task=>({id,topicId:topic.id,type:'number',difficulty,answer:'1',prompt:topic.title,hints:{ru:[],kk:[]},solution:{ru:[],kk:[]}});
+ const condition=(id:string)=>{const n=id.charCodeAt(0);return{ru:`${n}/${n}`,kk:`${n}/${n}`};};
+ const task=(id:string,difficulty:number):Task=>({id,topicId:topic.id,type:'number',difficulty,answer:'1',prompt:condition(id),hints:{ru:[],kk:[]},solution:{ru:[],kk:[]}});
  const hard=task('hard',3),easy=[task('a',1),task('b',1),task('c',1)];recordAttempt(state,hard,topic,{answer:'0'},[hard,...easy]);
  for(const t of easy)recordAttempt(state,t,topic,{answer:'1'},[hard,...easy]);assert.equal(state.errors[0].resolved,false);
 });
@@ -18,7 +19,8 @@ test('MAST-02: one mistake keeps previous mastery evidence and schedules a focus
 test('MAST-02: unrelated review cannot clear recovery; an assigned exact repair preserves the one-time mastery reward',()=>{
  const state=emptyState(),topic={id:'linear',track:'profile' as const,title:{ru:'Уравнения',kk:'Теңдеулер'}};
  state.progress.linear={attempts:8,correct:8,independent:4,independentTaskIds:['a','b','c','d'],confirmationTaskIds:['a','b','c','d'],mastered:true,reviewPassed:true,masteryRewarded:true};
- const task=(id:string):Task=>({id,topicId:'linear',prompt:topic.title,type:'number',difficulty:2,answer:'4',hints:{ru:[],kk:[]},solution:{ru:[],kk:[]}}),bad=task('bad'),repair={...task('repair'),repairsTaskIds:['bad']},unrelated=task('unrelated'),now=new Date('2026-10-06T09:00:00Z');
+ const condition=(id:string)=>{const n=id.charCodeAt(0);return{ru:`x+${n}=${n+4}`,kk:`x+${n}=${n+4}`};};
+ const task=(id:string):Task=>({id,topicId:'linear',prompt:condition(id),type:'number',difficulty:2,answer:'4',hints:{ru:[],kk:[]},solution:{ru:[],kk:[]}}),bad=task('bad'),repair={...task('repair'),repairsTaskIds:['bad']},unrelated=task('unrelated'),now=new Date('2026-10-06T09:00:00Z');
  recordAttempt(state,bad,topic,{answer:'0'},[bad,repair,unrelated],now);state.errors[0].exerciseIds=['repair'];
  recordAttempt(state,unrelated,topic,{answer:'4',reviewId:state.reviews[0].id},[bad,repair,unrelated],new Date('2026-10-07T10:00:00Z'));assert.equal(state.progress.linear.needsRecovery,true);assert.equal(state.errors[0].resolved,false);
  recordAttempt(state,repair,topic,{answer:'4'},[bad,repair,unrelated],new Date('2026-10-07T11:00:00Z'));assert.equal(state.progress.linear.needsRecovery,false);assert.equal(state.errors[0].resolved,true);assert.equal(state.progress.linear.mastered,true);assert.equal(state.xp,25);assert.equal(state.progress.linear.masteryRewarded,true);

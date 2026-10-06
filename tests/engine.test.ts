@@ -7,8 +7,10 @@ const topics: Topic[] = [
   { id: "fractions", title: { ru: "Дроби", kk: "Бөлшектер" }, track: "base", prerequisites: [] },
   { id: "equations", title: { ru: "Уравнения", kk: "Теңдеулер" }, track: "profile", prerequisites: ["fractions"] },
 ];
+const taskNumbers=new Map<string,number>();
 function task(id = "one", answer: string | string[] = "4", type: Task["type"] = "number"): Task {
-  return { id, answer, type, topicId: "equations", difficulty: 1, prompt: { ru: "2x+3=11", kk: "2x+3=11" }, hints: { ru: ["Вычти 3"], kk: ["3-ті азайт"] }, solution: { ru: ["x=4"], kk: ["x=4"] } };
+  const n=taskNumbers.get(id)??taskNumbers.size+3;taskNumbers.set(id,n);
+  return { id, answer, type, topicId: "equations", difficulty: 1, prompt: { ru: `2x+${n}=${8+n}`, kk: `2x+${n}=${8+n}` }, hints: { ru: ["Вычти 3"], kk: ["3-ті азайт"] }, solution: { ru: ["x=4"], kk: ["x=4"] } };
 }
 
 test("safe parser handles fractions, implicit multiplication, power precedence and rejects executable code", () => {

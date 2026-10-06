@@ -4,7 +4,9 @@ import assert from "node:assert/strict";
 import { calculate, equivalent, emptyState, recordAttempt, makePlan, finishExam, expireExam, scoreExamTask, answerFitsTask, EXAM_RULES, type Task, type Topic } from "../lib/engine.ts";
 
 const topic: Topic = { id: "linear", title: { ru: "Уравнения", kk: "Теңдеулер" }, track: "profile",masteryRubric:{reviewed:true,minimumIndependent:4} };
-const task = (id: string): Task => ({ id, topicId: "linear", type: "number", difficulty: 2,methodFamily:id.includes('1')||id.includes('one')?'model':'transformation',answer: "4", prompt: { ru: "2x+3=11", kk: "2x+3=11" }, hints: { ru: ["Вычти 3"], kk: ["3-ті азайт"] }, solution: { ru: ["x=4"], kk: ["x=4"] } });
+const taskNumbers=new Map<string,number>();
+const condition=(id:string)=>{const n=taskNumbers.get(id)??taskNumbers.size+3;taskNumbers.set(id,n);return {ru:`2x+${n}=${8+n}`,kk:`2x+${n}=${8+n}`};};
+const task = (id: string): Task => ({ id, topicId: "linear", type: "number", difficulty: 2,methodFamily:id.includes('1')||id.includes('one')?'model':'transformation',answer: "4", prompt: condition(id), hints: { ru: ["Вычти 3"], kk: ["3-ті азайт"] }, solution: { ru: ["x=4"], kk: ["x=4"] } });
 const start = new Date("2026-10-05T08:00:00Z");
 function mastered() {
   const state = emptyState(); for (let i = 0; i < 4; i++) recordAttempt(state, task(`p${i}`), topic, { answer: "4" }, [], start);
@@ -41,7 +43,7 @@ test("constant undefined expressions and tangent poles are rejected", () => {
 test("deadline is closed at the exact boundary and repeated completion is idempotent", () => {
   const state = emptyState(); state.activeExam = { id: "deadline", track: "profile", variant: 1, startedAt: start.toISOString(), durationMinutes: 80, questions: [task("deadline-task")], answers: {}, flagged: [], rules: EXAM_RULES };
   assert.equal(expireExam(state, new Date(start.getTime() + 80 * 60000 - 1)), null);
-  const result = expireExam(state, new Date(start.getTime() + 80 * 60000)); assert.ok(result); assert.equal(result.id, "deadline"); assert.equal(result.finishReason, "time"); assert.equal(result.score, 0); assert.equal(result.results?.[0].prompt?.ru, "2x+3=11");
+  const result = expireExam(state, new Date(start.getTime() + 80 * 60000)); assert.ok(result); assert.equal(result.id, "deadline"); assert.equal(result.finishReason, "time"); assert.equal(result.score, 0); assert.deepEqual(result.results?.[0].prompt, task("deadline-task").prompt);
   finishExam(result, state, new Date(start.getTime() + 81 * 60000)); assert.equal(state.exams.length, 1); assert.equal(state.errors.length, 1); assert.equal(state.activeExam, null);
 });
 test("official exam choices reject unknown values, duplicate selections and excess matching rows", () => {

@@ -6,7 +6,7 @@ import{beginClarification}from'../lib/diagnostic-clarification.ts';
 // @ts-expect-error Native Node tests.
 import{beginDiagnostic}from'../lib/diagnostic-session.ts';
 // @ts-expect-error Native Node tests.
-import{emptyState,taskFingerprint,reservedReviewIds,type Task}from'../lib/engine.ts';
+import{emptyState,makePlan,taskFingerprint,reservedReviewIds,type Task}from'../lib/engine.ts';
 // @ts-expect-error Native Node tests.
 import{topics,tasks,generateReviewTask,validateGeneratedTask,reviewCapacity}from'../lib/content.ts';
 const bank=tasks.map(t=>({...t,difficulty:t.level,reviewReserved:reservedReviewIds(topics.find(p=>p.id===t.topicId) as never).includes(t.id)})) as Task[];
@@ -43,4 +43,12 @@ test('DIAG: unfamiliar skill and exhausted generator leave state unchanged',()=>
 test('DIAG: every catalogued method can receive 3–5 mathematically checked fresh conditions',()=>{
  const ids=[...new Set(bank.map(t=>t.repairSkillId).filter((id):id is string=>typeof id==='string'))];assert.equal(ids.length,30);
  for(const id of ids){const s=learner(),t=bank.find(t=>t.repairSkillId===id)!;s.diagnostics[0].evidence=diagnosticEvidence([t],new Map()).evidence;s.diagnostics[0].taskIds=[t.id];const q=beginClarification(s,'profile',id,topics as never,bank,generator as never);assert.ok(q.length>=3&&q.length<=5,id);assert.equal(diagnosticEvidence(q,new Map(q.map(t=>[t.id,t.answer]))).score,q.length,id);}
+});
+
+test('PLAN: successful clarification removes its stale diagnostic gap without claiming mastery',()=>{
+ const s=learner();s.profile!.track='base';s.diagnostics[0].track='base';const t=bank.find(t=>t.repairSkillId==='numbers:method-1')!;
+ s.diagnostics[0].evidence=diagnosticEvidence([t],new Map([[t.id,'987654']])).evidence;s.diagnostics[0].gaps=['numbers'];s.progress.numbers={attempts:1,correct:0,independent:0,mastered:false,independentTaskIds:[]};
+ assert.equal(makePlan(s,topics as never).find(p=>p.topicId==='numbers')?.type,'repair');
+ s.diagnostics.push({id:'clarify',track:'base',at:new Date().toISOString(),score:5,total:5,strengths:['numbers'],gaps:[],clarificationSkillId:'numbers:method-1',evidence:[{topicId:'numbers',skillId:'numbers:method-1',correct:5,incorrect:0,unknown:0,total:5,status:'supported'}]});
+ const plan=makePlan(s,topics as never);assert.equal(plan.find(p=>p.topicId==='numbers')?.type,'lesson');assert.equal(s.progress.numbers.mastered,false);
 });

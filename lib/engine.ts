@@ -285,7 +285,11 @@ export function makePlan(state: LearnerState, topics: Topic[], now = new Date())
   const byId = new Map(topics.map(t => [t.id, t]));
   const latestDiagnostic = [...state.diagnostics].reverse().find(d => !d.clarificationSkillId && d.track === track && d.schoolGrade === schoolGrade && (!schoolGrade || Number(schoolGrade)<10 || (d.schoolPathway??'natural-math')===(state.profile?.schoolPathway??'natural-math')));
   const skillEvidence=currentDiagnosticEvidence(state);
-  const gaps = new Set([...(latestDiagnostic?.gaps || []),...skillEvidence.filter(e=>e.incorrect>0).map(e=>e.topicId)]);
+  const previousGaps=(latestDiagnostic?.gaps||[]).filter(id=>{
+    const original=latestDiagnostic?.evidence?.filter(e=>e.topicId===id&&e.incorrect>0);
+    return !original?.length||original.some(e=>!e.skillId||!skillEvidence.some(latest=>latest.skillId===e.skillId&&latest.status==='supported'));
+  });
+  const gaps = new Set([...previousGaps,...skillEvidence.filter(e=>e.incorrect>0).map(e=>e.topicId)]);
   const foundationStrengths = new Set((latestDiagnostic?.strengths || []).filter(id => (latestDiagnostic?.strengths.filter(s=>s===id).length||0)>=2&&!latestDiagnostic?.gaps.includes(id)&&byId.get(id)?.track === "base" && !state.errors.some(e => e.topicId === id && !e.resolved && e.at > (latestDiagnostic?.at || ""))));
   const ready = (id: string) => Boolean(state.progress[id]?.mastered || confirmationCount(state.progress[id]) >= 3 || foundationStrengths.has(id));
   const futureReview = (id: string) => state.reviews.some(r => r.topicId === id && !r.completed && Date.parse(r.due) > now.getTime());
@@ -320,7 +324,11 @@ export function makePlan(state: LearnerState, topics: Topic[], now = new Date())
     ru:'Прежнее подтверждение темы сохранено. Проверим затруднение в новой задаче; одна ошибка не отменяет уже освоенные методы.',
     kk:'Тақырыптың бұрынғы расталуы сақталды. Қиындықты жаңа тапсырмада тексереміз; бір қате меңгерілген әдістерді жоққа шығармайды.',
   });
-  const weak = selected.filter(t => (state.progress[t.id]?.attempts || 0) > (state.progress[t.id]?.correct || 0) || gaps.has(t.id));
+  const weak = selected.filter(t => {
+    const recent=state.attempts.filter(a=>a.topicId===t.id).slice(-3);
+    const hasDiagnostic=Boolean(latestDiagnostic?.taskIds?.length&&[...(latestDiagnostic.strengths||[]),...(latestDiagnostic.gaps||[]),...(latestDiagnostic.evidence||[]).map(e=>e.topicId)].includes(t.id))||skillEvidence.some(e=>e.topicId===t.id);
+    return gaps.has(t.id)||state.errors.some(e=>e.topicId===t.id&&!e.resolved)||recent.some(a=>!a.correct)||(!hasDiagnostic&&!recent.length&&(state.progress[t.id]?.attempts||0)>(state.progress[t.id]?.correct||0));
+  });
   if (nearExam) weak.sort((a, b) => {
     const severity = (t: Topic) => { const p = state.progress[t.id]; return p?.attempts ? (p.attempts - p.correct) / p.attempts : gaps.has(t.id) ? 1 : 0; };
     return severity(b) - severity(a);

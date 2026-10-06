@@ -10,16 +10,16 @@ function mastered() {
   const state = emptyState(); for (let i = 0; i < 4; i++) recordAttempt(state, task(`p${i}`), topic, { answer: "4" }, [], start);
   recordAttempt(state, task("r1"), topic, { answer: "4", reviewId: state.reviews[0].id }, [], new Date("2026-10-06T09:00:00Z")); return state;
 }
-test("a new wrong answer reopens an already mastered skill and keeps repair in the route", () => {
+test("a new wrong answer flags recovery while keeping prior mastery and a repair in the route", () => {
   const state = mastered(); recordAttempt(state, task("mistake"), topic, { answer: "7" }, [], new Date("2026-10-06T10:00:00Z"));
-  assert.equal(state.progress.linear.mastered, false); assert.equal(state.progress.linear.reviewPassed, false); assert.equal(makePlan(state, [topic], new Date("2026-10-06T10:01:00Z"))[0].type, "repair");
+  assert.equal(state.progress.linear.mastered, true); assert.equal(state.progress.linear.needsRecovery, true); assert.equal(state.progress.linear.reviewPassed, true); assert.equal(makePlan(state, [topic], new Date("2026-10-06T10:01:00Z"))[0].type, "repair");
 });
-test("regaining mastery cannot farm the original mastery award", () => {
+test("recovery cannot farm the original mastery award and unrelated checks do not clear it", () => {
   const state = mastered(); const before = state.xp;
   recordAttempt(state, task("mistake"), topic, { answer: "7", reviewId: state.reviews[1].id }, [], new Date("2026-10-09T10:00:00Z"));
   const next = new Date("2026-10-10T11:00:00Z"); for (let i = 0; i < 4; i++) recordAttempt(state, task(`again-${i}`), topic, { answer: "4" }, [], next);
-  assert.equal(state.progress.linear.mastered, false); recordAttempt(state, task("again-delayed"), topic, { answer: "4", reviewId: state.reviews[1].id }, [], new Date("2026-10-11T12:00:00Z"));
-  assert.equal(state.progress.linear.mastered, true); assert.equal(state.xp - before, 50,'five new successes; the original mastery award is not paid again');
+  assert.equal(state.progress.linear.mastered, true); assert.equal(state.progress.linear.needsRecovery, true); recordAttempt(state, task("again-delayed"), topic, { answer: "4", reviewId: state.reviews[1].id }, [], new Date("2026-10-11T12:00:00Z"));
+  assert.equal(state.progress.linear.mastered, true); assert.equal(state.progress.linear.needsRecovery, true); assert.equal(state.xp - before, 50,'five new successes; the original mastery award is not paid again');
 });
 test("a revealed exam answer cannot later count as fresh independent practice", () => {
   const state = emptyState(), t = task("exam-seen"), exam = { id: "e", track: "profile" as const, variant: 1, startedAt: start.toISOString(), durationMinutes: 80, questions: [t], answers: { "0": "4" }, flagged: [], rules: EXAM_RULES };

@@ -17,7 +17,7 @@ export type Task = {
 };
 export type Topic = { id: string; title: LocalText; track: Track; prerequisites?: string[]; minutes?: number; [key: string]: unknown };
 export type Profile = { name: string; grade: string; learningMode?: "school" | "ent"; schoolPathway?:'natural-math'|'humanitarian'; track: Track; examDate: string; target: number; targets?: Partial<Record<Track, number>>; dailyMinutes: number; language: Language };
-export type Progress = { attempts: number; correct: number; independent: number; mastered: boolean; reviewPassed?: boolean; independentTaskIds: string[]; confirmationTaskIds?: string[]; masteryRewarded?: boolean; lastAt?: string; masteryVersion?:string; masteryReadyAt?:string; masteryPending?:boolean; evidence?:Record<string,{difficulty:number;methodFamily:string|null}> };
+export type Progress = { attempts: number; correct: number; independent: number; mastered: boolean; reviewPassed?: boolean; independentTaskIds: string[]; confirmationTaskIds?: string[]; masteryRewarded?: boolean; lastAt?: string; masteryVersion?:string; masteryReadyAt?:string; masteryPending?:boolean;needsRecovery?:boolean;recoveryTaskIds?:string[]; evidence?:Record<string,{difficulty:number;methodFamily:string|null}> };
 export type Attempt = { id: string; taskId: string; topicId: string; track: Track; answer: Answer; steps: string; correct: boolean; assisted: boolean; at: string; category: string;taskVersion?:string;checkingVersion?:string;taskSnapshot?:Pick<Task,'prompt'|'answer'|'solution'|'domain'|'type'|'units'|'precision'|'difficulty'> };
 export type Review = { id: string; topicId: string; due: string; interval: number; completed: boolean; taskId?: string };
 export type ErrorEntry = { id: string; taskId: string; topicId: string; answer: Answer; steps: string; category: string; explanation: LocalText; at: string; resolved: boolean; exerciseIds: string[]; prompt?: LocalText; solution?: Task["solution"]; hints?: Task["hints"]; correctAnswer?: Answer };
@@ -296,6 +296,10 @@ export function makePlan(state: LearnerState, topics: Topic[], now = new Date())
     if (trail.has(topic.id)) return; trail.add(topic.id);
     for (const id of topic.prerequisites || []) { const p = byId.get(id); if (p && !ready(id)) { prerequisite(p, new Set(trail)); add(p, "repair", { ru: `Этот навык нужен перед темой «${topic.title.ru}».`, kk: `Бұл дағды «${topic.title.kk}» тақырыбына қажет.` }); } }
   }
+  for(const topic of topics.filter(t=>reachable.has(t.id)&&state.progress[t.id]?.needsRecovery))add(topic,'repair',{
+    ru:'Прежнее подтверждение темы сохранено. Проверим затруднение в новой задаче; одна ошибка не отменяет уже освоенные методы.',
+    kk:'Тақырыптың бұрынғы расталуы сақталды. Қиындықты жаңа тапсырмада тексереміз; бір қате меңгерілген әдістерді жоққа шығармайды.',
+  });
   const weak = selected.filter(t => (state.progress[t.id]?.attempts || 0) > (state.progress[t.id]?.correct || 0) || gaps.has(t.id));
   if (nearExam) weak.sort((a, b) => {
     const severity = (t: Topic) => { const p = state.progress[t.id]; return p?.attempts ? (p.attempts - p.correct) / p.attempts : gaps.has(t.id) ? 1 : 0; };
@@ -345,13 +349,14 @@ export function recordAttempt(state: LearnerState, task: Task, topic: Topic, inp
   const day = dayKey(now);
   if (!state.streakDays.includes(day)) state.streakDays.push(day);
   if (!correct) {
-    scheduleErrorReview(state, task.topicId, now);
+    scheduleErrorReview(state, task, now);
     state.errors.push({ id: attempt.id, taskId: task.id, topicId: task.topicId, answer: input.answer, steps: input.steps || "", category: mistake.category, explanation: mistake.explanation, at, resolved: false, exerciseIds: tasks.filter(t => t.topicId === task.topicId && t.id !== task.id).slice(0, 3).map(t => t.id), prompt: task.prompt, solution: task.solution, hints: task.hints, correctAnswer: task.answer });
   } else if (!assisted && confirmationCount(p) >= 3) {
     // An unrelated success in the same broad topic cannot prove that this
     // particular mistake is repaired. Assignments must explicitly target it.
     const corrected = state.errors.filter(e => e.topicId === task.topicId && !e.resolved && e.taskId !== task.id && e.exerciseIds.includes(task.id) && Array.isArray(task.repairsTaskIds) && task.repairsTaskIds.includes(e.taskId));
     for (const error of corrected) error.resolved = true;
+    if(corrected.length&&p.needsRecovery){p.recoveryTaskIds=(p.recoveryTaskIds||[]).filter(id=>state.errors.some(e=>e.taskId===id&&!e.resolved));p.needsRecovery=p.recoveryTaskIds.length>0;}
     if (corrected.length) state.xp += 5;
   }
   if (input.reviewId) {
@@ -377,8 +382,10 @@ export function recordAttempt(state: LearnerState, task: Task, topic: Topic, inp
   return saveReceipt({ correct, status:checked.status, solution: task.solution, hints: task.hints, errorCategory: mistake.category, explanation: mistake.explanation, answer: task.answer, independentEligible: !assisted, verification: checked.verification });
 }
 
-function scheduleErrorReview(state: LearnerState, topicId: string, now: Date) {
-  const p = state.progress[topicId]; if (p) { p.masteryRewarded ||= p.mastered; p.mastered = false; p.reviewPassed = false; p.confirmationTaskIds = [];delete p.masteryReadyAt; }
+function scheduleErrorReview(state: LearnerState, task:Task, now: Date) {
+  const topicId=task.topicId,p = state.progress[topicId];
+  if(p){p.masteryRewarded ||= p.mastered;if(p.mastered){p.needsRecovery=true;p.recoveryTaskIds=[...new Set([...(p.recoveryTaskIds||[]),task.id])];}
+   else{p.reviewPassed=false;p.confirmationTaskIds=[];delete p.masteryReadyAt;}}
   const scheduled = state.reviews.find(r => r.topicId === topicId && !r.completed), due = new Date(now.getTime() + 86400000).toISOString();
   if (scheduled) { scheduled.due = due; scheduled.interval = 1; }
   else state.reviews.push({ id: crypto.randomUUID(), topicId, due, interval: 1, completed: false });
@@ -518,7 +525,7 @@ export function finishExam(exam: Exam, state: LearnerState, now = new Date()) {
     const correct = grade(task, answer);
     const p = state.progress[task.topicId] ||= { attempts: 0, correct: 0, independent: 0, mastered: false, independentTaskIds: [] };
     p.attempts++; p.correct += Number(correct);
-    if (!correct) { scheduleErrorReview(state, task.topicId, now); state.errors.push({ id: crypto.randomUUID(), taskId: task.id, topicId: task.topicId, answer, steps: "", category: "unknown", explanation: classifyError("").explanation, at: now.toISOString(), resolved: false, exerciseIds: [], prompt: task.prompt, solution: task.solution, hints: task.hints, correctAnswer: task.answer }); }
+    if (!correct) { scheduleErrorReview(state, task, now); state.errors.push({ id: crypto.randomUUID(), taskId: task.id, topicId: task.topicId, answer, steps: "", category: "unknown", explanation: classifyError("").explanation, at: now.toISOString(), resolved: false, exerciseIds: [], prompt: task.prompt, solution: task.solution, hints: task.hints, correctAnswer: task.answer }); }
     return { taskId: task.id, topicId: task.topicId, answer, correct, points, max, prompt: task.prompt, context: task.context, solution: task.solution, correctAnswer: task.answer };
   });
   state.exams.push(exam); state.activeExam = null;

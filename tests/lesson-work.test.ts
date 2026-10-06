@@ -6,4 +6,5 @@ test('LESS-04: independent lessons and newer device work survive old beacons',()
  assert.equal(saveLessonWork(work,'linear',a),true);assert.equal(saveLessonWork(work,'linear',{...a,answer:'lost',updatedAt:99}),false);
  saveLessonWork(work,'fractions',{...a,answer:'1/2',updatedAt:101});assert.equal(work['linear'].answer,'4');assert.equal(work['fractions'].answer,'1/2');
  assert.throws(()=>validateLessonWork({...a,steps:'x'.repeat(4001)}));assert.throws(()=>validateLessonWork({...a,stage:10}));
+ const hints=validateLessonWork({...a,guidedHints:2,guidedReveal:true,checkpoint:false});assert.equal(hints.guidedHints,2);assert.equal(hints.guidedReveal,true);assert.throws(()=>validateLessonWork({...a,guidedHints:-1}));
 });

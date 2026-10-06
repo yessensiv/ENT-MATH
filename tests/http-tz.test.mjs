@@ -20,9 +20,9 @@ test('TZ: idempotent submissions, concurrent devices, review state and lesson re
   const after=(await call()).data;for(const key of ['attempts','errors','progress','reviews','xp'])assert.deepEqual(after[key],before[key]);
  });
  await t.test('lesson work restores on another session; older beacon cannot erase it',async()=>{
-  const body={action:'save-lesson',topicId:'linear',stage:2,exampleIndex:1,simple:true,answer:'4',steps:'2x=8',updatedAt:Date.now()};
+  const body={action:'save-lesson',topicId:'linear',stage:2,exampleIndex:1,simple:true,answer:'4',steps:'2x=8',reading:{positions:{'2':{anchor:'guidance',offset:0.5}},openDetails:['detail-3']},updatedAt:Date.now()};
   assert.equal((await call(body)).status,200);assert.equal((await call({...body,answer:'old',updatedAt:body.updatedAt-1})).data.staleSnapshot,true);
-  const state=(await call()).data;assert.deepEqual(state.lessonWork.linear,{stage:2,exampleIndex:1,simple:true,answer:'4',steps:'2x=8',updatedAt:body.updatedAt});
+  const state=(await call()).data;assert.deepEqual(state.lessonWork.linear,{stage:2,exampleIndex:1,simple:true,answer:'4',steps:'2x=8',reading:body.reading,updatedAt:body.updatedAt});
  });
  await t.test('tutor history is saved once and restored in its own context',async()=>{
   const body={messageId:crypto.randomUUID(),topicId:'linear',message:'Объясни идею уравнения проще.',language:'ru'};

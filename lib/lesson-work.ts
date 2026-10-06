@@ -1,10 +1,12 @@
-export type LessonWork={stage:number;exampleIndex:number;simple:boolean;answer:string;steps:string;updatedAt:number;guidedHints?:number;guidedReveal?:boolean;checkpoint?:boolean};
+// @ts-expect-error Native Node tests.
+import {validateLessonReading,type LessonReading} from './lesson-position.ts';
+export type LessonWork={stage:number;exampleIndex:number;simple:boolean;answer:string;steps:string;updatedAt:number;guidedHints?:number;guidedReveal?:boolean;checkpoint?:boolean;reading?:LessonReading};
 export function validateLessonWork(input:Record<string,unknown>):LessonWork {
  const {stage,exampleIndex,simple,answer,steps,updatedAt}=input;
  if(!Number.isInteger(stage)||Number(stage)<0||Number(stage)>3||!Number.isInteger(exampleIndex)||Number(exampleIndex)<0||Number(exampleIndex)>3||typeof simple!=='boolean'||typeof answer!=='string'||answer.length>300||typeof steps!=='string'||steps.length>4000||!Number.isSafeInteger(updatedAt)||Number(updatedAt)<0)throw Error('INVALID_LESSON_WORK');
  const {guidedHints,guidedReveal,checkpoint}=input;
  if(guidedHints!==undefined&&(!Number.isInteger(guidedHints)||Number(guidedHints)<0||Number(guidedHints)>100)||guidedReveal!==undefined&&typeof guidedReveal!=='boolean'||checkpoint!==undefined&&typeof checkpoint!=='boolean')throw Error('INVALID_LESSON_WORK');
- return {stage:Number(stage),exampleIndex:Number(exampleIndex),simple,answer,steps,updatedAt:Number(updatedAt),...(guidedHints===undefined?{}:{guidedHints:Number(guidedHints)}),...(guidedReveal===undefined?{}:{guidedReveal}),...(checkpoint===undefined?{}:{checkpoint})};
+ return {stage:Number(stage),exampleIndex:Number(exampleIndex),simple,answer,steps,updatedAt:Number(updatedAt),...(guidedHints===undefined?{}:{guidedHints:Number(guidedHints)}),...(guidedReveal===undefined?{}:{guidedReveal}),...(checkpoint===undefined?{}:{checkpoint}),...(input.reading===undefined?{}:{reading:validateLessonReading(input.reading)})};
 }
 export function saveLessonWork(existing:Record<string,LessonWork>,topicId:string,draft:LessonWork){
  const prior=existing[topicId];if(prior&&prior.updatedAt>=draft.updatedAt)return false;existing[topicId]=draft;return true;

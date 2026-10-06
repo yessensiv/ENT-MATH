@@ -59,7 +59,7 @@ function harness(screen = 'exams') {
   const refs = Object.fromEntries(Object.entries({ submitLock: false, submittedTask: '', examLock: false, latestRevision: -1, requestGeneration: 0, expiredHandled: '', draftSnapshot: null, examSnapshot: null, latestUser: user, savedExamSignature: '', savedDraftSignature: '', pending: 0, routeRef: screen, clockOffset: 0, examStamp: { key: '', at: 0 }, draftStamp: { key: '', at: 0 }, optimisticFlags: null }).map(([key, value]) => [key, { current: value }]));
   refs.writeQueue = { current: createWriteQueue() };
   refs.pendingSubmission={current:null};
-  refs.lessonSnapshot={current:null};refs.restoredLesson={current:false};
+  refs.captureLesson={current:null};refs.lessonCache={current:{}};refs.savedLessonSignature={current:''};refs.lessonSnapshot={current:null};refs.restoredLesson={current:false};
   class ClockDate extends Date { static now() { return now; } }
   const set = key => value => { model[key] = typeof value === 'function' ? value(model[key]) : value; if (key === 'notice') notices.push(model[key]); };
   const api = (url, body) => new Promise((resolve, reject) => requests.push({ url, body: body && structuredClone(body), resolve, reject }));

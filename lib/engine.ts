@@ -9,6 +9,10 @@ import { proveRationalIdentity, proveLinearEquationStep, type Verdict } from './
 import{checkStructuredAnswer,type AnswerFormat}from'./structured-answer.ts';
 // @ts-expect-error Native Node tests.
 import{fitWeeklyBudget}from'./weekly-plan.ts';
+// @ts-expect-error Native Node tests.
+import {currentDiagnosticEvidence,type DiagnosticEvidence} from './diagnostic-evidence.ts';
+// @ts-expect-error Native Node tests.
+import {repairSkillTitle} from './repair-catalog.ts';
 export type Language = "ru" | "kk";
 export type Track = "base" | "profile" | "literacy";
 export type LocalText = { ru: string; kk: string };
@@ -27,7 +31,7 @@ export type Attempt = { id: string; taskId: string; topicId: string; track: Trac
 export type Review = { id: string; topicId: string; due: string; interval: number; completed: boolean; taskId?: string };
 export type ErrorEntry = { id: string; taskId: string; topicId: string; answer: Answer; steps: string; category: string; explanation: LocalText; at: string; resolved: boolean; exerciseIds: string[]; prompt?: LocalText; solution?: Task["solution"]; hints?: Task["hints"]; correctAnswer?: Answer;repairRequired?:number;repairPassedTaskIds?:string[];repairVersion?:string;repairSkill?:LocalText;repairedAt?:string };
 export type Exam = { id: string; track: Track; variant: number; startedAt: string; durationMinutes: number; questions: Task[]; answers: Record<string, Answer>; flagged: number[]; answerUpdatedAt?: Record<string, number>; currentIndex?: number; currentIndexUpdatedAt?: number; finishedAt?: string; finishReason?: "submitted" | "time"; score?: number; maxScore?: number; results?: { taskId: string; topicId: string; answer: Answer; correct: boolean; points: number; max: number; prompt?: LocalText; context?: LocalText; solution: Task["solution"]; correctAnswer: Answer; scoringExplanation?:LocalText; gradingRuleId?:string }[]; rules: ExamRuleSnapshot;bankVersion?:string;familiarQuestionIds?:string[] };
-export type LearnerState = { profile: Profile | null; progress: Record<string, Progress>; attempts: Attempt[]; errors: ErrorEntry[]; reviews: Review[]; exams: Exam[]; diagnostics: { id: string; schoolGrade?: string; schoolPathway?:'natural-math'|'humanitarian'; track: Track; at: string; score: number; total: number; strengths: string[]; gaps: string[]; taskIds?: string[] }[]; xp: number; lessonResume: { topicId: string; stage: number } | null; plan: PlanItem[]; activeExam: Exam | null; revision: number; planReason?: LocalText; practiceStartedAt?: string; streakDays: string[]; preferences?: { leaderboard: boolean }; streakRecoveries?: { day: string; at: string; week: string }[]; [key: string]: unknown };
+export type LearnerState = { profile: Profile | null; progress: Record<string, Progress>; attempts: Attempt[]; errors: ErrorEntry[]; reviews: Review[]; exams: Exam[]; diagnostics: { id: string; schoolGrade?: string; schoolPathway?:'natural-math'|'humanitarian'; track: Track; at: string; score: number; total: number; strengths: string[]; gaps: string[]; taskIds?: string[]; evidence?:DiagnosticEvidence[]; clarificationSkillId?:string }[]; xp: number; lessonResume: { topicId: string; stage: number } | null; plan: PlanItem[]; activeExam: Exam | null; revision: number; planReason?: LocalText; practiceStartedAt?: string; streakDays: string[]; preferences?: { leaderboard: boolean }; streakRecoveries?: { day: string; at: string; week: string }[]; [key: string]: unknown };
 export type PlanItem = { topicId: string; title: LocalText; reason: LocalText; type: "lesson" | "review" | "repair" | "practice"; minutes: number; day: number };
 
 export function emptyState(): LearnerState {
@@ -279,8 +283,9 @@ export function makePlan(state: LearnerState, topics: Topic[], now = new Date())
   const courseIds = schoolGrade ? schoolTopicIds(schoolGrade,state.profile?.schoolPathway) : null;
   const selected = courseIds ? courseIds.map(id => topics.find(t => t.id === id)).filter((t): t is Topic => Boolean(t)) : topics.filter(t => t.track === track && !t.schoolOnly);
   const byId = new Map(topics.map(t => [t.id, t]));
-  const latestDiagnostic = [...state.diagnostics].reverse().find(d => d.track === track && d.schoolGrade === schoolGrade && (!schoolGrade || Number(schoolGrade)<10 || (d.schoolPathway??'natural-math')===(state.profile?.schoolPathway??'natural-math')));
-  const gaps = new Set(latestDiagnostic?.gaps || []);
+  const latestDiagnostic = [...state.diagnostics].reverse().find(d => !d.clarificationSkillId && d.track === track && d.schoolGrade === schoolGrade && (!schoolGrade || Number(schoolGrade)<10 || (d.schoolPathway??'natural-math')===(state.profile?.schoolPathway??'natural-math')));
+  const skillEvidence=currentDiagnosticEvidence(state);
+  const gaps = new Set([...(latestDiagnostic?.gaps || []),...skillEvidence.filter(e=>e.incorrect>0).map(e=>e.topicId)]);
   const foundationStrengths = new Set((latestDiagnostic?.strengths || []).filter(id => (latestDiagnostic?.strengths.filter(s=>s===id).length||0)>=2&&!latestDiagnostic?.gaps.includes(id)&&byId.get(id)?.track === "base" && !state.errors.some(e => e.topicId === id && !e.resolved && e.at > (latestDiagnostic?.at || ""))));
   const ready = (id: string) => Boolean(state.progress[id]?.mastered || confirmationCount(state.progress[id]) >= 3 || foundationStrengths.has(id));
   const futureReview = (id: string) => state.reviews.some(r => r.topicId === id && !r.completed && Date.parse(r.due) > now.getTime());
@@ -300,6 +305,8 @@ export function makePlan(state: LearnerState, topics: Topic[], now = new Date())
   function add(topic: Topic, type: PlanItem["type"], reason: LocalText) {
     if (seen.has(topic.id) || planned.length >= 7) return;
     seen.add(topic.id);
+    const evidence=skillEvidence.filter(e=>e.topicId===topic.id&&e.incorrect>0);
+    if(evidence.length){const descriptions=evidence.map(e=>({title:repairSkillTitle(e.skillId)!,e}));reason={ru:reason.ru+' Проверим конкретный способ: '+descriptions.map(({title,e})=>`${title.ru} (${e.correct} верно, ${e.incorrect} пока неверно, ${e.unknown} без вывода)`).join('; ')+'. Причину уточним по шагам решения.',kk:reason.kk+' Нақты тәсілді тексереміз: '+descriptions.map(({title,e})=>`${title.kk} (${e.correct} дұрыс, ${e.incorrect} әзірге қате, ${e.unknown} қорытындысыз)`).join('; ')+'. Себебін шешу қадамдары арқылы анықтаймыз.'};}
     planned.push({ topicId: topic.id, title: topic.title, type, minutes: Math.min(Number(topic.minutes || 12) + (ambitiousGoal && type === "repair" ? 5 : 0), state.profile?.dailyMinutes || 20), day: planned.length + 1, reason: { ru: reason.ru + context.ru, kk: reason.kk + context.kk } });
   }
   for (const review of state.reviews.filter(r => !r.completed && new Date(r.due) <= now && reachable.has(r.topicId)).sort((a, b) => Date.parse(a.due) - Date.parse(b.due))) {

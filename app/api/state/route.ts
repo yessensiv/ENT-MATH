@@ -5,6 +5,7 @@ import { applyExamSnapshot } from "@/lib/exam-snapshot";
 import { snapshotTime, beginDraftSnapshot, finishDraftSnapshot } from "@/lib/draft-snapshot";
 import{submissionIdentity,submissionPayload}from'@/lib/submission';
 import{validateLessonWork,saveLessonWork,type LessonWork}from'@/lib/lesson-work';
+import{diagnosticEvidence}from'@/lib/diagnostic-evidence';
 import{assignedDiagnostic}from'@/lib/diagnostic-session';
 import{reservedExam}from'@/lib/exam-bank';
 
@@ -52,7 +53,7 @@ export async function POST(request: Request) {
           if (reviewId && !state.reviews.some(r => r.id === reviewId && r.topicId === task.topicId && !r.completed)) throw new ApiError("Повторение не найдено.", 404);
           state.practiceDraft = { topicId: task.topicId, taskId, ...(typeof task.repairForErrorId==='string'?{errorId:task.repairForErrorId}:{}), answer: answerValue(input.answer ?? ""), steps: textValue(input.steps ?? "", 4000), assisted: Boolean(input.assisted), ...(reviewId ? { reviewId } : {}), updatedAt: new Date().toISOString() };
         } else {
-          const track = trackValue(input.track || state.profile?.track), expected = assignedDiagnostic(state,track,topics,content.tasks)??diagnosticTasks(track, topics, content.tasks, state.profile?.learningMode === "school" ? state.profile.grade : undefined, state.profile?.schoolPathway), allowed = new Set(expected.map(t => t.id));
+          const track = trackValue(input.track || state.profile?.track), expected = assignedDiagnostic(state,track,topics,tasks)??diagnosticTasks(track, topics, content.tasks, state.profile?.learningMode === "school" ? state.profile.grade : undefined, state.profile?.schoolPathway), allowed = new Set(expected.map(t => t.id));
           if (!Array.isArray(input.answers) || input.answers.length > expected.length) throw new ApiError("Некорректные ответы диагностики.");
           const answers = input.answers.map(a => { if (!a || typeof a !== "object" || Array.isArray(a)) throw new ApiError("Некорректный ответ диагностики."); const item = a as Record<string, unknown>, taskId = textValue(item.taskId, 120); if (!allowed.has(taskId)) throw new ApiError("Вопрос диагностики не найден."); return { taskId, answer: answerValue(item.answer) }; });
           if (new Set(answers.map(a => a.taskId)).size !== answers.length) throw new ApiError("Вопросы диагностики повторяются.");
@@ -100,14 +101,13 @@ export async function POST(request: Request) {
         if (!Array.isArray(input.answers) || input.answers.length !== expected.length) throw new ApiError("Завершите все вопросы диагностики.");
         const byId = new Map((input.answers as Record<string, unknown>[]).map(a => { if (!a || typeof a !== "object" || Array.isArray(a)) throw new ApiError("Некорректный ответ диагностики."); return [textValue(a.taskId, 120), answerValue(a.answer)] as const; }));
         if (byId.size !== expected.length || expected.some(t => !byId.has(t.id))) throw new ApiError("Вопросы диагностики не совпадают.");
-        const strengths: string[] = [], gaps: string[] = [],unknowns:string[]=[]; let score = 0;
+        const {score,strengths,gaps,unknowns,evidence}=diagnosticEvidence(expected,byId);
         for (const task of expected) {
-          const answer=byId.get(task.id)!;if((Array.isArray(answer)?answer.length===0:!answer.trim())){unknowns.push(task.topicId);continue;}
-          const checked=checkAnswer(task,answer);if(checked.status==='review'){unknowns.push(task.topicId);continue;}const correct = checked.status==='correct'; score += Number(correct);
-          (correct ? strengths : gaps).push(task.topicId);
+          const answer=byId.get(task.id)!;if((Array.isArray(answer)?answer.length===0:!answer.trim())){continue;}
+          const checked=checkAnswer(task,answer);if(checked.status==='review'){continue;}const correct = checked.status==='correct';
           const p = state.progress[task.topicId] ||= { attempts: 0, correct: 0, independent: 0, mastered: false, independentTaskIds: [] }; p.attempts++; p.correct += Number(correct);
         }
-        const result = { id: crypto.randomUUID(), unknowns, evidenceScope:'topic',version:state.diagnosticSession?2:1,schoolGrade: state.profile?.learningMode === "school" ? state.profile.grade : undefined, schoolPathway:state.profile?.learningMode==='school'&&Number(state.profile.grade)>=10?state.profile.schoolPathway:undefined, track, at: new Date().toISOString(), score, total: expected.length, strengths, gaps, taskIds: expected.map(t => t.id) };
+        const result = { id: crypto.randomUUID(), unknowns,evidence,clarificationSkillId:(state.diagnosticSession as {skillId?:string})?.skillId,evidenceScope:'tested-method',version:(state.diagnosticSession as {version?:number})?.version??1,schoolGrade: state.profile?.learningMode === "school" ? state.profile.grade : undefined, schoolPathway:state.profile?.learningMode==='school'&&Number(state.profile.grade)>=10?state.profile.schoolPathway:undefined, track, at: new Date().toISOString(), score, total: expected.length, strengths, gaps, taskIds: expected.map(t => t.id) };
         state.diagnosticSession=null;
         if(submissionId){submissionRequests[submissionId]={payload:submissionPayload(input),diagnostic:result};state.submissionRequests=submissionRequests;}
         finishDraftSnapshot(state, "diagnostic", submittedAt);

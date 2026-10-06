@@ -1,0 +1,14 @@
+"use client";
+import{useRef,useState}from'react';
+import{requestJson}from'@/lib/client-flow';
+import type{Attempt,Exam,LocalText}from'@/lib/engine';
+type Page={items:(Attempt|Exam)[];total:number;before:string|null};
+const answerText=(item:Attempt|Exam)=>{const a=(item as Attempt).answer;return Array.isArray(a)?a.join(', '):String(a);};
+export default function HistoryList({kind,lang,onExam,topicTitles}:{topicTitles?:Record<string,LocalText>;kind:'attempts'|'exams';lang:'ru'|'kk';onExam?:(exam:Exam)=>void}){
+ const tr=(ru:string,kk:string)=>lang==='ru'?ru:kk;
+ const [page,setPage]=useState<Page|null>(null),[busy,setBusy]=useState(false),[error,setError]=useState('');const lock=useRef(false);
+ async function load(){if(lock.current)return;lock.current=true;setBusy(true);setError('');try{const next=await requestJson<Page>(`/api/history?kind=${kind}${page?.before?'&before='+encodeURIComponent(page.before):''}`);setPage(old=>({...next,items:[...(old?.items||[]),...next.items.slice().reverse()]}));}catch(e){setError((e as Error).message);}finally{lock.current=false;setBusy(false);}}
+ return <section className="panel exam-history" aria-busy={busy}><h3>{kind==='exams'?tr('Все экзамены','Барлық емтихандар'):tr('История решений','Шешімдер тарихы')}</h3>{page&&<p role="status">{tr('Показано','Көрсетілді')} {page.items.length} / {page.total}</p>}
+ {page?.items.map(item=>kind==='exams'?<button className="plan-item" key={item.id} onClick={()=>onExam?.(item as Exam)}><span className="plan-text"><strong>{item.track==='literacy'?tr('Грамотность','Сауаттылық'):tr('Профильная математика','Бейіндік математика')} · {tr('Вариант','Нұсқа')} {(item as Exam).variant}</strong><small>{new Date((item as Exam).finishedAt!).toLocaleString(lang==='ru'?'ru-RU':'kk-KZ')}</small></span><strong>{(item as Exam).score} / {(item as Exam).maxScore}</strong></button>:<details className="example-details" key={item.id}><summary>{(item as Attempt).taskSnapshot?.prompt[lang]||topicTitles?.[(item as Attempt).topicId]?.[lang]||tr('Архивное задание','Мұрағаттық тапсырма')} · {(item as Attempt).correct?tr('Верно','Дұрыс'):tr('Нужен разбор','Талдау қажет')}</summary><p>{tr('Твой ответ','Сенің жауабың')}: {answerText(item)}</p><p>{(item as Attempt).steps}</p><p>{(item as Attempt).assisted?tr('С помощью','Көмекпен'):tr('Без подсказок','Кеңессіз')} · {new Date((item as Attempt).at).toLocaleString(lang==='ru'?'ru-RU':'kk-KZ')}</p>{!(item as Attempt).taskVersion&&<p className="muted">{tr('Архивная попытка: точная версия условия не была сохранена.','Мұрағаттық әрекет: шарттың нақты нұсқасы сақталмаған.')}</p>}</details>)}
+ {error&&<p role="alert">{error}</p>}{(!page||page.before)&&<button className="secondary" disabled={busy} onClick={()=>void load()}>{busy?tr('Загружаем…','Жүктелуде…'):page?tr('Показать более ранние','Бұрынғыларын көрсету'):tr('Открыть историю','Тарихты ашу')}</button>}</section>;
+}

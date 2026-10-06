@@ -26,7 +26,7 @@ export async function encodeState(state: Record<string, unknown>, token: string)
   const pointer: StatePointer = { version: 1, token, chunks: chunks.length, bytes, sha256: await digest(serialized) };
   const progress = Object.fromEntries(Object.entries((state.progress || {}) as Record<string, { mastered?: boolean }>).map(([id, p]) => [id, { mastered: Boolean(p.mastered) }]));
   // The head remains a small real-data summary for opt-in rankings.
-  return { head: JSON.stringify({ _entStorage: pointer, profile: state.profile, preferences: state.preferences, xp: state.xp, progress, revision: state.revision }), chunks, pointer };
+  return { head: JSON.stringify({ _entStorage: pointer,_entEvents:state._entEvents,profile: state.profile, preferences: state.preferences, xp: state.xp, progress, revision: state.revision }), chunks, pointer };
 }
 export async function decodeState(head: string, rows: { chunkIndex: number; data: string }[]): Promise<Record<string, unknown>> {
   const pointer = statePointer(head); if (!pointer) return JSON.parse(head);

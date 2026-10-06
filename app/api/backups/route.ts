@@ -1,5 +1,6 @@
 import {authenticate,loadCurrentState,saveState,configuration,response,failure,parseBody,textValue,ApiError,assertStudyAllowed,clientState,updatePlan,publishedContent} from '@/lib/server-store';
 import {decodeState} from '@/lib/state-codec';
+import{readEvents}from'@/lib/event-storage';
 import type {LearnerState} from '@/lib/engine';
 const db=()=>{const value=configuration().DB;if(!value)throw new ApiError('Хранилище недоступно.',503);return value;};
 export async function GET(){try{const user=await authenticate();const backups=(await db().prepare('SELECT id,created_at,revision,head FROM learner_backups WHERE user_id=? AND created_at>? ORDER BY created_at DESC LIMIT 7').bind(user.userId,new Date(Date.now()-7*86400000).toISOString()).all<{id:string;created_at:string;revision:number;head:string}>()).results.map(b=>{const s=JSON.parse(b.head);return {id:b.id,at:b.created_at,revision:b.revision,name:s.profile?.name,xp:s.xp||0,mastered:Object.values(s.progress||{}).filter(p=>(p as {mastered?:boolean}).mastered).length};});return response({backups});}catch(e){return failure(e);}}
@@ -14,6 +15,7 @@ export async function POST(request:Request){try{
  const id=textValue(input.id,200),saved=await db().prepare('SELECT * FROM learner_backups WHERE id=? AND user_id=? AND created_at>?').bind(id,user.userId,new Date(Date.now()-7*86400000).toISOString()).first<{head:string;revision:number}>();if(!saved)throw new ApiError('Копия не найдена.',404);
  const parts=(await db().prepare('SELECT chunk_index,data FROM learner_backup_chunks WHERE backup_id=? ORDER BY chunk_index').bind(id).all<{chunk_index:number;data:string}>()).results;
  const restored=await decodeState(saved.head,parts.map(p=>({chunkIndex:p.chunk_index,data:p.data}))) as LearnerState;
+ await readEvents(db(),user.userId,restored);
  const current=(await loadCurrentState(user)).state;assertStudyAllowed(current);
  if(Number(input.expectedRevision)!==current.revision)throw new ApiError('Сначала обновите результаты. Другая вкладка сохранила новое занятие.',409,'STATE_CONFLICT');
  await checkpoint(current.revision);

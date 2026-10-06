@@ -1,0 +1,29 @@
+import{test}from'node:test';import assert from'node:assert/strict';import{DatabaseSync}from'node:sqlite';import{readFileSync,readdirSync}from'node:fs';
+// @ts-expect-error Native Node test imports.
+import{prepareEventSave,eventWriteStatements,hydrateEvents,eventManifest,historyRowsSql,legacyEventState,type EventBaseline,type EventRecord,type EventState}from'../lib/event-storage.ts';
+// @ts-expect-error Native Node test imports.
+import{encodeState,decodeState,stateSaveStatements,type StateStatement}from'../lib/state-codec.ts';
+function db(){const d=new DatabaseSync(':memory:');for(const f of readdirSync('drizzle').filter(f=>f.endsWith('.sql')).sort())d.exec(readFileSync('drizzle/'+f,'utf8'));d.prepare('INSERT INTO learner_states(user_id,email,data,revision,updated_at) VALUES(?,?,?,?,?)').run('test','local-test','{}',0,'now');return d;}
+function batch(d:DatabaseSync,s:StateStatement[]){d.exec('BEGIN IMMEDIATE');try{const r=s.map(v=>d.prepare(v.sql).all(...v.params));d.exec('COMMIT');return r;}catch(e){d.exec('ROLLBACK');throw e;}}
+async function save(d:DatabaseSync,state:EventState,revision:number,baseline?:EventBaseline){const p=await prepareEventSave(state,revision+1,baseline),b=await encodeState({...p.aggregate,revision:revision+1},crypto.randomUUID());return{p,b,statements:[...stateSaveStatements('test','local-test',revision,b,'now'),...eventWriteStatements('test',p.manifest,p.groups)]};}
+async function read(d:DatabaseSync,head?:string){const row=head?{data:head}:d.prepare('SELECT data FROM learner_states WHERE user_id=?').get('test') as {data:string};const h=JSON.parse(row.data);const chunks=h._entStorage?d.prepare('SELECT chunk_index AS chunkIndex,data FROM learner_state_chunks WHERE user_id=? AND token=? ORDER BY chunk_index').all('test',h._entStorage.token) as {chunkIndex:number;data:string}[]:[];const s=await decodeState(row.data,chunks),m=eventManifest(s)!;const b=await hydrateEvents(s,d.prepare(historyRowsSql).all('test',m.branch,m.revision,m.revision) as EventRecord[]);return{s,b:b!};}
+test('ARCH-01/04: 10,000 attempts normalize losslessly; one append only writes one new event',async()=>{const d=db();try{
+ const state={profile:{name:'Сынақ Әлия',language:'kk'},attempts:Array.from({length:10000},(_,i)=>({id:'attempt-'+i,answer:'7',steps:'2x=14; x=7',at:'2026-10-06'})),exams:[{id:'exam',results:[{answer:['A','C'],score:2}]}],submissions:{old:{feedback:'ok'}},tutorMessages:[],errors:[{id:'error',explanation:'Түсіндірме'}],progress:{x:{mastered:true}},preferences:{leaderboard:false}};
+ const first=await save(d,state,0);assert.equal(batch(d,first.statements)[0].length,1);assert.equal(JSON.parse(first.b.head).attempts,undefined);assert.ok(first.b.head.length<2000);
+ const loaded=await read(d);assert.deepEqual(legacyEventState(loaded.s),{...state,revision:1});
+ (loaded.s.attempts as unknown[]).push({id:'new',answer:'8'});const next=await save(d,loaded.s,1,loaded.b);assert.equal(next.p.groups.flat().length,1);batch(d,next.statements);assert.equal((await read(d)).s.attempts instanceof Array,true);
+ const original=await read(d,first.b.head);assert.deepEqual(legacyEventState(original.s),{...state,revision:1});
+ const oldRollback=await encodeState({...legacyEventState((await read(d)).s),revision:3},'rollback');batch(d,stateSaveStatements('test','local-test',2,oldRollback,'now'));
+ const legacy=await decodeState(oldRollback.head,oldRollback.chunks.map((data,chunkIndex)=>({data,chunkIndex})));assert.equal((legacy.attempts as unknown[]).length,10001);assert.deepEqual(legacy.errors,state.errors);assert.deepEqual(legacy.progress,state.progress);
+ }finally{d.close();}});
+test('CAS loser leaves zero history rows, including chunked aggregates; SQL failure rolls all writes back',async()=>{const d=db();try{
+ const a=await save(d,{attempts:[{id:'a'}],padding:'x'.repeat(800000)},0),b=await save(d,{attempts:[{id:'b'}],padding:'y'.repeat(800000)},0);assert.ok(a.b.pointer);batch(d,a.statements);assert.equal(batch(d,b.statements)[0].length,0);assert.equal(d.prepare('SELECT count(*) n FROM learner_event_versions').get()?.n,1);assert.deepEqual((await read(d)).s.attempts,[{id:'a'}]);
+ const loaded=await read(d);(loaded.s.attempts as unknown[]).push({id:'c'});const fail=await save(d,loaded.s,1,loaded.b);fail.statements.push(fail.statements.at(-1)!);assert.throws(()=>batch(d,fail.statements));assert.deepEqual((await read(d)).s.attempts,[{id:'a'}]);
+ }finally{d.close();}});
+test('modified receipts and tombstones preserve previous snapshots; corruption and cross-user rows fail closed',async()=>{const d=db();try{
+ const first=await save(d,{attempts:[{id:'x'},{id:'y'}],tutorGenerations:{g:{status:'pending'}}},0);batch(d,first.statements);const loaded=await read(d);loaded.s.attempts=[{id:'y'}];loaded.s.tutorGenerations={g:{status:'done'}};const second=await save(d,loaded.s,1,loaded.b);batch(d,second.statements);assert.deepEqual((await read(d)).s.attempts,[{id:'y'}]);assert.deepEqual((await read(d,first.b.head)).s.tutorGenerations,{g:{status:'pending'}});
+ const restore=await read(d,first.b.head),newBranch=await save(d,restore.s,2);assert.notEqual(newBranch.p.manifest.branch,first.p.manifest.branch);batch(d,newBranch.statements);assert.deepEqual((await read(d)).s.attempts,[{id:'x'},{id:'y'}]);
+ await assert.rejects(()=>hydrateEvents({...newBranch.p.aggregate},[]),/EVENT_INTEGRITY/);
+ d.prepare("UPDATE learner_event_versions SET data='{}' WHERE branch_id=? AND event_id='x'").run(newBranch.p.manifest.branch);await assert.rejects(()=>read(d),/EVENT_INTEGRITY/);
+ }finally{d.close();}});
+test('migration rejects duplicate IDs and oversize event before producing a write plan',async()=>{await assert.rejects(()=>prepareEventSave({attempts:[{id:'same'},{id:'same'}]},1),/DUPLICATE_EVENT_ID/);await assert.rejects(()=>prepareEventSave({attempts:[{id:'huge',text:'x'.repeat(1500000)}]},1),/EVENT_CAPACITY/);});

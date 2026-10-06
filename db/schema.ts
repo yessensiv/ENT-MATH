@@ -1,6 +1,11 @@
 import { sqliteTable, text, integer, primaryKey,index,uniqueIndex } from "drizzle-orm/sqlite-core";
 import {sql} from 'drizzle-orm';
 
+// Immutable revisions. Aggregates and backups choose an exact history revision.
+export const learnerEventVersions=sqliteTable('learner_event_versions',{
+ userId:text('user_id').notNull(),branchId:text('branch_id').notNull(),stream:text('stream').notNull(),eventId:text('event_id').notNull(),revision:integer('revision').notNull(),position:integer('position').notNull(),data:text('data').notNull(),deleted:integer('deleted').notNull().default(0),
+},t=>[primaryKey({columns:[t.userId,t.branchId,t.stream,t.eventId,t.revision]}),index('learner_events_revision').on(t.userId,t.branchId,t.revision)]);
+
 // One independent aggregate per authenticated learner. Revisions prevent lost updates.
 export const learnerStates = sqliteTable("learner_states", {
   userId: text("user_id").primaryKey(),

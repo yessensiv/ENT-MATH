@@ -7,6 +7,8 @@ import { contentDigest,independentReviewCoverage } from '@/lib/material-review';
 import {publishedSnapshot} from '@/lib/content-versions';
 import{boundedText}from'@/lib/bounded-body';
 import { encodeState, decodeState, statePointer, stateSaveStatements } from "@/lib/state-codec";
+import{readEvents,prepareEventSave,eventWriteStatements,legacyEventState,type EventBaseline}from'@/lib/event-storage';
+import{historySummary}from'@/lib/history-summary';
 import { schoolTopics, schoolTasks } from "@/lib/school-content";
 import {schoolExtensionTopics,schoolExtensionTasks} from '@/lib/school-extension-content';
 import {schoolAdvancedTopics,schoolAdvancedTasks} from '@/lib/school-advanced-content';
@@ -16,7 +18,8 @@ import type {Topic as AuthoredTopic} from '@/lib/content';
 import { emptyState, sanitizeExam, makePlan, isModelExample, reservedReviewIds, calculate, checkAnswer,streakInfo, expireExam, diagnosticTasks, type LearnerState, type Topic, type Task } from "@/lib/engine";
 
 export class ApiError extends Error { constructor(message: string, public status = 400, public code?: string) { super(message); } }
-export function configuration() { return env as unknown as { DB?: D1Database; ADMIN_EMAILS?: string; TUTOR_API_KEY?: string; TUTOR_BASE_URL?: string; TUTOR_MODEL?: string; TUTOR_VISION_MODEL?: string; TUTOR_DAILY_LIMIT?: string; TUTOR_DAILY_TOKEN_LIMIT?:string }; }
+export function configuration() { return env as unknown as { DB?: D1Database; ADMIN_EMAILS?: string; TUTOR_API_KEY?: string; TUTOR_BASE_URL?: string; TUTOR_MODEL?: string; TUTOR_VISION_MODEL?: string; TUTOR_DAILY_LIMIT?: string; TUTOR_DAILY_TOKEN_LIMIT?:string;EVENT_STORAGE_MODE?:string }; }
+const eventBaselines=new WeakMap<LearnerState,EventBaseline>();
 export const isAdmin = (user: ChatGPTUser) => (configuration().ADMIN_EMAILS || "").split(",").map(s => s.trim().toLowerCase()).filter(Boolean).includes(user.email.toLowerCase());
 export async function authenticate() { const user = await getChatGPTUser(); if (!user) throw new ApiError("Войдите через ChatGPT, чтобы сохранять учебный прогресс.", 401); return user; }
 export async function adminAuthenticate() { const user = await authenticate(); if (!isAdmin(user)) throw new ApiError("Доступ разрешён только администратору.", 403); return user; }
@@ -65,16 +68,20 @@ export async function loadState(user: ChatGPTUser): Promise<LearnerState> {
     }
   }
   if (!decoded) throw new ApiError("Не удалось прочитать сохранённый профиль.", 503);
+  let events:EventBaseline|null;
+  try{events=await readEvents(configuration().DB!,user.userId,decoded);}catch{throw new ApiError('Не удалось проверить целостность учебной истории. Новые записи остановлены; обратитесь к администратору.',503,'EVENT_INTEGRITY');}
   const state = { ...emptyState(), ...decoded, revision: row.revision } as LearnerState;
+  if(events)eventBaselines.set(state,events);
   if (state.diagnostics.some(d => !d.taskIds)) { const content = baseContent(); for (const diagnostic of state.diagnostics) diagnostic.taskIds ||= diagnosticTasks(diagnostic.track, content.topics, content.tasks,diagnostic.schoolGrade,diagnostic.schoolPathway).map(t => t.id); }
   return state;
 }
 
-export async function saveState(user: ChatGPTUser, state: LearnerState) {
+export async function saveState(user: ChatGPTUser, state: LearnerState,options:{storage?:'legacy'|'events'}={}) {
   const revision = state.revision;
-  let bundle;
-  try { bundle = await encodeState({ ...state, revision: revision + 1 }, crypto.randomUUID()); }
-  catch (e) { if (e instanceof Error && e.message === "STATE_CAPACITY") throw new ApiError("История достигла лимита хранилища этого выпуска. Последнее занятие ещё не сохранено. Администратору нужно перенести историю в архив; прежние записи сохранены.", 507, "STATE_CAPACITY"); throw e; }
+  let bundle,eventSave;
+  const useEvents=(options.storage??(configuration().EVENT_STORAGE_MODE==='legacy'?'legacy':'events'))==='events';
+  try {if(useEvents)eventSave=await prepareEventSave(state,revision+1,eventBaselines.get(state));bundle = await encodeState({ ...(eventSave?.aggregate??legacyEventState(state)), revision: revision + 1 }, crypto.randomUUID()); }
+  catch (e) { if (e instanceof Error && ['STATE_CAPACITY','EVENT_CAPACITY','EVENT_MIGRATION_BATCH_REQUIRED'].includes(e.message)) throw new ApiError("Этот перенос превышает лимит одной операции. Последнее занятие ещё не сохранено; прежние записи сохранены. Администратору нужен отдельный пакетный перенос.", 507, "STATE_CAPACITY"); throw e; }
   const db = configuration().DB!, statements = stateSaveStatements(user.userId, user.email, revision, bundle, new Date().toISOString());
   const backupId=`${user.userId}:${new Intl.DateTimeFormat('en-CA',{timeZone:'Asia/Qyzylorda'}).format(new Date())}`;
   // One snapshot of the previous saved state per day. Head and all old chunks
@@ -85,9 +92,14 @@ export async function saveState(user: ChatGPTUser, state: LearnerState) {
   ];
   const oldest=new Date(Date.now()-7*86400000).toISOString();
   const cleanup=[db.prepare('DELETE FROM learner_backup_chunks WHERE backup_id IN (SELECT id FROM learner_backups WHERE user_id=? AND created_at<?)').bind(user.userId,oldest),db.prepare('DELETE FROM learner_backups WHERE user_id=? AND created_at<?').bind(user.userId,oldest)];
-  const results = await db.batch([...backup,...statements.map(s => db.prepare(s.sql).bind(...s.params)),...cleanup]);
+  const eventStatements=eventSave?eventWriteStatements(user.userId,eventSave.manifest,eventSave.groups):[];
+  // Reserve query capacity for the route's reads. Fail before any write rather
+  // than exceeding the free-plan limit partway through a large conversion.
+  if(statements.length+eventStatements.length>36)throw new ApiError('Нужен отдельный пакетный перенос большой истории. Сохранённые записи не изменены.',507,'STATE_CAPACITY');
+  const results = await db.batch([...backup,...statements.map(s => db.prepare(s.sql).bind(...s.params)),...eventStatements.map(s=>db.prepare(s.sql).bind(...s.params)),...cleanup]);
   if (!results[2].results?.length) throw new ApiError("Данные изменились в другой вкладке. Обновите страницу и повторите действие.", 409, "STATE_CONFLICT");
   state.revision++;
+  if(eventSave){state._entEvents=eventSave.manifest;eventBaselines.set(state,eventSave.baseline);}else{delete state._entEvents;eventBaselines.delete(state);}
 }
 
 export async function loadCurrentState(user: ChatGPTUser) {
@@ -103,7 +115,9 @@ export async function loadCurrentState(user: ChatGPTUser) {
 
 export function clientState(user: ChatGPTUser, state: LearnerState) {
   const testIdentity = user.userId === "local_seedy" && user.email === "seedy@sites.test";
-  const { generatedTasks: _generated, reviewSerials: _serials, submissions:_submissions, submissionRequests:_requests,tutorGenerations:_generations,tutorMessages:_messages, ...safe } = state; void _generated; void _serials;void _submissions;void _requests;void _generations;void _messages;
+  const { generatedTasks: _generated, reviewSerials: _serials, submissions:_submissions, submissionRequests:_requests,tutorGenerations:_generations,tutorMessages:_messages,_entEvents:_events,...safe } = state; void _generated; void _serials;void _submissions;void _requests;void _generations;void _messages;void _events;
+  const history={attempts:state.attempts.length,exams:state.exams.length,returnedAttempts:Math.min(100,state.attempts.length),returnedExams:Math.min(10,state.exams.length),endpoint:'/api/history'};
+  safe.attempts=state.activeExam?[]:state.attempts.slice(-100);safe.exams=state.activeExam?[]:state.exams.slice(-10);if(state.activeExam)safe.errors=[];safe.history=history;safe.statistics=historySummary(state);
   return { ...safe, serverNow: Date.now(), streak: streakInfo(state), activeExam: sanitizeExam(state.activeExam), isAdmin: isAdmin(user), aiConfigured: Boolean(configuration().TUTOR_API_KEY), user: { id: user.userId, email: user.email, name: user.displayName }, storage: "cloudflare-d1", demo: false, testIdentity, identityNotice: testIdentity ? { ru: "Локальный тестовый аккаунт. Здесь сохраняются результаты ваших проверок; это не реальная регистрация через ChatGPT.", kk: "Жергілікті сынақ аккаунты. Мұнда тексеру нәтижелері сақталады; бұл ChatGPT арқылы нақты тіркелу емес." } : null };
 }
 export function response(data: unknown, status = 200, requestId=crypto.randomUUID()) { const body=data&&typeof data==='object'&&!Array.isArray(data)?{...data,requestId,apiVersion:1}:data;return Response.json(body, { status, headers: { "Cache-Control": "no-store", "X-Content-Type-Options": "nosniff",'X-Request-Id':requestId } }); }

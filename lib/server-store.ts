@@ -1,3 +1,4 @@
+import {editorialPermissions} from '@/lib/editorial-permissions';
 import { env } from "cloudflare:workers";
 import { eq, and, sql, lt, asc } from "drizzle-orm";
 import { getChatGPTUser, type ChatGPTUser } from "@/app/chatgpt-auth";
@@ -18,9 +19,11 @@ import type {Topic as AuthoredTopic} from '@/lib/content';
 import { emptyState, sanitizeExam, makePlan, isModelExample, reservedReviewIds, calculate, checkAnswer,streakInfo, expireExam, diagnosticTasks, type LearnerState, type Topic, type Task } from "@/lib/engine";
 
 export class ApiError extends Error { constructor(message: string, public status = 400, public code?: string) { super(message); } }
-export function configuration() { return env as unknown as { DB?: D1Database; ADMIN_EMAILS?: string; TUTOR_API_KEY?: string; TUTOR_BASE_URL?: string; TUTOR_MODEL?: string; TUTOR_VISION_MODEL?: string; TUTOR_DAILY_LIMIT?: string; TUTOR_DAILY_TOKEN_LIMIT?:string;EVENT_STORAGE_MODE?:string }; }
+export function configuration() { return env as unknown as { DB?: D1Database; ADMIN_EMAILS?: string; EDITOR_ROLES?:string; TUTOR_PROVIDER?:string; TUTOR_API_KEY?: string; TUTOR_BASE_URL?: string; TUTOR_MODEL?: string; TUTOR_VISION_MODEL?: string; TUTOR_DAILY_LIMIT?: string; TUTOR_DAILY_TOKEN_LIMIT?:string;EVENT_STORAGE_MODE?:string }; }
 const eventBaselines=new WeakMap<LearnerState,EventBaseline>();
 export const isAdmin = (user: ChatGPTUser) => (configuration().ADMIN_EMAILS || "").split(",").map(s => s.trim().toLowerCase()).filter(Boolean).includes(user.email.toLowerCase());
+export const editorPermissions=(user:ChatGPTUser)=>editorialPermissions(user.email,isAdmin(user),configuration().EDITOR_ROLES);
+export async function editorAuthenticate(){const user=await authenticate();if(!editorPermissions(user).access)throw new ApiError('Доступ разрешён только редакционной команде.',403);return user;}
 export async function authenticate() { const user = await getChatGPTUser(); if (!user) throw new ApiError("Войдите через ChatGPT, чтобы сохранять учебный прогресс.", 401); return user; }
 export async function adminAuthenticate() { const user = await authenticate(); if (!isAdmin(user)) throw new ApiError("Доступ разрешён только администратору.", 403); return user; }
 
@@ -118,7 +121,7 @@ export function clientState(user: ChatGPTUser, state: LearnerState) {
   const { generatedTasks: _generated, reviewSerials: _serials, submissions:_submissions, submissionRequests:_requests,tutorGenerations:_generations,tutorMessages:_messages,_entEvents:_events,...safe } = state; void _generated; void _serials;void _submissions;void _requests;void _generations;void _messages;void _events;
   const history={attempts:state.attempts.length,exams:state.exams.length,returnedAttempts:Math.min(100,state.attempts.length),returnedExams:Math.min(10,state.exams.length),endpoint:'/api/history'};
   safe.attempts=state.activeExam?[]:state.attempts.slice(-100);safe.exams=state.activeExam?[]:state.exams.slice(-10);if(state.activeExam)safe.errors=[];safe.history=history;safe.statistics=historySummary(state);
-  return { ...safe, serverNow: Date.now(), streak: streakInfo(state), activeExam: sanitizeExam(state.activeExam), isAdmin: isAdmin(user), aiConfigured: Boolean(configuration().TUTOR_API_KEY), user: { id: user.userId, email: user.email, name: user.displayName }, storage: "cloudflare-d1", demo: false, testIdentity, identityNotice: testIdentity ? { ru: "Локальный тестовый аккаунт. Здесь сохраняются результаты ваших проверок; это не реальная регистрация через ChatGPT.", kk: "Жергілікті сынақ аккаунты. Мұнда тексеру нәтижелері сақталады; бұл ChatGPT арқылы нақты тіркелу емес." } : null };
+  return { ...safe, serverNow: Date.now(), streak: streakInfo(state), activeExam: sanitizeExam(state.activeExam), isAdmin: isAdmin(user), editorial:editorPermissions(user), aiConfigured: Boolean(configuration().TUTOR_API_KEY), user: { id: user.userId, email: user.email, name: user.displayName }, storage: "cloudflare-d1", demo: false, testIdentity, identityNotice: testIdentity ? { ru: "Локальный тестовый аккаунт. Здесь сохраняются результаты ваших проверок; это не реальная регистрация через ChatGPT.", kk: "Жергілікті сынақ аккаунты. Мұнда тексеру нәтижелері сақталады; бұл ChatGPT арқылы нақты тіркелу емес." } : null };
 }
 export function response(data: unknown, status = 200, requestId=crypto.randomUUID()) { const body=data&&typeof data==='object'&&!Array.isArray(data)?{...data,requestId,apiVersion:1}:data;return Response.json(body, { status, headers: { "Cache-Control": "no-store", "X-Content-Type-Options": "nosniff",'X-Request-Id':requestId } }); }
 export function failure(error: unknown) {
@@ -158,8 +161,8 @@ export async function recordReport(user: ChatGPTUser, taskId: string, message: s
   await getDb().insert(contentReports).values({ id: crypto.randomUUID(), userId: user.userId, taskId, message, createdAt: new Date().toISOString() });
 }
 
-export async function adminData() {
-  const [overrides, reports] = await Promise.all([getDb().select().from(contentOverrides), getDb().select().from(contentReports)]);
+export async function adminData(includeReports=true) {
+  const [overrides, reports] = await Promise.all([getDb().select().from(contentOverrides), includeReports?getDb().select().from(contentReports):Promise.resolve([])]);
   return { ...baseContent(), overrides: overrides.map(r => ({ ...r, data: JSON.parse(r.data), history: JSON.parse(r.history) })), reports };
 }
 
@@ -171,22 +174,38 @@ export async function editableContent(kind: "task" | "topic", id: string) {
   let data: Record<string, unknown>;
   try { data = JSON.parse(saved.data); if (!data || typeof data !== "object" || Array.isArray(data)) throw new Error(); }
   catch { throw new ApiError("Черновик повреждён. Обратитесь к администратору; опубликованный материал доступен ученикам.", 503); }
-  return { material: { ...base, ...data, id }, status: saved.status,authorId:saved.updatedBy,editVersion:await contentDigest(saved) };
+  const history=JSON.parse(saved.history) as {at?:string;previousStatus?:string;previousData?:unknown}[];
+  return { material: { ...base, ...data, id }, status: saved.status,authorId:saved.updatedBy,editVersion:await contentDigest(saved),versions:history.map((v,index)=>({index,at:v.at,status:v.previousStatus??'source'})) };
 }
 
 export async function updateContent(user: ChatGPTUser, input: Record<string, unknown>) {
-  if (!isAdmin(user)) throw new ApiError("Доступ разрешён только администратору.", 403);
+  const permissions=editorPermissions(user);if(!permissions.access)throw new ApiError("Доступ разрешён только редакционной команде.",403);
   const id = textValue(input.id, 120), kind = input.kind;
   if (kind !== "topic" && kind !== "task" && kind !== "rules") throw new ApiError("Неизвестный тип материала.");
+  if(input.action==='restore-version'){
+    if(!permissions.author)throw new ApiError('Восстановление черновика доступно автору.',403,'EDITOR_ROLE_REQUIRED');
+    if(kind==='rules')throw new ApiError('Версии правил восстанавливаются вместе с серверным движком.');
+    const row=await getDb().select().from(contentOverrides).where(and(eq(contentOverrides.id,id),eq(contentOverrides.kind,kind))).get();
+    if(!row)throw new ApiError('История материала не найдена.',404);
+    if(input.editVersion!==await contentDigest(row))throw new ApiError('Материал изменился. Обновите историю перед восстановлением.',409,'CONTENT_CONFLICT');
+    const history=JSON.parse(row.history) as {previousData?:unknown;at?:string}[];
+    if(!Number.isInteger(input.index)||Number(input.index)<0||Number(input.index)>=history.length)throw new ApiError('Версия не найдена.',404);
+    const snapshot=history[Number(input.index)],base=baseContent(),material=snapshot.previousData??(kind==='task'?base.tasks:base.topics).find(t=>t.id===id);
+    return updateContent(user,{id,kind,status:'draft',data:material,editVersion:input.editVersion,reviewNote:`Восстановлена в черновик версия до изменения ${snapshot.at??input.index}. Публикация требует повторной проверки.`});
+  }
   const status = input.status;
   if (!["draft", "review", "published"].includes(String(status))) throw new ApiError("Неверный статус.");
   if (!input.data || typeof input.data !== "object" || Array.isArray(input.data)) throw new ApiError("Требуется объект материала.");
   const db = getDb(), previous = await db.select().from(contentOverrides).where(eq(contentOverrides.id, id)).get();
   if(input.editVersion!==undefined&&input.editVersion!==(previous?await contentDigest(previous):'source:ent-math-2026.3'))throw new ApiError('Материал изменён другим редактором. Скопируйте свои изменения и загрузите актуальную версию.',409,'CONTENT_CONFLICT');
   const data = input.data as Record<string, unknown>;
+  if(status==='published'&&!permissions.publish)throw new ApiError('Публикация доступна выпускающему редактору.',403,'EDITOR_ROLE_REQUIRED');
+  if(status!=='published'&&!permissions.author)throw new ApiError('Редактирование доступно автору.',403,'EDITOR_ROLE_REQUIRED');
+
   // Expanded bilingual lessons include their existing tasks; the request stays below parseBody's 50k bound.
   if (JSON.stringify(data).length > (kind === 'topic' ? 40000 : 30000)) throw new ApiError("Материал слишком большой.");
   const base = baseContent(), existingTask = base.tasks.find(t => t.id === id);
+  if(status==='published'&&!permissions.author){const original=(kind==='topic'?base.topics:base.tasks).find(t=>t.id===id);if(!previous||await contentDigest({...original,...JSON.parse(previous.data),id})!==await contentDigest({...original,...data,id}))throw new ApiError('Выпускающий редактор может опубликовать сохранённую версию без изменения текста.',403,'EDITOR_ROLE_REQUIRED');}
   if ((kind === "task" && !existingTask) || (kind === "topic" && !base.topics.some(t => t.id === id))) throw new ApiError("Материал не найден.", 404);
   if (status === "published" && (typeof input.reviewNote !== "string" || !input.reviewNote.trim())) throw new ApiError("Для публикации требуется запись о математической и языковой проверке.");
   const bilingualText = (value: unknown) => { const v = value as { ru?: unknown; kk?: unknown }; return v && typeof v.ru === "string" && v.ru.trim() && typeof v.kk === "string" && v.kk.trim(); };
@@ -224,7 +243,7 @@ export async function updateContent(user: ChatGPTUser, input: Record<string, unk
   }
   const history = previous ? JSON.parse(previous.history) : [];
   history.push({ versionId:crypto.randomUUID(),at: new Date().toISOString(), by: user.email, status, previousStatus:previous?.status, previousData: previous ? JSON.parse(previous.data) : null, note: typeof input.reviewNote === "string" ? input.reviewNote : "" });
-  const row = { id, kind: String(kind), status: String(status), data: JSON.stringify(data), history: JSON.stringify(history), updatedBy: user.userId, updatedAt: new Date().toISOString() };
+  const row = { id, kind: String(kind), status: String(status), data: JSON.stringify(data), history: JSON.stringify(history), updatedBy: previous&&await contentDigest(JSON.parse(previous.data))===await contentDigest(data)?previous.updatedBy:user.userId, updatedAt: new Date().toISOString() };
   const changed=previous?await db.update(contentOverrides).set(row).where(and(eq(contentOverrides.id,id),eq(contentOverrides.history,previous.history),eq(contentOverrides.data,previous.data))).returning({id:contentOverrides.id}):await db.insert(contentOverrides).values(row).onConflictDoNothing().returning({id:contentOverrides.id});
   if(!changed.length)throw new ApiError('Материал изменён другим редактором. Загрузите актуальную версию перед сохранением.',409,'CONTENT_CONFLICT');
   return { id, status, history,editVersion:await contentDigest(row) };

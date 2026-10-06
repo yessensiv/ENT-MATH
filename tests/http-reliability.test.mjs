@@ -11,7 +11,9 @@ const invariant = s => ({ xp: s.xp, attempts: s.attempts, progress: s.progress, 
 
 test("server drafts, validation, concurrent saves and expiry regressions", async t => {
   const sign = await fetch(base + "/signin-with-chatgpt?return_to=/", { redirect: "manual" }); cookie = sign.headers.get("set-cookie").split(";")[0];
-  const initial = (await call("/api/state")).data; assert.equal(initial.user.id, "local_seedy"); assert.equal(initial.activeExam, null, "Finish a real local exam before fixture tests");
+  const prior = (await call("/api/state")).data; assert.equal(prior.user.id, "local_seedy"); assert.equal(prior.activeExam, null, "Finish a real local exam before fixture tests");
+  const isolated = await beginLocalFixture(old=>({...old,diagnosticDraft:null,diagnosticSession:null,tutorGenerations:{},tutorMessages:[]}));
+  const initial = (await call('/api/state')).data;
   try {
     await t.test("partial diagnostics and practice survive reload without changing learning results", async () => {
       const diagnostic = (await call("/api/diagnostic?track=profile")).data.tasks;
@@ -29,8 +31,8 @@ test("server drafts, validation, concurrent saves and expiry regressions", async
         ["/api/state", { action: "attempt", taskId: "linear-2", answer: ["4"] }],
         ["/api/state", { action: "attempt", taskId: multi.id, answer: extra }],
         ["/api/state", { action: "diagnostic", track: "profile", answers: Array(10).fill(null) }],
-        ["/api/tutor", { taskId: "fractions-4", message: "Помоги", steps: { invalid: true } }],
-        ["/api/tutor", { taskId: "fractions-4", message: "Помоги", fullSolution: "yes" }],
+        ["/api/tutor", { taskId: "fractions-1", message: "Помоги", steps: { invalid: true } }],
+        ["/api/tutor", { taskId: "fractions-1", message: "Помоги", fullSolution: "yes" }],
       ];
       for (const [path, body] of invalid) assert.equal((await call(path, body)).status, 400, JSON.stringify(body));
       const after = (await call("/api/state")).data; assert.equal(after.revision, before.revision); assert.deepEqual(after.assistedTaskIds, before.assistedTaskIds); assert.deepEqual(invariant(after), invariant(before));
@@ -53,11 +55,10 @@ test("server drafts, validation, concurrent saves and expiry regressions", async
         const state = (await call("/api/state")).data; assert.equal(state.activeExam, null); assert.equal(state.exams.filter(e => e.id === fixtureId).length, 1);
         const helper = await call("/api/tutor", { message: "Объясни проще", topicId: "linear" }); assert.equal(helper.status, 200); assert.equal(helper.data.mode, "study-helper");
       } finally {
-        await fixture.restore(fixture.revision + 1);
+        await fixture.restore(fixture.revision + 3);
       }
     });
   } finally {
-    if (initial.profile) await call("/api/state", { action: "profile", profile: initial.profile });
-    for (const kind of ["practice", "diagnostic"]) { const value = initial[kind === "practice" ? "practiceDraft" : "diagnosticDraft"]; const restored = value ? { ...value } : null; if (restored) delete restored.updatedAt; await call("/api/state", restored ? { action: "save-draft", kind, ...restored } : { action: "save-draft", kind, clear: true }); }
+    await isolated.restore((await call('/api/state')).data.revision);
   }
 });

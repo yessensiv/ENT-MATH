@@ -10,7 +10,7 @@ const fixture=await beginLocalFixture(original=>({...original,schoolFixture:true
 let code;
 try{
  code=await new Promise(resolve=>{const child=spawn(process.execPath,['--experimental-strip-types','--test','tests/http-school.test.mjs'],{cwd:process.cwd(),env:process.env,stdio:'inherit'});child.on('close',c=>resolve(c));child.on('error',()=>resolve(1));});
- assert.equal(code,0);const done=await state();assert.equal(done.revision,fixture.revision+16);assert.equal(done.schoolFixture,true);
+ assert.equal(code,0);const done=await state();assert.equal(done.revision,fixture.revision+26);assert.equal(done.schoolFixture,true);
 }finally{const done=await state();assert.equal(done.schoolFixture,true,'Restore only our isolated school fixture');await fixture.restore(done.revision);}
 const after=await state();for(const key of ['profile','attempts','errors','progress','reviews','exams','xp','diagnosticDraft'])assert.deepEqual(after[key],before[key],key);
 console.log('School flow verified; original learner state restored.');

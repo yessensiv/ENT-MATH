@@ -42,6 +42,13 @@ const derivedExamCode = ['examAnswerKey', 'examAnswer', 'examFlags'].map(name =>
 const snapshotsCode = snapshotStatements.map(node => node.getText(ast)).join('\n');
 const settle = () => new Promise(resolve => setImmediate(resolve));
 
+test('HOME-02: browsing other directions never changes the learner profile',()=>{
+  const writes=[],view={};
+  const context=createContext({requestGeneration:{current:0},setTrack:v=>view.track=v,setTopicId:v=>view.topic=v,setEditedTopic:()=>{},setTasks:()=>{},setSaveStatus:()=>{},act:v=>writes.push(v),state:{profile:{learningMode:'school',grade:'7',track:'base'}}});
+  runInContext(compile(`var changeTrack=${functions.get('changeTrack').getText(ast)};changeTrack('profile');`),context);
+  assert.equal(view.track,'profile');assert.equal(writes.length,0);assert.equal(context.state.profile.learningMode,'school');assert.equal(context.state.profile.track,'base');
+});
+
 function harness(screen = 'exams') {
   let now = 1_800_000_000_000, sequence = 0, timerId = 0;
   const timers = new Map(), mounted = new Map(), requests = [], notices = [];
@@ -51,13 +58,15 @@ function harness(screen = 'exams') {
   const model = { state: serverState, user, screen, busy: false, timeLeft: 4800, examIndex: 0, examAnswerDraft: { key: 'exam-1:0', value: 'A' }, currentTask: { id: 'task-1' }, answer: '42', steps: '2x = 84', hint: 0, reviewId: undefined, feedback: null, diagnosticDone: false, diagnosticAnswers: [], taskIndex: 0, tasks: [{ id: 'task-1' }, { id: 'task-2' }], track: 'profile', saveStatus: '', lang: 'ru', notice: '' };
   const refs = Object.fromEntries(Object.entries({ submitLock: false, submittedTask: '', examLock: false, latestRevision: -1, requestGeneration: 0, expiredHandled: '', draftSnapshot: null, examSnapshot: null, latestUser: user, savedExamSignature: '', savedDraftSignature: '', pending: 0, routeRef: screen, clockOffset: 0, examStamp: { key: '', at: 0 }, draftStamp: { key: '', at: 0 }, optimisticFlags: null }).map(([key, value]) => [key, { current: value }]));
   refs.writeQueue = { current: createWriteQueue() };
+  refs.pendingSubmission={current:null};
+  refs.lessonSnapshot={current:null};refs.restoredLesson={current:false};
   class ClockDate extends Date { static now() { return now; } }
   const set = key => value => { model[key] = typeof value === 'function' ? value(model[key]) : value; if (key === 'notice') notices.push(model[key]); };
   const api = (url, body) => new Promise((resolve, reject) => requests.push({ url, body: body && structuredClone(body), resolve, reject }));
   const globals = () => ({
     ...model, ...refs, activeExam: model.state.activeExam, question: model.state.activeExam?.questions?.[model.examIndex], questions: model.state.activeExam?.questions ?? [],
-    setSchoolGrade: set('schoolGrade'), setLessonOrigin: set('lessonOrigin'), setState: set('state'), setExamAnswerDraft: set('examAnswerDraft'), setBusy: set('busy'), setServiceError: set('serviceError'), setSaveStatus: set('saveStatus'), setScreen: set('screen'), setMenu: set('menu'), setOnboard: set('onboard'), setLang: set('lang'), setTrack: set('track'), setLoading: set('loading'), setFeedback: set('feedback'), setExamReview: set('examReview'), setExamIndex: set('examIndex'), setDiagnosticAnswers: set('diagnosticAnswers'), setDiagnosticDone: set('diagnosticDone'), setTaskIndex: set('taskIndex'), setAnswer: set('answer'), setNotice: set('notice'),
-    api, RequestError, Date: ClockDate, tr: ru => ru,
+    setLessonDrafts:set('lessonDrafts'),setSchoolGrade: set('schoolGrade'), setLessonOrigin: set('lessonOrigin'), setState: set('state'), setExamAnswerDraft: set('examAnswerDraft'), setBusy: set('busy'), setServiceError: set('serviceError'), setSaveStatus: set('saveStatus'), setScreen: set('screen'), setMenu: set('menu'), setOnboard: set('onboard'), setLang: set('lang'), setTrack: set('track'), setLoading: set('loading'), setFeedback: set('feedback'), setExamReview: set('examReview'), setExamIndex: set('examIndex'), setDiagnosticAnswers: set('diagnosticAnswers'), setDiagnosticDone: set('diagnosticDone'), setTaskIndex: set('taskIndex'), setAnswer: set('answer'), setNotice: set('notice'),
+    api, RequestError, Date: ClockDate, tr: ru => ru, crypto,
     location: { hash: `#${model.screen}` }, window: { scrollTo() {} },
     setTimeout: (callback, delay) => { const id = ++timerId; timers.set(id, { callback, due: now + delay }); return id; },
     clearTimeout: id => timers.delete(id),

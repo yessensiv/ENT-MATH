@@ -36,7 +36,7 @@ test("five real profile variants meet official structure and score 50 for correc
     assert.deepEqual([1, 2, 3].map(d => exam.questions.filter(q => q.difficulty === d).length), [20, 12, 8]);
     assert.ok(exam.questions.every(q => grade(q, q.answer)));
     assert.equal(exam.questions.reduce((sum, q) => sum + scoreExamTask(q, q.answer).points, 0), 50);
-    assert.equal(new Set(exam.questions.map(q => officialSection(program.find(t => t.id === q.topicId)))).size, 10);
+    assert.equal(new Set(exam.questions.map(q => q.curriculumSection || officialSection(program.find(t => t.id === q.topicId)))).size, 10);
     assert.ok(exam.questions.every(q => !isModelExample(q, program.find(t => t.id === q.topicId))));
     fingerprints.add(exam.questions.map(q => q.id).join(","));
   }

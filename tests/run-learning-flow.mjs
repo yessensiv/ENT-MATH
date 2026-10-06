@@ -18,11 +18,11 @@ try {
     child.on("error", error => resolve({ code: 1, error })); child.on("close", code => resolve({ code: code ?? 1 }));
   });
   assert.equal(result.code, 0, result.error?.message || "Full learning flow failed");
-  const completed = await state(); assert.equal(completed.revision, fixture.revision + 54, "Unexpected writer or changed flow: do not blindly restore the learner"); assert.equal(completed.exams.at(-1).score, 50); assert.equal(completed.learningFlowFixture, true);
+  const completed = await state(); assert.equal(completed.revision, fixture.revision + 57, "Unexpected writer or changed flow: do not blindly restore the learner"); assert.equal(completed.exams.at(-1).score, 50); assert.equal(completed.learningFlowFixture, true);
 } finally {
-  // A passing current flow has exactly 54 learner mutations. A failure keeps the
+  // A passing current flow has exactly 57 learner mutations. A failure keeps the
   // durable backup and deliberately refuses a guessed restoration revision.
-  if (result?.code === 0) await fixture.restore(fixture.revision + 54);
+  if (result?.code === 0) await fixture.restore(fixture.revision + 57);
   else { fixture.db.close(); throw new Error("Isolated flow failed. Inspect its durable .sites-runtime/tests/backups snapshot before restoring; no guessed revision was applied."); }
 }
 const restored = await state();

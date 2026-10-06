@@ -13,7 +13,10 @@ test('local editor verifies exact versions, collects minimal issue data and limi
    assert.equal((await call('/api/admin',{id,kind:'task',status:'draft',data:material})).status,200);
    const review=(await call(`/api/reviews?kind=task&id=${id}`)).data;assert.ok(Object.values(review.coverage).every(v=>!v));
    assert.equal((await call('/api/admin',{id,kind:'task',status:'published',data:material,reviewNote:'Only local mechanism test'})).status,400);
-   for(const discipline of ['math','methodology','kazakh'])assert.equal((await call('/api/reviews',{id,kind:'task',discipline,verdict:'approved',note:'LOCAL TEST ONLY: проверяем механизм, не реальная экспертная рецензия.',expectedHash:review.hash})).status,200);
+   assert.equal((await call('/api/reviews',{id,kind:'task',discipline:'math',verdict:'approved',note:'LOCAL TEST ONLY: author self approval must fail',expectedHash:review.hash})).status,403);
+   // Explicit local second-person fixture; never a real expert sign-off.
+   db.prepare('INSERT INTO editorial_reviews VALUES(?,?,?,?,?,?,?)').run(crypto.randomUUID(),id,'math','approved',JSON.stringify({hash:review.hash,comment:'LOCAL TEST ONLY'}),'local-test-independent-math',new Date().toISOString());
+   for(const discipline of ['methodology','kazakh'])assert.equal((await call('/api/reviews',{id,kind:'task',discipline,verdict:'approved',note:'LOCAL TEST ONLY: проверяем механизм, не реальная экспертная рецензия.',expectedHash:review.hash})).status,200);
    assert.ok(Object.values((await call(`/api/reviews?kind=task&id=${id}`)).data.coverage).every(Boolean));
    assert.equal((await call('/api/admin',{id,kind:'task',status:'published',data:material,reviewNote:'LOCAL TEST ONLY'})).status,200);
    assert.equal((await call('/api/tasks?topic=school-divisibility')).data.tasks.find(q=>q.id===id).prompt.ru,material.prompt.ru);

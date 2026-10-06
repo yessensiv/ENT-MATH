@@ -4,3 +4,8 @@ export async function contentDigest(material:unknown){return [...new Uint8Array(
 export function reviewCoverage(reviews:{discipline:string;verdict:string;note:string;createdAt:string}[],hash:string){
  return Object.fromEntries(reviewDisciplines.map(d=>{const current=reviews.filter(r=>r.discipline===d).sort((a,b)=>b.createdAt.localeCompare(a.createdAt)).find(r=>{try{return JSON.parse(r.note).hash===hash;}catch{return false;}});return [d,current?.verdict==='approved'];})) as Record<typeof reviewDisciplines[number],boolean>;
 }
+export function independentReviewCoverage(reviews:{discipline:string;verdict:string;note:string;createdAt:string;reviewerId:string}[],hash:string,authorId:string){
+ const current=reviewDisciplines.map(d=>reviews.filter(r=>r.discipline===d).sort((a,b)=>b.createdAt.localeCompare(a.createdAt)).find(r=>{try{return JSON.parse(r.note).hash===hash;}catch{return false;}}));
+ const approved=current.filter((r):r is NonNullable<typeof r>=>!!r&&r.verdict==='approved');
+ return {complete:approved.length===3&&new Set(approved.map(r=>r.reviewerId)).size>=2&&approved.find(r=>r.discipline==='math')?.reviewerId!==authorId,coverage:reviewCoverage(reviews,hash)};
+}

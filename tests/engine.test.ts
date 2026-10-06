@@ -67,9 +67,9 @@ test("provisional readiness opens successors while delayed review remains requir
   const plan = makePlan(state, [...topics, next], now); assert.equal(plan[0].topicId, "systems"); assert.equal(state.progress.equations.mastered, false);
   assert.equal(makePlan(state, [...topics, next], new Date("2026-10-06T08:01:00Z"))[0].type, "review");
 });
-test("diagnostic foundation strengths enable route without awarding mastery or XP", () => {
+test("one diagnostic success cannot establish a whole prerequisite", () => {
   const state = emptyState(); state.diagnostics.push({ id: "diag", track: "profile", at: "2026-10-05", score: 1, total: 2, strengths: ["fractions"], gaps: ["equations"] });
-  assert.equal(makePlan(state, topics)[0].topicId, "equations"); assert.match(makePlan(state, topics)[0].reason.ru, /Диагностика/); assert.equal(state.progress.fractions, undefined); assert.equal(state.xp, 0);
+  assert.equal(makePlan(state, topics)[0].topicId, "fractions"); assert.equal(state.progress.fractions, undefined); assert.equal(state.xp, 0);
 });
 test("close deadline prioritizes most severe gaps and includes target and days left", () => {
   const state = emptyState(), now = new Date("2026-10-05T08:00:00Z"); state.profile = { name: "A", grade: "11", track: "profile", dailyMinutes: 20, examDate: "2026-10-15", target: 40, language: "ru" };
@@ -89,13 +89,19 @@ test("exam errors assign one-day repetition without duplicated topic schedules",
   const exam = { id: "exam", track: "profile" as const, variant: 1, startedAt: now.toISOString(), durationMinutes: 80, questions: [task("exam-a"), task("exam-b")], answers: {}, flagged: [], rules: EXAM_RULES };
   finishExam(exam, state, now); assert.equal(state.errors.length, 2); assert.equal(state.reviews.length, 1); assert.equal(state.reviews[0].due, "2026-10-06T08:00:00.000Z");
 });
-test("mastery requires three new independent tasks then a fresh task after a day", () => {
+test("legacy topic successes do not prove mastery without reviewed methods and rubric", () => {
   const state = emptyState(), bank = ["a", "b", "c", "d"].map(id => task(id)), now = new Date("2026-10-05T08:00:00Z");
   for (const t of bank.slice(0, 3)) recordAttempt(state, t, topics[1], { answer: "4" }, bank, now);
   assert.equal(state.progress.equations.mastered, false); assert.equal(state.progress.equations.independent, 3);
   const review = state.reviews[0]; assert.throws(() => recordAttempt(structuredClone(state), bank[3], topics[1], { answer: "4", reviewId: review.id }, bank, now));
   recordAttempt(state, bank[3], topics[1], { answer: "4", reviewId: review.id }, bank, new Date("2026-10-06T08:01:00Z"));
-  assert.equal(state.progress.equations.mastered, true); assert.equal(state.reviews[1].interval, 3);
+  assert.equal(state.progress.equations.mastered, false); assert.equal(state.reviews[1].interval, 3);
+});
+test('MAST-01: reviewed rubric needs four independent tasks in two methods, required level and delayed check',()=>{
+ const state=emptyState(),now=new Date('2026-10-05T08:00:00Z'),bank=['a','b','c','d','e'].map((id,i)=>({...task(id),difficulty:2,methodFamily:i%2?'balance':'inverse'}));
+ const topic={...topics[1],masteryRubric:{reviewed:true,minimumIndependent:4,minimumDifficulty:2,minimumFamilies:2}};
+ for(const t of bank.slice(0,4))recordAttempt(state,t,topic,{answer:'4'},bank,now);assert.equal(state.progress.equations.mastered,false);
+ recordAttempt(state,bank[4],topic,{answer:'4',reviewId:state.reviews[0].id},bank,new Date('2026-10-06T08:01:00Z'));assert.equal(state.progress.equations.mastered,true);
 });
 test("repeat task and assisted answer never count as new independent mastery", () => {
   const state = emptyState(), t = task(); recordAttempt(state, t, topics[1], { answer: "4", assisted: true }, [t]); recordAttempt(state, t, topics[1], { answer: "4" }, [t]); assert.equal(state.progress.equations.independent, 0);
@@ -134,7 +140,7 @@ test("all five profile variants have blueprint types and 50/30/20 difficulties",
   const bank: Task[] = [];
   for (const type of ["single", "multiple", "matching"] as const) for (const d of [1, 2, 3]) for (let i = 0; i < 20; i++) bank.push({ ...task(`${type}-${d}-${i}`, type === "single" ? "4" : ["4", "5"], type), difficulty: d, options: ["4", "5", "6", "7"] });
   for (let variant = 1; variant <= 5; variant++) {
-    const exam = makeExam("profile", variant, topics, bank);
+    const exam = makeExam("profile", variant, [...topics, ...["numbers","percentages"].map(id=>({id,title:{ru:id,kk:id},track:"base" as const}))], bank);
     assert.equal(exam.questions.length, 40);
     assert.equal(exam.questions.filter(t => t.type === "single" && !t.context).length, 25);
     assert.equal(exam.questions.filter(t => t.context).length, 5);

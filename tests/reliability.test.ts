@@ -3,11 +3,11 @@ import assert from "node:assert/strict";
 // @ts-expect-error Node's native type stripping requires explicit extensions.
 import { calculate, equivalent, emptyState, recordAttempt, makePlan, finishExam, expireExam, scoreExamTask, answerFitsTask, EXAM_RULES, type Task, type Topic } from "../lib/engine.ts";
 
-const topic: Topic = { id: "linear", title: { ru: "Уравнения", kk: "Теңдеулер" }, track: "profile" };
-const task = (id: string): Task => ({ id, topicId: "linear", type: "number", difficulty: 1, answer: "4", prompt: { ru: "2x+3=11", kk: "2x+3=11" }, hints: { ru: ["Вычти 3"], kk: ["3-ті азайт"] }, solution: { ru: ["x=4"], kk: ["x=4"] } });
+const topic: Topic = { id: "linear", title: { ru: "Уравнения", kk: "Теңдеулер" }, track: "profile",masteryRubric:{reviewed:true,minimumIndependent:4} };
+const task = (id: string): Task => ({ id, topicId: "linear", type: "number", difficulty: 2,methodFamily:id.includes('1')||id.includes('one')?'model':'transformation',answer: "4", prompt: { ru: "2x+3=11", kk: "2x+3=11" }, hints: { ru: ["Вычти 3"], kk: ["3-ті азайт"] }, solution: { ru: ["x=4"], kk: ["x=4"] } });
 const start = new Date("2026-10-05T08:00:00Z");
 function mastered() {
-  const state = emptyState(); for (let i = 0; i < 3; i++) recordAttempt(state, task(`p${i}`), topic, { answer: "4" }, [], start);
+  const state = emptyState(); for (let i = 0; i < 4; i++) recordAttempt(state, task(`p${i}`), topic, { answer: "4" }, [], start);
   recordAttempt(state, task("r1"), topic, { answer: "4", reviewId: state.reviews[0].id }, [], new Date("2026-10-06T09:00:00Z")); return state;
 }
 test("a new wrong answer reopens an already mastered skill and keeps repair in the route", () => {
@@ -17,9 +17,9 @@ test("a new wrong answer reopens an already mastered skill and keeps repair in t
 test("regaining mastery cannot farm the original mastery award", () => {
   const state = mastered(); const before = state.xp;
   recordAttempt(state, task("mistake"), topic, { answer: "7", reviewId: state.reviews[1].id }, [], new Date("2026-10-09T10:00:00Z"));
-  const next = new Date("2026-10-10T11:00:00Z"); for (let i = 0; i < 3; i++) recordAttempt(state, task(`again-${i}`), topic, { answer: "4" }, [], next);
+  const next = new Date("2026-10-10T11:00:00Z"); for (let i = 0; i < 4; i++) recordAttempt(state, task(`again-${i}`), topic, { answer: "4" }, [], next);
   assert.equal(state.progress.linear.mastered, false); recordAttempt(state, task("again-delayed"), topic, { answer: "4", reviewId: state.reviews[1].id }, [], new Date("2026-10-11T12:00:00Z"));
-  assert.equal(state.progress.linear.mastered, true); assert.equal(state.xp - before, 45);
+  assert.equal(state.progress.linear.mastered, true); assert.equal(state.xp - before, 50,'five new successes; the original mastery award is not paid again');
 });
 test("a revealed exam answer cannot later count as fresh independent practice", () => {
   const state = emptyState(), t = task("exam-seen"), exam = { id: "e", track: "profile" as const, variant: 1, startedAt: start.toISOString(), durationMinutes: 80, questions: [t], answers: { "0": "4" }, flagged: [], rules: EXAM_RULES };
@@ -52,15 +52,18 @@ test("official exam choices reject unknown values, duplicate selections and exce
   const multiple = { ...matching, type: "multiple" as const, answer: ["A"] }; assert.equal(scoreExamTask(multiple, ["A", " A"]).points, 0);
 });
 test("repeated errors need several fresh solutions and cannot multiply the correction reward", () => {
-  const state = emptyState(); for (let i = 0; i < 5; i++) recordAttempt(state, task("same-error"), topic, { answer: "7" }, [], start);
+  const repair={...task('fix-c'),repairsTaskIds:['same-error']};
+  const state = emptyState(); for (let i = 0; i < 5; i++) recordAttempt(state, task("same-error"), topic, { answer: "7" }, [task('fix-a'),task('fix-b'),repair], start);
   recordAttempt(state, task("fix-a"), topic, { answer: "4" }, [], start); assert.equal(state.errors.every(e => e.resolved), false); assert.equal(state.xp, 10);
-  recordAttempt(state, task("fix-b"), topic, { answer: "4" }, [], start); recordAttempt(state, task("fix-c"), topic, { answer: "4" }, [], start); assert.equal(state.errors.every(e => e.resolved), true); assert.equal(state.xp, 35);
+  recordAttempt(state, task("fix-b"), topic, { answer: "4" }, [], start); recordAttempt(state, repair, topic, { answer: "4" }, [], start); assert.equal(state.errors.every(e => e.resolved), true); assert.equal(state.xp, 35);
 });
-test("an early remedial review cannot stand in for the delayed check after three confirmations", () => {
+test("an early remedial review cannot stand in for the delayed check after four confirmations", () => {
   const state = emptyState(); recordAttempt(state, task("wrong-first"), topic, { answer: "7" }, [], start);
   recordAttempt(state, task("fresh-one"), topic, { answer: "4" }, [], start);
   const later = new Date("2026-10-06T09:00:00Z"); recordAttempt(state, task("early-review"), topic, { answer: "4", reviewId: state.reviews[0].id }, [], later);
   recordAttempt(state, task("fresh-third"), topic, { answer: "4" }, [], later);
+  recordAttempt(state, task("fresh-fourth"), topic, { answer: "4" }, [], later);
   assert.equal(state.progress.linear.mastered, false); assert.equal(state.progress.linear.reviewPassed, false); assert.ok(state.reviews.some(r => !r.completed && Date.parse(r.due) > later.getTime()));
-  const pending = state.reviews.find(r => !r.completed)!; recordAttempt(state, task("delayed-final"), topic, { answer: "4", reviewId: pending.id }, [], new Date("2026-10-07T10:00:00Z")); assert.equal(state.progress.linear.mastered, true);
+  const pending = state.reviews.find(r => !r.completed)!;recordAttempt(state,task('too-soon'),topic,{answer:'4'},[],later);assert.equal(state.progress.linear.mastered,false);
+  recordAttempt(state, task("delayed-final"), topic, { answer: "4", reviewId: pending.id }, [], new Date(Date.parse(pending.due)+1000)); assert.equal(state.progress.linear.mastered, true);
 });

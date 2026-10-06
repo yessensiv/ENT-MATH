@@ -23,6 +23,6 @@ test("draft beacons cannot revert newer work or resurrect completed sessions", a
       assert.equal((await call("/api/state", draft)).status, 200); const older = await call("/api/state", { ...draft, answer: "2", updatedAt: now - 1 }); assert.equal(older.data.staleSnapshot, true); assert.equal(older.data.diagnosticDraft.answer, "1");
       const answers = questions.map(q => ({ taskId: q.id, answer: tasks.find(t => t.id === q.id).answer })), completed = await call("/api/state", { action: "diagnostic", track: "base", answers, draftUpdatedAt: now }); assert.equal(completed.status, 200); assert.equal(completed.data.diagnosticDraft, null);
       const beacon = await call("/api/state", { ...draft, updatedAt: now - 1 }); assert.equal(beacon.data.staleSnapshot, true); assert.equal(beacon.data.diagnosticDraft, null); assert.equal(beacon.data.revision, completed.data.revision);
-    } finally { await fixture.restore(fixture.revision + 2); }
+    } finally { await fixture.restore(fixture.revision + 3); }
   });
 });

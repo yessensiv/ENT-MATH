@@ -1,5 +1,9 @@
 // @ts-expect-error Native Node tests need explicit extensions.
 import { schoolTopicIds } from "./school-curriculum.ts";
+// @ts-expect-error Native Node tests need explicit extensions.
+import { proveRationalIdentity, type Verdict } from './algebra-proof.ts';
+// @ts-expect-error Native Node tests.
+import{checkStructuredAnswer,type AnswerFormat}from'./structured-answer.ts';
 export type Language = "ru" | "kk";
 export type Track = "base" | "profile" | "literacy";
 export type LocalText = { ru: string; kk: string };
@@ -13,8 +17,8 @@ export type Task = {
 };
 export type Topic = { id: string; title: LocalText; track: Track; prerequisites?: string[]; minutes?: number; [key: string]: unknown };
 export type Profile = { name: string; grade: string; learningMode?: "school" | "ent"; schoolPathway?:'natural-math'|'humanitarian'; track: Track; examDate: string; target: number; targets?: Partial<Record<Track, number>>; dailyMinutes: number; language: Language };
-export type Progress = { attempts: number; correct: number; independent: number; mastered: boolean; reviewPassed?: boolean; independentTaskIds: string[]; confirmationTaskIds?: string[]; masteryRewarded?: boolean; lastAt?: string };
-export type Attempt = { id: string; taskId: string; topicId: string; track: Track; answer: Answer; steps: string; correct: boolean; assisted: boolean; at: string; category: string };
+export type Progress = { attempts: number; correct: number; independent: number; mastered: boolean; reviewPassed?: boolean; independentTaskIds: string[]; confirmationTaskIds?: string[]; masteryRewarded?: boolean; lastAt?: string; masteryVersion?:string; masteryReadyAt?:string; masteryPending?:boolean; evidence?:Record<string,{difficulty:number;methodFamily:string|null}> };
+export type Attempt = { id: string; taskId: string; topicId: string; track: Track; answer: Answer; steps: string; correct: boolean; assisted: boolean; at: string; category: string;taskVersion?:string;checkingVersion?:string;taskSnapshot?:Pick<Task,'prompt'|'answer'|'solution'|'domain'|'type'|'units'|'precision'|'difficulty'> };
 export type Review = { id: string; topicId: string; due: string; interval: number; completed: boolean; taskId?: string };
 export type ErrorEntry = { id: string; taskId: string; topicId: string; answer: Answer; steps: string; category: string; explanation: LocalText; at: string; resolved: boolean; exerciseIds: string[]; prompt?: LocalText; solution?: Task["solution"]; hints?: Task["hints"]; correctAnswer?: Answer };
 export type Exam = { id: string; track: Track; variant: number; startedAt: string; durationMinutes: number; questions: Task[]; answers: Record<string, Answer>; flagged: number[]; answerUpdatedAt?: Record<string, number>; currentIndex?: number; currentIndexUpdatedAt?: number; finishedAt?: string; finishReason?: "submitted" | "time"; score?: number; maxScore?: number; results?: { taskId: string; topicId: string; answer: Answer; correct: boolean; points: number; max: number; prompt?: LocalText; context?: LocalText; solution: Task["solution"]; correctAnswer: Answer }[]; rules: typeof EXAM_RULES };
@@ -70,7 +74,7 @@ export function reservedReviewIds(topic: Topic | undefined) {
 }
 
 export function seenTaskIds(state: LearnerState) {
-  return new Set([...state.attempts.map(a => a.taskId), ...state.errors.map(e => e.taskId), ...state.exams.flatMap(e => e.questions.map(t => t.id)), ...(Array.isArray(state.assistedTaskIds) ? state.assistedTaskIds as string[] : []), ...state.diagnostics.flatMap(d => Array.isArray(d.taskIds) ? d.taskIds as string[] : [])]);
+  return new Set([...state.attempts.map(a => a.taskId), ...state.errors.map(e => e.taskId), ...state.exams.flatMap(e => e.questions.map(t => t.id)), ...(Array.isArray(state.assistedTaskIds) ? state.assistedTaskIds as string[] : []), ...(Array.isArray(state.diagnosticExposures)?state.diagnosticExposures as string[]:[]),...state.diagnostics.flatMap(d => Array.isArray(d.taskIds) ? d.taskIds as string[] : [])]);
 }
 export function taskFingerprint(task: Task) {
   const clean = (value: string) => value.toLowerCase().replace(/\s+/g, "").replace(/−/g, "-").replace(/,/g, ".");
@@ -82,6 +86,13 @@ export function deliverTask(task: Task, state?: LearnerState) {
   return { ...sanitizeTask(task), seen, assisted, practiceEligible: !seen && !assisted };
 }
 export function confirmationCount(p: Progress | undefined) { return p ? p.confirmationTaskIds?.length ?? p.independent : 0; }
+export function masteryReady(p:Progress|undefined,topic:Topic){
+ const rubric=topic.masteryRubric as {reviewed?:boolean;minimumIndependent?:number;minimumDifficulty?:number;minimumFamilies?:number}|undefined;
+ if(!p||!rubric?.reviewed)return false;
+ const evidence=(p.confirmationTaskIds||[]).map(id=>p.evidence?.[id]).filter((e):e is NonNullable<typeof e>=>!!e);
+ const minimum=Math.max(4,Math.min(6,Number(rubric.minimumIndependent)||4)),level=Math.max(1,Math.min(3,Number(rubric.minimumDifficulty)||2)),families=Math.max(2,Number(rubric.minimumFamilies)||2);
+ return evidence.length>=minimum&&evidence.some(e=>e.difficulty>=level)&&new Set(evidence.map(e=>e.methodFamily).filter(Boolean)).size>=families;
+}
 
 // Restricted arithmetic parser. No eval, Function, executable JavaScript or property access.
 type Polynomial = number[];
@@ -161,6 +172,7 @@ export function calculate(source: string, x = 0, criticalPoints?: Set<number>): 
 const normalize = (s: string) => s.trim().replace(/\s+/g, "").replace(/−/g, "-").replace(/,/g, ".").toLowerCase();
 export function equivalent(a: string, b: string, precision?: number, absoluteTolerance?: number): boolean {
   if (!a.trim()) return false;
+  if (/[xх]/i.test(a + b) && normalize(a) !== normalize(b)) return proveRationalIdentity(a,b) === 'correct';
   if (normalize(a) === normalize(b)) {
     if (/^[\d\s+\-*/^().,a-zхπ²³√|×·÷]+$/i.test(a)) {
       for (const x of /[xх]/i.test(a) ? [-1e6, -1000, -100, -10, -1, 0, 0.17, 1, 10, 100, 1000, 1e6] : [0]) { try { calculate(a, x); return true; } catch { /* Seek a real defined value, rather than accepting an always-undefined expression. */ } }
@@ -187,7 +199,25 @@ export function equivalent(a: string, b: string, precision?: number, absoluteTol
   } catch { return false; }
 }
 
+export function checkAnswer(task: Task, answer: Answer): {status: Verdict; verification: string} {
+  if(['interval','root-set','pair'].includes(String(task.answerFormat))){return{status:typeof answer==='string'&&typeof task.answer==='string'?checkStructuredAnswer(task.answerFormat as AnswerFormat,answer,task.answer):'review',verification:'exact-structured-rational-v1'};}
+  if (task.type === 'expression' && typeof answer === 'string' && typeof task.answer === 'string') {
+    if (!answer.trim()) return {status:'incorrect',verification:'empty-answer'};
+    if (/[xх]/i.test(answer+task.answer)) {
+      const status=proveRationalIdentity(answer,task.answer,task.domain);
+      if(status!=='review')return {status,verification:'exact-rational-polynomial-v1'};
+      // Identical, well-defined syntax is a proof of identity; evaluating
+      // different expressions at sample points is never a proof.
+      if(normalize(answer)===normalize(task.answer)&&equivalent(answer,task.answer))return{status:'correct',verification:'identical-defined-expression'};
+      return{status:'review',verification:'unsupported-expression'};
+    }
+    try {calculate(answer);calculate(task.answer);}catch{return{status:'review',verification:'unsupported-expression'};}
+  }
+  return {status:grade(task,answer)?'correct':'incorrect',verification:'verified-answer'};
+}
+
 export function grade(task: Task, answer: Answer): boolean {
+  if(['interval','root-set','pair'].includes(String(task.answerFormat)))return checkAnswer(task,answer).status==='correct';
   if (task.type === "multiple" || task.type === "matching") {
     const expected = Array.isArray(task.answer) ? task.answer : [task.answer];
     const provided = Array.isArray(answer) ? answer : [answer];
@@ -238,7 +268,7 @@ export function makePlan(state: LearnerState, topics: Topic[], now = new Date())
   const byId = new Map(topics.map(t => [t.id, t]));
   const latestDiagnostic = [...state.diagnostics].reverse().find(d => d.track === track && d.schoolGrade === schoolGrade && (!schoolGrade || Number(schoolGrade)<10 || (d.schoolPathway??'natural-math')===(state.profile?.schoolPathway??'natural-math')));
   const gaps = new Set(latestDiagnostic?.gaps || []);
-  const foundationStrengths = new Set((latestDiagnostic?.strengths || []).filter(id => byId.get(id)?.track === "base" && !state.errors.some(e => e.topicId === id && !e.resolved && e.at > (latestDiagnostic?.at || ""))));
+  const foundationStrengths = new Set((latestDiagnostic?.strengths || []).filter(id => (latestDiagnostic?.strengths.filter(s=>s===id).length||0)>=2&&!latestDiagnostic?.gaps.includes(id)&&byId.get(id)?.track === "base" && !state.errors.some(e => e.topicId === id && !e.resolved && e.at > (latestDiagnostic?.at || ""))));
   const ready = (id: string) => Boolean(state.progress[id]?.mastered || confirmationCount(state.progress[id]) >= 3 || foundationStrengths.has(id));
   const futureReview = (id: string) => state.reviews.some(r => r.topicId === id && !r.completed && Date.parse(r.due) > now.getTime());
   const reachable = new Set<string>();
@@ -285,29 +315,42 @@ export function makePlan(state: LearnerState, topics: Topic[], now = new Date())
   return planned;
 }
 
-export function recordAttempt(state: LearnerState, task: Task, topic: Topic, input: { answer: Answer; steps?: string; assisted?: boolean; reviewId?: string }, tasks: Task[], now = new Date()) {
-  const correct = grade(task, input.answer), at = now.toISOString();
+export function recordAttempt(state: LearnerState, task: Task, topic: Topic, input: { answer: Answer; steps?: string; assisted?: boolean; reviewId?: string; submissionId?:string }, tasks: Task[], now = new Date()) {
+  const payload=JSON.stringify([task.id,input.answer,input.steps||'',Boolean(input.assisted),input.reviewId||'']);
+  type Feedback={correct:boolean;status:Verdict;solution:Task['solution'];hints:Task['hints'];errorCategory:string;explanation:LocalText;answer:Answer;independentEligible:boolean;verification:string};
+  const receipts=(state.submissions||{}) as Record<string,{payload:string;feedback:Feedback}>;
+  if(input.submissionId && receipts[input.submissionId]) {const prior=receipts[input.submissionId];if(prior.payload!==payload)throw Error('SUBMISSION_CONFLICT');return structuredClone(prior.feedback);}
+  const saveReceipt=(feedback:Feedback)=>{if(input.submissionId){receipts[input.submissionId]={payload,feedback:structuredClone(feedback)};state.submissions=receipts;}return feedback;};
+  const checked=checkAnswer(task,input.answer),correct=checked.status==='correct',at=now.toISOString();
+  if(checked.status==='review')return saveReceipt({correct:false,status:'review',solution:{ru:[],kk:[]},hints:task.hints,errorCategory:'unverified',explanation:{ru:'Этот ответ требует проверки: автоматический проверяющий не смог доказать равенство. Ошибка не начислена, освоение не изменено. Покажи ход решения или сообщи редактору.',kk:'Бұл жауапты тексеру қажет: автоматты тексеру теңдікті дәлелдей алмады. Қате есептелмеді, меңгеру өзгермеді. Шешу жолын көрсет немесе редакторға хабарла.'},answer:'',independentEligible:false,verification:checked.verification});
   const confirmationsBefore = confirmationCount(state.progress[task.topicId]);
+  const readinessBefore=masteryReady(state.progress[task.topicId],topic);
   const previousSame = seenTaskIds(state).has(task.id);
   const assignedReview = input.reviewId ? state.reviews.find(r => r.id === input.reviewId && r.topicId === task.topicId && !r.completed) : undefined;
   if (input.reviewId && (!assignedReview || new Date(assignedReview.due) > now || previousSame)) throw new Error("Повторение ещё не назначено или задача уже решалась");
   const assisted = Boolean(input.assisted) || previousSame || isModelExample(task, topic);
   const mistake = correct ? { category: "none", explanation: { ru: "Верно!", kk: "Дұрыс!" } } : classifyError(input.steps || "");
   const attempt: Attempt = { id: crypto.randomUUID(), taskId: task.id, topicId: task.topicId, track: topic.track, answer: input.answer, steps: input.steps || "", correct, assisted, at, category: mistake.category };
+  attempt.taskVersion=typeof task.version==='string'?task.version:`attempt-snapshot:${attempt.id}`;
+  attempt.checkingVersion=checked.verification;
+  attempt.taskSnapshot=structuredClone({prompt:task.prompt,answer:task.answer,solution:task.solution,domain:task.domain,type:task.type,units:task.units,precision:task.precision,difficulty:task.difficulty});
   state.attempts.push(attempt);
   const p = state.progress[task.topicId] ||= { attempts: 0, correct: 0, independent: 0, mastered: false, independentTaskIds: [] };
   p.attempts++; p.correct += Number(correct); p.lastAt = at;
   p.independentTaskIds ||= [];
   p.confirmationTaskIds ||= [...p.independentTaskIds];
   p.masteryRewarded ||= p.mastered;
-  if (correct && !assisted && !p.independentTaskIds.includes(task.id)) { p.independentTaskIds.push(task.id); p.confirmationTaskIds.push(task.id); p.independent = p.independentTaskIds.length; state.xp += 10; }
+  if (correct && !assisted && !p.independentTaskIds.includes(task.id)) { p.independentTaskIds.push(task.id); p.confirmationTaskIds.push(task.id);(p.evidence||={})[task.id]={difficulty:task.difficulty,methodFamily:typeof task.methodFamily==='string'?task.methodFamily:null};p.independent = p.independentTaskIds.length; state.xp += 10; }
+  if(!readinessBefore&&masteryReady(p,topic))p.masteryReadyAt=at;
   const day = dayKey(now);
   if (!state.streakDays.includes(day)) state.streakDays.push(day);
   if (!correct) {
     scheduleErrorReview(state, task.topicId, now);
     state.errors.push({ id: attempt.id, taskId: task.id, topicId: task.topicId, answer: input.answer, steps: input.steps || "", category: mistake.category, explanation: mistake.explanation, at, resolved: false, exerciseIds: tasks.filter(t => t.topicId === task.topicId && t.id !== task.id).slice(0, 3).map(t => t.id), prompt: task.prompt, solution: task.solution, hints: task.hints, correctAnswer: task.answer });
   } else if (!assisted && confirmationCount(p) >= 3) {
-    const corrected = state.errors.filter(e => e.topicId === task.topicId && !e.resolved && e.taskId !== task.id);
+    // An unrelated success in the same broad topic cannot prove that this
+    // particular mistake is repaired. Assignments must explicitly target it.
+    const corrected = state.errors.filter(e => e.topicId === task.topicId && !e.resolved && e.taskId !== task.id && e.exerciseIds.includes(task.id) && Array.isArray(task.repairsTaskIds) && task.repairsTaskIds.includes(e.taskId));
     for (const error of corrected) error.resolved = true;
     if (corrected.length) state.xp += 5;
   }
@@ -315,8 +358,8 @@ export function recordAttempt(state: LearnerState, task: Task, topic: Topic, inp
     const review = assignedReview!;
     if (correct && !assisted) {
       review.completed = true; review.taskId = task.id;
-      p.reviewPassed = confirmationsBefore >= 3;
-      const intervals = [1, 3, 7, 14], next = p.reviewPassed ? intervals[intervals.indexOf(review.interval) + 1] : 1;
+      p.reviewPassed = readinessBefore&&Boolean(p.masteryReadyAt)&&now.getTime()-Date.parse(p.masteryReadyAt!)>=86400000;
+      const intervals = [1, 3, 7, 14], next = intervals[intervals.indexOf(review.interval) + 1];
       if (next) state.reviews.push({ id: crypto.randomUUID(), topicId: task.topicId, due: new Date(now.getTime() + next * 86400000).toISOString(), interval: next, completed: false });
     } else { p.reviewPassed = false; review.due = new Date(now.getTime() + 86400000).toISOString(); review.interval = 1; }
   }
@@ -326,21 +369,23 @@ export function recordAttempt(state: LearnerState, task: Task, topic: Topic, inp
   }
   if (confirmationCount(p) >= 3 && !state.reviews.some(r => r.topicId === task.topicId && !r.completed) && !p.reviewPassed) state.reviews.push({ id: crypto.randomUUID(), topicId: task.topicId, due: new Date(now.getTime() + 86400000).toISOString(), interval: 1, completed: false });
   const wasMastered = p.mastered;
-  p.mastered = confirmationCount(p) >= 3 && Boolean(p.reviewPassed);
+  p.mastered = wasMastered || masteryReady(p,topic) && Boolean(p.reviewPassed);
+  p.masteryPending=!p.mastered&&confirmationCount(p)>=4;
+  if(!wasMastered&&p.mastered)p.masteryVersion='reviewed-rubric-v2';
   if (!wasMastered && p.mastered && !p.masteryRewarded) { state.xp += 50; p.masteryRewarded = true; }
   state.lessonResume = { topicId: task.topicId, stage: 3 };
-  return { correct, solution: task.solution, hints: task.hints, errorCategory: mistake.category, explanation: mistake.explanation, answer: task.answer, independentEligible: !assisted, verification: task.type === "expression" ? "sampled-domain-check" : "verified-answer" };
+  return saveReceipt({ correct, status:checked.status, solution: task.solution, hints: task.hints, errorCategory: mistake.category, explanation: mistake.explanation, answer: task.answer, independentEligible: !assisted, verification: checked.verification });
 }
 
 function scheduleErrorReview(state: LearnerState, topicId: string, now: Date) {
-  const p = state.progress[topicId]; if (p) { p.masteryRewarded ||= p.mastered; p.mastered = false; p.reviewPassed = false; p.confirmationTaskIds = []; }
+  const p = state.progress[topicId]; if (p) { p.masteryRewarded ||= p.mastered; p.mastered = false; p.reviewPassed = false; p.confirmationTaskIds = [];delete p.masteryReadyAt; }
   const scheduled = state.reviews.find(r => r.topicId === topicId && !r.completed), due = new Date(now.getTime() + 86400000).toISOString();
   if (scheduled) { scheduled.due = due; scheduled.interval = 1; }
   else state.reviews.push({ id: crypto.randomUUID(), topicId, due, interval: 1, completed: false });
 }
 
 export function sanitizeTask(task: Task) {
-  return { id: task.id, topicId: task.topicId, prompt: task.prompt, type: task.type, difficulty: task.difficulty, level: task.difficulty, options: task.options, pairs: task.pairs?.map(p => ({ left: p.left, right: "" })), skill: task.skill, units: task.units, unit: task.units, precision: task.precision, domain: task.domain, context: task.context, modelExample: Boolean(task.modelExample), reviewReserved: Boolean(task.reviewReserved) };
+  return { id: task.id, topicId: task.topicId, prompt: task.prompt, type: task.type, answerFormat:task.answerFormat,difficulty: task.difficulty, level: task.difficulty, options: task.options, pairs: task.pairs?.map(p => ({ left: p.left, right: "" })), skill: task.skill, skillIds:task.skillIds,curriculumSection:task.curriculumSection,units: task.units, unit: task.units, precision: task.precision, domain: task.domain, context: task.context, modelExample: Boolean(task.modelExample), reviewReserved: Boolean(task.reviewReserved) };
 }
 
 export function diagnosticTasks(track: Track, topics: Topic[], tasks: Task[], schoolGrade?: string,schoolPathway?:'natural-math'|'humanitarian') {
@@ -455,9 +500,8 @@ export function makeExam(track: Track, variant: number, topics: Topic[], tasks: 
   }
   else {
     select("single", [12, 8, 5]);
-    const topic = topics.find(t => t.track === "profile" && /процент|модел|задач/i.test(t.title.ru)) || topics.find(t => t.track === "profile");
-    if (!topic) throw new Error("No profile curriculum");
-    [1, 1, 1, 2, 3].forEach((d, i) => questions.push(contextTask(i, variant, d, topic.id)));
+    const contextTopicIds=['numbers','percentages','percentages','numbers','fractions'];
+    [1, 1, 1, 2, 3].forEach((d, i) => {const id=contextTopicIds[i];if(!byTopic.has(id))throw new Error(`Missing context skill: ${id}`);questions.push({...contextTask(i, variant, d, id),skillIds:[id],assessmentTrack:'profile',curriculumSection:'13'});});
     select("multiple", [3, 1, 1]); select("matching", [2, 2, 1]);
   }
   return { id: crypto.randomUUID(), track, variant, startedAt: now.toISOString(), durationMinutes: track === "profile" ? 80 : 20, questions, answers: {}, flagged: [], rules: EXAM_RULES };

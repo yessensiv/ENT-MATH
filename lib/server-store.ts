@@ -3,7 +3,9 @@ import { eq, and, sql, lt, asc } from "drizzle-orm";
 import { getChatGPTUser, type ChatGPTUser } from "@/app/chatgpt-auth";
 import { getDb } from "@/db";
 import { learnerStates, learnerStateChunks, contentOverrides, contentReports, tutorUsage,editorialReviews } from "@/db/schema";
-import { contentDigest,reviewCoverage } from '@/lib/material-review';
+import { contentDigest,independentReviewCoverage } from '@/lib/material-review';
+import {publishedSnapshot} from '@/lib/content-versions';
+import{boundedText}from'@/lib/bounded-body';
 import { encodeState, decodeState, statePointer, stateSaveStatements } from "@/lib/state-codec";
 import { schoolTopics, schoolTasks } from "@/lib/school-content";
 import {schoolExtensionTopics,schoolExtensionTasks} from '@/lib/school-extension-content';
@@ -11,7 +13,7 @@ import {schoolAdvancedTopics,schoolAdvancedTasks} from '@/lib/school-advanced-co
 import * as curriculum from "@/lib/content";
 import {withLessonEnrichment,validLessonEnrichment} from '@/lib/lesson-enrichment';
 import type {Topic as AuthoredTopic} from '@/lib/content';
-import { emptyState, sanitizeExam, makePlan, isModelExample, reservedReviewIds, calculate, streakInfo, expireExam, diagnosticTasks, type LearnerState, type Topic, type Task } from "@/lib/engine";
+import { emptyState, sanitizeExam, makePlan, isModelExample, reservedReviewIds, calculate, checkAnswer,streakInfo, expireExam, diagnosticTasks, type LearnerState, type Topic, type Task } from "@/lib/engine";
 
 export class ApiError extends Error { constructor(message: string, public status = 400, public code?: string) { super(message); } }
 export function configuration() { return env as unknown as { DB?: D1Database; ADMIN_EMAILS?: string; TUTOR_API_KEY?: string; TUTOR_BASE_URL?: string; TUTOR_MODEL?: string; TUTOR_VISION_MODEL?: string; TUTOR_DAILY_LIMIT?: string; TUTOR_DAILY_TOKEN_LIMIT?:string }; }
@@ -30,13 +32,13 @@ export function baseContent() {
 export async function publishedContent() {
   const { topics, tasks } = baseContent();
   if (!configuration().DB) return { topics, tasks };
-  const rows = await getDb().select().from(contentOverrides).where(eq(contentOverrides.status, "published"));
+  const rows = await getDb().select().from(contentOverrides);
   const topicMap = new Map(topics.map(t => [t.id, t])), taskMap = new Map(tasks.map(t => [t.id, t]));
   for (const row of rows) {
     try {
-      const data = JSON.parse(row.data);
+      const data = publishedSnapshot(row); if(!data)continue;
       if (row.kind === "topic" && topicMap.has(row.id)) topicMap.set(row.id, { ...topicMap.get(row.id)!, ...data, id: row.id });
-      if (row.kind === "task" && taskMap.has(row.id)) { const merged = { ...taskMap.get(row.id)!, ...data, id: row.id }; merged.difficulty = Number(data.level || data.difficulty || merged.difficulty); merged.units = data.unit || data.units || merged.units; taskMap.set(row.id, merged); }
+      if (row.kind === "task" && taskMap.has(row.id)) { const merged = { ...taskMap.get(row.id)!, ...data, id: row.id }; merged.difficulty = Number(data.level || data.difficulty || merged.difficulty); merged.units = typeof data.unit==='string'?data.unit:typeof data.units==='string'?data.units:merged.units; taskMap.set(row.id, merged); }
     } catch { /* A corrupt draft must not break a learner session. */ }
   }
   return { topics: [...topicMap.values()].map(t=>withLessonEnrichment(t as unknown as AuthoredTopic)) as unknown as Topic[], tasks: [...taskMap.values()] };
@@ -101,15 +103,22 @@ export async function loadCurrentState(user: ChatGPTUser) {
 
 export function clientState(user: ChatGPTUser, state: LearnerState) {
   const testIdentity = user.userId === "local_seedy" && user.email === "seedy@sites.test";
-  const { generatedTasks: _generated, reviewSerials: _serials, ...safe } = state; void _generated; void _serials;
+  const { generatedTasks: _generated, reviewSerials: _serials, submissions:_submissions, submissionRequests:_requests,tutorGenerations:_generations,tutorMessages:_messages, ...safe } = state; void _generated; void _serials;void _submissions;void _requests;void _generations;void _messages;
   return { ...safe, serverNow: Date.now(), streak: streakInfo(state), activeExam: sanitizeExam(state.activeExam), isAdmin: isAdmin(user), aiConfigured: Boolean(configuration().TUTOR_API_KEY), user: { id: user.userId, email: user.email, name: user.displayName }, storage: "cloudflare-d1", demo: false, testIdentity, identityNotice: testIdentity ? { ru: "Локальный тестовый аккаунт. Здесь сохраняются результаты ваших проверок; это не реальная регистрация через ChatGPT.", kk: "Жергілікті сынақ аккаунты. Мұнда тексеру нәтижелері сақталады; бұл ChatGPT арқылы нақты тіркелу емес." } : null };
 }
-export function response(data: unknown, status = 200) { return Response.json(data, { status, headers: { "Cache-Control": "no-store", "X-Content-Type-Options": "nosniff" } }); }
-export function failure(error: unknown) { return response({ error: error instanceof ApiError ? error.message : "Не удалось выполнить запрос. Попробуйте ещё раз; ваш сохранённый прогресс не потерян.", ...(error instanceof ApiError && error.code ? { code: error.code, retryable: error.code === "STATE_CONFLICT" } : {}) }, error instanceof ApiError ? error.status : 500); }
+export function response(data: unknown, status = 200, requestId=crypto.randomUUID()) { const body=data&&typeof data==='object'&&!Array.isArray(data)?{...data,requestId,apiVersion:1}:data;return Response.json(body, { status, headers: { "Cache-Control": "no-store", "X-Content-Type-Options": "nosniff",'X-Request-Id':requestId } }); }
+export function failure(error: unknown) {
+  const status=error instanceof ApiError?error.status:500,requestId=crypto.randomUUID();
+  const defaults:Record<number,string>={400:'INVALID_INPUT',401:'AUTH_REQUIRED',403:'FORBIDDEN',404:'NOT_FOUND',409:'CONFLICT',413:'BODY_TOO_LARGE',429:'RATE_LIMITED',503:'SERVICE_UNAVAILABLE'};
+  const code=error instanceof ApiError&&error.code?error.code:defaults[status]||'INTERNAL_ERROR';
+  // Technical logs deliberately exclude identities, answers, chat, and exception text.
+  if(status>=500)console.error(JSON.stringify({event:'api_failure',requestId,code,status,at:new Date().toISOString()}));
+  return response({error:error instanceof ApiError?error.message:'Не удалось выполнить запрос. Повторите отправку после восстановления связи.',code,retryable:status>=500||status===429||code==='STATE_CONFLICT',requestId},status,requestId);
+}
 export async function parseBody(request: Request): Promise<Record<string, unknown>> {
   const origin = request.headers.get("origin");
   if (origin && origin !== new URL(request.url).origin) throw new ApiError("Недопустимый источник запроса.", 403);
-  const raw = await request.text(); if (raw.length > 50000) throw new ApiError("Запрос слишком большой.", 413);
+  let raw:string;try{raw=await boundedText(request,200000);}catch{throw new ApiError('Запрос слишком большой или прерван.',413,'BODY_TOO_LARGE');}if(raw.length>50000)throw new ApiError('Запрос слишком большой.',413,'BODY_TOO_LARGE');
   try { const data = JSON.parse(raw); if (!data || Array.isArray(data) || typeof data !== "object") throw new Error(); return data; } catch { throw new ApiError("Некорректный JSON."); }
 }
 export function textValue(value: unknown, max = 2000): string { if (typeof value !== "string" || value.length > max) throw new ApiError("Некорректное текстовое значение."); return value; }
@@ -143,12 +152,12 @@ export async function adminData() {
 export async function editableContent(kind: "task" | "topic", id: string) {
   const content = baseContent(), base = (kind === "task" ? content.tasks : content.topics).find(t => t.id === id);
   if (!base) throw new ApiError("Материал не найден.", 404);
-  const saved = await getDb().select({ data: contentOverrides.data, status: contentOverrides.status }).from(contentOverrides).where(and(eq(contentOverrides.id, id), eq(contentOverrides.kind, kind))).get();
-  if (!saved) return { material: base, status: "published" };
+  const saved = await getDb().select().from(contentOverrides).where(and(eq(contentOverrides.id, id), eq(contentOverrides.kind, kind))).get();
+  if (!saved) return { material: base, status: "published",authorId:'source:ent-math-2026.3',editVersion:'source:ent-math-2026.3' };
   let data: Record<string, unknown>;
   try { data = JSON.parse(saved.data); if (!data || typeof data !== "object" || Array.isArray(data)) throw new Error(); }
   catch { throw new ApiError("Черновик повреждён. Обратитесь к администратору; опубликованный материал доступен ученикам.", 503); }
-  return { material: { ...base, ...data, id }, status: saved.status };
+  return { material: { ...base, ...data, id }, status: saved.status,authorId:saved.updatedBy,editVersion:await contentDigest(saved) };
 }
 
 export async function updateContent(user: ChatGPTUser, input: Record<string, unknown>) {
@@ -158,6 +167,8 @@ export async function updateContent(user: ChatGPTUser, input: Record<string, unk
   const status = input.status;
   if (!["draft", "review", "published"].includes(String(status))) throw new ApiError("Неверный статус.");
   if (!input.data || typeof input.data !== "object" || Array.isArray(input.data)) throw new ApiError("Требуется объект материала.");
+  const db = getDb(), previous = await db.select().from(contentOverrides).where(eq(contentOverrides.id, id)).get();
+  if(input.editVersion!==undefined&&input.editVersion!==(previous?await contentDigest(previous):'source:ent-math-2026.3'))throw new ApiError('Материал изменён другим редактором. Скопируйте свои изменения и загрузите актуальную версию.',409,'CONTENT_CONFLICT');
   const data = input.data as Record<string, unknown>;
   // Expanded bilingual lessons include their existing tasks; the request stays below parseBody's 50k bound.
   if (JSON.stringify(data).length > (kind === 'topic' ? 40000 : 30000)) throw new ApiError("Материал слишком большой.");
@@ -182,6 +193,7 @@ export async function updateContent(user: ChatGPTUser, input: Record<string, unk
     const merged = { ...existingTask, ...data } as Task;
     if (!bilingualText(merged.prompt) || !bilingualSteps(merged.solution) || !bilingualSteps(merged.hints) || !["number", "single", "multiple", "matching", "expression"].includes(merged.type) || ![1, 2, 3].includes(Number(data.level || data.difficulty || merged.difficulty)) || !base.topics.some(t => t.id === merged.topicId)) throw new ApiError("Перед публикацией заполните условия, ответ, решения и подсказки на двух языках; проверьте тип, навык и сложность.");
     const answer = answerValue(merged.answer);
+    if(merged.answerFormat!==undefined&&(!["interval","root-set","pair"].includes(String(merged.answerFormat))||merged.type!=="expression"||checkAnswer(merged,answer).status!=="correct"))throw new ApiError("Проверьте формат ответа: interval, root-set или pair, тип expression и проверяемые рациональные границы/элементы.");
     if (Array.isArray(answer) ? !answer.length || answer.some(a => !a.trim()) : !answer.trim()) throw new ApiError("Правильный ответ не может быть пустым.");
     if (["single", "multiple", "matching"].includes(merged.type) && (!Array.isArray(merged.options) || merged.options.length < 2 || merged.options.some(o => typeof o !== "string") || new Set(merged.options).size !== merged.options.length || (Array.isArray(answer) ? answer : [answer]).some(a => !merged.options!.includes(a)))) throw new ApiError("Варианты ответа должны быть уникальными и содержать все правильные ответы.");
     if (["multiple", "matching"].includes(merged.type) && !Array.isArray(answer)) throw new ApiError("Для нескольких ответов и соответствия нужен массив ответов.");
@@ -193,13 +205,13 @@ export async function updateContent(user: ChatGPTUser, input: Record<string, unk
   if(status==='published'&&(kind==='topic'||kind==='task')){
     const material={...(kind==='topic'?base.topics:base.tasks).find(t=>t.id===id)!,...data,id};
     const reviews=await getDb().select().from(editorialReviews).where(eq(editorialReviews.materialId,id));
-    const coverage=reviewCoverage(reviews,await contentDigest(material));
-    if(!Object.values(coverage).every(Boolean))throw new ApiError('Сначала сохраните черновик и получите три актуальные проверки: математика, методика и казахский язык. Изменение текста отменяет прежние заключения.');
+    const coverage=independentReviewCoverage(reviews,await contentDigest(material),previous?.updatedBy??'source:ent-math-2026.3');
+    if(!coverage.complete)throw new ApiError('Нужны три актуальные проверки минимум двух специалистов. Автор материала не может подтвердить собственную математическую проверку. Изменение текста отменяет прежние заключения.');
   }
-  const db = getDb(), previous = await db.select().from(contentOverrides).where(eq(contentOverrides.id, id)).get();
   const history = previous ? JSON.parse(previous.history) : [];
-  history.push({ at: new Date().toISOString(), by: user.email, status, previousData: previous ? JSON.parse(previous.data) : null, note: typeof input.reviewNote === "string" ? input.reviewNote : "" });
+  history.push({ versionId:crypto.randomUUID(),at: new Date().toISOString(), by: user.email, status, previousStatus:previous?.status, previousData: previous ? JSON.parse(previous.data) : null, note: typeof input.reviewNote === "string" ? input.reviewNote : "" });
   const row = { id, kind: String(kind), status: String(status), data: JSON.stringify(data), history: JSON.stringify(history), updatedBy: user.userId, updatedAt: new Date().toISOString() };
-  await db.insert(contentOverrides).values(row).onConflictDoUpdate({ target: contentOverrides.id, set: row });
-  return { id, status, history };
+  const changed=previous?await db.update(contentOverrides).set(row).where(and(eq(contentOverrides.id,id),eq(contentOverrides.history,previous.history),eq(contentOverrides.data,previous.data))).returning({id:contentOverrides.id}):await db.insert(contentOverrides).values(row).onConflictDoNothing().returning({id:contentOverrides.id});
+  if(!changed.length)throw new ApiError('Материал изменён другим редактором. Загрузите актуальную версию перед сохранением.',409,'CONTENT_CONFLICT');
+  return { id, status, history,editVersion:await contentDigest(row) };
 }

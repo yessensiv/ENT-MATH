@@ -81,7 +81,7 @@ test("authenticated learning, grading, tutor, durable progress and exam flow", a
     await t.test("exam snapshot has broad official coverage and exposes no answer keys", async () => {
       assert.equal(state.activeExam, null);
       await update({ action: "exam-start", track: "profile", variant: 5 }); pendingExam = state.activeExam.id;
-      assert.equal(state.activeExam.questions.length, 40); assert.equal(new Set(state.activeExam.questions.map(q => officialSection(topics.find(p => p.id === q.topicId)))).size, 10);
+      assert.equal(state.activeExam.questions.length, 40); assert.equal(new Set(state.activeExam.questions.map(q => q.curriculumSection || officialSection(topics.find(p => p.id === q.topicId)))).size, 10);
       assert.deepEqual(state.activeExam.questions.map(q => q.id), expected.questions.map(q => q.id));
       for (const q of state.activeExam.questions) { assert.equal("answer" in q, false); assert.equal("solution" in q, false); assert.equal("hints" in q, false); }
     });

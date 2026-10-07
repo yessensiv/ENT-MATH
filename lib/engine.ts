@@ -28,7 +28,7 @@ export type Topic = { id: string; title: LocalText; track: Track; prerequisites?
 export type Profile = { name: string; grade: string; learningMode?: "school" | "ent"; schoolPathway?:'natural-math'|'humanitarian'; track: Track; examDate: string; target: number; targets?: Partial<Record<Track, number>>; dailyMinutes: number; language: Language };
 export type Progress = { attempts: number; correct: number; independent: number; mastered: boolean; reviewPassed?: boolean; independentTaskIds: string[]; confirmationTaskIds?: string[]; masteryRewarded?: boolean; lastAt?: string; masteryVersion?:string; masteryReadyAt?:string; masteryPending?:boolean;needsRecovery?:boolean;recoveryTaskIds?:string[]; evidence?:Record<string,{difficulty:number;methodFamily:string|null}> };
 export type Attempt = { id: string; taskId: string; topicId: string; track: Track; answer: Answer; steps: string; correct: boolean; assisted: boolean; at: string; category: string;taskVersion?:string;checkingVersion?:string;evidence?:{schema:1;independent:boolean;reason:"independent"|"help"|"repeat"|"worked-example";condition:string;difficulty:number;skillIds:string[];methodFamily:string|null};taskSnapshot?:Pick<Task,'prompt'|'answer'|'solution'|'domain'|'type'|'units'|'precision'|'difficulty'> };
-export type Review = { id: string; topicId: string; due: string; interval: number; completed: boolean; taskId?: string };
+export type Review = { id: string; topicId: string; due: string; interval: number; completed: boolean; taskId?: string; methodFamily?:string; variant?:{seed:number;level:1|2|3} };
 export type ErrorEntry = { id: string; taskId: string; topicId: string; answer: Answer; steps: string; category: string; explanation: LocalText; at: string; resolved: boolean; exerciseIds: string[]; prompt?: LocalText; solution?: Task["solution"]; hints?: Task["hints"]; correctAnswer?: Answer;repairRequired?:number;repairPassedTaskIds?:string[];repairVersion?:string;repairSkill?:LocalText;repairedAt?:string };
 export type Exam = { id: string; track: Track; variant: number; startedAt: string; durationMinutes: number; questions: Task[]; answers: Record<string, Answer>; flagged: number[]; answerUpdatedAt?: Record<string, number>; currentIndex?: number; currentIndexUpdatedAt?: number; finishedAt?: string; finishReason?: "submitted" | "time"; score?: number; maxScore?: number; results?: { taskId: string; topicId: string; answer: Answer; correct: boolean; points: number; max: number; prompt?: LocalText; context?: LocalText; solution: Task["solution"]; correctAnswer: Answer; scoringExplanation?:LocalText; gradingRuleId?:string }[]; rules: ExamRuleSnapshot;bankVersion?:string;familiarQuestionIds?:string[] };
 export type LearnerState = { profile: Profile | null; progress: Record<string, Progress>; attempts: Attempt[]; errors: ErrorEntry[]; reviews: Review[]; exams: Exam[]; diagnostics: { id: string; schoolGrade?: string; schoolPathway?:'natural-math'|'humanitarian'; track: Track; at: string; score: number; total: number; strengths: string[]; gaps: string[]; taskIds?: string[]; evidence?:DiagnosticEvidence[]; clarificationSkillId?:string }[]; xp: number; lessonResume: { topicId: string; stage: number } | null; plan: PlanItem[]; activeExam: Exam | null; revision: number; planReason?: LocalText; practiceStartedAt?: string; streakDays: string[]; preferences?: { leaderboard: boolean }; streakRecoveries?: { day: string; at: string; week: string }[]; [key: string]: unknown };
@@ -361,7 +361,7 @@ export function recordAttempt(state: LearnerState, task: Task, topic: Topic, inp
   const condition=taskFingerprint(task);
   const previousSame = seenTaskIds(state).has(task.id)||state.attempts.some(a=>a.evidence?.condition===condition)||state.exams.some(e=>e.questions.some(t=>taskFingerprint(t)===condition));
   const assignedReview = input.reviewId ? state.reviews.find(r => r.id === input.reviewId && r.topicId === task.topicId && !r.completed) : undefined;
-  if (input.reviewId && (!assignedReview || new Date(assignedReview.due) > now || previousSame)) throw new Error("Повторение ещё не назначено или задача уже решалась");
+  if (input.reviewId && (!assignedReview || new Date(assignedReview.due) > now || previousSame || (assignedReview.methodFamily&&assignedReview.methodFamily!==task.methodFamily))) throw new Error("Повторение ещё не назначено или задача уже решалась");
   const assisted = Boolean(input.assisted) || previousSame || isModelExample(task, topic);
   const mistake = correct ? { category: "none", explanation: { ru: "Верно!", kk: "Дұрыс!" } } : classifyError(input.steps || "");
   const attempt: Attempt = { id: crypto.randomUUID(), taskId: task.id, topicId: task.topicId, track: topic.track, answer: input.answer, steps: input.steps || "", correct, assisted, at, category: mistake.category };
@@ -401,7 +401,7 @@ export function recordAttempt(state: LearnerState, task: Task, topic: Topic, inp
       review.completed = true; review.taskId = task.id;
       p.reviewPassed = readinessBefore&&Boolean(p.masteryReadyAt)&&now.getTime()-Date.parse(p.masteryReadyAt!)>=86400000;
       const intervals = [1, 3, 7, 14], next = intervals[intervals.indexOf(review.interval) + 1];
-      if (next) state.reviews.push({ id: crypto.randomUUID(), topicId: task.topicId, due: new Date(now.getTime() + next * 86400000).toISOString(), interval: next, completed: false });
+      if (next) state.reviews.push({ id: crypto.randomUUID(), topicId: task.topicId, due: new Date(now.getTime() + next * 86400000).toISOString(), interval: next, completed: false, ...(review.methodFamily?{methodFamily:review.methodFamily,variant:review.variant}:{}) });
     } else { p.reviewPassed = false; review.due = new Date(now.getTime() + 86400000).toISOString(); review.interval = 1; }
   }
   if (!p.reviewPassed && confirmationsBefore < 3 && confirmationCount(p) >= 3) {
@@ -422,9 +422,10 @@ function scheduleErrorReview(state: LearnerState, task:Task, now: Date) {
   const topicId=task.topicId,p = state.progress[topicId];
   if(p){p.masteryRewarded ||= p.mastered;if(p.mastered){p.needsRecovery=true;p.recoveryTaskIds=[...new Set([...(p.recoveryTaskIds||[]),task.id])];}
    else{p.reviewPassed=false;p.confirmationTaskIds=[];delete p.masteryReadyAt;}}
-  const scheduled = state.reviews.find(r => r.topicId === topicId && !r.completed), due = new Date(now.getTime() + 86400000).toISOString();
+  const targeted=task.variant&&typeof task.methodFamily==='string'?{methodFamily:task.methodFamily,variant:task.variant as {seed:number;level:1|2|3}}:undefined;
+  const scheduled = state.reviews.find(r => r.topicId === topicId && !r.completed && (targeted?r.methodFamily===targeted.methodFamily:!r.methodFamily)), due = new Date(now.getTime() + 86400000).toISOString();
   if (scheduled) { scheduled.due = due; scheduled.interval = 1; }
-  else state.reviews.push({ id: crypto.randomUUID(), topicId, due, interval: 1, completed: false });
+  else state.reviews.push({ id: crypto.randomUUID(), topicId, due, interval: 1, completed: false,...targeted });
 }
 
 export function sanitizeTask(task: Task) {

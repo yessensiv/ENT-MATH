@@ -224,3 +224,11 @@ CUR-03: полная школьная программа по всем целя�
 - SQL-схема не менялась. Роли добавлены через серверную конфигурацию; текущие ADMIN_EMAILS не менялись в production. Новые операции используют существующую версионную историю. Полный конструктор новых материалов/импорта/архивации ещё не готов.
 
 - Контроль выпуска: 186/186 модульных/компонентных тестов; HTTP-роли author/math/publisher по отдельности (3 успешных сценария); 9/9 прежних редакторских/архивных проверок. Браузер подтвердил недоступные поля рецензента и доступный выбор версии у автора; снимок `.sites-runtime/tests/tz-editor-versions.png`. Временная локальная конфигурация ролей восстановлена, ключ ИИ не задавался.
+
+
+## Local tutor follow-up: 2026-10-06
+Task chat now displays its condition; practice sessions isolate histories; sidebar mentor opens without the task binding. Checked full solutions bypass paid generation. Failed text/photo provider requests release the learner request/token reservation; a separate capped attempts row retains conservative cost/rate accounting. No schema migration; prior successful/failed usage rows are unchanged. Verified: six quota/lifecycle checks, TypeScript, HTTP checked solution/replay, local browser task label and checked solution. Real provider failure/refund end-to-end and human editorial acceptance remain unverified. Production has not received these local changes.
+
+## Сессии практики и обратная связь — локально, 06.10.2026
+
+Добавлены фиксированная сессия, навигация, черновики, контроль двух устройств, закрепление отдельно от основных задач, сохранённый отчёт и обратная связь, архив переписки. Повторное нажатие не создаёт новую попытку/опыт. Расширены проверяемые шаблоны и методические связи; ИИ может подбирать параметры, но не определяет ключ и освоение. Подробный охват, проверки, запуск, резервная копия и ограничения: [PRACTICE-SESSIONS.md](PRACTICE-SESSIONS.md). Независимая предметная/языковая приёмка не заявлена; production пока не обновлён.

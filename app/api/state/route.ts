@@ -122,7 +122,7 @@ export async function POST(request: Request) {
         if (task.reviewReserved && !input.reviewId && !assignedRepair) throw new ApiError("Эта новая задача сохранена для повторения после перерыва. Для обычной практики выберите другую задачу.");
         if (input.reviewId) {
           const review = state.reviews.find(r => r.id === input.reviewId && r.topicId === task.topicId && !r.completed);
-          if (!review || new Date(review.due).getTime() > Date.now() || seenTaskIds(state).has(task.id)) throw new ApiError("Для повторения выберите новую задачу после назначенной даты.");
+          if (!review || new Date(review.due).getTime() > Date.now() || seenTaskIds(state).has(task.id) || (review.methodFamily&&review.methodFamily!==task.methodFamily)) throw new ApiError("Для повторения выберите новую задачу после назначенной даты.");
         }
         const serverAssisted = Array.isArray(state.assistedTaskIds) && state.assistedTaskIds.includes(task.id);
         const answer = answerValue(input.answer); if (!answerFitsTask(task, answer)) throw new ApiError("Формат ответа не соответствует заданию.");

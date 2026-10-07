@@ -41,7 +41,7 @@ test('DIAG: unfamiliar skill and exhausted generator leave state unchanged',()=>
 });
 
 test('DIAG: every catalogued method can receive 3–5 mathematically checked fresh conditions',()=>{
- const ids=[...new Set(bank.map(t=>t.repairSkillId).filter((id):id is string=>typeof id==='string'))];assert.equal(ids.length,30);
+ const ids=[...new Set(bank.map(t=>t.repairSkillId).filter((id):id is string=>typeof id==='string'))];assert.equal(ids.length,36);
  for(const id of ids){const s=learner(),t=bank.find(t=>t.repairSkillId===id)!;s.diagnostics[0].evidence=diagnosticEvidence([t],new Map()).evidence;s.diagnostics[0].taskIds=[t.id];const q=beginClarification(s,'profile',id,topics as never,bank,generator as never);assert.ok(q.length>=3&&q.length<=5,id);assert.equal(diagnosticEvidence(q,new Map(q.map(t=>[t.id,t.answer]))).score,q.length,id);}
 });
 

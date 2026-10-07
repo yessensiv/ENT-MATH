@@ -24,4 +24,4 @@ export function lessonTutorReply(topic:Topic, selected:{example:Example;stepInde
     ru?'Сопоставь этот переход с правилом. Напиши, какое действие непонятно; затем попробуй следующий шаг самостоятельно.':'Осы ауысуды ережемен салыстыр. Қай амал түсініксіз екенін жаз; содан кейін келесі қадамды өзің орындап көр.'].filter(Boolean).join('\n');
 }
 
-export function tutorContextKey(topicId:string,taskId?:string){return `${topicId}:${taskId??''}`;}
+export function tutorContextKey(topicId:string,taskId?:string,practiceSession?:string){return `${topicId}:${taskId??''}${taskId&&practiceSession?':practice:'+practiceSession:''}`;}

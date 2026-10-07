@@ -1,3 +1,5 @@
+import {makePracticeVariant,validatePracticeVariant} from '@/lib/practice-variants';
+import {taskFingerprint} from '@/lib/engine';
 import { getChatGPTUser } from "@/app/chatgpt-auth";
 import { publishedContent, response, failure, loadCurrentState, saveState, ApiError, assertStudyAllowed } from "@/lib/server-store";
 import { deliverTask, seenTaskIds, type Task } from "@/lib/engine";
@@ -24,6 +26,13 @@ export async function GET(request: Request) {
       const review = reviewId ? state.reviews.find(r => r.id === reviewId && r.topicId === topic && !r.completed) : undefined;
       if (reviewId && !review) throw new ApiError("Повторение не найдено.", 404);
       if (review && Date.parse(review.due) > Date.now()) throw new ApiError("Для проверки спустя время дождитесь назначенной даты. Сегодня доступна обычная практика.");
+      if(review?.variant&&review.methodFamily){
+        const generated=(state.generatedTasks||[]) as Task[],seen=seenTaskIds(state);
+        let assigned=generated.find(t=>t.reviewForId===review.id&&!seen.has(t.id)&&t.methodFamily===review.methodFamily&&validatePracticeVariant(t)),changed=false;
+        if(!assigned){const fingerprints=new Set([...tasks,...generated,...state.exams.flatMap(e=>e.questions)].map(taskFingerprint));for(let offset=1;offset<=10000;offset++){const candidate=makePracticeVariant(topic,(review.variant.seed+offset*137-1)%10000+1,review.variant.level);if(candidate&&candidate.methodFamily===review.methodFamily&&validatePracticeVariant(candidate)&&!fingerprints.has(taskFingerprint(candidate))){assigned={...candidate,reviewReserved:true,reviewForId:review.id};generated.push(assigned);state.generatedTasks=generated;changed=true;break;}}}
+        if(changed){try{await saveState(user,state);}catch(e){if(e instanceof ApiError&&e.code==='STATE_CONFLICT'&&retry<2)continue;throw e;}}
+        return response({tasks:assigned?[deliverTask(assigned,state)]:[],review:{id:review.id,topicId:review.topicId,due:review.due,interval:review.interval},notice:assigned?{ru:'Новая задача на тот же способ решения после перерыва. Выполни самостоятельно, чтобы проверить сохранение навыка.',kk:'Үзілістен кейін сол шешу тәсіліне жаңа есеп. Дағдының сақталуын тексеру үшін өз бетінше орында.'}:{ru:'Новые проверенные условия этого способа закончились. Повторение остаётся назначенным.',kk:'Осы тәсілдің жаңа тексерілген есептері таусылды. Қайталау тағайындауы сақталады.'}});
+      }
       const desiredLevel = review?.interval === 14 ? 3 : review && review.interval !== 1 ? 2 : 1;
       const supply = fillFreshTasks(state, topic, tasks, reviewGenerator, Boolean(review), desiredLevel, review ? 1 : 3);
       if (supply.changed) { try { await saveState(user, state); } catch (e) { if (e instanceof ApiError && e.code === "STATE_CONFLICT" && retry < 2) continue; throw e; } }

@@ -118,7 +118,7 @@ export async function loadCurrentState(user: ChatGPTUser) {
 
 export function clientState(user: ChatGPTUser, state: LearnerState) {
   const testIdentity = user.userId === "local_seedy" && user.email === "seedy@sites.test";
-  const { generatedTasks: _generated, reviewSerials: _serials, submissions:_submissions, submissionRequests:_requests,tutorGenerations:_generations,tutorMessages:_messages,_entEvents:_events,...safe } = state; void _generated; void _serials;void _submissions;void _requests;void _generations;void _messages;void _events;
+  const { practiceSessions:_practiceSessions, generatedTasks: _generated, reviewSerials: _serials, submissions:_submissions, submissionRequests:_requests,tutorGenerations:_generations,tutorMessages:_messages,_entEvents:_events,...safe } = state; safe.practiceHistory=Array.isArray(_practiceSessions)?_practiceSessions.filter(s=>s.finishedAt).slice(-30).reverse().map(s=>({id:s.id,topicId:s.topicId,finishedAt:s.finishedAt,total:s.main.length,correct:s.main.filter((i:{feedback?:{correct:boolean}})=>i.feedback?.correct).length})):[];void _generated; void _serials;void _submissions;void _requests;void _generations;void _messages;void _events;
   const history={attempts:state.attempts.length,exams:state.exams.length,returnedAttempts:Math.min(100,state.attempts.length),returnedExams:Math.min(10,state.exams.length),endpoint:'/api/history'};
   safe.attempts=state.activeExam?[]:state.attempts.slice(-100);safe.exams=state.activeExam?[]:state.exams.slice(-10);if(state.activeExam)safe.errors=[];safe.history=history;safe.statistics=historySummary(state);
   return { ...safe, serverNow: Date.now(), streak: streakInfo(state), activeExam: sanitizeExam(state.activeExam), isAdmin: isAdmin(user), editorial:editorPermissions(user), aiConfigured: Boolean(configuration().TUTOR_API_KEY), user: { id: user.userId, email: user.email, name: user.displayName }, storage: "cloudflare-d1", demo: false, testIdentity, identityNotice: testIdentity ? { ru: "Локальный тестовый аккаунт. Здесь сохраняются результаты ваших проверок; это не реальная регистрация через ChatGPT.", kk: "Жергілікті сынақ аккаунты. Мұнда тексеру нәтижелері сақталады; бұл ChatGPT арқылы нақты тіркелу емес." } : null };
@@ -148,11 +148,16 @@ export async function consumeTutorBudget(user: ChatGPTUser, reservation=8000) {
   const day = new Intl.DateTimeFormat("en-CA", { timeZone: "Asia/Qyzylorda" }).format(new Date());
   const id = `${user.userId}:${day}`, limit = Math.max(1, Math.min(200, Number(configuration().TUTOR_DAILY_LIMIT || 30) || 30));
   const db = getDb();
+  // Attempts remain bounded even when the provider fails and the learner quota is released.
+  const attemptId=id+':provider-attempts';
+  await db.insert(tutorUsage).values({id:attemptId,userId:user.userId,day,requests:0}).onConflictDoNothing();
+  const attempts=await db.update(tutorUsage).set({requests:sqlIncrement(),reservedTokens:sql`${tutorUsage.reservedTokens}+${reservation}`}).where(and(eq(tutorUsage.id,attemptId),lessThanLimit(Math.min(200,limit*3)),sql`${tutorUsage.reservedTokens}+${reservation}<=${tokenLimitForAttempts()}`)).returning({count:tutorUsage.requests});
+  if(!attempts.length)throw new ApiError('Слишком много обращений к ИИ сегодня. Это защитный лимит запросов; проверенные подсказки доступны.',429);
   await db.insert(tutorUsage).values({ id, userId: user.userId, day, requests: 0 }).onConflictDoNothing();
   const tokenLimit=Math.max(8000,Math.min(2000000,Number(configuration().TUTOR_DAILY_TOKEN_LIMIT||120000)||120000));
   const rows = await db.update(tutorUsage).set({ requests: sqlIncrement(),reservedTokens:sql`${tutorUsage.reservedTokens}+${reservation}` }).where(and(eq(tutorUsage.id, id), lessThanLimit(limit),sql`${tutorUsage.reservedTokens}+${reservation}<=${tokenLimit}`)).returning({ count: tutorUsage.requests });
   if (!rows.length) throw new ApiError("Сегодня лимит ИИ достигнут. Учебные материалы, практика и обычные подсказки доступны.", 429);
-  return { used: rows[0].count, limit };
+  return { used: rows[0].count, limit, reservationId:id };
 }
 function sqlIncrement() { return sql`${tutorUsage.requests} + 1`; }
 function lessThanLimit(limit: number) { return lt(tutorUsage.requests, limit); }
@@ -247,4 +252,16 @@ export async function updateContent(user: ChatGPTUser, input: Record<string, unk
   const changed=previous?await db.update(contentOverrides).set(row).where(and(eq(contentOverrides.id,id),eq(contentOverrides.history,previous.history),eq(contentOverrides.data,previous.data))).returning({id:contentOverrides.id}):await db.insert(contentOverrides).values(row).onConflictDoNothing().returning({id:contentOverrides.id});
   if(!changed.length)throw new ApiError('Материал изменён другим редактором. Загрузите актуальную версию перед сохранением.',409,'CONTENT_CONFLICT');
   return { id, status, history,editVersion:await contentDigest(row) };
+}
+
+function tokenLimitForAttempts(){return Math.max(24000,Math.min(2000000,Number(configuration().TUTOR_DAILY_TOKEN_LIMIT||120000)*3||360000));}
+export async function releaseFailedTutorBudget(user:ChatGPTUser,reservation=8000,reservationId?:string){
+ const day=new Intl.DateTimeFormat('en-CA',{timeZone:'Asia/Qyzylorda'}).format(new Date());
+ await getDb().update(tutorUsage).set({requests:sql`MAX(0,${tutorUsage.requests}-1)`,reservedTokens:sql`MAX(0,${tutorUsage.reservedTokens}-${reservation})`}).where(eq(tutorUsage.id,reservationId||`${user.userId}:${day}`));
+}
+
+export async function settleTutorTokens(reservationId:string|undefined,input:unknown,output:unknown,reservation=8000){
+ if(!reservationId||!Number.isSafeInteger(input)||!Number.isSafeInteger(output)||Number(input)<0||Number(output)<0)return;
+ const actual=Number(input)+Number(output);
+ await getDb().update(tutorUsage).set({reservedTokens:sql`MAX(0,${tutorUsage.reservedTokens}-${reservation})+${actual}`}).where(eq(tutorUsage.id,reservationId));
 }

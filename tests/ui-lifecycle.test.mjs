@@ -58,13 +58,13 @@ function harness(screen = 'exams') {
   const model = { state: serverState, user, screen, busy: false, timeLeft: 4800, examIndex: 0, examAnswerDraft: { key: 'exam-1:0', value: 'A' }, currentTask: { id: 'task-1' }, answer: '42', steps: '2x = 84', hint: 0, reviewId: undefined, feedback: null, diagnosticDone: false, diagnosticAnswers: [], taskIndex: 0, tasks: [{ id: 'task-1' }, { id: 'task-2' }], track: 'profile', saveStatus: '', lang: 'ru', notice: '' };
   const refs = Object.fromEntries(Object.entries({ submitLock: false, submittedTask: '', examLock: false, latestRevision: -1, requestGeneration: 0, expiredHandled: '', draftSnapshot: null, examSnapshot: null, latestUser: user, savedExamSignature: '', savedDraftSignature: '', pending: 0, routeRef: screen, clockOffset: 0, examStamp: { key: '', at: 0 }, draftStamp: { key: '', at: 0 }, optimisticFlags: null }).map(([key, value]) => [key, { current: value }]));
   refs.writeQueue = { current: createWriteQueue() };
-  refs.pendingSubmission={current:null};
+  refs.pendingSubmission={current:null}; refs.mentorTaskContext={current:undefined};
   refs.captureLesson={current:null};refs.lessonCache={current:{}};refs.savedLessonSignature={current:''};refs.lessonSnapshot={current:null};refs.restoredLesson={current:false};
   class ClockDate extends Date { static now() { return now; } }
   const set = key => value => { model[key] = typeof value === 'function' ? value(model[key]) : value; if (key === 'notice') notices.push(model[key]); };
   const api = (url, body) => new Promise((resolve, reject) => requests.push({ url, body: body && structuredClone(body), resolve, reject }));
   const globals = () => ({
-    ...model, ...refs, activeExam: model.state.activeExam, question: model.state.activeExam?.questions?.[model.examIndex], questions: model.state.activeExam?.questions ?? [],
+    ...model, ...refs, practiceSession: model.practiceSession ?? null, mentorTaskContext: refs.mentorTaskContext, activeExam: model.state.activeExam, question: model.state.activeExam?.questions?.[model.examIndex], questions: model.state.activeExam?.questions ?? [],
     setLessonDrafts:set('lessonDrafts'),setSchoolGrade: set('schoolGrade'), setLessonOrigin: set('lessonOrigin'), setState: set('state'), setExamAnswerDraft: set('examAnswerDraft'), setBusy: set('busy'), setServiceError: set('serviceError'), setSaveStatus: set('saveStatus'), setScreen: set('screen'), setMenu: set('menu'), setOnboard: set('onboard'), setLang: set('lang'), setTrack: set('track'), setLoading: set('loading'), setFeedback: set('feedback'), setExamReview: set('examReview'), setExamIndex: set('examIndex'), setDiagnosticAnswers: set('diagnosticAnswers'), setDiagnosticDone: set('diagnosticDone'), setTaskIndex: set('taskIndex'), setAnswer: set('answer'), setNotice: set('notice'),
     api, RequestError, Date: ClockDate, tr: ru => ru, crypto,
     location: { hash: `#${model.screen}` }, window: { scrollTo() {} },
@@ -285,3 +285,4 @@ test('school registration offers every grade without demanding ENT date or score
  assert.ok(ent.includes('type="date"'));assert.ok(ent.includes('type="number"'));
  for(const g of ['5','6','7','8','9','10','11'])assert.ok(school.includes(`value="${g}"`));
 });
+

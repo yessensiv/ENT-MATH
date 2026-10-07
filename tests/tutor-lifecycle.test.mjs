@@ -16,8 +16,8 @@ function walk(node){if(ts.isVariableDeclaration(node)&&ts.isIdentifier(node.name
 const run=(context,text)=>runInContext(ts.transpileModule(text,{compilerOptions:{target:ts.ScriptTarget.ES2022}}).outputText,context);
 test('moving practice into the mentor keeps the current task and conversation, changing the task clears context',()=>{
   let chat=[];
-  const context=createContext({user:null,topic:{id:'numbers'},currentTask:{id:'numbers-4',topicId:'numbers'},screen:'practice',mentorTaskContext:{current:undefined},tutorContext:{current:''},tutorContextKey,
-    flushDraft(){},requestGeneration:{current:0},routeRef:{current:'practice'},setScreen:s=>context.screen=s,setMenu(){},setLessonOrigin(){},location:{hash:''},window:{scrollTo(){}},setChat:c=>chat=c,setChatMode(){}});
+  const context=createContext({user:null,topic:{id:'numbers'},currentTask:{id:'numbers-4',topicId:'numbers'},screen:'practice',mentorTaskContext:{current:undefined},tutorContext:{current:''},tutorContextKey,practiceChatSession:'session-test',
+    flushDraft(){},requestGeneration:{current:0},routeRef:{current:'practice'},setScreen:s=>context.screen=s,setMenu(){},setLessonOrigin(){},location:{hash:''},window:{scrollTo(){}},setChat:c=>chat=c,setChatMode(){},setTutorNotice(){}});
   const render=()=>{run(context,`var tutorTaskId=${taskExpression.getText(ast)}; (${resetEffect.getText(ast)})();`);};
   render();chat=[{role:'assistant',content:'Сначала 3 · 6 = 18.'}];
   run(context,`(${navigateExpression.getText(ast)})('mentor');`);render();

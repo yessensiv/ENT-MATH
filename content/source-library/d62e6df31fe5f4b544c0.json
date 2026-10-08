@@ -1,0 +1,685 @@
+{
+  "title": "11.2: Sequences and Their Notations",
+  "originalText": "Learning Objectives\n\nIn this section, you will:\n\nWrite the terms of a sequence defined by an explicit\nformula.\n\nWrite the terms of a sequence defined by a recursive\nformula.\n\nUse factorial notation.\n\nA video game company launches an exciting new advertising\ncampaign. They predict the number of online visits to their\nwebsite, or hits, will double each day. The model they are using\nshows 2 hits the first day, 4 hits the second day, 8 hits the third\nday, and so on. See Table\n1.\n\nDay\t\n1\t\n2\t\n3\t\n4\t\n5\t\n…\t\n\nHits\t\n2\t\n4\t\n8\t\n16\t\n32\t\n…\t\n\nTable 1\n\nIf their model continues, how many hits will there be at the end\nof the month? To answer this question, we’ll first need to know how\nto determine a list of numbers written in a specific order. In this\nsection, we will explore these kinds of ordered lists.\n\nWriting the Terms of a Sequence\nDefined by an Explicit Formula\n\nOne way to describe an ordered list of numbers is as\na sequence. A sequence is a function whose\ndomain is a subset of the counting numbers. The sequence\nestablished by the number of hits on the website is\n\n{2,4,8,16,32,…}.{2,4,8,16,32,…}.\n\nThe ellipsis (…) indicates that the sequence continues\nindefinitely. Each number in the sequence is called\na term. The first five terms of this sequence\nare 2, 4, 8, 16, and 32.\n\nListing all of the terms for a sequence can be cumbersome. For\nexample, finding the number of hits on the website at the end of\nthe month would require listing out as many as 31 terms. A more\nefficient way to determine a specific term is by writing a formula\nto define the sequence.\n\nOne type of formula is an explicit formula, which defines\nthe terms of a sequence using their position in the sequence.\nExplicit formulas are helpful if we want to find a specific term of\na sequence without finding all of the previous terms. We can use\nthe formula to find the nth term of the sequence,\nwhere nn is any positive number. In our example, each\nnumber in the sequence is double the previous number, so we can use\npowers of 2 to write a formula for the nthnth term.\n\n[Figure: Sequence of {2, 4, 8, 16, 32, ...} expressed in exponential form (i.e., {2^1, 2^2, 2^3, ..., 2^n, ...}]\n\nThe first term of the sequence is 21=2,21=2, the\nsecond term is 22=4,22=4, the third term\nis 23=8,23=8, and so on. The nthnth term of the\nsequence can be found by raising 2 to the nthnth power.\nAn explicit formula for a sequence is named by a lower case\nletter a,b,c...a,b,c... with the\nsubscript n.n. The explicit formula for this sequence\nis\n\nan=2n.an=2n.\n\nNow that we have a formula for the nthnth term of the\nsequence, we can answer the question posed at the beginning of this\nsection. We were asked to find the number of hits at the end of the\nmonth, which we will take to be 31 days. To find the number of hits\non the last day of the month, we need to find the\n31^(st) term of the sequence. We will substitute 31\nfor nn in the formula.\n\na31=231     =2,147,483,648a31=231     =2,147,483,648\n\nIf the doubling trend continues, the company will\nget 2,147,483,6482,147,483,648 hits on the last day of\nthe month. That is over 2.1 billion hits! The huge number is\nprobably a little unrealistic because it does not take consumer\ninterest and competition into account. It does, however, give the\ncompany a starting point from which to consider business\ndecisions.\n\nAnother way to represent the sequence is by using a table. The\nfirst five terms of the sequence and the nthnth term of\nthe sequence are shown in Table\n2.\n\nnn\t\n1\t\n2\t\n3\t\n4\t\n5\t\nnn\t\n\nnthnth term of the\nsequence, anan\t\n2\t\n4\t\n8\t\n16\t\n32\t\n2n2n\t\n\nTable 2\n\nGraphing provides a visual representation of the sequence as a\nset of distinct points. We can see from the graph\nin Figure\n1 that the number of hits is rising at an exponential\nrate. This particular sequence forms an exponential function.\n\n[Figure: Graph of a plotted exponential function, f(n) = 2^n, where the x-axis is labeled n and the y-axis is labeled a_n.]\n\nFigure 1\n\nLastly, we can write this particular sequence as\n\n{2,4,8,16,32,…,2n,…}.{2,4,8,16,32,…,2n,…}.\n\nA sequence that continues indefinitely is called\nan infinite sequence. The domain of an\ninfinite sequence is the set of counting numbers. If we consider\nonly the first 10 terms of the sequence, we could write\n\n{2,4,8,16,32,…,2n,…,1024}.{2,4,8,16,32,…,2n,…,1024}.\n\nThis sequence is called a finite\nsequence because it does not continue\nindefinitely.\n\nSEQUENCE\n\nA sequence is a function whose domain\nis the set of positive integers. A finite\nsequence is a sequence whose domain consists of only\nthe first nn positive integers. The numbers in a sequence\nare called terms. The\nvariable aa with a number subscript is used to represent\nthe terms in a sequence and to indicate the position of the term in\nthe sequence.\n\na1,a2,a3,…,an,…a1,a2,a3,…,an,…\n\nWe call a1a1 the first term of the\nsequence, a2a2 the second term of the\nsequence, a3a3 the third term of the sequence, and so on.\nThe term anan is called the nth term of the\nsequence, or the general term of the sequence.\nAn explicit formula defines\nthe nthnth term of a sequence using the position of the\nterm. A sequence that continues indefinitely is\nan infinite sequence.\n\nQ&A\n\nDoes a sequence always have to begin\nwith a1?a1?\n\nNo. In certain problems, it may be\nuseful to define the initial term as a0a0 instead\nof a1.a1. In these problems, the domain of the function\nincludes 0.\n\nHOW\nTO\n\nGiven an explicit formula, write the\nfirst nn terms of a\nsequence.\n\n1. Substitute each value of nn into the formula. Begin\nwith n=1n=1 to find the first term, a1.a1.\n\n2. To find the second\nterm, a2,a2, use n=2.n=2.\n\n3. Continue in the same manner until you have identified\nall nn terms.\n\nEXAMPLE 1\n\nWriting the Terms of a Sequence\nDefined by an Explicit Formula\n\nWrite the first five terms of the sequence defined by the\nexplicit formula an=−3n+8.an=−3n+8.\n\nAnswer\n\nAnalysis\n\nThe sequence values can be listed in a table. A table, such\nas Table\n3, is a convenient way to input the function into a\ngraphing utility.\n\nnn\t\n1\t\n2\t\n3\t\n4\t\n5\t\n\nanan\t\n5\t\n2\t\n–1\t\n–4\t\n–7\t\n\nTable 3\n\nA graph can be made from this table of values. From the graph\nin Figure\n2, we can see that this sequence represents a linear\nfunction, but notice the graph is not continuous because the domain\nis over the positive integers only.\n\n[Figure: Graph of a scattered plot where the x-axis is labeled n and the y-axis is labeled a_n.]\n\nFigure 2\n\nTRY\nIT #1\n\nWrite the first five terms of the sequence defined by\nthe explicit formula tn=5n−4.tn=5n−4.\n\nInvestigating Alternating\nSequences\n\nSometimes sequences have terms that are alternate. In fact, the\nterms may actually alternate in sign. The steps to finding terms of\nthe sequence are the same as if the signs did not alternate.\nHowever, the resulting terms will not show increase or decrease\nas nn increases. Let’s take a look at the following\nsequence.\n\n{2,−4,6,−8}{2,−4,6,−8}\n\nNotice the first term is greater than the second term, the\nsecond term is less than the third term, and the third term is\ngreater than the fourth term. This trend continues forever. Do not\nrearrange the terms in numerical order to interpret the\nsequence.\n\nHOW\nTO\n\nGiven an explicit formula with alternating terms, write\nthe first nn terms of a sequence.\n\n1. Substitute each value of nn into the formula. Begin\nwith n=1n=1 to find the first term, a1.a1. The\nsign of the term is given by the (−1)n(−1)n in the\nexplicit formula.\n\n2. To find the second\nterm, a2,a2, use n=2.n=2.\n\n3. Continue in the same manner until you have identified\nall nn terms.\n\nEXAMPLE 2\n\nWriting the Terms of an Alternating\nSequence Defined by an Explicit Formula\n\nWrite the first five terms of the sequence.\n\nan=(−1)nn2n+1an=(−1)nn2n+1\n\nAnswer\n\nAnalysis\n\nThe graph of this function, shown in Figure\n3, looks different from the ones we have seen previously in\nthis section because the terms of the sequence alternate between\npositive and negative values.\n\n[Figure: Graph of a scattered plot with labeled points: (1, -1/2), (2, 4/3), (3, -9/4), (4, 16/5), and (5, -25/6). The x-axis is labeled n and the y-axis is labeled a_n.]\n\nFigure 3\n\nQ&A\n\nIn Example\n2, does the (–1) to the power\nof nn account for the oscillations of\nsigns?\n\nYes, the power might\nbe n,n+1,n−1,n,n+1,n−1, and so on, but any odd powers will result in a negative\nterm, and any even power will result in a positive term.\n\nTRY\nIT #2\n\nWrite the first five terms of the sequence.\n\nan=4n(−2)nan=4n(−2)n\n\nInvestigating Piecewise Explicit\nFormulas\n\nWe’ve learned that sequences are functions whose domain is over\nthe positive integers. This is true for other types of functions,\nincluding some piecewise functions. Recall that a piecewise\nfunction is a function defined by multiple subsections. A different\nformula might represent each individual subsection.\n\nHOW\nTO\n\nGiven an explicit formula for a piecewise function,\nwrite the first nn terms of a sequence\n\n1. Identify the formula to which n=1n=1 applies.\n\n2. To find the first\nterm, a1,a1, use n=1n=1 in the appropriate\nformula.\n\n3. Identify the formula to which n=2n=2 applies.\n\n4. To find the second\nterm, a2,a2, use n=2n=2 in the appropriate\nformula.\n\n5. Continue in the same manner until you have identified\nall nn terms.\n\nEXAMPLE 3\n\nWriting the Terms of a Sequence\nDefined by a Piecewise Explicit Formula\n\nWrite the first six terms of the sequence.\n\nan={n2n3if nis not divisible by 3if nis divisible by 3an={ n2if nis not divisible by 3n3if nis divisible by 3\n\nAnswer\n\nAnalysis\n\nEvery third point on the graph shown in Figure\n4 stands out from the two nearby points. This occurs\nbecause the sequence was defined by a piecewise function.\n\n[Figure: Graph of a scattered plot where the x-axis is labeled n and the y-axis is labeled a_n.]\n\nFigure 4\n\nTRY\nIT #3\n\nWrite the first six terms of the sequence.\n\nan={2n35n2if nis oddif nis evenan={ 2n3if nis odd5n2if nis even\n\nFinding an Explicit\nFormula\n\nThus far, we have been given the explicit formula and asked to\nfind a number of terms of the sequence. Sometimes, the explicit\nformula for the nthnth term of a sequence is not given.\nInstead, we are given several terms from the sequence. When this\nhappens, we can work in reverse to find an explicit formula from\nthe first few terms of a sequence. The key to finding an explicit\nformula is to look for a pattern in the terms. Keep in mind that\nthe pattern may involve alternating terms, formulas for numerators,\nformulas for denominators, exponents, or bases.\n\nHOW\nTO\n\nGiven the first few terms of a sequence, find an\nexplicit formula for the sequence.\n\n1. Look for a pattern among the terms.\n\n2. If the terms are fractions, look for a separate pattern among\nthe numerators and denominators.\n\n3. Look for a pattern among the signs of the terms.\n\n4. Write a formula for anan in terms\nof n.n. Test your formula\nfor n=1,n=2,n=1,n=2, and n=3.n=3.\n\nEXAMPLE 4\n\nWriting an Explicit Formula for\nthe nth Term of a\nSequence\n\nWrite an explicit formula for the nthnth term of each\nsequence.\n\n1. \nⓐ {−211,313,−415,517,−619,…}{ −211,313,−415,517,−619,… }\n\n2. \nⓑ {−225,−2125,−2625,−23,125,−215,625,…}{−225,−2125,−2625,−23,125,−215,625,…}\n\n3. ⓒ {e4,e5,e6,e7,e8,…}{e4,e5,e6,e7,e8,…}\n\nAnswer\n\n1. \n\n2. \n\n[Figure: 6828cceffd28dcdb3d63fe3e7e1b7a789ca9bd86]\n\n3. \n\nTRY\nIT #4\n\nWrite an explicit formula for the nthnth term of the\nsequence.\n\n{9,−81,729,−6,561,59,049,…}{9,−81,729,−6,561,59,049,…}\n\nTRY\nIT #5\n\nWrite an explicit formula for the nthnth term of the\nsequence.\n\n{−34,−98,−2712,−8116,−24320,...}{ −34,−98,−2712,−8116,−24320,... }\n\nTRY\nIT #6\n\nWrite an explicit formula for the nthnth term of the\nsequence.\n\n{1e2, 1e, 1, e, e2,...}{ 1e2, 1e, 1, e, e2,... }\n\nWriting the Terms of a Sequence\nDefined by a Recursive Formula\n\nSequences occur naturally in the growth patterns of nautilus\nshells, pinecones, tree branches, and many other natural\nstructures. We may see the sequence in the leaf or branch\narrangement, the number of petals of a flower, or the pattern of\nthe chambers in a nautilus shell. Their growth follows the\nFibonacci sequence, a famous sequence in which each term can be\nfound by adding the preceding two terms. The numbers in the\nsequence are 1, 1, 2, 3, 5, 8, 13, 21, 34,…. Other examples from\nthe natural world that exhibit the Fibonacci sequence are the Calla\nLily, which has just one petal, the Black-Eyed Susan with 13\npetals, and different varieties of daisies that may have 21 or 34\npetals.\n\nEach term of the Fibonacci sequence depends on the terms that\ncome before it. The Fibonacci sequence cannot easily be written\nusing an explicit formula. Instead, we describe the sequence using\na recursive formula, a formula that defines\nthe terms of a sequence using previous terms.\n\nA recursive formula always has two parts: the value of an\ninitial term (or terms), and an equation defining anan in\nterms of preceding terms. For example, suppose we know the\nfollowing:\n\na1=3an=2an−1−1 for n≥2a1=3an=2an−1−1 for n≥2\n\nWe can find the subsequent terms of the sequence using the first\nterm.\n\na1=3a2=2a1−1=2(3)−1=5a3=2a2−1=2(5)−1=9a4=2a3−1=2(9)−1=17a1=3a2=2a1−1=2(3)−1=5a3=2a2−1=2(5)−1=9a4=2a3−1=2(9)−1=17\n\nSo the first four terms of the sequence\nare {3,5,9,17}{ 3,5,9,17 } .\n\nThe recursive formula for the Fibonacci sequence states the\nfirst two terms and defines each successive term as the sum of the\npreceding two terms.\n\na1=1a2=1an=an−1+an−2 for  n≥3a1=1a2=1an=an−1+an−2 for  n≥3\n\nTo find the tenth term of the sequence, for example, we would\nneed to add the eighth and ninth terms. We were told previously\nthat the eighth and ninth terms are 21 and 34, so\n\na10=a9+a8=34+21=55a10=a9+a8=34+21=55\n\nRECURSIVE FORMULA\n\nA recursive formula is a formula that\ndefines each term of a sequence using preceding term(s). Recursive\nformulas must always state the initial term, or terms, of the\nsequence.\n\nQ&A\n\nMust the first two terms always be given in a recursive\nformula?\n\nNo. The Fibonacci sequence defines\neach term using the two preceding terms, but many recursive\nformulas define each term using only one preceding term. These\nsequences need only the first term to be defined.\n\nHOW\nTO\n\nGiven a recursive formula with only the first term\nprovided, write the first nn terms of a\nsequence.\n\n1. Identify the initial term, a1,a1, which is given as\npart of the formula. This is the first term.\n\n2. To find the second term, a2,a2, substitute the\ninitial term into the formula for an−1.an−1. Solve.\n\n3. To find the third term, a3,a3, substitute the second\nterm into the formula. Solve.\n\n4. Repeat until you have solved for\nthe nthnth term.\n\nEXAMPLE 5\n\nWriting the Terms of a Sequence\nDefined by a Recursive Formula\n\nWrite the first five terms of the sequence defined by the\nrecursive formula.\n\na1=9an=3an−1−20, for n≥2a1=9an=3an−1−20, for n≥2\n\nAnswer\n\n[Figure: Graph of a scattered plot with labeled points: (1, 9), (2, 7), (3, 1), (4, -17), and (5, -71). The x-axis is labeled n and the y-axis is labeled a_n.]\n\nTRY\nIT #7\n\nWrite the first five terms of the sequence defined by the\nrecursive formula.\n\na1=2an=2an−1+1, for n≥2a1=2an=2an−1+1, for n≥2\n\nHOW\nTO\n\nGiven a recursive formula with two initial terms, write\nthe first nn terms of a sequence.\n\n1. Identify the initial term, a1,a1, which is given as\npart of the formula.\n\n2. Identify the second term, a2,a2, which is given as\npart of the formula.\n\n3. To find the third term, substitute the initial term and the\nsecond term into the formula. Evaluate.\n\n4. Repeat until you have evaluated the nthnth term.\n\nEXAMPLE 6\n\nWriting the Terms of a Sequence\nDefined by a Recursive Formula\n\nWrite the first six terms of the sequence defined by the\nrecursive formula.\n\na1=1a2=2an=3an−1+4an−2, for n≥3a1=1a2=2an=3an−1+4an−2, for n≥3\n\nAnswer\n\n[Figure: Graph of a scattered plot with labeled points: (1, 1), (2, 2), (3, 10), (4, 38), (5, 154) and (6, 614). The x-axis is labeled n and the y-axis is labeled a_n.]\n\nTRY\nIT #8\n\nWrite the first 8 terms of the sequence defined by the recursive\nformula.\n\na1=0a2=1a3=1an=an−1an−2+an−3, for n≥4a1=0a2=1a3=1an=an−1an−2+an−3, for n≥4\n\nUsing Factorial\nNotation\n\nThe formulas for some sequences include products of consecutive\npositive integers. nn factorial, written\nas n!,n!, is the product of the positive integers from 1\nto n.n. For example,\n\n4!=4⋅3⋅2⋅1=245!=5⋅4⋅3⋅2⋅1=1204!=4⋅3⋅2⋅1=245!=5⋅4⋅3⋅2⋅1=120\n\nAn example of formula containing\na factorial is an=(n+1)!.an=(n+1)!. The sixth\nterm of the sequence can be found by substituting 6\nfor n.n.\n\na6=(6+1)!=7!=7⋅6⋅5⋅4⋅3⋅2⋅1=5040a6=(6+1)!=7!=7·6·5·4·3·2·1=5040\n\nThe factorial of any whole\nnumber nn is n(n−1)!n(n−1)! We can therefore\nalso think of 5!5! as 5⋅4!.5⋅4!.\n\nN\nFACTORIAL\n\nn factorial is a mathematical\noperation that can be defined using a recursive formula. The\nfactorial of n,n, denoted n!,n!, is defined for\na positive integer nn as:\n\n0!=11!=1n!=n(n−1)(n−2)⋯(2)(1), for n≥20!=11!=1n!=n(n−1)(n−2)⋯(2)(1), for n≥2\n\nThe special case 0!0! is defined\nas 0!=1.0!=1.\n\nQ&A\n\nCan factorials always be found using a\ncalculator?\n\nNo. Factorials get large very\nquickly—faster than even exponential functions! When the output\ngets too large for the calculator, it will not be able to calculate\nthe factorial.\n\nEXAMPLE 7\n\nWriting the Terms of a Sequence Using\nFactorials\n\nWrite the first five terms of the sequence defined by the\nexplicit formula an=5n(n+2)!.an=5n(n+2)!.\n\nAnswer\n\nAnalysis\n\nFigure 7 shows the graph of the sequence. Notice that,\nsince factorials grow very quickly, the presence of the factorial\nterm in the denominator results in the denominator becoming much\nlarger than the numerator as nn increases. This means the\nquotient gets smaller and, as the plot of the terms shows, the\nterms are decreasing and nearing zero.\n\n[Figure: Graph of a scattered plot with labeled points: (1, 5/6), (2, 5/12), (3, 1/8), (4, 1/36), and (5, 5/1008). The x-axis is labeled n and the y-axis is labeled a_n.]\n\nFigure 7\n\nTRY\nIT #9\n\nWrite the first five terms of the sequence defined by the\nexplicit formula an=(n+1)!2n.an=(n+1)!2n.\n\nMEDIA\n\nAccess this online resource for additional instruction and\npractice with sequences.\n\nFinding Terms in a\nSequence\n\n11.1 Section\nExercises\n\nVerbal\n\n1. \n\nDiscuss the meaning of a sequence. If a finite sequence is\ndefined by a formula, what is its domain? What about an infinite\nsequence?\n\n2. \n\nDescribe three ways that a sequence can be defined.\n\n3. \n\nIs the ordered set of even numbers an infinite sequence? What\nabout the ordered set of odd numbers? Explain why or why not.\n\n4. \n\nWhat happens to the terms anan of a sequence when\nthere is a negative factor in the formula that is raised to a power\nthat includes n?n? What is the term used to describe this\nphenomenon?\n\n5. \n\nWhat is a factorial, and how is it denoted? Use an example to\nillustrate how factorial notation can be beneficial.\n\nAlgebraic\n\nFor the following exercises, write the first four terms of the\nsequence.\n\n6. \n\nan=2n−2an=2n−2\n\n7. \n\nan=−16n+1an=−16n+1\n\n8. \n\nan=−(−5)n−1an=−(−5)n−1\n\n9. \n\nan=2nn3an=2nn3\n\n10. \n\nan=2n+1n3an=2n+1n3\n\n11. \n\nan=1.25⋅(−4)n−1an=1.25⋅(−4)n−1\n\n12. \n\nan=−4⋅(−6)n−1an=−4⋅(−6)n−1\n\n13. \n\nan=n22n+1an=n22n+1\n\n14. \n\nan=(−10)n+1an=(−10)n+1\n\n15. \n\nan=−(4⋅(−5)n−15)an=−(4⋅(−5)n−15)\n\nFor the following exercises, write the first eight terms of the\npiecewise sequence.\n\n16. \n\nan={(−2)n−2(3)n−1if nis evenif nis oddan={ (−2)n−2if nis even(3)n−1if nis odd\n\n17. \n\nan={n22n+1n2−5if n≤5if n>5an={ n22n+1if n≤5n2−5if n>5\n\n18. \n\nan={(2n+1)22nif nis divisible by 4if nis not divisible by 4an={ (2n+1)2if nis divisible by 42nif nis not divisible by 4\n\n19. \n\nan={−0.6⋅5n−12.5⋅(−2)n−1if nis prime or 1if nis compositean={ −0.6⋅5n−1if nis prime or 12.5⋅(−2)n−1if nis composite\n\n20. \n\nan={4(n2−2)n2−24if n≤3or n> 6if 3<n≤6an={ 4(n2−2)if n≤3or n> 6n2−24if 3<n≤6\n\nFor the following exercises, write an explicit formula for each\nsequence.\n\n21. \n\n4, 7, 12, 19, 28,…4, 7, 12, 19, 28,…\n\n22. \n\n−4,2,−10,14,−34,…−4,2,−10,14,−34,…\n\n23. \n\n1,1,43,2,165,…1,1,43,2,165,…\n\n24. \n\n0,1−e11+e2,1−e21+e3,1−e31+e4,1−e41+e5,…0,1−e11+e2,1−e21+e3,1−e31+e4,1−e41+e5,…\n\n25. \n\n1,−12,14,−18,116,…1,−12,14,−18,116,…\n\nFor the following exercises, write the first five terms of the\nsequence.\n\n26. \n\na1=9,an=an−1+na1=9,an=an−1+n\n\n27. \n\na1=3,an=(−3)an−1a1=3,an=(−3)an−1\n\n28. \n\na1=−4,an=an−1+2nan−1−1a1=−4,an=an−1+2nan−1−1\n\n29. \n\na1=−1,an=(−3)n−1an−1−2a1=−1,an=(−3)n−1an−1−2\n\n30. \n\na1=−30,an=(2+an−1)(12)na1=−30,an=(2+an−1)(12)n\n\nFor the following exercises, write the first eight terms of the\nsequence.\n\n31. \n\na1=124,a2=1,an=(2an−2)(3an−1)a1=124,a2=1,an=(2an−2)(3an−1)\n\n32. \n\na1=−1,a2=5,an=an−2(3−an−1)a1=−1,a2=5,an=an−2(3−an−1)\n\n33. \n\na1=2,a2=10,an=2(an−1+2)an−2a1=2,a2=10,an=2(an−1+2)an−2\n\nFor the following exercises, write a recursive formula for each\nsequence.\n\n34. \n\n−2.5,−5,−10,−20,−40,…−2.5,−5,−10,−20,−40,…\n\n35. \n\n−8,−6,−3,1,6,…−8,−6,−3,1,6,…\n\n36. \n\n2,4,12,48,240,…2,4,12,48,240,…\n\n37. \n\n35,38,41,44,47,…35,38,41,44,47,…\n\n38. \n\n15,3,35,325,3125,⋯15,3,35,325,3125,⋯\n\nFor the following exercises, evaluate the factorial.\n\n39. \n\n6!6!\n\n40. \n\n(126)!(126)!\n\n41. \n\n12!6!12!6!\n\n42. \n\n100!99!100!99!\n\nFor the following exercises, write the first four terms of the\nsequence.\n\n43. \n\nan=n!n2an=n!n2\n\n44. \n\nan=3⋅n!4⋅n!an=3⋅n!4⋅n!\n\n45. \n\nan=n!n2−n−1an=n!n2−n−1\n\n46. \n\nan=100⋅nn(n−1)!an=100⋅nn(n−1)!\n\nGraphical\n\nFor the following exercises, graph the first five terms of the\nindicated sequence\n\n47. \n\nan=(−1)nn+nan=(−1)nn+n\n\n48. \n\nan={4+n2n3+nif nis evenif nis oddan={ 4+n2nif nis even3+nif nis odd\n\n49. \n\na1=2,an=(−an−1+1)2a1=2,an=(−an−1+1)2\n\n50. \n\na1=1,an=an−1+8a1=1,an=an−1+8\n\n51. \n\nan=(n+1)!(n−1)!an=(n+1)!(n−1)!\n\nFor the following exercises, write an explicit formula for the\nsequence using the first five points shown on the graph.\n\n52.\n\n[Figure: Graph of a scattered plot with labeled points: (1, 5), (2, 7), (3, 9), (4, 11), and (5, 13). The x-axis is labeled n and the y-axis is labeled a_n.]\n\n53.\n\n[Figure: Graph of a scattered plot with labeled points: (1, 0.5), (2, 1), (3, 2), (4, 4), and (5, 8). The x-axis is labeled n and the y-axis is labeled a_n.]\n\n54.\n\n[Figure: Graph of a scattered plot with labeled points: (1, 12), (2, 9), (3, 6), (4, 3), and (5, 0). The x-axis is labeled n and the y-axis is labeled a_n.]\n\nFor the following exercises, write a recursive formula for the\nsequence using the first five points shown on the graph.\n\n55.\n\n[Figure: Graph of a scattered plot with labeled points: (1, 6), (2, 7), (3, 9), (4, 13), and (5, 21). The x-axis is labeled n and the y-axis is labeled a_n.]\n\n56.\n\n[Figure: Graph of a scattered plot with labeled points: (1, 16), (2, 8), (3, 4), (4, 2), and (5, 1). The x-axis is labeled n and the y-axis is labeled a_n.]\n\nTechnology\n\nFollow these steps to evaluate a sequence defined recursively\nusing a graphing calculator:\n\nOn the home screen, key in the value for the initial\nterm a1a1 and press [ENTER].\n\nEnter the recursive formula by keying in all numerical values\ngiven in the formula, along with the key strokes [2ND]\nANS for the previous\nterm an−1.an−1. Press [ENTER].\n\nContinue pressing [ENTER] to\ncalculate the values for each successive term.\n\nFor the following exercises, use the steps above to find the\nindicated term or terms for the sequence.\n\n57. \n\nFind the first five terms of the\nsequence a1=87111a1=87111, an=43an−1+1237.an=43an−1+1237. Use\nthe >Frac feature to give fractional\nresults.\n\n58. \n\nFind the 15^(th) term of the\nsequence a1=625a1=625, an=0.8an−1+18.an=0.8an−1+18.\n\n59. \n\nFind the first five terms of the\nsequence a1=2a1=2, an=2[(an−1)−1]+1.an=2[(an−1)−1]+1.\n\n60. \n\nFind the first ten terms of the\nsequence a1=8a1=8, an=(an−1+1)!an−1!.an=(an−1+1)!an−1!.\n\n61. \n\nFind the tenth term of the\nsequence a1=2a1=2, an=nan−1an=nan−1\n\nFollow these steps to evaluate a finite sequence defined by an\nexplicit formula. Using a TI-84, do the following.\n\nIn the home screen, press [2ND]\nLIST.\n\nScroll over to OPS and\nchoose “seq(” from the dropdown list.\nPress [ENTER].\n\nIn the line headed “Expr:” type in\nthe explicit formula, using the [X,T,θ,n][X,T,θ,n] button\nfor nn\n\nIn the line headed “Variable:” type\nin the variable used on the previous step.\n\nIn the line headed “start:” key in\nthe value of nn that begins the sequence.\n\nIn the line headed “end:” key in the\nvalue of nn that ends the sequence.\n\nPress [ENTER] 3 times to return to\nthe home screen. You will see the sequence syntax on the screen.\nPress [ENTER] to see the list of terms\nfor the finite sequence defined. Use the right arrow key to scroll\nthrough the list of terms.\n\nUsing a TI-83, do the following.\n\nIn the home screen, press [2ND]\nLIST.\n\nScroll over to OPS and\nchoose “seq(” from the dropdown list.\nPress [ENTER].\n\nEnter the items in the\norder “Expr”, “Variable”, “start”, “end” separated\nby commas. See the instructions above for the description of each\nitem.\n\nPress [ENTER] to see the list of\nterms for the finite sequence defined. Use the right arrow key to\nscroll through the list of terms.\n\nFor the following exercises, use the steps above to find the\nindicated terms for the sequence. Round to the nearest thousandth\nwhen necessary.\n\n62. \n\nList the first five terms of the\nsequence an=−289n+53.an=−289n+53.\n\n63. \n\nList the first six terms of the\nsequence an=n3−3.5n2+ 4.1n−1.52.4n.an=n3−3.5n2+ 4.1n−1.52.4n.\n\n64. \n\nList the first five terms of the\nsequence an=15n⋅(−2)n−147an=15n⋅(−2)n−147\n\n65. \n\nList the first four terms of the\nsequence an=5.7n+0.275(n−1)!an=5.7n+0.275(n−1)!\n\n66. \n\nList the first six terms of the sequence an=n!n.an=n!n.\n\nExtensions\n\n67. \n\nConsider the sequence defined\nby an=−6−8n.an=−6−8n. Is an=−421an=−421 a term\nin the sequence? Verify the result.\n\n68. \n\nWhat term in the\nsequence an=n2+4n+42(n+2)an=n2+4n+42(n+2) has the\nvalue 41?41? Verify the result.\n\n69. \n\nFind a recursive formula for the sequence 1, 0, −1, −1, 0, 1, 1,\n0, −1, −1, 0, 1, 1, .... (Hint: find\na pattern for anan based on the first two terms.)\n\n70. \n\nCalculate the first eight terms of the\nsequences an=(n+2)!(n−1)!an=(n+2)!(n−1)! and bn=n3+3n2+2n,bn=n3+3n2+2n, and\nthen make a conjecture about the relationship between these two\nsequences.\n\n71. \n\nProve the conjecture made in the preceding exercise.\n\nThis page titled 11.2: Sequences and Their Notations was last modified on Sun, 28 May 2023 07:34:11 GMT and is shared under a CC BY  4.0  license and was authored, remixed, and/or curated by OpenStax via source content that was edited to the style and standards of the LibreTexts platform.",
+  "figures": [
+    {
+      "url": "https://math.libretexts.org/@api/deki/files/105979/34bc3ef83962656c9b94a8c08d0a26e9d1fbfcaf?revision=1",
+      "alt": "Sequence of {2, 4, 8, 16, 32, ...} expressed in exponential form (i.e., {2^1, 2^2, 2^3, ..., 2^n, ...}",
+      "credit": ""
+    },
+    {
+      "url": "https://math.libretexts.org/@api/deki/files/105977/ef124e5c4241ab5946d5b89822fda5f5c54c6cdc?revision=1",
+      "alt": "Graph of a plotted exponential function, f(n) = 2^n, where the x-axis is labeled n and the y-axis is labeled a_n.",
+      "credit": ""
+    },
+    {
+      "url": "https://math.libretexts.org/@api/deki/files/105975/75d7e31b4566f5654088db458eb29a280d0caed8?revision=1",
+      "alt": "Graph of a scattered plot where the x-axis is labeled n and the y-axis is labeled a_n.",
+      "credit": ""
+    },
+    {
+      "url": "https://math.libretexts.org/@api/deki/files/105976/54edeeb755d45cb5d0200515cf8ae15f56108cc9?revision=1",
+      "alt": "Graph of a scattered plot with labeled points: (1, -1/2), (2, 4/3), (3, -9/4), (4, 16/5), and (5, -25/6). The x-axis is labeled n and the y-axis is labeled a_n.",
+      "credit": ""
+    },
+    {
+      "url": "https://math.libretexts.org/@api/deki/files/105978/e29c2b32ffbc6e847c8d37f30f55e2fe0dd29bd0?revision=1",
+      "alt": "Graph of a scattered plot where the x-axis is labeled n and the y-axis is labeled a_n.",
+      "credit": ""
+    },
+    {
+      "url": "https://math.libretexts.org/@api/deki/files/105980/6828cceffd28dcdb3d63fe3e7e1b7a789ca9bd86?revision=1",
+      "alt": "6828cceffd28dcdb3d63fe3e7e1b7a789ca9bd86",
+      "credit": ""
+    },
+    {
+      "url": "https://math.libretexts.org/@api/deki/files/105981/80001ee83676e72c4eeafa59feb9aee0d840fedf?revision=1",
+      "alt": "Graph of a scattered plot with labeled points: (1, 9), (2, 7), (3, 1), (4, -17), and (5, -71). The x-axis is labeled n and the y-axis is labeled a_n.",
+      "credit": ""
+    },
+    {
+      "url": "https://math.libretexts.org/@api/deki/files/105982/8d8e43569a981b9ba224b552f47fadd538056efe?revision=1",
+      "alt": "Graph of a scattered plot with labeled points: (1, 1), (2, 2), (3, 10), (4, 38), (5, 154) and (6, 614). The x-axis is labeled n and the y-axis is labeled a_n.",
+      "credit": ""
+    },
+    {
+      "url": "https://math.libretexts.org/@api/deki/files/105983/0536d352da37d85a401202182d02fd4d3cb82107?revision=1",
+      "alt": "Graph of a scattered plot with labeled points: (1, 5/6), (2, 5/12), (3, 1/8), (4, 1/36), and (5, 5/1008). The x-axis is labeled n and the y-axis is labeled a_n.",
+      "credit": ""
+    },
+    {
+      "url": "https://math.libretexts.org/@api/deki/files/105984/b19967243f48b0e06b3cb2087eddff5507b6018f?revision=1",
+      "alt": "Graph of a scattered plot with labeled points: (1, 5), (2, 7), (3, 9), (4, 11), and (5, 13). The x-axis is labeled n and the y-axis is labeled a_n.",
+      "credit": ""
+    },
+    {
+      "url": "https://math.libretexts.org/@api/deki/files/105985/338d79f78ddc1fb48e1dd465e24241bb423dfa1d?revision=1",
+      "alt": "Graph of a scattered plot with labeled points: (1, 0.5), (2, 1), (3, 2), (4, 4), and (5, 8). The x-axis is labeled n and the y-axis is labeled a_n.",
+      "credit": ""
+    },
+    {
+      "url": "https://math.libretexts.org/@api/deki/files/105986/449b60964e97430157d757cbe70a9252ef1e679c?revision=1",
+      "alt": "Graph of a scattered plot with labeled points: (1, 12), (2, 9), (3, 6), (4, 3), and (5, 0). The x-axis is labeled n and the y-axis is labeled a_n.",
+      "credit": ""
+    },
+    {
+      "url": "https://math.libretexts.org/@api/deki/files/105987/84d609ae1450ddc622082c6fac791dee0533a469?revision=1",
+      "alt": "Graph of a scattered plot with labeled points: (1, 6), (2, 7), (3, 9), (4, 13), and (5, 21). The x-axis is labeled n and the y-axis is labeled a_n.",
+      "credit": ""
+    },
+    {
+      "url": "https://math.libretexts.org/@api/deki/files/105989/5b72343f7498287af8722510b0c33d8623cb2ef1?revision=1",
+      "alt": "Graph of a scattered plot with labeled points: (1, 16), (2, 8), (3, 4), (4, 2), and (5, 1). The x-axis is labeled n and the y-axis is labeled a_n.",
+      "credit": ""
+    }
+  ],
+  "references": [
+    {
+      "text": "Table\n1",
+      "url": "https://openstax.org/books/precalculus/pages/11-1-sequences-and-their-notations#Table_11_01_01"
+    },
+    {
+      "text": "Table\n2",
+      "url": "https://openstax.org/books/precalculus/pages/11-1-sequences-and-their-notations#Table_11_01_02"
+    },
+    {
+      "text": "Figure\n1",
+      "url": "https://openstax.org/books/precalculus/pages/11-1-sequences-and-their-notations#CNX_Precalculus_Figure_11_01_002"
+    },
+    {
+      "text": "Table\n3",
+      "url": "https://openstax.org/books/precalculus/pages/11-1-sequences-and-their-notations#Table_11_01_03"
+    },
+    {
+      "text": "Figure\n2",
+      "url": "https://openstax.org/books/precalculus/pages/11-1-sequences-and-their-notations#CNX_Precalculus_Figure_11_01_003"
+    },
+    {
+      "text": "Figure\n3",
+      "url": "https://openstax.org/books/precalculus/pages/11-1-sequences-and-their-notations#CNX_Precalculus_Figure_11_01_004"
+    },
+    {
+      "text": "Example\n2",
+      "url": "https://openstax.org/books/precalculus/pages/11-1-sequences-and-their-notations#Example_11_01_02"
+    },
+    {
+      "text": "Figure\n4",
+      "url": "https://openstax.org/books/precalculus/pages/11-1-sequences-and-their-notations#CNX_Precalculus_Figure_11_01_005"
+    },
+    {
+      "text": "Figure 7",
+      "url": "https://openstax.org/books/precalculus/pages/11-1-sequences-and-their-notations#CNX_Precalculus_Figure_11_01_008"
+    },
+    {
+      "text": "Finding Terms in a\nSequence",
+      "url": "http://openstax.org/l/findingterms"
+    },
+    {
+      "text": "1",
+      "url": "https://openstax.org/books/precalculus/pages/chapter-11#fs-id1165137677166-solution"
+    },
+    {
+      "text": "3",
+      "url": "https://openstax.org/books/precalculus/pages/chapter-11#fs-id1165137767650-solution"
+    },
+    {
+      "text": "5",
+      "url": "https://openstax.org/books/precalculus/pages/chapter-11#fs-id1165137874938-solution"
+    },
+    {
+      "text": "7",
+      "url": "https://openstax.org/books/precalculus/pages/chapter-11#fs-id1165137736023-solution"
+    },
+    {
+      "text": "9",
+      "url": "https://openstax.org/books/precalculus/pages/chapter-11#fs-id1165135592083-solution"
+    },
+    {
+      "text": "11",
+      "url": "https://openstax.org/books/precalculus/pages/chapter-11#fs-id1165135543454-solution"
+    },
+    {
+      "text": "13",
+      "url": "https://openstax.org/books/precalculus/pages/chapter-11#fs-id1165137725287-solution"
+    },
+    {
+      "text": "15",
+      "url": "https://openstax.org/books/precalculus/pages/chapter-11#fs-id1165137772058-solution"
+    },
+    {
+      "text": "17",
+      "url": "https://openstax.org/books/precalculus/pages/chapter-11#fs-id1165137626830-solution"
+    },
+    {
+      "text": "19",
+      "url": "https://openstax.org/books/precalculus/pages/chapter-11#fs-id1165135245783-solution"
+    },
+    {
+      "text": "21",
+      "url": "https://openstax.org/books/precalculus/pages/chapter-11#fs-id1165137851677-solution"
+    },
+    {
+      "text": "23",
+      "url": "https://openstax.org/books/precalculus/pages/chapter-11#fs-id1165137849326-solution"
+    },
+    {
+      "text": "25",
+      "url": "https://openstax.org/books/precalculus/pages/chapter-11#fs-id1165135404195-solution"
+    },
+    {
+      "text": "27",
+      "url": "https://openstax.org/books/precalculus/pages/chapter-11#fs-id1165137678011-solution"
+    },
+    {
+      "text": "29",
+      "url": "https://openstax.org/books/precalculus/pages/chapter-11#fs-id1165135187060-solution"
+    },
+    {
+      "text": "31",
+      "url": "https://openstax.org/books/precalculus/pages/chapter-11#fs-id1165135241201-solution"
+    },
+    {
+      "text": "33",
+      "url": "https://openstax.org/books/precalculus/pages/chapter-11#fs-id1165137772277-solution"
+    },
+    {
+      "text": "35",
+      "url": "https://openstax.org/books/precalculus/pages/chapter-11#fs-id1165135176677-solution"
+    },
+    {
+      "text": "37",
+      "url": "https://openstax.org/books/precalculus/pages/chapter-11#fs-id1165135646259-solution"
+    },
+    {
+      "text": "39",
+      "url": "https://openstax.org/books/precalculus/pages/chapter-11#fs-id1165137749577-solution"
+    },
+    {
+      "text": "41",
+      "url": "https://openstax.org/books/precalculus/pages/chapter-11#fs-id1165137678239-solution"
+    },
+    {
+      "text": "43",
+      "url": "https://openstax.org/books/precalculus/pages/chapter-11#fs-id1165137894464-solution"
+    },
+    {
+      "text": "45",
+      "url": "https://openstax.org/books/precalculus/pages/chapter-11#fs-id1165137643157-solution"
+    },
+    {
+      "text": "47",
+      "url": "https://openstax.org/books/precalculus/pages/chapter-11#fs-id1165137526806-solution"
+    },
+    {
+      "text": "49",
+      "url": "https://openstax.org/books/precalculus/pages/chapter-11#fs-id1165137749961-solution"
+    },
+    {
+      "text": "51",
+      "url": "https://openstax.org/books/precalculus/pages/chapter-11#fs-id1165135570398-solution"
+    },
+    {
+      "text": "53",
+      "url": "https://openstax.org/books/precalculus/pages/chapter-11#fs-id1165137871118-solution"
+    },
+    {
+      "text": "55",
+      "url": "https://openstax.org/books/precalculus/pages/chapter-11#fs-id1165137735572-solution"
+    },
+    {
+      "text": "57",
+      "url": "https://openstax.org/books/precalculus/pages/chapter-11#fs-id1165137855403-solution"
+    },
+    {
+      "text": "59",
+      "url": "https://openstax.org/books/precalculus/pages/chapter-11#fs-id1165135307971-solution"
+    },
+    {
+      "text": "61",
+      "url": "https://openstax.org/books/precalculus/pages/chapter-11#fs-id1165135596428-solution"
+    },
+    {
+      "text": "63",
+      "url": "https://openstax.org/books/precalculus/pages/chapter-11#fs-id1165135195687-solution"
+    },
+    {
+      "text": "65",
+      "url": "https://openstax.org/books/precalculus/pages/chapter-11#fs-id1165137762782-solution"
+    },
+    {
+      "text": "67",
+      "url": "https://openstax.org/books/precalculus/pages/chapter-11#fs-id1165137696690-solution"
+    },
+    {
+      "text": "69",
+      "url": "https://openstax.org/books/precalculus/pages/chapter-11#fs-id1165135641594-solution"
+    },
+    {
+      "text": "71",
+      "url": "https://openstax.org/books/precalculus/pages/chapter-11#fs-id1165137758742-solution"
+    },
+    {
+      "text": "11.2: Sequences and Their Notations",
+      "url": "https://math.libretexts.org/Bookshelves/Precalculus/Precalculus_2e_(OpenStax)/11%3A_Sequences_Probability_and_Counting_Theory/11.02%3A_Sequences_and_Their_Notations"
+    },
+    {
+      "text": "CC BY  4.0",
+      "url": "https://creativecommons.org/licenses/by/4.0"
+    },
+    {
+      "text": "OpenStax",
+      "url": "https://openstax.org/"
+    },
+    {
+      "text": "source content",
+      "url": "https://openstax.org/details/books/precalculus"
+    }
+  ],
+  "exercises": [
+    {
+      "ordinal": 1,
+      "sourceNumber": "1",
+      "sourceAnchor": "",
+      "kind": "exercise-candidate",
+      "context": "Does a sequence always have to begin\nwith a1?a1?\n\nNo. In certain problems, it may be\nuseful to define the initial term as a0a0 instead\nof a1.a1. In these problems, the domain of the function\nincludes 0.\n\nGiven an explicit formula, write the\nfirst nn terms of a\nsequence.",
+      "original": "1. Substitute each value of nn into the formula. Begin\nwith n=1n=1 to find the first term, a1.a1.",
+      "prompt": "1. Substitute each value of nn into the formula. Begin\nwith n=1n=1 to find the first term, a1.a1.",
+      "sourceAnswers": [],
+      "hasFigure": false,
+      "status": "draft",
+      "answerVerified": false,
+      "translationStatus": "pending",
+      "mappingStatus": "pending"
+    },
+    {
+      "ordinal": 2,
+      "sourceNumber": "2",
+      "sourceAnchor": "",
+      "kind": "exercise-candidate",
+      "context": "Does a sequence always have to begin\nwith a1?a1?\n\nNo. In certain problems, it may be\nuseful to define the initial term as a0a0 instead\nof a1.a1. In these problems, the domain of the function\nincludes 0.\n\nGiven an explicit formula, write the\nfirst nn terms of a\nsequence.",
+      "original": "2. To find the second\nterm, a2,a2, use n=2.n=2.",
+      "prompt": "2. To find the second\nterm, a2,a2, use n=2.n=2.",
+      "sourceAnswers": [],
+      "hasFigure": false,
+      "status": "draft",
+      "answerVerified": false,
+      "translationStatus": "pending",
+      "mappingStatus": "pending"
+    },
+    {
+      "ordinal": 3,
+      "sourceNumber": "3",
+      "sourceAnchor": "",
+      "kind": "exercise-candidate",
+      "context": "Does a sequence always have to begin\nwith a1?a1?\n\nNo. In certain problems, it may be\nuseful to define the initial term as a0a0 instead\nof a1.a1. In these problems, the domain of the function\nincludes 0.\n\nGiven an explicit formula, write the\nfirst nn terms of a\nsequence.",
+      "original": "3. Continue in the same manner until you have identified\nall nn terms.",
+      "prompt": "3. Continue in the same manner until you have identified\nall nn terms.",
+      "sourceAnswers": [],
+      "hasFigure": false,
+      "status": "draft",
+      "answerVerified": false,
+      "translationStatus": "pending",
+      "mappingStatus": "pending"
+    },
+    {
+      "ordinal": 4,
+      "sourceNumber": "1",
+      "sourceAnchor": "",
+      "kind": "exercise-candidate",
+      "context": "Given an explicit formula with alternating terms, write\nthe first nn terms of a sequence.",
+      "original": "1. Substitute each value of nn into the formula. Begin\nwith n=1n=1 to find the first term, a1.a1. The\nsign of the term is given by the (−1)n(−1)n in the\nexplicit formula.",
+      "prompt": "1. Substitute each value of nn into the formula. Begin\nwith n=1n=1 to find the first term, a1.a1. The\nsign of the term is given by the (−1)n(−1)n in the\nexplicit formula.",
+      "sourceAnswers": [],
+      "hasFigure": false,
+      "status": "draft",
+      "answerVerified": false,
+      "translationStatus": "pending",
+      "mappingStatus": "pending"
+    },
+    {
+      "ordinal": 5,
+      "sourceNumber": "2",
+      "sourceAnchor": "",
+      "kind": "exercise-candidate",
+      "context": "Given an explicit formula with alternating terms, write\nthe first nn terms of a sequence.",
+      "original": "2. To find the second\nterm, a2,a2, use n=2.n=2.",
+      "prompt": "2. To find the second\nterm, a2,a2, use n=2.n=2.",
+      "sourceAnswers": [],
+      "hasFigure": false,
+      "status": "draft",
+      "answerVerified": false,
+      "translationStatus": "pending",
+      "mappingStatus": "pending"
+    },
+    {
+      "ordinal": 6,
+      "sourceNumber": "3",
+      "sourceAnchor": "",
+      "kind": "exercise-candidate",
+      "context": "Given an explicit formula with alternating terms, write\nthe first nn terms of a sequence.",
+      "original": "3. Continue in the same manner until you have identified\nall nn terms.",
+      "prompt": "3. Continue in the same manner until you have identified\nall nn terms.",
+      "sourceAnswers": [],
+      "hasFigure": false,
+      "status": "draft",
+      "answerVerified": false,
+      "translationStatus": "pending",
+      "mappingStatus": "pending"
+    },
+    {
+      "ordinal": 7,
+      "sourceNumber": "1",
+      "sourceAnchor": "",
+      "kind": "exercise-candidate",
+      "context": "Given an explicit formula for a piecewise function,\nwrite the first nn terms of a sequence",
+      "original": "1. Identify the formula to which n=1n=1 applies.",
+      "prompt": "1. Identify the formula to which n=1n=1 applies.",
+      "sourceAnswers": [],
+      "hasFigure": false,
+      "status": "draft",
+      "answerVerified": false,
+      "translationStatus": "pending",
+      "mappingStatus": "pending"
+    },
+    {
+      "ordinal": 8,
+      "sourceNumber": "2",
+      "sourceAnchor": "",
+      "kind": "exercise-candidate",
+      "context": "Given an explicit formula for a piecewise function,\nwrite the first nn terms of a sequence",
+      "original": "2. To find the first\nterm, a1,a1, use n=1n=1 in the appropriate\nformula.",
+      "prompt": "2. To find the first\nterm, a1,a1, use n=1n=1 in the appropriate\nformula.",
+      "sourceAnswers": [],
+      "hasFigure": false,
+      "status": "draft",
+      "answerVerified": false,
+      "translationStatus": "pending",
+      "mappingStatus": "pending"
+    },
+    {
+      "ordinal": 9,
+      "sourceNumber": "3",
+      "sourceAnchor": "",
+      "kind": "exercise-candidate",
+      "context": "Given an explicit formula for a piecewise function,\nwrite the first nn terms of a sequence",
+      "original": "3. Identify the formula to which n=2n=2 applies.",
+      "prompt": "3. Identify the formula to which n=2n=2 applies.",
+      "sourceAnswers": [],
+      "hasFigure": false,
+      "status": "draft",
+      "answerVerified": false,
+      "translationStatus": "pending",
+      "mappingStatus": "pending"
+    },
+    {
+      "ordinal": 10,
+      "sourceNumber": "4",
+      "sourceAnchor": "",
+      "kind": "exercise-candidate",
+      "context": "Given an explicit formula for a piecewise function,\nwrite the first nn terms of a sequence",
+      "original": "4. To find the second\nterm, a2,a2, use n=2n=2 in the appropriate\nformula.",
+      "prompt": "4. To find the second\nterm, a2,a2, use n=2n=2 in the appropriate\nformula.",
+      "sourceAnswers": [],
+      "hasFigure": false,
+      "status": "draft",
+      "answerVerified": false,
+      "translationStatus": "pending",
+      "mappingStatus": "pending"
+    },
+    {
+      "ordinal": 11,
+      "sourceNumber": "5",
+      "sourceAnchor": "",
+      "kind": "exercise-candidate",
+      "context": "Given an explicit formula for a piecewise function,\nwrite the first nn terms of a sequence",
+      "original": "5. Continue in the same manner until you have identified\nall nn terms.",
+      "prompt": "5. Continue in the same manner until you have identified\nall nn terms.",
+      "sourceAnswers": [],
+      "hasFigure": false,
+      "status": "draft",
+      "answerVerified": false,
+      "translationStatus": "pending",
+      "mappingStatus": "pending"
+    },
+    {
+      "ordinal": 12,
+      "sourceNumber": "1",
+      "sourceAnchor": "",
+      "kind": "exercise-candidate",
+      "context": "Given the first few terms of a sequence, find an\nexplicit formula for the sequence.",
+      "original": "1. Look for a pattern among the terms.",
+      "prompt": "1. Look for a pattern among the terms.",
+      "sourceAnswers": [],
+      "hasFigure": false,
+      "status": "draft",
+      "answerVerified": false,
+      "translationStatus": "pending",
+      "mappingStatus": "pending"
+    },
+    {
+      "ordinal": 13,
+      "sourceNumber": "2",
+      "sourceAnchor": "",
+      "kind": "exercise-candidate",
+      "context": "Given the first few terms of a sequence, find an\nexplicit formula for the sequence.",
+      "original": "2. If the terms are fractions, look for a separate pattern among\nthe numerators and denominators.",
+      "prompt": "2. If the terms are fractions, look for a separate pattern among\nthe numerators and denominators.",
+      "sourceAnswers": [],
+      "hasFigure": false,
+      "status": "draft",
+      "answerVerified": false,
+      "translationStatus": "pending",
+      "mappingStatus": "pending"
+    },
+    {
+      "ordinal": 14,
+      "sourceNumber": "3",
+      "sourceAnchor": "",
+      "kind": "exercise-candidate",
+      "context": "Given the first few terms of a sequence, find an\nexplicit formula for the sequence.",
+      "original": "3. Look for a pattern among the signs of the terms.",
+      "prompt": "3. Look for a pattern among the signs of the terms.",
+      "sourceAnswers": [],
+      "hasFigure": false,
+      "status": "draft",
+      "answerVerified": false,
+      "translationStatus": "pending",
+      "mappingStatus": "pending"
+    },
+    {
+      "ordinal": 15,
+      "sourceNumber": "4",
+      "sourceAnchor": "",
+      "kind": "exercise-candidate",
+      "context": "Given the first few terms of a sequence, find an\nexplicit formula for the sequence.",
+      "original": "4. Write a formula for anan in terms\nof n.n. Test your formula\nfor n=1,n=2,n=1,n=2, and n=3.n=3.",
+      "prompt": "4. Write a formula for anan in terms\nof n.n. Test your formula\nfor n=1,n=2,n=1,n=2, and n=3.n=3.",
+      "sourceAnswers": [],
+      "hasFigure": false,
+      "status": "draft",
+      "answerVerified": false,
+      "translationStatus": "pending",
+      "mappingStatus": "pending"
+    },
+    {
+      "ordinal": 16,
+      "sourceNumber": "1",
+      "sourceAnchor": "",
+      "kind": "exercise-candidate",
+      "context": "Writing an Explicit Formula for\nthe nth Term of a\nSequence\n\nWrite an explicit formula for the nthnth term of each\nsequence.",
+      "original": "1. \nⓐ {−211,313,−415,517,−619,…}{ −211,313,−415,517,−619,… }",
+      "prompt": "1. \nⓐ {−211,313,−415,517,−619,…}{ −211,313,−415,517,−619,… }",
+      "sourceAnswers": [],
+      "hasFigure": false,
+      "status": "draft",
+      "answerVerified": false,
+      "translationStatus": "pending",
+      "mappingStatus": "pending"
+    },
+    {
+      "ordinal": 17,
+      "sourceNumber": "2",
+      "sourceAnchor": "",
+      "kind": "exercise-candidate",
+      "context": "Writing an Explicit Formula for\nthe nth Term of a\nSequence\n\nWrite an explicit formula for the nthnth term of each\nsequence.",
+      "original": "2. \nⓑ {−225,−2125,−2625,−23,125,−215,625,…}{−225,−2125,−2625,−23,125,−215,625,…}",
+      "prompt": "2. \nⓑ {−225,−2125,−2625,−23,125,−215,625,…}{−225,−2125,−2625,−23,125,−215,625,…}",
+      "sourceAnswers": [],
+      "hasFigure": false,
+      "status": "draft",
+      "answerVerified": false,
+      "translationStatus": "pending",
+      "mappingStatus": "pending"
+    },
+    {
+      "ordinal": 18,
+      "sourceNumber": "3",
+      "sourceAnchor": "",
+      "kind": "exercise-candidate",
+      "context": "Writing an Explicit Formula for\nthe nth Term of a\nSequence\n\nWrite an explicit formula for the nthnth term of each\nsequence.",
+      "original": "3. ⓒ {e4,e5,e6,e7,e8,…}{e4,e5,e6,e7,e8,…}",
+      "prompt": "3. ⓒ {e4,e5,e6,e7,e8,…}{e4,e5,e6,e7,e8,…}",
+      "sourceAnswers": [],
+      "hasFigure": false,
+      "status": "draft",
+      "answerVerified": false,
+      "translationStatus": "pending",
+      "mappingStatus": "pending"
+    },
+    {
+      "ordinal": 19,
+      "sourceNumber": "1",
+      "sourceAnchor": "",
+      "kind": "exercise-candidate",
+      "context": "Given a recursive formula with only the first term\nprovided, write the first nn terms of a\nsequence.",
+      "original": "1. Identify the initial term, a1,a1, which is given as\npart of the formula. This is the first term.",
+      "prompt": "1. Identify the initial term, a1,a1, which is given as\npart of the formula. This is the first term.",
+      "sourceAnswers": [],
+      "hasFigure": false,
+      "status": "draft",
+      "answerVerified": false,
+      "translationStatus": "pending",
+      "mappingStatus": "pending"
+    },
+    {
+      "ordinal": 20,
+      "sourceNumber": "2",
+      "sourceAnchor": "",
+      "kind": "exercise-candidate",
+      "context": "Given a recursive formula with only the first term\nprovided, write the first nn terms of a\nsequence.",
+      "original": "2. To find the second term, a2,a2, substitute the\ninitial term into the formula for an−1.an−1. Solve.",
+      "prompt": "2. To find the second term, a2,a2, substitute the\ninitial term into the formula for an−1.an−1. Solve.",
+      "sourceAnswers": [],
+      "hasFigure": false,
+      "status": "draft",
+      "answerVerified": false,
+      "translationStatus": "pending",
+      "mappingStatus": "pending"
+    },
+    {
+      "ordinal": 21,
+      "sourceNumber": "3",
+      "sourceAnchor": "",
+      "kind": "exercise-candidate",
+      "context": "Given a recursive formula with only the first term\nprovided, write the first nn terms of a\nsequence.",
+      "original": "3. To find the third term, a3,a3, substitute the second\nterm into the formula. Solve.",
+      "prompt": "3. To find the third term, a3,a3, substitute the second\nterm into the formula. Solve.",
+      "sourceAnswers": [],
+      "hasFigure": false,
+      "status": "draft",
+      "answerVerified": false,
+      "translationStatus": "pending",
+      "mappingStatus": "pending"
+    },
+    {
+      "ordinal": 22,
+      "sourceNumber": "4",
+      "sourceAnchor": "",
+      "kind": "exercise-candidate",
+      "context": "Given a recursive formula with only the first term\nprovided, write the first nn terms of a\nsequence.",
+      "original": "4. Repeat until you have solved for\nthe nthnth term.",
+      "prompt": "4. Repeat until you have solved for\nthe nthnth term.",
+      "sourceAnswers": [],
+      "hasFigure": false,
+      "status": "draft",
+      "answerVerified": false,
+      "translationStatus": "pending",
+      "mappingStatus": "pending"
+    },
+    {
+      "ordinal": 23,
+      "sourceNumber": "1",
+      "sourceAnchor": "",
+      "kind": "exercise-candidate",
+      "context": "Given a recursive formula with two initial terms, write\nthe first nn terms of a sequence.",
+      "original": "1. Identify the initial term, a1,a1, which is given as\npart of the formula.",
+      "prompt": "1. Identify the initial term, a1,a1, which is given as\npart of the formula.",
+      "sourceAnswers": [],
+      "hasFigure": false,
+      "status": "draft",
+      "answerVerified": false,
+      "translationStatus": "pending",
+      "mappingStatus": "pending"
+    },
+    {
+      "ordinal": 24,
+      "sourceNumber": "2",
+      "sourceAnchor": "",
+      "kind": "exercise-candidate",
+      "context": "Given a recursive formula with two initial terms, write\nthe first nn terms of a sequence.",
+      "original": "2. Identify the second term, a2,a2, which is given as\npart of the formula.",
+      "prompt": "2. Identify the second term, a2,a2, which is given as\npart of the formula.",
+      "sourceAnswers": [],
+      "hasFigure": false,
+      "status": "draft",
+      "answerVerified": false,
+      "translationStatus": "pending",
+      "mappingStatus": "pending"
+    },
+    {
+      "ordinal": 25,
+      "sourceNumber": "3",
+      "sourceAnchor": "",
+      "kind": "exercise-candidate",
+      "context": "Given a recursive formula with two initial terms, write\nthe first nn terms of a sequence.",
+      "original": "3. To find the third term, substitute the initial term and the\nsecond term into the formula. Evaluate.",
+      "prompt": "3. To find the third term, substitute the initial term and the\nsecond term into the formula. Evaluate.",
+      "sourceAnswers": [],
+      "hasFigure": false,
+      "status": "draft",
+      "answerVerified": false,
+      "translationStatus": "pending",
+      "mappingStatus": "pending"
+    },
+    {
+      "ordinal": 26,
+      "sourceNumber": "4",
+      "sourceAnchor": "",
+      "kind": "exercise-candidate",
+      "context": "Given a recursive formula with two initial terms, write\nthe first nn terms of a sequence.",
+      "original": "4. Repeat until you have evaluated the nthnth term.",
+      "prompt": "4. Repeat until you have evaluated the nthnth term.",
+      "sourceAnswers": [],
+      "hasFigure": false,
+      "status": "draft",
+      "answerVerified": false,
+      "translationStatus": "pending",
+      "mappingStatus": "pending"
+    }
+  ],
+  "license": "CC BY 4.0",
+  "licenseEvidence": "This page titled 11.2: Sequences and Their Notations was last modified on Sun, 28 May 2023 07:34:11 GMT and is shared under a CC BY  4.0  license and was authored, remixed, and/or curated by OpenStax via source content that was edited to the style and standards of the LibreTexts platform.",
+  "url": "https://math.libretexts.org/Bookshelves/Precalculus/Precalculus_2e_(OpenStax)/11:_Sequences_Probability_and_Counting_Theory/11.02:_Sequences_and_Their_Notations",
+  "sha256": "af5ada9aa7d4bb4b31d8e5d15893a63b52805d140af7ca5e835fb5b44beea483",
+  "checkedAt": "2026-10-07",
+  "id": "d62e6df31fe5f4b544c0",
+  "bookId": "precalculus",
+  "licenseInherited": false,
+  "licenseSource": "https://math.libretexts.org/Bookshelves/Precalculus/Precalculus_2e_(OpenStax)/11:_Sequences_Probability_and_Counting_Theory/11.02:_Sequences_and_Their_Notations",
+  "licenseUrl": "https://creativecommons.org/licenses/by/4.0/",
+  "authors": "OpenStax / Jay Abramson et al.",
+  "book": "Precalculus 2e",
+  "reviewStatus": "unreviewed",
+  "sourceLanguage": "en",
+  "translationStatus": "pending"
+}

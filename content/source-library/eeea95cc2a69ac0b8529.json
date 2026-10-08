@@ -1,0 +1,1166 @@
+{
+  "title": "4.7: Solve Systems of Equations Using Determinants",
+  "originalText": "Learning Objectives\n\nBy the end of this section, you will be able to:\n\nEvaluate the determinant of a 2×2 matrix\n\nEvaluate the determinant of a 3×3 matrix\n\nUse Cramer’s Rule to solve systems of equations\n\nSolve applications using determinants\n\nBefore you get started, take this readiness quiz.\n\n1. Simplify: \\(5(−2)−(−4)(1)\\).\n\n    If you missed this problem, review [link].\n\n2. Simplify: \\(−3(8−10)+(−2)(6−3)−4(−3−(−4))\\).\n\n    If you missed this problem, review [link].\n\n3. Simplify: \\(\\frac{−12}{−8}\\).\n\n    If you missed this problem, review [link].\n\nIn this section we will learn of another method to solve systems of linear equations called Cramer’s rule. Before we can begin to use the rule, we need to learn some new definitions and notation.\n\nEvaluate the Determinant of a \\(2×2\\) Matrix\n\nIf a matrix has the same number of rows and columns, we call it a square matrix. Each square matrix has a real number associated with it called its determinant. To find the determinant of the square matrix \\(\\left[ \\begin{matrix} a &b \\\\ c&d \\end{matrix} \\right] \\), we first write it as \\(\\left| \\begin{matrix} a &b \\\\ c&d \\end{matrix} \\right| \\). To get the real number value of the determinate we subtract the products of the diagonals, as shown.\n\n[Figure: A 2 by 2 determinant is show, with its first row being a, b and second one being c, d. These values are written between two vertical lines instead of brackets as in the case of matrices. Two arrows are shown, one from a to d, the other from c to b. This determinant is equal to ad minus bc.]\n\nDETERMINANT\n\nThe determinant of any square matrix \\(\\left[ \\begin{matrix} a &b \\\\ c&d \\end{matrix} \\right] \\), where a, b, c, and d are real numbers, is\n\n\\[\\left| \\begin{matrix} a &b \\\\ c&d \\end{matrix} \\right| =ad−bc \\nonumber \\]\n\nExample \\(\\PageIndex{1}\\)\n\nEvaluate the determinate of ⓐ \\(\\left[ \\begin{matrix} 4 &-2 \\\\ 3&-1 \\end{matrix} \\right] \\) ⓑ \\(\\left[ \\begin{matrix} -3 &-4 \\\\ -2&0 \\end{matrix} \\right] \\).\n\nAnswer\n\nⓐ\n\n[Figure: .]\n\n                Write the determinant.\t\n\n[Figure: .]\n\n                Subtract the products of the diagonals.\t\n\n[Figure: .]\n\n                Simplify.\t\n\n[Figure: .]\n\n                Simplify.\t\n\n[Figure: .]\n\n    ⓑ\n\n[Figure: .]\n\n                Write the determinant.\t\n\n[Figure: .]\n\n                Subtract the products of the diagonals.\t\n\n[Figure: .]\n\n                Simplify.\t\n\n[Figure: .]\n\n                Simplify.\t\n\n[Figure: .]\n\nExample \\(\\PageIndex{2}\\)\n\nEvaluate the determinate of ⓐ \\(\\left[ \\begin{matrix} 5&−3\\\\2&−4 \\end{matrix} \\right] \\) ⓑ \\(\\left[ \\begin{matrix} −4&−6\\\\0&7 \\end{matrix} \\right] \\).\n\nAnswer\n\nⓐ \\(−14\\); ⓑ \\(−28\\)\n\nExample \\(\\PageIndex{3}\\)\n\nEvaluate the determinate of ⓐ \\(\\left[ \\begin{matrix} −1&3\\\\−2&4 \\end{matrix} \\right] \\) ⓑ \\(\\left[ \\begin{matrix} −7&−3\\\\−5&0 \\end{matrix} \\right] \\).\n\nAnswer\n\nⓐ 2 ⓑ \\(−15\\)\n\nEvaluate the Determinant of a \\(3×3\\) Matrix\n\nTo evaluate the determinant of a \\(3×3\\) matrix, we have to be able to evaluate the minor of an entry in the determinant. The minor of an entry is the \\(2×2\\) determinant found by eliminating the row and column in the \\(3×3\\) determinant that contains the entry.\n\nMINOR OF AN ENTRY IN \\(3×3\\) A DETERMINANT\n\nThe minor of an entry in a \\(3×3\\) determinant is the \\(2×2\\) determinant found by eliminating the row and column in the \\(3×3\\) determinant that contains the entry.\n\nTo find the minor of entry \\(a_1\\), we eliminate the row and column which contain it. So we eliminate the first row and first column. Then we write the \\(2×2\\) determinant that remains.\n\n[Figure: The first row of the 3 by 3 determinant is a1, b1, c1. Row 2 is a2, b2, c2. Row 3 is a3, b3, c3. a1 is highlighted. Lines strike out the first row and the first column. What remains is called minor of a1. It is shown as a separate determinant whose first row is b2, c2 and second row is b3, c3.]\n\nTo find the minor of entry \\(b_2\\), we eliminate the row and column that contain it. So we eliminate the \\(2^{nd}\\) row and \\(2^{nd}\\) column. Then we write the \\(2×2\\) determinant that remains.\n\n[Figure: The first row of the 3 by 3 determinant is a1, b1, c1. Row 2 is a2, b2, c2. Row 3 is a3, b3, c3. b2 is highlighted. Lines strike out the second row and second column. What remains is minor of b2. It is written as a separate determinant whose first row is a1, c1 and second row is a3, c3.]\n\nExample \\(\\PageIndex{4}\\)\n\nFor the determinant \\(\\left| \\begin{matrix} 4&−2&3\\\\1&0&−3\\\\−2&−4&2 \\end{matrix} \\right|\\), find and then evaluate the minor of ⓐ \\(a_1\\) ⓑ \\(b_3\\) ⓒ \\(c_2\\).\n\nAnswer\n\nⓐ\n\n[Figure: .]\n\n                Eliminate the row and column that contains \\(a_1\\).\t\n\n[Figure: .]\n\n                Write the \\(2×2\\) determinant that remains.\t\n\n[Figure: .]\n\n                Evaluate.\t\n\n[Figure: .]\n\n                Simplify.\t\n\n[Figure: .]\n\n    ⓑ\n\n                Eliminate the row and column that contains \\(b_3\\).\t\n\n[Figure: .]\n\n                Write the \\(2×2\\) determinant that remains.\t\n\n[Figure: .]\n\n                Evaluate.\t\n\n[Figure: .]\n\n                Simplify.\t\n\n[Figure: .]\n\n    ⓒ\n\n[Figure: .]\n\n                Eliminate the row and column that contains \\(c_2\\).\t\n\n[Figure: .]\n\n                Write the \\(2×2\\) determinant that remains.\t\n\n[Figure: .]\n\n                Evaluate.\t\n\n[Figure: .]\n\n                Simplify.\t\n\n[Figure: .]\n\nExample \\(\\PageIndex{5}\\)\n\nFor the determinant \\(\\left| \\begin{matrix} 1&−1&4\\\\0&2&−1\\\\−2&−3&3 \\end{matrix} \\right|\\), find and then evaluate the minor of ⓐ \\(a_1\\) ⓑ \\(b_2\\) ⓒ \\(c_3\\).\n\nAnswer\n\nⓐ 3 ⓑ 11 ⓒ 2\n\nExample \\(\\PageIndex{6}\\)\n\nFor the determinant \\(\\left| \\begin{matrix} −2&−1&0\\\\3&0&−1\\\\−1&−2&3 \\end{matrix} \\right|\\), find and then evaluate the minor of ⓐ \\(a_2\\) ⓑ \\(b_3\\) ⓒ \\(c_2\\).\n\nAnswer\n\nⓐ \\(−3\\) ⓑ 2 ⓒ 3\n\nWe are now ready to evaluate a \\(3×3\\) determinant. To do this we expand by minors, which allows us to evaluate the \\(3×3\\)determinant using \\(2×2\\) determinants—which we already know how to evaluate!\n\nTo evaluate a \\(3×3\\) determinant by expanding by minors along the first row, we use the following pattern:\n\n[Figure: A 3 by 3 determinant is equal to a1 times minor of a1 minus b1 times minor of b1 plus c1 times minor of c1.]\n\nRemember, to find the minor of an entry we eliminate the row and column that contains the entry.\n\nEXPANDING BY MINORS ALONG THE FIRST ROW TO EVALUATE A \\(3×3\\) DETERMINANT\n\nTo evaluate a \\(3×3\\) determinant by expanding by minors along the first row, the following pattern:\n\n[Figure: A 3 by 3 determinant is equal to a1 times minor of a1 minus b1 times minor of b1 plus c1 times minor of c1.]\n\nExample \\(\\PageIndex{7}\\)\n\nEvaluate the determinant \\(\\left| \\begin{matrix} 2&−3&−1\\\\3&2&0\\\\−1&−1&−2 \\end{matrix} \\right|\\) by expanding by minors along the first row.\n\nAnswer\n\n[Figure: .]\n\n                Expand by minors along the first row\t\n\n[Figure: .]\n\n                Evaluate each determinant.\t\n\n[Figure: .]\n\n                Simplify.\t\n\n[Figure: .]\n\n                Simplify.\t\n\n[Figure: .]\n\n                Simplify.\t\n\n[Figure: .]\n\nExample \\(\\PageIndex{8}\\)\n\nEvaluate the determinant \\(\\left| \\begin{matrix} 3&−2&4\\\\0&−1&−2\\\\2&3&−1 \\end{matrix} \\right|\\), by expanding by minors along the first row.\n\nAnswer\n\n37\n\nExample \\(\\PageIndex{9}\\)\n\nEvaluate the determinant \\(\\left| \\begin{matrix} 3&−2&−2\\\\2&−1&4\\\\−1&0&−3 \\end{matrix} \\right|\\), by expanding by minors along the first row.\n\nAnswer\n\n7\n\nTo evaluate a \\(3×3\\) determinant we can expand by minors using any row or column. Choosing a row or column other than the first row sometimes makes the work easier.\n\nWhen we expand by any row or column, we must be careful about the sign of the terms in the expansion. To determine the sign of the terms, we use the following sign pattern chart.\n\n\\[\\left| \\begin{matrix} +&−&+\\\\−&+&−\\\\+&−&+ \\end{matrix} \\right|\\nonumber\\]\n\nSIGN PATTERN\n\nWhen expanding by minors using a row or column, the sign of the terms in the expansion follow the following pattern.\\[\\left| \\begin{matrix} +&−&+\\\\−&+&−\\\\+&−&+ \\end{matrix} \\right|\\nonumber\\]\n\nNotice that the sign pattern in the first row matches the signs between the terms in the expansion by the first row.\n\n[Figure: A 3 by 3 determinant has row 1: plus, minus, plus, row 2: minus, plus, minus and row 3: plus, minus, plus. The three signs in the first row each point to a minor determinant in the expansion of a 3 by 3 determinant. Plus points to minor of a1, minus to the minor of b1 and plus to the minor of c1.]\n\nSince we can expand by any row or column, how do we decide which row or column to use? Usually we try to pick a row or column that will make our calculation easier. If the determinant contains a 0, using the row or column that contains the 0 will make the calculations easier.\n\nExample \\(\\PageIndex{10}\\)\n\nEvaluate the determinant \\(\\left| \\begin{matrix} 4&−1&−3\\\\3&0&2\\\\5&−4&−3 \\end{matrix} \\right|\\) by expanding by minors.\n\nAnswer\n\nTo expand by minors, we look for a row or column that will make our calculations easier. Since 0 is in the second row and second column, expanding by either of those is a good choice. Since the second row has fewer negatives than the second column, we will expand by the second row.\n\n[Figure: .]\n\n                Expand using the second row.\t\n\n                Be careful of the signs.\t\n\n[Figure: .]\n\n                Evaluate each determinant.\t\n\n[Figure: .]\n\n                Simplify.\t\n\n[Figure: .]\n\n                Simplify.\t\n\n[Figure: .]\n\n                Add.\t\n\n[Figure: .]\n\nExample \\(\\PageIndex{11}\\)\n\nEvaluate the determinant \\(\\left| \\begin{matrix} 2&−1&−3\\\\0&3&−4\\\\3&−4&−3 \\end{matrix} \\right|\\) by expanding by minors.\n\nAnswer\n\n\\(−11\\)\n\nExample \\(\\PageIndex{12}\\)\n\nEvaluate the determinant \\(\\left| \\begin{matrix} −2&−1&−3\\\\−1&2&2\\\\4&−4&0 \\end{matrix} \\right|\\) by expanding by minors.\n\nAnswer\n\n8\n\nUse Cramer’s Rule to Solve Systems of Equations\n\nCramer’s Rule is a method of solving systems of equations using determinants. It can be derived by solving the general form of the systems of equations by elimination. Here we will demonstrate the rule for both systems of two equations with two variables and for systems of three equations with three variables.\n\nLet’s start with the systems of two equations with two variables.\n\nCRAMER’S RULE FOR SOLVING A SYSTEM OF TWO EQUATIONS\n\nFor the system of equations \\(\\left\\{\\begin{array} {l} a_1x+b_1y=k_1 \\\\ a_2x+b_2y=k_2\\end{array}\\right.\\), the solution \\((x,y)\\) can be determined by\n\n[Figure: x is Dx upon D and y is Dy upon D where D is determinant with row 1: a1, b1 and row 2 a2, b2, use coefficients of the variables; Dx is determinant with row 1: k1, b1 and row 2: k2, b2, replace the x coefficients with the consonants; Dy is determinant with row 1: a1, k1 and row 2: a2, k2, replace the y coefficients with constants]\n\nNotice that to form the determinant D, we use take the coefficients of the variables.\n\n[Figure: The equations are a1x plus b1y equals k1 and a2x plus b2y equals k2. Here, a1, a2, b1, b2 are coefficients. The determinant is D with row 1: a1, b1 and row 2: a2, b2. Column 1 has coefficients of x and column 2 has coefficients of]\n\nNotice that to form the determinant \\(D_x\\) and \\(D_y\\), we substitute the constants for the coefficients of the variable we are finding.\n\n[Figure: The equations are a1x plus b1y equals k1 and a2x plus b2y equals k2. Here, a1, a2, b1, b2 are coefficients. The determinant is Dx has row 1: k1, b1 and row 2: k2, b2. Here columns 1 and 2 re constants and coefficients of y respectively. Determinant Dy has row 1: a1, k1 and row 2: a2, k2. Here, columns 1 and 2 are coefficients of x and constants respectively.]\n\nExample \\(\\PageIndex{13}\\): How to Solve a System of Equations Using Cramer’s Rule\n\nSolve using Cramer’s Rule: \\(\\left\\{ \\begin{array} {l} 2x+y=−4\\\\3x−2y=−6\\end{array}\\right.\\)\n\nAnswer\n\n[Figure: The equations are 2x plus y equals minus 4 and 3x minus 2y equals minus 6. Step 1. Evaluate the determinant D, using the coefficients of the variables. Determinant D has row 1: 2, 1 and row 2: 3, minus 2. So, D is minus 7.]\n\n[Figure: Step 2. Evaluate the determinant Dx. Use the constants in place of the x coefficients. We replace the coefficients of x, 2 and 3, with the constants, negative 4 and negative 6. We get Dx equal to 14.]\n\n[Figure: Step 3. Evaluate the determinant Dy. Use the constants in place of the y coefficients. We replace the coefficients of y, 1 and 2, with the constants, negative 4 and negative 6. We get Dy equal to 0.]\n\n[Figure: Step 4. Find x and y. Substituting values of D, Dx and Dy in the equations x equal to Dx upon D and y equal to Dy upon D, we get x equal to minus 2 and y equal to 0.]\n\n[Figure: Step 5. Write the solution as an ordered pair minus 2, 0.]\n\n[Figure: Step 6. Check that the ordered pair is a solution to both original equations.]\n\nExample \\(\\PageIndex{14}\\)\n\nSolve using Cramer’s rule: \\(\\left\\{\\begin{array} {l} 3x+y=−3 \\\\ 2x+3y=6 \\end{array} \\right.\\)\n\nAnswer\n\n\\((−\\frac{15}{7},\\frac{24}{7})\\)\n\nExample \\(\\PageIndex{15}\\)\n\nSolve using Cramer’s rule: \\(\\left\\{\\begin{array} {l} −x+y=2\\\\2x+y=−4 \\end{array} \\right.\\)\n\nAnswer\n\n\\((−2,0)\\)\n\nSOLVE A SYSTEM OF TWO EQUATIONS USING CRAMER’S RULE.\n\n1. Evaluate the determinant D, using the coefficients of the variables.\n\n2. Evaluate the determinant \\(D_x\\). Use the constants in place of the x coefficients.\n\n3. Evaluate the determinant \\(D_y\\). Use the constants in place of the y coefficients.\n\n4. Find x and y. \\(x=\\frac{D_x}{D}\\), \\(y=\\frac{D_y}{D}\\)\n\n5. Write the solution as an ordered pair.\n\n6. Check that the ordered pair is a solution to both original equations.\n\nTo solve a system of three equations with three variables with Cramer’s Rule, we basically do what we did for a system of two equations. However, we now have to solve for three variables to get the solution. The determinants are also going to be \\(3×3\\) which will make our work more interesting!\n\nCRAMER’S RULE FOR SOLVING A SYSTEM OF THREE EQUATIONS\n\nFor the system of equations \\(\\left\\{\\begin{array} {l} a_1x+b_1y+c_1z=k_1\\\\a_2x+b_2y+c_2z=k_2\\\\a_3x+b_3y+c_3z=k_3\\end{array}\\right.\\), the solution \\((x,y,z)\\) can be determined by\n\n[Figure: x is Dx upon D, y is Dy upon D and z is Dz upon D, where D is determinant with row 1: a1, b1, c1, row 2: a2, b2, c2, row 3: a3, b3, c3, use coefficients of the variables; Dx is determinant with row 1: k1, b1, c1, row 2: k2, b2, c2 and rwo 3: k3, b3, c3, replace the x coefficients with the consonants; Dy is determinant with row 1: a1, k1, c1, row 2: a2, k2, c2 and row 3: a3, k3, c3, replace the y coefficients with constants; Dz is determinant with row 1: a1, b1, k1; row 2: a2, b2, k2, row 3: a3, b3, k3; replace the z coefficients with constants.]\n\nExample \\(\\PageIndex{16}\\)\n\nSolve the system of equations using Cramer’s Rule: \\(\\left\\{\\begin{array} {l} 3x−5y+4z=5\\\\5x+2y+z=0\\\\2x+3y−2z=3 \\end{array} \\right.\\)\n\nAnswer\n\n                Evaluate the determinant D.\t\n\n[Figure: .]\n\n                Expand by minors using column 1.\t\n\n[Figure: .]\n\n[Figure: .]\n\n                Evaluate the determinants.\t\n\n[Figure: .]\n\n                Simplify.\t\n\n[Figure: .]\n\n                Simplify.\t\n\n[Figure: .]\n\n                Simplify.\t\n\n[Figure: .]\n\n                Evaluate the determinant \\(D_x\\). Use the\n\n                constants to replace the coefficients of x.\t\n\n[Figure: .]\n\n                Expand by minors using column 1.\t\n\n[Figure: .]\n\n                Evaluate the determinants.\t\n\n[Figure: .]\n\n                Simplify.\t\n\n[Figure: .]\n\n                Simplify.\t\n\n[Figure: .]\n\n                Evaluate the determinant Dy.Dy. Use the\n\n                constants to replace the coefficients of y.\t\n\n[Figure: .]\n\n[Figure: .]\n\n[Figure: .]\n\n                Evaluate the determinants.\t\n\n[Figure: .]\n\n                Simplify.\t\n\n[Figure: .]\n\n                Simplify.\t\n\n[Figure: .]\n\n                Simplify.\t\n\n[Figure: .]\n\n                Evaluate the determinant Dz.Dz. Use the\n\n                constants to replace the coefficients of z.\t\n\n[Figure: .]\n\n[Figure: .]\n\n[Figure: .]\n\n                Evaluate the determinants.\t\n\n[Figure: .]\n\n                Simplify.\t\n\n[Figure: .]\n\n                Simplify.\t\n\n[Figure: .]\n\n                Simplify.\t\n\n[Figure: .]\n\n                Find x, y, and z.\t\n\n[Figure: .]\n\n                Substitute in the values.\t\n\n[Figure: .]\n\n                Simplify.\t\n\n[Figure: .]\n\n                Write the solution as an ordered triple.\t\n\n[Figure: .]\n\n                Check that the ordered triple is a solution\n\n                to all three original equations.\t\n                We leave the check to you.\t\n\n                The solution is \\((2,−3,−4)\\).\t\n\nExample \\(\\PageIndex{17}\\)\n\nSolve the system of equations using Cramer’s Rule: \\(\\left\\{\\begin{array} {l} 3x+8y+2z=−5\\\\2x+5y−3z=0\\\\x+2y−2z=−1 \\end{array} \\right.\\)\n\nAnswer\n\n\\((−9,3,−1)\\)\n\nExample \\(\\PageIndex{18}\\)\n\nSolve the system of equations using Cramer’s Rule: \\(\\left\\{\\begin{array} {l} 3x+y−6z=−3\\\\2x+6y+3z=0\\\\3x+2y−3z=−6 \\end{array} \\right.\\)\n\nAnswer\n\n\\((−6,3,−2)\\)\n\nCramer’s rule does not work when the value of the D determinant is 0, as this would mean we would be dividing by 0. But when \\(D=0\\), the system is either inconsistent or dependent.\n\nWhen the value of \\(D=0\\) and \\(D_x,\\space D_y\\) and D are all zero, the system is consistent and dependent and there are infinitely many solutions.\n\nWhen the value of \\(D=0\\) and \\(D_x,\\space D_y\\) and \\(D_z\\) are not all zero, the system is inconsistent and there is no solution.\n\nDEPENDENT AND INCONSISTENT SYSTEMS OF EQUATIONS\n\nFor any system of equations, where the value of the determinant \\(D=0\\),\n\n\\[ \\begin{array} {lll} \\textbf{Value of determinants} &\\textbf{Type of system} &\\textbf{Solution} \\\\ {D=0\\text{ and }D_x,\\space D_y\\text{ and }D_z\\text{ are all zero}} &\\text{consistent and dependent} &\\text{infinitely many solutions} \\\\ {D=0\\text{ and }D_x,\\space D_y\\text{ and }D_z\\text{ are not all zero}} &\\text{inconsistent} &\\text{no solution} \\end{array} \\nonumber\\]\n\nIn the next example, we will use the values of the determinants to find the solution of the system.\n\nExample \\(\\PageIndex{19}\\)\n\nSolve the system of equations using Cramer’s rule : \\(\\left\\{\\begin{array} {l} x+3y=4\\\\−2x−6y=3 \\end{array} \\right.\\)\n\nAnswer\n\n\\(\\begin{array} {ll} {} &{\\left\\{\\begin{array} {l} x+3y=4\\\\−2x−6y=3 \\end{array} \\right.} \\\\ {\\begin{array} {l} \\text{Evaluate the determinantD,using the} \\\\ \\text{coefficients of the variables.} \\end{array}} &{D=\\left|\\begin{matrix} 1&3\\\\−2&−6\\end{matrix}\\right|} \\\\ {} &{D=−6−(−6)} \\\\ {} &{D=0} \\end{array} \\)\n\nWe cannot use Cramer’s Rule to solve this system. But by looking at the value of the determinants \\(D_x\\) and \\(D_y\\), we can determine whether the system is dependent or inconsistent.\n\n\\(\\begin{array} {ll} {\\text{Evaluate the determinant }D_x.} &{D_x=\\left|\\begin{matrix} 4&3\\\\3&−6\\end{matrix}\\right|} \\\\ {} &{D_x=−24−9} \\\\ {} &{D_x=15} \\end{array} \\)\n\nSince all the determinants are not zero, the system is inconsistent. There is no solution.\n\nExample \\(\\PageIndex{20}\\)\n\nSolve the system of equations using Cramer’s rule: \\(\\left\\{\\begin{array} {l} 4x−3y=8\\\\8x−6y=14 \\end{array} \\right.\\)\n\nAnswer\n\nno solution\n\nExample \\(\\PageIndex{21}\\)\n\nSolve the system of equations using Cramer’s rule: \\(\\left\\{\\begin{array} {l} x=−3y+4\\\\2x+6y=8 \\end{array} \\right.\\)\n\nAnswer\n\ninfinite solutions\n\nSolve Applications using Determinants\n\nAn interesting application of determinants allows us to test if points are collinear. Three points \\((x_1,y_1)\\), \\((x_2,y_2)\\) and \\((x_3,y_3)\\) are collinear if and only if the determinant below is zero.\n\n\\[\\left|\\begin{matrix}x_1&y_1&1\\\\x_2&y_2&1\\\\x_3&y_3&1\\end{matrix}\\right|=0\\nonumber\\]\n\nTEST FOR COLLINEAR POINTS\n\nThree points \\((x_1,y_1)\\), \\((x_2,y_2)\\) and \\((x_3,y_3)\\) are collinear if and only if\n\n\\[\\left|\\begin{matrix}x_1&y_1&1\\\\x_2&y_2&1\\\\x_3&y_3&1\\end{matrix}\\right|=0\\nonumber\\]\n\nWe will use this property in the next example.\n\nExample \\(\\PageIndex{22}\\)\n\nDetermine whether the points \\((5,−5)\\), \\((4,−3)\\), and \\((3,−1)\\) are collinear.\n\nAnswer\n\n[Figure: .]\n\n                Substitute the values into the determinant.\n\n                \\((5,−5)\\), \\((4,−3)\\), and \\((3,−1)\\)\t\n\n[Figure: .]\n\n                Evaluate the determinant by expanding\n\n                by minors using column 3.\t\n\n[Figure: .]\n\n                Evaluate the determinants.\t\n\n[Figure: .]\n\n                Simplify.\t\n\n[Figure: .]\n\n                Simplify.\t\n\n[Figure: .]\n\n                The value of the determinate is 0, so the\n\n                points are collinear.\t\n\nExample \\(\\PageIndex{23}\\)\n\nDetermine whether the points \\((3,−2)\\), \\((5,−3)\\), and \\((1,−1)\\) are collinear.\n\nAnswer\n\nyes\n\nExample \\(\\PageIndex{24}\\)\n\nDetermine whether the points \\((−4,−1)\\), \\((−6,2)\\), and \\((−2,−4)\\) are collinear.\n\nAnswer\n\nyes\n\nAccess these online resources for additional instruction and practice with solving systems of linear inequalities by graphing.\n\nSolving Systems of Linear Inequalities by Graphing\n\nSystems of Linear Inequalities\n\nKey Concepts\n\nDeterminant: The determinant of any square matrix \\(\\left[\\begin{matrix}a&b\\\\c&d\\end{matrix}\\right]\\), where a, b, c, and d are real numbers, is\n\n\\[\\left|\\begin{matrix}a&b\\\\c&d\\end{matrix}\\right|=ad−bc\\nonumber\\]\n\nExpanding by Minors along the First Row to Evaluate a 3 × 3 Determinant: To evaluate a \\(3×3\\) determinant by expanding by minors along the first row, the following pattern:\n\n[Figure: A 3 by 3 determinant is equal to a1 times minor of a1 minus b1 times minor of b1 plus c1 times minor of c1.]\n\nSign Pattern: When expanding by minors using a row or column, the sign of the terms in the expansion follow the following pattern.\n\n\\[\\left|\\begin{matrix}+&−&+\\\\−&+&−\\\\+&−&+\\end{matrix}\\right|\\nonumber\\]\n\nCramer’s Rule: For the system of equations \\(\\left\\{\\begin{array} {l} a_1x+b_1y=k_1\\\\a_2x+b_2y=k_2\\end{array}\\right.\\), the solution \\((x,y)\\) can be determined by\n\n[Figure: x is Dx upon D and y is Dy upon D where D is determinant with row 1: a1, b1 and row 2 a2, b2, use coefficients of the variables; Dx is determinant with row 1: k1, b1 and row 2: k2, b2, replace the x coefficients with the consonants; Dy is determinant with row 1: a1, k1 and row 2: a2, k2, replace the y coefficients with constants.]\n\n    Notice that to form the determinant D, we use take the coefficients of the variables.\n\nHow to solve a system of two equations using Cramer’s rule.\n\n1. Evaluate the determinant D, using the coefficients of the variables.\n\n2. Evaluate the determinant \\(D_x\\). Use the constants in place of the x coefficients.\n\n3. Evaluate the determinant \\(D_y\\). Use the constants in place of the y coefficients.\n\n4. Find x and y. \\(x=\\frac{D_x}{D}\\), \\(y=\\frac{D_y}{D}\\).\n\n5. Write the solution as an ordered pair.\n\n6. Check that the ordered pair is a solution to both original equations.\n\n7. Dependent and Inconsistent Systems of Equations: For any system of equations, where the value of the determinant \\(D=0\\),\\[ \\begin{array} {lll} \\textbf{Value of determinants} &\\textbf{Type of system} &\\textbf{Solution} \\\\ {D=0\\text{ and }D_x,\\space D_y\\text{ and }D_z\\text{ are all zero}} &\\text{consistent and dependent} &\\text{infinitely many solutions} \\\\ {D=0\\text{ and }D_x,\\space D_y\\text{ and }D_z\\text{ are not all zero}} &\\text{inconsistent} &\\text{no solution} \\end{array} \\nonumber\\]\n\n8. Test for Collinear Points: Three points \\((x_1,y_1)\\), \\((x_2,y_2)\\), and \\((x_3,y_3)\\) are collinear if and only if\n\n\\[\\left|\\begin{matrix}x_1&y_1&1\\\\x_2&y_2&1\\\\x_3&y_3&1\\end{matrix}\\right|=0\\nonumber\\]\n\nGlossary\n\ndeterminant\n\nEach square matrix has a real number associated with it called its determinant.\n\nminor of an entry in a 3×33×3 determinant\n\nThe minor of an entry in a 3×33×3 determinant is the 2×22×2 determinant found by eliminating the row and column in the 3×33×3determinant that contains the entry.\n\nsquare matrix\n\nA square matrix is a matrix with the same number of rows and columns.\n\nThis page titled 4.7: Solve Systems of Equations Using Determinants was last modified on Mon, 14 Feb 2022 01:05:39 GMT and is shared under a CC BY  4.0  license and was authored, remixed, and/or curated by OpenStax via source content that was edited to the style and standards of the LibreTexts platform.",
+  "figures": [
+    {
+      "url": "https://math.libretexts.org/@api/deki/files/19812/CNX_IntAlg_Figure_04_06_001_img_new.jpg?revision=1",
+      "alt": "A 2 by 2 determinant is show, with its first row being a, b and second one being c, d. These values are written between two vertical lines instead of brackets as in the case of matrices. Two arrows are shown, one from a to d, the other from c to b. This determinant is equal to ad minus bc.",
+      "credit": ""
+    },
+    {
+      "url": "https://math.libretexts.org/@api/deki/files/19767/CNX_IntAlg_Figure_04_06_002a_img.jpg?revision=1",
+      "alt": ".",
+      "credit": ""
+    },
+    {
+      "url": "https://math.libretexts.org/@api/deki/files/19766/CNX_IntAlg_Figure_04_06_002b_img.jpg?revision=1",
+      "alt": ".",
+      "credit": ""
+    },
+    {
+      "url": "https://math.libretexts.org/@api/deki/files/19803/CNX_IntAlg_Figure_04_06_002c_img.jpg?revision=1",
+      "alt": ".",
+      "credit": ""
+    },
+    {
+      "url": "https://math.libretexts.org/@api/deki/files/19762/CNX_IntAlg_Figure_04_06_002d_img.jpg?revision=1",
+      "alt": ".",
+      "credit": ""
+    },
+    {
+      "url": "https://math.libretexts.org/@api/deki/files/19763/CNX_IntAlg_Figure_04_06_002e_img.jpg?revision=1",
+      "alt": ".",
+      "credit": ""
+    },
+    {
+      "url": "https://math.libretexts.org/@api/deki/files/19811/CNX_IntAlg_Figure_04_06_003a_img.jpg?revision=1",
+      "alt": ".",
+      "credit": ""
+    },
+    {
+      "url": "https://math.libretexts.org/@api/deki/files/19768/CNX_IntAlg_Figure_04_06_003b_img.jpg?revision=1",
+      "alt": ".",
+      "credit": ""
+    },
+    {
+      "url": "https://math.libretexts.org/@api/deki/files/19810/CNX_IntAlg_Figure_04_06_003c_img.jpg?revision=1",
+      "alt": ".",
+      "credit": ""
+    },
+    {
+      "url": "https://math.libretexts.org/@api/deki/files/19783/CNX_IntAlg_Figure_04_06_003d_img.jpg?revision=1",
+      "alt": ".",
+      "credit": ""
+    },
+    {
+      "url": "https://math.libretexts.org/@api/deki/files/19788/CNX_IntAlg_Figure_04_06_003e_img.jpg?revision=1",
+      "alt": ".",
+      "credit": ""
+    },
+    {
+      "url": "https://math.libretexts.org/@api/deki/files/19802/CNX_IntAlg_Figure_04_06_004_img_new.jpg?revision=1",
+      "alt": "The first row of the 3 by 3 determinant is a1, b1, c1. Row 2 is a2, b2, c2. Row 3 is a3, b3, c3. a1 is highlighted. Lines strike out the first row and the first column. What remains is called minor of a1. It is shown as a separate determinant whose first row is b2, c2 and second row is b3, c3.",
+      "credit": ""
+    },
+    {
+      "url": "https://math.libretexts.org/@api/deki/files/19848/CNX_IntAlg_Figure_04_06_005_img_new.jpg?revision=1",
+      "alt": "The first row of the 3 by 3 determinant is a1, b1, c1. Row 2 is a2, b2, c2. Row 3 is a3, b3, c3. b2 is highlighted. Lines strike out the second row and second column. What remains is minor of b2. It is written as a separate determinant whose first row is a1, c1 and second row is a3, c3.",
+      "credit": ""
+    },
+    {
+      "url": "https://math.libretexts.org/@api/deki/files/19801/CNX_IntAlg_Figure_04_06_006a_img.jpg?revision=1",
+      "alt": ".",
+      "credit": ""
+    },
+    {
+      "url": "https://math.libretexts.org/@api/deki/files/19846/CNX_IntAlg_Figure_04_06_006b_img.jpg?revision=1",
+      "alt": ".",
+      "credit": ""
+    },
+    {
+      "url": "https://math.libretexts.org/@api/deki/files/19942/CNX_IntAlg_Figure_04_06_006c_img.jpg?revision=1",
+      "alt": ".",
+      "credit": ""
+    },
+    {
+      "url": "https://math.libretexts.org/@api/deki/files/19949/CNX_IntAlg_Figure_04_06_006d_img.jpg?revision=1",
+      "alt": ".",
+      "credit": ""
+    },
+    {
+      "url": "https://math.libretexts.org/@api/deki/files/19872/CNX_IntAlg_Figure_04_06_006e_img.jpg?revision=1",
+      "alt": ".",
+      "credit": ""
+    },
+    {
+      "url": "https://math.libretexts.org/@api/deki/files/20028/CNX_IntAlg_Figure_04_06_007a_img.jpg?revision=1",
+      "alt": ".",
+      "credit": ""
+    },
+    {
+      "url": "https://math.libretexts.org/@api/deki/files/20134/CNX_IntAlg_Figure_04_06_007b_img.jpg?revision=1",
+      "alt": ".",
+      "credit": ""
+    },
+    {
+      "url": "https://math.libretexts.org/@api/deki/files/20158/CNX_IntAlg_Figure_04_06_007c_img.jpg?revision=1",
+      "alt": ".",
+      "credit": ""
+    },
+    {
+      "url": "https://math.libretexts.org/@api/deki/files/19953/CNX_IntAlg_Figure_04_06_007d_img.jpg?revision=1",
+      "alt": ".",
+      "credit": ""
+    },
+    {
+      "url": "https://math.libretexts.org/@api/deki/files/20058/CNX_IntAlg_Figure_04_06_008a_img.jpg?revision=1",
+      "alt": ".",
+      "credit": ""
+    },
+    {
+      "url": "https://math.libretexts.org/@api/deki/files/20245/CNX_IntAlg_Figure_04_06_008b_img.jpg?revision=1",
+      "alt": ".",
+      "credit": ""
+    },
+    {
+      "url": "https://math.libretexts.org/@api/deki/files/20064/CNX_IntAlg_Figure_04_06_008c_img.jpg?revision=1",
+      "alt": ".",
+      "credit": ""
+    },
+    {
+      "url": "https://math.libretexts.org/@api/deki/files/20066/CNX_IntAlg_Figure_04_06_008d_img.jpg?revision=1",
+      "alt": ".",
+      "credit": ""
+    },
+    {
+      "url": "https://math.libretexts.org/@api/deki/files/35872/CNX_IntAlg_Figure_04_06_008e_img.jpg?revision=1",
+      "alt": ".",
+      "credit": ""
+    },
+    {
+      "url": "https://math.libretexts.org/@api/deki/files/19997/CNX_IntAlg_Figure_04_06_009_img_new.jpg?revision=1",
+      "alt": "A 3 by 3 determinant is equal to a1 times minor of a1 minus b1 times minor of b1 plus c1 times minor of c1.",
+      "credit": ""
+    },
+    {
+      "url": "https://math.libretexts.org/@api/deki/files/20258/CNX_IntAlg_Figure_04_06_021_img.jpg?revision=1",
+      "alt": "A 3 by 3 determinant is equal to a1 times minor of a1 minus b1 times minor of b1 plus c1 times minor of c1.",
+      "credit": ""
+    },
+    {
+      "url": "https://math.libretexts.org/@api/deki/files/20044/CNX_IntAlg_Figure_04_06_010a_img.jpg?revision=1",
+      "alt": ".",
+      "credit": ""
+    },
+    {
+      "url": "https://math.libretexts.org/@api/deki/files/20110/CNX_IntAlg_Figure_04_06_010b_img.jpg?revision=1",
+      "alt": ".",
+      "credit": ""
+    },
+    {
+      "url": "https://math.libretexts.org/@api/deki/files/35873/CNX_IntAlg_Figure_04_06_010c_img.jpg?revision=1",
+      "alt": ".",
+      "credit": ""
+    },
+    {
+      "url": "https://math.libretexts.org/@api/deki/files/20115/CNX_IntAlg_Figure_04_06_010d_img.jpg?revision=1",
+      "alt": ".",
+      "credit": ""
+    },
+    {
+      "url": "https://math.libretexts.org/@api/deki/files/20135/CNX_IntAlg_Figure_04_06_010e_img.jpg?revision=1",
+      "alt": ".",
+      "credit": ""
+    },
+    {
+      "url": "https://math.libretexts.org/@api/deki/files/20173/CNX_IntAlg_Figure_04_06_010f_img.jpg?revision=1",
+      "alt": ".",
+      "credit": ""
+    },
+    {
+      "url": "https://math.libretexts.org/@api/deki/files/20182/CNX_IntAlg_Figure_04_06_011_img_new.jpg?revision=1",
+      "alt": "A 3 by 3 determinant has row 1: plus, minus, plus, row 2: minus, plus, minus and row 3: plus, minus, plus. The three signs in the first row each point to a minor determinant in the expansion of a 3 by 3 determinant. Plus points to minor of a1, minus to the minor of b1 and plus to the minor of c1.",
+      "credit": ""
+    },
+    {
+      "url": "https://math.libretexts.org/@api/deki/files/20201/CNX_IntAlg_Figure_04_06_012a_img.jpg?revision=1",
+      "alt": ".",
+      "credit": ""
+    },
+    {
+      "url": "https://math.libretexts.org/@api/deki/files/20233/CNX_IntAlg_Figure_04_06_012b_img.jpg?revision=1",
+      "alt": ".",
+      "credit": ""
+    },
+    {
+      "url": "https://math.libretexts.org/@api/deki/files/20211/CNX_IntAlg_Figure_04_06_012c_img.jpg?revision=1",
+      "alt": ".",
+      "credit": ""
+    },
+    {
+      "url": "https://math.libretexts.org/@api/deki/files/20238/CNX_IntAlg_Figure_04_06_012d_img.jpg?revision=1",
+      "alt": ".",
+      "credit": ""
+    },
+    {
+      "url": "https://math.libretexts.org/@api/deki/files/20293/CNX_IntAlg_Figure_04_06_012e_img.jpg?revision=1",
+      "alt": ".",
+      "credit": ""
+    },
+    {
+      "url": "https://math.libretexts.org/@api/deki/files/20286/CNX_IntAlg_Figure_04_06_012f_img.jpg?revision=1",
+      "alt": ".",
+      "credit": ""
+    },
+    {
+      "url": "https://math.libretexts.org/@api/deki/files/20342/CNX_IntAlg_Figure_04_06_013_img_new.jpg?revision=1",
+      "alt": "x is Dx upon D and y is Dy upon D where D is determinant with row 1: a1, b1 and row 2 a2, b2, use coefficients of the variables; Dx is determinant with row 1: k1, b1 and row 2: k2, b2, replace the x coefficients with the consonants; Dy is determinant with row 1: a1, k1 and row 2: a2, k2, replace the y coefficients with constants",
+      "credit": ""
+    },
+    {
+      "url": "https://math.libretexts.org/@api/deki/files/20369/CNX_IntAlg_Figure_04_06_014_img_new.jpg?revision=1",
+      "alt": "The equations are a1x plus b1y equals k1 and a2x plus b2y equals k2. Here, a1, a2, b1, b2 are coefficients. The determinant is D with row 1: a1, b1 and row 2: a2, b2. Column 1 has coefficients of x and column 2 has coefficients of",
+      "credit": ""
+    },
+    {
+      "url": "https://math.libretexts.org/@api/deki/files/20252/CNX_IntAlg_Figure_04_06_015_img_new.jpg?revision=1",
+      "alt": "The equations are a1x plus b1y equals k1 and a2x plus b2y equals k2. Here, a1, a2, b1, b2 are coefficients. The determinant is Dx has row 1: k1, b1 and row 2: k2, b2. Here columns 1 and 2 re constants and coefficients of y respectively. Determinant Dy has row 1: a1, k1 and row 2: a2, k2. Here, columns 1 and 2 are coefficients of x and constants respectively.",
+      "credit": ""
+    },
+    {
+      "url": "https://math.libretexts.org/@api/deki/files/20397/CNX_IntAlg_Figure_04_06_016a_img_new.jpg?revision=1",
+      "alt": "The equations are 2x plus y equals minus 4 and 3x minus 2y equals minus 6. Step 1. Evaluate the determinant D, using the coefficients of the variables. Determinant D has row 1: 2, 1 and row 2: 3, minus 2. So, D is minus 7.",
+      "credit": ""
+    },
+    {
+      "url": "https://math.libretexts.org/@api/deki/files/20401/CNX_IntAlg_Figure_04_06_016b_img_new.jpg?revision=1",
+      "alt": "Step 2. Evaluate the determinant Dx. Use the constants in place of the x coefficients. We replace the coefficients of x, 2 and 3, with the constants, negative 4 and negative 6. We get Dx equal to 14.",
+      "credit": ""
+    },
+    {
+      "url": "https://math.libretexts.org/@api/deki/files/20261/CNX_IntAlg_Figure_04_06_016c_img_new.jpg?revision=1",
+      "alt": "Step 3. Evaluate the determinant Dy. Use the constants in place of the y coefficients. We replace the coefficients of y, 1 and 2, with the constants, negative 4 and negative 6. We get Dy equal to 0.",
+      "credit": ""
+    },
+    {
+      "url": "https://math.libretexts.org/@api/deki/files/20269/CNX_IntAlg_Figure_04_06_016d_img_new.jpg?revision=1",
+      "alt": "Step 4. Find x and y. Substituting values of D, Dx and Dy in the equations x equal to Dx upon D and y equal to Dy upon D, we get x equal to minus 2 and y equal to 0.",
+      "credit": ""
+    },
+    {
+      "url": "https://math.libretexts.org/@api/deki/files/20280/CNX_IntAlg_Figure_04_06_016e_img_new.jpg?revision=1",
+      "alt": "Step 5. Write the solution as an ordered pair minus 2, 0.",
+      "credit": ""
+    },
+    {
+      "url": "https://math.libretexts.org/@api/deki/files/20596/CNX_IntAlg_Figure_04_06_016f_img_new.jpg?revision=1",
+      "alt": "Step 6. Check that the ordered pair is a solution to both original equations.",
+      "credit": ""
+    },
+    {
+      "url": "https://math.libretexts.org/@api/deki/files/20430/CNX_IntAlg_Figure_04_06_017_img_new.jpg?revision=1",
+      "alt": "x is Dx upon D, y is Dy upon D and z is Dz upon D, where D is determinant with row 1: a1, b1, c1, row 2: a2, b2, c2, row 3: a3, b3, c3, use coefficients of the variables; Dx is determinant with row 1: k1, b1, c1, row 2: k2, b2, c2 and rwo 3: k3, b3, c3, replace the x coefficients with the consonants; Dy is determinant with row 1: a1, k1, c1, row 2: a2, k2, c2 and row 3: a3, k3, c3, replace the y coefficients with constants; Dz is determinant with row 1: a1, b1, k1; row 2: a2, b2, k2, row 3: a3, b3, k3; replace the z coefficients with constants.",
+      "credit": ""
+    },
+    {
+      "url": "https://math.libretexts.org/@api/deki/files/20469/CNX_IntAlg_Figure_04_06_018d_img.jpg?revision=1",
+      "alt": ".",
+      "credit": ""
+    },
+    {
+      "url": "https://math.libretexts.org/@api/deki/files/20292/CNX_IntAlg_Figure_04_06_018a_img.jpg?revision=1",
+      "alt": ".",
+      "credit": ""
+    },
+    {
+      "url": "https://math.libretexts.org/@api/deki/files/20311/CNX_IntAlg_Figure_04_06_018e_img.jpg?revision=1",
+      "alt": ".",
+      "credit": ""
+    },
+    {
+      "url": "https://math.libretexts.org/@api/deki/files/20499/CNX_IntAlg_Figure_04_06_018f_img.jpg?revision=1",
+      "alt": ".",
+      "credit": ""
+    },
+    {
+      "url": "https://math.libretexts.org/@api/deki/files/20429/CNX_IntAlg_Figure_04_06_018g_img.jpg?revision=1",
+      "alt": ".",
+      "credit": ""
+    },
+    {
+      "url": "https://math.libretexts.org/@api/deki/files/20322/CNX_IntAlg_Figure_04_06_018h_img.jpg?revision=1",
+      "alt": ".",
+      "credit": ""
+    },
+    {
+      "url": "https://math.libretexts.org/@api/deki/files/20340/CNX_IntAlg_Figure_04_06_018i_img.jpg?revision=1",
+      "alt": ".",
+      "credit": ""
+    },
+    {
+      "url": "https://math.libretexts.org/@api/deki/files/20524/CNX_IntAlg_Figure_04_06_018j_img.jpg?revision=1",
+      "alt": ".",
+      "credit": ""
+    },
+    {
+      "url": "https://math.libretexts.org/@api/deki/files/20361/CNX_IntAlg_Figure_04_06_018k_img.jpg?revision=1",
+      "alt": ".",
+      "credit": ""
+    },
+    {
+      "url": "https://math.libretexts.org/@api/deki/files/20396/CNX_IntAlg_Figure_04_06_018l_img.jpg?revision=1",
+      "alt": ".",
+      "credit": ""
+    },
+    {
+      "url": "https://math.libretexts.org/@api/deki/files/20502/CNX_IntAlg_Figure_04_06_018m_img.jpg?revision=1",
+      "alt": ".",
+      "credit": ""
+    },
+    {
+      "url": "https://math.libretexts.org/@api/deki/files/20575/CNX_IntAlg_Figure_04_06_018n_img.jpg?revision=1",
+      "alt": ".",
+      "credit": ""
+    },
+    {
+      "url": "https://math.libretexts.org/@api/deki/files/20576/CNX_IntAlg_Figure_04_06_018o_img.jpg?revision=1",
+      "alt": ".",
+      "credit": ""
+    },
+    {
+      "url": "https://math.libretexts.org/@api/deki/files/20478/CNX_IntAlg_Figure_04_06_018b_img.jpg?revision=1",
+      "alt": ".",
+      "credit": ""
+    },
+    {
+      "url": "https://math.libretexts.org/@api/deki/files/20491/CNX_IntAlg_Figure_04_06_018p_img.jpg?revision=1",
+      "alt": ".",
+      "credit": ""
+    },
+    {
+      "url": "https://math.libretexts.org/@api/deki/files/20480/CNX_IntAlg_Figure_04_06_018q_img.jpg?revision=1",
+      "alt": ".",
+      "credit": ""
+    },
+    {
+      "url": "https://math.libretexts.org/@api/deki/files/20513/CNX_IntAlg_Figure_04_06_018r_img.jpg?revision=1",
+      "alt": ".",
+      "credit": ""
+    },
+    {
+      "url": "https://math.libretexts.org/@api/deki/files/20495/CNX_IntAlg_Figure_04_06_018s_img.jpg?revision=1",
+      "alt": ".",
+      "credit": ""
+    },
+    {
+      "url": "https://math.libretexts.org/@api/deki/files/20503/CNX_IntAlg_Figure_04_06_018t_img.jpg?revision=1",
+      "alt": ".",
+      "credit": ""
+    },
+    {
+      "url": "https://math.libretexts.org/@api/deki/files/20520/CNX_IntAlg_Figure_04_06_018u_img.jpg?revision=1",
+      "alt": ".",
+      "credit": ""
+    },
+    {
+      "url": "https://math.libretexts.org/@api/deki/files/20516/CNX_IntAlg_Figure_04_06_018c_img.jpg?revision=1",
+      "alt": ".",
+      "credit": ""
+    },
+    {
+      "url": "https://math.libretexts.org/@api/deki/files/20569/CNX_IntAlg_Figure_04_06_018v_img.jpg?revision=1",
+      "alt": ".",
+      "credit": ""
+    },
+    {
+      "url": "https://math.libretexts.org/@api/deki/files/20548/CNX_IntAlg_Figure_04_06_018w_img.jpg?revision=1",
+      "alt": ".",
+      "credit": ""
+    },
+    {
+      "url": "https://math.libretexts.org/@api/deki/files/20581/CNX_IntAlg_Figure_04_06_018x_img.jpg?revision=1",
+      "alt": ".",
+      "credit": ""
+    },
+    {
+      "url": "https://math.libretexts.org/@api/deki/files/20729/CNX_IntAlg_Figure_04_06_018y_img.jpg?revision=1",
+      "alt": ".",
+      "credit": ""
+    },
+    {
+      "url": "https://math.libretexts.org/@api/deki/files/20712/CNX_IntAlg_Figure_04_06_018z_img.jpg?revision=1",
+      "alt": ".",
+      "credit": ""
+    },
+    {
+      "url": "https://math.libretexts.org/@api/deki/files/20727/CNX_IntAlg_Figure_04_06_018aa_img.jpg?revision=1",
+      "alt": ".",
+      "credit": ""
+    },
+    {
+      "url": "https://math.libretexts.org/@api/deki/files/20723/CNX_IntAlg_Figure_04_06_018bb_img.jpg?revision=1",
+      "alt": ".",
+      "credit": ""
+    },
+    {
+      "url": "https://math.libretexts.org/@api/deki/files/20722/CNX_IntAlg_Figure_04_06_018cc_img.jpg?revision=1",
+      "alt": ".",
+      "credit": ""
+    },
+    {
+      "url": "https://math.libretexts.org/@api/deki/files/20742/CNX_IntAlg_Figure_04_06_018dd_img.jpg?revision=1",
+      "alt": ".",
+      "credit": ""
+    },
+    {
+      "url": "https://math.libretexts.org/@api/deki/files/20734/CNX_IntAlg_Figure_04_06_019a_img.jpg?revision=1",
+      "alt": ".",
+      "credit": ""
+    },
+    {
+      "url": "https://math.libretexts.org/@api/deki/files/20752/CNX_IntAlg_Figure_04_06_019b_img.jpg?revision=1",
+      "alt": ".",
+      "credit": ""
+    },
+    {
+      "url": "https://math.libretexts.org/@api/deki/files/20799/CNX_IntAlg_Figure_04_06_019c_img.jpg?revision=1",
+      "alt": ".",
+      "credit": ""
+    },
+    {
+      "url": "https://math.libretexts.org/@api/deki/files/20819/CNX_IntAlg_Figure_04_06_019d_img.jpg?revision=1",
+      "alt": ".",
+      "credit": ""
+    },
+    {
+      "url": "https://math.libretexts.org/@api/deki/files/20786/CNX_IntAlg_Figure_04_06_019e_img.jpg?revision=1",
+      "alt": ".",
+      "credit": ""
+    },
+    {
+      "url": "https://math.libretexts.org/@api/deki/files/20761/CNX_IntAlg_Figure_04_06_019f_img.jpg?revision=1",
+      "alt": ".",
+      "credit": ""
+    },
+    {
+      "url": "https://math.libretexts.org/@api/deki/files/20837/CNX_IntAlg_Figure_04_06_022_img_new.jpg?revision=1",
+      "alt": "A 3 by 3 determinant is equal to a1 times minor of a1 minus b1 times minor of b1 plus c1 times minor of c1.",
+      "credit": ""
+    },
+    {
+      "url": "https://math.libretexts.org/@api/deki/files/20886/CNX_IntAlg_Figure_04_06_023_img_new.jpg?revision=1",
+      "alt": "x is Dx upon D and y is Dy upon D where D is determinant with row 1: a1, b1 and row 2 a2, b2, use coefficients of the variables; Dx is determinant with row 1: k1, b1 and row 2: k2, b2, replace the x coefficients with the consonants; Dy is determinant with row 1: a1, k1 and row 2: a2, k2, replace the y coefficients with constants.",
+      "credit": ""
+    }
+  ],
+  "references": [
+    {
+      "text": "[link]",
+      "url": "https://math.libretexts.org/Bookshelves/Algebra/Intermediate_Algebra_1e_(OpenStax)/01%3A_Foundations/1.03%3A_Integers#eg26"
+    },
+    {
+      "text": "[link]",
+      "url": "https://math.libretexts.org/Bookshelves/Algebra/Intermediate_Algebra_1e_(OpenStax)/01%3A_Foundations/1.03%3A_Integers#eg23"
+    },
+    {
+      "text": "[link]",
+      "url": "https://math.libretexts.org/Bookshelves/Algebra/Intermediate_Algebra_1e_(OpenStax)/01%3A_Foundations/1.03%3A_Integers#eg16"
+    },
+    {
+      "text": "4.7: Solve Systems of Equations Using Determinants",
+      "url": "https://math.libretexts.org/Bookshelves/Algebra/Intermediate_Algebra_1e_(OpenStax)/04%3A_Systems_of_Linear_Equations/4.07%3A_Solve_Systems_of_Equations_Using_Determinants"
+    },
+    {
+      "text": "CC BY  4.0",
+      "url": "https://creativecommons.org/licenses/by/4.0"
+    },
+    {
+      "text": "OpenStax",
+      "url": "https://openstax.org/"
+    },
+    {
+      "text": "source content",
+      "url": "https://openstax.org/details/books/intermediate-algebra-2e"
+    }
+  ],
+  "exercises": [
+    {
+      "ordinal": 1,
+      "sourceNumber": "1",
+      "sourceAnchor": "",
+      "kind": "exercise-candidate",
+      "context": "By the end of this section, you will be able to:\n\nBefore you get started, take this readiness quiz.",
+      "original": "1. Simplify: \\(5(−2)−(−4)(1)\\).\n\n    If you missed this problem, review [link].",
+      "prompt": "1. Simplify: \\(5(−2)−(−4)(1)\\).\n\n    If you missed this problem, review [link].",
+      "sourceAnswers": [],
+      "hasFigure": false,
+      "status": "draft",
+      "answerVerified": false,
+      "translationStatus": "pending",
+      "mappingStatus": "pending"
+    },
+    {
+      "ordinal": 2,
+      "sourceNumber": "2",
+      "sourceAnchor": "",
+      "kind": "exercise-candidate",
+      "context": "By the end of this section, you will be able to:\n\nBefore you get started, take this readiness quiz.",
+      "original": "2. Simplify: \\(−3(8−10)+(−2)(6−3)−4(−3−(−4))\\).\n\n    If you missed this problem, review [link].",
+      "prompt": "2. Simplify: \\(−3(8−10)+(−2)(6−3)−4(−3−(−4))\\).\n\n    If you missed this problem, review [link].",
+      "sourceAnswers": [],
+      "hasFigure": false,
+      "status": "draft",
+      "answerVerified": false,
+      "translationStatus": "pending",
+      "mappingStatus": "pending"
+    },
+    {
+      "ordinal": 3,
+      "sourceNumber": "3",
+      "sourceAnchor": "",
+      "kind": "exercise-candidate",
+      "context": "By the end of this section, you will be able to:\n\nBefore you get started, take this readiness quiz.",
+      "original": "3. Simplify: \\(\\frac{−12}{−8}\\).\n\n    If you missed this problem, review [link].",
+      "prompt": "3. Simplify: \\(\\frac{−12}{−8}\\).\n\n    If you missed this problem, review [link].",
+      "sourceAnswers": [],
+      "hasFigure": false,
+      "status": "draft",
+      "answerVerified": false,
+      "translationStatus": "pending",
+      "mappingStatus": "pending"
+    },
+    {
+      "ordinal": 4,
+      "sourceNumber": "",
+      "sourceAnchor": "",
+      "kind": "exercise-candidate",
+      "context": "[Figure: A 2 by 2 determinant is show, with its first row being a, b and second one being c, d. These values are written between two vertical lines instead of brackets as in the case of matrices. Two arrows are shown, one from a to d, the other from c to b. This determinant is equal to ad minus bc.]\n\nThe determinant of any square matrix \\(\\left[ \\begin{matrix} a &b \\\\ c&d \\end{matrix} \\right] \\), where a, b, c, and d are real numbers, is\n\n\\[\\left| \\begin{matrix} a &b \\\\ c&d \\end{matrix} \\right| =ad−bc \\nonumber \\]",
+      "original": "Example \\(\\PageIndex{1}\\)\n\nEvaluate the determinate of ⓐ \\(\\left[ \\begin{matrix} 4 &-2 \\\\ 3&-1 \\end{matrix} \\right] \\) ⓑ \\(\\left[ \\begin{matrix} -3 &-4 \\\\ -2&0 \\end{matrix} \\right] \\).\n\nAnswer\n\nⓐ\n\n[Figure: .]\n\n                Write the determinant.\t\n\n[Figure: .]\n\n                Subtract the products of the diagonals.\t\n\n[Figure: .]\n\n                Simplify.\t\n\n[Figure: .]\n\n                Simplify.\t\n\n[Figure: .]\n\n    ⓑ\n\n[Figure: .]\n\n                Write the determinant.\t\n\n[Figure: .]\n\n                Subtract the products of the diagonals.\t\n\n[Figure: .]\n\n                Simplify.\t\n\n[Figure: .]\n\n                Simplify.\t\n\n[Figure: .]",
+      "prompt": "Example \\(\\PageIndex{1}\\)\n\nEvaluate the determinate of ⓐ \\(\\left[ \\begin{matrix} 4 &-2 \\\\ 3&-1 \\end{matrix} \\right] \\) ⓑ \\(\\left[ \\begin{matrix} -3 &-4 \\\\ -2&0 \\end{matrix} \\right] \\).",
+      "sourceAnswers": [
+        "ⓐ\n\n[Figure: .]\n\n                Write the determinant.\t\n\n[Figure: .]\n\n                Subtract the products of the diagonals.\t\n\n[Figure: .]\n\n                Simplify.\t\n\n[Figure: .]\n\n                Simplify.\t\n\n[Figure: .]\n\n    ⓑ\n\n[Figure: .]\n\n                Write the determinant.\t\n\n[Figure: .]\n\n                Subtract the products of the diagonals.\t\n\n[Figure: .]\n\n                Simplify.\t\n\n[Figure: .]\n\n                Simplify.\t\n\n[Figure: .]"
+      ],
+      "hasFigure": true,
+      "status": "draft",
+      "answerVerified": false,
+      "translationStatus": "pending",
+      "mappingStatus": "pending"
+    },
+    {
+      "ordinal": 5,
+      "sourceNumber": "",
+      "sourceAnchor": "",
+      "kind": "exercise-candidate",
+      "context": "[Figure: A 2 by 2 determinant is show, with its first row being a, b and second one being c, d. These values are written between two vertical lines instead of brackets as in the case of matrices. Two arrows are shown, one from a to d, the other from c to b. This determinant is equal to ad minus bc.]\n\nThe determinant of any square matrix \\(\\left[ \\begin{matrix} a &b \\\\ c&d \\end{matrix} \\right] \\), where a, b, c, and d are real numbers, is\n\n\\[\\left| \\begin{matrix} a &b \\\\ c&d \\end{matrix} \\right| =ad−bc \\nonumber \\]",
+      "original": "Example \\(\\PageIndex{2}\\)\n\nEvaluate the determinate of ⓐ \\(\\left[ \\begin{matrix} 5&−3\\\\2&−4 \\end{matrix} \\right] \\) ⓑ \\(\\left[ \\begin{matrix} −4&−6\\\\0&7 \\end{matrix} \\right] \\).\n\nAnswer\n\nⓐ \\(−14\\); ⓑ \\(−28\\)",
+      "prompt": "Example \\(\\PageIndex{2}\\)\n\nEvaluate the determinate of ⓐ \\(\\left[ \\begin{matrix} 5&−3\\\\2&−4 \\end{matrix} \\right] \\) ⓑ \\(\\left[ \\begin{matrix} −4&−6\\\\0&7 \\end{matrix} \\right] \\).",
+      "sourceAnswers": [
+        "ⓐ \\(−14\\); ⓑ \\(−28\\)"
+      ],
+      "hasFigure": false,
+      "status": "draft",
+      "answerVerified": false,
+      "translationStatus": "pending",
+      "mappingStatus": "pending"
+    },
+    {
+      "ordinal": 6,
+      "sourceNumber": "",
+      "sourceAnchor": "",
+      "kind": "exercise-candidate",
+      "context": "[Figure: A 2 by 2 determinant is show, with its first row being a, b and second one being c, d. These values are written between two vertical lines instead of brackets as in the case of matrices. Two arrows are shown, one from a to d, the other from c to b. This determinant is equal to ad minus bc.]\n\nThe determinant of any square matrix \\(\\left[ \\begin{matrix} a &b \\\\ c&d \\end{matrix} \\right] \\), where a, b, c, and d are real numbers, is\n\n\\[\\left| \\begin{matrix} a &b \\\\ c&d \\end{matrix} \\right| =ad−bc \\nonumber \\]",
+      "original": "Example \\(\\PageIndex{3}\\)\n\nEvaluate the determinate of ⓐ \\(\\left[ \\begin{matrix} −1&3\\\\−2&4 \\end{matrix} \\right] \\) ⓑ \\(\\left[ \\begin{matrix} −7&−3\\\\−5&0 \\end{matrix} \\right] \\).\n\nAnswer\n\nⓐ 2 ⓑ \\(−15\\)",
+      "prompt": "Example \\(\\PageIndex{3}\\)\n\nEvaluate the determinate of ⓐ \\(\\left[ \\begin{matrix} −1&3\\\\−2&4 \\end{matrix} \\right] \\) ⓑ \\(\\left[ \\begin{matrix} −7&−3\\\\−5&0 \\end{matrix} \\right] \\).",
+      "sourceAnswers": [
+        "ⓐ 2 ⓑ \\(−15\\)"
+      ],
+      "hasFigure": false,
+      "status": "draft",
+      "answerVerified": false,
+      "translationStatus": "pending",
+      "mappingStatus": "pending"
+    },
+    {
+      "ordinal": 7,
+      "sourceNumber": "",
+      "sourceAnchor": "",
+      "kind": "exercise-candidate",
+      "context": "[Figure: The first row of the 3 by 3 determinant is a1, b1, c1. Row 2 is a2, b2, c2. Row 3 is a3, b3, c3. a1 is highlighted. Lines strike out the first row and the first column. What remains is called minor of a1. It is shown as a separate determinant whose first row is b2, c2 and second row is b3, c3.]\n\nTo find the minor of entry \\(b_2\\), we eliminate the row and column that contain it. So we eliminate the \\(2^{nd}\\) row and \\(2^{nd}\\) column. Then we write the \\(2×2\\) determinant that remains.\n\n[Figure: The first row of the 3 by 3 determinant is a1, b1, c1. Row 2 is a2, b2, c2. Row 3 is a3, b3, c3. b2 is highlighted. Lines strike out the second row and second column. What remains is minor of b2. It is written as a separate determinant whose first row is a1, c1 and second row is a3, c3.]",
+      "original": "Example \\(\\PageIndex{4}\\)\n\nFor the determinant \\(\\left| \\begin{matrix} 4&−2&3\\\\1&0&−3\\\\−2&−4&2 \\end{matrix} \\right|\\), find and then evaluate the minor of ⓐ \\(a_1\\) ⓑ \\(b_3\\) ⓒ \\(c_2\\).\n\nAnswer\n\nⓐ\n\n[Figure: .]\n\n                Eliminate the row and column that contains \\(a_1\\).\t\n\n[Figure: .]\n\n                Write the \\(2×2\\) determinant that remains.\t\n\n[Figure: .]\n\n                Evaluate.\t\n\n[Figure: .]\n\n                Simplify.\t\n\n[Figure: .]\n\n    ⓑ\n\n                Eliminate the row and column that contains \\(b_3\\).\t\n\n[Figure: .]\n\n                Write the \\(2×2\\) determinant that remains.\t\n\n[Figure: .]\n\n                Evaluate.\t\n\n[Figure: .]\n\n                Simplify.\t\n\n[Figure: .]\n\n    ⓒ\n\n[Figure: .]\n\n                Eliminate the row and column that contains \\(c_2\\).\t\n\n[Figure: .]\n\n                Write the \\(2×2\\) determinant that remains.\t\n\n[Figure: .]\n\n                Evaluate.\t\n\n[Figure: .]\n\n                Simplify.\t\n\n[Figure: .]",
+      "prompt": "Example \\(\\PageIndex{4}\\)\n\nFor the determinant \\(\\left| \\begin{matrix} 4&−2&3\\\\1&0&−3\\\\−2&−4&2 \\end{matrix} \\right|\\), find and then evaluate the minor of ⓐ \\(a_1\\) ⓑ \\(b_3\\) ⓒ \\(c_2\\).",
+      "sourceAnswers": [
+        "ⓐ\n\n[Figure: .]\n\n                Eliminate the row and column that contains \\(a_1\\).\t\n\n[Figure: .]\n\n                Write the \\(2×2\\) determinant that remains.\t\n\n[Figure: .]\n\n                Evaluate.\t\n\n[Figure: .]\n\n                Simplify.\t\n\n[Figure: .]\n\n    ⓑ\n\n                Eliminate the row and column that contains \\(b_3\\).\t\n\n[Figure: .]\n\n                Write the \\(2×2\\) determinant that remains.\t\n\n[Figure: .]\n\n                Evaluate.\t\n\n[Figure: .]\n\n                Simplify.\t\n\n[Figure: .]\n\n    ⓒ\n\n[Figure: .]\n\n                Eliminate the row and column that contains \\(c_2\\).\t\n\n[Figure: .]\n\n                Write the \\(2×2\\) determinant that remains.\t\n\n[Figure: .]\n\n                Evaluate.\t\n\n[Figure: .]\n\n                Simplify.\t\n\n[Figure: .]"
+      ],
+      "hasFigure": true,
+      "status": "draft",
+      "answerVerified": false,
+      "translationStatus": "pending",
+      "mappingStatus": "pending"
+    },
+    {
+      "ordinal": 8,
+      "sourceNumber": "",
+      "sourceAnchor": "",
+      "kind": "exercise-candidate",
+      "context": "[Figure: The first row of the 3 by 3 determinant is a1, b1, c1. Row 2 is a2, b2, c2. Row 3 is a3, b3, c3. a1 is highlighted. Lines strike out the first row and the first column. What remains is called minor of a1. It is shown as a separate determinant whose first row is b2, c2 and second row is b3, c3.]\n\nTo find the minor of entry \\(b_2\\), we eliminate the row and column that contain it. So we eliminate the \\(2^{nd}\\) row and \\(2^{nd}\\) column. Then we write the \\(2×2\\) determinant that remains.\n\n[Figure: The first row of the 3 by 3 determinant is a1, b1, c1. Row 2 is a2, b2, c2. Row 3 is a3, b3, c3. b2 is highlighted. Lines strike out the second row and second column. What remains is minor of b2. It is written as a separate determinant whose first row is a1, c1 and second row is a3, c3.]",
+      "original": "Example \\(\\PageIndex{5}\\)\n\nFor the determinant \\(\\left| \\begin{matrix} 1&−1&4\\\\0&2&−1\\\\−2&−3&3 \\end{matrix} \\right|\\), find and then evaluate the minor of ⓐ \\(a_1\\) ⓑ \\(b_2\\) ⓒ \\(c_3\\).\n\nAnswer\n\nⓐ 3 ⓑ 11 ⓒ 2",
+      "prompt": "Example \\(\\PageIndex{5}\\)\n\nFor the determinant \\(\\left| \\begin{matrix} 1&−1&4\\\\0&2&−1\\\\−2&−3&3 \\end{matrix} \\right|\\), find and then evaluate the minor of ⓐ \\(a_1\\) ⓑ \\(b_2\\) ⓒ \\(c_3\\).",
+      "sourceAnswers": [
+        "ⓐ 3 ⓑ 11 ⓒ 2"
+      ],
+      "hasFigure": false,
+      "status": "draft",
+      "answerVerified": false,
+      "translationStatus": "pending",
+      "mappingStatus": "pending"
+    },
+    {
+      "ordinal": 9,
+      "sourceNumber": "",
+      "sourceAnchor": "",
+      "kind": "exercise-candidate",
+      "context": "[Figure: The first row of the 3 by 3 determinant is a1, b1, c1. Row 2 is a2, b2, c2. Row 3 is a3, b3, c3. a1 is highlighted. Lines strike out the first row and the first column. What remains is called minor of a1. It is shown as a separate determinant whose first row is b2, c2 and second row is b3, c3.]\n\nTo find the minor of entry \\(b_2\\), we eliminate the row and column that contain it. So we eliminate the \\(2^{nd}\\) row and \\(2^{nd}\\) column. Then we write the \\(2×2\\) determinant that remains.\n\n[Figure: The first row of the 3 by 3 determinant is a1, b1, c1. Row 2 is a2, b2, c2. Row 3 is a3, b3, c3. b2 is highlighted. Lines strike out the second row and second column. What remains is minor of b2. It is written as a separate determinant whose first row is a1, c1 and second row is a3, c3.]",
+      "original": "Example \\(\\PageIndex{6}\\)\n\nFor the determinant \\(\\left| \\begin{matrix} −2&−1&0\\\\3&0&−1\\\\−1&−2&3 \\end{matrix} \\right|\\), find and then evaluate the minor of ⓐ \\(a_2\\) ⓑ \\(b_3\\) ⓒ \\(c_2\\).\n\nAnswer\n\nⓐ \\(−3\\) ⓑ 2 ⓒ 3",
+      "prompt": "Example \\(\\PageIndex{6}\\)\n\nFor the determinant \\(\\left| \\begin{matrix} −2&−1&0\\\\3&0&−1\\\\−1&−2&3 \\end{matrix} \\right|\\), find and then evaluate the minor of ⓐ \\(a_2\\) ⓑ \\(b_3\\) ⓒ \\(c_2\\).",
+      "sourceAnswers": [
+        "ⓐ \\(−3\\) ⓑ 2 ⓒ 3"
+      ],
+      "hasFigure": false,
+      "status": "draft",
+      "answerVerified": false,
+      "translationStatus": "pending",
+      "mappingStatus": "pending"
+    },
+    {
+      "ordinal": 10,
+      "sourceNumber": "",
+      "sourceAnchor": "",
+      "kind": "exercise-candidate",
+      "context": "Remember, to find the minor of an entry we eliminate the row and column that contains the entry.\n\nTo evaluate a \\(3×3\\) determinant by expanding by minors along the first row, the following pattern:\n\n[Figure: A 3 by 3 determinant is equal to a1 times minor of a1 minus b1 times minor of b1 plus c1 times minor of c1.]",
+      "original": "Example \\(\\PageIndex{7}\\)\n\nEvaluate the determinant \\(\\left| \\begin{matrix} 2&−3&−1\\\\3&2&0\\\\−1&−1&−2 \\end{matrix} \\right|\\) by expanding by minors along the first row.\n\nAnswer\n\n[Figure: .]\n\n                Expand by minors along the first row\t\n\n[Figure: .]\n\n                Evaluate each determinant.\t\n\n[Figure: .]\n\n                Simplify.\t\n\n[Figure: .]\n\n                Simplify.\t\n\n[Figure: .]\n\n                Simplify.\t\n\n[Figure: .]",
+      "prompt": "Example \\(\\PageIndex{7}\\)\n\nEvaluate the determinant \\(\\left| \\begin{matrix} 2&−3&−1\\\\3&2&0\\\\−1&−1&−2 \\end{matrix} \\right|\\) by expanding by minors along the first row.",
+      "sourceAnswers": [
+        "[Figure: .]\n\n                Expand by minors along the first row\t\n\n[Figure: .]\n\n                Evaluate each determinant.\t\n\n[Figure: .]\n\n                Simplify.\t\n\n[Figure: .]\n\n                Simplify.\t\n\n[Figure: .]\n\n                Simplify.\t\n\n[Figure: .]"
+      ],
+      "hasFigure": true,
+      "status": "draft",
+      "answerVerified": false,
+      "translationStatus": "pending",
+      "mappingStatus": "pending"
+    },
+    {
+      "ordinal": 11,
+      "sourceNumber": "",
+      "sourceAnchor": "",
+      "kind": "exercise-candidate",
+      "context": "Remember, to find the minor of an entry we eliminate the row and column that contains the entry.\n\nTo evaluate a \\(3×3\\) determinant by expanding by minors along the first row, the following pattern:\n\n[Figure: A 3 by 3 determinant is equal to a1 times minor of a1 minus b1 times minor of b1 plus c1 times minor of c1.]",
+      "original": "Example \\(\\PageIndex{8}\\)\n\nEvaluate the determinant \\(\\left| \\begin{matrix} 3&−2&4\\\\0&−1&−2\\\\2&3&−1 \\end{matrix} \\right|\\), by expanding by minors along the first row.\n\nAnswer\n\n37",
+      "prompt": "Example \\(\\PageIndex{8}\\)\n\nEvaluate the determinant \\(\\left| \\begin{matrix} 3&−2&4\\\\0&−1&−2\\\\2&3&−1 \\end{matrix} \\right|\\), by expanding by minors along the first row.",
+      "sourceAnswers": [
+        "37"
+      ],
+      "hasFigure": false,
+      "status": "draft",
+      "answerVerified": false,
+      "translationStatus": "pending",
+      "mappingStatus": "pending"
+    },
+    {
+      "ordinal": 12,
+      "sourceNumber": "",
+      "sourceAnchor": "",
+      "kind": "exercise-candidate",
+      "context": "Remember, to find the minor of an entry we eliminate the row and column that contains the entry.\n\nTo evaluate a \\(3×3\\) determinant by expanding by minors along the first row, the following pattern:\n\n[Figure: A 3 by 3 determinant is equal to a1 times minor of a1 minus b1 times minor of b1 plus c1 times minor of c1.]",
+      "original": "Example \\(\\PageIndex{9}\\)\n\nEvaluate the determinant \\(\\left| \\begin{matrix} 3&−2&−2\\\\2&−1&4\\\\−1&0&−3 \\end{matrix} \\right|\\), by expanding by minors along the first row.\n\nAnswer\n\n7",
+      "prompt": "Example \\(\\PageIndex{9}\\)\n\nEvaluate the determinant \\(\\left| \\begin{matrix} 3&−2&−2\\\\2&−1&4\\\\−1&0&−3 \\end{matrix} \\right|\\), by expanding by minors along the first row.",
+      "sourceAnswers": [
+        "7"
+      ],
+      "hasFigure": false,
+      "status": "draft",
+      "answerVerified": false,
+      "translationStatus": "pending",
+      "mappingStatus": "pending"
+    },
+    {
+      "ordinal": 13,
+      "sourceNumber": "",
+      "sourceAnchor": "",
+      "kind": "exercise-candidate",
+      "context": "Notice that the sign pattern in the first row matches the signs between the terms in the expansion by the first row.\n\n[Figure: A 3 by 3 determinant has row 1: plus, minus, plus, row 2: minus, plus, minus and row 3: plus, minus, plus. The three signs in the first row each point to a minor determinant in the expansion of a 3 by 3 determinant. Plus points to minor of a1, minus to the minor of b1 and plus to the minor of c1.]\n\nSince we can expand by any row or column, how do we decide which row or column to use? Usually we try to pick a row or column that will make our calculation easier. If the determinant contains a 0, using the row or column that contains the 0 will make the calculations easier.",
+      "original": "Example \\(\\PageIndex{10}\\)\n\nEvaluate the determinant \\(\\left| \\begin{matrix} 4&−1&−3\\\\3&0&2\\\\5&−4&−3 \\end{matrix} \\right|\\) by expanding by minors.\n\nAnswer\n\nTo expand by minors, we look for a row or column that will make our calculations easier. Since 0 is in the second row and second column, expanding by either of those is a good choice. Since the second row has fewer negatives than the second column, we will expand by the second row.\n\n[Figure: .]\n\n                Expand using the second row.\t\n\n                Be careful of the signs.\t\n\n[Figure: .]\n\n                Evaluate each determinant.\t\n\n[Figure: .]\n\n                Simplify.\t\n\n[Figure: .]\n\n                Simplify.\t\n\n[Figure: .]\n\n                Add.\t\n\n[Figure: .]",
+      "prompt": "Example \\(\\PageIndex{10}\\)\n\nEvaluate the determinant \\(\\left| \\begin{matrix} 4&−1&−3\\\\3&0&2\\\\5&−4&−3 \\end{matrix} \\right|\\) by expanding by minors.",
+      "sourceAnswers": [
+        "To expand by minors, we look for a row or column that will make our calculations easier. Since 0 is in the second row and second column, expanding by either of those is a good choice. Since the second row has fewer negatives than the second column, we will expand by the second row.\n\n[Figure: .]\n\n                Expand using the second row.\t\n\n                Be careful of the signs.\t\n\n[Figure: .]\n\n                Evaluate each determinant.\t\n\n[Figure: .]\n\n                Simplify.\t\n\n[Figure: .]\n\n                Simplify.\t\n\n[Figure: .]\n\n                Add.\t\n\n[Figure: .]"
+      ],
+      "hasFigure": true,
+      "status": "draft",
+      "answerVerified": false,
+      "translationStatus": "pending",
+      "mappingStatus": "pending"
+    },
+    {
+      "ordinal": 14,
+      "sourceNumber": "",
+      "sourceAnchor": "",
+      "kind": "exercise-candidate",
+      "context": "Notice that the sign pattern in the first row matches the signs between the terms in the expansion by the first row.\n\n[Figure: A 3 by 3 determinant has row 1: plus, minus, plus, row 2: minus, plus, minus and row 3: plus, minus, plus. The three signs in the first row each point to a minor determinant in the expansion of a 3 by 3 determinant. Plus points to minor of a1, minus to the minor of b1 and plus to the minor of c1.]\n\nSince we can expand by any row or column, how do we decide which row or column to use? Usually we try to pick a row or column that will make our calculation easier. If the determinant contains a 0, using the row or column that contains the 0 will make the calculations easier.",
+      "original": "Example \\(\\PageIndex{11}\\)\n\nEvaluate the determinant \\(\\left| \\begin{matrix} 2&−1&−3\\\\0&3&−4\\\\3&−4&−3 \\end{matrix} \\right|\\) by expanding by minors.\n\nAnswer\n\n\\(−11\\)",
+      "prompt": "Example \\(\\PageIndex{11}\\)\n\nEvaluate the determinant \\(\\left| \\begin{matrix} 2&−1&−3\\\\0&3&−4\\\\3&−4&−3 \\end{matrix} \\right|\\) by expanding by minors.",
+      "sourceAnswers": [
+        "\\(−11\\)"
+      ],
+      "hasFigure": false,
+      "status": "draft",
+      "answerVerified": false,
+      "translationStatus": "pending",
+      "mappingStatus": "pending"
+    },
+    {
+      "ordinal": 15,
+      "sourceNumber": "",
+      "sourceAnchor": "",
+      "kind": "exercise-candidate",
+      "context": "Notice that the sign pattern in the first row matches the signs between the terms in the expansion by the first row.\n\n[Figure: A 3 by 3 determinant has row 1: plus, minus, plus, row 2: minus, plus, minus and row 3: plus, minus, plus. The three signs in the first row each point to a minor determinant in the expansion of a 3 by 3 determinant. Plus points to minor of a1, minus to the minor of b1 and plus to the minor of c1.]\n\nSince we can expand by any row or column, how do we decide which row or column to use? Usually we try to pick a row or column that will make our calculation easier. If the determinant contains a 0, using the row or column that contains the 0 will make the calculations easier.",
+      "original": "Example \\(\\PageIndex{12}\\)\n\nEvaluate the determinant \\(\\left| \\begin{matrix} −2&−1&−3\\\\−1&2&2\\\\4&−4&0 \\end{matrix} \\right|\\) by expanding by minors.\n\nAnswer\n\n8",
+      "prompt": "Example \\(\\PageIndex{12}\\)\n\nEvaluate the determinant \\(\\left| \\begin{matrix} −2&−1&−3\\\\−1&2&2\\\\4&−4&0 \\end{matrix} \\right|\\) by expanding by minors.",
+      "sourceAnswers": [
+        "8"
+      ],
+      "hasFigure": false,
+      "status": "draft",
+      "answerVerified": false,
+      "translationStatus": "pending",
+      "mappingStatus": "pending"
+    },
+    {
+      "ordinal": 16,
+      "sourceNumber": "",
+      "sourceAnchor": "",
+      "kind": "exercise-candidate",
+      "context": "[Figure: The equations are a1x plus b1y equals k1 and a2x plus b2y equals k2. Here, a1, a2, b1, b2 are coefficients. The determinant is D with row 1: a1, b1 and row 2: a2, b2. Column 1 has coefficients of x and column 2 has coefficients of]\n\nNotice that to form the determinant \\(D_x\\) and \\(D_y\\), we substitute the constants for the coefficients of the variable we are finding.\n\n[Figure: The equations are a1x plus b1y equals k1 and a2x plus b2y equals k2. Here, a1, a2, b1, b2 are coefficients. The determinant is Dx has row 1: k1, b1 and row 2: k2, b2. Here columns 1 and 2 re constants and coefficients of y respectively. Determinant Dy has row 1: a1, k1 and row 2: a2, k2. Here, columns 1 and 2 are coefficients of x and constants respectively.]",
+      "original": "Example \\(\\PageIndex{13}\\): How to Solve a System of Equations Using Cramer’s Rule\n\nSolve using Cramer’s Rule: \\(\\left\\{ \\begin{array} {l} 2x+y=−4\\\\3x−2y=−6\\end{array}\\right.\\)\n\nAnswer\n\n[Figure: The equations are 2x plus y equals minus 4 and 3x minus 2y equals minus 6. Step 1. Evaluate the determinant D, using the coefficients of the variables. Determinant D has row 1: 2, 1 and row 2: 3, minus 2. So, D is minus 7.]\n\n[Figure: Step 2. Evaluate the determinant Dx. Use the constants in place of the x coefficients. We replace the coefficients of x, 2 and 3, with the constants, negative 4 and negative 6. We get Dx equal to 14.]\n\n[Figure: Step 3. Evaluate the determinant Dy. Use the constants in place of the y coefficients. We replace the coefficients of y, 1 and 2, with the constants, negative 4 and negative 6. We get Dy equal to 0.]\n\n[Figure: Step 4. Find x and y. Substituting values of D, Dx and Dy in the equations x equal to Dx upon D and y equal to Dy upon D, we get x equal to minus 2 and y equal to 0.]\n\n[Figure: Step 5. Write the solution as an ordered pair minus 2, 0.]\n\n[Figure: Step 6. Check that the ordered pair is a solution to both original equations.]",
+      "prompt": "Example \\(\\PageIndex{13}\\): How to Solve a System of Equations Using Cramer’s Rule\n\nSolve using Cramer’s Rule: \\(\\left\\{ \\begin{array} {l} 2x+y=−4\\\\3x−2y=−6\\end{array}\\right.\\)",
+      "sourceAnswers": [
+        "[Figure: The equations are 2x plus y equals minus 4 and 3x minus 2y equals minus 6. Step 1. Evaluate the determinant D, using the coefficients of the variables. Determinant D has row 1: 2, 1 and row 2: 3, minus 2. So, D is minus 7.]\n\n[Figure: Step 2. Evaluate the determinant Dx. Use the constants in place of the x coefficients. We replace the coefficients of x, 2 and 3, with the constants, negative 4 and negative 6. We get Dx equal to 14.]\n\n[Figure: Step 3. Evaluate the determinant Dy. Use the constants in place of the y coefficients. We replace the coefficients of y, 1 and 2, with the constants, negative 4 and negative 6. We get Dy equal to 0.]\n\n[Figure: Step 4. Find x and y. Substituting values of D, Dx and Dy in the equations x equal to Dx upon D and y equal to Dy upon D, we get x equal to minus 2 and y equal to 0.]\n\n[Figure: Step 5. Write the solution as an ordered pair minus 2, 0.]\n\n[Figure: Step 6. Check that the ordered pair is a solution to both original equations.]"
+      ],
+      "hasFigure": true,
+      "status": "draft",
+      "answerVerified": false,
+      "translationStatus": "pending",
+      "mappingStatus": "pending"
+    },
+    {
+      "ordinal": 17,
+      "sourceNumber": "",
+      "sourceAnchor": "",
+      "kind": "exercise-candidate",
+      "context": "[Figure: The equations are a1x plus b1y equals k1 and a2x plus b2y equals k2. Here, a1, a2, b1, b2 are coefficients. The determinant is D with row 1: a1, b1 and row 2: a2, b2. Column 1 has coefficients of x and column 2 has coefficients of]\n\nNotice that to form the determinant \\(D_x\\) and \\(D_y\\), we substitute the constants for the coefficients of the variable we are finding.\n\n[Figure: The equations are a1x plus b1y equals k1 and a2x plus b2y equals k2. Here, a1, a2, b1, b2 are coefficients. The determinant is Dx has row 1: k1, b1 and row 2: k2, b2. Here columns 1 and 2 re constants and coefficients of y respectively. Determinant Dy has row 1: a1, k1 and row 2: a2, k2. Here, columns 1 and 2 are coefficients of x and constants respectively.]",
+      "original": "Example \\(\\PageIndex{14}\\)\n\nSolve using Cramer’s rule: \\(\\left\\{\\begin{array} {l} 3x+y=−3 \\\\ 2x+3y=6 \\end{array} \\right.\\)\n\nAnswer\n\n\\((−\\frac{15}{7},\\frac{24}{7})\\)",
+      "prompt": "Example \\(\\PageIndex{14}\\)\n\nSolve using Cramer’s rule: \\(\\left\\{\\begin{array} {l} 3x+y=−3 \\\\ 2x+3y=6 \\end{array} \\right.\\)",
+      "sourceAnswers": [
+        "\\((−\\frac{15}{7},\\frac{24}{7})\\)"
+      ],
+      "hasFigure": false,
+      "status": "draft",
+      "answerVerified": false,
+      "translationStatus": "pending",
+      "mappingStatus": "pending"
+    },
+    {
+      "ordinal": 18,
+      "sourceNumber": "",
+      "sourceAnchor": "",
+      "kind": "exercise-candidate",
+      "context": "[Figure: The equations are a1x plus b1y equals k1 and a2x plus b2y equals k2. Here, a1, a2, b1, b2 are coefficients. The determinant is D with row 1: a1, b1 and row 2: a2, b2. Column 1 has coefficients of x and column 2 has coefficients of]\n\nNotice that to form the determinant \\(D_x\\) and \\(D_y\\), we substitute the constants for the coefficients of the variable we are finding.\n\n[Figure: The equations are a1x plus b1y equals k1 and a2x plus b2y equals k2. Here, a1, a2, b1, b2 are coefficients. The determinant is Dx has row 1: k1, b1 and row 2: k2, b2. Here columns 1 and 2 re constants and coefficients of y respectively. Determinant Dy has row 1: a1, k1 and row 2: a2, k2. Here, columns 1 and 2 are coefficients of x and constants respectively.]",
+      "original": "Example \\(\\PageIndex{15}\\)\n\nSolve using Cramer’s rule: \\(\\left\\{\\begin{array} {l} −x+y=2\\\\2x+y=−4 \\end{array} \\right.\\)\n\nAnswer\n\n\\((−2,0)\\)",
+      "prompt": "Example \\(\\PageIndex{15}\\)\n\nSolve using Cramer’s rule: \\(\\left\\{\\begin{array} {l} −x+y=2\\\\2x+y=−4 \\end{array} \\right.\\)",
+      "sourceAnswers": [
+        "\\((−2,0)\\)"
+      ],
+      "hasFigure": false,
+      "status": "draft",
+      "answerVerified": false,
+      "translationStatus": "pending",
+      "mappingStatus": "pending"
+    },
+    {
+      "ordinal": 19,
+      "sourceNumber": "1",
+      "sourceAnchor": "",
+      "kind": "exercise-candidate",
+      "context": "[Figure: The equations are a1x plus b1y equals k1 and a2x plus b2y equals k2. Here, a1, a2, b1, b2 are coefficients. The determinant is D with row 1: a1, b1 and row 2: a2, b2. Column 1 has coefficients of x and column 2 has coefficients of]\n\nNotice that to form the determinant \\(D_x\\) and \\(D_y\\), we substitute the constants for the coefficients of the variable we are finding.\n\n[Figure: The equations are a1x plus b1y equals k1 and a2x plus b2y equals k2. Here, a1, a2, b1, b2 are coefficients. The determinant is Dx has row 1: k1, b1 and row 2: k2, b2. Here columns 1 and 2 re constants and coefficients of y respectively. Determinant Dy has row 1: a1, k1 and row 2: a2, k2. Here, columns 1 and 2 are coefficients of x and constants respectively.]",
+      "original": "1. Evaluate the determinant D, using the coefficients of the variables.",
+      "prompt": "1. Evaluate the determinant D, using the coefficients of the variables.",
+      "sourceAnswers": [],
+      "hasFigure": false,
+      "status": "draft",
+      "answerVerified": false,
+      "translationStatus": "pending",
+      "mappingStatus": "pending"
+    },
+    {
+      "ordinal": 20,
+      "sourceNumber": "2",
+      "sourceAnchor": "",
+      "kind": "exercise-candidate",
+      "context": "[Figure: The equations are a1x plus b1y equals k1 and a2x plus b2y equals k2. Here, a1, a2, b1, b2 are coefficients. The determinant is D with row 1: a1, b1 and row 2: a2, b2. Column 1 has coefficients of x and column 2 has coefficients of]\n\nNotice that to form the determinant \\(D_x\\) and \\(D_y\\), we substitute the constants for the coefficients of the variable we are finding.\n\n[Figure: The equations are a1x plus b1y equals k1 and a2x plus b2y equals k2. Here, a1, a2, b1, b2 are coefficients. The determinant is Dx has row 1: k1, b1 and row 2: k2, b2. Here columns 1 and 2 re constants and coefficients of y respectively. Determinant Dy has row 1: a1, k1 and row 2: a2, k2. Here, columns 1 and 2 are coefficients of x and constants respectively.]",
+      "original": "2. Evaluate the determinant \\(D_x\\). Use the constants in place of the x coefficients.",
+      "prompt": "2. Evaluate the determinant \\(D_x\\). Use the constants in place of the x coefficients.",
+      "sourceAnswers": [],
+      "hasFigure": false,
+      "status": "draft",
+      "answerVerified": false,
+      "translationStatus": "pending",
+      "mappingStatus": "pending"
+    },
+    {
+      "ordinal": 21,
+      "sourceNumber": "3",
+      "sourceAnchor": "",
+      "kind": "exercise-candidate",
+      "context": "[Figure: The equations are a1x plus b1y equals k1 and a2x plus b2y equals k2. Here, a1, a2, b1, b2 are coefficients. The determinant is D with row 1: a1, b1 and row 2: a2, b2. Column 1 has coefficients of x and column 2 has coefficients of]\n\nNotice that to form the determinant \\(D_x\\) and \\(D_y\\), we substitute the constants for the coefficients of the variable we are finding.\n\n[Figure: The equations are a1x plus b1y equals k1 and a2x plus b2y equals k2. Here, a1, a2, b1, b2 are coefficients. The determinant is Dx has row 1: k1, b1 and row 2: k2, b2. Here columns 1 and 2 re constants and coefficients of y respectively. Determinant Dy has row 1: a1, k1 and row 2: a2, k2. Here, columns 1 and 2 are coefficients of x and constants respectively.]",
+      "original": "3. Evaluate the determinant \\(D_y\\). Use the constants in place of the y coefficients.",
+      "prompt": "3. Evaluate the determinant \\(D_y\\). Use the constants in place of the y coefficients.",
+      "sourceAnswers": [],
+      "hasFigure": false,
+      "status": "draft",
+      "answerVerified": false,
+      "translationStatus": "pending",
+      "mappingStatus": "pending"
+    },
+    {
+      "ordinal": 22,
+      "sourceNumber": "4",
+      "sourceAnchor": "",
+      "kind": "exercise-candidate",
+      "context": "[Figure: The equations are a1x plus b1y equals k1 and a2x plus b2y equals k2. Here, a1, a2, b1, b2 are coefficients. The determinant is D with row 1: a1, b1 and row 2: a2, b2. Column 1 has coefficients of x and column 2 has coefficients of]\n\nNotice that to form the determinant \\(D_x\\) and \\(D_y\\), we substitute the constants for the coefficients of the variable we are finding.\n\n[Figure: The equations are a1x plus b1y equals k1 and a2x plus b2y equals k2. Here, a1, a2, b1, b2 are coefficients. The determinant is Dx has row 1: k1, b1 and row 2: k2, b2. Here columns 1 and 2 re constants and coefficients of y respectively. Determinant Dy has row 1: a1, k1 and row 2: a2, k2. Here, columns 1 and 2 are coefficients of x and constants respectively.]",
+      "original": "4. Find x and y. \\(x=\\frac{D_x}{D}\\), \\(y=\\frac{D_y}{D}\\)",
+      "prompt": "4. Find x and y. \\(x=\\frac{D_x}{D}\\), \\(y=\\frac{D_y}{D}\\)",
+      "sourceAnswers": [],
+      "hasFigure": false,
+      "status": "draft",
+      "answerVerified": false,
+      "translationStatus": "pending",
+      "mappingStatus": "pending"
+    },
+    {
+      "ordinal": 23,
+      "sourceNumber": "5",
+      "sourceAnchor": "",
+      "kind": "exercise-candidate",
+      "context": "[Figure: The equations are a1x plus b1y equals k1 and a2x plus b2y equals k2. Here, a1, a2, b1, b2 are coefficients. The determinant is D with row 1: a1, b1 and row 2: a2, b2. Column 1 has coefficients of x and column 2 has coefficients of]\n\nNotice that to form the determinant \\(D_x\\) and \\(D_y\\), we substitute the constants for the coefficients of the variable we are finding.\n\n[Figure: The equations are a1x plus b1y equals k1 and a2x plus b2y equals k2. Here, a1, a2, b1, b2 are coefficients. The determinant is Dx has row 1: k1, b1 and row 2: k2, b2. Here columns 1 and 2 re constants and coefficients of y respectively. Determinant Dy has row 1: a1, k1 and row 2: a2, k2. Here, columns 1 and 2 are coefficients of x and constants respectively.]",
+      "original": "5. Write the solution as an ordered pair.",
+      "prompt": "5. Write the solution as an ordered pair.",
+      "sourceAnswers": [],
+      "hasFigure": false,
+      "status": "draft",
+      "answerVerified": false,
+      "translationStatus": "pending",
+      "mappingStatus": "pending"
+    },
+    {
+      "ordinal": 24,
+      "sourceNumber": "6",
+      "sourceAnchor": "",
+      "kind": "exercise-candidate",
+      "context": "[Figure: The equations are a1x plus b1y equals k1 and a2x plus b2y equals k2. Here, a1, a2, b1, b2 are coefficients. The determinant is D with row 1: a1, b1 and row 2: a2, b2. Column 1 has coefficients of x and column 2 has coefficients of]\n\nNotice that to form the determinant \\(D_x\\) and \\(D_y\\), we substitute the constants for the coefficients of the variable we are finding.\n\n[Figure: The equations are a1x plus b1y equals k1 and a2x plus b2y equals k2. Here, a1, a2, b1, b2 are coefficients. The determinant is Dx has row 1: k1, b1 and row 2: k2, b2. Here columns 1 and 2 re constants and coefficients of y respectively. Determinant Dy has row 1: a1, k1 and row 2: a2, k2. Here, columns 1 and 2 are coefficients of x and constants respectively.]",
+      "original": "6. Check that the ordered pair is a solution to both original equations.",
+      "prompt": "6. Check that the ordered pair is a solution to both original equations.",
+      "sourceAnswers": [],
+      "hasFigure": false,
+      "status": "draft",
+      "answerVerified": false,
+      "translationStatus": "pending",
+      "mappingStatus": "pending"
+    },
+    {
+      "ordinal": 25,
+      "sourceNumber": "",
+      "sourceAnchor": "",
+      "kind": "exercise-candidate",
+      "context": "To solve a system of three equations with three variables with Cramer’s Rule, we basically do what we did for a system of two equations. However, we now have to solve for three variables to get the solution. The determinants are also going to be \\(3×3\\) which will make our work more interesting!\n\nFor the system of equations \\(\\left\\{\\begin{array} {l} a_1x+b_1y+c_1z=k_1\\\\a_2x+b_2y+c_2z=k_2\\\\a_3x+b_3y+c_3z=k_3\\end{array}\\right.\\), the solution \\((x,y,z)\\) can be determined by\n\n[Figure: x is Dx upon D, y is Dy upon D and z is Dz upon D, where D is determinant with row 1: a1, b1, c1, row 2: a2, b2, c2, row 3: a3, b3, c3, use coefficients of the variables; Dx is determinant with row 1: k1, b1, c1, row 2: k2, b2, c2 and rwo 3: k3, b3, c3, replace the x coefficients with the consonants; Dy is determinant with row 1: a1, k1, c1, row 2: a2, k2, c2 and row 3: a3, k3, c3, replace the y coefficients with constants; Dz is determinant with row 1: a1, b1, k1; row 2: a2, b2, k2, row 3: a3, b3, k3; replace the z coefficients with constants.]",
+      "original": "Example \\(\\PageIndex{16}\\)\n\nSolve the system of equations using Cramer’s Rule: \\(\\left\\{\\begin{array} {l} 3x−5y+4z=5\\\\5x+2y+z=0\\\\2x+3y−2z=3 \\end{array} \\right.\\)\n\nAnswer\n\n                Evaluate the determinant D.\t\n\n[Figure: .]\n\n                Expand by minors using column 1.\t\n\n[Figure: .]\n\n[Figure: .]\n\n                Evaluate the determinants.\t\n\n[Figure: .]\n\n                Simplify.\t\n\n[Figure: .]\n\n                Simplify.\t\n\n[Figure: .]\n\n                Simplify.\t\n\n[Figure: .]\n\n                Evaluate the determinant \\(D_x\\). Use the\n\n                constants to replace the coefficients of x.\t\n\n[Figure: .]\n\n                Expand by minors using column 1.\t\n\n[Figure: .]\n\n                Evaluate the determinants.\t\n\n[Figure: .]\n\n                Simplify.\t\n\n[Figure: .]\n\n                Simplify.\t\n\n[Figure: .]\n\n                Evaluate the determinant Dy.Dy. Use the\n\n                constants to replace the coefficients of y.\t\n\n[Figure: .]\n\n[Figure: .]\n\n[Figure: .]\n\n                Evaluate the determinants.\t\n\n[Figure: .]\n\n                Simplify.\t\n\n[Figure: .]\n\n                Simplify.\t\n\n[Figure: .]\n\n                Simplify.\t\n\n[Figure: .]\n\n                Evaluate the determinant Dz.Dz. Use the\n\n                constants to replace the coefficients of z.\t\n\n[Figure: .]\n\n[Figure: .]\n\n[Figure: .]\n\n                Evaluate the determinants.\t\n\n[Figure: .]\n\n                Simplify.\t\n\n[Figure: .]\n\n                Simplify.\t\n\n[Figure: .]\n\n                Simplify.\t\n\n[Figure: .]\n\n                Find x, y, and z.\t\n\n[Figure: .]\n\n                Substitute in the values.\t\n\n[Figure: .]\n\n                Simplify.\t\n\n[Figure: .]\n\n                Write the solution as an ordered triple.\t\n\n[Figure: .]\n\n                Check that the ordered triple is a solution\n\n                to all three original equations.\t\n                We leave the check to you.\t\n\n                The solution is \\((2,−3,−4)\\).",
+      "prompt": "Example \\(\\PageIndex{16}\\)\n\nSolve the system of equations using Cramer’s Rule: \\(\\left\\{\\begin{array} {l} 3x−5y+4z=5\\\\5x+2y+z=0\\\\2x+3y−2z=3 \\end{array} \\right.\\)",
+      "sourceAnswers": [
+        "Evaluate the determinant D.\t\n\n[Figure: .]\n\n                Expand by minors using column 1.\t\n\n[Figure: .]\n\n[Figure: .]\n\n                Evaluate the determinants.\t\n\n[Figure: .]\n\n                Simplify.\t\n\n[Figure: .]\n\n                Simplify.\t\n\n[Figure: .]\n\n                Simplify.\t\n\n[Figure: .]\n\n                Evaluate the determinant \\(D_x\\). Use the\n\n                constants to replace the coefficients of x.\t\n\n[Figure: .]\n\n                Expand by minors using column 1.\t\n\n[Figure: .]\n\n                Evaluate the determinants.\t\n\n[Figure: .]\n\n                Simplify.\t\n\n[Figure: .]\n\n                Simplify.\t\n\n[Figure: .]\n\n                Evaluate the determinant Dy.Dy. Use the\n\n                constants to replace the coefficients of y.\t\n\n[Figure: .]\n\n[Figure: .]\n\n[Figure: .]\n\n                Evaluate the determinants.\t\n\n[Figure: .]\n\n                Simplify.\t\n\n[Figure: .]\n\n                Simplify.\t\n\n[Figure: .]\n\n                Simplify.\t\n\n[Figure: .]\n\n                Evaluate the determinant Dz.Dz. Use the\n\n                constants to replace the coefficients of z.\t\n\n[Figure: .]\n\n[Figure: .]\n\n[Figure: .]\n\n                Evaluate the determinants.\t\n\n[Figure: .]\n\n                Simplify.\t\n\n[Figure: .]\n\n                Simplify.\t\n\n[Figure: .]\n\n                Simplify.\t\n\n[Figure: .]\n\n                Find x, y, and z.\t\n\n[Figure: .]\n\n                Substitute in the values.\t\n\n[Figure: .]\n\n                Simplify.\t\n\n[Figure: .]\n\n                Write the solution as an ordered triple.\t\n\n[Figure: .]\n\n                Check that the ordered triple is a solution\n\n                to all three original equations.\t\n                We leave the check to you.\t\n\n                The solution is \\((2,−3,−4)\\)."
+      ],
+      "hasFigure": true,
+      "status": "draft",
+      "answerVerified": false,
+      "translationStatus": "pending",
+      "mappingStatus": "pending"
+    },
+    {
+      "ordinal": 26,
+      "sourceNumber": "",
+      "sourceAnchor": "",
+      "kind": "exercise-candidate",
+      "context": "To solve a system of three equations with three variables with Cramer’s Rule, we basically do what we did for a system of two equations. However, we now have to solve for three variables to get the solution. The determinants are also going to be \\(3×3\\) which will make our work more interesting!\n\nFor the system of equations \\(\\left\\{\\begin{array} {l} a_1x+b_1y+c_1z=k_1\\\\a_2x+b_2y+c_2z=k_2\\\\a_3x+b_3y+c_3z=k_3\\end{array}\\right.\\), the solution \\((x,y,z)\\) can be determined by\n\n[Figure: x is Dx upon D, y is Dy upon D and z is Dz upon D, where D is determinant with row 1: a1, b1, c1, row 2: a2, b2, c2, row 3: a3, b3, c3, use coefficients of the variables; Dx is determinant with row 1: k1, b1, c1, row 2: k2, b2, c2 and rwo 3: k3, b3, c3, replace the x coefficients with the consonants; Dy is determinant with row 1: a1, k1, c1, row 2: a2, k2, c2 and row 3: a3, k3, c3, replace the y coefficients with constants; Dz is determinant with row 1: a1, b1, k1; row 2: a2, b2, k2, row 3: a3, b3, k3; replace the z coefficients with constants.]",
+      "original": "Example \\(\\PageIndex{17}\\)\n\nSolve the system of equations using Cramer’s Rule: \\(\\left\\{\\begin{array} {l} 3x+8y+2z=−5\\\\2x+5y−3z=0\\\\x+2y−2z=−1 \\end{array} \\right.\\)\n\nAnswer\n\n\\((−9,3,−1)\\)",
+      "prompt": "Example \\(\\PageIndex{17}\\)\n\nSolve the system of equations using Cramer’s Rule: \\(\\left\\{\\begin{array} {l} 3x+8y+2z=−5\\\\2x+5y−3z=0\\\\x+2y−2z=−1 \\end{array} \\right.\\)",
+      "sourceAnswers": [
+        "\\((−9,3,−1)\\)"
+      ],
+      "hasFigure": false,
+      "status": "draft",
+      "answerVerified": false,
+      "translationStatus": "pending",
+      "mappingStatus": "pending"
+    },
+    {
+      "ordinal": 27,
+      "sourceNumber": "",
+      "sourceAnchor": "",
+      "kind": "exercise-candidate",
+      "context": "To solve a system of three equations with three variables with Cramer’s Rule, we basically do what we did for a system of two equations. However, we now have to solve for three variables to get the solution. The determinants are also going to be \\(3×3\\) which will make our work more interesting!\n\nFor the system of equations \\(\\left\\{\\begin{array} {l} a_1x+b_1y+c_1z=k_1\\\\a_2x+b_2y+c_2z=k_2\\\\a_3x+b_3y+c_3z=k_3\\end{array}\\right.\\), the solution \\((x,y,z)\\) can be determined by\n\n[Figure: x is Dx upon D, y is Dy upon D and z is Dz upon D, where D is determinant with row 1: a1, b1, c1, row 2: a2, b2, c2, row 3: a3, b3, c3, use coefficients of the variables; Dx is determinant with row 1: k1, b1, c1, row 2: k2, b2, c2 and rwo 3: k3, b3, c3, replace the x coefficients with the consonants; Dy is determinant with row 1: a1, k1, c1, row 2: a2, k2, c2 and row 3: a3, k3, c3, replace the y coefficients with constants; Dz is determinant with row 1: a1, b1, k1; row 2: a2, b2, k2, row 3: a3, b3, k3; replace the z coefficients with constants.]",
+      "original": "Example \\(\\PageIndex{18}\\)\n\nSolve the system of equations using Cramer’s Rule: \\(\\left\\{\\begin{array} {l} 3x+y−6z=−3\\\\2x+6y+3z=0\\\\3x+2y−3z=−6 \\end{array} \\right.\\)\n\nAnswer\n\n\\((−6,3,−2)\\)",
+      "prompt": "Example \\(\\PageIndex{18}\\)\n\nSolve the system of equations using Cramer’s Rule: \\(\\left\\{\\begin{array} {l} 3x+y−6z=−3\\\\2x+6y+3z=0\\\\3x+2y−3z=−6 \\end{array} \\right.\\)",
+      "sourceAnswers": [
+        "\\((−6,3,−2)\\)"
+      ],
+      "hasFigure": false,
+      "status": "draft",
+      "answerVerified": false,
+      "translationStatus": "pending",
+      "mappingStatus": "pending"
+    },
+    {
+      "ordinal": 28,
+      "sourceNumber": "",
+      "sourceAnchor": "",
+      "kind": "exercise-candidate",
+      "context": "For any system of equations, where the value of the determinant \\(D=0\\),\n\n\\[ \\begin{array} {lll} \\textbf{Value of determinants} &\\textbf{Type of system} &\\textbf{Solution} \\\\ {D=0\\text{ and }D_x,\\space D_y\\text{ and }D_z\\text{ are all zero}} &\\text{consistent and dependent} &\\text{infinitely many solutions} \\\\ {D=0\\text{ and }D_x,\\space D_y\\text{ and }D_z\\text{ are not all zero}} &\\text{inconsistent} &\\text{no solution} \\end{array} \\nonumber\\]\n\nIn the next example, we will use the values of the determinants to find the solution of the system.",
+      "original": "Example \\(\\PageIndex{19}\\)\n\nSolve the system of equations using Cramer’s rule : \\(\\left\\{\\begin{array} {l} x+3y=4\\\\−2x−6y=3 \\end{array} \\right.\\)\n\nAnswer\n\n\\(\\begin{array} {ll} {} &{\\left\\{\\begin{array} {l} x+3y=4\\\\−2x−6y=3 \\end{array} \\right.} \\\\ {\\begin{array} {l} \\text{Evaluate the determinantD,using the} \\\\ \\text{coefficients of the variables.} \\end{array}} &{D=\\left|\\begin{matrix} 1&3\\\\−2&−6\\end{matrix}\\right|} \\\\ {} &{D=−6−(−6)} \\\\ {} &{D=0} \\end{array} \\)\n\nWe cannot use Cramer’s Rule to solve this system. But by looking at the value of the determinants \\(D_x\\) and \\(D_y\\), we can determine whether the system is dependent or inconsistent.\n\n\\(\\begin{array} {ll} {\\text{Evaluate the determinant }D_x.} &{D_x=\\left|\\begin{matrix} 4&3\\\\3&−6\\end{matrix}\\right|} \\\\ {} &{D_x=−24−9} \\\\ {} &{D_x=15} \\end{array} \\)\n\nSince all the determinants are not zero, the system is inconsistent. There is no solution.",
+      "prompt": "Example \\(\\PageIndex{19}\\)\n\nSolve the system of equations using Cramer’s rule : \\(\\left\\{\\begin{array} {l} x+3y=4\\\\−2x−6y=3 \\end{array} \\right.\\)",
+      "sourceAnswers": [
+        "\\(\\begin{array} {ll} {} &{\\left\\{\\begin{array} {l} x+3y=4\\\\−2x−6y=3 \\end{array} \\right.} \\\\ {\\begin{array} {l} \\text{Evaluate the determinantD,using the} \\\\ \\text{coefficients of the variables.} \\end{array}} &{D=\\left|\\begin{matrix} 1&3\\\\−2&−6\\end{matrix}\\right|} \\\\ {} &{D=−6−(−6)} \\\\ {} &{D=0} \\end{array} \\)\n\nWe cannot use Cramer’s Rule to solve this system. But by looking at the value of the determinants \\(D_x\\) and \\(D_y\\), we can determine whether the system is dependent or inconsistent.\n\n\\(\\begin{array} {ll} {\\text{Evaluate the determinant }D_x.} &{D_x=\\left|\\begin{matrix} 4&3\\\\3&−6\\end{matrix}\\right|} \\\\ {} &{D_x=−24−9} \\\\ {} &{D_x=15} \\end{array} \\)\n\nSince all the determinants are not zero, the system is inconsistent. There is no solution."
+      ],
+      "hasFigure": false,
+      "status": "draft",
+      "answerVerified": false,
+      "translationStatus": "pending",
+      "mappingStatus": "pending"
+    },
+    {
+      "ordinal": 29,
+      "sourceNumber": "",
+      "sourceAnchor": "",
+      "kind": "exercise-candidate",
+      "context": "For any system of equations, where the value of the determinant \\(D=0\\),\n\n\\[ \\begin{array} {lll} \\textbf{Value of determinants} &\\textbf{Type of system} &\\textbf{Solution} \\\\ {D=0\\text{ and }D_x,\\space D_y\\text{ and }D_z\\text{ are all zero}} &\\text{consistent and dependent} &\\text{infinitely many solutions} \\\\ {D=0\\text{ and }D_x,\\space D_y\\text{ and }D_z\\text{ are not all zero}} &\\text{inconsistent} &\\text{no solution} \\end{array} \\nonumber\\]\n\nIn the next example, we will use the values of the determinants to find the solution of the system.",
+      "original": "Example \\(\\PageIndex{20}\\)\n\nSolve the system of equations using Cramer’s rule: \\(\\left\\{\\begin{array} {l} 4x−3y=8\\\\8x−6y=14 \\end{array} \\right.\\)\n\nAnswer\n\nno solution",
+      "prompt": "Example \\(\\PageIndex{20}\\)\n\nSolve the system of equations using Cramer’s rule: \\(\\left\\{\\begin{array} {l} 4x−3y=8\\\\8x−6y=14 \\end{array} \\right.\\)",
+      "sourceAnswers": [
+        "no solution"
+      ],
+      "hasFigure": false,
+      "status": "draft",
+      "answerVerified": false,
+      "translationStatus": "pending",
+      "mappingStatus": "pending"
+    },
+    {
+      "ordinal": 30,
+      "sourceNumber": "",
+      "sourceAnchor": "",
+      "kind": "exercise-candidate",
+      "context": "For any system of equations, where the value of the determinant \\(D=0\\),\n\n\\[ \\begin{array} {lll} \\textbf{Value of determinants} &\\textbf{Type of system} &\\textbf{Solution} \\\\ {D=0\\text{ and }D_x,\\space D_y\\text{ and }D_z\\text{ are all zero}} &\\text{consistent and dependent} &\\text{infinitely many solutions} \\\\ {D=0\\text{ and }D_x,\\space D_y\\text{ and }D_z\\text{ are not all zero}} &\\text{inconsistent} &\\text{no solution} \\end{array} \\nonumber\\]\n\nIn the next example, we will use the values of the determinants to find the solution of the system.",
+      "original": "Example \\(\\PageIndex{21}\\)\n\nSolve the system of equations using Cramer’s rule: \\(\\left\\{\\begin{array} {l} x=−3y+4\\\\2x+6y=8 \\end{array} \\right.\\)\n\nAnswer\n\ninfinite solutions",
+      "prompt": "Example \\(\\PageIndex{21}\\)\n\nSolve the system of equations using Cramer’s rule: \\(\\left\\{\\begin{array} {l} x=−3y+4\\\\2x+6y=8 \\end{array} \\right.\\)",
+      "sourceAnswers": [
+        "infinite solutions"
+      ],
+      "hasFigure": false,
+      "status": "draft",
+      "answerVerified": false,
+      "translationStatus": "pending",
+      "mappingStatus": "pending"
+    },
+    {
+      "ordinal": 31,
+      "sourceNumber": "",
+      "sourceAnchor": "",
+      "kind": "exercise-candidate",
+      "context": "Three points \\((x_1,y_1)\\), \\((x_2,y_2)\\) and \\((x_3,y_3)\\) are collinear if and only if\n\n\\[\\left|\\begin{matrix}x_1&y_1&1\\\\x_2&y_2&1\\\\x_3&y_3&1\\end{matrix}\\right|=0\\nonumber\\]\n\nWe will use this property in the next example.",
+      "original": "Example \\(\\PageIndex{22}\\)\n\nDetermine whether the points \\((5,−5)\\), \\((4,−3)\\), and \\((3,−1)\\) are collinear.\n\nAnswer\n\n[Figure: .]\n\n                Substitute the values into the determinant.\n\n                \\((5,−5)\\), \\((4,−3)\\), and \\((3,−1)\\)\t\n\n[Figure: .]\n\n                Evaluate the determinant by expanding\n\n                by minors using column 3.\t\n\n[Figure: .]\n\n                Evaluate the determinants.\t\n\n[Figure: .]\n\n                Simplify.\t\n\n[Figure: .]\n\n                Simplify.\t\n\n[Figure: .]\n\n                The value of the determinate is 0, so the\n\n                points are collinear.",
+      "prompt": "Example \\(\\PageIndex{22}\\)\n\nDetermine whether the points \\((5,−5)\\), \\((4,−3)\\), and \\((3,−1)\\) are collinear.",
+      "sourceAnswers": [
+        "[Figure: .]\n\n                Substitute the values into the determinant.\n\n                \\((5,−5)\\), \\((4,−3)\\), and \\((3,−1)\\)\t\n\n[Figure: .]\n\n                Evaluate the determinant by expanding\n\n                by minors using column 3.\t\n\n[Figure: .]\n\n                Evaluate the determinants.\t\n\n[Figure: .]\n\n                Simplify.\t\n\n[Figure: .]\n\n                Simplify.\t\n\n[Figure: .]\n\n                The value of the determinate is 0, so the\n\n                points are collinear."
+      ],
+      "hasFigure": true,
+      "status": "draft",
+      "answerVerified": false,
+      "translationStatus": "pending",
+      "mappingStatus": "pending"
+    },
+    {
+      "ordinal": 32,
+      "sourceNumber": "",
+      "sourceAnchor": "",
+      "kind": "exercise-candidate",
+      "context": "Three points \\((x_1,y_1)\\), \\((x_2,y_2)\\) and \\((x_3,y_3)\\) are collinear if and only if\n\n\\[\\left|\\begin{matrix}x_1&y_1&1\\\\x_2&y_2&1\\\\x_3&y_3&1\\end{matrix}\\right|=0\\nonumber\\]\n\nWe will use this property in the next example.",
+      "original": "Example \\(\\PageIndex{23}\\)\n\nDetermine whether the points \\((3,−2)\\), \\((5,−3)\\), and \\((1,−1)\\) are collinear.\n\nAnswer\n\nyes",
+      "prompt": "Example \\(\\PageIndex{23}\\)\n\nDetermine whether the points \\((3,−2)\\), \\((5,−3)\\), and \\((1,−1)\\) are collinear.",
+      "sourceAnswers": [
+        "yes"
+      ],
+      "hasFigure": false,
+      "status": "draft",
+      "answerVerified": false,
+      "translationStatus": "pending",
+      "mappingStatus": "pending"
+    },
+    {
+      "ordinal": 33,
+      "sourceNumber": "",
+      "sourceAnchor": "",
+      "kind": "exercise-candidate",
+      "context": "Three points \\((x_1,y_1)\\), \\((x_2,y_2)\\) and \\((x_3,y_3)\\) are collinear if and only if\n\n\\[\\left|\\begin{matrix}x_1&y_1&1\\\\x_2&y_2&1\\\\x_3&y_3&1\\end{matrix}\\right|=0\\nonumber\\]\n\nWe will use this property in the next example.",
+      "original": "Example \\(\\PageIndex{24}\\)\n\nDetermine whether the points \\((−4,−1)\\), \\((−6,2)\\), and \\((−2,−4)\\) are collinear.\n\nAnswer\n\nyes",
+      "prompt": "Example \\(\\PageIndex{24}\\)\n\nDetermine whether the points \\((−4,−1)\\), \\((−6,2)\\), and \\((−2,−4)\\) are collinear.",
+      "sourceAnswers": [
+        "yes"
+      ],
+      "hasFigure": false,
+      "status": "draft",
+      "answerVerified": false,
+      "translationStatus": "pending",
+      "mappingStatus": "pending"
+    },
+    {
+      "ordinal": 34,
+      "sourceNumber": "1",
+      "sourceAnchor": "",
+      "kind": "exercise-candidate",
+      "context": "Key Concepts\n\n\\[\\left|\\begin{matrix}a&b\\\\c&d\\end{matrix}\\right|=ad−bc\\nonumber\\]\n\n\\[\\left|\\begin{matrix}+&−&+\\\\−&+&−\\\\+&−&+\\end{matrix}\\right|\\nonumber\\]",
+      "original": "1. Evaluate the determinant D, using the coefficients of the variables.",
+      "prompt": "1. Evaluate the determinant D, using the coefficients of the variables.",
+      "sourceAnswers": [],
+      "hasFigure": false,
+      "status": "draft",
+      "answerVerified": false,
+      "translationStatus": "pending",
+      "mappingStatus": "pending"
+    },
+    {
+      "ordinal": 35,
+      "sourceNumber": "2",
+      "sourceAnchor": "",
+      "kind": "exercise-candidate",
+      "context": "Key Concepts\n\n\\[\\left|\\begin{matrix}a&b\\\\c&d\\end{matrix}\\right|=ad−bc\\nonumber\\]\n\n\\[\\left|\\begin{matrix}+&−&+\\\\−&+&−\\\\+&−&+\\end{matrix}\\right|\\nonumber\\]",
+      "original": "2. Evaluate the determinant \\(D_x\\). Use the constants in place of the x coefficients.",
+      "prompt": "2. Evaluate the determinant \\(D_x\\). Use the constants in place of the x coefficients.",
+      "sourceAnswers": [],
+      "hasFigure": false,
+      "status": "draft",
+      "answerVerified": false,
+      "translationStatus": "pending",
+      "mappingStatus": "pending"
+    },
+    {
+      "ordinal": 36,
+      "sourceNumber": "3",
+      "sourceAnchor": "",
+      "kind": "exercise-candidate",
+      "context": "Key Concepts\n\n\\[\\left|\\begin{matrix}a&b\\\\c&d\\end{matrix}\\right|=ad−bc\\nonumber\\]\n\n\\[\\left|\\begin{matrix}+&−&+\\\\−&+&−\\\\+&−&+\\end{matrix}\\right|\\nonumber\\]",
+      "original": "3. Evaluate the determinant \\(D_y\\). Use the constants in place of the y coefficients.",
+      "prompt": "3. Evaluate the determinant \\(D_y\\). Use the constants in place of the y coefficients.",
+      "sourceAnswers": [],
+      "hasFigure": false,
+      "status": "draft",
+      "answerVerified": false,
+      "translationStatus": "pending",
+      "mappingStatus": "pending"
+    },
+    {
+      "ordinal": 37,
+      "sourceNumber": "4",
+      "sourceAnchor": "",
+      "kind": "exercise-candidate",
+      "context": "Key Concepts\n\n\\[\\left|\\begin{matrix}a&b\\\\c&d\\end{matrix}\\right|=ad−bc\\nonumber\\]\n\n\\[\\left|\\begin{matrix}+&−&+\\\\−&+&−\\\\+&−&+\\end{matrix}\\right|\\nonumber\\]",
+      "original": "4. Find x and y. \\(x=\\frac{D_x}{D}\\), \\(y=\\frac{D_y}{D}\\).",
+      "prompt": "4. Find x and y. \\(x=\\frac{D_x}{D}\\), \\(y=\\frac{D_y}{D}\\).",
+      "sourceAnswers": [],
+      "hasFigure": false,
+      "status": "draft",
+      "answerVerified": false,
+      "translationStatus": "pending",
+      "mappingStatus": "pending"
+    },
+    {
+      "ordinal": 38,
+      "sourceNumber": "5",
+      "sourceAnchor": "",
+      "kind": "exercise-candidate",
+      "context": "Key Concepts\n\n\\[\\left|\\begin{matrix}a&b\\\\c&d\\end{matrix}\\right|=ad−bc\\nonumber\\]\n\n\\[\\left|\\begin{matrix}+&−&+\\\\−&+&−\\\\+&−&+\\end{matrix}\\right|\\nonumber\\]",
+      "original": "5. Write the solution as an ordered pair.",
+      "prompt": "5. Write the solution as an ordered pair.",
+      "sourceAnswers": [],
+      "hasFigure": false,
+      "status": "draft",
+      "answerVerified": false,
+      "translationStatus": "pending",
+      "mappingStatus": "pending"
+    },
+    {
+      "ordinal": 39,
+      "sourceNumber": "6",
+      "sourceAnchor": "",
+      "kind": "exercise-candidate",
+      "context": "Key Concepts\n\n\\[\\left|\\begin{matrix}a&b\\\\c&d\\end{matrix}\\right|=ad−bc\\nonumber\\]\n\n\\[\\left|\\begin{matrix}+&−&+\\\\−&+&−\\\\+&−&+\\end{matrix}\\right|\\nonumber\\]",
+      "original": "6. Check that the ordered pair is a solution to both original equations.",
+      "prompt": "6. Check that the ordered pair is a solution to both original equations.",
+      "sourceAnswers": [],
+      "hasFigure": false,
+      "status": "draft",
+      "answerVerified": false,
+      "translationStatus": "pending",
+      "mappingStatus": "pending"
+    },
+    {
+      "ordinal": 40,
+      "sourceNumber": "7",
+      "sourceAnchor": "",
+      "kind": "exercise-candidate",
+      "context": "Key Concepts\n\n\\[\\left|\\begin{matrix}a&b\\\\c&d\\end{matrix}\\right|=ad−bc\\nonumber\\]\n\n\\[\\left|\\begin{matrix}+&−&+\\\\−&+&−\\\\+&−&+\\end{matrix}\\right|\\nonumber\\]",
+      "original": "7. Dependent and Inconsistent Systems of Equations: For any system of equations, where the value of the determinant \\(D=0\\),\\[ \\begin{array} {lll} \\textbf{Value of determinants} &\\textbf{Type of system} &\\textbf{Solution} \\\\ {D=0\\text{ and }D_x,\\space D_y\\text{ and }D_z\\text{ are all zero}} &\\text{consistent and dependent} &\\text{infinitely many solutions} \\\\ {D=0\\text{ and }D_x,\\space D_y\\text{ and }D_z\\text{ are not all zero}} &\\text{inconsistent} &\\text{no solution} \\end{array} \\nonumber\\]",
+      "prompt": "7. Dependent and Inconsistent Systems of Equations: For any system of equations, where the value of the determinant \\(D=0\\),\\[ \\begin{array} {lll} \\textbf{Value of determinants} &\\textbf{Type of system} &\\textbf{Solution} \\\\ {D=0\\text{ and }D_x,\\space D_y\\text{ and }D_z\\text{ are all zero}} &\\text{consistent and dependent} &\\text{infinitely many solutions} \\\\ {D=0\\text{ and }D_x,\\space D_y\\text{ and }D_z\\text{ are not all zero}} &\\text{inconsistent} &\\text{no solution} \\end{array} \\nonumber\\]",
+      "sourceAnswers": [],
+      "hasFigure": false,
+      "status": "draft",
+      "answerVerified": false,
+      "translationStatus": "pending",
+      "mappingStatus": "pending"
+    },
+    {
+      "ordinal": 41,
+      "sourceNumber": "8",
+      "sourceAnchor": "",
+      "kind": "exercise-candidate",
+      "context": "Key Concepts\n\n\\[\\left|\\begin{matrix}a&b\\\\c&d\\end{matrix}\\right|=ad−bc\\nonumber\\]\n\n\\[\\left|\\begin{matrix}+&−&+\\\\−&+&−\\\\+&−&+\\end{matrix}\\right|\\nonumber\\]",
+      "original": "8. Test for Collinear Points: Three points \\((x_1,y_1)\\), \\((x_2,y_2)\\), and \\((x_3,y_3)\\) are collinear if and only if\n\n\\[\\left|\\begin{matrix}x_1&y_1&1\\\\x_2&y_2&1\\\\x_3&y_3&1\\end{matrix}\\right|=0\\nonumber\\]",
+      "prompt": "8. Test for Collinear Points: Three points \\((x_1,y_1)\\), \\((x_2,y_2)\\), and \\((x_3,y_3)\\) are collinear if and only if\n\n\\[\\left|\\begin{matrix}x_1&y_1&1\\\\x_2&y_2&1\\\\x_3&y_3&1\\end{matrix}\\right|=0\\nonumber\\]",
+      "sourceAnswers": [],
+      "hasFigure": false,
+      "status": "draft",
+      "answerVerified": false,
+      "translationStatus": "pending",
+      "mappingStatus": "pending"
+    }
+  ],
+  "license": "CC BY 4.0",
+  "licenseEvidence": "This page titled 4.7: Solve Systems of Equations Using Determinants was last modified on Mon, 14 Feb 2022 01:05:39 GMT and is shared under a CC BY  4.0  license and was authored, remixed, and/or curated by OpenStax via source content that was edited to the style and standards of the LibreTexts platform.",
+  "url": "https://math.libretexts.org/Bookshelves/Algebra/Intermediate_Algebra_1e_(OpenStax)/04:_Systems_of_Linear_Equations/4.07:_Solve_Systems_of_Equations_Using_Determinants",
+  "sha256": "5d532e7f43c97560a7ad7f03561befde82f9484f8c56840d0bf5a8f368ba17e4",
+  "checkedAt": "2026-10-07",
+  "id": "eeea95cc2a69ac0b8529",
+  "bookId": "intermediate-algebra",
+  "licenseInherited": false,
+  "licenseSource": "https://math.libretexts.org/Bookshelves/Algebra/Intermediate_Algebra_1e_(OpenStax)/04:_Systems_of_Linear_Equations/4.07:_Solve_Systems_of_Equations_Using_Determinants",
+  "licenseUrl": "https://creativecommons.org/licenses/by/4.0/",
+  "authors": "OpenStax / Lynn Marecek, Andrea Honeycutt Mathis",
+  "book": "Intermediate Algebra 1e",
+  "reviewStatus": "unreviewed",
+  "sourceLanguage": "en",
+  "translationStatus": "pending"
+}

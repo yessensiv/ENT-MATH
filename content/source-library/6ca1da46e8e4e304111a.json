@@ -1,0 +1,262 @@
+{
+  "title": "4.3: Fitting Linear Models to Data",
+  "originalText": "Learning Objectives\n\nDraw and interpret scatter diagrams.\n\nUse a graphing utility to find the line of best fit.\n\nDistinguish between linear and nonlinear relations.\n\nFit a regression line to a set of data and use the linear model to make predictions.\n\nA professor is attempting to identify trends among final exam scores. His class has a mixture of students, so he wonders if there is any relationship between age and final exam scores. One way for him to analyze the scores is by creating a diagram that relates the age of each student to the exam score received. In this section, we will examine one such diagram known as a scatter plot.\n\nDrawing and Interpreting Scatter Plots\n\nA scatter plot is a graph of plotted points that may show a relationship between two sets of data. If the relationship is from a linear model, or a model that is nearly linear, the professor can draw conclusions using his knowledge of linear functions. Figure \\(\\PageIndex{1}\\) shows a sample scatter plot.\n\n[Figure: Scatter plot, titled 'Final Exam Score VS Age'. The x-axis is the age, and the y-axis is the final exam score. The range of ages are between 20s - 50s, and the range for scores are between upper 50s and 90s]\n\nFigure \\(\\PageIndex{1}\\): A scatter plot of age and final exam score variables\n\nNotice this scatter plot does not indicate a linear relationship. The points do not appear to follow a trend. In other words, there does not appear to be a relationship between the age of the student and the score on the final exam.\n\nExample \\(\\PageIndex{1}\\): Using a Scatter Plot to Investigate Cricket Chirps\n\nTable shows the number of cricket chirps in 15 seconds, for several different air temperatures, in degrees Fahrenheit[1]. Plot this data, and determine whether the data appears to be linearly related.\n\n    Table \\(\\PageIndex{1}\\)\n\n            Chirps\t\n            44\t\n            35\t\n            20.4\t\n            33\t\n            31\t\n            35\t\n            18.5\t\n            37\t\n            26\t\n\n            Temperature\t\n            80.5\t\n            70.5\t\n            57\t\n            66\t\n            68\t\n            72\t\n            52\t\n            73.5\t\n            53\t\n\nSolution\n\nPlotting this data, as depicted in Figure \\(\\PageIndex{2}\\) suggests that there may be a trend. We can see from the trend in the data that the number of chirps increases as the temperature increases. The trend appears to be roughly linear, though certainly not perfectly so.\n\n[Figure: Scatter plot, titled 'Cricket Chirps Vs Air Temperature'. The x-axis is the Cricket Chirps in 15 Seconds, and the y-axis is the Temperature (F). The line regression is generally positive.]\n\nFigure \\(\\PageIndex{2}\\): The line regression is generally positive.\n\nFinding the Line of Best Fit\n\nOnce we recognize a need for a linear function to model that data, the natural follow-up question is “what is that linear function?” One way to approximate our linear function is to sketch the line that seems to best fit the data. Then we can extend the line until we can verify the y-intercept. We can approximate the slope of the line by extending it until we can estimate the \\(\\frac{\\text{rise}}{\\text{run}}\\).\n\nExample \\(\\PageIndex{2}\\): Finding a Line of Best Fit\n\nFind a linear function that fits the data in Table \\(\\PageIndex{1}\\) by “eyeballing” a line that seems to fit.\n\nSolution\n\nOn a graph, we could try sketching a line.\n\nUsing the starting and ending points of our hand drawn line, points \\((0, 30)\\) and \\((50, 90)\\), this graph has a slope of\n\n\\[m=\\dfrac{60}{50}=1.2\\]\n\nand a y-intercept at 30. This gives an equation of\n\n\\[T(c)=1.2c+30\\]\n\nwhere \\(c\\) is the number of chirps in 15 seconds, and \\(T(c)\\) is the temperature in degrees Fahrenheit. The resulting equation is represented in Figure \\(\\PageIndex{3}\\).\n\n[Figure: Scatter plot, showing the line of best fit. It is titled 'Cricket Chirps Vs Air Temperature'. The x-axis is 'c, Number of Chirps', and the y-axis is 'T(c), Temperature (F)'.]\n\nFigure \\(\\PageIndex{3}\\): Scatter plot, showing the line of best fit.\n\nAnalysis\n\nThis linear equation can then be used to approximate answers to various questions we might ask about the trend.\n\nRecognizing Interpolation or Extrapolation\n\nWhile the data for most examples does not fall perfectly on the line, the equation is our best guess as to how the relationship will behave outside of the values for which we have data. We use a process known as interpolation when we predict a value inside the domain and range of the data. The process of extrapolation is used when we predict a value outside the domain and range of the data.\n\nFigure \\(\\PageIndex{4}\\) compares the two processes for the cricket-chirp data addressed in Example \\(\\PageIndex{2}\\). We can see that interpolation would occur if we used our model to predict temperature when the values for chirps are between 18.5 and 44. Extrapolation would occur if we used our model to predict temperature when the values for chirps are less than 18.5 or greater than 44.\n\nThere is a difference between making predictions inside the domain and range of values for which we have data and outside that domain and range. Predicting a value outside of the domain and range has its limitations. When our model no longer applies after a certain point, it is sometimes called model breakdown. For example, predicting a cost function for a period of two years may involve examining the data where the input is the time in years and the output is the cost. But if we try to extrapolate a cost when \\(x=50\\), that is in 50 years, the model would not apply because we could not account for factors fifty years in the future.\n\n[Figure: Scatter plot, showing the line of best fit and where interpolation and extrapolation occurs. It is titled 'Cricket Chirps Vs Air Temperature'. The x-axis is 'c, Number of Chirps', and the y-axis is 'T(c), Temperature (F)'.]\n\nFigure \\(\\PageIndex{4}\\): Interpolation occurs within the domain and range of the provided data whereas extrapolation occurs outside.\n\nInterpolation and Extrapolation\n\nDifferent methods of making predictions are used to analyze data.\n\nThe method of extrapolation involves predicting a value outside the domain and/or range of the data.\n\nModel breakdown occurs at the point when the model no longer applies.\n\nExample \\(\\PageIndex{3}\\): Understanding Interpolation and Extrapolation\n\nUse the cricket data from Table \\(\\PageIndex{1}\\) to answer the following questions:\n\n1. Would predicting the temperature when crickets are chirping 30 times in 15 seconds be interpolation or extrapolation? Make the prediction, and discuss whether it is reasonable.\n\n2. Would predicting the number of chirps crickets will make at 40 degrees be interpolation or extrapolation? Make the prediction, and discuss whether it is reasonable.\n\nSolution\n\na. The number of chirps in the data provided varied from 18.5 to 44. A prediction at 30 chirps per 15 seconds is inside the domain of our data, so would be interpolation. Using our model:\n\n\\[\\begin{align} T(30)&=30+1.2(30) \\\\ &=66 \\text{ degrees} \\end{align}\\]\n\nBased on the data we have, this value seems reasonable.\n\nb. The temperature values varied from 52 to 80.5. Predicting the number of chirps at 40 degrees is extrapolation because 40 is outside the range of our data. Using our model:\n\n\\[\\begin{align} 40&=30+1.2c \\\\ 10&=1.2c \\\\ c&\\approx8.33 \\end{align}\\]\n\nWe can compare the regions of interpolation and extrapolation using Figure \\(\\PageIndex{5}\\).\n\n[Figure: Scatter plot, showing the line of best fit and where interpolation and extrapolation occurs. It is titled 'Cricket Chirps Vs Air Temperature'. The x-axis is 'c, Number of Chirps', and the y-axis is 'T(c), Temperature (F)'.]\n\nFigure \\(\\PageIndex{5}\\): Scatter plot, showing the line of best fit and where interpolation and extrapolation occurs.\n\nAnalysis\n\nOur model predicts the crickets would chirp 8.33 times in 15 seconds. While this might be possible, we have no reason to believe our model is valid outside the domain and range. In fact, generally crickets stop chirping altogether below around 50 degrees.\n\nExercise \\(\\PageIndex{1}\\)\n\nAccording to the data from Table \\(\\PageIndex{1}\\), what temperature can we predict it is if we counted 20 chirps in 15 seconds?\n\nSolution\n\n54°F\n\nFinding the Line of Best Fit Using a Graphing Utility\n\nWhile eyeballing a line works reasonably well, there are statistical techniques for fitting a line to data that minimize the differences between the line and data values[2]. One such technique is called least squares regression and can be computed by many graphing calculators, spreadsheet software, statistical software, and many web-based calculators[3]. Least squares regression is one means to determine the line that best fits the data, and here we will refer to this method as linear regression.\n\n[Figure: alt]\n Given data of input and corresponding outputs from a linear function, find the best fit line using linear regression.\n\n1. Enter the input in List 1 (L1).\n\n2. Enter the output in List 2 (L2).\n\n3. On a graphing utility, select Linear Regression (LinReg).\n\nExample \\(\\PageIndex{4}\\): Finding a Least Squares Regression Line\n\nFind the least squares regression line using the cricket-chirp data in Table \\(\\PageIndex{1}\\).\n\nSolution\n\nEnter the input (chirps) in List 1 (L1).\n\nEnter the output (temperature) in List 2 (L2). See Table \\(\\PageIndex{2}\\).\n\n    Table \\(\\PageIndex{2}\\)\n\n            L1\t\n            44\t\n            35\t\n            20.4\t\n            33\t\n            31\t\n            35\t\n            18.5\t\n            37\t\n            26\t\n\n            L2\t\n            80.5\t\n            70.5\t\n            57\t\n            66\t\n            68\t\n            72\t\n            52\t\n            73.5\t\n            53\t\n\nOn a graphing utility, select Linear Regression (LinReg). Using the cricket chirp data from earlier, with technology we obtain the equation:\n\n\\[T(c)=30.281+1.143c\\]\n\nAnalysis\n\nNotice that this line is quite similar to the equation we “eyeballed” but should fit the data better. Notice also that using this equation would change our prediction for the temperature when hearing 30 chirps in 15 seconds from 66 degrees to:\n\n\\[\\begin{align} T(30)&=30.281+1.143(30) \\\\ &=64.571 \\\\ &\\approx 64.6 \\text{ degrees} \\end{align}\\]\n\nThe graph of the scatter plot with the least squares regression line is shown in Figure \\(\\PageIndex{6}\\).\n\n[Figure: Scatter plot, showing the line of best fit. It is titled 'Cricket Chirps Vs Air Temperature'. The x-axis is 'c, Number of Chirps', and the y-axis is 'T(c), Temperature (F)'.]\n\nFigure \\(\\PageIndex{6}\\): Scatter plot, showing the line of best fit.\n\n[Figure: alt]\n Will there ever be a case where two different lines will serve as the best fit for the data?\n\nNo. There is only one best fit line.\n\nDistinguishing Between Linear and Non-Linear Models\n\nAs we saw above with the cricket-chirp model, some data exhibit strong linear trends, but other data, like the final exam scores plotted by age, are clearly nonlinear. Most calculators and computer software can also provide us with the correlation coefficient, which is a measure of how closely the line fits the data. Many graphing calculators require the user to turn a ”diagnostic on” selection to find the correlation coefficient, which mathematicians label as \\(r\\). The correlation coefficient provides an easy way to get an idea of how close to a line the data falls.\n\nWe should compute the correlation coefficient only for data that follows a linear pattern or to determine the degree to which a data set is linear. If the data exhibits a nonlinear pattern, the correlation coefficient for a linear regression is meaningless. To get a sense for the relationship between the value of \\(r\\) and the graph of the data, Figure \\(\\PageIndex{7}\\) shows some large data sets with their correlation coefficients. Remember, for all plots, the horizontal axis shows the input and the vertical axis shows the output.\n\n[Figure:  Plotted data and related correlation coefficients. (credit: “DenisBoigelot,” Wikimedia Commons)]\n\nFigure \\(\\PageIndex{7}\\): Plotted data and related correlation coefficients. (credit: “DenisBoigelot,” Wikimedia Commons)\n\nCorrelation Coefficient\n\nThe correlation coefficient is a value, \\(r\\), between –1 and 1.\n\n\\(r>0\\) suggests a positive (increasing) relationship\n\n\\(r<0\\) suggests a negative (decreasing) relationship\n\nThe closer the value is to 0, the more scattered the data.\n\nThe closer the value is to 1 or –1, the less scattered the data is.\n\nExample \\(\\PageIndex{5}\\): Finding a Correlation Coefficient\n\nCalculate the correlation coefficient for cricket-chirp data in Table \\(\\PageIndex{1}\\).\n\nSolution\n\nBecause the data appear to follow a linear pattern, we can use technology to calculate \\(r\\). Enter the inputs and corresponding outputs and select the Linear Regression. The calculator will also provide you with the correlation coefficient, \\(r=0.9509\\). This value is very close to 1, which suggests a strong increasing linear relationship.\n\nNote: For some calculators, the Diagnostics must be turned \"on\" in order to get the correlation coefficient when linear regression is performed: [2nd]>[0]>[alpha][x–1], then scroll to DIAGNOSTICSON.\n\nPredicting with a Regression Line\n\nOnce we determine that a set of data is linear using the correlation coefficient, we can use the regression line to make predictions. As we learned above, a regression line is a line that is closest to the data in the scatter plot, which means that only one such line is a best fit for the data.\n\nExample \\(\\PageIndex{6}\\): Using a Regression Line to Make Predictions\n\nGasoline consumption in the United States has been steadily increasing. Consumption data from 1994 to 2004 is shown in Table \\(\\PageIndex{3}\\). Determine whether the trend is linear, and if so, find a model for the data. Use the model to predict the consumption in 2008.\n\n    Table \\(\\PageIndex{3}\\)\n\n            Year\t\n            '94\t\n            '95\t\n            '96\t\n            '97\t\n            '98\t\n            '99\t\n            '00\t\n            '01\t\n            '02\t\n            '03\t\n            '04\t\n\n            Consumption (billions of gallons)\t\n            113\t\n            116\t\n            118\t\n            119\t\n            123\t\n            125\t\n            126\t\n            128\t\n            131\t\n            133\t\n            136\t\n\nThe scatter plot of the data, including the least squares regression line, is shown in Figure \\(\\PageIndex{8}\\).\n\n[Figure: Scatter plot, showing the line of best fit. It is titled 'Gas Consumption VS Year'. The x-axis is 'Year After 1994', and the y-axis is 'Gas Consumption (billions of gallons)'.]\n\nFigure \\(\\PageIndex{8}\\): Scatter plot, showing the line of best fit.\n\nWe can introduce new input variable, \\(t\\),representing years since 1994.\n\nThe least squares regression equation is:\n\n\\[C(t)=113.318+2.209t\\]\n\nUsing technology, the correlation coefficient was calculated to be 0.9965, suggesting a very strong increasing linear trend.\n\nUsing this to predict consumption in 2008 \\((t=14)\\),\n\n\\[\\begin{align} C(14)&=113.318+2.209(14) \\\\ &=144.244 \\end{align}\\]\n\nThe model predicts 144.244 billion gallons of gasoline consumption in 2008.\n\nExercise \\(\\PageIndex{1}\\)\n\nUse the model we created using technology in Example \\(\\PageIndex{6}\\) to predict the gas consumption in 2011. Is this an interpolation or an extrapolation?\n\nAnswer\n\n150.871 billion gallons; extrapolation\n\nKey Concepts\n\nScatter plots show the relationship between two sets of data.\n\nScatter plots may represent linear or non-linear models.\n\nThe line of best fit may be estimated or calculated, using a calculator or statistical software.\n\nInterpolation can be used to predict values inside the domain and range of the data, whereas extrapolation can be used to predict values outside the domain and range of the data.\n\nThe correlation coefficient, \\(r\\), indicates the degree of linear relationship between data.\n\nA regression line best fits the data.\n\nThe least squares regression line is found by minimizing the squares of the distances of points from a line passing through the data and may be used to make predictions regarding either of the variables.\n\nThis page titled 4.3: Fitting Linear Models to Data was last modified on Thu, 26 Dec 2024 22:30:42 GMT and is shared under a CC BY  4.0  license and was authored, remixed, and/or curated by OpenStax via source content that was edited to the style and standards of the LibreTexts platform.",
+  "figures": [
+    {
+      "url": "https://math.libretexts.org/@api/deki/files/1144/CNX_Precalc_Figure_02_04_001.jpg?revision=1&size=bestfit&width=429&height=297",
+      "alt": "Scatter plot, titled 'Final Exam Score VS Age'. The x-axis is the age, and the y-axis is the final exam score. The range of ages are between 20s - 50s, and the range for scores are between upper 50s and 90s",
+      "credit": ""
+    },
+    {
+      "url": "https://math.libretexts.org/@api/deki/files/1145/CNX_Precalc_Figure_02_04_002.jpg?revision=1&size=bestfit&width=405&height=321",
+      "alt": "Scatter plot, titled 'Cricket Chirps Vs Air Temperature'. The x-axis is the Cricket Chirps in 15 Seconds, and the y-axis is the Temperature (F). The line regression is generally positive.",
+      "credit": ""
+    },
+    {
+      "url": "https://math.libretexts.org/@api/deki/files/1146/CNX_Precalc_Figure_02_04_003.jpg?revision=1",
+      "alt": "Scatter plot, showing the line of best fit. It is titled 'Cricket Chirps Vs Air Temperature'. The x-axis is 'c, Number of Chirps', and the y-axis is 'T(c), Temperature (F)'.",
+      "credit": ""
+    },
+    {
+      "url": "https://math.libretexts.org/@api/deki/files/1147/CNX_Precalc_Figure_02_04_004.jpg?revision=1&size=bestfit&width=414&height=366",
+      "alt": "Scatter plot, showing the line of best fit and where interpolation and extrapolation occurs. It is titled 'Cricket Chirps Vs Air Temperature'. The x-axis is 'c, Number of Chirps', and the y-axis is 'T(c), Temperature (F)'.",
+      "credit": ""
+    },
+    {
+      "url": "https://math.libretexts.org/@api/deki/files/1148/CNX_Precalc_Figure_02_04_005.jpg?revision=1&size=bestfit&width=387&height=342",
+      "alt": "Scatter plot, showing the line of best fit and where interpolation and extrapolation occurs. It is titled 'Cricket Chirps Vs Air Temperature'. The x-axis is 'c, Number of Chirps', and the y-axis is 'T(c), Temperature (F)'.",
+      "credit": ""
+    },
+    {
+      "url": "https://math.libretexts.org/@api/deki/files/871/how-to.png?revision=1",
+      "alt": "alt",
+      "credit": ""
+    },
+    {
+      "url": "https://math.libretexts.org/@api/deki/files/1149/CNX_Precalc_Figure_02_04_006.jpg?revision=1&size=bestfit&width=384&height=322",
+      "alt": "Scatter plot, showing the line of best fit. It is titled 'Cricket Chirps Vs Air Temperature'. The x-axis is 'c, Number of Chirps', and the y-axis is 'T(c), Temperature (F)'.",
+      "credit": ""
+    },
+    {
+      "url": "https://math.libretexts.org/@api/deki/files/876/QA.png?revision=1",
+      "alt": "alt",
+      "credit": ""
+    },
+    {
+      "url": "https://math.libretexts.org/@api/deki/files/1150/CNX_Precalc_Figure_02_04_007.jpg?revision=1&size=bestfit&width=884&height=393",
+      "alt": " Plotted data and related correlation coefficients. (credit: “DenisBoigelot,” Wikimedia Commons)",
+      "credit": ""
+    },
+    {
+      "url": "https://math.libretexts.org/@api/deki/files/1151/CNX_Precalc_Figure_02_04_008.jpg?revision=1&size=bestfit&width=415&height=327",
+      "alt": "Scatter plot, showing the line of best fit. It is titled 'Gas Consumption VS Year'. The x-axis is 'Year After 1994', and the y-axis is 'Gas Consumption (billions of gallons)'.",
+      "credit": ""
+    }
+  ],
+  "references": [
+    {
+      "text": "scatter plot",
+      "url": "https://stats.libretexts.org/Textbook_Maps/Map%3A_Introductory_Statistics_(OpenStax)/12%3A_Linear_Regression_and_Correlation/12.03%3A_Scatter_Plots"
+    },
+    {
+      "text": "4.3: Fitting Linear Models to Data",
+      "url": "https://math.libretexts.org/Bookshelves/Algebra/Algebra_and_Trigonometry_1e_(OpenStax)/04%3A_Linear_Functions/4.03%3A_Fitting_Linear_Models_to_Data"
+    },
+    {
+      "text": "CC BY  4.0",
+      "url": "https://creativecommons.org/licenses/by/4.0"
+    },
+    {
+      "text": "OpenStax",
+      "url": "https://openstax.org/"
+    },
+    {
+      "text": "source content",
+      "url": "https://openstax.org/details/books/precalculus"
+    }
+  ],
+  "exercises": [
+    {
+      "ordinal": 1,
+      "sourceNumber": "",
+      "sourceAnchor": "",
+      "kind": "example-or-exercise",
+      "context": "Drawing and Interpreting Scatter Plots\n\nA scatter plot is a graph of plotted points that may show a relationship between two sets of data. If the relationship is from a linear model, or a model that is nearly linear, the professor can draw conclusions using his knowledge of linear functions. Figure \\(\\PageIndex{1}\\) shows a sample scatter plot.\n\nNotice this scatter plot does not indicate a linear relationship. The points do not appear to follow a trend. In other words, there does not appear to be a relationship between the age of the student and the score on the final exam.",
+      "original": "Example \\(\\PageIndex{1}\\): Using a Scatter Plot to Investigate Cricket Chirps\n\nTable shows the number of cricket chirps in 15 seconds, for several different air temperatures, in degrees Fahrenheit[1]. Plot this data, and determine whether the data appears to be linearly related.\n\n    Table \\(\\PageIndex{1}\\)\n\n            Chirps\t\n            44\t\n            35\t\n            20.4\t\n            33\t\n            31\t\n            35\t\n            18.5\t\n            37\t\n            26\t\n\n            Temperature\t\n            80.5\t\n            70.5\t\n            57\t\n            66\t\n            68\t\n            72\t\n            52\t\n            73.5\t\n            53\t\n\nSolution\n\nPlotting this data, as depicted in Figure \\(\\PageIndex{2}\\) suggests that there may be a trend. We can see from the trend in the data that the number of chirps increases as the temperature increases. The trend appears to be roughly linear, though certainly not perfectly so.\n\n[Figure: Scatter plot, titled 'Cricket Chirps Vs Air Temperature'. The x-axis is the Cricket Chirps in 15 Seconds, and the y-axis is the Temperature (F). The line regression is generally positive.]\n\nFigure \\(\\PageIndex{2}\\): The line regression is generally positive.",
+      "prompt": "Example \\(\\PageIndex{1}\\): Using a Scatter Plot to Investigate Cricket Chirps\n\nTable shows the number of cricket chirps in 15 seconds, for several different air temperatures, in degrees Fahrenheit[1]. Plot this data, and determine whether the data appears to be linearly related.\n\n    Table \\(\\PageIndex{1}\\)\n\n            Chirps\t\n            44\t\n            35\t\n            20.4\t\n            33\t\n            31\t\n            35\t\n            18.5\t\n            37\t\n            26\t\n\n            Temperature\t\n            80.5\t\n            70.5\t\n            57\t\n            66\t\n            68\t\n            72\t\n            52\t\n            73.5\t\n            53\t\n\nSolution\n\nPlotting this data, as depicted in Figure \\(\\PageIndex{2}\\) suggests that there may be a trend. We can see from the trend in the data that the number of chirps increases as the temperature increases. The trend appears to be roughly linear, though certainly not perfectly so.\n\n[Figure: Scatter plot, titled 'Cricket Chirps Vs Air Temperature'. The x-axis is the Cricket Chirps in 15 Seconds, and the y-axis is the Temperature (F). The line regression is generally positive.]\n\nFigure \\(\\PageIndex{2}\\): The line regression is generally positive.",
+      "sourceAnswers": [],
+      "hasFigure": true,
+      "status": "draft",
+      "answerVerified": false,
+      "translationStatus": "pending",
+      "mappingStatus": "pending"
+    },
+    {
+      "ordinal": 2,
+      "sourceNumber": "",
+      "sourceAnchor": "",
+      "kind": "example-or-exercise",
+      "context": "Finding the Line of Best Fit\n\nOnce we recognize a need for a linear function to model that data, the natural follow-up question is “what is that linear function?” One way to approximate our linear function is to sketch the line that seems to best fit the data. Then we can extend the line until we can verify the y-intercept. We can approximate the slope of the line by extending it until we can estimate the \\(\\frac{\\text{rise}}{\\text{run}}\\).",
+      "original": "Example \\(\\PageIndex{2}\\): Finding a Line of Best Fit\n\nFind a linear function that fits the data in Table \\(\\PageIndex{1}\\) by “eyeballing” a line that seems to fit.\n\nSolution\n\nOn a graph, we could try sketching a line.\n\nUsing the starting and ending points of our hand drawn line, points \\((0, 30)\\) and \\((50, 90)\\), this graph has a slope of\n\n\\[m=\\dfrac{60}{50}=1.2\\]\n\nand a y-intercept at 30. This gives an equation of\n\n\\[T(c)=1.2c+30\\]\n\nwhere \\(c\\) is the number of chirps in 15 seconds, and \\(T(c)\\) is the temperature in degrees Fahrenheit. The resulting equation is represented in Figure \\(\\PageIndex{3}\\).\n\n[Figure: Scatter plot, showing the line of best fit. It is titled 'Cricket Chirps Vs Air Temperature'. The x-axis is 'c, Number of Chirps', and the y-axis is 'T(c), Temperature (F)'.]\n\nFigure \\(\\PageIndex{3}\\): Scatter plot, showing the line of best fit.\n\nAnalysis\n\nThis linear equation can then be used to approximate answers to various questions we might ask about the trend.",
+      "prompt": "Example \\(\\PageIndex{2}\\): Finding a Line of Best Fit\n\nFind a linear function that fits the data in Table \\(\\PageIndex{1}\\) by “eyeballing” a line that seems to fit.\n\nSolution\n\nOn a graph, we could try sketching a line.\n\nUsing the starting and ending points of our hand drawn line, points \\((0, 30)\\) and \\((50, 90)\\), this graph has a slope of\n\n\\[m=\\dfrac{60}{50}=1.2\\]\n\nand a y-intercept at 30. This gives an equation of\n\n\\[T(c)=1.2c+30\\]\n\nwhere \\(c\\) is the number of chirps in 15 seconds, and \\(T(c)\\) is the temperature in degrees Fahrenheit. The resulting equation is represented in Figure \\(\\PageIndex{3}\\).\n\n[Figure: Scatter plot, showing the line of best fit. It is titled 'Cricket Chirps Vs Air Temperature'. The x-axis is 'c, Number of Chirps', and the y-axis is 'T(c), Temperature (F)'.]\n\nFigure \\(\\PageIndex{3}\\): Scatter plot, showing the line of best fit.\n\nAnalysis\n\nThis linear equation can then be used to approximate answers to various questions we might ask about the trend.",
+      "sourceAnswers": [],
+      "hasFigure": true,
+      "status": "draft",
+      "answerVerified": false,
+      "translationStatus": "pending",
+      "mappingStatus": "pending"
+    },
+    {
+      "ordinal": 3,
+      "sourceNumber": "",
+      "sourceAnchor": "",
+      "kind": "example-or-exercise",
+      "context": "There is a difference between making predictions inside the domain and range of values for which we have data and outside that domain and range. Predicting a value outside of the domain and range has its limitations. When our model no longer applies after a certain point, it is sometimes called model breakdown. For example, predicting a cost function for a period of two years may involve examining the data where the input is the time in years and the output is the cost. But if we try to extrapolate a cost when \\(x=50\\), that is in 50 years, the model would not apply because we could not account for factors fifty years in the future.\n\nInterpolation and Extrapolation\n\nDifferent methods of making predictions are used to analyze data.",
+      "original": "Example \\(\\PageIndex{3}\\): Understanding Interpolation and Extrapolation\n\nUse the cricket data from Table \\(\\PageIndex{1}\\) to answer the following questions:\n\n1. Would predicting the temperature when crickets are chirping 30 times in 15 seconds be interpolation or extrapolation? Make the prediction, and discuss whether it is reasonable.\n\n2. Would predicting the number of chirps crickets will make at 40 degrees be interpolation or extrapolation? Make the prediction, and discuss whether it is reasonable.\n\nSolution\n\na. The number of chirps in the data provided varied from 18.5 to 44. A prediction at 30 chirps per 15 seconds is inside the domain of our data, so would be interpolation. Using our model:\n\n\\[\\begin{align} T(30)&=30+1.2(30) \\\\ &=66 \\text{ degrees} \\end{align}\\]\n\nBased on the data we have, this value seems reasonable.\n\nb. The temperature values varied from 52 to 80.5. Predicting the number of chirps at 40 degrees is extrapolation because 40 is outside the range of our data. Using our model:\n\n\\[\\begin{align} 40&=30+1.2c \\\\ 10&=1.2c \\\\ c&\\approx8.33 \\end{align}\\]\n\nWe can compare the regions of interpolation and extrapolation using Figure \\(\\PageIndex{5}\\).\n\n[Figure: Scatter plot, showing the line of best fit and where interpolation and extrapolation occurs. It is titled 'Cricket Chirps Vs Air Temperature'. The x-axis is 'c, Number of Chirps', and the y-axis is 'T(c), Temperature (F)'.]\n\nFigure \\(\\PageIndex{5}\\): Scatter plot, showing the line of best fit and where interpolation and extrapolation occurs.\n\nAnalysis\n\nOur model predicts the crickets would chirp 8.33 times in 15 seconds. While this might be possible, we have no reason to believe our model is valid outside the domain and range. In fact, generally crickets stop chirping altogether below around 50 degrees.",
+      "prompt": "Example \\(\\PageIndex{3}\\): Understanding Interpolation and Extrapolation\n\nUse the cricket data from Table \\(\\PageIndex{1}\\) to answer the following questions:\n\n1. Would predicting the temperature when crickets are chirping 30 times in 15 seconds be interpolation or extrapolation? Make the prediction, and discuss whether it is reasonable.\n\n2. Would predicting the number of chirps crickets will make at 40 degrees be interpolation or extrapolation? Make the prediction, and discuss whether it is reasonable.\n\nSolution\n\na. The number of chirps in the data provided varied from 18.5 to 44. A prediction at 30 chirps per 15 seconds is inside the domain of our data, so would be interpolation. Using our model:\n\n\\[\\begin{align} T(30)&=30+1.2(30) \\\\ &=66 \\text{ degrees} \\end{align}\\]\n\nBased on the data we have, this value seems reasonable.\n\nb. The temperature values varied from 52 to 80.5. Predicting the number of chirps at 40 degrees is extrapolation because 40 is outside the range of our data. Using our model:\n\n\\[\\begin{align} 40&=30+1.2c \\\\ 10&=1.2c \\\\ c&\\approx8.33 \\end{align}\\]\n\nWe can compare the regions of interpolation and extrapolation using Figure \\(\\PageIndex{5}\\).\n\n[Figure: Scatter plot, showing the line of best fit and where interpolation and extrapolation occurs. It is titled 'Cricket Chirps Vs Air Temperature'. The x-axis is 'c, Number of Chirps', and the y-axis is 'T(c), Temperature (F)'.]\n\nFigure \\(\\PageIndex{5}\\): Scatter plot, showing the line of best fit and where interpolation and extrapolation occurs.\n\nAnalysis\n\nOur model predicts the crickets would chirp 8.33 times in 15 seconds. While this might be possible, we have no reason to believe our model is valid outside the domain and range. In fact, generally crickets stop chirping altogether below around 50 degrees.",
+      "sourceAnswers": [],
+      "hasFigure": true,
+      "status": "draft",
+      "answerVerified": false,
+      "translationStatus": "pending",
+      "mappingStatus": "pending"
+    },
+    {
+      "ordinal": 4,
+      "sourceNumber": "",
+      "sourceAnchor": "",
+      "kind": "exercise-candidate",
+      "context": "There is a difference between making predictions inside the domain and range of values for which we have data and outside that domain and range. Predicting a value outside of the domain and range has its limitations. When our model no longer applies after a certain point, it is sometimes called model breakdown. For example, predicting a cost function for a period of two years may involve examining the data where the input is the time in years and the output is the cost. But if we try to extrapolate a cost when \\(x=50\\), that is in 50 years, the model would not apply because we could not account for factors fifty years in the future.\n\nInterpolation and Extrapolation\n\nDifferent methods of making predictions are used to analyze data.",
+      "original": "Exercise \\(\\PageIndex{1}\\)\n\nAccording to the data from Table \\(\\PageIndex{1}\\), what temperature can we predict it is if we counted 20 chirps in 15 seconds?\n\nSolution\n\n54°F",
+      "prompt": "Exercise \\(\\PageIndex{1}\\)\n\nAccording to the data from Table \\(\\PageIndex{1}\\), what temperature can we predict it is if we counted 20 chirps in 15 seconds?\n\nSolution\n\n54°F",
+      "sourceAnswers": [],
+      "hasFigure": false,
+      "status": "draft",
+      "answerVerified": false,
+      "translationStatus": "pending",
+      "mappingStatus": "pending"
+    },
+    {
+      "ordinal": 5,
+      "sourceNumber": "1",
+      "sourceAnchor": "",
+      "kind": "exercise-candidate",
+      "context": "Finding the Line of Best Fit Using a Graphing Utility\n\nWhile eyeballing a line works reasonably well, there are statistical techniques for fitting a line to data that minimize the differences between the line and data values[2]. One such technique is called least squares regression and can be computed by many graphing calculators, spreadsheet software, statistical software, and many web-based calculators[3]. Least squares regression is one means to determine the line that best fits the data, and here we will refer to this method as linear regression.\n\n[Figure: alt]\n Given data of input and corresponding outputs from a linear function, find the best fit line using linear regression.",
+      "original": "1. Enter the input in List 1 (L1).",
+      "prompt": "1. Enter the input in List 1 (L1).",
+      "sourceAnswers": [],
+      "hasFigure": false,
+      "status": "draft",
+      "answerVerified": false,
+      "translationStatus": "pending",
+      "mappingStatus": "pending"
+    },
+    {
+      "ordinal": 6,
+      "sourceNumber": "2",
+      "sourceAnchor": "",
+      "kind": "exercise-candidate",
+      "context": "Finding the Line of Best Fit Using a Graphing Utility\n\nWhile eyeballing a line works reasonably well, there are statistical techniques for fitting a line to data that minimize the differences between the line and data values[2]. One such technique is called least squares regression and can be computed by many graphing calculators, spreadsheet software, statistical software, and many web-based calculators[3]. Least squares regression is one means to determine the line that best fits the data, and here we will refer to this method as linear regression.\n\n[Figure: alt]\n Given data of input and corresponding outputs from a linear function, find the best fit line using linear regression.",
+      "original": "2. Enter the output in List 2 (L2).",
+      "prompt": "2. Enter the output in List 2 (L2).",
+      "sourceAnswers": [],
+      "hasFigure": false,
+      "status": "draft",
+      "answerVerified": false,
+      "translationStatus": "pending",
+      "mappingStatus": "pending"
+    },
+    {
+      "ordinal": 7,
+      "sourceNumber": "3",
+      "sourceAnchor": "",
+      "kind": "exercise-candidate",
+      "context": "Finding the Line of Best Fit Using a Graphing Utility\n\nWhile eyeballing a line works reasonably well, there are statistical techniques for fitting a line to data that minimize the differences between the line and data values[2]. One such technique is called least squares regression and can be computed by many graphing calculators, spreadsheet software, statistical software, and many web-based calculators[3]. Least squares regression is one means to determine the line that best fits the data, and here we will refer to this method as linear regression.\n\n[Figure: alt]\n Given data of input and corresponding outputs from a linear function, find the best fit line using linear regression.",
+      "original": "3. On a graphing utility, select Linear Regression (LinReg).",
+      "prompt": "3. On a graphing utility, select Linear Regression (LinReg).",
+      "sourceAnswers": [],
+      "hasFigure": false,
+      "status": "draft",
+      "answerVerified": false,
+      "translationStatus": "pending",
+      "mappingStatus": "pending"
+    },
+    {
+      "ordinal": 8,
+      "sourceNumber": "",
+      "sourceAnchor": "",
+      "kind": "example-or-exercise",
+      "context": "Finding the Line of Best Fit Using a Graphing Utility\n\nWhile eyeballing a line works reasonably well, there are statistical techniques for fitting a line to data that minimize the differences between the line and data values[2]. One such technique is called least squares regression and can be computed by many graphing calculators, spreadsheet software, statistical software, and many web-based calculators[3]. Least squares regression is one means to determine the line that best fits the data, and here we will refer to this method as linear regression.\n\n[Figure: alt]\n Given data of input and corresponding outputs from a linear function, find the best fit line using linear regression.",
+      "original": "Example \\(\\PageIndex{4}\\): Finding a Least Squares Regression Line\n\nFind the least squares regression line using the cricket-chirp data in Table \\(\\PageIndex{1}\\).\n\nSolution\n\nEnter the input (chirps) in List 1 (L1).\n\nEnter the output (temperature) in List 2 (L2). See Table \\(\\PageIndex{2}\\).\n\n    Table \\(\\PageIndex{2}\\)\n\n            L1\t\n            44\t\n            35\t\n            20.4\t\n            33\t\n            31\t\n            35\t\n            18.5\t\n            37\t\n            26\t\n\n            L2\t\n            80.5\t\n            70.5\t\n            57\t\n            66\t\n            68\t\n            72\t\n            52\t\n            73.5\t\n            53\t\n\nOn a graphing utility, select Linear Regression (LinReg). Using the cricket chirp data from earlier, with technology we obtain the equation:\n\n\\[T(c)=30.281+1.143c\\]\n\nAnalysis\n\nNotice that this line is quite similar to the equation we “eyeballed” but should fit the data better. Notice also that using this equation would change our prediction for the temperature when hearing 30 chirps in 15 seconds from 66 degrees to:\n\n\\[\\begin{align} T(30)&=30.281+1.143(30) \\\\ &=64.571 \\\\ &\\approx 64.6 \\text{ degrees} \\end{align}\\]\n\nThe graph of the scatter plot with the least squares regression line is shown in Figure \\(\\PageIndex{6}\\).\n\n[Figure: Scatter plot, showing the line of best fit. It is titled 'Cricket Chirps Vs Air Temperature'. The x-axis is 'c, Number of Chirps', and the y-axis is 'T(c), Temperature (F)'.]\n\nFigure \\(\\PageIndex{6}\\): Scatter plot, showing the line of best fit.",
+      "prompt": "Example \\(\\PageIndex{4}\\): Finding a Least Squares Regression Line\n\nFind the least squares regression line using the cricket-chirp data in Table \\(\\PageIndex{1}\\).\n\nSolution\n\nEnter the input (chirps) in List 1 (L1).\n\nEnter the output (temperature) in List 2 (L2). See Table \\(\\PageIndex{2}\\).\n\n    Table \\(\\PageIndex{2}\\)\n\n            L1\t\n            44\t\n            35\t\n            20.4\t\n            33\t\n            31\t\n            35\t\n            18.5\t\n            37\t\n            26\t\n\n            L2\t\n            80.5\t\n            70.5\t\n            57\t\n            66\t\n            68\t\n            72\t\n            52\t\n            73.5\t\n            53\t\n\nOn a graphing utility, select Linear Regression (LinReg). Using the cricket chirp data from earlier, with technology we obtain the equation:\n\n\\[T(c)=30.281+1.143c\\]\n\nAnalysis\n\nNotice that this line is quite similar to the equation we “eyeballed” but should fit the data better. Notice also that using this equation would change our prediction for the temperature when hearing 30 chirps in 15 seconds from 66 degrees to:\n\n\\[\\begin{align} T(30)&=30.281+1.143(30) \\\\ &=64.571 \\\\ &\\approx 64.6 \\text{ degrees} \\end{align}\\]\n\nThe graph of the scatter plot with the least squares regression line is shown in Figure \\(\\PageIndex{6}\\).\n\n[Figure: Scatter plot, showing the line of best fit. It is titled 'Cricket Chirps Vs Air Temperature'. The x-axis is 'c, Number of Chirps', and the y-axis is 'T(c), Temperature (F)'.]\n\nFigure \\(\\PageIndex{6}\\): Scatter plot, showing the line of best fit.",
+      "sourceAnswers": [],
+      "hasFigure": true,
+      "status": "draft",
+      "answerVerified": false,
+      "translationStatus": "pending",
+      "mappingStatus": "pending"
+    },
+    {
+      "ordinal": 9,
+      "sourceNumber": "",
+      "sourceAnchor": "",
+      "kind": "example-or-exercise",
+      "context": "We should compute the correlation coefficient only for data that follows a linear pattern or to determine the degree to which a data set is linear. If the data exhibits a nonlinear pattern, the correlation coefficient for a linear regression is meaningless. To get a sense for the relationship between the value of \\(r\\) and the graph of the data, Figure \\(\\PageIndex{7}\\) shows some large data sets with their correlation coefficients. Remember, for all plots, the horizontal axis shows the input and the vertical axis shows the output.\n\nCorrelation Coefficient\n\nThe correlation coefficient is a value, \\(r\\), between –1 and 1.",
+      "original": "Example \\(\\PageIndex{5}\\): Finding a Correlation Coefficient\n\nCalculate the correlation coefficient for cricket-chirp data in Table \\(\\PageIndex{1}\\).\n\nSolution\n\nBecause the data appear to follow a linear pattern, we can use technology to calculate \\(r\\). Enter the inputs and corresponding outputs and select the Linear Regression. The calculator will also provide you with the correlation coefficient, \\(r=0.9509\\). This value is very close to 1, which suggests a strong increasing linear relationship.\n\nNote: For some calculators, the Diagnostics must be turned \"on\" in order to get the correlation coefficient when linear regression is performed: [2nd]>[0]>[alpha][x–1], then scroll to DIAGNOSTICSON.",
+      "prompt": "Example \\(\\PageIndex{5}\\): Finding a Correlation Coefficient\n\nCalculate the correlation coefficient for cricket-chirp data in Table \\(\\PageIndex{1}\\).\n\nSolution\n\nBecause the data appear to follow a linear pattern, we can use technology to calculate \\(r\\). Enter the inputs and corresponding outputs and select the Linear Regression. The calculator will also provide you with the correlation coefficient, \\(r=0.9509\\). This value is very close to 1, which suggests a strong increasing linear relationship.\n\nNote: For some calculators, the Diagnostics must be turned \"on\" in order to get the correlation coefficient when linear regression is performed: [2nd]>[0]>[alpha][x–1], then scroll to DIAGNOSTICSON.",
+      "sourceAnswers": [],
+      "hasFigure": false,
+      "status": "draft",
+      "answerVerified": false,
+      "translationStatus": "pending",
+      "mappingStatus": "pending"
+    },
+    {
+      "ordinal": 10,
+      "sourceNumber": "",
+      "sourceAnchor": "",
+      "kind": "example-or-exercise",
+      "context": "Predicting with a Regression Line\n\nOnce we determine that a set of data is linear using the correlation coefficient, we can use the regression line to make predictions. As we learned above, a regression line is a line that is closest to the data in the scatter plot, which means that only one such line is a best fit for the data.",
+      "original": "Example \\(\\PageIndex{6}\\): Using a Regression Line to Make Predictions\n\nGasoline consumption in the United States has been steadily increasing. Consumption data from 1994 to 2004 is shown in Table \\(\\PageIndex{3}\\). Determine whether the trend is linear, and if so, find a model for the data. Use the model to predict the consumption in 2008.\n\n    Table \\(\\PageIndex{3}\\)\n\n            Year\t\n            '94\t\n            '95\t\n            '96\t\n            '97\t\n            '98\t\n            '99\t\n            '00\t\n            '01\t\n            '02\t\n            '03\t\n            '04\t\n\n            Consumption (billions of gallons)\t\n            113\t\n            116\t\n            118\t\n            119\t\n            123\t\n            125\t\n            126\t\n            128\t\n            131\t\n            133\t\n            136\t\n\nThe scatter plot of the data, including the least squares regression line, is shown in Figure \\(\\PageIndex{8}\\).\n\n[Figure: Scatter plot, showing the line of best fit. It is titled 'Gas Consumption VS Year'. The x-axis is 'Year After 1994', and the y-axis is 'Gas Consumption (billions of gallons)'.]\n\nFigure \\(\\PageIndex{8}\\): Scatter plot, showing the line of best fit.\n\nWe can introduce new input variable, \\(t\\),representing years since 1994.\n\nThe least squares regression equation is:\n\n\\[C(t)=113.318+2.209t\\]\n\nUsing technology, the correlation coefficient was calculated to be 0.9965, suggesting a very strong increasing linear trend.\n\nUsing this to predict consumption in 2008 \\((t=14)\\),\n\n\\[\\begin{align} C(14)&=113.318+2.209(14) \\\\ &=144.244 \\end{align}\\]\n\nThe model predicts 144.244 billion gallons of gasoline consumption in 2008.",
+      "prompt": "Example \\(\\PageIndex{6}\\): Using a Regression Line to Make Predictions\n\nGasoline consumption in the United States has been steadily increasing. Consumption data from 1994 to 2004 is shown in Table \\(\\PageIndex{3}\\). Determine whether the trend is linear, and if so, find a model for the data. Use the model to predict the consumption in 2008.\n\n    Table \\(\\PageIndex{3}\\)\n\n            Year\t\n            '94\t\n            '95\t\n            '96\t\n            '97\t\n            '98\t\n            '99\t\n            '00\t\n            '01\t\n            '02\t\n            '03\t\n            '04\t\n\n            Consumption (billions of gallons)\t\n            113\t\n            116\t\n            118\t\n            119\t\n            123\t\n            125\t\n            126\t\n            128\t\n            131\t\n            133\t\n            136\t\n\nThe scatter plot of the data, including the least squares regression line, is shown in Figure \\(\\PageIndex{8}\\).\n\n[Figure: Scatter plot, showing the line of best fit. It is titled 'Gas Consumption VS Year'. The x-axis is 'Year After 1994', and the y-axis is 'Gas Consumption (billions of gallons)'.]\n\nFigure \\(\\PageIndex{8}\\): Scatter plot, showing the line of best fit.\n\nWe can introduce new input variable, \\(t\\),representing years since 1994.\n\nThe least squares regression equation is:\n\n\\[C(t)=113.318+2.209t\\]\n\nUsing technology, the correlation coefficient was calculated to be 0.9965, suggesting a very strong increasing linear trend.\n\nUsing this to predict consumption in 2008 \\((t=14)\\),\n\n\\[\\begin{align} C(14)&=113.318+2.209(14) \\\\ &=144.244 \\end{align}\\]\n\nThe model predicts 144.244 billion gallons of gasoline consumption in 2008.",
+      "sourceAnswers": [],
+      "hasFigure": true,
+      "status": "draft",
+      "answerVerified": false,
+      "translationStatus": "pending",
+      "mappingStatus": "pending"
+    },
+    {
+      "ordinal": 11,
+      "sourceNumber": "",
+      "sourceAnchor": "",
+      "kind": "exercise-candidate",
+      "context": "Predicting with a Regression Line\n\nOnce we determine that a set of data is linear using the correlation coefficient, we can use the regression line to make predictions. As we learned above, a regression line is a line that is closest to the data in the scatter plot, which means that only one such line is a best fit for the data.",
+      "original": "Exercise \\(\\PageIndex{1}\\)\n\nUse the model we created using technology in Example \\(\\PageIndex{6}\\) to predict the gas consumption in 2011. Is this an interpolation or an extrapolation?\n\nAnswer\n\n150.871 billion gallons; extrapolation",
+      "prompt": "Exercise \\(\\PageIndex{1}\\)\n\nUse the model we created using technology in Example \\(\\PageIndex{6}\\) to predict the gas consumption in 2011. Is this an interpolation or an extrapolation?",
+      "sourceAnswers": [
+        "150.871 billion gallons; extrapolation"
+      ],
+      "hasFigure": false,
+      "status": "draft",
+      "answerVerified": false,
+      "translationStatus": "pending",
+      "mappingStatus": "pending"
+    }
+  ],
+  "license": "CC BY 4.0",
+  "licenseEvidence": "This page titled 4.3: Fitting Linear Models to Data was last modified on Thu, 26 Dec 2024 22:30:42 GMT and is shared under a CC BY  4.0  license and was authored, remixed, and/or curated by OpenStax via source content that was edited to the style and standards of the LibreTexts platform.",
+  "url": "https://math.libretexts.org/Bookshelves/Algebra/Algebra_and_Trigonometry_1e_(OpenStax)/04:_Linear_Functions/4.03:_Fitting_Linear_Models_to_Data",
+  "sha256": "4fa5107777d85614cb90ef2a00af2fcfc837705c9740ff108abdca67b9b04e92",
+  "checkedAt": "2026-10-07",
+  "id": "6ca1da46e8e4e304111a",
+  "bookId": "algebra-trigonometry",
+  "licenseInherited": false,
+  "licenseSource": "https://math.libretexts.org/Bookshelves/Algebra/Algebra_and_Trigonometry_1e_(OpenStax)/04:_Linear_Functions/4.03:_Fitting_Linear_Models_to_Data",
+  "licenseUrl": "https://creativecommons.org/licenses/by/4.0/",
+  "authors": "OpenStax / Jay Abramson et al.",
+  "book": "Algebra and Trigonometry 1e",
+  "reviewStatus": "unreviewed",
+  "sourceLanguage": "en",
+  "translationStatus": "pending"
+}

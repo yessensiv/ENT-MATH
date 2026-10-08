@@ -12,6 +12,27 @@ export function assignErrorRepairs(state:LearnerState,error:ErrorEntry,bank:Task
  const completedReserve=state.exams.filter(e=>e.finishedAt&&e.bankVersion).flatMap(e=>e.questions.filter(t=>t.purpose==='exam'));
  const generated=(state.generatedTasks||[]) as Task[],all=[...bank,...generated,...completedReserve];
  const original=all.find(t=>t.id===error.taskId),skillId=original?.repairSkillId;
+ // Reuse an unseen licensed exercise of the same subskill and level. Give
+ // the assignment its own ID while retaining the original source citation.
+ if(original?.source&&original.purpose==='practice'&&original.methodFamily&&JSON.stringify(error.prompt)===JSON.stringify(original.prompt)&&JSON.stringify(error.correctAnswer)===JSON.stringify(original.answer)&&JSON.stringify(error.solution)===JSON.stringify(original.solution)){
+  const needed=Math.max(0,2-(error.repairPassedTaskIds?.length||0));
+  if(error.resolved||!needed)return{changed:false,tasks:[] as Task[],status:'complete' as const};
+  const seen=seenTaskIds(state),selected=generated.filter(t=>t.repairForErrorId===error.id&&!seen.has(t.id));
+  const reserved=new Set(all.filter(t=>seen.has(t.id)||t.repairForErrorId).map(taskFingerprint));
+  for(const a of state.attempts)if(a.evidence?.condition)reserved.add(a.evidence.condition);
+  for(const session of (state.practiceSessions||[]) as {finishedAt?:string;main:{task:Task}[];extra:{task:Task}[]}[])if(!session.finishedAt)for(const item of [...session.main,...session.extra])reserved.add(taskFingerprint(item.task));
+  let changed=false;
+  for(const candidate of bank){
+   if(selected.length>=needed)break;
+   if(!candidate.source||candidate.purpose!=='practice'||candidate.topicId!==original.topicId||candidate.methodFamily!==original.methodFamily||candidate.difficulty!==original.difficulty||candidate.type!==original.type||isModelExample(candidate)||reserved.has(taskFingerprint(candidate)))continue;
+   const task={...structuredClone(candidate),id:`repair-${error.id}-${candidate.id}`,reviewReserved:true,repairForErrorId:error.id,repairsTaskIds:[original.id]};
+   selected.push(task);generated.push(task);reserved.add(taskFingerprint(candidate));changed=true;
+  }
+  const ids=[...new Set([...error.exerciseIds,...selected.map(t=>t.id)])];
+  if(error.repairRequired!==2||JSON.stringify(ids)!==JSON.stringify(error.exerciseIds))changed=true;
+  error.exerciseIds=ids;error.repairRequired=2;error.repairVersion='sourced-same-subskill-v1';error.repairSkill=typeof original.skill==='object'?original.skill:undefined;state.generatedTasks=generated;
+  return{changed,tasks:selected.slice(0,needed),status:selected.length>=needed?'ready' as const:'exhausted' as const};
+ }
  if(original?.variant&&validatePracticeVariant(original)&&JSON.stringify(error.prompt)===JSON.stringify(original.prompt)&&JSON.stringify(error.correctAnswer)===JSON.stringify(original.answer)){
   if(error.resolved)return{changed:false,tasks:[] as Task[],status:'complete' as const};
   const spec=original.variant as {seed:number;level:1|2|3},seen=seenTaskIds(state),fingerprints=new Set(all.map(taskFingerprint));

@@ -1,0 +1,758 @@
+{
+  "title": "6.1: Exponential Functions",
+  "originalText": "Learning Objectives\n\nEvaluate exponential functions.\n\nFind the equation of an exponential function.\n\nUse compound interest formulas.\n\nEvaluate exponential functions with base \\(e\\).\n\nIndia is the second most populous country in the world with a population of about \\(1.25\\) billion people in 2013. The population is growing at a rate of about \\(.2\\%\\) each year. If this rate continues, the population of India will exceed China’s population by the year 2031. When populations grow rapidly, we often say that the growth is “exponential,” meaning that something is growing very rapidly. To a mathematician, however, the term exponential growth has a very specific meaning. In this section, we will take a look at exponential functions, which model this kind of rapid growth.\n\nIdentifying Exponential Functions\n\nWhen exploring linear growth, we observed a constant rate of change—a constant number by which the output increased for each unit increase in input. For example, in the equation \\(f(x)=3x+4\\), the slope tells us the output increases by \\(3\\) each time the input increases by \\(1\\). The scenario in the India population example is different because we have a percent change per unit time (rather than a constant change) in the number of people.\n\nDefining an Exponential Function\n\nA study found that the percent of the population who are vegans in the United States doubled from 2009 to 2011. In 2011, \\(2.5\\%\\) of the population was vegan, adhering to a diet that does not include any animal products—no meat, poultry, fish, dairy, or eggs. If this rate continues, vegans will make up \\(10\\%\\) of the U.S. population in 2015, \\(40\\%\\) in 2019, and \\(80\\%\\) in 2050.\n\nWhat exactly does it mean to grow exponentially? What does the word double have in common with percent increase? People toss these words around errantly. Are these words used correctly? The words certainly appear frequently in the media.\n\nPercent change refers to a change based on a percent of the original amount.\n\nExponential growth refers to an increase based on a constant multiplicative rate of change over equal increments of time, that is, a percent increase of the original amount over time.\n\nExponential decay refers to a decrease based on a constant multiplicative rate of change over equal increments of time, that is, a percent decrease of the original amount over time.\n\nFor us to gain a clear understanding of exponential growth, let us contrast exponential growth with linear growth. We will construct two functions. The first function is exponential. We will start with an input of \\(0\\), and increase each input by \\(1\\). We will double the corresponding consecutive outputs. The second function is linear. We will start with an input of \\(0\\), and increase each input by \\(1\\). We will add \\(2\\) to the corresponding consecutive outputs (Table \\(\\PageIndex{1}\\)).\n\nFrom Table \\(\\PageIndex{1}\\) we can infer that for these two functions, exponential growth dwarfs linear growth.\n\nExponential growth refers to the original value from the range increases by the same percentage over equal increments found in the domain.\n\nLinear growth refers to the original value from the range increases by the same amount over equal increments found in the domain.\n\n    Table \\(\\PageIndex{1}\\)\n\n            \\(x\\)\t\n            \\(f(x)=2^x\\)\t\n            \\(g(x)=2x\\)\t\n\n            0\t\n            1\t\n            0\t\n\n            1\t\n            2\t\n            2\t\n\n            2\t\n            4\t\n            4\t\n\n            3\t\n            8\t\n            6\t\n\n            4\t\n            16\t\n            8\t\n\n            5\t\n            32\t\n            10\t\n\n            6\t\n            64\t\n            12\t\n\nApparently, the difference between “the same percentage” and “the same amount” is quite significant. For exponential growth, over equal increments, the constant multiplicative rate of change resulted in doubling the output whenever the input increased by one. For linear growth, the constant additive rate of change over equal increments resulted in adding \\(2\\) to the output whenever the input was increased by one.\n\nThe general form of the exponential function is \\(f(x)=ab^x\\), where \\(a\\) is any nonzero number, \\(b\\) is a positive real number not equal to \\(1\\).\n\nIf \\(b>1\\),the function grows at a rate proportional to its size.\n\nIf \\(0<b<1\\), the function decays at a rate proportional to its size.\n\nLet’s look at the function \\(f(x)=2^x\\) from our example. We will create a table (Table \\(\\PageIndex{2}\\)) to determine the corresponding outputs over an interval in the domain from \\(−3\\) to \\(3\\).\n\n    Table \\(\\PageIndex{2}\\)\n\n            \\(x\\)\t\n            \\(−3\\)\t\n            \\(−2\\)\t\n            \\(−1\\)\t\n            \\(0\\)\t\n            \\(1\\)\t\n            \\(2\\)\t\n            \\(3\\)\t\n\n            \\(f(x)=2^x\\)\t\n            \\(2^{−3}=\\dfrac{1}{8}\\)\t\n            \\(2^{−2}=\\dfrac{1}{4}\\)\t\n            \\(2^{−1}=\\dfrac{1}{2}\\)\t\n            \\(2^0=1\\)\t\n            \\(2^1=2\\)\t\n            \\(2^2=4\\)\t\n            \\(2^3=8\\)\t\n\nLet us examine the graph of \\(f\\) by plotting the ordered pairs from Table \\(\\PageIndex{2}\\) and then make a few observations \\(\\PageIndex{1}\\).\n\n[Figure: Graph of Companies A and B’s functions, which values are found in the previous table.]\n\nFigure \\(\\PageIndex{1}\\)\n\nLet’s define the behavior of the graph of the exponential function \\(f(x)=2^x\\) and highlight some its key characteristics.\n\nthe domain is \\((−\\infty,\\infty)\\),\n\nthe range is \\((0,\\infty)\\),\n\nas \\(x\\rightarrow \\infty\\), \\(f(x)\\rightarrow \\infty\\),\n\nas \\(x\\rightarrow −\\infty\\), \\(f(x)\\rightarrow 0\\),\n\n\\(f(x)\\) is always increasing,\n\nthe graph of \\(f(x)\\) will never touch the x-axis because base two raised to any exponent never has the result of zero.\n\n\\(y=0\\) is the horizontal asymptote.\n\nthe y-intercept is \\(1\\).\n\nDefinition: Exponential Functions\n\nFor any real number \\(x\\),an exponential function is a function with the form\n\n\\[f(x)=ab^x\\]\n\nwhere\n\n\\(a\\) is a non-zero real number called the initial value and\n\n\\(b\\) is any positive real number such that \\(b≠1\\).\n\nThe domain of \\(f\\) is all real numbers.\n\nThe range of \\(f\\) is all positive real numbers if \\(a>0\\).\n\nThe range of \\(f\\) is all negative real numbers if \\(a<0\\).\n\nThe y-intercept is \\((0,a)\\),and the horizontal asymptote is \\(y=0\\).\n\nExample \\(\\PageIndex{1}\\): Identifying Exponential Functions\n\nWhich of the following equations are not exponential functions?\n\n\\(f(x)=4^{3(x−2)}\\)\n\n\\(g(x)=x^3\\)\n\n\\(h(x)=\\left(\\dfrac{1}{3}\\right)^x\\)\n\n\\(j(x)=(−2)^x\\)\n\nSolution\n\nBy definition, an exponential function has a constant as a base and an independent variable as an exponent. Thus, \\(g(x)=x^3\\) does not represent an exponential function because the base is an independent variable. In fact, \\(g(x)=x^3\\) is a power function.\n\nRecall that the base \\(b\\) of an exponential function is always a positive constant, and \\(b≠1\\). Thus, \\(j(x)={(−2)}^x\\) does not represent an exponential function because the base, \\(−2\\), is less than \\(0\\).\n\nExercise \\(\\PageIndex{1}\\)\n\nWhich of the following equations represent exponential functions?\n\n\\(f(x)=2x^2−3x+1\\)\n\n\\(g(x)={0.875}^x\\)\n\n\\(h(x)=1.75x+2\\)\n\n\\(j(x)={1095.6}^{−2x}\\)\n\nAnswer\n\n\\(g(x)={0.875}^x\\) and \\(j(x)={1095.6}^{−2x}\\) represent exponential functions.\n\nEvaluating Exponential Functions\n\nRecall that the base of an exponential function must be a positive real number other than \\(1\\).Why do we limit the base bb to positive values? To ensure that the outputs will be real numbers. Observe what happens if the base is not positive:\n\nLet \\(b=−9\\) and \\(x=\\dfrac{1}{2}\\). Then \\(f(x)=f\\left(\\dfrac{1}{2}\\right)={(−9)}^{\\dfrac{1}{2}}=\\sqrt{−9}\\),which is not a real number.\n\nWhy do we limit the base to positive values other than \\(1\\)? Because base \\(1\\) results in the constant function. Observe what happens if the base is \\(1\\):\n\nLet \\(b=1\\). Then \\(f(x)=1^x=1\\) for any value of \\(x\\).\n\nTo evaluate an exponential function with the form \\(f(x)=b^x\\),we simply substitute \\(x\\) with the given value, and calculate the resulting power. For example:\n\nLet \\(f(x)=2^x\\). What is \\(f(3)\\)?\n\n\\[\\begin{align*} f(x)&= 2^x\\\\ f(3)&= 2^3 \\qquad \\text{Substitute } x=3\\\\ &= 8 \\qquad \\text{Evaluate the power} \\end{align*}\\]\n\nTo evaluate an exponential function with a form other than the basic form, it is important to follow the order of operations. For example:\n\nLet \\(f(x)=30{(2)}^x\\). What is \\(f(3)\\)?\n\n\\[\\begin{align*} f(x)&= 30{(2)}^x\\\\ f(3)&= 30{(2)}^3 \\qquad \\text{Substitute } x=3\\\\ &= 30(8) \\qquad \\text{Simplify the power first}\\\\ &= 240 \\qquad \\text{Multiply} \\end{align*}\\]\n\nNote that if the order of operations were not followed, the result would be incorrect:\n\n\\[f(3)=30{(2)}^3≠{60}^3=216,000 \\nonumber\\]\n\nExample \\(\\PageIndex{2}\\): Evaluating Exponential Functions\n\nLet \\(f(x)=5{(3)}^{x+1}\\). Evaluate \\(f(2)\\) without using a calculator.\n\nSolution\n\nFollow the order of operations. Be sure to pay attention to the parentheses.\n\n\\[\\begin{align*} f(x)&= 5{(3)}^{x+1}\\\\ f(2)&= 5{(3)}^{2+1} \\qquad \\text{Substitute } x=2\\\\ &= 5{(3)}^3 \\qquad \\text{Add the exponents}\\\\ &= 5(27) \\qquad \\text{Simplify the power}\\\\ &= 135 \\qquad \\text{Multiply} \\end{align*}\\]\n\nExercise \\(\\PageIndex{2}\\)\n\nLet \\(f(x)=8{(1.2)}^{x−5}\\). Evaluate \\(f(3)\\) using a calculator. Round to four decimal places.\n\nAnswer\n\n\\(5.5556\\)\n\nDefining Exponential Growth\n\nBecause the output of exponential functions increases very rapidly, the term “exponential growth” is often used in everyday language to describe anything that grows or increases rapidly. However, exponential growth can be defined more precisely in a mathematical sense. If the growth rate is proportional to the amount present, the function models exponential growth.\n\nDefinition: Exponential Growth\n\nA function that models exponential growth grows by a rate proportional to the amount present. For any real number \\(x\\) and any positive real numbers \\(a\\) and \\(b\\) such that \\(b≠1\\),an exponential growth function has the form\n\n\\[f(x)=ab^x\\]\n\nwhere\n\n\\(a\\) is the initial or starting value of the function.\n\n\\(b\\) is the growth factor or growth multiplier per unit \\(x\\).\n\nIn more general terms, we have an exponential function, in which a constant base is raised to a variable exponent. To differentiate between linear and exponential functions, let’s consider two companies, A and B. Company A has \\(100\\) stores and expands by opening \\(50\\) new stores a year, so its growth can be represented by the function \\(A(x)=100+50x\\). Company B has \\(100\\) stores and expands by increasing the number of stores by \\(50\\%\\) each year, so its growth can be represented by the function \\(B(x)=100{(1+0.5)}^x\\).\n\nA few years of growth for these companies are illustrated in Table \\(\\PageIndex{3}\\).\n\n    Table \\(\\PageIndex{3}\\)\n\n            Year, \\(x\\)\t\n            Stores, Company A\t\n            Stores, Company B\t\n\n            \\(0\\)\t\n            \\(100+50(0)=100\\)\t\n            \\(100{(1+0.5)}^0=100\\)\t\n\n            \\(1\\)\t\n            \\(100+50(1)=150\\)\t\n            \\(100{(1+0.5)}^1=150\\)\t\n\n            \\(2\\)\t\n            \\(100+50(2)=200\\)\t\n            \\(100{(1+0.5)}^2=225\\)\t\n\n            \\(3\\)\t\n            \\(100+50(3)=250\\)\t\n            \\(100{(1+0.5)}^3=337.5\\)\t\n\n            \\(x\\)\t\n            \\(A(x)=100+50x\\)\t\n            \\(B(x)=100{(1+0.5)}^x\\)\t\n\nThe graphs comparing the number of stores for each company over a five-year period are shown in Figure \\(\\PageIndex{2}\\). We can see that, with exponential growth, the number of stores increases much more rapidly than with linear growth.\n\n[Figure: Graph of Companies A and B’s functions, which values are found in the previous table.]\n\nFigure \\(\\PageIndex{2}\\): The graph shows the numbers of stores Companies A and B opened over a five-year period.\n\nNotice that the domain for both functions is \\([0,\\infty)\\),and the range for both functions is \\([100,\\infty)\\). After year 1, Company B always has more stores than Company A.\n\nNow we will turn our attention to the function representing the number of stores for Company \\(B\\), \\(B(x)=100{(1+0.5)}^x\\). In this exponential function, \\(100\\) represents the initial number of stores, \\(0.50\\) represents the growth rate, and \\(1+0.5=1.5\\) represents the growth factor. Generalizing further, we can write this function as \\(B(x)=100{(1.5)}^x\\),where \\(100\\) is the initial value, \\(1.5\\) is called the base, and \\(x\\) is called the exponent.\n\nExample \\(\\PageIndex{3}\\): Evaluating a Real-World Exponential Model\n\nAt the beginning of this section, we learned that the population of India was about \\(1.25\\) billion in the year 2013, with an annual growth rate of about \\(1.2\\%\\). This situation is represented by the growth function \\(P(t)=1.25{(1.012)}^t\\), where \\(t\\) is the number of years since 2013. To the nearest thousandth, what will the population of India be in 2031?\n\nSolution\n\nTo estimate the population in 2031, we evaluate the models for \\(t=18\\), because 2031 is \\(18\\) years after 2013. Rounding to the nearest thousandth,\n\n\\[P(18)=1.25{(1.012)}^{18}≈1.549 \\nonumber\\]\n\nThere will be about \\(1.549\\) billion people in India in the year 2031.\n\nExercise \\(\\PageIndex{3}\\)\n\nThe population of China was about \\(1.39\\) billion in the year 2013, with an annual growth rate of about \\(0.6\\%\\). This situation is represented by the growth function \\(P(t)=1.39{(1.006)}^t\\), where \\(t\\) is the number of years since 2013.To the nearest thousandth, what will the population of China be for the year 2031? How does this compare to the population prediction we made for India in Example \\(\\PageIndex{3}\\)?\n\nAnswer\n\nAbout \\(1.548\\) billion people; by the year 2031, India’s population will exceed China’s by about \\(0.001\\) billion, or \\(1\\) million people.\n\nFinding Equations of Exponential Functions\n\nIn the previous examples, we were given an exponential function, which we then evaluated for a given input. Sometimes we are given information about an exponential function without knowing the function explicitly. We must use the information to first write the form of the function, then determine the constants \\(a, a\\) and \\(b, b\\),and evaluate the function.\n\nHow to: Given two data points, write an exponential model\n\n1. If one of the data points has the form \\((0,a)\\), then \\(a\\) is the initial value. Using \\(a\\), substitute the second point into the equation \\(f(x)=a{(b)}^x\\), and solve for \\(b\\).\n\n2. If neither of the data points have the form \\((0,a)\\), substitute both points into two equations with the form \\(f(x)=a{(b)}^x\\). Solve the resulting system of two equations in two unknowns to find \\(a\\) and \\(b\\).\n\n3. Using the \\(a\\) and \\(b\\) found in the steps above, write the exponential function in the form \\(f(x)=a{(b)}^x\\).\n\nExample \\(\\PageIndex{4}\\): Writing an Exponential Model When the Initial Value Is Known\n\nIn 2006, \\(80\\) deer were introduced into a wildlife refuge. By 2012, the population had grown to \\(180\\) deer. The population was growing exponentially. Write an algebraic function \\(N(t)\\) representing the population \\((N)\\) of deer over time \\(t\\).\n\nSolution\n\nWe let our independent variable \\(t\\) be the number of years after 2006. Thus, the information given in the problem can be written as input-output pairs: (0, 80) and (6, 180). Notice that by choosing our input variable to be measured as years after 2006, we have given ourselves the initial value for the function, \\(a=80\\). We can now substitute the second point into the equation \\(N(t)=80b^t\\) to find \\(b\\):\n\n\\[\\begin{align*} N(t)&= 80b^t\\\\ 180&= 80b^6 \\qquad \\text{Substitute using point } (6, 180)\\\\ \\dfrac{9}{4}&= b^6 \\qquad \\text{Divide and write in lowest terms}\\\\ b&= {\\left (\\dfrac{9}{4} \\right )}^{\\tfrac{1}{6}} \\qquad \\text{Isolate b using properties of exponents}\\\\ b&\\approx 1.1447 \\qquad \\text{Round to 4 decimal places} \\end{align*}\\]\n\nUnless otherwise stated, do not round any intermediate calculations. Then round the final answer to four places for the remainder of this section.\n\nThe exponential model for the population of deer is \\(N(t)=80{(1.1447)}^t\\). (Note that this exponential function models short-term growth. As the inputs gets large, the output will get increasingly larger, so much so that the model may not be useful in the long term.)\n\nWe can graph our model to observe the population growth of deer in the refuge over time. Notice that the graph in Figure \\(\\PageIndex{3}\\) passes through the initial points given in the problem, \\((0, 80)\\) and \\((6, 180)\\). We can also see that the domain for the function is \\([0,\\infty)\\),and the range for the function is \\([80,\\infty)\\).\n\n[Figure: Graph of the exponential function, N(t) = 80(1.1447)^t, with labeled points at (0, 80) and (6, 180).]\n\nFigure \\(\\PageIndex{3}\\): Graph showing the population of deer over time, \\(N(t)=80{(1.1447)}^t\\), \\(t\\) years after 2006\n\nExercise \\(\\PageIndex{4}\\)\n\nA wolf population is growing exponentially. In 2011, \\(129\\) wolves were counted. By 2013, the population had reached \\(236\\) wolves. What two points can be used to derive an exponential equation modeling this situation? Write the equation representing the population \\(N\\) of wolves over time \\(t\\).\n\nAnswer\n\n\\((0,129)\\) and \\((2,236)\\); \\(N(t)=129{(1.3526)}^t\\)\n\nExample \\(\\PageIndex{5}\\): Writing an Exponential Model When the Initial Value is Not Known\n\nFind an exponential function that passes through the points \\((−2,6)\\) and \\((2,1)\\).\n\nSolution\n\nBecause we don’t have the initial value, we substitute both points into an equation of the form \\(f(x)=ab^x\\), and then solve the system for \\(a\\) and \\(b\\).\n\nSubstituting \\((−2,6)\\) gives \\(6=ab^{−2}\\)\n\nSubstituting \\((2,1)\\) gives \\(1=ab^2\\)\n\nUse the first equation to solve for \\(a\\) in terms of \\(b\\):\n\n\\[\\begin{align*} 6&= ab^{-2}\\\\ \\dfrac{6}{b^{-2}}&= a \\qquad \\text{Divide}\\\\ a&= 6b^2 \\qquad \\text{Use properties of exponents to rewrite the denominator} \\end{align*}\\]\n\nSubstitute a in the second equation, and solve for \\(b\\):\n\n\\[\\begin{align*} 1&= ab^{2}\\\\ 1&= 6b^2 b^2\\\\ &= 6b^4 \\qquad \\text{Substitute a}\\\\ b&= \\left (\\dfrac{1}{6} \\right )^{\\tfrac{1}{4}} \\qquad \\text{Round 4 decimal places rewrite the denominator}\\\\ b&\\approx 0.6389 \\end{align*}\\]\n\nUse the value of \\(b\\) in the first equation to solve for the value of \\(a\\):\n\n\\[\\begin{align*} a&= 6b^{2}\\\\ &\\approx 6(0.6389)^2 \\\\ &\\approx 2.4492 \\end{align*}\\]\n\nThus, the equation is \\(f(x)=2.4492{(0.6389)}^x\\).\n\nWe can graph our model to check our work. Notice that the graph in Figure \\(\\PageIndex{4}\\) passes through the initial points given in the problem, \\((−2, 6)\\) and \\((2, 1)\\). The graph is an example of an exponential decay function.\n\n[Figure: Graph of the exponential function, f(x)=2.4492(0.6389)^x, with labeled points at (-2, 6) and (2, 1).]\n\nFigure \\(\\PageIndex{4}\\): The graph of \\(f(x)=2.4492{(0.6389)}^x\\) models exponential decay.\n\nExercise \\(\\PageIndex{5}\\)\n\nGiven the two points \\((1,3)\\) and \\((2,4.5)\\),find the equation of the exponential function that passes through these two points.\n\nAnswer\n\n\\(f(x)=2{(1.5)}^x\\)\n\nQ&A: Do two points always determine a unique exponential function?\n\nYes, provided the two points are either both above the x-axis or both below the x-axis and have different x-coordinates. But keep in mind that we also need to know that the graph is, in fact, an exponential function. Not every graph that looks exponential really is exponential. We need to know the graph is based on a model that shows the same percent growth with each unit increase in \\(x\\), which in many real world cases involves time.\n\nHow to: Given the graph of an exponential function, write its equation\n\n1. First, identify two points on the graph. Choose the \\(y\\)-intercept as one of the two points whenever possible. Try to choose points that are as far apart as possible to reduce round-off error.\n\n2. If one of the data points is the \\(y\\)-intercept \\((0,a)\\), then \\(a\\) is the initial value. Using \\(a\\), substitute the second point into the equation \\(f(x)=a{(b)}^x\\), and solve for \\(b\\)\n\n3. If neither of the data points have the form \\((0,a)\\), substitute both points into two equations with the form \\(f(x)=a{(b)}^x\\). Solve the resulting system of two equations in two unknowns to find \\(a\\) and \\(b\\).\n\n4. Write the exponential function, \\(f(x)=a{(b)}^x\\).\n\nExample \\(\\PageIndex{6}\\): Writing an Exponential Function Given Its Graph\n\nFind an equation for the exponential function graphed in Figure \\(\\PageIndex{5}\\).\n\n[Figure: Graph of an increasing exponential function with notable points at (0, 3) and (2, 12).]\n\nFigure \\(\\PageIndex{5}\\)\n\nSolution\n\nWe can choose the \\(y\\)-intercept of the graph, \\((0,3)\\), as our first point. This gives us the initial value, \\(a=3\\). Next, choose a point on the curve some distance away from \\((0,3)\\) that has integer coordinates. One such point is \\((2,12)\\).\n\n\\[\\begin{align*} y&= ab^x \\qquad \\text{Write the general form of an exponential equation}\\\\ y&= 3b^x \\qquad \\text{Substitute the initial value } 3 \\text{ for } a\\\\ 12&= 3b^2 \\qquad \\text{Substitute in 12 for } y \\text{ and } 2 \\text{ for } x\\\\ 4&= b^2 \\qquad \\text{Divide by }3\\\\ b&= \\pm 2 \\qquad \\text{Take the square root} \\end{align*}\\]\n\nBecause we restrict ourselves to positive values of \\(b\\), we will use \\(b=2\\). Substitute \\(a\\) and \\(b\\) into the standard form to yield the equation \\(f(x)=3{(2)}^x\\).\n\nExercise \\(\\PageIndex{6}\\)\n\nFind an equation for the exponential function graphed in Figure \\(\\PageIndex{6}\\).\n\n[Figure: Graph of an increasing function with a labeled point at (0, sqrt(2)).]\n\nFigure \\(\\PageIndex{6}\\)\n\nAnswer\n\n\\(f(x)=\\sqrt{2}{(\\sqrt{2})}^x\\). Answers may vary due to round-off error. The answer should be very close to \\(1.4142{(1.4142)}^x\\).\n\nHow to: Given two points on the curve of an exponential function, use a graphing calculator to find the equation\n\n1. Press [STAT].\n\n2. Clear any existing entries in columns L1 or L2.\n\n3. In L1, enter the x-coordinates given.\n\n4. In L2, enter the corresponding y-coordinates.\n\n5. Press [STAT] again. Cursor right to CALC, scroll down to ExpReg (Exponential Regression), and press [ENTER].\n\n6. The screen displays the values of a and b in the exponential equation \\(y=a⋅b^x\\).\n\nExample \\(\\PageIndex{7}\\): Using a Graphing Calculator to Find an Exponential Function\n\nUse a graphing calculator to find the exponential equation that includes the points \\((2,24.8)\\) and \\((5,198.4)\\).\n\nSolution\n\nFollow the guidelines above. First press [STAT], [EDIT], [1: Edit…], and clear the lists L1 and L2. Next, in the L1 column, enter the \\(x\\)-coordinates, \\(2\\) and \\(5\\). Do the same in the L2 column for the \\(y\\)-coordinates, \\(24.8\\) and \\(198.4\\).\n\nNow press [STAT], [CALC], [0: ExpReg] and press [ENTER]. The values \\(a=6.2\\) and \\(b=2\\) will be displayed. The exponential equation is \\(y=6.2⋅2^x\\).\n\nExercise \\(\\PageIndex{7}\\)\n\nUse a graphing calculator to find the exponential equation that includes the points \\((3, 75.98)\\) and \\((6, 481.07)\\).\n\nAnswer\n\n\\(y≈12⋅{1.85}^x\\)\n\nApplying the Compound-Interest Formula\n\nSavings instruments in which earnings are continually reinvested, such as mutual funds and retirement accounts, use compound interest. The term compounding refers to interest earned not only on the original value, but on the accumulated value of the account.\n\nThe annual percentage rate (APR) of an account, also called the nominal rate, is the yearly interest rate earned by an investment account. The term nominal is used when the compounding occurs a number of times other than once per year. In fact, when interest is compounded more than once a year, the effective interest rate ends up being greater than the nominal rate! This is a powerful tool for investing.\n\nWe can calculate the compound interest using the compound interest formula, which is an exponential function of the variables time \\(t\\), principal \\(P\\), \\(APR\\) \\(r\\), and number of compounding periods in a year \\(n\\):\n\n\\[A(t)=P{\\left (1+\\dfrac{r}{n} \\right )}^{nt} \\nonumber\\]\n\nFor example, observe Table \\(\\PageIndex{4}\\), which shows the result of investing \\($1,000\\) at \\(10\\%\\) for one year. Notice how the value of the account increases as the compounding frequency increases.\n\n    Table \\(\\PageIndex{4}\\)\n\n            Frequency\t\n            Value after \\(1\\) year\t\n\n            Annually\t\n            \\($1100\\)\t\n\n            Semiannually\t\n            \\($1102.50\\)\t\n\n            Quarterly\t\n            \\($1103.81\\)\t\n\n            Monthly\t\n            \\($1104.71\\)\t\n\n            Daily\t\n            \\($1105.16\\)\t\n\nDefinition: Compound Interest\n\nCompound interest can be calculated using the formula\n\n\\[A(t)=P{\\left (1+\\dfrac{r}{n} \\right )}^{nt}\\]\n\nwhere\n\n\\(A(t)\\) is the account value,\n\n\\(t\\) is measured in years,\n\n\\(P\\) is the starting amount of the account, often called the principal, or more generally present value,\n\n\\(r\\) is the annual percentage rate (APR) expressed as a decimal, and\n\n\\(n\\) is the number of compounding periods in one year.\n\nExample \\(\\PageIndex{8}\\): Calculating Compound Interest\n\nIf we invest \\($3,000\\) in an investment account paying \\(3\\%\\) interest compounded quarterly, how much will the account be worth in \\(10\\) years?\n\nSolution\n\nBecause we are starting with \\($3,000\\), \\(P=3000\\). Our interest rate is \\(3\\%\\), so \\(r = 0.03\\). Because we are compounding quarterly, we are compounding \\(4\\) times per year, so \\(n=4\\). We want to know the value of the account in \\(10\\) years, so we are looking for \\(A(10)\\),the value when \\(t = 10\\).\n\n\\[\\begin{align*} A(t)&= P{\\left (1+\\dfrac{r}{n} \\right )}^{nt} \\qquad \\text{Use the compound interest formula}\\\\ A(10)&= 3000{\\left (1+\\dfrac{0.03}{4} \\right )}^{(4)\\cdot (10)} \\qquad \\text{Substitute using given values}\\\\ &\\approx \\$4045.05 \\qquad \\text{Round to two decimal places} \\end{align*}\\]\n\nThe account will be worth about \\($4,045.05\\) in \\(10\\) years.\n\nExercise \\(\\PageIndex{8}\\)\n\nAn initial investment of \\($100,000\\) at \\(12\\%\\) interest is compounded weekly (use \\(52\\) weeks in a year). What will the investment be worth in \\(30\\) years?\n\nAnswer\n\nabout \\($3,644,675.88\\)\n\nExample \\(\\PageIndex{9}\\): Using the Compound Interest Formula to Solve for the Principal\n\nA 529 Plan is a college-savings plan that allows relatives to invest money to pay for a child’s future college tuition; the account grows tax-free. Lily wants to set up a 529 account for her new granddaughter and wants the account to grow to \\($40,000\\) over \\(18\\) years. She believes the account will earn \\(6\\%\\) compounded semi-annually (twice a year). To the nearest dollar, how much will Lily need to invest in the account now?\n\nSolution\n\nThe nominal interest rate is \\(6\\%\\), so \\(r=0.06\\). Interest is compounded twice a year, so \\(k=2\\).\n\nWe want to find the initial investment, \\(P\\), needed so that the value of the account will be worth \\($40,000\\) in \\(18\\) years. Substitute the given values into the compound interest formula, and solve for \\(P\\).\n\n\\[\\begin{align*} A(t)&= P{\\left (1+\\dfrac{r}{n} \\right )}^{nt} \\qquad \\text{Use the compound interest formula}\\\\ 40,000&= P{\\left (1+\\dfrac{0.06}{2} \\right )}^{2(18)} \\qquad \\text{Substitute using given values } A, r, n, t\\\\ 40,000&= P{(1.03)}^{36} \\qquad \\text{Simplify}\\\\ \\dfrac{40,000}{ {(1.03)}^{36} }&= P \\qquad \\text{Isolate } P\\\\ P&\\approx \\$13,801 \\qquad \\text{Divide and round to the nearest dollar} \\end{align*}\\]\n\nLily will need to invest \\($13,801\\) to have \\($40,000\\) in \\(18\\) years.\n\nExercise \\(\\PageIndex{9}\\)\n\nRefer to Example \\(\\PageIndex{9}\\). To the nearest dollar, how much would Lily need to invest if the account is compounded quarterly?\n\nAnswer\n\n\\($13,693\\)\n\nEvaluating Functions with Base \\(e\\)\n\nAs we saw earlier, the amount earned on an account increases as the compounding frequency increases. Table \\(\\PageIndex{5}\\) shows that the increase from annual to semi-annual compounding is larger than the increase from monthly to daily compounding. This might lead us to ask whether this pattern will continue.\n\nExamine the value of \\($1\\) invested at \\(100\\%\\) interest for \\(1\\) year, compounded at various frequencies, listed in Table \\(\\PageIndex{5}\\).\n\n    Table \\(\\PageIndex{5}\\)\n\n            Frequency\t\n            \\(A(t)={\\left (1+\\dfrac{1}{n} \\right )}^n\\)\t\n            Value\t\n\n            Annually\t\n            \\({\\left (1+\\dfrac{1}{1} \\right )}^1\\)\t\n            \\($2\\)\t\n\n            Semiannually\t\n            \\({\\left (1+\\dfrac{1}{2} \\right )}^2\\)\t\n            \\($2.25\\)\t\n\n            Quarterly\t\n            \\({\\left (1+\\dfrac{1}{4} \\right )}^4\\)\t\n            \\($2.441406\\)\t\n\n            Monthly\t\n            \\({\\left (1+\\dfrac{1}{12} \\right )}^{12}\\)\t\n            \\($2.613035\\)\t\n\n            Daily\t\n            \\({\\left (1+\\dfrac{1}{365} \\right )}^{365}\\)\t\n            \\($2.714567\\)\t\n\n            Hourly\t\n            \\({\\left (1+\\dfrac{1}{8760} \\right )}^{8760}\\)\t\n            \\($2.718127\\)\t\n\n            Once per minute\t\n            \\({\\left (1+\\dfrac{1}{525600} \\right )}^{525600}\\)\t\n            \\($2.718279\\)\t\n\n            Once per second\t\n            \\({\\left (1+\\dfrac{1}{31536000} \\right )}^{31536000}\\)\t\n            \\($2.718282\\)\t\n\nThese values appear to be approaching a limit as \\(n\\) increases without bound. In fact, as \\(n\\) gets larger and larger, the expression \\({\\left (1+\\dfrac{1}{n} \\right )}^n\\) approaches a number used so frequently in mathematics that it has its own name: the letter \\(e\\). This value is an irrational number, which means that its decimal expansion goes on forever without repeating. Its approximation to six decimal places is shown below.\n\nDefinition: The Number e\n\nThe letter \\(e\\) represents the irrational number\n\n\\[{\\left (1+\\dfrac{1}{n} \\right )}^n\\]\n\nas \\(n\\) increases without bound\n\nThe letter \\(e\\) is used as a base for many real-world exponential models. To work with base \\(e\\), we use the approximation, \\(e≈2.718282\\). The constant was named by the Swiss mathematician Leonhard Euler (1707–1783) who first investigated and discovered many of its properties.\n\nExample \\(\\PageIndex{10}\\): Using a Calculator to Find Powers of \\(e\\)\n\nCalculate \\(e^{3.14}\\). Round to five decimal places.\n\nSolution\n\nOn a calculator, press the button labeled \\([e^x]\\). The window shows \\([e {}^( ]\\). Type \\(3.14\\) and then close parenthesis, \\([)]\\). Press [ENTER]. Rounding to \\(5\\) decimal places, \\(e^{3.14}≈23.10387\\). Caution: Many scientific calculators have an “Exp” button, which is used to enter numbers in scientific notation. It is not used to find powers of \\(e\\).\n\nExercise \\(\\PageIndex{10}\\)\n\nUse a calculator to find \\(e^{−0.5}\\). Round to five decimal places.\n\nAnswer\n\n\\(e^{−0.5}≈0.60653\\)\n\nInvestigating Continuous Growth\n\nSo far we have worked with rational bases for exponential functions. For most real-world phenomena, however, \\(e\\) is used as the base for exponential functions. Exponential models that use \\(e\\) as the base are called continuous growth or decay models. We see these models in finance, computer science, and most of the sciences, such as physics, toxicology, and fluid dynamics.\n\nDefinition: The Continuous Growth/decay Formula\n\nFor all real numbers \\(t\\),and all positive numbers \\(a\\) and \\(r\\), continuous growth or decay is represented by the formula\n\n\\[A(t)=ae^{rt}\\]\n\nwhere\n\n\\(a\\) is the initial value,\n\n\\(r\\) is the continuous growth rate per unit time,\n\n\\(t\\) is the elapsed time.\n\nIf \\(r>0\\), then the formula represents continuous growth. If \\(r<0\\), then the formula represents continuous decay.\n\nFor business applications, the continuous growth formula is called the continuous compounding formula and takes the form\n\n\\[A(t)=Pe^{rt}\\]\n\nwhere\n\n\\(P\\) is the principal or the initial invested,\n\n\\(r\\) is the growth or interest rate per unit time,\n\n\\(t\\) is the period or term of the investment.\n\nHow to: Given the initial value, rate of growth or decay, and time \\(t\\), solve a continuous growth or decay function\n\n1. Use the information in the problem to determine \\(a\\), the initial value of the function.\n\n2. Use the information in the problem to determine the growth rate \\(r\\).\n\nIf the problem refers to continuous growth, then \\(r>0\\).\n\nIf the problem refers to continuous decay, then \\(r<0\\).\n\n3. Use the information in the problem to determine the time \\(t\\).\n\n4. Substitute the given information into the continuous growth formula and solve for \\(A(t)\\).\n\nExample \\(\\PageIndex{11}\\): Calculating Continuous Growth\n\nA person invested \\($1,000\\) in an account earning a nominal \\(10\\%\\) per year compounded continuously. How much was in the account at the end of one year?\n\nSolution\n\nSince the account is growing in value, this is a continuous compounding problem with growth rate \\(r=0.10\\). The initial investment was \\($1,000\\), so \\(P=1000\\). We use the continuous compounding formula to find the value after \\(t=1\\) year:\n\n\\[\\begin{align*} A(t)&= Pe^{rt} \\qquad \\text{Use the continuous compounding formula}\\\\ &= 1000{(e)}^{0.1} \\qquad \\text{Substitute known values for } P, r, t\\\\ &\\approx 1105.17 \\qquad \\text{Use a calculator to approximate} \\end{align*}\\]\n\nThe account is worth \\($1,105.17\\) after one year.\n\nExercise \\(\\PageIndex{11}\\)\n\nA person invests \\($100,000\\) at a nominal \\(12\\%\\) interest per year compounded continuously. What will be the value of the investment in \\(30\\) years?\n\nAnswer\n\n\\($3,659,823.44\\)\n\nExample \\(\\PageIndex{12}\\): Calculating Continuous Decay\n\n\\(Radon-222\\) decays at a continuous rate of \\(17.3\\%\\) per day. How much will \\(100 mg\\) of \\(Radon-222\\) decay to in \\(3\\) days?\n\nSolution\n\nSince the substance is decaying, the rate, \\(17.3\\%\\), is negative. So, \\(r = −0.173\\). The initial amount of \\(Radon-222\\) was \\(100\\) mg, so \\(a=100\\). We use the continuous decay formula to find the value after \\(t=3\\) days:\n\n\\[\\begin{align*} A(t)&= ae^{rt} \\qquad \\text{Use the continuous growth formula}\\\\ &= 100e6{-0.173(3)} \\qquad \\text{Substitute known values for } a, r, t\\\\ &\\approx 59.5115 \\qquad \\text{Use a calculator to approximate} \\end{align*}\\]\n\nSo \\(59.5115\\) mg of \\(Radon-222\\) will remain.\n\nExercise \\(\\PageIndex{12}\\)\n\nUsing the data in Example \\(\\PageIndex{12}\\), how much \\(Radon-222\\) will remain after one year?\n\nAnswer\n\n\\(3.77E-26\\) (This is calculator notation for the number written as \\(3.77×10^{−26}\\) in scientific notation. While the output of an exponential function is never zero, this number is so close to zero that for all practical purposes we can accept zero as the answer.)\n\nMedia\n\nAccess these online resources for additional instruction and practice with exponential functions.\n\nExponential Growth Function\n\nCompound Interest\n\nKey Equations\n\n            definition of the exponential function\t\n            \\(f(x)=b^x\\), where \\(b>0\\), \\(b≠1\\)\t\n\n            definition of exponential growth\t\n            \\(f(x)=ab^x\\), where \\(a>0\\), \\(b>0\\), \\(b≠1\\)\t\n\n            compound interest formula\t\n\n\\(A(t)=P{(1+\\dfrac{r}{n})}^{nt}\\),\n\nwhere \\(A(t)\\) is the account value at time \\(t\\)\n\n\\(t\\) is the number of years\n\n\\(P\\) is the initial investment, often called the principal\n\n\\(r\\) is the annual percentage rate (APR), or nominal rate\n\n\\(n\\) is the number of compounding periods in one year\n\n            continuous growth formula\t\n            \\(A(t)=ae^{rt}\\), where \\(t\\) is the number of unit time periods of growth \\(a\\) is the starting amount (in the continuous compounding formula a is replaced with \\(P\\), the principal) \\(e\\) is the mathematical constant, \\(e≈2.718282\\)\t\n\nKey Concepts\n\nAn exponential function is defined as a function with a positive constant other than \\(1\\) raised to a variable exponent. See Example.\n\nA function is evaluated by solving at a specific value. See Example and Example.\n\nAn exponential model can be found when the growth rate and initial value are known. See Example.\n\nAn exponential model can be found when the two data points from the model are known. See Example.\n\nAn exponential model can be found using two data points from the graph of the model. See Example.\n\nAn exponential model can be found using two data points from the graph and a calculator. See Example.\n\nThe value of an account at any time \\(t\\) can be calculated using the compound interest formula when the principal, annual interest rate, and compounding periods are known. See Example.\n\nThe initial investment of an account can be found using the compound interest formula when the value of the account, annual interest rate, compounding periods, and life span of the account are known. See Example.\n\nThe number \\(e\\) is a mathematical constant often used as the base of real world exponential growth and decay models. Its decimal approximation is \\(e≈2.718282\\).\n\nScientific and graphing calculators have the key \\([ex]\\) or \\([exp(x)]\\) for calculating powers of \\(e\\). See Example.\n\nContinuous growth or decay models are exponential models that use \\(e\\) as the base. Continuous growth and decay models can be found when the initial value and growth or decay rate are known. See Example and Example.\n\nThis page titled 6.1: Exponential Functions was last modified on Thu, 26 Dec 2024 22:30:48 GMT and is shared under a CC BY  4.0  license and was authored, remixed, and/or curated by OpenStax via source content that was edited to the style and standards of the LibreTexts platform.",
+  "figures": [
+    {
+      "url": "https://math.libretexts.org/@api/deki/files/12050/fig_6.2.1.jpg?revision=1",
+      "alt": "Graph of Companies A and B’s functions, which values are found in the previous table.",
+      "credit": ""
+    },
+    {
+      "url": "https://math.libretexts.org/@api/deki/files/14268/155285107153228253.jpg?revision=1",
+      "alt": "Graph of Companies A and B’s functions, which values are found in the previous table.",
+      "credit": ""
+    },
+    {
+      "url": "https://math.libretexts.org/@api/deki/files/12052/fig_6.2.3.jpg?revision=1",
+      "alt": "Graph of the exponential function, N(t) = 80(1.1447)^t, with labeled points at (0, 80) and (6, 180).",
+      "credit": ""
+    },
+    {
+      "url": "https://math.libretexts.org/@api/deki/files/12053/fig_6.2.4.jpg?revision=1",
+      "alt": "Graph of the exponential function, f(x)=2.4492(0.6389)^x, with labeled points at (-2, 6) and (2, 1).",
+      "credit": ""
+    },
+    {
+      "url": "https://math.libretexts.org/@api/deki/files/12054/fig_6.2.5.jpg?revision=1",
+      "alt": "Graph of an increasing exponential function with notable points at (0, 3) and (2, 12).",
+      "credit": ""
+    },
+    {
+      "url": "https://math.libretexts.org/@api/deki/files/12055/fig_6.2.6.jpg?revision=1",
+      "alt": "Graph of an increasing function with a labeled point at (0, sqrt(2)).",
+      "credit": ""
+    }
+  ],
+  "references": [
+    {
+      "text": "Example",
+      "url": "https://math.libretexts.org/Bookshelves/Algebra/Algebra_and_Trigonometry_1e_(OpenStax)/06:_Exponential_and_Logarithmic_Functions/6.01:_Exponential_Functions#Example+6.2.1"
+    },
+    {
+      "text": "Example",
+      "url": "https://math.libretexts.org/Bookshelves/Algebra/Algebra_and_Trigonometry_1e_(OpenStax)/06:_Exponential_and_Logarithmic_Functions/6.01:_Exponential_Functions#Example+6.2.2"
+    },
+    {
+      "text": "Example",
+      "url": "https://math.libretexts.org/Bookshelves/Algebra/Algebra_and_Trigonometry_1e_(OpenStax)/06:_Exponential_and_Logarithmic_Functions/6.01:_Exponential_Functions#Example+6.2.3"
+    },
+    {
+      "text": "Example",
+      "url": "https://math.libretexts.org/Bookshelves/Algebra/Algebra_and_Trigonometry_1e_(OpenStax)/06:_Exponential_and_Logarithmic_Functions/6.01:_Exponential_Functions#Example+6.2.4"
+    },
+    {
+      "text": "Example",
+      "url": "https://math.libretexts.org/Bookshelves/Algebra/Algebra_and_Trigonometry_1e_(OpenStax)/06:_Exponential_and_Logarithmic_Functions/6.01:_Exponential_Functions#Example+6.2.5"
+    },
+    {
+      "text": "Example",
+      "url": "https://math.libretexts.org/Bookshelves/Algebra/Algebra_and_Trigonometry_1e_(OpenStax)/06:_Exponential_and_Logarithmic_Functions/6.01:_Exponential_Functions#Example+6.2.6"
+    },
+    {
+      "text": "Example",
+      "url": "https://math.libretexts.org/Bookshelves/Algebra/Algebra_and_Trigonometry_1e_(OpenStax)/06:_Exponential_and_Logarithmic_Functions/6.01:_Exponential_Functions#Example+6.2.7"
+    },
+    {
+      "text": "Example",
+      "url": "https://math.libretexts.org/Bookshelves/Algebra/Algebra_and_Trigonometry_1e_(OpenStax)/06:_Exponential_and_Logarithmic_Functions/6.01:_Exponential_Functions#Example+6.2.8"
+    },
+    {
+      "text": "Example",
+      "url": "https://math.libretexts.org/Bookshelves/Algebra/Algebra_and_Trigonometry_1e_(OpenStax)/06:_Exponential_and_Logarithmic_Functions/6.01:_Exponential_Functions#Example+6.2.9"
+    },
+    {
+      "text": "Example",
+      "url": "https://math.libretexts.org/Bookshelves/Algebra/Algebra_and_Trigonometry_1e_(OpenStax)/06:_Exponential_and_Logarithmic_Functions/6.01:_Exponential_Functions#Example+6.2.10"
+    },
+    {
+      "text": "Example",
+      "url": "https://math.libretexts.org/Bookshelves/Algebra/Algebra_and_Trigonometry_1e_(OpenStax)/06:_Exponential_and_Logarithmic_Functions/6.01:_Exponential_Functions#Example+6.2.11"
+    },
+    {
+      "text": "Example",
+      "url": "https://math.libretexts.org/Bookshelves/Algebra/Algebra_and_Trigonometry_1e_(OpenStax)/06:_Exponential_and_Logarithmic_Functions/6.01:_Exponential_Functions#Example+6.2.12"
+    },
+    {
+      "text": "6.1: Exponential Functions",
+      "url": "https://math.libretexts.org/Bookshelves/Algebra/Algebra_and_Trigonometry_1e_(OpenStax)/06%3A_Exponential_and_Logarithmic_Functions/6.01%3A_Exponential_Functions"
+    },
+    {
+      "text": "CC BY  4.0",
+      "url": "https://creativecommons.org/licenses/by/4.0"
+    },
+    {
+      "text": "OpenStax",
+      "url": "https://openstax.org/"
+    },
+    {
+      "text": "source content",
+      "url": "https://openstax.org/details/books/precalculus"
+    }
+  ],
+  "exercises": [
+    {
+      "ordinal": 1,
+      "sourceNumber": "",
+      "sourceAnchor": "",
+      "kind": "example-or-exercise",
+      "context": "For any real number \\(x\\),an exponential function is a function with the form\n\n\\[f(x)=ab^x\\]\n\nwhere",
+      "original": "Example \\(\\PageIndex{1}\\): Identifying Exponential Functions\n\nWhich of the following equations are not exponential functions?\n\n\\(f(x)=4^{3(x−2)}\\)\n\n\\(g(x)=x^3\\)\n\n\\(h(x)=\\left(\\dfrac{1}{3}\\right)^x\\)\n\n\\(j(x)=(−2)^x\\)\n\nSolution\n\nBy definition, an exponential function has a constant as a base and an independent variable as an exponent. Thus, \\(g(x)=x^3\\) does not represent an exponential function because the base is an independent variable. In fact, \\(g(x)=x^3\\) is a power function.\n\nRecall that the base \\(b\\) of an exponential function is always a positive constant, and \\(b≠1\\). Thus, \\(j(x)={(−2)}^x\\) does not represent an exponential function because the base, \\(−2\\), is less than \\(0\\).",
+      "prompt": "Example \\(\\PageIndex{1}\\): Identifying Exponential Functions\n\nWhich of the following equations are not exponential functions?\n\n\\(f(x)=4^{3(x−2)}\\)\n\n\\(g(x)=x^3\\)\n\n\\(h(x)=\\left(\\dfrac{1}{3}\\right)^x\\)\n\n\\(j(x)=(−2)^x\\)\n\nSolution\n\nBy definition, an exponential function has a constant as a base and an independent variable as an exponent. Thus, \\(g(x)=x^3\\) does not represent an exponential function because the base is an independent variable. In fact, \\(g(x)=x^3\\) is a power function.\n\nRecall that the base \\(b\\) of an exponential function is always a positive constant, and \\(b≠1\\). Thus, \\(j(x)={(−2)}^x\\) does not represent an exponential function because the base, \\(−2\\), is less than \\(0\\).",
+      "sourceAnswers": [],
+      "hasFigure": false,
+      "status": "draft",
+      "answerVerified": false,
+      "translationStatus": "pending",
+      "mappingStatus": "pending"
+    },
+    {
+      "ordinal": 2,
+      "sourceNumber": "",
+      "sourceAnchor": "",
+      "kind": "exercise-candidate",
+      "context": "For any real number \\(x\\),an exponential function is a function with the form\n\n\\[f(x)=ab^x\\]\n\nwhere",
+      "original": "Exercise \\(\\PageIndex{1}\\)\n\nWhich of the following equations represent exponential functions?\n\n\\(f(x)=2x^2−3x+1\\)\n\n\\(g(x)={0.875}^x\\)\n\n\\(h(x)=1.75x+2\\)\n\n\\(j(x)={1095.6}^{−2x}\\)\n\nAnswer\n\n\\(g(x)={0.875}^x\\) and \\(j(x)={1095.6}^{−2x}\\) represent exponential functions.",
+      "prompt": "Exercise \\(\\PageIndex{1}\\)\n\nWhich of the following equations represent exponential functions?\n\n\\(f(x)=2x^2−3x+1\\)\n\n\\(g(x)={0.875}^x\\)\n\n\\(h(x)=1.75x+2\\)\n\n\\(j(x)={1095.6}^{−2x}\\)",
+      "sourceAnswers": [
+        "\\(g(x)={0.875}^x\\) and \\(j(x)={1095.6}^{−2x}\\) represent exponential functions."
+      ],
+      "hasFigure": false,
+      "status": "draft",
+      "answerVerified": false,
+      "translationStatus": "pending",
+      "mappingStatus": "pending"
+    },
+    {
+      "ordinal": 3,
+      "sourceNumber": "",
+      "sourceAnchor": "",
+      "kind": "example-or-exercise",
+      "context": "\\[\\begin{align*} f(x)&= 30{(2)}^x\\\\ f(3)&= 30{(2)}^3 \\qquad \\text{Substitute } x=3\\\\ &= 30(8) \\qquad \\text{Simplify the power first}\\\\ &= 240 \\qquad \\text{Multiply} \\end{align*}\\]\n\nNote that if the order of operations were not followed, the result would be incorrect:\n\n\\[f(3)=30{(2)}^3≠{60}^3=216,000 \\nonumber\\]",
+      "original": "Example \\(\\PageIndex{2}\\): Evaluating Exponential Functions\n\nLet \\(f(x)=5{(3)}^{x+1}\\). Evaluate \\(f(2)\\) without using a calculator.\n\nSolution\n\nFollow the order of operations. Be sure to pay attention to the parentheses.\n\n\\[\\begin{align*} f(x)&= 5{(3)}^{x+1}\\\\ f(2)&= 5{(3)}^{2+1} \\qquad \\text{Substitute } x=2\\\\ &= 5{(3)}^3 \\qquad \\text{Add the exponents}\\\\ &= 5(27) \\qquad \\text{Simplify the power}\\\\ &= 135 \\qquad \\text{Multiply} \\end{align*}\\]",
+      "prompt": "Example \\(\\PageIndex{2}\\): Evaluating Exponential Functions\n\nLet \\(f(x)=5{(3)}^{x+1}\\). Evaluate \\(f(2)\\) without using a calculator.\n\nSolution\n\nFollow the order of operations. Be sure to pay attention to the parentheses.\n\n\\[\\begin{align*} f(x)&= 5{(3)}^{x+1}\\\\ f(2)&= 5{(3)}^{2+1} \\qquad \\text{Substitute } x=2\\\\ &= 5{(3)}^3 \\qquad \\text{Add the exponents}\\\\ &= 5(27) \\qquad \\text{Simplify the power}\\\\ &= 135 \\qquad \\text{Multiply} \\end{align*}\\]",
+      "sourceAnswers": [],
+      "hasFigure": false,
+      "status": "draft",
+      "answerVerified": false,
+      "translationStatus": "pending",
+      "mappingStatus": "pending"
+    },
+    {
+      "ordinal": 4,
+      "sourceNumber": "",
+      "sourceAnchor": "",
+      "kind": "exercise-candidate",
+      "context": "\\[\\begin{align*} f(x)&= 30{(2)}^x\\\\ f(3)&= 30{(2)}^3 \\qquad \\text{Substitute } x=3\\\\ &= 30(8) \\qquad \\text{Simplify the power first}\\\\ &= 240 \\qquad \\text{Multiply} \\end{align*}\\]\n\nNote that if the order of operations were not followed, the result would be incorrect:\n\n\\[f(3)=30{(2)}^3≠{60}^3=216,000 \\nonumber\\]",
+      "original": "Exercise \\(\\PageIndex{2}\\)\n\nLet \\(f(x)=8{(1.2)}^{x−5}\\). Evaluate \\(f(3)\\) using a calculator. Round to four decimal places.\n\nAnswer\n\n\\(5.5556\\)",
+      "prompt": "Exercise \\(\\PageIndex{2}\\)\n\nLet \\(f(x)=8{(1.2)}^{x−5}\\). Evaluate \\(f(3)\\) using a calculator. Round to four decimal places.",
+      "sourceAnswers": [
+        "\\(5.5556\\)"
+      ],
+      "hasFigure": false,
+      "status": "draft",
+      "answerVerified": false,
+      "translationStatus": "pending",
+      "mappingStatus": "pending"
+    },
+    {
+      "ordinal": 5,
+      "sourceNumber": "",
+      "sourceAnchor": "",
+      "kind": "example-or-exercise",
+      "context": "The graphs comparing the number of stores for each company over a five-year period are shown in Figure \\(\\PageIndex{2}\\). We can see that, with exponential growth, the number of stores increases much more rapidly than with linear growth.\n\nNotice that the domain for both functions is \\([0,\\infty)\\),and the range for both functions is \\([100,\\infty)\\). After year 1, Company B always has more stores than Company A.\n\nNow we will turn our attention to the function representing the number of stores for Company \\(B\\), \\(B(x)=100{(1+0.5)}^x\\). In this exponential function, \\(100\\) represents the initial number of stores, \\(0.50\\) represents the growth rate, and \\(1+0.5=1.5\\) represents the growth factor. Generalizing further, we can write this function as \\(B(x)=100{(1.5)}^x\\),where \\(100\\) is the initial value, \\(1.5\\) is called the base, and \\(x\\) is called the exponent.",
+      "original": "Example \\(\\PageIndex{3}\\): Evaluating a Real-World Exponential Model\n\nAt the beginning of this section, we learned that the population of India was about \\(1.25\\) billion in the year 2013, with an annual growth rate of about \\(1.2\\%\\). This situation is represented by the growth function \\(P(t)=1.25{(1.012)}^t\\), where \\(t\\) is the number of years since 2013. To the nearest thousandth, what will the population of India be in 2031?\n\nSolution\n\nTo estimate the population in 2031, we evaluate the models for \\(t=18\\), because 2031 is \\(18\\) years after 2013. Rounding to the nearest thousandth,\n\n\\[P(18)=1.25{(1.012)}^{18}≈1.549 \\nonumber\\]\n\nThere will be about \\(1.549\\) billion people in India in the year 2031.",
+      "prompt": "Example \\(\\PageIndex{3}\\): Evaluating a Real-World Exponential Model\n\nAt the beginning of this section, we learned that the population of India was about \\(1.25\\) billion in the year 2013, with an annual growth rate of about \\(1.2\\%\\). This situation is represented by the growth function \\(P(t)=1.25{(1.012)}^t\\), where \\(t\\) is the number of years since 2013. To the nearest thousandth, what will the population of India be in 2031?\n\nSolution\n\nTo estimate the population in 2031, we evaluate the models for \\(t=18\\), because 2031 is \\(18\\) years after 2013. Rounding to the nearest thousandth,\n\n\\[P(18)=1.25{(1.012)}^{18}≈1.549 \\nonumber\\]\n\nThere will be about \\(1.549\\) billion people in India in the year 2031.",
+      "sourceAnswers": [],
+      "hasFigure": false,
+      "status": "draft",
+      "answerVerified": false,
+      "translationStatus": "pending",
+      "mappingStatus": "pending"
+    },
+    {
+      "ordinal": 6,
+      "sourceNumber": "",
+      "sourceAnchor": "",
+      "kind": "exercise-candidate",
+      "context": "The graphs comparing the number of stores for each company over a five-year period are shown in Figure \\(\\PageIndex{2}\\). We can see that, with exponential growth, the number of stores increases much more rapidly than with linear growth.\n\nNotice that the domain for both functions is \\([0,\\infty)\\),and the range for both functions is \\([100,\\infty)\\). After year 1, Company B always has more stores than Company A.\n\nNow we will turn our attention to the function representing the number of stores for Company \\(B\\), \\(B(x)=100{(1+0.5)}^x\\). In this exponential function, \\(100\\) represents the initial number of stores, \\(0.50\\) represents the growth rate, and \\(1+0.5=1.5\\) represents the growth factor. Generalizing further, we can write this function as \\(B(x)=100{(1.5)}^x\\),where \\(100\\) is the initial value, \\(1.5\\) is called the base, and \\(x\\) is called the exponent.",
+      "original": "Exercise \\(\\PageIndex{3}\\)\n\nThe population of China was about \\(1.39\\) billion in the year 2013, with an annual growth rate of about \\(0.6\\%\\). This situation is represented by the growth function \\(P(t)=1.39{(1.006)}^t\\), where \\(t\\) is the number of years since 2013.To the nearest thousandth, what will the population of China be for the year 2031? How does this compare to the population prediction we made for India in Example \\(\\PageIndex{3}\\)?\n\nAnswer\n\nAbout \\(1.548\\) billion people; by the year 2031, India’s population will exceed China’s by about \\(0.001\\) billion, or \\(1\\) million people.",
+      "prompt": "Exercise \\(\\PageIndex{3}\\)\n\nThe population of China was about \\(1.39\\) billion in the year 2013, with an annual growth rate of about \\(0.6\\%\\). This situation is represented by the growth function \\(P(t)=1.39{(1.006)}^t\\), where \\(t\\) is the number of years since 2013.To the nearest thousandth, what will the population of China be for the year 2031? How does this compare to the population prediction we made for India in Example \\(\\PageIndex{3}\\)?",
+      "sourceAnswers": [
+        "About \\(1.548\\) billion people; by the year 2031, India’s population will exceed China’s by about \\(0.001\\) billion, or \\(1\\) million people."
+      ],
+      "hasFigure": false,
+      "status": "draft",
+      "answerVerified": false,
+      "translationStatus": "pending",
+      "mappingStatus": "pending"
+    },
+    {
+      "ordinal": 7,
+      "sourceNumber": "1",
+      "sourceAnchor": "",
+      "kind": "exercise-candidate",
+      "context": "Finding Equations of Exponential Functions\n\nIn the previous examples, we were given an exponential function, which we then evaluated for a given input. Sometimes we are given information about an exponential function without knowing the function explicitly. We must use the information to first write the form of the function, then determine the constants \\(a, a\\) and \\(b, b\\),and evaluate the function.",
+      "original": "1. If one of the data points has the form \\((0,a)\\), then \\(a\\) is the initial value. Using \\(a\\), substitute the second point into the equation \\(f(x)=a{(b)}^x\\), and solve for \\(b\\).",
+      "prompt": "1. If one of the data points has the form \\((0,a)\\), then \\(a\\) is the initial value. Using \\(a\\), substitute the second point into the equation \\(f(x)=a{(b)}^x\\), and solve for \\(b\\).",
+      "sourceAnswers": [],
+      "hasFigure": false,
+      "status": "draft",
+      "answerVerified": false,
+      "translationStatus": "pending",
+      "mappingStatus": "pending"
+    },
+    {
+      "ordinal": 8,
+      "sourceNumber": "2",
+      "sourceAnchor": "",
+      "kind": "exercise-candidate",
+      "context": "Finding Equations of Exponential Functions\n\nIn the previous examples, we were given an exponential function, which we then evaluated for a given input. Sometimes we are given information about an exponential function without knowing the function explicitly. We must use the information to first write the form of the function, then determine the constants \\(a, a\\) and \\(b, b\\),and evaluate the function.",
+      "original": "2. If neither of the data points have the form \\((0,a)\\), substitute both points into two equations with the form \\(f(x)=a{(b)}^x\\). Solve the resulting system of two equations in two unknowns to find \\(a\\) and \\(b\\).",
+      "prompt": "2. If neither of the data points have the form \\((0,a)\\), substitute both points into two equations with the form \\(f(x)=a{(b)}^x\\). Solve the resulting system of two equations in two unknowns to find \\(a\\) and \\(b\\).",
+      "sourceAnswers": [],
+      "hasFigure": false,
+      "status": "draft",
+      "answerVerified": false,
+      "translationStatus": "pending",
+      "mappingStatus": "pending"
+    },
+    {
+      "ordinal": 9,
+      "sourceNumber": "3",
+      "sourceAnchor": "",
+      "kind": "exercise-candidate",
+      "context": "Finding Equations of Exponential Functions\n\nIn the previous examples, we were given an exponential function, which we then evaluated for a given input. Sometimes we are given information about an exponential function without knowing the function explicitly. We must use the information to first write the form of the function, then determine the constants \\(a, a\\) and \\(b, b\\),and evaluate the function.",
+      "original": "3. Using the \\(a\\) and \\(b\\) found in the steps above, write the exponential function in the form \\(f(x)=a{(b)}^x\\).",
+      "prompt": "3. Using the \\(a\\) and \\(b\\) found in the steps above, write the exponential function in the form \\(f(x)=a{(b)}^x\\).",
+      "sourceAnswers": [],
+      "hasFigure": false,
+      "status": "draft",
+      "answerVerified": false,
+      "translationStatus": "pending",
+      "mappingStatus": "pending"
+    },
+    {
+      "ordinal": 10,
+      "sourceNumber": "",
+      "sourceAnchor": "",
+      "kind": "example-or-exercise",
+      "context": "Finding Equations of Exponential Functions\n\nIn the previous examples, we were given an exponential function, which we then evaluated for a given input. Sometimes we are given information about an exponential function without knowing the function explicitly. We must use the information to first write the form of the function, then determine the constants \\(a, a\\) and \\(b, b\\),and evaluate the function.",
+      "original": "Example \\(\\PageIndex{4}\\): Writing an Exponential Model When the Initial Value Is Known\n\nIn 2006, \\(80\\) deer were introduced into a wildlife refuge. By 2012, the population had grown to \\(180\\) deer. The population was growing exponentially. Write an algebraic function \\(N(t)\\) representing the population \\((N)\\) of deer over time \\(t\\).\n\nSolution\n\nWe let our independent variable \\(t\\) be the number of years after 2006. Thus, the information given in the problem can be written as input-output pairs: (0, 80) and (6, 180). Notice that by choosing our input variable to be measured as years after 2006, we have given ourselves the initial value for the function, \\(a=80\\). We can now substitute the second point into the equation \\(N(t)=80b^t\\) to find \\(b\\):\n\n\\[\\begin{align*} N(t)&= 80b^t\\\\ 180&= 80b^6 \\qquad \\text{Substitute using point } (6, 180)\\\\ \\dfrac{9}{4}&= b^6 \\qquad \\text{Divide and write in lowest terms}\\\\ b&= {\\left (\\dfrac{9}{4} \\right )}^{\\tfrac{1}{6}} \\qquad \\text{Isolate b using properties of exponents}\\\\ b&\\approx 1.1447 \\qquad \\text{Round to 4 decimal places} \\end{align*}\\]\n\nUnless otherwise stated, do not round any intermediate calculations. Then round the final answer to four places for the remainder of this section.\n\nThe exponential model for the population of deer is \\(N(t)=80{(1.1447)}^t\\). (Note that this exponential function models short-term growth. As the inputs gets large, the output will get increasingly larger, so much so that the model may not be useful in the long term.)\n\nWe can graph our model to observe the population growth of deer in the refuge over time. Notice that the graph in Figure \\(\\PageIndex{3}\\) passes through the initial points given in the problem, \\((0, 80)\\) and \\((6, 180)\\). We can also see that the domain for the function is \\([0,\\infty)\\),and the range for the function is \\([80,\\infty)\\).\n\n[Figure: Graph of the exponential function, N(t) = 80(1.1447)^t, with labeled points at (0, 80) and (6, 180).]\n\nFigure \\(\\PageIndex{3}\\): Graph showing the population of deer over time, \\(N(t)=80{(1.1447)}^t\\), \\(t\\) years after 2006",
+      "prompt": "Example \\(\\PageIndex{4}\\): Writing an Exponential Model When the Initial Value Is Known\n\nIn 2006, \\(80\\) deer were introduced into a wildlife refuge. By 2012, the population had grown to \\(180\\) deer. The population was growing exponentially. Write an algebraic function \\(N(t)\\) representing the population \\((N)\\) of deer over time \\(t\\).\n\nSolution\n\nWe let our independent variable \\(t\\) be the number of years after 2006. Thus, the information given in the problem can be written as input-output pairs: (0, 80) and (6, 180). Notice that by choosing our input variable to be measured as years after 2006, we have given ourselves the initial value for the function, \\(a=80\\). We can now substitute the second point into the equation \\(N(t)=80b^t\\) to find \\(b\\):\n\n\\[\\begin{align*} N(t)&= 80b^t\\\\ 180&= 80b^6 \\qquad \\text{Substitute using point } (6, 180)\\\\ \\dfrac{9}{4}&= b^6 \\qquad \\text{Divide and write in lowest terms}\\\\ b&= {\\left (\\dfrac{9}{4} \\right )}^{\\tfrac{1}{6}} \\qquad \\text{Isolate b using properties of exponents}\\\\ b&\\approx 1.1447 \\qquad \\text{Round to 4 decimal places} \\end{align*}\\]\n\nUnless otherwise stated, do not round any intermediate calculations. Then round the final answer to four places for the remainder of this section.\n\nThe exponential model for the population of deer is \\(N(t)=80{(1.1447)}^t\\). (Note that this exponential function models short-term growth. As the inputs gets large, the output will get increasingly larger, so much so that the model may not be useful in the long term.)\n\nWe can graph our model to observe the population growth of deer in the refuge over time. Notice that the graph in Figure \\(\\PageIndex{3}\\) passes through the initial points given in the problem, \\((0, 80)\\) and \\((6, 180)\\). We can also see that the domain for the function is \\([0,\\infty)\\),and the range for the function is \\([80,\\infty)\\).\n\n[Figure: Graph of the exponential function, N(t) = 80(1.1447)^t, with labeled points at (0, 80) and (6, 180).]\n\nFigure \\(\\PageIndex{3}\\): Graph showing the population of deer over time, \\(N(t)=80{(1.1447)}^t\\), \\(t\\) years after 2006",
+      "sourceAnswers": [],
+      "hasFigure": true,
+      "status": "draft",
+      "answerVerified": false,
+      "translationStatus": "pending",
+      "mappingStatus": "pending"
+    },
+    {
+      "ordinal": 11,
+      "sourceNumber": "",
+      "sourceAnchor": "",
+      "kind": "exercise-candidate",
+      "context": "Finding Equations of Exponential Functions\n\nIn the previous examples, we were given an exponential function, which we then evaluated for a given input. Sometimes we are given information about an exponential function without knowing the function explicitly. We must use the information to first write the form of the function, then determine the constants \\(a, a\\) and \\(b, b\\),and evaluate the function.",
+      "original": "Exercise \\(\\PageIndex{4}\\)\n\nA wolf population is growing exponentially. In 2011, \\(129\\) wolves were counted. By 2013, the population had reached \\(236\\) wolves. What two points can be used to derive an exponential equation modeling this situation? Write the equation representing the population \\(N\\) of wolves over time \\(t\\).\n\nAnswer\n\n\\((0,129)\\) and \\((2,236)\\); \\(N(t)=129{(1.3526)}^t\\)",
+      "prompt": "Exercise \\(\\PageIndex{4}\\)\n\nA wolf population is growing exponentially. In 2011, \\(129\\) wolves were counted. By 2013, the population had reached \\(236\\) wolves. What two points can be used to derive an exponential equation modeling this situation? Write the equation representing the population \\(N\\) of wolves over time \\(t\\).",
+      "sourceAnswers": [
+        "\\((0,129)\\) and \\((2,236)\\); \\(N(t)=129{(1.3526)}^t\\)"
+      ],
+      "hasFigure": false,
+      "status": "draft",
+      "answerVerified": false,
+      "translationStatus": "pending",
+      "mappingStatus": "pending"
+    },
+    {
+      "ordinal": 12,
+      "sourceNumber": "",
+      "sourceAnchor": "",
+      "kind": "example-or-exercise",
+      "context": "Finding Equations of Exponential Functions\n\nIn the previous examples, we were given an exponential function, which we then evaluated for a given input. Sometimes we are given information about an exponential function without knowing the function explicitly. We must use the information to first write the form of the function, then determine the constants \\(a, a\\) and \\(b, b\\),and evaluate the function.",
+      "original": "Example \\(\\PageIndex{5}\\): Writing an Exponential Model When the Initial Value is Not Known\n\nFind an exponential function that passes through the points \\((−2,6)\\) and \\((2,1)\\).\n\nSolution\n\nBecause we don’t have the initial value, we substitute both points into an equation of the form \\(f(x)=ab^x\\), and then solve the system for \\(a\\) and \\(b\\).\n\nSubstituting \\((−2,6)\\) gives \\(6=ab^{−2}\\)\n\nSubstituting \\((2,1)\\) gives \\(1=ab^2\\)\n\nUse the first equation to solve for \\(a\\) in terms of \\(b\\):\n\n\\[\\begin{align*} 6&= ab^{-2}\\\\ \\dfrac{6}{b^{-2}}&= a \\qquad \\text{Divide}\\\\ a&= 6b^2 \\qquad \\text{Use properties of exponents to rewrite the denominator} \\end{align*}\\]\n\nSubstitute a in the second equation, and solve for \\(b\\):\n\n\\[\\begin{align*} 1&= ab^{2}\\\\ 1&= 6b^2 b^2\\\\ &= 6b^4 \\qquad \\text{Substitute a}\\\\ b&= \\left (\\dfrac{1}{6} \\right )^{\\tfrac{1}{4}} \\qquad \\text{Round 4 decimal places rewrite the denominator}\\\\ b&\\approx 0.6389 \\end{align*}\\]\n\nUse the value of \\(b\\) in the first equation to solve for the value of \\(a\\):\n\n\\[\\begin{align*} a&= 6b^{2}\\\\ &\\approx 6(0.6389)^2 \\\\ &\\approx 2.4492 \\end{align*}\\]\n\nThus, the equation is \\(f(x)=2.4492{(0.6389)}^x\\).\n\nWe can graph our model to check our work. Notice that the graph in Figure \\(\\PageIndex{4}\\) passes through the initial points given in the problem, \\((−2, 6)\\) and \\((2, 1)\\). The graph is an example of an exponential decay function.\n\n[Figure: Graph of the exponential function, f(x)=2.4492(0.6389)^x, with labeled points at (-2, 6) and (2, 1).]\n\nFigure \\(\\PageIndex{4}\\): The graph of \\(f(x)=2.4492{(0.6389)}^x\\) models exponential decay.",
+      "prompt": "Example \\(\\PageIndex{5}\\): Writing an Exponential Model When the Initial Value is Not Known\n\nFind an exponential function that passes through the points \\((−2,6)\\) and \\((2,1)\\).\n\nSolution\n\nBecause we don’t have the initial value, we substitute both points into an equation of the form \\(f(x)=ab^x\\), and then solve the system for \\(a\\) and \\(b\\).\n\nSubstituting \\((−2,6)\\) gives \\(6=ab^{−2}\\)\n\nSubstituting \\((2,1)\\) gives \\(1=ab^2\\)\n\nUse the first equation to solve for \\(a\\) in terms of \\(b\\):\n\n\\[\\begin{align*} 6&= ab^{-2}\\\\ \\dfrac{6}{b^{-2}}&= a \\qquad \\text{Divide}\\\\ a&= 6b^2 \\qquad \\text{Use properties of exponents to rewrite the denominator} \\end{align*}\\]\n\nSubstitute a in the second equation, and solve for \\(b\\):\n\n\\[\\begin{align*} 1&= ab^{2}\\\\ 1&= 6b^2 b^2\\\\ &= 6b^4 \\qquad \\text{Substitute a}\\\\ b&= \\left (\\dfrac{1}{6} \\right )^{\\tfrac{1}{4}} \\qquad \\text{Round 4 decimal places rewrite the denominator}\\\\ b&\\approx 0.6389 \\end{align*}\\]\n\nUse the value of \\(b\\) in the first equation to solve for the value of \\(a\\):\n\n\\[\\begin{align*} a&= 6b^{2}\\\\ &\\approx 6(0.6389)^2 \\\\ &\\approx 2.4492 \\end{align*}\\]\n\nThus, the equation is \\(f(x)=2.4492{(0.6389)}^x\\).\n\nWe can graph our model to check our work. Notice that the graph in Figure \\(\\PageIndex{4}\\) passes through the initial points given in the problem, \\((−2, 6)\\) and \\((2, 1)\\). The graph is an example of an exponential decay function.\n\n[Figure: Graph of the exponential function, f(x)=2.4492(0.6389)^x, with labeled points at (-2, 6) and (2, 1).]\n\nFigure \\(\\PageIndex{4}\\): The graph of \\(f(x)=2.4492{(0.6389)}^x\\) models exponential decay.",
+      "sourceAnswers": [],
+      "hasFigure": true,
+      "status": "draft",
+      "answerVerified": false,
+      "translationStatus": "pending",
+      "mappingStatus": "pending"
+    },
+    {
+      "ordinal": 13,
+      "sourceNumber": "",
+      "sourceAnchor": "",
+      "kind": "exercise-candidate",
+      "context": "Finding Equations of Exponential Functions\n\nIn the previous examples, we were given an exponential function, which we then evaluated for a given input. Sometimes we are given information about an exponential function without knowing the function explicitly. We must use the information to first write the form of the function, then determine the constants \\(a, a\\) and \\(b, b\\),and evaluate the function.",
+      "original": "Exercise \\(\\PageIndex{5}\\)\n\nGiven the two points \\((1,3)\\) and \\((2,4.5)\\),find the equation of the exponential function that passes through these two points.\n\nAnswer\n\n\\(f(x)=2{(1.5)}^x\\)",
+      "prompt": "Exercise \\(\\PageIndex{5}\\)\n\nGiven the two points \\((1,3)\\) and \\((2,4.5)\\),find the equation of the exponential function that passes through these two points.",
+      "sourceAnswers": [
+        "\\(f(x)=2{(1.5)}^x\\)"
+      ],
+      "hasFigure": false,
+      "status": "draft",
+      "answerVerified": false,
+      "translationStatus": "pending",
+      "mappingStatus": "pending"
+    },
+    {
+      "ordinal": 14,
+      "sourceNumber": "1",
+      "sourceAnchor": "",
+      "kind": "exercise-candidate",
+      "context": "Finding Equations of Exponential Functions\n\nIn the previous examples, we were given an exponential function, which we then evaluated for a given input. Sometimes we are given information about an exponential function without knowing the function explicitly. We must use the information to first write the form of the function, then determine the constants \\(a, a\\) and \\(b, b\\),and evaluate the function.\n\nYes, provided the two points are either both above the x-axis or both below the x-axis and have different x-coordinates. But keep in mind that we also need to know that the graph is, in fact, an exponential function. Not every graph that looks exponential really is exponential. We need to know the graph is based on a model that shows the same percent growth with each unit increase in \\(x\\), which in many real world cases involves time.",
+      "original": "1. First, identify two points on the graph. Choose the \\(y\\)-intercept as one of the two points whenever possible. Try to choose points that are as far apart as possible to reduce round-off error.",
+      "prompt": "1. First, identify two points on the graph. Choose the \\(y\\)-intercept as one of the two points whenever possible. Try to choose points that are as far apart as possible to reduce round-off error.",
+      "sourceAnswers": [],
+      "hasFigure": false,
+      "status": "draft",
+      "answerVerified": false,
+      "translationStatus": "pending",
+      "mappingStatus": "pending"
+    },
+    {
+      "ordinal": 15,
+      "sourceNumber": "2",
+      "sourceAnchor": "",
+      "kind": "exercise-candidate",
+      "context": "Finding Equations of Exponential Functions\n\nIn the previous examples, we were given an exponential function, which we then evaluated for a given input. Sometimes we are given information about an exponential function without knowing the function explicitly. We must use the information to first write the form of the function, then determine the constants \\(a, a\\) and \\(b, b\\),and evaluate the function.\n\nYes, provided the two points are either both above the x-axis or both below the x-axis and have different x-coordinates. But keep in mind that we also need to know that the graph is, in fact, an exponential function. Not every graph that looks exponential really is exponential. We need to know the graph is based on a model that shows the same percent growth with each unit increase in \\(x\\), which in many real world cases involves time.",
+      "original": "2. If one of the data points is the \\(y\\)-intercept \\((0,a)\\), then \\(a\\) is the initial value. Using \\(a\\), substitute the second point into the equation \\(f(x)=a{(b)}^x\\), and solve for \\(b\\)",
+      "prompt": "2. If one of the data points is the \\(y\\)-intercept \\((0,a)\\), then \\(a\\) is the initial value. Using \\(a\\), substitute the second point into the equation \\(f(x)=a{(b)}^x\\), and solve for \\(b\\)",
+      "sourceAnswers": [],
+      "hasFigure": false,
+      "status": "draft",
+      "answerVerified": false,
+      "translationStatus": "pending",
+      "mappingStatus": "pending"
+    },
+    {
+      "ordinal": 16,
+      "sourceNumber": "3",
+      "sourceAnchor": "",
+      "kind": "exercise-candidate",
+      "context": "Finding Equations of Exponential Functions\n\nIn the previous examples, we were given an exponential function, which we then evaluated for a given input. Sometimes we are given information about an exponential function without knowing the function explicitly. We must use the information to first write the form of the function, then determine the constants \\(a, a\\) and \\(b, b\\),and evaluate the function.\n\nYes, provided the two points are either both above the x-axis or both below the x-axis and have different x-coordinates. But keep in mind that we also need to know that the graph is, in fact, an exponential function. Not every graph that looks exponential really is exponential. We need to know the graph is based on a model that shows the same percent growth with each unit increase in \\(x\\), which in many real world cases involves time.",
+      "original": "3. If neither of the data points have the form \\((0,a)\\), substitute both points into two equations with the form \\(f(x)=a{(b)}^x\\). Solve the resulting system of two equations in two unknowns to find \\(a\\) and \\(b\\).",
+      "prompt": "3. If neither of the data points have the form \\((0,a)\\), substitute both points into two equations with the form \\(f(x)=a{(b)}^x\\). Solve the resulting system of two equations in two unknowns to find \\(a\\) and \\(b\\).",
+      "sourceAnswers": [],
+      "hasFigure": false,
+      "status": "draft",
+      "answerVerified": false,
+      "translationStatus": "pending",
+      "mappingStatus": "pending"
+    },
+    {
+      "ordinal": 17,
+      "sourceNumber": "4",
+      "sourceAnchor": "",
+      "kind": "exercise-candidate",
+      "context": "Finding Equations of Exponential Functions\n\nIn the previous examples, we were given an exponential function, which we then evaluated for a given input. Sometimes we are given information about an exponential function without knowing the function explicitly. We must use the information to first write the form of the function, then determine the constants \\(a, a\\) and \\(b, b\\),and evaluate the function.\n\nYes, provided the two points are either both above the x-axis or both below the x-axis and have different x-coordinates. But keep in mind that we also need to know that the graph is, in fact, an exponential function. Not every graph that looks exponential really is exponential. We need to know the graph is based on a model that shows the same percent growth with each unit increase in \\(x\\), which in many real world cases involves time.",
+      "original": "4. Write the exponential function, \\(f(x)=a{(b)}^x\\).",
+      "prompt": "4. Write the exponential function, \\(f(x)=a{(b)}^x\\).",
+      "sourceAnswers": [],
+      "hasFigure": false,
+      "status": "draft",
+      "answerVerified": false,
+      "translationStatus": "pending",
+      "mappingStatus": "pending"
+    },
+    {
+      "ordinal": 18,
+      "sourceNumber": "",
+      "sourceAnchor": "",
+      "kind": "example-or-exercise",
+      "context": "Finding Equations of Exponential Functions\n\nIn the previous examples, we were given an exponential function, which we then evaluated for a given input. Sometimes we are given information about an exponential function without knowing the function explicitly. We must use the information to first write the form of the function, then determine the constants \\(a, a\\) and \\(b, b\\),and evaluate the function.\n\nYes, provided the two points are either both above the x-axis or both below the x-axis and have different x-coordinates. But keep in mind that we also need to know that the graph is, in fact, an exponential function. Not every graph that looks exponential really is exponential. We need to know the graph is based on a model that shows the same percent growth with each unit increase in \\(x\\), which in many real world cases involves time.",
+      "original": "Example \\(\\PageIndex{6}\\): Writing an Exponential Function Given Its Graph\n\nFind an equation for the exponential function graphed in Figure \\(\\PageIndex{5}\\).\n\n[Figure: Graph of an increasing exponential function with notable points at (0, 3) and (2, 12).]\n\nFigure \\(\\PageIndex{5}\\)\n\nSolution\n\nWe can choose the \\(y\\)-intercept of the graph, \\((0,3)\\), as our first point. This gives us the initial value, \\(a=3\\). Next, choose a point on the curve some distance away from \\((0,3)\\) that has integer coordinates. One such point is \\((2,12)\\).\n\n\\[\\begin{align*} y&= ab^x \\qquad \\text{Write the general form of an exponential equation}\\\\ y&= 3b^x \\qquad \\text{Substitute the initial value } 3 \\text{ for } a\\\\ 12&= 3b^2 \\qquad \\text{Substitute in 12 for } y \\text{ and } 2 \\text{ for } x\\\\ 4&= b^2 \\qquad \\text{Divide by }3\\\\ b&= \\pm 2 \\qquad \\text{Take the square root} \\end{align*}\\]\n\nBecause we restrict ourselves to positive values of \\(b\\), we will use \\(b=2\\). Substitute \\(a\\) and \\(b\\) into the standard form to yield the equation \\(f(x)=3{(2)}^x\\).",
+      "prompt": "Example \\(\\PageIndex{6}\\): Writing an Exponential Function Given Its Graph\n\nFind an equation for the exponential function graphed in Figure \\(\\PageIndex{5}\\).\n\n[Figure: Graph of an increasing exponential function with notable points at (0, 3) and (2, 12).]\n\nFigure \\(\\PageIndex{5}\\)\n\nSolution\n\nWe can choose the \\(y\\)-intercept of the graph, \\((0,3)\\), as our first point. This gives us the initial value, \\(a=3\\). Next, choose a point on the curve some distance away from \\((0,3)\\) that has integer coordinates. One such point is \\((2,12)\\).\n\n\\[\\begin{align*} y&= ab^x \\qquad \\text{Write the general form of an exponential equation}\\\\ y&= 3b^x \\qquad \\text{Substitute the initial value } 3 \\text{ for } a\\\\ 12&= 3b^2 \\qquad \\text{Substitute in 12 for } y \\text{ and } 2 \\text{ for } x\\\\ 4&= b^2 \\qquad \\text{Divide by }3\\\\ b&= \\pm 2 \\qquad \\text{Take the square root} \\end{align*}\\]\n\nBecause we restrict ourselves to positive values of \\(b\\), we will use \\(b=2\\). Substitute \\(a\\) and \\(b\\) into the standard form to yield the equation \\(f(x)=3{(2)}^x\\).",
+      "sourceAnswers": [],
+      "hasFigure": true,
+      "status": "draft",
+      "answerVerified": false,
+      "translationStatus": "pending",
+      "mappingStatus": "pending"
+    },
+    {
+      "ordinal": 19,
+      "sourceNumber": "",
+      "sourceAnchor": "",
+      "kind": "exercise-candidate",
+      "context": "Finding Equations of Exponential Functions\n\nIn the previous examples, we were given an exponential function, which we then evaluated for a given input. Sometimes we are given information about an exponential function without knowing the function explicitly. We must use the information to first write the form of the function, then determine the constants \\(a, a\\) and \\(b, b\\),and evaluate the function.\n\nYes, provided the two points are either both above the x-axis or both below the x-axis and have different x-coordinates. But keep in mind that we also need to know that the graph is, in fact, an exponential function. Not every graph that looks exponential really is exponential. We need to know the graph is based on a model that shows the same percent growth with each unit increase in \\(x\\), which in many real world cases involves time.",
+      "original": "Exercise \\(\\PageIndex{6}\\)\n\nFind an equation for the exponential function graphed in Figure \\(\\PageIndex{6}\\).\n\n[Figure: Graph of an increasing function with a labeled point at (0, sqrt(2)).]\n\nFigure \\(\\PageIndex{6}\\)\n\nAnswer\n\n\\(f(x)=\\sqrt{2}{(\\sqrt{2})}^x\\). Answers may vary due to round-off error. The answer should be very close to \\(1.4142{(1.4142)}^x\\).",
+      "prompt": "Exercise \\(\\PageIndex{6}\\)\n\nFind an equation for the exponential function graphed in Figure \\(\\PageIndex{6}\\).\n\n[Figure: Graph of an increasing function with a labeled point at (0, sqrt(2)).]\n\nFigure \\(\\PageIndex{6}\\)",
+      "sourceAnswers": [
+        "\\(f(x)=\\sqrt{2}{(\\sqrt{2})}^x\\). Answers may vary due to round-off error. The answer should be very close to \\(1.4142{(1.4142)}^x\\)."
+      ],
+      "hasFigure": true,
+      "status": "draft",
+      "answerVerified": false,
+      "translationStatus": "pending",
+      "mappingStatus": "pending"
+    },
+    {
+      "ordinal": 20,
+      "sourceNumber": "1",
+      "sourceAnchor": "",
+      "kind": "exercise-candidate",
+      "context": "Finding Equations of Exponential Functions\n\nIn the previous examples, we were given an exponential function, which we then evaluated for a given input. Sometimes we are given information about an exponential function without knowing the function explicitly. We must use the information to first write the form of the function, then determine the constants \\(a, a\\) and \\(b, b\\),and evaluate the function.\n\nYes, provided the two points are either both above the x-axis or both below the x-axis and have different x-coordinates. But keep in mind that we also need to know that the graph is, in fact, an exponential function. Not every graph that looks exponential really is exponential. We need to know the graph is based on a model that shows the same percent growth with each unit increase in \\(x\\), which in many real world cases involves time.",
+      "original": "1. Press [STAT].",
+      "prompt": "1. Press [STAT].",
+      "sourceAnswers": [],
+      "hasFigure": false,
+      "status": "draft",
+      "answerVerified": false,
+      "translationStatus": "pending",
+      "mappingStatus": "pending"
+    },
+    {
+      "ordinal": 21,
+      "sourceNumber": "2",
+      "sourceAnchor": "",
+      "kind": "exercise-candidate",
+      "context": "Finding Equations of Exponential Functions\n\nIn the previous examples, we were given an exponential function, which we then evaluated for a given input. Sometimes we are given information about an exponential function without knowing the function explicitly. We must use the information to first write the form of the function, then determine the constants \\(a, a\\) and \\(b, b\\),and evaluate the function.\n\nYes, provided the two points are either both above the x-axis or both below the x-axis and have different x-coordinates. But keep in mind that we also need to know that the graph is, in fact, an exponential function. Not every graph that looks exponential really is exponential. We need to know the graph is based on a model that shows the same percent growth with each unit increase in \\(x\\), which in many real world cases involves time.",
+      "original": "2. Clear any existing entries in columns L1 or L2.",
+      "prompt": "2. Clear any existing entries in columns L1 or L2.",
+      "sourceAnswers": [],
+      "hasFigure": false,
+      "status": "draft",
+      "answerVerified": false,
+      "translationStatus": "pending",
+      "mappingStatus": "pending"
+    },
+    {
+      "ordinal": 22,
+      "sourceNumber": "3",
+      "sourceAnchor": "",
+      "kind": "exercise-candidate",
+      "context": "Finding Equations of Exponential Functions\n\nIn the previous examples, we were given an exponential function, which we then evaluated for a given input. Sometimes we are given information about an exponential function without knowing the function explicitly. We must use the information to first write the form of the function, then determine the constants \\(a, a\\) and \\(b, b\\),and evaluate the function.\n\nYes, provided the two points are either both above the x-axis or both below the x-axis and have different x-coordinates. But keep in mind that we also need to know that the graph is, in fact, an exponential function. Not every graph that looks exponential really is exponential. We need to know the graph is based on a model that shows the same percent growth with each unit increase in \\(x\\), which in many real world cases involves time.",
+      "original": "3. In L1, enter the x-coordinates given.",
+      "prompt": "3. In L1, enter the x-coordinates given.",
+      "sourceAnswers": [],
+      "hasFigure": false,
+      "status": "draft",
+      "answerVerified": false,
+      "translationStatus": "pending",
+      "mappingStatus": "pending"
+    },
+    {
+      "ordinal": 23,
+      "sourceNumber": "4",
+      "sourceAnchor": "",
+      "kind": "exercise-candidate",
+      "context": "Finding Equations of Exponential Functions\n\nIn the previous examples, we were given an exponential function, which we then evaluated for a given input. Sometimes we are given information about an exponential function without knowing the function explicitly. We must use the information to first write the form of the function, then determine the constants \\(a, a\\) and \\(b, b\\),and evaluate the function.\n\nYes, provided the two points are either both above the x-axis or both below the x-axis and have different x-coordinates. But keep in mind that we also need to know that the graph is, in fact, an exponential function. Not every graph that looks exponential really is exponential. We need to know the graph is based on a model that shows the same percent growth with each unit increase in \\(x\\), which in many real world cases involves time.",
+      "original": "4. In L2, enter the corresponding y-coordinates.",
+      "prompt": "4. In L2, enter the corresponding y-coordinates.",
+      "sourceAnswers": [],
+      "hasFigure": false,
+      "status": "draft",
+      "answerVerified": false,
+      "translationStatus": "pending",
+      "mappingStatus": "pending"
+    },
+    {
+      "ordinal": 24,
+      "sourceNumber": "5",
+      "sourceAnchor": "",
+      "kind": "exercise-candidate",
+      "context": "Finding Equations of Exponential Functions\n\nIn the previous examples, we were given an exponential function, which we then evaluated for a given input. Sometimes we are given information about an exponential function without knowing the function explicitly. We must use the information to first write the form of the function, then determine the constants \\(a, a\\) and \\(b, b\\),and evaluate the function.\n\nYes, provided the two points are either both above the x-axis or both below the x-axis and have different x-coordinates. But keep in mind that we also need to know that the graph is, in fact, an exponential function. Not every graph that looks exponential really is exponential. We need to know the graph is based on a model that shows the same percent growth with each unit increase in \\(x\\), which in many real world cases involves time.",
+      "original": "5. Press [STAT] again. Cursor right to CALC, scroll down to ExpReg (Exponential Regression), and press [ENTER].",
+      "prompt": "5. Press [STAT] again. Cursor right to CALC, scroll down to ExpReg (Exponential Regression), and press [ENTER].",
+      "sourceAnswers": [],
+      "hasFigure": false,
+      "status": "draft",
+      "answerVerified": false,
+      "translationStatus": "pending",
+      "mappingStatus": "pending"
+    },
+    {
+      "ordinal": 25,
+      "sourceNumber": "6",
+      "sourceAnchor": "",
+      "kind": "exercise-candidate",
+      "context": "Finding Equations of Exponential Functions\n\nIn the previous examples, we were given an exponential function, which we then evaluated for a given input. Sometimes we are given information about an exponential function without knowing the function explicitly. We must use the information to first write the form of the function, then determine the constants \\(a, a\\) and \\(b, b\\),and evaluate the function.\n\nYes, provided the two points are either both above the x-axis or both below the x-axis and have different x-coordinates. But keep in mind that we also need to know that the graph is, in fact, an exponential function. Not every graph that looks exponential really is exponential. We need to know the graph is based on a model that shows the same percent growth with each unit increase in \\(x\\), which in many real world cases involves time.",
+      "original": "6. The screen displays the values of a and b in the exponential equation \\(y=a⋅b^x\\).",
+      "prompt": "6. The screen displays the values of a and b in the exponential equation \\(y=a⋅b^x\\).",
+      "sourceAnswers": [],
+      "hasFigure": false,
+      "status": "draft",
+      "answerVerified": false,
+      "translationStatus": "pending",
+      "mappingStatus": "pending"
+    },
+    {
+      "ordinal": 26,
+      "sourceNumber": "",
+      "sourceAnchor": "",
+      "kind": "example-or-exercise",
+      "context": "Finding Equations of Exponential Functions\n\nIn the previous examples, we were given an exponential function, which we then evaluated for a given input. Sometimes we are given information about an exponential function without knowing the function explicitly. We must use the information to first write the form of the function, then determine the constants \\(a, a\\) and \\(b, b\\),and evaluate the function.\n\nYes, provided the two points are either both above the x-axis or both below the x-axis and have different x-coordinates. But keep in mind that we also need to know that the graph is, in fact, an exponential function. Not every graph that looks exponential really is exponential. We need to know the graph is based on a model that shows the same percent growth with each unit increase in \\(x\\), which in many real world cases involves time.",
+      "original": "Example \\(\\PageIndex{7}\\): Using a Graphing Calculator to Find an Exponential Function\n\nUse a graphing calculator to find the exponential equation that includes the points \\((2,24.8)\\) and \\((5,198.4)\\).\n\nSolution\n\nFollow the guidelines above. First press [STAT], [EDIT], [1: Edit…], and clear the lists L1 and L2. Next, in the L1 column, enter the \\(x\\)-coordinates, \\(2\\) and \\(5\\). Do the same in the L2 column for the \\(y\\)-coordinates, \\(24.8\\) and \\(198.4\\).\n\nNow press [STAT], [CALC], [0: ExpReg] and press [ENTER]. The values \\(a=6.2\\) and \\(b=2\\) will be displayed. The exponential equation is \\(y=6.2⋅2^x\\).",
+      "prompt": "Example \\(\\PageIndex{7}\\): Using a Graphing Calculator to Find an Exponential Function\n\nUse a graphing calculator to find the exponential equation that includes the points \\((2,24.8)\\) and \\((5,198.4)\\).\n\nSolution\n\nFollow the guidelines above. First press [STAT], [EDIT], [1: Edit…], and clear the lists L1 and L2. Next, in the L1 column, enter the \\(x\\)-coordinates, \\(2\\) and \\(5\\). Do the same in the L2 column for the \\(y\\)-coordinates, \\(24.8\\) and \\(198.4\\).\n\nNow press [STAT], [CALC], [0: ExpReg] and press [ENTER]. The values \\(a=6.2\\) and \\(b=2\\) will be displayed. The exponential equation is \\(y=6.2⋅2^x\\).",
+      "sourceAnswers": [],
+      "hasFigure": false,
+      "status": "draft",
+      "answerVerified": false,
+      "translationStatus": "pending",
+      "mappingStatus": "pending"
+    },
+    {
+      "ordinal": 27,
+      "sourceNumber": "",
+      "sourceAnchor": "",
+      "kind": "exercise-candidate",
+      "context": "Finding Equations of Exponential Functions\n\nIn the previous examples, we were given an exponential function, which we then evaluated for a given input. Sometimes we are given information about an exponential function without knowing the function explicitly. We must use the information to first write the form of the function, then determine the constants \\(a, a\\) and \\(b, b\\),and evaluate the function.\n\nYes, provided the two points are either both above the x-axis or both below the x-axis and have different x-coordinates. But keep in mind that we also need to know that the graph is, in fact, an exponential function. Not every graph that looks exponential really is exponential. We need to know the graph is based on a model that shows the same percent growth with each unit increase in \\(x\\), which in many real world cases involves time.",
+      "original": "Exercise \\(\\PageIndex{7}\\)\n\nUse a graphing calculator to find the exponential equation that includes the points \\((3, 75.98)\\) and \\((6, 481.07)\\).\n\nAnswer\n\n\\(y≈12⋅{1.85}^x\\)",
+      "prompt": "Exercise \\(\\PageIndex{7}\\)\n\nUse a graphing calculator to find the exponential equation that includes the points \\((3, 75.98)\\) and \\((6, 481.07)\\).",
+      "sourceAnswers": [
+        "\\(y≈12⋅{1.85}^x\\)"
+      ],
+      "hasFigure": false,
+      "status": "draft",
+      "answerVerified": false,
+      "translationStatus": "pending",
+      "mappingStatus": "pending"
+    },
+    {
+      "ordinal": 28,
+      "sourceNumber": "",
+      "sourceAnchor": "",
+      "kind": "example-or-exercise",
+      "context": "Compound interest can be calculated using the formula\n\n\\[A(t)=P{\\left (1+\\dfrac{r}{n} \\right )}^{nt}\\]\n\nwhere",
+      "original": "Example \\(\\PageIndex{8}\\): Calculating Compound Interest\n\nIf we invest \\($3,000\\) in an investment account paying \\(3\\%\\) interest compounded quarterly, how much will the account be worth in \\(10\\) years?\n\nSolution\n\nBecause we are starting with \\($3,000\\), \\(P=3000\\). Our interest rate is \\(3\\%\\), so \\(r = 0.03\\). Because we are compounding quarterly, we are compounding \\(4\\) times per year, so \\(n=4\\). We want to know the value of the account in \\(10\\) years, so we are looking for \\(A(10)\\),the value when \\(t = 10\\).\n\n\\[\\begin{align*} A(t)&= P{\\left (1+\\dfrac{r}{n} \\right )}^{nt} \\qquad \\text{Use the compound interest formula}\\\\ A(10)&= 3000{\\left (1+\\dfrac{0.03}{4} \\right )}^{(4)\\cdot (10)} \\qquad \\text{Substitute using given values}\\\\ &\\approx \\$4045.05 \\qquad \\text{Round to two decimal places} \\end{align*}\\]\n\nThe account will be worth about \\($4,045.05\\) in \\(10\\) years.",
+      "prompt": "Example \\(\\PageIndex{8}\\): Calculating Compound Interest\n\nIf we invest \\($3,000\\) in an investment account paying \\(3\\%\\) interest compounded quarterly, how much will the account be worth in \\(10\\) years?\n\nSolution\n\nBecause we are starting with \\($3,000\\), \\(P=3000\\). Our interest rate is \\(3\\%\\), so \\(r = 0.03\\). Because we are compounding quarterly, we are compounding \\(4\\) times per year, so \\(n=4\\). We want to know the value of the account in \\(10\\) years, so we are looking for \\(A(10)\\),the value when \\(t = 10\\).\n\n\\[\\begin{align*} A(t)&= P{\\left (1+\\dfrac{r}{n} \\right )}^{nt} \\qquad \\text{Use the compound interest formula}\\\\ A(10)&= 3000{\\left (1+\\dfrac{0.03}{4} \\right )}^{(4)\\cdot (10)} \\qquad \\text{Substitute using given values}\\\\ &\\approx \\$4045.05 \\qquad \\text{Round to two decimal places} \\end{align*}\\]\n\nThe account will be worth about \\($4,045.05\\) in \\(10\\) years.",
+      "sourceAnswers": [],
+      "hasFigure": false,
+      "status": "draft",
+      "answerVerified": false,
+      "translationStatus": "pending",
+      "mappingStatus": "pending"
+    },
+    {
+      "ordinal": 29,
+      "sourceNumber": "",
+      "sourceAnchor": "",
+      "kind": "exercise-candidate",
+      "context": "Compound interest can be calculated using the formula\n\n\\[A(t)=P{\\left (1+\\dfrac{r}{n} \\right )}^{nt}\\]\n\nwhere",
+      "original": "Exercise \\(\\PageIndex{8}\\)\n\nAn initial investment of \\($100,000\\) at \\(12\\%\\) interest is compounded weekly (use \\(52\\) weeks in a year). What will the investment be worth in \\(30\\) years?\n\nAnswer\n\nabout \\($3,644,675.88\\)",
+      "prompt": "Exercise \\(\\PageIndex{8}\\)\n\nAn initial investment of \\($100,000\\) at \\(12\\%\\) interest is compounded weekly (use \\(52\\) weeks in a year). What will the investment be worth in \\(30\\) years?",
+      "sourceAnswers": [
+        "about \\($3,644,675.88\\)"
+      ],
+      "hasFigure": false,
+      "status": "draft",
+      "answerVerified": false,
+      "translationStatus": "pending",
+      "mappingStatus": "pending"
+    },
+    {
+      "ordinal": 30,
+      "sourceNumber": "",
+      "sourceAnchor": "",
+      "kind": "example-or-exercise",
+      "context": "Compound interest can be calculated using the formula\n\n\\[A(t)=P{\\left (1+\\dfrac{r}{n} \\right )}^{nt}\\]\n\nwhere",
+      "original": "Example \\(\\PageIndex{9}\\): Using the Compound Interest Formula to Solve for the Principal\n\nA 529 Plan is a college-savings plan that allows relatives to invest money to pay for a child’s future college tuition; the account grows tax-free. Lily wants to set up a 529 account for her new granddaughter and wants the account to grow to \\($40,000\\) over \\(18\\) years. She believes the account will earn \\(6\\%\\) compounded semi-annually (twice a year). To the nearest dollar, how much will Lily need to invest in the account now?\n\nSolution\n\nThe nominal interest rate is \\(6\\%\\), so \\(r=0.06\\). Interest is compounded twice a year, so \\(k=2\\).\n\nWe want to find the initial investment, \\(P\\), needed so that the value of the account will be worth \\($40,000\\) in \\(18\\) years. Substitute the given values into the compound interest formula, and solve for \\(P\\).\n\n\\[\\begin{align*} A(t)&= P{\\left (1+\\dfrac{r}{n} \\right )}^{nt} \\qquad \\text{Use the compound interest formula}\\\\ 40,000&= P{\\left (1+\\dfrac{0.06}{2} \\right )}^{2(18)} \\qquad \\text{Substitute using given values } A, r, n, t\\\\ 40,000&= P{(1.03)}^{36} \\qquad \\text{Simplify}\\\\ \\dfrac{40,000}{ {(1.03)}^{36} }&= P \\qquad \\text{Isolate } P\\\\ P&\\approx \\$13,801 \\qquad \\text{Divide and round to the nearest dollar} \\end{align*}\\]\n\nLily will need to invest \\($13,801\\) to have \\($40,000\\) in \\(18\\) years.",
+      "prompt": "Example \\(\\PageIndex{9}\\): Using the Compound Interest Formula to Solve for the Principal\n\nA 529 Plan is a college-savings plan that allows relatives to invest money to pay for a child’s future college tuition; the account grows tax-free. Lily wants to set up a 529 account for her new granddaughter and wants the account to grow to \\($40,000\\) over \\(18\\) years. She believes the account will earn \\(6\\%\\) compounded semi-annually (twice a year). To the nearest dollar, how much will Lily need to invest in the account now?\n\nSolution\n\nThe nominal interest rate is \\(6\\%\\), so \\(r=0.06\\). Interest is compounded twice a year, so \\(k=2\\).\n\nWe want to find the initial investment, \\(P\\), needed so that the value of the account will be worth \\($40,000\\) in \\(18\\) years. Substitute the given values into the compound interest formula, and solve for \\(P\\).\n\n\\[\\begin{align*} A(t)&= P{\\left (1+\\dfrac{r}{n} \\right )}^{nt} \\qquad \\text{Use the compound interest formula}\\\\ 40,000&= P{\\left (1+\\dfrac{0.06}{2} \\right )}^{2(18)} \\qquad \\text{Substitute using given values } A, r, n, t\\\\ 40,000&= P{(1.03)}^{36} \\qquad \\text{Simplify}\\\\ \\dfrac{40,000}{ {(1.03)}^{36} }&= P \\qquad \\text{Isolate } P\\\\ P&\\approx \\$13,801 \\qquad \\text{Divide and round to the nearest dollar} \\end{align*}\\]\n\nLily will need to invest \\($13,801\\) to have \\($40,000\\) in \\(18\\) years.",
+      "sourceAnswers": [],
+      "hasFigure": false,
+      "status": "draft",
+      "answerVerified": false,
+      "translationStatus": "pending",
+      "mappingStatus": "pending"
+    },
+    {
+      "ordinal": 31,
+      "sourceNumber": "",
+      "sourceAnchor": "",
+      "kind": "exercise-candidate",
+      "context": "Compound interest can be calculated using the formula\n\n\\[A(t)=P{\\left (1+\\dfrac{r}{n} \\right )}^{nt}\\]\n\nwhere",
+      "original": "Exercise \\(\\PageIndex{9}\\)\n\nRefer to Example \\(\\PageIndex{9}\\). To the nearest dollar, how much would Lily need to invest if the account is compounded quarterly?\n\nAnswer\n\n\\($13,693\\)",
+      "prompt": "Exercise \\(\\PageIndex{9}\\)\n\nRefer to Example \\(\\PageIndex{9}\\). To the nearest dollar, how much would Lily need to invest if the account is compounded quarterly?",
+      "sourceAnswers": [
+        "\\($13,693\\)"
+      ],
+      "hasFigure": false,
+      "status": "draft",
+      "answerVerified": false,
+      "translationStatus": "pending",
+      "mappingStatus": "pending"
+    },
+    {
+      "ordinal": 32,
+      "sourceNumber": "",
+      "sourceAnchor": "",
+      "kind": "example-or-exercise",
+      "context": "\\[{\\left (1+\\dfrac{1}{n} \\right )}^n\\]\n\nas \\(n\\) increases without bound\n\nThe letter \\(e\\) is used as a base for many real-world exponential models. To work with base \\(e\\), we use the approximation, \\(e≈2.718282\\). The constant was named by the Swiss mathematician Leonhard Euler (1707–1783) who first investigated and discovered many of its properties.",
+      "original": "Example \\(\\PageIndex{10}\\): Using a Calculator to Find Powers of \\(e\\)\n\nCalculate \\(e^{3.14}\\). Round to five decimal places.\n\nSolution\n\nOn a calculator, press the button labeled \\([e^x]\\). The window shows \\([e {}^( ]\\). Type \\(3.14\\) and then close parenthesis, \\([)]\\). Press [ENTER]. Rounding to \\(5\\) decimal places, \\(e^{3.14}≈23.10387\\). Caution: Many scientific calculators have an “Exp” button, which is used to enter numbers in scientific notation. It is not used to find powers of \\(e\\).",
+      "prompt": "Example \\(\\PageIndex{10}\\): Using a Calculator to Find Powers of \\(e\\)\n\nCalculate \\(e^{3.14}\\). Round to five decimal places.\n\nSolution\n\nOn a calculator, press the button labeled \\([e^x]\\). The window shows \\([e {}^( ]\\). Type \\(3.14\\) and then close parenthesis, \\([)]\\). Press [ENTER]. Rounding to \\(5\\) decimal places, \\(e^{3.14}≈23.10387\\). Caution: Many scientific calculators have an “Exp” button, which is used to enter numbers in scientific notation. It is not used to find powers of \\(e\\).",
+      "sourceAnswers": [],
+      "hasFigure": false,
+      "status": "draft",
+      "answerVerified": false,
+      "translationStatus": "pending",
+      "mappingStatus": "pending"
+    },
+    {
+      "ordinal": 33,
+      "sourceNumber": "",
+      "sourceAnchor": "",
+      "kind": "exercise-candidate",
+      "context": "\\[{\\left (1+\\dfrac{1}{n} \\right )}^n\\]\n\nas \\(n\\) increases without bound\n\nThe letter \\(e\\) is used as a base for many real-world exponential models. To work with base \\(e\\), we use the approximation, \\(e≈2.718282\\). The constant was named by the Swiss mathematician Leonhard Euler (1707–1783) who first investigated and discovered many of its properties.",
+      "original": "Exercise \\(\\PageIndex{10}\\)\n\nUse a calculator to find \\(e^{−0.5}\\). Round to five decimal places.\n\nAnswer\n\n\\(e^{−0.5}≈0.60653\\)",
+      "prompt": "Exercise \\(\\PageIndex{10}\\)\n\nUse a calculator to find \\(e^{−0.5}\\). Round to five decimal places.",
+      "sourceAnswers": [
+        "\\(e^{−0.5}≈0.60653\\)"
+      ],
+      "hasFigure": false,
+      "status": "draft",
+      "answerVerified": false,
+      "translationStatus": "pending",
+      "mappingStatus": "pending"
+    },
+    {
+      "ordinal": 34,
+      "sourceNumber": "1",
+      "sourceAnchor": "",
+      "kind": "exercise-candidate",
+      "context": "For business applications, the continuous growth formula is called the continuous compounding formula and takes the form\n\n\\[A(t)=Pe^{rt}\\]\n\nwhere",
+      "original": "1. Use the information in the problem to determine \\(a\\), the initial value of the function.",
+      "prompt": "1. Use the information in the problem to determine \\(a\\), the initial value of the function.",
+      "sourceAnswers": [],
+      "hasFigure": false,
+      "status": "draft",
+      "answerVerified": false,
+      "translationStatus": "pending",
+      "mappingStatus": "pending"
+    },
+    {
+      "ordinal": 35,
+      "sourceNumber": "2",
+      "sourceAnchor": "",
+      "kind": "exercise-candidate",
+      "context": "For business applications, the continuous growth formula is called the continuous compounding formula and takes the form\n\n\\[A(t)=Pe^{rt}\\]\n\nwhere",
+      "original": "2. Use the information in the problem to determine the growth rate \\(r\\).\n\nIf the problem refers to continuous growth, then \\(r>0\\).\n\nIf the problem refers to continuous decay, then \\(r<0\\).",
+      "prompt": "2. Use the information in the problem to determine the growth rate \\(r\\).\n\nIf the problem refers to continuous growth, then \\(r>0\\).\n\nIf the problem refers to continuous decay, then \\(r<0\\).",
+      "sourceAnswers": [],
+      "hasFigure": false,
+      "status": "draft",
+      "answerVerified": false,
+      "translationStatus": "pending",
+      "mappingStatus": "pending"
+    },
+    {
+      "ordinal": 36,
+      "sourceNumber": "3",
+      "sourceAnchor": "",
+      "kind": "exercise-candidate",
+      "context": "For business applications, the continuous growth formula is called the continuous compounding formula and takes the form\n\n\\[A(t)=Pe^{rt}\\]\n\nwhere",
+      "original": "3. Use the information in the problem to determine the time \\(t\\).",
+      "prompt": "3. Use the information in the problem to determine the time \\(t\\).",
+      "sourceAnswers": [],
+      "hasFigure": false,
+      "status": "draft",
+      "answerVerified": false,
+      "translationStatus": "pending",
+      "mappingStatus": "pending"
+    },
+    {
+      "ordinal": 37,
+      "sourceNumber": "4",
+      "sourceAnchor": "",
+      "kind": "exercise-candidate",
+      "context": "For business applications, the continuous growth formula is called the continuous compounding formula and takes the form\n\n\\[A(t)=Pe^{rt}\\]\n\nwhere",
+      "original": "4. Substitute the given information into the continuous growth formula and solve for \\(A(t)\\).",
+      "prompt": "4. Substitute the given information into the continuous growth formula and solve for \\(A(t)\\).",
+      "sourceAnswers": [],
+      "hasFigure": false,
+      "status": "draft",
+      "answerVerified": false,
+      "translationStatus": "pending",
+      "mappingStatus": "pending"
+    },
+    {
+      "ordinal": 38,
+      "sourceNumber": "",
+      "sourceAnchor": "",
+      "kind": "example-or-exercise",
+      "context": "For business applications, the continuous growth formula is called the continuous compounding formula and takes the form\n\n\\[A(t)=Pe^{rt}\\]\n\nwhere",
+      "original": "Example \\(\\PageIndex{11}\\): Calculating Continuous Growth\n\nA person invested \\($1,000\\) in an account earning a nominal \\(10\\%\\) per year compounded continuously. How much was in the account at the end of one year?\n\nSolution\n\nSince the account is growing in value, this is a continuous compounding problem with growth rate \\(r=0.10\\). The initial investment was \\($1,000\\), so \\(P=1000\\). We use the continuous compounding formula to find the value after \\(t=1\\) year:\n\n\\[\\begin{align*} A(t)&= Pe^{rt} \\qquad \\text{Use the continuous compounding formula}\\\\ &= 1000{(e)}^{0.1} \\qquad \\text{Substitute known values for } P, r, t\\\\ &\\approx 1105.17 \\qquad \\text{Use a calculator to approximate} \\end{align*}\\]\n\nThe account is worth \\($1,105.17\\) after one year.",
+      "prompt": "Example \\(\\PageIndex{11}\\): Calculating Continuous Growth\n\nA person invested \\($1,000\\) in an account earning a nominal \\(10\\%\\) per year compounded continuously. How much was in the account at the end of one year?\n\nSolution\n\nSince the account is growing in value, this is a continuous compounding problem with growth rate \\(r=0.10\\). The initial investment was \\($1,000\\), so \\(P=1000\\). We use the continuous compounding formula to find the value after \\(t=1\\) year:\n\n\\[\\begin{align*} A(t)&= Pe^{rt} \\qquad \\text{Use the continuous compounding formula}\\\\ &= 1000{(e)}^{0.1} \\qquad \\text{Substitute known values for } P, r, t\\\\ &\\approx 1105.17 \\qquad \\text{Use a calculator to approximate} \\end{align*}\\]\n\nThe account is worth \\($1,105.17\\) after one year.",
+      "sourceAnswers": [],
+      "hasFigure": false,
+      "status": "draft",
+      "answerVerified": false,
+      "translationStatus": "pending",
+      "mappingStatus": "pending"
+    },
+    {
+      "ordinal": 39,
+      "sourceNumber": "",
+      "sourceAnchor": "",
+      "kind": "exercise-candidate",
+      "context": "For business applications, the continuous growth formula is called the continuous compounding formula and takes the form\n\n\\[A(t)=Pe^{rt}\\]\n\nwhere",
+      "original": "Exercise \\(\\PageIndex{11}\\)\n\nA person invests \\($100,000\\) at a nominal \\(12\\%\\) interest per year compounded continuously. What will be the value of the investment in \\(30\\) years?\n\nAnswer\n\n\\($3,659,823.44\\)",
+      "prompt": "Exercise \\(\\PageIndex{11}\\)\n\nA person invests \\($100,000\\) at a nominal \\(12\\%\\) interest per year compounded continuously. What will be the value of the investment in \\(30\\) years?",
+      "sourceAnswers": [
+        "\\($3,659,823.44\\)"
+      ],
+      "hasFigure": false,
+      "status": "draft",
+      "answerVerified": false,
+      "translationStatus": "pending",
+      "mappingStatus": "pending"
+    },
+    {
+      "ordinal": 40,
+      "sourceNumber": "",
+      "sourceAnchor": "",
+      "kind": "example-or-exercise",
+      "context": "For business applications, the continuous growth formula is called the continuous compounding formula and takes the form\n\n\\[A(t)=Pe^{rt}\\]\n\nwhere",
+      "original": "Example \\(\\PageIndex{12}\\): Calculating Continuous Decay\n\n\\(Radon-222\\) decays at a continuous rate of \\(17.3\\%\\) per day. How much will \\(100 mg\\) of \\(Radon-222\\) decay to in \\(3\\) days?\n\nSolution\n\nSince the substance is decaying, the rate, \\(17.3\\%\\), is negative. So, \\(r = −0.173\\). The initial amount of \\(Radon-222\\) was \\(100\\) mg, so \\(a=100\\). We use the continuous decay formula to find the value after \\(t=3\\) days:\n\n\\[\\begin{align*} A(t)&= ae^{rt} \\qquad \\text{Use the continuous growth formula}\\\\ &= 100e6{-0.173(3)} \\qquad \\text{Substitute known values for } a, r, t\\\\ &\\approx 59.5115 \\qquad \\text{Use a calculator to approximate} \\end{align*}\\]\n\nSo \\(59.5115\\) mg of \\(Radon-222\\) will remain.",
+      "prompt": "Example \\(\\PageIndex{12}\\): Calculating Continuous Decay\n\n\\(Radon-222\\) decays at a continuous rate of \\(17.3\\%\\) per day. How much will \\(100 mg\\) of \\(Radon-222\\) decay to in \\(3\\) days?\n\nSolution\n\nSince the substance is decaying, the rate, \\(17.3\\%\\), is negative. So, \\(r = −0.173\\). The initial amount of \\(Radon-222\\) was \\(100\\) mg, so \\(a=100\\). We use the continuous decay formula to find the value after \\(t=3\\) days:\n\n\\[\\begin{align*} A(t)&= ae^{rt} \\qquad \\text{Use the continuous growth formula}\\\\ &= 100e6{-0.173(3)} \\qquad \\text{Substitute known values for } a, r, t\\\\ &\\approx 59.5115 \\qquad \\text{Use a calculator to approximate} \\end{align*}\\]\n\nSo \\(59.5115\\) mg of \\(Radon-222\\) will remain.",
+      "sourceAnswers": [],
+      "hasFigure": false,
+      "status": "draft",
+      "answerVerified": false,
+      "translationStatus": "pending",
+      "mappingStatus": "pending"
+    },
+    {
+      "ordinal": 41,
+      "sourceNumber": "",
+      "sourceAnchor": "",
+      "kind": "exercise-candidate",
+      "context": "For business applications, the continuous growth formula is called the continuous compounding formula and takes the form\n\n\\[A(t)=Pe^{rt}\\]\n\nwhere",
+      "original": "Exercise \\(\\PageIndex{12}\\)\n\nUsing the data in Example \\(\\PageIndex{12}\\), how much \\(Radon-222\\) will remain after one year?\n\nAnswer\n\n\\(3.77E-26\\) (This is calculator notation for the number written as \\(3.77×10^{−26}\\) in scientific notation. While the output of an exponential function is never zero, this number is so close to zero that for all practical purposes we can accept zero as the answer.)",
+      "prompt": "Exercise \\(\\PageIndex{12}\\)\n\nUsing the data in Example \\(\\PageIndex{12}\\), how much \\(Radon-222\\) will remain after one year?",
+      "sourceAnswers": [
+        "\\(3.77E-26\\) (This is calculator notation for the number written as \\(3.77×10^{−26}\\) in scientific notation. While the output of an exponential function is never zero, this number is so close to zero that for all practical purposes we can accept zero as the answer.)"
+      ],
+      "hasFigure": false,
+      "status": "draft",
+      "answerVerified": false,
+      "translationStatus": "pending",
+      "mappingStatus": "pending"
+    }
+  ],
+  "license": "CC BY 4.0",
+  "licenseEvidence": "This page titled 6.1: Exponential Functions was last modified on Thu, 26 Dec 2024 22:30:48 GMT and is shared under a CC BY  4.0  license and was authored, remixed, and/or curated by OpenStax via source content that was edited to the style and standards of the LibreTexts platform.",
+  "url": "https://math.libretexts.org/Bookshelves/Algebra/Algebra_and_Trigonometry_1e_(OpenStax)/06:_Exponential_and_Logarithmic_Functions/6.01:_Exponential_Functions",
+  "sha256": "019cdeba83ad861897d2176b2dfae3e13bfcec479ff12aeae1cce5563be72348",
+  "checkedAt": "2026-10-07",
+  "id": "417920399284fc591806",
+  "bookId": "algebra-trigonometry",
+  "licenseInherited": false,
+  "licenseSource": "https://math.libretexts.org/Bookshelves/Algebra/Algebra_and_Trigonometry_1e_(OpenStax)/06:_Exponential_and_Logarithmic_Functions/6.01:_Exponential_Functions",
+  "licenseUrl": "https://creativecommons.org/licenses/by/4.0/",
+  "authors": "OpenStax / Jay Abramson et al.",
+  "book": "Algebra and Trigonometry 1e",
+  "reviewStatus": "unreviewed",
+  "sourceLanguage": "en",
+  "translationStatus": "pending"
+}

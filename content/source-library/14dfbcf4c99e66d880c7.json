@@ -1,0 +1,859 @@
+{
+  "title": "12.5: Derivatives",
+  "originalText": "Learning Objectives\n\nIn this section, you will:\n\nFind the derivative of a function.\n\nFind instantaneous rates of change.\n\nFind an equation of the tangent line to the graph of a function\nat a point.\n\nFind the instantaneous velocity of a particle.\n\nThe average teen in the United States opens a refrigerator door\nan estimated 25 times per day. Supposedly, this average is up from\n10 years ago when the average teenager opened a refrigerator door\n20 times per day ^(2).\n\nIt is estimated that a television is on in a home 6.75 hours per\nday, whereas parents spend an estimated 5.5 minutes per day having\na meaningful conversation with their children. These averages, too,\nare not the same as they were 10 years ago, when the television was\non an estimated 6 hours per day in the typical household, and\nparents spent 12 minutes per day in meaningful conversation with\ntheir kids.\n\nWhat do these scenarios have in common? The functions\nrepresenting them have changed over time. In this section, we will\nconsider methods of computing such changes over time.\n\nFinding the Average Rate of Change of\na Function\n\nThe functions describing the examples above involve a change\nover time. Change divided by time is one example of a rate. The\nrates of change in the previous examples are each different. In\nother words, some changed faster than others. If we were to graph\nthe functions, we could compare the rates by determining the slopes\nof the graphs.\n\nA tangent line to a curve is a line\nthat intersects the curve at only a single point but does not cross\nit there. (The tangent line may intersect the curve at another\npoint away from the point of interest.) If we zoom in on a curve at\nthat point, the curve appears linear, and the slope of the\ncurve at that point is close to the slope of the tangent line\nat that point.\n\nFigure 1 represents the\nfunction f(x)=x3−4x.f(x)=x3−4x. We can see the slope at\nvarious points along the curve.\n\nslope at x=−2x=−2 is 8\n\nslope at x=−1x=−1 is –1\n\nslope at x=2x=2 is 8\n\n[Figure: Graph of f(x) = x^3 - 4x with tangent lines at x = -2 with a slope of 8, at x = -3 with a slope of -1, and at x=2 with a slope of 8.]\n\nFigure 1 Graph\nshowing tangents to curve at –2, –1, and 2.\n\nLet’s imagine a point on the curve of\nfunction ff at x=ax=a as shown\nin Figure\n2. The coordinates of the point\nare (a,f(a)).(a,f(a)). Connect this point with a second\npoint on the curve a little to the right of x=a,x=a, with\nan x-value increased by some\nsmall real number h.h. The coordinates of this second\npoint are (a+h,f(a+h))(a+h,f(a+h)) for some\npositive-value h.h.\n\n[Figure: Graph of an increasing function that demonstrates the rate of change of the function by drawing a line between the two points, (a, f(a)) and (a, f(a+h)).]\n\nFigure 2 Connecting\npoint aa with a point just beyond allows us to measure a\nslope close to that of a tangent line at x=a.x=a.\n\nWe can calculate the slope of the line connecting the two\npoints (a,f(a))(a,f(a)) and (a+h,f(a+h)),(a+h,f(a+h)), called\na secant line, by applying the slope\nformula,\n\nslope = change in ychange in xslope = change in ychange in x\n\nWe use the notation msecmsec to represent the slope of\nthe secant line connecting two points.\n\nmsec=f(a+h)−f(a)(a+h)−(a)       =f(a+h)−f(a)a+h−amsec=f(a+h)−f(a)(a+h)−(a)       =f(a+h)−f(a)a+h−a\n\nThe slope msecmsec equals the average rate of change between two\npoints (a,f(a))(a,f(a)) and (a+h,f(a+h)).(a+h,f(a+h)).\n\nmsec=f(a+h)−f(a)hmsec=f(a+h)−f(a)h\n\nTHE\nAVERAGE RATE OF CHANGE BETWEEN TWO POINTS ON A\nCURVE\n\nThe average rate of change (AROC)\nbetween two\npoints (a,f(a))(a,f(a)) and (a+h,f(a+h))(a+h,f(a+h)) on\nthe curve of ff is the slope of the line connecting the\ntwo points and is given by\n\nAROC=f(a+h)−f(a)hAROC=f(a+h)−f(a)h\n\nEXAMPLE 1\n\nFinding the Average Rate of\nChange\n\nFind the average rate of change connecting the\npoints (2,−6)(2,−6) and (−1,5).(−1,5).\n\nAnswer\n\nTRY\nIT #1\n\nFind the average rate of change connecting the\npoints (−5,1.5)(−5,1.5) and (−2.5,9).(−2.5,9).\n\nUnderstanding the Instantaneous Rate\nof Change\n\nNow that we can find the average rate of change, suppose we\nmake hh in Figure\n2 smaller and smaller. Then a+ha+h will\napproach aa as hh gets smaller, getting closer\nand closer to 0. Likewise, the second\npoint (a+h,f(a+h))(a+h,f(a+h)) will approach the first\npoint, (a,f(a)).(a,f(a)). As a consequence, the\nconnecting line between the two points, called the secant line,\nwill get closer and closer to being a tangent to the function\nat x=a,x=a, and the slope of the secant line will get\ncloser and closer to the slope of the tangent\nat x=a.x=a. See Figure\n3.\n\n[Figure: Graph of an increasing function that contains a point, P, at (a, f(a)). At the point, there is a tangent line and two secant lines where one secant line is connected to Q1 and another secant line is connected to Q2.]\n\nFigure 3 The\nconnecting line between two points moves closer to being a tangent\nline at x=a.x=a.\n\nBecause we are looking for the slope of the\ntangent at x=a,x=a, we can think of the measure of\nthe slope of the curve of a function ff at a given point\nas the rate of change at a particular instant. We call this slope\nthe instantaneous rate of change, or\nthe derivative of the function\nat x=a.x=a. Both can be found by finding the limit of the\nslope of a line connecting the point at x=ax=a with a\nsecond point infinitesimally close along the curve. For a\nfunction ff both the instantaneous rate of change of the\nfunction and the derivative of the function at x=ax=a are\nwritten as f'(a),f'(a), and we can define them as\na two-sided limit that has the same value whether\napproached from the left or the right.\n\nf′(a)=limh→0f(a+h)−f(a)hf′(a)=limh→0f(a+h)−f(a)h\n\nThe expression by which the limit is found is known as\nthe difference quotient.\n\nDEFINITION OF INSTANTANEOUS RATE OF\nCHANGE AND DERIVATIVE\n\nThe derivative,\nor instantaneous rate of change, of a\nfunction ff at x=a,x=a, is given by\n\nf'(a)=limh→0f(a+h)−f(a)hf'(a)=limh→0f(a+h)−f(a)h\n\nThe expression f(a+h)−f(a)hf(a+h)−f(a)h is called the\ndifference quotient.\n\nWe use the difference quotient to evaluate the limit of the rate\nof change of the function as hh approaches 0.\n\nDerivatives: Interpretations and\nNotation\n\nThe derivative of a function can be interpreted in\ndifferent ways. It can be observed as the behavior of a graph of\nthe function or calculated as a numerical rate of change of the\nfunction.\n\nThe derivative of a function f(x)f(x) at a\npoint x=ax=a is the slope of the tangent line to the\ncurve f(x)f(x) at x=a.x=a. The derivative\nof f(x)f(x) at x=ax=a is\nwritten f′(a).f′(a).\n\nThe derivative f′(a)f′(a) measures how the curve\nchanges at the point (a,f(a)).(a,f(a)).\n\nThe derivative f′(a)f′(a) may be thought of as the\ninstantaneous rate of change of the\nfunction f(x)f(x) at x=a.x=a.\n\nIf a function measures distance as a function of time, then the\nderivative measures the instantaneous velocity at\ntime t=a.t=a.\n\nNOTATIONS FOR THE\nDERIVATIVE\n\nThe equation of the derivative of a\nfunction f(x)f(x) is written\nas y′=f′(x),y′=f′(x), where y=f(x).y=f(x). The\nnotation f′(x)f′(x) is read as\n“ f prime of x.f prime of x. ”\nAlternate notations for the derivative include the following:\n\nf′(x)=y′=dydx=dfdx=ddxf(x)=Df(x)f′(x)=y′=dydx=dfdx=ddxf(x)=Df(x)\n\nThe expression f′(x)f′(x) is now a function\nof xx; this function gives the slope of the\ncurve y=f(x)y=f(x) at any value of x.x. The\nderivative of a function f(x)f(x) at a\npoint x=ax=a is denoted f′(a).f′(a).\n\nHOW\nTO\n\nGiven a function f,f, find the derivative by\napplying the definition of the derivative.\n\n1. Calculate f(a+h).f(a+h).\n\n2. Calculate f(a).f(a).\n\n3. Substitute and simplify f(a+h)−f(a)h.f(a+h)−f(a)h.\n\n4. Evaluate the limit if it\nexists: f′(a)=limh→0f(a+h)−f(a)h.f′(a)=limh→0f(a+h)−f(a)h.\n\nEXAMPLE 2\n\nFinding the Derivative of a\nPolynomial Function\n\nFind the derivative of the\nfunction f(x)=x2−3x+5f(x)=x2−3x+5 at x=a.x=a.\n\nAnswer\n\nTRY\nIT #2\n\nFind the derivative of the\nfunction f(x)=3x2+7xf(x)=3x2+7x at x=a.x=a.\n\nFinding Derivatives of Rational\nFunctions\n\nTo find the derivative of a rational function, we will sometimes\nsimplify the expression using algebraic techniques we have already\nlearned.\n\nEXAMPLE 3\n\nFinding the Derivative of a Rational\nFunction\n\nFind the derivative of the\nfunction f(x)=3+x2−xf(x)=3+x2−x at x=a.x=a.\n\nAnswer\n\nTRY\nIT #3\n\nFind the derivative of the\nfunction f(x)=10x+115x+4f(x)=10x+115x+4 at x=a.x=a.\n\nFinding Derivatives of Functions with\nRoots\n\nTo find derivatives of functions with roots, we use the methods\nwe have learned to find limits of functions with roots, including\nmultiplying by a conjugate.\n\nEXAMPLE 4\n\nFinding the Derivative of a Function\nwith a Root\n\nFind the derivative of the\nfunction f(x)=4x−−√f(x)=4x at x=36.x=36.\n\nAnswer\n\nTRY\nIT #4\n\nFind the derivative of the\nfunction f(x)=9x−−√f(x)=9x at x=9.x=9.\n\nFinding Instantaneous Rates of\nChange\n\nMany applications of the derivative involve determining the rate\nof change at a given instant of a function with the independent\nvariable time—which is why the term instantaneous is used. Consider the height of a\nball tossed upward with an initial velocity of 64 feet per second,\ngiven\nby s(t)=−16t2+64t+6,s(t)=−16t2+64t+6, where tt is\nmeasured in seconds and s(t)s(t) is measured in feet. We\nknow the path is that of a parabola. The derivative will tell us\nhow the height is changing at any given point in time. The height\nof the ball is shown in Figure\n4 as a function of time. In physics, we call this the\n“s-t graph.”\n\n[Figure: Graph of a negative parabola with a vertex at (2, 70) and two points at (1, 55) and (3, 55).]\n\nFigure 4\n\nEXAMPLE 5\n\nFinding the Instantaneous Rate of\nChange\n\nUsing the function\nabove, s(t)=−16t2+64t+6,s(t)=−16t2+64t+6, what is the\ninstantaneous velocity of the ball at 1 second and 3 seconds into\nits flight?\n\nAnswer\n\nTRY\nIT #5\n\nThe position of the ball is given\nby s(t)=−16t2+64t+6.s(t)=−16t2+64t+6. What is its\nvelocity 2 seconds into flight?\n\nUsing Graphs to Find Instantaneous\nRates of Change\n\nWe can estimate an instantaneous rate of change\nat x=ax=a by observing the slope of the curve of the\nfunction f(x)f(x) at x=a.x=a. We do this by\ndrawing a line tangent to the function at x=ax=a and\nfinding its slope.\n\nHOW\nTO\n\nGiven a graph of a\nfunction f(x),f( x ), find the instantaneous\nrate of change of the function at x=a.x=a.\n\n1. Locate x=ax=a on the graph of the\nfunction f(x).f(x).\n\n2. Draw a tangent line, a line that goes\nthrough x=ax=a at aa and at no other point in\nthat section of the curve. Extend the line far enough to calculate\nits slope as\n\nchange in ychange in x.change in ychange in x.\n\nEXAMPLE 6\n\nEstimating the Derivative at a Point\non the Graph of a Function\n\nFrom the graph of the function y=f(x)y=f(x) presented\nin Figure\n5, estimate each of the following:\n\n1. ⓐ f(0)f(0)\n\n2. ⓑ f(2)f(2)\n\n3. ⓒ f'(0)f'(0)\n\n4. ⓓ f'(2)f'(2)\n\n[Figure: Graph of an odd function with multiplicity of two and with two points at (0, 1) and (2, 1).]\n\nFigure 5\n\nAnswer\n\n[Figure: Graph of the previous function with tangent lines at the two points (0, 1) and (2, 1). The graph demonstrates the slopes of the tangent lines. The slope of the tangent line at x = 0 is 0, and the slope of the tangent line at x = 2 is 4.]\n\n1.  \n\n2.  \n\n3.  \n\n4.  \n\nTRY\nIT #6\n\nUsing the graph of the\nfunction f(x)=x3−3xf(x)=x3−3x shown in Figure\n7,\nestimate: f(1),f(1), f′(1),f′(1), f(0),f(0), and f′(0).f′(0).\n\n[Figure: Graph of the function f(x) = x^3-3x with a viewing window of [-4. 4] by [-5, 7]\n\nFigure 7\n\nUsing Instantaneous Rates of Change\nto Solve Real-World Problems\n\nAnother way to interpret an instantaneous rate of change\nat x=ax=a is to observe the function in a real-world\ncontext. The unit for the derivative of a\nfunction f(x)f(x) is\n\noutput units  input unit output units  input unit \n\nSuch a unit shows by how many units the output changes for each\none-unit change of input. The instantaneous rate of change at a\ngiven instant shows the same thing: the units of change of output\nper one-unit change of input.\n\nOne example of an instantaneous rate of change is a marginal\ncost. For example, suppose the production cost for a company to\nproduce xx items is given by C(x),C(x), in\nthousands of dollars. The derivative function tells us how the cost\nis changing for any value of xx in the domain of the\nfunction. In other words, C′(x)C′(x) is interpreted as\na marginal cost, the additional cost in thousands of dollars\nof producing one more item when xx items have been\nproduced. For example, C′(11)C′(11) is the approximate\nadditional cost in thousands of dollars of producing the\n12^(th) item after 11 items have been\nproduced. C′(11)=2.50C′(11)=2.50 means that when 11 items\nhave been produced, producing the 12^(th) item would\nincrease the total cost by approximately $2,500.00.\n\nEXAMPLE 7\n\nFinding a Marginal Cost\n\nThe cost in dollars of producing xx laptop computers\nin dollars is f(x)=x2−100x.f(x)=x2−100x. At the point\nwhere 200 computers have been produced, what is the approximate\ncost of producing the 201^(st) unit?\n\nAnswer\n\nEXAMPLE 8\n\nInterpreting a Derivative in\nContext\n\nA car leaves an intersection. The distance it travels in miles\nis given by the\nfunction f(t),f(t), where tt represents hours.\nExplain the following notations:\n\n1. ⓐ f(0)=0f(0)=0\n\n2. ⓑ f′(1)=60f′(1)=60\n\n3. ⓒ f(1)=70f(1)=70\n\n4. ⓓ f(2.5)=150f(2.5)=150\n\nAnswer\n\n1.  \n\n2.  \n\n3.  \n\n4.  \n\nTRY\nIT #7\n\nA runner runs along a straight east-west road. The\nfunction f(t)f(t) gives how many feet eastward of her\nstarting point she is after tt seconds. Interpret each of\nthe following as it relates to the runner.\n\n1. ⓐ f(0)=0f(0)=0\n\n2. ⓑ f(10)=150f(10)=150\n\n3. ⓒ f′(10)=15f′(10)=15\n\n4. ⓓ f′(20)=−10f′(20)=−10\n\n5. ⓔ f(40)=−100f(40)=−100\n\nFinding Points Where a Function’s\nDerivative Does Not Exist\n\nTo understand where a function’s derivative does not exist, we\nneed to recall what normally happens when a\nfunction f(x)f(x) has a derivative at x=ax=a.\nSuppose we use a graphing utility to zoom in on x=ax=a. If the\nfunction f(x)f(x) is differentiable,\nthat is, if it is a function that can be differentiated, then the\ncloser one zooms in, the more closely the graph approaches a\nstraight line. This characteristic is called linearity.\n\nLook at the graph in Figure\n8. The closer we zoom in on the point, the more linear the\ncurve appears.\n\n[Figure: Graph of a negative parabola that is zoomed in on a point to show that the curve becomes linear the closer it is zoomed in.]\n\nFigure 8\n\nWe might presume the same thing would happen with any continuous\nfunction, but that is not so. The\nfunction f(x)=|x|,f(x)=| x |, for example, is\ncontinuous at x=0,x=0, but not differentiable\nat x=0.x=0. As we zoom in close to 0 in Figure\n9, the graph does not approach a straight line. No matter\nhow close we zoom in, the graph maintains its sharp corner.\n\n[Figure: Graph of an absolute function.]\n\nFigure 9 Graph of\nthe\nfunction f(x)=|x|,f(x)=| x |, with x-axis\nfrom –0.1 to 0.1 and y-axis\nfrom –0.1 to 0.1.\n\nWe zoom in closer by narrowing the range to\nproduce Figure\n10 and continue to observe the same shape. This graph\ndoes not appear linear at x=0.x=0.\n\n[Figure: Graph of an absolute function.]\n\nFigure 10 Graph of\nthe\nfunction f(x)=|x|,f(x)=| x |, with x-axis\nfrom –0.001 to 0.001 and y-axis\nfrom—0.001 to 0.001.\n\nWhat are the characteristics of a graph that is not\ndifferentiable at a point? Here are some examples in which\nfunction f(x)f(x) is not differentiable\nat x=a.x=a.\n\nIn Figure\n11, we see the graph of\n\nf(x)={x2,8−x,x≤2x>2.f(x)={ x2,x≤28−x,x>2.\n\nNotice that, as xx approaches 2 from the left, the\nleft-hand limit may be observed to be 4, while\nas xx approaches 2 from the right, the right-hand limit\nmay be observed to be 6. We see that it has a discontinuity\nat x=2.x=2.\n\n[Figure: Graph of a piecewise function where from negative infinity to (2, 4) is a positive parabola and from (2, 6) to positive infinity is a linear line.]\n\nFigure 11 The graph\nof f(x)f(x) has a discontinuity at x=2.x=2.\n\nIn Figure\n12, we see the graph\nof f(x)=|x|.f(x)=| x |. We see that the graph\nhas a corner point at x=0.x=0.\n\n[Figure: Graph of an absolute function.]\n\nFigure 12 The graph\nof f(x)=|x|f(x)=| x | has a corner point\nat x=0x=0.\n\nIn Figure\n13, we see that the graph of f(x)=x23f(x)=x23 has\na cusp at x=0.x=0. A cusp has a unique feature. Moving\naway from the cusp, both the left-hand and right-hand limits\napproach either infinity or negative infinity. Notice the tangent\nlines as xx approaches 0 from both the left and the right\nappear to get increasingly steeper, but one has a negative slope,\nthe other has a positive slope.\n\n[Figure: Graph of f(x) = x^(2/3) with a viewing window of [-3, 3] by [-2, 3].]\n\nFigure 13 The graph\nof f(x)=x23f(x)=x23 has a cusp at x=0.x=0.\n\nIn Figure\n14, we see that the graph of f(x)=x13f(x)=x13 has\na vertical tangent at x=0.x=0. Recall that vertical\ntangents are vertical lines, so where a vertical tangent exists,\nthe slope of the line is undefined. This is why the derivative,\nwhich measures the slope, does not exist there.\n\n[Figure: Graph of f(x) = x^(1/3) with a viewing window of [-3, 3] by [-3, 3].]\n\nFigure 14 The graph\nof f(x)=x13f(x)=x13 has a vertical\ntangent at x=0.x=0.\n\nDIFFERENTIABILITY\n\nA function f(x)f(x) is differentiable\nat x=ax=a if the derivative exists\nat x=a,x=a, which means\nthat f′(a)f′(a) exists.\n\nThere are four cases for which a function f(x)f(x) is\nnot differentiable at a point x=a.x=a.\n\n1. When there is a discontinuity at x=a.x=a.\n\n2. When there is a corner point at x=a.x=a.\n\n3. When there is a cusp at x=a.x=a.\n\n4. Any other time when there is a vertical tangent\nat x=a.x=a.\n\nEXAMPLE 9\n\nDetermining Where a Function Is\nContinuous and Differentiable from a Graph\n\nUsing Figure\n15, determine where the function is\n\n1. continuous\n\n2. discontinuous\n\n3. differentiable\n\n4. not differentiable\n\nAt the points where the graph is discontinuous or not\ndifferentiable, state why.\n\n[Figure: Graph of a piecewise function that has a removable discontinuity at (-2, -1) and is discontinuous when x =1.]\n\nFigure 15\n\nAnswer\n\n[Figure: Graph of the previous function that shows the intervals of continuity.]\n\n[Figure: Graph of the previous function that not only shows the intervals of continuity but also labels the parts of the graph that has sharp corners and discontinuities. The sharp corners are at (-1, -1) and (2, 3), and the discontinuities are at (-2, -1) and (1, 1).]\n\nTRY\nIT #8\n\nDetermine where the function y=f(x)y=f(x) shown\nin Figure\n18 is continuous and differentiable from the\ngraph.\n\n[Figure: Graph of a piecewise function with three pieces.]\n\nFigure 18\n\nFinding an Equation of a Line Tangent\nto the Graph of a Function\n\nThe equation of a tangent line to a curve of the\nfunction f(x)f(x) at x=ax=a is derived from the\npoint-slope form of a\nline, y=m(x−x1)+y1.y=m(x−x1)+y1. The slope of the line is\nthe slope of the curve at x=ax=a and is therefore equal\nto f′(a),f′(a), the derivative\nof f(x)f(x) at x=a.x=a. The coordinate pair of\nthe point on the line\nat x=ax=a is (a,f(a)).(a,f(a)).\n\nIf we substitute into the point-slope form, we have\n\n[Figure: The point-slope formula that demonstrates that m = f(a), x1 = a, and y_1 = f(a).]\n\nThe equation of the tangent line is\n\ny=f'(a)(x−a)+f(a)y=f'(a)(x−a)+f(a)\n\nTHE\nEQUATION OF A LINE TANGENT TO A CURVE OF THE\nFUNCTION F\n\nThe equation of a line tangent to the curve of a\nfunction ff at a point x=ax=a is\n\ny=f'(a)(x−a)+f(a)y=f'(a)(x−a)+f(a)\n\nHOW\nTO\n\nGiven a function f,f, find the equation of a\nline tangent to the function at x=a.x=a.\n\n1. Find the derivative\nof f(x)f(x) at x=ax=a using f′(a)=limh→0f(a+h)−f(a)h.f′(a)=limh→0f(a+h)−f(a)h.\n\n2. Evaluate the function at x=a.x=a. This\nis f(a).f(a).\n\n3. \nSubstitute (a,f(a))(a,f(a)) and f′(a)f′(a) into y=f'(a)(x−a)+f(a).y=f'(a)(x−a)+f(a).\n\n4. Write the equation of the tangent line in the\nform y=mx+b.y=mx+b.\n\nEXAMPLE 10\n\nFinding the Equation of a Line\nTangent to a Function at a Point\n\nFind the equation of a line tangent to the\ncurve f(x)=x2−4xf(x)=x2−4x at x=3.x=3.\n\nAnswer\n\nAnalysis\n\nWe can use a graphing utility to graph the function and the\ntangent line. In so doing, we can observe the point of tangency\nat x=3x=3 as shown in Figure\n19.\n\n[Figure: Graph of f(x) = x^2-4x with a tangent line at x = 3 which has the equation of y = 2x - 9.]\n\nFigure 19 Graph\nconfirms the point of tangency at x=3.x=3.\n\nTRY\nIT #9\n\nFind the equation of a tangent line to the curve of the\nfunction f(x)=5x2−x+4f(x)=5x2−x+4 at x=2.x=2.\n\nFinding the Instantaneous Speed of a\nParticle\n\nIf a function measures position versus time, the derivative\nmeasures displacement versus time, or the speed of the object. A\nchange in speed or direction relative to a change in time is known\nas velocity. The velocity at a\ngiven instant is known as instantaneous\nvelocity.\n\nIn trying to find the speed or velocity of an object at a given\ninstant, we seem to encounter a contradiction. We normally define\nspeed as the distance traveled divided by the elapsed time. But in\nan instant, no distance is traveled, and no time elapses. How will\nwe divide zero by zero? The use of a derivative solves this\nproblem. A derivative allows us to say that even while the object’s\nvelocity is constantly changing, it has a certain velocity at a\ngiven instant. That means that if the object traveled at that exact\nvelocity for a unit of time, it would travel the specified\ndistance.\n\nINSTANTANEOUS\nVELOCITY\n\nLet the function s(t)s(t) represent the position of an\nobject at time t.t. The instantaneous\nvelocity or velocity of the object at\ntime t=at=a is given by\n\ns′(a)=limh→0s(a+h)−s(a)hs′(a)=limh→0s(a+h)−s(a)h\n\nEXAMPLE 11\n\nFinding the Instantaneous\nVelocity\n\nA ball is tossed upward from a height of 200 feet with an\ninitial velocity of 36 ft/sec. If the height of the ball in feet\nafter tt seconds is given\nby s(t)=−16t2+36t+200,s(t)=−16t2+36t+200, find the\ninstantaneous velocity of the ball at t=2.t=2.\n\nAnswer\n\nAnalysis\n\nThis result means that at time t=2t=2 seconds, the\nball is dropping at a rate of 28 ft/sec.\n\nTRY\nIT #10\n\nA fireworks rocket is shot upward out of a pit 12 ft below the\nground at a velocity of 60 ft/sec. Its height in feet\nafter tt seconds is given\nby s=−16t2+60t−12.s=−16t2+60t−12. What is its\ninstantaneous velocity after 4 seconds?\n\nMEDIA\n\nAccess these online resources for additional instruction and\npractice with derivatives.\n\nEstimate the\nDerivative\n\nEstimate the Derivative Ex.\n4\n\n12.4 Section\nExercises\n\nVerbal\n\n1. \n\nHow is the slope of a linear function similar to the\nderivative?\n\n2. \n\nWhat is the difference between the average rate of change of a\nfunction on the interval [x,x+h][ x,x+h ] and\nthe derivative of the function at x?x?\n\n3. \n\nA car traveled 110 miles during the time period from\n2:00 P.M. to 4:00 P.M. What was the car's\naverage velocity? At exactly 2:30 P.M., the speed of the car\nregistered exactly 62 miles per hour. What is another name for the\nspeed of the car at 2:30 P.M.? Why does this speed differ from\nthe average velocity?\n\n4. \n\nExplain the concept of the slope of a curve at\npoint x.x.\n\n5. \n\nSuppose water is flowing into a tank at an average rate of 45\ngallons per minute. Translate this statement into the language of\nmathematics.\n\nAlgebraic\n\nFor the following exercises, use the definition of\nderivative limh→0f(x+h)−f(x)hlimh→0f(x+h)−f(x)h to\ncalculate the derivative of each function.\n\n6. \n\nf(x)=3x−4f(x)=3x−4\n\n7. \n\nf(x)=−2x+1f(x)=−2x+1\n\n8. \n\nf(x)=x2−2x+1f(x)=x2−2x+1\n\n9. \n\nf(x)=2x2+x−3f(x)=2x2+x−3\n\n10. \n\nf(x)=2x2+5f(x)=2x2+5\n\n11. \n\nf(x)=−1x−2f(x)=−1x−2\n\n12. \n\nf(x)=2+x1−xf(x)=2+x1−x\n\n13. \n\nf(x)=5−2x3+2xf(x)=5−2x3+2x\n\n14. \n\nf(x)=1+3x−−−−−√f(x)=1+3x\n\n15. \n\nf(x)=3x3−x2+2x+5f(x)=3x3−x2+2x+5\n\n16. \n\nf(x)=5f(x)=5\n\n17. \n\nf(x)=5πf(x)=5π\n\nFor the following exercises, find the average rate of change\nbetween the two points.\n\n18. \n\n(−2,0)(−2,0) and (−4,5)(−4,5)\n\n19. \n\n(4,−3)(4,−3) and (−2,−1)(−2,−1)\n\n20. \n\n(0,5)(0,5) and (6,5)(6,5)\n\n21. \n\n(7,−2)(7,−2) and (7,10)(7,10)\n\nFor the following polynomial functions, find the\nderivatives.\n\n22. \n\nf(x)=x3+1f(x)=x3+1\n\n23. \n\nf(x)=−3x2−7x=6f(x)=−3x2−7x=6\n\n24. \n\nf(x)=7x2f(x)=7x2\n\n25. \n\nf(x)=3x3+2x2+x−26f(x)=3x3+2x2+x−26\n\nFor the following functions, find the equation of the tangent\nline to the curve at the given point xx on the curve.\n\n26. \n\nf(x)=2x2−3xx=3f(x)=2x2−3xx=3\n\n27. \n\nf(x)=x3+1x=2f(x)=x3+1x=2\n\n28. \n\nf(x)=x−−√x=9f(x)=xx=9\n\nFor the following exercise, find kk such that the\ngiven line is tangent to the graph of the function.\n\n29. \n\nf(x)=x2−kx,y=4x−9f(x)=x2−kx,y=4x−9\n\nGraphical\n\nFor the following exercises, consider the graph of the\nfunction ff and determine where the function is\ncontinuous/discontinuous and differentiable/not differentiable.\n\n30.\n\n[Figure: Graph of a piecewise function with three segments. The first segment goes from negative infinity to (-3, -2), an open point; the second segment goes from (-3, 1) to (2, 3), which are both open points; the final segment goes from (2, 2), an open point, to positive infinity.]\n\n31.\n\n[Figure: Graph of a piecewise function with three segments. The first segment goes from negative infinity to (-2, -1), an open point; the second segment goes from (-2, -4), an open point, to (0, 0), a closed point; the final segment goes from (0, 1), an open point, to positive infinity.]\n\n32.\n\n[Figure: Graph of a piecewise function with two segments and an asymptote at x = 3. The first segment, which has a removable discontinuity at x = -2, goes from negative infinity to the asymptote, and the final segment goes from the asymptote to positive infinity.]\n\n33.\n\n[Figure: Graph of a piecewise function with two segments. The first segment goes from (-4, 0), an open point to (5, -2), and the final segment goes from (5, 3), an open point, to positive infinity.]\n\nFor the following exercises, use Figure\n20 to estimate either the function at a given value\nof xx or the derivative at a given value\nof x,x, as indicated.\n\n[Figure: Graph of an odd function with multiplicity of 2 with a turning point at (0, -2) and (2, -6).]\n\nFigure 20\n\n34. \n\nf(−1)f(−1)\n\n35. \n\nf(0)f(0)\n\n36. \n\nf(1)f(1)\n\n37. \n\nf(2)f(2)\n\n38. \n\nf(3)f(3)\n\n39. \n\nf′(−1)f′(−1)\n\n40. \n\nf′(0)f′(0)\n\n41. \n\nf′(1)f′(1)\n\n42. \n\nf′(2)f′(2)\n\n43. \n\nf′(3)f′(3)\n\n44. \n\nSketch the function based on the information below:\n\nf′(x)=2xf′(x)=2x, f(2)=4f(2)=4\n\nTechnology\n\n45. \n\nNumerically evaluate the derivative. Explore the behavior of the\ngraph of f(x)=x2f(x)=x2 around x=1x=1 by\ngraphing the function on the following\ndomains: [0.9,1.1][ 0.9,1.1 ], [0.99,1.01][ 0.99,1.01 ], [0.999,1.001],[ 0.999,1.001 ], and [0.9999,1.0001][0.9999,1.0001] .\nWe can use the feature on our calculator that automatically sets\nYmin and Ymax to the Xmin and Xmax values we preset. (On some of\nthe commonly used graphing calculators, this feature may be called\nZOOM FIT or ZOOM AUTO). By examining the corresponding range values\nfor this viewing window, approximate how the curve changes\nat x=1,x=1, that is, approximate the derivative\nat x=1.x=1.\n\nReal-World Applications\n\nFor the following exercises, explain the notation in words. The\nvolume f(t)f(t) of a tank of gasoline, in\ngallons, tt minutes after noon.\n\n46. \n\nf(0)=600f(0)=600\n\n47. \n\nf'(30)=−20f'(30)=−20\n\n48. \n\nf(30)=0f(30)=0\n\n49. \n\nf'(200)=30f'(200)=30\n\n50. \n\nf(240)=500f(240)=500\n\nFor the following exercises, explain the functions in words. The\nheight, s,s, of a projectile after tt seconds\nis given by s(t)=−16t2+80t.s(t)=−16t2+80t.\n\n51. \n\ns(2)=96s(2)=96\n\n52. \n\ns'(2)=16s'(2)=16\n\n53. \n\ns(3)=96s(3)=96\n\n54. \n\ns'(3)=−16s'(3)=−16\n\n55. \n\ns(0)=0,s(5)=0.s(0)=0,s(5)=0.\n\nFor the following exercises, the volume VV of a sphere\nwith respect to its radius rr is given\nby V=43πr3.V=43πr3.\n\n56. \n\nFind the average rate of change\nof VV as rr changes from 1 cm to 2 cm.\n\n57. \n\nFind the instantaneous rate of change\nof VV when r=3 cm.r=3 cm.\n\nFor the following exercises, the revenue generated by\nselling xx items is given\nby R(x)=2x2+10x.R(x)=2x2+10x.\n\n58. \n\nFind the average change of the revenue function\nas xx changes\nfrom x=10x=10 to x=20.x=20.\n\n59. \n\nFind R'(10)R'(10) and interpret.\n\n60. \n\nFind R'(15)R'(15) and interpret.\nCompare R'(15)R'(15) to R'(10),R'(10), and\nexplain the difference.\n\nFor the following exercises, the cost of\nproducing xx cellphones is described by the\nfunction C(x)=x2−4x+1000.C(x)=x2−4x+1000.\n\n61. \n\nFind the average rate of change in the total cost\nas xx changes\nfrom x=10 to x=15.x=10 to x=15.\n\n62. \n\nFind the approximate marginal cost, when 15 cellphones have been\nproduced, of producing the 16^(th) cellphone.\n\n63. \n\nFind the approximate marginal cost, when 20 cellphones have been\nproduced, of producing the 21^(st) cellphone.\n\nExtension\n\nFor the following exercises, use the definition for the\nderivative at a\npoint x=a,x=a, limx→af(x)−f(a)x−a,limx→af(x)−f(a)x−a, to\nfind the derivative of the functions.\n\n64. \n\nf(x)=1x2f(x)=1x2\n\n65. \n\nf(x)=5x2−x+4f(x)=5x2−x+4\n\n66. \n\nf(x)=−x2+4x+7f(x)=−x2+4x+7\n\n67. \n\nf(x)=−43−x2f(x)=−43−x2\n\nFootnotes\n\n2http://www.csun.edu/science/health/d...tv&health.html\nSource provided.\n\nSecurityError: document exceeded\n100,000 nodes. (click for details)\n\nCallstack:\n    at (Under_Construction/Precalculus_2e_(OpenStax)/12:_Introduction_to_Calculus/12.05:_Derivatives), /content/body/div/div/div[1]/section[4]/div/p[1]/span[2]/script/math/semantics/mrow/mrow/mo\n\nThis page titled 12.5: Derivatives was last modified on Sun, 28 May 2023 07:33:33 GMT and is shared under a CC BY  4.0  license and was authored, remixed, and/or curated by OpenStax via source content that was edited to the style and standards of the LibreTexts platform.",
+  "figures": [
+    {
+      "url": "https://math.libretexts.org/@api/deki/files/105778/0a3d5901e034403fa9fb7a216c356cebfd50c100?revision=1",
+      "alt": "Graph of f(x) = x^3 - 4x with tangent lines at x = -2 with a slope of 8, at x = -3 with a slope of -1, and at x=2 with a slope of 8.",
+      "credit": ""
+    },
+    {
+      "url": "https://math.libretexts.org/@api/deki/files/105776/e70f94eec5091aed6c0ee0239d772229508ade58?revision=1",
+      "alt": "Graph of an increasing function that demonstrates the rate of change of the function by drawing a line between the two points, (a, f(a)) and (a, f(a+h)).",
+      "credit": ""
+    },
+    {
+      "url": "https://math.libretexts.org/@api/deki/files/105779/284f66f9613b6a568d8d1ef6ef411761475d00fa?revision=1",
+      "alt": "Graph of an increasing function that contains a point, P, at (a, f(a)). At the point, there is a tangent line and two secant lines where one secant line is connected to Q1 and another secant line is connected to Q2.",
+      "credit": ""
+    },
+    {
+      "url": "https://math.libretexts.org/@api/deki/files/105781/f5a80a79b5f7a65c91cf170a072237ce80214f1f?revision=1",
+      "alt": "Graph of a negative parabola with a vertex at (2, 70) and two points at (1, 55) and (3, 55).",
+      "credit": ""
+    },
+    {
+      "url": "https://math.libretexts.org/@api/deki/files/105777/9861668bd8f24bc50cbaa45f1c8dadb7bf2cb9ed?revision=1",
+      "alt": "Graph of an odd function with multiplicity of two and with two points at (0, 1) and (2, 1).",
+      "credit": ""
+    },
+    {
+      "url": "https://math.libretexts.org/@api/deki/files/105789/0eef8693a27569ecf2d3b943abcf6385ed3f7520?revision=1",
+      "alt": "Graph of the previous function with tangent lines at the two points (0, 1) and (2, 1). The graph demonstrates the slopes of the tangent lines. The slope of the tangent line at x = 0 is 0, and the slope of the tangent line at x = 2 is 4.",
+      "credit": ""
+    },
+    {
+      "url": "https://math.libretexts.org/@api/deki/files/105786/6c222ee0a79ff9eac60613024370765834b3b543?revision=1",
+      "alt": "Graph of the function f(x) = x^3-3x with a viewing window of [-4. 4] by [-5, 7",
+      "credit": ""
+    },
+    {
+      "url": "https://math.libretexts.org/@api/deki/files/105790/5c431a111aa64d30777281bcd09651af5a34d6eb?revision=1",
+      "alt": "Graph of a negative parabola that is zoomed in on a point to show that the curve becomes linear the closer it is zoomed in.",
+      "credit": ""
+    },
+    {
+      "url": "https://math.libretexts.org/@api/deki/files/105793/ed0c79171ace30d7d216a4bdf1704e9a441bfc82?revision=1",
+      "alt": "Graph of an absolute function.",
+      "credit": ""
+    },
+    {
+      "url": "https://math.libretexts.org/@api/deki/files/105792/df2c182ae8d8bfa329a8d34f5c09c64442e379ac?revision=1",
+      "alt": "Graph of an absolute function.",
+      "credit": ""
+    },
+    {
+      "url": "https://math.libretexts.org/@api/deki/files/105794/dd70f50fa2aecfd91a9149ab556cfc24b080d4fb?revision=1",
+      "alt": "Graph of a piecewise function where from negative infinity to (2, 4) is a positive parabola and from (2, 6) to positive infinity is a linear line.",
+      "credit": ""
+    },
+    {
+      "url": "https://math.libretexts.org/@api/deki/files/105798/0af11fd6bab2746bffc86fadf2e6cfc5ab2dd3e1?revision=1",
+      "alt": "Graph of an absolute function.",
+      "credit": ""
+    },
+    {
+      "url": "https://math.libretexts.org/@api/deki/files/105799/0b78f1bf648b181d6332b474c91a2fa56dbc918d?revision=1",
+      "alt": "Graph of f(x) = x^(2/3) with a viewing window of [-3, 3] by [-2, 3].",
+      "credit": ""
+    },
+    {
+      "url": "https://math.libretexts.org/@api/deki/files/105802/7eef075e6cc18e975bf7b56c2b8422ff209d299c?revision=1",
+      "alt": "Graph of f(x) = x^(1/3) with a viewing window of [-3, 3] by [-3, 3].",
+      "credit": ""
+    },
+    {
+      "url": "https://math.libretexts.org/@api/deki/files/105801/6656d4493d7e4e7e9d9fe5554765a77332ef3768?revision=1",
+      "alt": "Graph of a piecewise function that has a removable discontinuity at (-2, -1) and is discontinuous when x =1.",
+      "credit": ""
+    },
+    {
+      "url": "https://math.libretexts.org/@api/deki/files/105803/88749cb8959335f923d9507e1215aee4f53a973c?revision=1",
+      "alt": "Graph of the previous function that shows the intervals of continuity.",
+      "credit": ""
+    },
+    {
+      "url": "https://math.libretexts.org/@api/deki/files/105804/263cefe0922dfae8d5d56c612fc0a5bf7dc3a1b1?revision=1",
+      "alt": "Graph of the previous function that not only shows the intervals of continuity but also labels the parts of the graph that has sharp corners and discontinuities. The sharp corners are at (-1, -1) and (2, 3), and the discontinuities are at (-2, -1) and (1, 1).",
+      "credit": ""
+    },
+    {
+      "url": "https://math.libretexts.org/@api/deki/files/105805/7faf1eecf7324199ba9af2a7ddcf1ecef61b4483?revision=1",
+      "alt": "Graph of a piecewise function with three pieces.",
+      "credit": ""
+    },
+    {
+      "url": "https://math.libretexts.org/@api/deki/files/105806/55a32ff380c0fa0c12c9834c826f420a47a5c90b?revision=1",
+      "alt": "The point-slope formula that demonstrates that m = f(a), x1 = a, and y_1 = f(a).",
+      "credit": ""
+    },
+    {
+      "url": "https://math.libretexts.org/@api/deki/files/105807/ad280ccc3a8fd4b9c54bf1097905bd5e07483019?revision=1",
+      "alt": "Graph of f(x) = x^2-4x with a tangent line at x = 3 which has the equation of y = 2x - 9.",
+      "credit": ""
+    },
+    {
+      "url": "https://math.libretexts.org/@api/deki/files/105808/4d9bc9090c50fb3bc8bfd9c5d48e3a19ef80a058?revision=1",
+      "alt": "Graph of a piecewise function with three segments. The first segment goes from negative infinity to (-3, -2), an open point; the second segment goes from (-3, 1) to (2, 3), which are both open points; the final segment goes from (2, 2), an open point, to positive infinity.",
+      "credit": ""
+    },
+    {
+      "url": "https://math.libretexts.org/@api/deki/files/105809/8e1c9592a8c73f108192068f3aaa4944e00c5b91?revision=1",
+      "alt": "Graph of a piecewise function with three segments. The first segment goes from negative infinity to (-2, -1), an open point; the second segment goes from (-2, -4), an open point, to (0, 0), a closed point; the final segment goes from (0, 1), an open point, to positive infinity.",
+      "credit": ""
+    },
+    {
+      "url": "https://math.libretexts.org/@api/deki/files/105811/01ecf2156501a4273be1b70b6b7603e1c065b893?revision=1",
+      "alt": "Graph of a piecewise function with two segments and an asymptote at x = 3. The first segment, which has a removable discontinuity at x = -2, goes from negative infinity to the asymptote, and the final segment goes from the asymptote to positive infinity.",
+      "credit": ""
+    },
+    {
+      "url": "https://math.libretexts.org/@api/deki/files/105810/b6639301ab0867b489581f787defa36dd9446355?revision=1",
+      "alt": "Graph of a piecewise function with two segments. The first segment goes from (-4, 0), an open point to (5, -2), and the final segment goes from (5, 3), an open point, to positive infinity.",
+      "credit": ""
+    },
+    {
+      "url": "https://math.libretexts.org/@api/deki/files/105812/a2880f2ed3d4403d257f465257d2b646ccc0b835?revision=1",
+      "alt": "Graph of an odd function with multiplicity of 2 with a turning point at (0, -2) and (2, -6).",
+      "credit": ""
+    }
+  ],
+  "references": [
+    {
+      "text": "2",
+      "url": "https://openstax.org/books/precalculus/pages/12-4-derivatives#fs-id1165137431100"
+    },
+    {
+      "text": "Figure 1",
+      "url": "https://openstax.org/books/precalculus/pages/12-4-derivatives#CNX_Precalc_Figure_12_04_001"
+    },
+    {
+      "text": "Figure\n2",
+      "url": "https://openstax.org/books/precalculus/pages/12-4-derivatives#CNX_Precalc_Figure_12_04_002"
+    },
+    {
+      "text": "Figure\n2",
+      "url": "https://openstax.org/books/precalculus/pages/12-4-derivatives#CNX_Precalc_Figure_12_04_002"
+    },
+    {
+      "text": "Figure\n3",
+      "url": "https://openstax.org/books/precalculus/pages/12-4-derivatives#CNX_Precalc_Figure_12_04_003"
+    },
+    {
+      "text": "Figure\n4",
+      "url": "https://openstax.org/books/precalculus/pages/12-4-derivatives#CNX_Precalc_Figure_12_04_004"
+    },
+    {
+      "text": "Figure\n5",
+      "url": "https://openstax.org/books/precalculus/pages/12-4-derivatives#CNX_Precalc_Figure_12_04_005"
+    },
+    {
+      "text": "Figure\n7",
+      "url": "https://openstax.org/books/precalculus/pages/12-4-derivatives#CNX_Precalc_Figure_12_04_007"
+    },
+    {
+      "text": "Figure\n8",
+      "url": "https://openstax.org/books/precalculus/pages/12-4-derivatives#CNX_Precalc_Figure_12_04_008"
+    },
+    {
+      "text": "Figure\n9",
+      "url": "https://openstax.org/books/precalculus/pages/12-4-derivatives#CNX_Precalc_Figure_12_04_009"
+    },
+    {
+      "text": "Figure\n10",
+      "url": "https://openstax.org/books/precalculus/pages/12-4-derivatives#CNX_Precalc_Figure_12_04_010"
+    },
+    {
+      "text": "Figure\n11",
+      "url": "https://openstax.org/books/precalculus/pages/12-4-derivatives#CNX_Precalc_Figure_12_04_011"
+    },
+    {
+      "text": "Figure\n12",
+      "url": "https://openstax.org/books/precalculus/pages/12-4-derivatives#CNX_Precalc_Figure_12_04_012"
+    },
+    {
+      "text": "Figure\n13",
+      "url": "https://openstax.org/books/precalculus/pages/12-4-derivatives#CNX_Precalc_Figure_12_04_013"
+    },
+    {
+      "text": "Figure\n14",
+      "url": "https://openstax.org/books/precalculus/pages/12-4-derivatives#CNX_Precalc_Figure_12_04_014"
+    },
+    {
+      "text": "Figure\n15",
+      "url": "https://openstax.org/books/precalculus/pages/12-4-derivatives#CNX_Precalc_Figure_12_04_015"
+    },
+    {
+      "text": "Figure\n18",
+      "url": "https://openstax.org/books/precalculus/pages/12-4-derivatives#CNX_Precalc_Figure_12_04_018"
+    },
+    {
+      "text": "Figure\n19",
+      "url": "https://openstax.org/books/precalculus/pages/12-4-derivatives#CNX_Precalc_Figure_12_04_020"
+    },
+    {
+      "text": "Estimate the\nDerivative",
+      "url": "http://openstax.org/l/estimatederiv"
+    },
+    {
+      "text": "Estimate the Derivative Ex.\n4",
+      "url": "http://openstax.org/l/estimatederiv4"
+    },
+    {
+      "text": "1",
+      "url": "https://openstax.org/books/precalculus/pages/chapter-12#fs-id1165134056134-solution"
+    },
+    {
+      "text": "3",
+      "url": "https://openstax.org/books/precalculus/pages/chapter-12#fs-id1165134056212-solution"
+    },
+    {
+      "text": "5",
+      "url": "https://openstax.org/books/precalculus/pages/chapter-12#fs-id1165134056271-solution"
+    },
+    {
+      "text": "7",
+      "url": "https://openstax.org/books/precalculus/pages/chapter-12#fs-id1165135514511-solution"
+    },
+    {
+      "text": "9",
+      "url": "https://openstax.org/books/precalculus/pages/chapter-12#fs-id1165135514637-solution"
+    },
+    {
+      "text": "11",
+      "url": "https://openstax.org/books/precalculus/pages/chapter-12#fs-id1165134041872-solution"
+    },
+    {
+      "text": "13",
+      "url": "https://openstax.org/books/precalculus/pages/chapter-12#fs-id1165134042042-solution"
+    },
+    {
+      "text": "15",
+      "url": "https://openstax.org/books/precalculus/pages/chapter-12#fs-id1165135701092-solution"
+    },
+    {
+      "text": "17",
+      "url": "https://openstax.org/books/precalculus/pages/chapter-12#fs-id1165135701244-solution"
+    },
+    {
+      "text": "19",
+      "url": "https://openstax.org/books/precalculus/pages/chapter-12#fs-id1165135701380-solution"
+    },
+    {
+      "text": "21",
+      "url": "https://openstax.org/books/precalculus/pages/chapter-12#fs-id1165135523071-solution"
+    },
+    {
+      "text": "23",
+      "url": "https://openstax.org/books/precalculus/pages/chapter-12#fs-id1165135523180-solution"
+    },
+    {
+      "text": "25",
+      "url": "https://openstax.org/books/precalculus/pages/chapter-12#fs-id1165135523279-solution"
+    },
+    {
+      "text": "27",
+      "url": "https://openstax.org/books/precalculus/pages/chapter-12#fs-id1165135513334-solution"
+    },
+    {
+      "text": "29",
+      "url": "https://openstax.org/books/precalculus/pages/chapter-12#fs-id1165135513509-solution"
+    },
+    {
+      "text": "31",
+      "url": "https://openstax.org/books/precalculus/pages/chapter-12#fs-id1165135513674-solution"
+    },
+    {
+      "text": "33",
+      "url": "https://openstax.org/books/precalculus/pages/chapter-12#fs-id1165135698718-solution"
+    },
+    {
+      "text": "Figure\n20",
+      "url": "https://openstax.org/books/precalculus/pages/12-4-derivatives#CNX_Precalc_Figure_12_04_205"
+    },
+    {
+      "text": "35",
+      "url": "https://openstax.org/books/precalculus/pages/chapter-12#fs-id1165135698830-solution"
+    },
+    {
+      "text": "37",
+      "url": "https://openstax.org/books/precalculus/pages/chapter-12#fs-id1165135698916-solution"
+    },
+    {
+      "text": "39",
+      "url": "https://openstax.org/books/precalculus/pages/chapter-12#eip-592-solution"
+    },
+    {
+      "text": "41",
+      "url": "https://openstax.org/books/precalculus/pages/chapter-12#fs-id1165135695780-solution"
+    },
+    {
+      "text": "43",
+      "url": "https://openstax.org/books/precalculus/pages/chapter-12#fs-id1165135695886-solution"
+    },
+    {
+      "text": "45",
+      "url": "https://openstax.org/books/precalculus/pages/chapter-12#fs-id1165135696029-solution"
+    },
+    {
+      "text": "47",
+      "url": "https://openstax.org/books/precalculus/pages/chapter-12#fs-id1165135690313-solution"
+    },
+    {
+      "text": "49",
+      "url": "https://openstax.org/books/precalculus/pages/chapter-12#fs-id1165135690394-solution"
+    },
+    {
+      "text": "51",
+      "url": "https://openstax.org/books/precalculus/pages/chapter-12#fs-id1165135690526-solution"
+    },
+    {
+      "text": "53",
+      "url": "https://openstax.org/books/precalculus/pages/chapter-12#fs-id1165135690599-solution"
+    },
+    {
+      "text": "55",
+      "url": "https://openstax.org/books/precalculus/pages/chapter-12#fs-id1165135690688-solution"
+    },
+    {
+      "text": "57",
+      "url": "https://openstax.org/books/precalculus/pages/chapter-12#fs-id1165135692520-solution"
+    },
+    {
+      "text": "59",
+      "url": "https://openstax.org/books/precalculus/pages/chapter-12#fs-id1165135692663-solution"
+    },
+    {
+      "text": "61",
+      "url": "https://openstax.org/books/precalculus/pages/chapter-12#fs-id1165135692831-solution"
+    },
+    {
+      "text": "63",
+      "url": "https://openstax.org/books/precalculus/pages/chapter-12#fs-id1165135692886-solution"
+    },
+    {
+      "text": "65",
+      "url": "https://openstax.org/books/precalculus/pages/chapter-12#fs-id1165134093704-solution"
+    },
+    {
+      "text": "67",
+      "url": "https://openstax.org/books/precalculus/pages/chapter-12#fs-id1165134093843-solution"
+    },
+    {
+      "text": "2",
+      "url": "https://openstax.org/books/precalculus/pages/12-4-derivatives#footnote-ref1"
+    },
+    {
+      "text": "http://www.csun.edu/science/health/d...tv&health.html",
+      "url": "http://www.csun.edu/science/health/docs/tv&health.html"
+    },
+    {
+      "text": "12.5: Derivatives",
+      "url": "https://math.libretexts.org/Bookshelves/Precalculus/Precalculus_2e_(OpenStax)/12%3A_Introduction_to_Calculus/12.05%3A_Derivatives"
+    },
+    {
+      "text": "CC BY  4.0",
+      "url": "https://creativecommons.org/licenses/by/4.0"
+    },
+    {
+      "text": "OpenStax",
+      "url": "https://openstax.org/"
+    },
+    {
+      "text": "source content",
+      "url": "https://openstax.org/details/books/precalculus"
+    }
+  ],
+  "exercises": [
+    {
+      "ordinal": 1,
+      "sourceNumber": "1",
+      "sourceAnchor": "",
+      "kind": "exercise-candidate",
+      "context": "Given a function f,f, find the derivative by\napplying the definition of the derivative.",
+      "original": "1. Calculate f(a+h).f(a+h).",
+      "prompt": "1. Calculate f(a+h).f(a+h).",
+      "sourceAnswers": [],
+      "hasFigure": false,
+      "status": "draft",
+      "answerVerified": false,
+      "translationStatus": "pending",
+      "mappingStatus": "pending"
+    },
+    {
+      "ordinal": 2,
+      "sourceNumber": "2",
+      "sourceAnchor": "",
+      "kind": "exercise-candidate",
+      "context": "Given a function f,f, find the derivative by\napplying the definition of the derivative.",
+      "original": "2. Calculate f(a).f(a).",
+      "prompt": "2. Calculate f(a).f(a).",
+      "sourceAnswers": [],
+      "hasFigure": false,
+      "status": "draft",
+      "answerVerified": false,
+      "translationStatus": "pending",
+      "mappingStatus": "pending"
+    },
+    {
+      "ordinal": 3,
+      "sourceNumber": "3",
+      "sourceAnchor": "",
+      "kind": "exercise-candidate",
+      "context": "Given a function f,f, find the derivative by\napplying the definition of the derivative.",
+      "original": "3. Substitute and simplify f(a+h)−f(a)h.f(a+h)−f(a)h.",
+      "prompt": "3. Substitute and simplify f(a+h)−f(a)h.f(a+h)−f(a)h.",
+      "sourceAnswers": [],
+      "hasFigure": false,
+      "status": "draft",
+      "answerVerified": false,
+      "translationStatus": "pending",
+      "mappingStatus": "pending"
+    },
+    {
+      "ordinal": 4,
+      "sourceNumber": "4",
+      "sourceAnchor": "",
+      "kind": "exercise-candidate",
+      "context": "Given a function f,f, find the derivative by\napplying the definition of the derivative.",
+      "original": "4. Evaluate the limit if it\nexists: f′(a)=limh→0f(a+h)−f(a)h.f′(a)=limh→0f(a+h)−f(a)h.",
+      "prompt": "4. Evaluate the limit if it\nexists: f′(a)=limh→0f(a+h)−f(a)h.f′(a)=limh→0f(a+h)−f(a)h.",
+      "sourceAnswers": [],
+      "hasFigure": false,
+      "status": "draft",
+      "answerVerified": false,
+      "translationStatus": "pending",
+      "mappingStatus": "pending"
+    },
+    {
+      "ordinal": 5,
+      "sourceNumber": "1",
+      "sourceAnchor": "",
+      "kind": "exercise-candidate",
+      "context": "Given a graph of a\nfunction f(x),f( x ), find the instantaneous\nrate of change of the function at x=a.x=a.",
+      "original": "1. Locate x=ax=a on the graph of the\nfunction f(x).f(x).",
+      "prompt": "1. Locate x=ax=a on the graph of the\nfunction f(x).f(x).",
+      "sourceAnswers": [],
+      "hasFigure": false,
+      "status": "draft",
+      "answerVerified": false,
+      "translationStatus": "pending",
+      "mappingStatus": "pending"
+    },
+    {
+      "ordinal": 6,
+      "sourceNumber": "2",
+      "sourceAnchor": "",
+      "kind": "exercise-candidate",
+      "context": "Given a graph of a\nfunction f(x),f( x ), find the instantaneous\nrate of change of the function at x=a.x=a.",
+      "original": "2. Draw a tangent line, a line that goes\nthrough x=ax=a at aa and at no other point in\nthat section of the curve. Extend the line far enough to calculate\nits slope as\n\nchange in ychange in x.change in ychange in x.",
+      "prompt": "2. Draw a tangent line, a line that goes\nthrough x=ax=a at aa and at no other point in\nthat section of the curve. Extend the line far enough to calculate\nits slope as\n\nchange in ychange in x.change in ychange in x.",
+      "sourceAnswers": [],
+      "hasFigure": false,
+      "status": "draft",
+      "answerVerified": false,
+      "translationStatus": "pending",
+      "mappingStatus": "pending"
+    },
+    {
+      "ordinal": 7,
+      "sourceNumber": "1",
+      "sourceAnchor": "",
+      "kind": "exercise-candidate",
+      "context": "Estimating the Derivative at a Point\non the Graph of a Function\n\nFrom the graph of the function y=f(x)y=f(x) presented\nin Figure\n5, estimate each of the following:",
+      "original": "1. ⓐ f(0)f(0)",
+      "prompt": "1. ⓐ f(0)f(0)",
+      "sourceAnswers": [],
+      "hasFigure": false,
+      "status": "draft",
+      "answerVerified": false,
+      "translationStatus": "pending",
+      "mappingStatus": "pending"
+    },
+    {
+      "ordinal": 8,
+      "sourceNumber": "2",
+      "sourceAnchor": "",
+      "kind": "exercise-candidate",
+      "context": "Estimating the Derivative at a Point\non the Graph of a Function\n\nFrom the graph of the function y=f(x)y=f(x) presented\nin Figure\n5, estimate each of the following:",
+      "original": "2. ⓑ f(2)f(2)",
+      "prompt": "2. ⓑ f(2)f(2)",
+      "sourceAnswers": [],
+      "hasFigure": false,
+      "status": "draft",
+      "answerVerified": false,
+      "translationStatus": "pending",
+      "mappingStatus": "pending"
+    },
+    {
+      "ordinal": 9,
+      "sourceNumber": "3",
+      "sourceAnchor": "",
+      "kind": "exercise-candidate",
+      "context": "Estimating the Derivative at a Point\non the Graph of a Function\n\nFrom the graph of the function y=f(x)y=f(x) presented\nin Figure\n5, estimate each of the following:",
+      "original": "3. ⓒ f'(0)f'(0)",
+      "prompt": "3. ⓒ f'(0)f'(0)",
+      "sourceAnswers": [],
+      "hasFigure": false,
+      "status": "draft",
+      "answerVerified": false,
+      "translationStatus": "pending",
+      "mappingStatus": "pending"
+    },
+    {
+      "ordinal": 10,
+      "sourceNumber": "4",
+      "sourceAnchor": "",
+      "kind": "exercise-candidate",
+      "context": "Estimating the Derivative at a Point\non the Graph of a Function\n\nFrom the graph of the function y=f(x)y=f(x) presented\nin Figure\n5, estimate each of the following:",
+      "original": "4. ⓓ f'(2)f'(2)",
+      "prompt": "4. ⓓ f'(2)f'(2)",
+      "sourceAnswers": [],
+      "hasFigure": false,
+      "status": "draft",
+      "answerVerified": false,
+      "translationStatus": "pending",
+      "mappingStatus": "pending"
+    },
+    {
+      "ordinal": 11,
+      "sourceNumber": "1",
+      "sourceAnchor": "",
+      "kind": "exercise-candidate",
+      "context": "Interpreting a Derivative in\nContext\n\nA car leaves an intersection. The distance it travels in miles\nis given by the\nfunction f(t),f(t), where tt represents hours.\nExplain the following notations:",
+      "original": "1. ⓐ f(0)=0f(0)=0",
+      "prompt": "1. ⓐ f(0)=0f(0)=0",
+      "sourceAnswers": [],
+      "hasFigure": false,
+      "status": "draft",
+      "answerVerified": false,
+      "translationStatus": "pending",
+      "mappingStatus": "pending"
+    },
+    {
+      "ordinal": 12,
+      "sourceNumber": "2",
+      "sourceAnchor": "",
+      "kind": "exercise-candidate",
+      "context": "Interpreting a Derivative in\nContext\n\nA car leaves an intersection. The distance it travels in miles\nis given by the\nfunction f(t),f(t), where tt represents hours.\nExplain the following notations:",
+      "original": "2. ⓑ f′(1)=60f′(1)=60",
+      "prompt": "2. ⓑ f′(1)=60f′(1)=60",
+      "sourceAnswers": [],
+      "hasFigure": false,
+      "status": "draft",
+      "answerVerified": false,
+      "translationStatus": "pending",
+      "mappingStatus": "pending"
+    },
+    {
+      "ordinal": 13,
+      "sourceNumber": "3",
+      "sourceAnchor": "",
+      "kind": "exercise-candidate",
+      "context": "Interpreting a Derivative in\nContext\n\nA car leaves an intersection. The distance it travels in miles\nis given by the\nfunction f(t),f(t), where tt represents hours.\nExplain the following notations:",
+      "original": "3. ⓒ f(1)=70f(1)=70",
+      "prompt": "3. ⓒ f(1)=70f(1)=70",
+      "sourceAnswers": [],
+      "hasFigure": false,
+      "status": "draft",
+      "answerVerified": false,
+      "translationStatus": "pending",
+      "mappingStatus": "pending"
+    },
+    {
+      "ordinal": 14,
+      "sourceNumber": "4",
+      "sourceAnchor": "",
+      "kind": "exercise-candidate",
+      "context": "Interpreting a Derivative in\nContext\n\nA car leaves an intersection. The distance it travels in miles\nis given by the\nfunction f(t),f(t), where tt represents hours.\nExplain the following notations:",
+      "original": "4. ⓓ f(2.5)=150f(2.5)=150",
+      "prompt": "4. ⓓ f(2.5)=150f(2.5)=150",
+      "sourceAnswers": [],
+      "hasFigure": false,
+      "status": "draft",
+      "answerVerified": false,
+      "translationStatus": "pending",
+      "mappingStatus": "pending"
+    },
+    {
+      "ordinal": 15,
+      "sourceNumber": "1",
+      "sourceAnchor": "",
+      "kind": "exercise-candidate",
+      "context": "Interpreting a Derivative in\nContext\n\nA car leaves an intersection. The distance it travels in miles\nis given by the\nfunction f(t),f(t), where tt represents hours.\nExplain the following notations:\n\nA runner runs along a straight east-west road. The\nfunction f(t)f(t) gives how many feet eastward of her\nstarting point she is after tt seconds. Interpret each of\nthe following as it relates to the runner.",
+      "original": "1. ⓐ f(0)=0f(0)=0",
+      "prompt": "1. ⓐ f(0)=0f(0)=0",
+      "sourceAnswers": [],
+      "hasFigure": false,
+      "status": "draft",
+      "answerVerified": false,
+      "translationStatus": "pending",
+      "mappingStatus": "pending"
+    },
+    {
+      "ordinal": 16,
+      "sourceNumber": "2",
+      "sourceAnchor": "",
+      "kind": "exercise-candidate",
+      "context": "Interpreting a Derivative in\nContext\n\nA car leaves an intersection. The distance it travels in miles\nis given by the\nfunction f(t),f(t), where tt represents hours.\nExplain the following notations:\n\nA runner runs along a straight east-west road. The\nfunction f(t)f(t) gives how many feet eastward of her\nstarting point she is after tt seconds. Interpret each of\nthe following as it relates to the runner.",
+      "original": "2. ⓑ f(10)=150f(10)=150",
+      "prompt": "2. ⓑ f(10)=150f(10)=150",
+      "sourceAnswers": [],
+      "hasFigure": false,
+      "status": "draft",
+      "answerVerified": false,
+      "translationStatus": "pending",
+      "mappingStatus": "pending"
+    },
+    {
+      "ordinal": 17,
+      "sourceNumber": "3",
+      "sourceAnchor": "",
+      "kind": "exercise-candidate",
+      "context": "Interpreting a Derivative in\nContext\n\nA car leaves an intersection. The distance it travels in miles\nis given by the\nfunction f(t),f(t), where tt represents hours.\nExplain the following notations:\n\nA runner runs along a straight east-west road. The\nfunction f(t)f(t) gives how many feet eastward of her\nstarting point she is after tt seconds. Interpret each of\nthe following as it relates to the runner.",
+      "original": "3. ⓒ f′(10)=15f′(10)=15",
+      "prompt": "3. ⓒ f′(10)=15f′(10)=15",
+      "sourceAnswers": [],
+      "hasFigure": false,
+      "status": "draft",
+      "answerVerified": false,
+      "translationStatus": "pending",
+      "mappingStatus": "pending"
+    },
+    {
+      "ordinal": 18,
+      "sourceNumber": "4",
+      "sourceAnchor": "",
+      "kind": "exercise-candidate",
+      "context": "Interpreting a Derivative in\nContext\n\nA car leaves an intersection. The distance it travels in miles\nis given by the\nfunction f(t),f(t), where tt represents hours.\nExplain the following notations:\n\nA runner runs along a straight east-west road. The\nfunction f(t)f(t) gives how many feet eastward of her\nstarting point she is after tt seconds. Interpret each of\nthe following as it relates to the runner.",
+      "original": "4. ⓓ f′(20)=−10f′(20)=−10",
+      "prompt": "4. ⓓ f′(20)=−10f′(20)=−10",
+      "sourceAnswers": [],
+      "hasFigure": false,
+      "status": "draft",
+      "answerVerified": false,
+      "translationStatus": "pending",
+      "mappingStatus": "pending"
+    },
+    {
+      "ordinal": 19,
+      "sourceNumber": "5",
+      "sourceAnchor": "",
+      "kind": "exercise-candidate",
+      "context": "Interpreting a Derivative in\nContext\n\nA car leaves an intersection. The distance it travels in miles\nis given by the\nfunction f(t),f(t), where tt represents hours.\nExplain the following notations:\n\nA runner runs along a straight east-west road. The\nfunction f(t)f(t) gives how many feet eastward of her\nstarting point she is after tt seconds. Interpret each of\nthe following as it relates to the runner.",
+      "original": "5. ⓔ f(40)=−100f(40)=−100",
+      "prompt": "5. ⓔ f(40)=−100f(40)=−100",
+      "sourceAnswers": [],
+      "hasFigure": false,
+      "status": "draft",
+      "answerVerified": false,
+      "translationStatus": "pending",
+      "mappingStatus": "pending"
+    },
+    {
+      "ordinal": 20,
+      "sourceNumber": "1",
+      "sourceAnchor": "",
+      "kind": "exercise-candidate",
+      "context": "Figure 14 The graph\nof f(x)=x13f(x)=x13 has a vertical\ntangent at x=0.x=0.\n\nA function f(x)f(x) is differentiable\nat x=ax=a if the derivative exists\nat x=a,x=a, which means\nthat f′(a)f′(a) exists.\n\nThere are four cases for which a function f(x)f(x) is\nnot differentiable at a point x=a.x=a.",
+      "original": "1. When there is a discontinuity at x=a.x=a.",
+      "prompt": "1. When there is a discontinuity at x=a.x=a.",
+      "sourceAnswers": [],
+      "hasFigure": false,
+      "status": "draft",
+      "answerVerified": false,
+      "translationStatus": "pending",
+      "mappingStatus": "pending"
+    },
+    {
+      "ordinal": 21,
+      "sourceNumber": "2",
+      "sourceAnchor": "",
+      "kind": "exercise-candidate",
+      "context": "Figure 14 The graph\nof f(x)=x13f(x)=x13 has a vertical\ntangent at x=0.x=0.\n\nA function f(x)f(x) is differentiable\nat x=ax=a if the derivative exists\nat x=a,x=a, which means\nthat f′(a)f′(a) exists.\n\nThere are four cases for which a function f(x)f(x) is\nnot differentiable at a point x=a.x=a.",
+      "original": "2. When there is a corner point at x=a.x=a.",
+      "prompt": "2. When there is a corner point at x=a.x=a.",
+      "sourceAnswers": [],
+      "hasFigure": false,
+      "status": "draft",
+      "answerVerified": false,
+      "translationStatus": "pending",
+      "mappingStatus": "pending"
+    },
+    {
+      "ordinal": 22,
+      "sourceNumber": "3",
+      "sourceAnchor": "",
+      "kind": "exercise-candidate",
+      "context": "Figure 14 The graph\nof f(x)=x13f(x)=x13 has a vertical\ntangent at x=0.x=0.\n\nA function f(x)f(x) is differentiable\nat x=ax=a if the derivative exists\nat x=a,x=a, which means\nthat f′(a)f′(a) exists.\n\nThere are four cases for which a function f(x)f(x) is\nnot differentiable at a point x=a.x=a.",
+      "original": "3. When there is a cusp at x=a.x=a.",
+      "prompt": "3. When there is a cusp at x=a.x=a.",
+      "sourceAnswers": [],
+      "hasFigure": false,
+      "status": "draft",
+      "answerVerified": false,
+      "translationStatus": "pending",
+      "mappingStatus": "pending"
+    },
+    {
+      "ordinal": 23,
+      "sourceNumber": "4",
+      "sourceAnchor": "",
+      "kind": "exercise-candidate",
+      "context": "Figure 14 The graph\nof f(x)=x13f(x)=x13 has a vertical\ntangent at x=0.x=0.\n\nA function f(x)f(x) is differentiable\nat x=ax=a if the derivative exists\nat x=a,x=a, which means\nthat f′(a)f′(a) exists.\n\nThere are four cases for which a function f(x)f(x) is\nnot differentiable at a point x=a.x=a.",
+      "original": "4. Any other time when there is a vertical tangent\nat x=a.x=a.",
+      "prompt": "4. Any other time when there is a vertical tangent\nat x=a.x=a.",
+      "sourceAnswers": [],
+      "hasFigure": false,
+      "status": "draft",
+      "answerVerified": false,
+      "translationStatus": "pending",
+      "mappingStatus": "pending"
+    },
+    {
+      "ordinal": 24,
+      "sourceNumber": "1",
+      "sourceAnchor": "",
+      "kind": "exercise-candidate",
+      "context": "Determining Where a Function Is\nContinuous and Differentiable from a Graph\n\nUsing Figure\n15, determine where the function is",
+      "original": "1. continuous",
+      "prompt": "1. continuous",
+      "sourceAnswers": [],
+      "hasFigure": false,
+      "status": "draft",
+      "answerVerified": false,
+      "translationStatus": "pending",
+      "mappingStatus": "pending"
+    },
+    {
+      "ordinal": 25,
+      "sourceNumber": "2",
+      "sourceAnchor": "",
+      "kind": "exercise-candidate",
+      "context": "Determining Where a Function Is\nContinuous and Differentiable from a Graph\n\nUsing Figure\n15, determine where the function is",
+      "original": "2. discontinuous",
+      "prompt": "2. discontinuous",
+      "sourceAnswers": [],
+      "hasFigure": false,
+      "status": "draft",
+      "answerVerified": false,
+      "translationStatus": "pending",
+      "mappingStatus": "pending"
+    },
+    {
+      "ordinal": 26,
+      "sourceNumber": "3",
+      "sourceAnchor": "",
+      "kind": "exercise-candidate",
+      "context": "Determining Where a Function Is\nContinuous and Differentiable from a Graph\n\nUsing Figure\n15, determine where the function is",
+      "original": "3. differentiable",
+      "prompt": "3. differentiable",
+      "sourceAnswers": [],
+      "hasFigure": false,
+      "status": "draft",
+      "answerVerified": false,
+      "translationStatus": "pending",
+      "mappingStatus": "pending"
+    },
+    {
+      "ordinal": 27,
+      "sourceNumber": "4",
+      "sourceAnchor": "",
+      "kind": "exercise-candidate",
+      "context": "Determining Where a Function Is\nContinuous and Differentiable from a Graph\n\nUsing Figure\n15, determine where the function is",
+      "original": "4. not differentiable",
+      "prompt": "4. not differentiable",
+      "sourceAnswers": [],
+      "hasFigure": false,
+      "status": "draft",
+      "answerVerified": false,
+      "translationStatus": "pending",
+      "mappingStatus": "pending"
+    },
+    {
+      "ordinal": 28,
+      "sourceNumber": "1",
+      "sourceAnchor": "",
+      "kind": "exercise-candidate",
+      "context": "Given a function f,f, find the equation of a\nline tangent to the function at x=a.x=a.",
+      "original": "1. Find the derivative\nof f(x)f(x) at x=ax=a using f′(a)=limh→0f(a+h)−f(a)h.f′(a)=limh→0f(a+h)−f(a)h.",
+      "prompt": "1. Find the derivative\nof f(x)f(x) at x=ax=a using f′(a)=limh→0f(a+h)−f(a)h.f′(a)=limh→0f(a+h)−f(a)h.",
+      "sourceAnswers": [],
+      "hasFigure": false,
+      "status": "draft",
+      "answerVerified": false,
+      "translationStatus": "pending",
+      "mappingStatus": "pending"
+    },
+    {
+      "ordinal": 29,
+      "sourceNumber": "2",
+      "sourceAnchor": "",
+      "kind": "exercise-candidate",
+      "context": "Given a function f,f, find the equation of a\nline tangent to the function at x=a.x=a.",
+      "original": "2. Evaluate the function at x=a.x=a. This\nis f(a).f(a).",
+      "prompt": "2. Evaluate the function at x=a.x=a. This\nis f(a).f(a).",
+      "sourceAnswers": [],
+      "hasFigure": false,
+      "status": "draft",
+      "answerVerified": false,
+      "translationStatus": "pending",
+      "mappingStatus": "pending"
+    },
+    {
+      "ordinal": 30,
+      "sourceNumber": "3",
+      "sourceAnchor": "",
+      "kind": "exercise-candidate",
+      "context": "Given a function f,f, find the equation of a\nline tangent to the function at x=a.x=a.",
+      "original": "3. \nSubstitute (a,f(a))(a,f(a)) and f′(a)f′(a) into y=f'(a)(x−a)+f(a).y=f'(a)(x−a)+f(a).",
+      "prompt": "3. \nSubstitute (a,f(a))(a,f(a)) and f′(a)f′(a) into y=f'(a)(x−a)+f(a).y=f'(a)(x−a)+f(a).",
+      "sourceAnswers": [],
+      "hasFigure": false,
+      "status": "draft",
+      "answerVerified": false,
+      "translationStatus": "pending",
+      "mappingStatus": "pending"
+    },
+    {
+      "ordinal": 31,
+      "sourceNumber": "4",
+      "sourceAnchor": "",
+      "kind": "exercise-candidate",
+      "context": "Given a function f,f, find the equation of a\nline tangent to the function at x=a.x=a.",
+      "original": "4. Write the equation of the tangent line in the\nform y=mx+b.y=mx+b.",
+      "prompt": "4. Write the equation of the tangent line in the\nform y=mx+b.y=mx+b.",
+      "sourceAnswers": [],
+      "hasFigure": false,
+      "status": "draft",
+      "answerVerified": false,
+      "translationStatus": "pending",
+      "mappingStatus": "pending"
+    }
+  ],
+  "license": "CC BY 4.0",
+  "licenseEvidence": "This page titled 12.5: Derivatives was last modified on Sun, 28 May 2023 07:33:33 GMT and is shared under a CC BY  4.0  license and was authored, remixed, and/or curated by OpenStax via source content that was edited to the style and standards of the LibreTexts platform.",
+  "url": "https://math.libretexts.org/Bookshelves/Precalculus/Precalculus_2e_(OpenStax)/12:_Introduction_to_Calculus/12.05:_Derivatives",
+  "sha256": "0e4d252237260bdf4dacab10efd71e71738f65cf6a9bdbf19d87e30c3ab1c27e",
+  "checkedAt": "2026-10-07",
+  "id": "14dfbcf4c99e66d880c7",
+  "bookId": "precalculus",
+  "licenseInherited": false,
+  "licenseSource": "https://math.libretexts.org/Bookshelves/Precalculus/Precalculus_2e_(OpenStax)/12:_Introduction_to_Calculus/12.05:_Derivatives",
+  "licenseUrl": "https://creativecommons.org/licenses/by/4.0/",
+  "authors": "OpenStax / Jay Abramson et al.",
+  "book": "Precalculus 2e",
+  "reviewStatus": "unreviewed",
+  "sourceLanguage": "en",
+  "translationStatus": "pending"
+}

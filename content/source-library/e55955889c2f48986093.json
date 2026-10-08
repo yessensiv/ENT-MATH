@@ -1,0 +1,608 @@
+{
+  "title": "10.5: Use the Properties of Logarithms",
+  "originalText": "Learning Objectives\n\nBy the end of this section, you will be able to:\n\nUse the properties of logarithms\n\nUse the Change of Base Formula\n\nBefore you get started, take this readiness quiz.\n\n1. Evaluate: a. \\(a^{0}\\) b. \\(a^{1}\\).\n\n    If you missed this problem, review Example 5.14.\n\n2. Write with a rational exponent: \\(\\sqrt[3]{x^{2} y}\\).\n\n    If you missed this problem, review Example 8.27.\n\n3. Round to three decimal places: \\(2.5646415\\).\n\n    If you missed this problem, review Example 1.34.\n\nUse the Properties of Logarithms\n\nNow that we have learned about exponential and logarithmic functions, we can introduce some of the properties of logarithms. These will be very helpful as we continue to solve both exponential and logarithmic equations.\n\nThe first two properties derive from the definition of logarithms. Since \\(a^{0}=1\\), we can convert this to logarithmic form and get \\(\\log _{a} 1=0\\). Also, since \\(a^{1}=a\\), we get \\(\\log _{a} a=1\\).\n\nDefinition \\(\\PageIndex{1}\\)\n\nProperties of Logarithms\n\n\\(\\log _{a} 1=0 \\quad \\log _{a} a=1\\)\n\nIn the next example we could evaluate the logarithm by converting to exponential form, as we have done previously, but recognizing and then applying the properties saves time.\n\nExample \\(\\PageIndex{1}\\)\n\nEvaluate using the properties of logarithms:\n\n1. \\(\\log _{8} 1\\)\n\n2. \\(\\log _{6} 6\\)\n\nSolution:\n\na.\n\n\\(\\log _{8} 1\\)\n\nUse the property, \\(\\log _{a} 1=0\\).\n\n\\(0 \\quad \\log _{8} 1=0\\)\n\nb.\n\n\\(\\log _{6} 6\\)\n\nUse the property, \\(\\log _{a} a=1\\).\n\n\\(1 \\quad \\log _{6} 6=1\\)\n\nExercise \\(\\PageIndex{1}\\)\n\nEvaluate using the properties of logarithms:\n\n1. \\(\\log _{13} 1\\)\n\n2. \\(\\log _{9} 9\\)\n\nAnswer\n\n1. \\(0\\)\n\n2. \\(1\\)\n\nExercise \\(\\PageIndex{2}\\)\n\nEvaluate using the properties of logarithms:\n\n1. \\(\\log _{5} 1\\)\n\n2. \\(\\log _{7} 7\\)\n\nAnswer\n\n1. \\(0\\)\n\n2. \\(1\\)\n\nThe next two properties can also be verified by converting them from exponential form to logarithmic form, or the reverse.\n\nThe exponential equation \\(a^{\\log _{a} x}=x\\) converts to the logarithmic equation \\(\\log _{a} x=\\log _{a} x\\), which is a true statement for positive values for \\(x\\) only.\n\nThe logarithmic equation \\(\\log _{a} a^{x}=x\\) converts to the exponential equation \\(a^{x}=a^{x}\\), which is also a true statement.\n\nThese two properties are called inverse properties because, when we have the same base, raising to a power “undoes” the log and taking the log “undoes” raising to a power. These two properties show the composition of functions. Both ended up with the identity function which shows again that the exponential and logarithmic functions are inverse functions.\n\nDefinition \\(\\PageIndex{2}\\)\n\nInverse Properties of Logarithms\n\nFor \\(a>0, x>0\\) and \\(a \\neq 1\\),\n\n\\(a^{\\log _{a} x}=x \\quad \\log _{a} a^{x}=x\\)\n\nIn the next example, apply the inverse properties of logarithms.\n\nExample \\(\\PageIndex{2}\\)\n\nEvaluate using the properties of logarithms:\n\n1. \\(4^{\\log _{4} 9}\\)\n\n2. \\(\\log _{3} 3^{5}\\)\n\nSolution:\n\na.\n\n\\(4^{\\log _{4} 9}\\)\n\nUse the property, \\(a^{\\log _{a} x}=x\\).\n\n\\(9 \\quad 4^{\\log _{4} 9}=9\\)\n\nb.\n\n\\(\\log _{3} 3^{5}\\)\n\nUse the property, \\(a^{\\log _{a} x}=x\\).\n\n\\(5 \\quad \\log _{3} 3^{5}=5\\)\n\nExercise \\(\\PageIndex{3}\\)\n\nEvaluate using the properties of logarithms:\n\n1. \\(5^{\\log _{5} 15}\\)\n\n2. \\(\\log _{7} 7^{4}\\)\n\nAnswer\n\n1. \\(15\\)\n\n2. \\(4\\)\n\nExercise \\(\\PageIndex{4}\\)\n\nEvaluate using the properties of logarithms:\n\n1. \\(2^{\\log _{2} 8}\\)\n\n2. \\(\\log _{2} 2^{15}\\)\n\nAnswer\n\n1. \\(8\\)\n\n2. \\(15\\)\n\nThere are three more properties of logarithms that will be useful in our work. We know exponential functions and logarithmic function are very interrelated. Our definition of logarithm shows us that a logarithm is the exponent of the equivalent exponential. The properties of exponents have related properties for exponents.\n\nIn the Product Property of Exponents, \\(a^{m} \\cdot a^{n}=a^{m+n}\\), we see that to multiply the same base, we add the exponents. The Product Property of Logarithms, \\(\\log _{a} M \\cdot N=\\log _{a} M+\\log _{a} N\\) tells us to take the log of a product, we add the log of the factors.\n\nDefinition \\(\\PageIndex{3}\\)\n\nProduct Property of Logarithms\n\nIf \\(M>0, N>0, \\mathrm{a}>0\\) and \\(\\mathrm{a} \\neq 1,\\) then\n\n\\(\\log _{a}(M \\cdot N)=\\log _{a} M+\\log _{a} N\\)\n\nThe logarithm of a product is the sum of the logarithms.\n\nWe use this property to write the log of a product as a sum of the logs of each factor.\n\nExample \\(\\PageIndex{3}\\)\n\nUse the Product Property of Logarithms to write each logarithm as a sum of logarithms. Simplify, if possible:\n\n1. \\(\\log _{3} 7 x\\)\n\n2. \\(\\log _{4} 64 x y\\)\n\nSolution:\n\na.\n\n\\(\\log _{3} 7 x\\)\n\nUse the Product Property, \\(\\log _{a}(M \\cdot N)=\\log _{a} M+\\log _{a} N\\).\n\n\\(\\log _{3} 7+\\log _{3} x\\)\n\n\\(\\log _{3} 7 x=\\log _{3} 7+\\log _{3} x\\)\n\nb.\n\n\\(\\log _{4} 64 x y\\)\n\nUse the Product Property, \\(\\log _{a}(M \\cdot N)=\\log _{a} M+\\log _{a} N\\).\n\n\\(\\log _{4} 64+\\log _{4} x+\\log _{4} y\\)\n\nSimplify be evaluating, \\(\\log _{4} 64\\).\n\n\\(3+\\log _{4} x+\\log _{4} y\\)\n\n\\(\\log _{4} 64 x y=3+\\log _{4} x+\\log _{4} y\\)\n\nExercise \\(\\PageIndex{5}\\)\n\nUse the Product Property of Logarithms to write each logarithm as a sum of logarithms. Simplify, if possible:\n\n1. \\(\\log _{3} 3 x\\)\n\n2. \\(\\log _{2} 8 x y\\)\n\nAnswer\n\n1. \\(1+\\log _{3} x\\)\n\n2. \\(3+\\log _{2} x+\\log _{2} y\\)\n\nExercise \\(\\PageIndex{6}\\)\n\nUse the Product Property of Logarithms to write each logarithm as a sum of logarithms. Simplify, if possible:\n\n1. \\(\\log _{9} 9 x\\)\n\n2. \\(\\log _{3} 27 x y\\)\n\nAnswer\n\n1. \\(1+\\log _{9} x\\)\n\n2. \\(3+\\log _{3} x+\\log _{3} y\\)\n\nSimilarly, in the Quotient Property of Exponents, \\(\\frac{a^{m}}{a^{n}}=a^{m-n}\\), we see that to divide the same base, we subtract the exponents. The Quotient Property of Logarithms, \\(\\log _{a} \\frac{M}{N}=\\log _{a} M-\\log _{a} N\\) tells us to take the log of a quotient, we subtract the log of the numerator and denominator.\n\nDefinition \\(\\PageIndex{4}\\)\n\nQuotient Property of Logarithms\n\nIf \\(M>0, N>0, \\mathrm{a}>0\\) and \\(\\mathrm{a} \\neq 1,\\) then\n\n\\(\\log _{a} \\frac{M}{N}=\\log _{a} M-\\log _{a} N\\)\n\nThe logarithm of a quotient is the difference of the logarithms.\n\nNote that \\(\\log _{a} M=\\log _{a} N \\not=\\log _{a}(M-N)\\).\n\nWe use this property to write the log of a quotient as a difference of the logs of each factor.\n\nExample \\(\\PageIndex{4}\\)\n\nUse the Quotient Property of Logarithms to write each logarithm as a difference of logarithms. Simplify, if possible.\n\n1. \\(\\log _{5} \\frac{5}{7}\\)\n\n2. \\(\\log \\frac{x}{100}\\)\n\nSolution:\n\na.\n\n\\(\\log _{5} \\frac{5}{7}\\)\n\nUse the Quotient Property, \\(\\log _{a} \\frac{M}{N}=\\log _{a} M-\\log _{a} N\\).\n\n\\(\\log _{5} 5-\\log _{5} 7\\)\n\nSimplify.\n\n\\(1-\\log _{5} 7\\)\n\n\\(\\log _{5} \\frac{5}{7}=1-\\log _{5} 7\\)\n\nb.\n\n\\(\\log \\frac{x}{100}\\)\n\nUse the Quotient Property, \\(\\log _{a} \\frac{M}{N}=\\log _{a} M-\\log _{a} N\\).\n\n\\(\\log x-\\log 100\\)\n\nSimplify.\n\n\\(\\log x-2\\)\n\n\\(\\log \\frac{x}{100}=\\log x-2\\)\n\nExercise \\(\\PageIndex{7}\\)\n\nUse the Quotient Property of Logarithms to write each logarithm as a difference of logarithms. Simplify, if possible.\n\n1. \\(\\log _{4} \\frac{3}{4}\\)\n\n2. \\(\\log \\frac{x}{1000}\\)\n\nAnswer\n\n1. \\(\\log _{4} 3-1\\)\n\n2. \\(\\log x-3\\)\n\nExercise \\(\\PageIndex{8}\\)\n\nUse the Quotient Property of Logarithms to write each logarithm as a difference of logarithms. Simplify, if possible.\n\n1. \\(\\log _{2} \\frac{5}{4}\\)\n\n2. \\(\\log \\frac{10}{y}\\)\n\nAnswer\n\n1. \\(\\log _{2} 5-2\\)\n\n2. \\(1-\\log y\\)\n\nThe third property of logarithms is related to the Power Property of Exponents, \\(\\left(a^{m}\\right)^{n}=a^{m \\cdot n}\\), we see that to raise a power to a power, we multiply the exponents. The Power Property of Logarithms, \\(\\log _{a} M^{p}=p \\log _{a} M\\) tells us to take the log of a number raised to a power, we multiply the power times the log of the number.\n\nDefinition \\(\\PageIndex{5}\\)\n\nPower Property of Logarithms\n\nIf \\(M>0, \\mathrm{a}>0, \\mathrm{a} \\neq 1\\) and \\(p\\) is any real number then,\n\n\\(\\log _{a} M^{p}=p \\log _{a} M\\)\n\nThe log of a number raised to a power as the product product of the power times the log of the number.\n\nWe use this property to write the log of a number raised to a power as the product of the power times the log of the number. We essentially take the exponent and throw it in front of the logarithm.\n\nExample \\(\\PageIndex{5}\\)\n\nUse the Power Property of Logarithms to write each logarithm as a product of logarithms. Simplify, if possible.\n\n1. \\(\\log _{5} 4^{3}\\)\n\n2. \\(\\log x^{10}\\)\n\nSolution:\n\na.\n\n\\(\\log _{5} 4^{3}\\)\n\nUse the Power Property, \\(\\log _{a} M^{p}=p \\log _{a} M\\).\n\n3 \\(\\log _{5} 4\\)\n\n\\(\\log _{5} 4^{3}=3 \\log _{5} 4\\)\n\nb.\n\n\\(\\log x^{10}\\)\n\nUse the Power Property, \\(\\log _{a} M^{p}=p \\log _{a} M\\).\n\n\\(10\\log x\\)\n\n\\(\\log x^{10}=10 \\log x\\)\n\nExercise \\(\\PageIndex{9}\\)\n\nUse the Power Property of Logarithms to write each logarithm as a product of logarithms. Simplify, if possible.\n\n1. \\(\\log _{7} 5^{4}\\)\n\n2. \\(\\log x^{100}\\)\n\nAnswer\n\n1. \\(4\\log _{7} 5\\)\n\n2. 100\\(\\cdot \\log x\\)\n\nExercise \\(\\PageIndex{10}\\)\n\nUse the Power Property of Logarithms to write each logarithm as a product of logarithms. Simplify, if possible.\n\n1. \\(\\log _{2} 3^{7}\\)\n\n2. \\(\\log x^{20}\\)\n\nAnswer\n\n1. \\(7\\log _{2} 3\\)\n\n2. \\(20\\cdot \\log x\\)\n\nWe summarize the Properties of Logarithms here for easy reference. While the natural logarithms are a special case of these properties, it is often helpful to also show the natural logarithm version of each property.\n\nProperties of Logarithms\n\nIf \\(M>0, \\mathrm{a}>0, \\mathrm{a} \\neq 1\\) and \\(p\\) is any real number then,\n\n            Property\t\n            Base \\(a\\)\t\n            Base \\(e\\)\t\n\n            \\(\\log _{a} 1=0\\)\t\n            \\(\\ln 1=0\\)\t\n\n            \\(\\log _{a} a=1\\)\t\n            \\(\\ln e=1\\)\t\n\n            Inverse Properties\t\n            \\(a^{\\log _{a} x}=x\\)\n\n            \\(\\log _{a} a^{x}=x\\)\t\n            \\(e^{\\ln x}=x\\)\n\n            \\(\\ln e^{x}=x\\)\t\n\n            Product Property of Logarithms\t\n            \\(\\log _{a}(M \\cdot N)=\\log _{a} M+\\log _{a} N\\)\t\n            \\(\\ln (M \\cdot N)=\\ln M+\\ln N\\)\t\n\n            Quotient Property of Logarithms\t\n            \\(\\log _{a} \\frac{M}{N}=\\log _{a} M-\\log _{a} N\\)\t\n            \\(\\ln \\frac{M}{N}=\\ln M-\\ln N\\)\t\n\n            Power Property of Logarithms\t\n            \\(\\log _{a} M^{p}=p \\log _{a} M\\)\t\n            \\(\\ln M^{p}=p \\ln M\\)\t\n\nTable 10.4.1\n\nNow that we have the properties we can use them to “expand” a logarithmic expression. This means to write the logarithm as a sum or difference and without any powers.\n\nWe generally apply the Product and Quotient Properties before we apply the Power Property.\n\nExample \\(\\PageIndex{6}\\)\n\nUse the Properties of Logarithms to expand the logarithm \\(\\log _{4}\\left(2 x^{3} y^{2}\\right)\\). Simplify, if possible.\n\nSolution:\n\nUse the Product Property, \\(\\log _{a} M \\cdot N=\\log _{a} M+\\log _{a} N\\).\n\nUse the Power Property, \\(\\log _{a} M^{p}=p \\log _{a} M\\), on the last two terms. Simplify.\n\nExercise \\(\\PageIndex{11}\\)\n\nUse the Properties of Logarithms to expand the logarithm \\(\\log _{2}\\left(5 x^{4} y^{2}\\right)\\). Simplify, if possible.\n\nAnswer\n\n\\(\\log _{2} 5+4 \\log _{2} x+2 \\log _{2} y\\)\n\nExercise \\(\\PageIndex{12}\\)\n\nUse the Properties of Logarithms to expand the logarithm \\(\\log _{3}\\left(7 x^{5} y^{3}\\right)\\). Simplify, if possible.\n\nAnswer\n\n\\(\\log _{3} 7+5 \\log _{3} x+3 \\log _{3} y\\)\n\nWhen we have a radical in the logarithmic expression, it is helpful to first write its radicand as a rational exponent.\n\nExample \\(\\PageIndex{7}\\)\n\nUse the Properties of Logarithms to expand the logarithm \\(\\log _{2} \\sqrt[4]{\\frac{x^{3}}{3 y^{2} z}}\\). Simplify, if possible.\n\nSolution\n\n\\(\\log _{2} \\sqrt[4]{\\frac{x^{3}}{3 y^{2} z}}\\)\n\nRewrite the radical with a rational exponent.\n\n\\(\\log _{2}\\left(\\frac{x^{3}}{3 y^{2} z}\\right)^{\\frac{1}{4}}\\)\n\nUse the Power Property, \\(\\log _{a} M^{p}=p \\log _{a} M\\).\n\n\\(\\frac{1}{4} \\log _{2}\\left(\\frac{x^{3}}{3 y^{2} z}\\right)\\)\n\nUse the Quotient Property, \\(\\log _{a} M \\cdot N=\\log _{a} M-\\log _{a} N\\).\n\n\\(\\frac{1}{4}\\left(\\log _{2}\\left(x^{3}\\right)-\\log _{2}\\left(3 y^{2} z\\right)\\right)\\)\n\nUse the Product Property, \\(\\log _{a} M \\cdot N=\\log _{a} M+\\log _{a} N\\), in the second term.\n\n\\(\\frac{1}{4}\\left(\\log _{2}\\left(x^{3}\\right)-\\left(\\log _{2} 3+\\log _{2} y^{2}+\\log _{2} z\\right)\\right)\\)\n\nUse the Power Property, \\(\\log _{a} M^{p}=p \\log _{a} M\\), inside the parentheses.\n\n\\(\\frac{1}{4}\\left(3 \\log _{2} x-\\left(\\log _{2} 3+2 \\log _{2} y+\\log _{2} z\\right)\\right)\\)\n\nSimplify by distributing.\n\n\\(\\frac{1}{4}\\left(3 \\log _{2} x-\\log _{2} 3-2 \\log _{2} y-\\log _{2} z\\right)\\)\n\n\\(\\log _{2} \\sqrt[4]{\\frac{x^{3}}{3 y^{2} z}}=\\frac{1}{4}\\left(3 \\log _{2} x-\\log _{2} 3-2 \\log _{2} y-\\log _{2} z\\right)\\)\n\nExercise \\(\\PageIndex{13}\\)\n\nUse the Properties of Logarithms to expand the logarithm \\(\\log _{4} \\sqrt[5]{\\frac{x^{4}}{2 y^{3} z^{2}}}\\). Simplify, if possible.\n\nAnswer\n\n\\(\\frac{1}{5}\\left(4 \\log _{4} x-\\frac{1}{2}-3 \\log _{4} y-2 \\log _{4} z\\right)\\)\n\nExercise \\(\\PageIndex{14}\\)\n\nUse the Properties of Logarithms to expand the logarithm \\(\\log _{3} \\sqrt[3]{\\frac{x^{2}}{5 y z}}\\). Simplify, if possible.\n\nAnswer\n\n\\(\\frac{1}{3}\\left(2 \\log _{3} x-\\log _{3} 5-\\log _{3} y-\\log _{3} z\\right)\\)\n\nThe opposite of expanding a logarithm is to condense a sum or difference of logarithms that have the same base into a single logarithm. We again use the properties of logarithms to help us, but in reverse.\n\nTo condense logarithmic expressions with the same base into one logarithm, we start by using the Power Property to get the coefficients of the log terms to be one and then the Product and Quotient Properties as needed.\n\nExample \\(\\PageIndex{8}\\)\n\nUse the Properties of Logarithms to condense the logarithm \\(\\log _{4} 3+\\log _{4} x-\\log _{4} y\\). Simplify, if possible.\n\nSolution:\n\nThe log expressions all have the same base, \\(4\\).\n\nThe first two terms are added, so we use the Product Property, \\(\\log _{a} M+\\log _{a} N=\\log _{a} M : N\\).\n\nSince the logs are subtracted, we use the Quotient Property, \\(\\log _{a} M-\\log _{a} N=\\log _{a} \\frac{M}{N}\\).\n\nExercise \\(\\PageIndex{15}\\)\n\nUse the Properties of Logarithms to condense the logarithm \\(\\log _{2} 5+\\log _{2} x-\\log _{2} y\\). Simplify, if possible.\n\nAnswer\n\n\\(\\log _{2} \\frac{5 x}{y}\\)\n\nExercise \\(\\PageIndex{16}\\)\n\nUse the Properties of Logarithms to condense the logarithm \\(\\log _{3} 6-\\log _{3} x-\\log _{3} y\\). Simplify, if possible.\n\nAnswer\n\n\\(\\log _{3} \\frac{6}{x y}\\)\n\nExample \\(\\PageIndex{9}\\)\n\nUse the Properties of Logarithms to condense the logarithm \\(2 \\log _{3} x+4 \\log _{3}(x+1)\\). Simplify, if possible.\n\nSolution:\n\nThe log expressions have the same base, \\(3\\).\n\n\\(2 \\log _{3} x+4 \\log _{3}(x+1)\\)\n\nUse the Power Property, \\(\\log _{a} M+\\log _{a} N=\\log _{a} M \\cdot N\\).\n\n\\(\\log _{3} x^{2}+\\log _{3}(x+1)^{4}\\)\n\nThe terms are added, so we use the Product Property, \\(\\log _{a} M+\\log _{a} N=\\log _{a} M \\cdot N\\).\n\n\\(\\log _{3} x^{2}(x+1)^{4}\\)\n\n\\(2 \\log _{3} x+4 \\log _{3}(x+1)=\\log _{3} x^{2}(x+1)^{4}\\)\n\nExercise \\(\\PageIndex{17}\\)\n\nUse the Properties of Logarithms to condense the logarithm \\(3 \\log _{2} x+2 \\log _{2}(x-1)\\). Simplify, if possible.\n\nAnswer\n\n\\(\\log _{2} x^{3}(x-1)^{2}\\)\n\nExercise \\(\\PageIndex{18}\\)\n\nUse the Properties of Logarithms to condense the logarithm \\(2 \\log x+2 \\log (x+1)\\). Simplify, if possible.\n\nAnswer\n\n\\(\\log x^{2}(x+1)^{2}\\)\n\nUse the Change-of-Base Formula\n\nTo evaluate a logarithm with any other base, we can use the Change-of-Base Formula. We will show how this is derived.\n\n\\(\\begin{array} {l c} {\\text{Suppose we want to evaluate} \\log_{a}M} & {\\log_{a}M} \\\\ {\\text{Let} \\:y =\\log_{a}M. }&{y=\\log_{a}M} \\\\ {\\text{Rewrite the epression in exponential form. }}&{a^{y}=M } \\\\ {\\text{Take the }\\:\\log_{b} \\text{of each side.}}&{\\log_{b}a^{y}=\\log_{b}M}\\\\ {\\text{Use the Power Property.}}&{y\\log_{b}a=\\log_{b}M} \\\\ {\\text{Solve for}\\:y. }&{y=\\frac{\\log_{b}M}{\\log_{b}a}} \\\\ {\\text{Substiture}\\:y=\\log_{a}M.}&{\\log_{a}M=\\frac{\\log_{b}M}{\\log_{b}a}} \\end{array}\\)\n\nThe Change-of-Base Formula introduces a new base \\(b\\). This can be any base \\(b\\) we want where \\(b>0,b≠1\\). Because our calculators have keys for logarithms base \\(10\\) and base \\(e\\), we will rewrite the Change-of-Base Formula with the new base as \\(10\\) or \\(e\\).\n\nDefinition \\(\\PageIndex{6}\\)\n\nChange-of-Base Formula\n\nFor any logarithmic bases \\(a, b\\) and \\(M>0\\),\n\n\\(\\begin{array}{lll}{\\log _{a} M=\\frac{\\log _{b} M}{\\log _{b} a}} & {\\log _{a} M=\\frac{\\log M}{\\log a}} & {\\log _{a} M=\\frac{\\ln M}{\\ln a}} \\\\ {\\text { new base } b} & {\\text { new base } 10} & {\\text { new base } e}\\end{array}\\)\n\nWhen we use a calculator to find the logarithm value, we usually round to three decimal places. This gives us an approximate value and so we use the approximately equal symbol \\((≈)\\).\n\nExample \\(\\PageIndex{10}\\)\n\nRounding to three decimal places, approximate \\(\\log _{4} 35\\).\n\nSolution:\n\n[Figure: .]\n\n            Use the Change-of-Base Formula.\t\n\n[Figure: .]\n\n            Identify \\(a\\) and \\(M\\). Choose \\(10\\) for \\(b\\).\t\n\n[Figure: .]\n\n            Enter the expression \\(\\frac{\\log 35}{\\log 4}\\) in the calculator using the log button for base \\(10\\). Round to three decimal places.\t\n\n[Figure: .]\n\nTable 10.4.2\n\nExercise \\(\\PageIndex{19}\\)\n\nRounding to three decimal places, approximate \\(\\log _{3} 42\\).\n\nAnswer\n\n\\(3.402\\)\n\nExercise \\(\\PageIndex{20}\\)\n\nRounding to three decimal places, approximate \\(\\log _{5} 46\\).\n\nAnswer\n\n\\(2.379\\)\n\nAccess these online resources for additional instruction and practice with using the properties of logarithms.\n\nUsing Properties of Logarithms to Expand Logs\n\nUsing Properties of Logarithms to Condense Logs\n\nChange of Base\n\nKey Concepts\n\n\\(\\log _{a} 1=0 \\quad \\log _{a} a=1\\)\n\nInverse Properties of Logarithms\n\nFor \\(a>0,x>0\\) and \\(a≠1\\)\n\n\\(a^{\\log _{a} x}=x \\quad \\log _{a} a^{x}=x\\)\n\nProduct Property of Logarithms\n\nIf \\(M>0,N>0,a>0\\) and \\(a≠1\\), then,\n\n\\(\\log _{a} M \\cdot N=\\log _{a} M+\\log _{a} N\\)\n\n        The logarithm of a product is the sum of the logarithms.\n\nQuotient Property of Logarithms\n\nIf \\(M>0, N>0, \\mathrm{a}>0\\) and \\(a≠1\\), then,\n\n\\(\\log _{a} \\frac{M}{N}=\\log _{a} M-\\log _{a} N\\)\n\n        The logarithm of a quotient is the difference of the logarithms.\n\nPower Property of Logarithms\n\nIf \\(M>0,a>0,a≠1\\) and \\(p\\) is any real number then,\n\n\\(\\log _{a} M^{p}=p \\log _{a} M\\)\n\n        The log of a number raised to a power is the product of the power times the log of the number.\n\nProperties of Logarithms Summary\n\n    If \\(M>0,a>0,a≠1\\) and \\(p\\) is any real number then,\n\n            Property\t\n            Base \\(a\\)\t\n            Base \\(e\\)\t\n\n            \\(\\log _{a} 1=0\\)\t\n            \\(\\ln 1=0\\)\t\n\n            \\(\\log _{a} a=1\\)\t\n            \\(\\ln e=1\\)\t\n\n            Inverse Properties\t\n            \\(a^{\\log _{a} x}=x\\)\n\n            \\(\\log _{a} a^{x}=x\\)\t\n            \\(e^{\\ln x}=x\\)\n\n            \\(\\ln e^{x}=x\\)\t\n\n            Product Property of Logarithms\t\n            \\(\\log _{a}(M \\cdot N)=\\log _{a} M+\\log _{a} N\\)\t\n            \\(\\ln (M \\cdot N)=\\ln M+\\ln N\\)\t\n\n            Quotient Property of Logarithms\t\n            \\(\\log _{a} \\frac{M}{N}=\\log _{a} M-\\log _{a} N\\)\t\n            \\(\\ln \\frac{M}{N}=\\ln M-\\ln N\\)\t\n\n            Power Property of Logarithms\t\n            \\(\\log _{a} M^{p}=p \\log _{a} M\\)\t\n            \\(\\ln M^{p}=p \\ln M\\)\t\n\nTable 10.4.1\n\nChange-of-Base Formula\n\n    For any logarithmic bases \\(a\\) and \\(b\\), and \\(M>0\\),\n\n\\(\\begin{array}{ll}{\\log _{a} M=\\frac{\\log _{b} M}{\\log _{b} a}} & {\\log _{a} M=\\frac{\\log M}{\\log a}} & {\\log _{a} M=\\frac{\\ln M}{\\ln a}} \\\\ {\\text { new base } b} & {\\text { new base } 10} & {\\text { new base } e}\\end{array}\\)\n\nThis page titled 10.5: Use the Properties of Logarithms was last modified on Mon, 14 Feb 2022 01:06:53 GMT and is shared under a CC BY  4.0  license and was authored, remixed, and/or curated by OpenStax via source content that was edited to the style and standards of the LibreTexts platform.",
+  "figures": [
+    {
+      "url": "https://math.libretexts.org/@api/deki/files/35703/CNX_IntAlg_Figure_10_04_001a_img.jpg?revision=1",
+      "alt": ".",
+      "credit": ""
+    },
+    {
+      "url": "https://math.libretexts.org/@api/deki/files/21144/CNX_IntAlg_Figure_10_04_001b_img.jpg?revision=1",
+      "alt": ".",
+      "credit": ""
+    },
+    {
+      "url": "https://math.libretexts.org/@api/deki/files/21135/CNX_IntAlg_Figure_10_04_001c_img.jpg?revision=1",
+      "alt": ".",
+      "credit": ""
+    },
+    {
+      "url": "https://math.libretexts.org/@api/deki/files/21204/CNX_IntAlg_Figure_10_04_001d_img.jpg?revision=1",
+      "alt": ".",
+      "credit": ""
+    }
+  ],
+  "references": [
+    {
+      "text": "Using Properties of Logarithms to Expand Logs",
+      "url": "https://openstax.org/l/37Logproperties"
+    },
+    {
+      "text": "Using Properties of Logarithms to Condense Logs",
+      "url": "https://openstax.org/l/37Condenselogs"
+    },
+    {
+      "text": "Change of Base",
+      "url": "https://openstax.org/l/37Changeofbase"
+    },
+    {
+      "text": "10.5: Use the Properties of Logarithms",
+      "url": "https://math.libretexts.org/Bookshelves/Algebra/Intermediate_Algebra_1e_(OpenStax)/10%3A_Exponential_and_Logarithmic_Functions/10.05%3A_Use_the_Properties_of_Logarithms"
+    },
+    {
+      "text": "CC BY  4.0",
+      "url": "https://creativecommons.org/licenses/by/4.0"
+    },
+    {
+      "text": "OpenStax",
+      "url": "https://openstax.org/"
+    },
+    {
+      "text": "source content",
+      "url": "https://openstax.org/details/books/intermediate-algebra-2e"
+    }
+  ],
+  "exercises": [
+    {
+      "ordinal": 1,
+      "sourceNumber": "1",
+      "sourceAnchor": "",
+      "kind": "exercise-candidate",
+      "context": "By the end of this section, you will be able to:\n\nBefore you get started, take this readiness quiz.",
+      "original": "1. Evaluate: a. \\(a^{0}\\) b. \\(a^{1}\\).\n\n    If you missed this problem, review Example 5.14.",
+      "prompt": "1. Evaluate: a. \\(a^{0}\\) b. \\(a^{1}\\).\n\n    If you missed this problem, review Example 5.14.",
+      "sourceAnswers": [],
+      "hasFigure": false,
+      "status": "draft",
+      "answerVerified": false,
+      "translationStatus": "pending",
+      "mappingStatus": "pending"
+    },
+    {
+      "ordinal": 2,
+      "sourceNumber": "2",
+      "sourceAnchor": "",
+      "kind": "exercise-candidate",
+      "context": "By the end of this section, you will be able to:\n\nBefore you get started, take this readiness quiz.",
+      "original": "2. Write with a rational exponent: \\(\\sqrt[3]{x^{2} y}\\).\n\n    If you missed this problem, review Example 8.27.",
+      "prompt": "2. Write with a rational exponent: \\(\\sqrt[3]{x^{2} y}\\).\n\n    If you missed this problem, review Example 8.27.",
+      "sourceAnswers": [],
+      "hasFigure": false,
+      "status": "draft",
+      "answerVerified": false,
+      "translationStatus": "pending",
+      "mappingStatus": "pending"
+    },
+    {
+      "ordinal": 3,
+      "sourceNumber": "3",
+      "sourceAnchor": "",
+      "kind": "exercise-candidate",
+      "context": "By the end of this section, you will be able to:\n\nBefore you get started, take this readiness quiz.",
+      "original": "3. Round to three decimal places: \\(2.5646415\\).\n\n    If you missed this problem, review Example 1.34.",
+      "prompt": "3. Round to three decimal places: \\(2.5646415\\).\n\n    If you missed this problem, review Example 1.34.",
+      "sourceAnswers": [],
+      "hasFigure": false,
+      "status": "draft",
+      "answerVerified": false,
+      "translationStatus": "pending",
+      "mappingStatus": "pending"
+    },
+    {
+      "ordinal": 4,
+      "sourceNumber": "",
+      "sourceAnchor": "",
+      "kind": "example-or-exercise",
+      "context": "Properties of Logarithms\n\n\\(\\log _{a} 1=0 \\quad \\log _{a} a=1\\)\n\nIn the next example we could evaluate the logarithm by converting to exponential form, as we have done previously, but recognizing and then applying the properties saves time.",
+      "original": "Example \\(\\PageIndex{1}\\)\n\nEvaluate using the properties of logarithms:\n\n1. \\(\\log _{8} 1\\)\n\n2. \\(\\log _{6} 6\\)\n\nSolution:\n\na.\n\n\\(\\log _{8} 1\\)\n\nUse the property, \\(\\log _{a} 1=0\\).\n\n\\(0 \\quad \\log _{8} 1=0\\)\n\nb.\n\n\\(\\log _{6} 6\\)\n\nUse the property, \\(\\log _{a} a=1\\).\n\n\\(1 \\quad \\log _{6} 6=1\\)",
+      "prompt": "Example \\(\\PageIndex{1}\\)\n\nEvaluate using the properties of logarithms:\n\n1. \\(\\log _{8} 1\\)\n\n2. \\(\\log _{6} 6\\)\n\nSolution:\n\na.\n\n\\(\\log _{8} 1\\)\n\nUse the property, \\(\\log _{a} 1=0\\).\n\n\\(0 \\quad \\log _{8} 1=0\\)\n\nb.\n\n\\(\\log _{6} 6\\)\n\nUse the property, \\(\\log _{a} a=1\\).\n\n\\(1 \\quad \\log _{6} 6=1\\)",
+      "sourceAnswers": [],
+      "hasFigure": false,
+      "status": "draft",
+      "answerVerified": false,
+      "translationStatus": "pending",
+      "mappingStatus": "pending"
+    },
+    {
+      "ordinal": 5,
+      "sourceNumber": "",
+      "sourceAnchor": "",
+      "kind": "exercise-candidate",
+      "context": "Properties of Logarithms\n\n\\(\\log _{a} 1=0 \\quad \\log _{a} a=1\\)\n\nIn the next example we could evaluate the logarithm by converting to exponential form, as we have done previously, but recognizing and then applying the properties saves time.",
+      "original": "Exercise \\(\\PageIndex{1}\\)\n\nEvaluate using the properties of logarithms:\n\n1. \\(\\log _{13} 1\\)\n\n2. \\(\\log _{9} 9\\)\n\nAnswer\n\n1. \\(0\\)\n\n2. \\(1\\)",
+      "prompt": "Exercise \\(\\PageIndex{1}\\)\n\nEvaluate using the properties of logarithms:\n\n1. \\(\\log _{13} 1\\)\n\n2. \\(\\log _{9} 9\\)",
+      "sourceAnswers": [
+        "1. \\(0\\)\n\n2. \\(1\\)"
+      ],
+      "hasFigure": false,
+      "status": "draft",
+      "answerVerified": false,
+      "translationStatus": "pending",
+      "mappingStatus": "pending"
+    },
+    {
+      "ordinal": 6,
+      "sourceNumber": "",
+      "sourceAnchor": "",
+      "kind": "exercise-candidate",
+      "context": "Properties of Logarithms\n\n\\(\\log _{a} 1=0 \\quad \\log _{a} a=1\\)\n\nIn the next example we could evaluate the logarithm by converting to exponential form, as we have done previously, but recognizing and then applying the properties saves time.",
+      "original": "Exercise \\(\\PageIndex{2}\\)\n\nEvaluate using the properties of logarithms:\n\n1. \\(\\log _{5} 1\\)\n\n2. \\(\\log _{7} 7\\)\n\nAnswer\n\n1. \\(0\\)\n\n2. \\(1\\)",
+      "prompt": "Exercise \\(\\PageIndex{2}\\)\n\nEvaluate using the properties of logarithms:\n\n1. \\(\\log _{5} 1\\)\n\n2. \\(\\log _{7} 7\\)",
+      "sourceAnswers": [
+        "1. \\(0\\)\n\n2. \\(1\\)"
+      ],
+      "hasFigure": false,
+      "status": "draft",
+      "answerVerified": false,
+      "translationStatus": "pending",
+      "mappingStatus": "pending"
+    },
+    {
+      "ordinal": 7,
+      "sourceNumber": "",
+      "sourceAnchor": "",
+      "kind": "example-or-exercise",
+      "context": "For \\(a>0, x>0\\) and \\(a \\neq 1\\),\n\n\\(a^{\\log _{a} x}=x \\quad \\log _{a} a^{x}=x\\)\n\nIn the next example, apply the inverse properties of logarithms.",
+      "original": "Example \\(\\PageIndex{2}\\)\n\nEvaluate using the properties of logarithms:\n\n1. \\(4^{\\log _{4} 9}\\)\n\n2. \\(\\log _{3} 3^{5}\\)\n\nSolution:\n\na.\n\n\\(4^{\\log _{4} 9}\\)\n\nUse the property, \\(a^{\\log _{a} x}=x\\).\n\n\\(9 \\quad 4^{\\log _{4} 9}=9\\)\n\nb.\n\n\\(\\log _{3} 3^{5}\\)\n\nUse the property, \\(a^{\\log _{a} x}=x\\).\n\n\\(5 \\quad \\log _{3} 3^{5}=5\\)",
+      "prompt": "Example \\(\\PageIndex{2}\\)\n\nEvaluate using the properties of logarithms:\n\n1. \\(4^{\\log _{4} 9}\\)\n\n2. \\(\\log _{3} 3^{5}\\)\n\nSolution:\n\na.\n\n\\(4^{\\log _{4} 9}\\)\n\nUse the property, \\(a^{\\log _{a} x}=x\\).\n\n\\(9 \\quad 4^{\\log _{4} 9}=9\\)\n\nb.\n\n\\(\\log _{3} 3^{5}\\)\n\nUse the property, \\(a^{\\log _{a} x}=x\\).\n\n\\(5 \\quad \\log _{3} 3^{5}=5\\)",
+      "sourceAnswers": [],
+      "hasFigure": false,
+      "status": "draft",
+      "answerVerified": false,
+      "translationStatus": "pending",
+      "mappingStatus": "pending"
+    },
+    {
+      "ordinal": 8,
+      "sourceNumber": "",
+      "sourceAnchor": "",
+      "kind": "exercise-candidate",
+      "context": "For \\(a>0, x>0\\) and \\(a \\neq 1\\),\n\n\\(a^{\\log _{a} x}=x \\quad \\log _{a} a^{x}=x\\)\n\nIn the next example, apply the inverse properties of logarithms.",
+      "original": "Exercise \\(\\PageIndex{3}\\)\n\nEvaluate using the properties of logarithms:\n\n1. \\(5^{\\log _{5} 15}\\)\n\n2. \\(\\log _{7} 7^{4}\\)\n\nAnswer\n\n1. \\(15\\)\n\n2. \\(4\\)",
+      "prompt": "Exercise \\(\\PageIndex{3}\\)\n\nEvaluate using the properties of logarithms:\n\n1. \\(5^{\\log _{5} 15}\\)\n\n2. \\(\\log _{7} 7^{4}\\)",
+      "sourceAnswers": [
+        "1. \\(15\\)\n\n2. \\(4\\)"
+      ],
+      "hasFigure": false,
+      "status": "draft",
+      "answerVerified": false,
+      "translationStatus": "pending",
+      "mappingStatus": "pending"
+    },
+    {
+      "ordinal": 9,
+      "sourceNumber": "",
+      "sourceAnchor": "",
+      "kind": "exercise-candidate",
+      "context": "For \\(a>0, x>0\\) and \\(a \\neq 1\\),\n\n\\(a^{\\log _{a} x}=x \\quad \\log _{a} a^{x}=x\\)\n\nIn the next example, apply the inverse properties of logarithms.",
+      "original": "Exercise \\(\\PageIndex{4}\\)\n\nEvaluate using the properties of logarithms:\n\n1. \\(2^{\\log _{2} 8}\\)\n\n2. \\(\\log _{2} 2^{15}\\)\n\nAnswer\n\n1. \\(8\\)\n\n2. \\(15\\)",
+      "prompt": "Exercise \\(\\PageIndex{4}\\)\n\nEvaluate using the properties of logarithms:\n\n1. \\(2^{\\log _{2} 8}\\)\n\n2. \\(\\log _{2} 2^{15}\\)",
+      "sourceAnswers": [
+        "1. \\(8\\)\n\n2. \\(15\\)"
+      ],
+      "hasFigure": false,
+      "status": "draft",
+      "answerVerified": false,
+      "translationStatus": "pending",
+      "mappingStatus": "pending"
+    },
+    {
+      "ordinal": 10,
+      "sourceNumber": "",
+      "sourceAnchor": "",
+      "kind": "example-or-exercise",
+      "context": "\\(\\log _{a}(M \\cdot N)=\\log _{a} M+\\log _{a} N\\)\n\nThe logarithm of a product is the sum of the logarithms.\n\nWe use this property to write the log of a product as a sum of the logs of each factor.",
+      "original": "Example \\(\\PageIndex{3}\\)\n\nUse the Product Property of Logarithms to write each logarithm as a sum of logarithms. Simplify, if possible:\n\n1. \\(\\log _{3} 7 x\\)\n\n2. \\(\\log _{4} 64 x y\\)\n\nSolution:\n\na.\n\n\\(\\log _{3} 7 x\\)\n\nUse the Product Property, \\(\\log _{a}(M \\cdot N)=\\log _{a} M+\\log _{a} N\\).\n\n\\(\\log _{3} 7+\\log _{3} x\\)\n\n\\(\\log _{3} 7 x=\\log _{3} 7+\\log _{3} x\\)\n\nb.\n\n\\(\\log _{4} 64 x y\\)\n\nUse the Product Property, \\(\\log _{a}(M \\cdot N)=\\log _{a} M+\\log _{a} N\\).\n\n\\(\\log _{4} 64+\\log _{4} x+\\log _{4} y\\)\n\nSimplify be evaluating, \\(\\log _{4} 64\\).\n\n\\(3+\\log _{4} x+\\log _{4} y\\)\n\n\\(\\log _{4} 64 x y=3+\\log _{4} x+\\log _{4} y\\)",
+      "prompt": "Example \\(\\PageIndex{3}\\)\n\nUse the Product Property of Logarithms to write each logarithm as a sum of logarithms. Simplify, if possible:\n\n1. \\(\\log _{3} 7 x\\)\n\n2. \\(\\log _{4} 64 x y\\)\n\nSolution:\n\na.\n\n\\(\\log _{3} 7 x\\)\n\nUse the Product Property, \\(\\log _{a}(M \\cdot N)=\\log _{a} M+\\log _{a} N\\).\n\n\\(\\log _{3} 7+\\log _{3} x\\)\n\n\\(\\log _{3} 7 x=\\log _{3} 7+\\log _{3} x\\)\n\nb.\n\n\\(\\log _{4} 64 x y\\)\n\nUse the Product Property, \\(\\log _{a}(M \\cdot N)=\\log _{a} M+\\log _{a} N\\).\n\n\\(\\log _{4} 64+\\log _{4} x+\\log _{4} y\\)\n\nSimplify be evaluating, \\(\\log _{4} 64\\).\n\n\\(3+\\log _{4} x+\\log _{4} y\\)\n\n\\(\\log _{4} 64 x y=3+\\log _{4} x+\\log _{4} y\\)",
+      "sourceAnswers": [],
+      "hasFigure": false,
+      "status": "draft",
+      "answerVerified": false,
+      "translationStatus": "pending",
+      "mappingStatus": "pending"
+    },
+    {
+      "ordinal": 11,
+      "sourceNumber": "",
+      "sourceAnchor": "",
+      "kind": "exercise-candidate",
+      "context": "\\(\\log _{a}(M \\cdot N)=\\log _{a} M+\\log _{a} N\\)\n\nThe logarithm of a product is the sum of the logarithms.\n\nWe use this property to write the log of a product as a sum of the logs of each factor.",
+      "original": "Exercise \\(\\PageIndex{5}\\)\n\nUse the Product Property of Logarithms to write each logarithm as a sum of logarithms. Simplify, if possible:\n\n1. \\(\\log _{3} 3 x\\)\n\n2. \\(\\log _{2} 8 x y\\)\n\nAnswer\n\n1. \\(1+\\log _{3} x\\)\n\n2. \\(3+\\log _{2} x+\\log _{2} y\\)",
+      "prompt": "Exercise \\(\\PageIndex{5}\\)\n\nUse the Product Property of Logarithms to write each logarithm as a sum of logarithms. Simplify, if possible:\n\n1. \\(\\log _{3} 3 x\\)\n\n2. \\(\\log _{2} 8 x y\\)",
+      "sourceAnswers": [
+        "1. \\(1+\\log _{3} x\\)\n\n2. \\(3+\\log _{2} x+\\log _{2} y\\)"
+      ],
+      "hasFigure": false,
+      "status": "draft",
+      "answerVerified": false,
+      "translationStatus": "pending",
+      "mappingStatus": "pending"
+    },
+    {
+      "ordinal": 12,
+      "sourceNumber": "",
+      "sourceAnchor": "",
+      "kind": "exercise-candidate",
+      "context": "\\(\\log _{a}(M \\cdot N)=\\log _{a} M+\\log _{a} N\\)\n\nThe logarithm of a product is the sum of the logarithms.\n\nWe use this property to write the log of a product as a sum of the logs of each factor.",
+      "original": "Exercise \\(\\PageIndex{6}\\)\n\nUse the Product Property of Logarithms to write each logarithm as a sum of logarithms. Simplify, if possible:\n\n1. \\(\\log _{9} 9 x\\)\n\n2. \\(\\log _{3} 27 x y\\)\n\nAnswer\n\n1. \\(1+\\log _{9} x\\)\n\n2. \\(3+\\log _{3} x+\\log _{3} y\\)",
+      "prompt": "Exercise \\(\\PageIndex{6}\\)\n\nUse the Product Property of Logarithms to write each logarithm as a sum of logarithms. Simplify, if possible:\n\n1. \\(\\log _{9} 9 x\\)\n\n2. \\(\\log _{3} 27 x y\\)",
+      "sourceAnswers": [
+        "1. \\(1+\\log _{9} x\\)\n\n2. \\(3+\\log _{3} x+\\log _{3} y\\)"
+      ],
+      "hasFigure": false,
+      "status": "draft",
+      "answerVerified": false,
+      "translationStatus": "pending",
+      "mappingStatus": "pending"
+    },
+    {
+      "ordinal": 13,
+      "sourceNumber": "",
+      "sourceAnchor": "",
+      "kind": "example-or-exercise",
+      "context": "The logarithm of a quotient is the difference of the logarithms.\n\nNote that \\(\\log _{a} M=\\log _{a} N \\not=\\log _{a}(M-N)\\).\n\nWe use this property to write the log of a quotient as a difference of the logs of each factor.",
+      "original": "Example \\(\\PageIndex{4}\\)\n\nUse the Quotient Property of Logarithms to write each logarithm as a difference of logarithms. Simplify, if possible.\n\n1. \\(\\log _{5} \\frac{5}{7}\\)\n\n2. \\(\\log \\frac{x}{100}\\)\n\nSolution:\n\na.\n\n\\(\\log _{5} \\frac{5}{7}\\)\n\nUse the Quotient Property, \\(\\log _{a} \\frac{M}{N}=\\log _{a} M-\\log _{a} N\\).\n\n\\(\\log _{5} 5-\\log _{5} 7\\)\n\nSimplify.\n\n\\(1-\\log _{5} 7\\)\n\n\\(\\log _{5} \\frac{5}{7}=1-\\log _{5} 7\\)\n\nb.\n\n\\(\\log \\frac{x}{100}\\)\n\nUse the Quotient Property, \\(\\log _{a} \\frac{M}{N}=\\log _{a} M-\\log _{a} N\\).\n\n\\(\\log x-\\log 100\\)\n\nSimplify.\n\n\\(\\log x-2\\)\n\n\\(\\log \\frac{x}{100}=\\log x-2\\)",
+      "prompt": "Example \\(\\PageIndex{4}\\)\n\nUse the Quotient Property of Logarithms to write each logarithm as a difference of logarithms. Simplify, if possible.\n\n1. \\(\\log _{5} \\frac{5}{7}\\)\n\n2. \\(\\log \\frac{x}{100}\\)\n\nSolution:\n\na.\n\n\\(\\log _{5} \\frac{5}{7}\\)\n\nUse the Quotient Property, \\(\\log _{a} \\frac{M}{N}=\\log _{a} M-\\log _{a} N\\).\n\n\\(\\log _{5} 5-\\log _{5} 7\\)\n\nSimplify.\n\n\\(1-\\log _{5} 7\\)\n\n\\(\\log _{5} \\frac{5}{7}=1-\\log _{5} 7\\)\n\nb.\n\n\\(\\log \\frac{x}{100}\\)\n\nUse the Quotient Property, \\(\\log _{a} \\frac{M}{N}=\\log _{a} M-\\log _{a} N\\).\n\n\\(\\log x-\\log 100\\)\n\nSimplify.\n\n\\(\\log x-2\\)\n\n\\(\\log \\frac{x}{100}=\\log x-2\\)",
+      "sourceAnswers": [],
+      "hasFigure": false,
+      "status": "draft",
+      "answerVerified": false,
+      "translationStatus": "pending",
+      "mappingStatus": "pending"
+    },
+    {
+      "ordinal": 14,
+      "sourceNumber": "",
+      "sourceAnchor": "",
+      "kind": "exercise-candidate",
+      "context": "The logarithm of a quotient is the difference of the logarithms.\n\nNote that \\(\\log _{a} M=\\log _{a} N \\not=\\log _{a}(M-N)\\).\n\nWe use this property to write the log of a quotient as a difference of the logs of each factor.",
+      "original": "Exercise \\(\\PageIndex{7}\\)\n\nUse the Quotient Property of Logarithms to write each logarithm as a difference of logarithms. Simplify, if possible.\n\n1. \\(\\log _{4} \\frac{3}{4}\\)\n\n2. \\(\\log \\frac{x}{1000}\\)\n\nAnswer\n\n1. \\(\\log _{4} 3-1\\)\n\n2. \\(\\log x-3\\)",
+      "prompt": "Exercise \\(\\PageIndex{7}\\)\n\nUse the Quotient Property of Logarithms to write each logarithm as a difference of logarithms. Simplify, if possible.\n\n1. \\(\\log _{4} \\frac{3}{4}\\)\n\n2. \\(\\log \\frac{x}{1000}\\)",
+      "sourceAnswers": [
+        "1. \\(\\log _{4} 3-1\\)\n\n2. \\(\\log x-3\\)"
+      ],
+      "hasFigure": false,
+      "status": "draft",
+      "answerVerified": false,
+      "translationStatus": "pending",
+      "mappingStatus": "pending"
+    },
+    {
+      "ordinal": 15,
+      "sourceNumber": "",
+      "sourceAnchor": "",
+      "kind": "exercise-candidate",
+      "context": "The logarithm of a quotient is the difference of the logarithms.\n\nNote that \\(\\log _{a} M=\\log _{a} N \\not=\\log _{a}(M-N)\\).\n\nWe use this property to write the log of a quotient as a difference of the logs of each factor.",
+      "original": "Exercise \\(\\PageIndex{8}\\)\n\nUse the Quotient Property of Logarithms to write each logarithm as a difference of logarithms. Simplify, if possible.\n\n1. \\(\\log _{2} \\frac{5}{4}\\)\n\n2. \\(\\log \\frac{10}{y}\\)\n\nAnswer\n\n1. \\(\\log _{2} 5-2\\)\n\n2. \\(1-\\log y\\)",
+      "prompt": "Exercise \\(\\PageIndex{8}\\)\n\nUse the Quotient Property of Logarithms to write each logarithm as a difference of logarithms. Simplify, if possible.\n\n1. \\(\\log _{2} \\frac{5}{4}\\)\n\n2. \\(\\log \\frac{10}{y}\\)",
+      "sourceAnswers": [
+        "1. \\(\\log _{2} 5-2\\)\n\n2. \\(1-\\log y\\)"
+      ],
+      "hasFigure": false,
+      "status": "draft",
+      "answerVerified": false,
+      "translationStatus": "pending",
+      "mappingStatus": "pending"
+    },
+    {
+      "ordinal": 16,
+      "sourceNumber": "",
+      "sourceAnchor": "",
+      "kind": "example-or-exercise",
+      "context": "\\(\\log _{a} M^{p}=p \\log _{a} M\\)\n\nThe log of a number raised to a power as the product product of the power times the log of the number.\n\nWe use this property to write the log of a number raised to a power as the product of the power times the log of the number. We essentially take the exponent and throw it in front of the logarithm.",
+      "original": "Example \\(\\PageIndex{5}\\)\n\nUse the Power Property of Logarithms to write each logarithm as a product of logarithms. Simplify, if possible.\n\n1. \\(\\log _{5} 4^{3}\\)\n\n2. \\(\\log x^{10}\\)\n\nSolution:\n\na.\n\n\\(\\log _{5} 4^{3}\\)\n\nUse the Power Property, \\(\\log _{a} M^{p}=p \\log _{a} M\\).\n\n3 \\(\\log _{5} 4\\)\n\n\\(\\log _{5} 4^{3}=3 \\log _{5} 4\\)\n\nb.\n\n\\(\\log x^{10}\\)\n\nUse the Power Property, \\(\\log _{a} M^{p}=p \\log _{a} M\\).\n\n\\(10\\log x\\)\n\n\\(\\log x^{10}=10 \\log x\\)",
+      "prompt": "Example \\(\\PageIndex{5}\\)\n\nUse the Power Property of Logarithms to write each logarithm as a product of logarithms. Simplify, if possible.\n\n1. \\(\\log _{5} 4^{3}\\)\n\n2. \\(\\log x^{10}\\)\n\nSolution:\n\na.\n\n\\(\\log _{5} 4^{3}\\)\n\nUse the Power Property, \\(\\log _{a} M^{p}=p \\log _{a} M\\).\n\n3 \\(\\log _{5} 4\\)\n\n\\(\\log _{5} 4^{3}=3 \\log _{5} 4\\)\n\nb.\n\n\\(\\log x^{10}\\)\n\nUse the Power Property, \\(\\log _{a} M^{p}=p \\log _{a} M\\).\n\n\\(10\\log x\\)\n\n\\(\\log x^{10}=10 \\log x\\)",
+      "sourceAnswers": [],
+      "hasFigure": false,
+      "status": "draft",
+      "answerVerified": false,
+      "translationStatus": "pending",
+      "mappingStatus": "pending"
+    },
+    {
+      "ordinal": 17,
+      "sourceNumber": "",
+      "sourceAnchor": "",
+      "kind": "exercise-candidate",
+      "context": "\\(\\log _{a} M^{p}=p \\log _{a} M\\)\n\nThe log of a number raised to a power as the product product of the power times the log of the number.\n\nWe use this property to write the log of a number raised to a power as the product of the power times the log of the number. We essentially take the exponent and throw it in front of the logarithm.",
+      "original": "Exercise \\(\\PageIndex{9}\\)\n\nUse the Power Property of Logarithms to write each logarithm as a product of logarithms. Simplify, if possible.\n\n1. \\(\\log _{7} 5^{4}\\)\n\n2. \\(\\log x^{100}\\)\n\nAnswer\n\n1. \\(4\\log _{7} 5\\)\n\n2. 100\\(\\cdot \\log x\\)",
+      "prompt": "Exercise \\(\\PageIndex{9}\\)\n\nUse the Power Property of Logarithms to write each logarithm as a product of logarithms. Simplify, if possible.\n\n1. \\(\\log _{7} 5^{4}\\)\n\n2. \\(\\log x^{100}\\)",
+      "sourceAnswers": [
+        "1. \\(4\\log _{7} 5\\)\n\n2. 100\\(\\cdot \\log x\\)"
+      ],
+      "hasFigure": false,
+      "status": "draft",
+      "answerVerified": false,
+      "translationStatus": "pending",
+      "mappingStatus": "pending"
+    },
+    {
+      "ordinal": 18,
+      "sourceNumber": "",
+      "sourceAnchor": "",
+      "kind": "exercise-candidate",
+      "context": "\\(\\log _{a} M^{p}=p \\log _{a} M\\)\n\nThe log of a number raised to a power as the product product of the power times the log of the number.\n\nWe use this property to write the log of a number raised to a power as the product of the power times the log of the number. We essentially take the exponent and throw it in front of the logarithm.",
+      "original": "Exercise \\(\\PageIndex{10}\\)\n\nUse the Power Property of Logarithms to write each logarithm as a product of logarithms. Simplify, if possible.\n\n1. \\(\\log _{2} 3^{7}\\)\n\n2. \\(\\log x^{20}\\)\n\nAnswer\n\n1. \\(7\\log _{2} 3\\)\n\n2. \\(20\\cdot \\log x\\)",
+      "prompt": "Exercise \\(\\PageIndex{10}\\)\n\nUse the Power Property of Logarithms to write each logarithm as a product of logarithms. Simplify, if possible.\n\n1. \\(\\log _{2} 3^{7}\\)\n\n2. \\(\\log x^{20}\\)",
+      "sourceAnswers": [
+        "1. \\(7\\log _{2} 3\\)\n\n2. \\(20\\cdot \\log x\\)"
+      ],
+      "hasFigure": false,
+      "status": "draft",
+      "answerVerified": false,
+      "translationStatus": "pending",
+      "mappingStatus": "pending"
+    },
+    {
+      "ordinal": 19,
+      "sourceNumber": "",
+      "sourceAnchor": "",
+      "kind": "example-or-exercise",
+      "context": "If \\(M>0, \\mathrm{a}>0, \\mathrm{a} \\neq 1\\) and \\(p\\) is any real number then,\n\nNow that we have the properties we can use them to “expand” a logarithmic expression. This means to write the logarithm as a sum or difference and without any powers.\n\nWe generally apply the Product and Quotient Properties before we apply the Power Property.",
+      "original": "Example \\(\\PageIndex{6}\\)\n\nUse the Properties of Logarithms to expand the logarithm \\(\\log _{4}\\left(2 x^{3} y^{2}\\right)\\). Simplify, if possible.\n\nSolution:\n\nUse the Product Property, \\(\\log _{a} M \\cdot N=\\log _{a} M+\\log _{a} N\\).\n\nUse the Power Property, \\(\\log _{a} M^{p}=p \\log _{a} M\\), on the last two terms. Simplify.",
+      "prompt": "Example \\(\\PageIndex{6}\\)\n\nUse the Properties of Logarithms to expand the logarithm \\(\\log _{4}\\left(2 x^{3} y^{2}\\right)\\). Simplify, if possible.\n\nSolution:\n\nUse the Product Property, \\(\\log _{a} M \\cdot N=\\log _{a} M+\\log _{a} N\\).\n\nUse the Power Property, \\(\\log _{a} M^{p}=p \\log _{a} M\\), on the last two terms. Simplify.",
+      "sourceAnswers": [],
+      "hasFigure": false,
+      "status": "draft",
+      "answerVerified": false,
+      "translationStatus": "pending",
+      "mappingStatus": "pending"
+    },
+    {
+      "ordinal": 20,
+      "sourceNumber": "",
+      "sourceAnchor": "",
+      "kind": "exercise-candidate",
+      "context": "If \\(M>0, \\mathrm{a}>0, \\mathrm{a} \\neq 1\\) and \\(p\\) is any real number then,\n\nNow that we have the properties we can use them to “expand” a logarithmic expression. This means to write the logarithm as a sum or difference and without any powers.\n\nWe generally apply the Product and Quotient Properties before we apply the Power Property.",
+      "original": "Exercise \\(\\PageIndex{11}\\)\n\nUse the Properties of Logarithms to expand the logarithm \\(\\log _{2}\\left(5 x^{4} y^{2}\\right)\\). Simplify, if possible.\n\nAnswer\n\n\\(\\log _{2} 5+4 \\log _{2} x+2 \\log _{2} y\\)",
+      "prompt": "Exercise \\(\\PageIndex{11}\\)\n\nUse the Properties of Logarithms to expand the logarithm \\(\\log _{2}\\left(5 x^{4} y^{2}\\right)\\). Simplify, if possible.",
+      "sourceAnswers": [
+        "\\(\\log _{2} 5+4 \\log _{2} x+2 \\log _{2} y\\)"
+      ],
+      "hasFigure": false,
+      "status": "draft",
+      "answerVerified": false,
+      "translationStatus": "pending",
+      "mappingStatus": "pending"
+    },
+    {
+      "ordinal": 21,
+      "sourceNumber": "",
+      "sourceAnchor": "",
+      "kind": "exercise-candidate",
+      "context": "If \\(M>0, \\mathrm{a}>0, \\mathrm{a} \\neq 1\\) and \\(p\\) is any real number then,\n\nNow that we have the properties we can use them to “expand” a logarithmic expression. This means to write the logarithm as a sum or difference and without any powers.\n\nWe generally apply the Product and Quotient Properties before we apply the Power Property.",
+      "original": "Exercise \\(\\PageIndex{12}\\)\n\nUse the Properties of Logarithms to expand the logarithm \\(\\log _{3}\\left(7 x^{5} y^{3}\\right)\\). Simplify, if possible.\n\nAnswer\n\n\\(\\log _{3} 7+5 \\log _{3} x+3 \\log _{3} y\\)",
+      "prompt": "Exercise \\(\\PageIndex{12}\\)\n\nUse the Properties of Logarithms to expand the logarithm \\(\\log _{3}\\left(7 x^{5} y^{3}\\right)\\). Simplify, if possible.",
+      "sourceAnswers": [
+        "\\(\\log _{3} 7+5 \\log _{3} x+3 \\log _{3} y\\)"
+      ],
+      "hasFigure": false,
+      "status": "draft",
+      "answerVerified": false,
+      "translationStatus": "pending",
+      "mappingStatus": "pending"
+    },
+    {
+      "ordinal": 22,
+      "sourceNumber": "",
+      "sourceAnchor": "",
+      "kind": "example-or-exercise",
+      "context": "Now that we have the properties we can use them to “expand” a logarithmic expression. This means to write the logarithm as a sum or difference and without any powers.\n\nWe generally apply the Product and Quotient Properties before we apply the Power Property.\n\nWhen we have a radical in the logarithmic expression, it is helpful to first write its radicand as a rational exponent.",
+      "original": "Example \\(\\PageIndex{7}\\)\n\nUse the Properties of Logarithms to expand the logarithm \\(\\log _{2} \\sqrt[4]{\\frac{x^{3}}{3 y^{2} z}}\\). Simplify, if possible.\n\nSolution\n\n\\(\\log _{2} \\sqrt[4]{\\frac{x^{3}}{3 y^{2} z}}\\)\n\nRewrite the radical with a rational exponent.\n\n\\(\\log _{2}\\left(\\frac{x^{3}}{3 y^{2} z}\\right)^{\\frac{1}{4}}\\)\n\nUse the Power Property, \\(\\log _{a} M^{p}=p \\log _{a} M\\).\n\n\\(\\frac{1}{4} \\log _{2}\\left(\\frac{x^{3}}{3 y^{2} z}\\right)\\)\n\nUse the Quotient Property, \\(\\log _{a} M \\cdot N=\\log _{a} M-\\log _{a} N\\).\n\n\\(\\frac{1}{4}\\left(\\log _{2}\\left(x^{3}\\right)-\\log _{2}\\left(3 y^{2} z\\right)\\right)\\)\n\nUse the Product Property, \\(\\log _{a} M \\cdot N=\\log _{a} M+\\log _{a} N\\), in the second term.\n\n\\(\\frac{1}{4}\\left(\\log _{2}\\left(x^{3}\\right)-\\left(\\log _{2} 3+\\log _{2} y^{2}+\\log _{2} z\\right)\\right)\\)\n\nUse the Power Property, \\(\\log _{a} M^{p}=p \\log _{a} M\\), inside the parentheses.\n\n\\(\\frac{1}{4}\\left(3 \\log _{2} x-\\left(\\log _{2} 3+2 \\log _{2} y+\\log _{2} z\\right)\\right)\\)\n\nSimplify by distributing.\n\n\\(\\frac{1}{4}\\left(3 \\log _{2} x-\\log _{2} 3-2 \\log _{2} y-\\log _{2} z\\right)\\)\n\n\\(\\log _{2} \\sqrt[4]{\\frac{x^{3}}{3 y^{2} z}}=\\frac{1}{4}\\left(3 \\log _{2} x-\\log _{2} 3-2 \\log _{2} y-\\log _{2} z\\right)\\)",
+      "prompt": "Example \\(\\PageIndex{7}\\)\n\nUse the Properties of Logarithms to expand the logarithm \\(\\log _{2} \\sqrt[4]{\\frac{x^{3}}{3 y^{2} z}}\\). Simplify, if possible.\n\nSolution\n\n\\(\\log _{2} \\sqrt[4]{\\frac{x^{3}}{3 y^{2} z}}\\)\n\nRewrite the radical with a rational exponent.\n\n\\(\\log _{2}\\left(\\frac{x^{3}}{3 y^{2} z}\\right)^{\\frac{1}{4}}\\)\n\nUse the Power Property, \\(\\log _{a} M^{p}=p \\log _{a} M\\).\n\n\\(\\frac{1}{4} \\log _{2}\\left(\\frac{x^{3}}{3 y^{2} z}\\right)\\)\n\nUse the Quotient Property, \\(\\log _{a} M \\cdot N=\\log _{a} M-\\log _{a} N\\).\n\n\\(\\frac{1}{4}\\left(\\log _{2}\\left(x^{3}\\right)-\\log _{2}\\left(3 y^{2} z\\right)\\right)\\)\n\nUse the Product Property, \\(\\log _{a} M \\cdot N=\\log _{a} M+\\log _{a} N\\), in the second term.\n\n\\(\\frac{1}{4}\\left(\\log _{2}\\left(x^{3}\\right)-\\left(\\log _{2} 3+\\log _{2} y^{2}+\\log _{2} z\\right)\\right)\\)\n\nUse the Power Property, \\(\\log _{a} M^{p}=p \\log _{a} M\\), inside the parentheses.\n\n\\(\\frac{1}{4}\\left(3 \\log _{2} x-\\left(\\log _{2} 3+2 \\log _{2} y+\\log _{2} z\\right)\\right)\\)\n\nSimplify by distributing.\n\n\\(\\frac{1}{4}\\left(3 \\log _{2} x-\\log _{2} 3-2 \\log _{2} y-\\log _{2} z\\right)\\)\n\n\\(\\log _{2} \\sqrt[4]{\\frac{x^{3}}{3 y^{2} z}}=\\frac{1}{4}\\left(3 \\log _{2} x-\\log _{2} 3-2 \\log _{2} y-\\log _{2} z\\right)\\)",
+      "sourceAnswers": [],
+      "hasFigure": false,
+      "status": "draft",
+      "answerVerified": false,
+      "translationStatus": "pending",
+      "mappingStatus": "pending"
+    },
+    {
+      "ordinal": 23,
+      "sourceNumber": "",
+      "sourceAnchor": "",
+      "kind": "exercise-candidate",
+      "context": "Now that we have the properties we can use them to “expand” a logarithmic expression. This means to write the logarithm as a sum or difference and without any powers.\n\nWe generally apply the Product and Quotient Properties before we apply the Power Property.\n\nWhen we have a radical in the logarithmic expression, it is helpful to first write its radicand as a rational exponent.",
+      "original": "Exercise \\(\\PageIndex{13}\\)\n\nUse the Properties of Logarithms to expand the logarithm \\(\\log _{4} \\sqrt[5]{\\frac{x^{4}}{2 y^{3} z^{2}}}\\). Simplify, if possible.\n\nAnswer\n\n\\(\\frac{1}{5}\\left(4 \\log _{4} x-\\frac{1}{2}-3 \\log _{4} y-2 \\log _{4} z\\right)\\)",
+      "prompt": "Exercise \\(\\PageIndex{13}\\)\n\nUse the Properties of Logarithms to expand the logarithm \\(\\log _{4} \\sqrt[5]{\\frac{x^{4}}{2 y^{3} z^{2}}}\\). Simplify, if possible.",
+      "sourceAnswers": [
+        "\\(\\frac{1}{5}\\left(4 \\log _{4} x-\\frac{1}{2}-3 \\log _{4} y-2 \\log _{4} z\\right)\\)"
+      ],
+      "hasFigure": false,
+      "status": "draft",
+      "answerVerified": false,
+      "translationStatus": "pending",
+      "mappingStatus": "pending"
+    },
+    {
+      "ordinal": 24,
+      "sourceNumber": "",
+      "sourceAnchor": "",
+      "kind": "exercise-candidate",
+      "context": "Now that we have the properties we can use them to “expand” a logarithmic expression. This means to write the logarithm as a sum or difference and without any powers.\n\nWe generally apply the Product and Quotient Properties before we apply the Power Property.\n\nWhen we have a radical in the logarithmic expression, it is helpful to first write its radicand as a rational exponent.",
+      "original": "Exercise \\(\\PageIndex{14}\\)\n\nUse the Properties of Logarithms to expand the logarithm \\(\\log _{3} \\sqrt[3]{\\frac{x^{2}}{5 y z}}\\). Simplify, if possible.\n\nAnswer\n\n\\(\\frac{1}{3}\\left(2 \\log _{3} x-\\log _{3} 5-\\log _{3} y-\\log _{3} z\\right)\\)",
+      "prompt": "Exercise \\(\\PageIndex{14}\\)\n\nUse the Properties of Logarithms to expand the logarithm \\(\\log _{3} \\sqrt[3]{\\frac{x^{2}}{5 y z}}\\). Simplify, if possible.",
+      "sourceAnswers": [
+        "\\(\\frac{1}{3}\\left(2 \\log _{3} x-\\log _{3} 5-\\log _{3} y-\\log _{3} z\\right)\\)"
+      ],
+      "hasFigure": false,
+      "status": "draft",
+      "answerVerified": false,
+      "translationStatus": "pending",
+      "mappingStatus": "pending"
+    },
+    {
+      "ordinal": 25,
+      "sourceNumber": "",
+      "sourceAnchor": "",
+      "kind": "example-or-exercise",
+      "context": "When we have a radical in the logarithmic expression, it is helpful to first write its radicand as a rational exponent.\n\nThe opposite of expanding a logarithm is to condense a sum or difference of logarithms that have the same base into a single logarithm. We again use the properties of logarithms to help us, but in reverse.\n\nTo condense logarithmic expressions with the same base into one logarithm, we start by using the Power Property to get the coefficients of the log terms to be one and then the Product and Quotient Properties as needed.",
+      "original": "Example \\(\\PageIndex{8}\\)\n\nUse the Properties of Logarithms to condense the logarithm \\(\\log _{4} 3+\\log _{4} x-\\log _{4} y\\). Simplify, if possible.\n\nSolution:\n\nThe log expressions all have the same base, \\(4\\).\n\nThe first two terms are added, so we use the Product Property, \\(\\log _{a} M+\\log _{a} N=\\log _{a} M : N\\).\n\nSince the logs are subtracted, we use the Quotient Property, \\(\\log _{a} M-\\log _{a} N=\\log _{a} \\frac{M}{N}\\).",
+      "prompt": "Example \\(\\PageIndex{8}\\)\n\nUse the Properties of Logarithms to condense the logarithm \\(\\log _{4} 3+\\log _{4} x-\\log _{4} y\\). Simplify, if possible.\n\nSolution:\n\nThe log expressions all have the same base, \\(4\\).\n\nThe first two terms are added, so we use the Product Property, \\(\\log _{a} M+\\log _{a} N=\\log _{a} M : N\\).\n\nSince the logs are subtracted, we use the Quotient Property, \\(\\log _{a} M-\\log _{a} N=\\log _{a} \\frac{M}{N}\\).",
+      "sourceAnswers": [],
+      "hasFigure": false,
+      "status": "draft",
+      "answerVerified": false,
+      "translationStatus": "pending",
+      "mappingStatus": "pending"
+    },
+    {
+      "ordinal": 26,
+      "sourceNumber": "",
+      "sourceAnchor": "",
+      "kind": "exercise-candidate",
+      "context": "When we have a radical in the logarithmic expression, it is helpful to first write its radicand as a rational exponent.\n\nThe opposite of expanding a logarithm is to condense a sum or difference of logarithms that have the same base into a single logarithm. We again use the properties of logarithms to help us, but in reverse.\n\nTo condense logarithmic expressions with the same base into one logarithm, we start by using the Power Property to get the coefficients of the log terms to be one and then the Product and Quotient Properties as needed.",
+      "original": "Exercise \\(\\PageIndex{15}\\)\n\nUse the Properties of Logarithms to condense the logarithm \\(\\log _{2} 5+\\log _{2} x-\\log _{2} y\\). Simplify, if possible.\n\nAnswer\n\n\\(\\log _{2} \\frac{5 x}{y}\\)",
+      "prompt": "Exercise \\(\\PageIndex{15}\\)\n\nUse the Properties of Logarithms to condense the logarithm \\(\\log _{2} 5+\\log _{2} x-\\log _{2} y\\). Simplify, if possible.",
+      "sourceAnswers": [
+        "\\(\\log _{2} \\frac{5 x}{y}\\)"
+      ],
+      "hasFigure": false,
+      "status": "draft",
+      "answerVerified": false,
+      "translationStatus": "pending",
+      "mappingStatus": "pending"
+    },
+    {
+      "ordinal": 27,
+      "sourceNumber": "",
+      "sourceAnchor": "",
+      "kind": "exercise-candidate",
+      "context": "When we have a radical in the logarithmic expression, it is helpful to first write its radicand as a rational exponent.\n\nThe opposite of expanding a logarithm is to condense a sum or difference of logarithms that have the same base into a single logarithm. We again use the properties of logarithms to help us, but in reverse.\n\nTo condense logarithmic expressions with the same base into one logarithm, we start by using the Power Property to get the coefficients of the log terms to be one and then the Product and Quotient Properties as needed.",
+      "original": "Exercise \\(\\PageIndex{16}\\)\n\nUse the Properties of Logarithms to condense the logarithm \\(\\log _{3} 6-\\log _{3} x-\\log _{3} y\\). Simplify, if possible.\n\nAnswer\n\n\\(\\log _{3} \\frac{6}{x y}\\)",
+      "prompt": "Exercise \\(\\PageIndex{16}\\)\n\nUse the Properties of Logarithms to condense the logarithm \\(\\log _{3} 6-\\log _{3} x-\\log _{3} y\\). Simplify, if possible.",
+      "sourceAnswers": [
+        "\\(\\log _{3} \\frac{6}{x y}\\)"
+      ],
+      "hasFigure": false,
+      "status": "draft",
+      "answerVerified": false,
+      "translationStatus": "pending",
+      "mappingStatus": "pending"
+    },
+    {
+      "ordinal": 28,
+      "sourceNumber": "",
+      "sourceAnchor": "",
+      "kind": "example-or-exercise",
+      "context": "When we have a radical in the logarithmic expression, it is helpful to first write its radicand as a rational exponent.\n\nThe opposite of expanding a logarithm is to condense a sum or difference of logarithms that have the same base into a single logarithm. We again use the properties of logarithms to help us, but in reverse.\n\nTo condense logarithmic expressions with the same base into one logarithm, we start by using the Power Property to get the coefficients of the log terms to be one and then the Product and Quotient Properties as needed.",
+      "original": "Example \\(\\PageIndex{9}\\)\n\nUse the Properties of Logarithms to condense the logarithm \\(2 \\log _{3} x+4 \\log _{3}(x+1)\\). Simplify, if possible.\n\nSolution:\n\nThe log expressions have the same base, \\(3\\).\n\n\\(2 \\log _{3} x+4 \\log _{3}(x+1)\\)\n\nUse the Power Property, \\(\\log _{a} M+\\log _{a} N=\\log _{a} M \\cdot N\\).\n\n\\(\\log _{3} x^{2}+\\log _{3}(x+1)^{4}\\)\n\nThe terms are added, so we use the Product Property, \\(\\log _{a} M+\\log _{a} N=\\log _{a} M \\cdot N\\).\n\n\\(\\log _{3} x^{2}(x+1)^{4}\\)\n\n\\(2 \\log _{3} x+4 \\log _{3}(x+1)=\\log _{3} x^{2}(x+1)^{4}\\)",
+      "prompt": "Example \\(\\PageIndex{9}\\)\n\nUse the Properties of Logarithms to condense the logarithm \\(2 \\log _{3} x+4 \\log _{3}(x+1)\\). Simplify, if possible.\n\nSolution:\n\nThe log expressions have the same base, \\(3\\).\n\n\\(2 \\log _{3} x+4 \\log _{3}(x+1)\\)\n\nUse the Power Property, \\(\\log _{a} M+\\log _{a} N=\\log _{a} M \\cdot N\\).\n\n\\(\\log _{3} x^{2}+\\log _{3}(x+1)^{4}\\)\n\nThe terms are added, so we use the Product Property, \\(\\log _{a} M+\\log _{a} N=\\log _{a} M \\cdot N\\).\n\n\\(\\log _{3} x^{2}(x+1)^{4}\\)\n\n\\(2 \\log _{3} x+4 \\log _{3}(x+1)=\\log _{3} x^{2}(x+1)^{4}\\)",
+      "sourceAnswers": [],
+      "hasFigure": false,
+      "status": "draft",
+      "answerVerified": false,
+      "translationStatus": "pending",
+      "mappingStatus": "pending"
+    },
+    {
+      "ordinal": 29,
+      "sourceNumber": "",
+      "sourceAnchor": "",
+      "kind": "exercise-candidate",
+      "context": "When we have a radical in the logarithmic expression, it is helpful to first write its radicand as a rational exponent.\n\nThe opposite of expanding a logarithm is to condense a sum or difference of logarithms that have the same base into a single logarithm. We again use the properties of logarithms to help us, but in reverse.\n\nTo condense logarithmic expressions with the same base into one logarithm, we start by using the Power Property to get the coefficients of the log terms to be one and then the Product and Quotient Properties as needed.",
+      "original": "Exercise \\(\\PageIndex{17}\\)\n\nUse the Properties of Logarithms to condense the logarithm \\(3 \\log _{2} x+2 \\log _{2}(x-1)\\). Simplify, if possible.\n\nAnswer\n\n\\(\\log _{2} x^{3}(x-1)^{2}\\)",
+      "prompt": "Exercise \\(\\PageIndex{17}\\)\n\nUse the Properties of Logarithms to condense the logarithm \\(3 \\log _{2} x+2 \\log _{2}(x-1)\\). Simplify, if possible.",
+      "sourceAnswers": [
+        "\\(\\log _{2} x^{3}(x-1)^{2}\\)"
+      ],
+      "hasFigure": false,
+      "status": "draft",
+      "answerVerified": false,
+      "translationStatus": "pending",
+      "mappingStatus": "pending"
+    },
+    {
+      "ordinal": 30,
+      "sourceNumber": "",
+      "sourceAnchor": "",
+      "kind": "exercise-candidate",
+      "context": "When we have a radical in the logarithmic expression, it is helpful to first write its radicand as a rational exponent.\n\nThe opposite of expanding a logarithm is to condense a sum or difference of logarithms that have the same base into a single logarithm. We again use the properties of logarithms to help us, but in reverse.\n\nTo condense logarithmic expressions with the same base into one logarithm, we start by using the Power Property to get the coefficients of the log terms to be one and then the Product and Quotient Properties as needed.",
+      "original": "Exercise \\(\\PageIndex{18}\\)\n\nUse the Properties of Logarithms to condense the logarithm \\(2 \\log x+2 \\log (x+1)\\). Simplify, if possible.\n\nAnswer\n\n\\(\\log x^{2}(x+1)^{2}\\)",
+      "prompt": "Exercise \\(\\PageIndex{18}\\)\n\nUse the Properties of Logarithms to condense the logarithm \\(2 \\log x+2 \\log (x+1)\\). Simplify, if possible.",
+      "sourceAnswers": [
+        "\\(\\log x^{2}(x+1)^{2}\\)"
+      ],
+      "hasFigure": false,
+      "status": "draft",
+      "answerVerified": false,
+      "translationStatus": "pending",
+      "mappingStatus": "pending"
+    },
+    {
+      "ordinal": 31,
+      "sourceNumber": "",
+      "sourceAnchor": "",
+      "kind": "example-or-exercise",
+      "context": "For any logarithmic bases \\(a, b\\) and \\(M>0\\),\n\n\\(\\begin{array}{lll}{\\log _{a} M=\\frac{\\log _{b} M}{\\log _{b} a}} & {\\log _{a} M=\\frac{\\log M}{\\log a}} & {\\log _{a} M=\\frac{\\ln M}{\\ln a}} \\\\ {\\text { new base } b} & {\\text { new base } 10} & {\\text { new base } e}\\end{array}\\)\n\nWhen we use a calculator to find the logarithm value, we usually round to three decimal places. This gives us an approximate value and so we use the approximately equal symbol \\((≈)\\).",
+      "original": "Example \\(\\PageIndex{10}\\)\n\nRounding to three decimal places, approximate \\(\\log _{4} 35\\).\n\nSolution:\n\n[Figure: .]\n\n            Use the Change-of-Base Formula.\t\n\n[Figure: .]\n\n            Identify \\(a\\) and \\(M\\). Choose \\(10\\) for \\(b\\).\t\n\n[Figure: .]\n\n            Enter the expression \\(\\frac{\\log 35}{\\log 4}\\) in the calculator using the log button for base \\(10\\). Round to three decimal places.\t\n\n[Figure: .]\n\nTable 10.4.2",
+      "prompt": "Example \\(\\PageIndex{10}\\)\n\nRounding to three decimal places, approximate \\(\\log _{4} 35\\).\n\nSolution:\n\n[Figure: .]\n\n            Use the Change-of-Base Formula.\t\n\n[Figure: .]\n\n            Identify \\(a\\) and \\(M\\). Choose \\(10\\) for \\(b\\).\t\n\n[Figure: .]\n\n            Enter the expression \\(\\frac{\\log 35}{\\log 4}\\) in the calculator using the log button for base \\(10\\). Round to three decimal places.\t\n\n[Figure: .]\n\nTable 10.4.2",
+      "sourceAnswers": [],
+      "hasFigure": true,
+      "status": "draft",
+      "answerVerified": false,
+      "translationStatus": "pending",
+      "mappingStatus": "pending"
+    },
+    {
+      "ordinal": 32,
+      "sourceNumber": "",
+      "sourceAnchor": "",
+      "kind": "exercise-candidate",
+      "context": "For any logarithmic bases \\(a, b\\) and \\(M>0\\),\n\n\\(\\begin{array}{lll}{\\log _{a} M=\\frac{\\log _{b} M}{\\log _{b} a}} & {\\log _{a} M=\\frac{\\log M}{\\log a}} & {\\log _{a} M=\\frac{\\ln M}{\\ln a}} \\\\ {\\text { new base } b} & {\\text { new base } 10} & {\\text { new base } e}\\end{array}\\)\n\nWhen we use a calculator to find the logarithm value, we usually round to three decimal places. This gives us an approximate value and so we use the approximately equal symbol \\((≈)\\).",
+      "original": "Exercise \\(\\PageIndex{19}\\)\n\nRounding to three decimal places, approximate \\(\\log _{3} 42\\).\n\nAnswer\n\n\\(3.402\\)",
+      "prompt": "Exercise \\(\\PageIndex{19}\\)\n\nRounding to three decimal places, approximate \\(\\log _{3} 42\\).",
+      "sourceAnswers": [
+        "\\(3.402\\)"
+      ],
+      "hasFigure": false,
+      "status": "draft",
+      "answerVerified": false,
+      "translationStatus": "pending",
+      "mappingStatus": "pending"
+    },
+    {
+      "ordinal": 33,
+      "sourceNumber": "",
+      "sourceAnchor": "",
+      "kind": "exercise-candidate",
+      "context": "For any logarithmic bases \\(a, b\\) and \\(M>0\\),\n\n\\(\\begin{array}{lll}{\\log _{a} M=\\frac{\\log _{b} M}{\\log _{b} a}} & {\\log _{a} M=\\frac{\\log M}{\\log a}} & {\\log _{a} M=\\frac{\\ln M}{\\ln a}} \\\\ {\\text { new base } b} & {\\text { new base } 10} & {\\text { new base } e}\\end{array}\\)\n\nWhen we use a calculator to find the logarithm value, we usually round to three decimal places. This gives us an approximate value and so we use the approximately equal symbol \\((≈)\\).",
+      "original": "Exercise \\(\\PageIndex{20}\\)\n\nRounding to three decimal places, approximate \\(\\log _{5} 46\\).\n\nAnswer\n\n\\(2.379\\)",
+      "prompt": "Exercise \\(\\PageIndex{20}\\)\n\nRounding to three decimal places, approximate \\(\\log _{5} 46\\).",
+      "sourceAnswers": [
+        "\\(2.379\\)"
+      ],
+      "hasFigure": false,
+      "status": "draft",
+      "answerVerified": false,
+      "translationStatus": "pending",
+      "mappingStatus": "pending"
+    }
+  ],
+  "license": "CC BY 4.0",
+  "licenseEvidence": "This page titled 10.5: Use the Properties of Logarithms was last modified on Mon, 14 Feb 2022 01:06:53 GMT and is shared under a CC BY  4.0  license and was authored, remixed, and/or curated by OpenStax via source content that was edited to the style and standards of the LibreTexts platform.",
+  "url": "https://math.libretexts.org/Bookshelves/Algebra/Intermediate_Algebra_1e_(OpenStax)/10:_Exponential_and_Logarithmic_Functions/10.05:_Use_the_Properties_of_Logarithms",
+  "sha256": "f1c0f054d071516ba86e7ed0fa9d6a39c3c318b74514f90f92b1d65a6bd7e811",
+  "checkedAt": "2026-10-07",
+  "id": "e55955889c2f48986093",
+  "bookId": "intermediate-algebra",
+  "licenseInherited": false,
+  "licenseSource": "https://math.libretexts.org/Bookshelves/Algebra/Intermediate_Algebra_1e_(OpenStax)/10:_Exponential_and_Logarithmic_Functions/10.05:_Use_the_Properties_of_Logarithms",
+  "licenseUrl": "https://creativecommons.org/licenses/by/4.0/",
+  "authors": "OpenStax / Lynn Marecek, Andrea Honeycutt Mathis",
+  "book": "Intermediate Algebra 1e",
+  "reviewStatus": "unreviewed",
+  "sourceLanguage": "en",
+  "translationStatus": "pending"
+}

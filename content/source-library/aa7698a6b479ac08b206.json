@@ -1,0 +1,334 @@
+{
+  "title": "10.1: Non-right Triangles - Law of Sines",
+  "originalText": "Learning Objectives\n\nUse the Law of Sines to solve oblique triangles.\n\nFind the area of an oblique triangle using the sine function.\n\nSolve applied problems using the Law of Sines.\n\nSuppose two radar stations located \\(20\\) miles apart each detect an aircraft between them. The angle of elevation measured by the first station is \\(35\\) degrees, whereas the angle of elevation measured by the second station is \\(15\\) degrees. How can we determine the altitude of the aircraft? We see in Figure \\(\\PageIndex{1}\\) that the triangle formed by the aircraft and the two stations is not a right triangle, so we cannot use what we know about right triangles. In this section, we will find out how to solve problems involving non-right triangles.\n\n[Figure: CNX_Precalc_Figure_08_01_001.jpg]\n\nFigure \\(\\PageIndex{1}\\)\n\nUsing the Law of Sines to Solve Oblique Triangles\n\nIn any triangle, we can draw an altitude, a perpendicular line from one vertex to the opposite side, forming two right triangles. It would be preferable, however, to have methods that we can apply directly to non-right triangles without first having to create right triangles.\n\nAny triangle that is not a right triangle is an oblique triangle. Solving an oblique triangle means finding the measurements of all three angles and all three sides. To do so, we need to start with at least three of these values, including at least one of the sides. We will investigate three possible oblique triangle problem situations:\n\nASA (angle-side-angle) We know the measurements of two angles and the included side. See Figure \\(\\PageIndex{2}\\).\n\n[Figure: CNX_Precalc_Figure_08_01_002.jpg]\n\nFigure \\(\\PageIndex{2}\\)\n\nAAS (angle-angle-side) We know the measurements of two angles and a side that is not between the known angles. See Figure \\(\\PageIndex{3}\\).\n\n[Figure: CNX_Precalc_Figure_08_01_003.jpg]\n\nFigure \\(\\PageIndex{3}\\)\n\nSSA (side-side-angle) We know the measurements of two sides and an angle that is not between the known sides. See Figure \\(\\PageIndex{4}\\).\n\n[Figure: CNX_Precalc_Figure_08_01_004.jpg]\n\nFigure \\(\\PageIndex{4}\\)\n\nKnowing how to approach each of these situations enables us to solve oblique triangles without having to drop a perpendicular to form two right triangles. Instead, we can use the fact that the ratio of the measurement of one of the angles to the length of its opposite side will be equal to the other two ratios of angle measure to opposite side. Let’s see how this statement is derived by considering the triangle shown in Figure \\(\\PageIndex{5}\\).\n\n[Figure: CNX_Precalc_Figure_08_01_005.jpg]\n\nFigure \\(\\PageIndex{5}\\)\n\nUsing the right triangle relationships, we know that \\(\\sin \\alpha=\\dfrac{h}{b}\\) and \\(\\sin \\beta=\\dfrac{h}{a}\\).  Solving both equations for \\(h\\)  gives two different expressions for \\(h\\).\n\n\\(h=b \\sin \\alpha\\) and \\(h=a \\sin \\beta\\)\n\nWe then set the expressions equal to each other.\n\n\\[\\begin{align*} b \\sin \\alpha&= a \\sin \\beta\\\\ \\left(\\dfrac{1}{ab}\\right)\\left(b \\sin \\alpha\\right)&= \\left(a \\sin \\beta\\right)\\left(\\dfrac{1}{ab}\\right)\\qquad \\text{Multiply both sides by } \\dfrac{1}{ab}\\\\ \\dfrac{\\sin \\alpha}{a}&= \\dfrac{\\sin \\beta}{b} \\end{align*}\\]\n\nSimilarly, we can compare the other ratios.\n\n\\(\\dfrac{\\sin \\alpha}{a}=\\dfrac{\\sin \\gamma}{c}\\) and \\(\\dfrac{\\sin \\beta}{b}=\\dfrac{\\sin \\gamma}{c}\\)\n\nCollectively, these relationships are called the Law of Sines.\n\n\\(\\dfrac{\\sin \\alpha}{a}=\\dfrac{\\sin \\beta}{b}=\\dfrac{\\sin \\gamma}{c}\\)\n\nNote the standard way of labeling triangles: angle \\(\\alpha\\) (alpha) is opposite side \\(a\\); angle \\(\\beta\\) (beta) is opposite side \\(b\\); and angle \\(\\gamma\\) (gamma) is opposite side \\(c\\). See Figure \\(\\PageIndex{6}\\).\n\nWhile calculating angles and sides, be sure to carry the exact values through to the final answer. Generally, final answers are rounded to the nearest tenth, unless otherwise specified.\n\n[Figure: CNX_Precalc_Figure_08_01_006.jpg]\n\nFigure \\(\\PageIndex{6}\\)\n\nNote: LAW OF SINES\n\nGiven a triangle with angles and opposite sides labeled as in Figure \\(\\PageIndex{6}\\), the ratio of the measurement of an angle to the length of its opposite side will be equal to the other two ratios of angle measure to opposite side. All proportions will be equal. The Law of Sines is based on proportions and is presented symbolically two ways.\n\n\\[\\dfrac{\\sin \\alpha}{a}=\\dfrac{\\sin \\beta}{b}=\\dfrac{\\sin \\gamma}{c}\\]\n\n\\[\\dfrac{a}{\\sin \\alpha}=\\dfrac{b}{\\sin \\beta}=\\dfrac{c}{\\sin \\gamma}\\]\n\nTo solve an oblique triangle, use any pair of applicable ratios.\n\nExample \\(\\PageIndex{1}\\): Solving for Two Unknown Sides and Angle of an AAS Triangle\n\nSolve the triangle shown in Figure \\(\\PageIndex{7}\\) to the nearest tenth.\n\n[Figure: CNX_Precalc_Figure_08_01_007.jpg]\n\nFigure \\(\\PageIndex{7}\\)\n\nSolution\n\nThe three angles must add up to 180 degrees. From this, we can determine that\n\n\\[\\begin{align*} \\beta &= 180^{\\circ} - 50^{\\circ} - 30^{\\circ}\\\\ &= 100^{\\circ} \\end{align*}\\]\n\nTo find an unknown side, we need to know the corresponding angle and a known ratio. We know that angle \\(\\alpha=50°\\)and its corresponding side \\(a=10\\). We can use the following proportion from the Law of Sines to find the length of \\(c\\). \n\n\\[\\begin{align*} \\dfrac{\\sin(50^{\\circ})}{10}&= \\dfrac{\\sin(30^{\\circ})}{c}\\\\ c\\dfrac{\\sin(50^{\\circ})}{10}&= \\sin(30^{\\circ})\\qquad \\text{Multiply both sides by } c\\\\ c&= \\sin(30^{\\circ})\\dfrac{10}{\\sin(50^{\\circ})}\\qquad \\text{Multiply by the reciprocal to isolate } c\\\\ c&\\approx 6.5 \\end{align*}\\]\n\nSimilarly, to solve for \\(b\\), we set up another proportion.\n\n\\[\\begin{align*} \\dfrac{\\sin(50^{\\circ})}{10}&= \\dfrac{\\sin(100^{\\circ})}{b}\\\\ b \\sin(50^{\\circ})&= 10 \\sin(100^{\\circ})\\qquad \\text{Multiply both sides by } b\\\\ b&= \\dfrac{10 \\sin(100^{\\circ})}{\\sin(50^{\\circ})}\\qquad \\text{Multiply by the reciprocal to isolate }b\\\\ b&\\approx 12.9 \\end{align*}\\]\n\nTherefore, the complete set of angles and sides is\n\n\\(\\begin{matrix} \\alpha=50^{\\circ} & a=10\\\\ \\beta=100^{\\circ} & b\\approx 12.9\\\\ \\gamma=30^{\\circ} & c\\approx 6.5 \\end{matrix}\\)\n\nExercise \\(\\PageIndex{1}\\)\n\nSolve the triangle shown in Figure \\(\\PageIndex{8}\\) to the nearest tenth.\n\n[Figure: CNX_Precalc_Figure_08_01_008.jpg]\n\nFigure \\(\\PageIndex{8}\\)\n\nAnswer\n\n\\(\\begin{matrix} \\alpha=98^{\\circ} & a=34.6\\\\ \\beta=39^{\\circ} & b=22\\\\ \\gamma=43^{\\circ} & c=23.8 \\end{matrix}\\)\n\nUsing The Law of Sines to Solve SSA Triangles\n\nWe can use the Law of Sines to solve any oblique triangle, but some solutions may not be straightforward. In some cases, more than one triangle may satisfy the given criteria, which we describe as an ambiguous case. Triangles classified as SSA, those in which we know the lengths of two sides and the measurement of the angle opposite one of the given sides, may result in one or two solutions, or even no solution.\n\nNote: POSSIBLE OUTCOMES FOR SSA TRIANGLES\n\nOblique triangles in the category SSA may have four different outcomes. Figure \\(\\PageIndex{9}\\) illustrates the solutions with the known sides \\(a\\) and \\(b\\) and known angle \\(\\alpha\\).\n\n[Figure: CNX_Precalc_Figure_08_01_009n.jpg]\n\nFigure \\(\\PageIndex{9}\\)\n\nExample \\(\\PageIndex{2}\\): Solving an Oblique SSA Triangle\n\nSolve the triangle in Figure \\(\\PageIndex{10}\\) for the missing side and find the missing angle measures to the nearest tenth.\n\n[Figure: CNX_Precalc_Figure_08_01_010.jpg]\n\nFigure \\(\\PageIndex{10}\\)\n\nSolution\n\nUse the Law of Sines to find angle \\(\\beta\\) and angle \\(\\gamma\\), and then side \\(c\\). Solving for \\(\\beta\\), we have the proportion\n\n\\[\\begin{align*} \\dfrac{\\sin \\alpha}{a}&= \\dfrac{\\sin \\beta}{b}\\\\ \\dfrac{\\sin(35^{\\circ})}{6}&= \\dfrac{\\sin \\beta}{8}\\\\ \\dfrac{8 \\sin(35^{\\circ})}{6}&= \\sin \\beta\\\\ 0.7648&\\approx \\sin \\beta\\\\ {\\sin}^{-1}(0.7648)&\\approx 49.9^{\\circ}\\\\ \\beta&\\approx 49.9^{\\circ} \\end{align*}\\]\n\nHowever, in the diagram, angle \\(\\beta\\) appears to be an obtuse angle and may be greater than \\(90°\\). How did we get an acute angle, and how do we find the measurement of \\(\\beta\\)? Let’s investigate further. Dropping a perpendicular from \\(\\gamma\\) and viewing the triangle from a right angle perspective, we have Figure \\(\\PageIndex{11}\\). It appears that there may be a second triangle that will fit the given criteria.\n\n[Figure: CNX_Precalc_Figure_08_01_011.jpg]\n\nFigure \\(\\PageIndex{11}\\)\n\nThe angle supplementary to \\(\\beta\\) is approximately equal to \\(49.9°\\), which means that \\(\\beta=180°−49.9°=130.1°\\). (Remember that the sine function is positive in both the first and second quadrants.) Solving for \\(\\gamma\\), we have\n\n\\[\\begin{align*} \\gamma&= 180^{\\circ}-35^{\\circ}-130.1^{\\circ}\\\\ &\\approx 14.9^{\\circ} \\end{align*}\\]\n\nWe can then use these measurements to solve the other triangle. Since \\(\\beta′\\) is supplementary to \\(\\beta\\), we have\n\n\\[\\begin{align*} \\gamma^{'}&= 180^{\\circ}-35^{\\circ}-49.5^{\\circ}\\\\ &\\approx 95.1^{\\circ} \\end{align*}\\]\n\nNow we need to find \\(c\\) and \\(c′\\).\n\nWe have\n\n\\[\\begin{align*} \\dfrac{c}{\\sin(14.9^{\\circ})}&= \\dfrac{6}{\\sin(35^{\\circ})}\\\\ c&= \\dfrac{6 \\sin(14.9^{\\circ})}{\\sin(35^{\\circ})}\\\\ &\\approx 2.7 \\end{align*}\\]\n\nFinally,\n\n\\[\\begin{align*} \\dfrac{c'}{\\sin(95.1^{\\circ})}&= \\dfrac{6}{\\sin(35^{\\circ})}\\\\ c'&= \\dfrac{6 \\sin(95.1^{\\circ})}{\\sin(35^{\\circ})}\\\\ &\\approx 10.4 \\end{align*}\\]\n\nTo summarize, there are two triangles with an angle of \\(35°\\), an adjacent side of 8, and an opposite side of 6, as shown in Figure \\(\\PageIndex{12}\\).\n\n[Figure: CNX_Precalc_Figure_08_01_012ab.jpg]\n\nFigure \\(\\PageIndex{12}\\)\n\nHowever, we were looking for the values for the triangle with an obtuse angle \\(\\beta\\). We can see them in the first triangle (a) in Figure \\(\\PageIndex{12}\\).\n\nExercise \\(\\PageIndex{2}\\)\n\nGiven \\(\\alpha=80°\\), \\(a=120\\), and \\(b=121\\), find the missing side and angles. If there is more than one possible solution, show both.\n\nAnswer\n\nSolution 1\n\n\\(\\begin{matrix} \\alpha=80^{\\circ} & a=120\\\\ \\beta\\approx 83.2^{\\circ} & b=121\\\\ \\gamma\\approx 16.8^{\\circ} & c\\approx 35.2 \\end{matrix}\\)\n\nSolution 2\n\n\\(\\begin{matrix} \\alpha '=80^{\\circ} & a'=120\\\\ \\beta '\\approx 96.8^{\\circ} & b'=121\\\\ \\gamma '\\approx 3.2^{\\circ} & c'\\approx 6.8 \\end{matrix}\\)\n\nExample \\(\\PageIndex{3}\\): Solving for the Unknown Sides and Angles of a SSA Triangle\n\nIn the triangle shown in Figure \\(\\PageIndex{13}\\), solve for the unknown side and angles. Round your answers to the nearest tenth.\n\n[Figure: CNX_Precalc_Figure_08_01_013.jpg]\n\nFigure \\(\\PageIndex{13}\\)\n\nSolution\n\nIn choosing the pair of ratios from the Law of Sines to use, look at the information given. In this case, we know the angle, \\(\\gamma=85°\\), and its corresponding side \\(c=12\\), and we know side \\(b=9\\). We will use this proportion to solve for \\(\\beta\\).\n\n\\[\\begin{align*} \\dfrac{\\sin(85^{\\circ})}{12}&= \\dfrac{\\sin \\beta}{9}\\qquad \\text{Isolate the unknown.}\\\\ \\dfrac{9 \\sin(85^{\\circ})}{12}&= \\sin \\beta \\end{align*}\\]\n\nTo find \\(\\beta\\), apply the inverse sine function. The inverse sine will produce a single result, but keep in mind that there may be two values for \\(\\beta\\). It is important to verify the result, as there may be two viable solutions, only one solution (the usual case), or no solutions.\n\n\\[\\begin{align*} \\beta&= {\\sin}^{-1}\\left(\\dfrac{9 \\sin(85^{\\circ})}{12}\\right)\\\\ \\beta&\\approx {\\sin}^{-1} (0.7471)\\\\ \\beta&\\approx 48.3^{\\circ} \\end{align*}\\]\n\nIn this case, if we subtract \\(\\beta\\) from \\(180°\\), we find that there may be a second possible solution. Thus, \\(\\beta=180°−48.3°≈131.7°\\). To check the solution, subtract both angles, \\(131.7°\\) and \\(85°\\), from \\(180°\\). This gives\n\n\\[\\begin{align*} \\alpha&= 180^{\\circ}-85^{\\circ}-131.7^{\\circ}\\\\ &\\approx -36.7^{\\circ} \\end{align*}\\]\n\nwhich is impossible, and so \\(\\beta≈48.3°\\).\n\nTo find the remaining missing values, we calculate \\(\\alpha=180°−85°−48.3°≈46.7°\\). Now, only side \\(a\\) is needed. Use the Law of Sines to solve for \\(a\\) by one of the proportions.\n\n\\[\\begin{align*} \\dfrac{\\sin(85°)}{12}&= \\dfrac{\\sin(46.7^{\\circ})}{a}\\\\ a\\dfrac{\\sin(85^{\\circ})}{12}&= \\sin(46.7^{\\circ})\\\\ a&=\\dfrac{12\\sin(46.7^{\\circ})}{\\sin(85^{\\circ})}\\\\ &\\approx 8.8 \\end{align*}\\]\n\nThe complete set of solutions for the given triangle is\n\n\\(\\begin{matrix} \\alpha\\approx 46.7^{\\circ} & a\\approx 8.8\\\\ \\beta\\approx 48.3^{\\circ} & b=9\\\\ \\gamma=85^{\\circ} & c=12 \\end{matrix}\\)\n\nExercise \\(\\PageIndex{3}\\)\n\nGiven \\(\\alpha=80°\\), \\(a=100\\), \\(b=10\\), find the missing side and angles. If there is more than one possible solution, show both. Round your answers to the nearest tenth.\n\nAnswer\n\n\\(\\beta≈5.7°\\), \\(\\gamma≈94.3°\\), \\(c≈101.3\\)\n\nExample \\(\\PageIndex{4}\\): Finding the Triangles That Meet the Given Criteria\n\nFind all possible triangles if one side has length \\(4\\) opposite an angle of \\(50°\\), and a second side has length \\(10\\).\n\nSolution\n\nUsing the given information, we can solve for the angle opposite the side of length \\(10\\). See Figure \\(\\PageIndex{14}\\).\n\n\\[\\begin{align*} \\dfrac{\\sin \\alpha}{10}&= \\dfrac{\\sin(50^{\\circ})}{4}\\\\ \\sin \\alpha&= \\dfrac{10 \\sin(50^{\\circ})}{4}\\\\ \\sin \\alpha&\\approx 1.915 \\end{align*}\\]\n\n[Figure: CNX_Precalc_Figure_08_01_014.jpg]\n\nFigure \\(\\PageIndex{14}\\)\n\nWe can stop here without finding the value of \\(\\alpha\\). Because the range of the sine function is \\([ −1,1 ]\\), it is impossible for the sine value to be \\(1.915\\). In fact, inputting \\({\\sin}^{−1}(1.915)\\) in a graphing calculator generates an ERROR DOMAIN. Therefore, no triangles can be drawn with the provided dimensions.\n\nExercise \\(\\PageIndex{4}\\)\n\nDetermine the number of triangles possible given \\(a=31\\), \\(b=26\\), \\(\\beta=48°\\).\n\nAnswer\n\ntwo\n\nFinding the Area of an Oblique Triangle Using the Sine Function\n\nNow that we can solve a triangle for missing values, we can use some of those values and the sine function to find the area of an oblique triangle. Recall that the area formula for a triangle is given as \\(Area=\\dfrac{1}{2}bh\\), where \\(b\\) is base and \\(h\\) is height. For oblique triangles, we must find \\(h\\) before we can use the area formula. Observing the two triangles in Figure \\(\\PageIndex{15}\\), one acute and one obtuse, we can drop a perpendicular to represent the height and then apply the trigonometric property \\(\\sin \\alpha=\\dfrac{opposite}{hypotenuse}\\) to write an equation for area in oblique triangles. In the acute triangle, we have \\(\\sin \\alpha=\\dfrac{h}{c}\\) or \\(c \\sin \\alpha=h\\). However, in the obtuse triangle, we drop the perpendicular outside the triangle and extend the base \\(b\\) to form a right triangle. The angle used in calculation is \\(\\alpha′\\), or \\(180−\\alpha\\).\n\n[Figure: CNX_Precalc_Figure_08_01_015.jpg]\n\nFigure \\(\\PageIndex{15}\\)\n\nThus,\n\n\\(Area=\\dfrac{1}{2}(base)(height)=\\dfrac{1}{2}b(c \\sin \\alpha)\\)\n\nSimilarly,\n\n\\(Area=\\dfrac{1}{2}a(b \\sin \\gamma)=\\dfrac{1}{2}a(c \\sin \\beta)\\)\n\nNote: AREA OF AN OBLIQUE TRIANGLE\n\nThe formula for the area of an oblique triangle is given by\n\n\\[Area=\\dfrac{1}{2}bc \\sin \\alpha\\]            \n\n\\[Area=\\dfrac{1}{2}ac \\sin \\beta\\]            \n\n\\[Area=\\dfrac{1}{2}ab \\sin \\gamma\\]\n\nThis is equivalent to one-half of the product of two sides and the sine of their included angle.\n\nExample \\(\\PageIndex{5}\\): Finding the Area of an Oblique Triangle\n\nFind the area of a triangle with sides \\(a=90\\), \\(b=52\\), and angle \\(\\gamma=102°\\). Round the area to the nearest integer.\n\nSolution\n\nUsing the formula, we have\n\n\\[\\begin{align*} Area&= \\dfrac{1}{2}ab \\sin \\gamma\\\\ Area&= \\dfrac{1}{2}(90)(52) \\sin(102^{\\circ})\\\\ Area&\\approx 2289\\; \\text{square units} \\end{align*}\\]\n\nExercise \\(\\PageIndex{5}\\)\n\nFind the area of the triangle given \\(\\beta=42°\\), \\(a=7.2 ft\\), \\(c=3.4 ft\\). Round the area to the nearest tenth.\n\nAnswer\n\nabout \\(8.2\\)  square feet\n\nSolving Applied Problems Using the Law of Sines\n\nThe more we study trigonometric applications, the more we discover that the applications are countless. Some are flat, diagram-type situations, but many applications in calculus, engineering, and physics involve three dimensions and motion.\n\nExample \\(\\PageIndex{6}\\): Finding an Altitude\n\nFind the altitude of the aircraft in the problem introduced at the beginning of this section, shown in Figure \\(\\PageIndex{16}\\). Round the altitude to the nearest tenth of a mile.\n\n[Figure: CNX_Precalc_Figure_08_01_016.jpg]\n\nFigure \\(\\PageIndex{16}\\)\n\nSolution\n\nTo find the elevation of the aircraft, we first find the distance from one station to the aircraft, such as the side \\(a\\), and then use right triangle relationships to find the height of the aircraft, \\(h\\).\n\nBecause the angles in the triangle add up to \\(180\\) degrees, the unknown angle must be \\(180°−15°−35°=130°\\). This angle is opposite the side of length \\(20\\), allowing us to set up a Law of Sines relationship.\n\n\\[\\begin{align*} \\dfrac{\\sin(130^{\\circ})}{20}&= \\dfrac{\\sin(35^{\\circ})}{a}\\\\ a \\sin(130^{\\circ})&= 20 \\sin(35^{\\circ})\\\\ a&= \\dfrac{20 \\sin(35^{\\circ})}{\\sin(130^{\\circ})}\\\\ a&\\approx 14.98 \\end{align*}\\]\n\nThe distance from one station to the aircraft is about \\(14.98\\) miles.\n\nNow that we know \\(a\\), we can use right triangle relationships to solve for \\(h\\).\n\n\\[\\begin{align*} \\sin(15^{\\circ})&= \\dfrac{opposite}{hypotenuse}\\\\ \\sin(15^{\\circ})&= \\dfrac{h}{a}\\\\ \\sin(15^{\\circ})&= \\dfrac{h}{14.98}\\\\ h&= 14.98 \\sin(15^{\\circ})\\\\ h&\\approx 3.88 \\end{align*}\\]\n\nThe aircraft is at an altitude of approximately \\(3.9\\) miles.\n\nExercise \\(\\PageIndex{6}\\)\n\nThe diagram shown in Figure \\(\\PageIndex{17}\\) represents the height of a blimp flying over a football stadium. Find the height of the blimp if the angle of elevation at the southern end zone, point A, is \\(70°\\), the angle of elevation from the northern end zone, point B, is \\(62°\\), and the distance between the viewing points of the two end zones is \\(145\\) yards.\n\n[Figure: CNX_Precalc_Figure_08_01_017.jpg]\n\nFigure \\(\\PageIndex{17}\\)\n\nAnswer\n\n\\(161.9\\) yd.\n\nMedia\n\nAccess these online resources for additional instruction and practice with trigonometric applications.\n\nLaw of Sines: The Basics\n\nLaw of Sines: The Ambiguous Case\n\nKey Equations\n\n            Law of Sines\t\n\n\\(\\dfrac{\\sin \\alpha}{a}=\\dfrac{\\sin \\beta}{b}=\\dfrac{\\sin \\gamma}{c}\\)\n\n\\(\\dfrac{a}{\\sin \\alpha}=\\dfrac{b}{\\sin \\beta}=\\dfrac{c}{\\sin \\gamma}\\)\n\n            Area for oblique triangles\t\n\n\\(Area=\\dfrac{1}{2}bc \\sin \\alpha\\)\n\n\\(=\\dfrac{1}{2} ac \\sin \\beta\\)\n\n\\(=\\dfrac{1}{2} ab \\sin \\gamma\\)\n\nKey Concepts\n\nThe Law of Sines can be used to solve oblique triangles, which are non-right triangles.\n\nAccording to the Law of Sines, the ratio of the measurement of one of the angles to the length of its opposite side equals the other two ratios of angle measure to opposite side.\n\nThere are three possible cases: ASA, AAS, SSA. Depending on the information given, we can choose the appropriate equation to find the requested solution. See Example \\(\\PageIndex{1}\\).\n\nThe ambiguous case arises when an oblique triangle can have different outcomes.\n\nThere are three possible cases that arise from SSA arrangement—a single solution, two possible solutions, and no solution. See Example \\(\\PageIndex{2}\\) and Example \\(\\PageIndex{3}\\).\n\nThe Law of Sines can be used to solve triangles with given criteria. See Example \\(\\PageIndex{4}\\).\n\nThe general area formula for triangles translates to oblique triangles by first finding the appropriate height value. See Example \\(\\PageIndex{5}\\).\n\nThere are many trigonometric applications. They can often be solved by first drawing a diagram of the given information and then using the appropriate equation. See Example \\(\\PageIndex{6}\\).\n\nContributors and Attributions\n\nJay Abramson (Arizona State University) with contributing authors. Textbook content produced by OpenStax College is licensed under a Creative Commons Attribution License 4.0 license. Download for free at https://openstax.org/details/books/precalculus.\n\nThis page titled 10.1: Non-right Triangles - Law of Sines was last modified on Sun, 27 Apr 2025 18:27:21 GMT and is shared under a CC BY  4.0  license and was authored, remixed, and/or curated by OpenStax via source content that was edited to the style and standards of the LibreTexts platform.",
+  "figures": [
+    {
+      "url": "https://math.libretexts.org/@api/deki/files/12462/CNX_Precalc_Figure_08_01_001.jpg?revision=1",
+      "alt": "CNX_Precalc_Figure_08_01_001.jpg",
+      "credit": ""
+    },
+    {
+      "url": "https://math.libretexts.org/@api/deki/files/12463/CNX_Precalc_Figure_08_01_002.jpg?revision=1",
+      "alt": "CNX_Precalc_Figure_08_01_002.jpg",
+      "credit": ""
+    },
+    {
+      "url": "https://math.libretexts.org/@api/deki/files/12464/CNX_Precalc_Figure_08_01_003.jpg?revision=1",
+      "alt": "CNX_Precalc_Figure_08_01_003.jpg",
+      "credit": ""
+    },
+    {
+      "url": "https://math.libretexts.org/@api/deki/files/12465/CNX_Precalc_Figure_08_01_004.jpg?revision=1",
+      "alt": "CNX_Precalc_Figure_08_01_004.jpg",
+      "credit": ""
+    },
+    {
+      "url": "https://math.libretexts.org/@api/deki/files/12466/CNX_Precalc_Figure_08_01_005.jpg?revision=1",
+      "alt": "CNX_Precalc_Figure_08_01_005.jpg",
+      "credit": ""
+    },
+    {
+      "url": "https://math.libretexts.org/@api/deki/files/12467/CNX_Precalc_Figure_08_01_006.jpg?revision=1",
+      "alt": "CNX_Precalc_Figure_08_01_006.jpg",
+      "credit": ""
+    },
+    {
+      "url": "https://math.libretexts.org/@api/deki/files/12468/CNX_Precalc_Figure_08_01_007.jpg?revision=1",
+      "alt": "CNX_Precalc_Figure_08_01_007.jpg",
+      "credit": ""
+    },
+    {
+      "url": "https://math.libretexts.org/@api/deki/files/12469/CNX_Precalc_Figure_08_01_008.jpg?revision=1",
+      "alt": "CNX_Precalc_Figure_08_01_008.jpg",
+      "credit": ""
+    },
+    {
+      "url": "https://math.libretexts.org/@api/deki/files/12470/CNX_Precalc_Figure_08_01_009n.jpg?revision=1",
+      "alt": "CNX_Precalc_Figure_08_01_009n.jpg",
+      "credit": ""
+    },
+    {
+      "url": "https://math.libretexts.org/@api/deki/files/12471/CNX_Precalc_Figure_08_01_010.jpg?revision=1",
+      "alt": "CNX_Precalc_Figure_08_01_010.jpg",
+      "credit": ""
+    },
+    {
+      "url": "https://math.libretexts.org/@api/deki/files/12472/CNX_Precalc_Figure_08_01_011.jpg?revision=1",
+      "alt": "CNX_Precalc_Figure_08_01_011.jpg",
+      "credit": ""
+    },
+    {
+      "url": "https://math.libretexts.org/@api/deki/files/12473/CNX_Precalc_Figure_08_01_012ab.jpg?revision=1",
+      "alt": "CNX_Precalc_Figure_08_01_012ab.jpg",
+      "credit": ""
+    },
+    {
+      "url": "https://math.libretexts.org/@api/deki/files/12474/CNX_Precalc_Figure_08_01_013.jpg?revision=1",
+      "alt": "CNX_Precalc_Figure_08_01_013.jpg",
+      "credit": ""
+    },
+    {
+      "url": "https://math.libretexts.org/@api/deki/files/12475/CNX_Precalc_Figure_08_01_014.jpg?revision=1",
+      "alt": "CNX_Precalc_Figure_08_01_014.jpg",
+      "credit": ""
+    },
+    {
+      "url": "https://math.libretexts.org/@api/deki/files/12476/CNX_Precalc_Figure_08_01_015.jpg?revision=1",
+      "alt": "CNX_Precalc_Figure_08_01_015.jpg",
+      "credit": ""
+    },
+    {
+      "url": "https://math.libretexts.org/@api/deki/files/12477/CNX_Precalc_Figure_08_01_016.jpg?revision=1",
+      "alt": "CNX_Precalc_Figure_08_01_016.jpg",
+      "credit": ""
+    },
+    {
+      "url": "https://math.libretexts.org/@api/deki/files/12478/CNX_Precalc_Figure_08_01_017.jpg?revision=1",
+      "alt": "CNX_Precalc_Figure_08_01_017.jpg",
+      "credit": ""
+    }
+  ],
+  "references": [
+    {
+      "text": "Law of Sines: The Basics",
+      "url": "http://openstaxcollege.org/l/sinesbasic"
+    },
+    {
+      "text": "Law of Sines: The Ambiguous Case",
+      "url": "http://openstaxcollege.org/l/sinesambiguous"
+    },
+    {
+      "text": "Creative Commons Attribution License 4.0",
+      "url": "http://creativecommons.org/licenses/by/4.0/"
+    },
+    {
+      "text": "https://openstax.org/details/books/precalculus",
+      "url": "https://openstax.org/details/books/precalculus"
+    },
+    {
+      "text": "10.1: Non-right Triangles - Law of Sines",
+      "url": "https://math.libretexts.org/Bookshelves/Algebra/Algebra_and_Trigonometry_1e_(OpenStax)/10%3A_Further_Applications_of_Trigonometry/10.01%3A_Non-right_Triangles_-_Law_of_Sines"
+    },
+    {
+      "text": "CC BY  4.0",
+      "url": "https://creativecommons.org/licenses/by/4.0"
+    },
+    {
+      "text": "OpenStax",
+      "url": "https://openstax.org/"
+    },
+    {
+      "text": "source content",
+      "url": "https://openstax.org/details/books/precalculus"
+    }
+  ],
+  "exercises": [
+    {
+      "ordinal": 1,
+      "sourceNumber": "",
+      "sourceAnchor": "",
+      "kind": "example-or-exercise",
+      "context": "\\[\\dfrac{\\sin \\alpha}{a}=\\dfrac{\\sin \\beta}{b}=\\dfrac{\\sin \\gamma}{c}\\]\n\n\\[\\dfrac{a}{\\sin \\alpha}=\\dfrac{b}{\\sin \\beta}=\\dfrac{c}{\\sin \\gamma}\\]\n\nTo solve an oblique triangle, use any pair of applicable ratios.",
+      "original": "Example \\(\\PageIndex{1}\\): Solving for Two Unknown Sides and Angle of an AAS Triangle\n\nSolve the triangle shown in Figure \\(\\PageIndex{7}\\) to the nearest tenth.\n\n[Figure: CNX_Precalc_Figure_08_01_007.jpg]\n\nFigure \\(\\PageIndex{7}\\)\n\nSolution\n\nThe three angles must add up to 180 degrees. From this, we can determine that\n\n\\[\\begin{align*} \\beta &= 180^{\\circ} - 50^{\\circ} - 30^{\\circ}\\\\ &= 100^{\\circ} \\end{align*}\\]\n\nTo find an unknown side, we need to know the corresponding angle and a known ratio. We know that angle \\(\\alpha=50°\\)and its corresponding side \\(a=10\\). We can use the following proportion from the Law of Sines to find the length of \\(c\\). \n\n\\[\\begin{align*} \\dfrac{\\sin(50^{\\circ})}{10}&= \\dfrac{\\sin(30^{\\circ})}{c}\\\\ c\\dfrac{\\sin(50^{\\circ})}{10}&= \\sin(30^{\\circ})\\qquad \\text{Multiply both sides by } c\\\\ c&= \\sin(30^{\\circ})\\dfrac{10}{\\sin(50^{\\circ})}\\qquad \\text{Multiply by the reciprocal to isolate } c\\\\ c&\\approx 6.5 \\end{align*}\\]\n\nSimilarly, to solve for \\(b\\), we set up another proportion.\n\n\\[\\begin{align*} \\dfrac{\\sin(50^{\\circ})}{10}&= \\dfrac{\\sin(100^{\\circ})}{b}\\\\ b \\sin(50^{\\circ})&= 10 \\sin(100^{\\circ})\\qquad \\text{Multiply both sides by } b\\\\ b&= \\dfrac{10 \\sin(100^{\\circ})}{\\sin(50^{\\circ})}\\qquad \\text{Multiply by the reciprocal to isolate }b\\\\ b&\\approx 12.9 \\end{align*}\\]\n\nTherefore, the complete set of angles and sides is\n\n\\(\\begin{matrix} \\alpha=50^{\\circ} & a=10\\\\ \\beta=100^{\\circ} & b\\approx 12.9\\\\ \\gamma=30^{\\circ} & c\\approx 6.5 \\end{matrix}\\)",
+      "prompt": "Example \\(\\PageIndex{1}\\): Solving for Two Unknown Sides and Angle of an AAS Triangle\n\nSolve the triangle shown in Figure \\(\\PageIndex{7}\\) to the nearest tenth.\n\n[Figure: CNX_Precalc_Figure_08_01_007.jpg]\n\nFigure \\(\\PageIndex{7}\\)\n\nSolution\n\nThe three angles must add up to 180 degrees. From this, we can determine that\n\n\\[\\begin{align*} \\beta &= 180^{\\circ} - 50^{\\circ} - 30^{\\circ}\\\\ &= 100^{\\circ} \\end{align*}\\]\n\nTo find an unknown side, we need to know the corresponding angle and a known ratio. We know that angle \\(\\alpha=50°\\)and its corresponding side \\(a=10\\). We can use the following proportion from the Law of Sines to find the length of \\(c\\). \n\n\\[\\begin{align*} \\dfrac{\\sin(50^{\\circ})}{10}&= \\dfrac{\\sin(30^{\\circ})}{c}\\\\ c\\dfrac{\\sin(50^{\\circ})}{10}&= \\sin(30^{\\circ})\\qquad \\text{Multiply both sides by } c\\\\ c&= \\sin(30^{\\circ})\\dfrac{10}{\\sin(50^{\\circ})}\\qquad \\text{Multiply by the reciprocal to isolate } c\\\\ c&\\approx 6.5 \\end{align*}\\]\n\nSimilarly, to solve for \\(b\\), we set up another proportion.\n\n\\[\\begin{align*} \\dfrac{\\sin(50^{\\circ})}{10}&= \\dfrac{\\sin(100^{\\circ})}{b}\\\\ b \\sin(50^{\\circ})&= 10 \\sin(100^{\\circ})\\qquad \\text{Multiply both sides by } b\\\\ b&= \\dfrac{10 \\sin(100^{\\circ})}{\\sin(50^{\\circ})}\\qquad \\text{Multiply by the reciprocal to isolate }b\\\\ b&\\approx 12.9 \\end{align*}\\]\n\nTherefore, the complete set of angles and sides is\n\n\\(\\begin{matrix} \\alpha=50^{\\circ} & a=10\\\\ \\beta=100^{\\circ} & b\\approx 12.9\\\\ \\gamma=30^{\\circ} & c\\approx 6.5 \\end{matrix}\\)",
+      "sourceAnswers": [],
+      "hasFigure": true,
+      "status": "draft",
+      "answerVerified": false,
+      "translationStatus": "pending",
+      "mappingStatus": "pending"
+    },
+    {
+      "ordinal": 2,
+      "sourceNumber": "",
+      "sourceAnchor": "",
+      "kind": "exercise-candidate",
+      "context": "\\[\\dfrac{\\sin \\alpha}{a}=\\dfrac{\\sin \\beta}{b}=\\dfrac{\\sin \\gamma}{c}\\]\n\n\\[\\dfrac{a}{\\sin \\alpha}=\\dfrac{b}{\\sin \\beta}=\\dfrac{c}{\\sin \\gamma}\\]\n\nTo solve an oblique triangle, use any pair of applicable ratios.",
+      "original": "Exercise \\(\\PageIndex{1}\\)\n\nSolve the triangle shown in Figure \\(\\PageIndex{8}\\) to the nearest tenth.\n\n[Figure: CNX_Precalc_Figure_08_01_008.jpg]\n\nFigure \\(\\PageIndex{8}\\)\n\nAnswer\n\n\\(\\begin{matrix} \\alpha=98^{\\circ} & a=34.6\\\\ \\beta=39^{\\circ} & b=22\\\\ \\gamma=43^{\\circ} & c=23.8 \\end{matrix}\\)",
+      "prompt": "Exercise \\(\\PageIndex{1}\\)\n\nSolve the triangle shown in Figure \\(\\PageIndex{8}\\) to the nearest tenth.\n\n[Figure: CNX_Precalc_Figure_08_01_008.jpg]\n\nFigure \\(\\PageIndex{8}\\)",
+      "sourceAnswers": [
+        "\\(\\begin{matrix} \\alpha=98^{\\circ} & a=34.6\\\\ \\beta=39^{\\circ} & b=22\\\\ \\gamma=43^{\\circ} & c=23.8 \\end{matrix}\\)"
+      ],
+      "hasFigure": true,
+      "status": "draft",
+      "answerVerified": false,
+      "translationStatus": "pending",
+      "mappingStatus": "pending"
+    },
+    {
+      "ordinal": 3,
+      "sourceNumber": "",
+      "sourceAnchor": "",
+      "kind": "example-or-exercise",
+      "context": "Using The Law of Sines to Solve SSA Triangles\n\nWe can use the Law of Sines to solve any oblique triangle, but some solutions may not be straightforward. In some cases, more than one triangle may satisfy the given criteria, which we describe as an ambiguous case. Triangles classified as SSA, those in which we know the lengths of two sides and the measurement of the angle opposite one of the given sides, may result in one or two solutions, or even no solution.\n\nOblique triangles in the category SSA may have four different outcomes. Figure \\(\\PageIndex{9}\\) illustrates the solutions with the known sides \\(a\\) and \\(b\\) and known angle \\(\\alpha\\).",
+      "original": "Example \\(\\PageIndex{2}\\): Solving an Oblique SSA Triangle\n\nSolve the triangle in Figure \\(\\PageIndex{10}\\) for the missing side and find the missing angle measures to the nearest tenth.\n\n[Figure: CNX_Precalc_Figure_08_01_010.jpg]\n\nFigure \\(\\PageIndex{10}\\)",
+      "prompt": "Example \\(\\PageIndex{2}\\): Solving an Oblique SSA Triangle\n\nSolve the triangle in Figure \\(\\PageIndex{10}\\) for the missing side and find the missing angle measures to the nearest tenth.\n\n[Figure: CNX_Precalc_Figure_08_01_010.jpg]\n\nFigure \\(\\PageIndex{10}\\)",
+      "sourceAnswers": [],
+      "hasFigure": true,
+      "status": "draft",
+      "answerVerified": false,
+      "translationStatus": "pending",
+      "mappingStatus": "pending"
+    },
+    {
+      "ordinal": 4,
+      "sourceNumber": "",
+      "sourceAnchor": "",
+      "kind": "exercise-candidate",
+      "context": "\\[\\begin{align*} \\dfrac{c'}{\\sin(95.1^{\\circ})}&= \\dfrac{6}{\\sin(35^{\\circ})}\\\\ c'&= \\dfrac{6 \\sin(95.1^{\\circ})}{\\sin(35^{\\circ})}\\\\ &\\approx 10.4 \\end{align*}\\]\n\nTo summarize, there are two triangles with an angle of \\(35°\\), an adjacent side of 8, and an opposite side of 6, as shown in Figure \\(\\PageIndex{12}\\).\n\nHowever, we were looking for the values for the triangle with an obtuse angle \\(\\beta\\). We can see them in the first triangle (a) in Figure \\(\\PageIndex{12}\\).",
+      "original": "Exercise \\(\\PageIndex{2}\\)\n\nGiven \\(\\alpha=80°\\), \\(a=120\\), and \\(b=121\\), find the missing side and angles. If there is more than one possible solution, show both.\n\nAnswer\n\nSolution 1\n\n\\(\\begin{matrix} \\alpha=80^{\\circ} & a=120\\\\ \\beta\\approx 83.2^{\\circ} & b=121\\\\ \\gamma\\approx 16.8^{\\circ} & c\\approx 35.2 \\end{matrix}\\)\n\nSolution 2\n\n\\(\\begin{matrix} \\alpha '=80^{\\circ} & a'=120\\\\ \\beta '\\approx 96.8^{\\circ} & b'=121\\\\ \\gamma '\\approx 3.2^{\\circ} & c'\\approx 6.8 \\end{matrix}\\)",
+      "prompt": "Exercise \\(\\PageIndex{2}\\)\n\nGiven \\(\\alpha=80°\\), \\(a=120\\), and \\(b=121\\), find the missing side and angles. If there is more than one possible solution, show both.",
+      "sourceAnswers": [
+        "Solution 1\n\n\\(\\begin{matrix} \\alpha=80^{\\circ} & a=120\\\\ \\beta\\approx 83.2^{\\circ} & b=121\\\\ \\gamma\\approx 16.8^{\\circ} & c\\approx 35.2 \\end{matrix}\\)\n\nSolution 2\n\n\\(\\begin{matrix} \\alpha '=80^{\\circ} & a'=120\\\\ \\beta '\\approx 96.8^{\\circ} & b'=121\\\\ \\gamma '\\approx 3.2^{\\circ} & c'\\approx 6.8 \\end{matrix}\\)"
+      ],
+      "hasFigure": false,
+      "status": "draft",
+      "answerVerified": false,
+      "translationStatus": "pending",
+      "mappingStatus": "pending"
+    },
+    {
+      "ordinal": 5,
+      "sourceNumber": "",
+      "sourceAnchor": "",
+      "kind": "example-or-exercise",
+      "context": "\\[\\begin{align*} \\dfrac{c'}{\\sin(95.1^{\\circ})}&= \\dfrac{6}{\\sin(35^{\\circ})}\\\\ c'&= \\dfrac{6 \\sin(95.1^{\\circ})}{\\sin(35^{\\circ})}\\\\ &\\approx 10.4 \\end{align*}\\]\n\nTo summarize, there are two triangles with an angle of \\(35°\\), an adjacent side of 8, and an opposite side of 6, as shown in Figure \\(\\PageIndex{12}\\).\n\nHowever, we were looking for the values for the triangle with an obtuse angle \\(\\beta\\). We can see them in the first triangle (a) in Figure \\(\\PageIndex{12}\\).",
+      "original": "Example \\(\\PageIndex{3}\\): Solving for the Unknown Sides and Angles of a SSA Triangle\n\nIn the triangle shown in Figure \\(\\PageIndex{13}\\), solve for the unknown side and angles. Round your answers to the nearest tenth.\n\n[Figure: CNX_Precalc_Figure_08_01_013.jpg]\n\nFigure \\(\\PageIndex{13}\\)\n\nSolution\n\nIn choosing the pair of ratios from the Law of Sines to use, look at the information given. In this case, we know the angle, \\(\\gamma=85°\\), and its corresponding side \\(c=12\\), and we know side \\(b=9\\). We will use this proportion to solve for \\(\\beta\\).\n\n\\[\\begin{align*} \\dfrac{\\sin(85^{\\circ})}{12}&= \\dfrac{\\sin \\beta}{9}\\qquad \\text{Isolate the unknown.}\\\\ \\dfrac{9 \\sin(85^{\\circ})}{12}&= \\sin \\beta \\end{align*}\\]\n\nTo find \\(\\beta\\), apply the inverse sine function. The inverse sine will produce a single result, but keep in mind that there may be two values for \\(\\beta\\). It is important to verify the result, as there may be two viable solutions, only one solution (the usual case), or no solutions.\n\n\\[\\begin{align*} \\beta&= {\\sin}^{-1}\\left(\\dfrac{9 \\sin(85^{\\circ})}{12}\\right)\\\\ \\beta&\\approx {\\sin}^{-1} (0.7471)\\\\ \\beta&\\approx 48.3^{\\circ} \\end{align*}\\]\n\nIn this case, if we subtract \\(\\beta\\) from \\(180°\\), we find that there may be a second possible solution. Thus, \\(\\beta=180°−48.3°≈131.7°\\). To check the solution, subtract both angles, \\(131.7°\\) and \\(85°\\), from \\(180°\\). This gives\n\n\\[\\begin{align*} \\alpha&= 180^{\\circ}-85^{\\circ}-131.7^{\\circ}\\\\ &\\approx -36.7^{\\circ} \\end{align*}\\]\n\nwhich is impossible, and so \\(\\beta≈48.3°\\).\n\nTo find the remaining missing values, we calculate \\(\\alpha=180°−85°−48.3°≈46.7°\\). Now, only side \\(a\\) is needed. Use the Law of Sines to solve for \\(a\\) by one of the proportions.\n\n\\[\\begin{align*} \\dfrac{\\sin(85°)}{12}&= \\dfrac{\\sin(46.7^{\\circ})}{a}\\\\ a\\dfrac{\\sin(85^{\\circ})}{12}&= \\sin(46.7^{\\circ})\\\\ a&=\\dfrac{12\\sin(46.7^{\\circ})}{\\sin(85^{\\circ})}\\\\ &\\approx 8.8 \\end{align*}\\]\n\nThe complete set of solutions for the given triangle is\n\n\\(\\begin{matrix} \\alpha\\approx 46.7^{\\circ} & a\\approx 8.8\\\\ \\beta\\approx 48.3^{\\circ} & b=9\\\\ \\gamma=85^{\\circ} & c=12 \\end{matrix}\\)",
+      "prompt": "Example \\(\\PageIndex{3}\\): Solving for the Unknown Sides and Angles of a SSA Triangle\n\nIn the triangle shown in Figure \\(\\PageIndex{13}\\), solve for the unknown side and angles. Round your answers to the nearest tenth.\n\n[Figure: CNX_Precalc_Figure_08_01_013.jpg]\n\nFigure \\(\\PageIndex{13}\\)\n\nSolution\n\nIn choosing the pair of ratios from the Law of Sines to use, look at the information given. In this case, we know the angle, \\(\\gamma=85°\\), and its corresponding side \\(c=12\\), and we know side \\(b=9\\). We will use this proportion to solve for \\(\\beta\\).\n\n\\[\\begin{align*} \\dfrac{\\sin(85^{\\circ})}{12}&= \\dfrac{\\sin \\beta}{9}\\qquad \\text{Isolate the unknown.}\\\\ \\dfrac{9 \\sin(85^{\\circ})}{12}&= \\sin \\beta \\end{align*}\\]\n\nTo find \\(\\beta\\), apply the inverse sine function. The inverse sine will produce a single result, but keep in mind that there may be two values for \\(\\beta\\). It is important to verify the result, as there may be two viable solutions, only one solution (the usual case), or no solutions.\n\n\\[\\begin{align*} \\beta&= {\\sin}^{-1}\\left(\\dfrac{9 \\sin(85^{\\circ})}{12}\\right)\\\\ \\beta&\\approx {\\sin}^{-1} (0.7471)\\\\ \\beta&\\approx 48.3^{\\circ} \\end{align*}\\]\n\nIn this case, if we subtract \\(\\beta\\) from \\(180°\\), we find that there may be a second possible solution. Thus, \\(\\beta=180°−48.3°≈131.7°\\). To check the solution, subtract both angles, \\(131.7°\\) and \\(85°\\), from \\(180°\\). This gives\n\n\\[\\begin{align*} \\alpha&= 180^{\\circ}-85^{\\circ}-131.7^{\\circ}\\\\ &\\approx -36.7^{\\circ} \\end{align*}\\]\n\nwhich is impossible, and so \\(\\beta≈48.3°\\).\n\nTo find the remaining missing values, we calculate \\(\\alpha=180°−85°−48.3°≈46.7°\\). Now, only side \\(a\\) is needed. Use the Law of Sines to solve for \\(a\\) by one of the proportions.\n\n\\[\\begin{align*} \\dfrac{\\sin(85°)}{12}&= \\dfrac{\\sin(46.7^{\\circ})}{a}\\\\ a\\dfrac{\\sin(85^{\\circ})}{12}&= \\sin(46.7^{\\circ})\\\\ a&=\\dfrac{12\\sin(46.7^{\\circ})}{\\sin(85^{\\circ})}\\\\ &\\approx 8.8 \\end{align*}\\]\n\nThe complete set of solutions for the given triangle is\n\n\\(\\begin{matrix} \\alpha\\approx 46.7^{\\circ} & a\\approx 8.8\\\\ \\beta\\approx 48.3^{\\circ} & b=9\\\\ \\gamma=85^{\\circ} & c=12 \\end{matrix}\\)",
+      "sourceAnswers": [],
+      "hasFigure": true,
+      "status": "draft",
+      "answerVerified": false,
+      "translationStatus": "pending",
+      "mappingStatus": "pending"
+    },
+    {
+      "ordinal": 6,
+      "sourceNumber": "",
+      "sourceAnchor": "",
+      "kind": "exercise-candidate",
+      "context": "\\[\\begin{align*} \\dfrac{c'}{\\sin(95.1^{\\circ})}&= \\dfrac{6}{\\sin(35^{\\circ})}\\\\ c'&= \\dfrac{6 \\sin(95.1^{\\circ})}{\\sin(35^{\\circ})}\\\\ &\\approx 10.4 \\end{align*}\\]\n\nTo summarize, there are two triangles with an angle of \\(35°\\), an adjacent side of 8, and an opposite side of 6, as shown in Figure \\(\\PageIndex{12}\\).\n\nHowever, we were looking for the values for the triangle with an obtuse angle \\(\\beta\\). We can see them in the first triangle (a) in Figure \\(\\PageIndex{12}\\).",
+      "original": "Exercise \\(\\PageIndex{3}\\)\n\nGiven \\(\\alpha=80°\\), \\(a=100\\), \\(b=10\\), find the missing side and angles. If there is more than one possible solution, show both. Round your answers to the nearest tenth.\n\nAnswer\n\n\\(\\beta≈5.7°\\), \\(\\gamma≈94.3°\\), \\(c≈101.3\\)",
+      "prompt": "Exercise \\(\\PageIndex{3}\\)\n\nGiven \\(\\alpha=80°\\), \\(a=100\\), \\(b=10\\), find the missing side and angles. If there is more than one possible solution, show both. Round your answers to the nearest tenth.",
+      "sourceAnswers": [
+        "\\(\\beta≈5.7°\\), \\(\\gamma≈94.3°\\), \\(c≈101.3\\)"
+      ],
+      "hasFigure": false,
+      "status": "draft",
+      "answerVerified": false,
+      "translationStatus": "pending",
+      "mappingStatus": "pending"
+    },
+    {
+      "ordinal": 7,
+      "sourceNumber": "",
+      "sourceAnchor": "",
+      "kind": "example-or-exercise",
+      "context": "\\[\\begin{align*} \\dfrac{c'}{\\sin(95.1^{\\circ})}&= \\dfrac{6}{\\sin(35^{\\circ})}\\\\ c'&= \\dfrac{6 \\sin(95.1^{\\circ})}{\\sin(35^{\\circ})}\\\\ &\\approx 10.4 \\end{align*}\\]\n\nTo summarize, there are two triangles with an angle of \\(35°\\), an adjacent side of 8, and an opposite side of 6, as shown in Figure \\(\\PageIndex{12}\\).\n\nHowever, we were looking for the values for the triangle with an obtuse angle \\(\\beta\\). We can see them in the first triangle (a) in Figure \\(\\PageIndex{12}\\).",
+      "original": "Example \\(\\PageIndex{4}\\): Finding the Triangles That Meet the Given Criteria\n\nFind all possible triangles if one side has length \\(4\\) opposite an angle of \\(50°\\), and a second side has length \\(10\\).\n\nSolution\n\nUsing the given information, we can solve for the angle opposite the side of length \\(10\\). See Figure \\(\\PageIndex{14}\\).\n\n\\[\\begin{align*} \\dfrac{\\sin \\alpha}{10}&= \\dfrac{\\sin(50^{\\circ})}{4}\\\\ \\sin \\alpha&= \\dfrac{10 \\sin(50^{\\circ})}{4}\\\\ \\sin \\alpha&\\approx 1.915 \\end{align*}\\]\n\n[Figure: CNX_Precalc_Figure_08_01_014.jpg]\n\nFigure \\(\\PageIndex{14}\\)\n\nWe can stop here without finding the value of \\(\\alpha\\). Because the range of the sine function is \\([ −1,1 ]\\), it is impossible for the sine value to be \\(1.915\\). In fact, inputting \\({\\sin}^{−1}(1.915)\\) in a graphing calculator generates an ERROR DOMAIN. Therefore, no triangles can be drawn with the provided dimensions.",
+      "prompt": "Example \\(\\PageIndex{4}\\): Finding the Triangles That Meet the Given Criteria\n\nFind all possible triangles if one side has length \\(4\\) opposite an angle of \\(50°\\), and a second side has length \\(10\\).\n\nSolution\n\nUsing the given information, we can solve for the angle opposite the side of length \\(10\\). See Figure \\(\\PageIndex{14}\\).\n\n\\[\\begin{align*} \\dfrac{\\sin \\alpha}{10}&= \\dfrac{\\sin(50^{\\circ})}{4}\\\\ \\sin \\alpha&= \\dfrac{10 \\sin(50^{\\circ})}{4}\\\\ \\sin \\alpha&\\approx 1.915 \\end{align*}\\]\n\n[Figure: CNX_Precalc_Figure_08_01_014.jpg]\n\nFigure \\(\\PageIndex{14}\\)\n\nWe can stop here without finding the value of \\(\\alpha\\). Because the range of the sine function is \\([ −1,1 ]\\), it is impossible for the sine value to be \\(1.915\\). In fact, inputting \\({\\sin}^{−1}(1.915)\\) in a graphing calculator generates an ERROR DOMAIN. Therefore, no triangles can be drawn with the provided dimensions.",
+      "sourceAnswers": [],
+      "hasFigure": true,
+      "status": "draft",
+      "answerVerified": false,
+      "translationStatus": "pending",
+      "mappingStatus": "pending"
+    },
+    {
+      "ordinal": 8,
+      "sourceNumber": "",
+      "sourceAnchor": "",
+      "kind": "exercise-candidate",
+      "context": "\\[\\begin{align*} \\dfrac{c'}{\\sin(95.1^{\\circ})}&= \\dfrac{6}{\\sin(35^{\\circ})}\\\\ c'&= \\dfrac{6 \\sin(95.1^{\\circ})}{\\sin(35^{\\circ})}\\\\ &\\approx 10.4 \\end{align*}\\]\n\nTo summarize, there are two triangles with an angle of \\(35°\\), an adjacent side of 8, and an opposite side of 6, as shown in Figure \\(\\PageIndex{12}\\).\n\nHowever, we were looking for the values for the triangle with an obtuse angle \\(\\beta\\). We can see them in the first triangle (a) in Figure \\(\\PageIndex{12}\\).",
+      "original": "Exercise \\(\\PageIndex{4}\\)\n\nDetermine the number of triangles possible given \\(a=31\\), \\(b=26\\), \\(\\beta=48°\\).\n\nAnswer\n\ntwo",
+      "prompt": "Exercise \\(\\PageIndex{4}\\)\n\nDetermine the number of triangles possible given \\(a=31\\), \\(b=26\\), \\(\\beta=48°\\).",
+      "sourceAnswers": [
+        "two"
+      ],
+      "hasFigure": false,
+      "status": "draft",
+      "answerVerified": false,
+      "translationStatus": "pending",
+      "mappingStatus": "pending"
+    },
+    {
+      "ordinal": 9,
+      "sourceNumber": "",
+      "sourceAnchor": "",
+      "kind": "example-or-exercise",
+      "context": "\\[Area=\\dfrac{1}{2}ac \\sin \\beta\\]\n\n\\[Area=\\dfrac{1}{2}ab \\sin \\gamma\\]\n\nThis is equivalent to one-half of the product of two sides and the sine of their included angle.",
+      "original": "Example \\(\\PageIndex{5}\\): Finding the Area of an Oblique Triangle\n\nFind the area of a triangle with sides \\(a=90\\), \\(b=52\\), and angle \\(\\gamma=102°\\). Round the area to the nearest integer.\n\nSolution\n\nUsing the formula, we have\n\n\\[\\begin{align*} Area&= \\dfrac{1}{2}ab \\sin \\gamma\\\\ Area&= \\dfrac{1}{2}(90)(52) \\sin(102^{\\circ})\\\\ Area&\\approx 2289\\; \\text{square units} \\end{align*}\\]",
+      "prompt": "Example \\(\\PageIndex{5}\\): Finding the Area of an Oblique Triangle\n\nFind the area of a triangle with sides \\(a=90\\), \\(b=52\\), and angle \\(\\gamma=102°\\). Round the area to the nearest integer.\n\nSolution\n\nUsing the formula, we have\n\n\\[\\begin{align*} Area&= \\dfrac{1}{2}ab \\sin \\gamma\\\\ Area&= \\dfrac{1}{2}(90)(52) \\sin(102^{\\circ})\\\\ Area&\\approx 2289\\; \\text{square units} \\end{align*}\\]",
+      "sourceAnswers": [],
+      "hasFigure": false,
+      "status": "draft",
+      "answerVerified": false,
+      "translationStatus": "pending",
+      "mappingStatus": "pending"
+    },
+    {
+      "ordinal": 10,
+      "sourceNumber": "",
+      "sourceAnchor": "",
+      "kind": "exercise-candidate",
+      "context": "\\[Area=\\dfrac{1}{2}ac \\sin \\beta\\]\n\n\\[Area=\\dfrac{1}{2}ab \\sin \\gamma\\]\n\nThis is equivalent to one-half of the product of two sides and the sine of their included angle.",
+      "original": "Exercise \\(\\PageIndex{5}\\)\n\nFind the area of the triangle given \\(\\beta=42°\\), \\(a=7.2 ft\\), \\(c=3.4 ft\\). Round the area to the nearest tenth.\n\nAnswer\n\nabout \\(8.2\\)  square feet",
+      "prompt": "Exercise \\(\\PageIndex{5}\\)\n\nFind the area of the triangle given \\(\\beta=42°\\), \\(a=7.2 ft\\), \\(c=3.4 ft\\). Round the area to the nearest tenth.",
+      "sourceAnswers": [
+        "about \\(8.2\\)  square feet"
+      ],
+      "hasFigure": false,
+      "status": "draft",
+      "answerVerified": false,
+      "translationStatus": "pending",
+      "mappingStatus": "pending"
+    },
+    {
+      "ordinal": 11,
+      "sourceNumber": "",
+      "sourceAnchor": "",
+      "kind": "example-or-exercise",
+      "context": "Solving Applied Problems Using the Law of Sines\n\nThe more we study trigonometric applications, the more we discover that the applications are countless. Some are flat, diagram-type situations, but many applications in calculus, engineering, and physics involve three dimensions and motion.",
+      "original": "Example \\(\\PageIndex{6}\\): Finding an Altitude\n\nFind the altitude of the aircraft in the problem introduced at the beginning of this section, shown in Figure \\(\\PageIndex{16}\\). Round the altitude to the nearest tenth of a mile.\n\n[Figure: CNX_Precalc_Figure_08_01_016.jpg]\n\nFigure \\(\\PageIndex{16}\\)\n\nSolution\n\nTo find the elevation of the aircraft, we first find the distance from one station to the aircraft, such as the side \\(a\\), and then use right triangle relationships to find the height of the aircraft, \\(h\\).\n\nBecause the angles in the triangle add up to \\(180\\) degrees, the unknown angle must be \\(180°−15°−35°=130°\\). This angle is opposite the side of length \\(20\\), allowing us to set up a Law of Sines relationship.\n\n\\[\\begin{align*} \\dfrac{\\sin(130^{\\circ})}{20}&= \\dfrac{\\sin(35^{\\circ})}{a}\\\\ a \\sin(130^{\\circ})&= 20 \\sin(35^{\\circ})\\\\ a&= \\dfrac{20 \\sin(35^{\\circ})}{\\sin(130^{\\circ})}\\\\ a&\\approx 14.98 \\end{align*}\\]\n\nThe distance from one station to the aircraft is about \\(14.98\\) miles.\n\nNow that we know \\(a\\), we can use right triangle relationships to solve for \\(h\\).\n\n\\[\\begin{align*} \\sin(15^{\\circ})&= \\dfrac{opposite}{hypotenuse}\\\\ \\sin(15^{\\circ})&= \\dfrac{h}{a}\\\\ \\sin(15^{\\circ})&= \\dfrac{h}{14.98}\\\\ h&= 14.98 \\sin(15^{\\circ})\\\\ h&\\approx 3.88 \\end{align*}\\]\n\nThe aircraft is at an altitude of approximately \\(3.9\\) miles.",
+      "prompt": "Example \\(\\PageIndex{6}\\): Finding an Altitude\n\nFind the altitude of the aircraft in the problem introduced at the beginning of this section, shown in Figure \\(\\PageIndex{16}\\). Round the altitude to the nearest tenth of a mile.\n\n[Figure: CNX_Precalc_Figure_08_01_016.jpg]\n\nFigure \\(\\PageIndex{16}\\)\n\nSolution\n\nTo find the elevation of the aircraft, we first find the distance from one station to the aircraft, such as the side \\(a\\), and then use right triangle relationships to find the height of the aircraft, \\(h\\).\n\nBecause the angles in the triangle add up to \\(180\\) degrees, the unknown angle must be \\(180°−15°−35°=130°\\). This angle is opposite the side of length \\(20\\), allowing us to set up a Law of Sines relationship.\n\n\\[\\begin{align*} \\dfrac{\\sin(130^{\\circ})}{20}&= \\dfrac{\\sin(35^{\\circ})}{a}\\\\ a \\sin(130^{\\circ})&= 20 \\sin(35^{\\circ})\\\\ a&= \\dfrac{20 \\sin(35^{\\circ})}{\\sin(130^{\\circ})}\\\\ a&\\approx 14.98 \\end{align*}\\]\n\nThe distance from one station to the aircraft is about \\(14.98\\) miles.\n\nNow that we know \\(a\\), we can use right triangle relationships to solve for \\(h\\).\n\n\\[\\begin{align*} \\sin(15^{\\circ})&= \\dfrac{opposite}{hypotenuse}\\\\ \\sin(15^{\\circ})&= \\dfrac{h}{a}\\\\ \\sin(15^{\\circ})&= \\dfrac{h}{14.98}\\\\ h&= 14.98 \\sin(15^{\\circ})\\\\ h&\\approx 3.88 \\end{align*}\\]\n\nThe aircraft is at an altitude of approximately \\(3.9\\) miles.",
+      "sourceAnswers": [],
+      "hasFigure": true,
+      "status": "draft",
+      "answerVerified": false,
+      "translationStatus": "pending",
+      "mappingStatus": "pending"
+    },
+    {
+      "ordinal": 12,
+      "sourceNumber": "",
+      "sourceAnchor": "",
+      "kind": "exercise-candidate",
+      "context": "Solving Applied Problems Using the Law of Sines\n\nThe more we study trigonometric applications, the more we discover that the applications are countless. Some are flat, diagram-type situations, but many applications in calculus, engineering, and physics involve three dimensions and motion.",
+      "original": "Exercise \\(\\PageIndex{6}\\)\n\nThe diagram shown in Figure \\(\\PageIndex{17}\\) represents the height of a blimp flying over a football stadium. Find the height of the blimp if the angle of elevation at the southern end zone, point A, is \\(70°\\), the angle of elevation from the northern end zone, point B, is \\(62°\\), and the distance between the viewing points of the two end zones is \\(145\\) yards.\n\n[Figure: CNX_Precalc_Figure_08_01_017.jpg]\n\nFigure \\(\\PageIndex{17}\\)\n\nAnswer\n\n\\(161.9\\) yd.",
+      "prompt": "Exercise \\(\\PageIndex{6}\\)\n\nThe diagram shown in Figure \\(\\PageIndex{17}\\) represents the height of a blimp flying over a football stadium. Find the height of the blimp if the angle of elevation at the southern end zone, point A, is \\(70°\\), the angle of elevation from the northern end zone, point B, is \\(62°\\), and the distance between the viewing points of the two end zones is \\(145\\) yards.\n\n[Figure: CNX_Precalc_Figure_08_01_017.jpg]\n\nFigure \\(\\PageIndex{17}\\)",
+      "sourceAnswers": [
+        "\\(161.9\\) yd."
+      ],
+      "hasFigure": true,
+      "status": "draft",
+      "answerVerified": false,
+      "translationStatus": "pending",
+      "mappingStatus": "pending"
+    }
+  ],
+  "license": "CC BY 4.0",
+  "licenseEvidence": "This page titled 10.1: Non-right Triangles - Law of Sines was last modified on Sun, 27 Apr 2025 18:27:21 GMT and is shared under a CC BY  4.0  license and was authored, remixed, and/or curated by OpenStax via source content that was edited to the style and standards of the LibreTexts platform.",
+  "url": "https://math.libretexts.org/Bookshelves/Algebra/Algebra_and_Trigonometry_1e_(OpenStax)/10:_Further_Applications_of_Trigonometry/10.01:_Non-right_Triangles_-_Law_of_Sines",
+  "sha256": "0dc3d4b6a28a8c229a45be85c74afa2696407a0f9f79d21ab308c324fd1ad6e0",
+  "checkedAt": "2026-10-07",
+  "id": "aa7698a6b479ac08b206",
+  "bookId": "algebra-trigonometry",
+  "licenseInherited": false,
+  "licenseSource": "https://math.libretexts.org/Bookshelves/Algebra/Algebra_and_Trigonometry_1e_(OpenStax)/10:_Further_Applications_of_Trigonometry/10.01:_Non-right_Triangles_-_Law_of_Sines",
+  "licenseUrl": "https://creativecommons.org/licenses/by/4.0/",
+  "authors": "OpenStax / Jay Abramson et al.",
+  "book": "Algebra and Trigonometry 1e",
+  "reviewStatus": "unreviewed",
+  "sourceLanguage": "en",
+  "translationStatus": "pending"
+}

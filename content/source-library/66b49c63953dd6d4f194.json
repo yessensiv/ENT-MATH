@@ -1,0 +1,113 @@
+{
+  "title": "10.5: Comparing Two Independent Population Proportions",
+  "originalText": "Proportions have their base in the binomial probability distribution. As a probability distribution, we know the mean and standard deviation of the distribution. As a binary or categorical sample data set, we lose this knowledge from when we knew the population parameters. We do not know the population mean, \\(\\mu=n p\\), or variance, \\(\\sigma^{\\angle}=n p q\\). We can gather data that we know comes from a binary distribution but not know the specific parameter. It is then that we have moved from probability to inferential statistics.\n\nWhen conducting a hypothesis test that compares two independent population proportions, the following characteristics should be present:\n\n1. The two independent samples are random samples that are independent.\n\n2. The number of successes is at least five, and the number of failures is at least five, for each of the samples.\n\n3. Growing literature states that the population must be at least ten or even perhaps 20 times the size of the sample. This keeps each population from being over-sampled and causing biased results.\n\nComparing two proportions, like comparing two means, is common. If two estimated proportions are different, it may be due to a difference in the populations or it may be due to chance in the sampling. A hypothesis test can help determine if a difference in the estimated proportions reflects a difference in the two population proportions.\n\nLike the case of differences in sample means, we construct a sampling distribution for differences in sample proportions: \\(\\left(p_A^{\\prime}-p_B^{\\prime}\\right)\\) where \\(p_A^{\\prime}=\\dfrac{X_A}{n_A}\\) and \\(p_B^{\\prime}=\\dfrac{X_B^{\\prime}}{n_B}\\) are the sample proportions for the two sets of data in question. \\(X_A\\) and \\(X_B\\) are the number of successes in each sample group respectively, and \\(n_A\\) and \\(n_B\\) are the respective sample sizes from the two groups. Again we go the Central Limit theorem to find the distribution of this sampling distribution for the differences in sample proportions. And again we find that this sampling distribution, like the ones past, are normally distributed as proved by the Central Limit Theorem, as seen in Figure \\(\\PageIndex{1}\\).\n\n[Figure: 01a3159d69852a3e1c7e7ff0cc34bd3d7f1bae87]\n\nFigure \\(\\PageIndex{1}\\): Copy and Paste Caption here. (Copyright; author via source)\n\nGenerally, the null hypothesis allows for the test of a difference of a particular value, \\(\\delta_0\\), just as we did for the case of differences in means.\n\n\\[\\begin{array}{l}\n\nH_0: p_1-p_2=\\delta_0 \\\\\n\nH_1: p_1-p_2 \\neq \\delta_0\n\n\\end{array}\\]\n\nMost common, however, is the test that the two proportions are the same. That is,\n\n\\[\\begin{array}{l}\n\nH_0: p_{\\mathrm{A}}=p_B \\\\\n\nH_a: p_{\\mathrm{A}} \\neq p_B\n\n\\end{array}\\]\n\nTo conduct the test, we use a pooled proportion, \\(p_c\\).\n\nThe pooled proportion is calculated as follows:\n\n\\[p_c=\\dfrac{x_A+x_B}{n_A+n_B}\\]\n\nThe test statistic ( \\(z\\)-score) is:\n\n\\[Z_c=\\dfrac{\\left(p_A^{\\prime}-p_B^{\\prime}\\right)-\\delta_0}{\\sqrt{p_c\\left(1-p_c\\right)\\left(\\dfrac{1}{n_A}+\\dfrac{1}{n_B}\\right)}\\]\n\nwhere \\(\\delta_0\\) is the hypothesized differences between the two proportions and \\(p_c\\) is the pooled variance from the formula above.\n\nExercise \\(\\PageIndex{1}\\)\n\nA bank has recently acquired a new branch and thus has customers in this new territory. They are interested in the default rate in their new territory. They wish to test the hypothesis that the default rate is different from their current customer base. They sample 200 files in area A, their current customers, and find that 20 have defaulted. In area B, the new customers, another sample of 200 files shows 12 have defaulted on their loans. At a 10% level of significance can we say that the default rates are the same or different?\n\nAnswer\n\nThis is a test of proportions. We know this because the underlying random variable is binary, default or not default. Further, we know it is a test of differences in proportions because we have two sample groups, the current customer base and the newly acquired customer base. Let A and B be the subscripts for the two customer groups. Then \\(p_A\\) and \\(p_B\\) are the two population proportions we wish to test.\n\nRandom Variable: \\(P_A^{\\prime}-P_B^{\\prime}=\\) difference in the proportions of customers who defaulted in the two groups.\n\n\\[\\begin{array}{l}\n\n    H_0: p_A=p_B \\\\\n\n    H_a: p_A \\neq p_B\n\n    \\end{array}\\]\n\nThe words \"is a difference\" tell you the test is two-tailed.\n\nDistribution for the test: Since this is a test of two binomial population proportions, the distribution is normal:\n\n\\[p_c=\\dfrac{x_A+x_B}{n_A+n_B}=\\dfrac{20+12}{200+200}=0.08 \\quad 1-p_c=0.92\\]\n\n\\(\\left(p_A^{\\prime}-p_B^{\\prime}\\right)=0.04\\) follows an approximate normal distribution.\n\nEstimated proportion for group A: \\(p^{\\prime}{ }_A=\\dfrac{x_A}{n_A}=\\dfrac{20}{200}=0.1\\)\n\nEstimated proportion for group B: \\(p^{\\prime}{ }_B=\\dfrac{x_B}{n_B}=\\dfrac{12}{200}=0.06\\)\n\nThe estimated difference between the two groups is : \\(p_A^{\\prime}-p_B^{\\prime}=0.1-0.06=0.04\\).\n\n[Figure: Normal distribution curve of the difference in the percentages of adult patients who don't react to medication A and B after 30 minutes. The mean is equal to zero, and the values -0.04, 0, and 0.04 are labeled on the horizontal axis. Two vertical lines extend from -0.04 and 0.04 to the curve. The region to the left of -0.04 and the region to the right of 0.04 are each shaded to represent 1/2(p-value) = 0.0702.]\n\nFigure \\(\\PageIndex{1}\\): Copy and Paste Caption here. (Copyright; author via source)\n\n\\[Z_c=\\dfrac{\\left(\\mathrm{P}_A^{\\prime}-\\mathrm{P}_B^{\\prime}\\right)-\\delta_0}{\\sqrt{P_c\\left(1-P_c\\right)\\left(\\dfrac{1}{n_A}+\\dfrac{1}{n_B}\\right)}}=1.47\\]\n\nThe calculated test statistic is 1.47 and is not in the tail of the distribution.\n\nMake a decision: Since the calculate test statistic is not in the tail of the distribution we cannot reject \\(H_0\\).\n\nConclusion: At a 1\\% level of significance, from the sample data, there is not sufficient evidence to conclude that there is a difference between the proportions of customers who defaulted in the two groups.\n\nTry It \\(\\PageIndex{1}\\)\n\nTwo types of valves are being tested to determine if there is a difference in pressure tolerances. Fifteen out of a random sample of 100 of Valve A cracked under 4,500 psi. Six out of a random sample of 100 of Valve B cracked under 4,500 psi. Test at a 5% level of significance.\n\nThis page titled 10.5: Comparing Two Independent Population Proportions was last modified on Thu, 07 May 2026 20:02:41 GMT and is shared under a CC BY  4.0  license and was authored, remixed, and/or curated by OpenStax via source content that was edited to the style and standards of the LibreTexts platform.",
+  "figures": [
+    {
+      "url": "https://stats.libretexts.org/@api/deki/files/40920/01a3159d69852a3e1c7e7ff0cc34bd3d7f1bae87?revision=1",
+      "alt": "01a3159d69852a3e1c7e7ff0cc34bd3d7f1bae87",
+      "credit": ""
+    },
+    {
+      "url": "https://stats.libretexts.org/@api/deki/files/40919/b9c2f3bb9f169eb14346363c848de64e58233ce0?revision=1",
+      "alt": "Normal distribution curve of the difference in the percentages of adult patients who don't react to medication A and B after 30 minutes. The mean is equal to zero, and the values -0.04, 0, and 0.04 are labeled on the horizontal axis. Two vertical lines extend from -0.04 and 0.04 to the curve. The region to the left of -0.04 and the region to the right of 0.04 are each shaded to represent 1/2(p-value) = 0.0702.",
+      "credit": ""
+    }
+  ],
+  "references": [
+    {
+      "text": "10.5: Comparing Two Independent Population Proportions",
+      "url": "https://stats.libretexts.org/Bookshelves/Introductory_Statistics/Introductory_Statistics_2e_(OpenStax)/10%3A_Hypothesis_Testing_with_Two_Samples/10.05%3A_Comparing_Two_Independent_Population_Proportions"
+    },
+    {
+      "text": "CC BY  4.0",
+      "url": "https://creativecommons.org/licenses/by/4.0"
+    },
+    {
+      "text": "OpenStax",
+      "url": "https://openstax.org/"
+    },
+    {
+      "text": "source content",
+      "url": "https://openstax.org/details/books/introductory-statistics"
+    }
+  ],
+  "exercises": [
+    {
+      "ordinal": 1,
+      "sourceNumber": "1",
+      "sourceAnchor": "",
+      "kind": "exercise-candidate",
+      "context": "Proportions have their base in the binomial probability distribution. As a probability distribution, we know the mean and standard deviation of the distribution. As a binary or categorical sample data set, we lose this knowledge from when we knew the population parameters. We do not know the population mean, \\(\\mu=n p\\), or variance, \\(\\sigma^{\\angle}=n p q\\). We can gather data that we know comes from a binary distribution but not know the specific parameter. It is then that we have moved from probability to inferential statistics.\n\nWhen conducting a hypothesis test that compares two independent population proportions, the following characteristics should be present:",
+      "original": "1. The two independent samples are random samples that are independent.",
+      "prompt": "1. The two independent samples are random samples that are independent.",
+      "sourceAnswers": [],
+      "hasFigure": false,
+      "status": "draft",
+      "answerVerified": false,
+      "translationStatus": "pending",
+      "mappingStatus": "pending"
+    },
+    {
+      "ordinal": 2,
+      "sourceNumber": "2",
+      "sourceAnchor": "",
+      "kind": "exercise-candidate",
+      "context": "Proportions have their base in the binomial probability distribution. As a probability distribution, we know the mean and standard deviation of the distribution. As a binary or categorical sample data set, we lose this knowledge from when we knew the population parameters. We do not know the population mean, \\(\\mu=n p\\), or variance, \\(\\sigma^{\\angle}=n p q\\). We can gather data that we know comes from a binary distribution but not know the specific parameter. It is then that we have moved from probability to inferential statistics.\n\nWhen conducting a hypothesis test that compares two independent population proportions, the following characteristics should be present:",
+      "original": "2. The number of successes is at least five, and the number of failures is at least five, for each of the samples.",
+      "prompt": "2. The number of successes is at least five, and the number of failures is at least five, for each of the samples.",
+      "sourceAnswers": [],
+      "hasFigure": false,
+      "status": "draft",
+      "answerVerified": false,
+      "translationStatus": "pending",
+      "mappingStatus": "pending"
+    },
+    {
+      "ordinal": 3,
+      "sourceNumber": "3",
+      "sourceAnchor": "",
+      "kind": "exercise-candidate",
+      "context": "Proportions have their base in the binomial probability distribution. As a probability distribution, we know the mean and standard deviation of the distribution. As a binary or categorical sample data set, we lose this knowledge from when we knew the population parameters. We do not know the population mean, \\(\\mu=n p\\), or variance, \\(\\sigma^{\\angle}=n p q\\). We can gather data that we know comes from a binary distribution but not know the specific parameter. It is then that we have moved from probability to inferential statistics.\n\nWhen conducting a hypothesis test that compares two independent population proportions, the following characteristics should be present:",
+      "original": "3. Growing literature states that the population must be at least ten or even perhaps 20 times the size of the sample. This keeps each population from being over-sampled and causing biased results.",
+      "prompt": "3. Growing literature states that the population must be at least ten or even perhaps 20 times the size of the sample. This keeps each population from being over-sampled and causing biased results.",
+      "sourceAnswers": [],
+      "hasFigure": false,
+      "status": "draft",
+      "answerVerified": false,
+      "translationStatus": "pending",
+      "mappingStatus": "pending"
+    },
+    {
+      "ordinal": 4,
+      "sourceNumber": "",
+      "sourceAnchor": "",
+      "kind": "exercise-candidate",
+      "context": "The test statistic ( \\(z\\)-score) is:\n\n\\[Z_c=\\dfrac{\\left(p_A^{\\prime}-p_B^{\\prime}\\right)-\\delta_0}{\\sqrt{p_c\\left(1-p_c\\right)\\left(\\dfrac{1}{n_A}+\\dfrac{1}{n_B}\\right)}\\]\n\nwhere \\(\\delta_0\\) is the hypothesized differences between the two proportions and \\(p_c\\) is the pooled variance from the formula above.",
+      "original": "Exercise \\(\\PageIndex{1}\\)\n\nA bank has recently acquired a new branch and thus has customers in this new territory. They are interested in the default rate in their new territory. They wish to test the hypothesis that the default rate is different from their current customer base. They sample 200 files in area A, their current customers, and find that 20 have defaulted. In area B, the new customers, another sample of 200 files shows 12 have defaulted on their loans. At a 10% level of significance can we say that the default rates are the same or different?\n\nAnswer\n\nThis is a test of proportions. We know this because the underlying random variable is binary, default or not default. Further, we know it is a test of differences in proportions because we have two sample groups, the current customer base and the newly acquired customer base. Let A and B be the subscripts for the two customer groups. Then \\(p_A\\) and \\(p_B\\) are the two population proportions we wish to test.\n\nRandom Variable: \\(P_A^{\\prime}-P_B^{\\prime}=\\) difference in the proportions of customers who defaulted in the two groups.\n\n\\[\\begin{array}{l}\n\n    H_0: p_A=p_B \\\\\n\n    H_a: p_A \\neq p_B\n\n    \\end{array}\\]\n\nThe words \"is a difference\" tell you the test is two-tailed.\n\nDistribution for the test: Since this is a test of two binomial population proportions, the distribution is normal:\n\n\\[p_c=\\dfrac{x_A+x_B}{n_A+n_B}=\\dfrac{20+12}{200+200}=0.08 \\quad 1-p_c=0.92\\]\n\n\\(\\left(p_A^{\\prime}-p_B^{\\prime}\\right)=0.04\\) follows an approximate normal distribution.\n\nEstimated proportion for group A: \\(p^{\\prime}{ }_A=\\dfrac{x_A}{n_A}=\\dfrac{20}{200}=0.1\\)\n\nEstimated proportion for group B: \\(p^{\\prime}{ }_B=\\dfrac{x_B}{n_B}=\\dfrac{12}{200}=0.06\\)\n\nThe estimated difference between the two groups is : \\(p_A^{\\prime}-p_B^{\\prime}=0.1-0.06=0.04\\).\n\n[Figure: Normal distribution curve of the difference in the percentages of adult patients who don't react to medication A and B after 30 minutes. The mean is equal to zero, and the values -0.04, 0, and 0.04 are labeled on the horizontal axis. Two vertical lines extend from -0.04 and 0.04 to the curve. The region to the left of -0.04 and the region to the right of 0.04 are each shaded to represent 1/2(p-value) = 0.0702.]\n\nFigure \\(\\PageIndex{1}\\): Copy and Paste Caption here. (Copyright; author via source)\n\n\\[Z_c=\\dfrac{\\left(\\mathrm{P}_A^{\\prime}-\\mathrm{P}_B^{\\prime}\\right)-\\delta_0}{\\sqrt{P_c\\left(1-P_c\\right)\\left(\\dfrac{1}{n_A}+\\dfrac{1}{n_B}\\right)}}=1.47\\]\n\nThe calculated test statistic is 1.47 and is not in the tail of the distribution.\n\nMake a decision: Since the calculate test statistic is not in the tail of the distribution we cannot reject \\(H_0\\).\n\nConclusion: At a 1\\% level of significance, from the sample data, there is not sufficient evidence to conclude that there is a difference between the proportions of customers who defaulted in the two groups.",
+      "prompt": "Exercise \\(\\PageIndex{1}\\)\n\nA bank has recently acquired a new branch and thus has customers in this new territory. They are interested in the default rate in their new territory. They wish to test the hypothesis that the default rate is different from their current customer base. They sample 200 files in area A, their current customers, and find that 20 have defaulted. In area B, the new customers, another sample of 200 files shows 12 have defaulted on their loans. At a 10% level of significance can we say that the default rates are the same or different?",
+      "sourceAnswers": [
+        "This is a test of proportions. We know this because the underlying random variable is binary, default or not default. Further, we know it is a test of differences in proportions because we have two sample groups, the current customer base and the newly acquired customer base. Let A and B be the subscripts for the two customer groups. Then \\(p_A\\) and \\(p_B\\) are the two population proportions we wish to test.\n\nRandom Variable: \\(P_A^{\\prime}-P_B^{\\prime}=\\) difference in the proportions of customers who defaulted in the two groups.\n\n\\[\\begin{array}{l}\n\n    H_0: p_A=p_B \\\\\n\n    H_a: p_A \\neq p_B\n\n    \\end{array}\\]\n\nThe words \"is a difference\" tell you the test is two-tailed.\n\nDistribution for the test: Since this is a test of two binomial population proportions, the distribution is normal:\n\n\\[p_c=\\dfrac{x_A+x_B}{n_A+n_B}=\\dfrac{20+12}{200+200}=0.08 \\quad 1-p_c=0.92\\]\n\n\\(\\left(p_A^{\\prime}-p_B^{\\prime}\\right)=0.04\\) follows an approximate normal distribution.\n\nEstimated proportion for group A: \\(p^{\\prime}{ }_A=\\dfrac{x_A}{n_A}=\\dfrac{20}{200}=0.1\\)\n\nEstimated proportion for group B: \\(p^{\\prime}{ }_B=\\dfrac{x_B}{n_B}=\\dfrac{12}{200}=0.06\\)\n\nThe estimated difference between the two groups is : \\(p_A^{\\prime}-p_B^{\\prime}=0.1-0.06=0.04\\).\n\n[Figure: Normal distribution curve of the difference in the percentages of adult patients who don't react to medication A and B after 30 minutes. The mean is equal to zero, and the values -0.04, 0, and 0.04 are labeled on the horizontal axis. Two vertical lines extend from -0.04 and 0.04 to the curve. The region to the left of -0.04 and the region to the right of 0.04 are each shaded to represent 1/2(p-value) = 0.0702.]\n\nFigure \\(\\PageIndex{1}\\): Copy and Paste Caption here. (Copyright; author via source)\n\n\\[Z_c=\\dfrac{\\left(\\mathrm{P}_A^{\\prime}-\\mathrm{P}_B^{\\prime}\\right)-\\delta_0}{\\sqrt{P_c\\left(1-P_c\\right)\\left(\\dfrac{1}{n_A}+\\dfrac{1}{n_B}\\right)}}=1.47\\]\n\nThe calculated test statistic is 1.47 and is not in the tail of the distribution.\n\nMake a decision: Since the calculate test statistic is not in the tail of the distribution we cannot reject \\(H_0\\).\n\nConclusion: At a 1\\% level of significance, from the sample data, there is not sufficient evidence to conclude that there is a difference between the proportions of customers who defaulted in the two groups."
+      ],
+      "hasFigure": true,
+      "status": "draft",
+      "answerVerified": false,
+      "translationStatus": "pending",
+      "mappingStatus": "pending"
+    }
+  ],
+  "license": "CC BY 4.0",
+  "licenseEvidence": "This page titled 10.5: Comparing Two Independent Population Proportions was last modified on Thu, 07 May 2026 20:02:41 GMT and is shared under a CC BY  4.0  license and was authored, remixed, and/or curated by OpenStax via source content that was edited to the style and standards of the LibreTexts platform.",
+  "url": "https://stats.libretexts.org/Bookshelves/Introductory_Statistics/Introductory_Statistics_2e_(OpenStax)/10:_Hypothesis_Testing_with_Two_Samples/10.05:_Comparing_Two_Independent_Population_Proportions",
+  "sha256": "b06fc01d363545ace6ffaef143d6a28d6037437da705df2a5c0bb395d7e06341",
+  "checkedAt": "2026-10-07",
+  "id": "66b49c63953dd6d4f194",
+  "bookId": "statistics",
+  "licenseInherited": false,
+  "licenseSource": "https://stats.libretexts.org/Bookshelves/Introductory_Statistics/Introductory_Statistics_2e_(OpenStax)/10:_Hypothesis_Testing_with_Two_Samples/10.05:_Comparing_Two_Independent_Population_Proportions",
+  "licenseUrl": "https://creativecommons.org/licenses/by/4.0/",
+  "authors": "OpenStax / Barbara Illowsky, Susan Dean",
+  "book": "Introductory Statistics 2e",
+  "reviewStatus": "unreviewed",
+  "sourceLanguage": "en",
+  "translationStatus": "pending"
+}

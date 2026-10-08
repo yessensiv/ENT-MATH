@@ -1,12 +1,12 @@
 import {makePracticeVariant,validatePracticeVariant,variantTopics} from '@/lib/practice-variants';
 import {taskFingerprint,seenTaskIds} from '@/lib/engine';
 import {authenticate,loadCurrentState,saveState,publishedContent,response,failure,parseBody,textValue,answerValue,assertStudyAllowed,updatePlan,ApiError,clientState} from '@/lib/server-store';
-import {sessions,createPractice,practiceItem,savePracticeDraft,submitPractice,publicPractice,PracticeError} from '@/lib/practice-session';
+import {sessions,createPractice,practiceItem,savePracticeDraft,submitPractice,publicPractice,PracticeError,repairTopicSelection} from '@/lib/practice-session';
 import {fillFreshTasks} from '@/lib/fresh-tasks';
 import {reviewGenerator} from '@/lib/review-generator';
 import type {Task} from '@/lib/engine';
 
-export async function GET(request:Request){try{const user=await authenticate(),{state}=await loadCurrentState(user);assertStudyAllowed(state);const id=new URL(request.url).searchParams.get('id')??state.activePracticeId;const session=sessions(state).find(s=>s.id===id);return response({session:session?publicPractice(session,state):null,history:sessions(state).filter(s=>s.finishedAt).slice(-30).reverse().map(s=>({id:s.id,topicId:s.topicId,finishedAt:s.finishedAt,total:s.main.length,correct:s.main.filter(i=>i.feedback?.correct).length}))});}catch(e){return failure(e);}}
+export async function GET(request:Request){try{const user=await authenticate(),{state}=await loadCurrentState(user);assertStudyAllowed(state);const id=new URL(request.url).searchParams.get('id')??state.activePracticeId;const session=sessions(state).find(s=>s.id===id);if(session?.topicId==='numbers'){const content=await publishedContent();if(repairTopicSelection(session,state,[...content.tasks,...(state.generatedTasks as Task[]||[])]))await saveState(user,state);}return response({session:session?publicPractice(session,state):null,history:sessions(state).filter(s=>s.finishedAt).slice(-30).reverse().map(s=>({id:s.id,topicId:s.topicId,finishedAt:s.finishedAt,total:s.main.length,correct:s.main.filter(i=>i.feedback?.correct).length}))});}catch(e){return failure(e);}}
 export async function POST(request:Request){try{
  const user=await authenticate(),input=await parseBody(request),content=await publishedContent();
  const requestId=textValue(input.requestId,80);if(!/^[a-zA-Z0-9-]{8,80}$/.test(requestId))throw new ApiError('Неверный идентификатор запроса.');
@@ -17,9 +17,9 @@ export async function POST(request:Request){try{
   if(input.action==='start'){
    const topicId=textValue(input.topicId,120);if(!content.topics.some(t=>t.id===topicId))throw new ApiError('Тема не найдена.',404);
    session=sessions(state).find(s=>s.id===requestId)??sessions(state).find(s=>s.topicId===topicId&&!s.finishedAt);
-   if(session)return response({session:publicPractice(session,state),state:clientState(user,state),resumed:true});
+   if(session){if(repairTopicSelection(session,state,[...content.tasks,...(state.generatedTasks as Task[]||[])]))await saveState(user,state);return response({session:publicPractice(session,state),state:clientState(user,state),resumed:true});}
    const size=Number(input.size??15);if(![10,15,20].includes(size))throw new ApiError('Выберите 10, 15 или 20 задач.');
-   if(variantTopics.includes(topicId as typeof variantTopics[number])){
+   if(topicId!=='numbers'&&variantTopics.includes(topicId as typeof variantTopics[number])){
     const generated=(state.generatedTasks||[]) as Task[],seen=seenTaskIds(state),fingerprints=new Set([...content.tasks,...generated].map(taskFingerprint));
     let count=generated.filter(t=>t.topicId===topicId&&t.variant&&!t.reviewReserved&&!seen.has(t.id)).length;
     for(let seed=1;count<size&&seed<=10000;seed++){const task=makePracticeVariant(topicId,(seed*137)%10000+1,(1+seed%3) as 1|2|3);if(task&&validatePracticeVariant(task)&&!fingerprints.has(taskFingerprint(task))){generated.push(task);fingerprints.add(taskFingerprint(task));count++;}}

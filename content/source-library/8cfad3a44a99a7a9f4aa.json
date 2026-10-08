@@ -1,0 +1,563 @@
+{
+  "title": "4.1: Linear Functions",
+  "originalText": "Learning Objectives\n\nRepresent a linear function.\n\nDetermine whether a linear function is increasing, decreasing, or constant.\n\nInterpret slope as a rate of change.\n\nWrite and interpret an equation for a linear function.\n\nGraph linear functions.\n\nDetermine whether lines are parallel or perpendicular.\n\nWrite the equation of a line parallel or perpendicular to a given line.\n\nJust as with the growth of a bamboo plant, there are many situations that involve constant change over time. Consider, for example, the first commercial maglev train in the world, the Shanghai MagLev Train (maglev train in the world, the Shanghai MagLev Train (Figure \\(\\PageIndex{1}\\)). It carries passengers comfortably for a 30-kilometer trip from the airport to the subway station in only eight minutes.\n\n[Figure: Front view of a subway train, the maglev train.]\n\nFigure \\(\\PageIndex{1}\\): Shanghai MagLev Train (credit: “kanegen”/Flickr)\n\nSuppose a maglev train were to travel a long distance, and that the train maintains a constant speed of 83 meters per second for a period of time once it is 250 meters from the station. How can we analyze the train’s distance from the station as a function of time? In this section, we will investigate a kind of function that is useful for this purpose, and use it to investigate real-world situations such as the train’s distance from the station at a given point in time.maglev train were to travel a long distance, and that the train maintains a constant speed of 83 meters per second for a period of time once it is 250 meters from the station. How can we analyze the train’s distance from the station as a function of time? In this section, we will investigate a kind of function that is useful for this purpose, and use it to investigate real-world situations such as the train’s distance from the station at a given point in time.\n\nRepresenting Linear Functions\n\nThe function describing the train’s motion is a linear function, which is defined as a function with a constant rate of change, that is, a polynomial of degree 1. There are several ways to represent a linear function, including word form, function notation, tabular form, and graphical form. We will describe the train’s motion as a function using each method.\n\nRepresenting a Linear Function in Word Form\n\nLet’s begin by describing the linear function in words. For the train problem we just considered, the following word sentence may be used to describe the function relationship.\n\nThe train’s distance from the station is a function of the time during which the train moves at a constant speed plus its original distance from the station when it began moving at constant speed.\n\nThe speed is the rate of change. Recall that a rate of change is a measure of how quickly the dependent variable changes with respect to the independent variable. The rate of change for this example is constant, which means that it is the same for each input value. As the time (input) increases by 1 second, the corresponding distance (output) increases by 83 meters. The train began moving at this constant speed at a distance of 250 meters from the station.\n\nRepresenting a Linear Function in Function Notation\n\nAnother approach to representing linear functions is by using function notation. One example of function notation is an equation written in the form known as the slope-intercept form of a line, where \\(x\\) is the input value, \\(m\\) is the rate of change, and \\(b\\) is the initial value of the dependent variable.\n\n\\[\\begin{align*} &\\text{Equation form } &y=mx+b \\\\[4pt] &\\text{Equation notation } &f(x)=mx+b \\end{align*}\\]\n\nIn the example of the train, we might use the notation \\(D(t)\\) in which the total distance \\(D\\) is a function of the time \\(t\\). The rate, \\(m\\), is 83 meters per second. The initial value of the dependent variable \\(b\\) is the original distance from the station, 250 meters. We can write a generalized equation to represent the motion of the train.\n\n\\[D(t)=83t+250\\]\n\nRepresenting a Linear Function in Tabular Form\n\nA third method of representing a linear function is through the use of a table. The relationship between the distance from the station and the time is represented in Figure \\(\\PageIndex{2}\\). From the table, we can see that the distance changes by 83 meters for every 1 second increase in time.\n\n[Figure: Table with the first row, labeled \\(t\\), containing the seconds from 0 to 3, and with the second row, labeled \\(D(t)\\), containing the meters 250 to 499. The first row goes up by 1 second, and the second row goes up by 83 meters.]\n\nFigure \\(\\PageIndex{2}\\): Tabular representation of the function \\(D\\) showing selected input and output values\n\nQ/A? Can the input in the previous example be any real number?\n\nNo. The input represents time, so while nonnegative rational and irrational numbers are possible, negative real numbers are not possible for this example. The input consists of non-negative real numbers.\n\nRepresenting a Linear Function in Graphical Form\n\nAnother way to represent linear functions is visually, using a graph. We can use the function relationship from above, \\(D(t)=83t+250\\), to draw a graph, represented in Figure \\(\\PageIndex{3}\\). Notice the graph is a line. When we plot a linear function, the graph is always a line.\n\nThe rate of change, which is constant, determines the slant, or slope of the line. The point at which the input value is zero is the vertical intercept, or y-intercept, of the line. We can see from the graph in Figure \\(\\PageIndex{3}\\) that the y-intercept in the train example we just saw is \\((0,250)\\) and represents the distance of the train from the station when it began moving at a constant speed.\n\n[Figure: A graph of an increasing function with points at (-2, -4) and (0, 2).]\n\nFigure \\(\\PageIndex{3}\\): The graph of \\(D(t)=83t+250\\). Graphs of linear functions are lines because the rate of change is constant.\n\nNotice that the graph of the train example is restricted, but this is not always the case. Consider the graph of the line \\(f(x)=2x+1\\). Ask yourself what numbers can be input to the function, that is, what is the domain of the function? The domain is comprised of all real numbers because any number may be doubled, and then have one added to the product.\n\nDefinition: Linear Function\n\nA linear function is a function whose graph is a line. Linear functions can be written in the slope-intercept form of a line\n\n\\[f(x)=mx+b\\]\n\nwhere \\(b\\) is the initial or starting value of the function (when input, \\(x=0\\)), and \\(m\\) is the constant rate of change, or slope of the function. The y-intercept is at \\((0,b)\\).\n\nExample \\(\\PageIndex{1}\\): Using a Linear Function to Find the Pressure on a Diver\n\nThe pressure, \\(P\\), in pounds per square inch (PSI) on the diver in Figure \\(\\PageIndex{4}\\) depends upon her depth below the water surface, \\(d\\), in feet. This relationship may be modeled by the equation, \\(P(d)=0.434d+14.696\\). Restate this function in words.\n\n[Figure: Scuba diver.]\n\nFigure \\(\\PageIndex{4}\\): (credit: Ilse Reijs and Jan-Noud Hutten)Hutten)\n\nTo restate the function in words, we need to describe each part of the equation. The pressure as a function of depth equals four hundred thirty-four thousandths times depth plus fourteen and six hundred ninety-six thousandths.\n\nAnalysis\n\nThe initial value, 14.696, is the pressure in PSI on the diver at a depth of 0 feet, which is the surface of the water. The rate of change, or slope, is 0.434 PSI per foot. This tells us that the pressure on the diver increases 0.434 PSI for each foot her depth increases.\n\nDetermining whether a Linear Function Is Increasing, Decreasing, or Constant\n\nThe linear functions we used in the two previous examples increased over time, but not every linear function does. A linear function may be increasing, decreasing, or constant. For an increasing function, as with the train example, the output values increase as the input values increase. The graph of an increasing function has a positive slope. A line with a positive slope slants upward from left to right as in Figure \\(\\PageIndex{5}\\)(a). For a decreasing function, the slope is negative. The output values decrease as the input values increase. A line with a negative slope slants downward from left to right as in Figure \\(\\PageIndex{5}\\)(b). If the function is constant, the output values are the same for all input values so the slope is zero. A line with a slope of zero is horizontal as in Figure \\(\\PageIndex{5}\\)(c).\n\n[Figure: Three graphs depicting an increasing function, a decreasing function, and a constant function.] Increasing and Decreasing Functions]\n\nFigure \\(\\PageIndex{5}\\): Three graphs depicting an increasing function, a decreasing function, and a constant function.]\n\nIncreasing and Decreasing Functions\n\nIncreasing and Decreasing Functions\n\nThe slope determines if the function is an increasing linear function, a decreasing linear function, or a constant function.\n\n\\(f(x)=mx+b\\) is an increasing function if \\(m>0\\).\n\n\\(f(x)=mx+b\\) is an decreasing function if \\(m<0\\).\n\n\\(f(x)=mx+b\\) is a constant function if \\(m=0\\).\n\nExample \\(\\PageIndex{2}\\): decide whether a Function is Increasing, Decreasing, or Constant\n\nSome recent studies suggest that a teenager sends an average of 60 texts per day. For each of the following scenarios, find the linear function that describes the relationship between the input value and the output value. Then, determine whether the graph of the function is increasing, decreasing, or constant.\n\n1. The total number of texts a teen sends is considered a function of time in days. The input is the number of days, and output is the total number of texts sent.\n\n2. A teen has a limit of 500 texts per month in his or her data plan. The input is the number of days, and output is the total number of texts remaining for the month.\n\n3. A teen has an unlimited number of texts in his or her data plan for a cost of $50 per month. The input is the number of days, and output is the total cost of texting each month.\n\nSolution\n\nAnalyze each function.\n\n1. The function can be represented as \\(f(x)=60x\\) where \\(x\\) is the number of days. The slope, 60, is positive so the function is increasing. This makes sense because the total number of texts increases with each day.\n\n2. The function can be represented as \\(f(x)=500−60x\\) where \\(x\\) is the number of days. In this case, the slope is negative so the function is decreasing. This makes sense because the number of texts remaining decreases each day and this function represents the number of texts remaining in the data plan after \\(x\\) days.\n\n3. The cost function can be represented as \\(f(x)=50\\) because the number of days does not affect the total cost. The slope is 0 so the function is constant.\n\nCalculating and Interpreting Slope\n\nIn the examples we have seen so far, we have had the slope provided for us. However, we often need to calculate the slope given input and output values. Given two values for the input, \\(x_1\\) and \\(x_2\\), and two corresponding values for the output, \\(y_1\\) and \\(y_2\\)—which can be represented by a set of points, \\((x_1,y_1)\\) and \\((x_2,y_2)\\)—we can calculate the slope \\(m\\), as follows\n\n\\[\\begin{align*} m &= \\dfrac{\\text{change in output (rise)}}{ \\text{change in input (run)}} \\\\[4pt] &= \\dfrac{{\\Delta}y}{ {\\Delta}x} = \\dfrac{y_2−y_1}{x_2−x_1} \\end{align*}\\]\n\nwhere \\({\\Delta}y\\) is the vertical displacement and \\({\\Delta}x\\) is the horizontal displacement. Note in function notation two corresponding values for the output \\(y_1\\) and \\(y_2\\) for the function \\(f\\), \\(y_1=f(x_1)\\) and \\(y_2=f(x_2)\\), so we could equivalently write\n\n\\[m=\\dfrac{f(x_2)-f(x_1)}{x_2-x_1} \\nonumber\\]\n\nFigure \\(\\PageIndex{6}\\) indicates how the slope of the line between the points, \\((x_1,y_1)\\) and \\((x_2,y_2)\\), is calculated. Recall that the slope measures steepness. The greater the absolute value of the slope, the steeper the line is.\n\n[Figure: Graph depicting how to calculate the slope of a line]\n\nFigure \\(\\PageIndex{6}\\): The slope of a function is calculated by the change in \\(y\\) divided by the change in \\(x\\). It does not matter which coordinate is used as the \\((x_2,y_2)\\) and which is the \\((x_1 ,y_1)\\),as long as each calculation is started with the elements from the same coordinate pair.\n\nQ & A\n\nAre the units for slope always \\(\\frac{\\text{units for the output}}{ \\text{units for the input}}\\)?\n\nYes. Think of the units as the change of output value for each unit of change in input value. An example of slope could be miles per hour or dollars per day. Notice the units appear as a ratio of units for the output per units for the input.\n\nNote: Calculate Slope\n\nThe slope or rate of change of a function, \\(m\\), can be calculated according to the following:\n\n\\[m=\\dfrac{\\text{change in output (rise)}}{\\text{change in input (run)}}=\\dfrac{{\\Delta}y}{{\\Delta}x}=\\dfrac{y_2-y_1}{x_2-x_1}\\]\n\nwhere \\(x_1\\) and \\(x_2\\) are input values, \\(y_1\\) and \\(y_2\\) are output values.\n\n[Figure: how-to.png]\n How to: Given two points from a linear function, calculate and interpret the slope.\n\n1. Determine the units for output and input values.\n\n2. Calculate the change of output values and change of input values.\n\n3. Interpret the slope as the change in output values per unit of the input value.\n\nExample \\(\\PageIndex{3}\\): Finding the Slope of a Linear Function\n\nIf \\(f(x)\\) is a linear function, and \\((3,−2)\\) and \\((8,1)\\) are points on the line, find the slope. Is this function increasing or decreasing?\n\nSolution\n\nThe coordinate pairs are \\((3,−2)\\) and \\((8,1)\\). To find the rate of change, we divide the change in output by the change in input.\n\n\\[m=\\dfrac{\\text{change in output (rise)}}{\\text{change in input (run)}}=\\dfrac{1-(-2)}{8-3}=\\dfrac{3}{5}\\]\n\nWe could also write the slope as \\(m=0.6\\). The function is increasing because \\(m>0\\).\n\nAnalysis\n\nAs noted earlier, the order in which we write the points does not matter when we compute the slope of the line as long as the first output value, or y-coordinate, used corresponds with the first input value, or x-coordinate, used.\n\nTry it! \\(\\PageIndex{1}\\)\n\nIf \\(f(x)\\) is a linear function, and \\((2, 3)\\) and \\((0,4)\\) are points on the line, find the slope. Is this function increasing or decreasing?\n\nAnswer\n\n\\(m=\\frac{4−3}{0−2} =\\frac{1}{-2}=-\\frac{1}{2}\\); decreasing because \\(m<0\\).\n\nExample \\(\\PageIndex{4}\\): Finding the Population Change from a Linear Function\n\nThe population of a city increased from 23,400 to 27,800 between 2008 and 2012. Find the change of population per year if we assume the change was constant from 2008 to 2012.\n\nThe rate of change relates the change in population to the change in time. The population increased by \\(27,800−23,400=4400\\) people over the four-year time interval. To find the rate of change, divide the change in the number of people by the number of years.\n\n\\[\\dfrac{4,400 \\text{ people}}{4 \\text{ years}} =1,100 \\dfrac{\\text{people}}{\\text{year}}\\]\n\nSo the population increased by 1,100 people per year.\n\nAnalysis\n\nBecause we are told that the population increased, we would expect the slope to be positive. This positive slope we calculated is therefore reasonable.\n\nTry it! \\(\\PageIndex{2}\\)\n\nThe population of a small town increased from 1,442 to 1,868 between 2009 and 2012. Find the change of population per year if we assume the change was constant from 2009 to 2012.\n\nAnswer\n\n\\(m=\\frac{1,868−1,442}{2,012−2,009} = \\frac{426}{3} =\\text{ 142 people per year}\\)\n\nWriting the Point-Slope Form of a Linear Equation\n\nUp until now, we have been using the slope-intercept form of a linear equation to describe linear functions. Here, we will learn another way to write a linear function, the point-slope form.\n\n\\[y-y_1=m(x-x_1)\\]\n\nThe point-slope form is derived from the slope formula.\n\n\\[ \\begin{align*} &m=\\dfrac{y-y_1}{x-x_1} &\\text{assuming }x{\\neq}x_1 \\\\ &m(x-x_1)=\\dfrac{y-y_1}{x-x_1}(x-x_1) &\\text{Multiply both sides by }(x-x_1). \\\\ &m(x-x_1)=y-y_1 &\\text{Simplify} \\\\ &y-y_1=m(x-x_1) &\\text{Rearrange} \\end{align*}\\]\n\nKeep in mind that the slope-intercept form and the point-slope form can be used to describe the same function. We can move from one form to another using basic algebra. For example, suppose we are given an equation in point-slope form, \\(y−4=− \\frac{1}{2}(x−6)\\). We can convert it to the slope-intercept form as shown.\n\n\\[\\begin{align*} y-4&=-\\dfrac{1}{2}(x-6) \\\\ y-4&=-\\dfrac{1}{2}x+3 &\\text{Distribute the }-\\dfrac{1}{2}. \\\\ y&=-\\dfrac{1}{2}x+7 &\\text{Add 4 to each side.}\\end{align*}\\]\n\nTherefore, the same line can be described in slope-intercept form as \\(y=\\dfrac{1}{2}x+7\\).\n\nNote: Point-Slope Form of a Linear Equation\n\nThe point-slope form of a linear equation takes the form\n\n\\[y-y_1=m(x−x_1)\\]\n\nwhere \\(m\\) is the slope, \\(x_1\\) and \\(y_1\\) are the \\(x\\) and \\(y\\) coordinates of a specific point through which the line passes.\n\nWriting the Equation of a Line Using a Point and the Slope\n\nThe point-slope form is particularly useful if we know one point and the slope of a line. Suppose, for example, we are told that a line has a slope of 2 and passes through the point \\((4,1)\\). We know that \\(m=2\\) and that \\(x_1=4\\) and \\(y_1=1\\). We can substitute these values into the general point-slope equation.\n\n\\[\\begin{align*} y−y_1&=m(x−x_1) \\\\ y−1&=2(x−4) \\end{align*}\\]\n\nIf we wanted to then rewrite the equation in slope-intercept form, we apply algebraic techniques.\n\n\\[\\begin{align*} y−1&=2(x−4) \\\\ y−1&=2x−8 &\\text{Distribute the 2.} \\\\ y&=2x−7 &\\text{Add 1 to each side.} \\end{align*}\\]\n\nBoth equations, \\(y−1=2(x−4)\\) and \\(y=2x–7\\), describe the same line. See Figure \\(\\PageIndex{7}\\).\n\n[Figure: alt]\n\nFigure \\(\\PageIndex{7}\\)\n\nExample \\(\\PageIndex{5}\\): Writing Linear Equations Using a Point and the Slope\n\nWrite the point-slope form of an equation of a line with a slope of 3 that passes through the point \\((6,–1)\\). Then rewrite it in the slope-intercept form.\n\nSolution\n\nLet’s figure out what we know from the given information. The slope is 3, so \\(m=3\\). We also know one point, so we know \\(x_1=6\\) and \\(y_1 =−1\\). Now we can substitute these values into the general point-slope equation.\n\n\\[\\begin{align*} y-y_1&=m(x-x_1) \\\\ y−(−1)&=3(x−6) &\\text{Substitute known values.} \\\\ y+1&=3(x−6) &\\text{Distribute −1 to find point-slope form.} \\end{align*}\\]\n\nThen we use algebra to find the slope-intercept form.\n\n\\[\\begin{align*} y+1&=3(x−6) \\\\ y+1&=3x−18 &\\text{Distribute 3.} \\\\ y&=3x−19 &\\text{Simplify to slope-intercept form.} \\end{align*}\\]\n\nTry it! \\(\\PageIndex{3}\\)\n\nWrite the point-slope form of an equation of a line with a slope of –2 that passes through the point \\((–2, 2)\\). Then rewrite it in the slope-intercept form.\n\nAnswer\n\n\\(y−2=−2(x+2)\\) ; \\(y=−2x−2\\)\n\nWriting the Equation of a Line Using Two Points\n\nThe point-slope form of an equation is also useful if we know any two points through which a line passes. Suppose, for example, we know that a line passes through the points \\((0, 1)\\) and \\((3, 2)\\). We can use the coordinates of the two points to find the slope.\n\n\\[\\begin{align*} m&=\\dfrac{y_2-y_1}{x_2-x_1} \\\\ &=\\dfrac{2-1}{3-0} \\\\ &=\\dfrac{1}{3} \\end{align*}\\]\n\nNow we can use the slope we found and the coordinates of one of the points to find the equation for the line. Let use \\((0,1)\\) for our point.\n\n\\[\\begin{align*} y-y_1&=m(x-x_1) \\\\ y-1&=\\dfrac{1}{3}(x-0) \\end{align*}\\]\n\nAs before, we can use algebra to rewrite the equation in the slope-intercept form.\n\n\\[\\begin{align*} y-1&=\\dfrac{1}{3}(x-0) \\\\ y-1&=\\dfrac{1}{3}x &\\text{Distribute the }\\dfrac{1}{3}. \\\\ y&=\\dfrac{1}{3}x+1 &\\text{Add 1 to each side.} \\end{align*}\\]\n\nBoth equations describe the line shown in Figure \\(\\PageIndex{8}\\).\n\n[Figure: alt]\n\nFigure \\(\\PageIndex{8}\\)\n\nExample \\(\\PageIndex{6}\\): Writing Linear Equations Using Two Points\n\nWrite the point-slope form of an equation of a line that passes through the points \\((5,1)\\) and \\((8, 7)\\). Then rewrite it in the slope-intercept form.\n\nLet’s begin by finding the slope.\n\n\\[\\begin{align*} m&=\\dfrac{y_2-y_1}{x_2-x_1} \\\\ &=\\dfrac{7-1}{8-5} \\\\ &=\\dfrac{6}{3} \\\\ &= 2 \\end{align*}\\]\n\nSo \\(m=2\\). Next, we substitute the slope and the coordinates for one of the points into the general point-slope equation. We can choose either point, but we will use \\((5,1)\\).\n\n\\[\\begin{align*} y-y_1&=m(x-x_1) \\\\ y-1&=2(x-5) \\end{align*}\\]\n\nThe point-slope equation of the line is \\(y_2–1=2(x_2–5)\\). To rewrite the equation in slope-intercept form, we use algebra.\n\n\\[\\begin{align*} y-1&=2(x-5) \\\\ y-1&=2x-10 \\\\ y&=2x-9 \\end{align*}\\]\n\nThe slope-intercept equation of the line is \\(y=2x–9\\).\n\nTry It! \\(\\PageIndex{4}\\)\n\nWrite the point-slope form of an equation of a line that passes through the points \\((–1,3)\\) and \\((0,0)\\). Then rewrite it in the slope-intercept form.\n\nAnswer\n\n\\(y−0=−3(x−0)\\); \\(y=−3x\\).\n\nWriting and Interpreting an Equation for a Linear Function\n\nNow that we have written equations for linear functions in both the slope-intercept form and the point-slope form, we can choose which method to use based on the information we are given. That information may be provided in the form of a graph, a point and a slope, two points, and so on. Look at the graph of the function \\(f\\) in Figure \\(\\PageIndex{9}\\).\n\n[Figure: Graph depicting how to calculate the slope of a line]\n\nFigure \\(\\PageIndex{9}\\): Graph depicting how to calculate the slope of a line.\n\nWe are not given the slope of the line, but we can choose any two points on the line to find the slope. Let’s choose \\((0,7)\\) and \\((4, 4)\\). We can use these points to calculate the slope.\n\n\\[\\begin{align*} m&=\\dfrac{y_2-y_1}{x_2-x_1} \\\\ &=\\dfrac{4-7}{4-0} \\\\&=-\\dfrac{3}{4}\\end{align*}\\]\n\nNow we can substitute the slope and the coordinates of one of the points into the point-slope form.\n\n\\[\\begin{align*} y-y_1&=m(x-x_1) \\\\ y-4&=-\\dfrac{3}{4}(x-4) \\end{align*}\\]\n\nIf we want to rewrite the equation in the slope-intercept form, we would find\n\n\\[\\begin{align*} y-4&=-\\dfrac{3}{4}(x-4) \\\\ y-4 &=-\\dfrac{3}{4}x+3 \\\\ y&=-\\dfrac{3}{4}x+7\\end{align*}\\]\n\nIf we wanted to find the slope-intercept form without first writing the point-slope form, we could have recognized that the line crosses the y-axis when the output value is 7. Therefore, \\(b=7\\). We now have the initial value \\(b\\) and the slope \\(m\\) so we can substitute \\(m\\) and \\(b\\) into the slope-intercept form of a line.\n\n[Figure: alt]\n\nFigure \\(\\PageIndex{10}\\)\n\nSo the function is \\(f(x)=−\\frac{3}{4}x+7\\), and the linear equation would be \\(y=−\\frac{3}{4}x+7\\).\n\n[Figure: how-to.png]\n How to: Given the graph of a linear function, write an equation to represent the function.\n\n1. Identify two points on the line.\n\n2. Use the two points to calculate the slope.\n\n3. Determine where the line crosses the y-axis to identify the y-intercept by visual inspection.\n\n4. Substitute the slope and y-intercept into the slope-intercept form of a line equation.\n\nExample \\(\\PageIndex{7}\\): Writing an Equation for a Linear Function\n\nWrite an equation for a linear function given a graph of \\(f\\) shown in Figure \\(\\PageIndex{11}\\).\n\n[Figure: Graph of an increasing function with points at (-3, 0) and (0, 1).]\n\nFigure \\(\\PageIndex{11}\\)\n\nSolution\n\nIdentify two points on the line, such as \\((0, 2)\\) and \\((−2,−4)\\). Use the points to calculate the slope.\n\n\\[\\begin{align*} m&=\\dfrac{y_2-y_1}{x_2-x_1} \\\\ &=\\dfrac{4-2}{-2-0} \\\\ &=\\dfrac{-6}{-2} \\\\ &=3 \\end{align*}\\]\n\nSubstitute the slope and the coordinates of one of the points into the point-slope form.\n\n\\[\\begin{align*} y-y_1&=m(x-x_1) \\\\ y-(-4)&=3(x-(-2)) \\\\ y+4 &= 3(x+2)\\end{align*}\\]\n\nWe can use algebra to rewrite the equation in the slope-intercept form.\n\n\\[\\begin{align*} y+4&= 3(x+2) \\\\ y+4&= 3x+6 \\\\ y & = 3x + 2 \\end{align*}\\]\n\nAnalysis\n\nThis makes sense because we can see from Figure \\(\\PageIndex{12}\\) that the line crosses the y-axis at the point \\((0, 2)\\), which is the y-intercept, so \\(b=2\\).\n\n[Figure: alt]\n\nFigure \\(\\PageIndex{12}\\): Graph of an increasing line with points at \\((0, 2)\\) and \\((-2, -4)\\).\n\nExample \\(\\PageIndex{8}\\): Writing an Equation for a Linear Cost Function\n\nSuppose Ben starts a company in which he incurs a fixed cost of $1,250 per month for the overhead, which includes his office rent. His production costs are $37.50 per item. Write a linear function \\(C\\) where \\(C(x)\\) is the cost for \\(x\\) items produced in a given month.\n\nSolution\n\nThe fixed cost is present every month, $1,250. The costs that can vary include the cost to produce each item, which is $37.50 for Ben. The variable cost, called the marginal cost, is represented by 37.5. The cost Ben incurs is the sum of these two costs, represented by \\(C(x)=1250+37.5x\\).\n\nAnalysis\n\nIf Ben produces 100 items in a month, his monthly cost is represented by\n\n\\[\\begin{align*} C(100)&=1250+37.5(100) \\\\ &=5000 \\end{align*}\\]\n\nSo his monthly cost would be $5,000.\n\nExample \\(\\PageIndex{9}\\): Writing an Equation for a Linear Function Given Two Points\n\nIf \\(f\\) is a linear function, with \\(f(3)=−2\\), and \\(f(8)=1\\), find an equation for the function in slope-intercept form.\n\nSolution\n\nWe can write the given points using coordinates.\n\n\\[\\begin{align*} f(3)&= -2{\\rightarrow}(3,2) \\\\ f(8)&=1{\\rightarrow}(8,1) \\end{align*}\\]\n\nWe can then use the points to calculate the slope.\n\n\\[\\begin{align*} m&=\\dfrac{y_2-y_1}{x_2-x_1} \\\\ &=\\dfrac{1-(-2)}{8-3} \\\\ &=\\dfrac{3}{5} \\end{align*}\\]\n\nSubstitute the slope and the coordinates of one of the points into the point-slope form.\n\n\\[\\begin{align*} y-y_1&=m(x-x_1) \\\\ y-(-2)&=\\dfrac{3}{5}(x-3) \\end{align*}\\]\n\nWe can use algebra to rewrite the equation in the slope-intercept form.\n\n\\[\\begin{align*} y+2&=\\dfrac{3}{5}(x-3) \\\\ y+2&=\\dfrac{3}{5}x-\\dfrac{9}{5} \\\\ y&=\\dfrac{3}{5}x-\\dfrac{19}{5} \\end{align*}\\]\n\nTry It! \\(\\PageIndex{5}\\)\n\nIf \\(f(x)\\) is a linear function, with \\(f(2)=–11\\), and \\(f(4)=−25\\), find an equation for the function in slope-intercept form.\n\nAnswer\n\n\\(y=−7x+3\\)\n\nModeling Real-World Problems with Linear Functions\n\nIn the real world, problems are not always explicitly stated in terms of a function or represented with a graph. Fortunately, we can analyze the problem by first representing it as a linear function and then interpreting the components of the function. As long as we know, or can figure out, the initial value and the rate of change of a linear function, we can solve many different kinds of real-world problems.\n\n[Figure: how-to.png]\n How to: Given a linear function \\(f\\) and the initial value and rate of change, evaluate \\( f(c) \\).\n\n1. Determine the initial value and the rate of change (slope).\n\n2. Substitute the values into \\(f(x)=mx+b\\).\n\n3. Evaluate the function at \\(x=c\\).\n\nExample \\(\\PageIndex{10}\\): Using a Linear Function to Determine the Number of Songs in a Music Collection\n\nMarcus currently has 200 songs in his music collection. Every month, he adds 15 new songs. Write a formula for the number of songs, \\(N\\), in his collection as a function of time, \\(t\\), the number of months. How many songs will he own in a year?\n\nSolution\n\nThe initial value for this function is 200 because he currently owns 200 songs, so \\(N(0)=200\\), which means that \\(b=200\\).\n\nThe number of songs increases by 15 songs per month, so the rate of change is 15 songs per month. Therefore we know that \\(m=15\\). We can substitute the initial value and the rate of change into the slope-intercept form of a line.\n\n[Figure: alt]\n\nFigure \\(\\PageIndex{13}\\)\n\nWe can write the formula \\(N(t)=15t+200\\).\n\nWith this formula, we can then predict how many songs Marcus will have in 1 year (12 months). In other words, we can evaluate the function at \\(t=12\\).\n\n\\[\\begin{align*} N(12)&=15(12)+200 \\\\ &=180+200 \\\\ &= 380 \\end{align*}\\]\n\nMarcus will have 380 songs in 12 months.\n\nAnalysis\n\nNotice that \\(N\\) is an increasing linear function. As the input (the number of months) increases, the output (number of songs) increases as well.\n\nExample \\(\\PageIndex{11}\\): Using a Linear Function to Calculate Salary Plus Commission \n\nWorking as an insurance salesperson, Ilya earns a base salary plus a commission on each new policy. Therefore, Ilya’s weekly income, I,depends on the number of new policies, \\(n\\), he sells during the week. Last week he sold 3 new policies, and earned $760 for the week. The week before, he sold 5 new policies and earned $920. Find an equation for \\(I(n)\\), and interpret the meaning of the components of the equation.\n\nSolution\n\nThe given information gives us two input-output pairs: \\((3,760)\\) and \\((5,920)\\). We start by finding the rate of change.\n\n\\[\\begin{align*} m&=\\dfrac{920-760}{5-3} \\\\ &=\\dfrac{$160}{2 \\text{ policies}} \\\\ &=$80 \\text{ per policy} \\end{align*}\\]\n\nKeeping track of units can help us interpret this quantity. Income increased by $160 when the number of policies increased by 2, so the rate of change is $80 per policy. Therefore, Ilya earns a commission of $80 for each policy sold during the week.\n\nWe can then solve for the initial value.\n\n\\[\\begin{align*} I(n)&=80n+b \\\\ 760&=80(3)+b \\text{ when } n=3, I(3)=760 \\\\ 760-80(3)&=b \\\\ 520 & =b \\end{align*}\\]\n\nThe value of \\(b\\) is the starting value for the function and represents Ilya’s income when \\(n=0\\), or when no new policies are sold. We can interpret this as Ilya’s base salary for the week, which does not depend upon the number of policies sold.\n\nWe can now write the final equation.\n\n\\[I(n)=80n+520 \\nonumber\\]\n\nOur final interpretation is that Ilya’s base salary is $520 per week and he earns an additional $80 commission for each policy sold.\n\nExample \\(\\PageIndex{12}\\): Using Tabular Form to Write an Equation for a Linear Function  \n\nTable \\(\\PageIndex{1}\\) relates the number of rats in a population to time, in weeks. Use the table to write a linear equation.\n\n    Table \\(\\PageIndex{1}\\)\n\n            w, number of weeks\t\n            0\t\n            2\t\n            4\t\n            6\t\n\n            P(w), number of rats\t\n            1000\t\n            1080\t\n            1160\t\n            1240\t\n\nSolution\n\nWe can see from the table that the initial value for the number of rats is 1000, so \\(b=1000\\).\n\nRather than solving for \\(m\\), we can tell from looking at the table that the population increases by 80 for every 2 weeks that pass. This means that the rate of change is 80 rats per 2 weeks, which can be simplified to 40 rats per week.\n\n\\[P(w)=40w+1000 \\nonumber\\]\n\nIf we did not notice the rate of change from the table we could still solve for the slope using any two points from the table. For example, using \\((2,1080)\\) and \\((6,1240)\\)\n\n\\[\\begin{align*} m&=\\dfrac{1240-1080}{6-2} \\\\ &=\\dfrac{160}{4} \\\\ &= 40\\end{align*}\\]\n\n[Figure: QA.png]\n Is the initial value always provided in a table of values? \n\nNo. Sometimes the initial value is provided in a table of values, but sometimes it is not. If you see an input of 0, then the initial value would be the corresponding output. If the initial value is not provided because there is no value of input on the table equal to 0, find the slope, substitute one coordinate pair and the slope into \\(f(x)=mx+b\\), and solve for \\(b\\).\n\n[Figure: try-it.png]\n Try It \\(\\PageIndex{6}\\)\n\nA new plant food was introduced to a young tree to test its effect on the height of the tree. Table \\(\\PageIndex{2}\\) shows the height of the tree, in feet, \\(x\\) months since the measurements began. Write a linear function, \\(H(x)\\), where \\(x\\) is the number of months since the start of the experiment.\n\n    Table \\(\\PageIndex{2}\\)\n\n            \\(x\\)\t\n            0\t\n            2\t\n            4\t\n            8\t\n            12\t\n\n            \\(H(x)\\)\t\n            12.5\t\n            13.5\t\n            14.5\t\n            16.5\t\n            18.5\t\n\nAnswer\n\n\\(H(x)=0.5x+12.5\\)\n\nKey Equations\n\nslope-intercept form of a line: \\(f(x)=mx+b\\)\n\nslope: \\(m=\\dfrac{\\text{change in output (rise)}}{\\text{change in input (run)}}=\\dfrac{{\\Delta}y}{{\\Delta}x}=\\dfrac{y_2-y_1}{x_2-x_1}\\)\n\npoint-slope form of a line: \\(y−y_1 =m(x-x_1)\\)\n\nKey Concepts\n\nThe ordered pairs given by a linear function represent points on a line.\n\nLinear functions can be represented in words, function notation, tabular form, and graphical form.\n\nThe rate of change of a linear function is also known as the slope.\n\nAn equation in the slope-intercept form of a line includes the slope and the initial value of the function.\n\nThe initial value, or y-intercept, is the output value when the input of a linear function is zero. It is the y-value of the point at which the line crosses the y-axis.\n\nAn increasing linear function results in a graph that slants upward from left to right and has a positive slope.\n\nA decreasing linear function results in a graph that slants downward from left to right and has a negative slope.\n\nA constant linear function results in a graph that is a horizontal line.\n\nAnalyzing the slope within the context of a problem indicates whether a linear function is increasing, decreasing, or constant.\n\nThe slope of a linear function can be calculated by dividing the difference between y-values by the difference in corresponding x-values of any two points on the line.\n\nThe slope and initial value can be determined given a graph or any two points on the line.\n\nOne type of function notation is the slope-intercept form of an equation.\n\nThe point-slope form is useful for finding a linear equation when given the slope of a line and one point.\n\nThe point-slope form is also convenient for finding a linear equation when given two points through which a line passes.\n\nThe equation for a linear function can be written if the slope \\(m\\) and initial value \\(b\\) are known.\n\nA linear function can be used to solve real-world problems.\n\nA linear function can be written from tabular form.\n\nFootnotes\n\n1 www.chinahighlights.com/shang...glev-train.htm\n\n2 www.cbsnews.com/8301-501465_1...ay-study-says/\n\nGlossary\n\ndecreasing linear function\n\na function with a negative slope: If \\(f(x)=mx+b\\), then \\(m<0\\).\n\nincreasing linear function\n\na function with a positive slope: If \\(f(x)=mx+b\\), then \\(m>0\\).\n\nlinear function\n\na function with a constant rate of change that is a polynomial of degree 1, and whose graph is a straight line\n\npoint-slope form\n\nthe equation for a line that represents a linear function of the form \\(y−y_1=m(x−x_1)\n\nslope\n\nthe ratio of the change in output values to the change in input values; a measure of the steepness of a line\n\nslope-intercept form\n\nthe equation for a line that represents a linear function in the form \\(f(x)=mx+b\\)\n\ny-intercept\n\nthe value of a function when the input value is zero; also known as initial value\n\nThis page titled 4.1: Linear Functions was last modified on Thu, 26 Dec 2024 22:30:42 GMT and is shared under a CC BY  4.0  license and was authored, remixed, and/or curated by OpenStax via source content that was edited to the style and standards of the LibreTexts platform.",
+  "figures": [
+    {
+      "url": "https://math.libretexts.org/@api/deki/files/1057/CNX_Precalc_Figure_02_01_011.jpg?revision=1&size=bestfit&width=657&height=437",
+      "alt": "Front view of a subway train, the maglev train.",
+      "credit": ""
+    },
+    {
+      "url": "https://math.libretexts.org/@api/deki/files/1058/CNX_Precalc_Figure_02_01_015.jpg?revision=1",
+      "alt": "Table with the first row, labeled \\(t\\), containing the seconds from 0 to 3, and with the second row, labeled \\(D(t)\\), containing the meters 250 to 499. The first row goes up by 1 second, and the second row goes up by 83 meters.",
+      "credit": ""
+    },
+    {
+      "url": "https://math.libretexts.org/@api/deki/files/1059/CNX_Precalc_Figure_02_01_012.jpg?revision=1",
+      "alt": "A graph of an increasing function with points at (-2, -4) and (0, 2).",
+      "credit": ""
+    },
+    {
+      "url": "https://math.libretexts.org/@api/deki/files/1060/CNX_Precalc_Figure_02_01_003.jpg?revision=1",
+      "alt": "Scuba diver.",
+      "credit": ""
+    },
+    {
+      "url": "https://math.libretexts.org/@api/deki/files/1061/CNX_Precalc_Figure_02_01_004abc.jpg?revision=1&size=bestfit&width=849&height=327",
+      "alt": "Three graphs depicting an increasing function, a decreasing function, and a constant function.] Increasing and Decreasing Functions",
+      "credit": ""
+    },
+    {
+      "url": "https://math.libretexts.org/@api/deki/files/1062/CNX_Precalc_Figure_02_01_005n.jpg?revision=1",
+      "alt": "Graph depicting how to calculate the slope of a line",
+      "credit": ""
+    },
+    {
+      "url": "https://math.libretexts.org/@api/deki/files/871/how-to.png?revision=1",
+      "alt": "how-to.png",
+      "credit": ""
+    },
+    {
+      "url": "https://math.libretexts.org/@api/deki/files/1063/CNX_Precalc_Figure_02_01_013.jpg?revision=1",
+      "alt": "alt",
+      "credit": ""
+    },
+    {
+      "url": "https://math.libretexts.org/@api/deki/files/1064/CNX_Precalc_Figure_02_01_014.jpg?revision=1",
+      "alt": "alt",
+      "credit": ""
+    },
+    {
+      "url": "https://math.libretexts.org/@api/deki/files/1065/CNX_Precalc_Figure_02_01_006.jpg?revision=1&size=bestfit&width=350&height=249",
+      "alt": "Graph depicting how to calculate the slope of a line",
+      "credit": ""
+    },
+    {
+      "url": "https://math.libretexts.org/@api/deki/files/1066/CNX_Precalc_Figure_02_01_007.jpg?revision=1",
+      "alt": "alt",
+      "credit": ""
+    },
+    {
+      "url": "https://math.libretexts.org/@api/deki/files/871/how-to.png?revision=1",
+      "alt": "how-to.png",
+      "credit": ""
+    },
+    {
+      "url": "https://math.libretexts.org/@api/deki/files/1068/CNX_Precalc_Figure_02_01_008a.jpg?revision=1",
+      "alt": "Graph of an increasing function with points at (-3, 0) and (0, 1).",
+      "credit": ""
+    },
+    {
+      "url": "https://math.libretexts.org/@api/deki/files/1069/CNX_Precalc_Figure_02_01_008b.jpg?revision=1",
+      "alt": "alt",
+      "credit": ""
+    },
+    {
+      "url": "https://math.libretexts.org/@api/deki/files/871/how-to.png?revision=1",
+      "alt": "how-to.png",
+      "credit": ""
+    },
+    {
+      "url": "https://math.libretexts.org/@api/deki/files/1070/CNX_Precalc_Figure_02_01_010.jpg?revision=1",
+      "alt": "alt",
+      "credit": ""
+    },
+    {
+      "url": "https://math.libretexts.org/@api/deki/files/876/QA.png?revision=1&size=bestfit&width=34&height=36",
+      "alt": "QA.png",
+      "credit": ""
+    },
+    {
+      "url": "https://math.libretexts.org/@api/deki/files/869/try-it.png?revision=1",
+      "alt": "try-it.png",
+      "credit": ""
+    }
+  ],
+  "references": [
+    {
+      "text": "4.1: Linear Functions",
+      "url": "https://math.libretexts.org/Bookshelves/Algebra/Algebra_and_Trigonometry_1e_(OpenStax)/04%3A_Linear_Functions/4.01%3A_Linear_Functions"
+    },
+    {
+      "text": "CC BY  4.0",
+      "url": "https://creativecommons.org/licenses/by/4.0"
+    },
+    {
+      "text": "OpenStax",
+      "url": "https://openstax.org/"
+    },
+    {
+      "text": "source content",
+      "url": "https://openstax.org/details/books/precalculus"
+    }
+  ],
+  "exercises": [
+    {
+      "ordinal": 1,
+      "sourceNumber": "",
+      "sourceAnchor": "",
+      "kind": "example-or-exercise",
+      "context": "A linear function is a function whose graph is a line. Linear functions can be written in the slope-intercept form of a line\n\n\\[f(x)=mx+b\\]\n\nwhere \\(b\\) is the initial or starting value of the function (when input, \\(x=0\\)), and \\(m\\) is the constant rate of change, or slope of the function. The y-intercept is at \\((0,b)\\).",
+      "original": "Example \\(\\PageIndex{1}\\): Using a Linear Function to Find the Pressure on a Diver\n\nThe pressure, \\(P\\), in pounds per square inch (PSI) on the diver in Figure \\(\\PageIndex{4}\\) depends upon her depth below the water surface, \\(d\\), in feet. This relationship may be modeled by the equation, \\(P(d)=0.434d+14.696\\). Restate this function in words.\n\n[Figure: Scuba diver.]\n\nFigure \\(\\PageIndex{4}\\): (credit: Ilse Reijs and Jan-Noud Hutten)Hutten)\n\nTo restate the function in words, we need to describe each part of the equation. The pressure as a function of depth equals four hundred thirty-four thousandths times depth plus fourteen and six hundred ninety-six thousandths.\n\nAnalysis\n\nThe initial value, 14.696, is the pressure in PSI on the diver at a depth of 0 feet, which is the surface of the water. The rate of change, or slope, is 0.434 PSI per foot. This tells us that the pressure on the diver increases 0.434 PSI for each foot her depth increases.",
+      "prompt": "Example \\(\\PageIndex{1}\\): Using a Linear Function to Find the Pressure on a Diver\n\nThe pressure, \\(P\\), in pounds per square inch (PSI) on the diver in Figure \\(\\PageIndex{4}\\) depends upon her depth below the water surface, \\(d\\), in feet. This relationship may be modeled by the equation, \\(P(d)=0.434d+14.696\\). Restate this function in words.\n\n[Figure: Scuba diver.]\n\nFigure \\(\\PageIndex{4}\\): (credit: Ilse Reijs and Jan-Noud Hutten)Hutten)\n\nTo restate the function in words, we need to describe each part of the equation. The pressure as a function of depth equals four hundred thirty-four thousandths times depth plus fourteen and six hundred ninety-six thousandths.\n\nAnalysis\n\nThe initial value, 14.696, is the pressure in PSI on the diver at a depth of 0 feet, which is the surface of the water. The rate of change, or slope, is 0.434 PSI per foot. This tells us that the pressure on the diver increases 0.434 PSI for each foot her depth increases.",
+      "sourceAnswers": [],
+      "hasFigure": true,
+      "status": "draft",
+      "answerVerified": false,
+      "translationStatus": "pending",
+      "mappingStatus": "pending"
+    },
+    {
+      "ordinal": 2,
+      "sourceNumber": "",
+      "sourceAnchor": "",
+      "kind": "example-or-exercise",
+      "context": "The linear functions we used in the two previous examples increased over time, but not every linear function does. A linear function may be increasing, decreasing, or constant. For an increasing function, as with the train example, the output values increase as the input values increase. The graph of an increasing function has a positive slope. A line with a positive slope slants upward from left to right as in Figure \\(\\PageIndex{5}\\)(a). For a decreasing function, the slope is negative. The output values decrease as the input values increase. A line with a negative slope slants downward from left to right as in Figure \\(\\PageIndex{5}\\)(b). If the function is constant, the output values are the same for all input values so the slope is zero. A line with a slope of zero is horizontal as in Figure \\(\\PageIndex{5}\\)(c).\n\nIncreasing and Decreasing Functions\n\nThe slope determines if the function is an increasing linear function, a decreasing linear function, or a constant function.",
+      "original": "Example \\(\\PageIndex{2}\\): decide whether a Function is Increasing, Decreasing, or Constant\n\nSome recent studies suggest that a teenager sends an average of 60 texts per day. For each of the following scenarios, find the linear function that describes the relationship between the input value and the output value. Then, determine whether the graph of the function is increasing, decreasing, or constant.\n\n1. The total number of texts a teen sends is considered a function of time in days. The input is the number of days, and output is the total number of texts sent.\n\n2. A teen has a limit of 500 texts per month in his or her data plan. The input is the number of days, and output is the total number of texts remaining for the month.\n\n3. A teen has an unlimited number of texts in his or her data plan for a cost of $50 per month. The input is the number of days, and output is the total cost of texting each month.\n\nSolution\n\nAnalyze each function.\n\n1. The function can be represented as \\(f(x)=60x\\) where \\(x\\) is the number of days. The slope, 60, is positive so the function is increasing. This makes sense because the total number of texts increases with each day.\n\n2. The function can be represented as \\(f(x)=500−60x\\) where \\(x\\) is the number of days. In this case, the slope is negative so the function is decreasing. This makes sense because the number of texts remaining decreases each day and this function represents the number of texts remaining in the data plan after \\(x\\) days.\n\n3. The cost function can be represented as \\(f(x)=50\\) because the number of days does not affect the total cost. The slope is 0 so the function is constant.",
+      "prompt": "Example \\(\\PageIndex{2}\\): decide whether a Function is Increasing, Decreasing, or Constant\n\nSome recent studies suggest that a teenager sends an average of 60 texts per day. For each of the following scenarios, find the linear function that describes the relationship between the input value and the output value. Then, determine whether the graph of the function is increasing, decreasing, or constant.\n\n1. The total number of texts a teen sends is considered a function of time in days. The input is the number of days, and output is the total number of texts sent.\n\n2. A teen has a limit of 500 texts per month in his or her data plan. The input is the number of days, and output is the total number of texts remaining for the month.\n\n3. A teen has an unlimited number of texts in his or her data plan for a cost of $50 per month. The input is the number of days, and output is the total cost of texting each month.\n\nSolution\n\nAnalyze each function.\n\n1. The function can be represented as \\(f(x)=60x\\) where \\(x\\) is the number of days. The slope, 60, is positive so the function is increasing. This makes sense because the total number of texts increases with each day.\n\n2. The function can be represented as \\(f(x)=500−60x\\) where \\(x\\) is the number of days. In this case, the slope is negative so the function is decreasing. This makes sense because the number of texts remaining decreases each day and this function represents the number of texts remaining in the data plan after \\(x\\) days.\n\n3. The cost function can be represented as \\(f(x)=50\\) because the number of days does not affect the total cost. The slope is 0 so the function is constant.",
+      "sourceAnswers": [],
+      "hasFigure": false,
+      "status": "draft",
+      "answerVerified": false,
+      "translationStatus": "pending",
+      "mappingStatus": "pending"
+    },
+    {
+      "ordinal": 3,
+      "sourceNumber": "1",
+      "sourceAnchor": "",
+      "kind": "exercise-candidate",
+      "context": "\\[m=\\dfrac{\\text{change in output (rise)}}{\\text{change in input (run)}}=\\dfrac{{\\Delta}y}{{\\Delta}x}=\\dfrac{y_2-y_1}{x_2-x_1}\\]\n\nwhere \\(x_1\\) and \\(x_2\\) are input values, \\(y_1\\) and \\(y_2\\) are output values.\n\n[Figure: how-to.png]\n How to: Given two points from a linear function, calculate and interpret the slope.",
+      "original": "1. Determine the units for output and input values.",
+      "prompt": "1. Determine the units for output and input values.",
+      "sourceAnswers": [],
+      "hasFigure": false,
+      "status": "draft",
+      "answerVerified": false,
+      "translationStatus": "pending",
+      "mappingStatus": "pending"
+    },
+    {
+      "ordinal": 4,
+      "sourceNumber": "2",
+      "sourceAnchor": "",
+      "kind": "exercise-candidate",
+      "context": "\\[m=\\dfrac{\\text{change in output (rise)}}{\\text{change in input (run)}}=\\dfrac{{\\Delta}y}{{\\Delta}x}=\\dfrac{y_2-y_1}{x_2-x_1}\\]\n\nwhere \\(x_1\\) and \\(x_2\\) are input values, \\(y_1\\) and \\(y_2\\) are output values.\n\n[Figure: how-to.png]\n How to: Given two points from a linear function, calculate and interpret the slope.",
+      "original": "2. Calculate the change of output values and change of input values.",
+      "prompt": "2. Calculate the change of output values and change of input values.",
+      "sourceAnswers": [],
+      "hasFigure": false,
+      "status": "draft",
+      "answerVerified": false,
+      "translationStatus": "pending",
+      "mappingStatus": "pending"
+    },
+    {
+      "ordinal": 5,
+      "sourceNumber": "3",
+      "sourceAnchor": "",
+      "kind": "exercise-candidate",
+      "context": "\\[m=\\dfrac{\\text{change in output (rise)}}{\\text{change in input (run)}}=\\dfrac{{\\Delta}y}{{\\Delta}x}=\\dfrac{y_2-y_1}{x_2-x_1}\\]\n\nwhere \\(x_1\\) and \\(x_2\\) are input values, \\(y_1\\) and \\(y_2\\) are output values.\n\n[Figure: how-to.png]\n How to: Given two points from a linear function, calculate and interpret the slope.",
+      "original": "3. Interpret the slope as the change in output values per unit of the input value.",
+      "prompt": "3. Interpret the slope as the change in output values per unit of the input value.",
+      "sourceAnswers": [],
+      "hasFigure": false,
+      "status": "draft",
+      "answerVerified": false,
+      "translationStatus": "pending",
+      "mappingStatus": "pending"
+    },
+    {
+      "ordinal": 6,
+      "sourceNumber": "",
+      "sourceAnchor": "",
+      "kind": "example-or-exercise",
+      "context": "\\[m=\\dfrac{\\text{change in output (rise)}}{\\text{change in input (run)}}=\\dfrac{{\\Delta}y}{{\\Delta}x}=\\dfrac{y_2-y_1}{x_2-x_1}\\]\n\nwhere \\(x_1\\) and \\(x_2\\) are input values, \\(y_1\\) and \\(y_2\\) are output values.\n\n[Figure: how-to.png]\n How to: Given two points from a linear function, calculate and interpret the slope.",
+      "original": "Example \\(\\PageIndex{3}\\): Finding the Slope of a Linear Function\n\nIf \\(f(x)\\) is a linear function, and \\((3,−2)\\) and \\((8,1)\\) are points on the line, find the slope. Is this function increasing or decreasing?\n\nSolution\n\nThe coordinate pairs are \\((3,−2)\\) and \\((8,1)\\). To find the rate of change, we divide the change in output by the change in input.\n\n\\[m=\\dfrac{\\text{change in output (rise)}}{\\text{change in input (run)}}=\\dfrac{1-(-2)}{8-3}=\\dfrac{3}{5}\\]\n\nWe could also write the slope as \\(m=0.6\\). The function is increasing because \\(m>0\\).\n\nAnalysis\n\nAs noted earlier, the order in which we write the points does not matter when we compute the slope of the line as long as the first output value, or y-coordinate, used corresponds with the first input value, or x-coordinate, used.",
+      "prompt": "Example \\(\\PageIndex{3}\\): Finding the Slope of a Linear Function\n\nIf \\(f(x)\\) is a linear function, and \\((3,−2)\\) and \\((8,1)\\) are points on the line, find the slope. Is this function increasing or decreasing?\n\nSolution\n\nThe coordinate pairs are \\((3,−2)\\) and \\((8,1)\\). To find the rate of change, we divide the change in output by the change in input.\n\n\\[m=\\dfrac{\\text{change in output (rise)}}{\\text{change in input (run)}}=\\dfrac{1-(-2)}{8-3}=\\dfrac{3}{5}\\]\n\nWe could also write the slope as \\(m=0.6\\). The function is increasing because \\(m>0\\).\n\nAnalysis\n\nAs noted earlier, the order in which we write the points does not matter when we compute the slope of the line as long as the first output value, or y-coordinate, used corresponds with the first input value, or x-coordinate, used.",
+      "sourceAnswers": [],
+      "hasFigure": false,
+      "status": "draft",
+      "answerVerified": false,
+      "translationStatus": "pending",
+      "mappingStatus": "pending"
+    },
+    {
+      "ordinal": 7,
+      "sourceNumber": "",
+      "sourceAnchor": "",
+      "kind": "exercise-candidate",
+      "context": "\\[m=\\dfrac{\\text{change in output (rise)}}{\\text{change in input (run)}}=\\dfrac{{\\Delta}y}{{\\Delta}x}=\\dfrac{y_2-y_1}{x_2-x_1}\\]\n\nwhere \\(x_1\\) and \\(x_2\\) are input values, \\(y_1\\) and \\(y_2\\) are output values.\n\n[Figure: how-to.png]\n How to: Given two points from a linear function, calculate and interpret the slope.",
+      "original": "Try it! \\(\\PageIndex{1}\\)\n\nIf \\(f(x)\\) is a linear function, and \\((2, 3)\\) and \\((0,4)\\) are points on the line, find the slope. Is this function increasing or decreasing?\n\nAnswer\n\n\\(m=\\frac{4−3}{0−2} =\\frac{1}{-2}=-\\frac{1}{2}\\); decreasing because \\(m<0\\).",
+      "prompt": "Try it! \\(\\PageIndex{1}\\)\n\nIf \\(f(x)\\) is a linear function, and \\((2, 3)\\) and \\((0,4)\\) are points on the line, find the slope. Is this function increasing or decreasing?",
+      "sourceAnswers": [
+        "\\(m=\\frac{4−3}{0−2} =\\frac{1}{-2}=-\\frac{1}{2}\\); decreasing because \\(m<0\\)."
+      ],
+      "hasFigure": false,
+      "status": "draft",
+      "answerVerified": false,
+      "translationStatus": "pending",
+      "mappingStatus": "pending"
+    },
+    {
+      "ordinal": 8,
+      "sourceNumber": "",
+      "sourceAnchor": "",
+      "kind": "example-or-exercise",
+      "context": "\\[m=\\dfrac{\\text{change in output (rise)}}{\\text{change in input (run)}}=\\dfrac{{\\Delta}y}{{\\Delta}x}=\\dfrac{y_2-y_1}{x_2-x_1}\\]\n\nwhere \\(x_1\\) and \\(x_2\\) are input values, \\(y_1\\) and \\(y_2\\) are output values.\n\n[Figure: how-to.png]\n How to: Given two points from a linear function, calculate and interpret the slope.",
+      "original": "Example \\(\\PageIndex{4}\\): Finding the Population Change from a Linear Function\n\nThe population of a city increased from 23,400 to 27,800 between 2008 and 2012. Find the change of population per year if we assume the change was constant from 2008 to 2012.\n\nThe rate of change relates the change in population to the change in time. The population increased by \\(27,800−23,400=4400\\) people over the four-year time interval. To find the rate of change, divide the change in the number of people by the number of years.\n\n\\[\\dfrac{4,400 \\text{ people}}{4 \\text{ years}} =1,100 \\dfrac{\\text{people}}{\\text{year}}\\]\n\nSo the population increased by 1,100 people per year.\n\nAnalysis\n\nBecause we are told that the population increased, we would expect the slope to be positive. This positive slope we calculated is therefore reasonable.",
+      "prompt": "Example \\(\\PageIndex{4}\\): Finding the Population Change from a Linear Function\n\nThe population of a city increased from 23,400 to 27,800 between 2008 and 2012. Find the change of population per year if we assume the change was constant from 2008 to 2012.\n\nThe rate of change relates the change in population to the change in time. The population increased by \\(27,800−23,400=4400\\) people over the four-year time interval. To find the rate of change, divide the change in the number of people by the number of years.\n\n\\[\\dfrac{4,400 \\text{ people}}{4 \\text{ years}} =1,100 \\dfrac{\\text{people}}{\\text{year}}\\]\n\nSo the population increased by 1,100 people per year.\n\nAnalysis\n\nBecause we are told that the population increased, we would expect the slope to be positive. This positive slope we calculated is therefore reasonable.",
+      "sourceAnswers": [],
+      "hasFigure": false,
+      "status": "draft",
+      "answerVerified": false,
+      "translationStatus": "pending",
+      "mappingStatus": "pending"
+    },
+    {
+      "ordinal": 9,
+      "sourceNumber": "",
+      "sourceAnchor": "",
+      "kind": "exercise-candidate",
+      "context": "\\[m=\\dfrac{\\text{change in output (rise)}}{\\text{change in input (run)}}=\\dfrac{{\\Delta}y}{{\\Delta}x}=\\dfrac{y_2-y_1}{x_2-x_1}\\]\n\nwhere \\(x_1\\) and \\(x_2\\) are input values, \\(y_1\\) and \\(y_2\\) are output values.\n\n[Figure: how-to.png]\n How to: Given two points from a linear function, calculate and interpret the slope.",
+      "original": "Try it! \\(\\PageIndex{2}\\)\n\nThe population of a small town increased from 1,442 to 1,868 between 2009 and 2012. Find the change of population per year if we assume the change was constant from 2009 to 2012.\n\nAnswer\n\n\\(m=\\frac{1,868−1,442}{2,012−2,009} = \\frac{426}{3} =\\text{ 142 people per year}\\)",
+      "prompt": "Try it! \\(\\PageIndex{2}\\)\n\nThe population of a small town increased from 1,442 to 1,868 between 2009 and 2012. Find the change of population per year if we assume the change was constant from 2009 to 2012.",
+      "sourceAnswers": [
+        "\\(m=\\frac{1,868−1,442}{2,012−2,009} = \\frac{426}{3} =\\text{ 142 people per year}\\)"
+      ],
+      "hasFigure": false,
+      "status": "draft",
+      "answerVerified": false,
+      "translationStatus": "pending",
+      "mappingStatus": "pending"
+    },
+    {
+      "ordinal": 10,
+      "sourceNumber": "",
+      "sourceAnchor": "",
+      "kind": "example-or-exercise",
+      "context": "If we wanted to then rewrite the equation in slope-intercept form, we apply algebraic techniques.\n\n\\[\\begin{align*} y−1&=2(x−4) \\\\ y−1&=2x−8 &\\text{Distribute the 2.} \\\\ y&=2x−7 &\\text{Add 1 to each side.} \\end{align*}\\]\n\nBoth equations, \\(y−1=2(x−4)\\) and \\(y=2x–7\\), describe the same line. See Figure \\(\\PageIndex{7}\\).",
+      "original": "Example \\(\\PageIndex{5}\\): Writing Linear Equations Using a Point and the Slope\n\nWrite the point-slope form of an equation of a line with a slope of 3 that passes through the point \\((6,–1)\\). Then rewrite it in the slope-intercept form.\n\nSolution\n\nLet’s figure out what we know from the given information. The slope is 3, so \\(m=3\\). We also know one point, so we know \\(x_1=6\\) and \\(y_1 =−1\\). Now we can substitute these values into the general point-slope equation.\n\n\\[\\begin{align*} y-y_1&=m(x-x_1) \\\\ y−(−1)&=3(x−6) &\\text{Substitute known values.} \\\\ y+1&=3(x−6) &\\text{Distribute −1 to find point-slope form.} \\end{align*}\\]\n\nThen we use algebra to find the slope-intercept form.\n\n\\[\\begin{align*} y+1&=3(x−6) \\\\ y+1&=3x−18 &\\text{Distribute 3.} \\\\ y&=3x−19 &\\text{Simplify to slope-intercept form.} \\end{align*}\\]",
+      "prompt": "Example \\(\\PageIndex{5}\\): Writing Linear Equations Using a Point and the Slope\n\nWrite the point-slope form of an equation of a line with a slope of 3 that passes through the point \\((6,–1)\\). Then rewrite it in the slope-intercept form.\n\nSolution\n\nLet’s figure out what we know from the given information. The slope is 3, so \\(m=3\\). We also know one point, so we know \\(x_1=6\\) and \\(y_1 =−1\\). Now we can substitute these values into the general point-slope equation.\n\n\\[\\begin{align*} y-y_1&=m(x-x_1) \\\\ y−(−1)&=3(x−6) &\\text{Substitute known values.} \\\\ y+1&=3(x−6) &\\text{Distribute −1 to find point-slope form.} \\end{align*}\\]\n\nThen we use algebra to find the slope-intercept form.\n\n\\[\\begin{align*} y+1&=3(x−6) \\\\ y+1&=3x−18 &\\text{Distribute 3.} \\\\ y&=3x−19 &\\text{Simplify to slope-intercept form.} \\end{align*}\\]",
+      "sourceAnswers": [],
+      "hasFigure": false,
+      "status": "draft",
+      "answerVerified": false,
+      "translationStatus": "pending",
+      "mappingStatus": "pending"
+    },
+    {
+      "ordinal": 11,
+      "sourceNumber": "",
+      "sourceAnchor": "",
+      "kind": "exercise-candidate",
+      "context": "If we wanted to then rewrite the equation in slope-intercept form, we apply algebraic techniques.\n\n\\[\\begin{align*} y−1&=2(x−4) \\\\ y−1&=2x−8 &\\text{Distribute the 2.} \\\\ y&=2x−7 &\\text{Add 1 to each side.} \\end{align*}\\]\n\nBoth equations, \\(y−1=2(x−4)\\) and \\(y=2x–7\\), describe the same line. See Figure \\(\\PageIndex{7}\\).",
+      "original": "Try it! \\(\\PageIndex{3}\\)\n\nWrite the point-slope form of an equation of a line with a slope of –2 that passes through the point \\((–2, 2)\\). Then rewrite it in the slope-intercept form.\n\nAnswer\n\n\\(y−2=−2(x+2)\\) ; \\(y=−2x−2\\)",
+      "prompt": "Try it! \\(\\PageIndex{3}\\)\n\nWrite the point-slope form of an equation of a line with a slope of –2 that passes through the point \\((–2, 2)\\). Then rewrite it in the slope-intercept form.",
+      "sourceAnswers": [
+        "\\(y−2=−2(x+2)\\) ; \\(y=−2x−2\\)"
+      ],
+      "hasFigure": false,
+      "status": "draft",
+      "answerVerified": false,
+      "translationStatus": "pending",
+      "mappingStatus": "pending"
+    },
+    {
+      "ordinal": 12,
+      "sourceNumber": "",
+      "sourceAnchor": "",
+      "kind": "example-or-exercise",
+      "context": "As before, we can use algebra to rewrite the equation in the slope-intercept form.\n\n\\[\\begin{align*} y-1&=\\dfrac{1}{3}(x-0) \\\\ y-1&=\\dfrac{1}{3}x &\\text{Distribute the }\\dfrac{1}{3}. \\\\ y&=\\dfrac{1}{3}x+1 &\\text{Add 1 to each side.} \\end{align*}\\]\n\nBoth equations describe the line shown in Figure \\(\\PageIndex{8}\\).",
+      "original": "Example \\(\\PageIndex{6}\\): Writing Linear Equations Using Two Points\n\nWrite the point-slope form of an equation of a line that passes through the points \\((5,1)\\) and \\((8, 7)\\). Then rewrite it in the slope-intercept form.\n\nLet’s begin by finding the slope.\n\n\\[\\begin{align*} m&=\\dfrac{y_2-y_1}{x_2-x_1} \\\\ &=\\dfrac{7-1}{8-5} \\\\ &=\\dfrac{6}{3} \\\\ &= 2 \\end{align*}\\]\n\nSo \\(m=2\\). Next, we substitute the slope and the coordinates for one of the points into the general point-slope equation. We can choose either point, but we will use \\((5,1)\\).\n\n\\[\\begin{align*} y-y_1&=m(x-x_1) \\\\ y-1&=2(x-5) \\end{align*}\\]\n\nThe point-slope equation of the line is \\(y_2–1=2(x_2–5)\\). To rewrite the equation in slope-intercept form, we use algebra.\n\n\\[\\begin{align*} y-1&=2(x-5) \\\\ y-1&=2x-10 \\\\ y&=2x-9 \\end{align*}\\]\n\nThe slope-intercept equation of the line is \\(y=2x–9\\).",
+      "prompt": "Example \\(\\PageIndex{6}\\): Writing Linear Equations Using Two Points\n\nWrite the point-slope form of an equation of a line that passes through the points \\((5,1)\\) and \\((8, 7)\\). Then rewrite it in the slope-intercept form.\n\nLet’s begin by finding the slope.\n\n\\[\\begin{align*} m&=\\dfrac{y_2-y_1}{x_2-x_1} \\\\ &=\\dfrac{7-1}{8-5} \\\\ &=\\dfrac{6}{3} \\\\ &= 2 \\end{align*}\\]\n\nSo \\(m=2\\). Next, we substitute the slope and the coordinates for one of the points into the general point-slope equation. We can choose either point, but we will use \\((5,1)\\).\n\n\\[\\begin{align*} y-y_1&=m(x-x_1) \\\\ y-1&=2(x-5) \\end{align*}\\]\n\nThe point-slope equation of the line is \\(y_2–1=2(x_2–5)\\). To rewrite the equation in slope-intercept form, we use algebra.\n\n\\[\\begin{align*} y-1&=2(x-5) \\\\ y-1&=2x-10 \\\\ y&=2x-9 \\end{align*}\\]\n\nThe slope-intercept equation of the line is \\(y=2x–9\\).",
+      "sourceAnswers": [],
+      "hasFigure": false,
+      "status": "draft",
+      "answerVerified": false,
+      "translationStatus": "pending",
+      "mappingStatus": "pending"
+    },
+    {
+      "ordinal": 13,
+      "sourceNumber": "",
+      "sourceAnchor": "",
+      "kind": "exercise-candidate",
+      "context": "As before, we can use algebra to rewrite the equation in the slope-intercept form.\n\n\\[\\begin{align*} y-1&=\\dfrac{1}{3}(x-0) \\\\ y-1&=\\dfrac{1}{3}x &\\text{Distribute the }\\dfrac{1}{3}. \\\\ y&=\\dfrac{1}{3}x+1 &\\text{Add 1 to each side.} \\end{align*}\\]\n\nBoth equations describe the line shown in Figure \\(\\PageIndex{8}\\).",
+      "original": "Try It! \\(\\PageIndex{4}\\)\n\nWrite the point-slope form of an equation of a line that passes through the points \\((–1,3)\\) and \\((0,0)\\). Then rewrite it in the slope-intercept form.\n\nAnswer\n\n\\(y−0=−3(x−0)\\); \\(y=−3x\\).",
+      "prompt": "Try It! \\(\\PageIndex{4}\\)\n\nWrite the point-slope form of an equation of a line that passes through the points \\((–1,3)\\) and \\((0,0)\\). Then rewrite it in the slope-intercept form.",
+      "sourceAnswers": [
+        "\\(y−0=−3(x−0)\\); \\(y=−3x\\)."
+      ],
+      "hasFigure": false,
+      "status": "draft",
+      "answerVerified": false,
+      "translationStatus": "pending",
+      "mappingStatus": "pending"
+    },
+    {
+      "ordinal": 14,
+      "sourceNumber": "1",
+      "sourceAnchor": "",
+      "kind": "exercise-candidate",
+      "context": "If we wanted to find the slope-intercept form without first writing the point-slope form, we could have recognized that the line crosses the y-axis when the output value is 7. Therefore, \\(b=7\\). We now have the initial value \\(b\\) and the slope \\(m\\) so we can substitute \\(m\\) and \\(b\\) into the slope-intercept form of a line.\n\nSo the function is \\(f(x)=−\\frac{3}{4}x+7\\), and the linear equation would be \\(y=−\\frac{3}{4}x+7\\).\n\n[Figure: how-to.png]\n How to: Given the graph of a linear function, write an equation to represent the function.",
+      "original": "1. Identify two points on the line.",
+      "prompt": "1. Identify two points on the line.",
+      "sourceAnswers": [],
+      "hasFigure": false,
+      "status": "draft",
+      "answerVerified": false,
+      "translationStatus": "pending",
+      "mappingStatus": "pending"
+    },
+    {
+      "ordinal": 15,
+      "sourceNumber": "2",
+      "sourceAnchor": "",
+      "kind": "exercise-candidate",
+      "context": "If we wanted to find the slope-intercept form without first writing the point-slope form, we could have recognized that the line crosses the y-axis when the output value is 7. Therefore, \\(b=7\\). We now have the initial value \\(b\\) and the slope \\(m\\) so we can substitute \\(m\\) and \\(b\\) into the slope-intercept form of a line.\n\nSo the function is \\(f(x)=−\\frac{3}{4}x+7\\), and the linear equation would be \\(y=−\\frac{3}{4}x+7\\).\n\n[Figure: how-to.png]\n How to: Given the graph of a linear function, write an equation to represent the function.",
+      "original": "2. Use the two points to calculate the slope.",
+      "prompt": "2. Use the two points to calculate the slope.",
+      "sourceAnswers": [],
+      "hasFigure": false,
+      "status": "draft",
+      "answerVerified": false,
+      "translationStatus": "pending",
+      "mappingStatus": "pending"
+    },
+    {
+      "ordinal": 16,
+      "sourceNumber": "3",
+      "sourceAnchor": "",
+      "kind": "exercise-candidate",
+      "context": "If we wanted to find the slope-intercept form without first writing the point-slope form, we could have recognized that the line crosses the y-axis when the output value is 7. Therefore, \\(b=7\\). We now have the initial value \\(b\\) and the slope \\(m\\) so we can substitute \\(m\\) and \\(b\\) into the slope-intercept form of a line.\n\nSo the function is \\(f(x)=−\\frac{3}{4}x+7\\), and the linear equation would be \\(y=−\\frac{3}{4}x+7\\).\n\n[Figure: how-to.png]\n How to: Given the graph of a linear function, write an equation to represent the function.",
+      "original": "3. Determine where the line crosses the y-axis to identify the y-intercept by visual inspection.",
+      "prompt": "3. Determine where the line crosses the y-axis to identify the y-intercept by visual inspection.",
+      "sourceAnswers": [],
+      "hasFigure": false,
+      "status": "draft",
+      "answerVerified": false,
+      "translationStatus": "pending",
+      "mappingStatus": "pending"
+    },
+    {
+      "ordinal": 17,
+      "sourceNumber": "4",
+      "sourceAnchor": "",
+      "kind": "exercise-candidate",
+      "context": "If we wanted to find the slope-intercept form without first writing the point-slope form, we could have recognized that the line crosses the y-axis when the output value is 7. Therefore, \\(b=7\\). We now have the initial value \\(b\\) and the slope \\(m\\) so we can substitute \\(m\\) and \\(b\\) into the slope-intercept form of a line.\n\nSo the function is \\(f(x)=−\\frac{3}{4}x+7\\), and the linear equation would be \\(y=−\\frac{3}{4}x+7\\).\n\n[Figure: how-to.png]\n How to: Given the graph of a linear function, write an equation to represent the function.",
+      "original": "4. Substitute the slope and y-intercept into the slope-intercept form of a line equation.",
+      "prompt": "4. Substitute the slope and y-intercept into the slope-intercept form of a line equation.",
+      "sourceAnswers": [],
+      "hasFigure": false,
+      "status": "draft",
+      "answerVerified": false,
+      "translationStatus": "pending",
+      "mappingStatus": "pending"
+    },
+    {
+      "ordinal": 18,
+      "sourceNumber": "",
+      "sourceAnchor": "",
+      "kind": "example-or-exercise",
+      "context": "If we wanted to find the slope-intercept form without first writing the point-slope form, we could have recognized that the line crosses the y-axis when the output value is 7. Therefore, \\(b=7\\). We now have the initial value \\(b\\) and the slope \\(m\\) so we can substitute \\(m\\) and \\(b\\) into the slope-intercept form of a line.\n\nSo the function is \\(f(x)=−\\frac{3}{4}x+7\\), and the linear equation would be \\(y=−\\frac{3}{4}x+7\\).\n\n[Figure: how-to.png]\n How to: Given the graph of a linear function, write an equation to represent the function.",
+      "original": "Example \\(\\PageIndex{7}\\): Writing an Equation for a Linear Function\n\nWrite an equation for a linear function given a graph of \\(f\\) shown in Figure \\(\\PageIndex{11}\\).\n\n[Figure: Graph of an increasing function with points at (-3, 0) and (0, 1).]\n\nFigure \\(\\PageIndex{11}\\)\n\nSolution\n\nIdentify two points on the line, such as \\((0, 2)\\) and \\((−2,−4)\\). Use the points to calculate the slope.\n\n\\[\\begin{align*} m&=\\dfrac{y_2-y_1}{x_2-x_1} \\\\ &=\\dfrac{4-2}{-2-0} \\\\ &=\\dfrac{-6}{-2} \\\\ &=3 \\end{align*}\\]\n\nSubstitute the slope and the coordinates of one of the points into the point-slope form.\n\n\\[\\begin{align*} y-y_1&=m(x-x_1) \\\\ y-(-4)&=3(x-(-2)) \\\\ y+4 &= 3(x+2)\\end{align*}\\]\n\nWe can use algebra to rewrite the equation in the slope-intercept form.\n\n\\[\\begin{align*} y+4&= 3(x+2) \\\\ y+4&= 3x+6 \\\\ y & = 3x + 2 \\end{align*}\\]\n\nAnalysis\n\nThis makes sense because we can see from Figure \\(\\PageIndex{12}\\) that the line crosses the y-axis at the point \\((0, 2)\\), which is the y-intercept, so \\(b=2\\).\n\n[Figure: alt]\n\nFigure \\(\\PageIndex{12}\\): Graph of an increasing line with points at \\((0, 2)\\) and \\((-2, -4)\\).",
+      "prompt": "Example \\(\\PageIndex{7}\\): Writing an Equation for a Linear Function\n\nWrite an equation for a linear function given a graph of \\(f\\) shown in Figure \\(\\PageIndex{11}\\).\n\n[Figure: Graph of an increasing function with points at (-3, 0) and (0, 1).]\n\nFigure \\(\\PageIndex{11}\\)\n\nSolution\n\nIdentify two points on the line, such as \\((0, 2)\\) and \\((−2,−4)\\). Use the points to calculate the slope.\n\n\\[\\begin{align*} m&=\\dfrac{y_2-y_1}{x_2-x_1} \\\\ &=\\dfrac{4-2}{-2-0} \\\\ &=\\dfrac{-6}{-2} \\\\ &=3 \\end{align*}\\]\n\nSubstitute the slope and the coordinates of one of the points into the point-slope form.\n\n\\[\\begin{align*} y-y_1&=m(x-x_1) \\\\ y-(-4)&=3(x-(-2)) \\\\ y+4 &= 3(x+2)\\end{align*}\\]\n\nWe can use algebra to rewrite the equation in the slope-intercept form.\n\n\\[\\begin{align*} y+4&= 3(x+2) \\\\ y+4&= 3x+6 \\\\ y & = 3x + 2 \\end{align*}\\]\n\nAnalysis\n\nThis makes sense because we can see from Figure \\(\\PageIndex{12}\\) that the line crosses the y-axis at the point \\((0, 2)\\), which is the y-intercept, so \\(b=2\\).\n\n[Figure: alt]\n\nFigure \\(\\PageIndex{12}\\): Graph of an increasing line with points at \\((0, 2)\\) and \\((-2, -4)\\).",
+      "sourceAnswers": [],
+      "hasFigure": true,
+      "status": "draft",
+      "answerVerified": false,
+      "translationStatus": "pending",
+      "mappingStatus": "pending"
+    },
+    {
+      "ordinal": 19,
+      "sourceNumber": "",
+      "sourceAnchor": "",
+      "kind": "example-or-exercise",
+      "context": "If we wanted to find the slope-intercept form without first writing the point-slope form, we could have recognized that the line crosses the y-axis when the output value is 7. Therefore, \\(b=7\\). We now have the initial value \\(b\\) and the slope \\(m\\) so we can substitute \\(m\\) and \\(b\\) into the slope-intercept form of a line.\n\nSo the function is \\(f(x)=−\\frac{3}{4}x+7\\), and the linear equation would be \\(y=−\\frac{3}{4}x+7\\).\n\n[Figure: how-to.png]\n How to: Given the graph of a linear function, write an equation to represent the function.",
+      "original": "Example \\(\\PageIndex{8}\\): Writing an Equation for a Linear Cost Function\n\nSuppose Ben starts a company in which he incurs a fixed cost of $1,250 per month for the overhead, which includes his office rent. His production costs are $37.50 per item. Write a linear function \\(C\\) where \\(C(x)\\) is the cost for \\(x\\) items produced in a given month.\n\nSolution\n\nThe fixed cost is present every month, $1,250. The costs that can vary include the cost to produce each item, which is $37.50 for Ben. The variable cost, called the marginal cost, is represented by 37.5. The cost Ben incurs is the sum of these two costs, represented by \\(C(x)=1250+37.5x\\).\n\nAnalysis\n\nIf Ben produces 100 items in a month, his monthly cost is represented by\n\n\\[\\begin{align*} C(100)&=1250+37.5(100) \\\\ &=5000 \\end{align*}\\]\n\nSo his monthly cost would be $5,000.",
+      "prompt": "Example \\(\\PageIndex{8}\\): Writing an Equation for a Linear Cost Function\n\nSuppose Ben starts a company in which he incurs a fixed cost of $1,250 per month for the overhead, which includes his office rent. His production costs are $37.50 per item. Write a linear function \\(C\\) where \\(C(x)\\) is the cost for \\(x\\) items produced in a given month.\n\nSolution\n\nThe fixed cost is present every month, $1,250. The costs that can vary include the cost to produce each item, which is $37.50 for Ben. The variable cost, called the marginal cost, is represented by 37.5. The cost Ben incurs is the sum of these two costs, represented by \\(C(x)=1250+37.5x\\).\n\nAnalysis\n\nIf Ben produces 100 items in a month, his monthly cost is represented by\n\n\\[\\begin{align*} C(100)&=1250+37.5(100) \\\\ &=5000 \\end{align*}\\]\n\nSo his monthly cost would be $5,000.",
+      "sourceAnswers": [],
+      "hasFigure": false,
+      "status": "draft",
+      "answerVerified": false,
+      "translationStatus": "pending",
+      "mappingStatus": "pending"
+    },
+    {
+      "ordinal": 20,
+      "sourceNumber": "",
+      "sourceAnchor": "",
+      "kind": "example-or-exercise",
+      "context": "If we wanted to find the slope-intercept form without first writing the point-slope form, we could have recognized that the line crosses the y-axis when the output value is 7. Therefore, \\(b=7\\). We now have the initial value \\(b\\) and the slope \\(m\\) so we can substitute \\(m\\) and \\(b\\) into the slope-intercept form of a line.\n\nSo the function is \\(f(x)=−\\frac{3}{4}x+7\\), and the linear equation would be \\(y=−\\frac{3}{4}x+7\\).\n\n[Figure: how-to.png]\n How to: Given the graph of a linear function, write an equation to represent the function.",
+      "original": "Example \\(\\PageIndex{9}\\): Writing an Equation for a Linear Function Given Two Points\n\nIf \\(f\\) is a linear function, with \\(f(3)=−2\\), and \\(f(8)=1\\), find an equation for the function in slope-intercept form.\n\nSolution\n\nWe can write the given points using coordinates.\n\n\\[\\begin{align*} f(3)&= -2{\\rightarrow}(3,2) \\\\ f(8)&=1{\\rightarrow}(8,1) \\end{align*}\\]\n\nWe can then use the points to calculate the slope.\n\n\\[\\begin{align*} m&=\\dfrac{y_2-y_1}{x_2-x_1} \\\\ &=\\dfrac{1-(-2)}{8-3} \\\\ &=\\dfrac{3}{5} \\end{align*}\\]\n\nSubstitute the slope and the coordinates of one of the points into the point-slope form.\n\n\\[\\begin{align*} y-y_1&=m(x-x_1) \\\\ y-(-2)&=\\dfrac{3}{5}(x-3) \\end{align*}\\]\n\nWe can use algebra to rewrite the equation in the slope-intercept form.\n\n\\[\\begin{align*} y+2&=\\dfrac{3}{5}(x-3) \\\\ y+2&=\\dfrac{3}{5}x-\\dfrac{9}{5} \\\\ y&=\\dfrac{3}{5}x-\\dfrac{19}{5} \\end{align*}\\]",
+      "prompt": "Example \\(\\PageIndex{9}\\): Writing an Equation for a Linear Function Given Two Points\n\nIf \\(f\\) is a linear function, with \\(f(3)=−2\\), and \\(f(8)=1\\), find an equation for the function in slope-intercept form.\n\nSolution\n\nWe can write the given points using coordinates.\n\n\\[\\begin{align*} f(3)&= -2{\\rightarrow}(3,2) \\\\ f(8)&=1{\\rightarrow}(8,1) \\end{align*}\\]\n\nWe can then use the points to calculate the slope.\n\n\\[\\begin{align*} m&=\\dfrac{y_2-y_1}{x_2-x_1} \\\\ &=\\dfrac{1-(-2)}{8-3} \\\\ &=\\dfrac{3}{5} \\end{align*}\\]\n\nSubstitute the slope and the coordinates of one of the points into the point-slope form.\n\n\\[\\begin{align*} y-y_1&=m(x-x_1) \\\\ y-(-2)&=\\dfrac{3}{5}(x-3) \\end{align*}\\]\n\nWe can use algebra to rewrite the equation in the slope-intercept form.\n\n\\[\\begin{align*} y+2&=\\dfrac{3}{5}(x-3) \\\\ y+2&=\\dfrac{3}{5}x-\\dfrac{9}{5} \\\\ y&=\\dfrac{3}{5}x-\\dfrac{19}{5} \\end{align*}\\]",
+      "sourceAnswers": [],
+      "hasFigure": false,
+      "status": "draft",
+      "answerVerified": false,
+      "translationStatus": "pending",
+      "mappingStatus": "pending"
+    },
+    {
+      "ordinal": 21,
+      "sourceNumber": "",
+      "sourceAnchor": "",
+      "kind": "exercise-candidate",
+      "context": "If we wanted to find the slope-intercept form without first writing the point-slope form, we could have recognized that the line crosses the y-axis when the output value is 7. Therefore, \\(b=7\\). We now have the initial value \\(b\\) and the slope \\(m\\) so we can substitute \\(m\\) and \\(b\\) into the slope-intercept form of a line.\n\nSo the function is \\(f(x)=−\\frac{3}{4}x+7\\), and the linear equation would be \\(y=−\\frac{3}{4}x+7\\).\n\n[Figure: how-to.png]\n How to: Given the graph of a linear function, write an equation to represent the function.",
+      "original": "Try It! \\(\\PageIndex{5}\\)\n\nIf \\(f(x)\\) is a linear function, with \\(f(2)=–11\\), and \\(f(4)=−25\\), find an equation for the function in slope-intercept form.\n\nAnswer\n\n\\(y=−7x+3\\)",
+      "prompt": "Try It! \\(\\PageIndex{5}\\)\n\nIf \\(f(x)\\) is a linear function, with \\(f(2)=–11\\), and \\(f(4)=−25\\), find an equation for the function in slope-intercept form.",
+      "sourceAnswers": [
+        "\\(y=−7x+3\\)"
+      ],
+      "hasFigure": false,
+      "status": "draft",
+      "answerVerified": false,
+      "translationStatus": "pending",
+      "mappingStatus": "pending"
+    },
+    {
+      "ordinal": 22,
+      "sourceNumber": "1",
+      "sourceAnchor": "",
+      "kind": "exercise-candidate",
+      "context": "Modeling Real-World Problems with Linear Functions\n\nIn the real world, problems are not always explicitly stated in terms of a function or represented with a graph. Fortunately, we can analyze the problem by first representing it as a linear function and then interpreting the components of the function. As long as we know, or can figure out, the initial value and the rate of change of a linear function, we can solve many different kinds of real-world problems.\n\n[Figure: how-to.png]\n How to: Given a linear function \\(f\\) and the initial value and rate of change, evaluate \\( f(c) \\).",
+      "original": "1. Determine the initial value and the rate of change (slope).",
+      "prompt": "1. Determine the initial value and the rate of change (slope).",
+      "sourceAnswers": [],
+      "hasFigure": false,
+      "status": "draft",
+      "answerVerified": false,
+      "translationStatus": "pending",
+      "mappingStatus": "pending"
+    },
+    {
+      "ordinal": 23,
+      "sourceNumber": "2",
+      "sourceAnchor": "",
+      "kind": "exercise-candidate",
+      "context": "Modeling Real-World Problems with Linear Functions\n\nIn the real world, problems are not always explicitly stated in terms of a function or represented with a graph. Fortunately, we can analyze the problem by first representing it as a linear function and then interpreting the components of the function. As long as we know, or can figure out, the initial value and the rate of change of a linear function, we can solve many different kinds of real-world problems.\n\n[Figure: how-to.png]\n How to: Given a linear function \\(f\\) and the initial value and rate of change, evaluate \\( f(c) \\).",
+      "original": "2. Substitute the values into \\(f(x)=mx+b\\).",
+      "prompt": "2. Substitute the values into \\(f(x)=mx+b\\).",
+      "sourceAnswers": [],
+      "hasFigure": false,
+      "status": "draft",
+      "answerVerified": false,
+      "translationStatus": "pending",
+      "mappingStatus": "pending"
+    },
+    {
+      "ordinal": 24,
+      "sourceNumber": "3",
+      "sourceAnchor": "",
+      "kind": "exercise-candidate",
+      "context": "Modeling Real-World Problems with Linear Functions\n\nIn the real world, problems are not always explicitly stated in terms of a function or represented with a graph. Fortunately, we can analyze the problem by first representing it as a linear function and then interpreting the components of the function. As long as we know, or can figure out, the initial value and the rate of change of a linear function, we can solve many different kinds of real-world problems.\n\n[Figure: how-to.png]\n How to: Given a linear function \\(f\\) and the initial value and rate of change, evaluate \\( f(c) \\).",
+      "original": "3. Evaluate the function at \\(x=c\\).",
+      "prompt": "3. Evaluate the function at \\(x=c\\).",
+      "sourceAnswers": [],
+      "hasFigure": false,
+      "status": "draft",
+      "answerVerified": false,
+      "translationStatus": "pending",
+      "mappingStatus": "pending"
+    },
+    {
+      "ordinal": 25,
+      "sourceNumber": "",
+      "sourceAnchor": "",
+      "kind": "example-or-exercise",
+      "context": "Modeling Real-World Problems with Linear Functions\n\nIn the real world, problems are not always explicitly stated in terms of a function or represented with a graph. Fortunately, we can analyze the problem by first representing it as a linear function and then interpreting the components of the function. As long as we know, or can figure out, the initial value and the rate of change of a linear function, we can solve many different kinds of real-world problems.\n\n[Figure: how-to.png]\n How to: Given a linear function \\(f\\) and the initial value and rate of change, evaluate \\( f(c) \\).",
+      "original": "Example \\(\\PageIndex{10}\\): Using a Linear Function to Determine the Number of Songs in a Music Collection\n\nMarcus currently has 200 songs in his music collection. Every month, he adds 15 new songs. Write a formula for the number of songs, \\(N\\), in his collection as a function of time, \\(t\\), the number of months. How many songs will he own in a year?\n\nSolution\n\nThe initial value for this function is 200 because he currently owns 200 songs, so \\(N(0)=200\\), which means that \\(b=200\\).\n\nThe number of songs increases by 15 songs per month, so the rate of change is 15 songs per month. Therefore we know that \\(m=15\\). We can substitute the initial value and the rate of change into the slope-intercept form of a line.\n\n[Figure: alt]\n\nFigure \\(\\PageIndex{13}\\)\n\nWe can write the formula \\(N(t)=15t+200\\).\n\nWith this formula, we can then predict how many songs Marcus will have in 1 year (12 months). In other words, we can evaluate the function at \\(t=12\\).\n\n\\[\\begin{align*} N(12)&=15(12)+200 \\\\ &=180+200 \\\\ &= 380 \\end{align*}\\]\n\nMarcus will have 380 songs in 12 months.\n\nAnalysis\n\nNotice that \\(N\\) is an increasing linear function. As the input (the number of months) increases, the output (number of songs) increases as well.",
+      "prompt": "Example \\(\\PageIndex{10}\\): Using a Linear Function to Determine the Number of Songs in a Music Collection\n\nMarcus currently has 200 songs in his music collection. Every month, he adds 15 new songs. Write a formula for the number of songs, \\(N\\), in his collection as a function of time, \\(t\\), the number of months. How many songs will he own in a year?\n\nSolution\n\nThe initial value for this function is 200 because he currently owns 200 songs, so \\(N(0)=200\\), which means that \\(b=200\\).\n\nThe number of songs increases by 15 songs per month, so the rate of change is 15 songs per month. Therefore we know that \\(m=15\\). We can substitute the initial value and the rate of change into the slope-intercept form of a line.\n\n[Figure: alt]\n\nFigure \\(\\PageIndex{13}\\)\n\nWe can write the formula \\(N(t)=15t+200\\).\n\nWith this formula, we can then predict how many songs Marcus will have in 1 year (12 months). In other words, we can evaluate the function at \\(t=12\\).\n\n\\[\\begin{align*} N(12)&=15(12)+200 \\\\ &=180+200 \\\\ &= 380 \\end{align*}\\]\n\nMarcus will have 380 songs in 12 months.\n\nAnalysis\n\nNotice that \\(N\\) is an increasing linear function. As the input (the number of months) increases, the output (number of songs) increases as well.",
+      "sourceAnswers": [],
+      "hasFigure": true,
+      "status": "draft",
+      "answerVerified": false,
+      "translationStatus": "pending",
+      "mappingStatus": "pending"
+    },
+    {
+      "ordinal": 26,
+      "sourceNumber": "",
+      "sourceAnchor": "",
+      "kind": "example-or-exercise",
+      "context": "Modeling Real-World Problems with Linear Functions\n\nIn the real world, problems are not always explicitly stated in terms of a function or represented with a graph. Fortunately, we can analyze the problem by first representing it as a linear function and then interpreting the components of the function. As long as we know, or can figure out, the initial value and the rate of change of a linear function, we can solve many different kinds of real-world problems.\n\n[Figure: how-to.png]\n How to: Given a linear function \\(f\\) and the initial value and rate of change, evaluate \\( f(c) \\).",
+      "original": "Example \\(\\PageIndex{11}\\): Using a Linear Function to Calculate Salary Plus Commission \n\nWorking as an insurance salesperson, Ilya earns a base salary plus a commission on each new policy. Therefore, Ilya’s weekly income, I,depends on the number of new policies, \\(n\\), he sells during the week. Last week he sold 3 new policies, and earned $760 for the week. The week before, he sold 5 new policies and earned $920. Find an equation for \\(I(n)\\), and interpret the meaning of the components of the equation.\n\nSolution\n\nThe given information gives us two input-output pairs: \\((3,760)\\) and \\((5,920)\\). We start by finding the rate of change.\n\n\\[\\begin{align*} m&=\\dfrac{920-760}{5-3} \\\\ &=\\dfrac{$160}{2 \\text{ policies}} \\\\ &=$80 \\text{ per policy} \\end{align*}\\]\n\nKeeping track of units can help us interpret this quantity. Income increased by $160 when the number of policies increased by 2, so the rate of change is $80 per policy. Therefore, Ilya earns a commission of $80 for each policy sold during the week.\n\nWe can then solve for the initial value.\n\n\\[\\begin{align*} I(n)&=80n+b \\\\ 760&=80(3)+b \\text{ when } n=3, I(3)=760 \\\\ 760-80(3)&=b \\\\ 520 & =b \\end{align*}\\]\n\nThe value of \\(b\\) is the starting value for the function and represents Ilya’s income when \\(n=0\\), or when no new policies are sold. We can interpret this as Ilya’s base salary for the week, which does not depend upon the number of policies sold.\n\nWe can now write the final equation.\n\n\\[I(n)=80n+520 \\nonumber\\]\n\nOur final interpretation is that Ilya’s base salary is $520 per week and he earns an additional $80 commission for each policy sold.",
+      "prompt": "Example \\(\\PageIndex{11}\\): Using a Linear Function to Calculate Salary Plus Commission \n\nWorking as an insurance salesperson, Ilya earns a base salary plus a commission on each new policy. Therefore, Ilya’s weekly income, I,depends on the number of new policies, \\(n\\), he sells during the week. Last week he sold 3 new policies, and earned $760 for the week. The week before, he sold 5 new policies and earned $920. Find an equation for \\(I(n)\\), and interpret the meaning of the components of the equation.\n\nSolution\n\nThe given information gives us two input-output pairs: \\((3,760)\\) and \\((5,920)\\). We start by finding the rate of change.\n\n\\[\\begin{align*} m&=\\dfrac{920-760}{5-3} \\\\ &=\\dfrac{$160}{2 \\text{ policies}} \\\\ &=$80 \\text{ per policy} \\end{align*}\\]\n\nKeeping track of units can help us interpret this quantity. Income increased by $160 when the number of policies increased by 2, so the rate of change is $80 per policy. Therefore, Ilya earns a commission of $80 for each policy sold during the week.\n\nWe can then solve for the initial value.\n\n\\[\\begin{align*} I(n)&=80n+b \\\\ 760&=80(3)+b \\text{ when } n=3, I(3)=760 \\\\ 760-80(3)&=b \\\\ 520 & =b \\end{align*}\\]\n\nThe value of \\(b\\) is the starting value for the function and represents Ilya’s income when \\(n=0\\), or when no new policies are sold. We can interpret this as Ilya’s base salary for the week, which does not depend upon the number of policies sold.\n\nWe can now write the final equation.\n\n\\[I(n)=80n+520 \\nonumber\\]\n\nOur final interpretation is that Ilya’s base salary is $520 per week and he earns an additional $80 commission for each policy sold.",
+      "sourceAnswers": [],
+      "hasFigure": false,
+      "status": "draft",
+      "answerVerified": false,
+      "translationStatus": "pending",
+      "mappingStatus": "pending"
+    },
+    {
+      "ordinal": 27,
+      "sourceNumber": "",
+      "sourceAnchor": "",
+      "kind": "example-or-exercise",
+      "context": "Modeling Real-World Problems with Linear Functions\n\nIn the real world, problems are not always explicitly stated in terms of a function or represented with a graph. Fortunately, we can analyze the problem by first representing it as a linear function and then interpreting the components of the function. As long as we know, or can figure out, the initial value and the rate of change of a linear function, we can solve many different kinds of real-world problems.\n\n[Figure: how-to.png]\n How to: Given a linear function \\(f\\) and the initial value and rate of change, evaluate \\( f(c) \\).",
+      "original": "Example \\(\\PageIndex{12}\\): Using Tabular Form to Write an Equation for a Linear Function  \n\nTable \\(\\PageIndex{1}\\) relates the number of rats in a population to time, in weeks. Use the table to write a linear equation.\n\n    Table \\(\\PageIndex{1}\\)\n\n            w, number of weeks\t\n            0\t\n            2\t\n            4\t\n            6\t\n\n            P(w), number of rats\t\n            1000\t\n            1080\t\n            1160\t\n            1240\t\n\nSolution\n\nWe can see from the table that the initial value for the number of rats is 1000, so \\(b=1000\\).\n\nRather than solving for \\(m\\), we can tell from looking at the table that the population increases by 80 for every 2 weeks that pass. This means that the rate of change is 80 rats per 2 weeks, which can be simplified to 40 rats per week.\n\n\\[P(w)=40w+1000 \\nonumber\\]\n\nIf we did not notice the rate of change from the table we could still solve for the slope using any two points from the table. For example, using \\((2,1080)\\) and \\((6,1240)\\)\n\n\\[\\begin{align*} m&=\\dfrac{1240-1080}{6-2} \\\\ &=\\dfrac{160}{4} \\\\ &= 40\\end{align*}\\]",
+      "prompt": "Example \\(\\PageIndex{12}\\): Using Tabular Form to Write an Equation for a Linear Function  \n\nTable \\(\\PageIndex{1}\\) relates the number of rats in a population to time, in weeks. Use the table to write a linear equation.\n\n    Table \\(\\PageIndex{1}\\)\n\n            w, number of weeks\t\n            0\t\n            2\t\n            4\t\n            6\t\n\n            P(w), number of rats\t\n            1000\t\n            1080\t\n            1160\t\n            1240\t\n\nSolution\n\nWe can see from the table that the initial value for the number of rats is 1000, so \\(b=1000\\).\n\nRather than solving for \\(m\\), we can tell from looking at the table that the population increases by 80 for every 2 weeks that pass. This means that the rate of change is 80 rats per 2 weeks, which can be simplified to 40 rats per week.\n\n\\[P(w)=40w+1000 \\nonumber\\]\n\nIf we did not notice the rate of change from the table we could still solve for the slope using any two points from the table. For example, using \\((2,1080)\\) and \\((6,1240)\\)\n\n\\[\\begin{align*} m&=\\dfrac{1240-1080}{6-2} \\\\ &=\\dfrac{160}{4} \\\\ &= 40\\end{align*}\\]",
+      "sourceAnswers": [],
+      "hasFigure": false,
+      "status": "draft",
+      "answerVerified": false,
+      "translationStatus": "pending",
+      "mappingStatus": "pending"
+    },
+    {
+      "ordinal": 28,
+      "sourceNumber": "",
+      "sourceAnchor": "",
+      "kind": "exercise-candidate",
+      "context": "In the real world, problems are not always explicitly stated in terms of a function or represented with a graph. Fortunately, we can analyze the problem by first representing it as a linear function and then interpreting the components of the function. As long as we know, or can figure out, the initial value and the rate of change of a linear function, we can solve many different kinds of real-world problems.\n\n[Figure: how-to.png]\n How to: Given a linear function \\(f\\) and the initial value and rate of change, evaluate \\( f(c) \\).\n\n[Figure: QA.png]\n Is the initial value always provided in a table of values?",
+      "original": "[Figure: try-it.png]\n Try It \\(\\PageIndex{6}\\)\n\nA new plant food was introduced to a young tree to test its effect on the height of the tree. Table \\(\\PageIndex{2}\\) shows the height of the tree, in feet, \\(x\\) months since the measurements began. Write a linear function, \\(H(x)\\), where \\(x\\) is the number of months since the start of the experiment.\n\n    Table \\(\\PageIndex{2}\\)\n\n            \\(x\\)\t\n            0\t\n            2\t\n            4\t\n            8\t\n            12\t\n\n            \\(H(x)\\)\t\n            12.5\t\n            13.5\t\n            14.5\t\n            16.5\t\n            18.5\t\n\nAnswer\n\n\\(H(x)=0.5x+12.5\\)",
+      "prompt": "[Figure: try-it.png]\n Try It \\(\\PageIndex{6}\\)\n\nA new plant food was introduced to a young tree to test its effect on the height of the tree. Table \\(\\PageIndex{2}\\) shows the height of the tree, in feet, \\(x\\) months since the measurements began. Write a linear function, \\(H(x)\\), where \\(x\\) is the number of months since the start of the experiment.\n\n    Table \\(\\PageIndex{2}\\)\n\n            \\(x\\)\t\n            0\t\n            2\t\n            4\t\n            8\t\n            12\t\n\n            \\(H(x)\\)\t\n            12.5\t\n            13.5\t\n            14.5\t\n            16.5\t\n            18.5",
+      "sourceAnswers": [
+        "\\(H(x)=0.5x+12.5\\)"
+      ],
+      "hasFigure": true,
+      "status": "draft",
+      "answerVerified": false,
+      "translationStatus": "pending",
+      "mappingStatus": "pending"
+    }
+  ],
+  "license": "CC BY 4.0",
+  "licenseEvidence": "This page titled 4.1: Linear Functions was last modified on Thu, 26 Dec 2024 22:30:42 GMT and is shared under a CC BY  4.0  license and was authored, remixed, and/or curated by OpenStax via source content that was edited to the style and standards of the LibreTexts platform.",
+  "url": "https://math.libretexts.org/Bookshelves/Algebra/Algebra_and_Trigonometry_1e_(OpenStax)/04:_Linear_Functions/4.01:_Linear_Functions",
+  "sha256": "86ca79e461a4fda652b31d70b757453dc1f1b424342ef65ed6538047392b992c",
+  "checkedAt": "2026-10-07",
+  "id": "8cfad3a44a99a7a9f4aa",
+  "bookId": "algebra-trigonometry",
+  "licenseInherited": false,
+  "licenseSource": "https://math.libretexts.org/Bookshelves/Algebra/Algebra_and_Trigonometry_1e_(OpenStax)/04:_Linear_Functions/4.01:_Linear_Functions",
+  "licenseUrl": "https://creativecommons.org/licenses/by/4.0/",
+  "authors": "OpenStax / Jay Abramson et al.",
+  "book": "Algebra and Trigonometry 1e",
+  "reviewStatus": "unreviewed",
+  "sourceLanguage": "en",
+  "translationStatus": "pending"
+}

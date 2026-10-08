@@ -1,0 +1,768 @@
+{
+  "title": "12.9: Traveling Salesperson Problem",
+  "originalText": "[Figure: Three doors are shown side-by-side.]\n\nFigure \\(\\PageIndex{1}\\): Each door on the route of a traveling salesperson can be represented as a vertex on a graph. (credit: \"Three in a row, Heriot Row\" by Jason Mason/Flickr, CC BY 2.1)\n\nLearning Objectives\n\n1. Distinguish between brute force algorithms and greedy algorithms.\n\n2. List all distinct Hamilton cycles of a complete graph.\n\n3. Apply brute force method to solve traveling salesperson applications.\n\n4. Apply nearest neighbor method to solve traveling salesperson applications.\n\nWe looked at Hamilton cycles and paths in the previous sections Hamilton Cycles and Hamilton Paths. In this section, we will analyze Hamilton cycles in complete weighted graphs to find the shortest route to visit a number of locations and return to the starting point. Besides the many routing applications in which we need the shortest distance, there are also applications in which we search for the route that is least expensive or takes the least time. Here are a few less common applications that you can read about on a website set up by the mathematics department at the University of Waterloo in Ontario, Canada:\n\nDesign of fiber optic networks\n\nMinimizing fuel expenses for repositioning satellites\n\nDevelopment of semi-conductors for microchips\n\nA technique for mapping mammalian chromosomes in genome sequencing\n\nBefore we look at approaches to solving applications like these, let's discuss the two types of algorithms we will use.\n\nBrute Force and Greedy Algorithms\n\nAn algorithm is a sequence of steps that can be used to solve a particular problem. We have solved many problems in this chapter, and the procedures that we used were different types of algorithms. In this section, we will use two common types of algorithms, a brute force algorithm and a greedy algorithm. A brute force algorithm begins by listing every possible solution and applying each one until the best solution is found. A greedy algorithm approaches a problem in stages, making the apparent best choice at each stage, then linking the choices together into an overall solution which may or may not be the best solution.\n\nTo understand the difference between these two algorithms, consider the tree diagram in Figure 12.214. Suppose we want to find the path from left to right with the largest total sum. For example, branch A in the tree diagram has a sum of \\(10+2+11+13=36\\).\n\n[Figure: A graph has 15 vertices. The vertices are labeled 1 to 15. 10 branches into 2 and 7. 2 branches into 11 and 15. 11 branches into 13 and 8. 15 branches into 1 and 6. 7 branches into 3 and 4. 3 branches into 20 and 14. 4 branches into 11 and 5. 13, 8, 1, 6, 20, 14, 11, and 5 are labeled A to H.]\n\nFigure \\(\\PageIndex{2}\\): Points Along Different Paths\n\nTo be certain that you pick the branch with greatest sum, you could list each sum from each of the different branches:\n\nA: \\(10+2+11+13=36\\)\n\nB: \\(10+2+11+8=31\\)\n\nC: \\(10+2+15+1=28\\)\n\nD: \\(10+2+15+6=33\\)\n\nE: \\(10+7+3+20=40\\)\n\nF: \\(10+7+3+14=34\\)\n\nG: \\(10+7+4+11=32\\)\n\nH: \\(10+7+4+5=26\\)\n\nThen we know with certainty that branch E has the greatest sum.\n\n[Figure: A graph has 15 vertices. The vertices are labeled 1 to 15. 10 branches into 2 and 7. 2 branches into 11 and 15. 11 branches into 13 and 8. 15 branches into 1 and 6. 7 branches into 3 and 4. 3 branches into 20 and 14. 4 branches into 11 and 5. 13, 8, 1, 6, 20, 14, 11, and 5 are labeled A to H. The edges 10 to 7, 7 to 3, and 3 to 20 are highlighted. An arrow from E points to 20.]\n\nFigure \\(\\PageIndex{3}\\): Branch E\n\nNow suppose that you wanted to find the branch with the highest value, but you only were shown the tree diagram in phases, one step at a time.\n\n[Figure: A graph has 3 vertices. The vertices are labeled 10, 2, and 7. 10 branches into 2 and 7. The edge, 10 to 7 is highlighted.]\n\nFigure \\(\\PageIndex{4}\\): Tree Diagram Phase 1\n\nAfter phase 1, you would have chosen the branch with 10 and 7. So far, you are following the same branch. Let’s look at the next phase.\n\n[Figure: A graph has 5 vertices. The vertices are labeled 10, 2, 7, 3, and 4. 10 branches into 2 and 7. 7 branches into 3 and 4. The edges, 10 to 7 and 7 to 4 are highlighted.]\n\nFigure \\(\\PageIndex{5}\\): Tree Diagram Phase 2\n\nAfter phase 2, based on the information you have, you will choose the branch with 10, 7 and 4. Now, you are following a different branch than before, but it is the best choice based on the information you have. Let’s look at the last phase.\n\n[Figure: A graph has 7 vertices. The vertices are labeled 10, 2, 7, 3, 4, 11, and 15. 10 branches into 2 and 7. 7 branches into 3 and 4. 4 branches into 11 and 5. The edges, 10 to 7, 7 to 4, and 4 to 11 are highlighted. 11 and 5 are labeled G and H.]\n\nFigure \\(\\PageIndex{6}\\): Tree Diagram Phase 3\n\nAfter phase 3, you will choose branch G which has a sum of 32.\n\nThe process of adding the values on each branch and selecting the highest sum is an example of a brute force algorithm because all options were explored in detail. The process of choosing the branch in phases, based on the best choice at each phase is a greedy algorithm. Although a brute force algorithm gives us the ideal solution, it can take a very long time to implement. Imagine a tree diagram with thousands or even millions of branches. It might not be possible to check all the sums. A greedy algorithm, on the other hand, can be completed in a relatively short time, and generally leads to good solutions, but not necessarily the ideal solution.\n\nExample \\(\\PageIndex{1}\\): Distinguishing between Brute Force and Greedy Algorithms\n\nA cashier rings up a sale for $4.63 cents in U.S. currency. The customer pays with a $5 bill. The cashier would like to give the customer $0.37 in change using the fewest coins possible. The coins that can be used are quarters ($0.25), dimes ($0.10), nickels ($0.05), and pennies ($0.01). The cashier starts by selecting the coin of highest value less than or equal to $0.37, which is a quarter. This leaves \\($0.37−$0.25=$0.12\\). The cashier selects the coin of highest value less than or equal to $0.12, which is a dime. This leaves \\($0.12−$0.10=$0.02\\). The cashier selects the coin of highest value less than or equal to $0.02, which is a penny. This leaves \\($0.02−$0.01=$0.01\\). The cashier selects the coin of highest value less than or equal to $0.01, which is a penny. This leaves no remainder. The cashier used one quarter, one dime, and two pennies, which is four coins. Use this information to answer the following questions.\n\n1. Is the cashier’s approach an example of a greedy algorithm or a brute force algorithm? Explain how you know.\n\n2. The cashier’s solution is the best solution. In other words, four is the fewest number of coins possible. Is this consistent with the results of an algorithm of this kind? Explain your reasoning.\n\nAnswer\n\n1. The approach the cashier used is an example of a greedy algorithm, because the problem was approached in phases and the best choice was made at each phase. Also, it is not a brute force algorithm, because the cashier did not attempt to list out all possible combinations of coins to reach this conclusion.\n\n2. Yes, it is consistent. A greedy algorithm does not always yield the best result, but sometimes it does.\n\nYour Turn \\(\\PageIndex{1}\\)\n\nSuppose that you lost the combination to a combination lock that consisted of three digits, and each was selected from the digits 0, 1, 2, 3, 4, 5, 6, 7, 8, or 9. You desperately need to open the lock without breaking it. You decide to check all possible combinations methodically, 000, then 001, then 002, and so on until you find the right combination. Is this an example of a brute force algorithm or a greedy algorithm?\n\nThe Traveling Salesperson Problem\n\nNow let’s focus our attention on the graph theory application known as the traveling salesperson problem (TSP) in which we must find the shortest route to visit a number of locations and return to the starting point.\n\nRecall from Hamilton Cycles, the officer in the U.S. Air Force who is stationed at Vandenberg Air Force base and must drive to visit three other California Air Force bases before returning to Vandenberg. The officer needed to visit each base once. We looked at the weighted graph in Figure \\(\\PageIndex{7}\\) representing the four U.S. Air Force bases: Vandenberg, Edwards, Los Angeles, and Beal and the distances between them.\n\n[Figure: A graph represents the four California air force bases. The graph has four vertices: E, B, V, and L. The edge, E B is labeld 410 miles. The edge, B V is labeled 396 miles. The edge, V L is labeled 159 miles. The edge, L E is labeled 106 miles. The edge, L B is labeled 439 miles. The edge, E V is labeled 207 miles.]\n\nFigure \\(\\PageIndex{7}\\): Graph of Four California Air Force Bases\n\nAny route that visits each base and returns to the start would be a Hamilton cycle on the graph. If the officer wants to travel the shortest distance, this will correspond to a Hamilton cycle of lowest weight. We see in Table \\(\\PageIndex{1}\\) that there are six distinct Hamilton cycles (directed cycles) in a complete graph with four vertices, but some lie on the same cycle (undirected cycle) in the graph.\n\n    Table \\(\\PageIndex{1}\\) Hamilton Cycles in a Complete Graph with Four Vertices\n\n            Complete Graph\t\n            Cycle\t\n            Cycle\t\n            Cycle\t\n\n[Figure: A graph has four vertices, a, b, c, and d. Edges connect a b, b c, c d, d a, a c, and b d.]\n\n[Figure: A graph has four vertices, a, b, c, and d.  Edges connect a b, b c, c d, d a, a c, and b d. The edges, a c, and b d are in dashed lines.]\n\n[Figure: A graph has four vertices, a, b, c, and d. Edges connect a b, b c, c d, d a, a c, and b d. The edges, a d, and b c are in dashed lines.]\n\n[Figure: A graph has four vertices, a, b, c, and d. Edges connect a b, b c, c d, d a, a c, and b d. The edges, a b, and d c are in dashed lines.]\n\n            Clockwise Hamilton Cycle\t\n\n[Figure: A graph has four vertices, a, b, c, and d. Edges connect a b, b c, c d, d a, a c, and b d. The edges, a c, and b d are in dashed lines. Directed arrows flow from a to b, b to c, c to d, and d to a.]\n\n            a → b → c → d → a\n\n[Figure: A graph has four vertices, a, b, c, and d. Edges connect a b, b c, c d, d a, a c, and b d. The edges, ad, and bc are in dashed lines. Directed edges flow from a to b, b to d, d to c, and c to a.]\n\n            a → b → d → c → a\n\n[Figure: A graph has four vertices, a, b, c, and d. Edges connect a b, b c, c d, d a, a c, and b d. The edges, a b, and dc are in dashed lines. Directed edges flow from a to c, c to b, b to d, and d to a.]\n\n            a → c → b → d → a\n\nCounterclockwise\n\n            Hamilton Cycle\n\n[Figure: A graph has four vertices, a, b, c, and d. Edges connect a b, b c, c d, d a, a c, and b d. The edges, a c, and b d are in dashed lines. Directed edges flow from a to d, d to c, c to b, and b to a.]\n\n            a → d → c → b → a\n\n[Figure: A graph has four vertices, a, b, c, and d. Edges connect a b, b c, c d, d a, a c, and b d. The edges, a d, and bc are in dashed lines. The directed edges flow from a to c, c to d, d to b, and b to a.]\n\n            a → c → d → b → a\n\n[Figure: A graph has four vertices, a, b, c, and d. Edges connect a b, b c, c d, d a, a c, and b d. The edges, a b, and dc are in dashed lines. The edges flow from a to d, d to b, b to c, and c to a.]\n\n            a → d → b → c → a\n\nSince the distance between bases is the same in either direction, it does not matter if the officer travels clockwise or counterclockwise. So, there are really only three possible distances as shown in Figure \\(\\PageIndex{8}\\)\n\n[Figure: Three graphs represent the four California air force bases. Each graph has four vertices: E, B, V, and L. The edge, E B is labeled 410 miles. The edge, B V is labeled 396 miles. The edge, V L is labeled 159 miles. The edge, L E is labeled 106 miles. The edge, L B is labeled 439 miles. The edge, E V is labeled 207 miles. In the first graph, the edges, E V, and L B are in dashed lines. In the second graph, the edges, E L and B V are in dashed lines. In the third graph, the edges, E B and L V are in dashed lines.]\n\n[Figure: Three graphs represent the four California air force bases. Each graph has four vertices: E, B, V, and L. The edge, E B is labeled 410 miles. The edge, B V is labeled 396 miles. The edge, V L is labeled 159 miles. The edge, L E is labeled 106 miles. The edge, L B is labeled 439 miles. The edge, E V is labeled 207 miles. In the first graph, the edges, E V, and L B are in dashed lines. In the second graph, the edges, E L and B V are in dashed lines. In the third graph, the edges, E B and L V are in dashed lines.]\n\n[Figure: Three graphs represent the four California air force bases. Each graph has four vertices: E, B, V, and L. The edge, E B is labeled 410 miles. The edge, B V is labeled 396 miles. The edge, V L is labeled 159 miles. The edge, L E is labeled 106 miles. The edge, L B is labeled 439 miles. The edge, E V is labeled 207 miles. In the first graph, the edges, E V, and L B are in dashed lines. In the second graph, the edges, E L and B V are in dashed lines. In the third graph, the edges, E B and L V are in dashed lines.]\n\nFigure \\(\\PageIndex{8}\\): Three Possible Distances\n\nThe possible distances are:\n\n\\(\\begin{matrix}396+410+106+159=1071\\\\207+410+439+159=1215\\\\396+439+106+207=1148\\end{matrix}\\)\n\nSo, a Hamilton cycle of least weight is V → B → E → L → V (or the reverse direction). The officer should travel from Vandenberg to Beal to Edwards, to Los Angeles, and back to Vandenberg.\n\nFinding Weights of All Hamilton Cycles in Complete Graphs\n\nNotice that we listed all of the Hamilton cycles and found their weights when we solved the TSP about the officer from Vandenberg. This is a skill you will need to practice. To make sure you don't miss any, you can calculate the number of possible Hamilton cycles in a complete graph. It is also helpful to know that half of the directed cycles in a complete graph are the same cycle in reverse direction, so, you only have to calculate half the number of possible weights, and the rest are duplicates.\n\nFORMULA\n\nIn a complete graph with \\(n\\) vertices,\n\nThe number of distinct Hamilton cycles is \\((n−1)!\\).\n\nThere are at most \\(\\frac{(n−1)!}{2}\\) different weights of Hamilton cycles.\n\nCheckpoint\n\nTIP! When listing all the distinct Hamilton cycles in a complete graph, you can start them all at any vertex you choose. Remember, the cycle a → b → c → a is the same cycle as b → c → a → b so there is no need to list both.\n\nExample \\(\\PageIndex{2}\\): Calculating Possible Weights of Hamilton Cycles\n\nSuppose you have a complete weighted graph with vertices N, M, O, and P.\n\n1. Use the formula \\((n−1)!\\) to calculate the number of distinct Hamilton cycles in the graph.\n\n2. Use the formula \\(\\frac{(n−1)!}{2}\\) to calculate the greatest number of different weights possible for the Hamilton cycles.\n\n3. Are all of the distinct Hamilton cycles listed here? How do you know?\n\n    Cycle 1: N → M → O → P → N\n\n    Cycle 2: N → M → P → O → N\n\n    Cycle 3: N → O → M → P → N\n\n    Cycle 4: N → O → P → M → N\n\n    Cycle 5: N → P → M → O → N\n\n    Cycle 6: N → P → O → M → N\n\n4. Which pairs of cycles must have the same weights? How do you know?\n\nAnswer\n\n1. There are 4 vertices; so, \\(n=4\\). This means there are \\((n−1)!=(4−1)!=3⋅2⋅1=6\\) distinct Hamilton cycles beginning at any given vertex.\n\n2. Since \\(n=4\\), there are \\(\\frac{(n−1)!}{2}=\\frac{(4−1)!}{2}=\\frac{6}{2}=3\\) possible weights.\n\n3. Yes, they are all distinct cycles and there are 6 of them.\n\n4. Cycles 1 and 6 have the same weight, Cycles 2 and 4 have the same weight, and Cycles 3 and 5 have the same weight, because these pairs follow the same route through the graph but in reverse.\n\nCheckpoint\n\nTIP! When listing the possible cycles, ignore the vertex where the cycle begins and ends and focus on the ways to arrange the letters that represent the vertices in the middle. Using a systematic approach is best; for example, if you must arrange the letters M, O, and P, first list all those arrangements beginning with M, then beginning with O, and then beginning with P, as we did in Example 12.42.\n\nYour Turn \\(\\PageIndex{2}\\)\n\nA complete weighted graph has vertices V, W, X, Y, and Z. List all the distinct Hamilton cycles. Use V as the starting vertex. Identify the pairs of cycles that have the same weight because they are reverses of each other.\n\nThe Brute Force Method\n\nThe method we have been using to find a Hamilton cycle of least weight in a complete graph is a brute force algorithm, so it is called the brute force method. The steps in the brute force method are:\n\nStep 1: Calculate the number of distinct Hamilton cycles and the number of possible weights.\n\nStep 2: List all possible Hamilton cycles.\n\nStep 3: Find the weight of each cycle.\n\nStep 4: Identify the Hamilton cycle of lowest weight.\n\nExample \\(\\PageIndex{3}\\): Applying the Brute Force Method\n\nOn the next assignment, the air force officer must leave from Travis Air Force base, visit Beal, Edwards, and Vandenberg Air Force bases each exactly once and return to Travis Air Force base. There is no need to visit Los Angeles Air Force base. Use Figure \\(\\PageIndex{9}\\) to find the shortest route.\n\n[Figure: A graph represents the five California air force bases. The graph has five vertices: E, B, V, L, and T. The edge, E B is labeled 410 miles. The edge, B V is labeled 396 miles. The edge, V L is labeled 159 miles. The edge, L E is labeled 106 miles. The edge, L B is labeled 439 miles. The edge, E V is labeled 207 miles. The edge, E T is labeled 370 miles. The edge, L T is labeled 396 miles. The edge, B T is labeled 84 miles. The edge, V T is labeled 396 miles.]\n\nFigure \\(\\PageIndex{9}\\) Distances between Five California Air Force Bases\n\nAnswer\n\nStep 1: Since there are 4 vertices, there will be \\((4−1)!=3!=6\\) cycles, but half of them will be the reverse of the others; so, there will be \\(\\frac{(4−1)!}{2}=\\frac{6}{2}=3\\) possible distances.\n\nStep 2: List all the Hamilton cycles in the subgraph of the graph in Figure 12.222.\n\n[Figure: A graph represents four cities. The graph has five vertices: E, B, V, L, and T. The edge, E B is labeled 410 miles. The edge, B V is labeled 396 miles. The edge, V L is labeled 159 miles. The edge, L E is labeled 106 miles. The edge, L B is labeled 439 miles. The edge, E V is labeled 207 miles. The edge, E T is labeled 370 miles. The edge, L T is labeled 396 miles. The edge, B T is labeled 84 miles. The edge, V T is labeled 396 miles. The edges, E L, L V, L B, and L T are in dashed lines.]\n\nFigure \\(\\PageIndex{10}\\) Subgraph with Cities B, E, T, and V\n\nTo find the 6 cycles, focus on the three vertices in the middle, B, E, and V. The arrangements of these vertices are BEV, BVE, EBV, EVB, VBE, and VEB. These would correspond to the 6 cycles:\n\n1: T → B → E → V → T\n\n2: T → B → V → E → T\n\n3: T → E → B → V → T\n\n4: T → E → V → B → T\n\n5: T → V → B → E → T\n\n6: T → V → E → B → T\n\nStep 3: Find the weight of each path. You can reduce your work by observing the cycles that are reverses of each other.\n\n1: \\(84+410+207+396=1097\\)\n\n2: \\(84+396+207+370=1071\\)\n\n3: \\(370+410+396+396=1572\\)\n\n4: Reverse of cycle 2, 1071\n\n5: Reverse of cycle 3, 1572\n\n6: Reverse of cycle 1, 1097\n\nStep 4: Identify a Hamilton cycle of least weight.\n\nThe second path, T → B → V → E → T, and its reverse, T → E → V → B → T, have the least weight. The solution is that the officer should travel from Travis Air Force base to Beal Air Force Base, to Vandenberg Air Force base, to Edwards Air Force base, and return to Travis Air Force base, or the same route in reverse.\n\nYour Turn \\(\\PageIndex{3}\\)\n\nSuppose that the Air Force officer needed to leave from Travis Air Force base, visit each of Beal, Edwards, and Los Angeles Air Force bases exactly once and return to Travis. Use Figure 12.278 to find the shortest route.\n\nNow suppose that the officer needed a cycle that visited all 5 of the Air Force bases in Figure 12.221. There would be \\((5−1)!=4!=4×3×2×1=24\\) different arrangements of vertices and \\(\\frac{(5−1)!}{2}=\\frac{4!}{2}=\\frac{24}{2}=12\\) distances to compare using the brute force method. If you consider 10 Air Force bases, there would be \\((10−1)!=9!=9⋅8⋅7⋅6⋅5⋅4⋅3⋅2⋅1=362,880\\) different arrangements and \\(\\frac{(10−1)!}{2}=\\frac{9!}{2}=\\frac{9⋅8⋅7⋅6⋅5⋅4⋅3⋅2⋅1}{2}=181,440\\) distances to consider. There must be another way!\n\nThe Nearest Neighbor Method\n\nWhen the brute force method is impractical for solving a traveling salesperson problem, an alternative is a greedy algorithm known as the nearest neighbor method, which always visit the closest or least costly place first. This method finds a Hamilton cycle of relatively low weight in a complete graph in which, at each phase, the next vertex is chosen by comparing the edges between the current vertex and the remaining vertices to find the lowest weight. Since the nearest neighbor method is a greedy algorithm, it usually doesn’t give the best solution, but it usually gives a solution that is \"good enough.\" Most importantly, the number of steps will be the number of vertices. That’s right! A problem with 10 vertices requires 10 steps, not 362,880. Let’s look at an example to see how it works.\n\nSuppose that a candidate for governor wants to hold rallies around the state. They plan to leave their home in city A, visit cities B, C, D, E, and F each once, and return home. The airfare between cities is indicated in the graph in Figure \\(\\PageIndex{11}\\).\n\n[Figure: A graph represents the airfares between six different cities. The graph has 6 vertices. The vertices are A, B, C, D, E, and F. Edges from A leading to B, C, D, E, and F are labeled 250 dollars, 210 dollars, 300 dollars, 200 dollars, and 100 dollars. Edges from B leading to C, D, E, and F are labeled 220 dollars, 120 dollars, 160 dollars, and 170 dollars. Edges from C to D, E, and F are labeled 310 dollars, 180 dollars, and 330 dollars. Edges from D to E and F 270 dollars and 150 dollars. An edge from E to F is labeled 350 dollars.]\n\nFigure \\(\\PageIndex{11}\\): Airfares between Cities A, B, C, D, E, and F\n\nLet's help the candidate keep costs of travel down by applying the nearest neighbor method to find a Hamilton cycle that has a reasonably low weight. Begin by marking starting vertex as \\(V_1\\) for \"visited 1st.\" Then to compare the weights of the edges between \\(A\\) and vertices adjacent to \\(A\\) : \\(\\$ 250, \\$ 210, \\$ 300, \\$ 200\\), and \\(\\$ 100\\) as shown in Figure \\(\\PageIndex{12}\\). The lowest of these is \\(\\$ 100\\), which is the edge between \\(A\\) and \\(F\\).\n\n[Figure: A graph represents the airfares between six different cities. The graph has 6 vertices. The vertices are A, B, C, D, E, and F. Edges from A leading to B, C, D, E, and F are labeled 250 dollars, 210 dollars, 300 dollars, 200 dollars, and 100 dollars. Edges from B leading to C, D, E, and F are labeled 220 dollars, 120 dollars, 160 dollars, and 170 dollars. Edges from C to D, E, and F are labeled 310 dollars, 180 dollars, and 330 dollars. Edges from D to E and F 270 dollars and 150 dollars. An edge from E to F is labeled 350 dollars. The edges from A are in dashed lines. A is labeled V 1.]\n\nFigure \\(\\PageIndex{12}\\): Finding the Second Vertex\n\nMark \\(F\\) as \\(V_2\\) for \"visited 2nd\" then compare the weights of the edges between \\(F\\) and the remaining vertices adjacent to \\(F\\) : \\(\\$ 170, \\$ 330, \\$ 150\\) and \\(\\$ 350\\) as shown in Figure \\(\\PageIndex{13}\\). The lowest of these is \\(\\$ 150\\), which is the edge between \\(F\\) and \\(D\\).\n\n[Figure: A graph represents the airfares between six different cities. The graph has 6 vertices. The vertices are A, B, C, D, E, and F. Edges from A leading to B, C, D, E, and F are labeled 250 dollars, 210 dollars, 300 dollars, 200 dollars, and 100 dollars. Edges from B leading to C, D, E, and F are labeled 220 dollars, 120 dollars, 160 dollars, and 170 dollars. Edges from C to D, E, and F are labeled 310 dollars, 180 dollars, and 330 dollars. Edges from D to E and F 270 dollars and 150 dollars. An edge from E to F is labeled 350 dollars. The edges from F are in dashed lines. A is labeled V 1. F is labeled V 2.]\n\nFigure \\(\\PageIndex{13}\\): Finding the Third Vertex\n\nMark \\(D\\) as \\(V_3\\) for \"visited 3rd.\" Next, compare the weights of the edges between \\(D\\) and the remaining vertices adjacent to \\(D: \\$ 120, \\$ 310\\), and \\(\\$ 270\\) as shown in Figure \\(\\PageIndex{14}\\). The lowest of these is \\(\\$ 120\\), which is the edge between \\(D\\) and \\(B\\).\n\n[Figure: A graph represents the airfares between six different cities. The graph has 6 vertices. The vertices are A, B, C, D, E, and F. Edges from A leading to B, C, D, E, and F are labeled 250 dollars, 210 dollars, 300 dollars, 200 dollars, and 100 dollars. Edges from B leading to C, D, E, and F are labeled 220 dollars, 120 dollars, 160 dollars, and 170 dollars. Edges from C to D, E, and F are labeled 310 dollars, 180 dollars, and 330 dollars. Edges from D to E and F 270 dollars and 150 dollars. A is labeled V 1. F is labeled V 2. D is labeled V 3. The edges, B D, C D, and D E are in dashed lines.]\n\nFigure \\(\\PageIndex{14}\\): Finding the Fourth Vertex\n\nSo, mark \\(B\\) as \\(V_4\\) for \"visited 4th.\" Finally, compare the weights of the edges between \\(B\\) and the remaining vertices adjacent to \\(B\\) : \\(\\$ 160\\) and \\(\\$ 220\\) as shown in Figure \\(\\PageIndex{15}\\). The lower amount is \\(\\$ 160\\), which is the edge between \\(B\\) and \\(E\\)\n\n[Figure: A graph represents the airfares between six different cities. The graph has 6 vertices. The vertices are A, B, C, D, E, and F. Edges from A leading to B, C, D, E, and F are labeled 250 dollars, 210 dollars, 300 dollars, 200 dollars, and 100 dollars. Edges from B leading to C, D, E, and F are labeled 220 dollars, 120 dollars, 160 dollars, and 170 dollars. Edges from C to D, E, and F are labeled 310 dollars, 180 dollars, and 330 dollars. Edges from D to E and F 270 dollars and 150 dollars. A is labeled V 1. F is labeled V 2. D is labeled V 3. B is labeled V 4. The edges, B E and B C are in dashed lines.]\n\nFigure \\(\\PageIndex{15}\\): Finding the Fifth Vertex\n\nNow you can mark \\(E\\) as \\(V_5\\) and mark the only remaining vertex, which is \\(C\\), as \\(V_6\\). This is shown in Figure \\(\\PageIndex{16}\\). Make a note of the weight of the edge from \\(E\\) to \\(C\\), which is \\(\\$ 180\\), and from \\(C\\) back to \\(A\\), which is \\(\\$ 210\\).\n\n[Figure: A graph represents the airfares between six different cities. The graph has 6 vertices. The vertices are A, B, C, D, E, and F. Edges from A leading to B, C, D, E, and F are labeled 250 dollars, 210 dollars, 300 dollars, 200 dollars, and 100 dollars. Edges from B leading to C, D, E, and F are labeled 220 dollars, 120 dollars, 160 dollars, and 170 dollars. Edges from C to D, E, and F are labeled 310 dollars, 180 dollars, and 330 dollars. Edges from D to E and F 270 dollars and 150 dollars. A is labeled V 1. F is labeled V 2. D is labeled V 3. B is labeled V 4. E is labeled V 5. C is labeled V 6. The edges, A C, and E C are in dashed lines.]\n\nFigure \\(\\PageIndex{16}\\): Finding the Sixth Vertex\n\nThe Hamilton cycle we found is A → F → D → B → E → C → A. The weight of the circuit is \\($100+$150+$120+$160+$180+$210=$920\\). This may or may not be the route with the lowest cost, but there is a good chance it is very close since the weights are most of the lowest weights on the graph and we found it in six steps instead of finding 120 different Hamilton cycles and calculating 60 weights. Let’s summarize the procedure that we used.\n\nStep 1: Select the starting vertex and label \\(\\)V1 for \"visited 1st.\" Identify the edge of lowest weight between \\(\\)V1 and the remaining vertices.\n\nStep 2: Label the vertex at the end of the edge of lowest weight that you found in previous step as \\(\\)Vn where the subscript n indicates the order the vertex is visited. Identify the edge of lowest weight between \\(\\)Vn and the vertices that remain to be visited.\n\nStep 3: If vertices remain that have not been visited, repeat Step 2. Otherwise, a Hamilton cycle of low weight is \\({V}_{1}→{V}_{2}→⋯→{V}_{n}→\\)V1.\n\nExample \\(\\PageIndex{4}\\): Using the Nearest Neighbor Method\n\nSuppose that the candidate for governor wants to hold rallies around the state but time before the election is very limited. They would like to leave their home in city A, visit cities B, C, D, E, and F each once, and return home. The airfare between cities is not as important as the time of travel, which is indicated in Figure \\(\\PageIndex{17}\\). Use the nearest neighbor method to find a route with relatively low travel time. What is the total travel time of the route that you found?\n\n[Figure: A graph represents the airfares between six different cities. The graph has 6 vertices. The vertices are A, B, C, D, E, and F. Edges from A leading to B, C, D, E, and F are labeled 120 minutes, 140 minutes, 85 minutes, 90 minutes, and 180 minutes. Edges from B leading to C, D, E, and F are labeled 100 minutes, 80 minutes, 95 minutes, and 110 minutes. Edges from C to D, E, and F are labeled 220 minutes, 200 minutes, and 75 minutes. Edges from D to E and F are labeled 130 minutes and 70 minutes. An edge from E to F is labeled 210 minutes.]\n\nFigure \\(\\PageIndex{17}\\) Travel Times between Cities A, B, C, D, E and F\n\nAnswer\n\nStep 1: Label vertex A as \\(\\)V1. The edge of lowest weight between A and the remaining vertices is 85 min between A and D.\n\nStep 2: Label vertex D as \\(\\)V2. The edge of lowest weight between D and the vertices that remain to be visited, B, C, E, and F, is 70 min between D and F.\n\nRepeat Step 2: Label vertex F as \\(\\)V3. The edge of lowest weight between F and the vertices that remain to be visited, B, C, and E, is 75 min between F and C.\n\nRepeat Step 2: Label vertex C as \\(\\)V4. The edge of lowest weight between C and the vertices that remain to be visited, B and E, is 100 min between C and B.\n\nRepeat Step 2: Label vertex B as \\(\\)V5. The only vertex that remains to be visited is E. The weight of the edge between B and E is 95 min.\n\nStep 3: A Hamilton cycle of low weight is A → D → F → C → B → E → A. So, a route of relatively low travel time is A to D to F to C to B to E and back to A. The total travel time of this route is: \\(\\)85min+70min+75min+100min+95min+90min=515minor8hrs35min\n\nYour Turn \\(\\PageIndex{4}\\)\n\nUse the nearest neighbor method to find a Hamilton cycle of relatively low weight beginning and ending at vertex D in Figure 12.240 and find its total weight. Give your answer in hours and minutes.\n\nCheck Your Understanding\n\n1. The advantage of a greedy algorithm is that it is more efficient.\n\n1. \n\nTrue\n\n2. \n\nFalse\n\n2. The disadvantage of a brute force algorithm is that it does not always give the ideal solution.\n\n1. \n\nTrue\n\n2. \n\nFalse\n\n3. The nearest neighbor method is an example of a brute force algorithm.\n\n1. \n\nTrue\n\n2. \n\nFalse\n\n4. The brute force method is an example of a greedy algorithm.\n\n1. \n\nTrue\n\n2. \n\nFalse\n\n5. The brute force method is used to find a Hamilton cycle of least weight in a complete graph.\n\n1. \n\nTrue\n\n2. \n\nFalse\n\n6. The nearest neighbor method is used to find the ideal solution to the traveling salesperson problem.\n\n1. \n\nTrue\n\n2. \n\nFalse\n\n7. The traveling salesman problem involves finding the shortest route to travel between two points.\n\n1. \n\nTrue\n\n2. \n\nFalse\n\n8. The traveling salesman problem can be represented as finding a Hamilton cycle of least weight on a weighted graph.\n\n1. \n\nTrue\n\n2. \n\nFalse\n\n9. There is always more than one Hamilton cycle of least weight, a given Hamilton cycle and the reverse of that Hamilton cycle.\n\n1. \n\nTrue\n\n2. \n\nFalse\n\n10. The greatest possible number of distinct weights for the Hamilton cycles of a complete graph with \\(n\\) vertices is (\\(n\\)-1)!\n\n1. \n\nTrue\n\n2. \n\nFalse\n\nThis page titled 12.9: Traveling Salesperson Problem was last modified on Thu, 02 Jan 2025 11:07:44 GMT and is shared under a CC BY  4.0  license and was authored, remixed, and/or curated by OpenStax via source content that was edited to the style and standards of the LibreTexts platform.",
+  "figures": [
+    {
+      "url": "https://math.libretexts.org/@api/deki/files/127263/f84faf7cd69c2655c35045bdbc0cf5ecb1ca403f?revision=1",
+      "alt": "Three doors are shown side-by-side.",
+      "credit": ""
+    },
+    {
+      "url": "https://math.libretexts.org/@api/deki/files/127258/b91547de72b8453722fe3fd6ad962a7656e4fb6b?revision=1&size=bestfit&width=400",
+      "alt": "A graph has 15 vertices. The vertices are labeled 1 to 15. 10 branches into 2 and 7. 2 branches into 11 and 15. 11 branches into 13 and 8. 15 branches into 1 and 6. 7 branches into 3 and 4. 3 branches into 20 and 14. 4 branches into 11 and 5. 13, 8, 1, 6, 20, 14, 11, and 5 are labeled A to H.",
+      "credit": ""
+    },
+    {
+      "url": "https://math.libretexts.org/@api/deki/files/127261/914f5a9a4a62df9e583c7240d9a0cd218cce22ea?revision=1&size=bestfit&width=400",
+      "alt": "A graph has 15 vertices. The vertices are labeled 1 to 15. 10 branches into 2 and 7. 2 branches into 11 and 15. 11 branches into 13 and 8. 15 branches into 1 and 6. 7 branches into 3 and 4. 3 branches into 20 and 14. 4 branches into 11 and 5. 13, 8, 1, 6, 20, 14, 11, and 5 are labeled A to H. The edges 10 to 7, 7 to 3, and 3 to 20 are highlighted. An arrow from E points to 20.",
+      "credit": ""
+    },
+    {
+      "url": "https://math.libretexts.org/@api/deki/files/127260/1656dbab8586e4336fbae6e43a85e4e33bc944bf?revision=1&size=bestfit&width=400",
+      "alt": "A graph has 3 vertices. The vertices are labeled 10, 2, and 7. 10 branches into 2 and 7. The edge, 10 to 7 is highlighted.",
+      "credit": ""
+    },
+    {
+      "url": "https://math.libretexts.org/@api/deki/files/127259/321178ac10c2d98d779eacef75a4bd820fc94e66?revision=1&size=bestfit&width=400",
+      "alt": "A graph has 5 vertices. The vertices are labeled 10, 2, 7, 3, and 4. 10 branches into 2 and 7. 7 branches into 3 and 4. The edges, 10 to 7 and 7 to 4 are highlighted.",
+      "credit": ""
+    },
+    {
+      "url": "https://math.libretexts.org/@api/deki/files/127267/d88a94df858c181c76684039f666a2778eb5f277?revision=1&size=bestfit&width=400",
+      "alt": "A graph has 7 vertices. The vertices are labeled 10, 2, 7, 3, 4, 11, and 15. 10 branches into 2 and 7. 7 branches into 3 and 4. 4 branches into 11 and 5. The edges, 10 to 7, 7 to 4, and 4 to 11 are highlighted. 11 and 5 are labeled G and H.",
+      "credit": ""
+    },
+    {
+      "url": "https://math.libretexts.org/@api/deki/files/127271/3142608528c268222eb5eac4db31a06515edbbef?revision=1",
+      "alt": "A graph represents the four California air force bases. The graph has four vertices: E, B, V, and L. The edge, E B is labeld 410 miles. The edge, B V is labeled 396 miles. The edge, V L is labeled 159 miles. The edge, L E is labeled 106 miles. The edge, L B is labeled 439 miles. The edge, E V is labeled 207 miles.",
+      "credit": ""
+    },
+    {
+      "url": "https://math.libretexts.org/@api/deki/files/127273/adae98454d3a116d39a7256e2d6b6df80b42a5a0?revision=1&size=bestfit&width=197&height=200",
+      "alt": "A graph has four vertices, a, b, c, and d. Edges connect a b, b c, c d, d a, a c, and b d.",
+      "credit": ""
+    },
+    {
+      "url": "https://math.libretexts.org/@api/deki/files/127272/5ada6bb5823fee53d2d3047cb7020e18bd02c5a5?revision=1&size=bestfit&width=147&height=150",
+      "alt": "A graph has four vertices, a, b, c, and d.  Edges connect a b, b c, c d, d a, a c, and b d. The edges, a c, and b d are in dashed lines.",
+      "credit": ""
+    },
+    {
+      "url": "https://math.libretexts.org/@api/deki/files/127411/73fb87a576586fc2c8b52f36cb30bcebcfda521f_jzmi?revision=1&size=bestfit&width=147&height=150",
+      "alt": "A graph has four vertices, a, b, c, and d. Edges connect a b, b c, c d, d a, a c, and b d. The edges, a d, and b c are in dashed lines.",
+      "credit": ""
+    },
+    {
+      "url": "https://math.libretexts.org/@api/deki/files/127275/6d6ab130cf923b2bbf5f04ff9006fb23f346ac07?revision=1&size=bestfit&width=147&height=150",
+      "alt": "A graph has four vertices, a, b, c, and d. Edges connect a b, b c, c d, d a, a c, and b d. The edges, a b, and d c are in dashed lines.",
+      "credit": ""
+    },
+    {
+      "url": "https://math.libretexts.org/@api/deki/files/127413/1ad6edb87240175d4b7ae3d6fa663243a914d2f3_iu9y?revision=1&size=bestfit&width=147&height=150",
+      "alt": "A graph has four vertices, a, b, c, and d. Edges connect a b, b c, c d, d a, a c, and b d. The edges, a c, and b d are in dashed lines. Directed arrows flow from a to b, b to c, c to d, and d to a.",
+      "credit": ""
+    },
+    {
+      "url": "https://math.libretexts.org/@api/deki/files/127279/818041b6f3eefd0f1e5b7fc21900e8ce90453e05?revision=1&size=bestfit&width=147&height=150",
+      "alt": "A graph has four vertices, a, b, c, and d. Edges connect a b, b c, c d, d a, a c, and b d. The edges, ad, and bc are in dashed lines. Directed edges flow from a to b, b to d, d to c, and c to a.",
+      "credit": ""
+    },
+    {
+      "url": "https://math.libretexts.org/@api/deki/files/127412/92b6b3751667ca093687a018de82e012b353d290_fwbz?revision=1&size=bestfit&width=147&height=150",
+      "alt": "A graph has four vertices, a, b, c, and d. Edges connect a b, b c, c d, d a, a c, and b d. The edges, a b, and dc are in dashed lines. Directed edges flow from a to c, c to b, b to d, and d to a.",
+      "credit": ""
+    },
+    {
+      "url": "https://math.libretexts.org/@api/deki/files/127281/fcfe669c5e6dc64c4c7465b870a19d8521e8517b?revision=1&size=bestfit&width=150&height=153",
+      "alt": "A graph has four vertices, a, b, c, and d. Edges connect a b, b c, c d, d a, a c, and b d. The edges, a c, and b d are in dashed lines. Directed edges flow from a to d, d to c, c to b, and b to a.",
+      "credit": ""
+    },
+    {
+      "url": "https://math.libretexts.org/@api/deki/files/127282/70d1b68744861e0393da73fe13383d96083411ea?revision=1&size=bestfit&width=150&height=153",
+      "alt": "A graph has four vertices, a, b, c, and d. Edges connect a b, b c, c d, d a, a c, and b d. The edges, a d, and bc are in dashed lines. The directed edges flow from a to c, c to d, d to b, and b to a.",
+      "credit": ""
+    },
+    {
+      "url": "https://math.libretexts.org/@api/deki/files/127283/89013a47651a239269fb63ea6be19bfb18f27a02?revision=1&size=bestfit&width=150&height=153",
+      "alt": "A graph has four vertices, a, b, c, and d. Edges connect a b, b c, c d, d a, a c, and b d. The edges, a b, and dc are in dashed lines. The edges flow from a to d, d to b, b to c, and c to a.",
+      "credit": ""
+    },
+    {
+      "url": "https://math.libretexts.org/@api/deki/files/127284/80a22d9d01c87e5229a539d795d2d876f528883a?revision=1&size=bestfit&width=400",
+      "alt": "Three graphs represent the four California air force bases. Each graph has four vertices: E, B, V, and L. The edge, E B is labeled 410 miles. The edge, B V is labeled 396 miles. The edge, V L is labeled 159 miles. The edge, L E is labeled 106 miles. The edge, L B is labeled 439 miles. The edge, E V is labeled 207 miles. In the first graph, the edges, E V, and L B are in dashed lines. In the second graph, the edges, E L and B V are in dashed lines. In the third graph, the edges, E B and L V are in dashed lines.",
+      "credit": ""
+    },
+    {
+      "url": "https://math.libretexts.org/@api/deki/files/127290/0333f78e1b5bd40ba76ce23cb7bd980def40470d?revision=1&size=bestfit&height=400",
+      "alt": "Three graphs represent the four California air force bases. Each graph has four vertices: E, B, V, and L. The edge, E B is labeled 410 miles. The edge, B V is labeled 396 miles. The edge, V L is labeled 159 miles. The edge, L E is labeled 106 miles. The edge, L B is labeled 439 miles. The edge, E V is labeled 207 miles. In the first graph, the edges, E V, and L B are in dashed lines. In the second graph, the edges, E L and B V are in dashed lines. In the third graph, the edges, E B and L V are in dashed lines.",
+      "credit": ""
+    },
+    {
+      "url": "https://math.libretexts.org/@api/deki/files/127285/16f26022f8448a12cf484aec7646628447b5e1ac?revision=1&size=bestfit&height=400",
+      "alt": "Three graphs represent the four California air force bases. Each graph has four vertices: E, B, V, and L. The edge, E B is labeled 410 miles. The edge, B V is labeled 396 miles. The edge, V L is labeled 159 miles. The edge, L E is labeled 106 miles. The edge, L B is labeled 439 miles. The edge, E V is labeled 207 miles. In the first graph, the edges, E V, and L B are in dashed lines. In the second graph, the edges, E L and B V are in dashed lines. In the third graph, the edges, E B and L V are in dashed lines.",
+      "credit": ""
+    },
+    {
+      "url": "https://math.libretexts.org/@api/deki/files/127287/8a7604466687c749f7927aab053c2e6077e34c7b?revision=1&size=bestfit&width=550&height=371",
+      "alt": "A graph represents the five California air force bases. The graph has five vertices: E, B, V, L, and T. The edge, E B is labeled 410 miles. The edge, B V is labeled 396 miles. The edge, V L is labeled 159 miles. The edge, L E is labeled 106 miles. The edge, L B is labeled 439 miles. The edge, E V is labeled 207 miles. The edge, E T is labeled 370 miles. The edge, L T is labeled 396 miles. The edge, B T is labeled 84 miles. The edge, V T is labeled 396 miles.",
+      "credit": ""
+    },
+    {
+      "url": "https://math.libretexts.org/@api/deki/files/127293/3f1a846bed2d5edc52477e72569c91177d7500f6?revision=1&size=bestfit&width=550&height=371",
+      "alt": "A graph represents four cities. The graph has five vertices: E, B, V, L, and T. The edge, E B is labeled 410 miles. The edge, B V is labeled 396 miles. The edge, V L is labeled 159 miles. The edge, L E is labeled 106 miles. The edge, L B is labeled 439 miles. The edge, E V is labeled 207 miles. The edge, E T is labeled 370 miles. The edge, L T is labeled 396 miles. The edge, B T is labeled 84 miles. The edge, V T is labeled 396 miles. The edges, E L, L V, L B, and L T are in dashed lines.",
+      "credit": ""
+    },
+    {
+      "url": "https://math.libretexts.org/@api/deki/files/127295/31cc925747178dec73225711363c0a5ea1891bf9?revision=1&size=bestfit&height=400",
+      "alt": "A graph represents the airfares between six different cities. The graph has 6 vertices. The vertices are A, B, C, D, E, and F. Edges from A leading to B, C, D, E, and F are labeled 250 dollars, 210 dollars, 300 dollars, 200 dollars, and 100 dollars. Edges from B leading to C, D, E, and F are labeled 220 dollars, 120 dollars, 160 dollars, and 170 dollars. Edges from C to D, E, and F are labeled 310 dollars, 180 dollars, and 330 dollars. Edges from D to E and F 270 dollars and 150 dollars. An edge from E to F is labeled 350 dollars.",
+      "credit": ""
+    },
+    {
+      "url": "https://math.libretexts.org/@api/deki/files/127294/141b0aa30c9bc337f96f3c22adad05d7ab78556c?revision=1&size=bestfit&height=400",
+      "alt": "A graph represents the airfares between six different cities. The graph has 6 vertices. The vertices are A, B, C, D, E, and F. Edges from A leading to B, C, D, E, and F are labeled 250 dollars, 210 dollars, 300 dollars, 200 dollars, and 100 dollars. Edges from B leading to C, D, E, and F are labeled 220 dollars, 120 dollars, 160 dollars, and 170 dollars. Edges from C to D, E, and F are labeled 310 dollars, 180 dollars, and 330 dollars. Edges from D to E and F 270 dollars and 150 dollars. An edge from E to F is labeled 350 dollars. The edges from A are in dashed lines. A is labeled V 1.",
+      "credit": ""
+    },
+    {
+      "url": "https://math.libretexts.org/@api/deki/files/127298/25ffcb20ed5618728f02c9b215db58902e7ad6cf?revision=1&size=bestfit&width=385&height=400",
+      "alt": "A graph represents the airfares between six different cities. The graph has 6 vertices. The vertices are A, B, C, D, E, and F. Edges from A leading to B, C, D, E, and F are labeled 250 dollars, 210 dollars, 300 dollars, 200 dollars, and 100 dollars. Edges from B leading to C, D, E, and F are labeled 220 dollars, 120 dollars, 160 dollars, and 170 dollars. Edges from C to D, E, and F are labeled 310 dollars, 180 dollars, and 330 dollars. Edges from D to E and F 270 dollars and 150 dollars. An edge from E to F is labeled 350 dollars. The edges from F are in dashed lines. A is labeled V 1. F is labeled V 2.",
+      "credit": ""
+    },
+    {
+      "url": "https://math.libretexts.org/@api/deki/files/127297/146b467c21672f29084264421eacd97fdafb2d28?revision=1&size=bestfit&height=400",
+      "alt": "A graph represents the airfares between six different cities. The graph has 6 vertices. The vertices are A, B, C, D, E, and F. Edges from A leading to B, C, D, E, and F are labeled 250 dollars, 210 dollars, 300 dollars, 200 dollars, and 100 dollars. Edges from B leading to C, D, E, and F are labeled 220 dollars, 120 dollars, 160 dollars, and 170 dollars. Edges from C to D, E, and F are labeled 310 dollars, 180 dollars, and 330 dollars. Edges from D to E and F 270 dollars and 150 dollars. A is labeled V 1. F is labeled V 2. D is labeled V 3. The edges, B D, C D, and D E are in dashed lines.",
+      "credit": ""
+    },
+    {
+      "url": "https://math.libretexts.org/@api/deki/files/127301/6c1610608563df98cd2275f6c7b26bd5aa02c8f0?revision=1&size=bestfit&height=400",
+      "alt": "A graph represents the airfares between six different cities. The graph has 6 vertices. The vertices are A, B, C, D, E, and F. Edges from A leading to B, C, D, E, and F are labeled 250 dollars, 210 dollars, 300 dollars, 200 dollars, and 100 dollars. Edges from B leading to C, D, E, and F are labeled 220 dollars, 120 dollars, 160 dollars, and 170 dollars. Edges from C to D, E, and F are labeled 310 dollars, 180 dollars, and 330 dollars. Edges from D to E and F 270 dollars and 150 dollars. A is labeled V 1. F is labeled V 2. D is labeled V 3. B is labeled V 4. The edges, B E and B C are in dashed lines.",
+      "credit": ""
+    },
+    {
+      "url": "https://math.libretexts.org/@api/deki/files/127304/727eb43512c10bf7dbd65c0dc4d5b8a98e8f8ab8?revision=1&size=bestfit&height=400",
+      "alt": "A graph represents the airfares between six different cities. The graph has 6 vertices. The vertices are A, B, C, D, E, and F. Edges from A leading to B, C, D, E, and F are labeled 250 dollars, 210 dollars, 300 dollars, 200 dollars, and 100 dollars. Edges from B leading to C, D, E, and F are labeled 220 dollars, 120 dollars, 160 dollars, and 170 dollars. Edges from C to D, E, and F are labeled 310 dollars, 180 dollars, and 330 dollars. Edges from D to E and F 270 dollars and 150 dollars. A is labeled V 1. F is labeled V 2. D is labeled V 3. B is labeled V 4. E is labeled V 5. C is labeled V 6. The edges, A C, and E C are in dashed lines.",
+      "credit": ""
+    },
+    {
+      "url": "https://math.libretexts.org/@api/deki/files/127303/01a5c51800e3917695ffb97ae17d8b4bde5b2402?revision=1&size=bestfit&height=400",
+      "alt": "A graph represents the airfares between six different cities. The graph has 6 vertices. The vertices are A, B, C, D, E, and F. Edges from A leading to B, C, D, E, and F are labeled 120 minutes, 140 minutes, 85 minutes, 90 minutes, and 180 minutes. Edges from B leading to C, D, E, and F are labeled 100 minutes, 80 minutes, 95 minutes, and 110 minutes. Edges from C to D, E, and F are labeled 220 minutes, 200 minutes, and 75 minutes. Edges from D to E and F are labeled 130 minutes and 70 minutes. An edge from E to F is labeled 210 minutes.",
+      "credit": ""
+    }
+  ],
+  "references": [
+    {
+      "text": "a website set up by the mathematics department at the University of Waterloo in Ontario, Canada:",
+      "url": "https://openstax.org/r/University_of_Waterloo"
+    },
+    {
+      "text": "12.9: Traveling Salesperson Problem",
+      "url": "https://math.libretexts.org/Bookshelves/Applied_Mathematics/Contemporary_Mathematics_(OpenStax)/12%3A_Graph_Theory/12.09%3A_Traveling_Salesperson_Problem"
+    },
+    {
+      "text": "CC BY  4.0",
+      "url": "https://creativecommons.org/licenses/by/4.0"
+    },
+    {
+      "text": "OpenStax",
+      "url": "https://openstax.org/"
+    },
+    {
+      "text": "source content",
+      "url": "https://openstax.org/details/books/contemporary-mathematics"
+    }
+  ],
+  "exercises": [
+    {
+      "ordinal": 1,
+      "sourceNumber": "1",
+      "sourceAnchor": "",
+      "kind": "exercise-candidate",
+      "context": "",
+      "original": "1. Distinguish between brute force algorithms and greedy algorithms.",
+      "prompt": "1. Distinguish between brute force algorithms and greedy algorithms.",
+      "sourceAnswers": [],
+      "hasFigure": false,
+      "status": "draft",
+      "answerVerified": false,
+      "translationStatus": "pending",
+      "mappingStatus": "pending"
+    },
+    {
+      "ordinal": 2,
+      "sourceNumber": "2",
+      "sourceAnchor": "",
+      "kind": "exercise-candidate",
+      "context": "",
+      "original": "2. List all distinct Hamilton cycles of a complete graph.",
+      "prompt": "2. List all distinct Hamilton cycles of a complete graph.",
+      "sourceAnswers": [],
+      "hasFigure": false,
+      "status": "draft",
+      "answerVerified": false,
+      "translationStatus": "pending",
+      "mappingStatus": "pending"
+    },
+    {
+      "ordinal": 3,
+      "sourceNumber": "3",
+      "sourceAnchor": "",
+      "kind": "exercise-candidate",
+      "context": "",
+      "original": "3. Apply brute force method to solve traveling salesperson applications.",
+      "prompt": "3. Apply brute force method to solve traveling salesperson applications.",
+      "sourceAnswers": [],
+      "hasFigure": false,
+      "status": "draft",
+      "answerVerified": false,
+      "translationStatus": "pending",
+      "mappingStatus": "pending"
+    },
+    {
+      "ordinal": 4,
+      "sourceNumber": "4",
+      "sourceAnchor": "",
+      "kind": "exercise-candidate",
+      "context": "",
+      "original": "4. Apply nearest neighbor method to solve traveling salesperson applications.",
+      "prompt": "4. Apply nearest neighbor method to solve traveling salesperson applications.",
+      "sourceAnswers": [],
+      "hasFigure": false,
+      "status": "draft",
+      "answerVerified": false,
+      "translationStatus": "pending",
+      "mappingStatus": "pending"
+    },
+    {
+      "ordinal": 5,
+      "sourceNumber": "",
+      "sourceAnchor": "",
+      "kind": "example-or-exercise",
+      "context": "After phase 2, based on the information you have, you will choose the branch with 10, 7 and 4. Now, you are following a different branch than before, but it is the best choice based on the information you have. Let’s look at the last phase.\n\nAfter phase 3, you will choose branch G which has a sum of 32.\n\nThe process of adding the values on each branch and selecting the highest sum is an example of a brute force algorithm because all options were explored in detail. The process of choosing the branch in phases, based on the best choice at each phase is a greedy algorithm. Although a brute force algorithm gives us the ideal solution, it can take a very long time to implement. Imagine a tree diagram with thousands or even millions of branches. It might not be possible to check all the sums. A greedy algorithm, on the other hand, can be completed in a relatively short time, and generally leads to good solutions, but not necessarily the ideal solution.",
+      "original": "Example \\(\\PageIndex{1}\\): Distinguishing between Brute Force and Greedy Algorithms\n\nA cashier rings up a sale for $4.63 cents in U.S. currency. The customer pays with a $5 bill. The cashier would like to give the customer $0.37 in change using the fewest coins possible. The coins that can be used are quarters ($0.25), dimes ($0.10), nickels ($0.05), and pennies ($0.01). The cashier starts by selecting the coin of highest value less than or equal to $0.37, which is a quarter. This leaves \\($0.37−$0.25=$0.12\\). The cashier selects the coin of highest value less than or equal to $0.12, which is a dime. This leaves \\($0.12−$0.10=$0.02\\). The cashier selects the coin of highest value less than or equal to $0.02, which is a penny. This leaves \\($0.02−$0.01=$0.01\\). The cashier selects the coin of highest value less than or equal to $0.01, which is a penny. This leaves no remainder. The cashier used one quarter, one dime, and two pennies, which is four coins. Use this information to answer the following questions.\n\n1. Is the cashier’s approach an example of a greedy algorithm or a brute force algorithm? Explain how you know.\n\n2. The cashier’s solution is the best solution. In other words, four is the fewest number of coins possible. Is this consistent with the results of an algorithm of this kind? Explain your reasoning.\n\nAnswer\n\n1. The approach the cashier used is an example of a greedy algorithm, because the problem was approached in phases and the best choice was made at each phase. Also, it is not a brute force algorithm, because the cashier did not attempt to list out all possible combinations of coins to reach this conclusion.\n\n2. Yes, it is consistent. A greedy algorithm does not always yield the best result, but sometimes it does.",
+      "prompt": "Example \\(\\PageIndex{1}\\): Distinguishing between Brute Force and Greedy Algorithms\n\nA cashier rings up a sale for $4.63 cents in U.S. currency. The customer pays with a $5 bill. The cashier would like to give the customer $0.37 in change using the fewest coins possible. The coins that can be used are quarters ($0.25), dimes ($0.10), nickels ($0.05), and pennies ($0.01). The cashier starts by selecting the coin of highest value less than or equal to $0.37, which is a quarter. This leaves \\($0.37−$0.25=$0.12\\). The cashier selects the coin of highest value less than or equal to $0.12, which is a dime. This leaves \\($0.12−$0.10=$0.02\\). The cashier selects the coin of highest value less than or equal to $0.02, which is a penny. This leaves \\($0.02−$0.01=$0.01\\). The cashier selects the coin of highest value less than or equal to $0.01, which is a penny. This leaves no remainder. The cashier used one quarter, one dime, and two pennies, which is four coins. Use this information to answer the following questions.\n\n1. Is the cashier’s approach an example of a greedy algorithm or a brute force algorithm? Explain how you know.\n\n2. The cashier’s solution is the best solution. In other words, four is the fewest number of coins possible. Is this consistent with the results of an algorithm of this kind? Explain your reasoning.",
+      "sourceAnswers": [
+        "1. The approach the cashier used is an example of a greedy algorithm, because the problem was approached in phases and the best choice was made at each phase. Also, it is not a brute force algorithm, because the cashier did not attempt to list out all possible combinations of coins to reach this conclusion.\n\n2. Yes, it is consistent. A greedy algorithm does not always yield the best result, but sometimes it does."
+      ],
+      "hasFigure": false,
+      "status": "draft",
+      "answerVerified": false,
+      "translationStatus": "pending",
+      "mappingStatus": "pending"
+    },
+    {
+      "ordinal": 6,
+      "sourceNumber": "",
+      "sourceAnchor": "",
+      "kind": "example-or-exercise",
+      "context": "Notice that we listed all of the Hamilton cycles and found their weights when we solved the TSP about the officer from Vandenberg. This is a skill you will need to practice. To make sure you don't miss any, you can calculate the number of possible Hamilton cycles in a complete graph. It is also helpful to know that half of the directed cycles in a complete graph are the same cycle in reverse direction, so, you only have to calculate half the number of possible weights, and the rest are duplicates.\n\nIn a complete graph with \\(n\\) vertices,\n\nTIP! When listing all the distinct Hamilton cycles in a complete graph, you can start them all at any vertex you choose. Remember, the cycle a → b → c → a is the same cycle as b → c → a → b so there is no need to list both.",
+      "original": "Example \\(\\PageIndex{2}\\): Calculating Possible Weights of Hamilton Cycles\n\nSuppose you have a complete weighted graph with vertices N, M, O, and P.\n\n1. Use the formula \\((n−1)!\\) to calculate the number of distinct Hamilton cycles in the graph.\n\n2. Use the formula \\(\\frac{(n−1)!}{2}\\) to calculate the greatest number of different weights possible for the Hamilton cycles.\n\n3. Are all of the distinct Hamilton cycles listed here? How do you know?\n\n    Cycle 1: N → M → O → P → N\n\n    Cycle 2: N → M → P → O → N\n\n    Cycle 3: N → O → M → P → N\n\n    Cycle 4: N → O → P → M → N\n\n    Cycle 5: N → P → M → O → N\n\n    Cycle 6: N → P → O → M → N\n\n4. Which pairs of cycles must have the same weights? How do you know?\n\nAnswer\n\n1. There are 4 vertices; so, \\(n=4\\). This means there are \\((n−1)!=(4−1)!=3⋅2⋅1=6\\) distinct Hamilton cycles beginning at any given vertex.\n\n2. Since \\(n=4\\), there are \\(\\frac{(n−1)!}{2}=\\frac{(4−1)!}{2}=\\frac{6}{2}=3\\) possible weights.\n\n3. Yes, they are all distinct cycles and there are 6 of them.\n\n4. Cycles 1 and 6 have the same weight, Cycles 2 and 4 have the same weight, and Cycles 3 and 5 have the same weight, because these pairs follow the same route through the graph but in reverse.",
+      "prompt": "Example \\(\\PageIndex{2}\\): Calculating Possible Weights of Hamilton Cycles\n\nSuppose you have a complete weighted graph with vertices N, M, O, and P.\n\n1. Use the formula \\((n−1)!\\) to calculate the number of distinct Hamilton cycles in the graph.\n\n2. Use the formula \\(\\frac{(n−1)!}{2}\\) to calculate the greatest number of different weights possible for the Hamilton cycles.\n\n3. Are all of the distinct Hamilton cycles listed here? How do you know?\n\n    Cycle 1: N → M → O → P → N\n\n    Cycle 2: N → M → P → O → N\n\n    Cycle 3: N → O → M → P → N\n\n    Cycle 4: N → O → P → M → N\n\n    Cycle 5: N → P → M → O → N\n\n    Cycle 6: N → P → O → M → N\n\n4. Which pairs of cycles must have the same weights? How do you know?",
+      "sourceAnswers": [
+        "1. There are 4 vertices; so, \\(n=4\\). This means there are \\((n−1)!=(4−1)!=3⋅2⋅1=6\\) distinct Hamilton cycles beginning at any given vertex.\n\n2. Since \\(n=4\\), there are \\(\\frac{(n−1)!}{2}=\\frac{(4−1)!}{2}=\\frac{6}{2}=3\\) possible weights.\n\n3. Yes, they are all distinct cycles and there are 6 of them.\n\n4. Cycles 1 and 6 have the same weight, Cycles 2 and 4 have the same weight, and Cycles 3 and 5 have the same weight, because these pairs follow the same route through the graph but in reverse."
+      ],
+      "hasFigure": false,
+      "status": "draft",
+      "answerVerified": false,
+      "translationStatus": "pending",
+      "mappingStatus": "pending"
+    },
+    {
+      "ordinal": 7,
+      "sourceNumber": "",
+      "sourceAnchor": "",
+      "kind": "example-or-exercise",
+      "context": "Step 2: List all possible Hamilton cycles.\n\nStep 3: Find the weight of each cycle.\n\nStep 4: Identify the Hamilton cycle of lowest weight.",
+      "original": "Example \\(\\PageIndex{3}\\): Applying the Brute Force Method\n\nOn the next assignment, the air force officer must leave from Travis Air Force base, visit Beal, Edwards, and Vandenberg Air Force bases each exactly once and return to Travis Air Force base. There is no need to visit Los Angeles Air Force base. Use Figure \\(\\PageIndex{9}\\) to find the shortest route.\n\n[Figure: A graph represents the five California air force bases. The graph has five vertices: E, B, V, L, and T. The edge, E B is labeled 410 miles. The edge, B V is labeled 396 miles. The edge, V L is labeled 159 miles. The edge, L E is labeled 106 miles. The edge, L B is labeled 439 miles. The edge, E V is labeled 207 miles. The edge, E T is labeled 370 miles. The edge, L T is labeled 396 miles. The edge, B T is labeled 84 miles. The edge, V T is labeled 396 miles.]\n\nFigure \\(\\PageIndex{9}\\) Distances between Five California Air Force Bases\n\nAnswer\n\nStep 1: Since there are 4 vertices, there will be \\((4−1)!=3!=6\\) cycles, but half of them will be the reverse of the others; so, there will be \\(\\frac{(4−1)!}{2}=\\frac{6}{2}=3\\) possible distances.\n\nStep 2: List all the Hamilton cycles in the subgraph of the graph in Figure 12.222.\n\n[Figure: A graph represents four cities. The graph has five vertices: E, B, V, L, and T. The edge, E B is labeled 410 miles. The edge, B V is labeled 396 miles. The edge, V L is labeled 159 miles. The edge, L E is labeled 106 miles. The edge, L B is labeled 439 miles. The edge, E V is labeled 207 miles. The edge, E T is labeled 370 miles. The edge, L T is labeled 396 miles. The edge, B T is labeled 84 miles. The edge, V T is labeled 396 miles. The edges, E L, L V, L B, and L T are in dashed lines.]\n\nFigure \\(\\PageIndex{10}\\) Subgraph with Cities B, E, T, and V\n\nTo find the 6 cycles, focus on the three vertices in the middle, B, E, and V. The arrangements of these vertices are BEV, BVE, EBV, EVB, VBE, and VEB. These would correspond to the 6 cycles:\n\n1: T → B → E → V → T\n\n2: T → B → V → E → T\n\n3: T → E → B → V → T\n\n4: T → E → V → B → T\n\n5: T → V → B → E → T\n\n6: T → V → E → B → T\n\nStep 3: Find the weight of each path. You can reduce your work by observing the cycles that are reverses of each other.\n\n1: \\(84+410+207+396=1097\\)\n\n2: \\(84+396+207+370=1071\\)\n\n3: \\(370+410+396+396=1572\\)\n\n4: Reverse of cycle 2, 1071\n\n5: Reverse of cycle 3, 1572\n\n6: Reverse of cycle 1, 1097\n\nStep 4: Identify a Hamilton cycle of least weight.\n\nThe second path, T → B → V → E → T, and its reverse, T → E → V → B → T, have the least weight. The solution is that the officer should travel from Travis Air Force base to Beal Air Force Base, to Vandenberg Air Force base, to Edwards Air Force base, and return to Travis Air Force base, or the same route in reverse.",
+      "prompt": "Example \\(\\PageIndex{3}\\): Applying the Brute Force Method\n\nOn the next assignment, the air force officer must leave from Travis Air Force base, visit Beal, Edwards, and Vandenberg Air Force bases each exactly once and return to Travis Air Force base. There is no need to visit Los Angeles Air Force base. Use Figure \\(\\PageIndex{9}\\) to find the shortest route.\n\n[Figure: A graph represents the five California air force bases. The graph has five vertices: E, B, V, L, and T. The edge, E B is labeled 410 miles. The edge, B V is labeled 396 miles. The edge, V L is labeled 159 miles. The edge, L E is labeled 106 miles. The edge, L B is labeled 439 miles. The edge, E V is labeled 207 miles. The edge, E T is labeled 370 miles. The edge, L T is labeled 396 miles. The edge, B T is labeled 84 miles. The edge, V T is labeled 396 miles.]\n\nFigure \\(\\PageIndex{9}\\) Distances between Five California Air Force Bases",
+      "sourceAnswers": [
+        "Step 1: Since there are 4 vertices, there will be \\((4−1)!=3!=6\\) cycles, but half of them will be the reverse of the others; so, there will be \\(\\frac{(4−1)!}{2}=\\frac{6}{2}=3\\) possible distances.\n\nStep 2: List all the Hamilton cycles in the subgraph of the graph in Figure 12.222.\n\n[Figure: A graph represents four cities. The graph has five vertices: E, B, V, L, and T. The edge, E B is labeled 410 miles. The edge, B V is labeled 396 miles. The edge, V L is labeled 159 miles. The edge, L E is labeled 106 miles. The edge, L B is labeled 439 miles. The edge, E V is labeled 207 miles. The edge, E T is labeled 370 miles. The edge, L T is labeled 396 miles. The edge, B T is labeled 84 miles. The edge, V T is labeled 396 miles. The edges, E L, L V, L B, and L T are in dashed lines.]\n\nFigure \\(\\PageIndex{10}\\) Subgraph with Cities B, E, T, and V\n\nTo find the 6 cycles, focus on the three vertices in the middle, B, E, and V. The arrangements of these vertices are BEV, BVE, EBV, EVB, VBE, and VEB. These would correspond to the 6 cycles:\n\n1: T → B → E → V → T\n\n2: T → B → V → E → T\n\n3: T → E → B → V → T\n\n4: T → E → V → B → T\n\n5: T → V → B → E → T\n\n6: T → V → E → B → T\n\nStep 3: Find the weight of each path. You can reduce your work by observing the cycles that are reverses of each other.\n\n1: \\(84+410+207+396=1097\\)\n\n2: \\(84+396+207+370=1071\\)\n\n3: \\(370+410+396+396=1572\\)\n\n4: Reverse of cycle 2, 1071\n\n5: Reverse of cycle 3, 1572\n\n6: Reverse of cycle 1, 1097\n\nStep 4: Identify a Hamilton cycle of least weight.\n\nThe second path, T → B → V → E → T, and its reverse, T → E → V → B → T, have the least weight. The solution is that the officer should travel from Travis Air Force base to Beal Air Force Base, to Vandenberg Air Force base, to Edwards Air Force base, and return to Travis Air Force base, or the same route in reverse."
+      ],
+      "hasFigure": true,
+      "status": "draft",
+      "answerVerified": false,
+      "translationStatus": "pending",
+      "mappingStatus": "pending"
+    },
+    {
+      "ordinal": 8,
+      "sourceNumber": "",
+      "sourceAnchor": "",
+      "kind": "example-or-exercise",
+      "context": "Step 1: Select the starting vertex and label \\(\\)V1 for \"visited 1st.\" Identify the edge of lowest weight between \\(\\)V1 and the remaining vertices.\n\nStep 2: Label the vertex at the end of the edge of lowest weight that you found in previous step as \\(\\)Vn where the subscript n indicates the order the vertex is visited. Identify the edge of lowest weight between \\(\\)Vn and the vertices that remain to be visited.\n\nStep 3: If vertices remain that have not been visited, repeat Step 2. Otherwise, a Hamilton cycle of low weight is \\({V}_{1}→{V}_{2}→⋯→{V}_{n}→\\)V1.",
+      "original": "Example \\(\\PageIndex{4}\\): Using the Nearest Neighbor Method\n\nSuppose that the candidate for governor wants to hold rallies around the state but time before the election is very limited. They would like to leave their home in city A, visit cities B, C, D, E, and F each once, and return home. The airfare between cities is not as important as the time of travel, which is indicated in Figure \\(\\PageIndex{17}\\). Use the nearest neighbor method to find a route with relatively low travel time. What is the total travel time of the route that you found?\n\n[Figure: A graph represents the airfares between six different cities. The graph has 6 vertices. The vertices are A, B, C, D, E, and F. Edges from A leading to B, C, D, E, and F are labeled 120 minutes, 140 minutes, 85 minutes, 90 minutes, and 180 minutes. Edges from B leading to C, D, E, and F are labeled 100 minutes, 80 minutes, 95 minutes, and 110 minutes. Edges from C to D, E, and F are labeled 220 minutes, 200 minutes, and 75 minutes. Edges from D to E and F are labeled 130 minutes and 70 minutes. An edge from E to F is labeled 210 minutes.]\n\nFigure \\(\\PageIndex{17}\\) Travel Times between Cities A, B, C, D, E and F\n\nAnswer\n\nStep 1: Label vertex A as \\(\\)V1. The edge of lowest weight between A and the remaining vertices is 85 min between A and D.\n\nStep 2: Label vertex D as \\(\\)V2. The edge of lowest weight between D and the vertices that remain to be visited, B, C, E, and F, is 70 min between D and F.\n\nRepeat Step 2: Label vertex F as \\(\\)V3. The edge of lowest weight between F and the vertices that remain to be visited, B, C, and E, is 75 min between F and C.\n\nRepeat Step 2: Label vertex C as \\(\\)V4. The edge of lowest weight between C and the vertices that remain to be visited, B and E, is 100 min between C and B.\n\nRepeat Step 2: Label vertex B as \\(\\)V5. The only vertex that remains to be visited is E. The weight of the edge between B and E is 95 min.\n\nStep 3: A Hamilton cycle of low weight is A → D → F → C → B → E → A. So, a route of relatively low travel time is A to D to F to C to B to E and back to A. The total travel time of this route is: \\(\\)85min+70min+75min+100min+95min+90min=515minor8hrs35min",
+      "prompt": "Example \\(\\PageIndex{4}\\): Using the Nearest Neighbor Method\n\nSuppose that the candidate for governor wants to hold rallies around the state but time before the election is very limited. They would like to leave their home in city A, visit cities B, C, D, E, and F each once, and return home. The airfare between cities is not as important as the time of travel, which is indicated in Figure \\(\\PageIndex{17}\\). Use the nearest neighbor method to find a route with relatively low travel time. What is the total travel time of the route that you found?\n\n[Figure: A graph represents the airfares between six different cities. The graph has 6 vertices. The vertices are A, B, C, D, E, and F. Edges from A leading to B, C, D, E, and F are labeled 120 minutes, 140 minutes, 85 minutes, 90 minutes, and 180 minutes. Edges from B leading to C, D, E, and F are labeled 100 minutes, 80 minutes, 95 minutes, and 110 minutes. Edges from C to D, E, and F are labeled 220 minutes, 200 minutes, and 75 minutes. Edges from D to E and F are labeled 130 minutes and 70 minutes. An edge from E to F is labeled 210 minutes.]\n\nFigure \\(\\PageIndex{17}\\) Travel Times between Cities A, B, C, D, E and F",
+      "sourceAnswers": [
+        "Step 1: Label vertex A as \\(\\)V1. The edge of lowest weight between A and the remaining vertices is 85 min between A and D.\n\nStep 2: Label vertex D as \\(\\)V2. The edge of lowest weight between D and the vertices that remain to be visited, B, C, E, and F, is 70 min between D and F.\n\nRepeat Step 2: Label vertex F as \\(\\)V3. The edge of lowest weight between F and the vertices that remain to be visited, B, C, and E, is 75 min between F and C.\n\nRepeat Step 2: Label vertex C as \\(\\)V4. The edge of lowest weight between C and the vertices that remain to be visited, B and E, is 100 min between C and B.\n\nRepeat Step 2: Label vertex B as \\(\\)V5. The only vertex that remains to be visited is E. The weight of the edge between B and E is 95 min.\n\nStep 3: A Hamilton cycle of low weight is A → D → F → C → B → E → A. So, a route of relatively low travel time is A to D to F to C to B to E and back to A. The total travel time of this route is: \\(\\)85min+70min+75min+100min+95min+90min=515minor8hrs35min"
+      ],
+      "hasFigure": true,
+      "status": "draft",
+      "answerVerified": false,
+      "translationStatus": "pending",
+      "mappingStatus": "pending"
+    },
+    {
+      "ordinal": 9,
+      "sourceNumber": "1",
+      "sourceAnchor": "",
+      "kind": "exercise-candidate",
+      "context": "Check Your Understanding",
+      "original": "1. The advantage of a greedy algorithm is that it is more efficient.",
+      "prompt": "1. The advantage of a greedy algorithm is that it is more efficient.",
+      "sourceAnswers": [],
+      "hasFigure": false,
+      "status": "draft",
+      "answerVerified": false,
+      "translationStatus": "pending",
+      "mappingStatus": "pending"
+    },
+    {
+      "ordinal": 10,
+      "sourceNumber": "1",
+      "sourceAnchor": "",
+      "kind": "exercise-candidate",
+      "context": "Check Your Understanding",
+      "original": "1. \n\nTrue",
+      "prompt": "1. \n\nTrue",
+      "sourceAnswers": [],
+      "hasFigure": false,
+      "status": "draft",
+      "answerVerified": false,
+      "translationStatus": "pending",
+      "mappingStatus": "pending"
+    },
+    {
+      "ordinal": 11,
+      "sourceNumber": "2",
+      "sourceAnchor": "",
+      "kind": "exercise-candidate",
+      "context": "Check Your Understanding",
+      "original": "2. \n\nFalse",
+      "prompt": "2. \n\nFalse",
+      "sourceAnswers": [],
+      "hasFigure": false,
+      "status": "draft",
+      "answerVerified": false,
+      "translationStatus": "pending",
+      "mappingStatus": "pending"
+    },
+    {
+      "ordinal": 12,
+      "sourceNumber": "2",
+      "sourceAnchor": "",
+      "kind": "exercise-candidate",
+      "context": "Check Your Understanding",
+      "original": "2. The disadvantage of a brute force algorithm is that it does not always give the ideal solution.",
+      "prompt": "2. The disadvantage of a brute force algorithm is that it does not always give the ideal solution.",
+      "sourceAnswers": [],
+      "hasFigure": false,
+      "status": "draft",
+      "answerVerified": false,
+      "translationStatus": "pending",
+      "mappingStatus": "pending"
+    },
+    {
+      "ordinal": 13,
+      "sourceNumber": "1",
+      "sourceAnchor": "",
+      "kind": "exercise-candidate",
+      "context": "Check Your Understanding",
+      "original": "1. \n\nTrue",
+      "prompt": "1. \n\nTrue",
+      "sourceAnswers": [],
+      "hasFigure": false,
+      "status": "draft",
+      "answerVerified": false,
+      "translationStatus": "pending",
+      "mappingStatus": "pending"
+    },
+    {
+      "ordinal": 14,
+      "sourceNumber": "2",
+      "sourceAnchor": "",
+      "kind": "exercise-candidate",
+      "context": "Check Your Understanding",
+      "original": "2. \n\nFalse",
+      "prompt": "2. \n\nFalse",
+      "sourceAnswers": [],
+      "hasFigure": false,
+      "status": "draft",
+      "answerVerified": false,
+      "translationStatus": "pending",
+      "mappingStatus": "pending"
+    },
+    {
+      "ordinal": 15,
+      "sourceNumber": "3",
+      "sourceAnchor": "",
+      "kind": "exercise-candidate",
+      "context": "Check Your Understanding",
+      "original": "3. The nearest neighbor method is an example of a brute force algorithm.",
+      "prompt": "3. The nearest neighbor method is an example of a brute force algorithm.",
+      "sourceAnswers": [],
+      "hasFigure": false,
+      "status": "draft",
+      "answerVerified": false,
+      "translationStatus": "pending",
+      "mappingStatus": "pending"
+    },
+    {
+      "ordinal": 16,
+      "sourceNumber": "1",
+      "sourceAnchor": "",
+      "kind": "exercise-candidate",
+      "context": "Check Your Understanding",
+      "original": "1. \n\nTrue",
+      "prompt": "1. \n\nTrue",
+      "sourceAnswers": [],
+      "hasFigure": false,
+      "status": "draft",
+      "answerVerified": false,
+      "translationStatus": "pending",
+      "mappingStatus": "pending"
+    },
+    {
+      "ordinal": 17,
+      "sourceNumber": "2",
+      "sourceAnchor": "",
+      "kind": "exercise-candidate",
+      "context": "Check Your Understanding",
+      "original": "2. \n\nFalse",
+      "prompt": "2. \n\nFalse",
+      "sourceAnswers": [],
+      "hasFigure": false,
+      "status": "draft",
+      "answerVerified": false,
+      "translationStatus": "pending",
+      "mappingStatus": "pending"
+    },
+    {
+      "ordinal": 18,
+      "sourceNumber": "4",
+      "sourceAnchor": "",
+      "kind": "exercise-candidate",
+      "context": "Check Your Understanding",
+      "original": "4. The brute force method is an example of a greedy algorithm.",
+      "prompt": "4. The brute force method is an example of a greedy algorithm.",
+      "sourceAnswers": [],
+      "hasFigure": false,
+      "status": "draft",
+      "answerVerified": false,
+      "translationStatus": "pending",
+      "mappingStatus": "pending"
+    },
+    {
+      "ordinal": 19,
+      "sourceNumber": "1",
+      "sourceAnchor": "",
+      "kind": "exercise-candidate",
+      "context": "Check Your Understanding",
+      "original": "1. \n\nTrue",
+      "prompt": "1. \n\nTrue",
+      "sourceAnswers": [],
+      "hasFigure": false,
+      "status": "draft",
+      "answerVerified": false,
+      "translationStatus": "pending",
+      "mappingStatus": "pending"
+    },
+    {
+      "ordinal": 20,
+      "sourceNumber": "2",
+      "sourceAnchor": "",
+      "kind": "exercise-candidate",
+      "context": "Check Your Understanding",
+      "original": "2. \n\nFalse",
+      "prompt": "2. \n\nFalse",
+      "sourceAnswers": [],
+      "hasFigure": false,
+      "status": "draft",
+      "answerVerified": false,
+      "translationStatus": "pending",
+      "mappingStatus": "pending"
+    },
+    {
+      "ordinal": 21,
+      "sourceNumber": "5",
+      "sourceAnchor": "",
+      "kind": "exercise-candidate",
+      "context": "Check Your Understanding",
+      "original": "5. The brute force method is used to find a Hamilton cycle of least weight in a complete graph.",
+      "prompt": "5. The brute force method is used to find a Hamilton cycle of least weight in a complete graph.",
+      "sourceAnswers": [],
+      "hasFigure": false,
+      "status": "draft",
+      "answerVerified": false,
+      "translationStatus": "pending",
+      "mappingStatus": "pending"
+    },
+    {
+      "ordinal": 22,
+      "sourceNumber": "1",
+      "sourceAnchor": "",
+      "kind": "exercise-candidate",
+      "context": "Check Your Understanding",
+      "original": "1. \n\nTrue",
+      "prompt": "1. \n\nTrue",
+      "sourceAnswers": [],
+      "hasFigure": false,
+      "status": "draft",
+      "answerVerified": false,
+      "translationStatus": "pending",
+      "mappingStatus": "pending"
+    },
+    {
+      "ordinal": 23,
+      "sourceNumber": "2",
+      "sourceAnchor": "",
+      "kind": "exercise-candidate",
+      "context": "Check Your Understanding",
+      "original": "2. \n\nFalse",
+      "prompt": "2. \n\nFalse",
+      "sourceAnswers": [],
+      "hasFigure": false,
+      "status": "draft",
+      "answerVerified": false,
+      "translationStatus": "pending",
+      "mappingStatus": "pending"
+    },
+    {
+      "ordinal": 24,
+      "sourceNumber": "6",
+      "sourceAnchor": "",
+      "kind": "exercise-candidate",
+      "context": "Check Your Understanding",
+      "original": "6. The nearest neighbor method is used to find the ideal solution to the traveling salesperson problem.",
+      "prompt": "6. The nearest neighbor method is used to find the ideal solution to the traveling salesperson problem.",
+      "sourceAnswers": [],
+      "hasFigure": false,
+      "status": "draft",
+      "answerVerified": false,
+      "translationStatus": "pending",
+      "mappingStatus": "pending"
+    },
+    {
+      "ordinal": 25,
+      "sourceNumber": "1",
+      "sourceAnchor": "",
+      "kind": "exercise-candidate",
+      "context": "Check Your Understanding",
+      "original": "1. \n\nTrue",
+      "prompt": "1. \n\nTrue",
+      "sourceAnswers": [],
+      "hasFigure": false,
+      "status": "draft",
+      "answerVerified": false,
+      "translationStatus": "pending",
+      "mappingStatus": "pending"
+    },
+    {
+      "ordinal": 26,
+      "sourceNumber": "2",
+      "sourceAnchor": "",
+      "kind": "exercise-candidate",
+      "context": "Check Your Understanding",
+      "original": "2. \n\nFalse",
+      "prompt": "2. \n\nFalse",
+      "sourceAnswers": [],
+      "hasFigure": false,
+      "status": "draft",
+      "answerVerified": false,
+      "translationStatus": "pending",
+      "mappingStatus": "pending"
+    },
+    {
+      "ordinal": 27,
+      "sourceNumber": "7",
+      "sourceAnchor": "",
+      "kind": "exercise-candidate",
+      "context": "Check Your Understanding",
+      "original": "7. The traveling salesman problem involves finding the shortest route to travel between two points.",
+      "prompt": "7. The traveling salesman problem involves finding the shortest route to travel between two points.",
+      "sourceAnswers": [],
+      "hasFigure": false,
+      "status": "draft",
+      "answerVerified": false,
+      "translationStatus": "pending",
+      "mappingStatus": "pending"
+    },
+    {
+      "ordinal": 28,
+      "sourceNumber": "1",
+      "sourceAnchor": "",
+      "kind": "exercise-candidate",
+      "context": "Check Your Understanding",
+      "original": "1. \n\nTrue",
+      "prompt": "1. \n\nTrue",
+      "sourceAnswers": [],
+      "hasFigure": false,
+      "status": "draft",
+      "answerVerified": false,
+      "translationStatus": "pending",
+      "mappingStatus": "pending"
+    },
+    {
+      "ordinal": 29,
+      "sourceNumber": "2",
+      "sourceAnchor": "",
+      "kind": "exercise-candidate",
+      "context": "Check Your Understanding",
+      "original": "2. \n\nFalse",
+      "prompt": "2. \n\nFalse",
+      "sourceAnswers": [],
+      "hasFigure": false,
+      "status": "draft",
+      "answerVerified": false,
+      "translationStatus": "pending",
+      "mappingStatus": "pending"
+    },
+    {
+      "ordinal": 30,
+      "sourceNumber": "8",
+      "sourceAnchor": "",
+      "kind": "exercise-candidate",
+      "context": "Check Your Understanding",
+      "original": "8. The traveling salesman problem can be represented as finding a Hamilton cycle of least weight on a weighted graph.",
+      "prompt": "8. The traveling salesman problem can be represented as finding a Hamilton cycle of least weight on a weighted graph.",
+      "sourceAnswers": [],
+      "hasFigure": false,
+      "status": "draft",
+      "answerVerified": false,
+      "translationStatus": "pending",
+      "mappingStatus": "pending"
+    },
+    {
+      "ordinal": 31,
+      "sourceNumber": "1",
+      "sourceAnchor": "",
+      "kind": "exercise-candidate",
+      "context": "Check Your Understanding",
+      "original": "1. \n\nTrue",
+      "prompt": "1. \n\nTrue",
+      "sourceAnswers": [],
+      "hasFigure": false,
+      "status": "draft",
+      "answerVerified": false,
+      "translationStatus": "pending",
+      "mappingStatus": "pending"
+    },
+    {
+      "ordinal": 32,
+      "sourceNumber": "2",
+      "sourceAnchor": "",
+      "kind": "exercise-candidate",
+      "context": "Check Your Understanding",
+      "original": "2. \n\nFalse",
+      "prompt": "2. \n\nFalse",
+      "sourceAnswers": [],
+      "hasFigure": false,
+      "status": "draft",
+      "answerVerified": false,
+      "translationStatus": "pending",
+      "mappingStatus": "pending"
+    },
+    {
+      "ordinal": 33,
+      "sourceNumber": "9",
+      "sourceAnchor": "",
+      "kind": "exercise-candidate",
+      "context": "Check Your Understanding",
+      "original": "9. There is always more than one Hamilton cycle of least weight, a given Hamilton cycle and the reverse of that Hamilton cycle.",
+      "prompt": "9. There is always more than one Hamilton cycle of least weight, a given Hamilton cycle and the reverse of that Hamilton cycle.",
+      "sourceAnswers": [],
+      "hasFigure": false,
+      "status": "draft",
+      "answerVerified": false,
+      "translationStatus": "pending",
+      "mappingStatus": "pending"
+    },
+    {
+      "ordinal": 34,
+      "sourceNumber": "1",
+      "sourceAnchor": "",
+      "kind": "exercise-candidate",
+      "context": "Check Your Understanding",
+      "original": "1. \n\nTrue",
+      "prompt": "1. \n\nTrue",
+      "sourceAnswers": [],
+      "hasFigure": false,
+      "status": "draft",
+      "answerVerified": false,
+      "translationStatus": "pending",
+      "mappingStatus": "pending"
+    },
+    {
+      "ordinal": 35,
+      "sourceNumber": "2",
+      "sourceAnchor": "",
+      "kind": "exercise-candidate",
+      "context": "Check Your Understanding",
+      "original": "2. \n\nFalse",
+      "prompt": "2. \n\nFalse",
+      "sourceAnswers": [],
+      "hasFigure": false,
+      "status": "draft",
+      "answerVerified": false,
+      "translationStatus": "pending",
+      "mappingStatus": "pending"
+    },
+    {
+      "ordinal": 36,
+      "sourceNumber": "10",
+      "sourceAnchor": "",
+      "kind": "exercise-candidate",
+      "context": "Check Your Understanding",
+      "original": "10. The greatest possible number of distinct weights for the Hamilton cycles of a complete graph with \\(n\\) vertices is (\\(n\\)-1)!",
+      "prompt": "10. The greatest possible number of distinct weights for the Hamilton cycles of a complete graph with \\(n\\) vertices is (\\(n\\)-1)!",
+      "sourceAnswers": [],
+      "hasFigure": false,
+      "status": "draft",
+      "answerVerified": false,
+      "translationStatus": "pending",
+      "mappingStatus": "pending"
+    },
+    {
+      "ordinal": 37,
+      "sourceNumber": "1",
+      "sourceAnchor": "",
+      "kind": "exercise-candidate",
+      "context": "Check Your Understanding",
+      "original": "1. \n\nTrue",
+      "prompt": "1. \n\nTrue",
+      "sourceAnswers": [],
+      "hasFigure": false,
+      "status": "draft",
+      "answerVerified": false,
+      "translationStatus": "pending",
+      "mappingStatus": "pending"
+    },
+    {
+      "ordinal": 38,
+      "sourceNumber": "2",
+      "sourceAnchor": "",
+      "kind": "exercise-candidate",
+      "context": "Check Your Understanding",
+      "original": "2. \n\nFalse",
+      "prompt": "2. \n\nFalse",
+      "sourceAnswers": [],
+      "hasFigure": false,
+      "status": "draft",
+      "answerVerified": false,
+      "translationStatus": "pending",
+      "mappingStatus": "pending"
+    }
+  ],
+  "license": "CC BY 4.0",
+  "licenseEvidence": "This page titled 12.9: Traveling Salesperson Problem was last modified on Thu, 02 Jan 2025 11:07:44 GMT and is shared under a CC BY  4.0  license and was authored, remixed, and/or curated by OpenStax via source content that was edited to the style and standards of the LibreTexts platform.",
+  "url": "https://math.libretexts.org/Bookshelves/Applied_Mathematics/Contemporary_Mathematics_(OpenStax)/12:_Graph_Theory/12.09:_Traveling_Salesperson_Problem",
+  "sha256": "8fe5aeb667383de0deda922ea7029fad1f02cb674d72194c955c5cf9b9db3c0e",
+  "checkedAt": "2026-10-07",
+  "id": "3c7e28ec736d397ed2ac",
+  "bookId": "contemporary",
+  "licenseInherited": false,
+  "licenseSource": "https://math.libretexts.org/Bookshelves/Applied_Mathematics/Contemporary_Mathematics_(OpenStax)/12:_Graph_Theory/12.09:_Traveling_Salesperson_Problem",
+  "licenseUrl": "https://creativecommons.org/licenses/by/4.0/",
+  "authors": "OpenStax / Donna Kirk et al.",
+  "book": "Contemporary Mathematics",
+  "reviewStatus": "unreviewed",
+  "sourceLanguage": "en",
+  "translationStatus": "pending"
+}

@@ -1,0 +1,215 @@
+{
+  "title": "9.3: Outcomes and the Type I and Type II Errors",
+  "originalText": "When you perform a hypothesis test, there are four possible outcomes depending on the actual truth (or falseness) of the null hypothesis H_(0) and the decision to reject or not. The outcomes are summarized in the following table:\n\n            ACTION\t\n            H_(0) IS ACTUALLY\t\n            ...\t\n\n            True\t\n            False\t\n\n            Do not reject H_(0)\t\n            Correct Outcome\t\n            Type II error\t\n\n            Reject H_(0)\t\n            Type I Error\t\n            Correct Outcome\t\n\nThe four possible outcomes in the table are:\n\n1. The decision is cannot reject \\(H_0\\) when \\(H_0\\) is true (correct decision).\n\n2. The decision is cannot accept \\(\\boldsymbol{H}_0\\) when \\(\\boldsymbol{H}_0\\) is true (incorrect decision known as aType I error). This case is described as \"rejecting a good null\". As we will see later, it is this type of error that we will guard against by setting the probability of making such an error. The goal is to NOT take an action that is an error.\n\n3. The decision is cannot reject \\(\\boldsymbol{H}_0\\) when, in fact, \\(\\boldsymbol{H}_0\\) is false (incorrect decision known as a Type II error). This is called \"accepting a false null\". In this situation you have allowed the status quo to remain in force when it should be overturned. As we will see, the null hypothesis has the advantage in competition with the alternative.\n\n4. The decision is cannot accept \\(H_0\\) when \\(H_0\\) is false (correct decision).\n\nEach of the errors occurs with a particular probability. The Greek letters \\(\\alpha\\) and \\(\\beta\\) represent the probabilities.\n\n\\(\\alpha=\\) probability of a Type I error \\(=P\\) (Type I error) \\(=\\) probability of rejecting the null hypothesis when the null hypothesis is true: rejecting a good null.\n\n\\(\\beta=\\) probability of a Type II error \\(=P(\\) Type II error \\()=\\) probability of not rejecting the null hypothesis when the null hypothesis is false. ( \\(1-\\beta\\) ) is called the Power of the Test.\n\n\\(\\alpha\\) and \\(\\beta\\) should be as small as possible because they are probabilities of errors.\n\nStatistics allows us to set the probability that we are making a Type I error. The probability of making a Type I error is \\(\\alpha\\). Recall that the confidence intervals in the last unit were set by choosing a value called \\(Z_\\alpha\\) (or \\(t_\\alpha\\) ) and the alpha value determined the confidence level of the estimate because it was the probability of the interval failing to capture the true mean (or proportion parameter p). This alpha and that one are the same.\n\nThe easiest way to see the relationship between the alpha error and the level of confidence is with the following figure.\n\n[Figure: ...]\n\nFigure \\(\\PageIndex{1}\\):\n\nIn the center of Figure \\(\\PageIndex{1}\\) is a normally distributed sampling distribution marked \\(\\mathrm{H}_0\\). This is a sampling distribution of \\(\\bar{X}\\) and by the Central Limit Theorem it is normally distributed. The distribution in the center is marked \\(H_0\\) and represents the distribution for the null hypotheses \\(H_0: \\mu=100\\). This is the value that is being tested. The formal statements of the null and alternative hypotheses are listed below the figure.\n\nThe distributions on either side of the \\(\\mathrm{H}_0\\) distribution represent distributions that would be true if \\(\\mathrm{H}_0\\) is false, under the alternative hypothesis listed as \\(H_a\\). We do not know which is true, and will never know. There are, in fact, an infinite number of distributions from which the data could have been drawn if \\(H_a\\) is true, but only two of them are on Figure \\(\\PageIndex{1}\\) representing all of the others.\n\nTo test a hypothesis we take a sample from the population and determine if it could have come from the hypothesized distribution with an acceptable level of significance. This level of significance is the alpha error and is marked on Figure \\(\\PageIndex{1}\\) as the shaded areas in each tail of the \\(H_0\\) distribution. (Each area is actually \\(\\alpha / 2\\) because the distribution is symmetrical and the alternative hypothesis allows for the possibility for the value to be either greater than or less than the hypothesized value--called a two-tailed test).\n\nIf the sample mean marked as \\(\\bar{X}_1\\) is in the tail of the distribution of \\(H_0\\), we conclude that the probability that it could have come from the \\(H_0\\) distribution is less than alpha. We consequently state, \"the null hypothesis cannot be accepted with \\((\\alpha)\\) level of significance\". The truth may be that this \\(\\bar{X}_1\\) did come from the \\(H_0\\) distribution, but from out in the tail. If this is so then we have falsely rejected a true null hypothesis and have made a Type I error. What statistics has done is provide an estimate about what we know, and what we control, and that is the probability of us being wrong, \\(\\alpha\\).\n\nWe can also see in Figure \\(\\PageIndex{1}\\) that the sample mean could be really from an \\(H_a\\) distribution, but within the boundary set by the alpha level. Such a case is marked as \\(\\bar{X}_2\\). There is a probability that \\(\\bar{X}_2\\) actually came from \\(H_a\\) but shows up in the range of \\(H_0\\) between the two tails. This probability is the beta error, the probability of accepting a false null.\n\nOur problem is that we can only set the alpha error because there are an infinite number of alternative distributions from which the mean could have come that are not equal to \\(H_0\\). As a result, the statistician places the burden of proof on the alternative hypothesis. That is, we will not reject a null hypothesis unless there is a greater than 90, or 95 , or even 99 percent probability that the null is false: the burden of proof lies with the alternative hypothesis. This is why we called this the tyranny of the status quo earlier.\n\nBy way of example, the American judicial system begins with the concept that a defendant is \"presumed innocent\". This is the status quo and is the null hypothesis. The judge will tell the jury that they cannot find the defendant guilty unless the evidence indicates guilt beyond a \"reasonable doubt\" which is usually defined in criminal cases as \\(95 \\%\\) certainty of guilt. If the jury cannot accept the null, innocent, then action will be taken, jail time. The burden of proof always lies with the alternative hypothesis. (In civil cases, the jury needs only to be more than \\(50 \\%\\) certain of wrongdoing to find culpability, called \"a preponderance of the evidence\").\n\nThe example above was for a test of a mean, but the same logic applies to tests of hypotheses for all statistical parameters one may wish to test.\n\nThe following are examples of Type I and Type II errors.\n\nExercise \\(\\PageIndex{1}\\)\n\nSuppose the null hypothesis, \\(H_0\\), is: Navah's rock climbing equipment is safe.\n\nType I error: Navah thinks that his rock climbing equipment may not be safe when, in fact, it really is safe.\n\nType II error: Navah thinks that her rock climbing equipment may be safe when, in fact, it is not safe.\n\n\\(\\alpha=\\) probability that Navah thinks her rock climbing equipment may not be safe when, in fact, it really is safe. \\(\\boldsymbol{\\beta}=\\) probability that Navah thinks her rock climbing equipment may be safe when, in fact, it is not safe.\n\nNotice that, in this case, the error with the greater consequence is the Type II error. (If Navah thinks her rock climbing equipment is safe, she will go ahead and use it.)\n\nThis is a situation described as \"accepting a false null\"\n\nTry It \\(\\PageIndex{1}\\)\n\nSuppose the null hypothesis, \\(H_0\\), is: the blood cultures contain no traces of pathogen \\(X\\). State the Type I and Type II errors.\n\nExercise \\(\\PageIndex{2}\\)\n\nSuppose the null hypothesis, \\(H_0\\), is: The victim of an automobile accident is alive when he arrives at the emergency room of a hospital. This is the status quo and requires no action if it is true. If the null hypothesis cannot be accepted then action is required and the hospital will begin appropriate procedures.\n\nType I error: The emergency crew thinks that the victim is dead when, in fact, the victim is alive. Type II error: The emergency crew does not know if the victim is alive when, in fact, the victim is dead.\n\n\\(\\boldsymbol{\\alpha}=\\) probability that the emergency crew thinks the victim is dead when, in fact, he is really alive \\(=P\\) (Type I error). \\(\\boldsymbol{\\beta}=\\) probability that the emergency crew does not know if the victim is alive when, in fact, the victim is dead \\(=P(\\) Type II error \\()\\).\n\nThe error with the greater consequence is the Type I error. (If the emergency crew thinks the victim is dead, they will not treat him.\n\nTry It \\(\\PageIndex{2}\\)\n\nSuppose the null hypothesis, \\(H_0\\), is: a patient is not sick. Which type of error has the greater consequence, Type I or Type II?\n\nExercise \\(\\PageIndex{3}\\)\n\nA company called Genetic Labs claims to be able to increase the likelihood that a pregnancy will result in a male being born. Statisticians want to test the claim. Suppose that the null hypothesis, \\(H_0\\), is: Genetic Labs has no effect on sex outcome. The status quo is that the claim is false. The burden of proof always falls to the person making the claim, in this case the Genetics Lab.\n\nAnswer\n\nType I error: This results when a true null hypothesis is rejected. In the context of this scenario, we would state that we believe that Genetic Labs influences the sex outcome, when in fact it has no effect. The probability of this error occurring is denoted by the Greek letter alpha, \\(\\alpha\\).\n\nType II error: This results when we fail to reject a false null hypothesis. In context, we would state that Genetic Labs does not influence the sex outcome of a pregnancy when, in fact, it does. The probability of this error occurring is denoted by the Greek letter beta, \\(\\beta\\).\n\nThe error of greater consequence would be the Type I error since people would use the Genetic Labs product in hopes of increasing the chances of having a male.\n\nTry It \\(\\PageIndex{3}\\)\n\n“Red tide” is a bloom of poison-producing algae–a few different species of a class of plankton called dinoflagellates. When the weather and water conditions cause these blooms, shellfish such as clams living in the area develop dangerous levels of a paralysis-inducing toxin. In Massachusetts, the Division of Marine Fisheries (DMF) monitors levels of the toxin in shellfish by regular sampling of shellfish along the coastline. If the mean level of toxin in clams exceeds 800 μg (micrograms) of toxin per kg of clam meat in any area, clam harvesting is banned there until the bloom is over and levels of toxin in clams subside. Describe both a Type I and a Type II error in this context, and state which error has the greater consequence.\n\nExercise \\(\\PageIndex{4}\\)\n\nA certain experimental drug claims a cure rate of at least 75% for males with prostate cancer. Describe both the Type I and Type II errors in context. Which error is the more serious?\n\nAnswer\n\nType I: A cancer patient believes the cure rate for the drug is less than \\(75 \\%\\) when it actually is at least \\(75 \\%\\).\n\nType II: A cancer patient believes the experimental drug has at least a \\(75 \\%\\) cure rate when it has a cure rate that is less than \\(75 \\%\\).\n\nIn this scenario, the Type II error contains the more severe consequence. If a patient believes the drug works at least \\(75 \\%\\) of the time, this most likely will influence the patient's (and doctor's) choice about whether to use the drug as a treatment option.\n\nTry It \\(\\PageIndex{4}\\)\n\nDetermine both Type I and Type II errors for the following scenario:\n\nAssume a null hypothesis, \\(H_0\\), that states the percentage of adults with jobs is at least \\(88 \\%\\).\n\nIdentify the Type I and Type II errors from these four statements.\n\n1. Not to reject the null hypothesis that the percentage of adults who have jobs is at least \\(88 \\%\\) when that percentage is actually less than \\(88 \\%\\)\n\n2. Not to reject the null hypothesis that the percentage of adults who have jobs is at least \\(88 \\%\\) when the percentage is actually at least \\(88 \\%\\).\n\n3. Reject the null hypothesis that the percentage of adults who have jobs is at least \\(88 \\%\\) when the percentage is actually less than 88%.\n\nThis page titled 9.3: Outcomes and the Type I and Type II Errors was last modified on Thu, 07 May 2026 20:05:35 GMT and is shared under a CC BY  4.0  license and was authored, remixed, and/or curated by OpenStax via source content that was edited to the style and standards of the LibreTexts platform.",
+  "figures": [
+    {
+      "url": "https://stats.libretexts.org/@api/deki/files/40897/18ec96e66f7c4e32b2172a958701be905aab44d7?revision=1&size=bestfit&width=499&height=249",
+      "alt": "...",
+      "credit": ""
+    }
+  ],
+  "references": [
+    {
+      "text": "9.3: Outcomes and the Type I and Type II Errors",
+      "url": "https://stats.libretexts.org/Bookshelves/Introductory_Statistics/Introductory_Statistics_2e_(OpenStax)/09%3A_Hypothesis_Testing_with_One_Sample/9.03%3A_Outcomes_and_the_Type_I_and_Type_II_Errors"
+    },
+    {
+      "text": "CC BY  4.0",
+      "url": "https://creativecommons.org/licenses/by/4.0"
+    },
+    {
+      "text": "OpenStax",
+      "url": "https://openstax.org/"
+    },
+    {
+      "text": "source content",
+      "url": "https://openstax.org/details/books/introductory-statistics"
+    }
+  ],
+  "exercises": [
+    {
+      "ordinal": 1,
+      "sourceNumber": "1",
+      "sourceAnchor": "",
+      "kind": "exercise-candidate",
+      "context": "When you perform a hypothesis test, there are four possible outcomes depending on the actual truth (or falseness) of the null hypothesis H_(0) and the decision to reject or not. The outcomes are summarized in the following table:\n\nThe four possible outcomes in the table are:",
+      "original": "1. The decision is cannot reject \\(H_0\\) when \\(H_0\\) is true (correct decision).",
+      "prompt": "1. The decision is cannot reject \\(H_0\\) when \\(H_0\\) is true (correct decision).",
+      "sourceAnswers": [],
+      "hasFigure": false,
+      "status": "draft",
+      "answerVerified": false,
+      "translationStatus": "pending",
+      "mappingStatus": "pending"
+    },
+    {
+      "ordinal": 2,
+      "sourceNumber": "2",
+      "sourceAnchor": "",
+      "kind": "exercise-candidate",
+      "context": "When you perform a hypothesis test, there are four possible outcomes depending on the actual truth (or falseness) of the null hypothesis H_(0) and the decision to reject or not. The outcomes are summarized in the following table:\n\nThe four possible outcomes in the table are:",
+      "original": "2. The decision is cannot accept \\(\\boldsymbol{H}_0\\) when \\(\\boldsymbol{H}_0\\) is true (incorrect decision known as aType I error). This case is described as \"rejecting a good null\". As we will see later, it is this type of error that we will guard against by setting the probability of making such an error. The goal is to NOT take an action that is an error.",
+      "prompt": "2. The decision is cannot accept \\(\\boldsymbol{H}_0\\) when \\(\\boldsymbol{H}_0\\) is true (incorrect decision known as aType I error). This case is described as \"rejecting a good null\". As we will see later, it is this type of error that we will guard against by setting the probability of making such an error. The goal is to NOT take an action that is an error.",
+      "sourceAnswers": [],
+      "hasFigure": false,
+      "status": "draft",
+      "answerVerified": false,
+      "translationStatus": "pending",
+      "mappingStatus": "pending"
+    },
+    {
+      "ordinal": 3,
+      "sourceNumber": "3",
+      "sourceAnchor": "",
+      "kind": "exercise-candidate",
+      "context": "When you perform a hypothesis test, there are four possible outcomes depending on the actual truth (or falseness) of the null hypothesis H_(0) and the decision to reject or not. The outcomes are summarized in the following table:\n\nThe four possible outcomes in the table are:",
+      "original": "3. The decision is cannot reject \\(\\boldsymbol{H}_0\\) when, in fact, \\(\\boldsymbol{H}_0\\) is false (incorrect decision known as a Type II error). This is called \"accepting a false null\". In this situation you have allowed the status quo to remain in force when it should be overturned. As we will see, the null hypothesis has the advantage in competition with the alternative.",
+      "prompt": "3. The decision is cannot reject \\(\\boldsymbol{H}_0\\) when, in fact, \\(\\boldsymbol{H}_0\\) is false (incorrect decision known as a Type II error). This is called \"accepting a false null\". In this situation you have allowed the status quo to remain in force when it should be overturned. As we will see, the null hypothesis has the advantage in competition with the alternative.",
+      "sourceAnswers": [],
+      "hasFigure": false,
+      "status": "draft",
+      "answerVerified": false,
+      "translationStatus": "pending",
+      "mappingStatus": "pending"
+    },
+    {
+      "ordinal": 4,
+      "sourceNumber": "4",
+      "sourceAnchor": "",
+      "kind": "exercise-candidate",
+      "context": "When you perform a hypothesis test, there are four possible outcomes depending on the actual truth (or falseness) of the null hypothesis H_(0) and the decision to reject or not. The outcomes are summarized in the following table:\n\nThe four possible outcomes in the table are:",
+      "original": "4. The decision is cannot accept \\(H_0\\) when \\(H_0\\) is false (correct decision).",
+      "prompt": "4. The decision is cannot accept \\(H_0\\) when \\(H_0\\) is false (correct decision).",
+      "sourceAnswers": [],
+      "hasFigure": false,
+      "status": "draft",
+      "answerVerified": false,
+      "translationStatus": "pending",
+      "mappingStatus": "pending"
+    },
+    {
+      "ordinal": 5,
+      "sourceNumber": "",
+      "sourceAnchor": "",
+      "kind": "exercise-candidate",
+      "context": "We can also see in Figure \\(\\PageIndex{1}\\) that the sample mean could be really from an \\(H_a\\) distribution, but within the boundary set by the alpha level. Such a case is marked as \\(\\bar{X}_2\\). There is a probability that \\(\\bar{X}_2\\) actually came from \\(H_a\\) but shows up in the range of \\(H_0\\) between the two tails. This probability is the beta error, the probability of accepting a false null.\n\nOur problem is that we can only set the alpha error because there are an infinite number of alternative distributions from which the mean could have come that are not equal to \\(H_0\\). As a result, the statistician places the burden of proof on the alternative hypothesis. That is, we will not reject a null hypothesis unless there is a greater than 90, or 95 , or even 99 percent probability that the null is false: the burden of proof lies with the alternative hypothesis. This is why we called this the tyranny of the status quo earlier.\n\nBy way of example, the American judicial system begins with the concept that a defendant is \"presumed innocent\". This is the status quo and is the null hypothesis. The judge will tell the jury that they cannot find the defendant guilty unless the evidence indicates guilt beyond a \"reasonable doubt\" which is usually defined in criminal cases as \\(95 \\%\\) certainty of guilt. If the jury cannot accept the null, innocent, then action will be taken, jail time. The burden of proof always lies with the alternative hypothesis. (In civil cases, the jury needs only to be more than \\(50 \\%\\) certain of wrongdoing to find culpability, called \"a preponderance of the evidence\").\n\nThe example above was for a test of a mean, but the same logic applies to tests of hypotheses for all statistical parameters one may wish to test.\n\nThe following are examples of Type I and Type II errors.",
+      "original": "Exercise \\(\\PageIndex{1}\\)\n\nSuppose the null hypothesis, \\(H_0\\), is: Navah's rock climbing equipment is safe.\n\nType I error: Navah thinks that his rock climbing equipment may not be safe when, in fact, it really is safe.\n\nType II error: Navah thinks that her rock climbing equipment may be safe when, in fact, it is not safe.\n\n\\(\\alpha=\\) probability that Navah thinks her rock climbing equipment may not be safe when, in fact, it really is safe. \\(\\boldsymbol{\\beta}=\\) probability that Navah thinks her rock climbing equipment may be safe when, in fact, it is not safe.\n\nNotice that, in this case, the error with the greater consequence is the Type II error. (If Navah thinks her rock climbing equipment is safe, she will go ahead and use it.)\n\nThis is a situation described as \"accepting a false null\"",
+      "prompt": "Exercise \\(\\PageIndex{1}\\)\n\nSuppose the null hypothesis, \\(H_0\\), is: Navah's rock climbing equipment is safe.\n\nType I error: Navah thinks that his rock climbing equipment may not be safe when, in fact, it really is safe.\n\nType II error: Navah thinks that her rock climbing equipment may be safe when, in fact, it is not safe.\n\n\\(\\alpha=\\) probability that Navah thinks her rock climbing equipment may not be safe when, in fact, it really is safe. \\(\\boldsymbol{\\beta}=\\) probability that Navah thinks her rock climbing equipment may be safe when, in fact, it is not safe.\n\nNotice that, in this case, the error with the greater consequence is the Type II error. (If Navah thinks her rock climbing equipment is safe, she will go ahead and use it.)\n\nThis is a situation described as \"accepting a false null\"",
+      "sourceAnswers": [],
+      "hasFigure": false,
+      "status": "draft",
+      "answerVerified": false,
+      "translationStatus": "pending",
+      "mappingStatus": "pending"
+    },
+    {
+      "ordinal": 6,
+      "sourceNumber": "",
+      "sourceAnchor": "",
+      "kind": "exercise-candidate",
+      "context": "Our problem is that we can only set the alpha error because there are an infinite number of alternative distributions from which the mean could have come that are not equal to \\(H_0\\). As a result, the statistician places the burden of proof on the alternative hypothesis. That is, we will not reject a null hypothesis unless there is a greater than 90, or 95 , or even 99 percent probability that the null is false: the burden of proof lies with the alternative hypothesis. This is why we called this the tyranny of the status quo earlier.\n\nBy way of example, the American judicial system begins with the concept that a defendant is \"presumed innocent\". This is the status quo and is the null hypothesis. The judge will tell the jury that they cannot find the defendant guilty unless the evidence indicates guilt beyond a \"reasonable doubt\" which is usually defined in criminal cases as \\(95 \\%\\) certainty of guilt. If the jury cannot accept the null, innocent, then action will be taken, jail time. The burden of proof always lies with the alternative hypothesis. (In civil cases, the jury needs only to be more than \\(50 \\%\\) certain of wrongdoing to find culpability, called \"a preponderance of the evidence\").\n\nThe example above was for a test of a mean, but the same logic applies to tests of hypotheses for all statistical parameters one may wish to test.\n\nThe following are examples of Type I and Type II errors.\n\nSuppose the null hypothesis, \\(H_0\\), is: the blood cultures contain no traces of pathogen \\(X\\). State the Type I and Type II errors.",
+      "original": "Exercise \\(\\PageIndex{2}\\)\n\nSuppose the null hypothesis, \\(H_0\\), is: The victim of an automobile accident is alive when he arrives at the emergency room of a hospital. This is the status quo and requires no action if it is true. If the null hypothesis cannot be accepted then action is required and the hospital will begin appropriate procedures.\n\nType I error: The emergency crew thinks that the victim is dead when, in fact, the victim is alive. Type II error: The emergency crew does not know if the victim is alive when, in fact, the victim is dead.\n\n\\(\\boldsymbol{\\alpha}=\\) probability that the emergency crew thinks the victim is dead when, in fact, he is really alive \\(=P\\) (Type I error). \\(\\boldsymbol{\\beta}=\\) probability that the emergency crew does not know if the victim is alive when, in fact, the victim is dead \\(=P(\\) Type II error \\()\\).\n\nThe error with the greater consequence is the Type I error. (If the emergency crew thinks the victim is dead, they will not treat him.",
+      "prompt": "Exercise \\(\\PageIndex{2}\\)\n\nSuppose the null hypothesis, \\(H_0\\), is: The victim of an automobile accident is alive when he arrives at the emergency room of a hospital. This is the status quo and requires no action if it is true. If the null hypothesis cannot be accepted then action is required and the hospital will begin appropriate procedures.\n\nType I error: The emergency crew thinks that the victim is dead when, in fact, the victim is alive. Type II error: The emergency crew does not know if the victim is alive when, in fact, the victim is dead.\n\n\\(\\boldsymbol{\\alpha}=\\) probability that the emergency crew thinks the victim is dead when, in fact, he is really alive \\(=P\\) (Type I error). \\(\\boldsymbol{\\beta}=\\) probability that the emergency crew does not know if the victim is alive when, in fact, the victim is dead \\(=P(\\) Type II error \\()\\).\n\nThe error with the greater consequence is the Type I error. (If the emergency crew thinks the victim is dead, they will not treat him.",
+      "sourceAnswers": [],
+      "hasFigure": false,
+      "status": "draft",
+      "answerVerified": false,
+      "translationStatus": "pending",
+      "mappingStatus": "pending"
+    },
+    {
+      "ordinal": 7,
+      "sourceNumber": "",
+      "sourceAnchor": "",
+      "kind": "exercise-candidate",
+      "context": "The following are examples of Type I and Type II errors.\n\nSuppose the null hypothesis, \\(H_0\\), is: the blood cultures contain no traces of pathogen \\(X\\). State the Type I and Type II errors.\n\nSuppose the null hypothesis, \\(H_0\\), is: a patient is not sick. Which type of error has the greater consequence, Type I or Type II?",
+      "original": "Exercise \\(\\PageIndex{3}\\)\n\nA company called Genetic Labs claims to be able to increase the likelihood that a pregnancy will result in a male being born. Statisticians want to test the claim. Suppose that the null hypothesis, \\(H_0\\), is: Genetic Labs has no effect on sex outcome. The status quo is that the claim is false. The burden of proof always falls to the person making the claim, in this case the Genetics Lab.\n\nAnswer\n\nType I error: This results when a true null hypothesis is rejected. In the context of this scenario, we would state that we believe that Genetic Labs influences the sex outcome, when in fact it has no effect. The probability of this error occurring is denoted by the Greek letter alpha, \\(\\alpha\\).\n\nType II error: This results when we fail to reject a false null hypothesis. In context, we would state that Genetic Labs does not influence the sex outcome of a pregnancy when, in fact, it does. The probability of this error occurring is denoted by the Greek letter beta, \\(\\beta\\).\n\nThe error of greater consequence would be the Type I error since people would use the Genetic Labs product in hopes of increasing the chances of having a male.",
+      "prompt": "Exercise \\(\\PageIndex{3}\\)\n\nA company called Genetic Labs claims to be able to increase the likelihood that a pregnancy will result in a male being born. Statisticians want to test the claim. Suppose that the null hypothesis, \\(H_0\\), is: Genetic Labs has no effect on sex outcome. The status quo is that the claim is false. The burden of proof always falls to the person making the claim, in this case the Genetics Lab.",
+      "sourceAnswers": [
+        "Type I error: This results when a true null hypothesis is rejected. In the context of this scenario, we would state that we believe that Genetic Labs influences the sex outcome, when in fact it has no effect. The probability of this error occurring is denoted by the Greek letter alpha, \\(\\alpha\\).\n\nType II error: This results when we fail to reject a false null hypothesis. In context, we would state that Genetic Labs does not influence the sex outcome of a pregnancy when, in fact, it does. The probability of this error occurring is denoted by the Greek letter beta, \\(\\beta\\).\n\nThe error of greater consequence would be the Type I error since people would use the Genetic Labs product in hopes of increasing the chances of having a male."
+      ],
+      "hasFigure": false,
+      "status": "draft",
+      "answerVerified": false,
+      "translationStatus": "pending",
+      "mappingStatus": "pending"
+    },
+    {
+      "ordinal": 8,
+      "sourceNumber": "",
+      "sourceAnchor": "",
+      "kind": "exercise-candidate",
+      "context": "Suppose the null hypothesis, \\(H_0\\), is: the blood cultures contain no traces of pathogen \\(X\\). State the Type I and Type II errors.\n\nSuppose the null hypothesis, \\(H_0\\), is: a patient is not sick. Which type of error has the greater consequence, Type I or Type II?\n\n“Red tide” is a bloom of poison-producing algae–a few different species of a class of plankton called dinoflagellates. When the weather and water conditions cause these blooms, shellfish such as clams living in the area develop dangerous levels of a paralysis-inducing toxin. In Massachusetts, the Division of Marine Fisheries (DMF) monitors levels of the toxin in shellfish by regular sampling of shellfish along the coastline. If the mean level of toxin in clams exceeds 800 μg (micrograms) of toxin per kg of clam meat in any area, clam harvesting is banned there until the bloom is over and levels of toxin in clams subside. Describe both a Type I and a Type II error in this context, and state which error has the greater consequence.",
+      "original": "Exercise \\(\\PageIndex{4}\\)\n\nA certain experimental drug claims a cure rate of at least 75% for males with prostate cancer. Describe both the Type I and Type II errors in context. Which error is the more serious?\n\nAnswer\n\nType I: A cancer patient believes the cure rate for the drug is less than \\(75 \\%\\) when it actually is at least \\(75 \\%\\).\n\nType II: A cancer patient believes the experimental drug has at least a \\(75 \\%\\) cure rate when it has a cure rate that is less than \\(75 \\%\\).\n\nIn this scenario, the Type II error contains the more severe consequence. If a patient believes the drug works at least \\(75 \\%\\) of the time, this most likely will influence the patient's (and doctor's) choice about whether to use the drug as a treatment option.",
+      "prompt": "Exercise \\(\\PageIndex{4}\\)\n\nA certain experimental drug claims a cure rate of at least 75% for males with prostate cancer. Describe both the Type I and Type II errors in context. Which error is the more serious?",
+      "sourceAnswers": [
+        "Type I: A cancer patient believes the cure rate for the drug is less than \\(75 \\%\\) when it actually is at least \\(75 \\%\\).\n\nType II: A cancer patient believes the experimental drug has at least a \\(75 \\%\\) cure rate when it has a cure rate that is less than \\(75 \\%\\).\n\nIn this scenario, the Type II error contains the more severe consequence. If a patient believes the drug works at least \\(75 \\%\\) of the time, this most likely will influence the patient's (and doctor's) choice about whether to use the drug as a treatment option."
+      ],
+      "hasFigure": false,
+      "status": "draft",
+      "answerVerified": false,
+      "translationStatus": "pending",
+      "mappingStatus": "pending"
+    },
+    {
+      "ordinal": 9,
+      "sourceNumber": "1",
+      "sourceAnchor": "",
+      "kind": "exercise-candidate",
+      "context": "“Red tide” is a bloom of poison-producing algae–a few different species of a class of plankton called dinoflagellates. When the weather and water conditions cause these blooms, shellfish such as clams living in the area develop dangerous levels of a paralysis-inducing toxin. In Massachusetts, the Division of Marine Fisheries (DMF) monitors levels of the toxin in shellfish by regular sampling of shellfish along the coastline. If the mean level of toxin in clams exceeds 800 μg (micrograms) of toxin per kg of clam meat in any area, clam harvesting is banned there until the bloom is over and levels of toxin in clams subside. Describe both a Type I and a Type II error in this context, and state which error has the greater consequence.\n\nDetermine both Type I and Type II errors for the following scenario:\n\nAssume a null hypothesis, \\(H_0\\), that states the percentage of adults with jobs is at least \\(88 \\%\\).\n\nIdentify the Type I and Type II errors from these four statements.",
+      "original": "1. Not to reject the null hypothesis that the percentage of adults who have jobs is at least \\(88 \\%\\) when that percentage is actually less than \\(88 \\%\\)",
+      "prompt": "1. Not to reject the null hypothesis that the percentage of adults who have jobs is at least \\(88 \\%\\) when that percentage is actually less than \\(88 \\%\\)",
+      "sourceAnswers": [],
+      "hasFigure": false,
+      "status": "draft",
+      "answerVerified": false,
+      "translationStatus": "pending",
+      "mappingStatus": "pending"
+    },
+    {
+      "ordinal": 10,
+      "sourceNumber": "2",
+      "sourceAnchor": "",
+      "kind": "exercise-candidate",
+      "context": "“Red tide” is a bloom of poison-producing algae–a few different species of a class of plankton called dinoflagellates. When the weather and water conditions cause these blooms, shellfish such as clams living in the area develop dangerous levels of a paralysis-inducing toxin. In Massachusetts, the Division of Marine Fisheries (DMF) monitors levels of the toxin in shellfish by regular sampling of shellfish along the coastline. If the mean level of toxin in clams exceeds 800 μg (micrograms) of toxin per kg of clam meat in any area, clam harvesting is banned there until the bloom is over and levels of toxin in clams subside. Describe both a Type I and a Type II error in this context, and state which error has the greater consequence.\n\nDetermine both Type I and Type II errors for the following scenario:\n\nAssume a null hypothesis, \\(H_0\\), that states the percentage of adults with jobs is at least \\(88 \\%\\).\n\nIdentify the Type I and Type II errors from these four statements.",
+      "original": "2. Not to reject the null hypothesis that the percentage of adults who have jobs is at least \\(88 \\%\\) when the percentage is actually at least \\(88 \\%\\).",
+      "prompt": "2. Not to reject the null hypothesis that the percentage of adults who have jobs is at least \\(88 \\%\\) when the percentage is actually at least \\(88 \\%\\).",
+      "sourceAnswers": [],
+      "hasFigure": false,
+      "status": "draft",
+      "answerVerified": false,
+      "translationStatus": "pending",
+      "mappingStatus": "pending"
+    },
+    {
+      "ordinal": 11,
+      "sourceNumber": "3",
+      "sourceAnchor": "",
+      "kind": "exercise-candidate",
+      "context": "“Red tide” is a bloom of poison-producing algae–a few different species of a class of plankton called dinoflagellates. When the weather and water conditions cause these blooms, shellfish such as clams living in the area develop dangerous levels of a paralysis-inducing toxin. In Massachusetts, the Division of Marine Fisheries (DMF) monitors levels of the toxin in shellfish by regular sampling of shellfish along the coastline. If the mean level of toxin in clams exceeds 800 μg (micrograms) of toxin per kg of clam meat in any area, clam harvesting is banned there until the bloom is over and levels of toxin in clams subside. Describe both a Type I and a Type II error in this context, and state which error has the greater consequence.\n\nDetermine both Type I and Type II errors for the following scenario:\n\nAssume a null hypothesis, \\(H_0\\), that states the percentage of adults with jobs is at least \\(88 \\%\\).\n\nIdentify the Type I and Type II errors from these four statements.",
+      "original": "3. Reject the null hypothesis that the percentage of adults who have jobs is at least \\(88 \\%\\) when the percentage is actually less than 88%.",
+      "prompt": "3. Reject the null hypothesis that the percentage of adults who have jobs is at least \\(88 \\%\\) when the percentage is actually less than 88%.",
+      "sourceAnswers": [],
+      "hasFigure": false,
+      "status": "draft",
+      "answerVerified": false,
+      "translationStatus": "pending",
+      "mappingStatus": "pending"
+    }
+  ],
+  "license": "CC BY 4.0",
+  "licenseEvidence": "This page titled 9.3: Outcomes and the Type I and Type II Errors was last modified on Thu, 07 May 2026 20:05:35 GMT and is shared under a CC BY  4.0  license and was authored, remixed, and/or curated by OpenStax via source content that was edited to the style and standards of the LibreTexts platform.",
+  "url": "https://stats.libretexts.org/Bookshelves/Introductory_Statistics/Introductory_Statistics_2e_(OpenStax)/09:_Hypothesis_Testing_with_One_Sample/9.03:_Outcomes_and_the_Type_I_and_Type_II_Errors",
+  "sha256": "6fc448841b2279343ad164b691bd4f1faf878c388a1e85e5dcc8ecc4e9c14ce2",
+  "checkedAt": "2026-10-07",
+  "id": "de4d9c3ecaefba2c076b",
+  "bookId": "statistics",
+  "licenseInherited": false,
+  "licenseSource": "https://stats.libretexts.org/Bookshelves/Introductory_Statistics/Introductory_Statistics_2e_(OpenStax)/09:_Hypothesis_Testing_with_One_Sample/9.03:_Outcomes_and_the_Type_I_and_Type_II_Errors",
+  "licenseUrl": "https://creativecommons.org/licenses/by/4.0/",
+  "authors": "OpenStax / Barbara Illowsky, Susan Dean",
+  "book": "Introductory Statistics 2e",
+  "reviewStatus": "unreviewed",
+  "sourceLanguage": "en",
+  "translationStatus": "pending"
+}

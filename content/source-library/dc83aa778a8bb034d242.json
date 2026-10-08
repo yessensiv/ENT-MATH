@@ -1,0 +1,830 @@
+{
+  "title": "11.2: Distance and Midpoint Formulas and Circles",
+  "originalText": "Learning Objectives\n\nBy the end of this section, you will be able to:\n\nUse the Distance Formula\n\nUse the Midpoint Formula\n\nWrite the equation of a circle in standard form\n\nGraph a circle\n\nBefore you get started, take this readiness quiz.\n\n1. Find the length of the hypotenuse of a right triangle whose legs are \\(12\\) and \\(16\\) inches.\n\n    If you missed this problem, review Example 2.34.\n\n2. Factor: \\(x^{2}-18 x+81\\).\n\n    If you missed this problem, review Example 6.24.\n\n3. Solve by completing the square: \\(x^{2}-12 x-12=0\\).\n\n    If you missed this problem, review Example 9.22.\n\nIn this chapter we will be looking at the conic sections, usually called the conics, and their properties. The conics are curves that result from a plane intersecting a double cone—two cones placed point-to-point. Each half of a double cone is called a nappe.\n\n[Figure: This figure shows two cones placed point to point. They are labeled nappes.]\n\nFigure 11.1.1\n\nThere are four conics—the circle, parabola, ellipse, and hyperbola. The next figure shows how the plane intersecting the double cone results in each curve.\n\n[Figure: Each of these four figures shows a double cone intersected by a plane. In the first figure, the plane is perpendicular to the axis of the cones and intersects the bottom cone to form a circle. In the second figure, the plane is at an angle to the axis and intersects the bottom cone in such a way that it intersects the base as well. Thus, the curve formed by the intersection is open at both ends. This is labeled parabola. In the third figure, the plane is at an angle to the axis and intersects the bottom cone in such a way that it does not intersect the base of the cone. Thus, the curve formed by the intersection is a closed loop, labeled ellipse. In the fourth figure, the plane is parallel to the axis, intersecting both cones. This is labeled hyperbola.]\n\nFigure 11.1.2\n\nEach of the curves has many applications that affect your daily life, from your cell phone to acoustics and navigation systems. In this section we will look at the properties of a circle.\n\nUse the Distance Formula\n\nWe have used the Pythagorean Theorem to find the lengths of the sides of a right triangle. Here we will use this theorem again to find distances on the rectangular coordinate system. By finding distance on the rectangular coordinate system, we can make a connection between the geometry of a conic and algebra—which opens up a world of opportunities for application.\n\nOur first step is to develop a formula to find distances between points on the rectangular coordinate system. We will plot the points and create a right triangle much as we did when we found slope in Graphs and Functions. We then take it one step further and use the Pythagorean Theorem to find the length of the hypotenuse of the triangle—which is the distance between the points.\n\nExample \\(\\PageIndex{1}\\)\n\nUse the rectangular coordinate system to find the distance between the points \\((6,4)\\) and \\((2,1)\\).\n\nSolution\n\n            Plot the two points. Connect the two points\n\n            with a line.\n\n            Draw a right triangle as if you were going to\n\n            find slope.\t\n\n[Figure: .]\n\nFigure 11.1.3\n\n            Find the length of each leg.\t\n\n[Figure: .]\n\nFigure 11.1.4\n\n            Use the Pythagorean Theorem to find \\(d\\), the distance between the two points.\t\n            \\(a^{2}+b^{2}=c^{2}\\)\t\n\n            Substitute in the values.\t\n            \\(3^{2}+4^{2}=d^{2}\\)\t\n\n            Simplify.\t\n            \\(9+16=d^{2}\\)\t\n\n            \\(25=d^{2}\\)\t\n\n            Use the Square Root Property.\t\n            \\(d=5\\quad\\cancel{d=-5}\\)\t\n\n            Since distance, \\(d\\) is positive, we can eliminate \\(d=-5\\).\t\n            The distance between the points \\((6,4)\\) and \\((2,1)\\) is \\(5\\).\t\n\nTable 11.1.1\n\nExercise \\(\\PageIndex{1}\\)\n\nUse the rectangular coordinate system to find the distance between the points \\((6,1)\\) and \\((2,-2)\\).\n\nAnswer\n\n\\(d=5\\)\n\nExercise \\(\\PageIndex{2}\\)\n\nUse the rectangular coordinate system to find the distance between the points \\((5,3)\\) and \\((-3,-3)\\).\n\nAnswer\n\n\\(d=10\\)\n\n[Figure: Figure shows a graph with a right triangle. The hypotenuse connects two points, (2, 1) and (6, 4). These are respectively labeled (x1, y1) and (x2, y2). The rise is y2 minus y1, which is 4 minus 1 equals 3. The run is x2 minus x1, which is 6 minus 2 equals 4.]\n\nFigure 11.1.5\n\nThe method we used in the last example leads us to the formula to find the distance between the two points \\(\\left(x_{1}, y_{1}\\right)\\) and \\(\\left(x_{2}, y_{2}\\right)\\).\n\nWhen we found the length of the horizontal leg we subtracted \\(6−2\\) which is \\(x_{2}-x_{1}\\).\n\nWhen we found the length of the vertical leg we subtracted \\(4−1\\) which is \\(y_{2}-y_{1}\\).\n\nIf the triangle had been in a different position, we may have subtracted \\(x_{1}-x_{2}\\) or \\(y_{1}-y_{2}\\). The expressions \\(x_{2}-x_{1}\\) and \\(x_{1}-x_{2}\\) vary only in the sign of the resulting number. To get the positive value-since distance is positive- we can use absolute value. So to generalize we will say \\(\\left|x_{2}-x_{1}\\right|\\) and \\(\\left|y_{2}-y_{1}\\right|\\).\n\nIn the Pythagorean Theorem, we substitute the general expressions \\(\\left|x_{2}-x_{1}\\right|\\) and \\(\\left|y_{2}-y_{1}\\right|\\) rather than the numbers.\n\n\\(\\begin{array}{l c}{} & {a^{2}+b^{2}=c^{2}} \\\\ {\\text {Substitute in the values. }}&{(|x_{2}-x_{1}|)^{2}+(|y_{2}-y_{1}|)^{2}=d^{2}} \\\\ {\\text{Squaring the expressions makes}}&{(x_{2}-x_{1})^{2}+(y_{2}-y_{1})^{2}=d^{2}} \\\\ \\text{them positive, so we eliminate} \\\\\\text{the absolute value bars.}\\\\ {\\text{Use the Square Root Property.}}&{d=\\pm\\sqrt{(x_{2}-x_{1})^{2}+(y_{2}-y_{1})^{2}}}\\\\ {\\text{Distance is positive, so eliminate}}&{d=\\sqrt{(x_{2}-x_{1})^{2}+(y_{2}-y_{1})^{2}}}\\\\\\text{the negative value.}\\end{array}\\)\n\nThis is the Distance Formula we use to find the distance \\(d\\) between the two points \\((x_{1},y_{1})\\) and \\((x_{2}, y_{2})\\).\n\nDefinition \\(\\PageIndex{1}\\)\n\nDistance Formula\n\nThe distance \\(d\\) between the two points \\((x_{1},y_{1})\\) and \\((x_{2}, y_{2})\\) is\n\n\\(d=\\sqrt{\\left(x_{2}-x_{1}\\right)^{2}+\\left(y_{2}-y_{1}\\right)^{2}}\\)\n\nExample \\(\\PageIndex{2}\\)\n\nUse the Distance Formula to find the distance between the points \\((-5,-3)\\) and \\((7,2)\\).\n\nSolution:\n\nWrite the Distance Formula.\n\n\\(d=\\sqrt{\\left(x_{2}-x_{1}\\right)^{2}+\\left(y_{2}-y_{1}\\right)^{2}}\\)\n\nLabel the points, \\(\\left( \\begin{array}{c}{x_{1}, y_{1}} \\\\ {-5,-3}\\end{array}\\right)\\), \\(\\left( \\begin{array}{l}{x_{2}, y_{2}} \\\\ {7,2}\\end{array}\\right)\\) and substitute.\n\n\\(d=\\sqrt{(7-(-5))^{2}+(2-(-3))^{2}}\\)\n\nSimplify.\n\n\\(d=\\sqrt{12^{2}+5^{2}}\\)\n\n\\(d=\\sqrt{144+25}\\)\n\n\\(d=\\sqrt{169}\\)\n\n\\(d=13\\)\n\nAnswer:\n\n\\(d=13\\)\n\nExercise \\(\\PageIndex{3}\\)\n\nUse the Distance Formula to find the distance between the points \\((-4,-5)\\) and \\((5,7)\\).\n\nAnswer\n\n\\(d=15\\)\n\nExercise \\(\\PageIndex{4}\\)\n\nUse the Distance Formula to find the distance between the points \\((-2,-5)\\) and \\((-14,-10)\\).\n\nAnswer\n\n\\(d=13\\)\n\nExample \\(\\PageIndex{3}\\)\n\nUse the Distance Formula to find the distance between the points \\((10,−4)\\) and \\((−1,5)\\). Write the answer in exact form and then find the decimal approximation, rounded to the nearest tenth if needed.\n\nSolution:\n\nWrite the Distance Formula.\n\n\\(d=\\sqrt{\\left(x_{2}-x_{1}\\right)^{2}+\\left(y_{2}-y_{1}\\right)^{2}}\\)\n\nLabel the points, \\(\\left( \\begin{array}{c}{x_{1}, y_{1}} \\\\ {10,-4}\\end{array}\\right)\\), \\(\\left( \\begin{array}{c}{x_{2}, y_{2}} \\\\ {-1,5}\\end{array}\\right)\\) and substitute.\n\n\\(d=\\sqrt{(-1-10)^{2}+(5-(-4))^{2}}\\)\n\nSimplify.\n\n\\(d=\\sqrt{(-11)^{2}+9^{2}}\\)\n\n\\(d=\\sqrt{121+81}\\)\n\n\\(d=\\sqrt{202}\\)\n\nSince \\(202\\) is not a perfect square, we can leave the answer in exact form or find a decimal approximation.\n\n\\(d=\\sqrt{202}\\)\n\nor\n\n\\(d \\approx 14.2\\)\n\nExercise \\(\\PageIndex{5}\\)\n\nUse the Distance Formula to find the distance between the points \\((−4,−5)\\) and \\((3,4)\\). Write the answer in exact form and then find the decimal approximation, rounded to the nearest tenth if needed.\n\nAnswer\n\n\\(d=\\sqrt{130}, d \\approx 11.4\\)\n\nExercise \\(\\PageIndex{6}\\)\n\nUse the Distance Formula to find the distance between the points \\((−2,−5)\\) and \\((−3,−4)\\). Write the answer in exact form and then find the decimal approximation, rounded to the nearest tenth if needed.\n\nAnswer\n\n\\(d=\\sqrt{2}, d \\approx 1.4\\)\n\nUse the Midpoint Formula\n\nIt is often useful to be able to find the midpoint of a segment. For example, if you have the endpoints of the diameter of a circle, you may want to find the center of the circle which is the midpoint of the diameter. To find the midpoint of a line segment, we find the average of the \\(x\\)-coordinates and the average of the \\(y\\)-coordinates of the endpoints.\n\nDefinition \\(\\PageIndex{2}\\)\n\nMidpoint Formula\n\nThe midpoint of the line segment whose endpoints are the two points \\(\\left(x_{1}, y_{1}\\right)\\) and \\(\\left(x_{2}, y_{2}\\right)\\) is\n\n\\(\\left(\\frac{x_{1}+x_{2}}{2}, \\frac{y_{1}+y_{2}}{2}\\right)\\)\n\nTo find the midpoint of a line segment, we find the average of the \\(x\\)-coordinates and the average of the \\(y\\)-coordinates of the endpoints.\n\nExample \\(\\PageIndex{4}\\)\n\nUse the Midpoint Formula to find the midpoint of the line segments whose endpoints are \\((−5,−4)\\) and \\((7,2)\\). Plot the endpoints and the midpoint on a rectangular coordinate system.\n\nSolution:\n\n            Write the Midpoint Formula.\t\n            \\(\\left(\\frac{x_{1}+x_{2}}{2}, \\frac{y_{1}+y_{2}}{2}\\right)\\)\t\n\n            Label the points, \\(\\left( \\begin{array}{c}{x_{1}, y_{1}} \\\\ {-5,-4}\\end{array}\\right), \\left( \\begin{array}{l}{x_{2}, y_{2}} \\\\ {7,2}\\end{array}\\right)\\) and substitute.\t\n            \\(\\left(\\frac{-5+7}{2}, \\frac{-4+2}{2}\\right)\\)\t\n\n            Simplify.\t\n            \\(\\left(\\frac{2}{2}, \\frac{-2}{2}\\right)\\)\t\n\n\\((1,-1)\\)\n\nThe midpoint of the segment is the point\n\n\\((1,-1)\\).\n\n            Plot the endpoints and midpoint.\t\n\n[Figure: .]\n\nFigure 11.1.6\n\nTable 11.1.2\n\nExercise \\(\\PageIndex{7}\\)\n\nUse the Midpoint Formula to find the midpoint of the line segments whose endpoints are \\((−3,−5)\\) and \\((5,7)\\). Plot the endpoints and the midpoint on a rectangular coordinate system.\n\nAnswer\n\n[Figure: This graph shows a line segment with endpoints (negative 3, negative 5) and (5, 7) and midpoint (1, negative 1).]\n\nFigure 11.1.7\n\nExercise \\(\\PageIndex{8}\\)\n\nUse the Midpoint Formula to find the midpoint of the line segments whose endpoints are \\((−2,−5)\\) and \\((6,−1)\\). Plot the endpoints and the midpoint on a rectangular coordinate system.\n\nAnswer\n\n[Figure: This graph shows a line segment with endpoints (negative 2, negative 5) and (6, negative 1) and midpoint (2, negative 3).]\n\nFigure 11.1.8\n\nBoth the Distance Formula and the Midpoint Formula depend on two points, \\(\\left(x_{1}, y_{1}\\right)\\) and \\(\\left(x_{2}, y_{2}\\right)\\). It is easy to confuse which formula requires addition and which subtraction of the coordinates. If we remember where the formulas come from, is may be easier to remember the formulas.\n\n[Figure: The distance formula is d equals square root of open parentheses x2 minus x1 close parentheses squared plus open parentheses y2 minus y1 close parentheses squared end of root. This is labeled subtract the coordinates. The midpoint formula is open parentheses open parentheses x1 plus x2 close parentheses upon 2 comma open parentheses y1 plus y2 close parentheses upon 2 close parentheses. This is labeled add the coordinates.]\n\nFigure 11.1.9\n\nWrite the Equation of a Circle in Standard Form\n\nAs we mentioned, our goal is to connect the geometry of a conic with algebra. By using the coordinate plane, we are able to do this easily.\n\n[Figure: This figure shows a double cone and an intersecting plane, which form a circle.]\n\nFigure 11.1.10\n\nWe define a circle as all points in a plane that are a fixed distance from a given point in the plane. The given point is called the center, \\((h,k)\\), and the fixed distance is called the radius, \\(r\\), of the circle.\n\nDefinition \\(\\PageIndex{3}\\)\n\nA circle is all points in a plane that are a fixed distance from a given point in the plane. The given point is called the center, \\((h,k)\\), and the fixed distance is called the radius, \\(r\\), of the circle.\n\n            We look at a circle in the rectangular coordinate system.\n\n            The radius is the distance from the center, \\((h,k)\\),to a\n\n            point on the circle, \\((x,y)\\).\t\n\n[Figure: .]\n\nFigure 11.1.11\n\n            To derive the equation of a circle, we can use the\n\n            distance formula with the points \\((h,k)\\), \\((x,y)\\) and the\n\n            distance, \\(r\\).\t\n            \\(d=\\sqrt{\\left(x_{2}-x_{1}\\right)^{2}+\\left(y_{2}-y_{1}\\right)^{2}}\\)\t\n\n            Substitute the values.\t\n            \\(r=\\sqrt{(x-h)^{2}+(y-k)^{2}}\\)\t\n\n            Square both sides.\t\n            \\(r^{2}=(x-h)^{2}+(y-k)^{2}\\)\t\n\nTable 11.1.3\n\nThis is the standard form of the equation of a circle with center, \\((h,k)\\), and radius, \\(r\\).\n\nDefinition \\(\\PageIndex{4}\\)\n\nThe standard form of the equation of a circle with center, \\((h,k)\\), and radius, \\(r\\), is\n\n[Figure: Figure shows circle with center at (h, k) and a radius of r. A point on the circle is labeled x, y. The formula is open parentheses x minus h close parentheses squared plus open parentheses y minus k close parentheses squared equals r squared.]\n\nFigure 11.1.12\n\nExample \\(\\PageIndex{5}\\)\n\nWrite the standard form of the equation of the circle with radius \\(3\\) and center \\((0,0)\\).\n\nSolution:\n\n            Use the standard form of the equation of a circle\t\n            \\((x-h)^{2}+(y-k)^{2}=r^{2}\\)\t\n\n            Substitute in the values \\(r=3, h=0\\), and \\(k=0\\).\t\n            \\((x-0)^{2}+(y-0)^{2}=3^{2}\\)\t\n\n[Figure: .]\n\n            Simplify.\t\n            \\(x^{2}+y^{2}=9\\)\t\n\nTable 11.1.4\n\nExercise \\(\\PageIndex{9}\\)\n\nWrite the standard form of the equation of the circle with a radius of \\(6\\) and center \\((0,0)\\).\n\nAnswer\n\n\\(x^{2}+y^{2}=36\\)\n\nExercise \\(\\PageIndex{10}\\)\n\nWrite the standard form of the equation of the circle with a radius of \\(8\\) and center \\((0,0)\\).\n\nAnswer\n\n\\(x^{2}+y^{2}=64\\)\n\nIn the last example, the center was \\((0,0)\\). Notice what happened to the equation. Whenever the center is \\((0,0)\\), the standard form becomes \\(x^{2}+y^{2}=r^{2}\\).\n\nExample \\(\\PageIndex{6}\\)\n\nWrite the standard form of the equation of the circle with radius \\(2\\) and center \\((−1,3)\\).\n\nSolution:\n\n            Use the standard form of the equation of a circle.\t\n            \\((x-h)^{2}+(y-k)^{2}=r^{2}\\)\t\n\n            Substitute in the values.\t\n            \\((x-(-1))^{2}+(y-3)^{2}=2^{2}\\)\t\n\n[Figure: .]\n\n            Simplify.\t\n            \\((x+1)^{2}+(y-3)^{2}=4\\)\t\n\nTable 11.1.5\n\nExercise \\(\\PageIndex{11}\\)\n\nWrite the standard form of the equation of the circle with a radius of \\(7\\) and center \\((2,−4)\\).\n\nAnswer\n\n\\((x-2)^{2}+(y+4)^{2}=49\\)\n\nExercise \\(\\PageIndex{12}\\)\n\nWrite the standard form of the equation of the circle with a radius of \\(9\\) and center \\((−3,−5)\\).\n\nAnswer\n\n\\((x+3)^{2}+(y+5)^{2}=81\\)\n\nIn the next example, the radius is not given. To calculate the radius, we use the Distance Formula with the two given points.\n\nExample \\(\\PageIndex{7}\\)\n\nWrite the standard form of the equation of the circle with center \\((2,4)\\) that also contains the point \\((−2,1)\\).\n\n[Figure: This graph shows circle with center at (2, 4, radius 5 and a point on the circle minus 2, 1.]\n\nFigure 11.1.15\n\nSolution:\n\nThe radius is the distance from the center to any point on the circle so we can use the distance formula to calculate it. We will use the center \\((2,4)\\) and point \\((−2,1)\\)\n\nUse the Distance Formula to find the radius.\n\n\\(r=\\sqrt{\\left(x_{2}-x_{1}\\right)^{2}+\\left(y_{2}-y_{1}\\right)^{2}}\\)\n\nSubstitute the values. \\(\\left( \\begin{array}{l}{x_{1}, y_{1}} \\\\ {2,4}\\end{array}\\right), \\left( \\begin{array}{c}{x_{2}, y_{2}} \\\\ {-2,1}\\end{array}\\right)\\)\n\n\\(r=\\sqrt{(-2-2)^{2}+(1-4)^{2}}\\)\n\nSimplify.\n\n\\(r=\\sqrt{(-4)^{2}+(-3)^{2}}\\)\n\n\\(r=\\sqrt{16+9}\\)\n\n\\(r=\\sqrt{25}\\)\n\n\\(r=5\\)\n\nNow that we know the radius, \\(r=5\\), and the center, \\((2,4)\\), we can use the standard form of the equation of a circle to find the equation.\n\nUse the standard form of the equation of a circle.\n\n\\((x-h)^{2}+(y-k)^{2}=r^{2}\\)\n\nSubstitute in the values.\n\n\\((x-2)^{2}+(y-4)^{2}=5^{2}\\)\n\nSimplify.\n\n\\((x-2)^{2}+(y-4)^{2}=25\\)\n\nExercise \\(\\PageIndex{13}\\)\n\nWrite the standard form of the equation of the circle with center \\((2,1)\\) that also contains the point \\((−2,−2)\\).\n\nAnswer\n\n\\((x-2)^{2}+(y-1)^{2}=25\\)\n\nExercise \\(\\PageIndex{14}\\)\n\nWrite the standard form of the equation of the circle with center \\((7,1)\\) that also contains the point \\((−1,−5)\\).\n\nAnswer\n\n\\((x-7)^{2}+(y-1)^{2}=100\\)\n\nGraph a Circle\n\nAny equation of the form \\((x-h)^{2}+(y-k)^{2}=r^{2}\\) is the standard form of the equation of a circle with center, \\((h,k)\\), and radius, \\(r\\). We can then graph the circle on a rectangular coordinate system.\n\nNote that the standard form calls for subtraction from \\(x\\) and \\(y\\). In the next example, the equation has \\(x+2\\), so we need to rewrite the addition as subtraction of a negative.\n\nExample \\(\\PageIndex{8}\\)\n\nFind the center and radius, then graph the circle: \\((x+2)^{2}+(y-1)^{2}=9\\).\n\nSolution:\n\n[Figure: .]\n\nUse the standard form of the equation of a circle.\n\nIdentify the center, \\((h,k)\\) and radius, \\(r\\).\n\n[Figure: .]\n\n            Center: \\((-2,1)\\) radius: \\(3\\)\t\n\n            Graph the circle.\t\n\n[Figure: .]\n\nTable 11.1.6\n\nExercise \\(\\PageIndex{15}\\)\n\n1. Find the center and radius, then\n\n2. Graph the circle: \\((x-3)^{2}+(y+4)^{2}=4\\).\n\nAnswer\n\n1. The circle is centered at \\((3,-4)\\) with a radius of \\(2\\).\n\n2.  \n\n[Figure: This graph shows a circle with center at (3, negative 4) and a radius of 2.]\n\nFigure 11.1.19\n\nExercise \\(\\PageIndex{16}\\)\n\n1. Find the center and radius, then\n\n2. Graph the circle: \\((x-3)^{2}+(y-1)^{2}=16\\).\n\nAnswer\n\n1. The circle is centered at \\((3,1)\\) with a radius of \\(4\\).\n\n2.  \n\n[Figure: This graph shows circle with center at (3, 1) and a radius of 4.]\n\nFigure 11.1.20\n\nTo find the center and radius, we must write the equation in standard form. In the next example, we must first get the coefficient of \\(x^{2}, y^{2}\\) to be one.\n\nExample \\(\\PageIndex{9}\\)\n\nFind the center and radius and then graph the circle, \\(4 x^{2}+4 y^{2}=64\\).\n\nSolution:\n\n[Figure: .]\n\n            Divide each side by \\(4\\).\t\n\n[Figure: .]\n\n            Use the standard form of the equation of a circle.\n\n            Identify the center, \\((h,k)\\) and radius, \\(r\\).\t\n\n[Figure: .]\n\n            Center: \\((0,0)\\) radius: \\(4\\)\t\n\n            Graph the circle.\t\n\n[Figure: .]\n\nTable 11.1.7\n\nExercise \\(\\PageIndex{17}\\)\n\n1. Find the center and radius, then\n\n2. Graph the circle: \\(3 x^{2}+3 y^{2}=27\\)\n\nAnswer\n\n1. The circle is centered at \\((0,0)\\) with a radius of \\(3\\).\n\n2.  \n\n[Figure: This graph shows circle with center at (0, 0) and a radius of 3.]\n\nFigure 11.1.25\n\nExercise \\(\\PageIndex{18}\\)\n\n1. Find the center and radius, then\n\n2. Graph the circle: \\(5 x^{2}+5 y^{2}=125\\)\n\nAnswer\n\n1. The circle is centered at \\((0,0)\\) with a radius of \\(5\\).\n\n2.  \n\n[Figure: This graph shows circle with center at (0, 0) and a radius of 5.]\n\nFigure 11.1.26\n\nIf we expand the equation from Example 11.1.8, \\((x+2)^{2}+(y-1)^{2}=9\\), the equation of the circle looks very different.\n\n\\((x+2)^{2}+(y-1)^{2}=9\\)\n\nSquare the binomials.\n\n\\(x^{2}+4 x+4+y^{2}-2 y+1=9\\)\n\nArrange the terms in descending degree order, and get zero on the right\n\n\\(x^{2}+y^{2}+4 x-2 y-4=0\\)\n\nThis form of the equation is called the general form of the equation of the circle.\n\nDefinition \\(\\PageIndex{5}\\)\n\nThe general form of the equation of a circle is\n\n\\(x^{2}+y^{2}+a x+b y+c=0\\)\n\nIf we are given an equation in general form, we can change it to standard form by completing the squares in both \\(x\\) and \\(y\\). Then we can graph the circle using its center and radius.\n\nExample \\(\\PageIndex{10}\\)\n\n1. Find the center and radius, then\n\n2. Graph the circle: \\(x^{2}+y^{2}-4 x-6 y+4=0\\)\n\nSolution:\n\nWe need to rewrite this general form into standard form in order to find the center and radius.\n\n[Figure: .]\n\nFigure 11.1.27\n\n            Group the \\(x\\)-terms and \\(y\\)-terms.\n\n            Collect the constants on the right side.\t\n\n[Figure: .]\n\nFigure 11.1.28\n\n            Complete the squares.\t\n\n[Figure: .]\n\nFigure 11.1.29\n\n            Rewrite as binomial squares.\t\n\n[Figure: .]\n\nFigure 11.1.30\n\n            Identify the center and radius.\t\n            Center: \\((2,3)\\) radius: \\(3\\)\t\n\n            Graph the circle.\t\n\n[Figure: .]\n\nFigure 11.1.31\n\nTable 11.1.8\n\nExercise \\(\\PageIndex{19}\\)\n\n1. Find the center and radius, then\n\n2. Graph the circle: \\(x^{2}+y^{2}-6 x-8 y+9=0\\).\n\nAnswer\n\n1. The circle is centered at \\((3,4)\\) with a radius of \\(4\\).\n\n2.  \n\n[Figure: This graph shows circle with center at (3, 4) and a radius of 4.]\n\nFigure 11.1.32\n\nExercise \\(\\PageIndex{20}\\)\n\n1. Find the center and radius, then\n\n2. Graph the circle: \\(x^{2}+y^{2}+6 x-2 y+1=0\\)\n\nAnswer\n\n1. The circle is centered at \\((-3,1)\\) with a radius of \\(3\\).\n\n2.  \n\n[Figure: This graph shows circle with center at (negative 3, 1) and a radius of 3.]\n\nFigure 11.1.33\n\nIn the next example, there is a \\(y\\)-term and a \\(y^{2}\\)-term. But notice that there is no \\(x\\)-term, only an \\(x^{2}\\)-term. We have seen this before and know that it means \\(h\\) is \\(0\\). We will need to complete the square for the \\(y\\) terms, but not for the \\(x\\) terms.\n\nExample \\(\\PageIndex{11}\\)\n\n1. Find the center and radius, then\n\n2. Graph the circle: \\(x^{2}+y^{2}+8 y=0\\)\n\nSolution:\n\nWe need to rewrite this general form into standard form in order to find the center and radius.\n\n[Figure: .]\n\n            Group the \\(x\\)-terms and \\(y\\)-terms.\t\n\n[Figure: .]\n\n            There are no constants to collect on the right side.\t\n\n            Complete the square for \\(y^{2}+8y\\).\t\n\n[Figure: .]\n\n            Rewrite as binomial squares.\t\n\n[Figure: .]\n\n            Identify the center and radius.\t\n            Center: \\((0,-4)\\) radius: \\(4\\)\t\n\n            Graph the circle.\t\n\n[Figure: .]\n\nTable 11.1.9\n\nExercise \\(\\PageIndex{21}\\)\n\n1. Find the center and radius, then\n\n2. Graph the circle: \\(x^{2}+y^{2}-2 x-3=0\\).\n\nAnswer\n\n1. The circle is centered at \\((-1,0)\\) with a radius of \\(2\\).\n\n2.  \n\n[Figure: This graph shows circle with center at (1, 0) and a radius of 2.]\n\nFigure 11.1.39\n\nExercise \\(\\PageIndex{22}\\)\n\n1. Find the center and radius, then\n\n2. Graph the circle: \\(x^{2}+y^{2}-12 y+11=0\\).\n\nAnswer\n\n1. The circle is centered at \\((0,6)\\) with a radius of \\(5\\).\n\n2.  \n\n[Figure: This graph shows circle with center at (0, 6) and a radius of 5.]\n\nFigure 11.1.40\n\nAccess these online resources for additional instructions and practice with using the distance and midpoint formulas, and graphing circles.\n\nDistance-Midpoint Formulas and Circles\n\nFinding the Distance and Midpoint Between Two Points\n\nCompleting the Square to Write Equation in Standard Form of a Circle\n\nKey Concepts\n\nDistance Formula: The distance \\(d\\) between the two points \\(\\left(x_{1}, y_{1}\\right)\\) and \\(\\left(x_{2}, y_{2}\\right)\\) is\n\n\\(d=\\sqrt{\\left(x_{2}-x_{1}\\right)^{2}+\\left(y_{2}-y_{1}\\right)^{2}}\\)\n\nMidpoint Formula: The midpoint of the line segment whose endpoints are the two points \\(\\left(x_{1}, y_{1}\\right)\\) and \\(\\left(x_{2}, y_{2}\\right)\\) is\n\n\\(\\left(\\frac{x_{1}+x_{2}}{2}, \\frac{y_{1}+y_{2}}{2}\\right)\\)\n\n    To find the midpoint of a line segment, we find the average of the \\(x\\)-coordinates and the average of the \\(y\\)-coordinates of the endpoints.\n\nCircle: A circle is all points in a plane that are a fixed distance from a fixed point in the plane. The given point is called the center, \\((h,k)\\), and the fixed distance is called the radius, \\(r\\), of the circle.\n\nStandard Form of the Equation a Circle: The standard form of the equation of a circle with center, \\((h,k)\\), and radius, \\(r\\), is\n\n[Figure: Figure shows circle with center at (h, k) and a radius of r. A point on the circle is labeled x, y. The formula is open parentheses x minus h close parentheses squared plus open parentheses y minus k close parentheses squared equals r squared.]\n\nFigure 11.1.41\n\nGeneral Form of the Equation of a Circle: The general form of the equation of a circle is\n\n\\(x^{2}+y^{2}+a x+b y+c=0\\)\n\nGlossary\n\ncircle\n\nA circle is all points in a plane that are a fixed distance from a fixed point in the plane.\n\nThis page titled 11.2: Distance and Midpoint Formulas and Circles was last modified on Mon, 14 Feb 2022 01:07:21 GMT and is shared under a CC BY  4.0  license and was authored, remixed, and/or curated by OpenStax via source content that was edited to the style and standards of the LibreTexts platform.",
+  "figures": [
+    {
+      "url": "https://math.libretexts.org/@api/deki/files/21357/15a63e49126e7b951c0f3446da6f1cc87530bb04?revision=1",
+      "alt": "This figure shows two cones placed point to point. They are labeled nappes.",
+      "credit": ""
+    },
+    {
+      "url": "https://math.libretexts.org/@api/deki/files/21358/70de68ff5ad5cfac17094df07fab7b1027c37ed7?revision=1",
+      "alt": "Each of these four figures shows a double cone intersected by a plane. In the first figure, the plane is perpendicular to the axis of the cones and intersects the bottom cone to form a circle. In the second figure, the plane is at an angle to the axis and intersects the bottom cone in such a way that it intersects the base as well. Thus, the curve formed by the intersection is open at both ends. This is labeled parabola. In the third figure, the plane is at an angle to the axis and intersects the bottom cone in such a way that it does not intersect the base of the cone. Thus, the curve formed by the intersection is a closed loop, labeled ellipse. In the fourth figure, the plane is parallel to the axis, intersecting both cones. This is labeled hyperbola.",
+      "credit": ""
+    },
+    {
+      "url": "https://math.libretexts.org/@api/deki/files/21378/CNX_IntAlg_Figure_11_01_003a_img.jpg?revision=1",
+      "alt": ".",
+      "credit": ""
+    },
+    {
+      "url": "https://math.libretexts.org/@api/deki/files/21354/CNX_IntAlg_Figure_11_01_003b_img.jpg?revision=1",
+      "alt": ".",
+      "credit": ""
+    },
+    {
+      "url": "https://math.libretexts.org/@api/deki/files/21376/CNX_IntAlg_Figure_11_01_004_img.jpg?revision=1",
+      "alt": "Figure shows a graph with a right triangle. The hypotenuse connects two points, (2, 1) and (6, 4). These are respectively labeled (x1, y1) and (x2, y2). The rise is y2 minus y1, which is 4 minus 1 equals 3. The run is x2 minus x1, which is 6 minus 2 equals 4.",
+      "credit": ""
+    },
+    {
+      "url": "https://math.libretexts.org/@api/deki/files/21536/CNX_IntAlg_Figure_11_01_005a_img.jpg?revision=1",
+      "alt": ".",
+      "credit": ""
+    },
+    {
+      "url": "https://math.libretexts.org/@api/deki/files/21523/CNX_IntAlg_Figure_11_01_301_img.jpg?revision=1",
+      "alt": "This graph shows a line segment with endpoints (negative 3, negative 5) and (5, 7) and midpoint (1, negative 1).",
+      "credit": ""
+    },
+    {
+      "url": "https://math.libretexts.org/@api/deki/files/21529/CNX_IntAlg_Figure_11_01_302_img.jpg?revision=1",
+      "alt": "This graph shows a line segment with endpoints (negative 2, negative 5) and (6, negative 1) and midpoint (2, negative 3).",
+      "credit": ""
+    },
+    {
+      "url": "https://math.libretexts.org/@api/deki/files/21528/CNX_IntAlg_Figure_11_01_006_img.jpg?revision=1",
+      "alt": "The distance formula is d equals square root of open parentheses x2 minus x1 close parentheses squared plus open parentheses y2 minus y1 close parentheses squared end of root. This is labeled subtract the coordinates. The midpoint formula is open parentheses open parentheses x1 plus x2 close parentheses upon 2 comma open parentheses y1 plus y2 close parentheses upon 2 close parentheses. This is labeled add the coordinates.",
+      "credit": ""
+    },
+    {
+      "url": "https://math.libretexts.org/@api/deki/files/21377/CNX_IntAlg_Figure_11_01_007_img.jpg?revision=1",
+      "alt": "This figure shows a double cone and an intersecting plane, which form a circle.",
+      "credit": ""
+    },
+    {
+      "url": "https://math.libretexts.org/@api/deki/files/21448/CNX_IntAlg_Figure_11_01_008a_img.jpg?revision=1",
+      "alt": ".",
+      "credit": ""
+    },
+    {
+      "url": "https://math.libretexts.org/@api/deki/files/21444/CNX_IntAlg_Figure_11_01_009_img.jpg?revision=1",
+      "alt": "Figure shows circle with center at (h, k) and a radius of r. A point on the circle is labeled x, y. The formula is open parentheses x minus h close parentheses squared plus open parentheses y minus k close parentheses squared equals r squared.",
+      "credit": ""
+    },
+    {
+      "url": "https://math.libretexts.org/@api/deki/files/21475/CNX_IntAlg_Figure_11_01_010a_img.jpg?revision=1",
+      "alt": ".",
+      "credit": ""
+    },
+    {
+      "url": "https://math.libretexts.org/@api/deki/files/21467/CNX_IntAlg_Figure_11_01_011a_img.jpg?revision=1",
+      "alt": ".",
+      "credit": ""
+    },
+    {
+      "url": "https://math.libretexts.org/@api/deki/files/21524/CNX_IntAlg_Figure_11_01_012_img.jpg?revision=1",
+      "alt": "This graph shows circle with center at (2, 4, radius 5 and a point on the circle minus 2, 1.",
+      "credit": ""
+    },
+    {
+      "url": "https://math.libretexts.org/@api/deki/files/21468/CNX_IntAlg_Figure_11_01_013a_img.jpg?revision=1",
+      "alt": ".",
+      "credit": ""
+    },
+    {
+      "url": "https://math.libretexts.org/@api/deki/files/21496/CNX_IntAlg_Figure_11_01_013b_img.jpg?revision=1",
+      "alt": ".",
+      "credit": ""
+    },
+    {
+      "url": "https://math.libretexts.org/@api/deki/files/21550/CNX_IntAlg_Figure_11_01_013c_img.jpg?revision=1",
+      "alt": ".",
+      "credit": ""
+    },
+    {
+      "url": "https://math.libretexts.org/@api/deki/files/21557/CNX_IntAlg_Figure_11_01_303_img.jpg?revision=1",
+      "alt": "This graph shows a circle with center at (3, negative 4) and a radius of 2.",
+      "credit": ""
+    },
+    {
+      "url": "https://math.libretexts.org/@api/deki/files/21595/CNX_IntAlg_Figure_11_01_304_img.jpg?revision=1",
+      "alt": "This graph shows circle with center at (3, 1) and a radius of 4.",
+      "credit": ""
+    },
+    {
+      "url": "https://math.libretexts.org/@api/deki/files/21531/CNX_IntAlg_Figure_11_01_014a_img.jpg?revision=1",
+      "alt": ".",
+      "credit": ""
+    },
+    {
+      "url": "https://math.libretexts.org/@api/deki/files/21686/CNX_IntAlg_Figure_11_01_014b_img.jpg?revision=1",
+      "alt": ".",
+      "credit": ""
+    },
+    {
+      "url": "https://math.libretexts.org/@api/deki/files/21613/CNX_IntAlg_Figure_11_01_014c_img.jpg?revision=1",
+      "alt": ".",
+      "credit": ""
+    },
+    {
+      "url": "https://math.libretexts.org/@api/deki/files/21789/CNX_IntAlg_Figure_11_01_014d_img.jpg?revision=1",
+      "alt": ".",
+      "credit": ""
+    },
+    {
+      "url": "https://math.libretexts.org/@api/deki/files/21823/CNX_IntAlg_Figure_11_01_305_img.jpg?revision=1",
+      "alt": "This graph shows circle with center at (0, 0) and a radius of 3.",
+      "credit": ""
+    },
+    {
+      "url": "https://math.libretexts.org/@api/deki/files/21827/CNX_IntAlg_Figure_11_01_306_img.jpg?revision=1",
+      "alt": "This graph shows circle with center at (0, 0) and a radius of 5.",
+      "credit": ""
+    },
+    {
+      "url": "https://math.libretexts.org/@api/deki/files/21877/CNX_IntAlg_Figure_11_01_015a_img.jpg?revision=1",
+      "alt": ".",
+      "credit": ""
+    },
+    {
+      "url": "https://math.libretexts.org/@api/deki/files/21835/CNX_IntAlg_Figure_11_01_015b_img.jpg?revision=1",
+      "alt": ".",
+      "credit": ""
+    },
+    {
+      "url": "https://math.libretexts.org/@api/deki/files/21788/CNX_IntAlg_Figure_11_01_015c_img.jpg?revision=1",
+      "alt": ".",
+      "credit": ""
+    },
+    {
+      "url": "https://math.libretexts.org/@api/deki/files/21826/CNX_IntAlg_Figure_11_01_015d_img.jpg?revision=1",
+      "alt": ".",
+      "credit": ""
+    },
+    {
+      "url": "https://math.libretexts.org/@api/deki/files/21640/CNX_IntAlg_Figure_11_01_015e_img.jpg?revision=1",
+      "alt": ".",
+      "credit": ""
+    },
+    {
+      "url": "https://math.libretexts.org/@api/deki/files/21895/CNX_IntAlg_Figure_11_01_307_img.jpg?revision=1",
+      "alt": "This graph shows circle with center at (3, 4) and a radius of 4.",
+      "credit": ""
+    },
+    {
+      "url": "https://math.libretexts.org/@api/deki/files/21724/CNX_IntAlg_Figure_11_01_308_img.jpg?revision=1",
+      "alt": "This graph shows circle with center at (negative 3, 1) and a radius of 3.",
+      "credit": ""
+    },
+    {
+      "url": "https://math.libretexts.org/@api/deki/files/22017/CNX_IntAlg_Figure_11_01_016a_img.jpg?revision=1",
+      "alt": ".",
+      "credit": ""
+    },
+    {
+      "url": "https://math.libretexts.org/@api/deki/files/22009/CNX_IntAlg_Figure_11_01_016b_img.jpg?revision=1",
+      "alt": ".",
+      "credit": ""
+    },
+    {
+      "url": "https://math.libretexts.org/@api/deki/files/21882/CNX_IntAlg_Figure_11_01_016c_img.jpg?revision=1",
+      "alt": ".",
+      "credit": ""
+    },
+    {
+      "url": "https://math.libretexts.org/@api/deki/files/21844/CNX_IntAlg_Figure_11_01_016d_img.jpg?revision=1",
+      "alt": ".",
+      "credit": ""
+    },
+    {
+      "url": "https://math.libretexts.org/@api/deki/files/35893/CNX_IntAlg_Figure_11_01_016e_img.jpg?revision=1",
+      "alt": ".",
+      "credit": ""
+    },
+    {
+      "url": "https://math.libretexts.org/@api/deki/files/22016/CNX_IntAlg_Figure_11_01_309_img.jpg?revision=1",
+      "alt": "This graph shows circle with center at (1, 0) and a radius of 2.",
+      "credit": ""
+    },
+    {
+      "url": "https://math.libretexts.org/@api/deki/files/22078/CNX_IntAlg_Figure_11_01_310_img.jpg?revision=1",
+      "alt": "This graph shows circle with center at (0, 6) and a radius of 5.",
+      "credit": ""
+    },
+    {
+      "url": "https://math.libretexts.org/@api/deki/files/21973/CNX_IntAlg_Figure_11_01_017_img.jpg?revision=1",
+      "alt": "Figure shows circle with center at (h, k) and a radius of r. A point on the circle is labeled x, y. The formula is open parentheses x minus h close parentheses squared plus open parentheses y minus k close parentheses squared equals r squared.",
+      "credit": ""
+    }
+  ],
+  "references": [
+    {
+      "text": "11.2: Distance and Midpoint Formulas and Circles",
+      "url": "https://math.libretexts.org/Bookshelves/Algebra/Intermediate_Algebra_1e_(OpenStax)/11%3A_Conics/11.02%3A_Distance_and_Midpoint_Formulas_and_Circles"
+    },
+    {
+      "text": "CC BY  4.0",
+      "url": "https://creativecommons.org/licenses/by/4.0"
+    },
+    {
+      "text": "OpenStax",
+      "url": "https://openstax.org/"
+    },
+    {
+      "text": "source content",
+      "url": "https://openstax.org/details/books/intermediate-algebra-2e"
+    }
+  ],
+  "exercises": [
+    {
+      "ordinal": 1,
+      "sourceNumber": "1",
+      "sourceAnchor": "",
+      "kind": "exercise-candidate",
+      "context": "By the end of this section, you will be able to:\n\nBefore you get started, take this readiness quiz.",
+      "original": "1. Find the length of the hypotenuse of a right triangle whose legs are \\(12\\) and \\(16\\) inches.\n\n    If you missed this problem, review Example 2.34.",
+      "prompt": "1. Find the length of the hypotenuse of a right triangle whose legs are \\(12\\) and \\(16\\) inches.\n\n    If you missed this problem, review Example 2.34.",
+      "sourceAnswers": [],
+      "hasFigure": false,
+      "status": "draft",
+      "answerVerified": false,
+      "translationStatus": "pending",
+      "mappingStatus": "pending"
+    },
+    {
+      "ordinal": 2,
+      "sourceNumber": "2",
+      "sourceAnchor": "",
+      "kind": "exercise-candidate",
+      "context": "By the end of this section, you will be able to:\n\nBefore you get started, take this readiness quiz.",
+      "original": "2. Factor: \\(x^{2}-18 x+81\\).\n\n    If you missed this problem, review Example 6.24.",
+      "prompt": "2. Factor: \\(x^{2}-18 x+81\\).\n\n    If you missed this problem, review Example 6.24.",
+      "sourceAnswers": [],
+      "hasFigure": false,
+      "status": "draft",
+      "answerVerified": false,
+      "translationStatus": "pending",
+      "mappingStatus": "pending"
+    },
+    {
+      "ordinal": 3,
+      "sourceNumber": "3",
+      "sourceAnchor": "",
+      "kind": "exercise-candidate",
+      "context": "By the end of this section, you will be able to:\n\nBefore you get started, take this readiness quiz.",
+      "original": "3. Solve by completing the square: \\(x^{2}-12 x-12=0\\).\n\n    If you missed this problem, review Example 9.22.",
+      "prompt": "3. Solve by completing the square: \\(x^{2}-12 x-12=0\\).\n\n    If you missed this problem, review Example 9.22.",
+      "sourceAnswers": [],
+      "hasFigure": false,
+      "status": "draft",
+      "answerVerified": false,
+      "translationStatus": "pending",
+      "mappingStatus": "pending"
+    },
+    {
+      "ordinal": 4,
+      "sourceNumber": "",
+      "sourceAnchor": "",
+      "kind": "example-or-exercise",
+      "context": "Use the Distance Formula\n\nWe have used the Pythagorean Theorem to find the lengths of the sides of a right triangle. Here we will use this theorem again to find distances on the rectangular coordinate system. By finding distance on the rectangular coordinate system, we can make a connection between the geometry of a conic and algebra—which opens up a world of opportunities for application.\n\nOur first step is to develop a formula to find distances between points on the rectangular coordinate system. We will plot the points and create a right triangle much as we did when we found slope in Graphs and Functions. We then take it one step further and use the Pythagorean Theorem to find the length of the hypotenuse of the triangle—which is the distance between the points.",
+      "original": "Example \\(\\PageIndex{1}\\)\n\nUse the rectangular coordinate system to find the distance between the points \\((6,4)\\) and \\((2,1)\\).\n\nSolution\n\n            Plot the two points. Connect the two points\n\n            with a line.\n\n            Draw a right triangle as if you were going to\n\n            find slope.\t\n\n[Figure: .]\n\nFigure 11.1.3\n\n            Find the length of each leg.\t\n\n[Figure: .]\n\nFigure 11.1.4\n\n            Use the Pythagorean Theorem to find \\(d\\), the distance between the two points.\t\n            \\(a^{2}+b^{2}=c^{2}\\)\t\n\n            Substitute in the values.\t\n            \\(3^{2}+4^{2}=d^{2}\\)\t\n\n            Simplify.\t\n            \\(9+16=d^{2}\\)\t\n\n            \\(25=d^{2}\\)\t\n\n            Use the Square Root Property.\t\n            \\(d=5\\quad\\cancel{d=-5}\\)\t\n\n            Since distance, \\(d\\) is positive, we can eliminate \\(d=-5\\).\t\n            The distance between the points \\((6,4)\\) and \\((2,1)\\) is \\(5\\).\t\n\nTable 11.1.1",
+      "prompt": "Example \\(\\PageIndex{1}\\)\n\nUse the rectangular coordinate system to find the distance between the points \\((6,4)\\) and \\((2,1)\\).\n\nSolution\n\n            Plot the two points. Connect the two points\n\n            with a line.\n\n            Draw a right triangle as if you were going to\n\n            find slope.\t\n\n[Figure: .]\n\nFigure 11.1.3\n\n            Find the length of each leg.\t\n\n[Figure: .]\n\nFigure 11.1.4\n\n            Use the Pythagorean Theorem to find \\(d\\), the distance between the two points.\t\n            \\(a^{2}+b^{2}=c^{2}\\)\t\n\n            Substitute in the values.\t\n            \\(3^{2}+4^{2}=d^{2}\\)\t\n\n            Simplify.\t\n            \\(9+16=d^{2}\\)\t\n\n            \\(25=d^{2}\\)\t\n\n            Use the Square Root Property.\t\n            \\(d=5\\quad\\cancel{d=-5}\\)\t\n\n            Since distance, \\(d\\) is positive, we can eliminate \\(d=-5\\).\t\n            The distance between the points \\((6,4)\\) and \\((2,1)\\) is \\(5\\).\t\n\nTable 11.1.1",
+      "sourceAnswers": [],
+      "hasFigure": true,
+      "status": "draft",
+      "answerVerified": false,
+      "translationStatus": "pending",
+      "mappingStatus": "pending"
+    },
+    {
+      "ordinal": 5,
+      "sourceNumber": "",
+      "sourceAnchor": "",
+      "kind": "exercise-candidate",
+      "context": "Use the Distance Formula\n\nWe have used the Pythagorean Theorem to find the lengths of the sides of a right triangle. Here we will use this theorem again to find distances on the rectangular coordinate system. By finding distance on the rectangular coordinate system, we can make a connection between the geometry of a conic and algebra—which opens up a world of opportunities for application.\n\nOur first step is to develop a formula to find distances between points on the rectangular coordinate system. We will plot the points and create a right triangle much as we did when we found slope in Graphs and Functions. We then take it one step further and use the Pythagorean Theorem to find the length of the hypotenuse of the triangle—which is the distance between the points.",
+      "original": "Exercise \\(\\PageIndex{1}\\)\n\nUse the rectangular coordinate system to find the distance between the points \\((6,1)\\) and \\((2,-2)\\).\n\nAnswer\n\n\\(d=5\\)",
+      "prompt": "Exercise \\(\\PageIndex{1}\\)\n\nUse the rectangular coordinate system to find the distance between the points \\((6,1)\\) and \\((2,-2)\\).",
+      "sourceAnswers": [
+        "\\(d=5\\)"
+      ],
+      "hasFigure": false,
+      "status": "draft",
+      "answerVerified": false,
+      "translationStatus": "pending",
+      "mappingStatus": "pending"
+    },
+    {
+      "ordinal": 6,
+      "sourceNumber": "",
+      "sourceAnchor": "",
+      "kind": "exercise-candidate",
+      "context": "Use the Distance Formula\n\nWe have used the Pythagorean Theorem to find the lengths of the sides of a right triangle. Here we will use this theorem again to find distances on the rectangular coordinate system. By finding distance on the rectangular coordinate system, we can make a connection between the geometry of a conic and algebra—which opens up a world of opportunities for application.\n\nOur first step is to develop a formula to find distances between points on the rectangular coordinate system. We will plot the points and create a right triangle much as we did when we found slope in Graphs and Functions. We then take it one step further and use the Pythagorean Theorem to find the length of the hypotenuse of the triangle—which is the distance between the points.",
+      "original": "Exercise \\(\\PageIndex{2}\\)\n\nUse the rectangular coordinate system to find the distance between the points \\((5,3)\\) and \\((-3,-3)\\).\n\nAnswer\n\n\\(d=10\\)",
+      "prompt": "Exercise \\(\\PageIndex{2}\\)\n\nUse the rectangular coordinate system to find the distance between the points \\((5,3)\\) and \\((-3,-3)\\).",
+      "sourceAnswers": [
+        "\\(d=10\\)"
+      ],
+      "hasFigure": false,
+      "status": "draft",
+      "answerVerified": false,
+      "translationStatus": "pending",
+      "mappingStatus": "pending"
+    },
+    {
+      "ordinal": 7,
+      "sourceNumber": "",
+      "sourceAnchor": "",
+      "kind": "example-or-exercise",
+      "context": "Distance Formula\n\nThe distance \\(d\\) between the two points \\((x_{1},y_{1})\\) and \\((x_{2}, y_{2})\\) is\n\n\\(d=\\sqrt{\\left(x_{2}-x_{1}\\right)^{2}+\\left(y_{2}-y_{1}\\right)^{2}}\\)",
+      "original": "Example \\(\\PageIndex{2}\\)\n\nUse the Distance Formula to find the distance between the points \\((-5,-3)\\) and \\((7,2)\\).\n\nSolution:\n\nWrite the Distance Formula.\n\n\\(d=\\sqrt{\\left(x_{2}-x_{1}\\right)^{2}+\\left(y_{2}-y_{1}\\right)^{2}}\\)\n\nLabel the points, \\(\\left( \\begin{array}{c}{x_{1}, y_{1}} \\\\ {-5,-3}\\end{array}\\right)\\), \\(\\left( \\begin{array}{l}{x_{2}, y_{2}} \\\\ {7,2}\\end{array}\\right)\\) and substitute.\n\n\\(d=\\sqrt{(7-(-5))^{2}+(2-(-3))^{2}}\\)\n\nSimplify.\n\n\\(d=\\sqrt{12^{2}+5^{2}}\\)\n\n\\(d=\\sqrt{144+25}\\)\n\n\\(d=\\sqrt{169}\\)\n\n\\(d=13\\)\n\nAnswer:\n\n\\(d=13\\)",
+      "prompt": "Example \\(\\PageIndex{2}\\)\n\nUse the Distance Formula to find the distance between the points \\((-5,-3)\\) and \\((7,2)\\).\n\nSolution:\n\nWrite the Distance Formula.\n\n\\(d=\\sqrt{\\left(x_{2}-x_{1}\\right)^{2}+\\left(y_{2}-y_{1}\\right)^{2}}\\)\n\nLabel the points, \\(\\left( \\begin{array}{c}{x_{1}, y_{1}} \\\\ {-5,-3}\\end{array}\\right)\\), \\(\\left( \\begin{array}{l}{x_{2}, y_{2}} \\\\ {7,2}\\end{array}\\right)\\) and substitute.\n\n\\(d=\\sqrt{(7-(-5))^{2}+(2-(-3))^{2}}\\)\n\nSimplify.\n\n\\(d=\\sqrt{12^{2}+5^{2}}\\)\n\n\\(d=\\sqrt{144+25}\\)\n\n\\(d=\\sqrt{169}\\)\n\n\\(d=13\\)\n\nAnswer:\n\n\\(d=13\\)",
+      "sourceAnswers": [],
+      "hasFigure": false,
+      "status": "draft",
+      "answerVerified": false,
+      "translationStatus": "pending",
+      "mappingStatus": "pending"
+    },
+    {
+      "ordinal": 8,
+      "sourceNumber": "",
+      "sourceAnchor": "",
+      "kind": "exercise-candidate",
+      "context": "Distance Formula\n\nThe distance \\(d\\) between the two points \\((x_{1},y_{1})\\) and \\((x_{2}, y_{2})\\) is\n\n\\(d=\\sqrt{\\left(x_{2}-x_{1}\\right)^{2}+\\left(y_{2}-y_{1}\\right)^{2}}\\)",
+      "original": "Exercise \\(\\PageIndex{3}\\)\n\nUse the Distance Formula to find the distance between the points \\((-4,-5)\\) and \\((5,7)\\).\n\nAnswer\n\n\\(d=15\\)",
+      "prompt": "Exercise \\(\\PageIndex{3}\\)\n\nUse the Distance Formula to find the distance between the points \\((-4,-5)\\) and \\((5,7)\\).",
+      "sourceAnswers": [
+        "\\(d=15\\)"
+      ],
+      "hasFigure": false,
+      "status": "draft",
+      "answerVerified": false,
+      "translationStatus": "pending",
+      "mappingStatus": "pending"
+    },
+    {
+      "ordinal": 9,
+      "sourceNumber": "",
+      "sourceAnchor": "",
+      "kind": "exercise-candidate",
+      "context": "Distance Formula\n\nThe distance \\(d\\) between the two points \\((x_{1},y_{1})\\) and \\((x_{2}, y_{2})\\) is\n\n\\(d=\\sqrt{\\left(x_{2}-x_{1}\\right)^{2}+\\left(y_{2}-y_{1}\\right)^{2}}\\)",
+      "original": "Exercise \\(\\PageIndex{4}\\)\n\nUse the Distance Formula to find the distance between the points \\((-2,-5)\\) and \\((-14,-10)\\).\n\nAnswer\n\n\\(d=13\\)",
+      "prompt": "Exercise \\(\\PageIndex{4}\\)\n\nUse the Distance Formula to find the distance between the points \\((-2,-5)\\) and \\((-14,-10)\\).",
+      "sourceAnswers": [
+        "\\(d=13\\)"
+      ],
+      "hasFigure": false,
+      "status": "draft",
+      "answerVerified": false,
+      "translationStatus": "pending",
+      "mappingStatus": "pending"
+    },
+    {
+      "ordinal": 10,
+      "sourceNumber": "",
+      "sourceAnchor": "",
+      "kind": "example-or-exercise",
+      "context": "Distance Formula\n\nThe distance \\(d\\) between the two points \\((x_{1},y_{1})\\) and \\((x_{2}, y_{2})\\) is\n\n\\(d=\\sqrt{\\left(x_{2}-x_{1}\\right)^{2}+\\left(y_{2}-y_{1}\\right)^{2}}\\)",
+      "original": "Example \\(\\PageIndex{3}\\)\n\nUse the Distance Formula to find the distance between the points \\((10,−4)\\) and \\((−1,5)\\). Write the answer in exact form and then find the decimal approximation, rounded to the nearest tenth if needed.\n\nSolution:\n\nWrite the Distance Formula.\n\n\\(d=\\sqrt{\\left(x_{2}-x_{1}\\right)^{2}+\\left(y_{2}-y_{1}\\right)^{2}}\\)\n\nLabel the points, \\(\\left( \\begin{array}{c}{x_{1}, y_{1}} \\\\ {10,-4}\\end{array}\\right)\\), \\(\\left( \\begin{array}{c}{x_{2}, y_{2}} \\\\ {-1,5}\\end{array}\\right)\\) and substitute.\n\n\\(d=\\sqrt{(-1-10)^{2}+(5-(-4))^{2}}\\)\n\nSimplify.\n\n\\(d=\\sqrt{(-11)^{2}+9^{2}}\\)\n\n\\(d=\\sqrt{121+81}\\)\n\n\\(d=\\sqrt{202}\\)\n\nSince \\(202\\) is not a perfect square, we can leave the answer in exact form or find a decimal approximation.\n\n\\(d=\\sqrt{202}\\)\n\nor\n\n\\(d \\approx 14.2\\)",
+      "prompt": "Example \\(\\PageIndex{3}\\)\n\nUse the Distance Formula to find the distance between the points \\((10,−4)\\) and \\((−1,5)\\). Write the answer in exact form and then find the decimal approximation, rounded to the nearest tenth if needed.\n\nSolution:\n\nWrite the Distance Formula.\n\n\\(d=\\sqrt{\\left(x_{2}-x_{1}\\right)^{2}+\\left(y_{2}-y_{1}\\right)^{2}}\\)\n\nLabel the points, \\(\\left( \\begin{array}{c}{x_{1}, y_{1}} \\\\ {10,-4}\\end{array}\\right)\\), \\(\\left( \\begin{array}{c}{x_{2}, y_{2}} \\\\ {-1,5}\\end{array}\\right)\\) and substitute.\n\n\\(d=\\sqrt{(-1-10)^{2}+(5-(-4))^{2}}\\)\n\nSimplify.\n\n\\(d=\\sqrt{(-11)^{2}+9^{2}}\\)\n\n\\(d=\\sqrt{121+81}\\)\n\n\\(d=\\sqrt{202}\\)\n\nSince \\(202\\) is not a perfect square, we can leave the answer in exact form or find a decimal approximation.\n\n\\(d=\\sqrt{202}\\)\n\nor\n\n\\(d \\approx 14.2\\)",
+      "sourceAnswers": [],
+      "hasFigure": false,
+      "status": "draft",
+      "answerVerified": false,
+      "translationStatus": "pending",
+      "mappingStatus": "pending"
+    },
+    {
+      "ordinal": 11,
+      "sourceNumber": "",
+      "sourceAnchor": "",
+      "kind": "exercise-candidate",
+      "context": "Distance Formula\n\nThe distance \\(d\\) between the two points \\((x_{1},y_{1})\\) and \\((x_{2}, y_{2})\\) is\n\n\\(d=\\sqrt{\\left(x_{2}-x_{1}\\right)^{2}+\\left(y_{2}-y_{1}\\right)^{2}}\\)",
+      "original": "Exercise \\(\\PageIndex{5}\\)\n\nUse the Distance Formula to find the distance between the points \\((−4,−5)\\) and \\((3,4)\\). Write the answer in exact form and then find the decimal approximation, rounded to the nearest tenth if needed.\n\nAnswer\n\n\\(d=\\sqrt{130}, d \\approx 11.4\\)",
+      "prompt": "Exercise \\(\\PageIndex{5}\\)\n\nUse the Distance Formula to find the distance between the points \\((−4,−5)\\) and \\((3,4)\\). Write the answer in exact form and then find the decimal approximation, rounded to the nearest tenth if needed.",
+      "sourceAnswers": [
+        "\\(d=\\sqrt{130}, d \\approx 11.4\\)"
+      ],
+      "hasFigure": false,
+      "status": "draft",
+      "answerVerified": false,
+      "translationStatus": "pending",
+      "mappingStatus": "pending"
+    },
+    {
+      "ordinal": 12,
+      "sourceNumber": "",
+      "sourceAnchor": "",
+      "kind": "exercise-candidate",
+      "context": "Distance Formula\n\nThe distance \\(d\\) between the two points \\((x_{1},y_{1})\\) and \\((x_{2}, y_{2})\\) is\n\n\\(d=\\sqrt{\\left(x_{2}-x_{1}\\right)^{2}+\\left(y_{2}-y_{1}\\right)^{2}}\\)",
+      "original": "Exercise \\(\\PageIndex{6}\\)\n\nUse the Distance Formula to find the distance between the points \\((−2,−5)\\) and \\((−3,−4)\\). Write the answer in exact form and then find the decimal approximation, rounded to the nearest tenth if needed.\n\nAnswer\n\n\\(d=\\sqrt{2}, d \\approx 1.4\\)",
+      "prompt": "Exercise \\(\\PageIndex{6}\\)\n\nUse the Distance Formula to find the distance between the points \\((−2,−5)\\) and \\((−3,−4)\\). Write the answer in exact form and then find the decimal approximation, rounded to the nearest tenth if needed.",
+      "sourceAnswers": [
+        "\\(d=\\sqrt{2}, d \\approx 1.4\\)"
+      ],
+      "hasFigure": false,
+      "status": "draft",
+      "answerVerified": false,
+      "translationStatus": "pending",
+      "mappingStatus": "pending"
+    },
+    {
+      "ordinal": 13,
+      "sourceNumber": "",
+      "sourceAnchor": "",
+      "kind": "example-or-exercise",
+      "context": "The midpoint of the line segment whose endpoints are the two points \\(\\left(x_{1}, y_{1}\\right)\\) and \\(\\left(x_{2}, y_{2}\\right)\\) is\n\n\\(\\left(\\frac{x_{1}+x_{2}}{2}, \\frac{y_{1}+y_{2}}{2}\\right)\\)\n\nTo find the midpoint of a line segment, we find the average of the \\(x\\)-coordinates and the average of the \\(y\\)-coordinates of the endpoints.",
+      "original": "Example \\(\\PageIndex{4}\\)\n\nUse the Midpoint Formula to find the midpoint of the line segments whose endpoints are \\((−5,−4)\\) and \\((7,2)\\). Plot the endpoints and the midpoint on a rectangular coordinate system.\n\nSolution:\n\n            Write the Midpoint Formula.\t\n            \\(\\left(\\frac{x_{1}+x_{2}}{2}, \\frac{y_{1}+y_{2}}{2}\\right)\\)\t\n\n            Label the points, \\(\\left( \\begin{array}{c}{x_{1}, y_{1}} \\\\ {-5,-4}\\end{array}\\right), \\left( \\begin{array}{l}{x_{2}, y_{2}} \\\\ {7,2}\\end{array}\\right)\\) and substitute.\t\n            \\(\\left(\\frac{-5+7}{2}, \\frac{-4+2}{2}\\right)\\)\t\n\n            Simplify.\t\n            \\(\\left(\\frac{2}{2}, \\frac{-2}{2}\\right)\\)\t\n\n\\((1,-1)\\)\n\nThe midpoint of the segment is the point\n\n\\((1,-1)\\).\n\n            Plot the endpoints and midpoint.\t\n\n[Figure: .]\n\nFigure 11.1.6\n\nTable 11.1.2",
+      "prompt": "Example \\(\\PageIndex{4}\\)\n\nUse the Midpoint Formula to find the midpoint of the line segments whose endpoints are \\((−5,−4)\\) and \\((7,2)\\). Plot the endpoints and the midpoint on a rectangular coordinate system.\n\nSolution:\n\n            Write the Midpoint Formula.\t\n            \\(\\left(\\frac{x_{1}+x_{2}}{2}, \\frac{y_{1}+y_{2}}{2}\\right)\\)\t\n\n            Label the points, \\(\\left( \\begin{array}{c}{x_{1}, y_{1}} \\\\ {-5,-4}\\end{array}\\right), \\left( \\begin{array}{l}{x_{2}, y_{2}} \\\\ {7,2}\\end{array}\\right)\\) and substitute.\t\n            \\(\\left(\\frac{-5+7}{2}, \\frac{-4+2}{2}\\right)\\)\t\n\n            Simplify.\t\n            \\(\\left(\\frac{2}{2}, \\frac{-2}{2}\\right)\\)\t\n\n\\((1,-1)\\)\n\nThe midpoint of the segment is the point\n\n\\((1,-1)\\).\n\n            Plot the endpoints and midpoint.\t\n\n[Figure: .]\n\nFigure 11.1.6\n\nTable 11.1.2",
+      "sourceAnswers": [],
+      "hasFigure": true,
+      "status": "draft",
+      "answerVerified": false,
+      "translationStatus": "pending",
+      "mappingStatus": "pending"
+    },
+    {
+      "ordinal": 14,
+      "sourceNumber": "",
+      "sourceAnchor": "",
+      "kind": "exercise-candidate",
+      "context": "The midpoint of the line segment whose endpoints are the two points \\(\\left(x_{1}, y_{1}\\right)\\) and \\(\\left(x_{2}, y_{2}\\right)\\) is\n\n\\(\\left(\\frac{x_{1}+x_{2}}{2}, \\frac{y_{1}+y_{2}}{2}\\right)\\)\n\nTo find the midpoint of a line segment, we find the average of the \\(x\\)-coordinates and the average of the \\(y\\)-coordinates of the endpoints.",
+      "original": "Exercise \\(\\PageIndex{7}\\)\n\nUse the Midpoint Formula to find the midpoint of the line segments whose endpoints are \\((−3,−5)\\) and \\((5,7)\\). Plot the endpoints and the midpoint on a rectangular coordinate system.\n\nAnswer\n\n[Figure: This graph shows a line segment with endpoints (negative 3, negative 5) and (5, 7) and midpoint (1, negative 1).]\n\nFigure 11.1.7",
+      "prompt": "Exercise \\(\\PageIndex{7}\\)\n\nUse the Midpoint Formula to find the midpoint of the line segments whose endpoints are \\((−3,−5)\\) and \\((5,7)\\). Plot the endpoints and the midpoint on a rectangular coordinate system.",
+      "sourceAnswers": [
+        "[Figure: This graph shows a line segment with endpoints (negative 3, negative 5) and (5, 7) and midpoint (1, negative 1).]\n\nFigure 11.1.7"
+      ],
+      "hasFigure": true,
+      "status": "draft",
+      "answerVerified": false,
+      "translationStatus": "pending",
+      "mappingStatus": "pending"
+    },
+    {
+      "ordinal": 15,
+      "sourceNumber": "",
+      "sourceAnchor": "",
+      "kind": "exercise-candidate",
+      "context": "The midpoint of the line segment whose endpoints are the two points \\(\\left(x_{1}, y_{1}\\right)\\) and \\(\\left(x_{2}, y_{2}\\right)\\) is\n\n\\(\\left(\\frac{x_{1}+x_{2}}{2}, \\frac{y_{1}+y_{2}}{2}\\right)\\)\n\nTo find the midpoint of a line segment, we find the average of the \\(x\\)-coordinates and the average of the \\(y\\)-coordinates of the endpoints.",
+      "original": "Exercise \\(\\PageIndex{8}\\)\n\nUse the Midpoint Formula to find the midpoint of the line segments whose endpoints are \\((−2,−5)\\) and \\((6,−1)\\). Plot the endpoints and the midpoint on a rectangular coordinate system.\n\nAnswer\n\n[Figure: This graph shows a line segment with endpoints (negative 2, negative 5) and (6, negative 1) and midpoint (2, negative 3).]\n\nFigure 11.1.8",
+      "prompt": "Exercise \\(\\PageIndex{8}\\)\n\nUse the Midpoint Formula to find the midpoint of the line segments whose endpoints are \\((−2,−5)\\) and \\((6,−1)\\). Plot the endpoints and the midpoint on a rectangular coordinate system.",
+      "sourceAnswers": [
+        "[Figure: This graph shows a line segment with endpoints (negative 2, negative 5) and (6, negative 1) and midpoint (2, negative 3).]\n\nFigure 11.1.8"
+      ],
+      "hasFigure": true,
+      "status": "draft",
+      "answerVerified": false,
+      "translationStatus": "pending",
+      "mappingStatus": "pending"
+    },
+    {
+      "ordinal": 16,
+      "sourceNumber": "",
+      "sourceAnchor": "",
+      "kind": "example-or-exercise",
+      "context": "A circle is all points in a plane that are a fixed distance from a given point in the plane. The given point is called the center, \\((h,k)\\), and the fixed distance is called the radius, \\(r\\), of the circle.\n\nThis is the standard form of the equation of a circle with center, \\((h,k)\\), and radius, \\(r\\).\n\nThe standard form of the equation of a circle with center, \\((h,k)\\), and radius, \\(r\\), is",
+      "original": "Example \\(\\PageIndex{5}\\)\n\nWrite the standard form of the equation of the circle with radius \\(3\\) and center \\((0,0)\\).\n\nSolution:\n\n            Use the standard form of the equation of a circle\t\n            \\((x-h)^{2}+(y-k)^{2}=r^{2}\\)\t\n\n            Substitute in the values \\(r=3, h=0\\), and \\(k=0\\).\t\n            \\((x-0)^{2}+(y-0)^{2}=3^{2}\\)\t\n\n[Figure: .]\n\n            Simplify.\t\n            \\(x^{2}+y^{2}=9\\)\t\n\nTable 11.1.4",
+      "prompt": "Example \\(\\PageIndex{5}\\)\n\nWrite the standard form of the equation of the circle with radius \\(3\\) and center \\((0,0)\\).\n\nSolution:\n\n            Use the standard form of the equation of a circle\t\n            \\((x-h)^{2}+(y-k)^{2}=r^{2}\\)\t\n\n            Substitute in the values \\(r=3, h=0\\), and \\(k=0\\).\t\n            \\((x-0)^{2}+(y-0)^{2}=3^{2}\\)\t\n\n[Figure: .]\n\n            Simplify.\t\n            \\(x^{2}+y^{2}=9\\)\t\n\nTable 11.1.4",
+      "sourceAnswers": [],
+      "hasFigure": true,
+      "status": "draft",
+      "answerVerified": false,
+      "translationStatus": "pending",
+      "mappingStatus": "pending"
+    },
+    {
+      "ordinal": 17,
+      "sourceNumber": "",
+      "sourceAnchor": "",
+      "kind": "exercise-candidate",
+      "context": "A circle is all points in a plane that are a fixed distance from a given point in the plane. The given point is called the center, \\((h,k)\\), and the fixed distance is called the radius, \\(r\\), of the circle.\n\nThis is the standard form of the equation of a circle with center, \\((h,k)\\), and radius, \\(r\\).\n\nThe standard form of the equation of a circle with center, \\((h,k)\\), and radius, \\(r\\), is",
+      "original": "Exercise \\(\\PageIndex{9}\\)\n\nWrite the standard form of the equation of the circle with a radius of \\(6\\) and center \\((0,0)\\).\n\nAnswer\n\n\\(x^{2}+y^{2}=36\\)",
+      "prompt": "Exercise \\(\\PageIndex{9}\\)\n\nWrite the standard form of the equation of the circle with a radius of \\(6\\) and center \\((0,0)\\).",
+      "sourceAnswers": [
+        "\\(x^{2}+y^{2}=36\\)"
+      ],
+      "hasFigure": false,
+      "status": "draft",
+      "answerVerified": false,
+      "translationStatus": "pending",
+      "mappingStatus": "pending"
+    },
+    {
+      "ordinal": 18,
+      "sourceNumber": "",
+      "sourceAnchor": "",
+      "kind": "exercise-candidate",
+      "context": "A circle is all points in a plane that are a fixed distance from a given point in the plane. The given point is called the center, \\((h,k)\\), and the fixed distance is called the radius, \\(r\\), of the circle.\n\nThis is the standard form of the equation of a circle with center, \\((h,k)\\), and radius, \\(r\\).\n\nThe standard form of the equation of a circle with center, \\((h,k)\\), and radius, \\(r\\), is",
+      "original": "Exercise \\(\\PageIndex{10}\\)\n\nWrite the standard form of the equation of the circle with a radius of \\(8\\) and center \\((0,0)\\).\n\nAnswer\n\n\\(x^{2}+y^{2}=64\\)",
+      "prompt": "Exercise \\(\\PageIndex{10}\\)\n\nWrite the standard form of the equation of the circle with a radius of \\(8\\) and center \\((0,0)\\).",
+      "sourceAnswers": [
+        "\\(x^{2}+y^{2}=64\\)"
+      ],
+      "hasFigure": false,
+      "status": "draft",
+      "answerVerified": false,
+      "translationStatus": "pending",
+      "mappingStatus": "pending"
+    },
+    {
+      "ordinal": 19,
+      "sourceNumber": "",
+      "sourceAnchor": "",
+      "kind": "example-or-exercise",
+      "context": "This is the standard form of the equation of a circle with center, \\((h,k)\\), and radius, \\(r\\).\n\nThe standard form of the equation of a circle with center, \\((h,k)\\), and radius, \\(r\\), is\n\nIn the last example, the center was \\((0,0)\\). Notice what happened to the equation. Whenever the center is \\((0,0)\\), the standard form becomes \\(x^{2}+y^{2}=r^{2}\\).",
+      "original": "Example \\(\\PageIndex{6}\\)\n\nWrite the standard form of the equation of the circle with radius \\(2\\) and center \\((−1,3)\\).\n\nSolution:\n\n            Use the standard form of the equation of a circle.\t\n            \\((x-h)^{2}+(y-k)^{2}=r^{2}\\)\t\n\n            Substitute in the values.\t\n            \\((x-(-1))^{2}+(y-3)^{2}=2^{2}\\)\t\n\n[Figure: .]\n\n            Simplify.\t\n            \\((x+1)^{2}+(y-3)^{2}=4\\)\t\n\nTable 11.1.5",
+      "prompt": "Example \\(\\PageIndex{6}\\)\n\nWrite the standard form of the equation of the circle with radius \\(2\\) and center \\((−1,3)\\).\n\nSolution:\n\n            Use the standard form of the equation of a circle.\t\n            \\((x-h)^{2}+(y-k)^{2}=r^{2}\\)\t\n\n            Substitute in the values.\t\n            \\((x-(-1))^{2}+(y-3)^{2}=2^{2}\\)\t\n\n[Figure: .]\n\n            Simplify.\t\n            \\((x+1)^{2}+(y-3)^{2}=4\\)\t\n\nTable 11.1.5",
+      "sourceAnswers": [],
+      "hasFigure": true,
+      "status": "draft",
+      "answerVerified": false,
+      "translationStatus": "pending",
+      "mappingStatus": "pending"
+    },
+    {
+      "ordinal": 20,
+      "sourceNumber": "",
+      "sourceAnchor": "",
+      "kind": "exercise-candidate",
+      "context": "This is the standard form of the equation of a circle with center, \\((h,k)\\), and radius, \\(r\\).\n\nThe standard form of the equation of a circle with center, \\((h,k)\\), and radius, \\(r\\), is\n\nIn the last example, the center was \\((0,0)\\). Notice what happened to the equation. Whenever the center is \\((0,0)\\), the standard form becomes \\(x^{2}+y^{2}=r^{2}\\).",
+      "original": "Exercise \\(\\PageIndex{11}\\)\n\nWrite the standard form of the equation of the circle with a radius of \\(7\\) and center \\((2,−4)\\).\n\nAnswer\n\n\\((x-2)^{2}+(y+4)^{2}=49\\)",
+      "prompt": "Exercise \\(\\PageIndex{11}\\)\n\nWrite the standard form of the equation of the circle with a radius of \\(7\\) and center \\((2,−4)\\).",
+      "sourceAnswers": [
+        "\\((x-2)^{2}+(y+4)^{2}=49\\)"
+      ],
+      "hasFigure": false,
+      "status": "draft",
+      "answerVerified": false,
+      "translationStatus": "pending",
+      "mappingStatus": "pending"
+    },
+    {
+      "ordinal": 21,
+      "sourceNumber": "",
+      "sourceAnchor": "",
+      "kind": "exercise-candidate",
+      "context": "This is the standard form of the equation of a circle with center, \\((h,k)\\), and radius, \\(r\\).\n\nThe standard form of the equation of a circle with center, \\((h,k)\\), and radius, \\(r\\), is\n\nIn the last example, the center was \\((0,0)\\). Notice what happened to the equation. Whenever the center is \\((0,0)\\), the standard form becomes \\(x^{2}+y^{2}=r^{2}\\).",
+      "original": "Exercise \\(\\PageIndex{12}\\)\n\nWrite the standard form of the equation of the circle with a radius of \\(9\\) and center \\((−3,−5)\\).\n\nAnswer\n\n\\((x+3)^{2}+(y+5)^{2}=81\\)",
+      "prompt": "Exercise \\(\\PageIndex{12}\\)\n\nWrite the standard form of the equation of the circle with a radius of \\(9\\) and center \\((−3,−5)\\).",
+      "sourceAnswers": [
+        "\\((x+3)^{2}+(y+5)^{2}=81\\)"
+      ],
+      "hasFigure": false,
+      "status": "draft",
+      "answerVerified": false,
+      "translationStatus": "pending",
+      "mappingStatus": "pending"
+    },
+    {
+      "ordinal": 22,
+      "sourceNumber": "",
+      "sourceAnchor": "",
+      "kind": "example-or-exercise",
+      "context": "The standard form of the equation of a circle with center, \\((h,k)\\), and radius, \\(r\\), is\n\nIn the last example, the center was \\((0,0)\\). Notice what happened to the equation. Whenever the center is \\((0,0)\\), the standard form becomes \\(x^{2}+y^{2}=r^{2}\\).\n\nIn the next example, the radius is not given. To calculate the radius, we use the Distance Formula with the two given points.",
+      "original": "Example \\(\\PageIndex{7}\\)\n\nWrite the standard form of the equation of the circle with center \\((2,4)\\) that also contains the point \\((−2,1)\\).\n\n[Figure: This graph shows circle with center at (2, 4, radius 5 and a point on the circle minus 2, 1.]\n\nFigure 11.1.15\n\nSolution:\n\nThe radius is the distance from the center to any point on the circle so we can use the distance formula to calculate it. We will use the center \\((2,4)\\) and point \\((−2,1)\\)\n\nUse the Distance Formula to find the radius.\n\n\\(r=\\sqrt{\\left(x_{2}-x_{1}\\right)^{2}+\\left(y_{2}-y_{1}\\right)^{2}}\\)\n\nSubstitute the values. \\(\\left( \\begin{array}{l}{x_{1}, y_{1}} \\\\ {2,4}\\end{array}\\right), \\left( \\begin{array}{c}{x_{2}, y_{2}} \\\\ {-2,1}\\end{array}\\right)\\)\n\n\\(r=\\sqrt{(-2-2)^{2}+(1-4)^{2}}\\)\n\nSimplify.\n\n\\(r=\\sqrt{(-4)^{2}+(-3)^{2}}\\)\n\n\\(r=\\sqrt{16+9}\\)\n\n\\(r=\\sqrt{25}\\)\n\n\\(r=5\\)\n\nNow that we know the radius, \\(r=5\\), and the center, \\((2,4)\\), we can use the standard form of the equation of a circle to find the equation.\n\nUse the standard form of the equation of a circle.\n\n\\((x-h)^{2}+(y-k)^{2}=r^{2}\\)\n\nSubstitute in the values.\n\n\\((x-2)^{2}+(y-4)^{2}=5^{2}\\)\n\nSimplify.\n\n\\((x-2)^{2}+(y-4)^{2}=25\\)",
+      "prompt": "Example \\(\\PageIndex{7}\\)\n\nWrite the standard form of the equation of the circle with center \\((2,4)\\) that also contains the point \\((−2,1)\\).\n\n[Figure: This graph shows circle with center at (2, 4, radius 5 and a point on the circle minus 2, 1.]\n\nFigure 11.1.15\n\nSolution:\n\nThe radius is the distance from the center to any point on the circle so we can use the distance formula to calculate it. We will use the center \\((2,4)\\) and point \\((−2,1)\\)\n\nUse the Distance Formula to find the radius.\n\n\\(r=\\sqrt{\\left(x_{2}-x_{1}\\right)^{2}+\\left(y_{2}-y_{1}\\right)^{2}}\\)\n\nSubstitute the values. \\(\\left( \\begin{array}{l}{x_{1}, y_{1}} \\\\ {2,4}\\end{array}\\right), \\left( \\begin{array}{c}{x_{2}, y_{2}} \\\\ {-2,1}\\end{array}\\right)\\)\n\n\\(r=\\sqrt{(-2-2)^{2}+(1-4)^{2}}\\)\n\nSimplify.\n\n\\(r=\\sqrt{(-4)^{2}+(-3)^{2}}\\)\n\n\\(r=\\sqrt{16+9}\\)\n\n\\(r=\\sqrt{25}\\)\n\n\\(r=5\\)\n\nNow that we know the radius, \\(r=5\\), and the center, \\((2,4)\\), we can use the standard form of the equation of a circle to find the equation.\n\nUse the standard form of the equation of a circle.\n\n\\((x-h)^{2}+(y-k)^{2}=r^{2}\\)\n\nSubstitute in the values.\n\n\\((x-2)^{2}+(y-4)^{2}=5^{2}\\)\n\nSimplify.\n\n\\((x-2)^{2}+(y-4)^{2}=25\\)",
+      "sourceAnswers": [],
+      "hasFigure": true,
+      "status": "draft",
+      "answerVerified": false,
+      "translationStatus": "pending",
+      "mappingStatus": "pending"
+    },
+    {
+      "ordinal": 23,
+      "sourceNumber": "",
+      "sourceAnchor": "",
+      "kind": "exercise-candidate",
+      "context": "The standard form of the equation of a circle with center, \\((h,k)\\), and radius, \\(r\\), is\n\nIn the last example, the center was \\((0,0)\\). Notice what happened to the equation. Whenever the center is \\((0,0)\\), the standard form becomes \\(x^{2}+y^{2}=r^{2}\\).\n\nIn the next example, the radius is not given. To calculate the radius, we use the Distance Formula with the two given points.",
+      "original": "Exercise \\(\\PageIndex{13}\\)\n\nWrite the standard form of the equation of the circle with center \\((2,1)\\) that also contains the point \\((−2,−2)\\).\n\nAnswer\n\n\\((x-2)^{2}+(y-1)^{2}=25\\)",
+      "prompt": "Exercise \\(\\PageIndex{13}\\)\n\nWrite the standard form of the equation of the circle with center \\((2,1)\\) that also contains the point \\((−2,−2)\\).",
+      "sourceAnswers": [
+        "\\((x-2)^{2}+(y-1)^{2}=25\\)"
+      ],
+      "hasFigure": false,
+      "status": "draft",
+      "answerVerified": false,
+      "translationStatus": "pending",
+      "mappingStatus": "pending"
+    },
+    {
+      "ordinal": 24,
+      "sourceNumber": "",
+      "sourceAnchor": "",
+      "kind": "exercise-candidate",
+      "context": "The standard form of the equation of a circle with center, \\((h,k)\\), and radius, \\(r\\), is\n\nIn the last example, the center was \\((0,0)\\). Notice what happened to the equation. Whenever the center is \\((0,0)\\), the standard form becomes \\(x^{2}+y^{2}=r^{2}\\).\n\nIn the next example, the radius is not given. To calculate the radius, we use the Distance Formula with the two given points.",
+      "original": "Exercise \\(\\PageIndex{14}\\)\n\nWrite the standard form of the equation of the circle with center \\((7,1)\\) that also contains the point \\((−1,−5)\\).\n\nAnswer\n\n\\((x-7)^{2}+(y-1)^{2}=100\\)",
+      "prompt": "Exercise \\(\\PageIndex{14}\\)\n\nWrite the standard form of the equation of the circle with center \\((7,1)\\) that also contains the point \\((−1,−5)\\).",
+      "sourceAnswers": [
+        "\\((x-7)^{2}+(y-1)^{2}=100\\)"
+      ],
+      "hasFigure": false,
+      "status": "draft",
+      "answerVerified": false,
+      "translationStatus": "pending",
+      "mappingStatus": "pending"
+    },
+    {
+      "ordinal": 25,
+      "sourceNumber": "",
+      "sourceAnchor": "",
+      "kind": "example-or-exercise",
+      "context": "Graph a Circle\n\nAny equation of the form \\((x-h)^{2}+(y-k)^{2}=r^{2}\\) is the standard form of the equation of a circle with center, \\((h,k)\\), and radius, \\(r\\). We can then graph the circle on a rectangular coordinate system.\n\nNote that the standard form calls for subtraction from \\(x\\) and \\(y\\). In the next example, the equation has \\(x+2\\), so we need to rewrite the addition as subtraction of a negative.",
+      "original": "Example \\(\\PageIndex{8}\\)\n\nFind the center and radius, then graph the circle: \\((x+2)^{2}+(y-1)^{2}=9\\).\n\nSolution:\n\n[Figure: .]\n\nUse the standard form of the equation of a circle.\n\nIdentify the center, \\((h,k)\\) and radius, \\(r\\).\n\n[Figure: .]\n\n            Center: \\((-2,1)\\) radius: \\(3\\)\t\n\n            Graph the circle.\t\n\n[Figure: .]\n\nTable 11.1.6",
+      "prompt": "Example \\(\\PageIndex{8}\\)\n\nFind the center and radius, then graph the circle: \\((x+2)^{2}+(y-1)^{2}=9\\).\n\nSolution:\n\n[Figure: .]\n\nUse the standard form of the equation of a circle.\n\nIdentify the center, \\((h,k)\\) and radius, \\(r\\).\n\n[Figure: .]\n\n            Center: \\((-2,1)\\) radius: \\(3\\)\t\n\n            Graph the circle.\t\n\n[Figure: .]\n\nTable 11.1.6",
+      "sourceAnswers": [],
+      "hasFigure": true,
+      "status": "draft",
+      "answerVerified": false,
+      "translationStatus": "pending",
+      "mappingStatus": "pending"
+    },
+    {
+      "ordinal": 26,
+      "sourceNumber": "",
+      "sourceAnchor": "",
+      "kind": "exercise-candidate",
+      "context": "Graph a Circle\n\nAny equation of the form \\((x-h)^{2}+(y-k)^{2}=r^{2}\\) is the standard form of the equation of a circle with center, \\((h,k)\\), and radius, \\(r\\). We can then graph the circle on a rectangular coordinate system.\n\nNote that the standard form calls for subtraction from \\(x\\) and \\(y\\). In the next example, the equation has \\(x+2\\), so we need to rewrite the addition as subtraction of a negative.",
+      "original": "Exercise \\(\\PageIndex{15}\\)\n\n1. Find the center and radius, then\n\n2. Graph the circle: \\((x-3)^{2}+(y+4)^{2}=4\\).\n\nAnswer\n\n1. The circle is centered at \\((3,-4)\\) with a radius of \\(2\\).\n\n2.  \n\n[Figure: This graph shows a circle with center at (3, negative 4) and a radius of 2.]\n\nFigure 11.1.19",
+      "prompt": "Exercise \\(\\PageIndex{15}\\)\n\n1. Find the center and radius, then\n\n2. Graph the circle: \\((x-3)^{2}+(y+4)^{2}=4\\).",
+      "sourceAnswers": [
+        "1. The circle is centered at \\((3,-4)\\) with a radius of \\(2\\).\n\n2.  \n\n[Figure: This graph shows a circle with center at (3, negative 4) and a radius of 2.]\n\nFigure 11.1.19"
+      ],
+      "hasFigure": true,
+      "status": "draft",
+      "answerVerified": false,
+      "translationStatus": "pending",
+      "mappingStatus": "pending"
+    },
+    {
+      "ordinal": 27,
+      "sourceNumber": "",
+      "sourceAnchor": "",
+      "kind": "exercise-candidate",
+      "context": "Graph a Circle\n\nAny equation of the form \\((x-h)^{2}+(y-k)^{2}=r^{2}\\) is the standard form of the equation of a circle with center, \\((h,k)\\), and radius, \\(r\\). We can then graph the circle on a rectangular coordinate system.\n\nNote that the standard form calls for subtraction from \\(x\\) and \\(y\\). In the next example, the equation has \\(x+2\\), so we need to rewrite the addition as subtraction of a negative.",
+      "original": "Exercise \\(\\PageIndex{16}\\)\n\n1. Find the center and radius, then\n\n2. Graph the circle: \\((x-3)^{2}+(y-1)^{2}=16\\).\n\nAnswer\n\n1. The circle is centered at \\((3,1)\\) with a radius of \\(4\\).\n\n2.  \n\n[Figure: This graph shows circle with center at (3, 1) and a radius of 4.]\n\nFigure 11.1.20",
+      "prompt": "Exercise \\(\\PageIndex{16}\\)\n\n1. Find the center and radius, then\n\n2. Graph the circle: \\((x-3)^{2}+(y-1)^{2}=16\\).",
+      "sourceAnswers": [
+        "1. The circle is centered at \\((3,1)\\) with a radius of \\(4\\).\n\n2.  \n\n[Figure: This graph shows circle with center at (3, 1) and a radius of 4.]\n\nFigure 11.1.20"
+      ],
+      "hasFigure": true,
+      "status": "draft",
+      "answerVerified": false,
+      "translationStatus": "pending",
+      "mappingStatus": "pending"
+    },
+    {
+      "ordinal": 28,
+      "sourceNumber": "",
+      "sourceAnchor": "",
+      "kind": "example-or-exercise",
+      "context": "Any equation of the form \\((x-h)^{2}+(y-k)^{2}=r^{2}\\) is the standard form of the equation of a circle with center, \\((h,k)\\), and radius, \\(r\\). We can then graph the circle on a rectangular coordinate system.\n\nNote that the standard form calls for subtraction from \\(x\\) and \\(y\\). In the next example, the equation has \\(x+2\\), so we need to rewrite the addition as subtraction of a negative.\n\nTo find the center and radius, we must write the equation in standard form. In the next example, we must first get the coefficient of \\(x^{2}, y^{2}\\) to be one.",
+      "original": "Example \\(\\PageIndex{9}\\)\n\nFind the center and radius and then graph the circle, \\(4 x^{2}+4 y^{2}=64\\).\n\nSolution:\n\n[Figure: .]\n\n            Divide each side by \\(4\\).\t\n\n[Figure: .]\n\n            Use the standard form of the equation of a circle.\n\n            Identify the center, \\((h,k)\\) and radius, \\(r\\).\t\n\n[Figure: .]\n\n            Center: \\((0,0)\\) radius: \\(4\\)\t\n\n            Graph the circle.\t\n\n[Figure: .]\n\nTable 11.1.7",
+      "prompt": "Example \\(\\PageIndex{9}\\)\n\nFind the center and radius and then graph the circle, \\(4 x^{2}+4 y^{2}=64\\).\n\nSolution:\n\n[Figure: .]\n\n            Divide each side by \\(4\\).\t\n\n[Figure: .]\n\n            Use the standard form of the equation of a circle.\n\n            Identify the center, \\((h,k)\\) and radius, \\(r\\).\t\n\n[Figure: .]\n\n            Center: \\((0,0)\\) radius: \\(4\\)\t\n\n            Graph the circle.\t\n\n[Figure: .]\n\nTable 11.1.7",
+      "sourceAnswers": [],
+      "hasFigure": true,
+      "status": "draft",
+      "answerVerified": false,
+      "translationStatus": "pending",
+      "mappingStatus": "pending"
+    },
+    {
+      "ordinal": 29,
+      "sourceNumber": "",
+      "sourceAnchor": "",
+      "kind": "exercise-candidate",
+      "context": "Any equation of the form \\((x-h)^{2}+(y-k)^{2}=r^{2}\\) is the standard form of the equation of a circle with center, \\((h,k)\\), and radius, \\(r\\). We can then graph the circle on a rectangular coordinate system.\n\nNote that the standard form calls for subtraction from \\(x\\) and \\(y\\). In the next example, the equation has \\(x+2\\), so we need to rewrite the addition as subtraction of a negative.\n\nTo find the center and radius, we must write the equation in standard form. In the next example, we must first get the coefficient of \\(x^{2}, y^{2}\\) to be one.",
+      "original": "Exercise \\(\\PageIndex{17}\\)\n\n1. Find the center and radius, then\n\n2. Graph the circle: \\(3 x^{2}+3 y^{2}=27\\)\n\nAnswer\n\n1. The circle is centered at \\((0,0)\\) with a radius of \\(3\\).\n\n2.  \n\n[Figure: This graph shows circle with center at (0, 0) and a radius of 3.]\n\nFigure 11.1.25",
+      "prompt": "Exercise \\(\\PageIndex{17}\\)\n\n1. Find the center and radius, then\n\n2. Graph the circle: \\(3 x^{2}+3 y^{2}=27\\)",
+      "sourceAnswers": [
+        "1. The circle is centered at \\((0,0)\\) with a radius of \\(3\\).\n\n2.  \n\n[Figure: This graph shows circle with center at (0, 0) and a radius of 3.]\n\nFigure 11.1.25"
+      ],
+      "hasFigure": true,
+      "status": "draft",
+      "answerVerified": false,
+      "translationStatus": "pending",
+      "mappingStatus": "pending"
+    },
+    {
+      "ordinal": 30,
+      "sourceNumber": "",
+      "sourceAnchor": "",
+      "kind": "exercise-candidate",
+      "context": "Any equation of the form \\((x-h)^{2}+(y-k)^{2}=r^{2}\\) is the standard form of the equation of a circle with center, \\((h,k)\\), and radius, \\(r\\). We can then graph the circle on a rectangular coordinate system.\n\nNote that the standard form calls for subtraction from \\(x\\) and \\(y\\). In the next example, the equation has \\(x+2\\), so we need to rewrite the addition as subtraction of a negative.\n\nTo find the center and radius, we must write the equation in standard form. In the next example, we must first get the coefficient of \\(x^{2}, y^{2}\\) to be one.",
+      "original": "Exercise \\(\\PageIndex{18}\\)\n\n1. Find the center and radius, then\n\n2. Graph the circle: \\(5 x^{2}+5 y^{2}=125\\)\n\nAnswer\n\n1. The circle is centered at \\((0,0)\\) with a radius of \\(5\\).\n\n2.  \n\n[Figure: This graph shows circle with center at (0, 0) and a radius of 5.]\n\nFigure 11.1.26",
+      "prompt": "Exercise \\(\\PageIndex{18}\\)\n\n1. Find the center and radius, then\n\n2. Graph the circle: \\(5 x^{2}+5 y^{2}=125\\)",
+      "sourceAnswers": [
+        "1. The circle is centered at \\((0,0)\\) with a radius of \\(5\\).\n\n2.  \n\n[Figure: This graph shows circle with center at (0, 0) and a radius of 5.]\n\nFigure 11.1.26"
+      ],
+      "hasFigure": true,
+      "status": "draft",
+      "answerVerified": false,
+      "translationStatus": "pending",
+      "mappingStatus": "pending"
+    },
+    {
+      "ordinal": 31,
+      "sourceNumber": "",
+      "sourceAnchor": "",
+      "kind": "example-or-exercise",
+      "context": "The general form of the equation of a circle is\n\n\\(x^{2}+y^{2}+a x+b y+c=0\\)\n\nIf we are given an equation in general form, we can change it to standard form by completing the squares in both \\(x\\) and \\(y\\). Then we can graph the circle using its center and radius.",
+      "original": "Example \\(\\PageIndex{10}\\)\n\n1. Find the center and radius, then\n\n2. Graph the circle: \\(x^{2}+y^{2}-4 x-6 y+4=0\\)\n\nSolution:\n\nWe need to rewrite this general form into standard form in order to find the center and radius.\n\n[Figure: .]\n\nFigure 11.1.27\n\n            Group the \\(x\\)-terms and \\(y\\)-terms.\n\n            Collect the constants on the right side.\t\n\n[Figure: .]\n\nFigure 11.1.28\n\n            Complete the squares.\t\n\n[Figure: .]\n\nFigure 11.1.29\n\n            Rewrite as binomial squares.\t\n\n[Figure: .]\n\nFigure 11.1.30\n\n            Identify the center and radius.\t\n            Center: \\((2,3)\\) radius: \\(3\\)\t\n\n            Graph the circle.\t\n\n[Figure: .]\n\nFigure 11.1.31\n\nTable 11.1.8",
+      "prompt": "Example \\(\\PageIndex{10}\\)\n\n1. Find the center and radius, then\n\n2. Graph the circle: \\(x^{2}+y^{2}-4 x-6 y+4=0\\)\n\nSolution:\n\nWe need to rewrite this general form into standard form in order to find the center and radius.\n\n[Figure: .]\n\nFigure 11.1.27\n\n            Group the \\(x\\)-terms and \\(y\\)-terms.\n\n            Collect the constants on the right side.\t\n\n[Figure: .]\n\nFigure 11.1.28\n\n            Complete the squares.\t\n\n[Figure: .]\n\nFigure 11.1.29\n\n            Rewrite as binomial squares.\t\n\n[Figure: .]\n\nFigure 11.1.30\n\n            Identify the center and radius.\t\n            Center: \\((2,3)\\) radius: \\(3\\)\t\n\n            Graph the circle.\t\n\n[Figure: .]\n\nFigure 11.1.31\n\nTable 11.1.8",
+      "sourceAnswers": [],
+      "hasFigure": true,
+      "status": "draft",
+      "answerVerified": false,
+      "translationStatus": "pending",
+      "mappingStatus": "pending"
+    },
+    {
+      "ordinal": 32,
+      "sourceNumber": "",
+      "sourceAnchor": "",
+      "kind": "exercise-candidate",
+      "context": "The general form of the equation of a circle is\n\n\\(x^{2}+y^{2}+a x+b y+c=0\\)\n\nIf we are given an equation in general form, we can change it to standard form by completing the squares in both \\(x\\) and \\(y\\). Then we can graph the circle using its center and radius.",
+      "original": "Exercise \\(\\PageIndex{19}\\)\n\n1. Find the center and radius, then\n\n2. Graph the circle: \\(x^{2}+y^{2}-6 x-8 y+9=0\\).\n\nAnswer\n\n1. The circle is centered at \\((3,4)\\) with a radius of \\(4\\).\n\n2.  \n\n[Figure: This graph shows circle with center at (3, 4) and a radius of 4.]\n\nFigure 11.1.32",
+      "prompt": "Exercise \\(\\PageIndex{19}\\)\n\n1. Find the center and radius, then\n\n2. Graph the circle: \\(x^{2}+y^{2}-6 x-8 y+9=0\\).",
+      "sourceAnswers": [
+        "1. The circle is centered at \\((3,4)\\) with a radius of \\(4\\).\n\n2.  \n\n[Figure: This graph shows circle with center at (3, 4) and a radius of 4.]\n\nFigure 11.1.32"
+      ],
+      "hasFigure": true,
+      "status": "draft",
+      "answerVerified": false,
+      "translationStatus": "pending",
+      "mappingStatus": "pending"
+    },
+    {
+      "ordinal": 33,
+      "sourceNumber": "",
+      "sourceAnchor": "",
+      "kind": "exercise-candidate",
+      "context": "The general form of the equation of a circle is\n\n\\(x^{2}+y^{2}+a x+b y+c=0\\)\n\nIf we are given an equation in general form, we can change it to standard form by completing the squares in both \\(x\\) and \\(y\\). Then we can graph the circle using its center and radius.",
+      "original": "Exercise \\(\\PageIndex{20}\\)\n\n1. Find the center and radius, then\n\n2. Graph the circle: \\(x^{2}+y^{2}+6 x-2 y+1=0\\)\n\nAnswer\n\n1. The circle is centered at \\((-3,1)\\) with a radius of \\(3\\).\n\n2.  \n\n[Figure: This graph shows circle with center at (negative 3, 1) and a radius of 3.]\n\nFigure 11.1.33",
+      "prompt": "Exercise \\(\\PageIndex{20}\\)\n\n1. Find the center and radius, then\n\n2. Graph the circle: \\(x^{2}+y^{2}+6 x-2 y+1=0\\)",
+      "sourceAnswers": [
+        "1. The circle is centered at \\((-3,1)\\) with a radius of \\(3\\).\n\n2.  \n\n[Figure: This graph shows circle with center at (negative 3, 1) and a radius of 3.]\n\nFigure 11.1.33"
+      ],
+      "hasFigure": true,
+      "status": "draft",
+      "answerVerified": false,
+      "translationStatus": "pending",
+      "mappingStatus": "pending"
+    },
+    {
+      "ordinal": 34,
+      "sourceNumber": "",
+      "sourceAnchor": "",
+      "kind": "example-or-exercise",
+      "context": "\\(x^{2}+y^{2}+a x+b y+c=0\\)\n\nIf we are given an equation in general form, we can change it to standard form by completing the squares in both \\(x\\) and \\(y\\). Then we can graph the circle using its center and radius.\n\nIn the next example, there is a \\(y\\)-term and a \\(y^{2}\\)-term. But notice that there is no \\(x\\)-term, only an \\(x^{2}\\)-term. We have seen this before and know that it means \\(h\\) is \\(0\\). We will need to complete the square for the \\(y\\) terms, but not for the \\(x\\) terms.",
+      "original": "Example \\(\\PageIndex{11}\\)\n\n1. Find the center and radius, then\n\n2. Graph the circle: \\(x^{2}+y^{2}+8 y=0\\)\n\nSolution:\n\nWe need to rewrite this general form into standard form in order to find the center and radius.\n\n[Figure: .]\n\n            Group the \\(x\\)-terms and \\(y\\)-terms.\t\n\n[Figure: .]\n\n            There are no constants to collect on the right side.\t\n\n            Complete the square for \\(y^{2}+8y\\).\t\n\n[Figure: .]\n\n            Rewrite as binomial squares.\t\n\n[Figure: .]\n\n            Identify the center and radius.\t\n            Center: \\((0,-4)\\) radius: \\(4\\)\t\n\n            Graph the circle.\t\n\n[Figure: .]\n\nTable 11.1.9",
+      "prompt": "Example \\(\\PageIndex{11}\\)\n\n1. Find the center and radius, then\n\n2. Graph the circle: \\(x^{2}+y^{2}+8 y=0\\)\n\nSolution:\n\nWe need to rewrite this general form into standard form in order to find the center and radius.\n\n[Figure: .]\n\n            Group the \\(x\\)-terms and \\(y\\)-terms.\t\n\n[Figure: .]\n\n            There are no constants to collect on the right side.\t\n\n            Complete the square for \\(y^{2}+8y\\).\t\n\n[Figure: .]\n\n            Rewrite as binomial squares.\t\n\n[Figure: .]\n\n            Identify the center and radius.\t\n            Center: \\((0,-4)\\) radius: \\(4\\)\t\n\n            Graph the circle.\t\n\n[Figure: .]\n\nTable 11.1.9",
+      "sourceAnswers": [],
+      "hasFigure": true,
+      "status": "draft",
+      "answerVerified": false,
+      "translationStatus": "pending",
+      "mappingStatus": "pending"
+    },
+    {
+      "ordinal": 35,
+      "sourceNumber": "",
+      "sourceAnchor": "",
+      "kind": "exercise-candidate",
+      "context": "\\(x^{2}+y^{2}+a x+b y+c=0\\)\n\nIf we are given an equation in general form, we can change it to standard form by completing the squares in both \\(x\\) and \\(y\\). Then we can graph the circle using its center and radius.\n\nIn the next example, there is a \\(y\\)-term and a \\(y^{2}\\)-term. But notice that there is no \\(x\\)-term, only an \\(x^{2}\\)-term. We have seen this before and know that it means \\(h\\) is \\(0\\). We will need to complete the square for the \\(y\\) terms, but not for the \\(x\\) terms.",
+      "original": "Exercise \\(\\PageIndex{21}\\)\n\n1. Find the center and radius, then\n\n2. Graph the circle: \\(x^{2}+y^{2}-2 x-3=0\\).\n\nAnswer\n\n1. The circle is centered at \\((-1,0)\\) with a radius of \\(2\\).\n\n2.  \n\n[Figure: This graph shows circle with center at (1, 0) and a radius of 2.]\n\nFigure 11.1.39",
+      "prompt": "Exercise \\(\\PageIndex{21}\\)\n\n1. Find the center and radius, then\n\n2. Graph the circle: \\(x^{2}+y^{2}-2 x-3=0\\).",
+      "sourceAnswers": [
+        "1. The circle is centered at \\((-1,0)\\) with a radius of \\(2\\).\n\n2.  \n\n[Figure: This graph shows circle with center at (1, 0) and a radius of 2.]\n\nFigure 11.1.39"
+      ],
+      "hasFigure": true,
+      "status": "draft",
+      "answerVerified": false,
+      "translationStatus": "pending",
+      "mappingStatus": "pending"
+    },
+    {
+      "ordinal": 36,
+      "sourceNumber": "",
+      "sourceAnchor": "",
+      "kind": "exercise-candidate",
+      "context": "\\(x^{2}+y^{2}+a x+b y+c=0\\)\n\nIf we are given an equation in general form, we can change it to standard form by completing the squares in both \\(x\\) and \\(y\\). Then we can graph the circle using its center and radius.\n\nIn the next example, there is a \\(y\\)-term and a \\(y^{2}\\)-term. But notice that there is no \\(x\\)-term, only an \\(x^{2}\\)-term. We have seen this before and know that it means \\(h\\) is \\(0\\). We will need to complete the square for the \\(y\\) terms, but not for the \\(x\\) terms.",
+      "original": "Exercise \\(\\PageIndex{22}\\)\n\n1. Find the center and radius, then\n\n2. Graph the circle: \\(x^{2}+y^{2}-12 y+11=0\\).\n\nAnswer\n\n1. The circle is centered at \\((0,6)\\) with a radius of \\(5\\).\n\n2.  \n\n[Figure: This graph shows circle with center at (0, 6) and a radius of 5.]\n\nFigure 11.1.40",
+      "prompt": "Exercise \\(\\PageIndex{22}\\)\n\n1. Find the center and radius, then\n\n2. Graph the circle: \\(x^{2}+y^{2}-12 y+11=0\\).",
+      "sourceAnswers": [
+        "1. The circle is centered at \\((0,6)\\) with a radius of \\(5\\).\n\n2.  \n\n[Figure: This graph shows circle with center at (0, 6) and a radius of 5.]\n\nFigure 11.1.40"
+      ],
+      "hasFigure": true,
+      "status": "draft",
+      "answerVerified": false,
+      "translationStatus": "pending",
+      "mappingStatus": "pending"
+    }
+  ],
+  "license": "CC BY 4.0",
+  "licenseEvidence": "This page titled 11.2: Distance and Midpoint Formulas and Circles was last modified on Mon, 14 Feb 2022 01:07:21 GMT and is shared under a CC BY  4.0  license and was authored, remixed, and/or curated by OpenStax via source content that was edited to the style and standards of the LibreTexts platform.",
+  "url": "https://math.libretexts.org/Bookshelves/Algebra/Intermediate_Algebra_1e_(OpenStax)/11:_Conics/11.02:_Distance_and_Midpoint_Formulas_and_Circles",
+  "sha256": "afcf016de6c821f923af8fb96cf2b213399076d347c67d18145db2dd5660013f",
+  "checkedAt": "2026-10-07",
+  "id": "dc83aa778a8bb034d242",
+  "bookId": "intermediate-algebra",
+  "licenseInherited": false,
+  "licenseSource": "https://math.libretexts.org/Bookshelves/Algebra/Intermediate_Algebra_1e_(OpenStax)/11:_Conics/11.02:_Distance_and_Midpoint_Formulas_and_Circles",
+  "licenseUrl": "https://creativecommons.org/licenses/by/4.0/",
+  "authors": "OpenStax / Lynn Marecek, Andrea Honeycutt Mathis",
+  "book": "Intermediate Algebra 1e",
+  "reviewStatus": "unreviewed",
+  "sourceLanguage": "en",
+  "translationStatus": "pending"
+}

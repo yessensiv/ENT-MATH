@@ -1,0 +1,254 @@
+{
+  "title": "7.3: Combinations",
+  "originalText": "[Figure: A person is shown holding 5 playing cards. The hand of another player is shown near a pile of plastic chips.]\n\nFigure \\(\\PageIndex{1}\\): Combinations help us count things like the number of possible card hands, when the order in which the cards were drawn doesn’t matter. (credit: “IMG_3177” by Zanaca/Flickr, CC BY 2.0)\n\nLearning Objectives\n\n1. Distinguish between permutation and combination uses.\n\n2. Compute combinations.\n\n3. Apply combinations to solve applications.\n\nIn Permutations, we studied permutations, which we use to count the number of ways to generate an ordered list of a given length from a group of objects. An important property of permutations is that the order of the list matters: The results of a race and the selection of club officers are examples of lists where the order is important. In other situations, the order is not important. For example, in most card games where a player receives a hand of cards, the order in which the cards are received is irrelevant; in fact, players often rearrange the cards in a way that helps them keep the cards organized.\n\nCombinations: When Order Doesn’t Matter\n\nIn situations in which the order of a list of objects doesn’t matter, the lists are no longer permutations. Instead, we call them combinations.\n\nExample \\(\\PageIndex{1}\\): Distinguishing Between Permutations and Combinations\n\nFor each of the following situations, decide whether the chosen subset is a permutation or a combination.\n\n1. A social club selects 3 members to form a committee. Each of the members has an equal share of responsibility.\n\n2. You are prompted to reset your email password; you select a password consisting of 10 characters without repeats.\n\n3. At a dog show, the judge must choose first-, second-, and third-place finishers from a group of 16 dogs.\n\n4. At a restaurant, the special of the day comes with the customer’s choice of 3 sides taken from a list of 6 possibilities.\n\nAnswer\n\n1. Since there is no distinction among the responsibilities of the 3 committee members, the order isn’t important. So, this is a combination.\n\n2. The order of the characters in a password matter, so this is a permutation.\n\n3. The order of finish matters in a dog show, so this is a permutation.\n\n4. A plate with mashed potatoes, peas, and broccoli is functionally the same as a plate with peas, broccoli, and mashed potatoes, so this is a combination.\n\nYour Turn \\(\\PageIndex{1}\\)\n\nDecide whether the following represent permutations or combinations:\n\nOn Halloween, you give each kid who comes to your door 3 pieces of candy, taken randomly from a candy dish.\n\nYour class is going on a field trip, but there are too many people for one vehicle. Your instructor chooses half the class to take the first vehicle.\n\n\\(\\frac{12!}{{10!}\\) \\(\\frac{8!}{{4!4!}\\)\n\nCounting Combinations\n\nPermutations and combinations are certainly related, because they both involve choosing a subset of a large group. Let’s explore that connection, so that we can figure out how to use what we know about permutations to help us count combinations. We’ll take a basic example. How many ways can we select 3 letters from the group A, B, C, D, and E? If order matters, that number is \\(\\unsupported{msub}{}\\unsupported{msub}{5}{P}_{3}=60\\). That’s small enough that we can list them all out in the table below.\n\n            ABC\t\n            ABD\t\n            ABE\t\n            ACB\t\n            ACD\t\n            ACE\t\n\n            ADB\t\n            ADC\t\n            ADE\t\n            AEB\t\n            AEC\t\n            AED\t\n\n            BAC\t\n            BAD\t\n            BAE\t\n            BCA\t\n            BCD\t\n            BCE\t\n\n            BDA\t\n            BDC\t\n            BDE\t\n            BEA\t\n            BEC\t\n            BED\t\n\n            CAB\t\n            CAD\t\n            CAE\t\n            CBA\t\n            CBD\t\n            CBE\t\n\n            CDA\t\n            CDB\t\n            CDE\t\n            CEA\t\n            CEB\t\n            CED\t\n\n            DCA\t\n            DAC\t\n            DAE\t\n            DBA\t\n            DBC\t\n            DBE\t\n\n            DCA\t\n            DCB\t\n            DCE\t\n            DEA\t\n            DEB\t\n            DEC\t\n\n            EAB\t\n            EAC\t\n            EAD\t\n            EBA\t\n            EBC\t\n            EBD\t\n\n            ECA\t\n            ECB\t\n            ECD\t\n            EDA\t\n            EDB\t\n            EDC\t\n\nNow, let’s look back at that list and color-code it so that groupings of the same 3 letters get the same color, as shown in Figure 7.9:\n\n[Figure: A table of possible combinations. The table has 10 rows and 6 columns. The data is as follows: Row 1, ABC, ABD, ABE, ACB, ACD, ACE. Row 2, ADB, ADC, ADE, AEB, AEC, AED. Row 3, BAC, BAD, BAE, BCA, BCD, BCE. Row 4, BDA, BDC, BDE, BEA, BEC, BED. Row 5, CAB, CAD, CAE, CBA, CBD, CBE. Row 6, CDA, CDB, CDE, CEA, CEB, CED. Row 7,  DAB, DAC, DAE, DBA, DBC, DBE. Row 8, DCA, DCB, DCE, DEA, DEB, DEC. Row 9, EAB, EAC, EAD, EBA, EBC, EBD. Row 10, ECA, ECB, ECD, EDA, EDB, EDC. The combinations are color-coded as follows: Dark red, ABC, ACB, BAC, BCA, CAB, CBA. Light red, ABD, ADB, BAD, BDA, DAB, DBA. Orange, ABE, AEB, BAE, BEA, EAB, EBA. Yellow, ACD, ADC, CAD, CDA, DAC, DCA. Light green, ACE, AEC, CAE, CEA, EAC, ECA. Dark green, ADE, AED, DAE, DEA, EAD, EDA. Light blue, BCD, BDC, CBD, CDB, DBC, DCB. Dark blue, BCE, BEC, CBE, CEB, EBC, ECB. Dark purple, BDE, BED, DBE, DEB, EBD, EDB. Light purple, CDE, CED, DCE, DEC, ECD, EDC.]\n\nFigure \\(\\PageIndex{2}\\)\n\nAfter color-coding, we see that the 60 cells can be seen as 10 groups (colors) of 6. That’s no coincidence! We’ve already seen how to compute the number of permutations using the formula To compute the number of combinations, let’s count them another way using the Multiplication Rule for Counting. We’ll do this in two steps:\n\nStep 1: Choose 3 letters (paying no attention to order).\n\nStep 2: Put those letters in order.\n\nThe number of ways to choose 3 letters from this group of 5 (A, B, C, D, E) is the number of combinations we’re looking for; let’s call that number \\(\\unsupported{msub}{}\\unsupported{msub}{5}{C}_{3}\\) (read “the number of combinations of 5 objects taken 3 at a time”). We can see from our chart that this is ten (the number of colors used). We can generalize our findings this way: remember that the number of permutations of \\(n\\) things taken \\(r\\) at a time is \\(\\unsupported{msub}{}\\unsupported{msub}{n}{P}_{r}=\\frac{n!}{(n−r)!}\\). That number is also equal to \\(\\unsupported{msub}{}\\unsupported{msub}{n}{C}_{r}×r!\\), and so it must be the case that \\(\\frac{n!}{(n−r)!}\\unsupported{msub}{=}\\unsupported{msub}{n}{C}_{r}×r!\\). Dividing both sides of that equation by \\(r!\\) gives us the formula below.\n\nFORMULA\n\n\\(\\unsupported{msub}{}\\unsupported{msub}{}\\)\\({ }_n C_r=\\frac{n!}{r!(n-r)!}\\)\\(\\)\n\nExample \\(\\PageIndex{2}\\): Using the Combination Formula\n\nCompute the following:\n\n1. \\({ }_8 C_3\\)\n\n2. \\({ }_{12} C_5\\)\n\n3. \\({ }_{15} C_9\\)\n\nAnswer\n\n1. \\( { }_8 C_3=\\frac{8!}{3!(8-3)!}=\\frac{8 \\times 7 \\times \\mathbf{6} \\times \\mathbf{5 !}}{\\mathbf{3} \\times \\mathbf{2} \\times \\mathbf{1} \\times \\mathbf{5 !}}=8 \\times 7=56 \\)\n\n2. \\({ }_{12} C_5=\\frac{12!}{5!(12-5)!}=\\frac{12 \\times 11 \\times 10 \\times 9 \\times 8 \\times 7!}{5 \\times 4 \\times 3 \\times 2 \\times 1 \\times 7!}=11 \\times 9 \\times 8=792\\)\n\n3. \\({ }_{15} C_9=\\frac{15!}{9!(15-9)!}=\\frac{\\mathbf{1 5} \\times 14 \\times 13 \\times \\mathbf{1 2} \\times 11 \\times 10 \\times \\mathbf{9 !}}{\\mathbf{9 !} \\times \\mathbf{6} \\times \\mathbf{5} \\times 4 \\times \\mathbf{3} \\times \\mathbf{2} \\times 1}=\\frac{14 \\times 13 \\times 11 \\times 10}{4}=5,005\\)\n\nYour Turn \\(\\PageIndex{2}\\)\n\nCompute the following:\n\n\\(_6{C_4}\\)\n\n\\(_{10}{C_8}\\)\n\n\\(_{14}{C_5}\\)\n\nExample \\(\\PageIndex{3}\\): Applying the Combination Formula\n\n1. In the card game Texas Hold’em (a variation of poker), players are dealt 2 cards from a standard deck to form their hands. How many different hands are possible?\n\n2. The board game Clue uses a deck of 21 cards. If 3 people are playing, each person gets 6 cards for their hand. How many different 6-card Clue hands are possible?\n\n3. Palmetto Cash 5 is a game offered by the South Carolina Education Lottery. Players choose 5 numbers from the whole numbers between 1 and 38 (inclusive); the player wins the jackpot of $100,000 if the randomizer selects those numbers in any order. How many different sets of winning numbers are possible?\n\nAnswer\n\n1. A standard deck has 52 cards, and a hand has 2 cards. Since the order doesn’t matter, we use the formula for counting combinations:\n\n\\(\\unsupported{msub}{}\\unsupported{msub}{52}{C}_{2}=\\frac{52!}{2!(52−2)!}=\\frac{52×51×50!}{2×1×50!}=\\frac{52×51}{2}=1,326.\\)\n\n2. Again, the order doesn’t matter, so the number of combinations is:\n\n\\(\\unsupported{msub}{}\\unsupported{msub}{21}{C}_{6}=\\frac{21!}{6!(21−6)!}=\\frac{21×20×19×18×17×16×15!}{6×5×4×3×2×1×15!}=\\frac{21×19×17×16}{2}=54,264.\\)\n\n3. There are 38 numbers to choose from, and we must pick 5. Since order doesn’t matter, the number of combinations is:\n\n\\(\\unsupported{msub}{}\\unsupported{msub}{38}{C}_{5}=\\frac{38!}{5!(38−5)!}=\\frac{38×37×36×35×34×33!}{5×4×3×2×1×33!}=501,492.\\)\n\nYour Turn \\(\\PageIndex{3}\\)\n\nAt a charity event with 58 people in attendance, 3 raffle winners are chosen. All receive the same prize, so order doesn’t matter. How many different groups of 3 winners can be chosen?\n\nA sorority with 42 members needs to choose a committee with 4 members, each with equal responsibility. How many committees are possible?\n\nCheckpoint\n\nThe notation and nomenclature used for the number of combinations is not standard across all sources. You’ll sometimes see \\((\\begin{matrix}n\\\\r\\end{matrix})\\) instead of \\(\\unsupported{msub}{}\\unsupported{msub}{n}{C}_{r}\\) . Sometimes you’ll hear that expression read as “\\(n\\) choose \\(r\\)” as shorthand for “the number of combinations of \\(n\\) objects taken \\(r\\) at a time.”\n\nPeople in Mathematics: Early Eastern Mathematicians\n\nAlthough combinations weren’t really studied in Europe until around the 13th century, mathematicians of the Middle and Far East had already been working on them for hundreds of years. The Indian mathematician known as Pingala had described them by the second century BCE; Varāhamihira (fl. sixth century) and Halayudha (fl. 10th century) extended Pingala’s work. In the ninth century, a Jain mathematician named Mahāvīra gave the formula for combinations that we use today.\n\nIn 10th-century Baghdad, a mathematician named Al-Karaji also knew formulas for combinations; though his work is now lost, it was known to (and repeated by) Persian mathematician Omar Khayyam, whose work survives. Khayyam is probably best remembered as a poet, with his Rubaiyat being his most famous work.\n\nMeanwhile, in 11th-century China, Jia Xian also was working with combinations, as was his 13th-century successor Yang Hui.\n\nIt is not known whether the discoveries of any of these men were known in the other regions, or if the Indians, Persians, and Chinese all came to their discoveries independently. We do know that mathematical knowledge and sometimes texts did get passed along trade routes, so it can’t be ruled out.\n\nExample \\(\\PageIndex{4}\\): Combining Combinations with the Multiplication Rule for Counting\n\nThe student government at a university consists of 10 seniors, 8 juniors, 6 sophomores, and 4 first-years.\n\n1. How many ways are there to choose a committee of 8 people from this group?\n\n2. How many ways are to choose a committee of 8 people if the committee must consist of 2 people from each class?\n\nAnswer\n\n1. There are 28 people to choose from, and we need 8. So, the number of possible committees is \\(\\unsupported{msub}{}\\unsupported{msub}{28}{C}_{8}=3,108,105\\).\n\n2. Break the selection of the committee members down into a 4-step process: Choose the seniors, then choose the juniors, then the sophomores, and then the first-years, as shown in the table below:\n\n                    Class\t\n                    Number of Ways to Choose Committee Representatives\t\n\n                    senior\t\n                    \\(\\unsupported{msub}{}\\unsupported{msub}{10}{C}_{2}=45\\)\t\n\n                    junior\t\n                    \\(\\unsupported{msub}{}\\unsupported{msub}{8}{C}_{2}=28\\)\t\n\n                    sophomore\t\n                    \\(\\unsupported{msub}{}\\unsupported{msub}{6}{C}_{2}=15\\)\t\n\n                    first-year\t\n                    \\(\\unsupported{msub}{}\\unsupported{msub}{4}{C}_{2}=6\\)\t\n\nThe Multiplication Rule for Counting tells us that we can get the total number of ways to complete this task by multiplying together the number of ways to do each of the four subtasks. So, there are \\(45×28×15×6=113,400\\) possible committees with these restrictions.\n\nYour Turn \\(\\PageIndex{4}\\)\n\nHow many ways are there to choose a hand of 6 cards from a standard deck with the constraint that 3 are \\(\\spadesuit\\), 2 are \\(\\heartsuit\\), and 1 is \\(\\clubsuit\\)?\n\nCheck Your Understanding\n\n1. Suppose you want to count the number of ways that you can arrange the apps on the home screen on your phone. Should you use permutations or combinations?\n\n2. Your little brother is packing up for a family vacation, but there’s only room for 3 of his toys. If you want to know how many possible groups of toys he can bring, should you use permutations or combinations?\n\n3. Compute \\(_{12}{C_{10}}\\).\n\n4. Compute \\(_{16}{C_3}\\).\n\n5. You’re planning a road trip with some friends. Though you have 6 friends you’d consider bringing along, you only have room for 3 other people in the car. How many different possibilities are there for your road trip squad?\n\n6. You’re packing for a trip, for which you need 3 shirts and 3 skirts. If you have 8 shirts and 5 skirts that would work for the trip, how many different ways are there to pack for the trip?\n\nThis page titled 7.3: Combinations was last modified on Thu, 02 Jan 2025 11:07:44 GMT and is shared under a CC BY  4.0  license and was authored, remixed, and/or curated by OpenStax via source content that was edited to the style and standards of the LibreTexts platform.",
+  "figures": [
+    {
+      "url": "https://math.libretexts.org/@api/deki/files/110440/7baae475670cddd3db9810c0baf902ec06c8e679?revision=1",
+      "alt": "A person is shown holding 5 playing cards. The hand of another player is shown near a pile of plastic chips.",
+      "credit": ""
+    },
+    {
+      "url": "https://math.libretexts.org/@api/deki/files/110439/e7b23e2eb947c81b381e610fe76a6bb51159a4f8?revision=1",
+      "alt": "A table of possible combinations. The table has 10 rows and 6 columns. The data is as follows: Row 1, ABC, ABD, ABE, ACB, ACD, ACE. Row 2, ADB, ADC, ADE, AEB, AEC, AED. Row 3, BAC, BAD, BAE, BCA, BCD, BCE. Row 4, BDA, BDC, BDE, BEA, BEC, BED. Row 5, CAB, CAD, CAE, CBA, CBD, CBE. Row 6, CDA, CDB, CDE, CEA, CEB, CED. Row 7,  DAB, DAC, DAE, DBA, DBC, DBE. Row 8, DCA, DCB, DCE, DEA, DEB, DEC. Row 9, EAB, EAC, EAD, EBA, EBC, EBD. Row 10, ECA, ECB, ECD, EDA, EDB, EDC. The combinations are color-coded as follows: Dark red, ABC, ACB, BAC, BCA, CAB, CBA. Light red, ABD, ADB, BAD, BDA, DAB, DBA. Orange, ABE, AEB, BAE, BEA, EAB, EBA. Yellow, ACD, ADC, CAD, CDA, DAC, DCA. Light green, ACE, AEC, CAE, CEA, EAC, ECA. Dark green, ADE, AED, DAE, DEA, EAD, EDA. Light blue, BCD, BDC, CBD, CDB, DBC, DCB. Dark blue, BCE, BEC, CBE, CEB, EBC, ECB. Dark purple, BDE, BED, DBE, DEB, EBD, EDB. Light purple, CDE, CED, DCE, DEC, ECD, EDC.",
+      "credit": ""
+    }
+  ],
+  "references": [
+    {
+      "text": "7.3: Combinations",
+      "url": "https://math.libretexts.org/Bookshelves/Applied_Mathematics/Contemporary_Mathematics_(OpenStax)/07%3A_Probability/7.03%3A_Combinations"
+    },
+    {
+      "text": "CC BY  4.0",
+      "url": "https://creativecommons.org/licenses/by/4.0"
+    },
+    {
+      "text": "OpenStax",
+      "url": "https://openstax.org/"
+    },
+    {
+      "text": "source content",
+      "url": "https://openstax.org/details/books/contemporary-mathematics"
+    }
+  ],
+  "exercises": [
+    {
+      "ordinal": 1,
+      "sourceNumber": "1",
+      "sourceAnchor": "",
+      "kind": "exercise-candidate",
+      "context": "",
+      "original": "1. Distinguish between permutation and combination uses.",
+      "prompt": "1. Distinguish between permutation and combination uses.",
+      "sourceAnswers": [],
+      "hasFigure": false,
+      "status": "draft",
+      "answerVerified": false,
+      "translationStatus": "pending",
+      "mappingStatus": "pending"
+    },
+    {
+      "ordinal": 2,
+      "sourceNumber": "2",
+      "sourceAnchor": "",
+      "kind": "exercise-candidate",
+      "context": "",
+      "original": "2. Compute combinations.",
+      "prompt": "2. Compute combinations.",
+      "sourceAnswers": [],
+      "hasFigure": false,
+      "status": "draft",
+      "answerVerified": false,
+      "translationStatus": "pending",
+      "mappingStatus": "pending"
+    },
+    {
+      "ordinal": 3,
+      "sourceNumber": "3",
+      "sourceAnchor": "",
+      "kind": "exercise-candidate",
+      "context": "",
+      "original": "3. Apply combinations to solve applications.",
+      "prompt": "3. Apply combinations to solve applications.",
+      "sourceAnswers": [],
+      "hasFigure": false,
+      "status": "draft",
+      "answerVerified": false,
+      "translationStatus": "pending",
+      "mappingStatus": "pending"
+    },
+    {
+      "ordinal": 4,
+      "sourceNumber": "",
+      "sourceAnchor": "",
+      "kind": "example-or-exercise",
+      "context": "Combinations: When Order Doesn’t Matter\n\nIn situations in which the order of a list of objects doesn’t matter, the lists are no longer permutations. Instead, we call them combinations.",
+      "original": "Example \\(\\PageIndex{1}\\): Distinguishing Between Permutations and Combinations\n\nFor each of the following situations, decide whether the chosen subset is a permutation or a combination.\n\n1. A social club selects 3 members to form a committee. Each of the members has an equal share of responsibility.\n\n2. You are prompted to reset your email password; you select a password consisting of 10 characters without repeats.\n\n3. At a dog show, the judge must choose first-, second-, and third-place finishers from a group of 16 dogs.\n\n4. At a restaurant, the special of the day comes with the customer’s choice of 3 sides taken from a list of 6 possibilities.\n\nAnswer\n\n1. Since there is no distinction among the responsibilities of the 3 committee members, the order isn’t important. So, this is a combination.\n\n2. The order of the characters in a password matter, so this is a permutation.\n\n3. The order of finish matters in a dog show, so this is a permutation.\n\n4. A plate with mashed potatoes, peas, and broccoli is functionally the same as a plate with peas, broccoli, and mashed potatoes, so this is a combination.",
+      "prompt": "Example \\(\\PageIndex{1}\\): Distinguishing Between Permutations and Combinations\n\nFor each of the following situations, decide whether the chosen subset is a permutation or a combination.\n\n1. A social club selects 3 members to form a committee. Each of the members has an equal share of responsibility.\n\n2. You are prompted to reset your email password; you select a password consisting of 10 characters without repeats.\n\n3. At a dog show, the judge must choose first-, second-, and third-place finishers from a group of 16 dogs.\n\n4. At a restaurant, the special of the day comes with the customer’s choice of 3 sides taken from a list of 6 possibilities.",
+      "sourceAnswers": [
+        "1. Since there is no distinction among the responsibilities of the 3 committee members, the order isn’t important. So, this is a combination.\n\n2. The order of the characters in a password matter, so this is a permutation.\n\n3. The order of finish matters in a dog show, so this is a permutation.\n\n4. A plate with mashed potatoes, peas, and broccoli is functionally the same as a plate with peas, broccoli, and mashed potatoes, so this is a combination."
+      ],
+      "hasFigure": false,
+      "status": "draft",
+      "answerVerified": false,
+      "translationStatus": "pending",
+      "mappingStatus": "pending"
+    },
+    {
+      "ordinal": 5,
+      "sourceNumber": "",
+      "sourceAnchor": "",
+      "kind": "exercise-candidate",
+      "context": "Step 2: Put those letters in order.\n\nThe number of ways to choose 3 letters from this group of 5 (A, B, C, D, E) is the number of combinations we’re looking for; let’s call that number \\(\\unsupported{msub}{}\\unsupported{msub}{5}{C}_{3}\\) (read “the number of combinations of 5 objects taken 3 at a time”). We can see from our chart that this is ten (the number of colors used). We can generalize our findings this way: remember that the number of permutations of \\(n\\) things taken \\(r\\) at a time is \\(\\unsupported{msub}{}\\unsupported{msub}{n}{P}_{r}=\\frac{n!}{(n−r)!}\\). That number is also equal to \\(\\unsupported{msub}{}\\unsupported{msub}{n}{C}_{r}×r!\\), and so it must be the case that \\(\\frac{n!}{(n−r)!}\\unsupported{msub}{=}\\unsupported{msub}{n}{C}_{r}×r!\\). Dividing both sides of that equation by \\(r!\\) gives us the formula below.\n\n\\(\\unsupported{msub}{}\\unsupported{msub}{}\\)\\({ }_n C_r=\\frac{n!}{r!(n-r)!}\\)\\(\\)",
+      "original": "Example \\(\\PageIndex{2}\\): Using the Combination Formula\n\nCompute the following:\n\n1. \\({ }_8 C_3\\)\n\n2. \\({ }_{12} C_5\\)\n\n3. \\({ }_{15} C_9\\)\n\nAnswer\n\n1. \\( { }_8 C_3=\\frac{8!}{3!(8-3)!}=\\frac{8 \\times 7 \\times \\mathbf{6} \\times \\mathbf{5 !}}{\\mathbf{3} \\times \\mathbf{2} \\times \\mathbf{1} \\times \\mathbf{5 !}}=8 \\times 7=56 \\)\n\n2. \\({ }_{12} C_5=\\frac{12!}{5!(12-5)!}=\\frac{12 \\times 11 \\times 10 \\times 9 \\times 8 \\times 7!}{5 \\times 4 \\times 3 \\times 2 \\times 1 \\times 7!}=11 \\times 9 \\times 8=792\\)\n\n3. \\({ }_{15} C_9=\\frac{15!}{9!(15-9)!}=\\frac{\\mathbf{1 5} \\times 14 \\times 13 \\times \\mathbf{1 2} \\times 11 \\times 10 \\times \\mathbf{9 !}}{\\mathbf{9 !} \\times \\mathbf{6} \\times \\mathbf{5} \\times 4 \\times \\mathbf{3} \\times \\mathbf{2} \\times 1}=\\frac{14 \\times 13 \\times 11 \\times 10}{4}=5,005\\)",
+      "prompt": "Example \\(\\PageIndex{2}\\): Using the Combination Formula\n\nCompute the following:\n\n1. \\({ }_8 C_3\\)\n\n2. \\({ }_{12} C_5\\)\n\n3. \\({ }_{15} C_9\\)",
+      "sourceAnswers": [
+        "1. \\( { }_8 C_3=\\frac{8!}{3!(8-3)!}=\\frac{8 \\times 7 \\times \\mathbf{6} \\times \\mathbf{5 !}}{\\mathbf{3} \\times \\mathbf{2} \\times \\mathbf{1} \\times \\mathbf{5 !}}=8 \\times 7=56 \\)\n\n2. \\({ }_{12} C_5=\\frac{12!}{5!(12-5)!}=\\frac{12 \\times 11 \\times 10 \\times 9 \\times 8 \\times 7!}{5 \\times 4 \\times 3 \\times 2 \\times 1 \\times 7!}=11 \\times 9 \\times 8=792\\)\n\n3. \\({ }_{15} C_9=\\frac{15!}{9!(15-9)!}=\\frac{\\mathbf{1 5} \\times 14 \\times 13 \\times \\mathbf{1 2} \\times 11 \\times 10 \\times \\mathbf{9 !}}{\\mathbf{9 !} \\times \\mathbf{6} \\times \\mathbf{5} \\times 4 \\times \\mathbf{3} \\times \\mathbf{2} \\times 1}=\\frac{14 \\times 13 \\times 11 \\times 10}{4}=5,005\\)"
+      ],
+      "hasFigure": false,
+      "status": "draft",
+      "answerVerified": false,
+      "translationStatus": "pending",
+      "mappingStatus": "pending"
+    },
+    {
+      "ordinal": 6,
+      "sourceNumber": "",
+      "sourceAnchor": "",
+      "kind": "example-or-exercise",
+      "context": "\\(_6{C_4}\\)\n\n\\(_{10}{C_8}\\)\n\n\\(_{14}{C_5}\\)",
+      "original": "Example \\(\\PageIndex{3}\\): Applying the Combination Formula\n\n1. In the card game Texas Hold’em (a variation of poker), players are dealt 2 cards from a standard deck to form their hands. How many different hands are possible?\n\n2. The board game Clue uses a deck of 21 cards. If 3 people are playing, each person gets 6 cards for their hand. How many different 6-card Clue hands are possible?\n\n3. Palmetto Cash 5 is a game offered by the South Carolina Education Lottery. Players choose 5 numbers from the whole numbers between 1 and 38 (inclusive); the player wins the jackpot of $100,000 if the randomizer selects those numbers in any order. How many different sets of winning numbers are possible?\n\nAnswer\n\n1. A standard deck has 52 cards, and a hand has 2 cards. Since the order doesn’t matter, we use the formula for counting combinations:\n\n\\(\\unsupported{msub}{}\\unsupported{msub}{52}{C}_{2}=\\frac{52!}{2!(52−2)!}=\\frac{52×51×50!}{2×1×50!}=\\frac{52×51}{2}=1,326.\\)\n\n2. Again, the order doesn’t matter, so the number of combinations is:\n\n\\(\\unsupported{msub}{}\\unsupported{msub}{21}{C}_{6}=\\frac{21!}{6!(21−6)!}=\\frac{21×20×19×18×17×16×15!}{6×5×4×3×2×1×15!}=\\frac{21×19×17×16}{2}=54,264.\\)\n\n3. There are 38 numbers to choose from, and we must pick 5. Since order doesn’t matter, the number of combinations is:\n\n\\(\\unsupported{msub}{}\\unsupported{msub}{38}{C}_{5}=\\frac{38!}{5!(38−5)!}=\\frac{38×37×36×35×34×33!}{5×4×3×2×1×33!}=501,492.\\)",
+      "prompt": "Example \\(\\PageIndex{3}\\): Applying the Combination Formula\n\n1. In the card game Texas Hold’em (a variation of poker), players are dealt 2 cards from a standard deck to form their hands. How many different hands are possible?\n\n2. The board game Clue uses a deck of 21 cards. If 3 people are playing, each person gets 6 cards for their hand. How many different 6-card Clue hands are possible?\n\n3. Palmetto Cash 5 is a game offered by the South Carolina Education Lottery. Players choose 5 numbers from the whole numbers between 1 and 38 (inclusive); the player wins the jackpot of $100,000 if the randomizer selects those numbers in any order. How many different sets of winning numbers are possible?",
+      "sourceAnswers": [
+        "1. A standard deck has 52 cards, and a hand has 2 cards. Since the order doesn’t matter, we use the formula for counting combinations:\n\n\\(\\unsupported{msub}{}\\unsupported{msub}{52}{C}_{2}=\\frac{52!}{2!(52−2)!}=\\frac{52×51×50!}{2×1×50!}=\\frac{52×51}{2}=1,326.\\)\n\n2. Again, the order doesn’t matter, so the number of combinations is:\n\n\\(\\unsupported{msub}{}\\unsupported{msub}{21}{C}_{6}=\\frac{21!}{6!(21−6)!}=\\frac{21×20×19×18×17×16×15!}{6×5×4×3×2×1×15!}=\\frac{21×19×17×16}{2}=54,264.\\)\n\n3. There are 38 numbers to choose from, and we must pick 5. Since order doesn’t matter, the number of combinations is:\n\n\\(\\unsupported{msub}{}\\unsupported{msub}{38}{C}_{5}=\\frac{38!}{5!(38−5)!}=\\frac{38×37×36×35×34×33!}{5×4×3×2×1×33!}=501,492.\\)"
+      ],
+      "hasFigure": false,
+      "status": "draft",
+      "answerVerified": false,
+      "translationStatus": "pending",
+      "mappingStatus": "pending"
+    },
+    {
+      "ordinal": 7,
+      "sourceNumber": "",
+      "sourceAnchor": "",
+      "kind": "example-or-exercise",
+      "context": "In 10th-century Baghdad, a mathematician named Al-Karaji also knew formulas for combinations; though his work is now lost, it was known to (and repeated by) Persian mathematician Omar Khayyam, whose work survives. Khayyam is probably best remembered as a poet, with his Rubaiyat being his most famous work.\n\nMeanwhile, in 11th-century China, Jia Xian also was working with combinations, as was his 13th-century successor Yang Hui.\n\nIt is not known whether the discoveries of any of these men were known in the other regions, or if the Indians, Persians, and Chinese all came to their discoveries independently. We do know that mathematical knowledge and sometimes texts did get passed along trade routes, so it can’t be ruled out.",
+      "original": "Example \\(\\PageIndex{4}\\): Combining Combinations with the Multiplication Rule for Counting\n\nThe student government at a university consists of 10 seniors, 8 juniors, 6 sophomores, and 4 first-years.\n\n1. How many ways are there to choose a committee of 8 people from this group?\n\n2. How many ways are to choose a committee of 8 people if the committee must consist of 2 people from each class?\n\nAnswer\n\n1. There are 28 people to choose from, and we need 8. So, the number of possible committees is \\(\\unsupported{msub}{}\\unsupported{msub}{28}{C}_{8}=3,108,105\\).\n\n2. Break the selection of the committee members down into a 4-step process: Choose the seniors, then choose the juniors, then the sophomores, and then the first-years, as shown in the table below:\n\n                    Class\t\n                    Number of Ways to Choose Committee Representatives\t\n\n                    senior\t\n                    \\(\\unsupported{msub}{}\\unsupported{msub}{10}{C}_{2}=45\\)\t\n\n                    junior\t\n                    \\(\\unsupported{msub}{}\\unsupported{msub}{8}{C}_{2}=28\\)\t\n\n                    sophomore\t\n                    \\(\\unsupported{msub}{}\\unsupported{msub}{6}{C}_{2}=15\\)\t\n\n                    first-year\t\n                    \\(\\unsupported{msub}{}\\unsupported{msub}{4}{C}_{2}=6\\)\t\n\nThe Multiplication Rule for Counting tells us that we can get the total number of ways to complete this task by multiplying together the number of ways to do each of the four subtasks. So, there are \\(45×28×15×6=113,400\\) possible committees with these restrictions.",
+      "prompt": "Example \\(\\PageIndex{4}\\): Combining Combinations with the Multiplication Rule for Counting\n\nThe student government at a university consists of 10 seniors, 8 juniors, 6 sophomores, and 4 first-years.\n\n1. How many ways are there to choose a committee of 8 people from this group?\n\n2. How many ways are to choose a committee of 8 people if the committee must consist of 2 people from each class?",
+      "sourceAnswers": [
+        "1. There are 28 people to choose from, and we need 8. So, the number of possible committees is \\(\\unsupported{msub}{}\\unsupported{msub}{28}{C}_{8}=3,108,105\\).\n\n2. Break the selection of the committee members down into a 4-step process: Choose the seniors, then choose the juniors, then the sophomores, and then the first-years, as shown in the table below:\n\n                    Class\t\n                    Number of Ways to Choose Committee Representatives\t\n\n                    senior\t\n                    \\(\\unsupported{msub}{}\\unsupported{msub}{10}{C}_{2}=45\\)\t\n\n                    junior\t\n                    \\(\\unsupported{msub}{}\\unsupported{msub}{8}{C}_{2}=28\\)\t\n\n                    sophomore\t\n                    \\(\\unsupported{msub}{}\\unsupported{msub}{6}{C}_{2}=15\\)\t\n\n                    first-year\t\n                    \\(\\unsupported{msub}{}\\unsupported{msub}{4}{C}_{2}=6\\)\t\n\nThe Multiplication Rule for Counting tells us that we can get the total number of ways to complete this task by multiplying together the number of ways to do each of the four subtasks. So, there are \\(45×28×15×6=113,400\\) possible committees with these restrictions."
+      ],
+      "hasFigure": false,
+      "status": "draft",
+      "answerVerified": false,
+      "translationStatus": "pending",
+      "mappingStatus": "pending"
+    },
+    {
+      "ordinal": 8,
+      "sourceNumber": "1",
+      "sourceAnchor": "",
+      "kind": "exercise-candidate",
+      "context": "Check Your Understanding",
+      "original": "1. Suppose you want to count the number of ways that you can arrange the apps on the home screen on your phone. Should you use permutations or combinations?",
+      "prompt": "1. Suppose you want to count the number of ways that you can arrange the apps on the home screen on your phone. Should you use permutations or combinations?",
+      "sourceAnswers": [],
+      "hasFigure": false,
+      "status": "draft",
+      "answerVerified": false,
+      "translationStatus": "pending",
+      "mappingStatus": "pending"
+    },
+    {
+      "ordinal": 9,
+      "sourceNumber": "2",
+      "sourceAnchor": "",
+      "kind": "exercise-candidate",
+      "context": "Check Your Understanding",
+      "original": "2. Your little brother is packing up for a family vacation, but there’s only room for 3 of his toys. If you want to know how many possible groups of toys he can bring, should you use permutations or combinations?",
+      "prompt": "2. Your little brother is packing up for a family vacation, but there’s only room for 3 of his toys. If you want to know how many possible groups of toys he can bring, should you use permutations or combinations?",
+      "sourceAnswers": [],
+      "hasFigure": false,
+      "status": "draft",
+      "answerVerified": false,
+      "translationStatus": "pending",
+      "mappingStatus": "pending"
+    },
+    {
+      "ordinal": 10,
+      "sourceNumber": "3",
+      "sourceAnchor": "",
+      "kind": "exercise-candidate",
+      "context": "Check Your Understanding",
+      "original": "3. Compute \\(_{12}{C_{10}}\\).",
+      "prompt": "3. Compute \\(_{12}{C_{10}}\\).",
+      "sourceAnswers": [],
+      "hasFigure": false,
+      "status": "draft",
+      "answerVerified": false,
+      "translationStatus": "pending",
+      "mappingStatus": "pending"
+    },
+    {
+      "ordinal": 11,
+      "sourceNumber": "4",
+      "sourceAnchor": "",
+      "kind": "exercise-candidate",
+      "context": "Check Your Understanding",
+      "original": "4. Compute \\(_{16}{C_3}\\).",
+      "prompt": "4. Compute \\(_{16}{C_3}\\).",
+      "sourceAnswers": [],
+      "hasFigure": false,
+      "status": "draft",
+      "answerVerified": false,
+      "translationStatus": "pending",
+      "mappingStatus": "pending"
+    },
+    {
+      "ordinal": 12,
+      "sourceNumber": "5",
+      "sourceAnchor": "",
+      "kind": "exercise-candidate",
+      "context": "Check Your Understanding",
+      "original": "5. You’re planning a road trip with some friends. Though you have 6 friends you’d consider bringing along, you only have room for 3 other people in the car. How many different possibilities are there for your road trip squad?",
+      "prompt": "5. You’re planning a road trip with some friends. Though you have 6 friends you’d consider bringing along, you only have room for 3 other people in the car. How many different possibilities are there for your road trip squad?",
+      "sourceAnswers": [],
+      "hasFigure": false,
+      "status": "draft",
+      "answerVerified": false,
+      "translationStatus": "pending",
+      "mappingStatus": "pending"
+    },
+    {
+      "ordinal": 13,
+      "sourceNumber": "6",
+      "sourceAnchor": "",
+      "kind": "exercise-candidate",
+      "context": "Check Your Understanding",
+      "original": "6. You’re packing for a trip, for which you need 3 shirts and 3 skirts. If you have 8 shirts and 5 skirts that would work for the trip, how many different ways are there to pack for the trip?",
+      "prompt": "6. You’re packing for a trip, for which you need 3 shirts and 3 skirts. If you have 8 shirts and 5 skirts that would work for the trip, how many different ways are there to pack for the trip?",
+      "sourceAnswers": [],
+      "hasFigure": false,
+      "status": "draft",
+      "answerVerified": false,
+      "translationStatus": "pending",
+      "mappingStatus": "pending"
+    }
+  ],
+  "license": "CC BY 4.0",
+  "licenseEvidence": "This page titled 7.3: Combinations was last modified on Thu, 02 Jan 2025 11:07:44 GMT and is shared under a CC BY  4.0  license and was authored, remixed, and/or curated by OpenStax via source content that was edited to the style and standards of the LibreTexts platform.",
+  "url": "https://math.libretexts.org/Bookshelves/Applied_Mathematics/Contemporary_Mathematics_(OpenStax)/07:_Probability/7.03:_Combinations",
+  "sha256": "0a52b33e9089a70ee94ecdcb1d45cdf1d0ab3534c27a0163155ebd7af301e9e5",
+  "checkedAt": "2026-10-07",
+  "id": "f307fac8132ddea6749c",
+  "bookId": "contemporary",
+  "licenseInherited": false,
+  "licenseSource": "https://math.libretexts.org/Bookshelves/Applied_Mathematics/Contemporary_Mathematics_(OpenStax)/07:_Probability/7.03:_Combinations",
+  "licenseUrl": "https://creativecommons.org/licenses/by/4.0/",
+  "authors": "OpenStax / Donna Kirk et al.",
+  "book": "Contemporary Mathematics",
+  "reviewStatus": "unreviewed",
+  "sourceLanguage": "en",
+  "translationStatus": "pending"
+}

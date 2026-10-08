@@ -1,0 +1,202 @@
+{
+  "title": "4.6: Hypergeometric Distribution",
+  "originalText": "There are five characteristics of a hypergeometric experiment.\n\n1. You take samples from two groups.\n\n2. You are concerned with a group of interest, called the first group.\n\n3. You sample without replacement from the combined groups. For example, you want to choose a softball team from a combined group of 11 men and 13 women. The team consists of ten players.\n\n4. Each pick is not independent, since sampling is without replacement. In the softball example, the probability of picking a woman first is \\(\\frac{13}{24}\\). The probability of picking a man second is \\(\\frac{11}{23}\\) if a woman was picked first. It is \\(\\frac{10}{23}\\) if a man was picked first. The probability of the second pick depends on what happened in the first pick.\n\n5. You are not dealing with Bernoulli Trials.\n\nThe outcomes of a hypergeometric experiment fit a hypergeometric probability distribution. The random variable \\(X=\\) the number of items from the group of interest.\n\nExercise \\(\\PageIndex{1}\\)\n\nA candy dish contains 100 jelly beans and 80 gumdrops. Fifty candies are picked at random. What is the probability that 35 of the 50 are gumdrops? The two groups are jelly beans and gumdrops. Since the probability question asks for the probability of picking gumdrops, the group of interest (first group) is gumdrops. The size of the group of interest (first group) is 80. The size of the second group is 100. The size of the sample is 50 (jelly beans or gumdrops). Let X = the number of gumdrops in the sample of 50. X takes on the values x = 0, 1, 2, ..., 50. What is the probability statement written mathematically?\n\nAnswer\n\nP(x = 35)\n\nSolution\n\nP(x = 35)\n\nTry It \\(\\PageIndex{1}\\)\n\nA bag contains letter tiles. Forty-four of the tiles are vowels, and 56 are consonants. Seven tiles are picked at random. You want to know the probability that four of the seven tiles are vowels. What is the group of interest, the size of the group of interest, and the size of the sample?\n\nExercise \\(\\PageIndex{2}\\)\n\nSuppose a shipment of 100 laptops is known to have ten defective laptops. An inspector randomly chooses 12 for inspection. He is interested in determining the probability that, among the 12 laptops, at most two are defective. The two groups are the 90 non-defective laptops and the 10 defective laptops. The group of interest (first group) is the defective group because the probability question asks for the probability of at most two defective laptops. The size of the sample is 12 laptops. (They may be non-defective or defective.) Let X = the number of defective laptops in the sample of 12. X takes on the values 0, 1, 2, ..., 10. X may not take on the values 11 or 12. The sample size is 12, but there are only 10 defective laptops. Write the probability statement mathematically.\n\nAnswer\n\nP(x ≤ 2)\n\nTry It \\(\\PageIndex{2}\\)\n\nA gross of eggs contains 144 eggs. A particular gross is known to have 12 cracked eggs. An inspector randomly chooses 15 for inspection. She wants to know the probability that, among the 15, at most three are cracked. What is X, and what values does it take on?\n\nExercise \\(\\PageIndex{3\\)\n\nYou are president of an on-campus special events organization. You need a committee of seven students to plan a special birthday party for the president of the college. Your organization consists of 18 women and 15 men. You are interested in the number of men on your committee. If the members of the committee are randomly selected, what is the probability that your committee has more than four men?\n\nThis is a hypergeometric problem because you are choosing your committee from two groups (men and women).\n\nProblem\n\na. Are you choosing with or without replacement?\n\nb. What is the group of interest?\n\nc. How many are in the group of interest?\n\nd. How many are in the other group?\n\ne. Let X = _________ on the committee. What values does X take on?\n\nf. The probability question is P(_______).\n\nAnswer\n\na. without\n\nb. the men\n\nc. 15 men\n\nd. 18 women\n\ne. Let X = the number of men on the committee. x = 0, 1, 2, …, 7.\n\nf. P(x > 4)\n\nTry It \\(\\PageIndex{3}\\)\n\nA palette has 200 milk cartons. Of the 200 cartons, it is known that ten of them have leaked and cannot be sold. A stock clerk randomly chooses 18 for inspection. He wants to know the probability that among the 18, no more than two are leaking. Give five reasons why this is a hypergeometric problem.\n\nNotation for the Hypergeometric: H = Hypergeometric Probability Distribution Function\n\n\\(X \\sim H(r, b, n)\\)\n\nRead this as \" \\(X\\) is a random variable with a hypergeometric distribution.\" The parameters are \\(r, b\\), and \\(n\\); \\(r=\\) the size of the group of interest (first group), \\(b=\\) the size of the second group, \\(n=\\) the size of the chosen sample.\n\nExample \\(\\PageIndex{1}\\)\n\nA school site committee is to be chosen randomly from six men and five women. If the committee consists of four members chosen randomly, what is the probability that two of them are men? How many men do you expect to be on the committee?\n\nLet X = the number of men on the committee of four. The men are the group of interest (first group).\n\nX takes on the values 0, 1, 2, 3, 4, where r = 6, b = 5, and n = 4. X ~ H(6, 5, 4)\n\nFind P(x = 2). P(x = 2) = 0.4545 (calculator or computer)\n\nSolution\n\nThe probability that there are two men on the committee is about 0.45 .\n\nThe graph of \\(X \\sim H(6,5,4)\\) is:\n\n[Figure: This graph shows a hypergeometric probability distribution. It has five bars that are slightly normally distributed. The x-axis shows values from 0 to 4 in increments of 1, representing the number of men on the four-person committee. The y-axis ranges from 0 to 0.5 in increments of 0.1.]\n\nFigure \\(\\PageIndex{1}\\): \n\nThe \\(y\\)-axis contains the probability of \\(X\\), where \\(X=\\) the number of men on the committee.\n\nYou would expect \\(m=2.18\\) (about two) men on the committee.\n\nThe formula for the mean is \\(\\mu \\equiv \\frac{\\sqrt{m}}{\\sqrt{ \\pm} t} \\equiv \\frac{[4)(6]}{6+5} \\equiv 2.18\\)\n\nTry It \\(\\PageIndex{4}\\)\n\nAn intramural basketball team is to be chosen randomly from 15 boys and 12 girls. The team has ten slots. You want to know the probability that eight of the players will be boys. What is the group of interest and the sample?\n\nThis page titled 4.6: Hypergeometric Distribution was last modified on Thu, 07 May 2026 20:05:49 GMT and is shared under a CC BY  4.0  license and was authored, remixed, and/or curated by OpenStax via source content that was edited to the style and standards of the LibreTexts platform.",
+  "figures": [
+    {
+      "url": "https://openstax.org/apps/image-cdn/v1/f=webp/apps/archive/20251118.192121/resources/839fb57724373d5ac396c63f6d8e272e1062e29d",
+      "alt": "This graph shows a hypergeometric probability distribution. It has five bars that are slightly normally distributed. The x-axis shows values from 0 to 4 in increments of 1, representing the number of men on the four-person committee. The y-axis ranges from 0 to 0.5 in increments of 0.1.",
+      "credit": ""
+    }
+  ],
+  "references": [
+    {
+      "text": "4.6: Hypergeometric Distribution",
+      "url": "https://stats.libretexts.org/Bookshelves/Introductory_Statistics/Introductory_Statistics_2e_(OpenStax)/04%3A_Discrete_Random_Variables/4.06%3A_Hypergeometric_Distribution"
+    },
+    {
+      "text": "CC BY  4.0",
+      "url": "https://creativecommons.org/licenses/by/4.0"
+    },
+    {
+      "text": "OpenStax",
+      "url": "https://openstax.org/"
+    },
+    {
+      "text": "source content",
+      "url": "https://openstax.org/details/books/introductory-statistics"
+    }
+  ],
+  "exercises": [
+    {
+      "ordinal": 1,
+      "sourceNumber": "1",
+      "sourceAnchor": "",
+      "kind": "exercise-candidate",
+      "context": "There are five characteristics of a hypergeometric experiment.",
+      "original": "1. You take samples from two groups.",
+      "prompt": "1. You take samples from two groups.",
+      "sourceAnswers": [],
+      "hasFigure": false,
+      "status": "draft",
+      "answerVerified": false,
+      "translationStatus": "pending",
+      "mappingStatus": "pending"
+    },
+    {
+      "ordinal": 2,
+      "sourceNumber": "2",
+      "sourceAnchor": "",
+      "kind": "exercise-candidate",
+      "context": "There are five characteristics of a hypergeometric experiment.",
+      "original": "2. You are concerned with a group of interest, called the first group.",
+      "prompt": "2. You are concerned with a group of interest, called the first group.",
+      "sourceAnswers": [],
+      "hasFigure": false,
+      "status": "draft",
+      "answerVerified": false,
+      "translationStatus": "pending",
+      "mappingStatus": "pending"
+    },
+    {
+      "ordinal": 3,
+      "sourceNumber": "3",
+      "sourceAnchor": "",
+      "kind": "exercise-candidate",
+      "context": "There are five characteristics of a hypergeometric experiment.",
+      "original": "3. You sample without replacement from the combined groups. For example, you want to choose a softball team from a combined group of 11 men and 13 women. The team consists of ten players.",
+      "prompt": "3. You sample without replacement from the combined groups. For example, you want to choose a softball team from a combined group of 11 men and 13 women. The team consists of ten players.",
+      "sourceAnswers": [],
+      "hasFigure": false,
+      "status": "draft",
+      "answerVerified": false,
+      "translationStatus": "pending",
+      "mappingStatus": "pending"
+    },
+    {
+      "ordinal": 4,
+      "sourceNumber": "4",
+      "sourceAnchor": "",
+      "kind": "exercise-candidate",
+      "context": "There are five characteristics of a hypergeometric experiment.",
+      "original": "4. Each pick is not independent, since sampling is without replacement. In the softball example, the probability of picking a woman first is \\(\\frac{13}{24}\\). The probability of picking a man second is \\(\\frac{11}{23}\\) if a woman was picked first. It is \\(\\frac{10}{23}\\) if a man was picked first. The probability of the second pick depends on what happened in the first pick.",
+      "prompt": "4. Each pick is not independent, since sampling is without replacement. In the softball example, the probability of picking a woman first is \\(\\frac{13}{24}\\). The probability of picking a man second is \\(\\frac{11}{23}\\) if a woman was picked first. It is \\(\\frac{10}{23}\\) if a man was picked first. The probability of the second pick depends on what happened in the first pick.",
+      "sourceAnswers": [],
+      "hasFigure": false,
+      "status": "draft",
+      "answerVerified": false,
+      "translationStatus": "pending",
+      "mappingStatus": "pending"
+    },
+    {
+      "ordinal": 5,
+      "sourceNumber": "5",
+      "sourceAnchor": "",
+      "kind": "exercise-candidate",
+      "context": "There are five characteristics of a hypergeometric experiment.",
+      "original": "5. You are not dealing with Bernoulli Trials.",
+      "prompt": "5. You are not dealing with Bernoulli Trials.",
+      "sourceAnswers": [],
+      "hasFigure": false,
+      "status": "draft",
+      "answerVerified": false,
+      "translationStatus": "pending",
+      "mappingStatus": "pending"
+    },
+    {
+      "ordinal": 6,
+      "sourceNumber": "",
+      "sourceAnchor": "",
+      "kind": "exercise-candidate",
+      "context": "There are five characteristics of a hypergeometric experiment.\n\nThe outcomes of a hypergeometric experiment fit a hypergeometric probability distribution. The random variable \\(X=\\) the number of items from the group of interest.",
+      "original": "Exercise \\(\\PageIndex{1}\\)\n\nA candy dish contains 100 jelly beans and 80 gumdrops. Fifty candies are picked at random. What is the probability that 35 of the 50 are gumdrops? The two groups are jelly beans and gumdrops. Since the probability question asks for the probability of picking gumdrops, the group of interest (first group) is gumdrops. The size of the group of interest (first group) is 80. The size of the second group is 100. The size of the sample is 50 (jelly beans or gumdrops). Let X = the number of gumdrops in the sample of 50. X takes on the values x = 0, 1, 2, ..., 50. What is the probability statement written mathematically?\n\nAnswer\n\nP(x = 35)",
+      "prompt": "Exercise \\(\\PageIndex{1}\\)\n\nA candy dish contains 100 jelly beans and 80 gumdrops. Fifty candies are picked at random. What is the probability that 35 of the 50 are gumdrops? The two groups are jelly beans and gumdrops. Since the probability question asks for the probability of picking gumdrops, the group of interest (first group) is gumdrops. The size of the group of interest (first group) is 80. The size of the second group is 100. The size of the sample is 50 (jelly beans or gumdrops). Let X = the number of gumdrops in the sample of 50. X takes on the values x = 0, 1, 2, ..., 50. What is the probability statement written mathematically?",
+      "sourceAnswers": [
+        "P(x = 35)"
+      ],
+      "hasFigure": false,
+      "status": "draft",
+      "answerVerified": false,
+      "translationStatus": "pending",
+      "mappingStatus": "pending"
+    },
+    {
+      "ordinal": 7,
+      "sourceNumber": "",
+      "sourceAnchor": "fs-idp41303504",
+      "kind": "exercise-candidate",
+      "context": "There are five characteristics of a hypergeometric experiment.\n\nThe outcomes of a hypergeometric experiment fit a hypergeometric probability distribution. The random variable \\(X=\\) the number of items from the group of interest.",
+      "original": "Solution\n\nP(x = 35)",
+      "prompt": "",
+      "sourceAnswers": [
+        "Solution\n\nP(x = 35)"
+      ],
+      "hasFigure": false,
+      "status": "draft",
+      "answerVerified": false,
+      "translationStatus": "pending",
+      "mappingStatus": "pending"
+    },
+    {
+      "ordinal": 8,
+      "sourceNumber": "",
+      "sourceAnchor": "",
+      "kind": "exercise-candidate",
+      "context": "There are five characteristics of a hypergeometric experiment.\n\nThe outcomes of a hypergeometric experiment fit a hypergeometric probability distribution. The random variable \\(X=\\) the number of items from the group of interest.\n\nA bag contains letter tiles. Forty-four of the tiles are vowels, and 56 are consonants. Seven tiles are picked at random. You want to know the probability that four of the seven tiles are vowels. What is the group of interest, the size of the group of interest, and the size of the sample?",
+      "original": "Exercise \\(\\PageIndex{2}\\)\n\nSuppose a shipment of 100 laptops is known to have ten defective laptops. An inspector randomly chooses 12 for inspection. He is interested in determining the probability that, among the 12 laptops, at most two are defective. The two groups are the 90 non-defective laptops and the 10 defective laptops. The group of interest (first group) is the defective group because the probability question asks for the probability of at most two defective laptops. The size of the sample is 12 laptops. (They may be non-defective or defective.) Let X = the number of defective laptops in the sample of 12. X takes on the values 0, 1, 2, ..., 10. X may not take on the values 11 or 12. The sample size is 12, but there are only 10 defective laptops. Write the probability statement mathematically.\n\nAnswer\n\nP(x ≤ 2)",
+      "prompt": "Exercise \\(\\PageIndex{2}\\)\n\nSuppose a shipment of 100 laptops is known to have ten defective laptops. An inspector randomly chooses 12 for inspection. He is interested in determining the probability that, among the 12 laptops, at most two are defective. The two groups are the 90 non-defective laptops and the 10 defective laptops. The group of interest (first group) is the defective group because the probability question asks for the probability of at most two defective laptops. The size of the sample is 12 laptops. (They may be non-defective or defective.) Let X = the number of defective laptops in the sample of 12. X takes on the values 0, 1, 2, ..., 10. X may not take on the values 11 or 12. The sample size is 12, but there are only 10 defective laptops. Write the probability statement mathematically.",
+      "sourceAnswers": [
+        "P(x ≤ 2)"
+      ],
+      "hasFigure": false,
+      "status": "draft",
+      "answerVerified": false,
+      "translationStatus": "pending",
+      "mappingStatus": "pending"
+    },
+    {
+      "ordinal": 9,
+      "sourceNumber": "",
+      "sourceAnchor": "",
+      "kind": "exercise-candidate",
+      "context": "The outcomes of a hypergeometric experiment fit a hypergeometric probability distribution. The random variable \\(X=\\) the number of items from the group of interest.\n\nA bag contains letter tiles. Forty-four of the tiles are vowels, and 56 are consonants. Seven tiles are picked at random. You want to know the probability that four of the seven tiles are vowels. What is the group of interest, the size of the group of interest, and the size of the sample?\n\nA gross of eggs contains 144 eggs. A particular gross is known to have 12 cracked eggs. An inspector randomly chooses 15 for inspection. She wants to know the probability that, among the 15, at most three are cracked. What is X, and what values does it take on?",
+      "original": "Exercise \\(\\PageIndex{3\\)\n\nYou are president of an on-campus special events organization. You need a committee of seven students to plan a special birthday party for the president of the college. Your organization consists of 18 women and 15 men. You are interested in the number of men on your committee. If the members of the committee are randomly selected, what is the probability that your committee has more than four men?\n\nThis is a hypergeometric problem because you are choosing your committee from two groups (men and women).\n\nProblem\n\na. Are you choosing with or without replacement?\n\nb. What is the group of interest?\n\nc. How many are in the group of interest?\n\nd. How many are in the other group?\n\ne. Let X = _________ on the committee. What values does X take on?\n\nf. The probability question is P(_______).",
+      "prompt": "Exercise \\(\\PageIndex{3\\)\n\nYou are president of an on-campus special events organization. You need a committee of seven students to plan a special birthday party for the president of the college. Your organization consists of 18 women and 15 men. You are interested in the number of men on your committee. If the members of the committee are randomly selected, what is the probability that your committee has more than four men?\n\nThis is a hypergeometric problem because you are choosing your committee from two groups (men and women).\n\nProblem\n\na. Are you choosing with or without replacement?\n\nb. What is the group of interest?\n\nc. How many are in the group of interest?\n\nd. How many are in the other group?\n\ne. Let X = _________ on the committee. What values does X take on?\n\nf. The probability question is P(_______).",
+      "sourceAnswers": [],
+      "hasFigure": false,
+      "status": "draft",
+      "answerVerified": false,
+      "translationStatus": "pending",
+      "mappingStatus": "pending"
+    },
+    {
+      "ordinal": 10,
+      "sourceNumber": "",
+      "sourceAnchor": "",
+      "kind": "example-or-exercise",
+      "context": "Notation for the Hypergeometric: H = Hypergeometric Probability Distribution Function\n\n\\(X \\sim H(r, b, n)\\)\n\nRead this as \" \\(X\\) is a random variable with a hypergeometric distribution.\" The parameters are \\(r, b\\), and \\(n\\); \\(r=\\) the size of the group of interest (first group), \\(b=\\) the size of the second group, \\(n=\\) the size of the chosen sample.",
+      "original": "Example \\(\\PageIndex{1}\\)\n\nA school site committee is to be chosen randomly from six men and five women. If the committee consists of four members chosen randomly, what is the probability that two of them are men? How many men do you expect to be on the committee?\n\nLet X = the number of men on the committee of four. The men are the group of interest (first group).\n\nX takes on the values 0, 1, 2, 3, 4, where r = 6, b = 5, and n = 4. X ~ H(6, 5, 4)\n\nFind P(x = 2). P(x = 2) = 0.4545 (calculator or computer)\n\nSolution\n\nThe probability that there are two men on the committee is about 0.45 .\n\nThe graph of \\(X \\sim H(6,5,4)\\) is:\n\n[Figure: This graph shows a hypergeometric probability distribution. It has five bars that are slightly normally distributed. The x-axis shows values from 0 to 4 in increments of 1, representing the number of men on the four-person committee. The y-axis ranges from 0 to 0.5 in increments of 0.1.]\n\nFigure \\(\\PageIndex{1}\\): \n\nThe \\(y\\)-axis contains the probability of \\(X\\), where \\(X=\\) the number of men on the committee.\n\nYou would expect \\(m=2.18\\) (about two) men on the committee.\n\nThe formula for the mean is \\(\\mu \\equiv \\frac{\\sqrt{m}}{\\sqrt{ \\pm} t} \\equiv \\frac{[4)(6]}{6+5} \\equiv 2.18\\)",
+      "prompt": "Example \\(\\PageIndex{1}\\)\n\nA school site committee is to be chosen randomly from six men and five women. If the committee consists of four members chosen randomly, what is the probability that two of them are men? How many men do you expect to be on the committee?\n\nLet X = the number of men on the committee of four. The men are the group of interest (first group).\n\nX takes on the values 0, 1, 2, 3, 4, where r = 6, b = 5, and n = 4. X ~ H(6, 5, 4)\n\nFind P(x = 2). P(x = 2) = 0.4545 (calculator or computer)\n\nSolution\n\nThe probability that there are two men on the committee is about 0.45 .\n\nThe graph of \\(X \\sim H(6,5,4)\\) is:\n\n[Figure: This graph shows a hypergeometric probability distribution. It has five bars that are slightly normally distributed. The x-axis shows values from 0 to 4 in increments of 1, representing the number of men on the four-person committee. The y-axis ranges from 0 to 0.5 in increments of 0.1.]\n\nFigure \\(\\PageIndex{1}\\): \n\nThe \\(y\\)-axis contains the probability of \\(X\\), where \\(X=\\) the number of men on the committee.\n\nYou would expect \\(m=2.18\\) (about two) men on the committee.\n\nThe formula for the mean is \\(\\mu \\equiv \\frac{\\sqrt{m}}{\\sqrt{ \\pm} t} \\equiv \\frac{[4)(6]}{6+5} \\equiv 2.18\\)",
+      "sourceAnswers": [],
+      "hasFigure": true,
+      "status": "draft",
+      "answerVerified": false,
+      "translationStatus": "pending",
+      "mappingStatus": "pending"
+    }
+  ],
+  "license": "CC BY 4.0",
+  "licenseEvidence": "This page titled 4.6: Hypergeometric Distribution was last modified on Thu, 07 May 2026 20:05:49 GMT and is shared under a CC BY  4.0  license and was authored, remixed, and/or curated by OpenStax via source content that was edited to the style and standards of the LibreTexts platform.",
+  "url": "https://stats.libretexts.org/Bookshelves/Introductory_Statistics/Introductory_Statistics_2e_(OpenStax)/04:_Discrete_Random_Variables/4.06:_Hypergeometric_Distribution",
+  "sha256": "d324dd78b74a0ef31ecf0841f70745cc078dd83cf90731b8683c59e4514460a8",
+  "checkedAt": "2026-10-07",
+  "id": "998089964f9960efc448",
+  "bookId": "statistics",
+  "licenseInherited": false,
+  "licenseSource": "https://stats.libretexts.org/Bookshelves/Introductory_Statistics/Introductory_Statistics_2e_(OpenStax)/04:_Discrete_Random_Variables/4.06:_Hypergeometric_Distribution",
+  "licenseUrl": "https://creativecommons.org/licenses/by/4.0/",
+  "authors": "OpenStax / Barbara Illowsky, Susan Dean",
+  "book": "Introductory Statistics 2e",
+  "reviewStatus": "unreviewed",
+  "sourceLanguage": "en",
+  "translationStatus": "pending"
+}

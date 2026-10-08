@@ -1,0 +1,81 @@
+{
+  "title": "10.6:  Two Population Means with Known Standard Deviations",
+  "originalText": "Even though this situation is not likely (knowing the population standard deviations is very unlikely), the following example illustrates hypothesis testing for independent means with known population standard deviations. The sampling distribution for the difference between the means is normal in accordance with the central limit theorem. The random variable is \\(\\overline{X_1}-\\overline{X_2}\\). The normal distribution has the following format:\n\nThe standard deviation is:\n\n\\[\\sqrt{\\dfrac{\\left(\\sigma_1\\right)^2}{n_1}+\\dfrac{\\left(\\sigma_2\\right)^2}{n_2}}\\]\n\nThe test statistic ( \\(z\\)-score) is:\n\n\\[Z_c=\\dfrac{\\left(\\bar{x}_1-\\bar{x}_2\\right)-\\delta_0}{\\sqrt{\\dfrac{\\left(\\sigma_1\\right)^2}{n_1}+\\dfrac{\\left(\\sigma_2\\right)^2}{n_2}}}\\]\n\nExercise \\(\\PageIndex{1}\\)\n\nIndependent groups, population standard deviations known: The mean lasting time of two competing floor waxes is to be compared. Twenty floors are randomly assigned to test each wax. Both populations have a normal distributions. The data are recorded in Table \\(\\PageIndex{1}\\).\n\n     Table \\(\\PageIndex{1}\\)\n\n            Wax\t\n            Sample mean number of months floor wax lasts\t\n            Population standard deviation\t\n\n            1\t\n            3\t\n            0.33\t\n\n            2\t\n            2.9\t\n            0.36\t\n\nProblem\n\nDoes the data indicate that wax 1 is more effective than wax 2? Test at a 5% level of significance.\n\nAnswer\n\nThis is a test of two independent groups, two population means, population standard deviations known.\n\nRandom Variable: \\(\\bar{X}_1-\\bar{X}_2=\\) difference in the mean number of months the competing floor waxes last.\n\n\\[\n\n    \\begin{array}{l}\n\n    H_0: \\mu_1 \\leq \\mu_2 \\\\\n\n    H_a: \\mu_1>\\mu_2\n\n    \\end{array}\n\n    \\]\n\n    The words \"is more effective\" says that wax 1 lasts longer than wax 2, on average. \"Longer\" is a \">\" symbol and goes into \\(H_a\\). Therefore, this is a right-tailed test.\n\nDistribution for the test: The population standard deviations are known so the distribution is normal. Using the formula for the test statistic we find the calculated value for the problem.\n\n\\[Z_c=\\dfrac{\\left(\\mu_1-\\mu_2\\right)-\\delta_0}{\\sqrt{\\dfrac{\\sigma_1^2}{n_1}+\\dfrac{\\sigma_2^2}{n_2}}}=0.1\\]\n\n[Figure: This is a normal distribution curve with mean equal to zero. The values 0 and 0.1 are labeled on the horiztonal axis. A vertical line extends from 0.1 to the curve. The region under the curve to the right of the line is shaded to represent p-value = 0.1799.]\n\nFigure \\(\\PageIndex{1}\\): Copy and Paste Caption here. (Copyright; author via source)\n\nThe estimated difference between he two means is: \\(\\bar{X}_1-\\bar{X}_2=3-2.9=0.1\\)\n\nCompare calculated value and critical value and \\(\\mathbf{Z}_\\alpha\\) : We mark the calculated value on the graph and find the calculated value is not in the tail therefore we cannot reject the null hypothesis.\n\nMake a decision: the calculated value of the test statistic is not in the tail, therefore you cannot reject \\(H_0\\).\n\nConclusion: At the \\(5 \\%\\) level of significance, from the sample data, there is not sufficient evidence to conclude that the mean time wax 1 lasts is longer (wax 1 is more effective) than the mean time wax 2 lasts.\n\nTry It \\(\\PageIndex{1}\\)\n\nThe means of the number of revolutions per minute of two competing engines are to be compared. Thirty engines of each type are randomly assigned to be tested. Both populations have normal distributions. Table \\(\\PageIndex{2}\\) shows the result. Do the data indicate that Engine 2 has higher RPM than Engine 1? Test at a 5% level of significance.\n\n    Table \\(\\PageIndex{2}\\)\n\n            Engine\t\n            Sample mean number of RPM\t\n            Population standard deviation\t\n\n            1\t\n            1,500\t\n            50\t\n\n            2\t\n            1,600\t\n            60\t\n\nExercise \\(\\PageIndex{2}\\)\n\nAn interested citizen wanted to know if Democratic U. S. senators are older than Republican U.S. senators, on average. On May 26 2013, the mean age of 30 randomly selected Republican Senators was 61 years 247 days old (61.675 years) with a standard deviation of 10.17 years. The mean age of 30 randomly selected Democratic senators was 61 years 257 days old (61.704 years) with a standard deviation of 9.55 years.\n\nProblem\n\nDo the data indicate that Democratic senators are older than Republican senators, on average? Test at a 5% level of significance.\n\nAnswer\n\nThis is a test of two independent groups, two population means. The population standard deviations are unknown, but the sum of the sample sizes is \\(30+30=60\\), which is greater than 30 , so we can use the normal approximation to the Student's-t distribution. Subscripts: 1: Democratic senators 2: Republican senators\n\nRandom variable: \\(\\bar{X}_1-\\bar{X}_2=\\) difference in the mean age of Democratic and Republican U.S. senators.\n\n\\[\\begin{array}{l}\n\n    H_0: \\mu_1 \\leq \\mu_2 H_0: \\mu_1-\\mu_2 \\leq 0 \\\\\n\n    H_a: \\mu_1>\\mu_2 H_a: \\mu_1-\\mu_2>0\n\n    \\end{array}\\]\n\n    The words \"older than\" translates as a \">\" symbol and goes into \\(H_a\\). Therefore, this is a right-tailed test.\n\n[Figure: This is a normal distribution curve with mean equal to zero. A vertical line to the right of zero extends from the axis to the curve. The region under the curve to the right of the line is shaded representing p-value = 0.4955.]\n\nFigure \\(\\PageIndex{2}\\)\n\nMake a decision: The p-value is larger than 5%, therefore we cannot reject the null hypothesis. By calculating the test statistic we would find that the test statistic does not fall in the tail, therefore we cannot reject the null hypothesis. We reach the same conclusion using either method of a making this statistical decision.\n\nConclusion: At the 5% level of significance, from the sample data, there is not sufficient evidence to conclude that the mean age of Democratic senators is greater than the mean age of the Republican senators.\n\nTry It \\(\\PageIndex{2}\\)\n\nThe average age of 10 professors selected randomly in university A is 46.672 with a standard deviation of 8.53. The average age of 10 professors selected randomly in university B is 47.531 with a standard deviation of 7.83.\n\nDoes the data indicate that university A has older professors than university B, on average? Test at a 5% level of significance.\n\nThis page titled 10.6:  Two Population Means with Known Standard Deviations was last modified on Thu, 07 May 2026 20:02:40 GMT and is shared under a CC BY  4.0  license and was authored, remixed, and/or curated by OpenStax via source content that was edited to the style and standards of the LibreTexts platform.",
+  "figures": [
+    {
+      "url": "https://stats.libretexts.org/@api/deki/files/40922/27999c263316118c511a77c48bc9aa005518c593?revision=1",
+      "alt": "This is a normal distribution curve with mean equal to zero. The values 0 and 0.1 are labeled on the horiztonal axis. A vertical line extends from 0.1 to the curve. The region under the curve to the right of the line is shaded to represent p-value = 0.1799.",
+      "credit": ""
+    },
+    {
+      "url": "https://stats.libretexts.org/@api/deki/files/40921/f4f39b75d2421b2e8f70860f0c56a41cfbe843d9?revision=1",
+      "alt": "This is a normal distribution curve with mean equal to zero. A vertical line to the right of zero extends from the axis to the curve. The region under the curve to the right of the line is shaded representing p-value = 0.4955.",
+      "credit": ""
+    }
+  ],
+  "references": [
+    {
+      "text": "10.6:  Two Population Means with Known Standard Deviations",
+      "url": "https://stats.libretexts.org/Bookshelves/Introductory_Statistics/Introductory_Statistics_2e_(OpenStax)/10%3A_Hypothesis_Testing_with_Two_Samples/10.06%3A__Two_Population_Means_with_Known_Standard_Deviations"
+    },
+    {
+      "text": "CC BY  4.0",
+      "url": "https://creativecommons.org/licenses/by/4.0"
+    },
+    {
+      "text": "OpenStax",
+      "url": "https://openstax.org/"
+    },
+    {
+      "text": "source content",
+      "url": "https://openstax.org/details/books/introductory-statistics"
+    }
+  ],
+  "exercises": [
+    {
+      "ordinal": 1,
+      "sourceNumber": "",
+      "sourceAnchor": "",
+      "kind": "exercise-candidate",
+      "context": "\\[\\sqrt{\\dfrac{\\left(\\sigma_1\\right)^2}{n_1}+\\dfrac{\\left(\\sigma_2\\right)^2}{n_2}}\\]\n\nThe test statistic ( \\(z\\)-score) is:\n\n\\[Z_c=\\dfrac{\\left(\\bar{x}_1-\\bar{x}_2\\right)-\\delta_0}{\\sqrt{\\dfrac{\\left(\\sigma_1\\right)^2}{n_1}+\\dfrac{\\left(\\sigma_2\\right)^2}{n_2}}}\\]",
+      "original": "Exercise \\(\\PageIndex{1}\\)\n\nIndependent groups, population standard deviations known: The mean lasting time of two competing floor waxes is to be compared. Twenty floors are randomly assigned to test each wax. Both populations have a normal distributions. The data are recorded in Table \\(\\PageIndex{1}\\).\n\n     Table \\(\\PageIndex{1}\\)\n\n            Wax\t\n            Sample mean number of months floor wax lasts\t\n            Population standard deviation\t\n\n            1\t\n            3\t\n            0.33\t\n\n            2\t\n            2.9\t\n            0.36\t\n\nProblem\n\nDoes the data indicate that wax 1 is more effective than wax 2? Test at a 5% level of significance.",
+      "prompt": "Exercise \\(\\PageIndex{1}\\)\n\nIndependent groups, population standard deviations known: The mean lasting time of two competing floor waxes is to be compared. Twenty floors are randomly assigned to test each wax. Both populations have a normal distributions. The data are recorded in Table \\(\\PageIndex{1}\\).\n\n     Table \\(\\PageIndex{1}\\)\n\n            Wax\t\n            Sample mean number of months floor wax lasts\t\n            Population standard deviation\t\n\n            1\t\n            3\t\n            0.33\t\n\n            2\t\n            2.9\t\n            0.36\t\n\nProblem\n\nDoes the data indicate that wax 1 is more effective than wax 2? Test at a 5% level of significance.",
+      "sourceAnswers": [],
+      "hasFigure": false,
+      "status": "draft",
+      "answerVerified": false,
+      "translationStatus": "pending",
+      "mappingStatus": "pending"
+    },
+    {
+      "ordinal": 2,
+      "sourceNumber": "",
+      "sourceAnchor": "",
+      "kind": "exercise-candidate",
+      "context": "The test statistic ( \\(z\\)-score) is:\n\n\\[Z_c=\\dfrac{\\left(\\bar{x}_1-\\bar{x}_2\\right)-\\delta_0}{\\sqrt{\\dfrac{\\left(\\sigma_1\\right)^2}{n_1}+\\dfrac{\\left(\\sigma_2\\right)^2}{n_2}}}\\]\n\nThe means of the number of revolutions per minute of two competing engines are to be compared. Thirty engines of each type are randomly assigned to be tested. Both populations have normal distributions. Table \\(\\PageIndex{2}\\) shows the result. Do the data indicate that Engine 2 has higher RPM than Engine 1? Test at a 5% level of significance.",
+      "original": "Exercise \\(\\PageIndex{2}\\)\n\nAn interested citizen wanted to know if Democratic U. S. senators are older than Republican U.S. senators, on average. On May 26 2013, the mean age of 30 randomly selected Republican Senators was 61 years 247 days old (61.675 years) with a standard deviation of 10.17 years. The mean age of 30 randomly selected Democratic senators was 61 years 257 days old (61.704 years) with a standard deviation of 9.55 years.\n\nProblem\n\nDo the data indicate that Democratic senators are older than Republican senators, on average? Test at a 5% level of significance.",
+      "prompt": "Exercise \\(\\PageIndex{2}\\)\n\nAn interested citizen wanted to know if Democratic U. S. senators are older than Republican U.S. senators, on average. On May 26 2013, the mean age of 30 randomly selected Republican Senators was 61 years 247 days old (61.675 years) with a standard deviation of 10.17 years. The mean age of 30 randomly selected Democratic senators was 61 years 257 days old (61.704 years) with a standard deviation of 9.55 years.\n\nProblem\n\nDo the data indicate that Democratic senators are older than Republican senators, on average? Test at a 5% level of significance.",
+      "sourceAnswers": [],
+      "hasFigure": false,
+      "status": "draft",
+      "answerVerified": false,
+      "translationStatus": "pending",
+      "mappingStatus": "pending"
+    }
+  ],
+  "license": "CC BY 4.0",
+  "licenseEvidence": "This page titled 10.6:  Two Population Means with Known Standard Deviations was last modified on Thu, 07 May 2026 20:02:40 GMT and is shared under a CC BY  4.0  license and was authored, remixed, and/or curated by OpenStax via source content that was edited to the style and standards of the LibreTexts platform.",
+  "url": "https://stats.libretexts.org/Bookshelves/Introductory_Statistics/Introductory_Statistics_2e_(OpenStax)/10:_Hypothesis_Testing_with_Two_Samples/10.06:__Two_Population_Means_with_Known_Standard_Deviations",
+  "sha256": "0a0615b3123a82b7ab4ccdf6c68006cb5e93e96871d1b4e48d5f3c136e96dc38",
+  "checkedAt": "2026-10-07",
+  "id": "970ec456da2ed69e6241",
+  "bookId": "statistics",
+  "licenseInherited": false,
+  "licenseSource": "https://stats.libretexts.org/Bookshelves/Introductory_Statistics/Introductory_Statistics_2e_(OpenStax)/10:_Hypothesis_Testing_with_Two_Samples/10.06:__Two_Population_Means_with_Known_Standard_Deviations",
+  "licenseUrl": "https://creativecommons.org/licenses/by/4.0/",
+  "authors": "OpenStax / Barbara Illowsky, Susan Dean",
+  "book": "Introductory Statistics 2e",
+  "reviewStatus": "unreviewed",
+  "sourceLanguage": "en",
+  "translationStatus": "pending"
+}

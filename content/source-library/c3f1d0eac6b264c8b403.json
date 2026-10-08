@@ -1,0 +1,630 @@
+{
+  "title": "12.3: Arithmetic Sequences",
+  "originalText": "Learning Objectives\n\nBy the end of this section, you will be able to:\n\nDetermine if a sequence is arithmetic\n\nFind the general term (\\(n\\)th term) of an arithmetic sequence\n\nFind the sum of the first \\(n\\) terms of an arithmetic sequence\n\nBefore you get started, take this readiness quiz.\n\n1. Evaluate \\(4n−1\\) for the integers \\(1, 2, 3\\), and \\(4\\).\n\n    If you missed this problem, review Example 1.6.\n\n2. Solve the system of equations: \\(\\left\\{\\begin{array}{l}{x+y=7} \\\\ {3 x+4 y=23}\\end{array}\\right.\\).\n\n    If you missed this problem, review Example 4.9.\n\n3. If \\(f(n)=\\frac{n}{2}(3 n+5)\\), find \\(f(1)+f(20)\\).\n\n    If you missed this problem, review Example 3.49.\n\nDetermine if a Sequence is Arithmetic\n\nThe last section introduced sequences and now we will look at two specific types of sequences that each have special properties. In this section we will look at arithmetic sequences and in the next section, geometric sequences.\n\nAn arithmetic sequence is a sequence where the difference between consecutive terms is constant. The difference between consecutive terms in an arithmetic sequence, a_{n}-a_{n-1}, is \\(d\\), the common difference, for \\(n\\) greater than or equal to two.\n\nDefinition \\(\\PageIndex{1}\\)\n\nAn arithmetic sequence is a sequence where the difference between consecutive terms is always the same.\n\nThe difference between consecutive terms, a_{n}-a_{n-1}, is \\(d\\), the common difference, for \\(n\\) greater than or equal to two.\n\n[Figure: This figure has two rows and three columns. The first row reads “7”, “10”,”13”, “16”, “19”, “22”, and an ellipsis, “10 minus 7, divided by 3”, “13 minus 10, divided by 3”, “16 minus 13, divided by 3”, nth term equals nth term minus 1 divided by d”]\n\nFigure 12.2.1\n\nExample \\(\\PageIndex{1}\\)\n\nDetermine if each sequence is arithmetic. If so, indicate the common difference.\n\n1. \\(5,9,13,17,21,25, \\dots\\)\n\n2. \\(4,9,12,17,20,25, \\dots\\)\n\n3. \\(10,3,-4,-11,-18,-25, \\dots\\)\n\nSolution:\n\nTo determine if the sequence is arithmetic, we find the difference of the consecutive terms shown.\n\na. \\(\\begin{array}{cccccc}{5,} & {9,} & {13,} & {17} & {21,} & {25, \\ldots} \\\\ {\\text { Find the difference of the consecutive terms.}} & {9-5} & {13-9} & {17-13} & {21-17} & {25-21} \\\\ & {4} & {4} & {4} & {4}&{4}\\end{array}\\)\n\nThe sequence is arithmetic. The common difference is \\(d=4\\).\n\nb. \\(\\begin{array}{cccccc}{4,} & {9,} & {12,} & {17} & {20,} & {25, \\ldots} \\\\ {\\text { Find the difference of the consecutive terms.}} & {9-4} & {12-9} & {17-12} & {20-17} & {25-20} \\\\ & {2} & {3} & {5} & {3}&{5}\\end{array}\\)\n\nThe sequence is not arithmetic as all the differences between the consecutive terms are not the same. There is no common difference.\n\nc. \\(\\begin{array}{cccccc}{10,} & {3,} & {-4,} & {-11} & {-18,} & {-25, \\ldots} \\\\ {\\text { Find the difference of the consecutive terms.}} & {3-10} & {-4-3} & {-11-(-4)} & {-18-(-11)} & {-25-(-18)} \\\\ & {-7} & {-7} & {-7} & {-7}&{-7}\\end{array}\\)\n\nAnswer:\n\nThe sequence is arithmetic. The common difference is \\(d=-7\\).\n\nExercise \\(\\PageIndex{1}\\)\n\nDetermine if each sequence is arithmetic. If so, indicate the common difference.\n\n1. \\(9,20,31,42,53,64, \\dots\\)\n\n2. \\(12,6,0,-6,-12,-18, \\dots\\)\n\n3. \\(7,1,10,4,13,7, \\dots\\)\n\nAnswer\n\n1. The sequence is arithmetic with common difference \\(d=11\\).\n\n2. The sequence is arithmetic with common difference \\(d=-6\\).\n\n3. The sequence is not arithmetic as all the differences between the consecutive terms are not the same.\n\nExercise \\(\\PageIndex{2}\\)\n\nDetermine if each sequence is arithmetic. If so, indicate the common difference.\n\n1. \\(-4,4,2,10,8,16, \\dots\\)\n\n2. \\(-3,-1,1,3,5,7, \\dots\\)\n\n3. \\(7,2,-3,-8,-13,-18, \\dots\\)\n\nAnswer\n\n1. The sequence is not arithmetic as all the differences between the consecutive terms are not the same.\n\n2. The sequence is arithmetic with common difference \\(d=2\\).\n\n3. The sequence is arithmetic with common difference \\(d=−5\\).\n\nIf we know the first term, \\(a_{1}\\), and the common difference, \\(d\\), we can list a finite number of terms of the sequence.\n\nExample \\(\\PageIndex{2}\\)\n\nWrite the first five terms of the sequence where the first term is \\(5\\) and the common difference is \\(d=−6\\).\n\nSolution:\n\nWe start with the first term and add the common difference. Then we add the common difference to that result to get the next term, and so on.\n\n\\(\\begin{array}{cccc}{a_{1}} & {a_{2}} & {a_{3}} & {a_{4}} & {a_{5}} \\\\ {5} & {5+(-6)} & {-1+(-6)} & {-7+(-6)} & {-13+(-6)} \\\\ {}&{-1} & {-7} & {-13} & {-19}\\end{array}\\)\n\nAnswer:\n\nThe sequence is \\(5,-1,-7,-13,-19, \\dots\\)\n\nExercise \\(\\PageIndex{3}\\)\n\nWrite the first five terms of the sequence where the first term is \\(7\\) and the common difference is \\(d=−4\\).\n\nAnswer\n\n\\(7,3,-1,-5,-9, \\dots\\)\n\nExercise \\(\\PageIndex{4}\\)\n\nWrite the first five terms of the sequence where the first term is \\(11\\) and the common difference is \\(d=−8\\).\n\nAnswer\n\n\\(11,3,-5,-13,-21, \\dots\\)\n\nFind the General Term (\\(n\\)th Term) of an Arithmetic Sequence\n\nJust as we found a formula for the general term of a sequence, we can also find a formula for the general term of an arithmetic sequence.\n\nLet’s write the first few terms of a sequence where the first term is \\(a_{1}\\) and the common difference is \\(d\\). We will then look for a pattern.\n\nAs we look for a pattern we see that each term starts with \\(a_{1}\\).\n\n[Figure: This figures shows an image of a sequence.]\n\nFigure 12.2.2\n\nThe first term adds \\(0d\\) to the \\(a_{1}\\), the second term adds \\(1d\\), the third term adds \\(2d\\), the fourth term adds \\(3d\\), and the fifth term adds \\(4d\\). The number of \\(ds\\) that were added to \\(a_{1}\\) is one less than the number of the term. This leads us to the following\n\n\\(a_{n}=a_{1}+(n-1) d\\)\n\nDefinition \\(\\PageIndex{2}\\)\n\nThe general term of an arithmetic sequence with first term \\(a_{1}\\) and the common difference \\(d\\) is\n\n\\(a_{n}=a_{1}+(n-1) d\\)\n\nWe will use this formula in the next example to find the 15^(th) term of a sequence.\n\nExample \\(\\PageIndex{3}\\)\n\nFind the fifteenth term of a sequence where the first term is \\(3\\) and the common difference is \\(6\\).\n\nSolution:\n\n\\(\\begin{array}{cc}{\\text{To find the fifteenth term, }a_{15}\\text{, use the formula with } a_{1}=3 \\:\\text{and} \\:d=6.}&{a_{n}=a_{1}+(n-1) d} \\\\ {\\text{Substitute in the values.}}&{a_{15}=3+(15-1) 6} \\\\{\\text{Simplify.}}& {a_{15}=3+(14) 6} \\\\ {}&{a_{15}=87}\\end{array}\\)\n\nExercise \\(\\PageIndex{5}\\)\n\nFind the twenty-seventh term of a sequence where the first term is \\(7\\) and the common difference is \\(9\\).\n\nAnswer\n\n\\(241\\)\n\nExercise \\(\\PageIndex{6}\\)\n\nFind the eighteenth term of a sequence where the first term is \\(13\\) and the common difference is \\(−7\\).\n\nAnswer\n\n\\(-106\\)\n\nSometimes we do not know the first term and we must use other given information to find it before we find the requested term.\n\nExample \\(\\PageIndex{4}\\)\n\nFind the twelfth term of a sequence where the seventh term is \\(10\\) and the common difference is \\(−2\\). Give the formula for the general term.\n\nSolution:\n\nTo first find the first term, \\(a_{1}\\), use the formula with \\(a_{7}=10\\),\\(n=7\\), and \\(d=−2\\). Substitute in the values. Simplify.\n\n\\(a_{n}=a_{1}+(n-1) d\\)\n\n\\(10=a_{1}+(7-1)(-2)\\)\n\n\\(10=a_{1}+(6)(-2)\\)\n\n\\(10=a_{1}-12\\)\n\n\\(a_{1}=22\\)\n\nFind the twelfth term, \\(a_{12}\\),using the formula with \\(a_{1}=22\\), \\(n=12\\), and \\(d=-2\\). Substitute in the values. Simplify.\n\n\\(a_{n}=a_{1}+(n-1) d\\)\n\n\\(a_{12}=22+(12-1)(-2)\\)\n\n\\(a_{12}=22+(11)(-2)\\)\n\n\\(a_{12}=0\\)\n\nThe twelfth term of the sequence is \\(0, a_{12}=0\\)\n\nTo find the general term, substitute the values into the formula.\n\n\\(a_{n}=a_{1}+(n-1) d\\)\n\n\\(a_{n}=22+(n-1)(-2)\\)\n\n\\(a_{n}=22-2 n+2\\)\n\nAnswer:\n\nThe general term is \\(a_{n}=-2 n+24\\)\n\nExercise \\(\\PageIndex{7}\\)\n\nFind the eleventh term of a sequence where the ninth term is \\(8\\) and the common difference is \\(−3\\). Give the formula for the general term.\n\nAnswer\n\n\\(a_{11}=2 .\\) The general term is \\(a_{n}=-3 n+35\\)\n\nExercise \\(\\PageIndex{8}\\)\n\nFind the nineteenth term of a sequence where the fifth term is \\(1\\) and the common difference is \\(−4\\).Give the formula for the general term.\n\nAnswer\n\n\\(a_{19}=-55 .\\) The general term is \\(a_{n}=-4 n+21\\)\n\nSometimes the information given leads us to two equations in two unknowns. We then use our methods for solving systems of equations to find the values needed.\n\nExample \\(\\PageIndex{5}\\)\n\nFind the first term and common difference of a sequence where the fifth term is \\(19\\) and the eleventh term is \\(37\\). Give the formula for the general term.\n\nSolution:\n\nSince we know two terms, we can make a system of equations using the formula for the general term.\n\n[Figure: .]\n\n            We know the value of \\(a_{5}\\) and \\(a_{11}\\), so we will use \\(n=5\\) and \\(n=11\\).\t\n\n[Figure: .]\n\n            Substitute in the values, \\(a_{5}=19\\) and \\(a_{11}=37\\).\t\n\n[Figure: .]\n\n            Simplify.\t\n\n[Figure: .]\n\n            Prepare to eliminate the \\(a_{1}\\) term by multiplying the top equation by \\(−1\\).\n\n            Add the equations.\t\n\n[Figure: .]\n\n            Substituting \\(d=3\\) back into the first equation.\t\n\n[Figure: .]\n\n            Solve for \\(a_{1}\\).\t\n\n[Figure: .]\n\n            Use the formula with \\(a_{1}=7\\) and \\(d=3\\).\t\n\n[Figure: .]\n\n            Substitute in the values.\t\n\n[Figure: .]\n\n            Simplify.\t\n\n[Figure: .]\n\n            The first term is \\(a_{1}=7\\).\n\n            The common difference is \\(d=3\\).\t\n\n            The general term of the sequence is \\(a_{n}=3n+4\\).\t\n\nTable 12.2.1\n\nAnswer:\n\nThe general term of the sequence is \\(a_{n}=3n+4\\).\n\nExercise \\(\\PageIndex{9}\\)\n\nFind the first term and common difference of a sequence where the fourth term is \\(17\\) and the thirteenth term is \\(53\\). Give the formula for the general term.\n\nAnswer\n\n\\(a_{1}=5, d=4 .\\) The general term is \\(a_{n}=4 n+1\\).\n\nExercise \\(\\PageIndex{10}\\)\n\nFind the first term and common difference of a sequence where the third term is \\(2\\) and the twelfth term is \\(−25\\). Give the formula for the general term.\n\nAnswer\n\n\\(a_{1}=8, d=-3 .\\) The general term is \\(a_{n}=-3 n+11\\).\n\nFind the Sum of the First \\(n\\) Terms of an Arithmetic Sequence\n\nAs with the general sequences, it is often useful to find the sum of an arithmetic sequence. The sum, \\(S_{n}\\), of the first \\(n\\) terms of any arithmetic sequence is written as \\(S_{n} =a_{1} +a_{2} +a_{3} +\\ldots +a_{n}\\). To find the sum by merely adding all the terms can be tedious. So we can also develop a formula to find the sum of a sequence using the first and last term of the sequence.\n\nWe can develop this new formula by first writing the sum by starting with the first term, \\(a_{1}\\), and keep adding a \\(d\\) to get the next term as:\n\n\\(S_{n}=a_{1}+\\left(a_{1}+d\\right)+\\left(a_{1}+2 d\\right)+\\ldots+a_{n}\\).\n\nWe can also reverse the order of the terms and write the sum by starting with \\(a_{n}\\) and keep subtracting \\(d\\) to get the next term as\n\n\\(S_{n}=a_{n}+\\left(a_{n}-d\\right)+\\left(a_{n}-2 d\\right)+\\ldots+a_{1}\\).\n\nIf we add these two expressions for the sum of the first \\(n\\) terms of an arithmetic sequence, we can derive a formula for the sum of the first \\(n\\) terms of any arithmetic series.\n\n\\(\\begin{aligned} &S_{n}= a_{1} \\quad+\\left(a_{1}+d\\right)+\\left(a_{1}+2 d\\right)+\\ldots+a_{n} \\\\+&S_{n} =a_{n} \\quad+\\left(a_{n}-d\\right)+\\left(a_{n}-2 d\\right)+\\ldots+a_{1} \\\\ \\hline \\\\ &2S_{n}=(a_{1}+a_{n})+(a_{1}+a_{n})+(a_{1}+a_{n})+\\dots+(a_{1}+a_{n}) \\end{aligned}\\)\n\nBecause there are \\(n\\) sums of \\((a_{1}+a_{n})\\) on the right side of the equation, we rewrite the right side as \\(n(a_{1}+a_{n})\\).\n\n\\(2 S_{n}=n\\left(a_{1}+a_{n}\\right)\\)\n\nWe divide by two to solve for \\(S_{n}\\).\n\n\\(S_{n}=\\frac{n}{2}\\left(a_{1}+a_{n}\\right)\\)\n\nThis give us a general formula for the sum of the first \\(n\\) terms of an arithmetic sequence.\n\nDefinition \\(\\PageIndex{3}\\)\n\nThe sum, \\(S_{n}\\), of the first \\(n\\) terms of an arithmetic sequence is\n\n\\(S_{n}=\\frac{n}{2}\\left(a_{1}+a_{n}\\right)\\)\n\nwhere \\(a_{1}\\) is the first term and \\(a_{n}\\) is the \\(n\\)th term.\n\nWe apply this formula in the next example where the first few terms of the sequence are given.\n\nExample \\(\\PageIndex{6}\\)\n\nFind the sum of the first \\(30\\) terms of the arithmetic sequence: \\(8, 13, 18, 23, 28, …\\)\n\nSolution:\n\nTo find the sum, we will use the formula \\(S_{n}=\\frac{n}{2}\\left(a_{1}+a_{n}\\right)\\). We know \\(a_{1}=8, d=5\\) and \\(n=30\\), but we need to find \\(a_{n}\\) in order to use the sum formula.\n\nFind \\(a_{n}\\) where \\(a_{1}=8, d=5\\) and \\(n=30\\). Simplify.\n\n\\(\\begin{aligned} a_{n} &=a_{1}+(n-1) d \\\\ a_{30} &=8+(30-1) 5 \\\\ a_{30} &=8+(29) 5 \\\\ a_{30} &=153 \\end{aligned}\\)\n\nKnowing \\(a_{1}=8, n=30\\), and \\(a_{30}=153\\), use the sum formula. Substitute in the values. Simplify. Simplify.\n\n\\(\\begin{aligned} S_{n} &=\\frac{n}{2}\\left(a_{1}+a_{n}\\right) \\\\ S_{30} &=\\frac{30}{2}(8+153) \\\\ S_{30} &=15(161) \\\\ S_{30} &=2,415 \\end{aligned}\\)\n\nExercise \\(\\PageIndex{11}\\)\n\nFind the sum of the first \\(30\\) terms of the arithmetic sequence: \\(5, 9, 13, 17, 21, …\\)\n\nAnswer\n\n\\(1,890\\)\n\nExercise \\(\\PageIndex{12}\\)\n\nFind the sum of the first \\(30\\) terms of the arithmetic sequence: \\(7, 10, 13, 16, 19, …\\)\n\nAnswer\n\n\\(1,515\\)\n\nIn the next example, we are given the general term for the sequence and are asked to find the sum of the first \\(50\\) terms.\n\nExample \\(\\PageIndex{7}\\)\n\nFind the sum of the first \\(50\\) terms of the arithmetic sequence whose general term is \\(a_{n}=3n−4\\).\n\nSolution:\n\nTo find the sum, we will use the formula \\(S_{n}=\\frac{n}{2}\\left(a_{1}+a_{n}\\right)\\). We know \\(n=50\\), but we need to find \\(a_{1}\\) and \\(a_{n}\\) in order to use the sum formula.\n\n[Figure: .]\n\n            Find \\(a_{1}\\), by substituting \\(n=1\\).\t\n\n[Figure: .]\n\n            Find \\(a_{n}\\) by substituting \\(n=50\\).\t\n\n[Figure: .]\n\n            Simplify.\t\n\n[Figure: .]\n\n            Knowing \\(n=50, a_{1}=−1,\\) and \\(a_{50}=146\\) use the sum formula.\t\n\n[Figure: .]\n\n            Substitute in the values.\t\n\n[Figure: .]\n\n            Simplify.\t\n\n[Figure: .]\n\n            Simplify.\t\n\n[Figure: .]\n\nTable 12.2.2\n\nExercise \\(\\PageIndex{13}\\)\n\nFind the sum of the first \\(50\\) terms of the arithmetic sequence whose general term is \\(a_{n}=2n−5\\).\n\nAnswer\n\n\\(2,300\\)\n\nExercise \\(\\PageIndex{14}\\)\n\nFind the sum of the first \\(50\\) terms of the arithmetic sequence whose general term is \\(a_{n}=4n+3\\).\n\nAnswer\n\n\\(5,250\\)\n\nIn the next example we are given the sum in summation notation. To add all the terms would be tedious, so we extract the information needed to use the formula to find the sum of the first \\(n\\) terms.\n\nExample \\(\\PageIndex{8}\\)\n\nFind the sum: \\(\\sum_{i=1}^{25}(4 i+7)\\).\n\nSolution:\n\nTo find the sum, we will use the formula \\(S_{n}=\\frac{n}{2}\\left(a_{1}+a_{n}\\right)\\). We know \\(n=25\\), but we need to find \\(a_{1}\\) and \\(a_{n}\\) in order to use the sum formula.\n\n            Expand the summation notation.\t\n\n[Figure: .]\n\nFigure 12.2.21\n\n            Simplify.\t\n\n[Figure: .]\n\nFigure 12.2.22\n\n            Identify \\(a_{1}\\).\t\n\n[Figure: .]\n\n            Identify \\(a_{25}\\).\t\n\n[Figure: .]\n\nFigure 12.2.24\n\n            Knowing \\(n=25, a_{1}=11\\), and \\(a_{25} = 107\\) use the sum formula.\t\n\n[Figure: .]\n\n            Substitute in the values.\t\n\n[Figure: .]\n\n            Simplify.\t\n\n[Figure: .]\n\n            Simplify.\t\n\n[Figure: .]\n\nTable 12.2.3\n\nExercise \\(\\PageIndex{15}\\)\n\nFind the sum: \\(\\sum_{i=1}^{30}(6 i-4)\\).\n\nAnswer\n\n\\(2,670\\)\n\nExercise \\(\\PageIndex{16}\\)\n\nFind the sum: \\(\\sum_{i=1}^{35}(5 i-3)\\).\n\nAnswer\n\n\\(3,045\\)\n\nAccess these online resources for additional instruction and practice with arithmetic sequences\n\nArithmetic Sequences\n\nArithmetic Sequences: A Formula for the ‘n-th’ Term\n\nArithmetic Series\n\nKey Concepts\n\nGeneral Term (\\(n\\)th term) of an Arithmetic Sequence\n\n    The general term of an arithmetic sequence with first term \\(a_{1}\\) and the common difference \\(d\\) is\n\n\\(a_{n}=a_{1}+(n-1) d\\)\n\nSum of the First \\(n\\) Terms of an Arithmetic Sequence\n\n    The sum, \\(S_{n}\\), of the first \\\\(n\\) terms of an arithmetic sequence, where \\(a_{1}\\) is the first term and \\(a_{n}\\) is the \\(n\\)th term is\n\n\\(S_{n}=\\frac{n}{2}\\left(a_{1}+a_{n}\\right)\\)\n\nGlossary\n\narithmetic sequence\n\nAn arithmetic sequence is a sequence where the difference between consecutive terms is constant.\n\ncommon difference\n\nThe difference between consecutive terms in an arithmetic sequence, \\(a_{n}−a_{n−1}\\), is \\(d\\), the common difference, for \\(n\\) greater than or equal to two.\n\nThis page titled 12.3: Arithmetic Sequences was last modified on Mon, 14 Feb 2022 01:06:51 GMT and is shared under a CC BY  4.0  license and was authored, remixed, and/or curated by OpenStax via source content that was edited to the style and standards of the LibreTexts platform.",
+  "figures": [
+    {
+      "url": "https://math.libretexts.org/@api/deki/files/21061/05a967b867629b7e30f983760383afd6affe505d?revision=1",
+      "alt": "This figure has two rows and three columns. The first row reads “7”, “10”,”13”, “16”, “19”, “22”, and an ellipsis, “10 minus 7, divided by 3”, “13 minus 10, divided by 3”, “16 minus 13, divided by 3”, nth term equals nth term minus 1 divided by d”",
+      "credit": ""
+    },
+    {
+      "url": "https://math.libretexts.org/@api/deki/files/21079/CNX_IntAlg_Figure_12_02_002_img.jpg?revision=1",
+      "alt": "This figures shows an image of a sequence.",
+      "credit": ""
+    },
+    {
+      "url": "https://math.libretexts.org/@api/deki/files/21077/CNX_IntAlg_Figure_12_02_003a_img.jpg?revision=1",
+      "alt": ".",
+      "credit": ""
+    },
+    {
+      "url": "https://math.libretexts.org/@api/deki/files/21193/CNX_IntAlg_Figure_12_02_003b_img.jpg?revision=1",
+      "alt": ".",
+      "credit": ""
+    },
+    {
+      "url": "https://math.libretexts.org/@api/deki/files/21065/CNX_IntAlg_Figure_12_02_003c_img.jpg?revision=1",
+      "alt": ".",
+      "credit": ""
+    },
+    {
+      "url": "https://math.libretexts.org/@api/deki/files/21060/CNX_IntAlg_Figure_12_02_003d_img.jpg?revision=1",
+      "alt": ".",
+      "credit": ""
+    },
+    {
+      "url": "https://math.libretexts.org/@api/deki/files/21059/CNX_IntAlg_Figure_12_02_003e_img.jpg?revision=1",
+      "alt": ".",
+      "credit": ""
+    },
+    {
+      "url": "https://math.libretexts.org/@api/deki/files/21112/CNX_IntAlg_Figure_12_02_003g_img.jpg?revision=1",
+      "alt": ".",
+      "credit": ""
+    },
+    {
+      "url": "https://math.libretexts.org/@api/deki/files/21151/CNX_IntAlg_Figure_12_02_003h_img.jpg?revision=1",
+      "alt": ".",
+      "credit": ""
+    },
+    {
+      "url": "https://math.libretexts.org/@api/deki/files/21110/CNX_IntAlg_Figure_12_02_003i_img.jpg?revision=1",
+      "alt": ".",
+      "credit": ""
+    },
+    {
+      "url": "https://math.libretexts.org/@api/deki/files/21099/CNX_IntAlg_Figure_12_02_003j_img.jpg?revision=1",
+      "alt": ".",
+      "credit": ""
+    },
+    {
+      "url": "https://math.libretexts.org/@api/deki/files/21100/CNX_IntAlg_Figure_12_02_003k_img.jpg?revision=1",
+      "alt": ".",
+      "credit": ""
+    },
+    {
+      "url": "https://math.libretexts.org/@api/deki/files/21237/CNX_IntAlg_Figure_12_02_004a_img.jpg?revision=1",
+      "alt": ".",
+      "credit": ""
+    },
+    {
+      "url": "https://math.libretexts.org/@api/deki/files/21122/CNX_IntAlg_Figure_12_02_004b_img.jpg?revision=1",
+      "alt": ".",
+      "credit": ""
+    },
+    {
+      "url": "https://math.libretexts.org/@api/deki/files/21168/CNX_IntAlg_Figure_12_02_004c_img.jpg?revision=1",
+      "alt": ".",
+      "credit": ""
+    },
+    {
+      "url": "https://math.libretexts.org/@api/deki/files/21108/CNX_IntAlg_Figure_12_02_004d_img.jpg?revision=1",
+      "alt": ".",
+      "credit": ""
+    },
+    {
+      "url": "https://math.libretexts.org/@api/deki/files/21160/CNX_IntAlg_Figure_12_02_004e_img.jpg?revision=1",
+      "alt": ".",
+      "credit": ""
+    },
+    {
+      "url": "https://math.libretexts.org/@api/deki/files/21198/CNX_IntAlg_Figure_12_02_004f_img.jpg?revision=1",
+      "alt": ".",
+      "credit": ""
+    },
+    {
+      "url": "https://math.libretexts.org/@api/deki/files/21130/CNX_IntAlg_Figure_12_02_004g_img.jpg?revision=1",
+      "alt": ".",
+      "credit": ""
+    },
+    {
+      "url": "https://math.libretexts.org/@api/deki/files/35876/CNX_IntAlg_Figure_12_02_004h_img.jpg?revision=1",
+      "alt": ".",
+      "credit": ""
+    },
+    {
+      "url": "https://math.libretexts.org/@api/deki/files/21285/CNX_IntAlg_Figure_12_02_005a_img.jpg?revision=1",
+      "alt": ".",
+      "credit": ""
+    },
+    {
+      "url": "https://math.libretexts.org/@api/deki/files/21211/CNX_IntAlg_Figure_12_02_005b_img.jpg?revision=1",
+      "alt": ".",
+      "credit": ""
+    },
+    {
+      "url": "https://math.libretexts.org/@api/deki/files/21214/CNX_IntAlg_Figure_12_02_005c_img.jpg?revision=1",
+      "alt": ".",
+      "credit": ""
+    },
+    {
+      "url": "https://math.libretexts.org/@api/deki/files/21287/CNX_IntAlg_Figure_12_02_005d_img.jpg?revision=1",
+      "alt": ".",
+      "credit": ""
+    },
+    {
+      "url": "https://math.libretexts.org/@api/deki/files/21344/CNX_IntAlg_Figure_12_02_005e_img.jpg?revision=1",
+      "alt": ".",
+      "credit": ""
+    },
+    {
+      "url": "https://math.libretexts.org/@api/deki/files/21389/CNX_IntAlg_Figure_12_02_005f_img.jpg?revision=1",
+      "alt": ".",
+      "credit": ""
+    },
+    {
+      "url": "https://math.libretexts.org/@api/deki/files/21246/CNX_IntAlg_Figure_12_02_005g_img.jpg?revision=1",
+      "alt": ".",
+      "credit": ""
+    },
+    {
+      "url": "https://math.libretexts.org/@api/deki/files/21321/CNX_IntAlg_Figure_12_02_005h_img.jpg?revision=1",
+      "alt": ".",
+      "credit": ""
+    }
+  ],
+  "references": [
+    {
+      "text": "Arithmetic Sequences",
+      "url": "https://openstax.org/l/37ArithSequenc"
+    },
+    {
+      "text": "Arithmetic Sequences: A Formula for the ‘n-th’ Term",
+      "url": "https://openstax.org/l/37AritSeqnthter"
+    },
+    {
+      "text": "Arithmetic Series",
+      "url": "https://openstax.org/l/37ArithSeries"
+    },
+    {
+      "text": "12.3: Arithmetic Sequences",
+      "url": "https://math.libretexts.org/Bookshelves/Algebra/Intermediate_Algebra_1e_(OpenStax)/12%3A_Sequences_Series_and_Binomial_Theorem/12.03%3A_Arithmetic_Sequences"
+    },
+    {
+      "text": "CC BY  4.0",
+      "url": "https://creativecommons.org/licenses/by/4.0"
+    },
+    {
+      "text": "OpenStax",
+      "url": "https://openstax.org/"
+    },
+    {
+      "text": "source content",
+      "url": "https://openstax.org/details/books/intermediate-algebra-2e"
+    }
+  ],
+  "exercises": [
+    {
+      "ordinal": 1,
+      "sourceNumber": "1",
+      "sourceAnchor": "",
+      "kind": "exercise-candidate",
+      "context": "By the end of this section, you will be able to:\n\nBefore you get started, take this readiness quiz.",
+      "original": "1. Evaluate \\(4n−1\\) for the integers \\(1, 2, 3\\), and \\(4\\).\n\n    If you missed this problem, review Example 1.6.",
+      "prompt": "1. Evaluate \\(4n−1\\) for the integers \\(1, 2, 3\\), and \\(4\\).\n\n    If you missed this problem, review Example 1.6.",
+      "sourceAnswers": [],
+      "hasFigure": false,
+      "status": "draft",
+      "answerVerified": false,
+      "translationStatus": "pending",
+      "mappingStatus": "pending"
+    },
+    {
+      "ordinal": 2,
+      "sourceNumber": "2",
+      "sourceAnchor": "",
+      "kind": "exercise-candidate",
+      "context": "By the end of this section, you will be able to:\n\nBefore you get started, take this readiness quiz.",
+      "original": "2. Solve the system of equations: \\(\\left\\{\\begin{array}{l}{x+y=7} \\\\ {3 x+4 y=23}\\end{array}\\right.\\).\n\n    If you missed this problem, review Example 4.9.",
+      "prompt": "2. Solve the system of equations: \\(\\left\\{\\begin{array}{l}{x+y=7} \\\\ {3 x+4 y=23}\\end{array}\\right.\\).\n\n    If you missed this problem, review Example 4.9.",
+      "sourceAnswers": [],
+      "hasFigure": false,
+      "status": "draft",
+      "answerVerified": false,
+      "translationStatus": "pending",
+      "mappingStatus": "pending"
+    },
+    {
+      "ordinal": 3,
+      "sourceNumber": "3",
+      "sourceAnchor": "",
+      "kind": "exercise-candidate",
+      "context": "By the end of this section, you will be able to:\n\nBefore you get started, take this readiness quiz.",
+      "original": "3. If \\(f(n)=\\frac{n}{2}(3 n+5)\\), find \\(f(1)+f(20)\\).\n\n    If you missed this problem, review Example 3.49.",
+      "prompt": "3. If \\(f(n)=\\frac{n}{2}(3 n+5)\\), find \\(f(1)+f(20)\\).\n\n    If you missed this problem, review Example 3.49.",
+      "sourceAnswers": [],
+      "hasFigure": false,
+      "status": "draft",
+      "answerVerified": false,
+      "translationStatus": "pending",
+      "mappingStatus": "pending"
+    },
+    {
+      "ordinal": 4,
+      "sourceNumber": "",
+      "sourceAnchor": "",
+      "kind": "example-or-exercise",
+      "context": "An arithmetic sequence is a sequence where the difference between consecutive terms is constant. The difference between consecutive terms in an arithmetic sequence, a_{n}-a_{n-1}, is \\(d\\), the common difference, for \\(n\\) greater than or equal to two.\n\nAn arithmetic sequence is a sequence where the difference between consecutive terms is always the same.\n\nThe difference between consecutive terms, a_{n}-a_{n-1}, is \\(d\\), the common difference, for \\(n\\) greater than or equal to two.",
+      "original": "Example \\(\\PageIndex{1}\\)\n\nDetermine if each sequence is arithmetic. If so, indicate the common difference.\n\n1. \\(5,9,13,17,21,25, \\dots\\)\n\n2. \\(4,9,12,17,20,25, \\dots\\)\n\n3. \\(10,3,-4,-11,-18,-25, \\dots\\)\n\nSolution:\n\nTo determine if the sequence is arithmetic, we find the difference of the consecutive terms shown.\n\na. \\(\\begin{array}{cccccc}{5,} & {9,} & {13,} & {17} & {21,} & {25, \\ldots} \\\\ {\\text { Find the difference of the consecutive terms.}} & {9-5} & {13-9} & {17-13} & {21-17} & {25-21} \\\\ & {4} & {4} & {4} & {4}&{4}\\end{array}\\)\n\nThe sequence is arithmetic. The common difference is \\(d=4\\).\n\nb. \\(\\begin{array}{cccccc}{4,} & {9,} & {12,} & {17} & {20,} & {25, \\ldots} \\\\ {\\text { Find the difference of the consecutive terms.}} & {9-4} & {12-9} & {17-12} & {20-17} & {25-20} \\\\ & {2} & {3} & {5} & {3}&{5}\\end{array}\\)\n\nThe sequence is not arithmetic as all the differences between the consecutive terms are not the same. There is no common difference.\n\nc. \\(\\begin{array}{cccccc}{10,} & {3,} & {-4,} & {-11} & {-18,} & {-25, \\ldots} \\\\ {\\text { Find the difference of the consecutive terms.}} & {3-10} & {-4-3} & {-11-(-4)} & {-18-(-11)} & {-25-(-18)} \\\\ & {-7} & {-7} & {-7} & {-7}&{-7}\\end{array}\\)\n\nAnswer:\n\nThe sequence is arithmetic. The common difference is \\(d=-7\\).",
+      "prompt": "Example \\(\\PageIndex{1}\\)\n\nDetermine if each sequence is arithmetic. If so, indicate the common difference.\n\n1. \\(5,9,13,17,21,25, \\dots\\)\n\n2. \\(4,9,12,17,20,25, \\dots\\)\n\n3. \\(10,3,-4,-11,-18,-25, \\dots\\)\n\nSolution:\n\nTo determine if the sequence is arithmetic, we find the difference of the consecutive terms shown.\n\na. \\(\\begin{array}{cccccc}{5,} & {9,} & {13,} & {17} & {21,} & {25, \\ldots} \\\\ {\\text { Find the difference of the consecutive terms.}} & {9-5} & {13-9} & {17-13} & {21-17} & {25-21} \\\\ & {4} & {4} & {4} & {4}&{4}\\end{array}\\)\n\nThe sequence is arithmetic. The common difference is \\(d=4\\).\n\nb. \\(\\begin{array}{cccccc}{4,} & {9,} & {12,} & {17} & {20,} & {25, \\ldots} \\\\ {\\text { Find the difference of the consecutive terms.}} & {9-4} & {12-9} & {17-12} & {20-17} & {25-20} \\\\ & {2} & {3} & {5} & {3}&{5}\\end{array}\\)\n\nThe sequence is not arithmetic as all the differences between the consecutive terms are not the same. There is no common difference.\n\nc. \\(\\begin{array}{cccccc}{10,} & {3,} & {-4,} & {-11} & {-18,} & {-25, \\ldots} \\\\ {\\text { Find the difference of the consecutive terms.}} & {3-10} & {-4-3} & {-11-(-4)} & {-18-(-11)} & {-25-(-18)} \\\\ & {-7} & {-7} & {-7} & {-7}&{-7}\\end{array}\\)\n\nAnswer:\n\nThe sequence is arithmetic. The common difference is \\(d=-7\\).",
+      "sourceAnswers": [],
+      "hasFigure": false,
+      "status": "draft",
+      "answerVerified": false,
+      "translationStatus": "pending",
+      "mappingStatus": "pending"
+    },
+    {
+      "ordinal": 5,
+      "sourceNumber": "",
+      "sourceAnchor": "",
+      "kind": "exercise-candidate",
+      "context": "An arithmetic sequence is a sequence where the difference between consecutive terms is constant. The difference between consecutive terms in an arithmetic sequence, a_{n}-a_{n-1}, is \\(d\\), the common difference, for \\(n\\) greater than or equal to two.\n\nAn arithmetic sequence is a sequence where the difference between consecutive terms is always the same.\n\nThe difference between consecutive terms, a_{n}-a_{n-1}, is \\(d\\), the common difference, for \\(n\\) greater than or equal to two.",
+      "original": "Exercise \\(\\PageIndex{1}\\)\n\nDetermine if each sequence is arithmetic. If so, indicate the common difference.\n\n1. \\(9,20,31,42,53,64, \\dots\\)\n\n2. \\(12,6,0,-6,-12,-18, \\dots\\)\n\n3. \\(7,1,10,4,13,7, \\dots\\)\n\nAnswer\n\n1. The sequence is arithmetic with common difference \\(d=11\\).\n\n2. The sequence is arithmetic with common difference \\(d=-6\\).\n\n3. The sequence is not arithmetic as all the differences between the consecutive terms are not the same.",
+      "prompt": "Exercise \\(\\PageIndex{1}\\)\n\nDetermine if each sequence is arithmetic. If so, indicate the common difference.\n\n1. \\(9,20,31,42,53,64, \\dots\\)\n\n2. \\(12,6,0,-6,-12,-18, \\dots\\)\n\n3. \\(7,1,10,4,13,7, \\dots\\)",
+      "sourceAnswers": [
+        "1. The sequence is arithmetic with common difference \\(d=11\\).\n\n2. The sequence is arithmetic with common difference \\(d=-6\\).\n\n3. The sequence is not arithmetic as all the differences between the consecutive terms are not the same."
+      ],
+      "hasFigure": false,
+      "status": "draft",
+      "answerVerified": false,
+      "translationStatus": "pending",
+      "mappingStatus": "pending"
+    },
+    {
+      "ordinal": 6,
+      "sourceNumber": "",
+      "sourceAnchor": "",
+      "kind": "exercise-candidate",
+      "context": "An arithmetic sequence is a sequence where the difference between consecutive terms is constant. The difference between consecutive terms in an arithmetic sequence, a_{n}-a_{n-1}, is \\(d\\), the common difference, for \\(n\\) greater than or equal to two.\n\nAn arithmetic sequence is a sequence where the difference between consecutive terms is always the same.\n\nThe difference between consecutive terms, a_{n}-a_{n-1}, is \\(d\\), the common difference, for \\(n\\) greater than or equal to two.",
+      "original": "Exercise \\(\\PageIndex{2}\\)\n\nDetermine if each sequence is arithmetic. If so, indicate the common difference.\n\n1. \\(-4,4,2,10,8,16, \\dots\\)\n\n2. \\(-3,-1,1,3,5,7, \\dots\\)\n\n3. \\(7,2,-3,-8,-13,-18, \\dots\\)\n\nAnswer\n\n1. The sequence is not arithmetic as all the differences between the consecutive terms are not the same.\n\n2. The sequence is arithmetic with common difference \\(d=2\\).\n\n3. The sequence is arithmetic with common difference \\(d=−5\\).",
+      "prompt": "Exercise \\(\\PageIndex{2}\\)\n\nDetermine if each sequence is arithmetic. If so, indicate the common difference.\n\n1. \\(-4,4,2,10,8,16, \\dots\\)\n\n2. \\(-3,-1,1,3,5,7, \\dots\\)\n\n3. \\(7,2,-3,-8,-13,-18, \\dots\\)",
+      "sourceAnswers": [
+        "1. The sequence is not arithmetic as all the differences between the consecutive terms are not the same.\n\n2. The sequence is arithmetic with common difference \\(d=2\\).\n\n3. The sequence is arithmetic with common difference \\(d=−5\\)."
+      ],
+      "hasFigure": false,
+      "status": "draft",
+      "answerVerified": false,
+      "translationStatus": "pending",
+      "mappingStatus": "pending"
+    },
+    {
+      "ordinal": 7,
+      "sourceNumber": "",
+      "sourceAnchor": "",
+      "kind": "example-or-exercise",
+      "context": "An arithmetic sequence is a sequence where the difference between consecutive terms is always the same.\n\nThe difference between consecutive terms, a_{n}-a_{n-1}, is \\(d\\), the common difference, for \\(n\\) greater than or equal to two.\n\nIf we know the first term, \\(a_{1}\\), and the common difference, \\(d\\), we can list a finite number of terms of the sequence.",
+      "original": "Example \\(\\PageIndex{2}\\)\n\nWrite the first five terms of the sequence where the first term is \\(5\\) and the common difference is \\(d=−6\\).\n\nSolution:\n\nWe start with the first term and add the common difference. Then we add the common difference to that result to get the next term, and so on.\n\n\\(\\begin{array}{cccc}{a_{1}} & {a_{2}} & {a_{3}} & {a_{4}} & {a_{5}} \\\\ {5} & {5+(-6)} & {-1+(-6)} & {-7+(-6)} & {-13+(-6)} \\\\ {}&{-1} & {-7} & {-13} & {-19}\\end{array}\\)\n\nAnswer:\n\nThe sequence is \\(5,-1,-7,-13,-19, \\dots\\)",
+      "prompt": "Example \\(\\PageIndex{2}\\)\n\nWrite the first five terms of the sequence where the first term is \\(5\\) and the common difference is \\(d=−6\\).\n\nSolution:\n\nWe start with the first term and add the common difference. Then we add the common difference to that result to get the next term, and so on.\n\n\\(\\begin{array}{cccc}{a_{1}} & {a_{2}} & {a_{3}} & {a_{4}} & {a_{5}} \\\\ {5} & {5+(-6)} & {-1+(-6)} & {-7+(-6)} & {-13+(-6)} \\\\ {}&{-1} & {-7} & {-13} & {-19}\\end{array}\\)\n\nAnswer:\n\nThe sequence is \\(5,-1,-7,-13,-19, \\dots\\)",
+      "sourceAnswers": [],
+      "hasFigure": false,
+      "status": "draft",
+      "answerVerified": false,
+      "translationStatus": "pending",
+      "mappingStatus": "pending"
+    },
+    {
+      "ordinal": 8,
+      "sourceNumber": "",
+      "sourceAnchor": "",
+      "kind": "exercise-candidate",
+      "context": "An arithmetic sequence is a sequence where the difference between consecutive terms is always the same.\n\nThe difference between consecutive terms, a_{n}-a_{n-1}, is \\(d\\), the common difference, for \\(n\\) greater than or equal to two.\n\nIf we know the first term, \\(a_{1}\\), and the common difference, \\(d\\), we can list a finite number of terms of the sequence.",
+      "original": "Exercise \\(\\PageIndex{3}\\)\n\nWrite the first five terms of the sequence where the first term is \\(7\\) and the common difference is \\(d=−4\\).\n\nAnswer\n\n\\(7,3,-1,-5,-9, \\dots\\)",
+      "prompt": "Exercise \\(\\PageIndex{3}\\)\n\nWrite the first five terms of the sequence where the first term is \\(7\\) and the common difference is \\(d=−4\\).",
+      "sourceAnswers": [
+        "\\(7,3,-1,-5,-9, \\dots\\)"
+      ],
+      "hasFigure": false,
+      "status": "draft",
+      "answerVerified": false,
+      "translationStatus": "pending",
+      "mappingStatus": "pending"
+    },
+    {
+      "ordinal": 9,
+      "sourceNumber": "",
+      "sourceAnchor": "",
+      "kind": "exercise-candidate",
+      "context": "An arithmetic sequence is a sequence where the difference between consecutive terms is always the same.\n\nThe difference between consecutive terms, a_{n}-a_{n-1}, is \\(d\\), the common difference, for \\(n\\) greater than or equal to two.\n\nIf we know the first term, \\(a_{1}\\), and the common difference, \\(d\\), we can list a finite number of terms of the sequence.",
+      "original": "Exercise \\(\\PageIndex{4}\\)\n\nWrite the first five terms of the sequence where the first term is \\(11\\) and the common difference is \\(d=−8\\).\n\nAnswer\n\n\\(11,3,-5,-13,-21, \\dots\\)",
+      "prompt": "Exercise \\(\\PageIndex{4}\\)\n\nWrite the first five terms of the sequence where the first term is \\(11\\) and the common difference is \\(d=−8\\).",
+      "sourceAnswers": [
+        "\\(11,3,-5,-13,-21, \\dots\\)"
+      ],
+      "hasFigure": false,
+      "status": "draft",
+      "answerVerified": false,
+      "translationStatus": "pending",
+      "mappingStatus": "pending"
+    },
+    {
+      "ordinal": 10,
+      "sourceNumber": "",
+      "sourceAnchor": "",
+      "kind": "example-or-exercise",
+      "context": "The general term of an arithmetic sequence with first term \\(a_{1}\\) and the common difference \\(d\\) is\n\n\\(a_{n}=a_{1}+(n-1) d\\)\n\nWe will use this formula in the next example to find the 15^(th) term of a sequence.",
+      "original": "Example \\(\\PageIndex{3}\\)\n\nFind the fifteenth term of a sequence where the first term is \\(3\\) and the common difference is \\(6\\).\n\nSolution:\n\n\\(\\begin{array}{cc}{\\text{To find the fifteenth term, }a_{15}\\text{, use the formula with } a_{1}=3 \\:\\text{and} \\:d=6.}&{a_{n}=a_{1}+(n-1) d} \\\\ {\\text{Substitute in the values.}}&{a_{15}=3+(15-1) 6} \\\\{\\text{Simplify.}}& {a_{15}=3+(14) 6} \\\\ {}&{a_{15}=87}\\end{array}\\)",
+      "prompt": "Example \\(\\PageIndex{3}\\)\n\nFind the fifteenth term of a sequence where the first term is \\(3\\) and the common difference is \\(6\\).\n\nSolution:\n\n\\(\\begin{array}{cc}{\\text{To find the fifteenth term, }a_{15}\\text{, use the formula with } a_{1}=3 \\:\\text{and} \\:d=6.}&{a_{n}=a_{1}+(n-1) d} \\\\ {\\text{Substitute in the values.}}&{a_{15}=3+(15-1) 6} \\\\{\\text{Simplify.}}& {a_{15}=3+(14) 6} \\\\ {}&{a_{15}=87}\\end{array}\\)",
+      "sourceAnswers": [],
+      "hasFigure": false,
+      "status": "draft",
+      "answerVerified": false,
+      "translationStatus": "pending",
+      "mappingStatus": "pending"
+    },
+    {
+      "ordinal": 11,
+      "sourceNumber": "",
+      "sourceAnchor": "",
+      "kind": "exercise-candidate",
+      "context": "The general term of an arithmetic sequence with first term \\(a_{1}\\) and the common difference \\(d\\) is\n\n\\(a_{n}=a_{1}+(n-1) d\\)\n\nWe will use this formula in the next example to find the 15^(th) term of a sequence.",
+      "original": "Exercise \\(\\PageIndex{5}\\)\n\nFind the twenty-seventh term of a sequence where the first term is \\(7\\) and the common difference is \\(9\\).\n\nAnswer\n\n\\(241\\)",
+      "prompt": "Exercise \\(\\PageIndex{5}\\)\n\nFind the twenty-seventh term of a sequence where the first term is \\(7\\) and the common difference is \\(9\\).",
+      "sourceAnswers": [
+        "\\(241\\)"
+      ],
+      "hasFigure": false,
+      "status": "draft",
+      "answerVerified": false,
+      "translationStatus": "pending",
+      "mappingStatus": "pending"
+    },
+    {
+      "ordinal": 12,
+      "sourceNumber": "",
+      "sourceAnchor": "",
+      "kind": "exercise-candidate",
+      "context": "The general term of an arithmetic sequence with first term \\(a_{1}\\) and the common difference \\(d\\) is\n\n\\(a_{n}=a_{1}+(n-1) d\\)\n\nWe will use this formula in the next example to find the 15^(th) term of a sequence.",
+      "original": "Exercise \\(\\PageIndex{6}\\)\n\nFind the eighteenth term of a sequence where the first term is \\(13\\) and the common difference is \\(−7\\).\n\nAnswer\n\n\\(-106\\)",
+      "prompt": "Exercise \\(\\PageIndex{6}\\)\n\nFind the eighteenth term of a sequence where the first term is \\(13\\) and the common difference is \\(−7\\).",
+      "sourceAnswers": [
+        "\\(-106\\)"
+      ],
+      "hasFigure": false,
+      "status": "draft",
+      "answerVerified": false,
+      "translationStatus": "pending",
+      "mappingStatus": "pending"
+    },
+    {
+      "ordinal": 13,
+      "sourceNumber": "",
+      "sourceAnchor": "",
+      "kind": "example-or-exercise",
+      "context": "\\(a_{n}=a_{1}+(n-1) d\\)\n\nWe will use this formula in the next example to find the 15^(th) term of a sequence.\n\nSometimes we do not know the first term and we must use other given information to find it before we find the requested term.",
+      "original": "Example \\(\\PageIndex{4}\\)\n\nFind the twelfth term of a sequence where the seventh term is \\(10\\) and the common difference is \\(−2\\). Give the formula for the general term.\n\nSolution:\n\nTo first find the first term, \\(a_{1}\\), use the formula with \\(a_{7}=10\\),\\(n=7\\), and \\(d=−2\\). Substitute in the values. Simplify.\n\n\\(a_{n}=a_{1}+(n-1) d\\)\n\n\\(10=a_{1}+(7-1)(-2)\\)\n\n\\(10=a_{1}+(6)(-2)\\)\n\n\\(10=a_{1}-12\\)\n\n\\(a_{1}=22\\)\n\nFind the twelfth term, \\(a_{12}\\),using the formula with \\(a_{1}=22\\), \\(n=12\\), and \\(d=-2\\). Substitute in the values. Simplify.\n\n\\(a_{n}=a_{1}+(n-1) d\\)\n\n\\(a_{12}=22+(12-1)(-2)\\)\n\n\\(a_{12}=22+(11)(-2)\\)\n\n\\(a_{12}=0\\)\n\nThe twelfth term of the sequence is \\(0, a_{12}=0\\)\n\nTo find the general term, substitute the values into the formula.\n\n\\(a_{n}=a_{1}+(n-1) d\\)\n\n\\(a_{n}=22+(n-1)(-2)\\)\n\n\\(a_{n}=22-2 n+2\\)\n\nAnswer:\n\nThe general term is \\(a_{n}=-2 n+24\\)",
+      "prompt": "Example \\(\\PageIndex{4}\\)\n\nFind the twelfth term of a sequence where the seventh term is \\(10\\) and the common difference is \\(−2\\). Give the formula for the general term.\n\nSolution:\n\nTo first find the first term, \\(a_{1}\\), use the formula with \\(a_{7}=10\\),\\(n=7\\), and \\(d=−2\\). Substitute in the values. Simplify.\n\n\\(a_{n}=a_{1}+(n-1) d\\)\n\n\\(10=a_{1}+(7-1)(-2)\\)\n\n\\(10=a_{1}+(6)(-2)\\)\n\n\\(10=a_{1}-12\\)\n\n\\(a_{1}=22\\)\n\nFind the twelfth term, \\(a_{12}\\),using the formula with \\(a_{1}=22\\), \\(n=12\\), and \\(d=-2\\). Substitute in the values. Simplify.\n\n\\(a_{n}=a_{1}+(n-1) d\\)\n\n\\(a_{12}=22+(12-1)(-2)\\)\n\n\\(a_{12}=22+(11)(-2)\\)\n\n\\(a_{12}=0\\)\n\nThe twelfth term of the sequence is \\(0, a_{12}=0\\)\n\nTo find the general term, substitute the values into the formula.\n\n\\(a_{n}=a_{1}+(n-1) d\\)\n\n\\(a_{n}=22+(n-1)(-2)\\)\n\n\\(a_{n}=22-2 n+2\\)\n\nAnswer:\n\nThe general term is \\(a_{n}=-2 n+24\\)",
+      "sourceAnswers": [],
+      "hasFigure": false,
+      "status": "draft",
+      "answerVerified": false,
+      "translationStatus": "pending",
+      "mappingStatus": "pending"
+    },
+    {
+      "ordinal": 14,
+      "sourceNumber": "",
+      "sourceAnchor": "",
+      "kind": "exercise-candidate",
+      "context": "\\(a_{n}=a_{1}+(n-1) d\\)\n\nWe will use this formula in the next example to find the 15^(th) term of a sequence.\n\nSometimes we do not know the first term and we must use other given information to find it before we find the requested term.",
+      "original": "Exercise \\(\\PageIndex{7}\\)\n\nFind the eleventh term of a sequence where the ninth term is \\(8\\) and the common difference is \\(−3\\). Give the formula for the general term.\n\nAnswer\n\n\\(a_{11}=2 .\\) The general term is \\(a_{n}=-3 n+35\\)",
+      "prompt": "Exercise \\(\\PageIndex{7}\\)\n\nFind the eleventh term of a sequence where the ninth term is \\(8\\) and the common difference is \\(−3\\). Give the formula for the general term.",
+      "sourceAnswers": [
+        "\\(a_{11}=2 .\\) The general term is \\(a_{n}=-3 n+35\\)"
+      ],
+      "hasFigure": false,
+      "status": "draft",
+      "answerVerified": false,
+      "translationStatus": "pending",
+      "mappingStatus": "pending"
+    },
+    {
+      "ordinal": 15,
+      "sourceNumber": "",
+      "sourceAnchor": "",
+      "kind": "exercise-candidate",
+      "context": "\\(a_{n}=a_{1}+(n-1) d\\)\n\nWe will use this formula in the next example to find the 15^(th) term of a sequence.\n\nSometimes we do not know the first term and we must use other given information to find it before we find the requested term.",
+      "original": "Exercise \\(\\PageIndex{8}\\)\n\nFind the nineteenth term of a sequence where the fifth term is \\(1\\) and the common difference is \\(−4\\).Give the formula for the general term.\n\nAnswer\n\n\\(a_{19}=-55 .\\) The general term is \\(a_{n}=-4 n+21\\)",
+      "prompt": "Exercise \\(\\PageIndex{8}\\)\n\nFind the nineteenth term of a sequence where the fifth term is \\(1\\) and the common difference is \\(−4\\).Give the formula for the general term.",
+      "sourceAnswers": [
+        "\\(a_{19}=-55 .\\) The general term is \\(a_{n}=-4 n+21\\)"
+      ],
+      "hasFigure": false,
+      "status": "draft",
+      "answerVerified": false,
+      "translationStatus": "pending",
+      "mappingStatus": "pending"
+    },
+    {
+      "ordinal": 16,
+      "sourceNumber": "",
+      "sourceAnchor": "",
+      "kind": "example-or-exercise",
+      "context": "We will use this formula in the next example to find the 15^(th) term of a sequence.\n\nSometimes we do not know the first term and we must use other given information to find it before we find the requested term.\n\nSometimes the information given leads us to two equations in two unknowns. We then use our methods for solving systems of equations to find the values needed.",
+      "original": "Example \\(\\PageIndex{5}\\)\n\nFind the first term and common difference of a sequence where the fifth term is \\(19\\) and the eleventh term is \\(37\\). Give the formula for the general term.\n\nSolution:\n\nSince we know two terms, we can make a system of equations using the formula for the general term.\n\n[Figure: .]\n\n            We know the value of \\(a_{5}\\) and \\(a_{11}\\), so we will use \\(n=5\\) and \\(n=11\\).\t\n\n[Figure: .]\n\n            Substitute in the values, \\(a_{5}=19\\) and \\(a_{11}=37\\).\t\n\n[Figure: .]\n\n            Simplify.\t\n\n[Figure: .]\n\n            Prepare to eliminate the \\(a_{1}\\) term by multiplying the top equation by \\(−1\\).\n\n            Add the equations.\t\n\n[Figure: .]\n\n            Substituting \\(d=3\\) back into the first equation.\t\n\n[Figure: .]\n\n            Solve for \\(a_{1}\\).\t\n\n[Figure: .]\n\n            Use the formula with \\(a_{1}=7\\) and \\(d=3\\).\t\n\n[Figure: .]\n\n            Substitute in the values.\t\n\n[Figure: .]\n\n            Simplify.\t\n\n[Figure: .]\n\n            The first term is \\(a_{1}=7\\).\n\n            The common difference is \\(d=3\\).\t\n\n            The general term of the sequence is \\(a_{n}=3n+4\\).\t\n\nTable 12.2.1\n\nAnswer:\n\nThe general term of the sequence is \\(a_{n}=3n+4\\).",
+      "prompt": "Example \\(\\PageIndex{5}\\)\n\nFind the first term and common difference of a sequence where the fifth term is \\(19\\) and the eleventh term is \\(37\\). Give the formula for the general term.\n\nSolution:\n\nSince we know two terms, we can make a system of equations using the formula for the general term.\n\n[Figure: .]\n\n            We know the value of \\(a_{5}\\) and \\(a_{11}\\), so we will use \\(n=5\\) and \\(n=11\\).\t\n\n[Figure: .]\n\n            Substitute in the values, \\(a_{5}=19\\) and \\(a_{11}=37\\).\t\n\n[Figure: .]\n\n            Simplify.\t\n\n[Figure: .]\n\n            Prepare to eliminate the \\(a_{1}\\) term by multiplying the top equation by \\(−1\\).\n\n            Add the equations.\t\n\n[Figure: .]\n\n            Substituting \\(d=3\\) back into the first equation.\t\n\n[Figure: .]\n\n            Solve for \\(a_{1}\\).\t\n\n[Figure: .]\n\n            Use the formula with \\(a_{1}=7\\) and \\(d=3\\).\t\n\n[Figure: .]\n\n            Substitute in the values.\t\n\n[Figure: .]\n\n            Simplify.\t\n\n[Figure: .]\n\n            The first term is \\(a_{1}=7\\).\n\n            The common difference is \\(d=3\\).\t\n\n            The general term of the sequence is \\(a_{n}=3n+4\\).\t\n\nTable 12.2.1\n\nAnswer:\n\nThe general term of the sequence is \\(a_{n}=3n+4\\).",
+      "sourceAnswers": [],
+      "hasFigure": true,
+      "status": "draft",
+      "answerVerified": false,
+      "translationStatus": "pending",
+      "mappingStatus": "pending"
+    },
+    {
+      "ordinal": 17,
+      "sourceNumber": "",
+      "sourceAnchor": "",
+      "kind": "exercise-candidate",
+      "context": "We will use this formula in the next example to find the 15^(th) term of a sequence.\n\nSometimes we do not know the first term and we must use other given information to find it before we find the requested term.\n\nSometimes the information given leads us to two equations in two unknowns. We then use our methods for solving systems of equations to find the values needed.",
+      "original": "Exercise \\(\\PageIndex{9}\\)\n\nFind the first term and common difference of a sequence where the fourth term is \\(17\\) and the thirteenth term is \\(53\\). Give the formula for the general term.\n\nAnswer\n\n\\(a_{1}=5, d=4 .\\) The general term is \\(a_{n}=4 n+1\\).",
+      "prompt": "Exercise \\(\\PageIndex{9}\\)\n\nFind the first term and common difference of a sequence where the fourth term is \\(17\\) and the thirteenth term is \\(53\\). Give the formula for the general term.",
+      "sourceAnswers": [
+        "\\(a_{1}=5, d=4 .\\) The general term is \\(a_{n}=4 n+1\\)."
+      ],
+      "hasFigure": false,
+      "status": "draft",
+      "answerVerified": false,
+      "translationStatus": "pending",
+      "mappingStatus": "pending"
+    },
+    {
+      "ordinal": 18,
+      "sourceNumber": "",
+      "sourceAnchor": "",
+      "kind": "exercise-candidate",
+      "context": "We will use this formula in the next example to find the 15^(th) term of a sequence.\n\nSometimes we do not know the first term and we must use other given information to find it before we find the requested term.\n\nSometimes the information given leads us to two equations in two unknowns. We then use our methods for solving systems of equations to find the values needed.",
+      "original": "Exercise \\(\\PageIndex{10}\\)\n\nFind the first term and common difference of a sequence where the third term is \\(2\\) and the twelfth term is \\(−25\\). Give the formula for the general term.\n\nAnswer\n\n\\(a_{1}=8, d=-3 .\\) The general term is \\(a_{n}=-3 n+11\\).",
+      "prompt": "Exercise \\(\\PageIndex{10}\\)\n\nFind the first term and common difference of a sequence where the third term is \\(2\\) and the twelfth term is \\(−25\\). Give the formula for the general term.",
+      "sourceAnswers": [
+        "\\(a_{1}=8, d=-3 .\\) The general term is \\(a_{n}=-3 n+11\\)."
+      ],
+      "hasFigure": false,
+      "status": "draft",
+      "answerVerified": false,
+      "translationStatus": "pending",
+      "mappingStatus": "pending"
+    },
+    {
+      "ordinal": 19,
+      "sourceNumber": "",
+      "sourceAnchor": "",
+      "kind": "example-or-exercise",
+      "context": "\\(S_{n}=\\frac{n}{2}\\left(a_{1}+a_{n}\\right)\\)\n\nwhere \\(a_{1}\\) is the first term and \\(a_{n}\\) is the \\(n\\)th term.\n\nWe apply this formula in the next example where the first few terms of the sequence are given.",
+      "original": "Example \\(\\PageIndex{6}\\)\n\nFind the sum of the first \\(30\\) terms of the arithmetic sequence: \\(8, 13, 18, 23, 28, …\\)\n\nSolution:\n\nTo find the sum, we will use the formula \\(S_{n}=\\frac{n}{2}\\left(a_{1}+a_{n}\\right)\\). We know \\(a_{1}=8, d=5\\) and \\(n=30\\), but we need to find \\(a_{n}\\) in order to use the sum formula.\n\nFind \\(a_{n}\\) where \\(a_{1}=8, d=5\\) and \\(n=30\\). Simplify.\n\n\\(\\begin{aligned} a_{n} &=a_{1}+(n-1) d \\\\ a_{30} &=8+(30-1) 5 \\\\ a_{30} &=8+(29) 5 \\\\ a_{30} &=153 \\end{aligned}\\)\n\nKnowing \\(a_{1}=8, n=30\\), and \\(a_{30}=153\\), use the sum formula. Substitute in the values. Simplify. Simplify.\n\n\\(\\begin{aligned} S_{n} &=\\frac{n}{2}\\left(a_{1}+a_{n}\\right) \\\\ S_{30} &=\\frac{30}{2}(8+153) \\\\ S_{30} &=15(161) \\\\ S_{30} &=2,415 \\end{aligned}\\)",
+      "prompt": "Example \\(\\PageIndex{6}\\)\n\nFind the sum of the first \\(30\\) terms of the arithmetic sequence: \\(8, 13, 18, 23, 28, …\\)\n\nSolution:\n\nTo find the sum, we will use the formula \\(S_{n}=\\frac{n}{2}\\left(a_{1}+a_{n}\\right)\\). We know \\(a_{1}=8, d=5\\) and \\(n=30\\), but we need to find \\(a_{n}\\) in order to use the sum formula.\n\nFind \\(a_{n}\\) where \\(a_{1}=8, d=5\\) and \\(n=30\\). Simplify.\n\n\\(\\begin{aligned} a_{n} &=a_{1}+(n-1) d \\\\ a_{30} &=8+(30-1) 5 \\\\ a_{30} &=8+(29) 5 \\\\ a_{30} &=153 \\end{aligned}\\)\n\nKnowing \\(a_{1}=8, n=30\\), and \\(a_{30}=153\\), use the sum formula. Substitute in the values. Simplify. Simplify.\n\n\\(\\begin{aligned} S_{n} &=\\frac{n}{2}\\left(a_{1}+a_{n}\\right) \\\\ S_{30} &=\\frac{30}{2}(8+153) \\\\ S_{30} &=15(161) \\\\ S_{30} &=2,415 \\end{aligned}\\)",
+      "sourceAnswers": [],
+      "hasFigure": false,
+      "status": "draft",
+      "answerVerified": false,
+      "translationStatus": "pending",
+      "mappingStatus": "pending"
+    },
+    {
+      "ordinal": 20,
+      "sourceNumber": "",
+      "sourceAnchor": "",
+      "kind": "exercise-candidate",
+      "context": "\\(S_{n}=\\frac{n}{2}\\left(a_{1}+a_{n}\\right)\\)\n\nwhere \\(a_{1}\\) is the first term and \\(a_{n}\\) is the \\(n\\)th term.\n\nWe apply this formula in the next example where the first few terms of the sequence are given.",
+      "original": "Exercise \\(\\PageIndex{11}\\)\n\nFind the sum of the first \\(30\\) terms of the arithmetic sequence: \\(5, 9, 13, 17, 21, …\\)\n\nAnswer\n\n\\(1,890\\)",
+      "prompt": "Exercise \\(\\PageIndex{11}\\)\n\nFind the sum of the first \\(30\\) terms of the arithmetic sequence: \\(5, 9, 13, 17, 21, …\\)",
+      "sourceAnswers": [
+        "\\(1,890\\)"
+      ],
+      "hasFigure": false,
+      "status": "draft",
+      "answerVerified": false,
+      "translationStatus": "pending",
+      "mappingStatus": "pending"
+    },
+    {
+      "ordinal": 21,
+      "sourceNumber": "",
+      "sourceAnchor": "",
+      "kind": "exercise-candidate",
+      "context": "\\(S_{n}=\\frac{n}{2}\\left(a_{1}+a_{n}\\right)\\)\n\nwhere \\(a_{1}\\) is the first term and \\(a_{n}\\) is the \\(n\\)th term.\n\nWe apply this formula in the next example where the first few terms of the sequence are given.",
+      "original": "Exercise \\(\\PageIndex{12}\\)\n\nFind the sum of the first \\(30\\) terms of the arithmetic sequence: \\(7, 10, 13, 16, 19, …\\)\n\nAnswer\n\n\\(1,515\\)",
+      "prompt": "Exercise \\(\\PageIndex{12}\\)\n\nFind the sum of the first \\(30\\) terms of the arithmetic sequence: \\(7, 10, 13, 16, 19, …\\)",
+      "sourceAnswers": [
+        "\\(1,515\\)"
+      ],
+      "hasFigure": false,
+      "status": "draft",
+      "answerVerified": false,
+      "translationStatus": "pending",
+      "mappingStatus": "pending"
+    },
+    {
+      "ordinal": 22,
+      "sourceNumber": "",
+      "sourceAnchor": "",
+      "kind": "example-or-exercise",
+      "context": "where \\(a_{1}\\) is the first term and \\(a_{n}\\) is the \\(n\\)th term.\n\nWe apply this formula in the next example where the first few terms of the sequence are given.\n\nIn the next example, we are given the general term for the sequence and are asked to find the sum of the first \\(50\\) terms.",
+      "original": "Example \\(\\PageIndex{7}\\)\n\nFind the sum of the first \\(50\\) terms of the arithmetic sequence whose general term is \\(a_{n}=3n−4\\).\n\nSolution:\n\nTo find the sum, we will use the formula \\(S_{n}=\\frac{n}{2}\\left(a_{1}+a_{n}\\right)\\). We know \\(n=50\\), but we need to find \\(a_{1}\\) and \\(a_{n}\\) in order to use the sum formula.\n\n[Figure: .]\n\n            Find \\(a_{1}\\), by substituting \\(n=1\\).\t\n\n[Figure: .]\n\n            Find \\(a_{n}\\) by substituting \\(n=50\\).\t\n\n[Figure: .]\n\n            Simplify.\t\n\n[Figure: .]\n\n            Knowing \\(n=50, a_{1}=−1,\\) and \\(a_{50}=146\\) use the sum formula.\t\n\n[Figure: .]\n\n            Substitute in the values.\t\n\n[Figure: .]\n\n            Simplify.\t\n\n[Figure: .]\n\n            Simplify.\t\n\n[Figure: .]\n\nTable 12.2.2",
+      "prompt": "Example \\(\\PageIndex{7}\\)\n\nFind the sum of the first \\(50\\) terms of the arithmetic sequence whose general term is \\(a_{n}=3n−4\\).\n\nSolution:\n\nTo find the sum, we will use the formula \\(S_{n}=\\frac{n}{2}\\left(a_{1}+a_{n}\\right)\\). We know \\(n=50\\), but we need to find \\(a_{1}\\) and \\(a_{n}\\) in order to use the sum formula.\n\n[Figure: .]\n\n            Find \\(a_{1}\\), by substituting \\(n=1\\).\t\n\n[Figure: .]\n\n            Find \\(a_{n}\\) by substituting \\(n=50\\).\t\n\n[Figure: .]\n\n            Simplify.\t\n\n[Figure: .]\n\n            Knowing \\(n=50, a_{1}=−1,\\) and \\(a_{50}=146\\) use the sum formula.\t\n\n[Figure: .]\n\n            Substitute in the values.\t\n\n[Figure: .]\n\n            Simplify.\t\n\n[Figure: .]\n\n            Simplify.\t\n\n[Figure: .]\n\nTable 12.2.2",
+      "sourceAnswers": [],
+      "hasFigure": true,
+      "status": "draft",
+      "answerVerified": false,
+      "translationStatus": "pending",
+      "mappingStatus": "pending"
+    },
+    {
+      "ordinal": 23,
+      "sourceNumber": "",
+      "sourceAnchor": "",
+      "kind": "exercise-candidate",
+      "context": "where \\(a_{1}\\) is the first term and \\(a_{n}\\) is the \\(n\\)th term.\n\nWe apply this formula in the next example where the first few terms of the sequence are given.\n\nIn the next example, we are given the general term for the sequence and are asked to find the sum of the first \\(50\\) terms.",
+      "original": "Exercise \\(\\PageIndex{13}\\)\n\nFind the sum of the first \\(50\\) terms of the arithmetic sequence whose general term is \\(a_{n}=2n−5\\).\n\nAnswer\n\n\\(2,300\\)",
+      "prompt": "Exercise \\(\\PageIndex{13}\\)\n\nFind the sum of the first \\(50\\) terms of the arithmetic sequence whose general term is \\(a_{n}=2n−5\\).",
+      "sourceAnswers": [
+        "\\(2,300\\)"
+      ],
+      "hasFigure": false,
+      "status": "draft",
+      "answerVerified": false,
+      "translationStatus": "pending",
+      "mappingStatus": "pending"
+    },
+    {
+      "ordinal": 24,
+      "sourceNumber": "",
+      "sourceAnchor": "",
+      "kind": "exercise-candidate",
+      "context": "where \\(a_{1}\\) is the first term and \\(a_{n}\\) is the \\(n\\)th term.\n\nWe apply this formula in the next example where the first few terms of the sequence are given.\n\nIn the next example, we are given the general term for the sequence and are asked to find the sum of the first \\(50\\) terms.",
+      "original": "Exercise \\(\\PageIndex{14}\\)\n\nFind the sum of the first \\(50\\) terms of the arithmetic sequence whose general term is \\(a_{n}=4n+3\\).\n\nAnswer\n\n\\(5,250\\)",
+      "prompt": "Exercise \\(\\PageIndex{14}\\)\n\nFind the sum of the first \\(50\\) terms of the arithmetic sequence whose general term is \\(a_{n}=4n+3\\).",
+      "sourceAnswers": [
+        "\\(5,250\\)"
+      ],
+      "hasFigure": false,
+      "status": "draft",
+      "answerVerified": false,
+      "translationStatus": "pending",
+      "mappingStatus": "pending"
+    },
+    {
+      "ordinal": 25,
+      "sourceNumber": "",
+      "sourceAnchor": "",
+      "kind": "example-or-exercise",
+      "context": "We apply this formula in the next example where the first few terms of the sequence are given.\n\nIn the next example, we are given the general term for the sequence and are asked to find the sum of the first \\(50\\) terms.\n\nIn the next example we are given the sum in summation notation. To add all the terms would be tedious, so we extract the information needed to use the formula to find the sum of the first \\(n\\) terms.",
+      "original": "Example \\(\\PageIndex{8}\\)\n\nFind the sum: \\(\\sum_{i=1}^{25}(4 i+7)\\).\n\nSolution:\n\nTo find the sum, we will use the formula \\(S_{n}=\\frac{n}{2}\\left(a_{1}+a_{n}\\right)\\). We know \\(n=25\\), but we need to find \\(a_{1}\\) and \\(a_{n}\\) in order to use the sum formula.\n\n            Expand the summation notation.\t\n\n[Figure: .]\n\nFigure 12.2.21\n\n            Simplify.\t\n\n[Figure: .]\n\nFigure 12.2.22\n\n            Identify \\(a_{1}\\).\t\n\n[Figure: .]\n\n            Identify \\(a_{25}\\).\t\n\n[Figure: .]\n\nFigure 12.2.24\n\n            Knowing \\(n=25, a_{1}=11\\), and \\(a_{25} = 107\\) use the sum formula.\t\n\n[Figure: .]\n\n            Substitute in the values.\t\n\n[Figure: .]\n\n            Simplify.\t\n\n[Figure: .]\n\n            Simplify.\t\n\n[Figure: .]\n\nTable 12.2.3",
+      "prompt": "Example \\(\\PageIndex{8}\\)\n\nFind the sum: \\(\\sum_{i=1}^{25}(4 i+7)\\).\n\nSolution:\n\nTo find the sum, we will use the formula \\(S_{n}=\\frac{n}{2}\\left(a_{1}+a_{n}\\right)\\). We know \\(n=25\\), but we need to find \\(a_{1}\\) and \\(a_{n}\\) in order to use the sum formula.\n\n            Expand the summation notation.\t\n\n[Figure: .]\n\nFigure 12.2.21\n\n            Simplify.\t\n\n[Figure: .]\n\nFigure 12.2.22\n\n            Identify \\(a_{1}\\).\t\n\n[Figure: .]\n\n            Identify \\(a_{25}\\).\t\n\n[Figure: .]\n\nFigure 12.2.24\n\n            Knowing \\(n=25, a_{1}=11\\), and \\(a_{25} = 107\\) use the sum formula.\t\n\n[Figure: .]\n\n            Substitute in the values.\t\n\n[Figure: .]\n\n            Simplify.\t\n\n[Figure: .]\n\n            Simplify.\t\n\n[Figure: .]\n\nTable 12.2.3",
+      "sourceAnswers": [],
+      "hasFigure": true,
+      "status": "draft",
+      "answerVerified": false,
+      "translationStatus": "pending",
+      "mappingStatus": "pending"
+    },
+    {
+      "ordinal": 26,
+      "sourceNumber": "",
+      "sourceAnchor": "",
+      "kind": "exercise-candidate",
+      "context": "We apply this formula in the next example where the first few terms of the sequence are given.\n\nIn the next example, we are given the general term for the sequence and are asked to find the sum of the first \\(50\\) terms.\n\nIn the next example we are given the sum in summation notation. To add all the terms would be tedious, so we extract the information needed to use the formula to find the sum of the first \\(n\\) terms.",
+      "original": "Exercise \\(\\PageIndex{15}\\)\n\nFind the sum: \\(\\sum_{i=1}^{30}(6 i-4)\\).\n\nAnswer\n\n\\(2,670\\)",
+      "prompt": "Exercise \\(\\PageIndex{15}\\)\n\nFind the sum: \\(\\sum_{i=1}^{30}(6 i-4)\\).",
+      "sourceAnswers": [
+        "\\(2,670\\)"
+      ],
+      "hasFigure": false,
+      "status": "draft",
+      "answerVerified": false,
+      "translationStatus": "pending",
+      "mappingStatus": "pending"
+    },
+    {
+      "ordinal": 27,
+      "sourceNumber": "",
+      "sourceAnchor": "",
+      "kind": "exercise-candidate",
+      "context": "We apply this formula in the next example where the first few terms of the sequence are given.\n\nIn the next example, we are given the general term for the sequence and are asked to find the sum of the first \\(50\\) terms.\n\nIn the next example we are given the sum in summation notation. To add all the terms would be tedious, so we extract the information needed to use the formula to find the sum of the first \\(n\\) terms.",
+      "original": "Exercise \\(\\PageIndex{16}\\)\n\nFind the sum: \\(\\sum_{i=1}^{35}(5 i-3)\\).\n\nAnswer\n\n\\(3,045\\)",
+      "prompt": "Exercise \\(\\PageIndex{16}\\)\n\nFind the sum: \\(\\sum_{i=1}^{35}(5 i-3)\\).",
+      "sourceAnswers": [
+        "\\(3,045\\)"
+      ],
+      "hasFigure": false,
+      "status": "draft",
+      "answerVerified": false,
+      "translationStatus": "pending",
+      "mappingStatus": "pending"
+    }
+  ],
+  "license": "CC BY 4.0",
+  "licenseEvidence": "This page titled 12.3: Arithmetic Sequences was last modified on Mon, 14 Feb 2022 01:06:51 GMT and is shared under a CC BY  4.0  license and was authored, remixed, and/or curated by OpenStax via source content that was edited to the style and standards of the LibreTexts platform.",
+  "url": "https://math.libretexts.org/Bookshelves/Algebra/Intermediate_Algebra_1e_(OpenStax)/12:_Sequences_Series_and_Binomial_Theorem/12.03:_Arithmetic_Sequences",
+  "sha256": "6afe5c6fe65834b74dbba72fe1f58ea4ebd715f6eafe8a45e6162834d6673f53",
+  "checkedAt": "2026-10-07",
+  "id": "c3f1d0eac6b264c8b403",
+  "bookId": "intermediate-algebra",
+  "licenseInherited": false,
+  "licenseSource": "https://math.libretexts.org/Bookshelves/Algebra/Intermediate_Algebra_1e_(OpenStax)/12:_Sequences_Series_and_Binomial_Theorem/12.03:_Arithmetic_Sequences",
+  "licenseUrl": "https://creativecommons.org/licenses/by/4.0/",
+  "authors": "OpenStax / Lynn Marecek, Andrea Honeycutt Mathis",
+  "book": "Intermediate Algebra 1e",
+  "reviewStatus": "unreviewed",
+  "sourceLanguage": "en",
+  "translationStatus": "pending"
+}

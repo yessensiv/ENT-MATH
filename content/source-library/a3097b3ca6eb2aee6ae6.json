@@ -1,0 +1,491 @@
+{
+  "title": "12.7: Hamilton Cycles",
+  "originalText": "Learning Objectives\n\n1. Describe and identify Hamilton cycles.\n\n2. Compute the number of Hamilton cycles in a complete graph.\n\n3. Apply and evaluate weighted graphs.\n\nIn Euler Circuits and Euler Trails, we looked for circuits and paths that visited each edge of a graph exactly once. In this section, we will look for circuits that visit each vertex exactly once. Like many concepts in graph theory, the idea of a circuit that visits each vertex once was inspired by games and puzzles. As early as the 9th century, Indian and Islamic intellectuals wondered whether it was possible for a knight to visit every space on a chess board of a given size, which is equivalent to visiting every vertex of a graph that represents the chess board.\n\n[Figure: A 3D model of an icosahedron.]\n\nFigure \\(\\PageIndex{1}\\): The symmetries of an icosahedron, with 30 edges, 20 faces, and 12 vertices, can be analyzed using graph theory. (credit: \"Really big icosahedron\" by Clayton Shonkwiler/Wikimedia, CC BY 2.0)\n\nIn 1857, a mathematician named William Rowan Hamilton invented a puzzle in which players were asked to find a route along the edges of a dodecahedron (see Figure 12.178), which visited every vertex exactly once. Let’s explore how graph theory provides insight into these games as well as practical applications such as the Traveling Salesperson Problem.\n\n[Figure: A dodecahedron.]\n\nFigure \\(\\PageIndex{2}\\): A Dodecahedron\n\nHamilton’s Puzzle\n\nBefore we look at the solution to Hamilton's puzzle, let’s review some vocabulary we used in Figure \\(\\PageIndex{3}\\) . It will be helpful to remember that directed cycle is a type of circuit that doesn’t repeat any edges or vertices.\n\n[Figure: Three concentric ovals represent directed cycles, circuits, and closed walks. The first (inner) oval labeled directed cycles (closed paths) reads, no repeated edges or vertices. The second oval labeled circuits (closed talks) reads, no repeated edges. The third oval is labeled closed walks.]\n\nFigure \\(\\PageIndex{3}\\): Closed Walks, Circuits, and Directed Cycles\n\nThe goal of Hamilton's puzzle was to find a route along the edges of the dodecahedron, which visits each vertex exactly once. A dodecahedron is a three-dimensional space figure with faces that are all pentagons as we saw in Figure 12.178.\n\nSince it is easier to visualize two dimensions rather than three, we will flatten out the dodecahedron and look at the edges and vertices on a flat surface. Graph A in Figure 12.180 shows a two-dimensional graph of the edges and vertices, and Graph B shows an untangled version of Graph A in which no edges are crossing. Graph B in Figure 12.180 is very similar to the design of the game board that Hamilton invented for his puzzle.\n\n[Figure: Two graphs are labeled graph A and graph B. Graph A highlights the edges of a dodecahedron. Graph B highlights the vertices of a dodecahedron.]\n\n[Figure: Two figures. The first figure is a 2 D view of a dodecahedron. The edges are highlighted. The second figure is a 3 D view of a dodecahedron. The edges in the front face are highlighted.]\n\n     Untangle graph\n\n[Figure: Two graphs are labeled graph A and graph B. Graph A highlights the edges of a dodecahedron. Graph B highlights the vertices of a dodecahedron.]\n\nFigure \\(\\PageIndex{4}\\): Graph of Edges and Vertices of Dodecahedron\n\nWe can see that this is a planar graph because it can be “untangled.” In order to solve Hamilton’s puzzle, we need to find a circuit that visits every vertex once. A solution is shown in Figure 12.181.\n\n.\n\n[Figure: A 2 D view of a dodecahedron. The edges are highlighted.]\n\n[Figure: Two figures. The first figure is a 2 D view of a dodecahedron. The edges are highlighted. The second figure is a 3 D view of a dodecahedron. The edges in the front face are highlighted.]\n\n     In three Dimensions >\n\n[Figure: Two figures. The first figure is a 2 D view of a dodecahedron. The edges are highlighted. The second figure is a 3 D view of a dodecahedron. The edges in the front face are highlighted.]\n\nFigure \\(\\PageIndex{5}\\): A Solution to Hamilton’s Puzzle\n\nA circuit that doesn’t repeat any vertices, like the one in Figure 12.181, is called a directed cycle. So, we can most accurately say that Hamilton’s puzzle asks us to find a directed cycle that visits every vertex in a graph exactly once. Because Hamilton created and solved this puzzle, these special circuits were named Hamilton cycles, or Hamilton circuits.\n\nWho Knew?: Icosian Game\n\nWhen Hamilton invented his puzzle in the 19th century, it was originally called the Icosian game. This was a reference to an icosahedron, not a dodecahedron. Why? Hamilton was actually interested in the symmetries of icosahedrons. It turns out that these two space figures are related to each other. The dodecahedron has 30 edges, 20 faces, and 12 vertices, while the icosahedron has 30 edges, 12 faces, and 20 vertices. By relating the vertices of the dodecahedron to the faces of the icosahedron, Hamilton was able to make the mathematical connections necessary to use graph theory and dodecahedrons to make discoveries about the symmetries of icosahedrons.\n\nHamilton Cycles vs. Euler Circuits\n\nLet’s practice naming and identifying Hamilton cycles, as well as distinguishing them from Euler circuits. It is important to remember that Euler circuits visit all edges without repetition, while Hamilton cycles visit all vertices without repetition. Hamilton cycles are named by their vertices just like all circuits. An example is given in Figure \\(\\PageIndex{6}\\).\n\n[Figure: Two graphs. The first graph, graph Z has four vertices: a, b, c, and d. The edges connect a b, b c, c d, d a, and a c. The second graph directed edges from a to b, b to c, c to d, and d to a. A dashed line connects a to c.]\n\nFigure \\(\\PageIndex{6}\\): Hamilton Cycle in Graph Z\n\nNotice that the Hamilton cycle a → b → c → d for Graph Z in Figure 12.182 is NOT an Euler circuit, because it does not visit edge \\(\\)ac. Some Hamilton cycles are also Euler circuits while some are not, and some Euler circuits are Hamilton cycles while some are not.\n\nCheckpoint\n\nTIP! Sometimes students confuse Euler circuits with Hamilton cycles. To help you remember, think of the E in Euler as standing for Edge.\n\nExample \\(\\PageIndex{1}\\): Differentiating between Hamilton Cycles or Euler Circuits\n\nUse Figure \\(\\PageIndex{7}\\) to determine whether the given circuit is a Hamilton cycle, an Euler circuit, both, or neither.\n\n[Figure: Graph Q has two overlapping quadrilaterals. The vertices of the outer quadrilateral are a, c, h, and f. The vertices of the inner quadrilateral are d, b, e, and g. The vertex, d rests on the edge a f. The vertex, b rests on the edge a c. The vertex, e rests on the edge c h. The vertex, g rests on the edge hf. ]\n\nFigure 12.183 Graph Q\n\n1. a → b → c → e → h → g → f → d → a\n\n2. g → e → h → g → f → d → a → b → d → g\n\n3. a → b → c → e → h → g → f → d → b → e → g → d → a\n\nAnswer\n\n1. This circuit is a Hamilton cycle only. It visits each vertex exactly once, so, it is a Hamilton cycle. It is not an Euler circuit because it doesn’t visit all of the edges.\n\n2. This circuit is neither Hamilton cycle nor an Euler circuit. It doesn’t visit vertex \\(c\\), so, it is not a Hamilton cycle. It also doesn’t visit edges \\(\\)be and \\(\\)ce, so, it is not an Euler circuit.\n\n3. This circuit is an Euler circuit only. It visits several vertices more than once; so, it is not a Hamilton cycle. It visits every edge exactly once, so, it is an Euler circuit.\n\nCheckpoint\n\nTIP! Euler circuits never skip a vertex, so, they only fail to be Hamilton cycles when they visit a vertex more than once. Hamilton cycles never visit any edges twice, so, they only fail to be Euler circuits when they skip edges.\n\nYour Turn \\(\\PageIndex{1}\\)\n\nConsider the figure shown. Is the circuit a → b → f → e → h → i → g → d → c → a an Euler circuit, a Hamilton cycle, or both?\n\n[Figure: Graph T has 9 vertices. The edges connect a b, b f, f e, e h, h i, I g, g d, d c, and c a.]\n\nFigure \\(\\PageIndex{8}\\): Graph T\n\nNotice that the graph is a cycle. A cycle will always be Eulerian because all vertices are degree 2. Moreover, any circuit in the graph will always be both an Euler circuit and a Hamilton cycle. It is not always as easy to determine if a graph has a Hamilton cycle as it is to see that it has an Euler circuit, but there is a large group of graphs that we know will always have Hamilton cycles, the complete graphs. Since all vertices in a complete graph are adjacent, we can always find a directed cycle that visits all the vertices. For example, look at the directed six-cycle, n → o → p → q → r → s, in the complete graph with six vertices in Figure \\(\\PageIndex{9}\\).\n\n[Figure: A directed graph has six vertices: o, p, q, r, s, and n. All the vertices are interconnected. Directed arrows flow from o to p, p to q, q to r, r to s, s to n, and n to o.]\n\nFigure \\(\\PageIndex{9}\\): Directed Cycle in Complete Graph\n\nThat is not the only directed six-cycle in the graph though. We could find another just be reversing the direction, and we could find even more by using different edges. So, how many Hamilton cycles are in a complete graph with \\(n\\) vertices? Before we tackle this problem, let’s look at a shorthand notation that we use in mathematics which will be helpful to us.\n\nFactorials\n\nIn many areas of mathematics, we must calculate products like \\(7⋅6⋅5⋅4⋅3⋅2⋅1\\) or \\(11⋅10⋅9⋅8⋅7⋅6⋅5⋅4⋅3⋅2⋅1\\), products that involve multiplying all the counting numbers from a particular number down to 1. Imagine that the product happened to be all the numbers from 100 down to 1. That’s a lot of writing! Instead of writing all of that out, mathematicians came up with a shorthand notation. For example, instead of \\(7⋅6⋅5⋅4⋅3⋅2⋅1\\), we write \\(7!\\), which is read “7 factorial.” In other words, the product of all the counting numbers from \\(n\\) down to 1 is called \\(n\\) factorial and it is written \\(n!\\)\n\nExample \\(\\PageIndex{2}\\): Evaluating Factorials\n\nEvaluate \\(n!\\) and \\((n−1)!\\) for \\(n=4\\).\n\nAnswer\n\n\\(n!=4!=4⋅3⋅2⋅1=\\)24 and \\((n−1)!=(4−1)!=3!=3⋅2⋅1=6\\)\n\nYour Turn \\(\\PageIndex{12}\\)\n\nEvaluate \\(n!\\) and \\((n - 1)!\\) for \\(n = 6\\).\n\nA common use for factorials is counting the number of ways to arrange objects. Suppose that there were three students, Aryana, Byron, and Carlos, who wanted to line up in a row. How many arrangements are possible? There are six possibilities: ABC, ACB, BAC, BCA, CAB, or CBA. Notice that there were three students being arranged, and the number of possible arrangements is three.\n\nFORMULA\n\nThe number of ways to arrange \\(n\\) distinct objects is \\(n!\\).\n\nExample \\(\\PageIndex{3}\\): Counting Arrangements of Letters\n\nFind the number of ways to arrange the letters a, b, c, and d.\n\nAnswer\n\n\\(4!=4⋅3⋅2⋅1=24\\)\n\nYour Turn \\(\\PageIndex{3}\\)\n\nFind the number of ways to arrange the letters v, w, x, y, and z.\n\nCounting Hamilton Cycles in Complete Graphs\n\nNow, let’s get back to answering the question of how many Hamilton cycles are in a complete graph. In Table 12.8, we have drawn all the four cycles in a complete graph with four vertices. Remember, cycles can be named starting with any vertex in the cycle, but we will name them starting with vertex \\(a\\).\n\n    Table \\(\\PageIndex{1}\\) Four-Cycles in Complete Graph with Four Vertices\n\n            Complete Graph\t\n            Cycle\t\n            Cycle\t\n            Cycle\t\n\n[Figure: A graph with four vertices, a, b, c, and d. Edges connect a b, b c, c d, d a, a c, and b d.]\n\n[Figure: A graph with four vertices, a, b, c, and d. Edges connect a b, b c, c d, d a, a c, and b d. The edges, a c, and b d are in dashed lines.]\n\n[Figure: A graph with four vertices, a, b, c, and d. Edges connect a b, b c, c d, d a, a c, and b d. The edges, a d, and b c are in dashed lines.]\n\n[Figure: A graph with four vertices, a, b, c, and d. Edges connect a b, b c, c d, d a, a c, and b d. The edges, a b, and d c are in dashed lines.]\n\n            Cycle Name Clockwise\t\n            a, b, c, d\t\n            a, b, d, c\t\n            a, c, b, d\t\n\n            Cycle Name Counterclockwise\t\n            a, d, c, b\t\n            a, c, d, b\t\n            a, d, b, c\t\n\nTable \\(\\PageIndex{1}\\) shows that there are three unique four-cycles in a complete graph with four vertices. Notice that there were two ways to name each cycle, one reading the vertices in a clockwise direction and one reading the vertices in a counterclockwise direction. This is important to us because we are interested in Hamilton cycles, which are directed cycles. Although the cycles (a, b, c, d) and (a, d, c, b) are the same cycle, the directed cycles, a → b → c → d → a and a → d → c → b → a, which travel the same route in reverse order are considered different directed cycles, as shown in Table \\(\\PageIndex{2}\\).\n\n    Table \\(\\PageIndex{2}\\) Hamilton Cycles in a Complete Graph with Four Vertices\n\n            Complete Graph\t\n            Cycle\t\n            Cycle\t\n            Cycle\t\n\n[Figure: A grah with four vertices, a, b, c, and d. Edges connect a b, b c, c d, d a, a c, and b d.]\n\n[Figure: A grah with four vertices, a, b, c, and d. Edges connect a b, b c, c d, d a, a c, and b d. The edges, a c, and b d are in dashed lines.]\n\n[Figure: A grah with four vertices, a, b, c, and d. Edges connect a b, b c, c d, d a, a c, and b d. The edges, a d, and b c are in dashed lines.]\n\n[Figure: A grah with four vertices, a, b, c, and d. Edges connect a b, b c, c d, d a, a c, and b d. The edges, a b, and d c are in dashed lines.]\n\n            Clockwise Hamilton Cycle\t\n\n[Figure: A grah with four vertices, a, b, c, and d. Edges connect a b, b c, c d, d a, a c, and b d. The edges, a c, and b d are in dashed lines. Directed edges flow from a to d, d to c, c to b, and b to a.]\n\na → b → c → d → a\n\n[Figure: A grah with four vertices, a, b, c, and d. Edges connect a b, b c, c d, d a, a c, and b d. The edges, a d, and b c are in dashed lines. The directed edges flow from a to c, c to d, d to b, and b to a.]\n\na → b → d → c → a\n\n[Figure: A grah with four vertices, a, b, c, and d. Edges connect a b, b c, c d, d a, a c, and b d. The edges, a b, and d c are in dashed lines. The edges flow from a to d, d to b, b to c, c, and c to a.]\n\na → c → b → d → a\n\n            Counter-clockwise Hamilton Cycle\t\n\n[Figure: In this graph, four vertices, a, b, c, and d are present. Edges connect a b, b c, c d, d a, a c, and b d. In this eighth graph, the edges, a c, and b d are in dashed lines. Directed edges flow from a to d, d to c, c to b, and b to a.]\n\na → d → c → b → a\n\n[Figure: In this graph, four vertices, a, b, c, and d are present. Edges connect a b, b c, c d, d a, a c, and b d. In this ninth graph, the edges, a d, and b c are in dashed lines. The directed edges flow from a to c, c to d, d to b, and b to a.]\n\na → c → d → b → a\n\n[Figure: In this graph, four vertices, a, b, c, and d are present. Edges connect a b, b c, c d, d a, a c, and b d. In this tenth graph, the edges, a b, and d c are in dashed lines. The edges flow from a to d, d to b, b to c, c, and c to a.]\n\na → d → b → c → a\n\nThe six directed four-cycles in Table \\(\\PageIndex{2}\\) are the only distinct Hamilton cycles in a complete graph with four vertices. Six is also the number of ways to arrange the three letters b, c, and d. (Do you see why?) The number of ways to arrange three letters is \\(3!=3⋅2⋅1=6\\). Similarly, the number of Hamilton cycles in a graph with five vertices is the number of ways to arrange four letters, which is \\(4!=4⋅3⋅2⋅1=24\\). In general, to find the number of Hamilton cycles in a graph, we take one less than the number of vertices and find its factorial.\n\nFORMULA\n\nThe number of distinct Hamilton cycles in a complete graph with \\(n\\) vertices is \\((n−1)!\\)\n\nExample \\(\\PageIndex{4}\\): Counting Hamilton Cycles in a Complete Graph\n\nHow many Hamilton cycles are in the complete graph in Figure \\(\\PageIndex{10}\\)?\n\n[Figure: Graph L has five vertices: m, n, o, p, and q. All vertices are interconnected.]\n\nFigure \\(\\PageIndex{10}\\) Complete Graph L\n\nAnswer\n\nThere are five vertices in the graph. Using \\(n=5\\), we have\\((n−1)!=(5−1)!=4!=4⋅3⋅2⋅1=24\\) Hamilton cycles.\n\nYour Turn \\(\\PageIndex{4}\\)\n\nHow many Hamilton cycles are in the graph?\n\n[Figure: Graph R has six vertices: s, t, x, u, w, and v. All vertices are interconnected.]\n\nFigure \\(\\PageIndex{11}\\): Complete Graph R\n\nWeighted Graphs\n\nSuppose that an officer in the U.S. Air Force who is stationed at Vandenberg Air Force base must drive to visit three other California Air Force bases before returning to Vandenberg. The officer needs to visit each base once. The vertices in the graph in Figure \\(\\PageIndex{12}\\) represent the four U.S. Air Force bases, Vandenberg, Edwards, Los Angeles, and Beale. The edges are labeled to with the driving distance between each pair of cities.\n\n[Figure: A graph represents the four California air force bases. The graph has four vertices: E, B, V, and L. The edge, E B is labeld 410 miles. The edge, B V is labeled 396 miles. The edge, V L is labeled 159 miles. The edge, L E is labeled 106 miles. The edge, L B is labeled 439 miles. The edge, E V is labeled 207 miles.]\n\nFigure \\(\\PageIndex{12}\\): Graph of Four California Air Force Bases\n\nThe graph in Figure \\(\\PageIndex{12}\\) is called a weighted graph, because each edge has been assigned a value or weight. The weights can represent quantities such as time, distance, money, or any quantity associated with the adjacent vertices joined by the edges. The total weight of any walk, trail, or path is the sum of the weights of the edges it visits.\n\nNotice that the officer’s trip can be represented as a Hamilton cycle, because each of the four vertices in the graph is visited exactly once.\n\nExample \\(\\PageIndex{5}\\): Finding Hamilton Cycles of Lowest Weight\n\nUse Figure \\(\\PageIndex{12}\\) and the given Hamilton cycles to answer the following questions.\n\nV → L → E → B → V\n\nV → L → B → E → V\n\nV → E → L → B → V\n\nV → B → E → L → V\n\n1. Which of the Hamilton cycles (directed cycles) lie on the same cycle (undirected cycle) in the graph?\n\n2. Find the total weight of each cycle.\n\n3. Of the four, which of the Hamilton cycles describes the shortest trip for the officer? Describe the route.\n\nAnswer\n\n1. V → L → E → B → V and V → B → E → L → V follow the same edges in reverse order.\n\n2. Any Hamilton cycles that lie on the same cycle will have the same edges and the same total weight.\n\nV → L → E → B → V and V → B → E → L → V each have total weight \\(159+106+410+396=1071\\).\n\nV → L → B → E → V has a total weight \\(159+439+410+207=1215\\).\n\nV → E → L → B → V has a total weight \\(396+439+106+207=1148\\).\n\n3. Hamilton cycles V → L → E → B → V and V → B → E → L → V each have the lowest total weight. The officer would take the route from Vandenberg, to Los Angeles, to Edwards, to Beale, and back to Vandenberg, or reverse that route.\n\nYour Turn \\(\\PageIndex{5}\\)\n\nFind the weight of the Hamilton cycle m → o → p → n → q → m in the given figure.\n\n[Figure: A graph with 5 vertices: m, n, o, p, and q. The edges from m to q, p, o, and n are labeled 5, 5, 3, and 4. The edges from n to q, p, and o are labeled 8, 5, and 6. The edges from p to o and q are labeled 5 and 7. The edge from q to o is labeled 2.]\n\nFigure \\(\\PageIndex{13}\\): Weighted Complete Graph with Five Vertices\n\nCheck Your Understanding\n\nFor the following exercises, fill in the blank to make the statement true.\n\n1. A Hamilton cycle is a circuit that visits each ___________ exactly once.\n\n2. A __________ graph with \\(n \\geq 3\\) vertices has \\(\\left( {n - 1} \\right)!\\) Hamilton cycles.\n\n3. For the following exercises, fill in the blank with is or is not to make the statement true.\n\n4. A Hamilton cycle ________ a circuit.\n\n5. A Hamilton cycle that visits every edge ________ an Euler circuit.\n\n6. A Hamilton cycle ________ different from a Hamilton circuit.\n\n7. An Euler circuit that visits every vertex ________ a Hamilton cycle.\n\n8. The total weight of a trail _______ the sum of the weights of the edges visited by the trail.\n\n9. A weighted graph _______ always a complete graph.\n\n10. The number of ways to arrange n objects _______ \\(\\left( {n - 1} \\right)!\\)\n\n11. Every cycle ____ a circuit.\n\nThis page titled 12.7: Hamilton Cycles was last modified on Thu, 02 Jan 2025 11:07:44 GMT and is shared under a CC BY  4.0  license and was authored, remixed, and/or curated by OpenStax via source content that was edited to the style and standards of the LibreTexts platform.",
+  "figures": [
+    {
+      "url": "https://math.libretexts.org/@api/deki/files/127203/12cacfbd51c01de4906b16ea40ce397e8e1f69ee?revision=1&size=bestfit&width=445&height=334",
+      "alt": "A 3D model of an icosahedron.",
+      "credit": ""
+    },
+    {
+      "url": "https://math.libretexts.org/@api/deki/files/127201/5e476bc552fd9d6db7ff0044197d8ee97040a0f4?revision=1&size=bestfit&width=277&height=272",
+      "alt": "A dodecahedron.",
+      "credit": ""
+    },
+    {
+      "url": "https://math.libretexts.org/@api/deki/files/127200/167bd138f3c6843c01667b90acdc430a8155a8e7?revision=1&size=bestfit&width=604&height=416",
+      "alt": "Three concentric ovals represent directed cycles, circuits, and closed walks. The first (inner) oval labeled directed cycles (closed paths) reads, no repeated edges or vertices. The second oval labeled circuits (closed talks) reads, no repeated edges. The third oval is labeled closed walks.",
+      "credit": ""
+    },
+    {
+      "url": "https://math.libretexts.org/@api/deki/files/127199/696d798ccf85c2fed6a9ea89f992e60373c9a246?revision=1&size=bestfit&width=302&height=358",
+      "alt": "Two graphs are labeled graph A and graph B. Graph A highlights the edges of a dodecahedron. Graph B highlights the vertices of a dodecahedron.",
+      "credit": ""
+    },
+    {
+      "url": "https://math.libretexts.org/@api/deki/files/127198/200d5c972448b0ed738daf9e4ddb17ec9b18d8a4?revision=1",
+      "alt": "Two figures. The first figure is a 2 D view of a dodecahedron. The edges are highlighted. The second figure is a 3 D view of a dodecahedron. The edges in the front face are highlighted.",
+      "credit": ""
+    },
+    {
+      "url": "https://math.libretexts.org/@api/deki/files/127208/c3a61a6078d28a6f1301709932508bec29f32af4?revision=1&size=bestfit&width=316&height=348",
+      "alt": "Two graphs are labeled graph A and graph B. Graph A highlights the edges of a dodecahedron. Graph B highlights the vertices of a dodecahedron.",
+      "credit": ""
+    },
+    {
+      "url": "https://math.libretexts.org/@api/deki/files/127206/e489b6c8a7d5b96b38e1571e138900f1fbe827ac?revision=1",
+      "alt": "A 2 D view of a dodecahedron. The edges are highlighted.",
+      "credit": ""
+    },
+    {
+      "url": "https://math.libretexts.org/@api/deki/files/127198/200d5c972448b0ed738daf9e4ddb17ec9b18d8a4?revision=1",
+      "alt": "Two figures. The first figure is a 2 D view of a dodecahedron. The edges are highlighted. The second figure is a 3 D view of a dodecahedron. The edges in the front face are highlighted.",
+      "credit": ""
+    },
+    {
+      "url": "https://math.libretexts.org/@api/deki/files/127210/cb9aa8c72acae5a68cf74e543d2f6abac94df261?revision=1&size=bestfit&width=332&height=303",
+      "alt": "Two figures. The first figure is a 2 D view of a dodecahedron. The edges are highlighted. The second figure is a 3 D view of a dodecahedron. The edges in the front face are highlighted.",
+      "credit": ""
+    },
+    {
+      "url": "https://math.libretexts.org/@api/deki/files/127214/147c12d974b76d15fbb20cd98329b230c8e7c3e2?revision=1&size=bestfit&width=497&height=267",
+      "alt": "Two graphs. The first graph, graph Z has four vertices: a, b, c, and d. The edges connect a b, b c, c d, d a, and a c. The second graph directed edges from a to b, b to c, c to d, and d to a. A dashed line connects a to c.",
+      "credit": ""
+    },
+    {
+      "url": "https://math.libretexts.org/@api/deki/files/127216/7128e5b2ab0938d0118f50b625bc2eeb9eb419af?revision=1&size=bestfit&width=347&height=355",
+      "alt": "Graph Q has two overlapping quadrilaterals. The vertices of the outer quadrilateral are a, c, h, and f. The vertices of the inner quadrilateral are d, b, e, and g. The vertex, d rests on the edge a f. The vertex, b rests on the edge a c. The vertex, e rests on the edge c h. The vertex, g rests on the edge hf. ",
+      "credit": ""
+    },
+    {
+      "url": "https://math.libretexts.org/@api/deki/files/109925/CS_Figure_12_07_193.png?revision=1&size=bestfit&width=359&height=358",
+      "alt": "Graph T has 9 vertices. The edges connect a b, b f, f e, e h, h i, I g, g d, d c, and c a.",
+      "credit": ""
+    },
+    {
+      "url": "https://math.libretexts.org/@api/deki/files/127217/7ad71f6ff1a147c316bb3461baa9340633e19600?revision=1",
+      "alt": "A directed graph has six vertices: o, p, q, r, s, and n. All the vertices are interconnected. Directed arrows flow from o to p, p to q, q to r, r to s, s to n, and n to o.",
+      "credit": ""
+    },
+    {
+      "url": "https://math.libretexts.org/@api/deki/files/127221/adae98454d3a116d39a7256e2d6b6df80b42a5a0?revision=1",
+      "alt": "A graph with four vertices, a, b, c, and d. Edges connect a b, b c, c d, d a, a c, and b d.",
+      "credit": ""
+    },
+    {
+      "url": "https://math.libretexts.org/@api/deki/files/127224/5ada6bb5823fee53d2d3047cb7020e18bd02c5a5?revision=1",
+      "alt": "A graph with four vertices, a, b, c, and d. Edges connect a b, b c, c d, d a, a c, and b d. The edges, a c, and b d are in dashed lines.",
+      "credit": ""
+    },
+    {
+      "url": "https://math.libretexts.org/@api/deki/files/127226/73fb87a576586fc2c8b52f36cb30bcebcfda521f?revision=1",
+      "alt": "A graph with four vertices, a, b, c, and d. Edges connect a b, b c, c d, d a, a c, and b d. The edges, a d, and b c are in dashed lines.",
+      "credit": ""
+    },
+    {
+      "url": "https://math.libretexts.org/@api/deki/files/127227/6d6ab130cf923b2bbf5f04ff9006fb23f346ac07?revision=1",
+      "alt": "A graph with four vertices, a, b, c, and d. Edges connect a b, b c, c d, d a, a c, and b d. The edges, a b, and d c are in dashed lines.",
+      "credit": ""
+    },
+    {
+      "url": "https://math.libretexts.org/@api/deki/files/127225/adae98454d3a116d39a7256e2d6b6df80b42a5a0_28c1?revision=1",
+      "alt": "A grah with four vertices, a, b, c, and d. Edges connect a b, b c, c d, d a, a c, and b d.",
+      "credit": ""
+    },
+    {
+      "url": "https://math.libretexts.org/@api/deki/files/127232/5ada6bb5823fee53d2d3047cb7020e18bd02c5a5_qbr0?revision=1",
+      "alt": "A grah with four vertices, a, b, c, and d. Edges connect a b, b c, c d, d a, a c, and b d. The edges, a c, and b d are in dashed lines.",
+      "credit": ""
+    },
+    {
+      "url": "https://math.libretexts.org/@api/deki/files/127233/73fb87a576586fc2c8b52f36cb30bcebcfda521f_1n6m?revision=1",
+      "alt": "A grah with four vertices, a, b, c, and d. Edges connect a b, b c, c d, d a, a c, and b d. The edges, a d, and b c are in dashed lines.",
+      "credit": ""
+    },
+    {
+      "url": "https://math.libretexts.org/@api/deki/files/127234/6d6ab130cf923b2bbf5f04ff9006fb23f346ac07_zjuf?revision=1",
+      "alt": "A grah with four vertices, a, b, c, and d. Edges connect a b, b c, c d, d a, a c, and b d. The edges, a b, and d c are in dashed lines.",
+      "credit": ""
+    },
+    {
+      "url": "https://math.libretexts.org/@api/deki/files/127235/1ad6edb87240175d4b7ae3d6fa663243a914d2f3?revision=1",
+      "alt": "A grah with four vertices, a, b, c, and d. Edges connect a b, b c, c d, d a, a c, and b d. The edges, a c, and b d are in dashed lines. Directed edges flow from a to d, d to c, c to b, and b to a.",
+      "credit": ""
+    },
+    {
+      "url": "https://math.libretexts.org/@api/deki/files/127236/818041b6f3eefd0f1e5b7fc21900e8ce90453e05?revision=1",
+      "alt": "A grah with four vertices, a, b, c, and d. Edges connect a b, b c, c d, d a, a c, and b d. The edges, a d, and b c are in dashed lines. The directed edges flow from a to c, c to d, d to b, and b to a.",
+      "credit": ""
+    },
+    {
+      "url": "https://math.libretexts.org/@api/deki/files/127237/92b6b3751667ca093687a018de82e012b353d290?revision=1",
+      "alt": "A grah with four vertices, a, b, c, and d. Edges connect a b, b c, c d, d a, a c, and b d. The edges, a b, and d c are in dashed lines. The edges flow from a to d, d to b, b to c, c, and c to a.",
+      "credit": ""
+    },
+    {
+      "url": "https://math.libretexts.org/@api/deki/files/127239/fcfe669c5e6dc64c4c7465b870a19d8521e8517b?revision=1",
+      "alt": "In this graph, four vertices, a, b, c, and d are present. Edges connect a b, b c, c d, d a, a c, and b d. In this eighth graph, the edges, a c, and b d are in dashed lines. Directed edges flow from a to d, d to c, c to b, and b to a.",
+      "credit": ""
+    },
+    {
+      "url": "https://math.libretexts.org/@api/deki/files/127238/70d1b68744861e0393da73fe13383d96083411ea?revision=1",
+      "alt": "In this graph, four vertices, a, b, c, and d are present. Edges connect a b, b c, c d, d a, a c, and b d. In this ninth graph, the edges, a d, and b c are in dashed lines. The directed edges flow from a to c, c to d, d to b, and b to a.",
+      "credit": ""
+    },
+    {
+      "url": "https://math.libretexts.org/@api/deki/files/127240/89013a47651a239269fb63ea6be19bfb18f27a02?revision=1",
+      "alt": "In this graph, four vertices, a, b, c, and d are present. Edges connect a b, b c, c d, d a, a c, and b d. In this tenth graph, the edges, a b, and d c are in dashed lines. The edges flow from a to d, d to b, b to c, c, and c to a.",
+      "credit": ""
+    },
+    {
+      "url": "https://math.libretexts.org/@api/deki/files/127245/53c4f14ddcdd8721f96a5c0fb5d75e0079eec07b?revision=1",
+      "alt": "Graph L has five vertices: m, n, o, p, and q. All vertices are interconnected.",
+      "credit": ""
+    },
+    {
+      "url": "https://math.libretexts.org/@api/deki/files/109926/CS_Figure_12_07_198.png?revision=1",
+      "alt": "Graph R has six vertices: s, t, x, u, w, and v. All vertices are interconnected.",
+      "credit": ""
+    },
+    {
+      "url": "https://math.libretexts.org/@api/deki/files/127247/3142608528c268222eb5eac4db31a06515edbbef?revision=1",
+      "alt": "A graph represents the four California air force bases. The graph has four vertices: E, B, V, and L. The edge, E B is labeld 410 miles. The edge, B V is labeled 396 miles. The edge, V L is labeled 159 miles. The edge, L E is labeled 106 miles. The edge, L B is labeled 439 miles. The edge, E V is labeled 207 miles.",
+      "credit": ""
+    },
+    {
+      "url": "https://math.libretexts.org/@api/deki/files/109927/CS_Figure_12_07_200.png?revision=1",
+      "alt": "A graph with 5 vertices: m, n, o, p, and q. The edges from m to q, p, o, and n are labeled 5, 5, 3, and 4. The edges from n to q, p, and o are labeled 8, 5, and 6. The edges from p to o and q are labeled 5 and 7. The edge from q to o is labeled 2.",
+      "credit": ""
+    }
+  ],
+  "references": [
+    {
+      "text": "12.7: Hamilton Cycles",
+      "url": "https://math.libretexts.org/Bookshelves/Applied_Mathematics/Contemporary_Mathematics_(OpenStax)/12%3A_Graph_Theory/12.07%3A_Hamilton_Cycles"
+    },
+    {
+      "text": "CC BY  4.0",
+      "url": "https://creativecommons.org/licenses/by/4.0"
+    },
+    {
+      "text": "OpenStax",
+      "url": "https://openstax.org/"
+    },
+    {
+      "text": "source content",
+      "url": "https://openstax.org/details/books/contemporary-mathematics"
+    }
+  ],
+  "exercises": [
+    {
+      "ordinal": 1,
+      "sourceNumber": "1",
+      "sourceAnchor": "",
+      "kind": "exercise-candidate",
+      "context": "",
+      "original": "1. Describe and identify Hamilton cycles.",
+      "prompt": "1. Describe and identify Hamilton cycles.",
+      "sourceAnswers": [],
+      "hasFigure": false,
+      "status": "draft",
+      "answerVerified": false,
+      "translationStatus": "pending",
+      "mappingStatus": "pending"
+    },
+    {
+      "ordinal": 2,
+      "sourceNumber": "2",
+      "sourceAnchor": "",
+      "kind": "exercise-candidate",
+      "context": "",
+      "original": "2. Compute the number of Hamilton cycles in a complete graph.",
+      "prompt": "2. Compute the number of Hamilton cycles in a complete graph.",
+      "sourceAnswers": [],
+      "hasFigure": false,
+      "status": "draft",
+      "answerVerified": false,
+      "translationStatus": "pending",
+      "mappingStatus": "pending"
+    },
+    {
+      "ordinal": 3,
+      "sourceNumber": "3",
+      "sourceAnchor": "",
+      "kind": "exercise-candidate",
+      "context": "",
+      "original": "3. Apply and evaluate weighted graphs.",
+      "prompt": "3. Apply and evaluate weighted graphs.",
+      "sourceAnswers": [],
+      "hasFigure": false,
+      "status": "draft",
+      "answerVerified": false,
+      "translationStatus": "pending",
+      "mappingStatus": "pending"
+    },
+    {
+      "ordinal": 4,
+      "sourceNumber": "",
+      "sourceAnchor": "",
+      "kind": "example-or-exercise",
+      "context": "Let’s practice naming and identifying Hamilton cycles, as well as distinguishing them from Euler circuits. It is important to remember that Euler circuits visit all edges without repetition, while Hamilton cycles visit all vertices without repetition. Hamilton cycles are named by their vertices just like all circuits. An example is given in Figure \\(\\PageIndex{6}\\).\n\nNotice that the Hamilton cycle a → b → c → d for Graph Z in Figure 12.182 is NOT an Euler circuit, because it does not visit edge \\(\\)ac. Some Hamilton cycles are also Euler circuits while some are not, and some Euler circuits are Hamilton cycles while some are not.\n\nTIP! Sometimes students confuse Euler circuits with Hamilton cycles. To help you remember, think of the E in Euler as standing for Edge.",
+      "original": "Example \\(\\PageIndex{1}\\): Differentiating between Hamilton Cycles or Euler Circuits\n\nUse Figure \\(\\PageIndex{7}\\) to determine whether the given circuit is a Hamilton cycle, an Euler circuit, both, or neither.\n\n[Figure: Graph Q has two overlapping quadrilaterals. The vertices of the outer quadrilateral are a, c, h, and f. The vertices of the inner quadrilateral are d, b, e, and g. The vertex, d rests on the edge a f. The vertex, b rests on the edge a c. The vertex, e rests on the edge c h. The vertex, g rests on the edge hf. ]\n\nFigure 12.183 Graph Q\n\n1. a → b → c → e → h → g → f → d → a\n\n2. g → e → h → g → f → d → a → b → d → g\n\n3. a → b → c → e → h → g → f → d → b → e → g → d → a\n\nAnswer\n\n1. This circuit is a Hamilton cycle only. It visits each vertex exactly once, so, it is a Hamilton cycle. It is not an Euler circuit because it doesn’t visit all of the edges.\n\n2. This circuit is neither Hamilton cycle nor an Euler circuit. It doesn’t visit vertex \\(c\\), so, it is not a Hamilton cycle. It also doesn’t visit edges \\(\\)be and \\(\\)ce, so, it is not an Euler circuit.\n\n3. This circuit is an Euler circuit only. It visits several vertices more than once; so, it is not a Hamilton cycle. It visits every edge exactly once, so, it is an Euler circuit.",
+      "prompt": "Example \\(\\PageIndex{1}\\): Differentiating between Hamilton Cycles or Euler Circuits\n\nUse Figure \\(\\PageIndex{7}\\) to determine whether the given circuit is a Hamilton cycle, an Euler circuit, both, or neither.\n\n[Figure: Graph Q has two overlapping quadrilaterals. The vertices of the outer quadrilateral are a, c, h, and f. The vertices of the inner quadrilateral are d, b, e, and g. The vertex, d rests on the edge a f. The vertex, b rests on the edge a c. The vertex, e rests on the edge c h. The vertex, g rests on the edge hf. ]\n\nFigure 12.183 Graph Q\n\n1. a → b → c → e → h → g → f → d → a\n\n2. g → e → h → g → f → d → a → b → d → g\n\n3. a → b → c → e → h → g → f → d → b → e → g → d → a",
+      "sourceAnswers": [
+        "1. This circuit is a Hamilton cycle only. It visits each vertex exactly once, so, it is a Hamilton cycle. It is not an Euler circuit because it doesn’t visit all of the edges.\n\n2. This circuit is neither Hamilton cycle nor an Euler circuit. It doesn’t visit vertex \\(c\\), so, it is not a Hamilton cycle. It also doesn’t visit edges \\(\\)be and \\(\\)ce, so, it is not an Euler circuit.\n\n3. This circuit is an Euler circuit only. It visits several vertices more than once; so, it is not a Hamilton cycle. It visits every edge exactly once, so, it is an Euler circuit."
+      ],
+      "hasFigure": true,
+      "status": "draft",
+      "answerVerified": false,
+      "translationStatus": "pending",
+      "mappingStatus": "pending"
+    },
+    {
+      "ordinal": 5,
+      "sourceNumber": "",
+      "sourceAnchor": "",
+      "kind": "example-or-exercise",
+      "context": "Factorials\n\nIn many areas of mathematics, we must calculate products like \\(7⋅6⋅5⋅4⋅3⋅2⋅1\\) or \\(11⋅10⋅9⋅8⋅7⋅6⋅5⋅4⋅3⋅2⋅1\\), products that involve multiplying all the counting numbers from a particular number down to 1. Imagine that the product happened to be all the numbers from 100 down to 1. That’s a lot of writing! Instead of writing all of that out, mathematicians came up with a shorthand notation. For example, instead of \\(7⋅6⋅5⋅4⋅3⋅2⋅1\\), we write \\(7!\\), which is read “7 factorial.” In other words, the product of all the counting numbers from \\(n\\) down to 1 is called \\(n\\) factorial and it is written \\(n!\\)",
+      "original": "Example \\(\\PageIndex{2}\\): Evaluating Factorials\n\nEvaluate \\(n!\\) and \\((n−1)!\\) for \\(n=4\\).\n\nAnswer\n\n\\(n!=4!=4⋅3⋅2⋅1=\\)24 and \\((n−1)!=(4−1)!=3!=3⋅2⋅1=6\\)",
+      "prompt": "Example \\(\\PageIndex{2}\\): Evaluating Factorials\n\nEvaluate \\(n!\\) and \\((n−1)!\\) for \\(n=4\\).",
+      "sourceAnswers": [
+        "\\(n!=4!=4⋅3⋅2⋅1=\\)24 and \\((n−1)!=(4−1)!=3!=3⋅2⋅1=6\\)"
+      ],
+      "hasFigure": false,
+      "status": "draft",
+      "answerVerified": false,
+      "translationStatus": "pending",
+      "mappingStatus": "pending"
+    },
+    {
+      "ordinal": 6,
+      "sourceNumber": "",
+      "sourceAnchor": "",
+      "kind": "example-or-exercise",
+      "context": "Evaluate \\(n!\\) and \\((n - 1)!\\) for \\(n = 6\\).\n\nA common use for factorials is counting the number of ways to arrange objects. Suppose that there were three students, Aryana, Byron, and Carlos, who wanted to line up in a row. How many arrangements are possible? There are six possibilities: ABC, ACB, BAC, BCA, CAB, or CBA. Notice that there were three students being arranged, and the number of possible arrangements is three.\n\nThe number of ways to arrange \\(n\\) distinct objects is \\(n!\\).",
+      "original": "Example \\(\\PageIndex{3}\\): Counting Arrangements of Letters\n\nFind the number of ways to arrange the letters a, b, c, and d.\n\nAnswer\n\n\\(4!=4⋅3⋅2⋅1=24\\)",
+      "prompt": "Example \\(\\PageIndex{3}\\): Counting Arrangements of Letters\n\nFind the number of ways to arrange the letters a, b, c, and d.",
+      "sourceAnswers": [
+        "\\(4!=4⋅3⋅2⋅1=24\\)"
+      ],
+      "hasFigure": false,
+      "status": "draft",
+      "answerVerified": false,
+      "translationStatus": "pending",
+      "mappingStatus": "pending"
+    },
+    {
+      "ordinal": 7,
+      "sourceNumber": "",
+      "sourceAnchor": "",
+      "kind": "example-or-exercise",
+      "context": "a → d → b → c → a\n\nThe six directed four-cycles in Table \\(\\PageIndex{2}\\) are the only distinct Hamilton cycles in a complete graph with four vertices. Six is also the number of ways to arrange the three letters b, c, and d. (Do you see why?) The number of ways to arrange three letters is \\(3!=3⋅2⋅1=6\\). Similarly, the number of Hamilton cycles in a graph with five vertices is the number of ways to arrange four letters, which is \\(4!=4⋅3⋅2⋅1=24\\). In general, to find the number of Hamilton cycles in a graph, we take one less than the number of vertices and find its factorial.\n\nThe number of distinct Hamilton cycles in a complete graph with \\(n\\) vertices is \\((n−1)!\\)",
+      "original": "Example \\(\\PageIndex{4}\\): Counting Hamilton Cycles in a Complete Graph\n\nHow many Hamilton cycles are in the complete graph in Figure \\(\\PageIndex{10}\\)?\n\n[Figure: Graph L has five vertices: m, n, o, p, and q. All vertices are interconnected.]\n\nFigure \\(\\PageIndex{10}\\) Complete Graph L\n\nAnswer\n\nThere are five vertices in the graph. Using \\(n=5\\), we have\\((n−1)!=(5−1)!=4!=4⋅3⋅2⋅1=24\\) Hamilton cycles.",
+      "prompt": "Example \\(\\PageIndex{4}\\): Counting Hamilton Cycles in a Complete Graph\n\nHow many Hamilton cycles are in the complete graph in Figure \\(\\PageIndex{10}\\)?\n\n[Figure: Graph L has five vertices: m, n, o, p, and q. All vertices are interconnected.]\n\nFigure \\(\\PageIndex{10}\\) Complete Graph L",
+      "sourceAnswers": [
+        "There are five vertices in the graph. Using \\(n=5\\), we have\\((n−1)!=(5−1)!=4!=4⋅3⋅2⋅1=24\\) Hamilton cycles."
+      ],
+      "hasFigure": true,
+      "status": "draft",
+      "answerVerified": false,
+      "translationStatus": "pending",
+      "mappingStatus": "pending"
+    },
+    {
+      "ordinal": 8,
+      "sourceNumber": "",
+      "sourceAnchor": "",
+      "kind": "example-or-exercise",
+      "context": "Suppose that an officer in the U.S. Air Force who is stationed at Vandenberg Air Force base must drive to visit three other California Air Force bases before returning to Vandenberg. The officer needs to visit each base once. The vertices in the graph in Figure \\(\\PageIndex{12}\\) represent the four U.S. Air Force bases, Vandenberg, Edwards, Los Angeles, and Beale. The edges are labeled to with the driving distance between each pair of cities.\n\nThe graph in Figure \\(\\PageIndex{12}\\) is called a weighted graph, because each edge has been assigned a value or weight. The weights can represent quantities such as time, distance, money, or any quantity associated with the adjacent vertices joined by the edges. The total weight of any walk, trail, or path is the sum of the weights of the edges it visits.\n\nNotice that the officer’s trip can be represented as a Hamilton cycle, because each of the four vertices in the graph is visited exactly once.",
+      "original": "Example \\(\\PageIndex{5}\\): Finding Hamilton Cycles of Lowest Weight\n\nUse Figure \\(\\PageIndex{12}\\) and the given Hamilton cycles to answer the following questions.\n\nV → L → E → B → V\n\nV → L → B → E → V\n\nV → E → L → B → V\n\nV → B → E → L → V\n\n1. Which of the Hamilton cycles (directed cycles) lie on the same cycle (undirected cycle) in the graph?\n\n2. Find the total weight of each cycle.\n\n3. Of the four, which of the Hamilton cycles describes the shortest trip for the officer? Describe the route.\n\nAnswer\n\n1. V → L → E → B → V and V → B → E → L → V follow the same edges in reverse order.\n\n2. Any Hamilton cycles that lie on the same cycle will have the same edges and the same total weight.\n\nV → L → E → B → V and V → B → E → L → V each have total weight \\(159+106+410+396=1071\\).\n\nV → L → B → E → V has a total weight \\(159+439+410+207=1215\\).\n\nV → E → L → B → V has a total weight \\(396+439+106+207=1148\\).\n\n3. Hamilton cycles V → L → E → B → V and V → B → E → L → V each have the lowest total weight. The officer would take the route from Vandenberg, to Los Angeles, to Edwards, to Beale, and back to Vandenberg, or reverse that route.",
+      "prompt": "Example \\(\\PageIndex{5}\\): Finding Hamilton Cycles of Lowest Weight\n\nUse Figure \\(\\PageIndex{12}\\) and the given Hamilton cycles to answer the following questions.\n\nV → L → E → B → V\n\nV → L → B → E → V\n\nV → E → L → B → V\n\nV → B → E → L → V\n\n1. Which of the Hamilton cycles (directed cycles) lie on the same cycle (undirected cycle) in the graph?\n\n2. Find the total weight of each cycle.\n\n3. Of the four, which of the Hamilton cycles describes the shortest trip for the officer? Describe the route.",
+      "sourceAnswers": [
+        "1. V → L → E → B → V and V → B → E → L → V follow the same edges in reverse order.\n\n2. Any Hamilton cycles that lie on the same cycle will have the same edges and the same total weight.\n\nV → L → E → B → V and V → B → E → L → V each have total weight \\(159+106+410+396=1071\\).\n\nV → L → B → E → V has a total weight \\(159+439+410+207=1215\\).\n\nV → E → L → B → V has a total weight \\(396+439+106+207=1148\\).\n\n3. Hamilton cycles V → L → E → B → V and V → B → E → L → V each have the lowest total weight. The officer would take the route from Vandenberg, to Los Angeles, to Edwards, to Beale, and back to Vandenberg, or reverse that route."
+      ],
+      "hasFigure": false,
+      "status": "draft",
+      "answerVerified": false,
+      "translationStatus": "pending",
+      "mappingStatus": "pending"
+    },
+    {
+      "ordinal": 9,
+      "sourceNumber": "1",
+      "sourceAnchor": "",
+      "kind": "exercise-candidate",
+      "context": "Check Your Understanding\n\nFor the following exercises, fill in the blank to make the statement true.",
+      "original": "1. A Hamilton cycle is a circuit that visits each ___________ exactly once.",
+      "prompt": "1. A Hamilton cycle is a circuit that visits each ___________ exactly once.",
+      "sourceAnswers": [],
+      "hasFigure": false,
+      "status": "draft",
+      "answerVerified": false,
+      "translationStatus": "pending",
+      "mappingStatus": "pending"
+    },
+    {
+      "ordinal": 10,
+      "sourceNumber": "2",
+      "sourceAnchor": "",
+      "kind": "exercise-candidate",
+      "context": "Check Your Understanding\n\nFor the following exercises, fill in the blank to make the statement true.",
+      "original": "2. A __________ graph with \\(n \\geq 3\\) vertices has \\(\\left( {n - 1} \\right)!\\) Hamilton cycles.",
+      "prompt": "2. A __________ graph with \\(n \\geq 3\\) vertices has \\(\\left( {n - 1} \\right)!\\) Hamilton cycles.",
+      "sourceAnswers": [],
+      "hasFigure": false,
+      "status": "draft",
+      "answerVerified": false,
+      "translationStatus": "pending",
+      "mappingStatus": "pending"
+    },
+    {
+      "ordinal": 11,
+      "sourceNumber": "3",
+      "sourceAnchor": "",
+      "kind": "exercise-candidate",
+      "context": "Check Your Understanding\n\nFor the following exercises, fill in the blank to make the statement true.",
+      "original": "3. For the following exercises, fill in the blank with is or is not to make the statement true.",
+      "prompt": "3. For the following exercises, fill in the blank with is or is not to make the statement true.",
+      "sourceAnswers": [],
+      "hasFigure": false,
+      "status": "draft",
+      "answerVerified": false,
+      "translationStatus": "pending",
+      "mappingStatus": "pending"
+    },
+    {
+      "ordinal": 12,
+      "sourceNumber": "4",
+      "sourceAnchor": "",
+      "kind": "exercise-candidate",
+      "context": "Check Your Understanding\n\nFor the following exercises, fill in the blank to make the statement true.",
+      "original": "4. A Hamilton cycle ________ a circuit.",
+      "prompt": "4. A Hamilton cycle ________ a circuit.",
+      "sourceAnswers": [],
+      "hasFigure": false,
+      "status": "draft",
+      "answerVerified": false,
+      "translationStatus": "pending",
+      "mappingStatus": "pending"
+    },
+    {
+      "ordinal": 13,
+      "sourceNumber": "5",
+      "sourceAnchor": "",
+      "kind": "exercise-candidate",
+      "context": "Check Your Understanding\n\nFor the following exercises, fill in the blank to make the statement true.",
+      "original": "5. A Hamilton cycle that visits every edge ________ an Euler circuit.",
+      "prompt": "5. A Hamilton cycle that visits every edge ________ an Euler circuit.",
+      "sourceAnswers": [],
+      "hasFigure": false,
+      "status": "draft",
+      "answerVerified": false,
+      "translationStatus": "pending",
+      "mappingStatus": "pending"
+    },
+    {
+      "ordinal": 14,
+      "sourceNumber": "6",
+      "sourceAnchor": "",
+      "kind": "exercise-candidate",
+      "context": "Check Your Understanding\n\nFor the following exercises, fill in the blank to make the statement true.",
+      "original": "6. A Hamilton cycle ________ different from a Hamilton circuit.",
+      "prompt": "6. A Hamilton cycle ________ different from a Hamilton circuit.",
+      "sourceAnswers": [],
+      "hasFigure": false,
+      "status": "draft",
+      "answerVerified": false,
+      "translationStatus": "pending",
+      "mappingStatus": "pending"
+    },
+    {
+      "ordinal": 15,
+      "sourceNumber": "7",
+      "sourceAnchor": "",
+      "kind": "exercise-candidate",
+      "context": "Check Your Understanding\n\nFor the following exercises, fill in the blank to make the statement true.",
+      "original": "7. An Euler circuit that visits every vertex ________ a Hamilton cycle.",
+      "prompt": "7. An Euler circuit that visits every vertex ________ a Hamilton cycle.",
+      "sourceAnswers": [],
+      "hasFigure": false,
+      "status": "draft",
+      "answerVerified": false,
+      "translationStatus": "pending",
+      "mappingStatus": "pending"
+    },
+    {
+      "ordinal": 16,
+      "sourceNumber": "8",
+      "sourceAnchor": "",
+      "kind": "exercise-candidate",
+      "context": "Check Your Understanding\n\nFor the following exercises, fill in the blank to make the statement true.",
+      "original": "8. The total weight of a trail _______ the sum of the weights of the edges visited by the trail.",
+      "prompt": "8. The total weight of a trail _______ the sum of the weights of the edges visited by the trail.",
+      "sourceAnswers": [],
+      "hasFigure": false,
+      "status": "draft",
+      "answerVerified": false,
+      "translationStatus": "pending",
+      "mappingStatus": "pending"
+    },
+    {
+      "ordinal": 17,
+      "sourceNumber": "9",
+      "sourceAnchor": "",
+      "kind": "exercise-candidate",
+      "context": "Check Your Understanding\n\nFor the following exercises, fill in the blank to make the statement true.",
+      "original": "9. A weighted graph _______ always a complete graph.",
+      "prompt": "9. A weighted graph _______ always a complete graph.",
+      "sourceAnswers": [],
+      "hasFigure": false,
+      "status": "draft",
+      "answerVerified": false,
+      "translationStatus": "pending",
+      "mappingStatus": "pending"
+    },
+    {
+      "ordinal": 18,
+      "sourceNumber": "10",
+      "sourceAnchor": "",
+      "kind": "exercise-candidate",
+      "context": "Check Your Understanding\n\nFor the following exercises, fill in the blank to make the statement true.",
+      "original": "10. The number of ways to arrange n objects _______ \\(\\left( {n - 1} \\right)!\\)",
+      "prompt": "10. The number of ways to arrange n objects _______ \\(\\left( {n - 1} \\right)!\\)",
+      "sourceAnswers": [],
+      "hasFigure": false,
+      "status": "draft",
+      "answerVerified": false,
+      "translationStatus": "pending",
+      "mappingStatus": "pending"
+    },
+    {
+      "ordinal": 19,
+      "sourceNumber": "11",
+      "sourceAnchor": "",
+      "kind": "exercise-candidate",
+      "context": "Check Your Understanding\n\nFor the following exercises, fill in the blank to make the statement true.",
+      "original": "11. Every cycle ____ a circuit.",
+      "prompt": "11. Every cycle ____ a circuit.",
+      "sourceAnswers": [],
+      "hasFigure": false,
+      "status": "draft",
+      "answerVerified": false,
+      "translationStatus": "pending",
+      "mappingStatus": "pending"
+    }
+  ],
+  "license": "CC BY 4.0",
+  "licenseEvidence": "This page titled 12.7: Hamilton Cycles was last modified on Thu, 02 Jan 2025 11:07:44 GMT and is shared under a CC BY  4.0  license and was authored, remixed, and/or curated by OpenStax via source content that was edited to the style and standards of the LibreTexts platform.",
+  "url": "https://math.libretexts.org/Bookshelves/Applied_Mathematics/Contemporary_Mathematics_(OpenStax)/12:_Graph_Theory/12.07:_Hamilton_Cycles",
+  "sha256": "2874f7b13be0ef51281c2c0f2bc11a85de2ac49434a9d6ca9d8856168a84c633",
+  "checkedAt": "2026-10-07",
+  "id": "a3097b3ca6eb2aee6ae6",
+  "bookId": "contemporary",
+  "licenseInherited": false,
+  "licenseSource": "https://math.libretexts.org/Bookshelves/Applied_Mathematics/Contemporary_Mathematics_(OpenStax)/12:_Graph_Theory/12.07:_Hamilton_Cycles",
+  "licenseUrl": "https://creativecommons.org/licenses/by/4.0/",
+  "authors": "OpenStax / Donna Kirk et al.",
+  "book": "Contemporary Mathematics",
+  "reviewStatus": "unreviewed",
+  "sourceLanguage": "en",
+  "translationStatus": "pending"
+}

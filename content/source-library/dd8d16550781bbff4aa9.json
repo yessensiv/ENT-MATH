@@ -1,0 +1,354 @@
+{
+  "title": "9.9: Solving Systems with Cramer's Rule",
+  "originalText": "Learning Objectives\n\nIn this section, you will:\n\nEvaluate  2 × 2  determinants.\n\nUse Cramer’s Rule to solve a system of equations in two\nvariables.\n\nEvaluate  3 × 3  determinants.\n\nUse Cramer’s Rule to solve a system of three equations in three\nvariables.\n\nKnow the properties of determinants.\n\nWe have learned how to solve systems of equations in two\nvariables and three variables, and by multiple methods:\nsubstitution, addition, Gaussian elimination, using the inverse of\na matrix, and graphing. Some of these methods are easier to apply\nthan others and are more appropriate in certain situations. In this\nsection, we will study two more strategies for solving systems of\nequations.\n\nEvaluating the Determinant of a 2×2\nMatrix\n\nA determinant is a real number that can be very useful in\nmathematics because it has multiple applications, such as\ncalculating area, volume, and other quantities. Here, we will use\ndeterminants to reveal whether a matrix is invertible by using the\nentries of a square matrix to determine whether there is\na solution to the system of equations. Perhaps one of the more\ninteresting applications, however, is their use in cryptography.\nSecure signals or messages are sometimes sent encoded in a matrix.\nThe data can only be decrypted with an invertible\nmatrix and the determinant. For our purposes, we focus on the\ndeterminant as an indication of the invertibility of the matrix.\nCalculating the determinant of a matrix involves following the\nspecific patterns that are outlined in this section.\n\nFIND\nTHE DETERMINANT OF A 2 × 2 MATRIX\n\nThe determinant of\na 2×22×2 matrix, given\n\nA=[acbd]A=[ abcd ]\n\nis defined as\n\n[Figure: 8662a76a38f992c8993a9ab1ff140fbfef057632]\n\nNotice the change in notation. There are several ways to\nindicate the determinant, including det(A)det(A) and\nreplacing the brackets in a matrix with straight\nlines, |A|.| A |.\n\nEXAMPLE 1\n\nFinding the Determinant of a 2 × 2\nMatrix\n\nFind the determinant of the given matrix.\n\nA=[5−623]A=[ 52−63 ]\n\nAnswer\n\nUsing Cramer’s Rule to Solve a System\nof Two Equations in Two Variables\n\nWe will now introduce a final method for solving systems of\nequations that uses determinants. Known as Cramer’s Rule, this\ntechnique dates back to the middle of the 18th century and is named\nfor its innovator, the Swiss mathematician Gabriel Cramer\n(1704-1752), who introduced it in 1750 in Introduction à\nl'Analyse des lignes Courbes algébriques. Cramer’s Rule is a viable\nand efficient method for finding solutions to systems with an\narbitrary number of unknowns, provided that we have the same number\nof equations as unknowns.\n\nCramer’s Rule will give us the unique solution to a system of\nequations, if it exists. However, if the system has no solution or\nan infinite number of solutions, this will be indicated by a\ndeterminant of zero. To find out if the system is inconsistent or\ndependent, another method, such as elimination, will have to be\nused.\n\nTo understand Cramer’s Rule, let’s look closely at how we solve\nsystems of linear equations using basic row operations. Consider a\nsystem of two equations in two variables.\n\na1x+b1y=c1(1)a2x+b2y=c2(2)a1x+b1y=c1(1)a2x+b2y=c2(2)\n\nWe eliminate one variable using row operations and solve for the\nother. Say that we wish to solve for x.x. If equation (2)\nis multiplied by the opposite of the coefficient of yy in\nequation (1), equation (1) is multiplied by the coefficient\nof yy in equation (2), and we add the two equations, the\nvariable yy will be eliminated.\n\nb2a1x+b2b1y=b2c1−b1a2x−b1b2y=−b1c2Multiply R1by b2Multiply R2by−b1________________________________________________________ b2a1x−b1a2x=b2c1−b1c2b2a1x+b2b1y=b2c1Multiply R1by b2−b1a2x−b1b2y=−b1c2Multiply R2by−b1________________________________________________________ b2a1x−b1a2x=b2c1−b1c2\n\nNow, solve for x.x.\n\nb2a1x−b1a2x=b2c1−b1c2x(b2a1−b1a2)=b2c1−b1c2                      x=b2c1−b1c2b2a1−b1a2=∣∣∣c1c2b1b2∣∣∣∣∣∣a1a2b1b2∣∣∣b2a1x−b1a2x=b2c1−b1c2x(b2a1−b1a2)=b2c1−b1c2                      x=b2c1−b1c2b2a1−b1a2=| c1b1c2b2 || a1b1a2b2 |\n\nSimilarly, to solve for y,y, we will\neliminate x.x.\n\na2a1x+a2b1y=a2c1−a1a2x−a1b2y=−a1c2Multiply R1by a2Multiply R2by−a1________________________________________________________a2b1y−a1b2y=a2c1−a1c2a2a1x+a2b1y=a2c1Multiply R1by a2−a1a2x−a1b2y=−a1c2Multiply R2by−a1________________________________________________________a2b1y−a1b2y=a2c1−a1c2\n\nSolving for yy gives\n\na2b1y−a1b2y=a2c1−a1c2y(a2b1−a1b2)=a2c1−a1c2                       y=a2c1−a1c2a2b1−a1b2=a1c2−a2c1a1b2−a2b1=∣∣∣a1a2c1c2∣∣∣∣∣∣a1a2b1b2∣∣∣a2b1y−a1b2y=a2c1−a1c2y(a2b1−a1b2)=a2c1−a1c2                       y=a2c1−a1c2a2b1−a1b2=a1c2−a2c1a1b2−a2b1=|a1c1a2c2||a1b1a2b2|\n\nNotice that the denominator for\nboth xx and yy is the determinant of the\ncoefficient matrix.\n\nWe can use these formulas to solve\nfor xx and y,y, but Cramer’s Rule also\nintroduces new notation:\n\nD:D: determinant of the coefficient matrix\n\nDx:Dx: determinant of the numerator in the solution\nof xx\n\nx=DxDx=DxD\n\nDy:Dy: determinant of the numerator in the solution\nof yy\n\ny=DyDy=DyD\n\nThe key to Cramer’s Rule is replacing the variable column of\ninterest with the constant column and calculating the determinants.\nWe can then express xx and yy as a quotient of\ntwo determinants.\n\nCRAMER’S RULE FOR 2×2\nSYSTEMS\n\nCramer’s Rule is a method that uses\ndeterminants to solve systems of equations that have the same\nnumber of equations as variables.\n\nConsider a system of two linear equations in two variables.\n\na1x+b1y=c1a2x+b2y=c2a1x+b1y=c1a2x+b2y=c2\n\nThe solution using Cramer’s Rule is given as\n\nx=DxD=∣∣∣c1c2b1b2∣∣∣∣∣∣a1a2b1b2∣∣∣,D≠0;​​y=DyD=∣∣∣a1a2c1c2∣∣∣∣∣∣a1a2b1b2∣∣∣,D≠0.x=DxD=| c1b1c2b2 || a1b1a2b2 |,D≠0;​​y=DyD=| a1c1a2c2 || a1b1a2b2 |,D≠0.\n\nIf we are solving for x,x, the xx column is\nreplaced with the constant column. If we are solving\nfor y,y, the yy column is replaced with the\nconstant column.\n\nEXAMPLE 2\n\nUsing Cramer’s Rule to Solve a 2 × 2\nSystem\n\nSolve the following 2×22×2 system using Cramer’s\nRule.\n\n12x+3y=15 2x−3y=1312x+3y=15 2x−3y=13\n\nAnswer\n\nTRY\nIT #1\n\nUse Cramer’s Rule to solve the 2 × 2 system of equations.\n\n x+2y=−11−2x+y=−13  x+2y=−11−2x+y=−13\n\nEvaluating the Determinant of a 3 × 3\nMatrix\n\nFinding the determinant of a 2×2 matrix is straightforward, but\nfinding the determinant of a 3×3 matrix is more complicated. One\nmethod is to augment the 3×3 matrix with a repetition of the first\ntwo columns, giving a 3×5 matrix. Then we calculate the sum of the\nproducts of entries down each of the three diagonals (upper left to\nlower right), and subtract the products of\nentries up each of the\nthree diagonals (lower left to upper right). This is more easily\nunderstood with a visual and an example.\n\nFind the determinant of the 3×3 matrix.\n\nA=⎡⎣⎢a1a2a3b1b2b3c1c2c3⎤⎦⎥A=[ a1b1c1a2b2c2a3b3c3 ]\n\n1. Augment AA with the first two columns.\n\ndet(A)=∣∣∣∣a1a2a3b1b2b3c1c2c3∣∣∣∣a1a2a3b1b2b3∣∣∣∣det(A)=| a1b1c1a2b2c2a3b3c3|a1a2a3b1b2b3 |\n\n2. From upper left to lower right: Multiply the entries down the\nfirst diagonal. Add the result to the product of entries down the\nsecond diagonal. Add this result to the product of the entries down\nthe third diagonal.\n\n3. From lower left to upper right: Subtract the product of entries\nup the first diagonal. From this result subtract the product of\nentries up the second diagonal. From this result, subtract the\nproduct of entries up the third diagonal.\n\n[Figure: 2bccf0504586138f019e9ed1bbc6d1001e57b10b]\n\nThe algebra is as follows:\n\n|A|=a1b2c3+b1c2a3+c1a2b3−a3b2c1−b3c2a1−c3a2b1| A |=a1b2c3+b1c2a3+c1a2b3−a3b2c1−b3c2a1−c3a2b1\n\nEXAMPLE 3\n\nFinding the Determinant of a 3 × 3\nMatrix\n\nFind the determinant of the 3 × 3 matrix given\n\nA=⎡⎣⎢0342−10111⎤⎦⎥A=[ 0213−11401 ]\n\nAnswer\n\nTRY\nIT #2\n\nFind the determinant of the 3 × 3 matrix.\n\ndet(A)=∣∣∣∣111−31−2713∣∣∣∣det(A)=| 1−371111−23 |\n\nQ&A\n\nCan we use the same method to find the determinant of a\nlarger matrix?\n\nNo, this method only works\nfor 2×22×2 and 3×33×3 matrices. For larger\nmatrices it is best to use a graphing utility or computer\nsoftware.\n\nUsing Cramer’s Rule to Solve a System\nof Three Equations in Three Variables\n\nNow that we can find the determinant of a 3 × 3\nmatrix, we can apply Cramer’s Rule to solve a system\nof three equations in three variables. Cramer’s Rule is\nstraightforward, following a pattern consistent with Cramer’s Rule\nfor 2 × 2 matrices. As the order of the matrix increases to 3 × 3,\nhowever, there are many more calculations required.\n\nWhen we calculate the determinant to be zero, Cramer’s Rule\ngives no indication as to whether the system has no solution or an\ninfinite number of solutions. To find out, we have to perform\nelimination on the system.\n\nConsider a 3 × 3 system of equations.\n\n[Figure: 5254cdece00d5e0a4bb5cca730975bc62e9fbbb5]\n\nx=DxD,y=DyD,z=DzD,D≠0x=DxD,y=DyD,z=DzD,D≠0\n\nwhere\n\n[Figure: a790a6ec447c1b025a9035670b10d750a55ca9af]\n\nIf we are writing the determinant Dx,Dx, we replace\nthe xx column with the constant column. If we are writing\nthe determinant Dy,Dy, we replace the yy column\nwith the constant column. If we are writing the\ndeterminant Dz,Dz, we replace the zz column\nwith the constant column. Always check the answer.\n\nEXAMPLE 4\n\nSolving a 3 × 3 System Using Cramer’s\nRule\n\nFind the solution to the given 3 × 3 system using Cramer’s\nRule.\n\nx+y−z=63x−2y+z=−5x+3y−2z=14x+y−z=63x−2y+z=−5x+3y−2z=14\n\nAnswer\n\nTRY\nIT #3\n\nUse Cramer’s Rule to solve the 3 × 3 matrix.\n\nx−3y+7z=13x+y+z=1x−2y+3z=4x−3y+7z=13x+y+z=1x−2y+3z=4\n\nEXAMPLE 5\n\nUsing Cramer’s Rule to Solve an\nInconsistent System\n\nSolve the system of equations using Cramer’s Rule.\n\n3x−2y=4 (1)6x−4y=0 (2)3x−2y=4 (1)6x−4y=0 (2)\n\nAnswer\n\n1.  \n\n2.  \n\n[Figure: 95b49d838db02cbcf578aa067740e8ac6b622532]\n\nEXAMPLE 6\n\nUse Cramer’s Rule to Solve a\nDependent System\n\nSolve the system with an infinite number of solutions.\n\nx−2y+3z=03x+y−2z=02x−4y+6z=0(1)(2)(3)x−2y+3z=0(1)3x+y−2z=0(2)2x−4y+6z=0(3)\n\nAnswer\n\n1.  \n\n2.  \n\n[Figure: 7229fdec7aa9008a66004f46ad9143c67ab2804f]\n\nUnderstanding Properties of\nDeterminants\n\nThere are many properties of determinants. Listed here are\nsome properties that may be helpful in calculating the determinant\nof a matrix.\n\nPROPERTIES OF\nDETERMINANTS\n\n1. If the matrix is in upper triangular form, the determinant\nequals the product of entries down the main diagonal.\n\n2. When two rows are interchanged, the determinant changes\nsign.\n\n3. If either two rows or two columns are identical, the\ndeterminant equals zero.\n\n4. If a matrix contains either a row of zeros or a column of\nzeros, the determinant equals zero.\n\n5. The determinant of an inverse matrix A−1A−1 is the\nreciprocal of the determinant of the matrix A.A.\n\n6. If any row or column is multiplied by a constant, the\ndeterminant is multiplied by the same factor.\n\nEXAMPLE 7\n\nIllustrating Properties of\nDeterminants\n\nIllustrate each of the properties of determinants.\n\nAnswer\n\nEXAMPLE 8\n\nUsing Cramer’s Rule and Determinant\nProperties to Solve a System\n\nFind the solution to the given 3 × 3 system.\n\n2x+4y+4z=23x+7y+7z=−5 x+2y+2z=4(1)(2)(3)2x+4y+4z=2(1)3x+7y+7z=−5(2) x+2y+2z=4(3)\n\nAnswer\n\n1.  \n\nMEDIA\n\nAccess these online resources for additional instruction and\npractice with Cramer’s Rule.\n\nSolve a System of Two Equations\nUsing Cramer's Rule\n\nSolve a Systems of Three\nEquations using Cramer's Rule\n\n9.8 Section\nExercises\n\nVerbal\n\n1. \n\nExplain why we can always evaluate the determinant of a square\nmatrix.\n\n2. \n\nExamining Cramer’s Rule, explain why there is no unique solution\nto the system when the determinant of your matrix is 0. For\nsimplicity, use a 2×22×2 matrix.\n\n3. \n\nExplain what it means in terms of an inverse for a matrix to\nhave a 0 determinant.\n\n4. \n\nThe determinant of 2×22×2 matrix AA is 3. If\nyou switch the rows and multiply the first row by 6 and the second\nrow by 2, explain how to find the determinant and provide the\nanswer.\n\nAlgebraic\n\nFor the following exercises, find the determinant.\n\n5. \n\n∣∣∣1324∣∣∣| 1234 |\n\n6. \n\n∣∣∣−132−4∣∣∣| −123−4 |\n\n7. \n\n∣∣∣2−1−56∣∣∣| 2−5−16 |\n\n8. \n\n∣∣∣−8−145∣∣∣| −84−15 |\n\n9. \n\n∣∣∣130−4∣∣∣| 103−4 |\n\n10. \n\n∣∣∣10020−10∣∣∣| 10200−10 |\n\n11. \n\n∣∣∣1050.20.1∣∣∣| 100.250.1 |\n\n12. \n\n∣∣∣68−34∣∣∣| 6−384 |\n\n13. \n\n∣∣∣−23.1−34,000∣∣∣| −2−33.14,000 |\n\n14. \n\n∣∣∣−1.17.20.6−0.5∣∣∣| −1.10.67.2−0.5 |\n\n15. \n\n∣∣∣∣−10001000−3∣∣∣∣| −10001000−3 |\n\n16. \n\n∣∣∣∣−10042003−3∣∣∣∣| −14002300−3 |\n\n17. \n\n∣∣∣∣101010100∣∣∣∣| 101010100 |\n\n18. \n\n∣∣∣∣23−5−3−46111∣∣∣∣| 2−313−41−561 |\n\n19. \n\n∣∣∣∣−2−4212−84−8−3∣∣∣∣| −214−42−82−8−3 |\n\n20. \n\n∣∣∣∣6−41−1−3925−1∣∣∣∣| 6−12−4−3519−1 |\n\n21. \n\n∣∣∣∣52313−6−11−3∣∣∣∣| 51−12313−6−3 |\n\n22. \n\n∣∣∣∣1.1−44.120−0.4−102.5∣∣∣∣| 1.12−1−4004.1−0.42.5 |\n\n23. \n\n∣∣∣∣21.1−9.3−1.6303.1−82∣∣∣∣| 2−1.63.11.13−8−9.302 |\n\n24. \n\n∣∣∣∣∣−1215013−160141718∣∣∣∣∣| −12131415−16170018 |\n\nFor the following exercises, solve the system of linear\nequations using Cramer’s Rule.\n\n25. \n\n2x−3y=−14x+5y=92x−3y=−14x+5y=9\n\n26. \n\n5x−4y=2−4x+7y=65x−4y=2−4x+7y=6\n\n27. \n\n6x−3y=2−8x+9y=−16x−3y=2−8x+9y=−1\n\n28. \n\n2x+6y=125x−2y=132x+6y=125x−2y=13\n\n29. \n\n4x+3y=232x−y=−14x+3y=232x−y=−1\n\n30. \n\n10x−6y=2−5x+8y=−110x−6y=2−5x+8y=−1\n\n31. \n\n4x−3y=−32x+6y=−44x−3y=−32x+6y=−4\n\n32. \n\n4x−5y=7−3x+9y=04x−5y=7−3x+9y=0\n\n33. \n\n4x+10y=180−3x−5y=−1054x+10y=180−3x−5y=−105\n\n34. \n\n8x−2y=−3−4x+6y=48x−2y=−3−4x+6y=4\n\nFor the following exercises, solve the system of linear\nequations using Cramer’s Rule.\n\n35. \n\nx+2y−4z=−17x+3y+5z=26−2x−6y+7z=−6x+2y−4z=−17x+3y+5z=26−2x−6y+7z=−6\n\n36. \n\n−5x+2y−4z=−474x−3y−z=−943x−3y+2z=94−5x+2y−4z=−474x−3y−z=−943x−3y+2z=94\n\n37. \n\n4x+5y−z=−7−2x−9y+2z=85y+7z=214x+5y−z=−7−2x−9y+2z=85y+7z=21\n\n38. \n\n4x−3y+4z=105x−2z=−23x+2y−5z=−94x−3y+4z=105x−2z=−23x+2y−5z=−9\n\n39. \n\n4x−2y+3z=6−6x+y=−22x+7y+8z=244x−2y+3z=6−6x+y=−22x+7y+8z=24\n\n40. \n\n5x+2y−z=1−7x−8y+3z=1.56x−12y+z=75x+2y−z=1−7x−8y+3z=1.56x−12y+z=7\n\n41. \n\n13x−17y+16z=73−11x+15y+17z=6146x+10y−30z=−1813x−17y+16z=73−11x+15y+17z=6146x+10y−30z=−18\n\n42. \n\n−4x−3y−8z=−72x−9y+5z=0.55x−6y−5z=−2−4x−3y−8z=−72x−9y+5z=0.55x−6y−5z=−2\n\n43. \n\n4x−6y+8z=10−2x+3y−4z=−5x+y+z=14x−6y+8z=10−2x+3y−4z=−5x+y+z=1\n\n44. \n\n4x−6y+8z=10−2x+3y−4z=−512x+18y−24z=−304x−6y+8z=10−2x+3y−4z=−512x+18y−24z=−30\n\nTechnology\n\nFor the following exercises, use the determinant function on a\ngraphing utility.\n\n45. \n\n∣∣∣∣∣∣1010020281349003∣∣∣∣∣∣| 1089021010300243 |\n\n46. \n\n∣∣∣∣∣∣10300−90121−2113−1−2∣∣∣∣∣∣| 10210−91330−2−1011−2 |\n\n47. \n\n∣∣∣∣∣∣∣1200011200710020452,0002∣∣∣∣∣∣∣| 1217401210050022,0000002 |\n\n48. \n\n∣∣∣∣∣∣1247035800690000∣∣∣∣∣∣| 1000230045607890 |\n\nReal-World Applications\n\nFor the following exercises, create a system of linear equations\nto describe the behavior. Then, calculate the determinant. Will\nthere be a unique solution? If so, find the unique solution.\n\n49. \n\nTwo numbers add up to 56. One number is 20 less than the\nother.\n\n50. \n\nTwo numbers add up to 104. If you add two times the first number\nplus two times the second number, your total is 208\n\n51. \n\nThree numbers add up to 106. The first number is 3 less than the\nsecond number. The third number is 4 more than the first\nnumber.\n\n52. \n\nThree numbers add to 216. The sum of the first two numbers is\n112. The third number is 8 less than the first two numbers\ncombined.\n\nFor the following exercises, create a system of linear equations\nto describe the behavior. Then, solve the system for all solutions\nusing Cramer’s Rule.\n\n53. \n\nYou invest $10,000 into two accounts, which receive 8% interest\nand 5% interest. At the end of a year, you had $10,710 in your\ncombined accounts. How much was invested in each account?\n\n54. \n\nYou invest $80,000 into two accounts, $22,000 in one account,\nand $58,000 in the other account. At the end of one year, assuming\nsimple interest, you have earned $2,470 in interest. The second\naccount receives half a percent less than twice the interest on the\nfirst account. What are the interest rates for your accounts?\n\n55. \n\nA movie theater needs to know how many adult tickets and\nchildren tickets were sold out of the 1,200 total tickets. If\nchildren’s tickets are $5.95, adult tickets are $11.15, and the\ntotal amount of revenue was $12,756, how many children’s tickets\nand adult tickets were sold?\n\n56. \n\nA concert venue sells single tickets for $40 each and couple’s\ntickets for $65. If the total revenue was $18,090 and the 321\ntickets were sold, how many single tickets and how many couple’s\ntickets were sold?\n\n57. \n\nYou decide to paint your kitchen green. You create the color of\npaint by mixing yellow and blue paints. You cannot remember how\nmany gallons of each color went into your mix, but you know there\nwere 10 gal total. Additionally, you kept your receipt, and know\nthe total amount spent was $29.50. If each gallon of yellow costs\n$2.59, and each gallon of blue costs $3.19, how many gallons of\neach color go into your green mix?\n\n58. \n\nYou sold two types of scarves at a farmers’ market and would\nlike to know which one was more popular. The total number of\nscarves sold was 56, the yellow scarf cost $10, and the purple\nscarf cost $11. If you had total revenue of $583, how many yellow\nscarves and how many purple scarves were sold?\n\n59. \n\nYour garden produced two types of tomatoes, one green and one\nred. The red weigh 10 oz, and the green weigh 4 oz. You have 30\ntomatoes, and a total weight of 13 lb, 14 oz. How many of each type\nof tomato do you have?\n\n60. \n\nAt a market, the three most popular vegetables make up 53% of\nvegetable sales. Corn has 4% higher sales than broccoli, which has\n5% more sales than onions. What percentage does each vegetable have\nin the market share?\n\n61. \n\nAt the same market, the three most popular fruits make up 37% of\nthe total fruit sold. Strawberries sell twice as much as oranges,\nand kiwis sell one more percentage point than oranges. For each\nfruit, find the percentage of total fruit sold.\n\n62. \n\nThree bands performed at a concert venue. The first band charged\n$15 per ticket, the second band charged $45 per ticket, and the\nfinal band charged $22 per ticket. There were 510 tickets sold, for\na total of $12,700. If the first band had 40 more audience members\nthan the second band, how many tickets were sold for each band?\n\n63. \n\nA movie theatre sold tickets to three movies. The tickets to the\nfirst movie were $5, the tickets to the second movie were $11, and\nthe third movie was $12. 100 tickets were sold to the first movie.\nThe total number of tickets sold was 642, for a total revenue of\n$6,774. How many tickets for each movie were sold?\n\n64. \n\nMen aged 20–29, 30–39, and 40–49 made up 78% of the population\nat a prison last year. This year, the same age groups made up\n82.08% of the population. The 20–29 age group increased by 20%, the\n30–39 age group increased by 2%, and the 40–49 age group decreased\nto 3434 of their previous population. Originally, the\n30–39 age group had 2% more prisoners than the 20–29 age group.\nDetermine the prison population percentage for each age group last\nyear.\n\n65. \n\nAt a women’s prison down the road, the total number of inmates\naged 20–49 totaled 5,525. This year, the 20–29 age group increased\nby 10%, the 30–39 age group decreased by 20%, and the 40–49 age\ngroup doubled. There are now 6,040 prisoners. Originally, there\nwere 500 more in the 30–39 age group than the 20–29 age group.\nDetermine the prison population for each age group last year.\n\nFor the following exercises, use this scenario: A\nhealth-conscious company decides to make a trail mix out of\nalmonds, dried cranberries, and chocolate-covered cashews. The\nnutritional information for these items is shown\nin Table\n1.\n\nFat (g)\t\nProtein (g)\t\nCarbohydrates (g)\t\n\nAlmonds (10)\t\n6\t\n2\t\n3\t\n\nCranberries (10)\t\n0.02\t\n0\t\n8\t\n\nCashews (10)\t\n7\t\n3.5\t\n5.5\t\n\nTable 1\n\n66. \n\nFor the special “low-carb”trail mix, there are 1,000 pieces of\nmix. The total number of carbohydrates is 425 g, and the total\namount of fat is 570.2 g. If there are 200 more pieces of cashews\nthan cranberries, how many of each item is in the trail mix?\n\n67. \n\nFor the “hiking” mix, there are 1,000 pieces in the mix,\ncontaining 390.8 g of fat, and 165 g of protein. If there is the\nsame amount of almonds as cashews, how many of each item is in the\ntrail mix?\n\n68. \n\nFor the “energy-booster” mix, there are 1,000 pieces in the mix,\ncontaining 145 g of protein and 625 g of carbohydrates. If the\nnumber of almonds and cashews summed together is equivalent to the\namount of cranberries, how many of each item is in the trail\nmix?\n\nThis page titled 9.9: Solving Systems with Cramer's Rule was last modified on Sun, 28 May 2023 07:33:43 GMT and is shared under a CC BY  4.0  license and was authored, remixed, and/or curated by OpenStax via source content that was edited to the style and standards of the LibreTexts platform.",
+  "figures": [
+    {
+      "url": "https://math.libretexts.org/@api/deki/files/105848/8662a76a38f992c8993a9ab1ff140fbfef057632?revision=1",
+      "alt": "8662a76a38f992c8993a9ab1ff140fbfef057632",
+      "credit": ""
+    },
+    {
+      "url": "https://math.libretexts.org/@api/deki/files/105845/2bccf0504586138f019e9ed1bbc6d1001e57b10b?revision=1",
+      "alt": "2bccf0504586138f019e9ed1bbc6d1001e57b10b",
+      "credit": ""
+    },
+    {
+      "url": "https://math.libretexts.org/@api/deki/files/105847/5254cdece00d5e0a4bb5cca730975bc62e9fbbb5?revision=1",
+      "alt": "5254cdece00d5e0a4bb5cca730975bc62e9fbbb5",
+      "credit": ""
+    },
+    {
+      "url": "https://math.libretexts.org/@api/deki/files/105846/a790a6ec447c1b025a9035670b10d750a55ca9af?revision=1",
+      "alt": "a790a6ec447c1b025a9035670b10d750a55ca9af",
+      "credit": ""
+    },
+    {
+      "url": "https://math.libretexts.org/@api/deki/files/105849/95b49d838db02cbcf578aa067740e8ac6b622532?revision=1",
+      "alt": "95b49d838db02cbcf578aa067740e8ac6b622532",
+      "credit": ""
+    },
+    {
+      "url": "https://math.libretexts.org/@api/deki/files/105850/7229fdec7aa9008a66004f46ad9143c67ab2804f?revision=1",
+      "alt": "7229fdec7aa9008a66004f46ad9143c67ab2804f",
+      "credit": ""
+    }
+  ],
+  "references": [
+    {
+      "text": "Solve a System of Two Equations\nUsing Cramer's Rule",
+      "url": "http://openstax.org/l/system2cramer"
+    },
+    {
+      "text": "Solve a Systems of Three\nEquations using Cramer's Rule",
+      "url": "http://openstax.org/l/system3cramer"
+    },
+    {
+      "text": "1",
+      "url": "https://openstax.org/books/precalculus/pages/chapter-9#fs-id1405255-solution"
+    },
+    {
+      "text": "3",
+      "url": "https://openstax.org/books/precalculus/pages/chapter-9#fs-id1394594-solution"
+    },
+    {
+      "text": "5",
+      "url": "https://openstax.org/books/precalculus/pages/chapter-9#fs-id1417233-solution"
+    },
+    {
+      "text": "7",
+      "url": "https://openstax.org/books/precalculus/pages/chapter-9#fs-id1434436-solution"
+    },
+    {
+      "text": "9",
+      "url": "https://openstax.org/books/precalculus/pages/chapter-9#fs-id1677911-solution"
+    },
+    {
+      "text": "11",
+      "url": "https://openstax.org/books/precalculus/pages/chapter-9#fs-id1407150-solution"
+    },
+    {
+      "text": "13",
+      "url": "https://openstax.org/books/precalculus/pages/chapter-9#fs-id1587739-solution"
+    },
+    {
+      "text": "15",
+      "url": "https://openstax.org/books/precalculus/pages/chapter-9#fs-id1513986-solution"
+    },
+    {
+      "text": "17",
+      "url": "https://openstax.org/books/precalculus/pages/chapter-9#fs-id1586650-solution"
+    },
+    {
+      "text": "19",
+      "url": "https://openstax.org/books/precalculus/pages/chapter-9#fs-id2692384-solution"
+    },
+    {
+      "text": "21",
+      "url": "https://openstax.org/books/precalculus/pages/chapter-9#fs-id1365782-solution"
+    },
+    {
+      "text": "23",
+      "url": "https://openstax.org/books/precalculus/pages/chapter-9#fs-id1370226-solution"
+    },
+    {
+      "text": "25",
+      "url": "https://openstax.org/books/precalculus/pages/chapter-9#fs-id1891699-solution"
+    },
+    {
+      "text": "27",
+      "url": "https://openstax.org/books/precalculus/pages/chapter-9#fs-id1704920-solution"
+    },
+    {
+      "text": "29",
+      "url": "https://openstax.org/books/precalculus/pages/chapter-9#fs-id1408543-solution"
+    },
+    {
+      "text": "31",
+      "url": "https://openstax.org/books/precalculus/pages/chapter-9#fs-id1512009-solution"
+    },
+    {
+      "text": "33",
+      "url": "https://openstax.org/books/precalculus/pages/chapter-9#fs-id1701646-solution"
+    },
+    {
+      "text": "35",
+      "url": "https://openstax.org/books/precalculus/pages/chapter-9#fs-id1517134-solution"
+    },
+    {
+      "text": "37",
+      "url": "https://openstax.org/books/precalculus/pages/chapter-9#fs-id1351513-solution"
+    },
+    {
+      "text": "39",
+      "url": "https://openstax.org/books/precalculus/pages/chapter-9#fs-id1410018-solution"
+    },
+    {
+      "text": "41",
+      "url": "https://openstax.org/books/precalculus/pages/chapter-9#fs-id1348575-solution"
+    },
+    {
+      "text": "43",
+      "url": "https://openstax.org/books/precalculus/pages/chapter-9#fs-id1601296-solution"
+    },
+    {
+      "text": "45",
+      "url": "https://openstax.org/books/precalculus/pages/chapter-9#fs-id1487533-solution"
+    },
+    {
+      "text": "47",
+      "url": "https://openstax.org/books/precalculus/pages/chapter-9#fs-id1700780-solution"
+    },
+    {
+      "text": "49",
+      "url": "https://openstax.org/books/precalculus/pages/chapter-9#fs-id1702577-solution"
+    },
+    {
+      "text": "51",
+      "url": "https://openstax.org/books/precalculus/pages/chapter-9#fs-id1702595-solution"
+    },
+    {
+      "text": "53",
+      "url": "https://openstax.org/books/precalculus/pages/chapter-9#fs-id1791180-solution"
+    },
+    {
+      "text": "55",
+      "url": "https://openstax.org/books/precalculus/pages/chapter-9#fs-id1354944-solution"
+    },
+    {
+      "text": "57",
+      "url": "https://openstax.org/books/precalculus/pages/chapter-9#fs-id1584211-solution"
+    },
+    {
+      "text": "59",
+      "url": "https://openstax.org/books/precalculus/pages/chapter-9#fs-id1698991-solution"
+    },
+    {
+      "text": "61",
+      "url": "https://openstax.org/books/precalculus/pages/chapter-9#fs-id1648798-solution"
+    },
+    {
+      "text": "63",
+      "url": "https://openstax.org/books/precalculus/pages/chapter-9#fs-id1637276-solution"
+    },
+    {
+      "text": "65",
+      "url": "https://openstax.org/books/precalculus/pages/chapter-9#fs-id1425381-solution"
+    },
+    {
+      "text": "Table\n1",
+      "url": "https://openstax.org/books/precalculus/pages/9-8-solving-systems-with-cramers-rule#Table_09_08_01"
+    },
+    {
+      "text": "67",
+      "url": "https://openstax.org/books/precalculus/pages/chapter-9#fs-id1394933-solution"
+    },
+    {
+      "text": "9.9: Solving Systems with Cramer's Rule",
+      "url": "https://math.libretexts.org/Bookshelves/Precalculus/Precalculus_2e_(OpenStax)/09%3A_Systems_of_Equations_and_Inequalities/9.09%3A_Solving_Systems_with_Cramer's_Rule"
+    },
+    {
+      "text": "CC BY  4.0",
+      "url": "https://creativecommons.org/licenses/by/4.0"
+    },
+    {
+      "text": "OpenStax",
+      "url": "https://openstax.org/"
+    },
+    {
+      "text": "source content",
+      "url": "https://openstax.org/details/books/precalculus"
+    }
+  ],
+  "exercises": [
+    {
+      "ordinal": 1,
+      "sourceNumber": "1",
+      "sourceAnchor": "",
+      "kind": "exercise-candidate",
+      "context": "Finding the determinant of a 2×2 matrix is straightforward, but\nfinding the determinant of a 3×3 matrix is more complicated. One\nmethod is to augment the 3×3 matrix with a repetition of the first\ntwo columns, giving a 3×5 matrix. Then we calculate the sum of the\nproducts of entries down each of the three diagonals (upper left to\nlower right), and subtract the products of\nentries up each of the\nthree diagonals (lower left to upper right). This is more easily\nunderstood with a visual and an example.\n\nFind the determinant of the 3×3 matrix.\n\nA=⎡⎣⎢a1a2a3b1b2b3c1c2c3⎤⎦⎥A=[ a1b1c1a2b2c2a3b3c3 ]",
+      "original": "1. Augment AA with the first two columns.\n\ndet(A)=∣∣∣∣a1a2a3b1b2b3c1c2c3∣∣∣∣a1a2a3b1b2b3∣∣∣∣det(A)=| a1b1c1a2b2c2a3b3c3|a1a2a3b1b2b3 |",
+      "prompt": "1. Augment AA with the first two columns.\n\ndet(A)=∣∣∣∣a1a2a3b1b2b3c1c2c3∣∣∣∣a1a2a3b1b2b3∣∣∣∣det(A)=| a1b1c1a2b2c2a3b3c3|a1a2a3b1b2b3 |",
+      "sourceAnswers": [],
+      "hasFigure": false,
+      "status": "draft",
+      "answerVerified": false,
+      "translationStatus": "pending",
+      "mappingStatus": "pending"
+    },
+    {
+      "ordinal": 2,
+      "sourceNumber": "2",
+      "sourceAnchor": "",
+      "kind": "exercise-candidate",
+      "context": "Finding the determinant of a 2×2 matrix is straightforward, but\nfinding the determinant of a 3×3 matrix is more complicated. One\nmethod is to augment the 3×3 matrix with a repetition of the first\ntwo columns, giving a 3×5 matrix. Then we calculate the sum of the\nproducts of entries down each of the three diagonals (upper left to\nlower right), and subtract the products of\nentries up each of the\nthree diagonals (lower left to upper right). This is more easily\nunderstood with a visual and an example.\n\nFind the determinant of the 3×3 matrix.\n\nA=⎡⎣⎢a1a2a3b1b2b3c1c2c3⎤⎦⎥A=[ a1b1c1a2b2c2a3b3c3 ]",
+      "original": "2. From upper left to lower right: Multiply the entries down the\nfirst diagonal. Add the result to the product of entries down the\nsecond diagonal. Add this result to the product of the entries down\nthe third diagonal.",
+      "prompt": "2. From upper left to lower right: Multiply the entries down the\nfirst diagonal. Add the result to the product of entries down the\nsecond diagonal. Add this result to the product of the entries down\nthe third diagonal.",
+      "sourceAnswers": [],
+      "hasFigure": false,
+      "status": "draft",
+      "answerVerified": false,
+      "translationStatus": "pending",
+      "mappingStatus": "pending"
+    },
+    {
+      "ordinal": 3,
+      "sourceNumber": "3",
+      "sourceAnchor": "",
+      "kind": "exercise-candidate",
+      "context": "Finding the determinant of a 2×2 matrix is straightforward, but\nfinding the determinant of a 3×3 matrix is more complicated. One\nmethod is to augment the 3×3 matrix with a repetition of the first\ntwo columns, giving a 3×5 matrix. Then we calculate the sum of the\nproducts of entries down each of the three diagonals (upper left to\nlower right), and subtract the products of\nentries up each of the\nthree diagonals (lower left to upper right). This is more easily\nunderstood with a visual and an example.\n\nFind the determinant of the 3×3 matrix.\n\nA=⎡⎣⎢a1a2a3b1b2b3c1c2c3⎤⎦⎥A=[ a1b1c1a2b2c2a3b3c3 ]",
+      "original": "3. From lower left to upper right: Subtract the product of entries\nup the first diagonal. From this result subtract the product of\nentries up the second diagonal. From this result, subtract the\nproduct of entries up the third diagonal.",
+      "prompt": "3. From lower left to upper right: Subtract the product of entries\nup the first diagonal. From this result subtract the product of\nentries up the second diagonal. From this result, subtract the\nproduct of entries up the third diagonal.",
+      "sourceAnswers": [],
+      "hasFigure": false,
+      "status": "draft",
+      "answerVerified": false,
+      "translationStatus": "pending",
+      "mappingStatus": "pending"
+    },
+    {
+      "ordinal": 4,
+      "sourceNumber": "1",
+      "sourceAnchor": "",
+      "kind": "exercise-candidate",
+      "context": "Understanding Properties of\nDeterminants\n\nThere are many properties of determinants. Listed here are\nsome properties that may be helpful in calculating the determinant\nof a matrix.",
+      "original": "1. If the matrix is in upper triangular form, the determinant\nequals the product of entries down the main diagonal.",
+      "prompt": "1. If the matrix is in upper triangular form, the determinant\nequals the product of entries down the main diagonal.",
+      "sourceAnswers": [],
+      "hasFigure": false,
+      "status": "draft",
+      "answerVerified": false,
+      "translationStatus": "pending",
+      "mappingStatus": "pending"
+    },
+    {
+      "ordinal": 5,
+      "sourceNumber": "2",
+      "sourceAnchor": "",
+      "kind": "exercise-candidate",
+      "context": "Understanding Properties of\nDeterminants\n\nThere are many properties of determinants. Listed here are\nsome properties that may be helpful in calculating the determinant\nof a matrix.",
+      "original": "2. When two rows are interchanged, the determinant changes\nsign.",
+      "prompt": "2. When two rows are interchanged, the determinant changes\nsign.",
+      "sourceAnswers": [],
+      "hasFigure": false,
+      "status": "draft",
+      "answerVerified": false,
+      "translationStatus": "pending",
+      "mappingStatus": "pending"
+    },
+    {
+      "ordinal": 6,
+      "sourceNumber": "3",
+      "sourceAnchor": "",
+      "kind": "exercise-candidate",
+      "context": "Understanding Properties of\nDeterminants\n\nThere are many properties of determinants. Listed here are\nsome properties that may be helpful in calculating the determinant\nof a matrix.",
+      "original": "3. If either two rows or two columns are identical, the\ndeterminant equals zero.",
+      "prompt": "3. If either two rows or two columns are identical, the\ndeterminant equals zero.",
+      "sourceAnswers": [],
+      "hasFigure": false,
+      "status": "draft",
+      "answerVerified": false,
+      "translationStatus": "pending",
+      "mappingStatus": "pending"
+    },
+    {
+      "ordinal": 7,
+      "sourceNumber": "4",
+      "sourceAnchor": "",
+      "kind": "exercise-candidate",
+      "context": "Understanding Properties of\nDeterminants\n\nThere are many properties of determinants. Listed here are\nsome properties that may be helpful in calculating the determinant\nof a matrix.",
+      "original": "4. If a matrix contains either a row of zeros or a column of\nzeros, the determinant equals zero.",
+      "prompt": "4. If a matrix contains either a row of zeros or a column of\nzeros, the determinant equals zero.",
+      "sourceAnswers": [],
+      "hasFigure": false,
+      "status": "draft",
+      "answerVerified": false,
+      "translationStatus": "pending",
+      "mappingStatus": "pending"
+    },
+    {
+      "ordinal": 8,
+      "sourceNumber": "5",
+      "sourceAnchor": "",
+      "kind": "exercise-candidate",
+      "context": "Understanding Properties of\nDeterminants\n\nThere are many properties of determinants. Listed here are\nsome properties that may be helpful in calculating the determinant\nof a matrix.",
+      "original": "5. The determinant of an inverse matrix A−1A−1 is the\nreciprocal of the determinant of the matrix A.A.",
+      "prompt": "5. The determinant of an inverse matrix A−1A−1 is the\nreciprocal of the determinant of the matrix A.A.",
+      "sourceAnswers": [],
+      "hasFigure": false,
+      "status": "draft",
+      "answerVerified": false,
+      "translationStatus": "pending",
+      "mappingStatus": "pending"
+    },
+    {
+      "ordinal": 9,
+      "sourceNumber": "6",
+      "sourceAnchor": "",
+      "kind": "exercise-candidate",
+      "context": "Understanding Properties of\nDeterminants\n\nThere are many properties of determinants. Listed here are\nsome properties that may be helpful in calculating the determinant\nof a matrix.",
+      "original": "6. If any row or column is multiplied by a constant, the\ndeterminant is multiplied by the same factor.",
+      "prompt": "6. If any row or column is multiplied by a constant, the\ndeterminant is multiplied by the same factor.",
+      "sourceAnswers": [],
+      "hasFigure": false,
+      "status": "draft",
+      "answerVerified": false,
+      "translationStatus": "pending",
+      "mappingStatus": "pending"
+    }
+  ],
+  "license": "CC BY 4.0",
+  "licenseEvidence": "This page titled 9.9: Solving Systems with Cramer's Rule was last modified on Sun, 28 May 2023 07:33:43 GMT and is shared under a CC BY  4.0  license and was authored, remixed, and/or curated by OpenStax via source content that was edited to the style and standards of the LibreTexts platform.",
+  "url": "https://math.libretexts.org/Bookshelves/Precalculus/Precalculus_2e_(OpenStax)/09:_Systems_of_Equations_and_Inequalities/9.09:_Solving_Systems_with_Cramer%27s_Rule",
+  "sha256": "2b3eae0d27397c5e6606f8d8b510909cbe1def8d7c440f18409e802952ef1829",
+  "checkedAt": "2026-10-07",
+  "id": "dd8d16550781bbff4aa9",
+  "bookId": "precalculus",
+  "licenseInherited": false,
+  "licenseSource": "https://math.libretexts.org/Bookshelves/Precalculus/Precalculus_2e_(OpenStax)/09:_Systems_of_Equations_and_Inequalities/9.09:_Solving_Systems_with_Cramer%27s_Rule",
+  "licenseUrl": "https://creativecommons.org/licenses/by/4.0/",
+  "authors": "OpenStax / Jay Abramson et al.",
+  "book": "Precalculus 2e",
+  "reviewStatus": "unreviewed",
+  "sourceLanguage": "en",
+  "translationStatus": "pending"
+}

@@ -1,0 +1,388 @@
+{
+  "title": "9.6: Matrices and Matrix Operations",
+  "originalText": "Learning Objectives\n\nIn this section, you will:\n\nFind the sum and difference of two matrices.\n\nFind scalar multiples of a matrix.\n\nFind the product of two matrices.\n\n[Figure: 16fcc5068681499fc421c01dde81854437e9a81b]\n\nFigure 1 (credit:\n“SD Dirk,” Flickr)\n\nTwo club soccer teams, the Wildcats and the Mud Cats, are hoping\nto obtain new equipment for an upcoming season. Table\n1 shows the needs of both teams.\n\nWildcats\t\nMud Cats\t\n\nGoals\t\n6\t\n10\t\n\nBalls\t\n30\t\n24\t\n\nJerseys\t\n14\t\n20\t\n\nTable 1\n\nA goal costs $300; a ball costs $10; and a jersey costs $30. How\ncan we find the total cost for the equipment needed for each team?\nIn this section, we discover a method in which the data in the\nsoccer equipment table can be displayed and used for calculating\nother information. Then, we will be able to calculate the cost of\nthe equipment.\n\nFinding the Sum and Difference of Two\nMatrices\n\nTo solve a problem like the one described for the soccer teams,\nwe can use a matrix, which is a rectangular array of numbers.\nA row in a matrix is a set of numbers that are aligned\nhorizontally. A column in a matrix is a set of numbers\nthat are aligned vertically. Each number is an entry,\nsometimes called an element, of the matrix. Matrices (plural) are\nenclosed in [ ] or ( ), and are usually named with capital letters.\nFor example, three matrices\nnamed A,B,A,B, and CC are shown below.\n\nA=[1324],B=⎡⎣⎢1072−58762⎤⎦⎥,C=⎡⎣⎢−103321⎤⎦⎥A=[ 1234 ],B=[ 1270−56782 ],C=[ −103321 ]\n\nDescribing Matrices\n\nA matrix is often referred to by its size or\ndimensions: m×nm×n indicating mm rows\nand nn columns. Matrix entries are defined first by row\nand then by column. For example, to locate the entry in\nmatrix AA identified as aij,aij, we look for\nthe entry in row i,i, column j.j. In\nmatrix A,  A,   shown below, the entry in row 2, column 3\nis a23.a23.\n\nA=⎡⎣⎢a11a21a31a12a22a32a13a23a33⎤⎦⎥A=[ a11a12a13a21a22a23a31a32a33 ]\n\nA square matrix is a matrix with\ndimensions n×n,n×n, meaning that it has the same number\nof rows as columns. The 3×33×3 matrix above is an example\nof a square matrix.\n\nA row matrix is a matrix consisting of one row with\ndimensions 1×n.1×n.\n\n[a11a12a13][ a11a12a13 ]\n\nA column matrix is a matrix consisting of one column\nwith dimensions m×1.m×1.\n\n⎡⎣⎢a11a21a31⎤⎦⎥[ a11a21a31 ]\n\nA matrix may be used to represent a system of equations. In\nthese cases, the numbers represent the coefficients of the\nvariables in the system. Matrices often make solving systems of\nequations easier because they are not encumbered with variables. We\nwill investigate this idea further in the next section, but first\nwe will look at basic matrix operations.\n\nMATRICES\n\nA matrix is a rectangular array of\nnumbers that is usually named by a capital\nletter: A,B,C,A,B,C, and so on. Each entry in a matrix is\nreferred to as aij,aij, such that ii represents\nthe row and jj represents the column. Matrices are often\nreferred to by their\ndimensions: m×nm×n indicating mm rows\nand nn columns.\n\nEXAMPLE 1\n\nFinding the Dimensions of the Given\nMatrix and Locating Entries\n\nGiven matrix A:A:\n\n1. ⓐWhat are the dimensions of matrix A?A?\n\n2. ⓑWhat are the entries at a31a31 and a22?a22?\n\nA=⎡⎣⎢22314107−2⎤⎦⎥A=[ 21024731−2 ]\n\nAnswer\n\n1.  \n\n2.  \n\nAdding and Subtracting\nMatrices\n\nWe use matrices to list data or to represent systems. Because\nthe entries are numbers, we can perform operations on matrices. We\nadd or subtract matrices by adding or subtracting corresponding\nentries.\n\nIn order to do this, the entries must correspond.\nTherefore, addition and subtraction\nof matrices is only possible when the matrices have the same\ndimensions. We can add or subtract a 3×33×3 matrix\nand another 3×33×3 matrix, but we cannot add or subtract\na 2×32×3 matrix and a 3×33×3 matrix because\nsome entries in one matrix will not have a corresponding entry in\nthe other matrix.\n\nADDING\nAND SUBTRACTING MATRICES\n\nGiven matrices AA and BB of like dimensions,\naddition and subtraction of AA and BB will\nproduce matrix CC or\n\nmatrix DD of the same dimension.\n\nA+B=Csuch that aij+bij=cijA+B=Csuch that aij+bij=cij\n\nA−B=Dsuch that aij−bij=dijA−B=Dsuch that aij−bij=dij\n\nMatrix addition is commutative.\n\nA+B=B+AA+B=B+A\n\nIt is also associative.\n\n(A+B)+C=A+(B+C)(A+B)+C=A+(B+C)\n\nEXAMPLE 2\n\nFinding the Sum of\nMatrices\n\nFind the sum of AA and B,B, given\n\nA=[acbd]  and  B=[egfh]A=[ abcd ]  and  B=[ efgh ]\n\nAnswer\n\nEXAMPLE 3\n\nAdding Matrix A and Matrix B\n\nFind the sum of AA and B.B.\n\nA=[4312] and  B=[5097]A=[ 4132 ] and  B=[ 5907 ]\n\nAnswer\n\nEXAMPLE 4\n\nFinding the Difference of Two\nMatrices\n\nFind the difference of AA and B.B.\n\nA=[−2031] and  B=[8514]A=[ −2301 ] and  B=[ 8154 ]\n\nAnswer\n\nEXAMPLE 5\n\nFinding the Sum and Difference of Two\n3 x 3 Matrices\n\nGiven AA and B:B:\n\n1. ⓐFind the sum.\n\n2. ⓑFind the difference.\n\nA=⎡⎣⎢2144−1012−2−2102⎤⎦⎥and B=⎡⎣⎢60−510−122−2−4−2⎤⎦⎥A=[ 2−10−21412104−22 ]and B=[ 610−20−12−4−52−2 ]\n\nAnswer\n\n1.  \n\n2.  \n\nTRY\nIT #1\n\nAdd matrix AA and matrix B.B.\n\nA=⎡⎣⎢21160−3⎤⎦⎥ and  B=⎡⎣⎢31−4−253⎤⎦⎥A=[ 26101−3 ] and  B=[ 3−215−43 ]\n\nFinding Scalar Multiples of a\nMatrix\n\nBesides adding and subtracting whole matrices, there are many\nsituations in which we need to multiply a matrix by a constant\ncalled a scalar. Recall that a scalar is a real number\nquantity that has magnitude, but not direction. For example, time,\ntemperature, and distance are scalar quantities. The process\nof scalar multiplication involves multiplying each entry\nin a matrix by a scalar. A scalar\nmultiple is any entry of a matrix that results from\nscalar multiplication.\n\nConsider a real-world scenario in which a university needs to\nadd to its inventory of computers, computer tables, and chairs in\ntwo of the campus labs due to increased enrollment. They estimate\nthat 15% more equipment is needed in both labs. The school’s\ncurrent inventory is displayed in Table\n2.\n\nLab A\t\nLab B\t\n\nComputers\t\n15\t\n27\t\n\nComputer Tables\t\n16\t\n34\t\n\nChairs\t\n16\t\n34\t\n\nTable 2\n\nConverting the data to a matrix, we have\n\nC2013=⎡⎣⎢151616273434⎤⎦⎥C2013=[ 151616273434 ]\n\nTo calculate how much computer equipment will be needed, we\nmultiply all entries in matrix CC by 0.15.\n\n(0.15)C2013=⎡⎣⎢(0.15)15(0.15)16(0.15)16(0.15)27(0.15)34(0.15)34⎤⎦⎥=⎡⎣⎢2.252.42.44.055.15.1⎤⎦⎥(0.15)C2013=[ (0.15)15(0.15)16(0.15)16(0.15)27(0.15)34(0.15)34 ]=[ 2.252.42.44.055.15.1 ]\n\nWe must round up to the next integer, so the amount of new\nequipment needed is\n\n⎡⎣⎢333566⎤⎦⎥[ 333566 ]\n\nAdding the two matrices as shown below, we see the new inventory\namounts.\n\n⎡⎣⎢151616273434⎤⎦⎥+⎡⎣⎢333566⎤⎦⎥=⎡⎣⎢181919324040⎤⎦⎥[ 151616273434 ]+[ 333566 ]=[ 181919324040 ]\n\nThis means\n\nC2014=⎡⎣⎢181919324040⎤⎦⎥C2014=[ 181919324040 ]\n\nThus, Lab A will have 18 computers, 19 computer tables, and 19\nchairs; Lab B will have 32 computers, 40 computer tables, and 40\nchairs.\n\nSCALAR\nMULTIPLICATION\n\nScalar multiplication involves finding the product of a constant\nby each entry in the matrix. Given\n\nA=[a11a21a12a22]A=[ a11a12a21a22 ]\n\nthe scalar multiple cAcA is\n\ncA=c[a11a21a12a22]   =[ca11ca21ca12ca22]cA=c[ a11a12a21a22 ]   =[ ca11ca12ca21ca22 ]\n\nScalar multiplication is distributive. For the\nmatrices A,B,A,B, and CC with\nscalars a a  and b,b,\n\na(A+B)=aA+aB(a+b)A=aA+bAa(A+B)=aA+aB(a+b)A=aA+bA\n\nEXAMPLE 6\n\nMultiplying the Matrix by a\nScalar\n\nMultiply matrix AA by the scalar 3.\n\nA=[8514]A=[ 8154 ]\n\nAnswer\n\nTRY\nIT #2\n\nGiven matrix B,B, find −2B−2B where\n\nB=[4312]B=[ 4132 ]\n\nEXAMPLE 7\n\nFinding the Sum of Scalar\nMultiples\n\nFind the sum 3A+2B.3A+2B.\n\nA=⎡⎣⎢104−2−1302−6⎤⎦⎥and B=⎡⎣⎢−1002−3112−4⎤⎦⎥A=[ 1−200−1243−6 ]and B=[ −1210−3201−4 ]\n\nAnswer\n\nFinding the Product of Two\nMatrices\n\nIn addition to multiplying a matrix by a scalar, we can multiply\ntwo matrices. Finding the product of two matrices is only\npossible when the inner dimensions are the same, meaning that the\nnumber of columns of the first matrix is equal to the number of\nrows of the second matrix. If AA is\nan m×rm×r matrix and BB is\nan r×nr×n matrix, then the product\nmatrix AB AB  is an m×nm×n matrix. For example,\nthe product AB AB  is possible because the number of\ncolumns in AA is the same as the number of rows\nin B.B. If the inner dimensions do not match, the product\nis not defined.\n\n[Figure: 88839e36027696ba32b7022513f098cfbd4b9fe6]\n\nWe multiply entries of AA with entries\nof BB according to a specific pattern as outlined below.\nThe process of matrix multiplication becomes clearer when\nworking a problem with real numbers.\n\nTo obtain the entries in row ii of AB,AB, we\nmultiply the entries in row ii of AA by\ncolumn jj in BB and add. For example, given\nmatrices AA and B,B, where the dimensions\nof AA are 2×32×3 and the dimensions\nof BB are 3×3,3×3, the product\nof ABAB will be a 2×32×3 matrix.\n\nA=[a11a21a12a22a13a23]and B=⎡⎣⎢b11b21b31b12b22b32b13b23b33⎤⎦⎥A=[ a11a12a13a21a22a23 ]and B=[ b11b12b13b21b22b23b31b32b33 ]\n\nMultiply and add as follows to obtain the first entry of the\nproduct matrix AB.AB.\n\n1. To obtain the entry in row 1, column 1\nof AB,AB, multiply the first row in AA by the\nfirst column in B,B, and add.\n\n[a11a12a13]⎡⎣⎢b11b21b31⎤⎦⎥=a11⋅b11+a12⋅b21+a13⋅b31[ a11a12a13 ][ b11b21b31 ]=a11⋅b11+a12⋅b21+a13⋅b31\n\n2. To obtain the entry in row 1, column 2\nof AB,AB, multiply the first row of AA by the\nsecond column in B,B, and add.\n\n[a11a12a13]⎡⎣⎢b12b22b32⎤⎦⎥=a11⋅b12+a12⋅b22+a13⋅b32[ a11a12a13 ][ b12b22b32 ]=a11⋅b12+a12⋅b22+a13⋅b32\n\n3. To obtain the entry in row 1, column 3\nof AB,AB, multiply the first row of AA by the\nthird column in B,B, and add.\n\n[a11a12a13]⎡⎣⎢b13b23b33⎤⎦⎥=a11⋅b13+a12⋅b23+a13⋅b33[ a11a12a13 ][ b13b23b33 ]=a11⋅b13+a12⋅b23+a13⋅b33\n\nWe proceed the same way to obtain the second row\nof AB.AB. In other words, row 2 of AA times\ncolumn 1 of B;B; row 2 of AA times column 2\nof B;B; row 2 of AA times column 3\nof B.B. When complete, the product matrix will be\n\nAB=⎡⎣⎢a11⋅b11+a12⋅b21+a13⋅b31a21⋅b11+a22⋅b21+a23⋅b31a11⋅b12+a12⋅b22+a13⋅b32a21⋅b12+a22⋅b22+a23⋅b32a11⋅b13+a12⋅b23+a13⋅b33a21⋅b13+a22⋅b23+a23⋅b33⎤⎦⎥AB=[ a11⋅b11+a12⋅b21+a13⋅b31a21⋅b11+a22⋅b21+a23⋅b31a11⋅b12+a12⋅b22+a13⋅b32a21⋅b12+a22⋅b22+a23⋅b32a11⋅b13+a12⋅b23+a13⋅b33a21⋅b13+a22⋅b23+a23⋅b33 ]\n\nPROPERTIES OF MATRIX\nMULTIPLICATION\n\nFor the matrices A,B,A,B, and CC the\nfollowing properties hold.\n\nMatrix multiplication is\nassociative: (AB)C=A(BC).(AB)C=A(BC).\n\nMatrix multiplication is\ndistributive: C(A+B)=CA+CB,(A+B)C=AC+BC.C(A+B)=CA+CB,(A+B)C=AC+BC.\n\nNote that matrix multiplication is not commutative.\n\nEXAMPLE 8\n\nMultiplying Two\nMatrices\n\nMultiply matrix AA and matrix B.B.\n\nA=[1324] and  B=[5768]A=[ 1234 ] and  B=[ 5678 ]\n\nAnswer\n\n[Figure: 4dbae5b2ae233d1f92697d6138c1db108694d8f1]\n\nEXAMPLE 9\n\nMultiplying Two\nMatrices\n\nGiven AA and B:B:\n\n1. ⓐ Find AB.AB.\n\n2. ⓑ Find BA.BA.\n\nA=[−123405]and  B=⎡⎣⎢5−42−103⎤⎦⎥A=[ −123405 ]and  B=[ 5−42−103 ]\n\nAnswer\n\n1.  \n\n2.  \n\nAnalysis\n\nNotice that the products ABAB and BABA are\nnot equal.\n\nAB=[−7301011]≠⎡⎣⎢−941010−8410−1221⎤⎦⎥=BAAB=[ −7103011 ]≠[ −910104−8−1210421 ]=BA\n\nThis illustrates the fact that matrix multiplication is not\ncommutative.\n\nQ&A\n\nIs it possible for AB to be defined but not BA?\n\nYes, consider a matrix A with\ndimension 3×43×4 and matrix B with\ndimension 4×2.4×2. For the product AB the inner\ndimensions are 4 and the product is defined, but for the product BA\nthe inner dimensions are 2 and 3 so the product is\nundefined.\n\nEXAMPLE 10\n\nUsing Matrices in Real-World\nProblems\n\nLet’s return to the problem presented at the opening of this\nsection. We have Table\n3, representing the equipment needs of two soccer\nteams.\n\nWildcats\t\nMud Cats\t\n\nGoals\t\n6\t\n10\t\n\nBalls\t\n30\t\n24\t\n\nJerseys\t\n14\t\n20\t\n\nTable 3\n\nWe are also given the prices of the equipment, as shown\nin Table\n4.\n\nGoal\t\n$300\t\n\nBall\t\n$10\t\n\nJersey\t\n$30\t\n\nTable 4\n\nWe will convert the data to matrices. Thus, the equipment need\nmatrix is written as\n\nE=⎡⎣⎢63014102420⎤⎦⎥E=[ 63014102420 ]\n\nThe cost matrix is written as\n\nC=[3001030]C=[ 3001030 ]\n\nWe perform matrix multiplication to obtain costs for the\nequipment.\n\nCE=[3001030]⎡⎣⎢63014102420⎤⎦⎥=[300(6)+10(30)+30(14)300(10)+10(24)+30(20)]=[2,5203,840]CE=[ 3001030 ][ 61030241420 ]=[ 300(6)+10(30)+30(14)300(10)+10(24)+30(20) ]=[ 2,5203,840 ]\n\nThe total cost for equipment for the Wildcats is $2,520, and the\ntotal cost for equipment for the Mud Cats is $3,840.\n\nHOW\nTO\n\nGiven a matrix operation, evaluate using a\ncalculator.\n\n1. Save each matrix as a matrix\nvariable [A],[B],[C],...[ A ],[ B ],[ C ],...\n\n2. Enter the operation into the calculator, calling up each matrix\nvariable as needed.\n\n3. If the operation is defined, the calculator will present the\nsolution matrix; if the operation is undefined, it will display an\nerror message.\n\nEXAMPLE 11\n\nUsing a Calculator to Perform Matrix\nOperations\n\nFind AB−CAB−C given\n\nA=⎡⎣⎢−15411025−73432−28−2⎤⎦⎥,B=⎡⎣⎢45−2462152−48−3719−31⎤⎦⎥,and C=⎡⎣⎢−10025−67−89−5642−9874−75⎤⎦⎥.A=[ −15253241−7−281034−2 ],B=[ 4521−37−2452196−48−31 ],and C=[ −100−89−9825−5674−6742−75 ].\n\nAnswer\n\nMEDIA\n\nAccess these online resources for additional instruction and\npractice with matrices and matrix operations.\n\nDimensions of a\nMatrix\n\nMatrix Addition and\nSubtraction\n\nMatrix Operations\n\nMatrix\nMultiplication\n\n9.5 Section\nExercises\n\nVerbal\n\n1. \n\nCan we add any two matrices together? If so, explain why; if\nnot, explain why not and give an example of two matrices that\ncannot be added together.\n\n2. \n\nCan we multiply any column matrix by any row matrix? Explain why\nor why not.\n\n3. \n\nCan both the products ABAB and BABA be\ndefined? If so, explain how; if not, explain why.\n\n4. \n\nCan any two matrices of the same size be multiplied? If so,\nexplain why, and if not, explain why not and give an example of two\nmatrices of the same size that cannot be multiplied together.\n\n5. \n\nDoes matrix multiplication commute? That is,\ndoes AB=BA?AB=BA? If so, prove why it does. If not,\nexplain why it does not.\n\nAlgebraic\n\nFor the following exercises, use the matrices below and perform\nthe matrix addition or subtraction. Indicate if the operation is\nundefined.\n\nA=[1037],B=[222146],C=⎡⎣⎢18125926⎤⎦⎥,D=⎡⎣⎢107514261⎤⎦⎥,E=[614125],F=⎡⎣⎢078159174⎤⎦⎥A=[ 1307 ],B=[ 214226 ],C=[ 15892126 ],D=[ 101472561 ],E=[ 612145 ],F=[ 097817154 ]\n\n6. \n\nA+BA+B\n\n7. \n\nC+DC+D\n\n8. \n\nA+CA+C\n\n9. \n\nB−EB−E\n\n10. \n\nC+FC+F\n\n11. \n\nD−BD−B\n\nFor the following exercises, use the matrices below to perform\nscalar multiplication.\n\nA=[413612],B=⎡⎣⎢321091264⎤⎦⎥,C=[169035731829],D=⎡⎣⎢18871214413621⎤⎦⎥A=[ 461312 ],B=[ 392112064 ],C=[ 163718905329 ],D=[ 18121381467421 ]\n\n12. \n\n5A5A\n\n13. \n\n3B3B\n\n14. \n\n−2B−2B\n\n15. \n\n−4C−4C\n\n16. \n\n12C12C\n\n17. \n\n100D100D\n\nFor the following exercises, use the matrices below to perform\nmatrix multiplication.\n\nA=[−1352],B=[3−860412],C=⎡⎣⎢4−251069⎤⎦⎥,D=⎡⎣⎢290−338121−10⎤⎦⎥A=[ −1532 ],B=[ 364−8012 ],C=[ 410−2659 ],D=[ 2−31293108−10 ]\n\n18. \n\nABAB\n\n19. \n\nBCBC\n\n20. \n\nCACA\n\n21. \n\nBDBD\n\n22. \n\nDCDC\n\n23. \n\nCBCB\n\nFor the following exercises, use the matrices below to perform\nthe indicated operation if possible. If not possible, explain why\nthe operation cannot be performed.\n\nA=[26−57],B=[−9−462],C=[0791],D=⎡⎣⎢−840739−522⎤⎦⎥,E=⎡⎣⎢4715−603−59⎤⎦⎥A=[ 2−567 ],B=[ −96−42 ],C=[ 0971 ],D=[ −87−5432092 ],E=[ 4537−6−5109 ]\n\n24. \n\nA+B−CA+B−C\n\n25. \n\n4A+5D4A+5D\n\n26. \n\n2C+B2C+B\n\n27. \n\n3D+4E3D+4E\n\n28. \n\nC−0.5DC−0.5D\n\n29. \n\n100D−10E100D−10E\n\nFor the following exercises, use the matrices below to perform\nthe indicated operation if possible. If not possible, explain why\nthe operation cannot be performed.\n(Hint: A2=A⋅AA2=A⋅A )\n\nA=[−1052025],B=[40−201030],C=⎡⎣⎢−1010−10⎤⎦⎥A=[ −1020525 ],B=[ 4010−2030 ],C=[ −100−110 ]\n\n30. \n\nABAB\n\n31. \n\nBABA\n\n32. \n\nCACA\n\n33. \n\nBCBC\n\n34. \n\nA2A2\n\n35. \n\nB2B2\n\n36. \n\nC2C2\n\n37. \n\nB2A2B2A2\n\n38. \n\nA2B2A2B2\n\n39. \n\n(AB)2(AB)2\n\n40. \n\n(BA)2(BA)2\n\nFor the following exercises, use the matrices below to perform\nthe indicated operation if possible. If not possible, explain why\nthe operation cannot be performed.\n(Hint: A2=A⋅AA2=A⋅A )\n\nA=[1203],B=[−2−1314−5],C=⎡⎣⎢0.51−0.50.10.20.3⎤⎦⎥,D=⎡⎣⎢1−64072−151⎤⎦⎥A=[ 1023 ],B=[ −234−11−5 ],C=[ 0.50.110.2−0.50.3 ],D=[ 10−1−675421 ]\n\n41. \n\nABAB\n\n42. \n\nBABA\n\n43. \n\nBDBD\n\n44. \n\nDCDC\n\n45. \n\nD2D2\n\n46. \n\nA2A2\n\n47. \n\nD3D3\n\n48. \n\n(AB)C(AB)C\n\n49. \n\nA(BC)A(BC)\n\nTechnology\n\nFor the following exercises, use the matrices below to perform\nthe indicated operation if possible. If not possible, explain why\nthe operation cannot be performed. Use a calculator to verify your\nsolution.\n\nA=⎡⎣⎢−210.50849−35⎤⎦⎥,B=⎡⎣⎢0.5−48317062⎤⎦⎥,C=⎡⎣⎢101010101⎤⎦⎥A=[ −20918−30.545 ],B=[ 0.530−416872 ],C=[ 101010101 ]\n\n50. \n\nABAB\n\n51. \n\nBABA\n\n52. \n\nCACA\n\n53. \n\nBCBC\n\n54. \n\nABCABC\n\nExtensions\n\nFor the following exercises, use the matrix below to perform the\nindicated operation on the given matrix.\n\nB=⎡⎣⎢100001010⎤⎦⎥B=[ 100001010 ]\n\n55. \n\nB2B2\n\n56. \n\nB3B3\n\n57. \n\nB4B4\n\n58. \n\nB5B5\n\n59. \n\nUsing the above questions, find a formula\nfor Bn.Bn. Test the formula\nfor B201B201 and B202,B202, using a\ncalculator.\n\nThis page titled 9.6: Matrices and Matrix Operations was last modified on Sun, 28 May 2023 07:33:40 GMT and is shared under a CC BY  4.0  license and was authored, remixed, and/or curated by OpenStax via source content that was edited to the style and standards of the LibreTexts platform.",
+  "figures": [
+    {
+      "url": "https://math.libretexts.org/@api/deki/files/105843/16fcc5068681499fc421c01dde81854437e9a81b?revision=1",
+      "alt": "16fcc5068681499fc421c01dde81854437e9a81b",
+      "credit": ""
+    },
+    {
+      "url": "https://math.libretexts.org/@api/deki/files/105838/88839e36027696ba32b7022513f098cfbd4b9fe6?revision=1",
+      "alt": "88839e36027696ba32b7022513f098cfbd4b9fe6",
+      "credit": ""
+    },
+    {
+      "url": "https://math.libretexts.org/@api/deki/files/105839/4dbae5b2ae233d1f92697d6138c1db108694d8f1?revision=1",
+      "alt": "4dbae5b2ae233d1f92697d6138c1db108694d8f1",
+      "credit": ""
+    }
+  ],
+  "references": [
+    {
+      "text": "Table\n1",
+      "url": "https://openstax.org/books/precalculus/pages/9-5-matrices-and-matrix-operations#Table_09_05_01"
+    },
+    {
+      "text": "Table\n2",
+      "url": "https://openstax.org/books/precalculus/pages/9-5-matrices-and-matrix-operations#Table_09_05_02"
+    },
+    {
+      "text": "Table\n3",
+      "url": "https://openstax.org/books/precalculus/pages/9-5-matrices-and-matrix-operations#Table_09_05_03"
+    },
+    {
+      "text": "Table\n4",
+      "url": "https://openstax.org/books/precalculus/pages/9-5-matrices-and-matrix-operations#Table_09_05_04"
+    },
+    {
+      "text": "Dimensions of a\nMatrix",
+      "url": "http://openstax.org/l/matrixdimen"
+    },
+    {
+      "text": "Matrix Addition and\nSubtraction",
+      "url": "http://openstax.org/l/matrixaddsub"
+    },
+    {
+      "text": "Matrix Operations",
+      "url": "http://openstax.org/l/matrixoper"
+    },
+    {
+      "text": "Matrix\nMultiplication",
+      "url": "http://openstax.org/l/matrixmult"
+    },
+    {
+      "text": "1",
+      "url": "https://openstax.org/books/precalculus/pages/chapter-9#fs-id1165134301527-solution"
+    },
+    {
+      "text": "3",
+      "url": "https://openstax.org/books/precalculus/pages/chapter-9#fs-id1165134183750-solution"
+    },
+    {
+      "text": "5",
+      "url": "https://openstax.org/books/precalculus/pages/chapter-9#fs-id1165133088804-solution"
+    },
+    {
+      "text": "7",
+      "url": "https://openstax.org/books/precalculus/pages/chapter-9#fs-id1165135481913-solution"
+    },
+    {
+      "text": "9",
+      "url": "https://openstax.org/books/precalculus/pages/chapter-9#fs-id1165135452967-solution"
+    },
+    {
+      "text": "11",
+      "url": "https://openstax.org/books/precalculus/pages/chapter-9#fs-id1165134589497-solution"
+    },
+    {
+      "text": "13",
+      "url": "https://openstax.org/books/precalculus/pages/chapter-9#fs-id1165134556459-solution"
+    },
+    {
+      "text": "15",
+      "url": "https://openstax.org/books/precalculus/pages/chapter-9#fs-id1165135367787-solution"
+    },
+    {
+      "text": "17",
+      "url": "https://openstax.org/books/precalculus/pages/chapter-9#fs-id1165137896991-solution"
+    },
+    {
+      "text": "19",
+      "url": "https://openstax.org/books/precalculus/pages/chapter-9#fs-id1165133103836-solution"
+    },
+    {
+      "text": "21",
+      "url": "https://openstax.org/books/precalculus/pages/chapter-9#fs-id1165134282176-solution"
+    },
+    {
+      "text": "23",
+      "url": "https://openstax.org/books/precalculus/pages/chapter-9#fs-id1165135367683-solution"
+    },
+    {
+      "text": "25",
+      "url": "https://openstax.org/books/precalculus/pages/chapter-9#fs-id1165135320576-solution"
+    },
+    {
+      "text": "27",
+      "url": "https://openstax.org/books/precalculus/pages/chapter-9#fs-id1165134042234-solution"
+    },
+    {
+      "text": "29",
+      "url": "https://openstax.org/books/precalculus/pages/chapter-9#fs-id1165134042465-solution"
+    },
+    {
+      "text": "31",
+      "url": "https://openstax.org/books/precalculus/pages/chapter-9#fs-id1165135332915-solution"
+    },
+    {
+      "text": "33",
+      "url": "https://openstax.org/books/precalculus/pages/chapter-9#fs-id1165137809962-solution"
+    },
+    {
+      "text": "35",
+      "url": "https://openstax.org/books/precalculus/pages/chapter-9#fs-id1165135440347-solution"
+    },
+    {
+      "text": "37",
+      "url": "https://openstax.org/books/precalculus/pages/chapter-9#fs-id1165133214671-solution"
+    },
+    {
+      "text": "39",
+      "url": "https://openstax.org/books/precalculus/pages/chapter-9#fs-id1165131891720-solution"
+    },
+    {
+      "text": "41",
+      "url": "https://openstax.org/books/precalculus/pages/chapter-9#fs-id1165135177605-solution"
+    },
+    {
+      "text": "43",
+      "url": "https://openstax.org/books/precalculus/pages/chapter-9#fs-id1165133134811-solution"
+    },
+    {
+      "text": "45",
+      "url": "https://openstax.org/books/precalculus/pages/chapter-9#fs-id1165135320241-solution"
+    },
+    {
+      "text": "47",
+      "url": "https://openstax.org/books/precalculus/pages/chapter-9#fs-id1165135421447-solution"
+    },
+    {
+      "text": "49",
+      "url": "https://openstax.org/books/precalculus/pages/chapter-9#fs-id1165135154488-solution"
+    },
+    {
+      "text": "51",
+      "url": "https://openstax.org/books/precalculus/pages/chapter-9#fs-id1165135546873-solution"
+    },
+    {
+      "text": "53",
+      "url": "https://openstax.org/books/precalculus/pages/chapter-9#fs-id1165134038135-solution"
+    },
+    {
+      "text": "55",
+      "url": "https://openstax.org/books/precalculus/pages/chapter-9#fs-id1165135298429-solution"
+    },
+    {
+      "text": "57",
+      "url": "https://openstax.org/books/precalculus/pages/chapter-9#fs-id1165133377041-solution"
+    },
+    {
+      "text": "59",
+      "url": "https://openstax.org/books/precalculus/pages/chapter-9#fs-id1165135455009-solution"
+    },
+    {
+      "text": "9.6: Matrices and Matrix Operations",
+      "url": "https://math.libretexts.org/Bookshelves/Precalculus/Precalculus_2e_(OpenStax)/09%3A_Systems_of_Equations_and_Inequalities/9.06%3A_Matrices_and_Matrix_Operations"
+    },
+    {
+      "text": "CC BY  4.0",
+      "url": "https://creativecommons.org/licenses/by/4.0"
+    },
+    {
+      "text": "OpenStax",
+      "url": "https://openstax.org/"
+    },
+    {
+      "text": "source content",
+      "url": "https://openstax.org/details/books/precalculus"
+    }
+  ],
+  "exercises": [
+    {
+      "ordinal": 1,
+      "sourceNumber": "1",
+      "sourceAnchor": "",
+      "kind": "exercise-candidate",
+      "context": "Finding the Dimensions of the Given\nMatrix and Locating Entries\n\nGiven matrix A:A:",
+      "original": "1. ⓐWhat are the dimensions of matrix A?A?",
+      "prompt": "1. ⓐWhat are the dimensions of matrix A?A?",
+      "sourceAnswers": [],
+      "hasFigure": false,
+      "status": "draft",
+      "answerVerified": false,
+      "translationStatus": "pending",
+      "mappingStatus": "pending"
+    },
+    {
+      "ordinal": 2,
+      "sourceNumber": "2",
+      "sourceAnchor": "",
+      "kind": "exercise-candidate",
+      "context": "Finding the Dimensions of the Given\nMatrix and Locating Entries\n\nGiven matrix A:A:",
+      "original": "2. ⓑWhat are the entries at a31a31 and a22?a22?\n\nA=⎡⎣⎢22314107−2⎤⎦⎥A=[ 21024731−2 ]",
+      "prompt": "2. ⓑWhat are the entries at a31a31 and a22?a22?\n\nA=⎡⎣⎢22314107−2⎤⎦⎥A=[ 21024731−2 ]",
+      "sourceAnswers": [],
+      "hasFigure": false,
+      "status": "draft",
+      "answerVerified": false,
+      "translationStatus": "pending",
+      "mappingStatus": "pending"
+    },
+    {
+      "ordinal": 3,
+      "sourceNumber": "1",
+      "sourceAnchor": "",
+      "kind": "exercise-candidate",
+      "context": "Finding the Sum and Difference of Two\n3 x 3 Matrices\n\nGiven AA and B:B:",
+      "original": "1. ⓐFind the sum.",
+      "prompt": "1. ⓐFind the sum.",
+      "sourceAnswers": [],
+      "hasFigure": false,
+      "status": "draft",
+      "answerVerified": false,
+      "translationStatus": "pending",
+      "mappingStatus": "pending"
+    },
+    {
+      "ordinal": 4,
+      "sourceNumber": "2",
+      "sourceAnchor": "",
+      "kind": "exercise-candidate",
+      "context": "Finding the Sum and Difference of Two\n3 x 3 Matrices\n\nGiven AA and B:B:",
+      "original": "2. ⓑFind the difference.",
+      "prompt": "2. ⓑFind the difference.",
+      "sourceAnswers": [],
+      "hasFigure": false,
+      "status": "draft",
+      "answerVerified": false,
+      "translationStatus": "pending",
+      "mappingStatus": "pending"
+    },
+    {
+      "ordinal": 5,
+      "sourceNumber": "1",
+      "sourceAnchor": "",
+      "kind": "exercise-candidate",
+      "context": "To obtain the entries in row ii of AB,AB, we\nmultiply the entries in row ii of AA by\ncolumn jj in BB and add. For example, given\nmatrices AA and B,B, where the dimensions\nof AA are 2×32×3 and the dimensions\nof BB are 3×3,3×3, the product\nof ABAB will be a 2×32×3 matrix.\n\nA=[a11a21a12a22a13a23]and B=⎡⎣⎢b11b21b31b12b22b32b13b23b33⎤⎦⎥A=[ a11a12a13a21a22a23 ]and B=[ b11b12b13b21b22b23b31b32b33 ]\n\nMultiply and add as follows to obtain the first entry of the\nproduct matrix AB.AB.",
+      "original": "1. To obtain the entry in row 1, column 1\nof AB,AB, multiply the first row in AA by the\nfirst column in B,B, and add.\n\n[a11a12a13]⎡⎣⎢b11b21b31⎤⎦⎥=a11⋅b11+a12⋅b21+a13⋅b31[ a11a12a13 ][ b11b21b31 ]=a11⋅b11+a12⋅b21+a13⋅b31",
+      "prompt": "1. To obtain the entry in row 1, column 1\nof AB,AB, multiply the first row in AA by the\nfirst column in B,B, and add.\n\n[a11a12a13]⎡⎣⎢b11b21b31⎤⎦⎥=a11⋅b11+a12⋅b21+a13⋅b31[ a11a12a13 ][ b11b21b31 ]=a11⋅b11+a12⋅b21+a13⋅b31",
+      "sourceAnswers": [],
+      "hasFigure": false,
+      "status": "draft",
+      "answerVerified": false,
+      "translationStatus": "pending",
+      "mappingStatus": "pending"
+    },
+    {
+      "ordinal": 6,
+      "sourceNumber": "2",
+      "sourceAnchor": "",
+      "kind": "exercise-candidate",
+      "context": "To obtain the entries in row ii of AB,AB, we\nmultiply the entries in row ii of AA by\ncolumn jj in BB and add. For example, given\nmatrices AA and B,B, where the dimensions\nof AA are 2×32×3 and the dimensions\nof BB are 3×3,3×3, the product\nof ABAB will be a 2×32×3 matrix.\n\nA=[a11a21a12a22a13a23]and B=⎡⎣⎢b11b21b31b12b22b32b13b23b33⎤⎦⎥A=[ a11a12a13a21a22a23 ]and B=[ b11b12b13b21b22b23b31b32b33 ]\n\nMultiply and add as follows to obtain the first entry of the\nproduct matrix AB.AB.",
+      "original": "2. To obtain the entry in row 1, column 2\nof AB,AB, multiply the first row of AA by the\nsecond column in B,B, and add.\n\n[a11a12a13]⎡⎣⎢b12b22b32⎤⎦⎥=a11⋅b12+a12⋅b22+a13⋅b32[ a11a12a13 ][ b12b22b32 ]=a11⋅b12+a12⋅b22+a13⋅b32",
+      "prompt": "2. To obtain the entry in row 1, column 2\nof AB,AB, multiply the first row of AA by the\nsecond column in B,B, and add.\n\n[a11a12a13]⎡⎣⎢b12b22b32⎤⎦⎥=a11⋅b12+a12⋅b22+a13⋅b32[ a11a12a13 ][ b12b22b32 ]=a11⋅b12+a12⋅b22+a13⋅b32",
+      "sourceAnswers": [],
+      "hasFigure": false,
+      "status": "draft",
+      "answerVerified": false,
+      "translationStatus": "pending",
+      "mappingStatus": "pending"
+    },
+    {
+      "ordinal": 7,
+      "sourceNumber": "3",
+      "sourceAnchor": "",
+      "kind": "exercise-candidate",
+      "context": "To obtain the entries in row ii of AB,AB, we\nmultiply the entries in row ii of AA by\ncolumn jj in BB and add. For example, given\nmatrices AA and B,B, where the dimensions\nof AA are 2×32×3 and the dimensions\nof BB are 3×3,3×3, the product\nof ABAB will be a 2×32×3 matrix.\n\nA=[a11a21a12a22a13a23]and B=⎡⎣⎢b11b21b31b12b22b32b13b23b33⎤⎦⎥A=[ a11a12a13a21a22a23 ]and B=[ b11b12b13b21b22b23b31b32b33 ]\n\nMultiply and add as follows to obtain the first entry of the\nproduct matrix AB.AB.",
+      "original": "3. To obtain the entry in row 1, column 3\nof AB,AB, multiply the first row of AA by the\nthird column in B,B, and add.\n\n[a11a12a13]⎡⎣⎢b13b23b33⎤⎦⎥=a11⋅b13+a12⋅b23+a13⋅b33[ a11a12a13 ][ b13b23b33 ]=a11⋅b13+a12⋅b23+a13⋅b33",
+      "prompt": "3. To obtain the entry in row 1, column 3\nof AB,AB, multiply the first row of AA by the\nthird column in B,B, and add.\n\n[a11a12a13]⎡⎣⎢b13b23b33⎤⎦⎥=a11⋅b13+a12⋅b23+a13⋅b33[ a11a12a13 ][ b13b23b33 ]=a11⋅b13+a12⋅b23+a13⋅b33",
+      "sourceAnswers": [],
+      "hasFigure": false,
+      "status": "draft",
+      "answerVerified": false,
+      "translationStatus": "pending",
+      "mappingStatus": "pending"
+    },
+    {
+      "ordinal": 8,
+      "sourceNumber": "1",
+      "sourceAnchor": "",
+      "kind": "exercise-candidate",
+      "context": "Multiplying Two\nMatrices\n\nGiven AA and B:B:",
+      "original": "1. ⓐ Find AB.AB.",
+      "prompt": "1. ⓐ Find AB.AB.",
+      "sourceAnswers": [],
+      "hasFigure": false,
+      "status": "draft",
+      "answerVerified": false,
+      "translationStatus": "pending",
+      "mappingStatus": "pending"
+    },
+    {
+      "ordinal": 9,
+      "sourceNumber": "2",
+      "sourceAnchor": "",
+      "kind": "exercise-candidate",
+      "context": "Multiplying Two\nMatrices\n\nGiven AA and B:B:",
+      "original": "2. ⓑ Find BA.BA.",
+      "prompt": "2. ⓑ Find BA.BA.",
+      "sourceAnswers": [],
+      "hasFigure": false,
+      "status": "draft",
+      "answerVerified": false,
+      "translationStatus": "pending",
+      "mappingStatus": "pending"
+    },
+    {
+      "ordinal": 10,
+      "sourceNumber": "1",
+      "sourceAnchor": "",
+      "kind": "exercise-candidate",
+      "context": "Given a matrix operation, evaluate using a\ncalculator.",
+      "original": "1. Save each matrix as a matrix\nvariable [A],[B],[C],...[ A ],[ B ],[ C ],...",
+      "prompt": "1. Save each matrix as a matrix\nvariable [A],[B],[C],...[ A ],[ B ],[ C ],...",
+      "sourceAnswers": [],
+      "hasFigure": false,
+      "status": "draft",
+      "answerVerified": false,
+      "translationStatus": "pending",
+      "mappingStatus": "pending"
+    },
+    {
+      "ordinal": 11,
+      "sourceNumber": "2",
+      "sourceAnchor": "",
+      "kind": "exercise-candidate",
+      "context": "Given a matrix operation, evaluate using a\ncalculator.",
+      "original": "2. Enter the operation into the calculator, calling up each matrix\nvariable as needed.",
+      "prompt": "2. Enter the operation into the calculator, calling up each matrix\nvariable as needed.",
+      "sourceAnswers": [],
+      "hasFigure": false,
+      "status": "draft",
+      "answerVerified": false,
+      "translationStatus": "pending",
+      "mappingStatus": "pending"
+    },
+    {
+      "ordinal": 12,
+      "sourceNumber": "3",
+      "sourceAnchor": "",
+      "kind": "exercise-candidate",
+      "context": "Given a matrix operation, evaluate using a\ncalculator.",
+      "original": "3. If the operation is defined, the calculator will present the\nsolution matrix; if the operation is undefined, it will display an\nerror message.",
+      "prompt": "3. If the operation is defined, the calculator will present the\nsolution matrix; if the operation is undefined, it will display an\nerror message.",
+      "sourceAnswers": [],
+      "hasFigure": false,
+      "status": "draft",
+      "answerVerified": false,
+      "translationStatus": "pending",
+      "mappingStatus": "pending"
+    }
+  ],
+  "license": "CC BY 4.0",
+  "licenseEvidence": "This page titled 9.6: Matrices and Matrix Operations was last modified on Sun, 28 May 2023 07:33:40 GMT and is shared under a CC BY  4.0  license and was authored, remixed, and/or curated by OpenStax via source content that was edited to the style and standards of the LibreTexts platform.",
+  "url": "https://math.libretexts.org/Bookshelves/Precalculus/Precalculus_2e_(OpenStax)/09:_Systems_of_Equations_and_Inequalities/9.06:_Matrices_and_Matrix_Operations",
+  "sha256": "97c9653b6811b58186cb76b5bc51510b16f216132302d592d12045c3e486eead",
+  "checkedAt": "2026-10-07",
+  "id": "21882d937417826d4f59",
+  "bookId": "precalculus",
+  "licenseInherited": false,
+  "licenseSource": "https://math.libretexts.org/Bookshelves/Precalculus/Precalculus_2e_(OpenStax)/09:_Systems_of_Equations_and_Inequalities/9.06:_Matrices_and_Matrix_Operations",
+  "licenseUrl": "https://creativecommons.org/licenses/by/4.0/",
+  "authors": "OpenStax / Jay Abramson et al.",
+  "book": "Precalculus 2e",
+  "reviewStatus": "unreviewed",
+  "sourceLanguage": "en",
+  "translationStatus": "pending"
+}

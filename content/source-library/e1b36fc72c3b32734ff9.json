@@ -1,0 +1,390 @@
+{
+  "title": "12.1: Graph Basics",
+  "originalText": "[Figure: A close-up view of three people holding cell phones.]\n\nFigure \\(\\PageIndex{1}\\): Cell phone networks connect individuals. (credit: \"Business people using their phones\" by Rawpixel Ltd./Flickr, CC BY 2.0)\n\nLearning Objectives\n\n1. Identify parts of a graph.\n\n2. Model applications of graph basics.\n\nWhen you hear the word, graph, what comes to mind? You might think of the \\(\\)xy-coordinate system you learned about earlier in this course, or you might think of the line graphs and bar charts that are used to display data in news reports. The graphs we discuss in this chapter are probably very different from what you think of as a graph. They look like a bunch of dots connected by short line segments. The dots represent a group of objects and the line segments represent the connections, or relationships, between them. The objects might be bus stops, computers, Snapchat accounts, family members, or any other objects that have direct connections to each other. The connections can be physical or virtual, formal or casual, scientific or social. Regardless of the kind of connections, the purpose of the graph is to help us visualize the structure of the entire network to better understand the interactions of the objects within it.\n\nParts of a Graph\n\nIn a graph, the objects are represented with dots and their connections are represented with lines like those in Figure 12.3. Figure 12.3 displays a simple graph labeled G and a multigraph labeled H. The dots are called vertices; an individual dot is a vertex, which is one object of a set of objects, some of which may be connected. We often label vertices with letters. For example, Graph G has vertices a, b, c, and d, and Multigraph H has vertices, e, f, g, and h. Each line segment or connection joining two vertices is referred to as an edge. H is considered a multigraph because it has a double edge between f and h, and a double edge between h and g. Another reason H is called a multigraph is that it has a loop connecting vertex e to itself; a loop is an edge that joins a vertex to itself. Loops and double edges are not allowed in a simple graph.\n\nTo sum up, a simple graph is a collection of vertices and any edges that may connect them, such that every edge connects two vertices with no loops and no two vertices are joined by more than one edge. A multigraph is a graph in which there may be loops or pairs of vertices that are joined by more than one edge. In this chapter, most of our work will be with simple graphs, which we will call graphs for convenience.\n\n[Figure: Two graphs are labeled graph G and multigraph H. Graph G has four vertices, a, b, c, and d. Two edges connect a with b and c. Two edges connect c with b and d. Multigraph H has four vertices, e, f, g, and h. A double edge connects f and h. A double edge connects h and g. Two edges connect e with f and h. A loop connects vertex e to itself.]\n\nFigure \\(\\PageIndex{2}\\): A Graph and a Multigraph\n\nIt is not necessary for the edges in a graph to be straight. In fact, you can draw an edge any way you want. In graph theory, the focus is on which vertices are connected, not how the connections are drawn (see Figure 12.4). In a graph, each edge can be named by the two letters of the associated vertices. The four edges in Graph X in Figure 12.4 are ab, ac, ad, and ae. The order of the letters is not important when you name the edge of a graph. For example, ab refers to the same edge as ba.\n\nCheckpoint\n\nA graph may have vertices that are not joined to other vertices by edges, such as vertex f in Graph X in Figure 12.4, but any edge must have a vertex at each end.\n\n[Figure: Two graphs are labeled graph X. In each graph, six vertices are present: a, b, c, d, e, and f. Edges connect a with b, c, d, and e. In the first graph, the edges are straight lines. In the second graph, the edges are curved.]\n\nFigure \\(\\PageIndex{3}\\): Different Representations of the Same Graph\n\nExample \\(\\PageIndex{1}\\): Identifying Edges and Vertices\n\nName all the vertices and edges of graph F in Figure \\(\\PageIndex{4}\\).\n\n[Figure: A graph labeled graph F. The graph has five vertices: V, W, X, Y, and Z. Four edges connect X with V, W, Y, and Z. Two edges connect W with V and Z.]\n\nFigure \\(\\PageIndex{4}\\) Graph F\n\nAnswer\n\nThe vertices are v, w, x, y, and z. The edges are vw, vx, wx, wz, xy, and xz.\n\nCheckpoint\n\nWhen listing the vertices and edges in a graph, work in alphabetical order to avoid accidentally listing the same item twice. When you are finished, count the number of vertices or edges you listed and compare that to the number of vertices or edges on the graph to ensure you didn’t miss any.\n\nYour Turn \\(\\PageIndex{1}\\)\n\nName all the vertices and edges of Graph A.\n\n[Figure: A graph labeled graph A. The graph has five vertices, p, q, r, s, and t. Edges connect p with q, r, and t. Edges connect r with q and s. Edges connect s with q and t. An edge connects q with t.]\n\nFigure \\(\\PageIndex{5}\\): Graph A\n\nSince the purpose of a graph is to represent the connections between objects, it is very important to know if two vertices share a common edge. The two vertices at either end of a given edge are referred to as neighboring, or adjacent. For example, in Figure 12.5, vertices x and w are adjacent, but vertices y and w are not.\n\nExample \\(\\PageIndex{2}\\): Identifying Vertices That Are Not Adjacent\n\nName all the pairs of vertices of graph F in Figure 12.5 that are not adjacent.\n\nAnswer\n\nThe pairs of vertices that are not adjacent in graph F are v and y, v and z, w and y, and y and z.\n\nYour Turn \\(\\PageIndex{2}\\)\n\nName all the pairs of vertices of graph A in Figure 12.6 that are not adjacent.\n\nPeople in Mathematics: Sergey Brin and Laurence Page\n\nThe “Google boys,” Sergey Brin and Laurence Page, transformed the World Wide Web in 1998 when they used the mathematics of graph theory to create an algorithm called Page Rank, which is known as the Google Search Engine today. The two computer scientists identified webpages as vertices and hyperlinks on those pages as edges because hyperlinks connect one website to the next. The number of edges influences the ranking of a website on the Google Search Engine because the websites with more links to “credible sources” are ranked higher. (\"Page Rank: The Graph Theory-based Backbone of Google,\" September 20, 2011, Cornell University, Networks Blog.\n\nAnalyzing Geographical Maps with Graphs\n\n[Figure: A map shows dots representing the flight connections from a particular airport.]\n\nFigure \\(\\PageIndex{6}\\): Commercial airlines' route systems create a global network.\n\nWhen graphs are used to model and analyze real-world applications, the number of edges that meet at a particular vertex is important. For example, a graph may represent the direct flight connections for a particular airport as in Figure \\(\\PageIndex{7}\\). Representing the connections with a graph rather than a map shifts the focus away from the relative positions and toward which airports are connected. In Figure \\(\\PageIndex{7}\\), the vertices are the airports, and the edges are the direct flight paths. The number of flight connections between a particular airport and other South Florida airports is the number of edges meeting at a particular vertex. For example, Key West has direct flights to three of the five airports on the graph. In graph theory terms, we would say that vertex FYW has degree 3. The degree of a vertex is the number of edges that connect to that vertex.\n\n[Figure: A graph represents the direct flights between South Florida airports. The graph has five vertices. Edges from the vertex, Tampa T P A connect with Key West E Y W, Miami M I A, Fort Lauderdale F L L, and West Palm Beach P B I. An edge connects Fort Lauderdale with Key West. An edge connects Miami with Key West.]\n\nFigure \\(\\PageIndex{7}\\): Direct Flights between South Florida Airports\n\nExample \\(\\PageIndex{3}\\): Determining the Degree of a Vertex\n\nDetermine the degree of each vertex of Graph J in Figure \\(\\PageIndex{8}\\). If graph J represents direct flights between a set of airports, do any of the airports have direct flights to two or more of the other cities on the graph?\n\n[Figure: A graph labeled graph J. The graph has five vertices, a, b, c, d, and e. Edges connect a with b, c, and d. An edge connects c with d.]\n\nFigure 1\\(\\PageIndex{8}\\) Graph J\n\nAnswer\n\nFor each vertex, count the number of edges that meet at that vertex. This value is the degree of the vertex. In Figure 12.10, the dashed edges indicate the edges that meet at the marked vertex.\n\n[Figure: Five graphs labeled graph J. In the first graph vertex a has degree 3. The graph has five vertices, a, b, c, d, and e. Dotted edges from a connect with b, c, and d. An edge connects c with d. In the second graph vertex b has degree 1. The graph has five vertices, a, b, c, d, and e. Edges from a connect with b, c, and d. An edge connects c with d. The edge connecting b and a is dotted. In the third graph vertex c has degree 2. The graph has five vertices, a, b, c, d, and e. Edges from a connect with b, c, and d. An edge connects c with d. The edges connecting a and c and c and d are dotted. In the fourth graph vertex d has degree 2. The graph has five vertices, a, b, c, d, and e. Edges from a connect with b, c, and d. An edge connects c with d. The edges connecting c and d and a and d are dotted. In the fifth graph vertex e has degree 0. The graph has five vertices, a, b, c, d, and e. Edges from a connect with b, c, and d. An edge connects c with d.]\n\nFigure \\(\\PageIndex{9}\\) Degrees of Vertices of Graph J\n\nVertex a has degree 3, vertex b has degree 1, vertices c and d each have degree 2, and vertex e has degree 0. Airports a, c,  and  d have direct flights to two or more of the other airports.\n\nYour Turn \\(\\PageIndex{3}\\)\n\nName a vertx of Graph A in Figure \\(\\PageIndex{6}\\) with degree 4.\n\nGraphs are also used to analyze regional boundaries. The states of Utah, Colorado, Arizona, and New Mexico all meet at a single point known as the “Four Corners,” which is shown in the map in Figure 12.11.\n\n[Figure: A map of the USA with the four corners region highlighted. It includes Utah, Colorado, Arizona, and New Mexico.]\n\nFigure \\(\\PageIndex{10}\\): Map of the Four Corners\n\nIn Figure \\(\\PageIndex{11}\\), each vertex represents one of these states, and each edge represents a shared border. States like Utah and New Mexico that meet at only a single point are not considered to have a shared border. By representing this map as a graph, where the connections are shared borders, we shift our perspective from physical attributes such as shape, size and distance, toward the existence of the relationship of having a shared boundary.\n\n[Figure: A graph of four corner states. The graph shows four edges and four vertices forming a rectangle. The vertices are Utah, Colorado, Arizona, and New Mexico.]\n\nFigure \\(\\PageIndex{11}\\): Graph of the Shared Boundaries of Four Corners States\n\nExample \\(\\PageIndex{4}\\): Graphing the Midwestern States\n\nA map of the Midwest is given in Figure \\(\\PageIndex{12}\\). Create a graph of the region in which each vertex represents a state and each edge represents a shared border.\n\n[Figure: A partial map of the USA with the midwestern states. The Midwestern states are North Dakota, South Dakota, Nebraska, Kansas, Minnesota, Iowa, Missouri, Wisconsin, Illinois, Indiana, Michigan, and Ohio.]\n\nFigure \\(\\PageIndex{12}\\) Map of Midwestern States\n\nAnswer\n\nStep 1: For each state, draw and label a vertex as in Figure \\(\\PageIndex{13}\\)\n\n[Figure: A partial map of the USA with the midwestern states. The Midwestern states are North Dakota (N D), South Dakota (S D), Nebraska (N E), Kansas (K S), Minnesota (M N), Iowa (I A), Missouri (M O), Wisconsin (W I), Illinois (I L), Indiana (I N), Michigan (M I), and Ohio (O H).]\n\nFigure \\(\\PageIndex{13}\\) Vertex Assigned to Each Midwestern State\n\nStep 2: Draw edges between any two states that share a common land border as in Figure \\(\\PageIndex{14}\\)\n\n[Figure: A partial map of the USA with the midwestern states. The Midwestern states are North Dakota (N D), South Dakota (S D), Nebraska (N E), Kansas (K S), Minnesota (M N), Iowa (I A), Missouri (M O), Wisconsin (W I), Illinois (I L), Indiana (I N), Michigan (M I), and Ohio (O H). Edges from N D connect with S D and M N. Edges from S D connect with N E, I A, and M N. Edges from M N connect with I A and W I. Edges from N E connect with K S, M O, and I A. Edges from I A connect with M O and I L. Edges from W I connect with I A and I L. An edge from K S connects with M O. An edge from M O connects with I L. An edge from I L connects with I N. Edges from I N connect with M I and O H. An edge from M I connects with O H.]\n\nFigure \\(\\PageIndex{14}\\): Edge Assigned to Each Pair of Midwestern States with Common Border\n\nThe graph is given in Figure \\(\\PageIndex{15}\\).\n\n[Figure: A graph represents common boundaries between midwestern states. Edges from M N connect with I A and W I. Edges from N E connect with K S, M O, and I A. Edges from I A connect with M O and I L. Edges from W I connect with I A and I L. An edge from K S connects with M O. An edge from M O connects with I L. An edge from I L connects with I N. Edges from I N connect with M I and O H. An edge from M I connects with O H.]\n\nFigure \\(\\PageIndex{15}\\): Final Graph Representing Common Boundaries between Midwestern States\n\nYour Turn \\(\\PageIndex{4}\\)\n\nThe figure shows a map of the Island of Oahu in the State of Hawaii divided into regions. Draw a graph in which each vertex represents one of the regions and each edge represents a shared land border.\n\n[Figure: A map shows the regions of Oahu. The regions are North Shore, Leeward Coast, Central, Windward Coast, and South.]\n\nFigure \\(\\PageIndex{16}\\): Map of Oahu\n\nVideo\n\nGraph Theory: Create a Graph to Represent Common Boundaries on a Map\n\nGraphs of Social Interactions\n\nGeographical maps are just one of many real-world scenarios which graphs can depict. Any scenario in which objects are connected to each other can be represented with a graph, and the connections don’t have to be physical. Just think about all the connections you have to people around the world through social media! Who is in your network of Twitter followers? Whose Snapchat network are you connected to?\n\nExample \\(\\PageIndex{5}\\): Graphing Chloe’s Roblox Friends\n\nRoblox is an online gaming platform. Chloe is interested to know how many people in her network of Roblox friends are also friends with each other so she polls them. Explain how a graph or multigraph might be drawn to model this scenario by identifying the objects that could be represented by vertices and the connections that could be represented by edges. Indicate whether a graph or a multigraph would be a better model.\n\nAnswer\n\nThe objects that are represented with vertices are Roblox friends. A Roblox friendship between two friends will be represented as an edge between a pair of vertices. There will be no double edges because it is not possible for two friends to be linked twice in Roblox; they are either friends or they are not. Also, a player cannot be a friend to themself, so there is no need for a loop. Since there are no double edges or loops, this is best represented as a graph.\n\nYour Turn \\(\\PageIndex{5}\\)\n\nIn a particular poker tournament, five groups of five players will play at a table until one player wins, then the five winning players will play each other at a table in a final round. Explain how a graph or multigraph might be drawn to model this scenario by identifying the objects that could be represented by vertices and the connections that could be represented by edges. Indicate whether a graph or a multigraph would be a better model.\n\nWho Knew?: Using Graph Theory to Reduce Internet Fraud\n\nCould graphs be used to reduce Internet fraud? At least one researcher thinks so. Graph theory is used every day to analyze our behavior, particularly on social network sites. Alex Buetel, a computer scientist from Carnegie Mellon University in Pittsburgh, Pennsylvania, published a research paper in 2016 that discussed the possibilities of distinguishing the normal interactions from those that might be fraudulent using graph theory. Buetel wrote, “To more effectively model and detect abnormal behavior, we model how fraudsters work, catching previously undetected fraud on Facebook, Twitter, and Tencent Weibo and improving classification accuracy by up to 68%.” In the same paper, the researcher discusses how similar techniques can be used to model many other applications and even, “predict why you like a particular movie.” (Alex Beutel, \"User Behavior Modeling with Large-Scale Graph Analysis,\" http://reports-archive.adm.cs.cmu.ed...-CS-16-105.pdf, May 2016, CMU-CS-16-105, Computer Science Department, School of Computer Science, Carnegie Mellon University, Pittsburgh, PA)\n\nCheck Your Understanding\n\n1. A simple graph has no loops.\n\n1. \n\nTrue\n\n2. \n\nFalse\n\n2. It is not possible to have a vertex of degree 0.\n\n1. \n\nTrue\n\n2. \n\nFalse\n\n3. A graph with three vertices has at most three edges.\n\n1. \n\nTrue\n\n2. \n\nFalse\n\n4. A multigraph with three vertices has at most three edges.\n\n1. \n\nTrue\n\n2. \n\nFalse\n\n5. If vertex a is adjacent to vertex b, and vertex b is adjacent to vertex c, then vertex a must be adjacent to vertex c.\n\n1. \n\nTrue\n\n2. \n\nFalse\n\nThis page titled 12.1: Graph Basics was last modified on Thu, 02 Jan 2025 09:27:16 GMT and is shared under a CC BY  4.0  license and was authored, remixed, and/or curated by OpenStax via source content that was edited to the style and standards of the LibreTexts platform.",
+  "figures": [
+    {
+      "url": "https://math.libretexts.org/@api/deki/files/127030/f767967f1a50cf32b45fb13ab0ee6f75f7a34d7a?revision=1",
+      "alt": "A close-up view of three people holding cell phones.",
+      "credit": ""
+    },
+    {
+      "url": "https://math.libretexts.org/@api/deki/files/127029/672d32b0b9f20c2adf3ba916a1eaeb1a6a5a0ba1?revision=1",
+      "alt": "Two graphs are labeled graph G and multigraph H. Graph G has four vertices, a, b, c, and d. Two edges connect a with b and c. Two edges connect c with b and d. Multigraph H has four vertices, e, f, g, and h. A double edge connects f and h. A double edge connects h and g. Two edges connect e with f and h. A loop connects vertex e to itself.",
+      "credit": ""
+    },
+    {
+      "url": "https://math.libretexts.org/@api/deki/files/127028/54d106925a7ee4d29afc7cb5c7afc8dcebbd6974?revision=1",
+      "alt": "Two graphs are labeled graph X. In each graph, six vertices are present: a, b, c, d, e, and f. Edges connect a with b, c, d, and e. In the first graph, the edges are straight lines. In the second graph, the edges are curved.",
+      "credit": ""
+    },
+    {
+      "url": "https://math.libretexts.org/@api/deki/files/127027/628ecee27158270d88be2057af1cc9cc9b4e503f?revision=1",
+      "alt": "A graph labeled graph F. The graph has five vertices: V, W, X, Y, and Z. Four edges connect X with V, W, Y, and Z. Two edges connect W with V and Z.",
+      "credit": ""
+    },
+    {
+      "url": "https://math.libretexts.org/@api/deki/files/109803/CS_Figure_12_01_004.png?revision=1",
+      "alt": "A graph labeled graph A. The graph has five vertices, p, q, r, s, and t. Edges connect p with q, r, and t. Edges connect r with q and s. Edges connect s with q and t. An edge connects q with t.",
+      "credit": ""
+    },
+    {
+      "url": "https://math.libretexts.org/@api/deki/files/127034/8409e8c5bc6c94b2f34779dda479cae7f3dcfafa?revision=1",
+      "alt": "A map shows dots representing the flight connections from a particular airport.",
+      "credit": ""
+    },
+    {
+      "url": "https://math.libretexts.org/@api/deki/files/127035/4f830857b9a1c450c19eb1786d7c5735f2e4b656?revision=1",
+      "alt": "A graph represents the direct flights between South Florida airports. The graph has five vertices. Edges from the vertex, Tampa T P A connect with Key West E Y W, Miami M I A, Fort Lauderdale F L L, and West Palm Beach P B I. An edge connects Fort Lauderdale with Key West. An edge connects Miami with Key West.",
+      "credit": ""
+    },
+    {
+      "url": "https://math.libretexts.org/@api/deki/files/127036/c6af1558def9f1ec68029293f02a11b2bd3d5285?revision=1",
+      "alt": "A graph labeled graph J. The graph has five vertices, a, b, c, d, and e. Edges connect a with b, c, and d. An edge connects c with d.",
+      "credit": ""
+    },
+    {
+      "url": "https://math.libretexts.org/@api/deki/files/127040/690af67e222d89ad79dab66ac8828bfe868284ff?revision=1",
+      "alt": "Five graphs labeled graph J. In the first graph vertex a has degree 3. The graph has five vertices, a, b, c, d, and e. Dotted edges from a connect with b, c, and d. An edge connects c with d. In the second graph vertex b has degree 1. The graph has five vertices, a, b, c, d, and e. Edges from a connect with b, c, and d. An edge connects c with d. The edge connecting b and a is dotted. In the third graph vertex c has degree 2. The graph has five vertices, a, b, c, d, and e. Edges from a connect with b, c, and d. An edge connects c with d. The edges connecting a and c and c and d are dotted. In the fourth graph vertex d has degree 2. The graph has five vertices, a, b, c, d, and e. Edges from a connect with b, c, and d. An edge connects c with d. The edges connecting c and d and a and d are dotted. In the fifth graph vertex e has degree 0. The graph has five vertices, a, b, c, d, and e. Edges from a connect with b, c, and d. An edge connects c with d.",
+      "credit": ""
+    },
+    {
+      "url": "https://math.libretexts.org/@api/deki/files/127046/4d8ab1704073aa122530401f30cd233a3e812b31?revision=1",
+      "alt": "A map of the USA with the four corners region highlighted. It includes Utah, Colorado, Arizona, and New Mexico.",
+      "credit": ""
+    },
+    {
+      "url": "https://math.libretexts.org/@api/deki/files/127045/aeceeb372e6c22d2fe3570888f07db8a1eed68a3?revision=1",
+      "alt": "A graph of four corner states. The graph shows four edges and four vertices forming a rectangle. The vertices are Utah, Colorado, Arizona, and New Mexico.",
+      "credit": ""
+    },
+    {
+      "url": "https://math.libretexts.org/@api/deki/files/127049/5aaf69d3738d8576d06891a9b1dfaade765ca8e4?revision=1",
+      "alt": "A partial map of the USA with the midwestern states. The Midwestern states are North Dakota, South Dakota, Nebraska, Kansas, Minnesota, Iowa, Missouri, Wisconsin, Illinois, Indiana, Michigan, and Ohio.",
+      "credit": ""
+    },
+    {
+      "url": "https://math.libretexts.org/@api/deki/files/127048/305c3329a1fb9e9511900e8cb7dda4f2818ca8f5?revision=1",
+      "alt": "A partial map of the USA with the midwestern states. The Midwestern states are North Dakota (N D), South Dakota (S D), Nebraska (N E), Kansas (K S), Minnesota (M N), Iowa (I A), Missouri (M O), Wisconsin (W I), Illinois (I L), Indiana (I N), Michigan (M I), and Ohio (O H).",
+      "credit": ""
+    },
+    {
+      "url": "https://math.libretexts.org/@api/deki/files/127051/4b20196e4736bcbdf1d3d2867fc963e90fbf5eeb?revision=1",
+      "alt": "A partial map of the USA with the midwestern states. The Midwestern states are North Dakota (N D), South Dakota (S D), Nebraska (N E), Kansas (K S), Minnesota (M N), Iowa (I A), Missouri (M O), Wisconsin (W I), Illinois (I L), Indiana (I N), Michigan (M I), and Ohio (O H). Edges from N D connect with S D and M N. Edges from S D connect with N E, I A, and M N. Edges from M N connect with I A and W I. Edges from N E connect with K S, M O, and I A. Edges from I A connect with M O and I L. Edges from W I connect with I A and I L. An edge from K S connects with M O. An edge from M O connects with I L. An edge from I L connects with I N. Edges from I N connect with M I and O H. An edge from M I connects with O H.",
+      "credit": ""
+    },
+    {
+      "url": "https://math.libretexts.org/@api/deki/files/127054/c3ab57e64a6e5ba7ac12b111f23330bc3ad95fad?revision=1",
+      "alt": "A graph represents common boundaries between midwestern states. Edges from M N connect with I A and W I. Edges from N E connect with K S, M O, and I A. Edges from I A connect with M O and I L. Edges from W I connect with I A and I L. An edge from K S connects with M O. An edge from M O connects with I L. An edge from I L connects with I N. Edges from I N connect with M I and O H. An edge from M I connects with O H.",
+      "credit": ""
+    },
+    {
+      "url": "https://math.libretexts.org/@api/deki/files/109806/CS_Figure_12_01_014.png?revision=1",
+      "alt": "A map shows the regions of Oahu. The regions are North Shore, Leeward Coast, Central, Windward Coast, and South.",
+      "credit": ""
+    }
+  ],
+  "references": [
+    {
+      "text": "http://reports-archive.adm.cs.cmu.ed...-CS-16-105.pdf",
+      "url": "http://reports-archive.adm.cs.cmu.edu/anon/2016/CMU-CS-16-105.pdf"
+    },
+    {
+      "text": "12.1: Graph Basics",
+      "url": "https://math.libretexts.org/Bookshelves/Applied_Mathematics/Contemporary_Mathematics_(OpenStax)/12%3A_Graph_Theory/12.01%3A_Graph_Basics"
+    },
+    {
+      "text": "CC BY  4.0",
+      "url": "https://creativecommons.org/licenses/by/4.0"
+    },
+    {
+      "text": "OpenStax",
+      "url": "https://openstax.org/"
+    },
+    {
+      "text": "source content",
+      "url": "https://openstax.org/details/books/contemporary-mathematics"
+    }
+  ],
+  "exercises": [
+    {
+      "ordinal": 1,
+      "sourceNumber": "1",
+      "sourceAnchor": "",
+      "kind": "exercise-candidate",
+      "context": "",
+      "original": "1. Identify parts of a graph.",
+      "prompt": "1. Identify parts of a graph.",
+      "sourceAnswers": [],
+      "hasFigure": false,
+      "status": "draft",
+      "answerVerified": false,
+      "translationStatus": "pending",
+      "mappingStatus": "pending"
+    },
+    {
+      "ordinal": 2,
+      "sourceNumber": "2",
+      "sourceAnchor": "",
+      "kind": "exercise-candidate",
+      "context": "",
+      "original": "2. Model applications of graph basics.",
+      "prompt": "2. Model applications of graph basics.",
+      "sourceAnswers": [],
+      "hasFigure": false,
+      "status": "draft",
+      "answerVerified": false,
+      "translationStatus": "pending",
+      "mappingStatus": "pending"
+    },
+    {
+      "ordinal": 3,
+      "sourceNumber": "",
+      "sourceAnchor": "",
+      "kind": "example-or-exercise",
+      "context": "To sum up, a simple graph is a collection of vertices and any edges that may connect them, such that every edge connects two vertices with no loops and no two vertices are joined by more than one edge. A multigraph is a graph in which there may be loops or pairs of vertices that are joined by more than one edge. In this chapter, most of our work will be with simple graphs, which we will call graphs for convenience.\n\nIt is not necessary for the edges in a graph to be straight. In fact, you can draw an edge any way you want. In graph theory, the focus is on which vertices are connected, not how the connections are drawn (see Figure 12.4). In a graph, each edge can be named by the two letters of the associated vertices. The four edges in Graph X in Figure 12.4 are ab, ac, ad, and ae. The order of the letters is not important when you name the edge of a graph. For example, ab refers to the same edge as ba.\n\nA graph may have vertices that are not joined to other vertices by edges, such as vertex f in Graph X in Figure 12.4, but any edge must have a vertex at each end.",
+      "original": "Example \\(\\PageIndex{1}\\): Identifying Edges and Vertices\n\nName all the vertices and edges of graph F in Figure \\(\\PageIndex{4}\\).\n\n[Figure: A graph labeled graph F. The graph has five vertices: V, W, X, Y, and Z. Four edges connect X with V, W, Y, and Z. Two edges connect W with V and Z.]\n\nFigure \\(\\PageIndex{4}\\) Graph F\n\nAnswer\n\nThe vertices are v, w, x, y, and z. The edges are vw, vx, wx, wz, xy, and xz.",
+      "prompt": "Example \\(\\PageIndex{1}\\): Identifying Edges and Vertices\n\nName all the vertices and edges of graph F in Figure \\(\\PageIndex{4}\\).\n\n[Figure: A graph labeled graph F. The graph has five vertices: V, W, X, Y, and Z. Four edges connect X with V, W, Y, and Z. Two edges connect W with V and Z.]\n\nFigure \\(\\PageIndex{4}\\) Graph F",
+      "sourceAnswers": [
+        "The vertices are v, w, x, y, and z. The edges are vw, vx, wx, wz, xy, and xz."
+      ],
+      "hasFigure": true,
+      "status": "draft",
+      "answerVerified": false,
+      "translationStatus": "pending",
+      "mappingStatus": "pending"
+    },
+    {
+      "ordinal": 4,
+      "sourceNumber": "",
+      "sourceAnchor": "",
+      "kind": "example-or-exercise",
+      "context": "When listing the vertices and edges in a graph, work in alphabetical order to avoid accidentally listing the same item twice. When you are finished, count the number of vertices or edges you listed and compare that to the number of vertices or edges on the graph to ensure you didn’t miss any.\n\nName all the vertices and edges of Graph A.\n\nSince the purpose of a graph is to represent the connections between objects, it is very important to know if two vertices share a common edge. The two vertices at either end of a given edge are referred to as neighboring, or adjacent. For example, in Figure 12.5, vertices x and w are adjacent, but vertices y and w are not.",
+      "original": "Example \\(\\PageIndex{2}\\): Identifying Vertices That Are Not Adjacent\n\nName all the pairs of vertices of graph F in Figure 12.5 that are not adjacent.\n\nAnswer\n\nThe pairs of vertices that are not adjacent in graph F are v and y, v and z, w and y, and y and z.",
+      "prompt": "Example \\(\\PageIndex{2}\\): Identifying Vertices That Are Not Adjacent\n\nName all the pairs of vertices of graph F in Figure 12.5 that are not adjacent.",
+      "sourceAnswers": [
+        "The pairs of vertices that are not adjacent in graph F are v and y, v and z, w and y, and y and z."
+      ],
+      "hasFigure": false,
+      "status": "draft",
+      "answerVerified": false,
+      "translationStatus": "pending",
+      "mappingStatus": "pending"
+    },
+    {
+      "ordinal": 5,
+      "sourceNumber": "",
+      "sourceAnchor": "",
+      "kind": "example-or-exercise",
+      "context": "Analyzing Geographical Maps with Graphs\n\nWhen graphs are used to model and analyze real-world applications, the number of edges that meet at a particular vertex is important. For example, a graph may represent the direct flight connections for a particular airport as in Figure \\(\\PageIndex{7}\\). Representing the connections with a graph rather than a map shifts the focus away from the relative positions and toward which airports are connected. In Figure \\(\\PageIndex{7}\\), the vertices are the airports, and the edges are the direct flight paths. The number of flight connections between a particular airport and other South Florida airports is the number of edges meeting at a particular vertex. For example, Key West has direct flights to three of the five airports on the graph. In graph theory terms, we would say that vertex FYW has degree 3. The degree of a vertex is the number of edges that connect to that vertex.",
+      "original": "Example \\(\\PageIndex{3}\\): Determining the Degree of a Vertex\n\nDetermine the degree of each vertex of Graph J in Figure \\(\\PageIndex{8}\\). If graph J represents direct flights between a set of airports, do any of the airports have direct flights to two or more of the other cities on the graph?\n\n[Figure: A graph labeled graph J. The graph has five vertices, a, b, c, d, and e. Edges connect a with b, c, and d. An edge connects c with d.]\n\nFigure 1\\(\\PageIndex{8}\\) Graph J\n\nAnswer\n\nFor each vertex, count the number of edges that meet at that vertex. This value is the degree of the vertex. In Figure 12.10, the dashed edges indicate the edges that meet at the marked vertex.\n\n[Figure: Five graphs labeled graph J. In the first graph vertex a has degree 3. The graph has five vertices, a, b, c, d, and e. Dotted edges from a connect with b, c, and d. An edge connects c with d. In the second graph vertex b has degree 1. The graph has five vertices, a, b, c, d, and e. Edges from a connect with b, c, and d. An edge connects c with d. The edge connecting b and a is dotted. In the third graph vertex c has degree 2. The graph has five vertices, a, b, c, d, and e. Edges from a connect with b, c, and d. An edge connects c with d. The edges connecting a and c and c and d are dotted. In the fourth graph vertex d has degree 2. The graph has five vertices, a, b, c, d, and e. Edges from a connect with b, c, and d. An edge connects c with d. The edges connecting c and d and a and d are dotted. In the fifth graph vertex e has degree 0. The graph has five vertices, a, b, c, d, and e. Edges from a connect with b, c, and d. An edge connects c with d.]\n\nFigure \\(\\PageIndex{9}\\) Degrees of Vertices of Graph J\n\nVertex a has degree 3, vertex b has degree 1, vertices c and d each have degree 2, and vertex e has degree 0. Airports a, c,  and  d have direct flights to two or more of the other airports.",
+      "prompt": "Example \\(\\PageIndex{3}\\): Determining the Degree of a Vertex\n\nDetermine the degree of each vertex of Graph J in Figure \\(\\PageIndex{8}\\). If graph J represents direct flights between a set of airports, do any of the airports have direct flights to two or more of the other cities on the graph?\n\n[Figure: A graph labeled graph J. The graph has five vertices, a, b, c, d, and e. Edges connect a with b, c, and d. An edge connects c with d.]\n\nFigure 1\\(\\PageIndex{8}\\) Graph J",
+      "sourceAnswers": [
+        "For each vertex, count the number of edges that meet at that vertex. This value is the degree of the vertex. In Figure 12.10, the dashed edges indicate the edges that meet at the marked vertex.\n\n[Figure: Five graphs labeled graph J. In the first graph vertex a has degree 3. The graph has five vertices, a, b, c, d, and e. Dotted edges from a connect with b, c, and d. An edge connects c with d. In the second graph vertex b has degree 1. The graph has five vertices, a, b, c, d, and e. Edges from a connect with b, c, and d. An edge connects c with d. The edge connecting b and a is dotted. In the third graph vertex c has degree 2. The graph has five vertices, a, b, c, d, and e. Edges from a connect with b, c, and d. An edge connects c with d. The edges connecting a and c and c and d are dotted. In the fourth graph vertex d has degree 2. The graph has five vertices, a, b, c, d, and e. Edges from a connect with b, c, and d. An edge connects c with d. The edges connecting c and d and a and d are dotted. In the fifth graph vertex e has degree 0. The graph has five vertices, a, b, c, d, and e. Edges from a connect with b, c, and d. An edge connects c with d.]\n\nFigure \\(\\PageIndex{9}\\) Degrees of Vertices of Graph J\n\nVertex a has degree 3, vertex b has degree 1, vertices c and d each have degree 2, and vertex e has degree 0. Airports a, c,  and  d have direct flights to two or more of the other airports."
+      ],
+      "hasFigure": true,
+      "status": "draft",
+      "answerVerified": false,
+      "translationStatus": "pending",
+      "mappingStatus": "pending"
+    },
+    {
+      "ordinal": 6,
+      "sourceNumber": "",
+      "sourceAnchor": "",
+      "kind": "example-or-exercise",
+      "context": "Name a vertx of Graph A in Figure \\(\\PageIndex{6}\\) with degree 4.\n\nGraphs are also used to analyze regional boundaries. The states of Utah, Colorado, Arizona, and New Mexico all meet at a single point known as the “Four Corners,” which is shown in the map in Figure 12.11.\n\nIn Figure \\(\\PageIndex{11}\\), each vertex represents one of these states, and each edge represents a shared border. States like Utah and New Mexico that meet at only a single point are not considered to have a shared border. By representing this map as a graph, where the connections are shared borders, we shift our perspective from physical attributes such as shape, size and distance, toward the existence of the relationship of having a shared boundary.",
+      "original": "Example \\(\\PageIndex{4}\\): Graphing the Midwestern States\n\nA map of the Midwest is given in Figure \\(\\PageIndex{12}\\). Create a graph of the region in which each vertex represents a state and each edge represents a shared border.\n\n[Figure: A partial map of the USA with the midwestern states. The Midwestern states are North Dakota, South Dakota, Nebraska, Kansas, Minnesota, Iowa, Missouri, Wisconsin, Illinois, Indiana, Michigan, and Ohio.]\n\nFigure \\(\\PageIndex{12}\\) Map of Midwestern States\n\nAnswer\n\nStep 1: For each state, draw and label a vertex as in Figure \\(\\PageIndex{13}\\)\n\n[Figure: A partial map of the USA with the midwestern states. The Midwestern states are North Dakota (N D), South Dakota (S D), Nebraska (N E), Kansas (K S), Minnesota (M N), Iowa (I A), Missouri (M O), Wisconsin (W I), Illinois (I L), Indiana (I N), Michigan (M I), and Ohio (O H).]\n\nFigure \\(\\PageIndex{13}\\) Vertex Assigned to Each Midwestern State\n\nStep 2: Draw edges between any two states that share a common land border as in Figure \\(\\PageIndex{14}\\)\n\n[Figure: A partial map of the USA with the midwestern states. The Midwestern states are North Dakota (N D), South Dakota (S D), Nebraska (N E), Kansas (K S), Minnesota (M N), Iowa (I A), Missouri (M O), Wisconsin (W I), Illinois (I L), Indiana (I N), Michigan (M I), and Ohio (O H). Edges from N D connect with S D and M N. Edges from S D connect with N E, I A, and M N. Edges from M N connect with I A and W I. Edges from N E connect with K S, M O, and I A. Edges from I A connect with M O and I L. Edges from W I connect with I A and I L. An edge from K S connects with M O. An edge from M O connects with I L. An edge from I L connects with I N. Edges from I N connect with M I and O H. An edge from M I connects with O H.]\n\nFigure \\(\\PageIndex{14}\\): Edge Assigned to Each Pair of Midwestern States with Common Border\n\nThe graph is given in Figure \\(\\PageIndex{15}\\).\n\n[Figure: A graph represents common boundaries between midwestern states. Edges from M N connect with I A and W I. Edges from N E connect with K S, M O, and I A. Edges from I A connect with M O and I L. Edges from W I connect with I A and I L. An edge from K S connects with M O. An edge from M O connects with I L. An edge from I L connects with I N. Edges from I N connect with M I and O H. An edge from M I connects with O H.]\n\nFigure \\(\\PageIndex{15}\\): Final Graph Representing Common Boundaries between Midwestern States",
+      "prompt": "Example \\(\\PageIndex{4}\\): Graphing the Midwestern States\n\nA map of the Midwest is given in Figure \\(\\PageIndex{12}\\). Create a graph of the region in which each vertex represents a state and each edge represents a shared border.\n\n[Figure: A partial map of the USA with the midwestern states. The Midwestern states are North Dakota, South Dakota, Nebraska, Kansas, Minnesota, Iowa, Missouri, Wisconsin, Illinois, Indiana, Michigan, and Ohio.]\n\nFigure \\(\\PageIndex{12}\\) Map of Midwestern States",
+      "sourceAnswers": [
+        "Step 1: For each state, draw and label a vertex as in Figure \\(\\PageIndex{13}\\)\n\n[Figure: A partial map of the USA with the midwestern states. The Midwestern states are North Dakota (N D), South Dakota (S D), Nebraska (N E), Kansas (K S), Minnesota (M N), Iowa (I A), Missouri (M O), Wisconsin (W I), Illinois (I L), Indiana (I N), Michigan (M I), and Ohio (O H).]\n\nFigure \\(\\PageIndex{13}\\) Vertex Assigned to Each Midwestern State\n\nStep 2: Draw edges between any two states that share a common land border as in Figure \\(\\PageIndex{14}\\)\n\n[Figure: A partial map of the USA with the midwestern states. The Midwestern states are North Dakota (N D), South Dakota (S D), Nebraska (N E), Kansas (K S), Minnesota (M N), Iowa (I A), Missouri (M O), Wisconsin (W I), Illinois (I L), Indiana (I N), Michigan (M I), and Ohio (O H). Edges from N D connect with S D and M N. Edges from S D connect with N E, I A, and M N. Edges from M N connect with I A and W I. Edges from N E connect with K S, M O, and I A. Edges from I A connect with M O and I L. Edges from W I connect with I A and I L. An edge from K S connects with M O. An edge from M O connects with I L. An edge from I L connects with I N. Edges from I N connect with M I and O H. An edge from M I connects with O H.]\n\nFigure \\(\\PageIndex{14}\\): Edge Assigned to Each Pair of Midwestern States with Common Border\n\nThe graph is given in Figure \\(\\PageIndex{15}\\).\n\n[Figure: A graph represents common boundaries between midwestern states. Edges from M N connect with I A and W I. Edges from N E connect with K S, M O, and I A. Edges from I A connect with M O and I L. Edges from W I connect with I A and I L. An edge from K S connects with M O. An edge from M O connects with I L. An edge from I L connects with I N. Edges from I N connect with M I and O H. An edge from M I connects with O H.]\n\nFigure \\(\\PageIndex{15}\\): Final Graph Representing Common Boundaries between Midwestern States"
+      ],
+      "hasFigure": true,
+      "status": "draft",
+      "answerVerified": false,
+      "translationStatus": "pending",
+      "mappingStatus": "pending"
+    },
+    {
+      "ordinal": 7,
+      "sourceNumber": "",
+      "sourceAnchor": "",
+      "kind": "example-or-exercise",
+      "context": "Graphs of Social Interactions\n\nGeographical maps are just one of many real-world scenarios which graphs can depict. Any scenario in which objects are connected to each other can be represented with a graph, and the connections don’t have to be physical. Just think about all the connections you have to people around the world through social media! Who is in your network of Twitter followers? Whose Snapchat network are you connected to?",
+      "original": "Example \\(\\PageIndex{5}\\): Graphing Chloe’s Roblox Friends\n\nRoblox is an online gaming platform. Chloe is interested to know how many people in her network of Roblox friends are also friends with each other so she polls them. Explain how a graph or multigraph might be drawn to model this scenario by identifying the objects that could be represented by vertices and the connections that could be represented by edges. Indicate whether a graph or a multigraph would be a better model.\n\nAnswer\n\nThe objects that are represented with vertices are Roblox friends. A Roblox friendship between two friends will be represented as an edge between a pair of vertices. There will be no double edges because it is not possible for two friends to be linked twice in Roblox; they are either friends or they are not. Also, a player cannot be a friend to themself, so there is no need for a loop. Since there are no double edges or loops, this is best represented as a graph.",
+      "prompt": "Example \\(\\PageIndex{5}\\): Graphing Chloe’s Roblox Friends\n\nRoblox is an online gaming platform. Chloe is interested to know how many people in her network of Roblox friends are also friends with each other so she polls them. Explain how a graph or multigraph might be drawn to model this scenario by identifying the objects that could be represented by vertices and the connections that could be represented by edges. Indicate whether a graph or a multigraph would be a better model.",
+      "sourceAnswers": [
+        "The objects that are represented with vertices are Roblox friends. A Roblox friendship between two friends will be represented as an edge between a pair of vertices. There will be no double edges because it is not possible for two friends to be linked twice in Roblox; they are either friends or they are not. Also, a player cannot be a friend to themself, so there is no need for a loop. Since there are no double edges or loops, this is best represented as a graph."
+      ],
+      "hasFigure": false,
+      "status": "draft",
+      "answerVerified": false,
+      "translationStatus": "pending",
+      "mappingStatus": "pending"
+    },
+    {
+      "ordinal": 8,
+      "sourceNumber": "1",
+      "sourceAnchor": "",
+      "kind": "exercise-candidate",
+      "context": "Check Your Understanding",
+      "original": "1. \n\nTrue",
+      "prompt": "1. \n\nTrue",
+      "sourceAnswers": [],
+      "hasFigure": false,
+      "status": "draft",
+      "answerVerified": false,
+      "translationStatus": "pending",
+      "mappingStatus": "pending"
+    },
+    {
+      "ordinal": 9,
+      "sourceNumber": "2",
+      "sourceAnchor": "",
+      "kind": "exercise-candidate",
+      "context": "Check Your Understanding",
+      "original": "2. \n\nFalse",
+      "prompt": "2. \n\nFalse",
+      "sourceAnswers": [],
+      "hasFigure": false,
+      "status": "draft",
+      "answerVerified": false,
+      "translationStatus": "pending",
+      "mappingStatus": "pending"
+    },
+    {
+      "ordinal": 10,
+      "sourceNumber": "1",
+      "sourceAnchor": "",
+      "kind": "exercise-candidate",
+      "context": "Check Your Understanding",
+      "original": "1. \n\nTrue",
+      "prompt": "1. \n\nTrue",
+      "sourceAnswers": [],
+      "hasFigure": false,
+      "status": "draft",
+      "answerVerified": false,
+      "translationStatus": "pending",
+      "mappingStatus": "pending"
+    },
+    {
+      "ordinal": 11,
+      "sourceNumber": "2",
+      "sourceAnchor": "",
+      "kind": "exercise-candidate",
+      "context": "Check Your Understanding",
+      "original": "2. \n\nFalse",
+      "prompt": "2. \n\nFalse",
+      "sourceAnswers": [],
+      "hasFigure": false,
+      "status": "draft",
+      "answerVerified": false,
+      "translationStatus": "pending",
+      "mappingStatus": "pending"
+    },
+    {
+      "ordinal": 12,
+      "sourceNumber": "1",
+      "sourceAnchor": "",
+      "kind": "exercise-candidate",
+      "context": "Check Your Understanding",
+      "original": "1. \n\nTrue",
+      "prompt": "1. \n\nTrue",
+      "sourceAnswers": [],
+      "hasFigure": false,
+      "status": "draft",
+      "answerVerified": false,
+      "translationStatus": "pending",
+      "mappingStatus": "pending"
+    },
+    {
+      "ordinal": 13,
+      "sourceNumber": "2",
+      "sourceAnchor": "",
+      "kind": "exercise-candidate",
+      "context": "Check Your Understanding",
+      "original": "2. \n\nFalse",
+      "prompt": "2. \n\nFalse",
+      "sourceAnswers": [],
+      "hasFigure": false,
+      "status": "draft",
+      "answerVerified": false,
+      "translationStatus": "pending",
+      "mappingStatus": "pending"
+    },
+    {
+      "ordinal": 14,
+      "sourceNumber": "1",
+      "sourceAnchor": "",
+      "kind": "exercise-candidate",
+      "context": "Check Your Understanding",
+      "original": "1. \n\nTrue",
+      "prompt": "1. \n\nTrue",
+      "sourceAnswers": [],
+      "hasFigure": false,
+      "status": "draft",
+      "answerVerified": false,
+      "translationStatus": "pending",
+      "mappingStatus": "pending"
+    },
+    {
+      "ordinal": 15,
+      "sourceNumber": "2",
+      "sourceAnchor": "",
+      "kind": "exercise-candidate",
+      "context": "Check Your Understanding",
+      "original": "2. \n\nFalse",
+      "prompt": "2. \n\nFalse",
+      "sourceAnswers": [],
+      "hasFigure": false,
+      "status": "draft",
+      "answerVerified": false,
+      "translationStatus": "pending",
+      "mappingStatus": "pending"
+    },
+    {
+      "ordinal": 16,
+      "sourceNumber": "1",
+      "sourceAnchor": "",
+      "kind": "exercise-candidate",
+      "context": "Check Your Understanding",
+      "original": "1. \n\nTrue",
+      "prompt": "1. \n\nTrue",
+      "sourceAnswers": [],
+      "hasFigure": false,
+      "status": "draft",
+      "answerVerified": false,
+      "translationStatus": "pending",
+      "mappingStatus": "pending"
+    },
+    {
+      "ordinal": 17,
+      "sourceNumber": "2",
+      "sourceAnchor": "",
+      "kind": "exercise-candidate",
+      "context": "Check Your Understanding",
+      "original": "2. \n\nFalse",
+      "prompt": "2. \n\nFalse",
+      "sourceAnswers": [],
+      "hasFigure": false,
+      "status": "draft",
+      "answerVerified": false,
+      "translationStatus": "pending",
+      "mappingStatus": "pending"
+    }
+  ],
+  "license": "CC BY 4.0",
+  "licenseEvidence": "This page titled 12.1: Graph Basics was last modified on Thu, 02 Jan 2025 09:27:16 GMT and is shared under a CC BY  4.0  license and was authored, remixed, and/or curated by OpenStax via source content that was edited to the style and standards of the LibreTexts platform.",
+  "url": "https://math.libretexts.org/Bookshelves/Applied_Mathematics/Contemporary_Mathematics_(OpenStax)/12:_Graph_Theory/12.01:_Graph_Basics",
+  "sha256": "2f0702fddab3060be72929ba6b635a4f453fa91f5115b892c8b9f1d581b8aa90",
+  "checkedAt": "2026-10-07",
+  "id": "e1b36fc72c3b32734ff9",
+  "bookId": "contemporary",
+  "licenseInherited": false,
+  "licenseSource": "https://math.libretexts.org/Bookshelves/Applied_Mathematics/Contemporary_Mathematics_(OpenStax)/12:_Graph_Theory/12.01:_Graph_Basics",
+  "licenseUrl": "https://creativecommons.org/licenses/by/4.0/",
+  "authors": "OpenStax / Donna Kirk et al.",
+  "book": "Contemporary Mathematics",
+  "reviewStatus": "unreviewed",
+  "sourceLanguage": "en",
+  "translationStatus": "pending"
+}

@@ -1,0 +1,366 @@
+{
+  "title": "4.3:  Addition and Subtraction in Base Systems",
+  "originalText": "[Figure: A person holding a magnifying glass is observing binary code.]\n\nFigure \\(\\PageIndex{1}\\): All information in computers is represented by 0's and 1's, including quantity, which means computers use Base 2 for arithmetic. (credit: modification of work “Magnifying glass and binary code” by Marco Verch Professional Photographer/Flickr, CC BY 2.0)\n\nLearning Objectives\n\n1. Add and subtract in bases 2–9 and 12.\n\n2. Identify errors in adding and subtracting in bases 2–9 and 12.\n\nOnce we decide on a system for counting, we need to establish rules for combining the numbers we’re using. This begins with the rules for addition and subtraction. We are familiar with base 10 arithmetic, such as \\(2+5=7\\) or \\(3×5=15\\). How does that change if we instead use a different base? A larger base? A smaller one? In particular, computers use base 2 for all number representation. When your calculator adds or subtracts, multiplies or divides, it uses base 2. This is because the circuitry recognizes only two things, high current and low current, which means the system is uses only has two symbols. Which is what base 2 is.\n\nIn this section, we use addition and subtraction in bases other than 10 by referencing the processes of base 10, but applied to a new base system.\n\nAddition in Bases Other Than Base 10\n\nNow that we understand what it means for numbers to be expressed in a base other than 10, we can look at arithmetic using other bases, starting with addition. When you think back to when you first learned addition, it is very likely you learned the addition table. Once you knew the addition table, you moved on to addition of numbers with more than one digit. The same process holds for addition in other bases. We begin with an addition table, and then move on to adding numbers with two or more digits.\n\nWe worked with base 6 earlier, and have the numbers in base 6 up to 100_(6). Using that table of values, we can create the base 6 addition table.\n\nHere’s the beginning of the base 6 addition table:\n\n            +\t\n            0\t\n            1\t\n            2\t\n            3\t\n            4\t\n            5\t\n\n            0\t\n            0\t\n            1\t\n            2\t\n            3\t\n            4\t\n            5\t\n\n            1\t\n            1\t\n            2\t\n            3\t\n            4\t\n            5\t\n            ?\t\n\n            2\t\n            2\t\n            3\t\n            4\t\n            5\t\n            ?\t\n            ?\t\n\n            3\t\n            3\t\n            4\t\n            5\t\n            ?\t\n            ?\t\n            ?\t\n\n            4\t\n            4\t\n            5\t\n            ?\t\n            ?\t\n            ?\t\n            ?\t\n\n            5\t\n            5\t\n            ?\t\n            ?\t\n            ?\t\n            ?\t\n            ?\t\n\nMany of the cells are not filled out. The ones filled in are values that never get past 5, which is the largest legal symbol in base 6, so they are acceptable symbols. But what do we do with 5 + 3 in base 6? We can’t represent the answer as “8” since “8” is not a symbol available to us. Let’s go back to the list of numbers we have for base 6.\n\n            0\t\n            1\t\n            2\t\n            3\t\n            4\t\n            5\t\n\n            10\t\n            11\t\n            12\t\n            13\t\n            14\t\n            15\t\n\n            20\t\n            21\t\n            22\t\n            23\t\n            24\t\n            25\t\n\n            30\t\n            31\t\n            32\t\n            33\t\n            34\t\n            35\t\n\n            40\t\n            41\t\n            42\t\n            43\t\n            44\t\n            45\t\n\n            50\t\n            51\t\n            52\t\n            53\t\n            54\t\n            55\t\n\nSo, what is 5 + 1 equal to in base 6? Well, start at the 5, and jump ahead one step. You land on 10.\n\n[Figure: A table with numbers 0 to 5, 10 to 15, 20 to 25, 30 to 35, 40 to 45, 50 to 55. An arrow points from 5 to 10]\n\n[Figure: A table with numbers 0 to 5, 10 to 15, 20 to 25, 30 to 35, 40 to 45, 50 to 55. A callout pointing to 10 reads, The 10 is one step past the 5.]\n\nThis means that, in base 6, 5 + 1 = 10.\n\nSo, what is 5 + 2 in base 6? Well, 5 + 2 = 5 + 1 + 1, so 10 + 1…jump one more space and you land on 11. So, 5 + 2 = 11 in base 6.\n\n[Figure: A table with numbers 0 to 5, 10 to 15, 20 to 25, 30 to 35, 40 to 45, 50 to 55. Arrows point from 5 to 10 and from 10 to 11.]\n\nAnd so it goes. Using that process, stepping one more along the list, we can fill in the remainder of the base 6 addition table (Table 4.4).\n\n            +\t\n            0\t\n            1\t\n            2\t\n            3\t\n            4\t\n            5\t\n\n            0\t\n            0\t\n            1\t\n            2\t\n            3\t\n            4\t\n            5\t\n\n            1\t\n            1\t\n            2\t\n            3\t\n            4\t\n            5\t\n            10\t\n\n            2\t\n            2\t\n            3\t\n            4\t\n            5\t\n            10\t\n            11\t\n\n            3\t\n            3\t\n            4\t\n            5\t\n            10\t\n            11\t\n            12\t\n\n            4\t\n            4\t\n            5\t\n            10\t\n            11\t\n            12\t\n            13\t\n\n            5\t\n            5\t\n            10\t\n            11\t\n            12\t\n            13\t\n            14\t\n\n    Table 4.4 Base 6 Addition Table\n\nWith this table, and with our understanding of “carrying the one,” we can then use the addition table to do addition in base 6 for numbers with two or more digits, using the same processes you learned for addition when you did it by hand.\n\nExample  \\(\\PageIndex{1}\\): Adding in Base 6\n\nCalculate 251_(6) + 133_(6).\n\nAnswer\n\nStep 1: Let’s set up the addition using columns.\n\n                2\t\n                5\t\n                1\t\n\n                +\t\n                1\t\n                3\t\n                3\t\n\nStep 2: Let’s do the one’s place first. According to the base 6 addition table (Table 4.4), 1 + 3 = 4.\n\n                2\t\n                5\t\n                1\t\n\n                +\t\n                1\t\n                3\t\n                3\t\n\n                4\t\n\nStep 3: Now, we do the “tens” place (it’s really the sixes place). According to the base 6 addition table (Table 4.4), we have 5 + 3 = 12. So, like in base 10, we use the 2 and carry the 1.\n\n            1\t\n\n            2\t\n            5\t\n            1\t\n\n            +\t\n            1\t\n            3\t\n            3\t\n\n            2\t\n            4\t\n\nStep 4: Now the “hundreds” place (really, thirty-sixes place). There, we have 1 + 2 + 1 = 3 + 1 = 4.\n\n            1\t\n\n            2\t\n            5\t\n            1\t\n\n            +\t\n            1\t\n            3\t\n            3\t\n\n            4\t\n            2\t\n            4\t\n\nSo, 251_(6) + 133_(6) = 424_(6).\n\nAs you can see, the process is the same as when you learned base 10 addition, just a different symbol set.\n\nYour Turn  \\(\\PageIndex{1}\\)\n\nCalculate 453_(6) + 345_(6).\n\nExample  \\(\\PageIndex{2}\\): Creating an Addition Table for a Base Lower Than 10\n\n1. Create the addition table for base 7.\n\n2. Create the addition table for base 2.\n\nAnswer\n\n1. We begin with the table below.\n\n                    +\t\n                    0\t\n                    1\t\n                    2\t\n                    3\t\n                    4\t\n                    5\t\n                    6\t\n\n                    0\t\n                    0\t\n                    1\t\n                    2\t\n                    3\t\n                    4\t\n                    5\t\n                    6\t\n\n                    1\t\n                    1\t\n                    2\t\n                    3\t\n                    4\t\n                    5\t\n                    6\t\n\n                    2\t\n                    2\t\n                    3\t\n                    4\t\n                    5\t\n                    6\t\n\n                    3\t\n                    3\t\n                    4\t\n                    5\t\n                    6\t\n\n                    4\t\n                    4\t\n                    5\t\n                    6\t\n\n                    5\t\n                    5\t\n                    6\t\n\n                    6\t\n                    6\t\n\nIn base 7, the number that follows 6 is 10 (since we’ve run out of symbols!). So, 6_(7) + 1_(7) = 10_(7). Once that is established, 6_(7) + 2_(7) will be two numbers past 6, which is 11 in base 7.\n\n                    +\t\n                    0\t\n                    1\t\n                    2\t\n                    3\t\n                    4\t\n                    5\t\n                    6\t\n\n                    0\t\n                    0\t\n                    1\t\n                    2\t\n                    3\t\n                    4\t\n                    5\t\n                    6\t\n\n                    1\t\n                    1\t\n                    2\t\n                    3\t\n                    4\t\n                    5\t\n                    6\t\n                    10\t\n\n                    2\t\n                    2\t\n                    3\t\n                    4\t\n                    5\t\n                    6\t\n\n                    11\t\n\n                    3\t\n                    3\t\n                    4\t\n                    5\t\n                    6\t\n\n                    4\t\n                    4\t\n                    5\t\n                    6\t\n\n                    5\t\n                    5\t\n                    6\t\n\n                    6\t\n                    6\t\n                    10\t\n                    11\t\n\nContinuing, we can fill in the rows as we would in base 10, but being aware that we are working in base 7 (Table 4.5).\n\n            +\t\n            0\t\n            1\t\n            2\t\n            3\t\n            4\t\n            5\t\n            6\t\n\n            0\t\n            0\t\n            1\t\n            2\t\n            3\t\n            4\t\n            5\t\n            6\t\n\n            1\t\n            1\t\n            2\t\n            3\t\n            4\t\n            5\t\n            6\t\n            10\t\n\n            2\t\n            2\t\n            3\t\n            4\t\n            5\t\n            6\t\n            10\t\n            11\t\n\n            3\t\n            3\t\n            4\t\n            5\t\n            6\t\n            10\t\n            11\t\n            12\t\n\n            4\t\n            4\t\n            5\t\n            6\t\n            10\t\n            11\t\n            12\t\n            13\t\n\n            5\t\n            5\t\n            6\t\n            10\t\n            11\t\n            12\t\n            13\t\n            14\t\n\n            6\t\n            6\t\n            10\t\n            11\t\n            12\t\n            13\t\n            14\t\n            15\t\n\n    Table 4.5 Base 7 Addition Table\n\nWe revisit base 2 here. Begin with the table:\n\n                +\t\n                0\t\n                1\t\n\n                0\t\n                0\t\n                1\t\n\n                1\t\n                1\t\n\n        Table 4.6 Base 2 Addition Table\n\nIn base 2, the number that follows 1 is 10 (since we’ve run out of symbols!). So, 1_(2) + 1_(2) = 10_(2). The complete table for base two then is below.\n\n                +\t\n                0\t\n                1\t\n\n                0\t\n                0\t\n                1\t\n\n                1\t\n                1\t\n                10\t\n\nThis demonstrates that the rules necessary for base 2 addition are as small as possible: four rules.\n\nYour Turn  \\(\\PageIndex{2}\\)\n\nCreate the addition table for base 4.\n\nTo summarize the creation of the addition tables for a given base, do the following.\n\nStep 1: Set up the table.\n\nStep 2: Fill in all the additions that use the “legal” symbols for the base. The diagonal that goes from upper left to lower right that is immediately next to the filled boxes all get the value 10, regardless of base.\n\nStep 3: Enter the values that are in the “teens.” This can all be done on one table without creating multiple copies of previously done work.\n\nExample  \\(\\PageIndex{3}\\): Adding in Base 7\n\nCalculate 536_(7) + 433_(7).\n\nAnswer\n\nStep 1: Let’s set up the addition using columns.\n\n                5\t\n                3\t\n                6\t\n\n                +\t\n                4\t\n                3\t\n                3\t\n\nStep 2: Let’s do the one’s place first. According to the base 7 addition table in the solution for Example 4.29, 6 + 3 = 12. We will carry the 1.\n\n                1\t\n\n                5\t\n                3\t\n                6\t\n\n                +\t\n                4\t\n                3\t\n                3\t\n\n                2\t\n\nStep 3: Now, we do the “tens” place (it’s really the sevens place). According to the base 7 addition table in the solution for Example 4.29, we have 1 + 3 + 3 = 10. So, like in base 10, we use the 0 and carry the 1.\n\n            1\t\n\n            5\t\n            3\t\n            6\t\n\n            +\t\n            4\t\n            3\t\n            3\t\n\n            0\t\n            2\t\n\nStep 4: Now the “hundreds” place (really, forty-ninths place). There, we have 1 + 5 + 4 = 6 + 4 = 13.\n\n            1\t\n\n            5\t\n            3\t\n            6\t\n\n            +\t\n            4\t\n            3\t\n            3\t\n\n            1\t\n            3\t\n            0\t\n            2\t\n\nSo, 536_(7) + 333_(7) = 1302_(7).\n\nYour Turn  \\(\\PageIndex{3}\\)\n\nCalculate 461_(7) + 142_(7.)\n\nAs seen previously, when performing addition in another base, set up the problem exactly as you would for addition in base 10. At each step, check the addition table for the base. As in base 10 addition, move right to left, adding down the columns using the rules in the addition table. When necessary and just as in base 10, be sure to carry the 1.\n\nExample  \\(\\PageIndex{4}\\): Creating an Addition Table for a Base Higher Than 10\n\nCreate the addition table for base 12.\n\nAnswer\n\nStep 1: Recall, in base 12, the symbol set is 0, 1, 2, 3, 4, 5, 6, 7, 8, 9, A, and B. So, the addition table begins as shown below.\n\n                +\t\n                0\t\n                1\t\n                2\t\n                3\t\n                4\t\n                5\t\n                6\t\n                7\t\n                8\t\n                9\t\n                A\t\n                B\t\n\n                0\t\n                0\t\n                1\t\n                2\t\n                3\t\n                4\t\n                5\t\n                6\t\n                7\t\n                8\t\n                9\t\n                A\t\n                B\t\n\n                1\t\n                1\t\n                2\t\n                3\t\n                4\t\n                5\t\n                6\t\n                7\t\n                8\t\n                9\t\n                A\t\n                B\t\n\n                2\t\n                2\t\n                3\t\n                4\t\n                5\t\n                6\t\n                7\t\n                8\t\n                9\t\n                A\t\n                B\t\n\n                3\t\n                3\t\n                4\t\n                5\t\n                6\t\n                7\t\n                8\t\n                9\t\n                A\t\n                B\t\n\n                4\t\n                4\t\n                5\t\n                6\t\n                7\t\n                8\t\n                9\t\n                A\t\n                B\t\n\n                5\t\n                5\t\n                6\t\n                7\t\n                8\t\n                9\t\n                A\t\n                B\t\n\n                6\t\n                6\t\n                7\t\n                8\t\n                9\t\n                A\t\n                B\t\n\n                7\t\n                7\t\n                8\t\n                9\t\n                A\t\n                B\t\n\n                8\t\n                8\t\n                9\t\n                A\t\n                B\t\n\n                9\t\n                9\t\n                A\t\n                B\t\n\n                A\t\n                A\t\n                B\t\n\n                B\t\n                B\t\n\nStep 2: The diagonal immediately to the right of the filled in boxes is where the 10 goes for this base.\n\n                +\t\n                0\t\n                1\t\n                2\t\n                3\t\n                4\t\n                5\t\n                6\t\n                7\t\n                8\t\n                9\t\n                A\t\n                B\t\n\n                0\t\n                0\t\n                1\t\n                2\t\n                3\t\n                4\t\n                5\t\n                6\t\n                7\t\n                8\t\n                9\t\n                A\t\n                B\t\n\n                1\t\n                1\t\n                2\t\n                3\t\n                4\t\n                5\t\n                6\t\n                7\t\n                8\t\n                9\t\n                A\t\n                B\t\n                10\t\n\n                2\t\n                2\t\n                3\t\n                4\t\n                5\t\n                6\t\n                7\t\n                8\t\n                9\t\n                A\t\n                B\t\n                10\t\n\n                3\t\n                3\t\n                4\t\n                5\t\n                6\t\n                7\t\n                8\t\n                9\t\n                A\t\n                B\t\n                10\t\n\n                4\t\n                4\t\n                5\t\n                6\t\n                7\t\n                8\t\n                9\t\n                A\t\n                B\t\n                10\t\n\n                5\t\n                5\t\n                6\t\n                7\t\n                8\t\n                9\t\n                A\t\n                B\t\n                10\t\n\n                6\t\n                6\t\n                7\t\n                8\t\n                9\t\n                A\t\n                B\t\n                10\t\n\n                7\t\n                7\t\n                8\t\n                9\t\n                A\t\n                B\t\n                10\t\n\n                8\t\n                8\t\n                9\t\n                A\t\n                B\t\n                10\t\n\n                9\t\n                9\t\n                A\t\n                B\t\n                10\t\n\n                A\t\n                A\t\n                B\t\n                10\t\n\n                B\t\n                B\t\n                10\t\n\nStep 3: Using the pattern we’re familiar with, and counting in base 12, we can fill in the other cells.\n\n            +\t\n            0\t\n            1\t\n            2\t\n            3\t\n            4\t\n            5\t\n            6\t\n            7\t\n            8\t\n            9\t\n            A\t\n            B\t\n\n            0\t\n            0\t\n            1\t\n            2\t\n            3\t\n            4\t\n            5\t\n            6\t\n            7\t\n            8\t\n            9\t\n            A\t\n            B\t\n\n            1\t\n            1\t\n            2\t\n            3\t\n            4\t\n            5\t\n            6\t\n            7\t\n            8\t\n            9\t\n            A\t\n            B\t\n            10\t\n\n            2\t\n            2\t\n            3\t\n            4\t\n            5\t\n            6\t\n            7\t\n            8\t\n            9\t\n            A\t\n            B\t\n            10\t\n            11\t\n\n            3\t\n            3\t\n            4\t\n            5\t\n            6\t\n            7\t\n            8\t\n            9\t\n            A\t\n            B\t\n            10\t\n            11\t\n            12\t\n\n            4\t\n            4\t\n            5\t\n            6\t\n            7\t\n            8\t\n            9\t\n            A\t\n            B\t\n            10\t\n            11\t\n            12\t\n            13\t\n\n            5\t\n            5\t\n            6\t\n            7\t\n            8\t\n            9\t\n            A\t\n            B\t\n            10\t\n            11\t\n            12\t\n            13\t\n            14\t\n\n            6\t\n            6\t\n            7\t\n            8\t\n            9\t\n            A\t\n            B\t\n            10\t\n            11\t\n            12\t\n            13\t\n            14\t\n            15\t\n\n            7\t\n            7\t\n            8\t\n            9\t\n            A\t\n            B\t\n            10\t\n            11\t\n            12\t\n            13\t\n            14\t\n            15\t\n            16\t\n\n            8\t\n            8\t\n            9\t\n            A\t\n            B\t\n            10\t\n            11\t\n            12\t\n            13\t\n            14\t\n            15\t\n            16\t\n            17\t\n\n            9\t\n            9\t\n            A\t\n            B\t\n            10\t\n            11\t\n            12\t\n            13\t\n            14\t\n            15\t\n            16\t\n            17\t\n            18\t\n\n            A\t\n            A\t\n            B\t\n            10\t\n            11\t\n            12\t\n            13\t\n            14\t\n            15\t\n            16\t\n            17\t\n            18\t\n            19\t\n\n            B\t\n            B\t\n            10\t\n            11\t\n            12\t\n            13\t\n            14\t\n            15\t\n            16\t\n            17\t\n            18\t\n            19\t\n            1A\t\n\n    Table 4.7 Base 12 addition table\n\nNotice that the lower-right entry is 1A_(12), as this is the number one past 19_(12).\n\nYour Turn  \\(\\PageIndex{4}\\)\n\nCreate the addition table for base 14.\n\nExample  \\(\\PageIndex{5}\\): Adding in Base 12\n\nCalculate 3A7_(12) + 9BA_(12).\n\nAnswer\n\nStep 1: Using the process established in the earlier addition problem, set up the columns.\n\n                3\t\n                A\t\n                7\t\n\n                +\t\n                9\t\n                B\t\n                A\t\n\nStep 2: Using the rules from the base 12 addition table in the solution for Example 4.31, and being careful to carry the 1 when necessary, we get the following:\n\n                1\t\n                1\t\n\n                3\t\n                A\t\n                7\t\n\n                +\t\n                9\t\n                B\t\n                A\t\n\n                1\t\n                1\t\n                A\t\n                5\t\n\nThe ones that were carried are located over the columns.\n\nSo, 3A7_(12) + 9BA_(12)= 11A5_(12).\n\nYour Turn  \\(\\PageIndex{5}\\)\n\nCalculate 4B3_(12) + B06_(12).\n\nExample  \\(\\PageIndex{6}\\): Adding in Base 2\n\nWe again return to base 2, the base used by computers. Calculate 1001_(2) + 11011_(2).\n\nAnswer\n\nStep 1: Using the process established in the earlier addition problem, set up the columns.\n\n                1\t\n                0\t\n                0\t\n                1\t\n\n                +\t\n                1\t\n                1\t\n                0\t\n                1\t\n                1\t\n\nStep 2: Using the rules from the base 2 addition table in the solution for Example 4.29, and being careful to carry the 1 when necessary (and shown at the top of the grid), we get the following:\n\n                1\t\n\n                1\t\n                1\t\n\n                1\t\n                0\t\n                0\t\n                1\t\n\n                +\t\n                1\t\n                1\t\n                0\t\n                1\t\n                1\t\n\n                1\t\n                0\t\n                0\t\n                1\t\n                0\t\n                0\t\n\nStep 3: Calculate 1001_(2) + 11011_(2) = 100100_(2).\n\nSo, 1001_(2) + 11011_(2) = 100100_(2).\n\nYour Turn  \\(\\PageIndex{6}\\)\n\nCalculate 101111_(2) + 1100011_(2).\n\nSubtraction in Bases Other Than Base 10\n\nSubtraction in bases other than base 10 follow the same processes as base 10 subtraction, but, as with addition, using the addition table for the base.\n\nExample  \\(\\PageIndex{7}\\): Subtracting in Base 6\n\nCalculate 52_(6) − 34_(6).\n\nAnswer\n\nStep 1: Let’s set up the subtraction using columns.\n\n                5\t\n                2\t\n\n                −\t\n                3\t\n                4\t\n\nStep 2: Just as we might do in base 10, we borrow a 1 from the 5 for the ones digit.\n\n                \\(\\unsupported{menclose}{5}4\\)\t\n                12\t\n\n                −\t\n                3\t\n                4\t\n\nStep 3: Referring to the base 6 addition table (Table 4.4), we see that 4 + 4 = 12, so 12_(6) − 4_(6) is 4_(6).\n\n            \\(\\unsupported{menclose}{5}4\\)\t\n            12\t\n\n            −\t\n            3\t\n            4\t\n\n            4\t\n\nStep 4: Now we deal with the “tens” (really, sixes) digit, 4_(6) − 3_(6), which equals 1_(6) according to the base 6 addition table (Table 4.4).\n\n            \\(\\unsupported{menclose}{5}\\) 4\t\n            12\t\n\n            −\t\n            3\t\n            4\t\n\n            1\t\n            4\t\n\nSo, 52_(6) − 34_(6) = 14_(6).\n\nYour Turn  \\(\\PageIndex{71}\\)\n\nCalculate 115_(6) − 43_(6).\n\nExample  \\(\\PageIndex{8}\\): Subtracting in Base 12\n\nCalculate A17_(12) − 4B3_(12)_(.)\n\nAnswer\n\nStep 1: Let’s set up the subtraction using columns.\n\n                A\t\n                1\t\n                7\t\n\n                −\t\n                4\t\n                B\t\n                3\t\n\nStep 2: Even in base 12, 7_(12) − 3_(12) = 4_(12).\n\n                A\t\n                1\t\n                7\t\n\n                −\t\n                4\t\n                B\t\n                3\t\n\n                4\t\n\nStep 3: Moving to the “tens” digit, we have 1_(12) − B_(12). Since 1 is less than B in base 12, we need to borrow a 1 from the A, just as we would for subtraction in base 10.\n\n            \\(\\unsupported{menclose}{A}\\) 9\t\n            11\t\n            7\t\n\n            −\t\n            4\t\n            B\t\n            3\t\n\n            4\t\n\nStep 4: According to the base 12 addition table in the solution for Example 4.31, B_(12) + 2_(12) = 11_(12), so 11_(12) − B_(12) = 2_(12).\n\n            \\(\\unsupported{menclose}{A}\\) 9\t\n            11\t\n            7\t\n\n            −\t\n            4\t\n            B\t\n            3\t\n\n            2\t\n            4\t\n\nStep 5: Finally, we deal with the “hundreds” digit. According to the base 12 addition table in the solution for Example 4.31, 4_(12) + 5_(12) = 9_(12), so 9_(12) − 4_(12) = 5_(12).\n\n            \\(\\unsupported{menclose}{A}\\) 9\t\n            11\t\n            7\t\n\n            −\t\n            4\t\n            B\t\n            3\t\n\n            5\t\n            2\t\n            4\t\n\nSo, A17_(12) − 4B3_(12) = 524_(12).\n\nYour Turn  \\(\\PageIndex{8}\\)\n\nCalculate 716_(12) − 4AB_(12).\n\nErrors When Adding and Subtracting in Bases Other Than Base 10\n\nErrors when computing in bases other than 10 often involve applying base 10 rules or symbols to an arithmetic problem in a base other than base 10. The first type of error is using a symbol that is not in the symbol set for the base. For instance, if a 9 shows up when working in base 7, you know an error has happened because 9 is not a legal symbol in base 7.\n\nExample  \\(\\PageIndex{9}\\): Identifying an Illegal Symbol in Arithmetic in a Base Other Than Base 10\n\nExplain the error in the following calculation:\n\n\\({15}_{6}+{34}_{6}={49}_{6}\\)\n\nAnswer\n\nSince the problem is in base 6, the symbol set available is 0, 1, 2, 3, 4 and 5. The 9 in the answer is clearly not a legal symbol for base 6. Looking back to the base 6 addition table (Table 4.4), we see that \\({5}_{6}+{4}_{6}={13}_{6}\\). Correcting the error, we see the sum is \\({15}_{6}+{34}_{6}={53}_{6}\\).\n\nYour Turn  \\(\\PageIndex{9}\\)\n\nExplain the error in the following calculation and correct the problem:\n\n\\({133_4} + {112_4} = {245_4}\\)\n\nThe second type of error is using a base 10 rule when the numbers are not in base 10. For instance, if you are working in base 13, then 9_(13) + 9_(13) is not 18_(13), even though 18 is the correct answer in base 10.\n\nExample  \\(\\PageIndex{10}\\): Identifying an Arithmetic Error in a Base Other Than Base 10\n\nExplain the error in the following calculation, and correct the error:\n\n\\({89}_{12}+{76}_{12}={165}_{12}\\)\n\nAnswer\n\nIf this problem was a base 10 problem, this would be the correct answer. However, in base 12, 9 + 6 is not 15, but is instead 13. To correct this error, carefully use the addition table for base 12. If properly used, the correct answer would be \\({143}_{12}\\), as seen below:\n\n                8\t\n                9\t\n\n                +\t\n\n                7\t\n                6\t\n\n                1\t\n                4\t\n                3\t\n\nYour Turn  \\(\\PageIndex{10}\\)\n\nExplain the error in the following calculation, and correct the error:\n\n\\({149_{14}} + {19_{14}} = {168_{14}}\\)\n\nCheck Your Understanding\n\n1. Determine the addition table for base 8.\n\n2. Compute 24_(6) + 53_(6).\n\n3. Compute 35_(8) − 26_(8).\n\n4. Compute 3B_(14) + 45_(14).\n\n5. Compute A4_(12) − 9B_(12)_(.)\n\n6. How do you know an error has occurred in a base 8 addition question if the answer obtained was 28_(8)?\n\n7. What is one common error made in calculating in base 14?\n\nThis page titled 4.3:  Addition and Subtraction in Base Systems was last modified on Thu, 02 Jan 2025 11:07:44 GMT and is shared under a CC BY  4.0  license and was authored, remixed, and/or curated by OpenStax via source content that was edited to the style and standards of the LibreTexts platform.",
+  "figures": [
+    {
+      "url": "https://math.libretexts.org/@api/deki/files/109746/6ab85723bd965e08e4727ced2cda1377151008c9?revision=1",
+      "alt": "A person holding a magnifying glass is observing binary code.",
+      "credit": ""
+    },
+    {
+      "url": "https://math.libretexts.org/@api/deki/files/109740/d617577ab67883f6cbf28e2f65395ef9524ae6d7?revision=1",
+      "alt": "A table with numbers 0 to 5, 10 to 15, 20 to 25, 30 to 35, 40 to 45, 50 to 55. An arrow points from 5 to 10",
+      "credit": ""
+    },
+    {
+      "url": "https://math.libretexts.org/@api/deki/files/109742/44c907e6ec6e016c93d861341f785e5074719bf5?revision=1",
+      "alt": "A table with numbers 0 to 5, 10 to 15, 20 to 25, 30 to 35, 40 to 45, 50 to 55. A callout pointing to 10 reads, The 10 is one step past the 5.",
+      "credit": ""
+    },
+    {
+      "url": "https://math.libretexts.org/@api/deki/files/109741/04042152447efc5a78a550dbe02b2b0dcb0d1c17?revision=1",
+      "alt": "A table with numbers 0 to 5, 10 to 15, 20 to 25, 30 to 35, 40 to 45, 50 to 55. Arrows point from 5 to 10 and from 10 to 11.",
+      "credit": ""
+    }
+  ],
+  "references": [
+    {
+      "text": "4.3:  Addition and Subtraction in Base Systems",
+      "url": "https://math.libretexts.org/Bookshelves/Applied_Mathematics/Contemporary_Mathematics_(OpenStax)/04%3A__Number_Representation_and_Calculation/4.03%3A__Addition_and_Subtraction_in_Base_Systems"
+    },
+    {
+      "text": "CC BY  4.0",
+      "url": "https://creativecommons.org/licenses/by/4.0"
+    },
+    {
+      "text": "OpenStax",
+      "url": "https://openstax.org/"
+    },
+    {
+      "text": "source content",
+      "url": "https://openstax.org/details/books/contemporary-mathematics"
+    }
+  ],
+  "exercises": [
+    {
+      "ordinal": 1,
+      "sourceNumber": "1",
+      "sourceAnchor": "",
+      "kind": "exercise-candidate",
+      "context": "",
+      "original": "1. Add and subtract in bases 2–9 and 12.",
+      "prompt": "1. Add and subtract in bases 2–9 and 12.",
+      "sourceAnswers": [],
+      "hasFigure": false,
+      "status": "draft",
+      "answerVerified": false,
+      "translationStatus": "pending",
+      "mappingStatus": "pending"
+    },
+    {
+      "ordinal": 2,
+      "sourceNumber": "2",
+      "sourceAnchor": "",
+      "kind": "exercise-candidate",
+      "context": "",
+      "original": "2. Identify errors in adding and subtracting in bases 2–9 and 12.",
+      "prompt": "2. Identify errors in adding and subtracting in bases 2–9 and 12.",
+      "sourceAnswers": [],
+      "hasFigure": false,
+      "status": "draft",
+      "answerVerified": false,
+      "translationStatus": "pending",
+      "mappingStatus": "pending"
+    },
+    {
+      "ordinal": 3,
+      "sourceNumber": "",
+      "sourceAnchor": "",
+      "kind": "example-or-exercise",
+      "context": "So, what is 5 + 2 in base 6? Well, 5 + 2 = 5 + 1 + 1, so 10 + 1…jump one more space and you land on 11. So, 5 + 2 = 11 in base 6.\n\nAnd so it goes. Using that process, stepping one more along the list, we can fill in the remainder of the base 6 addition table (Table 4.4).\n\nWith this table, and with our understanding of “carrying the one,” we can then use the addition table to do addition in base 6 for numbers with two or more digits, using the same processes you learned for addition when you did it by hand.",
+      "original": "Example  \\(\\PageIndex{1}\\): Adding in Base 6\n\nCalculate 251_(6) + 133_(6).\n\nAnswer\n\nStep 1: Let’s set up the addition using columns.\n\n                2\t\n                5\t\n                1\t\n\n                +\t\n                1\t\n                3\t\n                3\t\n\nStep 2: Let’s do the one’s place first. According to the base 6 addition table (Table 4.4), 1 + 3 = 4.\n\n                2\t\n                5\t\n                1\t\n\n                +\t\n                1\t\n                3\t\n                3\t\n\n                4",
+      "prompt": "Example  \\(\\PageIndex{1}\\): Adding in Base 6\n\nCalculate 251_(6) + 133_(6).",
+      "sourceAnswers": [
+        "Step 1: Let’s set up the addition using columns.\n\n                2\t\n                5\t\n                1\t\n\n                +\t\n                1\t\n                3\t\n                3\t\n\nStep 2: Let’s do the one’s place first. According to the base 6 addition table (Table 4.4), 1 + 3 = 4.\n\n                2\t\n                5\t\n                1\t\n\n                +\t\n                1\t\n                3\t\n                3\t\n\n                4"
+      ],
+      "hasFigure": false,
+      "status": "draft",
+      "answerVerified": false,
+      "translationStatus": "pending",
+      "mappingStatus": "pending"
+    },
+    {
+      "ordinal": 4,
+      "sourceNumber": "",
+      "sourceAnchor": "",
+      "kind": "example-or-exercise",
+      "context": "So, 251_(6) + 133_(6) = 424_(6).\n\nAs you can see, the process is the same as when you learned base 10 addition, just a different symbol set.\n\nCalculate 453_(6) + 345_(6).",
+      "original": "Example  \\(\\PageIndex{2}\\): Creating an Addition Table for a Base Lower Than 10\n\n1. Create the addition table for base 7.\n\n2. Create the addition table for base 2.\n\nAnswer\n\n1. We begin with the table below.\n\n                    +\t\n                    0\t\n                    1\t\n                    2\t\n                    3\t\n                    4\t\n                    5\t\n                    6\t\n\n                    0\t\n                    0\t\n                    1\t\n                    2\t\n                    3\t\n                    4\t\n                    5\t\n                    6\t\n\n                    1\t\n                    1\t\n                    2\t\n                    3\t\n                    4\t\n                    5\t\n                    6\t\n\n                    2\t\n                    2\t\n                    3\t\n                    4\t\n                    5\t\n                    6\t\n\n                    3\t\n                    3\t\n                    4\t\n                    5\t\n                    6\t\n\n                    4\t\n                    4\t\n                    5\t\n                    6\t\n\n                    5\t\n                    5\t\n                    6\t\n\n                    6\t\n                    6\t\n\nIn base 7, the number that follows 6 is 10 (since we’ve run out of symbols!). So, 6_(7) + 1_(7) = 10_(7). Once that is established, 6_(7) + 2_(7) will be two numbers past 6, which is 11 in base 7.\n\n                    +\t\n                    0\t\n                    1\t\n                    2\t\n                    3\t\n                    4\t\n                    5\t\n                    6\t\n\n                    0\t\n                    0\t\n                    1\t\n                    2\t\n                    3\t\n                    4\t\n                    5\t\n                    6\t\n\n                    1\t\n                    1\t\n                    2\t\n                    3\t\n                    4\t\n                    5\t\n                    6\t\n                    10\t\n\n                    2\t\n                    2\t\n                    3\t\n                    4\t\n                    5\t\n                    6\t\n\n                    11\t\n\n                    3\t\n                    3\t\n                    4\t\n                    5\t\n                    6\t\n\n                    4\t\n                    4\t\n                    5\t\n                    6\t\n\n                    5\t\n                    5\t\n                    6\t\n\n                    6\t\n                    6\t\n                    10\t\n                    11",
+      "prompt": "Example  \\(\\PageIndex{2}\\): Creating an Addition Table for a Base Lower Than 10\n\n1. Create the addition table for base 7.\n\n2. Create the addition table for base 2.",
+      "sourceAnswers": [
+        "1. We begin with the table below.\n\n                    +\t\n                    0\t\n                    1\t\n                    2\t\n                    3\t\n                    4\t\n                    5\t\n                    6\t\n\n                    0\t\n                    0\t\n                    1\t\n                    2\t\n                    3\t\n                    4\t\n                    5\t\n                    6\t\n\n                    1\t\n                    1\t\n                    2\t\n                    3\t\n                    4\t\n                    5\t\n                    6\t\n\n                    2\t\n                    2\t\n                    3\t\n                    4\t\n                    5\t\n                    6\t\n\n                    3\t\n                    3\t\n                    4\t\n                    5\t\n                    6\t\n\n                    4\t\n                    4\t\n                    5\t\n                    6\t\n\n                    5\t\n                    5\t\n                    6\t\n\n                    6\t\n                    6\t\n\nIn base 7, the number that follows 6 is 10 (since we’ve run out of symbols!). So, 6_(7) + 1_(7) = 10_(7). Once that is established, 6_(7) + 2_(7) will be two numbers past 6, which is 11 in base 7.\n\n                    +\t\n                    0\t\n                    1\t\n                    2\t\n                    3\t\n                    4\t\n                    5\t\n                    6\t\n\n                    0\t\n                    0\t\n                    1\t\n                    2\t\n                    3\t\n                    4\t\n                    5\t\n                    6\t\n\n                    1\t\n                    1\t\n                    2\t\n                    3\t\n                    4\t\n                    5\t\n                    6\t\n                    10\t\n\n                    2\t\n                    2\t\n                    3\t\n                    4\t\n                    5\t\n                    6\t\n\n                    11\t\n\n                    3\t\n                    3\t\n                    4\t\n                    5\t\n                    6\t\n\n                    4\t\n                    4\t\n                    5\t\n                    6\t\n\n                    5\t\n                    5\t\n                    6\t\n\n                    6\t\n                    6\t\n                    10\t\n                    11"
+      ],
+      "hasFigure": false,
+      "status": "draft",
+      "answerVerified": false,
+      "translationStatus": "pending",
+      "mappingStatus": "pending"
+    },
+    {
+      "ordinal": 5,
+      "sourceNumber": "",
+      "sourceAnchor": "",
+      "kind": "example-or-exercise",
+      "context": "Step 1: Set up the table.\n\nStep 2: Fill in all the additions that use the “legal” symbols for the base. The diagonal that goes from upper left to lower right that is immediately next to the filled boxes all get the value 10, regardless of base.\n\nStep 3: Enter the values that are in the “teens.” This can all be done on one table without creating multiple copies of previously done work.",
+      "original": "Example  \\(\\PageIndex{3}\\): Adding in Base 7\n\nCalculate 536_(7) + 433_(7).\n\nAnswer\n\nStep 1: Let’s set up the addition using columns.\n\n                5\t\n                3\t\n                6\t\n\n                +\t\n                4\t\n                3\t\n                3\t\n\nStep 2: Let’s do the one’s place first. According to the base 7 addition table in the solution for Example 4.29, 6 + 3 = 12. We will carry the 1.\n\n                1\t\n\n                5\t\n                3\t\n                6\t\n\n                +\t\n                4\t\n                3\t\n                3\t\n\n                2",
+      "prompt": "Example  \\(\\PageIndex{3}\\): Adding in Base 7\n\nCalculate 536_(7) + 433_(7).",
+      "sourceAnswers": [
+        "Step 1: Let’s set up the addition using columns.\n\n                5\t\n                3\t\n                6\t\n\n                +\t\n                4\t\n                3\t\n                3\t\n\nStep 2: Let’s do the one’s place first. According to the base 7 addition table in the solution for Example 4.29, 6 + 3 = 12. We will carry the 1.\n\n                1\t\n\n                5\t\n                3\t\n                6\t\n\n                +\t\n                4\t\n                3\t\n                3\t\n\n                2"
+      ],
+      "hasFigure": false,
+      "status": "draft",
+      "answerVerified": false,
+      "translationStatus": "pending",
+      "mappingStatus": "pending"
+    },
+    {
+      "ordinal": 6,
+      "sourceNumber": "",
+      "sourceAnchor": "",
+      "kind": "example-or-exercise",
+      "context": "So, 536_(7) + 333_(7) = 1302_(7).\n\nCalculate 461_(7) + 142_(7.)\n\nAs seen previously, when performing addition in another base, set up the problem exactly as you would for addition in base 10. At each step, check the addition table for the base. As in base 10 addition, move right to left, adding down the columns using the rules in the addition table. When necessary and just as in base 10, be sure to carry the 1.",
+      "original": "Example  \\(\\PageIndex{4}\\): Creating an Addition Table for a Base Higher Than 10\n\nCreate the addition table for base 12.\n\nAnswer\n\nStep 1: Recall, in base 12, the symbol set is 0, 1, 2, 3, 4, 5, 6, 7, 8, 9, A, and B. So, the addition table begins as shown below.\n\n                +\t\n                0\t\n                1\t\n                2\t\n                3\t\n                4\t\n                5\t\n                6\t\n                7\t\n                8\t\n                9\t\n                A\t\n                B\t\n\n                0\t\n                0\t\n                1\t\n                2\t\n                3\t\n                4\t\n                5\t\n                6\t\n                7\t\n                8\t\n                9\t\n                A\t\n                B\t\n\n                1\t\n                1\t\n                2\t\n                3\t\n                4\t\n                5\t\n                6\t\n                7\t\n                8\t\n                9\t\n                A\t\n                B\t\n\n                2\t\n                2\t\n                3\t\n                4\t\n                5\t\n                6\t\n                7\t\n                8\t\n                9\t\n                A\t\n                B\t\n\n                3\t\n                3\t\n                4\t\n                5\t\n                6\t\n                7\t\n                8\t\n                9\t\n                A\t\n                B\t\n\n                4\t\n                4\t\n                5\t\n                6\t\n                7\t\n                8\t\n                9\t\n                A\t\n                B\t\n\n                5\t\n                5\t\n                6\t\n                7\t\n                8\t\n                9\t\n                A\t\n                B\t\n\n                6\t\n                6\t\n                7\t\n                8\t\n                9\t\n                A\t\n                B\t\n\n                7\t\n                7\t\n                8\t\n                9\t\n                A\t\n                B\t\n\n                8\t\n                8\t\n                9\t\n                A\t\n                B\t\n\n                9\t\n                9\t\n                A\t\n                B\t\n\n                A\t\n                A\t\n                B\t\n\n                B\t\n                B\t\n\nStep 2: The diagonal immediately to the right of the filled in boxes is where the 10 goes for this base.\n\n                +\t\n                0\t\n                1\t\n                2\t\n                3\t\n                4\t\n                5\t\n                6\t\n                7\t\n                8\t\n                9\t\n                A\t\n                B\t\n\n                0\t\n                0\t\n                1\t\n                2\t\n                3\t\n                4\t\n                5\t\n                6\t\n                7\t\n                8\t\n                9\t\n                A\t\n                B\t\n\n                1\t\n                1\t\n                2\t\n                3\t\n                4\t\n                5\t\n                6\t\n                7\t\n                8\t\n                9\t\n                A\t\n                B\t\n                10\t\n\n                2\t\n                2\t\n                3\t\n                4\t\n                5\t\n                6\t\n                7\t\n                8\t\n                9\t\n                A\t\n                B\t\n                10\t\n\n                3\t\n                3\t\n                4\t\n                5\t\n                6\t\n                7\t\n                8\t\n                9\t\n                A\t\n                B\t\n                10\t\n\n                4\t\n                4\t\n                5\t\n                6\t\n                7\t\n                8\t\n                9\t\n                A\t\n                B\t\n                10\t\n\n                5\t\n                5\t\n                6\t\n                7\t\n                8\t\n                9\t\n                A\t\n                B\t\n                10\t\n\n                6\t\n                6\t\n                7\t\n                8\t\n                9\t\n                A\t\n                B\t\n                10\t\n\n                7\t\n                7\t\n                8\t\n                9\t\n                A\t\n                B\t\n                10\t\n\n                8\t\n                8\t\n                9\t\n                A\t\n                B\t\n                10\t\n\n                9\t\n                9\t\n                A\t\n                B\t\n                10\t\n\n                A\t\n                A\t\n                B\t\n                10\t\n\n                B\t\n                B\t\n                10",
+      "prompt": "Example  \\(\\PageIndex{4}\\): Creating an Addition Table for a Base Higher Than 10\n\nCreate the addition table for base 12.",
+      "sourceAnswers": [
+        "Step 1: Recall, in base 12, the symbol set is 0, 1, 2, 3, 4, 5, 6, 7, 8, 9, A, and B. So, the addition table begins as shown below.\n\n                +\t\n                0\t\n                1\t\n                2\t\n                3\t\n                4\t\n                5\t\n                6\t\n                7\t\n                8\t\n                9\t\n                A\t\n                B\t\n\n                0\t\n                0\t\n                1\t\n                2\t\n                3\t\n                4\t\n                5\t\n                6\t\n                7\t\n                8\t\n                9\t\n                A\t\n                B\t\n\n                1\t\n                1\t\n                2\t\n                3\t\n                4\t\n                5\t\n                6\t\n                7\t\n                8\t\n                9\t\n                A\t\n                B\t\n\n                2\t\n                2\t\n                3\t\n                4\t\n                5\t\n                6\t\n                7\t\n                8\t\n                9\t\n                A\t\n                B\t\n\n                3\t\n                3\t\n                4\t\n                5\t\n                6\t\n                7\t\n                8\t\n                9\t\n                A\t\n                B\t\n\n                4\t\n                4\t\n                5\t\n                6\t\n                7\t\n                8\t\n                9\t\n                A\t\n                B\t\n\n                5\t\n                5\t\n                6\t\n                7\t\n                8\t\n                9\t\n                A\t\n                B\t\n\n                6\t\n                6\t\n                7\t\n                8\t\n                9\t\n                A\t\n                B\t\n\n                7\t\n                7\t\n                8\t\n                9\t\n                A\t\n                B\t\n\n                8\t\n                8\t\n                9\t\n                A\t\n                B\t\n\n                9\t\n                9\t\n                A\t\n                B\t\n\n                A\t\n                A\t\n                B\t\n\n                B\t\n                B\t\n\nStep 2: The diagonal immediately to the right of the filled in boxes is where the 10 goes for this base.\n\n                +\t\n                0\t\n                1\t\n                2\t\n                3\t\n                4\t\n                5\t\n                6\t\n                7\t\n                8\t\n                9\t\n                A\t\n                B\t\n\n                0\t\n                0\t\n                1\t\n                2\t\n                3\t\n                4\t\n                5\t\n                6\t\n                7\t\n                8\t\n                9\t\n                A\t\n                B\t\n\n                1\t\n                1\t\n                2\t\n                3\t\n                4\t\n                5\t\n                6\t\n                7\t\n                8\t\n                9\t\n                A\t\n                B\t\n                10\t\n\n                2\t\n                2\t\n                3\t\n                4\t\n                5\t\n                6\t\n                7\t\n                8\t\n                9\t\n                A\t\n                B\t\n                10\t\n\n                3\t\n                3\t\n                4\t\n                5\t\n                6\t\n                7\t\n                8\t\n                9\t\n                A\t\n                B\t\n                10\t\n\n                4\t\n                4\t\n                5\t\n                6\t\n                7\t\n                8\t\n                9\t\n                A\t\n                B\t\n                10\t\n\n                5\t\n                5\t\n                6\t\n                7\t\n                8\t\n                9\t\n                A\t\n                B\t\n                10\t\n\n                6\t\n                6\t\n                7\t\n                8\t\n                9\t\n                A\t\n                B\t\n                10\t\n\n                7\t\n                7\t\n                8\t\n                9\t\n                A\t\n                B\t\n                10\t\n\n                8\t\n                8\t\n                9\t\n                A\t\n                B\t\n                10\t\n\n                9\t\n                9\t\n                A\t\n                B\t\n                10\t\n\n                A\t\n                A\t\n                B\t\n                10\t\n\n                B\t\n                B\t\n                10"
+      ],
+      "hasFigure": false,
+      "status": "draft",
+      "answerVerified": false,
+      "translationStatus": "pending",
+      "mappingStatus": "pending"
+    },
+    {
+      "ordinal": 7,
+      "sourceNumber": "",
+      "sourceAnchor": "",
+      "kind": "example-or-exercise",
+      "context": "Step 3: Using the pattern we’re familiar with, and counting in base 12, we can fill in the other cells.\n\nNotice that the lower-right entry is 1A_(12), as this is the number one past 19_(12).\n\nCreate the addition table for base 14.",
+      "original": "Example  \\(\\PageIndex{5}\\): Adding in Base 12\n\nCalculate 3A7_(12) + 9BA_(12).\n\nAnswer\n\nStep 1: Using the process established in the earlier addition problem, set up the columns.\n\n                3\t\n                A\t\n                7\t\n\n                +\t\n                9\t\n                B\t\n                A\t\n\nStep 2: Using the rules from the base 12 addition table in the solution for Example 4.31, and being careful to carry the 1 when necessary, we get the following:\n\n                1\t\n                1\t\n\n                3\t\n                A\t\n                7\t\n\n                +\t\n                9\t\n                B\t\n                A\t\n\n                1\t\n                1\t\n                A\t\n                5",
+      "prompt": "Example  \\(\\PageIndex{5}\\): Adding in Base 12\n\nCalculate 3A7_(12) + 9BA_(12).",
+      "sourceAnswers": [
+        "Step 1: Using the process established in the earlier addition problem, set up the columns.\n\n                3\t\n                A\t\n                7\t\n\n                +\t\n                9\t\n                B\t\n                A\t\n\nStep 2: Using the rules from the base 12 addition table in the solution for Example 4.31, and being careful to carry the 1 when necessary, we get the following:\n\n                1\t\n                1\t\n\n                3\t\n                A\t\n                7\t\n\n                +\t\n                9\t\n                B\t\n                A\t\n\n                1\t\n                1\t\n                A\t\n                5"
+      ],
+      "hasFigure": false,
+      "status": "draft",
+      "answerVerified": false,
+      "translationStatus": "pending",
+      "mappingStatus": "pending"
+    },
+    {
+      "ordinal": 8,
+      "sourceNumber": "",
+      "sourceAnchor": "",
+      "kind": "example-or-exercise",
+      "context": "The ones that were carried are located over the columns.\n\nSo, 3A7_(12) + 9BA_(12)= 11A5_(12).\n\nCalculate 4B3_(12) + B06_(12).",
+      "original": "Example  \\(\\PageIndex{6}\\): Adding in Base 2\n\nWe again return to base 2, the base used by computers. Calculate 1001_(2) + 11011_(2).\n\nAnswer\n\nStep 1: Using the process established in the earlier addition problem, set up the columns.\n\n                1\t\n                0\t\n                0\t\n                1\t\n\n                +\t\n                1\t\n                1\t\n                0\t\n                1\t\n                1\t\n\nStep 2: Using the rules from the base 2 addition table in the solution for Example 4.29, and being careful to carry the 1 when necessary (and shown at the top of the grid), we get the following:\n\n                1\t\n\n                1\t\n                1\t\n\n                1\t\n                0\t\n                0\t\n                1\t\n\n                +\t\n                1\t\n                1\t\n                0\t\n                1\t\n                1\t\n\n                1\t\n                0\t\n                0\t\n                1\t\n                0\t\n                0",
+      "prompt": "Example  \\(\\PageIndex{6}\\): Adding in Base 2\n\nWe again return to base 2, the base used by computers. Calculate 1001_(2) + 11011_(2).",
+      "sourceAnswers": [
+        "Step 1: Using the process established in the earlier addition problem, set up the columns.\n\n                1\t\n                0\t\n                0\t\n                1\t\n\n                +\t\n                1\t\n                1\t\n                0\t\n                1\t\n                1\t\n\nStep 2: Using the rules from the base 2 addition table in the solution for Example 4.29, and being careful to carry the 1 when necessary (and shown at the top of the grid), we get the following:\n\n                1\t\n\n                1\t\n                1\t\n\n                1\t\n                0\t\n                0\t\n                1\t\n\n                +\t\n                1\t\n                1\t\n                0\t\n                1\t\n                1\t\n\n                1\t\n                0\t\n                0\t\n                1\t\n                0\t\n                0"
+      ],
+      "hasFigure": false,
+      "status": "draft",
+      "answerVerified": false,
+      "translationStatus": "pending",
+      "mappingStatus": "pending"
+    },
+    {
+      "ordinal": 9,
+      "sourceNumber": "",
+      "sourceAnchor": "",
+      "kind": "example-or-exercise",
+      "context": "Subtraction in Bases Other Than Base 10\n\nSubtraction in bases other than base 10 follow the same processes as base 10 subtraction, but, as with addition, using the addition table for the base.",
+      "original": "Example  \\(\\PageIndex{7}\\): Subtracting in Base 6\n\nCalculate 52_(6) − 34_(6).\n\nAnswer\n\nStep 1: Let’s set up the subtraction using columns.\n\n                5\t\n                2\t\n\n                −\t\n                3\t\n                4\t\n\nStep 2: Just as we might do in base 10, we borrow a 1 from the 5 for the ones digit.\n\n                \\(\\unsupported{menclose}{5}4\\)\t\n                12\t\n\n                −\t\n                3\t\n                4",
+      "prompt": "Example  \\(\\PageIndex{7}\\): Subtracting in Base 6\n\nCalculate 52_(6) − 34_(6).",
+      "sourceAnswers": [
+        "Step 1: Let’s set up the subtraction using columns.\n\n                5\t\n                2\t\n\n                −\t\n                3\t\n                4\t\n\nStep 2: Just as we might do in base 10, we borrow a 1 from the 5 for the ones digit.\n\n                \\(\\unsupported{menclose}{5}4\\)\t\n                12\t\n\n                −\t\n                3\t\n                4"
+      ],
+      "hasFigure": false,
+      "status": "draft",
+      "answerVerified": false,
+      "translationStatus": "pending",
+      "mappingStatus": "pending"
+    },
+    {
+      "ordinal": 10,
+      "sourceNumber": "",
+      "sourceAnchor": "",
+      "kind": "example-or-exercise",
+      "context": "Step 4: Now we deal with the “tens” (really, sixes) digit, 4_(6) − 3_(6), which equals 1_(6) according to the base 6 addition table (Table 4.4).\n\nSo, 52_(6) − 34_(6) = 14_(6).\n\nCalculate 115_(6) − 43_(6).",
+      "original": "Example  \\(\\PageIndex{8}\\): Subtracting in Base 12\n\nCalculate A17_(12) − 4B3_(12)_(.)\n\nAnswer\n\nStep 1: Let’s set up the subtraction using columns.\n\n                A\t\n                1\t\n                7\t\n\n                −\t\n                4\t\n                B\t\n                3\t\n\nStep 2: Even in base 12, 7_(12) − 3_(12) = 4_(12).\n\n                A\t\n                1\t\n                7\t\n\n                −\t\n                4\t\n                B\t\n                3\t\n\n                4",
+      "prompt": "Example  \\(\\PageIndex{8}\\): Subtracting in Base 12\n\nCalculate A17_(12) − 4B3_(12)_(.)",
+      "sourceAnswers": [
+        "Step 1: Let’s set up the subtraction using columns.\n\n                A\t\n                1\t\n                7\t\n\n                −\t\n                4\t\n                B\t\n                3\t\n\nStep 2: Even in base 12, 7_(12) − 3_(12) = 4_(12).\n\n                A\t\n                1\t\n                7\t\n\n                −\t\n                4\t\n                B\t\n                3\t\n\n                4"
+      ],
+      "hasFigure": false,
+      "status": "draft",
+      "answerVerified": false,
+      "translationStatus": "pending",
+      "mappingStatus": "pending"
+    },
+    {
+      "ordinal": 11,
+      "sourceNumber": "",
+      "sourceAnchor": "",
+      "kind": "example-or-exercise",
+      "context": "Errors When Adding and Subtracting in Bases Other Than Base 10\n\nErrors when computing in bases other than 10 often involve applying base 10 rules or symbols to an arithmetic problem in a base other than base 10. The first type of error is using a symbol that is not in the symbol set for the base. For instance, if a 9 shows up when working in base 7, you know an error has happened because 9 is not a legal symbol in base 7.",
+      "original": "Example  \\(\\PageIndex{9}\\): Identifying an Illegal Symbol in Arithmetic in a Base Other Than Base 10\n\nExplain the error in the following calculation:\n\n\\({15}_{6}+{34}_{6}={49}_{6}\\)\n\nAnswer\n\nSince the problem is in base 6, the symbol set available is 0, 1, 2, 3, 4 and 5. The 9 in the answer is clearly not a legal symbol for base 6. Looking back to the base 6 addition table (Table 4.4), we see that \\({5}_{6}+{4}_{6}={13}_{6}\\). Correcting the error, we see the sum is \\({15}_{6}+{34}_{6}={53}_{6}\\).",
+      "prompt": "Example  \\(\\PageIndex{9}\\): Identifying an Illegal Symbol in Arithmetic in a Base Other Than Base 10\n\nExplain the error in the following calculation:\n\n\\({15}_{6}+{34}_{6}={49}_{6}\\)",
+      "sourceAnswers": [
+        "Since the problem is in base 6, the symbol set available is 0, 1, 2, 3, 4 and 5. The 9 in the answer is clearly not a legal symbol for base 6. Looking back to the base 6 addition table (Table 4.4), we see that \\({5}_{6}+{4}_{6}={13}_{6}\\). Correcting the error, we see the sum is \\({15}_{6}+{34}_{6}={53}_{6}\\)."
+      ],
+      "hasFigure": false,
+      "status": "draft",
+      "answerVerified": false,
+      "translationStatus": "pending",
+      "mappingStatus": "pending"
+    },
+    {
+      "ordinal": 12,
+      "sourceNumber": "",
+      "sourceAnchor": "",
+      "kind": "example-or-exercise",
+      "context": "Errors when computing in bases other than 10 often involve applying base 10 rules or symbols to an arithmetic problem in a base other than base 10. The first type of error is using a symbol that is not in the symbol set for the base. For instance, if a 9 shows up when working in base 7, you know an error has happened because 9 is not a legal symbol in base 7.\n\nExplain the error in the following calculation and correct the problem:\n\n\\({133_4} + {112_4} = {245_4}\\)\n\nThe second type of error is using a base 10 rule when the numbers are not in base 10. For instance, if you are working in base 13, then 9_(13) + 9_(13) is not 18_(13), even though 18 is the correct answer in base 10.",
+      "original": "Example  \\(\\PageIndex{10}\\): Identifying an Arithmetic Error in a Base Other Than Base 10\n\nExplain the error in the following calculation, and correct the error:\n\n\\({89}_{12}+{76}_{12}={165}_{12}\\)\n\nAnswer\n\nIf this problem was a base 10 problem, this would be the correct answer. However, in base 12, 9 + 6 is not 15, but is instead 13. To correct this error, carefully use the addition table for base 12. If properly used, the correct answer would be \\({143}_{12}\\), as seen below:\n\n                8\t\n                9\t\n\n                +\t\n\n                7\t\n                6\t\n\n                1\t\n                4\t\n                3",
+      "prompt": "Example  \\(\\PageIndex{10}\\): Identifying an Arithmetic Error in a Base Other Than Base 10\n\nExplain the error in the following calculation, and correct the error:\n\n\\({89}_{12}+{76}_{12}={165}_{12}\\)",
+      "sourceAnswers": [
+        "If this problem was a base 10 problem, this would be the correct answer. However, in base 12, 9 + 6 is not 15, but is instead 13. To correct this error, carefully use the addition table for base 12. If properly used, the correct answer would be \\({143}_{12}\\), as seen below:\n\n                8\t\n                9\t\n\n                +\t\n\n                7\t\n                6\t\n\n                1\t\n                4\t\n                3"
+      ],
+      "hasFigure": false,
+      "status": "draft",
+      "answerVerified": false,
+      "translationStatus": "pending",
+      "mappingStatus": "pending"
+    },
+    {
+      "ordinal": 13,
+      "sourceNumber": "1",
+      "sourceAnchor": "",
+      "kind": "exercise-candidate",
+      "context": "Check Your Understanding",
+      "original": "1. Determine the addition table for base 8.",
+      "prompt": "1. Determine the addition table for base 8.",
+      "sourceAnswers": [],
+      "hasFigure": false,
+      "status": "draft",
+      "answerVerified": false,
+      "translationStatus": "pending",
+      "mappingStatus": "pending"
+    },
+    {
+      "ordinal": 14,
+      "sourceNumber": "2",
+      "sourceAnchor": "",
+      "kind": "exercise-candidate",
+      "context": "Check Your Understanding",
+      "original": "2. Compute 24_(6) + 53_(6).",
+      "prompt": "2. Compute 24_(6) + 53_(6).",
+      "sourceAnswers": [],
+      "hasFigure": false,
+      "status": "draft",
+      "answerVerified": false,
+      "translationStatus": "pending",
+      "mappingStatus": "pending"
+    },
+    {
+      "ordinal": 15,
+      "sourceNumber": "3",
+      "sourceAnchor": "",
+      "kind": "exercise-candidate",
+      "context": "Check Your Understanding",
+      "original": "3. Compute 35_(8) − 26_(8).",
+      "prompt": "3. Compute 35_(8) − 26_(8).",
+      "sourceAnswers": [],
+      "hasFigure": false,
+      "status": "draft",
+      "answerVerified": false,
+      "translationStatus": "pending",
+      "mappingStatus": "pending"
+    },
+    {
+      "ordinal": 16,
+      "sourceNumber": "4",
+      "sourceAnchor": "",
+      "kind": "exercise-candidate",
+      "context": "Check Your Understanding",
+      "original": "4. Compute 3B_(14) + 45_(14).",
+      "prompt": "4. Compute 3B_(14) + 45_(14).",
+      "sourceAnswers": [],
+      "hasFigure": false,
+      "status": "draft",
+      "answerVerified": false,
+      "translationStatus": "pending",
+      "mappingStatus": "pending"
+    },
+    {
+      "ordinal": 17,
+      "sourceNumber": "5",
+      "sourceAnchor": "",
+      "kind": "exercise-candidate",
+      "context": "Check Your Understanding",
+      "original": "5. Compute A4_(12) − 9B_(12)_(.)",
+      "prompt": "5. Compute A4_(12) − 9B_(12)_(.)",
+      "sourceAnswers": [],
+      "hasFigure": false,
+      "status": "draft",
+      "answerVerified": false,
+      "translationStatus": "pending",
+      "mappingStatus": "pending"
+    },
+    {
+      "ordinal": 18,
+      "sourceNumber": "6",
+      "sourceAnchor": "",
+      "kind": "exercise-candidate",
+      "context": "Check Your Understanding",
+      "original": "6. How do you know an error has occurred in a base 8 addition question if the answer obtained was 28_(8)?",
+      "prompt": "6. How do you know an error has occurred in a base 8 addition question if the answer obtained was 28_(8)?",
+      "sourceAnswers": [],
+      "hasFigure": false,
+      "status": "draft",
+      "answerVerified": false,
+      "translationStatus": "pending",
+      "mappingStatus": "pending"
+    },
+    {
+      "ordinal": 19,
+      "sourceNumber": "7",
+      "sourceAnchor": "",
+      "kind": "exercise-candidate",
+      "context": "Check Your Understanding",
+      "original": "7. What is one common error made in calculating in base 14?",
+      "prompt": "7. What is one common error made in calculating in base 14?",
+      "sourceAnswers": [],
+      "hasFigure": false,
+      "status": "draft",
+      "answerVerified": false,
+      "translationStatus": "pending",
+      "mappingStatus": "pending"
+    }
+  ],
+  "license": "CC BY 4.0",
+  "licenseEvidence": "This page titled 4.3:  Addition and Subtraction in Base Systems was last modified on Thu, 02 Jan 2025 11:07:44 GMT and is shared under a CC BY  4.0  license and was authored, remixed, and/or curated by OpenStax via source content that was edited to the style and standards of the LibreTexts platform.",
+  "url": "https://math.libretexts.org/Bookshelves/Applied_Mathematics/Contemporary_Mathematics_(OpenStax)/04:__Number_Representation_and_Calculation/4.03:__Addition_and_Subtraction_in_Base_Systems",
+  "sha256": "3cf01b6ded39d0075983f89dab36c53833ee165a03fc00eed7651f662ab859f4",
+  "checkedAt": "2026-10-07",
+  "id": "3c6afaa2bc5b8a8fe420",
+  "bookId": "contemporary",
+  "licenseInherited": false,
+  "licenseSource": "https://math.libretexts.org/Bookshelves/Applied_Mathematics/Contemporary_Mathematics_(OpenStax)/04:__Number_Representation_and_Calculation/4.03:__Addition_and_Subtraction_in_Base_Systems",
+  "licenseUrl": "https://creativecommons.org/licenses/by/4.0/",
+  "authors": "OpenStax / Donna Kirk et al.",
+  "book": "Contemporary Mathematics",
+  "reviewStatus": "unreviewed",
+  "sourceLanguage": "en",
+  "translationStatus": "pending"
+}

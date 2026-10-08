@@ -1,0 +1,557 @@
+{
+  "title": "8.3: Inverse Trigonometric Functions",
+  "originalText": "Learning Objectives\n\nUnderstand and use the inverse sine, cosine, and tangent functions.\n\nFind the exact value of expressions involving the inverse sine, cosine, and tangent functions.\n\nUse a calculator to evaluate inverse trigonometric functions.\n\nFind exact values of composite functions with inverse trigonometric functions.\n\nFor any right triangle, given one other angle and the length of one side, we can figure out what the other angles and sides are. But what if we are given only two sides of a right triangle? We need a procedure that leads us from a ratio of sides to an angle. This is where the notion of an inverse to a trigonometric function comes into play. In this section, we will explore the inverse trigonometric functions.\n\nUnderstanding and Using the Inverse Sine, Cosine, and Tangent Functions\n\nIn order to use inverse trigonometric functions, we need to understand that an inverse trigonometric function “undoes” what the original trigonometric function “does,” as is the case with any other function and its inverse. In other words, the domain of the inverse function is the range of the original function, and vice versa, as summarized in Figure \\(\\PageIndex{1}\\).\n\n[Figure: A chart that says “Trig Functinos”, “Inverse Trig Functions”, “Domain: Measure of an angle”, “Domain: Ratio”, “Range: Ratio”, and “Range: Measure of an angle”.]\n\nFigure \\(\\PageIndex{1}\\)\n\nFor example, if \\(f(x)=\\sin\\space x\\), then we would write \\(f^{−1}(x)={\\sin}^{−1}x\\). Be aware that \\({\\sin}^{−1}x\\) does not mean \\(\\dfrac{1}{\\sin\\space x}\\). The following examples illustrate the inverse trigonometric functions:\n\nSince \\(\\sin\\left(\\dfrac{\\pi}{6}\\right)=\\dfrac{1}{2}\\), then \\(\\dfrac{\\pi}{6}={\\sin}^{−1}\\left(\\dfrac{1}{2}\\right)\\).\n\nSince \\(\\cos(\\pi)=−1\\), then \\(\\pi={\\cos}^{−1}(−1)\\).\n\nSince \\(\\tan\\left (\\dfrac{\\pi}{4}\\right )=1\\), then \\(\\dfrac{\\pi}{4}={\\tan}^{−1}(1)\\).\n\nIn previous sections, we evaluated the trigonometric functions at various angles, but at times we need to know what angle would yield a specific sine, cosine, or tangent value. For this, we need inverse functions. Recall that, for a one-to-one function, if \\(f(a)=b\\), then an inverse function would satisfy \\(f^{−1}(b)=a\\).\n\nBear in mind that the sine, cosine, and tangent functions are not one-to-one functions. The graph of each function would fail the horizontal line test. In fact, no periodic function can be one-to-one because each output in its range corresponds to at least one input in every period, and there are an infinite number of periods. As with other functions that are not one-to-one, we will need to restrict the domain of each function to yield a new function that is one-to-one. We choose a domain for each function that includes the number 0. Figure \\(\\PageIndex{2}\\) shows the graph of the sine function limited to \\(\\left[ −\\dfrac{\\pi}{2},\\dfrac{\\pi}{2} \\right]\\) and the graph of the cosine function limited to \\([ 0,\\pi ]\\).\n\n[Figure: Two side-by-side graphs. The first graph, graph A, shows half of a period of the function sine of x. The second graph, graph B, shows half a period of the function cosine of x.]\n\nFigure \\(\\PageIndex{2}\\): (a) Sine function on a restricted domain of \\(\\left[ −\\dfrac{\\pi}{2}, \\dfrac{\\pi}{2} \\right]\\); (b) Cosine function on a restricted domain of \\([ 0,\\pi ]\\)\n\nFigure \\(\\PageIndex{3}\\) shows the graph of the tangent function limited to \\(\\left(−\\dfrac{\\pi}{2},\\dfrac{\\pi}{2}\\right)\\).\n\n[Figure: A graph of one period of tangent of x, from -pi/2 to pi/2.]\n\nFigure \\(\\PageIndex{3}\\): Tangent function on a restricted domain of \\(\\left (−\\dfrac{\\pi}{2},\\dfrac{\\pi}{2}\\right )\\)\n\nThese conventional choices for the restricted domain are somewhat arbitrary, but they have important, helpful characteristics. Each domain includes the origin and some positive values, and most importantly, each results in a one-to-one function that is invertible. The conventional choice for the restricted domain of the tangent function also has the useful property that it extends from one vertical asymptote to the next instead of being divided into two parts by an asymptote.\n\nOn these restricted domains, we can define the inverse trigonometric functions.\n\nThe inverse sine function \\(y={\\sin}^{−1}x\\) means \\(x=\\sin\\space y\\). The inverse sine function is sometimes called the arcsine function, and notated \\(\\arcsin\\space x\\).\n\n\\(y={\\sin}^{−1}x\\) has domain \\([−1,1]\\) and range \\(\\left[−\\frac{\\pi}{2},\\frac{\\pi}{2}\\right]\\)\n\nThe inverse cosine function \\(y={\\cos}^{−1}x\\) means \\(x=\\cos\\space y\\). The inverse cosine function is sometimes called the arccosine function, and notated \\(\\arccos\\space x\\).\n\n\\(y={\\cos}^{−1}x\\) has domain \\([−1,1]\\) and range \\([0,π]\\)\n\nThe inverse tangent function \\(y={\\tan}^{−1}x\\) means \\(x=\\tan\\space y\\). The inverse tangent function is sometimes called the arctangent function, and notated \\(\\arctan\\space x\\).\n\n\\(y={\\tan}^{−1}x\\) has domain \\((−\\infty,\\infty)\\) and range \\(\\left(−\\frac{\\pi}{2},\\frac{\\pi}{2}\\right)\\)\n\nThe graphs of the inverse functions are shown in Figures \\(\\PageIndex{4}\\) - \\(\\PageIndex{6}\\). Notice that the output of each of these inverse functions is a number, an angle in radian measure. We see that \\({\\sin}^{−1}x\\) has domain \\([ −1,1 ]\\) and range \\(\\left[ −\\dfrac{\\pi}{2},\\dfrac{\\pi}{2} \\right]\\), \\({\\cos}^{−1}x\\) has domain \\([ −1,1 ]\\) and range \\([0,\\pi]\\), and \\({\\tan}^{−1}x\\) has domain of all real numbers and range \\(\\left(−\\dfrac{\\pi}{2},\\dfrac{\\pi}{2}\\right)\\). To find the domain and range of inverse trigonometric functions, switch the domain and range of the original functions. Each graph of the inverse trigonometric function is a reflection of the graph of the original function about the line \\(y=x\\).\n\n[Figure: A graph of the functions of sine of x and arc sine of x. There is a dotted line y=x between the two graphs, to show inverse nature of the two functions]\n\nFigure \\(\\PageIndex{4}\\): The sine function and inverse sine (or arcsine) function\n\n[Figure: A graph of the functions of cosine of x and arc cosine of x. There is a dotted line at y=x to show the inverse nature of the two functions.]\n\nFigure \\(\\PageIndex{5}\\): The cosine function and inverse cosine (or arccosine) function\n\n[Figure: A graph of the functions of tangent of x and arc tangent of x. There is a dotted line at y=x to show the inverse nature of the two functions.]\n\nFigure \\(\\PageIndex{6}\\): The tangent function and inverse tangent (or arctangent) function\n\nRELATIONS FOR INVERSE SINE, COSINE, AND TANGENT FUNCTIONS\n\nFor angles in the interval \\(\\left[ −\\dfrac{\\pi}{2},\\dfrac{\\pi}{2} \\right]\\), if \\(\\sin y=x\\), then \\({\\sin}^{−1}x=y\\).\n\nFor angles in the interval \\([ 0,\\pi ]\\), if \\(\\cos y=x\\), then \\({\\cos}^{−1}x=y\\).\n\nFor angles in the interval \\(\\left(−\\dfrac{\\pi}{2},\\dfrac{\\pi}{2}\\right )\\), if \\(\\tan y=x\\),then \\({\\tan}^{−1}x=y\\).\n\nExample \\(\\PageIndex{1}\\): Writing a Relation for an Inverse Function\n\nGiven \\(\\sin\\left(\\dfrac{5\\pi}{12}\\right)≈0.96593\\), write a relation involving the inverse sine.\n\nSolution\n\nUse the relation for the inverse sine. If \\(\\sin y=x\\), then \\({\\sin}^{−1}x=y\\).\n\nIn this problem, \\(x=0.96593\\), and \\(y=\\dfrac{5\\pi}{12}\\).\n\n\\({\\sin}^{−1}(0.96593)≈\\dfrac{5\\pi}{12}\\)\n\nExercise \\(\\PageIndex{1}\\)\n\nGiven \\(\\cos(0.5)≈0.8776\\),write a relation involving the inverse cosine.\n\nAnswer\n\n\\(\\arccos(0.8776)≈0.5\\)\n\nFinding the Exact Value of Expressions Involving the Inverse Sine, Cosine, and Tangent Functions\n\nNow that we can identify inverse functions, we will learn to evaluate them. For most values in their domains, we must evaluate the inverse trigonometric functions by using a calculator, interpolating from a table, or using some other numerical technique. Just as we did with the original trigonometric functions, we can give exact values for the inverse functions when we are using the special angles, specifically \\(\\dfrac{\\pi}{6}\\)(30°), \\(\\dfrac{\\pi}{4}\\)(45°), and \\(\\dfrac{\\pi}{3}\\)(60°), and their reflections into other quadrants.\n\nGiven a “special” input value, evaluate an inverse trigonometric function.\n\n1. Find angle \\(x\\) for which the original trigonometric function has an output equal to the given input for the inverse trigonometric function.\n\n2. If \\(x\\) is not in the defined range of the inverse, find another angle \\(y\\) that is in the defined range and has the same sine, cosine, or tangent as \\(x\\),depending on which corresponds to the given inverse function.\n\nExample \\(\\PageIndex{2}\\): Evaluating Inverse Trigonometric Functions for Special Input Values\n\nEvaluate each of the following.\n\n1. \\({\\sin}^{−1}\\left(\\dfrac{1}{2}\\right)\\)\n\n2. \\({\\sin}^{−1}\\left(−\\dfrac{\\sqrt{2}}{2}\\right)\\)\n\n3. \\({\\cos}^{−1}\\left(−\\dfrac{\\sqrt{3}}{2}\\right)\\)\n\n4. \\({\\tan}^{−1}(1)\\)\n\nSolution\n\n1. Evaluating \\({\\sin}^{−1}\\left(\\dfrac{1}{2}\\right)\\) is the same as determining the angle that would have a sine value of \\(\\dfrac{1}{2}\\). In other words, what angle \\(x\\) would satisfy \\(\\sin(x)=\\dfrac{1}{2}\\)? There are multiple values that would satisfy this relationship, such as \\(\\dfrac{\\pi}{6}\\) and \\(\\dfrac{5\\pi}{6}\\), but we know we need the angle in the interval \\(\\left[ −\\dfrac{\\pi}{2},\\dfrac{\\pi}{2} \\right]\\), so the answer will be \\({\\sin}^{−1}\\left (\\dfrac{1}{2}\\right)=\\dfrac{\\pi}{6}\\). Remember that the inverse is a function, so for each input, we will get exactly one output.\n\n2. To evaluate \\({\\sin}^{−1}\\left(−\\dfrac{\\sqrt{2}}{2}\\right)\\), we know that \\(\\dfrac{5\\pi}{4}\\) and \\(\\dfrac{7\\pi}{4}\\) both have a sine value of \\(-\\dfrac{\\sqrt{2}}{2}\\), but neither is in the interval \\(\\left[ −\\dfrac{\\pi}{2},\\dfrac{\\pi}{2} \\right]\\). For that, we need the negative angle coterminal with \\(\\dfrac{7\\pi}{4}\\): \\({\\sin}^{−1}\\left(−\\dfrac{\\sqrt{2}}{2}\\right)=−\\dfrac{\\pi}{4}\\).\n\n3. To evaluate \\({\\cos}^{−1}\\left(−\\dfrac{\\sqrt{3}}{2}\\right)\\), we are looking for an angle in the interval \\([ 0,\\pi ]\\) with a cosine value of \\(-\\dfrac{\\sqrt{3}}{2}\\). The angle that satisfies this is \\({\\cos}^{−1}\\left(−\\dfrac{\\sqrt{3}}{2}\\right)=\\dfrac{5\\pi}{6}\\).\n\n4. Evaluating \\({\\tan}^{−1}(1)\\), we are looking for an angle in the interval \\(\\left(−\\dfrac{\\pi}{2},\\dfrac{\\pi}{2}\\right)\\) with a tangent value of \\(1\\). The correct angle is \\({\\tan}^{−1}(1)=\\dfrac{\\pi}{4}\\).\n\nExercise \\(\\PageIndex{2}\\)\n\nEvaluate each of the following.\n\n1. \\({\\sin}^{−1}(−1)\\)\n\n2. \\({\\tan}^{−1}(−1)\\)\n\n3. \\({\\cos}^{−1}(−1)\\)\n\n4. \\({\\cos}^{−1}\\left(\\dfrac{1}{2}\\right)\\)\n\nAnswer a\n\n\\(-\\dfrac{\\pi}{2}\\)\n\nAnswer b\n\n\\(-\\dfrac{\\pi}{4}\\)\n\nAnswer c\n\n\\(\\pi\\)\n\nAnswer d\n\n\\(\\dfrac{\\pi}{3}\\)\n\nUsing a Calculator to Evaluate Inverse Trigonometric Functions\n\nTo evaluate inverse trigonometric functions that do not involve the special angles discussed previously, we will need to use a calculator or other type of technology. Most scientific calculators and calculator-emulating applications have specific keys or buttons for the inverse sine, cosine, and tangent functions. These may be labeled, for example, SIN-1, ARCSIN, or ASIN.\n\nIn the previous chapter, we worked with trigonometry on a right triangle to solve for the sides of a triangle given one side and an additional angle. Using the inverse trigonometric functions, we can solve for the angles of a right triangle given two sides, and we can use a calculator to find the values to several decimal places.\n\nIn these examples and exercises, the answers will be interpreted as angles and we will use \\(\\theta\\) as the independent variable. The value displayed on the calculator may be in degrees or radians, so be sure to set the mode appropriate to the application.\n\nExample \\(\\PageIndex{3}\\): Evaluating the Inverse Sine on a Calculator\n\nEvaluate \\({\\sin}^{−1}(0.97)\\) using a calculator.\n\nSolution\n\nBecause the output of the inverse function is an angle, the calculator will give us a degree value if in degree mode and a radian value if in radian mode. Calculators also use the same domain restrictions on the angles as we are using.\n\nIn radian mode, \\({\\sin}^{−1}(0.97)≈1.3252\\). In degree mode, \\({\\sin}^{−1}(0.97)≈75.93°\\). Note that in calculus and beyond we will use radians in almost all cases.\n\nExercise \\(\\PageIndex{3}\\)\n\nEvaluate \\({\\cos}^{−1}(−0.4)\\) using a calculator.\n\nAnswer\n\n\\(1.9823\\) or \\(113.578^{\\circ}\\)\n\nGiven two sides of a right triangle like the one shown in Figure 8.4.7, find an angle.\n\n[Figure: An illustration of a right triangle with an angle theta. Adjacent to theta is the side a, opposite theta is the side p, and the hypoteneuse is side h.]\n\nFigure \\(\\PageIndex{7}\\)\n\n1. If one given side is the hypotenuse of length \\(h\\) and the side of length \\(a\\) adjacent to the desired angle is given, use the equation \\(\\theta={\\cos}^{−1}\\left(\\dfrac{a}{h}\\right)\\).\n\n2. If one given side is the hypotenuse of length \\(h\\) and the side of length \\(p\\) opposite to the desired angle is given, use the equation \\(\\theta={\\sin}^{−1}\\left(\\dfrac{p}{h}\\right)\\).\n\n3. If the two legs (the sides adjacent to the right angle) are given, then use the equation \\(\\theta={\\tan}^{−1}\\left(\\dfrac{p}{a}\\right)\\).\n\nExample \\(\\PageIndex{4}\\): Applying the Inverse Cosine to a Right Triangle\n\nSolve the triangle in Figure \\(\\PageIndex{8}\\) for the angle \\(\\theta\\).\n\n[Figure: An illustration of a right triangle with the angle theta. Adjacent to the angle theta is a side with a length of 9 and a hypoteneuse of length 12.]\n\nFigure \\(\\PageIndex{8}\\)\n\nSolution\n\nBecause we know the hypotenuse and the side adjacent to the angle, it makes sense for us to use the cosine function.\n\n\\[\\begin{align*} \\cos \\theta&= \\dfrac{9}{12}\\\\ \\theta&= {\\cos}^{-1}\\left(\\dfrac{9}{12}\\right)\\qquad \\text{Apply definition of the inverse}\\\\ \\theta&\\approx 0.7227\\qquad \\text{or about } 41.4096^{\\circ} \\text{ Evaluate} \\end{align*}\\]\n\nExercise \\(\\PageIndex{4}\\)\n\nSolve the triangle in Figure \\(\\PageIndex{9}\\) for the angle \\(\\theta\\).\n\n[Figure: An illustration of a right triangle with the angle theta. Opposite to the angle theta is a side with a length of 6 and a hypoteneuse of length 10.]\n\nFigure \\(\\PageIndex{9}\\)\n\nAnswer\n\n\\({\\sin}^{−1}(0.6)=36.87°=0.6435\\) radians\n\nFinding Exact Values of Composite Functions with Inverse Trigonometric Functions\n\nThere are times when we need to compose a trigonometric function with an inverse trigonometric function. In these cases, we can usually find exact values for the resulting expressions without resorting to a calculator. Even when the input to the composite function is a variable or an expression, we can often find an expression for the output. To help sort out different cases, let \\(f(x)\\) and \\(g(x)\\) be two different trigonometric functions belonging to the set{ \\(\\sin(x)\\),\\(\\cos(x)\\),\\(\\tan(x)\\) } and let \\(f^{-1}(y)\\) and \\(g^{-1}(y)\\) be their inverses.\n\nEvaluating Compositions of the Form \\(f(f^{-1}(y))\\) and \\(f^{-1}(f(x))\\)\n\nFor any trigonometric function,\\(f(f^{-1}(y))=y\\) for all \\(y\\) in the proper domain for the given function. This follows from the definition of the inverse and from the fact that the range of \\(f\\) was defined to be identical to the domain of \\(f^{−1}\\). However, we have to be a little more careful with expressions of the form \\(f^{-1}(f(x))\\).\n\nCOMPOSITIONS OF A TRIGONOMETRIC FUNCTION AND ITS INVERSE\n\n\\[\\begin{align*} \\sin({\\sin}^{-1}x)&= x\\qquad \\text{for } -1\\leq x\\leq 1\\\\ \\cos({\\cos}^{-1}x)&= x\\qquad \\text{for } -1\\leq x\\leq 1\\\\ \\tan({\\tan}^{-1}x)&= x\\qquad \\text{for } -\\infty<x<\\infty\\\\ {\\sin}^{-1}(\\sin x)&= x\\qquad \\text{only for } -\\dfrac{\\pi}{2}\\leq x\\leq \\dfrac{\\pi}{2}\\\\ {\\cos}^{-1}(\\cos x)&= x\\qquad \\text{only for } 0\\leq x\\leq \\pi\\\\ {\\tan}^{-1}(\\tan x)& =x\\qquad \\text{only for } -\\dfrac{\\pi}{2}< x< \\dfrac{\\pi}{2} \\end{align*}\\]\n\nQ&A\n\nIs it correct that \\({\\sin}^{−1}(\\sin x)=x\\)?\n\nNo. This equation is correct ifx x belongs to the restricted domain\\(\\left[−\\dfrac{\\pi}{2},\\dfrac{\\pi}{2}\\right]\\), but sine is defined for all real input values, and for \\(x\\) outside the restricted interval, the equation is not correct because its inverse always returns a value in \\(\\left[ −\\dfrac{\\pi}{2},\\dfrac{\\pi}{2} \\right]\\). The situation is similar for cosine and tangent and their inverses. For example, \\({\\sin}^{−1}\\left(\\sin\\left(\\dfrac{3\\pi}{4}\\right)\\right)=\\dfrac{\\pi}{4}\\).\n\n1. If \\(\\theta\\) is in the restricted domain of \\(f\\), then \\(f^{−1}(f(\\theta))=\\theta\\).\n\n2. If not, then find an angle \\(\\phi\\) within the restricted domain off f such that \\(f(\\phi)=f(\\theta)\\). Then \\(f^{−1}(f(\\theta))=\\phi\\).\n\nExample \\(\\PageIndex{5}\\): Using Inverse Trigonometric Functions\n\nEvaluate the following:\n\n1. \\({\\sin}^{−1}\\left (\\sin \\left(\\dfrac{\\pi}{3}\\right )\\right )\\)\n\n2. \\({\\sin}^{−1}\\left (\\sin \\left(\\dfrac{2\\pi}{3}\\right )\\right )\\)\n\n3. \\({\\cos}^{−1}\\left (\\cos \\left (\\dfrac{2\\pi}{3}\\right )\\right )\\)\n\n4. \\({\\cos}^{−1}\\left (\\cos \\left (−\\dfrac{\\pi}{3}\\right )\\right )\\)\n\nSolution\n\n1. \\(\\dfrac{\\pi}{3}\\) is in \\(\\left[−\\dfrac{\\pi}{2},\\dfrac{\\pi}{2}\\right]\\), so \\({\\sin}^{−1}\\left(\\sin\\left(\\dfrac{\\pi}{3}\\right)\\right)=\\dfrac{\\pi}{3}\\).\n\n2. \\(\\dfrac{2\\pi}{3}\\) is not in \\(\\left[−\\dfrac{\\pi}{2},\\dfrac{\\pi}{2}\\right]\\), but \\(sin\\left(\\dfrac{2\\pi}{3}\\right)=sin\\left(\\dfrac{\\pi}{3}\\right)\\), so \\({\\sin}^{−1}\\left(\\sin\\left(\\dfrac{2\\pi}{3}\\right)\\right)=\\dfrac{\\pi}{3}\\).\n\n3. \\(\\dfrac{2\\pi}{3}\\) is in \\([ 0,\\pi ]\\), so \\({\\cos}^{−1}\\left(\\cos\\left(\\dfrac{2\\pi}{3}\\right)\\right)=\\dfrac{2\\pi}{3}\\).\n\n4. \\(-\\dfrac{\\pi}{3}\\) is not in \\([ 0,\\pi ]\\), but \\(\\cos\\left(−\\dfrac{\\pi}{3}\\right)=\\cos\\left(\\dfrac{\\pi}{3}\\right)\\) because cosine is an even function. \\(\\dfrac{\\pi}{3}\\) is in \\([ 0,\\pi ]\\), so \\({\\cos}^{−1}\\left(\\cos\\left(−\\dfrac{\\pi}{3}\\right)\\right)=\\dfrac{\\pi}{3}\\).\n\nExercise \\(\\PageIndex{5}\\)\n\nEvaluate \\({\\tan}^{−1}\\left(\\tan\\left(\\dfrac{\\pi}{8}\\right)\\right)\\) and \\({\\tan}^{−1}\\left(\\tan\\left(\\dfrac{11\\pi}{9}\\right)\\right)\\).\n\nAnswer\n\n\\(\\dfrac{\\pi}{8}\\); \\(\\dfrac{2\\pi}{9}\\)\n\nEvaluating Compositions of the Form \\(f^{-1}(g(x))\\)\n\nNow that we can compose a trigonometric function with its inverse, we can explore how to evaluate a composition of a trigonometric function and the inverse of another trigonometric function. We will begin with compositions of the form \\(f^{-1}(g(x))\\). For special values of \\(x\\),we can exactly evaluate the inner function and then the outer, inverse function. However, we can find a more general approach by considering the relation between the two acute angles of a right triangle where one is \\(\\theta\\), making the other \\(\\dfrac{\\pi}{2}−\\theta\\).Consider the sine and cosine of each angle of the right triangle in Figure \\(\\PageIndex{10}\\).\n\n[Figure: An illustration of a right triangle with angles theta and pi/2 - theta. Opposite the angle theta and adjacent the angle pi/2-theta is the side a. Adjacent the angle theta and opposite the angle pi/2 - theta is the side b. The hypoteneuse is labeled c.]\n\nFigure \\(\\PageIndex{10}\\): Right triangle illustrating the cofunction relationships\n\nBecause \\(\\cos \\theta=\\dfrac{b}{c}=sin\\left(\\dfrac{\\pi}{2}−\\theta\\right)\\), we have \\({\\sin}^{−1}(\\cos \\theta)=\\dfrac{\\pi}{2}−\\theta\\) if \\(0≤\\theta≤\\pi\\). If \\(\\theta\\) is not in this domain, then we need to find another angle that has the same cosine as \\(\\theta\\) and does belong to the restricted domain; we then subtract this angle from \\(\\dfrac{\\pi}{2}\\).Similarly, \\(\\sin \\theta=\\dfrac{a}{c}=\\cos\\left(\\dfrac{\\pi}{2}−\\theta\\right)\\), so \\({\\cos}^{−1}(\\sin \\theta)=\\dfrac{\\pi}{2}−\\theta\\) if \\(−\\dfrac{\\pi}{2}≤\\theta≤\\dfrac{\\pi}{2}\\). These are just the function-cofunction relationships presented in another way.\n\nGiven functions of the form \\({\\sin}^{−1}(\\cos x)\\) and \\({\\cos}^{−1}(\\sin x)\\), evaluate them.\n\n1. If \\(x\\) is in \\([ 0,\\pi ]\\), then \\({\\sin}^{−1}(\\cos x)=\\dfrac{\\pi}{2}−x\\).\n\n2. If \\(x\\) is not in \\([ 0,\\pi ]\\), then find another angle \\(y\\) in \\([ 0,\\pi ]\\) such that \\(\\cos y=\\cos x\\).\n\n\\[{\\sin}^{−1}(\\cos x)=\\dfrac{\\pi}{2}−y\\]\n\n3. If \\(x\\) is in \\(\\left[ −\\dfrac{\\pi}{2},\\dfrac{\\pi}{2} \\right]\\), then \\({\\cos}^{−1}(\\sin x)=\\dfrac{\\pi}{2}−x\\).\n\n4. If \\(x\\) is not in \\(\\left[ −\\dfrac{\\pi}{2},\\dfrac{\\pi}{2} \\right]\\), then find another angle \\(y\\) in \\(\\left[ −\\dfrac{\\pi}{2},\\dfrac{\\pi}{2} \\right]\\) such that \\(\\sin y=\\sin x\\).\n\n\\[{\\cos}^{−1}(\\sin x)=\\dfrac{\\pi}{2}−y\\]\n\nExample \\(\\PageIndex{6}\\): Evaluating the Composition of an Inverse Sine with a Cosine\n\nEvaluate \\({\\sin}^{−1}\\left(\\cos\\left(\\dfrac{13\\pi}{6}\\right)\\right)\\)\n\n1. by direct evaluation.\n\n2. by the method described previously.\n\nSolution\n\n1. Here, we can directly evaluate the inside of the composition. \\[\\begin{align*} \\cos\\left(\\dfrac{13\\pi}{6}\\right)&= \\cos\\left (\\dfrac{\\pi}{6}+2\\pi\\right )\\\\ &= \\cos\\left (\\dfrac{\\pi}{6}\\right )\\\\ &= \\dfrac{\\sqrt{3}}{2} \\end{align*}\\] Now, we can evaluate the inverse function as we did earlier. \\[{\\sin}^{−1}\\left (\\dfrac{\\sqrt{3}}{2}\\right )=\\dfrac{\\pi}{3}\\]\n\n2. We have \\(x=\\dfrac{13\\pi}{6}\\), \\(y=\\dfrac{\\pi}{6}\\), and \\[\\begin{align*} {\\sin}^{-1}\\left (\\cos \\left (\\dfrac{13\\pi}{6} \\right ) \\right )&= \\dfrac{\\pi}{2}-\\dfrac{\\pi}{6}\\\\ &= \\dfrac{\\pi}{3} \\end{align*}\\]\n\nExercise \\(\\PageIndex{6}\\)\n\nEvaluate \\({\\cos}^{−1}\\left (\\sin\\left (−\\dfrac{11\\pi}{4}\\right )\\right )\\).\n\nAnswer\n\n\\(\\dfrac{3\\pi}{4}\\)\n\nEvaluating Compositions of the Form \\(f(g^{−1}(x))\\)\n\nTo evaluate compositions of the form \\(f(g^{−1}(x))\\), where \\(f\\) and \\(g\\) are any two of the functions sine, cosine, or tangent and \\(x\\) is any input in the domain of \\(g^{−1}\\), we have exact formulas, such as \\(\\sin({\\cos}^{−1}x)=\\sqrt{1−x^2}\\). When we need to use them, we can derive these formulas by using the trigonometric relations between the angles and sides of a right triangle, together with the use of Pythagoras’s relation between the lengths of the sides. We can use the Pythagorean identity, \\({\\sin}^2 x+{\\cos}^2 x=1\\), to solve for one when given the other. We can also use the inverse trigonometric functions to find compositions involving algebraic expressions.\n\nExample \\(\\PageIndex{7}\\): Evaluating the Composition of a Sine with an Inverse Cosine\n\nFind an exact value for \\(\\sin\\left({\\cos}^{−1}\\left(\\dfrac{4}{5}\\right)\\right)\\).\n\nSolution\n\nBeginning with the inside, we can say there is some angle such that \\(\\theta={\\cos}^{−1}\\left (\\dfrac{4}{5}\\right )\\), which means \\(\\cos \\theta=\\dfrac{4}{5}\\), and we are looking for \\(\\sin \\theta\\). We can use the Pythagorean identity to do this.\n\n\\[\\begin{align*} {\\sin}^2 \\theta+{\\cos}^2 \\theta&= 1\\qquad \\text{Use our known value for cosine}\\\\ {\\sin}^2 \\theta+{\\left (\\dfrac{4}{5} \\right )}^2&= 1\\qquad \\text{Solve for sine}\\\\ {\\sin}^2 \\theta&= 1-\\dfrac{16}{25}\\\\ \\sin \\theta&=\\pm \\dfrac{9}{25}\\\\ &= \\pm \\dfrac{3}{5} \\end{align*}\\]\n\nSince \\(\\theta={\\cos}^{−1}\\left (\\dfrac{4}{5}\\right )\\) is in quadrant I, \\(\\sin \\theta\\) must be positive, so the solution is \\(35\\). See Figure \\(\\PageIndex{11}\\).\n\n[Figure: An illustration of a right triangle with an angle theta. Oppostie the angle theta is a side with length 3. Adjacent the angle theta is a side with length 4. The hypoteneuse has angle of length 5.]\n\nFigure \\(\\PageIndex{11}\\): Right triangle illustrating that if \\(\\cos \\theta=\\dfrac{4}{5}\\), then \\(\\sin \\theta=\\dfrac{3}{5}\\)\n\nWe know that the inverse cosine always gives an angle on the interval \\([ 0,\\pi ]\\), so we know that the sine of that angle must be positive; therefore \\(\\sin \\left ({\\cos}^{−1}\\left (\\dfrac{4}{5} \\right ) \\right )=\\sin \\theta=\\dfrac{3}{5}\\).\n\nExercise \\(\\PageIndex{7}\\)\n\nEvaluate \\(\\cos \\left ({\\tan}^{−1} \\left (\\dfrac{5}{12} \\right ) \\right )\\).\n\nAnswer\n\n\\(\\frac{12}{13}\\)\n\nExample \\(\\PageIndex{8}\\): Evaluating the Composition of a Sine with an Inverse Tangent\n\nFind an exact value for \\(\\sin\\left({\\tan}^{−1}\\left(\\dfrac{7}{4}\\right)\\right)\\).\n\nSolution\n\nWhile we could use a similar technique as in Example \\(\\PageIndex{6}\\), we will demonstrate a different technique here. From the inside, we know there is an angle such that \\(\\tan \\theta=\\dfrac{7}{4}\\). We can envision this as the opposite and adjacent sides on a right triangle, as shown in Figure \\(\\PageIndex{12}\\).\n\n[Figure: An illustration of a right triangle with angle theta. Adjacent the angle theta is a side with length 4. Opposite the angle theta is a side with length 7.]\n\nFigure \\(\\PageIndex{12}\\): A right triangle with two sides known\n\nUsing the Pythagorean Theorem, we can find the hypotenuse of this triangle.\n\n\\[\\begin{align*}\n\n4^2+7^2&= {hypotenuse}^2\\\\\n\nhypotenuse&=\\sqrt{65}\\\\\n\n\\text {Now, we can evaluate the sine of the angle as the opposite side divided by the hypotenuse.}\\\\\n\n\\sin \\theta&= \\dfrac{7}{\\sqrt{65}}\\\\\n\n\\text {This gives us our desired composition.}\\\\\n\n\\sin \\left ({\\tan}^{-1} \\left (\\dfrac{7}{4} \\right ) \\right )&= \\sin \\theta\\\\\n\n&= \\dfrac{7}{\\sqrt{65}}\\\\\n\n&= \\dfrac{7\\sqrt{65}}{65}\n\n\\end{align*}\\]\n\nExercise \\(\\PageIndex{8}\\)\n\nEvaluate \\(\\cos\\left({\\sin}^{−1}\\left(\\dfrac{7}{9}\\right)\\right)\\).\n\nAnswer\n\n\\(\\dfrac{4\\sqrt{2}}{9}\\)\n\nExample \\(\\PageIndex{9}\\): Finding the Cosine of the Inverse Sine of an Algebraic Expression\n\nFind a simplified expression for \\(\\cos\\left({\\sin}^{−1}\\left(\\dfrac{x}{3}\\right)\\right)\\) for \\(−3≤x≤3\\).\n\nSolution\n\nWe know there is an angle \\(\\theta\\) such that \\(\\sin \\theta=\\dfrac{x}{3}\\).\n\n\\[\\begin{align*} {\\sin}^2 \\theta+{\\cos}^2 \\theta&= 1\\qquad \\text{Use the Pythagorean Theorem}\\\\ {\\left (\\dfrac{x}{3}\\right )}^2+{\\cos}^2 \\theta&= 1\\qquad \\text{Solve for cosine}\\\\ {\\cos}^2 \\theta&= 1-\\dfrac{x^2}{9}\\\\ \\cos \\theta &= \\pm \\sqrt{\\dfrac{9-x^2}{9}}\\\\ &= \\pm \\sqrt{\\dfrac{9-x^2}{3}} \\end{align*}\\]\n\nBecause we know that the inverse sine must give an angle on the interval \\([ −\\dfrac{\\pi}{2},\\dfrac{\\pi}{2} ]\\), we can deduce that the cosine of that angle must be positive.\n\n\\(cos\\left({\\sin}^{−1}\\left(\\dfrac{x}{3}\\right)\\right)=\\sqrt{\\dfrac{9-x^2}{3}}\\)\n\nExercise \\(\\PageIndex{9}\\)\n\nFind a simplified expression for \\(\\sin({\\tan}^{−1}(4x))\\) for \\(−\\dfrac{1}{4}≤x≤\\dfrac{1}{4}\\).\n\nAnswer\n\n\\(\\dfrac{4x}{\\sqrt{16x^2+1}}\\)\n\nMedia\n\nAccess this online resource for additional instruction and practice with inverse trigonometric functions.\n\nEvaluate Expressions Involving Inverse Trigonometric Functions\n\nVisit this website for additional practice questions from Learningpod.\n\nKey Concepts\n\nAn inverse function is one that “undoes” another function. The domain of an inverse function is the range of the original function and the range of an inverse function is the domain of the original function.\n\nBecause the trigonometric functions are not one-to-one on their natural domains, inverse trigonometric functions are defined for restricted domains.\n\nFor any trigonometric function \\(f(x)\\), if \\(x=f^{−1}(y)\\), then \\(f(x)=y\\). However, \\(f(x)=y\\) only implies \\(x=f^{−1}(y)\\) if \\(x\\) is in the restricted domain of \\(f\\). See Example \\(\\PageIndex{1}\\).\n\nSpecial angles are the outputs of inverse trigonometric functions for special input values; for example, \\(\\frac{\\pi}{4}={\\tan}^{−1}(1)\\) and \\(\\frac{\\pi}{6}={\\sin}^{−1}(\\frac{1}{2})\\).See Example \\(\\PageIndex{2}\\).\n\nA calculator will return an angle within the restricted domain of the original trigonometric function. See Example \\(\\PageIndex{3}\\).\n\nInverse functions allow us to find an angle when given two sides of a right triangle. See Example \\(\\PageIndex{4}\\).\n\nIn function composition, if the inside function is an inverse trigonometric function, then there are exact expressions; for example,\\(\\sin({\\cos}^{−1}(x))=\\sqrt{1−x^2}\\). See Example \\(\\PageIndex{5}\\).\n\nIf the inside function is a trigonometric function, then the only possible combinations are \\({\\sin}^{−1}(\\cos x)=\\frac{\\pi}{2}−x\\) if \\(0≤x≤\\pi\\) and \\({\\cos}^{−1}(\\sin x)=\\frac{\\pi}{2}−x\\) if \\(−\\frac{\\pi}{2}≤x≤\\frac{\\pi}{2}\\). See Example \\(\\PageIndex{6}\\) and Example \\(\\PageIndex{7}\\).\n\nWhen evaluating the composition of a trigonometric function with an inverse trigonometric function, draw a reference triangle to assist in determining the ratio of sides that represents the output of the trigonometric function. See Example \\(\\PageIndex{8}\\).\n\nWhen evaluating the composition of a trigonometric function with an inverse trigonometric function, you may use trig identities to assist in determining the ratio of sides. See Example \\(\\PageIndex{9}\\).\n\nThis page titled 8.3: Inverse Trigonometric Functions was last modified on Thu, 26 Dec 2024 22:30:41 GMT and is shared under a CC BY  4.0  license and was authored, remixed, and/or curated by OpenStax via source content that was edited to the style and standards of the LibreTexts platform.",
+  "figures": [
+    {
+      "url": "https://math.libretexts.org/@api/deki/files/6939/CNX_Precalc_Figure_06_03_013.jpg?revision=1",
+      "alt": "A chart that says “Trig Functinos”, “Inverse Trig Functions”, “Domain: Measure of an angle”, “Domain: Ratio”, “Range: Ratio”, and “Range: Measure of an angle”.",
+      "credit": ""
+    },
+    {
+      "url": "https://math.libretexts.org/@api/deki/files/6940/CNX_Precalc_Figure_06_03_001.jpg?revision=1",
+      "alt": "Two side-by-side graphs. The first graph, graph A, shows half of a period of the function sine of x. The second graph, graph B, shows half a period of the function cosine of x.",
+      "credit": ""
+    },
+    {
+      "url": "https://math.libretexts.org/@api/deki/files/6941/CNX_Precalc_Figure_06_03_003.jpg?revision=1",
+      "alt": "A graph of one period of tangent of x, from -pi/2 to pi/2.",
+      "credit": ""
+    },
+    {
+      "url": "https://math.libretexts.org/@api/deki/files/6942/CNX_Precalc_Figure_06_03_004n.jpg?revision=1",
+      "alt": "A graph of the functions of sine of x and arc sine of x. There is a dotted line y=x between the two graphs, to show inverse nature of the two functions",
+      "credit": ""
+    },
+    {
+      "url": "https://math.libretexts.org/@api/deki/files/6943/CNX_Precalc_Figure_06_03_005n.jpg?revision=1",
+      "alt": "A graph of the functions of cosine of x and arc cosine of x. There is a dotted line at y=x to show the inverse nature of the two functions.",
+      "credit": ""
+    },
+    {
+      "url": "https://math.libretexts.org/@api/deki/files/6944/CNX_Precalc_Figure_06_03_006n.jpg?revision=1",
+      "alt": "A graph of the functions of tangent of x and arc tangent of x. There is a dotted line at y=x to show the inverse nature of the two functions.",
+      "credit": ""
+    },
+    {
+      "url": "https://math.libretexts.org/@api/deki/files/6945/CNX_Precalc_Figure_06_03_012.jpg?revision=1",
+      "alt": "An illustration of a right triangle with an angle theta. Adjacent to theta is the side a, opposite theta is the side p, and the hypoteneuse is side h.",
+      "credit": ""
+    },
+    {
+      "url": "https://math.libretexts.org/@api/deki/files/6946/CNX_Precalc_Figure_06_03_007.jpg?revision=1",
+      "alt": "An illustration of a right triangle with the angle theta. Adjacent to the angle theta is a side with a length of 9 and a hypoteneuse of length 12.",
+      "credit": ""
+    },
+    {
+      "url": "https://math.libretexts.org/@api/deki/files/6947/CNX_Precalc_Figure_06_03_008.jpg?revision=1",
+      "alt": "An illustration of a right triangle with the angle theta. Opposite to the angle theta is a side with a length of 6 and a hypoteneuse of length 10.",
+      "credit": ""
+    },
+    {
+      "url": "https://math.libretexts.org/@api/deki/files/6948/CNX_Precalc_Figure_06_03_009.jpg?revision=1",
+      "alt": "An illustration of a right triangle with angles theta and pi/2 - theta. Opposite the angle theta and adjacent the angle pi/2-theta is the side a. Adjacent the angle theta and opposite the angle pi/2 - theta is the side b. The hypoteneuse is labeled c.",
+      "credit": ""
+    },
+    {
+      "url": "https://math.libretexts.org/@api/deki/files/6949/CNX_Precalc_Figure_06_03_010.jpg?revision=1",
+      "alt": "An illustration of a right triangle with an angle theta. Oppostie the angle theta is a side with length 3. Adjacent the angle theta is a side with length 4. The hypoteneuse has angle of length 5.",
+      "credit": ""
+    },
+    {
+      "url": "https://math.libretexts.org/@api/deki/files/6950/CNX_Precalc_Figure_06_03_011n.jpg?revision=1",
+      "alt": "An illustration of a right triangle with angle theta. Adjacent the angle theta is a side with length 4. Opposite the angle theta is a side with length 7.",
+      "credit": ""
+    }
+  ],
+  "references": [
+    {
+      "text": "8.3: Inverse Trigonometric Functions",
+      "url": "https://math.libretexts.org/Bookshelves/Algebra/Algebra_and_Trigonometry_1e_(OpenStax)/08%3A_Periodic_Functions/8.03%3A_Inverse_Trigonometric_Functions"
+    },
+    {
+      "text": "CC BY  4.0",
+      "url": "https://creativecommons.org/licenses/by/4.0"
+    },
+    {
+      "text": "OpenStax",
+      "url": "https://openstax.org/"
+    },
+    {
+      "text": "source content",
+      "url": "https://openstax.org/details/books/precalculus"
+    }
+  ],
+  "exercises": [
+    {
+      "ordinal": 1,
+      "sourceNumber": "",
+      "sourceAnchor": "",
+      "kind": "example-or-exercise",
+      "context": "For angles in the interval \\(\\left[ −\\dfrac{\\pi}{2},\\dfrac{\\pi}{2} \\right]\\), if \\(\\sin y=x\\), then \\({\\sin}^{−1}x=y\\).\n\nFor angles in the interval \\([ 0,\\pi ]\\), if \\(\\cos y=x\\), then \\({\\cos}^{−1}x=y\\).\n\nFor angles in the interval \\(\\left(−\\dfrac{\\pi}{2},\\dfrac{\\pi}{2}\\right )\\), if \\(\\tan y=x\\),then \\({\\tan}^{−1}x=y\\).",
+      "original": "Example \\(\\PageIndex{1}\\): Writing a Relation for an Inverse Function\n\nGiven \\(\\sin\\left(\\dfrac{5\\pi}{12}\\right)≈0.96593\\), write a relation involving the inverse sine.\n\nSolution\n\nUse the relation for the inverse sine. If \\(\\sin y=x\\), then \\({\\sin}^{−1}x=y\\).\n\nIn this problem, \\(x=0.96593\\), and \\(y=\\dfrac{5\\pi}{12}\\).\n\n\\({\\sin}^{−1}(0.96593)≈\\dfrac{5\\pi}{12}\\)",
+      "prompt": "Example \\(\\PageIndex{1}\\): Writing a Relation for an Inverse Function\n\nGiven \\(\\sin\\left(\\dfrac{5\\pi}{12}\\right)≈0.96593\\), write a relation involving the inverse sine.\n\nSolution\n\nUse the relation for the inverse sine. If \\(\\sin y=x\\), then \\({\\sin}^{−1}x=y\\).\n\nIn this problem, \\(x=0.96593\\), and \\(y=\\dfrac{5\\pi}{12}\\).\n\n\\({\\sin}^{−1}(0.96593)≈\\dfrac{5\\pi}{12}\\)",
+      "sourceAnswers": [],
+      "hasFigure": false,
+      "status": "draft",
+      "answerVerified": false,
+      "translationStatus": "pending",
+      "mappingStatus": "pending"
+    },
+    {
+      "ordinal": 2,
+      "sourceNumber": "",
+      "sourceAnchor": "",
+      "kind": "exercise-candidate",
+      "context": "For angles in the interval \\(\\left[ −\\dfrac{\\pi}{2},\\dfrac{\\pi}{2} \\right]\\), if \\(\\sin y=x\\), then \\({\\sin}^{−1}x=y\\).\n\nFor angles in the interval \\([ 0,\\pi ]\\), if \\(\\cos y=x\\), then \\({\\cos}^{−1}x=y\\).\n\nFor angles in the interval \\(\\left(−\\dfrac{\\pi}{2},\\dfrac{\\pi}{2}\\right )\\), if \\(\\tan y=x\\),then \\({\\tan}^{−1}x=y\\).",
+      "original": "Exercise \\(\\PageIndex{1}\\)\n\nGiven \\(\\cos(0.5)≈0.8776\\),write a relation involving the inverse cosine.\n\nAnswer\n\n\\(\\arccos(0.8776)≈0.5\\)",
+      "prompt": "Exercise \\(\\PageIndex{1}\\)\n\nGiven \\(\\cos(0.5)≈0.8776\\),write a relation involving the inverse cosine.",
+      "sourceAnswers": [
+        "\\(\\arccos(0.8776)≈0.5\\)"
+      ],
+      "hasFigure": false,
+      "status": "draft",
+      "answerVerified": false,
+      "translationStatus": "pending",
+      "mappingStatus": "pending"
+    },
+    {
+      "ordinal": 3,
+      "sourceNumber": "1",
+      "sourceAnchor": "",
+      "kind": "exercise-candidate",
+      "context": "Finding the Exact Value of Expressions Involving the Inverse Sine, Cosine, and Tangent Functions\n\nNow that we can identify inverse functions, we will learn to evaluate them. For most values in their domains, we must evaluate the inverse trigonometric functions by using a calculator, interpolating from a table, or using some other numerical technique. Just as we did with the original trigonometric functions, we can give exact values for the inverse functions when we are using the special angles, specifically \\(\\dfrac{\\pi}{6}\\)(30°), \\(\\dfrac{\\pi}{4}\\)(45°), and \\(\\dfrac{\\pi}{3}\\)(60°), and their reflections into other quadrants.",
+      "original": "1. Find angle \\(x\\) for which the original trigonometric function has an output equal to the given input for the inverse trigonometric function.",
+      "prompt": "1. Find angle \\(x\\) for which the original trigonometric function has an output equal to the given input for the inverse trigonometric function.",
+      "sourceAnswers": [],
+      "hasFigure": false,
+      "status": "draft",
+      "answerVerified": false,
+      "translationStatus": "pending",
+      "mappingStatus": "pending"
+    },
+    {
+      "ordinal": 4,
+      "sourceNumber": "2",
+      "sourceAnchor": "",
+      "kind": "exercise-candidate",
+      "context": "Finding the Exact Value of Expressions Involving the Inverse Sine, Cosine, and Tangent Functions\n\nNow that we can identify inverse functions, we will learn to evaluate them. For most values in their domains, we must evaluate the inverse trigonometric functions by using a calculator, interpolating from a table, or using some other numerical technique. Just as we did with the original trigonometric functions, we can give exact values for the inverse functions when we are using the special angles, specifically \\(\\dfrac{\\pi}{6}\\)(30°), \\(\\dfrac{\\pi}{4}\\)(45°), and \\(\\dfrac{\\pi}{3}\\)(60°), and their reflections into other quadrants.",
+      "original": "2. If \\(x\\) is not in the defined range of the inverse, find another angle \\(y\\) that is in the defined range and has the same sine, cosine, or tangent as \\(x\\),depending on which corresponds to the given inverse function.",
+      "prompt": "2. If \\(x\\) is not in the defined range of the inverse, find another angle \\(y\\) that is in the defined range and has the same sine, cosine, or tangent as \\(x\\),depending on which corresponds to the given inverse function.",
+      "sourceAnswers": [],
+      "hasFigure": false,
+      "status": "draft",
+      "answerVerified": false,
+      "translationStatus": "pending",
+      "mappingStatus": "pending"
+    },
+    {
+      "ordinal": 5,
+      "sourceNumber": "",
+      "sourceAnchor": "",
+      "kind": "example-or-exercise",
+      "context": "Finding the Exact Value of Expressions Involving the Inverse Sine, Cosine, and Tangent Functions\n\nNow that we can identify inverse functions, we will learn to evaluate them. For most values in their domains, we must evaluate the inverse trigonometric functions by using a calculator, interpolating from a table, or using some other numerical technique. Just as we did with the original trigonometric functions, we can give exact values for the inverse functions when we are using the special angles, specifically \\(\\dfrac{\\pi}{6}\\)(30°), \\(\\dfrac{\\pi}{4}\\)(45°), and \\(\\dfrac{\\pi}{3}\\)(60°), and their reflections into other quadrants.",
+      "original": "Example \\(\\PageIndex{2}\\): Evaluating Inverse Trigonometric Functions for Special Input Values\n\nEvaluate each of the following.\n\n1. \\({\\sin}^{−1}\\left(\\dfrac{1}{2}\\right)\\)\n\n2. \\({\\sin}^{−1}\\left(−\\dfrac{\\sqrt{2}}{2}\\right)\\)\n\n3. \\({\\cos}^{−1}\\left(−\\dfrac{\\sqrt{3}}{2}\\right)\\)\n\n4. \\({\\tan}^{−1}(1)\\)\n\nSolution\n\n1. Evaluating \\({\\sin}^{−1}\\left(\\dfrac{1}{2}\\right)\\) is the same as determining the angle that would have a sine value of \\(\\dfrac{1}{2}\\). In other words, what angle \\(x\\) would satisfy \\(\\sin(x)=\\dfrac{1}{2}\\)? There are multiple values that would satisfy this relationship, such as \\(\\dfrac{\\pi}{6}\\) and \\(\\dfrac{5\\pi}{6}\\), but we know we need the angle in the interval \\(\\left[ −\\dfrac{\\pi}{2},\\dfrac{\\pi}{2} \\right]\\), so the answer will be \\({\\sin}^{−1}\\left (\\dfrac{1}{2}\\right)=\\dfrac{\\pi}{6}\\). Remember that the inverse is a function, so for each input, we will get exactly one output.\n\n2. To evaluate \\({\\sin}^{−1}\\left(−\\dfrac{\\sqrt{2}}{2}\\right)\\), we know that \\(\\dfrac{5\\pi}{4}\\) and \\(\\dfrac{7\\pi}{4}\\) both have a sine value of \\(-\\dfrac{\\sqrt{2}}{2}\\), but neither is in the interval \\(\\left[ −\\dfrac{\\pi}{2},\\dfrac{\\pi}{2} \\right]\\). For that, we need the negative angle coterminal with \\(\\dfrac{7\\pi}{4}\\): \\({\\sin}^{−1}\\left(−\\dfrac{\\sqrt{2}}{2}\\right)=−\\dfrac{\\pi}{4}\\).\n\n3. To evaluate \\({\\cos}^{−1}\\left(−\\dfrac{\\sqrt{3}}{2}\\right)\\), we are looking for an angle in the interval \\([ 0,\\pi ]\\) with a cosine value of \\(-\\dfrac{\\sqrt{3}}{2}\\). The angle that satisfies this is \\({\\cos}^{−1}\\left(−\\dfrac{\\sqrt{3}}{2}\\right)=\\dfrac{5\\pi}{6}\\).\n\n4. Evaluating \\({\\tan}^{−1}(1)\\), we are looking for an angle in the interval \\(\\left(−\\dfrac{\\pi}{2},\\dfrac{\\pi}{2}\\right)\\) with a tangent value of \\(1\\). The correct angle is \\({\\tan}^{−1}(1)=\\dfrac{\\pi}{4}\\).",
+      "prompt": "Example \\(\\PageIndex{2}\\): Evaluating Inverse Trigonometric Functions for Special Input Values\n\nEvaluate each of the following.\n\n1. \\({\\sin}^{−1}\\left(\\dfrac{1}{2}\\right)\\)\n\n2. \\({\\sin}^{−1}\\left(−\\dfrac{\\sqrt{2}}{2}\\right)\\)\n\n3. \\({\\cos}^{−1}\\left(−\\dfrac{\\sqrt{3}}{2}\\right)\\)\n\n4. \\({\\tan}^{−1}(1)\\)\n\nSolution\n\n1. Evaluating \\({\\sin}^{−1}\\left(\\dfrac{1}{2}\\right)\\) is the same as determining the angle that would have a sine value of \\(\\dfrac{1}{2}\\). In other words, what angle \\(x\\) would satisfy \\(\\sin(x)=\\dfrac{1}{2}\\)? There are multiple values that would satisfy this relationship, such as \\(\\dfrac{\\pi}{6}\\) and \\(\\dfrac{5\\pi}{6}\\), but we know we need the angle in the interval \\(\\left[ −\\dfrac{\\pi}{2},\\dfrac{\\pi}{2} \\right]\\), so the answer will be \\({\\sin}^{−1}\\left (\\dfrac{1}{2}\\right)=\\dfrac{\\pi}{6}\\). Remember that the inverse is a function, so for each input, we will get exactly one output.\n\n2. To evaluate \\({\\sin}^{−1}\\left(−\\dfrac{\\sqrt{2}}{2}\\right)\\), we know that \\(\\dfrac{5\\pi}{4}\\) and \\(\\dfrac{7\\pi}{4}\\) both have a sine value of \\(-\\dfrac{\\sqrt{2}}{2}\\), but neither is in the interval \\(\\left[ −\\dfrac{\\pi}{2},\\dfrac{\\pi}{2} \\right]\\). For that, we need the negative angle coterminal with \\(\\dfrac{7\\pi}{4}\\): \\({\\sin}^{−1}\\left(−\\dfrac{\\sqrt{2}}{2}\\right)=−\\dfrac{\\pi}{4}\\).\n\n3. To evaluate \\({\\cos}^{−1}\\left(−\\dfrac{\\sqrt{3}}{2}\\right)\\), we are looking for an angle in the interval \\([ 0,\\pi ]\\) with a cosine value of \\(-\\dfrac{\\sqrt{3}}{2}\\). The angle that satisfies this is \\({\\cos}^{−1}\\left(−\\dfrac{\\sqrt{3}}{2}\\right)=\\dfrac{5\\pi}{6}\\).\n\n4. Evaluating \\({\\tan}^{−1}(1)\\), we are looking for an angle in the interval \\(\\left(−\\dfrac{\\pi}{2},\\dfrac{\\pi}{2}\\right)\\) with a tangent value of \\(1\\). The correct angle is \\({\\tan}^{−1}(1)=\\dfrac{\\pi}{4}\\).",
+      "sourceAnswers": [],
+      "hasFigure": false,
+      "status": "draft",
+      "answerVerified": false,
+      "translationStatus": "pending",
+      "mappingStatus": "pending"
+    },
+    {
+      "ordinal": 6,
+      "sourceNumber": "",
+      "sourceAnchor": "",
+      "kind": "exercise-candidate",
+      "context": "Finding the Exact Value of Expressions Involving the Inverse Sine, Cosine, and Tangent Functions\n\nNow that we can identify inverse functions, we will learn to evaluate them. For most values in their domains, we must evaluate the inverse trigonometric functions by using a calculator, interpolating from a table, or using some other numerical technique. Just as we did with the original trigonometric functions, we can give exact values for the inverse functions when we are using the special angles, specifically \\(\\dfrac{\\pi}{6}\\)(30°), \\(\\dfrac{\\pi}{4}\\)(45°), and \\(\\dfrac{\\pi}{3}\\)(60°), and their reflections into other quadrants.",
+      "original": "Exercise \\(\\PageIndex{2}\\)\n\nEvaluate each of the following.\n\n1. \\({\\sin}^{−1}(−1)\\)\n\n2. \\({\\tan}^{−1}(−1)\\)\n\n3. \\({\\cos}^{−1}(−1)\\)\n\n4. \\({\\cos}^{−1}\\left(\\dfrac{1}{2}\\right)\\)\n\nAnswer a\n\n\\(-\\dfrac{\\pi}{2}\\)\n\nAnswer b\n\n\\(-\\dfrac{\\pi}{4}\\)\n\nAnswer c\n\n\\(\\pi\\)\n\nAnswer d\n\n\\(\\dfrac{\\pi}{3}\\)",
+      "prompt": "Exercise \\(\\PageIndex{2}\\)\n\nEvaluate each of the following.\n\n1. \\({\\sin}^{−1}(−1)\\)\n\n2. \\({\\tan}^{−1}(−1)\\)\n\n3. \\({\\cos}^{−1}(−1)\\)\n\n4. \\({\\cos}^{−1}\\left(\\dfrac{1}{2}\\right)\\)",
+      "sourceAnswers": [
+        "\\(-\\dfrac{\\pi}{2}\\)",
+        "\\(-\\dfrac{\\pi}{4}\\)",
+        "\\(\\pi\\)",
+        "\\(\\dfrac{\\pi}{3}\\)"
+      ],
+      "hasFigure": false,
+      "status": "draft",
+      "answerVerified": false,
+      "translationStatus": "pending",
+      "mappingStatus": "pending"
+    },
+    {
+      "ordinal": 7,
+      "sourceNumber": "",
+      "sourceAnchor": "",
+      "kind": "example-or-exercise",
+      "context": "To evaluate inverse trigonometric functions that do not involve the special angles discussed previously, we will need to use a calculator or other type of technology. Most scientific calculators and calculator-emulating applications have specific keys or buttons for the inverse sine, cosine, and tangent functions. These may be labeled, for example, SIN-1, ARCSIN, or ASIN.\n\nIn the previous chapter, we worked with trigonometry on a right triangle to solve for the sides of a triangle given one side and an additional angle. Using the inverse trigonometric functions, we can solve for the angles of a right triangle given two sides, and we can use a calculator to find the values to several decimal places.\n\nIn these examples and exercises, the answers will be interpreted as angles and we will use \\(\\theta\\) as the independent variable. The value displayed on the calculator may be in degrees or radians, so be sure to set the mode appropriate to the application.",
+      "original": "Example \\(\\PageIndex{3}\\): Evaluating the Inverse Sine on a Calculator\n\nEvaluate \\({\\sin}^{−1}(0.97)\\) using a calculator.\n\nSolution\n\nBecause the output of the inverse function is an angle, the calculator will give us a degree value if in degree mode and a radian value if in radian mode. Calculators also use the same domain restrictions on the angles as we are using.\n\nIn radian mode, \\({\\sin}^{−1}(0.97)≈1.3252\\). In degree mode, \\({\\sin}^{−1}(0.97)≈75.93°\\). Note that in calculus and beyond we will use radians in almost all cases.",
+      "prompt": "Example \\(\\PageIndex{3}\\): Evaluating the Inverse Sine on a Calculator\n\nEvaluate \\({\\sin}^{−1}(0.97)\\) using a calculator.\n\nSolution\n\nBecause the output of the inverse function is an angle, the calculator will give us a degree value if in degree mode and a radian value if in radian mode. Calculators also use the same domain restrictions on the angles as we are using.\n\nIn radian mode, \\({\\sin}^{−1}(0.97)≈1.3252\\). In degree mode, \\({\\sin}^{−1}(0.97)≈75.93°\\). Note that in calculus and beyond we will use radians in almost all cases.",
+      "sourceAnswers": [],
+      "hasFigure": false,
+      "status": "draft",
+      "answerVerified": false,
+      "translationStatus": "pending",
+      "mappingStatus": "pending"
+    },
+    {
+      "ordinal": 8,
+      "sourceNumber": "",
+      "sourceAnchor": "",
+      "kind": "exercise-candidate",
+      "context": "To evaluate inverse trigonometric functions that do not involve the special angles discussed previously, we will need to use a calculator or other type of technology. Most scientific calculators and calculator-emulating applications have specific keys or buttons for the inverse sine, cosine, and tangent functions. These may be labeled, for example, SIN-1, ARCSIN, or ASIN.\n\nIn the previous chapter, we worked with trigonometry on a right triangle to solve for the sides of a triangle given one side and an additional angle. Using the inverse trigonometric functions, we can solve for the angles of a right triangle given two sides, and we can use a calculator to find the values to several decimal places.\n\nIn these examples and exercises, the answers will be interpreted as angles and we will use \\(\\theta\\) as the independent variable. The value displayed on the calculator may be in degrees or radians, so be sure to set the mode appropriate to the application.",
+      "original": "Exercise \\(\\PageIndex{3}\\)\n\nEvaluate \\({\\cos}^{−1}(−0.4)\\) using a calculator.\n\nAnswer\n\n\\(1.9823\\) or \\(113.578^{\\circ}\\)",
+      "prompt": "Exercise \\(\\PageIndex{3}\\)\n\nEvaluate \\({\\cos}^{−1}(−0.4)\\) using a calculator.",
+      "sourceAnswers": [
+        "\\(1.9823\\) or \\(113.578^{\\circ}\\)"
+      ],
+      "hasFigure": false,
+      "status": "draft",
+      "answerVerified": false,
+      "translationStatus": "pending",
+      "mappingStatus": "pending"
+    },
+    {
+      "ordinal": 9,
+      "sourceNumber": "1",
+      "sourceAnchor": "",
+      "kind": "exercise-candidate",
+      "context": "To evaluate inverse trigonometric functions that do not involve the special angles discussed previously, we will need to use a calculator or other type of technology. Most scientific calculators and calculator-emulating applications have specific keys or buttons for the inverse sine, cosine, and tangent functions. These may be labeled, for example, SIN-1, ARCSIN, or ASIN.\n\nIn the previous chapter, we worked with trigonometry on a right triangle to solve for the sides of a triangle given one side and an additional angle. Using the inverse trigonometric functions, we can solve for the angles of a right triangle given two sides, and we can use a calculator to find the values to several decimal places.\n\nIn these examples and exercises, the answers will be interpreted as angles and we will use \\(\\theta\\) as the independent variable. The value displayed on the calculator may be in degrees or radians, so be sure to set the mode appropriate to the application.",
+      "original": "1. If one given side is the hypotenuse of length \\(h\\) and the side of length \\(a\\) adjacent to the desired angle is given, use the equation \\(\\theta={\\cos}^{−1}\\left(\\dfrac{a}{h}\\right)\\).",
+      "prompt": "1. If one given side is the hypotenuse of length \\(h\\) and the side of length \\(a\\) adjacent to the desired angle is given, use the equation \\(\\theta={\\cos}^{−1}\\left(\\dfrac{a}{h}\\right)\\).",
+      "sourceAnswers": [],
+      "hasFigure": false,
+      "status": "draft",
+      "answerVerified": false,
+      "translationStatus": "pending",
+      "mappingStatus": "pending"
+    },
+    {
+      "ordinal": 10,
+      "sourceNumber": "2",
+      "sourceAnchor": "",
+      "kind": "exercise-candidate",
+      "context": "To evaluate inverse trigonometric functions that do not involve the special angles discussed previously, we will need to use a calculator or other type of technology. Most scientific calculators and calculator-emulating applications have specific keys or buttons for the inverse sine, cosine, and tangent functions. These may be labeled, for example, SIN-1, ARCSIN, or ASIN.\n\nIn the previous chapter, we worked with trigonometry on a right triangle to solve for the sides of a triangle given one side and an additional angle. Using the inverse trigonometric functions, we can solve for the angles of a right triangle given two sides, and we can use a calculator to find the values to several decimal places.\n\nIn these examples and exercises, the answers will be interpreted as angles and we will use \\(\\theta\\) as the independent variable. The value displayed on the calculator may be in degrees or radians, so be sure to set the mode appropriate to the application.",
+      "original": "2. If one given side is the hypotenuse of length \\(h\\) and the side of length \\(p\\) opposite to the desired angle is given, use the equation \\(\\theta={\\sin}^{−1}\\left(\\dfrac{p}{h}\\right)\\).",
+      "prompt": "2. If one given side is the hypotenuse of length \\(h\\) and the side of length \\(p\\) opposite to the desired angle is given, use the equation \\(\\theta={\\sin}^{−1}\\left(\\dfrac{p}{h}\\right)\\).",
+      "sourceAnswers": [],
+      "hasFigure": false,
+      "status": "draft",
+      "answerVerified": false,
+      "translationStatus": "pending",
+      "mappingStatus": "pending"
+    },
+    {
+      "ordinal": 11,
+      "sourceNumber": "3",
+      "sourceAnchor": "",
+      "kind": "exercise-candidate",
+      "context": "To evaluate inverse trigonometric functions that do not involve the special angles discussed previously, we will need to use a calculator or other type of technology. Most scientific calculators and calculator-emulating applications have specific keys or buttons for the inverse sine, cosine, and tangent functions. These may be labeled, for example, SIN-1, ARCSIN, or ASIN.\n\nIn the previous chapter, we worked with trigonometry on a right triangle to solve for the sides of a triangle given one side and an additional angle. Using the inverse trigonometric functions, we can solve for the angles of a right triangle given two sides, and we can use a calculator to find the values to several decimal places.\n\nIn these examples and exercises, the answers will be interpreted as angles and we will use \\(\\theta\\) as the independent variable. The value displayed on the calculator may be in degrees or radians, so be sure to set the mode appropriate to the application.",
+      "original": "3. If the two legs (the sides adjacent to the right angle) are given, then use the equation \\(\\theta={\\tan}^{−1}\\left(\\dfrac{p}{a}\\right)\\).",
+      "prompt": "3. If the two legs (the sides adjacent to the right angle) are given, then use the equation \\(\\theta={\\tan}^{−1}\\left(\\dfrac{p}{a}\\right)\\).",
+      "sourceAnswers": [],
+      "hasFigure": false,
+      "status": "draft",
+      "answerVerified": false,
+      "translationStatus": "pending",
+      "mappingStatus": "pending"
+    },
+    {
+      "ordinal": 12,
+      "sourceNumber": "",
+      "sourceAnchor": "",
+      "kind": "example-or-exercise",
+      "context": "To evaluate inverse trigonometric functions that do not involve the special angles discussed previously, we will need to use a calculator or other type of technology. Most scientific calculators and calculator-emulating applications have specific keys or buttons for the inverse sine, cosine, and tangent functions. These may be labeled, for example, SIN-1, ARCSIN, or ASIN.\n\nIn the previous chapter, we worked with trigonometry on a right triangle to solve for the sides of a triangle given one side and an additional angle. Using the inverse trigonometric functions, we can solve for the angles of a right triangle given two sides, and we can use a calculator to find the values to several decimal places.\n\nIn these examples and exercises, the answers will be interpreted as angles and we will use \\(\\theta\\) as the independent variable. The value displayed on the calculator may be in degrees or radians, so be sure to set the mode appropriate to the application.",
+      "original": "Example \\(\\PageIndex{4}\\): Applying the Inverse Cosine to a Right Triangle\n\nSolve the triangle in Figure \\(\\PageIndex{8}\\) for the angle \\(\\theta\\).\n\n[Figure: An illustration of a right triangle with the angle theta. Adjacent to the angle theta is a side with a length of 9 and a hypoteneuse of length 12.]\n\nFigure \\(\\PageIndex{8}\\)\n\nSolution\n\nBecause we know the hypotenuse and the side adjacent to the angle, it makes sense for us to use the cosine function.\n\n\\[\\begin{align*} \\cos \\theta&= \\dfrac{9}{12}\\\\ \\theta&= {\\cos}^{-1}\\left(\\dfrac{9}{12}\\right)\\qquad \\text{Apply definition of the inverse}\\\\ \\theta&\\approx 0.7227\\qquad \\text{or about } 41.4096^{\\circ} \\text{ Evaluate} \\end{align*}\\]",
+      "prompt": "Example \\(\\PageIndex{4}\\): Applying the Inverse Cosine to a Right Triangle\n\nSolve the triangle in Figure \\(\\PageIndex{8}\\) for the angle \\(\\theta\\).\n\n[Figure: An illustration of a right triangle with the angle theta. Adjacent to the angle theta is a side with a length of 9 and a hypoteneuse of length 12.]\n\nFigure \\(\\PageIndex{8}\\)\n\nSolution\n\nBecause we know the hypotenuse and the side adjacent to the angle, it makes sense for us to use the cosine function.\n\n\\[\\begin{align*} \\cos \\theta&= \\dfrac{9}{12}\\\\ \\theta&= {\\cos}^{-1}\\left(\\dfrac{9}{12}\\right)\\qquad \\text{Apply definition of the inverse}\\\\ \\theta&\\approx 0.7227\\qquad \\text{or about } 41.4096^{\\circ} \\text{ Evaluate} \\end{align*}\\]",
+      "sourceAnswers": [],
+      "hasFigure": true,
+      "status": "draft",
+      "answerVerified": false,
+      "translationStatus": "pending",
+      "mappingStatus": "pending"
+    },
+    {
+      "ordinal": 13,
+      "sourceNumber": "",
+      "sourceAnchor": "",
+      "kind": "exercise-candidate",
+      "context": "To evaluate inverse trigonometric functions that do not involve the special angles discussed previously, we will need to use a calculator or other type of technology. Most scientific calculators and calculator-emulating applications have specific keys or buttons for the inverse sine, cosine, and tangent functions. These may be labeled, for example, SIN-1, ARCSIN, or ASIN.\n\nIn the previous chapter, we worked with trigonometry on a right triangle to solve for the sides of a triangle given one side and an additional angle. Using the inverse trigonometric functions, we can solve for the angles of a right triangle given two sides, and we can use a calculator to find the values to several decimal places.\n\nIn these examples and exercises, the answers will be interpreted as angles and we will use \\(\\theta\\) as the independent variable. The value displayed on the calculator may be in degrees or radians, so be sure to set the mode appropriate to the application.",
+      "original": "Exercise \\(\\PageIndex{4}\\)\n\nSolve the triangle in Figure \\(\\PageIndex{9}\\) for the angle \\(\\theta\\).\n\n[Figure: An illustration of a right triangle with the angle theta. Opposite to the angle theta is a side with a length of 6 and a hypoteneuse of length 10.]\n\nFigure \\(\\PageIndex{9}\\)\n\nAnswer\n\n\\({\\sin}^{−1}(0.6)=36.87°=0.6435\\) radians",
+      "prompt": "Exercise \\(\\PageIndex{4}\\)\n\nSolve the triangle in Figure \\(\\PageIndex{9}\\) for the angle \\(\\theta\\).\n\n[Figure: An illustration of a right triangle with the angle theta. Opposite to the angle theta is a side with a length of 6 and a hypoteneuse of length 10.]\n\nFigure \\(\\PageIndex{9}\\)",
+      "sourceAnswers": [
+        "\\({\\sin}^{−1}(0.6)=36.87°=0.6435\\) radians"
+      ],
+      "hasFigure": true,
+      "status": "draft",
+      "answerVerified": false,
+      "translationStatus": "pending",
+      "mappingStatus": "pending"
+    },
+    {
+      "ordinal": 14,
+      "sourceNumber": "1",
+      "sourceAnchor": "",
+      "kind": "exercise-candidate",
+      "context": "Is it correct that \\({\\sin}^{−1}(\\sin x)=x\\)?\n\nNo. This equation is correct ifx x belongs to the restricted domain\\(\\left[−\\dfrac{\\pi}{2},\\dfrac{\\pi}{2}\\right]\\), but sine is defined for all real input values, and for \\(x\\) outside the restricted interval, the equation is not correct because its inverse always returns a value in \\(\\left[ −\\dfrac{\\pi}{2},\\dfrac{\\pi}{2} \\right]\\). The situation is similar for cosine and tangent and their inverses. For example, \\({\\sin}^{−1}\\left(\\sin\\left(\\dfrac{3\\pi}{4}\\right)\\right)=\\dfrac{\\pi}{4}\\).",
+      "original": "1. If \\(\\theta\\) is in the restricted domain of \\(f\\), then \\(f^{−1}(f(\\theta))=\\theta\\).",
+      "prompt": "1. If \\(\\theta\\) is in the restricted domain of \\(f\\), then \\(f^{−1}(f(\\theta))=\\theta\\).",
+      "sourceAnswers": [],
+      "hasFigure": false,
+      "status": "draft",
+      "answerVerified": false,
+      "translationStatus": "pending",
+      "mappingStatus": "pending"
+    },
+    {
+      "ordinal": 15,
+      "sourceNumber": "2",
+      "sourceAnchor": "",
+      "kind": "exercise-candidate",
+      "context": "Is it correct that \\({\\sin}^{−1}(\\sin x)=x\\)?\n\nNo. This equation is correct ifx x belongs to the restricted domain\\(\\left[−\\dfrac{\\pi}{2},\\dfrac{\\pi}{2}\\right]\\), but sine is defined for all real input values, and for \\(x\\) outside the restricted interval, the equation is not correct because its inverse always returns a value in \\(\\left[ −\\dfrac{\\pi}{2},\\dfrac{\\pi}{2} \\right]\\). The situation is similar for cosine and tangent and their inverses. For example, \\({\\sin}^{−1}\\left(\\sin\\left(\\dfrac{3\\pi}{4}\\right)\\right)=\\dfrac{\\pi}{4}\\).",
+      "original": "2. If not, then find an angle \\(\\phi\\) within the restricted domain off f such that \\(f(\\phi)=f(\\theta)\\). Then \\(f^{−1}(f(\\theta))=\\phi\\).",
+      "prompt": "2. If not, then find an angle \\(\\phi\\) within the restricted domain off f such that \\(f(\\phi)=f(\\theta)\\). Then \\(f^{−1}(f(\\theta))=\\phi\\).",
+      "sourceAnswers": [],
+      "hasFigure": false,
+      "status": "draft",
+      "answerVerified": false,
+      "translationStatus": "pending",
+      "mappingStatus": "pending"
+    },
+    {
+      "ordinal": 16,
+      "sourceNumber": "",
+      "sourceAnchor": "",
+      "kind": "example-or-exercise",
+      "context": "Is it correct that \\({\\sin}^{−1}(\\sin x)=x\\)?\n\nNo. This equation is correct ifx x belongs to the restricted domain\\(\\left[−\\dfrac{\\pi}{2},\\dfrac{\\pi}{2}\\right]\\), but sine is defined for all real input values, and for \\(x\\) outside the restricted interval, the equation is not correct because its inverse always returns a value in \\(\\left[ −\\dfrac{\\pi}{2},\\dfrac{\\pi}{2} \\right]\\). The situation is similar for cosine and tangent and their inverses. For example, \\({\\sin}^{−1}\\left(\\sin\\left(\\dfrac{3\\pi}{4}\\right)\\right)=\\dfrac{\\pi}{4}\\).",
+      "original": "Example \\(\\PageIndex{5}\\): Using Inverse Trigonometric Functions\n\nEvaluate the following:\n\n1. \\({\\sin}^{−1}\\left (\\sin \\left(\\dfrac{\\pi}{3}\\right )\\right )\\)\n\n2. \\({\\sin}^{−1}\\left (\\sin \\left(\\dfrac{2\\pi}{3}\\right )\\right )\\)\n\n3. \\({\\cos}^{−1}\\left (\\cos \\left (\\dfrac{2\\pi}{3}\\right )\\right )\\)\n\n4. \\({\\cos}^{−1}\\left (\\cos \\left (−\\dfrac{\\pi}{3}\\right )\\right )\\)\n\nSolution\n\n1. \\(\\dfrac{\\pi}{3}\\) is in \\(\\left[−\\dfrac{\\pi}{2},\\dfrac{\\pi}{2}\\right]\\), so \\({\\sin}^{−1}\\left(\\sin\\left(\\dfrac{\\pi}{3}\\right)\\right)=\\dfrac{\\pi}{3}\\).\n\n2. \\(\\dfrac{2\\pi}{3}\\) is not in \\(\\left[−\\dfrac{\\pi}{2},\\dfrac{\\pi}{2}\\right]\\), but \\(sin\\left(\\dfrac{2\\pi}{3}\\right)=sin\\left(\\dfrac{\\pi}{3}\\right)\\), so \\({\\sin}^{−1}\\left(\\sin\\left(\\dfrac{2\\pi}{3}\\right)\\right)=\\dfrac{\\pi}{3}\\).\n\n3. \\(\\dfrac{2\\pi}{3}\\) is in \\([ 0,\\pi ]\\), so \\({\\cos}^{−1}\\left(\\cos\\left(\\dfrac{2\\pi}{3}\\right)\\right)=\\dfrac{2\\pi}{3}\\).\n\n4. \\(-\\dfrac{\\pi}{3}\\) is not in \\([ 0,\\pi ]\\), but \\(\\cos\\left(−\\dfrac{\\pi}{3}\\right)=\\cos\\left(\\dfrac{\\pi}{3}\\right)\\) because cosine is an even function. \\(\\dfrac{\\pi}{3}\\) is in \\([ 0,\\pi ]\\), so \\({\\cos}^{−1}\\left(\\cos\\left(−\\dfrac{\\pi}{3}\\right)\\right)=\\dfrac{\\pi}{3}\\).",
+      "prompt": "Example \\(\\PageIndex{5}\\): Using Inverse Trigonometric Functions\n\nEvaluate the following:\n\n1. \\({\\sin}^{−1}\\left (\\sin \\left(\\dfrac{\\pi}{3}\\right )\\right )\\)\n\n2. \\({\\sin}^{−1}\\left (\\sin \\left(\\dfrac{2\\pi}{3}\\right )\\right )\\)\n\n3. \\({\\cos}^{−1}\\left (\\cos \\left (\\dfrac{2\\pi}{3}\\right )\\right )\\)\n\n4. \\({\\cos}^{−1}\\left (\\cos \\left (−\\dfrac{\\pi}{3}\\right )\\right )\\)\n\nSolution\n\n1. \\(\\dfrac{\\pi}{3}\\) is in \\(\\left[−\\dfrac{\\pi}{2},\\dfrac{\\pi}{2}\\right]\\), so \\({\\sin}^{−1}\\left(\\sin\\left(\\dfrac{\\pi}{3}\\right)\\right)=\\dfrac{\\pi}{3}\\).\n\n2. \\(\\dfrac{2\\pi}{3}\\) is not in \\(\\left[−\\dfrac{\\pi}{2},\\dfrac{\\pi}{2}\\right]\\), but \\(sin\\left(\\dfrac{2\\pi}{3}\\right)=sin\\left(\\dfrac{\\pi}{3}\\right)\\), so \\({\\sin}^{−1}\\left(\\sin\\left(\\dfrac{2\\pi}{3}\\right)\\right)=\\dfrac{\\pi}{3}\\).\n\n3. \\(\\dfrac{2\\pi}{3}\\) is in \\([ 0,\\pi ]\\), so \\({\\cos}^{−1}\\left(\\cos\\left(\\dfrac{2\\pi}{3}\\right)\\right)=\\dfrac{2\\pi}{3}\\).\n\n4. \\(-\\dfrac{\\pi}{3}\\) is not in \\([ 0,\\pi ]\\), but \\(\\cos\\left(−\\dfrac{\\pi}{3}\\right)=\\cos\\left(\\dfrac{\\pi}{3}\\right)\\) because cosine is an even function. \\(\\dfrac{\\pi}{3}\\) is in \\([ 0,\\pi ]\\), so \\({\\cos}^{−1}\\left(\\cos\\left(−\\dfrac{\\pi}{3}\\right)\\right)=\\dfrac{\\pi}{3}\\).",
+      "sourceAnswers": [],
+      "hasFigure": false,
+      "status": "draft",
+      "answerVerified": false,
+      "translationStatus": "pending",
+      "mappingStatus": "pending"
+    },
+    {
+      "ordinal": 17,
+      "sourceNumber": "",
+      "sourceAnchor": "",
+      "kind": "exercise-candidate",
+      "context": "Is it correct that \\({\\sin}^{−1}(\\sin x)=x\\)?\n\nNo. This equation is correct ifx x belongs to the restricted domain\\(\\left[−\\dfrac{\\pi}{2},\\dfrac{\\pi}{2}\\right]\\), but sine is defined for all real input values, and for \\(x\\) outside the restricted interval, the equation is not correct because its inverse always returns a value in \\(\\left[ −\\dfrac{\\pi}{2},\\dfrac{\\pi}{2} \\right]\\). The situation is similar for cosine and tangent and their inverses. For example, \\({\\sin}^{−1}\\left(\\sin\\left(\\dfrac{3\\pi}{4}\\right)\\right)=\\dfrac{\\pi}{4}\\).",
+      "original": "Exercise \\(\\PageIndex{5}\\)\n\nEvaluate \\({\\tan}^{−1}\\left(\\tan\\left(\\dfrac{\\pi}{8}\\right)\\right)\\) and \\({\\tan}^{−1}\\left(\\tan\\left(\\dfrac{11\\pi}{9}\\right)\\right)\\).\n\nAnswer\n\n\\(\\dfrac{\\pi}{8}\\); \\(\\dfrac{2\\pi}{9}\\)",
+      "prompt": "Exercise \\(\\PageIndex{5}\\)\n\nEvaluate \\({\\tan}^{−1}\\left(\\tan\\left(\\dfrac{\\pi}{8}\\right)\\right)\\) and \\({\\tan}^{−1}\\left(\\tan\\left(\\dfrac{11\\pi}{9}\\right)\\right)\\).",
+      "sourceAnswers": [
+        "\\(\\dfrac{\\pi}{8}\\); \\(\\dfrac{2\\pi}{9}\\)"
+      ],
+      "hasFigure": false,
+      "status": "draft",
+      "answerVerified": false,
+      "translationStatus": "pending",
+      "mappingStatus": "pending"
+    },
+    {
+      "ordinal": 18,
+      "sourceNumber": "1",
+      "sourceAnchor": "",
+      "kind": "exercise-candidate",
+      "context": "Evaluating Compositions of the Form \\(f^{-1}(g(x))\\)\n\nNow that we can compose a trigonometric function with its inverse, we can explore how to evaluate a composition of a trigonometric function and the inverse of another trigonometric function. We will begin with compositions of the form \\(f^{-1}(g(x))\\). For special values of \\(x\\),we can exactly evaluate the inner function and then the outer, inverse function. However, we can find a more general approach by considering the relation between the two acute angles of a right triangle where one is \\(\\theta\\), making the other \\(\\dfrac{\\pi}{2}−\\theta\\).Consider the sine and cosine of each angle of the right triangle in Figure \\(\\PageIndex{10}\\).\n\nBecause \\(\\cos \\theta=\\dfrac{b}{c}=sin\\left(\\dfrac{\\pi}{2}−\\theta\\right)\\), we have \\({\\sin}^{−1}(\\cos \\theta)=\\dfrac{\\pi}{2}−\\theta\\) if \\(0≤\\theta≤\\pi\\). If \\(\\theta\\) is not in this domain, then we need to find another angle that has the same cosine as \\(\\theta\\) and does belong to the restricted domain; we then subtract this angle from \\(\\dfrac{\\pi}{2}\\).Similarly, \\(\\sin \\theta=\\dfrac{a}{c}=\\cos\\left(\\dfrac{\\pi}{2}−\\theta\\right)\\), so \\({\\cos}^{−1}(\\sin \\theta)=\\dfrac{\\pi}{2}−\\theta\\) if \\(−\\dfrac{\\pi}{2}≤\\theta≤\\dfrac{\\pi}{2}\\). These are just the function-cofunction relationships presented in another way.",
+      "original": "1. If \\(x\\) is in \\([ 0,\\pi ]\\), then \\({\\sin}^{−1}(\\cos x)=\\dfrac{\\pi}{2}−x\\).",
+      "prompt": "1. If \\(x\\) is in \\([ 0,\\pi ]\\), then \\({\\sin}^{−1}(\\cos x)=\\dfrac{\\pi}{2}−x\\).",
+      "sourceAnswers": [],
+      "hasFigure": false,
+      "status": "draft",
+      "answerVerified": false,
+      "translationStatus": "pending",
+      "mappingStatus": "pending"
+    },
+    {
+      "ordinal": 19,
+      "sourceNumber": "2",
+      "sourceAnchor": "",
+      "kind": "exercise-candidate",
+      "context": "Evaluating Compositions of the Form \\(f^{-1}(g(x))\\)\n\nNow that we can compose a trigonometric function with its inverse, we can explore how to evaluate a composition of a trigonometric function and the inverse of another trigonometric function. We will begin with compositions of the form \\(f^{-1}(g(x))\\). For special values of \\(x\\),we can exactly evaluate the inner function and then the outer, inverse function. However, we can find a more general approach by considering the relation between the two acute angles of a right triangle where one is \\(\\theta\\), making the other \\(\\dfrac{\\pi}{2}−\\theta\\).Consider the sine and cosine of each angle of the right triangle in Figure \\(\\PageIndex{10}\\).\n\nBecause \\(\\cos \\theta=\\dfrac{b}{c}=sin\\left(\\dfrac{\\pi}{2}−\\theta\\right)\\), we have \\({\\sin}^{−1}(\\cos \\theta)=\\dfrac{\\pi}{2}−\\theta\\) if \\(0≤\\theta≤\\pi\\). If \\(\\theta\\) is not in this domain, then we need to find another angle that has the same cosine as \\(\\theta\\) and does belong to the restricted domain; we then subtract this angle from \\(\\dfrac{\\pi}{2}\\).Similarly, \\(\\sin \\theta=\\dfrac{a}{c}=\\cos\\left(\\dfrac{\\pi}{2}−\\theta\\right)\\), so \\({\\cos}^{−1}(\\sin \\theta)=\\dfrac{\\pi}{2}−\\theta\\) if \\(−\\dfrac{\\pi}{2}≤\\theta≤\\dfrac{\\pi}{2}\\). These are just the function-cofunction relationships presented in another way.",
+      "original": "2. If \\(x\\) is not in \\([ 0,\\pi ]\\), then find another angle \\(y\\) in \\([ 0,\\pi ]\\) such that \\(\\cos y=\\cos x\\).\n\n\\[{\\sin}^{−1}(\\cos x)=\\dfrac{\\pi}{2}−y\\]",
+      "prompt": "2. If \\(x\\) is not in \\([ 0,\\pi ]\\), then find another angle \\(y\\) in \\([ 0,\\pi ]\\) such that \\(\\cos y=\\cos x\\).\n\n\\[{\\sin}^{−1}(\\cos x)=\\dfrac{\\pi}{2}−y\\]",
+      "sourceAnswers": [],
+      "hasFigure": false,
+      "status": "draft",
+      "answerVerified": false,
+      "translationStatus": "pending",
+      "mappingStatus": "pending"
+    },
+    {
+      "ordinal": 20,
+      "sourceNumber": "3",
+      "sourceAnchor": "",
+      "kind": "exercise-candidate",
+      "context": "Evaluating Compositions of the Form \\(f^{-1}(g(x))\\)\n\nNow that we can compose a trigonometric function with its inverse, we can explore how to evaluate a composition of a trigonometric function and the inverse of another trigonometric function. We will begin with compositions of the form \\(f^{-1}(g(x))\\). For special values of \\(x\\),we can exactly evaluate the inner function and then the outer, inverse function. However, we can find a more general approach by considering the relation between the two acute angles of a right triangle where one is \\(\\theta\\), making the other \\(\\dfrac{\\pi}{2}−\\theta\\).Consider the sine and cosine of each angle of the right triangle in Figure \\(\\PageIndex{10}\\).\n\nBecause \\(\\cos \\theta=\\dfrac{b}{c}=sin\\left(\\dfrac{\\pi}{2}−\\theta\\right)\\), we have \\({\\sin}^{−1}(\\cos \\theta)=\\dfrac{\\pi}{2}−\\theta\\) if \\(0≤\\theta≤\\pi\\). If \\(\\theta\\) is not in this domain, then we need to find another angle that has the same cosine as \\(\\theta\\) and does belong to the restricted domain; we then subtract this angle from \\(\\dfrac{\\pi}{2}\\).Similarly, \\(\\sin \\theta=\\dfrac{a}{c}=\\cos\\left(\\dfrac{\\pi}{2}−\\theta\\right)\\), so \\({\\cos}^{−1}(\\sin \\theta)=\\dfrac{\\pi}{2}−\\theta\\) if \\(−\\dfrac{\\pi}{2}≤\\theta≤\\dfrac{\\pi}{2}\\). These are just the function-cofunction relationships presented in another way.",
+      "original": "3. If \\(x\\) is in \\(\\left[ −\\dfrac{\\pi}{2},\\dfrac{\\pi}{2} \\right]\\), then \\({\\cos}^{−1}(\\sin x)=\\dfrac{\\pi}{2}−x\\).",
+      "prompt": "3. If \\(x\\) is in \\(\\left[ −\\dfrac{\\pi}{2},\\dfrac{\\pi}{2} \\right]\\), then \\({\\cos}^{−1}(\\sin x)=\\dfrac{\\pi}{2}−x\\).",
+      "sourceAnswers": [],
+      "hasFigure": false,
+      "status": "draft",
+      "answerVerified": false,
+      "translationStatus": "pending",
+      "mappingStatus": "pending"
+    },
+    {
+      "ordinal": 21,
+      "sourceNumber": "4",
+      "sourceAnchor": "",
+      "kind": "exercise-candidate",
+      "context": "Evaluating Compositions of the Form \\(f^{-1}(g(x))\\)\n\nNow that we can compose a trigonometric function with its inverse, we can explore how to evaluate a composition of a trigonometric function and the inverse of another trigonometric function. We will begin with compositions of the form \\(f^{-1}(g(x))\\). For special values of \\(x\\),we can exactly evaluate the inner function and then the outer, inverse function. However, we can find a more general approach by considering the relation between the two acute angles of a right triangle where one is \\(\\theta\\), making the other \\(\\dfrac{\\pi}{2}−\\theta\\).Consider the sine and cosine of each angle of the right triangle in Figure \\(\\PageIndex{10}\\).\n\nBecause \\(\\cos \\theta=\\dfrac{b}{c}=sin\\left(\\dfrac{\\pi}{2}−\\theta\\right)\\), we have \\({\\sin}^{−1}(\\cos \\theta)=\\dfrac{\\pi}{2}−\\theta\\) if \\(0≤\\theta≤\\pi\\). If \\(\\theta\\) is not in this domain, then we need to find another angle that has the same cosine as \\(\\theta\\) and does belong to the restricted domain; we then subtract this angle from \\(\\dfrac{\\pi}{2}\\).Similarly, \\(\\sin \\theta=\\dfrac{a}{c}=\\cos\\left(\\dfrac{\\pi}{2}−\\theta\\right)\\), so \\({\\cos}^{−1}(\\sin \\theta)=\\dfrac{\\pi}{2}−\\theta\\) if \\(−\\dfrac{\\pi}{2}≤\\theta≤\\dfrac{\\pi}{2}\\). These are just the function-cofunction relationships presented in another way.",
+      "original": "4. If \\(x\\) is not in \\(\\left[ −\\dfrac{\\pi}{2},\\dfrac{\\pi}{2} \\right]\\), then find another angle \\(y\\) in \\(\\left[ −\\dfrac{\\pi}{2},\\dfrac{\\pi}{2} \\right]\\) such that \\(\\sin y=\\sin x\\).\n\n\\[{\\cos}^{−1}(\\sin x)=\\dfrac{\\pi}{2}−y\\]",
+      "prompt": "4. If \\(x\\) is not in \\(\\left[ −\\dfrac{\\pi}{2},\\dfrac{\\pi}{2} \\right]\\), then find another angle \\(y\\) in \\(\\left[ −\\dfrac{\\pi}{2},\\dfrac{\\pi}{2} \\right]\\) such that \\(\\sin y=\\sin x\\).\n\n\\[{\\cos}^{−1}(\\sin x)=\\dfrac{\\pi}{2}−y\\]",
+      "sourceAnswers": [],
+      "hasFigure": false,
+      "status": "draft",
+      "answerVerified": false,
+      "translationStatus": "pending",
+      "mappingStatus": "pending"
+    },
+    {
+      "ordinal": 22,
+      "sourceNumber": "",
+      "sourceAnchor": "",
+      "kind": "example-or-exercise",
+      "context": "Evaluating Compositions of the Form \\(f^{-1}(g(x))\\)\n\nNow that we can compose a trigonometric function with its inverse, we can explore how to evaluate a composition of a trigonometric function and the inverse of another trigonometric function. We will begin with compositions of the form \\(f^{-1}(g(x))\\). For special values of \\(x\\),we can exactly evaluate the inner function and then the outer, inverse function. However, we can find a more general approach by considering the relation between the two acute angles of a right triangle where one is \\(\\theta\\), making the other \\(\\dfrac{\\pi}{2}−\\theta\\).Consider the sine and cosine of each angle of the right triangle in Figure \\(\\PageIndex{10}\\).\n\nBecause \\(\\cos \\theta=\\dfrac{b}{c}=sin\\left(\\dfrac{\\pi}{2}−\\theta\\right)\\), we have \\({\\sin}^{−1}(\\cos \\theta)=\\dfrac{\\pi}{2}−\\theta\\) if \\(0≤\\theta≤\\pi\\). If \\(\\theta\\) is not in this domain, then we need to find another angle that has the same cosine as \\(\\theta\\) and does belong to the restricted domain; we then subtract this angle from \\(\\dfrac{\\pi}{2}\\).Similarly, \\(\\sin \\theta=\\dfrac{a}{c}=\\cos\\left(\\dfrac{\\pi}{2}−\\theta\\right)\\), so \\({\\cos}^{−1}(\\sin \\theta)=\\dfrac{\\pi}{2}−\\theta\\) if \\(−\\dfrac{\\pi}{2}≤\\theta≤\\dfrac{\\pi}{2}\\). These are just the function-cofunction relationships presented in another way.",
+      "original": "Example \\(\\PageIndex{6}\\): Evaluating the Composition of an Inverse Sine with a Cosine\n\nEvaluate \\({\\sin}^{−1}\\left(\\cos\\left(\\dfrac{13\\pi}{6}\\right)\\right)\\)\n\n1. by direct evaluation.\n\n2. by the method described previously.\n\nSolution\n\n1. Here, we can directly evaluate the inside of the composition. \\[\\begin{align*} \\cos\\left(\\dfrac{13\\pi}{6}\\right)&= \\cos\\left (\\dfrac{\\pi}{6}+2\\pi\\right )\\\\ &= \\cos\\left (\\dfrac{\\pi}{6}\\right )\\\\ &= \\dfrac{\\sqrt{3}}{2} \\end{align*}\\] Now, we can evaluate the inverse function as we did earlier. \\[{\\sin}^{−1}\\left (\\dfrac{\\sqrt{3}}{2}\\right )=\\dfrac{\\pi}{3}\\]\n\n2. We have \\(x=\\dfrac{13\\pi}{6}\\), \\(y=\\dfrac{\\pi}{6}\\), and \\[\\begin{align*} {\\sin}^{-1}\\left (\\cos \\left (\\dfrac{13\\pi}{6} \\right ) \\right )&= \\dfrac{\\pi}{2}-\\dfrac{\\pi}{6}\\\\ &= \\dfrac{\\pi}{3} \\end{align*}\\]",
+      "prompt": "Example \\(\\PageIndex{6}\\): Evaluating the Composition of an Inverse Sine with a Cosine\n\nEvaluate \\({\\sin}^{−1}\\left(\\cos\\left(\\dfrac{13\\pi}{6}\\right)\\right)\\)\n\n1. by direct evaluation.\n\n2. by the method described previously.\n\nSolution\n\n1. Here, we can directly evaluate the inside of the composition. \\[\\begin{align*} \\cos\\left(\\dfrac{13\\pi}{6}\\right)&= \\cos\\left (\\dfrac{\\pi}{6}+2\\pi\\right )\\\\ &= \\cos\\left (\\dfrac{\\pi}{6}\\right )\\\\ &= \\dfrac{\\sqrt{3}}{2} \\end{align*}\\] Now, we can evaluate the inverse function as we did earlier. \\[{\\sin}^{−1}\\left (\\dfrac{\\sqrt{3}}{2}\\right )=\\dfrac{\\pi}{3}\\]\n\n2. We have \\(x=\\dfrac{13\\pi}{6}\\), \\(y=\\dfrac{\\pi}{6}\\), and \\[\\begin{align*} {\\sin}^{-1}\\left (\\cos \\left (\\dfrac{13\\pi}{6} \\right ) \\right )&= \\dfrac{\\pi}{2}-\\dfrac{\\pi}{6}\\\\ &= \\dfrac{\\pi}{3} \\end{align*}\\]",
+      "sourceAnswers": [],
+      "hasFigure": false,
+      "status": "draft",
+      "answerVerified": false,
+      "translationStatus": "pending",
+      "mappingStatus": "pending"
+    },
+    {
+      "ordinal": 23,
+      "sourceNumber": "",
+      "sourceAnchor": "",
+      "kind": "exercise-candidate",
+      "context": "Evaluating Compositions of the Form \\(f^{-1}(g(x))\\)\n\nNow that we can compose a trigonometric function with its inverse, we can explore how to evaluate a composition of a trigonometric function and the inverse of another trigonometric function. We will begin with compositions of the form \\(f^{-1}(g(x))\\). For special values of \\(x\\),we can exactly evaluate the inner function and then the outer, inverse function. However, we can find a more general approach by considering the relation between the two acute angles of a right triangle where one is \\(\\theta\\), making the other \\(\\dfrac{\\pi}{2}−\\theta\\).Consider the sine and cosine of each angle of the right triangle in Figure \\(\\PageIndex{10}\\).\n\nBecause \\(\\cos \\theta=\\dfrac{b}{c}=sin\\left(\\dfrac{\\pi}{2}−\\theta\\right)\\), we have \\({\\sin}^{−1}(\\cos \\theta)=\\dfrac{\\pi}{2}−\\theta\\) if \\(0≤\\theta≤\\pi\\). If \\(\\theta\\) is not in this domain, then we need to find another angle that has the same cosine as \\(\\theta\\) and does belong to the restricted domain; we then subtract this angle from \\(\\dfrac{\\pi}{2}\\).Similarly, \\(\\sin \\theta=\\dfrac{a}{c}=\\cos\\left(\\dfrac{\\pi}{2}−\\theta\\right)\\), so \\({\\cos}^{−1}(\\sin \\theta)=\\dfrac{\\pi}{2}−\\theta\\) if \\(−\\dfrac{\\pi}{2}≤\\theta≤\\dfrac{\\pi}{2}\\). These are just the function-cofunction relationships presented in another way.",
+      "original": "Exercise \\(\\PageIndex{6}\\)\n\nEvaluate \\({\\cos}^{−1}\\left (\\sin\\left (−\\dfrac{11\\pi}{4}\\right )\\right )\\).\n\nAnswer\n\n\\(\\dfrac{3\\pi}{4}\\)",
+      "prompt": "Exercise \\(\\PageIndex{6}\\)\n\nEvaluate \\({\\cos}^{−1}\\left (\\sin\\left (−\\dfrac{11\\pi}{4}\\right )\\right )\\).",
+      "sourceAnswers": [
+        "\\(\\dfrac{3\\pi}{4}\\)"
+      ],
+      "hasFigure": false,
+      "status": "draft",
+      "answerVerified": false,
+      "translationStatus": "pending",
+      "mappingStatus": "pending"
+    },
+    {
+      "ordinal": 24,
+      "sourceNumber": "",
+      "sourceAnchor": "",
+      "kind": "example-or-exercise",
+      "context": "Evaluating Compositions of the Form \\(f(g^{−1}(x))\\)\n\nTo evaluate compositions of the form \\(f(g^{−1}(x))\\), where \\(f\\) and \\(g\\) are any two of the functions sine, cosine, or tangent and \\(x\\) is any input in the domain of \\(g^{−1}\\), we have exact formulas, such as \\(\\sin({\\cos}^{−1}x)=\\sqrt{1−x^2}\\). When we need to use them, we can derive these formulas by using the trigonometric relations between the angles and sides of a right triangle, together with the use of Pythagoras’s relation between the lengths of the sides. We can use the Pythagorean identity, \\({\\sin}^2 x+{\\cos}^2 x=1\\), to solve for one when given the other. We can also use the inverse trigonometric functions to find compositions involving algebraic expressions.",
+      "original": "Example \\(\\PageIndex{7}\\): Evaluating the Composition of a Sine with an Inverse Cosine\n\nFind an exact value for \\(\\sin\\left({\\cos}^{−1}\\left(\\dfrac{4}{5}\\right)\\right)\\).\n\nSolution\n\nBeginning with the inside, we can say there is some angle such that \\(\\theta={\\cos}^{−1}\\left (\\dfrac{4}{5}\\right )\\), which means \\(\\cos \\theta=\\dfrac{4}{5}\\), and we are looking for \\(\\sin \\theta\\). We can use the Pythagorean identity to do this.\n\n\\[\\begin{align*} {\\sin}^2 \\theta+{\\cos}^2 \\theta&= 1\\qquad \\text{Use our known value for cosine}\\\\ {\\sin}^2 \\theta+{\\left (\\dfrac{4}{5} \\right )}^2&= 1\\qquad \\text{Solve for sine}\\\\ {\\sin}^2 \\theta&= 1-\\dfrac{16}{25}\\\\ \\sin \\theta&=\\pm \\dfrac{9}{25}\\\\ &= \\pm \\dfrac{3}{5} \\end{align*}\\]\n\nSince \\(\\theta={\\cos}^{−1}\\left (\\dfrac{4}{5}\\right )\\) is in quadrant I, \\(\\sin \\theta\\) must be positive, so the solution is \\(35\\). See Figure \\(\\PageIndex{11}\\).\n\n[Figure: An illustration of a right triangle with an angle theta. Oppostie the angle theta is a side with length 3. Adjacent the angle theta is a side with length 4. The hypoteneuse has angle of length 5.]\n\nFigure \\(\\PageIndex{11}\\): Right triangle illustrating that if \\(\\cos \\theta=\\dfrac{4}{5}\\), then \\(\\sin \\theta=\\dfrac{3}{5}\\)\n\nWe know that the inverse cosine always gives an angle on the interval \\([ 0,\\pi ]\\), so we know that the sine of that angle must be positive; therefore \\(\\sin \\left ({\\cos}^{−1}\\left (\\dfrac{4}{5} \\right ) \\right )=\\sin \\theta=\\dfrac{3}{5}\\).",
+      "prompt": "Example \\(\\PageIndex{7}\\): Evaluating the Composition of a Sine with an Inverse Cosine\n\nFind an exact value for \\(\\sin\\left({\\cos}^{−1}\\left(\\dfrac{4}{5}\\right)\\right)\\).\n\nSolution\n\nBeginning with the inside, we can say there is some angle such that \\(\\theta={\\cos}^{−1}\\left (\\dfrac{4}{5}\\right )\\), which means \\(\\cos \\theta=\\dfrac{4}{5}\\), and we are looking for \\(\\sin \\theta\\). We can use the Pythagorean identity to do this.\n\n\\[\\begin{align*} {\\sin}^2 \\theta+{\\cos}^2 \\theta&= 1\\qquad \\text{Use our known value for cosine}\\\\ {\\sin}^2 \\theta+{\\left (\\dfrac{4}{5} \\right )}^2&= 1\\qquad \\text{Solve for sine}\\\\ {\\sin}^2 \\theta&= 1-\\dfrac{16}{25}\\\\ \\sin \\theta&=\\pm \\dfrac{9}{25}\\\\ &= \\pm \\dfrac{3}{5} \\end{align*}\\]\n\nSince \\(\\theta={\\cos}^{−1}\\left (\\dfrac{4}{5}\\right )\\) is in quadrant I, \\(\\sin \\theta\\) must be positive, so the solution is \\(35\\). See Figure \\(\\PageIndex{11}\\).\n\n[Figure: An illustration of a right triangle with an angle theta. Oppostie the angle theta is a side with length 3. Adjacent the angle theta is a side with length 4. The hypoteneuse has angle of length 5.]\n\nFigure \\(\\PageIndex{11}\\): Right triangle illustrating that if \\(\\cos \\theta=\\dfrac{4}{5}\\), then \\(\\sin \\theta=\\dfrac{3}{5}\\)\n\nWe know that the inverse cosine always gives an angle on the interval \\([ 0,\\pi ]\\), so we know that the sine of that angle must be positive; therefore \\(\\sin \\left ({\\cos}^{−1}\\left (\\dfrac{4}{5} \\right ) \\right )=\\sin \\theta=\\dfrac{3}{5}\\).",
+      "sourceAnswers": [],
+      "hasFigure": true,
+      "status": "draft",
+      "answerVerified": false,
+      "translationStatus": "pending",
+      "mappingStatus": "pending"
+    },
+    {
+      "ordinal": 25,
+      "sourceNumber": "",
+      "sourceAnchor": "",
+      "kind": "exercise-candidate",
+      "context": "Evaluating Compositions of the Form \\(f(g^{−1}(x))\\)\n\nTo evaluate compositions of the form \\(f(g^{−1}(x))\\), where \\(f\\) and \\(g\\) are any two of the functions sine, cosine, or tangent and \\(x\\) is any input in the domain of \\(g^{−1}\\), we have exact formulas, such as \\(\\sin({\\cos}^{−1}x)=\\sqrt{1−x^2}\\). When we need to use them, we can derive these formulas by using the trigonometric relations between the angles and sides of a right triangle, together with the use of Pythagoras’s relation between the lengths of the sides. We can use the Pythagorean identity, \\({\\sin}^2 x+{\\cos}^2 x=1\\), to solve for one when given the other. We can also use the inverse trigonometric functions to find compositions involving algebraic expressions.",
+      "original": "Exercise \\(\\PageIndex{7}\\)\n\nEvaluate \\(\\cos \\left ({\\tan}^{−1} \\left (\\dfrac{5}{12} \\right ) \\right )\\).\n\nAnswer\n\n\\(\\frac{12}{13}\\)",
+      "prompt": "Exercise \\(\\PageIndex{7}\\)\n\nEvaluate \\(\\cos \\left ({\\tan}^{−1} \\left (\\dfrac{5}{12} \\right ) \\right )\\).",
+      "sourceAnswers": [
+        "\\(\\frac{12}{13}\\)"
+      ],
+      "hasFigure": false,
+      "status": "draft",
+      "answerVerified": false,
+      "translationStatus": "pending",
+      "mappingStatus": "pending"
+    },
+    {
+      "ordinal": 26,
+      "sourceNumber": "",
+      "sourceAnchor": "",
+      "kind": "example-or-exercise",
+      "context": "Evaluating Compositions of the Form \\(f(g^{−1}(x))\\)\n\nTo evaluate compositions of the form \\(f(g^{−1}(x))\\), where \\(f\\) and \\(g\\) are any two of the functions sine, cosine, or tangent and \\(x\\) is any input in the domain of \\(g^{−1}\\), we have exact formulas, such as \\(\\sin({\\cos}^{−1}x)=\\sqrt{1−x^2}\\). When we need to use them, we can derive these formulas by using the trigonometric relations between the angles and sides of a right triangle, together with the use of Pythagoras’s relation between the lengths of the sides. We can use the Pythagorean identity, \\({\\sin}^2 x+{\\cos}^2 x=1\\), to solve for one when given the other. We can also use the inverse trigonometric functions to find compositions involving algebraic expressions.",
+      "original": "Example \\(\\PageIndex{8}\\): Evaluating the Composition of a Sine with an Inverse Tangent\n\nFind an exact value for \\(\\sin\\left({\\tan}^{−1}\\left(\\dfrac{7}{4}\\right)\\right)\\).\n\nSolution\n\nWhile we could use a similar technique as in Example \\(\\PageIndex{6}\\), we will demonstrate a different technique here. From the inside, we know there is an angle such that \\(\\tan \\theta=\\dfrac{7}{4}\\). We can envision this as the opposite and adjacent sides on a right triangle, as shown in Figure \\(\\PageIndex{12}\\).\n\n[Figure: An illustration of a right triangle with angle theta. Adjacent the angle theta is a side with length 4. Opposite the angle theta is a side with length 7.]\n\nFigure \\(\\PageIndex{12}\\): A right triangle with two sides known\n\nUsing the Pythagorean Theorem, we can find the hypotenuse of this triangle.\n\n\\[\\begin{align*}\n\n4^2+7^2&= {hypotenuse}^2\\\\\n\nhypotenuse&=\\sqrt{65}\\\\\n\n\\text {Now, we can evaluate the sine of the angle as the opposite side divided by the hypotenuse.}\\\\\n\n\\sin \\theta&= \\dfrac{7}{\\sqrt{65}}\\\\\n\n\\text {This gives us our desired composition.}\\\\\n\n\\sin \\left ({\\tan}^{-1} \\left (\\dfrac{7}{4} \\right ) \\right )&= \\sin \\theta\\\\\n\n&= \\dfrac{7}{\\sqrt{65}}\\\\\n\n&= \\dfrac{7\\sqrt{65}}{65}\n\n\\end{align*}\\]",
+      "prompt": "Example \\(\\PageIndex{8}\\): Evaluating the Composition of a Sine with an Inverse Tangent\n\nFind an exact value for \\(\\sin\\left({\\tan}^{−1}\\left(\\dfrac{7}{4}\\right)\\right)\\).\n\nSolution\n\nWhile we could use a similar technique as in Example \\(\\PageIndex{6}\\), we will demonstrate a different technique here. From the inside, we know there is an angle such that \\(\\tan \\theta=\\dfrac{7}{4}\\). We can envision this as the opposite and adjacent sides on a right triangle, as shown in Figure \\(\\PageIndex{12}\\).\n\n[Figure: An illustration of a right triangle with angle theta. Adjacent the angle theta is a side with length 4. Opposite the angle theta is a side with length 7.]\n\nFigure \\(\\PageIndex{12}\\): A right triangle with two sides known\n\nUsing the Pythagorean Theorem, we can find the hypotenuse of this triangle.\n\n\\[\\begin{align*}\n\n4^2+7^2&= {hypotenuse}^2\\\\\n\nhypotenuse&=\\sqrt{65}\\\\\n\n\\text {Now, we can evaluate the sine of the angle as the opposite side divided by the hypotenuse.}\\\\\n\n\\sin \\theta&= \\dfrac{7}{\\sqrt{65}}\\\\\n\n\\text {This gives us our desired composition.}\\\\\n\n\\sin \\left ({\\tan}^{-1} \\left (\\dfrac{7}{4} \\right ) \\right )&= \\sin \\theta\\\\\n\n&= \\dfrac{7}{\\sqrt{65}}\\\\\n\n&= \\dfrac{7\\sqrt{65}}{65}\n\n\\end{align*}\\]",
+      "sourceAnswers": [],
+      "hasFigure": true,
+      "status": "draft",
+      "answerVerified": false,
+      "translationStatus": "pending",
+      "mappingStatus": "pending"
+    },
+    {
+      "ordinal": 27,
+      "sourceNumber": "",
+      "sourceAnchor": "",
+      "kind": "exercise-candidate",
+      "context": "Evaluating Compositions of the Form \\(f(g^{−1}(x))\\)\n\nTo evaluate compositions of the form \\(f(g^{−1}(x))\\), where \\(f\\) and \\(g\\) are any two of the functions sine, cosine, or tangent and \\(x\\) is any input in the domain of \\(g^{−1}\\), we have exact formulas, such as \\(\\sin({\\cos}^{−1}x)=\\sqrt{1−x^2}\\). When we need to use them, we can derive these formulas by using the trigonometric relations between the angles and sides of a right triangle, together with the use of Pythagoras’s relation between the lengths of the sides. We can use the Pythagorean identity, \\({\\sin}^2 x+{\\cos}^2 x=1\\), to solve for one when given the other. We can also use the inverse trigonometric functions to find compositions involving algebraic expressions.",
+      "original": "Exercise \\(\\PageIndex{8}\\)\n\nEvaluate \\(\\cos\\left({\\sin}^{−1}\\left(\\dfrac{7}{9}\\right)\\right)\\).\n\nAnswer\n\n\\(\\dfrac{4\\sqrt{2}}{9}\\)",
+      "prompt": "Exercise \\(\\PageIndex{8}\\)\n\nEvaluate \\(\\cos\\left({\\sin}^{−1}\\left(\\dfrac{7}{9}\\right)\\right)\\).",
+      "sourceAnswers": [
+        "\\(\\dfrac{4\\sqrt{2}}{9}\\)"
+      ],
+      "hasFigure": false,
+      "status": "draft",
+      "answerVerified": false,
+      "translationStatus": "pending",
+      "mappingStatus": "pending"
+    },
+    {
+      "ordinal": 28,
+      "sourceNumber": "",
+      "sourceAnchor": "",
+      "kind": "example-or-exercise",
+      "context": "Evaluating Compositions of the Form \\(f(g^{−1}(x))\\)\n\nTo evaluate compositions of the form \\(f(g^{−1}(x))\\), where \\(f\\) and \\(g\\) are any two of the functions sine, cosine, or tangent and \\(x\\) is any input in the domain of \\(g^{−1}\\), we have exact formulas, such as \\(\\sin({\\cos}^{−1}x)=\\sqrt{1−x^2}\\). When we need to use them, we can derive these formulas by using the trigonometric relations between the angles and sides of a right triangle, together with the use of Pythagoras’s relation between the lengths of the sides. We can use the Pythagorean identity, \\({\\sin}^2 x+{\\cos}^2 x=1\\), to solve for one when given the other. We can also use the inverse trigonometric functions to find compositions involving algebraic expressions.",
+      "original": "Example \\(\\PageIndex{9}\\): Finding the Cosine of the Inverse Sine of an Algebraic Expression\n\nFind a simplified expression for \\(\\cos\\left({\\sin}^{−1}\\left(\\dfrac{x}{3}\\right)\\right)\\) for \\(−3≤x≤3\\).\n\nSolution\n\nWe know there is an angle \\(\\theta\\) such that \\(\\sin \\theta=\\dfrac{x}{3}\\).\n\n\\[\\begin{align*} {\\sin}^2 \\theta+{\\cos}^2 \\theta&= 1\\qquad \\text{Use the Pythagorean Theorem}\\\\ {\\left (\\dfrac{x}{3}\\right )}^2+{\\cos}^2 \\theta&= 1\\qquad \\text{Solve for cosine}\\\\ {\\cos}^2 \\theta&= 1-\\dfrac{x^2}{9}\\\\ \\cos \\theta &= \\pm \\sqrt{\\dfrac{9-x^2}{9}}\\\\ &= \\pm \\sqrt{\\dfrac{9-x^2}{3}} \\end{align*}\\]\n\nBecause we know that the inverse sine must give an angle on the interval \\([ −\\dfrac{\\pi}{2},\\dfrac{\\pi}{2} ]\\), we can deduce that the cosine of that angle must be positive.\n\n\\(cos\\left({\\sin}^{−1}\\left(\\dfrac{x}{3}\\right)\\right)=\\sqrt{\\dfrac{9-x^2}{3}}\\)",
+      "prompt": "Example \\(\\PageIndex{9}\\): Finding the Cosine of the Inverse Sine of an Algebraic Expression\n\nFind a simplified expression for \\(\\cos\\left({\\sin}^{−1}\\left(\\dfrac{x}{3}\\right)\\right)\\) for \\(−3≤x≤3\\).\n\nSolution\n\nWe know there is an angle \\(\\theta\\) such that \\(\\sin \\theta=\\dfrac{x}{3}\\).\n\n\\[\\begin{align*} {\\sin}^2 \\theta+{\\cos}^2 \\theta&= 1\\qquad \\text{Use the Pythagorean Theorem}\\\\ {\\left (\\dfrac{x}{3}\\right )}^2+{\\cos}^2 \\theta&= 1\\qquad \\text{Solve for cosine}\\\\ {\\cos}^2 \\theta&= 1-\\dfrac{x^2}{9}\\\\ \\cos \\theta &= \\pm \\sqrt{\\dfrac{9-x^2}{9}}\\\\ &= \\pm \\sqrt{\\dfrac{9-x^2}{3}} \\end{align*}\\]\n\nBecause we know that the inverse sine must give an angle on the interval \\([ −\\dfrac{\\pi}{2},\\dfrac{\\pi}{2} ]\\), we can deduce that the cosine of that angle must be positive.\n\n\\(cos\\left({\\sin}^{−1}\\left(\\dfrac{x}{3}\\right)\\right)=\\sqrt{\\dfrac{9-x^2}{3}}\\)",
+      "sourceAnswers": [],
+      "hasFigure": false,
+      "status": "draft",
+      "answerVerified": false,
+      "translationStatus": "pending",
+      "mappingStatus": "pending"
+    },
+    {
+      "ordinal": 29,
+      "sourceNumber": "",
+      "sourceAnchor": "",
+      "kind": "exercise-candidate",
+      "context": "Evaluating Compositions of the Form \\(f(g^{−1}(x))\\)\n\nTo evaluate compositions of the form \\(f(g^{−1}(x))\\), where \\(f\\) and \\(g\\) are any two of the functions sine, cosine, or tangent and \\(x\\) is any input in the domain of \\(g^{−1}\\), we have exact formulas, such as \\(\\sin({\\cos}^{−1}x)=\\sqrt{1−x^2}\\). When we need to use them, we can derive these formulas by using the trigonometric relations between the angles and sides of a right triangle, together with the use of Pythagoras’s relation between the lengths of the sides. We can use the Pythagorean identity, \\({\\sin}^2 x+{\\cos}^2 x=1\\), to solve for one when given the other. We can also use the inverse trigonometric functions to find compositions involving algebraic expressions.",
+      "original": "Exercise \\(\\PageIndex{9}\\)\n\nFind a simplified expression for \\(\\sin({\\tan}^{−1}(4x))\\) for \\(−\\dfrac{1}{4}≤x≤\\dfrac{1}{4}\\).\n\nAnswer\n\n\\(\\dfrac{4x}{\\sqrt{16x^2+1}}\\)",
+      "prompt": "Exercise \\(\\PageIndex{9}\\)\n\nFind a simplified expression for \\(\\sin({\\tan}^{−1}(4x))\\) for \\(−\\dfrac{1}{4}≤x≤\\dfrac{1}{4}\\).",
+      "sourceAnswers": [
+        "\\(\\dfrac{4x}{\\sqrt{16x^2+1}}\\)"
+      ],
+      "hasFigure": false,
+      "status": "draft",
+      "answerVerified": false,
+      "translationStatus": "pending",
+      "mappingStatus": "pending"
+    }
+  ],
+  "license": "CC BY 4.0",
+  "licenseEvidence": "This page titled 8.3: Inverse Trigonometric Functions was last modified on Thu, 26 Dec 2024 22:30:41 GMT and is shared under a CC BY  4.0  license and was authored, remixed, and/or curated by OpenStax via source content that was edited to the style and standards of the LibreTexts platform.",
+  "url": "https://math.libretexts.org/Bookshelves/Algebra/Algebra_and_Trigonometry_1e_(OpenStax)/08:_Periodic_Functions/8.03:_Inverse_Trigonometric_Functions",
+  "sha256": "b007d04b80a530c2f28f8e8374cf5e4f5f9366b17ed24e2c6e6480bbc2ff68e7",
+  "checkedAt": "2026-10-07",
+  "id": "f4ad41039875e146334f",
+  "bookId": "algebra-trigonometry",
+  "licenseInherited": false,
+  "licenseSource": "https://math.libretexts.org/Bookshelves/Algebra/Algebra_and_Trigonometry_1e_(OpenStax)/08:_Periodic_Functions/8.03:_Inverse_Trigonometric_Functions",
+  "licenseUrl": "https://creativecommons.org/licenses/by/4.0/",
+  "authors": "OpenStax / Jay Abramson et al.",
+  "book": "Algebra and Trigonometry 1e",
+  "reviewStatus": "unreviewed",
+  "sourceLanguage": "en",
+  "translationStatus": "pending"
+}

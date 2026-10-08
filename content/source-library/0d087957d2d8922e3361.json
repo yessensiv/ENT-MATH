@@ -1,0 +1,39 @@
+{
+  "title": "13.2: The Correlation Coefficient r",
+  "originalText": "The correlation coefficient, \\(r\\), tells us about the strength and direction of the linear relationship between \\(\\mathrm{X}_1\\) and \\(\\mathrm{X}_2\\).\n\nThe sample data are used to compute \\(r\\), the correlation coefficient for the sample. If we had data for the entire population, we could find the population correlation coefficient. But because we have only sample data, we cannot calculate the population correlation coefficient. The sample correlation coefficient, \\(r\\), is our estimate of the unknown population correlation coefficient.\n\n\\(\\rho=\\) population correlation coefficient (unknown)\n\n\\(r=\\) sample correlation coefficient (known; calculated from sample data)\n\nThe hypothesis test lets us decide whether the value of the population correlation coefficient \\(\\rho\\) is \"close to zero\" or \"significantly different from zero\". We decide this based on the sample correlation coefficient \\(r\\) and the sample size n.\n\nIf the test concludes that the correlation coefficient is significantly different from zero, we say that the correlation coefficient is \"significant.\"\n\nConclusion: There is sufficient evidence to conclude that there is a significant linear relationship between \\(\\mathrm{X}_1\\) and \\(X_2\\) because the correlation coefficient is significantly different from zero.\n\nWhat the conclusion means: There is a significant linear relationship \\(X_1\\) and \\(X_2\\). If the test concludes that the correlation coefficient is not significantly different from zero (it is close to zero), we say that correlation coefficient is \"not significant\".\n\nPerforming the Hypothesis Test\n\nNull Hypothesis: \\(H_0: \\rho=0\\)\n\nAlternate Hypothesis: \\(H_a: \\rho \\neq 0\\)\n\nWhat the Hypotheses Mean in Words\n\nNull Hypothesis \\(\\boldsymbol{H}_0\\) : The population correlation coefficient IS NOT significantly different from zero. There IS NOT a significant linear relationship (correlation) between \\(X_1\\) and \\(X_2\\) in the population.\n\nAlternate Hypothesis \\(\\boldsymbol{H}_a\\) : The population correlation coefficient is significantly different from zero. There is a significant linear relationship (correlation) between \\(X_1\\) and \\(X_2\\) in the population.\n\nDrawing a Conclusion\n\nThere are two methods of making the decision concerning the hypothesis. The test statistic to test this hypothesis is:\n\n\\[t_c=\\dfrac{r}{\\sqrt{\\left(1-r^2\\right) /(n-2)}}\\]\n\nor\n\n\\[t_c=\\dfrac{r \\sqrt{n-2}}{\\sqrt{1-r^2}}\\]\n\nWhere the second formula is an equivalent form of the test statistic, n is the sample size and the degrees of freedom are \\(\\mathrm{n}-2\\). This is a t -statistic and operates in the same way as other t tests. Calculate the t -value and compare that with the critical value from the t-table at the appropriate degrees of freedom and the level of confidence you wish to maintain. If the calculated value is in the tail then cannot accept the null hypothesis that there is no linear relationship between these two independent random variables. If the calculated \\(t\\)-value is NOT in the tailed then cannot reject the null hypothesis that there is no linear relationship between the two variables.\n\nA quick shorthand way to test correlations is the relationship between the sample size and the correlation. If:\n\n\\[|r| \\geq \\dfrac{2}{\\sqrt{n}}\\]\n\nthen this implies that the correlation between the two variables demonstrates that a linear relationship exists and is statistically significant at approximately the 0.05 level of significance. As the formula indicates, there is an inverse relationship between the sample size and the required correlation for significance of a linear relationship. With only 10 observations, the required correlation for significance is 0.6325 , for 30 observations the required correlation for significance decreases to 0.3651 and at 100 observations the required level is only 0.2000 .\n\nCorrelations may be helpful in visualizing the data, but are not appropriately used to \"explain\" a relationship between two variables. Perhaps no single statistic is more misused than the correlation coefficient. Citing correlations between health conditions and everything from place of residence to eye color have the effect of implying a cause and effect relationship. This simply cannot be accomplished with a correlation coefficient. The correlation coefficient is, of course, innocent of this misinterpretation. It is the duty of the analyst to use a statistic that is designed to test for cause and effect relationships and report only those results if they are intending to make such a claim. The problem is that passing this more rigorous test is difficult so lazy and/or unscrupulous \"researchers\" fall back on correlations when they cannot make their case legitimately.\n\nThis page titled 13.2: The Correlation Coefficient r was last modified on Thu, 07 May 2026 20:01:50 GMT and is shared under a CC BY  4.0  license and was authored, remixed, and/or curated by OpenStax via source content that was edited to the style and standards of the LibreTexts platform.",
+  "figures": [],
+  "references": [
+    {
+      "text": "13.2: The Correlation Coefficient r",
+      "url": "https://stats.libretexts.org/Bookshelves/Introductory_Statistics/Introductory_Statistics_2e_(OpenStax)/13%3A_Linear_Regression_and_Correlation/13.02%3A_The_Correlation_Coefficient_r"
+    },
+    {
+      "text": "CC BY  4.0",
+      "url": "https://creativecommons.org/licenses/by/4.0"
+    },
+    {
+      "text": "OpenStax",
+      "url": "https://openstax.org/"
+    },
+    {
+      "text": "source content",
+      "url": "https://openstax.org/details/books/introductory-statistics"
+    }
+  ],
+  "exercises": [],
+  "license": "CC BY 4.0",
+  "licenseEvidence": "This page titled 13.2: The Correlation Coefficient r was last modified on Thu, 07 May 2026 20:01:50 GMT and is shared under a CC BY  4.0  license and was authored, remixed, and/or curated by OpenStax via source content that was edited to the style and standards of the LibreTexts platform.",
+  "url": "https://stats.libretexts.org/Bookshelves/Introductory_Statistics/Introductory_Statistics_2e_(OpenStax)/13:_Linear_Regression_and_Correlation/13.02:_The_Correlation_Coefficient_r",
+  "sha256": "d180ad2e357e2f3d30aa2a5aef8d8b928cc3e1d4b3bfa3537fbde69d8789b6ea",
+  "checkedAt": "2026-10-07",
+  "id": "0d087957d2d8922e3361",
+  "bookId": "statistics",
+  "licenseInherited": false,
+  "licenseSource": "https://stats.libretexts.org/Bookshelves/Introductory_Statistics/Introductory_Statistics_2e_(OpenStax)/13:_Linear_Regression_and_Correlation/13.02:_The_Correlation_Coefficient_r",
+  "licenseUrl": "https://creativecommons.org/licenses/by/4.0/",
+  "authors": "OpenStax / Barbara Illowsky, Susan Dean",
+  "book": "Introductory Statistics 2e",
+  "reviewStatus": "unreviewed",
+  "sourceLanguage": "en",
+  "translationStatus": "pending"
+}

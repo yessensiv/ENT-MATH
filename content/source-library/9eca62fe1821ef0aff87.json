@@ -1,0 +1,360 @@
+{
+  "title": "9.1: Solving Trigonometric Equations with Identities",
+  "originalText": "Learning Objectives\n\nVerify the fundamental trigonometric identities.\n\nSimplify trigonometric expressions using algebra and the identities.\n\nIn espionage movies, we see international spies with multiple passports, each claiming a different identity. However, we know that each of those passports represents the same person. The trigonometric identities act in a similar manner to multiple passports—there are many ways to represent the same trigonometric expression. Just as a spy will choose an Italian passport when traveling to Italy, we choose the identity that applies to the given scenario when solving a trigonometric equation.\n\n[Figure: Photo of international passports.]\n\nFigure \\(\\PageIndex{1}\\): International passports and travel documents\n\nIn this section, we will begin an examination of the fundamental trigonometric identities, including how we can verify them and how we can use them to simplify trigonometric expressions.\n\nVerifying the Fundamental Trigonometric Identities\n\nIdentities enable us to simplify complicated expressions. They are the basic tools of trigonometry used in solving trigonometric equations, just as factoring, finding common denominators, and using special formulas are the basic tools of solving algebraic equations. In fact, we use algebraic techniques constantly to simplify trigonometric expressions. Basic properties and formulas of algebra, such as the difference of squares formula and the perfect squares formula, will simplify the work involved with trigonometric expressions and equations. We already know that all of the trigonometric functions are related because they all are defined in terms of the unit circle. Consequently, any trigonometric identity can be written in many ways.\n\nTo verify the trigonometric identities, we usually start with the more complicated side of the equation and essentially rewrite the expression until it has been transformed into the same expression as the other side of the equation. Sometimes we have to factor expressions, expand expressions, find common denominators, or use other algebraic strategies to obtain the desired result. In this first section, we will work with the fundamental identities: the Pythagorean identities, the even-odd identities, the reciprocal identities, and the quotient identities.\n\nWe will begin with the Pythagorean identities (Table \\(\\PageIndex{1}\\)), which are equations involving trigonometric functions based on the properties of a right triangle. We have already seen and used the first of these identifies, but now we will also use additional identities.\n\n    Table \\(\\PageIndex{1}\\): Pythagorean Identities\n\n            \\({\\sin}^2 \\theta+{\\cos}^2 \\theta=1\\)\t\n            \\(1+{\\cot}^2 \\theta={\\csc}^2 \\theta\\)\t\n            \\(1+{\\tan}^2 \\theta={\\sec}^2 \\theta\\)\t\n\nThe second and third identities can be obtained by manipulating the first. The identity \\(1+{\\cot}^2 \\theta={\\csc}^2 \\theta\\) is found by rewriting the left side of the equation in terms of sine and cosine.\n\nProve: \\(1+{\\cot}^2 \\theta={\\csc}^2 \\theta\\)\n\n\\[\\begin{align*} 1+{\\cot}^2 \\theta&= (1+\\dfrac{{\\cos}^2}{{\\sin}^2})\\qquad \\text{Rewrite the left side}\\\\ &= \\left(\\dfrac{{\\sin}^2}{{\\sin}^2}\\right)+\\left (\\dfrac{{\\cos}^2}{{\\sin}^2}\\right)\\qquad \\text{Write both terms with the common denominator}\\\\ &= \\dfrac{{\\sin}^2+{\\cos}^2}{{\\sin}^2}\\\\ &= \\dfrac{1}{{\\sin}^2}\\\\ &= {\\csc}^2 \\end{align*}\\]\n\nSimilarly,\\(1+{\\tan}^2 \\theta={\\sec}^2 \\theta\\)can be obtained by rewriting the left side of this identity in terms of sine and cosine. This gives\n\n\\[\\begin{align*} 1+{\\tan}^2 \\theta&= 1+{\\left(\\dfrac{\\sin \\theta}{\\cos \\theta}\\right )}^2\\qquad \\text{Rewrite left side}\\\\ &= {\\left (\\dfrac{\\cos \\theta}{\\cos \\theta}\\right )}^2+{\\left (\\dfrac{\\sin \\theta}{\\cos \\theta}\\right)}^2\\qquad \\text{Write both terms with the common denominator}\\\\ &= \\dfrac{{\\cos}^2 \\theta+{\\sin}^2 \\theta}{{\\cos}^2 \\theta}\\\\ &= \\dfrac{1}{{\\cos}^2 \\theta}\\\\ &= {\\sec}^2 \\theta \\end{align*}\\]\n\nRecall that we determined which trigonometric functions are odd and which are even. The next set of fundamental identities is the set of even-odd identities. The even-odd identities relate the value of a trigonometric function at a given angle to the value of the function at the opposite angle (Table \\(\\PageIndex{2}\\)).\n\n    Table \\(\\PageIndex{2}\\): Even-Odd Identities\n\n            \\(\\tan(−\\theta)=−\\tan \\theta\\)\t\n            \\(\\sin(−\\theta)=−\\sin \\theta\\)\t\n            \\(\\cos(−\\theta)=\\cos \\theta\\)\t\n\n            \\(\\cot(−\\theta)=−\\cot \\theta\\)\t\n            \\(\\csc(−\\theta)=−\\csc \\theta\\)\t\n            \\(\\sec(−\\theta)=\\sec \\theta\\)\t\n\nRecall that an odd function is one in which \\(f(−x)= −f(x)\\) for all \\(x\\) in the domain off. f. The sine function is an odd function because \\(\\sin(−\\theta)=−\\sin \\theta\\). The graph of an odd function is symmetric about the origin. For example, consider corresponding inputs of \\(\\dfrac{\\pi}{2}\\) and \\(−\\dfrac{\\pi}{2}\\). The output of \\(\\sin\\left (\\dfrac{\\pi}{2}\\right )\\) is opposite the output of \\(\\sin \\left (−\\dfrac{\\pi}{2}\\right )\\). Thus,\n\n\\[\\begin{align*} \\sin\\left (\\dfrac{\\pi}{2}\\right)&=1 \\\\[4pt] \\sin\\left (-\\dfrac{\\pi}{2}\\right) &=-\\sin\\left (\\dfrac{\\pi}{2}\\right) \\\\[4pt] &=-1 \\end{align*}\\]\n\nThis is shown in Figure \\(\\PageIndex{2}\\).\n\n[Figure: Graph of y=sin(theta) from -2pi to 2pi, showing in particular that it is symmetric about the origin. Points given are (pi/2, 1) and (-pi/2, -1).]\n\nFigure \\(\\PageIndex{2}\\): Graph of \\(y=\\sin \\theta\\)\n\nRecall that an even function is one in which\n\n\\(f(−x)=f(x)\\) for all \\(x\\) in the domain of \\(f\\)\n\nThe graph of an even function is symmetric about the y-axis. The cosine function is an even function because \\(\\cos(−\\theta)=\\cos \\theta\\). For example, consider corresponding inputs \\(\\dfrac{\\pi}{4}\\) and \\(−\\dfrac{\\pi}{4}\\). The output of \\(\\cos\\left (\\dfrac{\\pi}{4}\\right)\\) is the same as the output of \\(\\cos\\left (−\\dfrac{\\pi}{4}\\right)\\). Thus,\n\n\\[\\begin{align*}  \\cos\\left (−\\dfrac{\\pi}{4}\\right ) &=\\cos\\left (\\dfrac{\\pi}{4}\\right)  \\\\[4pt] &≈0.707 \\end{align*}\\]\n\nSee Figure \\(\\PageIndex{3}\\).\n\n[Figure: Graph of y=cos(theta) from -2pi to 2pi, showing in particular that it is symmetric about the y-axis. Points given are (-pi/4, .707) and (pi/4, .707). ]\n\nFigure \\(\\PageIndex{3}\\): Graph of \\(y=\\cos \\theta\\)\n\nFor all \\(\\theta\\) in the domain of the sine and cosine functions, respectively, we can state the following:\n\nSince \\(\\sin(−\\theta)=−\\sin \\theta\\),sine is an odd function.\n\nSince \\(\\cos(−\\theta)=\\cos \\theta\\),cosine is an even function.\n\nThe other even-odd identities follow from the even and odd nature of the sine and cosine functions. For example, consider the tangent identity,\\(\\tan(−\\theta)=−\\tan \\theta\\). We can interpret the tangent of a negative angle as\n\n\\[\\tan (−\\theta)=\\dfrac{\\sin (−\\theta)}{\\cos (−\\theta)}=\\dfrac{−\\sin \\theta}{\\cos \\theta}=−\\tan \\theta. \\nonumber\\]\n\nTangent is therefore an odd function, which means that \\(\\tan(−\\theta)=−\\tan(\\theta)\\) for all \\(\\theta\\) in the domain of the tangent function.\n\nThe cotangent identity, \\(\\cot(−\\theta)=−\\cot \\theta\\),also follows from the sine and cosine identities. We can interpret the cotangent of a negative angle as\n\n\\[\\cot(−\\theta)=\\dfrac{\\cos(−\\theta)}{\\sin(−\\theta)}=\\dfrac{\\cos \\theta}{−\\sin \\theta}=−\\cot \\theta.\\nonumber\\]\n\nCotangent is therefore an odd function, which means that \\(\\cot(−\\theta)=−\\cot(\\theta)\\) for all \\(\\theta\\) in the domain of the cotangent function.\n\nThe cosecant function is the reciprocal of the sine function, which means that the cosecant of a negative angle will be interpreted as\n\n\\[\\csc(−\\theta)=\\dfrac{1}{\\sin(−\\theta)}=\\dfrac{1}{−\\sin \\theta}=−\\csc \\theta. \\nonumber\\]\n\nThe cosecant function is therefore odd.\n\nFinally, the secant function is the reciprocal of the cosine function, and the secant of a negative angle is interpreted as\n\n\\[\\sec(−\\theta)=\\dfrac{1}{\\cos(−\\theta)}=\\dfrac{1}{\\cos \\theta}=\\sec \\theta. \\nonumber\\]\n\nThe secant function is therefore even.\n\nTo sum up, only two of the trigonometric functions, cosine and secant, are even. The other four functions are odd, verifying the even-odd identities.\n\nThe next set of fundamental identities is the set of reciprocal identities, which, as their name implies, relate trigonometric functions that are reciprocals of each other. (Table \\(\\PageIndex{3}\\)). Recall that we first encountered these identities when defining trigonometric functions from right angles in Right Angle Trigonometry.\n\n    Table \\(\\PageIndex{3}\\): Reciprocal Identities\n\n            \\(\\sin \\theta=\\dfrac{1}{\\csc \\theta}\\)\t\n            \\(\\csc \\theta=\\dfrac{1}{\\sin \\theta}\\)\t\n\n            \\(\\cos \\theta = \\dfrac{1}{\\sec \\theta}\\)\t\n            \\(\\sec \\theta=\\dfrac{1}{\\cos \\theta}\\)\t\n\n            \\(\\tan \\theta=\\dfrac{1}{\\cot \\theta}\\)\t\n            \\(\\cot \\theta=\\dfrac{1}{\\tan \\theta}\\)\t\n\nThe final set of identities is the set of quotient identities, which define relationships among certain trigonometric functions and can be very helpful in verifying other identities (Table \\(\\PageIndex{4}\\)).\n\n    Table \\(\\PageIndex{4}\\): Quotient Identities\n\n            \\(\\tan \\theta=\\dfrac{\\sin \\theta}{\\cos \\theta}\\)\t\n            \\(\\cot \\theta=\\dfrac{\\cos \\theta}{\\sin \\theta}\\)\t\n\nThe reciprocal and quotient identities are derived from the definitions of the basic trigonometric functions.\n\nSUMMARIZING TRIGONOMETRIC IDENTITIES\n\nThe Pythagorean identities are based on the properties of a right triangle.\n\n\\[{\\cos}^2 \\theta+{\\sin}^2 \\theta=1\\]\n\n\\[1+{\\cot}^2 \\theta={\\csc}^2 \\theta\\]\n\n\\[1+{\\tan}^2 \\theta={\\sec}^2 \\theta\\]\n\nThe even-odd identities relate the value of a trigonometric function at a given angle to the value of the function at the opposite angle.\n\n\\[\\tan(−\\theta)=−\\tan \\theta\\]\n\n\\[\\cot(−\\theta)=−\\cot \\theta\\]\n\n\\[\\sin(−\\theta)=−\\sin \\theta\\]\n\n\\[\\csc(−\\theta)=−\\csc \\theta\\]\n\n\\[\\cos(−\\theta)=\\cos \\theta\\]\n\n\\[\\sec(−\\theta)=\\sec \\theta\\]\n\nThe reciprocal identities define reciprocals of the trigonometric functions.\n\n\\[\\sin \\theta=\\dfrac{1}{\\csc \\theta}\\]\n\n\\[\\cos \\theta=\\dfrac{1}{\\sec \\theta}\\]\n\n\\[\\tan \\theta=\\dfrac{1}{\\cot \\theta}\\]\n\n\\[\\csc \\theta=\\dfrac{1}{\\sin \\theta}\\]\n\n\\[\\sec \\theta=\\dfrac{1}{\\cos \\theta}\\]\n\n\\[\\cot \\theta=\\dfrac{1}{\\tan \\theta}\\]\n\nThe quotient identities define the relationship among the trigonometric functions.\n\n\\[\\tan \\theta=\\dfrac{\\sin \\theta}{\\cos \\theta}\\]\n\n\\[\\cot \\theta=\\dfrac{\\cos \\theta}{\\sin \\theta}\\]\n\nExample \\(\\PageIndex{1}\\): Graphing the Equations of an Identity\n\nGraph both sides of the identity \\(\\cot \\theta=\\dfrac{1}{\\tan \\theta}\\). In other words, on the graphing calculator, graph \\(y=\\cot \\theta\\) and \\(y=\\dfrac{1}{\\tan \\theta}\\).\n\nSolution\n\nSee Figure \\(\\PageIndex{4}\\).\n\n[Figure: Graph of y = cot(theta) and y=1/tan(theta) from -2pi to 2pi. They are the same!]\n\nFigure \\(\\PageIndex{4}\\)\n\nAnalysis\n\nWe see only one graph because both expressions generate the same image. One is on top of the other. This is a good way to prove any identity. If both expressions give the same graph, then they must be identities.\n\nHow to: Given a trigonometric identity, verify that it is true.\n\n1. Work on one side of the equation. It is usually better to start with the more complex side, as it is easier to simplify than to build.\n\n2. Look for opportunities to factor expressions, square a binomial, or add fractions.\n\n3. Noting which functions are in the final expression, look for opportunities to use the identities and make the proper substitutions.\n\n4. If these steps do not yield the desired result, try converting all terms to sines and cosines.\n\nExample \\(\\PageIndex{2}\\): Verifying a Trigonometric Identity\n\nVerify \\(\\tan \\theta \\cos \\theta=\\sin \\theta\\).\n\nSolution\n\nWe will start on the left side, as it is the more complicated side:\n\n\\[ \\begin{align*} \\tan \\theta \\cos \\theta &=\\left(\\dfrac{\\sin \\theta}{\\cos \\theta}\\right)\\cos \\theta \\\\[4pt] &=\\sin \\theta \\end{align*}\\]\n\nAnalysis\n\nThis identity was fairly simple to verify, as it only required writing \\(\\tan \\theta\\) in terms of \\(\\sin \\theta\\) and \\(\\cos \\theta\\).\n\nExercise \\(\\PageIndex{1}\\)\n\nVerify the identity \\(\\csc \\theta \\cos \\theta \\tan \\theta=1\\).\n\nAnswer\n\n\\[ \\begin{align*}  \\csc \\theta \\cos \\theta \\tan \\theta=\\left(\\dfrac{1}{\\sin \\theta}\\right)\\cos \\theta\\left(\\dfrac{\\sin \\theta}{\\cos \\theta}\\right) \\\\[4pt] & =\\dfrac{\\cos \\theta}{\\sin \\theta}(\\dfrac{\\sin \\theta}{\\cos \\theta}) \\\\[4pt] & =\\dfrac{\\sin \\theta \\cos \\theta}{\\sin \\theta \\cos \\theta} \\\\[4pt] &=1 \\end{align*}\\]\n\nExample \\(\\PageIndex{3A}\\): Verifying the Equivalency Using the Even-Odd Identities\n\nVerify the following equivalency using the even-odd identities:\n\n\\((1+\\sin x)[1+\\sin(−x)]={\\cos}^2 x\\)\n\nSolution\n\nWorking on the left side of the equation, we have\n\n\\( (1+\\sin x)[1+\\sin(−x)]=(1+\\sin x)(1-\\sin x)\\)\n\nSince\n\n\\[\\begin{align*} \\sin(-x)&= -\\sin x \\\\ [5pt] &=1-{\\sin}^2 x\\qquad \\text{Difference of squares} \\\\ [5pt] &={\\cos}^2 x \\\\ {\\cos}^2 x&= 1-{\\sin}^2 x \\\\ \\end{align*}\\]\n\nExample \\(\\PageIndex{3B}\\): Verifying a Trigonometric Identity Involving \\({\\sec}^2 \\theta\\)\n\nVerify the identity \\(\\dfrac{{\\sec}^2 \\theta−1}{{\\sec}^2 \\theta}={\\sin}^2 \\theta\\)\n\nSolution\n\nAs the left side is more complicated, let’s begin there.\n\n\\[\\begin{align*}\n\n\\dfrac{{\\sec}^2 \\theta-1}{{\\sec}^2 \\theta}&= \\dfrac{({\\tan}^2 \\theta +1)-1}{{\\sec}^2 \\theta}\\\\\n\n{\\sec}^2 \\theta&= {\\tan}^2 \\theta +1\\\\\n\n&= \\dfrac{{\\tan}^2 \\theta}{{\\sec}^2 \\theta}\\\\\n\n&= {\\tan}^2 \\theta\\left (\\dfrac{1}{{\\sec}^2 \\theta}\\right )\\\\\n\n&= {\\tan}^2 \\theta \\left ({\\cos}^2 \\theta\\right )\\\\\n\n{\\cos}^2 \\theta&= \\dfrac{1}{{\\sec}^2 \\theta}\\\\\n\n&= \\left (\\dfrac{{\\sin}^2 \\theta}{{\\cos}^2 \\theta}\\right )\\\\\n\n{\\tan}^2 \\theta&= \\dfrac{{\\sin}^2 \\theta}{{\\cos}^2 \\theta}\\\\\n\n&= {\\sin}^2 \\theta\n\n\\end{align*}\\]\n\nThere is more than one way to verify an identity. Here is another possibility. Again, we can start with the left side.\n\n\\[\\begin{align*} \\dfrac{{\\sec}^2 \\theta-1}{{\\sec}^2 \\theta}&= \\dfrac{{\\sec}^2 \\theta}{{\\sec}^2 \\theta}-\\dfrac{1}{{\\sec}^2 \\theta}\\\\ &= 1-{\\cos}^2 \\theta\\\\ &= {\\sin}^2 \\theta \\end{align*}\\]\n\nAnalysis\n\nIn the first method, we used the identity \\({\\sec}^2 \\theta={\\tan}^2 \\theta+1\\) and continued to simplify. In the second method, we split the fraction, putting both terms in the numerator over the common denominator. This problem illustrates that there are multiple ways we can verify an identity. Employing some creativity can sometimes simplify a procedure. As long as the substitutions are correct, the answer will be the same.\n\nExercise \\(\\PageIndex{2}\\)\n\nShow that \\(\\dfrac{\\cot \\theta}{\\csc \\theta}=\\cos \\theta\\).\n\nAnswer\n\n\\[\\begin{align*} \\dfrac{\\cot \\theta}{\\csc \\theta}&= \\dfrac{\\tfrac{\\cos \\theta}{\\sin \\theta}}{\\dfrac{1}{\\sin \\theta}}\\\\ &= \\dfrac{\\cos \\theta}{\\sin \\theta}\\cdot \\dfrac{\\sin \\theta}{1}\\\\ &= \\cos \\theta \\end{align*}\\]\n\nExample \\(\\PageIndex{4}\\): Creating and Verifying an Identity\n\nCreate an identity for the expression \\(2 \\tan \\theta \\sec \\theta\\) by rewriting strictly in terms of sine.\n\nSolution\n\nThere are a number of ways to begin, but here we will use the quotient and reciprocal identities to rewrite the expression:\n\n\\[\\begin{align*} 2 \\tan \\theta \\sec \\theta&= 2\\left (\\dfrac{\\sin \\theta}{\\cos \\theta}\\right )\\left(\\dfrac{1}{\\cos \\theta}\\right )\\\\ &= \\dfrac{2\\sin \\theta}{{\\cos}^2 \\theta}\\\\ &= \\dfrac{2\\sin \\theta}{1-{\\sin}^2 \\theta}\\qquad \\text{Substitute } 1-{\\sin}^2 \\theta \\text{ for } {\\cos}^2 \\theta \\end{align*}\\]\n\nThus,\n\n\\(2 \\tan \\theta \\sec \\theta=\\dfrac{2 \\sin \\theta}{1−{\\sin}^2 \\theta}\\)\n\nExample \\(\\PageIndex{5}\\): Verifying an Identity Using Algebra and Even/Odd Identities\n\nVerify the identity:\n\n\\(\\dfrac{{\\sin}^2(−\\theta)−{\\cos}^2(−\\theta)}{\\sin(−\\theta)−\\cos(−\\theta)}=\\cos \\theta−\\sin \\theta\\)\n\nSolution\n\nLet’s start with the left side and simplify:\n\n\\[\\begin{align*} \\dfrac{{\\sin}^2(-\\theta)-{\\cos}^2(-\\theta)}{\\sin(-\\theta)-\\cos(-\\theta)}&= \\dfrac{{[\\sin(-\\theta)]}^2-{[\\cos(-\\theta)]}^2}{\\sin(-\\theta)-\\cos(-\\theta)}\\\\ &= \\dfrac{{(-\\sin \\theta)}^2-{(\\cos \\theta)}^2}{-\\sin \\theta -\\cos \\theta} \\;\\; \\; , \\sin(-x) = -\\sin\\space x\\text { and } \\cos(-x)=\\cos \\space x\\\\ &= \\dfrac{{(\\sin \\theta)}^2-{(\\cos \\theta)}^2}{-\\sin \\theta -\\cos \\theta}\\qquad \\text{Difference of squares}\\\\ &= \\dfrac{(\\sin \\theta-\\cos \\theta)(\\sin \\theta+\\cos \\theta)}{-(\\sin \\theta+\\cos \\theta)}\\\\ &= \\cos \\theta-\\sin \\theta \\end{align*}\\]\n\nExercise \\(\\PageIndex{3}\\)\n\nVerify the identity \\(\\dfrac{{\\sin}^2 \\theta−1}{\\tan \\theta \\sin \\theta−\\tan \\theta}=\\dfrac{\\sin \\theta+1}{\\tan \\theta}\\).\n\nAnswer\n\n\\[\\begin{align*} \\dfrac{{\\sin}^2 \\theta-1}{\\tan \\theta \\sin \\theta-\\tan \\theta}&= \\dfrac{(\\sin \\theta +1)(\\sin \\theta -1)}{\\tan \\theta(\\sin \\theta -1)}\\\\ &= \\dfrac{\\sin \\theta+1}{\\tan \\theta} \\end{align*}\\]\n\nExample \\(\\PageIndex{6}\\): Verifying an Identity Involving Cosines and Cotangents\n\nVerify the identity: \\((1−{\\cos}^2 x)(1+{\\cot}^2 x)=1\\).\n\nSolution\n\n\\[\\begin{align*} (1-{\\cos}^2 x)(1+{\\cot}^2 x)&= (1-{\\cos}^2 x)\\left(1+\\dfrac{{\\cos}^2 x}{{\\sin}^2 x}\\right)\\\\ &= (1-{\\cos}^2 x)\\left(\\dfrac{{\\sin}^2 x}{{\\sin}^2 x}+\\dfrac{{\\cos}^2 x}{{\\sin}^2 x}\\right )\\qquad \\text{Find the common denominator}\\\\ &= (1-{\\cos}^2 x)\\left(\\dfrac{{\\sin}^2 x +{\\cos}^2 x}{{\\sin}^2 x}\\right)\\\\ &= ({\\sin}^2 x)\\left (\\dfrac{1}{{\\sin}^2 x}\\right )\\\\ &= 1 \\end{align*}\\]\n\nUsing Algebra to Simplify Trigonometric Expressions\n\nWe have seen that algebra is very important in verifying trigonometric identities, but it is just as critical in simplifying trigonometric expressions before solving. Being familiar with the basic properties and formulas of algebra, such as the difference of squares formula, the perfect square formula, or substitution, will simplify the work involved with trigonometric expressions and equations.\n\nFor example, the equation \\((\\sin x+1)(\\sin x−1)=0\\) resembles the equation \\((x+1)(x−1)=0\\), which uses the factored form of the difference of squares. Using algebra makes finding a solution straightforward and familiar. We can set each factor equal to zero and solve. This is one example of recognizing algebraic patterns in trigonometric expressions or equations.\n\nAnother example is the difference of squares formula, \\(a^2−b^2=(a−b)(a+b)\\), which is widely used in many areas other than mathematics, such as engineering, architecture, and physics. We can also create our own identities by continually expanding an expression and making the appropriate substitutions. Using algebraic properties and formulas makes many trigonometric equations easier to understand and solve.\n\nExample \\(\\PageIndex{7A}\\): Writing the Trigonometric Expression as an Algebraic Expression\n\nWrite the following trigonometric expression as an algebraic expression: \\(2{\\cos}^2 \\theta+\\cos \\theta−1\\).\n\nSolution\n\nNotice that the pattern displayed has the same form as a standard quadratic expression,\\(ax^2+bx+c\\). Letting \\(\\cos \\theta=x\\),we can rewrite the expression as follows:\n\n\\(2x^2+x−1\\)\n\nThis expression can be factored as \\((2x+1)(x−1)\\). If it were set equal to zero and we wanted to solve the equation, we would use the zero factor property and solve each factor for \\(x\\). At this point, we would replace \\(x\\) with \\(\\cos \\theta\\) and solve for \\(\\theta\\).\n\nExample \\(\\PageIndex{7B}\\): Rewriting a Trigonometric Expression Using the Difference of Squares\n\nRewrite the trigonometric expression using the difference of squares: \\(4{cos}^2 \\theta−1\\).\n\nSolution\n\nNotice that both the coefficient and the trigonometric expression in the first term are squared, and the square of the number 1 is 1. This is the difference of squares.\n\n\\[\\begin{align*} 4{\\cos}^2 \\theta-1&= {(2\\cos \\theta)}^2-1\\\\ &= (2\\cos \\theta-1)(2\\cos \\theta+1) \\end{align*}\\]\n\nAnalysis\n\nIf this expression were written in the form of an equation set equal to zero, we could solve each factor using the zero factor property. We could also use substitution like we did in the previous problem and let \\(\\cos \\theta=x\\), rewrite the expression as \\(4x^2−1\\), and factor \\((2x−1)(2x+1)\\). Then replace \\(x\\) with \\(\\cos \\theta\\) and solve for the angle.\n\nExercise \\(\\PageIndex{4}\\)\n\nRewrite the trigonometric expression using the difference of squares: \\(25−9{\\sin}^2 \\theta\\).\n\nAnswer\n\nThis is a difference of squares formula: \\(25−9{\\sin}^2 \\theta=(5−3\\sin \\theta)(5+3\\sin \\theta)\\).\n\nExample \\(\\PageIndex{8}\\): Simplify by Rewriting and Using Substitution\n\nSimplify the expression by rewriting and using identities:\n\n\\({\\csc}^2 \\theta−{\\cot}^2 \\theta\\)\n\nSolution\n\nWe can start with the Pythagorean identity.\n\n\\[\\begin{align*} 1+{\\cot}^2 \\theta&= {\\csc}^2 \\theta\\\\ \\text{Now we can simplify by substituting } 1+{\\cot}^2 \\theta \\text{ for } {\\csc}^2 \\theta\\\\ {\\csc}^2 \\theta-{\\cot}^2 \\theta&= 1+{\\cot}^2 \\theta-{\\cot}^2 \\theta\\\\ &= 1 \\end{align*}\\]\n\nExercise \\(\\PageIndex{5}\\)\n\nUse algebraic techniques to verify the identity: \\(\\dfrac{\\cos \\theta}{1+\\sin \\theta}=\\dfrac{1−\\sin \\theta}{\\cos \\theta}\\).\n\n(Hint: Multiply the numerator and denominator on the left side by \\(1−\\sin \\theta\\).)\n\nAnswer\n\n\\[\\begin{align*} \\dfrac{\\cos \\theta}{1+\\sin \\theta}\\left(\\dfrac{1-\\sin \\theta}{1-\\sin \\theta}\\right)&= \\dfrac{\\cos \\theta (1-\\sin \\theta)}{1-{\\sin}^2 \\theta}\\\\ &= \\dfrac{\\cos \\theta (1-\\sin \\theta)}{{\\cos}^2 \\theta}\\\\ &= \\dfrac{1-\\sin \\theta}{\\cos \\theta} \\end{align*}\\]\n\nMedia\n\nAccess these online resources for additional instruction and practice with the fundamental trigonometric identities.\n\nFundamental Trigonometric Identities\n\nVerifying Trigonometric Identities\n\nKey Equations\n\n            Pythagorean identities\t\n\n\\({\\cos}^2 \\theta+{\\sin}^2 \\theta=1\\)\n\n\\(1+{\\cot}^2 \\theta={\\csc}^2 \\theta\\)\n\n\\(1+{\\tan}^2 \\theta={\\sec}^2 \\theta\\)\n\n            Even-odd identities\t\n\n\\(\\tan(−\\theta)=-\\tan \\theta\\)\n\n\\(\\cot(-\\theta)=-\\cot \\theta\\)\n\n\\(\\sin(-\\theta)=-\\sin \\theta\\)\n\n\\(\\csc(-\\theta)=-\\csc \\theta\\)\n\n\\(\\cos(-\\theta)=\\cos \\theta\\)\n\n\\(\\sec(-\\theta)=\\sec \\theta\\)\n\n            Reciprocal identities\t\n\n\\(\\sin \\theta=\\dfrac{1}{\\csc \\theta}\\)\n\n\\(\\cos \\theta=\\dfrac{1}{\\sec \\theta}\\)\n\n\\(\\tan \\theta=\\dfrac{1}{\\cot \\theta}\\)\n\n\\(\\csc \\theta=\\dfrac{1}{\\sin \\theta}\\)\n\n\\(\\sec \\theta=\\dfrac{1}{\\cos \\theta}\\)\n\n\\(\\cot \\theta=\\dfrac{1}{\\tan \\theta}\\)\n\n            Quotient identities\t\n\n\\(\\tan \\theta=\\dfrac{\\sin \\theta}{\\cos \\theta}\\)\n\n\\(\\cot \\theta=\\dfrac{\\cos \\theta}{\\sin \\theta}\\)\n\nKey Concepts\n\nThere are multiple ways to represent a trigonometric expression. Verifying the identities illustrates how expressions can be rewritten to simplify a problem.\n\nGraphing both sides of an identity will verify it. See Example \\(\\PageIndex{1}\\).\n\nSimplifying one side of the equation to equal the other side is another method for verifying an identity. See Example \\(\\PageIndex{2}\\) and Example \\(\\PageIndex{3}\\).\n\nThe approach to verifying an identity depends on the nature of the identity. It is often useful to begin on the more complex side of the equation. See Example \\(\\PageIndex{4}\\).\n\nWe can create an identity and then verify it. See Example \\(\\PageIndex{5}\\).\n\nVerifying an identity may involve algebra with the fundamental identities. See Example \\(\\PageIndex{6}\\) and Example \\(\\PageIndex{7}\\).\n\nAlgebraic techniques can be used to simplify trigonometric expressions. We use algebraic techniques throughout this text, as they consist of the fundamental rules of mathematics. See Example \\(\\PageIndex{8}\\), Example \\(\\PageIndex{9}\\), and Example \\(\\PageIndex{10}\\).\n\nThis page titled 9.1: Solving Trigonometric Equations with Identities was last modified on Thu, 26 Dec 2024 22:30:50 GMT and is shared under a CC BY  4.0  license and was authored, remixed, and/or curated by OpenStax via source content that was edited to the style and standards of the LibreTexts platform.",
+  "figures": [
+    {
+      "url": "https://math.libretexts.org/@api/deki/files/7120/CNX_Precalc_Figure_07_01_006.jpg?revision=1&size=bestfit&width=380&height=285",
+      "alt": "Photo of international passports.",
+      "credit": ""
+    },
+    {
+      "url": "https://math.libretexts.org/@api/deki/files/7102/CNX_Precalc_Figure_07_01_002.jpg?revision=1",
+      "alt": "Graph of y=sin(theta) from -2pi to 2pi, showing in particular that it is symmetric about the origin. Points given are (pi/2, 1) and (-pi/2, -1).",
+      "credit": ""
+    },
+    {
+      "url": "https://math.libretexts.org/@api/deki/files/7103/CNX_Precalc_Figure_07_01_003.jpg?revision=1",
+      "alt": "Graph of y=cos(theta) from -2pi to 2pi, showing in particular that it is symmetric about the y-axis. Points given are (-pi/4, .707) and (pi/4, .707). ",
+      "credit": ""
+    },
+    {
+      "url": "https://math.libretexts.org/@api/deki/files/7104/CNX_Precalc_Figure_07_01_007.jpg?revision=1&size=bestfit&width=426&height=330",
+      "alt": "Graph of y = cot(theta) and y=1/tan(theta) from -2pi to 2pi. They are the same!",
+      "credit": ""
+    }
+  ],
+  "references": [
+    {
+      "text": "Right Angle Trigonometry",
+      "url": "https://math.libretexts.org/Bookshelves/Precalculus/Precalculus_1e_(OpenStax)/05%3A_Trigonometric_Functions/5.04%3A_Right_Triangle_Trigonometry"
+    },
+    {
+      "text": "9.1: Solving Trigonometric Equations with Identities",
+      "url": "https://math.libretexts.org/Bookshelves/Algebra/Algebra_and_Trigonometry_1e_(OpenStax)/09%3A_Trigonometric_Identities_and_Equations/9.01%3A_Solving_Trigonometric_Equations_with_Identities"
+    },
+    {
+      "text": "CC BY  4.0",
+      "url": "https://creativecommons.org/licenses/by/4.0"
+    },
+    {
+      "text": "OpenStax",
+      "url": "https://openstax.org/"
+    },
+    {
+      "text": "source content",
+      "url": "https://openstax.org/details/books/precalculus"
+    }
+  ],
+  "exercises": [
+    {
+      "ordinal": 1,
+      "sourceNumber": "",
+      "sourceAnchor": "",
+      "kind": "example-or-exercise",
+      "context": "The quotient identities define the relationship among the trigonometric functions.\n\n\\[\\tan \\theta=\\dfrac{\\sin \\theta}{\\cos \\theta}\\]\n\n\\[\\cot \\theta=\\dfrac{\\cos \\theta}{\\sin \\theta}\\]",
+      "original": "Example \\(\\PageIndex{1}\\): Graphing the Equations of an Identity\n\nGraph both sides of the identity \\(\\cot \\theta=\\dfrac{1}{\\tan \\theta}\\). In other words, on the graphing calculator, graph \\(y=\\cot \\theta\\) and \\(y=\\dfrac{1}{\\tan \\theta}\\).\n\nSolution\n\nSee Figure \\(\\PageIndex{4}\\).\n\n[Figure: Graph of y = cot(theta) and y=1/tan(theta) from -2pi to 2pi. They are the same!]\n\nFigure \\(\\PageIndex{4}\\)\n\nAnalysis\n\nWe see only one graph because both expressions generate the same image. One is on top of the other. This is a good way to prove any identity. If both expressions give the same graph, then they must be identities.",
+      "prompt": "Example \\(\\PageIndex{1}\\): Graphing the Equations of an Identity\n\nGraph both sides of the identity \\(\\cot \\theta=\\dfrac{1}{\\tan \\theta}\\). In other words, on the graphing calculator, graph \\(y=\\cot \\theta\\) and \\(y=\\dfrac{1}{\\tan \\theta}\\).\n\nSolution\n\nSee Figure \\(\\PageIndex{4}\\).\n\n[Figure: Graph of y = cot(theta) and y=1/tan(theta) from -2pi to 2pi. They are the same!]\n\nFigure \\(\\PageIndex{4}\\)\n\nAnalysis\n\nWe see only one graph because both expressions generate the same image. One is on top of the other. This is a good way to prove any identity. If both expressions give the same graph, then they must be identities.",
+      "sourceAnswers": [],
+      "hasFigure": true,
+      "status": "draft",
+      "answerVerified": false,
+      "translationStatus": "pending",
+      "mappingStatus": "pending"
+    },
+    {
+      "ordinal": 2,
+      "sourceNumber": "1",
+      "sourceAnchor": "",
+      "kind": "exercise-candidate",
+      "context": "The quotient identities define the relationship among the trigonometric functions.\n\n\\[\\tan \\theta=\\dfrac{\\sin \\theta}{\\cos \\theta}\\]\n\n\\[\\cot \\theta=\\dfrac{\\cos \\theta}{\\sin \\theta}\\]",
+      "original": "1. Work on one side of the equation. It is usually better to start with the more complex side, as it is easier to simplify than to build.",
+      "prompt": "1. Work on one side of the equation. It is usually better to start with the more complex side, as it is easier to simplify than to build.",
+      "sourceAnswers": [],
+      "hasFigure": false,
+      "status": "draft",
+      "answerVerified": false,
+      "translationStatus": "pending",
+      "mappingStatus": "pending"
+    },
+    {
+      "ordinal": 3,
+      "sourceNumber": "2",
+      "sourceAnchor": "",
+      "kind": "exercise-candidate",
+      "context": "The quotient identities define the relationship among the trigonometric functions.\n\n\\[\\tan \\theta=\\dfrac{\\sin \\theta}{\\cos \\theta}\\]\n\n\\[\\cot \\theta=\\dfrac{\\cos \\theta}{\\sin \\theta}\\]",
+      "original": "2. Look for opportunities to factor expressions, square a binomial, or add fractions.",
+      "prompt": "2. Look for opportunities to factor expressions, square a binomial, or add fractions.",
+      "sourceAnswers": [],
+      "hasFigure": false,
+      "status": "draft",
+      "answerVerified": false,
+      "translationStatus": "pending",
+      "mappingStatus": "pending"
+    },
+    {
+      "ordinal": 4,
+      "sourceNumber": "3",
+      "sourceAnchor": "",
+      "kind": "exercise-candidate",
+      "context": "The quotient identities define the relationship among the trigonometric functions.\n\n\\[\\tan \\theta=\\dfrac{\\sin \\theta}{\\cos \\theta}\\]\n\n\\[\\cot \\theta=\\dfrac{\\cos \\theta}{\\sin \\theta}\\]",
+      "original": "3. Noting which functions are in the final expression, look for opportunities to use the identities and make the proper substitutions.",
+      "prompt": "3. Noting which functions are in the final expression, look for opportunities to use the identities and make the proper substitutions.",
+      "sourceAnswers": [],
+      "hasFigure": false,
+      "status": "draft",
+      "answerVerified": false,
+      "translationStatus": "pending",
+      "mappingStatus": "pending"
+    },
+    {
+      "ordinal": 5,
+      "sourceNumber": "4",
+      "sourceAnchor": "",
+      "kind": "exercise-candidate",
+      "context": "The quotient identities define the relationship among the trigonometric functions.\n\n\\[\\tan \\theta=\\dfrac{\\sin \\theta}{\\cos \\theta}\\]\n\n\\[\\cot \\theta=\\dfrac{\\cos \\theta}{\\sin \\theta}\\]",
+      "original": "4. If these steps do not yield the desired result, try converting all terms to sines and cosines.",
+      "prompt": "4. If these steps do not yield the desired result, try converting all terms to sines and cosines.",
+      "sourceAnswers": [],
+      "hasFigure": false,
+      "status": "draft",
+      "answerVerified": false,
+      "translationStatus": "pending",
+      "mappingStatus": "pending"
+    },
+    {
+      "ordinal": 6,
+      "sourceNumber": "",
+      "sourceAnchor": "",
+      "kind": "example-or-exercise",
+      "context": "The quotient identities define the relationship among the trigonometric functions.\n\n\\[\\tan \\theta=\\dfrac{\\sin \\theta}{\\cos \\theta}\\]\n\n\\[\\cot \\theta=\\dfrac{\\cos \\theta}{\\sin \\theta}\\]",
+      "original": "Example \\(\\PageIndex{2}\\): Verifying a Trigonometric Identity\n\nVerify \\(\\tan \\theta \\cos \\theta=\\sin \\theta\\).\n\nSolution\n\nWe will start on the left side, as it is the more complicated side:\n\n\\[ \\begin{align*} \\tan \\theta \\cos \\theta &=\\left(\\dfrac{\\sin \\theta}{\\cos \\theta}\\right)\\cos \\theta \\\\[4pt] &=\\sin \\theta \\end{align*}\\]\n\nAnalysis\n\nThis identity was fairly simple to verify, as it only required writing \\(\\tan \\theta\\) in terms of \\(\\sin \\theta\\) and \\(\\cos \\theta\\).",
+      "prompt": "Example \\(\\PageIndex{2}\\): Verifying a Trigonometric Identity\n\nVerify \\(\\tan \\theta \\cos \\theta=\\sin \\theta\\).\n\nSolution\n\nWe will start on the left side, as it is the more complicated side:\n\n\\[ \\begin{align*} \\tan \\theta \\cos \\theta &=\\left(\\dfrac{\\sin \\theta}{\\cos \\theta}\\right)\\cos \\theta \\\\[4pt] &=\\sin \\theta \\end{align*}\\]\n\nAnalysis\n\nThis identity was fairly simple to verify, as it only required writing \\(\\tan \\theta\\) in terms of \\(\\sin \\theta\\) and \\(\\cos \\theta\\).",
+      "sourceAnswers": [],
+      "hasFigure": false,
+      "status": "draft",
+      "answerVerified": false,
+      "translationStatus": "pending",
+      "mappingStatus": "pending"
+    },
+    {
+      "ordinal": 7,
+      "sourceNumber": "",
+      "sourceAnchor": "",
+      "kind": "exercise-candidate",
+      "context": "The quotient identities define the relationship among the trigonometric functions.\n\n\\[\\tan \\theta=\\dfrac{\\sin \\theta}{\\cos \\theta}\\]\n\n\\[\\cot \\theta=\\dfrac{\\cos \\theta}{\\sin \\theta}\\]",
+      "original": "Exercise \\(\\PageIndex{1}\\)\n\nVerify the identity \\(\\csc \\theta \\cos \\theta \\tan \\theta=1\\).\n\nAnswer\n\n\\[ \\begin{align*}  \\csc \\theta \\cos \\theta \\tan \\theta=\\left(\\dfrac{1}{\\sin \\theta}\\right)\\cos \\theta\\left(\\dfrac{\\sin \\theta}{\\cos \\theta}\\right) \\\\[4pt] & =\\dfrac{\\cos \\theta}{\\sin \\theta}(\\dfrac{\\sin \\theta}{\\cos \\theta}) \\\\[4pt] & =\\dfrac{\\sin \\theta \\cos \\theta}{\\sin \\theta \\cos \\theta} \\\\[4pt] &=1 \\end{align*}\\]",
+      "prompt": "Exercise \\(\\PageIndex{1}\\)\n\nVerify the identity \\(\\csc \\theta \\cos \\theta \\tan \\theta=1\\).",
+      "sourceAnswers": [
+        "\\[ \\begin{align*}  \\csc \\theta \\cos \\theta \\tan \\theta=\\left(\\dfrac{1}{\\sin \\theta}\\right)\\cos \\theta\\left(\\dfrac{\\sin \\theta}{\\cos \\theta}\\right) \\\\[4pt] & =\\dfrac{\\cos \\theta}{\\sin \\theta}(\\dfrac{\\sin \\theta}{\\cos \\theta}) \\\\[4pt] & =\\dfrac{\\sin \\theta \\cos \\theta}{\\sin \\theta \\cos \\theta} \\\\[4pt] &=1 \\end{align*}\\]"
+      ],
+      "hasFigure": false,
+      "status": "draft",
+      "answerVerified": false,
+      "translationStatus": "pending",
+      "mappingStatus": "pending"
+    },
+    {
+      "ordinal": 8,
+      "sourceNumber": "",
+      "sourceAnchor": "",
+      "kind": "example-or-exercise",
+      "context": "The quotient identities define the relationship among the trigonometric functions.\n\n\\[\\tan \\theta=\\dfrac{\\sin \\theta}{\\cos \\theta}\\]\n\n\\[\\cot \\theta=\\dfrac{\\cos \\theta}{\\sin \\theta}\\]",
+      "original": "Example \\(\\PageIndex{3A}\\): Verifying the Equivalency Using the Even-Odd Identities\n\nVerify the following equivalency using the even-odd identities:\n\n\\((1+\\sin x)[1+\\sin(−x)]={\\cos}^2 x\\)\n\nSolution\n\nWorking on the left side of the equation, we have\n\n\\( (1+\\sin x)[1+\\sin(−x)]=(1+\\sin x)(1-\\sin x)\\)\n\nSince\n\n\\[\\begin{align*} \\sin(-x)&= -\\sin x \\\\ [5pt] &=1-{\\sin}^2 x\\qquad \\text{Difference of squares} \\\\ [5pt] &={\\cos}^2 x \\\\ {\\cos}^2 x&= 1-{\\sin}^2 x \\\\ \\end{align*}\\]",
+      "prompt": "Example \\(\\PageIndex{3A}\\): Verifying the Equivalency Using the Even-Odd Identities\n\nVerify the following equivalency using the even-odd identities:\n\n\\((1+\\sin x)[1+\\sin(−x)]={\\cos}^2 x\\)\n\nSolution\n\nWorking on the left side of the equation, we have\n\n\\( (1+\\sin x)[1+\\sin(−x)]=(1+\\sin x)(1-\\sin x)\\)\n\nSince\n\n\\[\\begin{align*} \\sin(-x)&= -\\sin x \\\\ [5pt] &=1-{\\sin}^2 x\\qquad \\text{Difference of squares} \\\\ [5pt] &={\\cos}^2 x \\\\ {\\cos}^2 x&= 1-{\\sin}^2 x \\\\ \\end{align*}\\]",
+      "sourceAnswers": [],
+      "hasFigure": false,
+      "status": "draft",
+      "answerVerified": false,
+      "translationStatus": "pending",
+      "mappingStatus": "pending"
+    },
+    {
+      "ordinal": 9,
+      "sourceNumber": "",
+      "sourceAnchor": "",
+      "kind": "example-or-exercise",
+      "context": "The quotient identities define the relationship among the trigonometric functions.\n\n\\[\\tan \\theta=\\dfrac{\\sin \\theta}{\\cos \\theta}\\]\n\n\\[\\cot \\theta=\\dfrac{\\cos \\theta}{\\sin \\theta}\\]",
+      "original": "Example \\(\\PageIndex{3B}\\): Verifying a Trigonometric Identity Involving \\({\\sec}^2 \\theta\\)\n\nVerify the identity \\(\\dfrac{{\\sec}^2 \\theta−1}{{\\sec}^2 \\theta}={\\sin}^2 \\theta\\)\n\nSolution\n\nAs the left side is more complicated, let’s begin there.\n\n\\[\\begin{align*}\n\n\\dfrac{{\\sec}^2 \\theta-1}{{\\sec}^2 \\theta}&= \\dfrac{({\\tan}^2 \\theta +1)-1}{{\\sec}^2 \\theta}\\\\\n\n{\\sec}^2 \\theta&= {\\tan}^2 \\theta +1\\\\\n\n&= \\dfrac{{\\tan}^2 \\theta}{{\\sec}^2 \\theta}\\\\\n\n&= {\\tan}^2 \\theta\\left (\\dfrac{1}{{\\sec}^2 \\theta}\\right )\\\\\n\n&= {\\tan}^2 \\theta \\left ({\\cos}^2 \\theta\\right )\\\\\n\n{\\cos}^2 \\theta&= \\dfrac{1}{{\\sec}^2 \\theta}\\\\\n\n&= \\left (\\dfrac{{\\sin}^2 \\theta}{{\\cos}^2 \\theta}\\right )\\\\\n\n{\\tan}^2 \\theta&= \\dfrac{{\\sin}^2 \\theta}{{\\cos}^2 \\theta}\\\\\n\n&= {\\sin}^2 \\theta\n\n\\end{align*}\\]\n\nThere is more than one way to verify an identity. Here is another possibility. Again, we can start with the left side.\n\n\\[\\begin{align*} \\dfrac{{\\sec}^2 \\theta-1}{{\\sec}^2 \\theta}&= \\dfrac{{\\sec}^2 \\theta}{{\\sec}^2 \\theta}-\\dfrac{1}{{\\sec}^2 \\theta}\\\\ &= 1-{\\cos}^2 \\theta\\\\ &= {\\sin}^2 \\theta \\end{align*}\\]\n\nAnalysis\n\nIn the first method, we used the identity \\({\\sec}^2 \\theta={\\tan}^2 \\theta+1\\) and continued to simplify. In the second method, we split the fraction, putting both terms in the numerator over the common denominator. This problem illustrates that there are multiple ways we can verify an identity. Employing some creativity can sometimes simplify a procedure. As long as the substitutions are correct, the answer will be the same.",
+      "prompt": "Example \\(\\PageIndex{3B}\\): Verifying a Trigonometric Identity Involving \\({\\sec}^2 \\theta\\)\n\nVerify the identity \\(\\dfrac{{\\sec}^2 \\theta−1}{{\\sec}^2 \\theta}={\\sin}^2 \\theta\\)\n\nSolution\n\nAs the left side is more complicated, let’s begin there.\n\n\\[\\begin{align*}\n\n\\dfrac{{\\sec}^2 \\theta-1}{{\\sec}^2 \\theta}&= \\dfrac{({\\tan}^2 \\theta +1)-1}{{\\sec}^2 \\theta}\\\\\n\n{\\sec}^2 \\theta&= {\\tan}^2 \\theta +1\\\\\n\n&= \\dfrac{{\\tan}^2 \\theta}{{\\sec}^2 \\theta}\\\\\n\n&= {\\tan}^2 \\theta\\left (\\dfrac{1}{{\\sec}^2 \\theta}\\right )\\\\\n\n&= {\\tan}^2 \\theta \\left ({\\cos}^2 \\theta\\right )\\\\\n\n{\\cos}^2 \\theta&= \\dfrac{1}{{\\sec}^2 \\theta}\\\\\n\n&= \\left (\\dfrac{{\\sin}^2 \\theta}{{\\cos}^2 \\theta}\\right )\\\\\n\n{\\tan}^2 \\theta&= \\dfrac{{\\sin}^2 \\theta}{{\\cos}^2 \\theta}\\\\\n\n&= {\\sin}^2 \\theta\n\n\\end{align*}\\]\n\nThere is more than one way to verify an identity. Here is another possibility. Again, we can start with the left side.\n\n\\[\\begin{align*} \\dfrac{{\\sec}^2 \\theta-1}{{\\sec}^2 \\theta}&= \\dfrac{{\\sec}^2 \\theta}{{\\sec}^2 \\theta}-\\dfrac{1}{{\\sec}^2 \\theta}\\\\ &= 1-{\\cos}^2 \\theta\\\\ &= {\\sin}^2 \\theta \\end{align*}\\]\n\nAnalysis\n\nIn the first method, we used the identity \\({\\sec}^2 \\theta={\\tan}^2 \\theta+1\\) and continued to simplify. In the second method, we split the fraction, putting both terms in the numerator over the common denominator. This problem illustrates that there are multiple ways we can verify an identity. Employing some creativity can sometimes simplify a procedure. As long as the substitutions are correct, the answer will be the same.",
+      "sourceAnswers": [],
+      "hasFigure": false,
+      "status": "draft",
+      "answerVerified": false,
+      "translationStatus": "pending",
+      "mappingStatus": "pending"
+    },
+    {
+      "ordinal": 10,
+      "sourceNumber": "",
+      "sourceAnchor": "",
+      "kind": "exercise-candidate",
+      "context": "The quotient identities define the relationship among the trigonometric functions.\n\n\\[\\tan \\theta=\\dfrac{\\sin \\theta}{\\cos \\theta}\\]\n\n\\[\\cot \\theta=\\dfrac{\\cos \\theta}{\\sin \\theta}\\]",
+      "original": "Exercise \\(\\PageIndex{2}\\)\n\nShow that \\(\\dfrac{\\cot \\theta}{\\csc \\theta}=\\cos \\theta\\).\n\nAnswer\n\n\\[\\begin{align*} \\dfrac{\\cot \\theta}{\\csc \\theta}&= \\dfrac{\\tfrac{\\cos \\theta}{\\sin \\theta}}{\\dfrac{1}{\\sin \\theta}}\\\\ &= \\dfrac{\\cos \\theta}{\\sin \\theta}\\cdot \\dfrac{\\sin \\theta}{1}\\\\ &= \\cos \\theta \\end{align*}\\]",
+      "prompt": "Exercise \\(\\PageIndex{2}\\)\n\nShow that \\(\\dfrac{\\cot \\theta}{\\csc \\theta}=\\cos \\theta\\).",
+      "sourceAnswers": [
+        "\\[\\begin{align*} \\dfrac{\\cot \\theta}{\\csc \\theta}&= \\dfrac{\\tfrac{\\cos \\theta}{\\sin \\theta}}{\\dfrac{1}{\\sin \\theta}}\\\\ &= \\dfrac{\\cos \\theta}{\\sin \\theta}\\cdot \\dfrac{\\sin \\theta}{1}\\\\ &= \\cos \\theta \\end{align*}\\]"
+      ],
+      "hasFigure": false,
+      "status": "draft",
+      "answerVerified": false,
+      "translationStatus": "pending",
+      "mappingStatus": "pending"
+    },
+    {
+      "ordinal": 11,
+      "sourceNumber": "",
+      "sourceAnchor": "",
+      "kind": "example-or-exercise",
+      "context": "The quotient identities define the relationship among the trigonometric functions.\n\n\\[\\tan \\theta=\\dfrac{\\sin \\theta}{\\cos \\theta}\\]\n\n\\[\\cot \\theta=\\dfrac{\\cos \\theta}{\\sin \\theta}\\]",
+      "original": "Example \\(\\PageIndex{4}\\): Creating and Verifying an Identity\n\nCreate an identity for the expression \\(2 \\tan \\theta \\sec \\theta\\) by rewriting strictly in terms of sine.\n\nSolution\n\nThere are a number of ways to begin, but here we will use the quotient and reciprocal identities to rewrite the expression:\n\n\\[\\begin{align*} 2 \\tan \\theta \\sec \\theta&= 2\\left (\\dfrac{\\sin \\theta}{\\cos \\theta}\\right )\\left(\\dfrac{1}{\\cos \\theta}\\right )\\\\ &= \\dfrac{2\\sin \\theta}{{\\cos}^2 \\theta}\\\\ &= \\dfrac{2\\sin \\theta}{1-{\\sin}^2 \\theta}\\qquad \\text{Substitute } 1-{\\sin}^2 \\theta \\text{ for } {\\cos}^2 \\theta \\end{align*}\\]\n\nThus,\n\n\\(2 \\tan \\theta \\sec \\theta=\\dfrac{2 \\sin \\theta}{1−{\\sin}^2 \\theta}\\)",
+      "prompt": "Example \\(\\PageIndex{4}\\): Creating and Verifying an Identity\n\nCreate an identity for the expression \\(2 \\tan \\theta \\sec \\theta\\) by rewriting strictly in terms of sine.\n\nSolution\n\nThere are a number of ways to begin, but here we will use the quotient and reciprocal identities to rewrite the expression:\n\n\\[\\begin{align*} 2 \\tan \\theta \\sec \\theta&= 2\\left (\\dfrac{\\sin \\theta}{\\cos \\theta}\\right )\\left(\\dfrac{1}{\\cos \\theta}\\right )\\\\ &= \\dfrac{2\\sin \\theta}{{\\cos}^2 \\theta}\\\\ &= \\dfrac{2\\sin \\theta}{1-{\\sin}^2 \\theta}\\qquad \\text{Substitute } 1-{\\sin}^2 \\theta \\text{ for } {\\cos}^2 \\theta \\end{align*}\\]\n\nThus,\n\n\\(2 \\tan \\theta \\sec \\theta=\\dfrac{2 \\sin \\theta}{1−{\\sin}^2 \\theta}\\)",
+      "sourceAnswers": [],
+      "hasFigure": false,
+      "status": "draft",
+      "answerVerified": false,
+      "translationStatus": "pending",
+      "mappingStatus": "pending"
+    },
+    {
+      "ordinal": 12,
+      "sourceNumber": "",
+      "sourceAnchor": "",
+      "kind": "example-or-exercise",
+      "context": "The quotient identities define the relationship among the trigonometric functions.\n\n\\[\\tan \\theta=\\dfrac{\\sin \\theta}{\\cos \\theta}\\]\n\n\\[\\cot \\theta=\\dfrac{\\cos \\theta}{\\sin \\theta}\\]",
+      "original": "Example \\(\\PageIndex{5}\\): Verifying an Identity Using Algebra and Even/Odd Identities\n\nVerify the identity:\n\n\\(\\dfrac{{\\sin}^2(−\\theta)−{\\cos}^2(−\\theta)}{\\sin(−\\theta)−\\cos(−\\theta)}=\\cos \\theta−\\sin \\theta\\)\n\nSolution\n\nLet’s start with the left side and simplify:\n\n\\[\\begin{align*} \\dfrac{{\\sin}^2(-\\theta)-{\\cos}^2(-\\theta)}{\\sin(-\\theta)-\\cos(-\\theta)}&= \\dfrac{{[\\sin(-\\theta)]}^2-{[\\cos(-\\theta)]}^2}{\\sin(-\\theta)-\\cos(-\\theta)}\\\\ &= \\dfrac{{(-\\sin \\theta)}^2-{(\\cos \\theta)}^2}{-\\sin \\theta -\\cos \\theta} \\;\\; \\; , \\sin(-x) = -\\sin\\space x\\text { and } \\cos(-x)=\\cos \\space x\\\\ &= \\dfrac{{(\\sin \\theta)}^2-{(\\cos \\theta)}^2}{-\\sin \\theta -\\cos \\theta}\\qquad \\text{Difference of squares}\\\\ &= \\dfrac{(\\sin \\theta-\\cos \\theta)(\\sin \\theta+\\cos \\theta)}{-(\\sin \\theta+\\cos \\theta)}\\\\ &= \\cos \\theta-\\sin \\theta \\end{align*}\\]",
+      "prompt": "Example \\(\\PageIndex{5}\\): Verifying an Identity Using Algebra and Even/Odd Identities\n\nVerify the identity:\n\n\\(\\dfrac{{\\sin}^2(−\\theta)−{\\cos}^2(−\\theta)}{\\sin(−\\theta)−\\cos(−\\theta)}=\\cos \\theta−\\sin \\theta\\)\n\nSolution\n\nLet’s start with the left side and simplify:\n\n\\[\\begin{align*} \\dfrac{{\\sin}^2(-\\theta)-{\\cos}^2(-\\theta)}{\\sin(-\\theta)-\\cos(-\\theta)}&= \\dfrac{{[\\sin(-\\theta)]}^2-{[\\cos(-\\theta)]}^2}{\\sin(-\\theta)-\\cos(-\\theta)}\\\\ &= \\dfrac{{(-\\sin \\theta)}^2-{(\\cos \\theta)}^2}{-\\sin \\theta -\\cos \\theta} \\;\\; \\; , \\sin(-x) = -\\sin\\space x\\text { and } \\cos(-x)=\\cos \\space x\\\\ &= \\dfrac{{(\\sin \\theta)}^2-{(\\cos \\theta)}^2}{-\\sin \\theta -\\cos \\theta}\\qquad \\text{Difference of squares}\\\\ &= \\dfrac{(\\sin \\theta-\\cos \\theta)(\\sin \\theta+\\cos \\theta)}{-(\\sin \\theta+\\cos \\theta)}\\\\ &= \\cos \\theta-\\sin \\theta \\end{align*}\\]",
+      "sourceAnswers": [],
+      "hasFigure": false,
+      "status": "draft",
+      "answerVerified": false,
+      "translationStatus": "pending",
+      "mappingStatus": "pending"
+    },
+    {
+      "ordinal": 13,
+      "sourceNumber": "",
+      "sourceAnchor": "",
+      "kind": "exercise-candidate",
+      "context": "The quotient identities define the relationship among the trigonometric functions.\n\n\\[\\tan \\theta=\\dfrac{\\sin \\theta}{\\cos \\theta}\\]\n\n\\[\\cot \\theta=\\dfrac{\\cos \\theta}{\\sin \\theta}\\]",
+      "original": "Exercise \\(\\PageIndex{3}\\)\n\nVerify the identity \\(\\dfrac{{\\sin}^2 \\theta−1}{\\tan \\theta \\sin \\theta−\\tan \\theta}=\\dfrac{\\sin \\theta+1}{\\tan \\theta}\\).\n\nAnswer\n\n\\[\\begin{align*} \\dfrac{{\\sin}^2 \\theta-1}{\\tan \\theta \\sin \\theta-\\tan \\theta}&= \\dfrac{(\\sin \\theta +1)(\\sin \\theta -1)}{\\tan \\theta(\\sin \\theta -1)}\\\\ &= \\dfrac{\\sin \\theta+1}{\\tan \\theta} \\end{align*}\\]",
+      "prompt": "Exercise \\(\\PageIndex{3}\\)\n\nVerify the identity \\(\\dfrac{{\\sin}^2 \\theta−1}{\\tan \\theta \\sin \\theta−\\tan \\theta}=\\dfrac{\\sin \\theta+1}{\\tan \\theta}\\).",
+      "sourceAnswers": [
+        "\\[\\begin{align*} \\dfrac{{\\sin}^2 \\theta-1}{\\tan \\theta \\sin \\theta-\\tan \\theta}&= \\dfrac{(\\sin \\theta +1)(\\sin \\theta -1)}{\\tan \\theta(\\sin \\theta -1)}\\\\ &= \\dfrac{\\sin \\theta+1}{\\tan \\theta} \\end{align*}\\]"
+      ],
+      "hasFigure": false,
+      "status": "draft",
+      "answerVerified": false,
+      "translationStatus": "pending",
+      "mappingStatus": "pending"
+    },
+    {
+      "ordinal": 14,
+      "sourceNumber": "",
+      "sourceAnchor": "",
+      "kind": "example-or-exercise",
+      "context": "The quotient identities define the relationship among the trigonometric functions.\n\n\\[\\tan \\theta=\\dfrac{\\sin \\theta}{\\cos \\theta}\\]\n\n\\[\\cot \\theta=\\dfrac{\\cos \\theta}{\\sin \\theta}\\]",
+      "original": "Example \\(\\PageIndex{6}\\): Verifying an Identity Involving Cosines and Cotangents\n\nVerify the identity: \\((1−{\\cos}^2 x)(1+{\\cot}^2 x)=1\\).\n\nSolution\n\n\\[\\begin{align*} (1-{\\cos}^2 x)(1+{\\cot}^2 x)&= (1-{\\cos}^2 x)\\left(1+\\dfrac{{\\cos}^2 x}{{\\sin}^2 x}\\right)\\\\ &= (1-{\\cos}^2 x)\\left(\\dfrac{{\\sin}^2 x}{{\\sin}^2 x}+\\dfrac{{\\cos}^2 x}{{\\sin}^2 x}\\right )\\qquad \\text{Find the common denominator}\\\\ &= (1-{\\cos}^2 x)\\left(\\dfrac{{\\sin}^2 x +{\\cos}^2 x}{{\\sin}^2 x}\\right)\\\\ &= ({\\sin}^2 x)\\left (\\dfrac{1}{{\\sin}^2 x}\\right )\\\\ &= 1 \\end{align*}\\]",
+      "prompt": "Example \\(\\PageIndex{6}\\): Verifying an Identity Involving Cosines and Cotangents\n\nVerify the identity: \\((1−{\\cos}^2 x)(1+{\\cot}^2 x)=1\\).\n\nSolution\n\n\\[\\begin{align*} (1-{\\cos}^2 x)(1+{\\cot}^2 x)&= (1-{\\cos}^2 x)\\left(1+\\dfrac{{\\cos}^2 x}{{\\sin}^2 x}\\right)\\\\ &= (1-{\\cos}^2 x)\\left(\\dfrac{{\\sin}^2 x}{{\\sin}^2 x}+\\dfrac{{\\cos}^2 x}{{\\sin}^2 x}\\right )\\qquad \\text{Find the common denominator}\\\\ &= (1-{\\cos}^2 x)\\left(\\dfrac{{\\sin}^2 x +{\\cos}^2 x}{{\\sin}^2 x}\\right)\\\\ &= ({\\sin}^2 x)\\left (\\dfrac{1}{{\\sin}^2 x}\\right )\\\\ &= 1 \\end{align*}\\]",
+      "sourceAnswers": [],
+      "hasFigure": false,
+      "status": "draft",
+      "answerVerified": false,
+      "translationStatus": "pending",
+      "mappingStatus": "pending"
+    },
+    {
+      "ordinal": 15,
+      "sourceNumber": "",
+      "sourceAnchor": "",
+      "kind": "example-or-exercise",
+      "context": "We have seen that algebra is very important in verifying trigonometric identities, but it is just as critical in simplifying trigonometric expressions before solving. Being familiar with the basic properties and formulas of algebra, such as the difference of squares formula, the perfect square formula, or substitution, will simplify the work involved with trigonometric expressions and equations.\n\nFor example, the equation \\((\\sin x+1)(\\sin x−1)=0\\) resembles the equation \\((x+1)(x−1)=0\\), which uses the factored form of the difference of squares. Using algebra makes finding a solution straightforward and familiar. We can set each factor equal to zero and solve. This is one example of recognizing algebraic patterns in trigonometric expressions or equations.\n\nAnother example is the difference of squares formula, \\(a^2−b^2=(a−b)(a+b)\\), which is widely used in many areas other than mathematics, such as engineering, architecture, and physics. We can also create our own identities by continually expanding an expression and making the appropriate substitutions. Using algebraic properties and formulas makes many trigonometric equations easier to understand and solve.",
+      "original": "Example \\(\\PageIndex{7A}\\): Writing the Trigonometric Expression as an Algebraic Expression\n\nWrite the following trigonometric expression as an algebraic expression: \\(2{\\cos}^2 \\theta+\\cos \\theta−1\\).\n\nSolution\n\nNotice that the pattern displayed has the same form as a standard quadratic expression,\\(ax^2+bx+c\\). Letting \\(\\cos \\theta=x\\),we can rewrite the expression as follows:\n\n\\(2x^2+x−1\\)\n\nThis expression can be factored as \\((2x+1)(x−1)\\). If it were set equal to zero and we wanted to solve the equation, we would use the zero factor property and solve each factor for \\(x\\). At this point, we would replace \\(x\\) with \\(\\cos \\theta\\) and solve for \\(\\theta\\).",
+      "prompt": "Example \\(\\PageIndex{7A}\\): Writing the Trigonometric Expression as an Algebraic Expression\n\nWrite the following trigonometric expression as an algebraic expression: \\(2{\\cos}^2 \\theta+\\cos \\theta−1\\).\n\nSolution\n\nNotice that the pattern displayed has the same form as a standard quadratic expression,\\(ax^2+bx+c\\). Letting \\(\\cos \\theta=x\\),we can rewrite the expression as follows:\n\n\\(2x^2+x−1\\)\n\nThis expression can be factored as \\((2x+1)(x−1)\\). If it were set equal to zero and we wanted to solve the equation, we would use the zero factor property and solve each factor for \\(x\\). At this point, we would replace \\(x\\) with \\(\\cos \\theta\\) and solve for \\(\\theta\\).",
+      "sourceAnswers": [],
+      "hasFigure": false,
+      "status": "draft",
+      "answerVerified": false,
+      "translationStatus": "pending",
+      "mappingStatus": "pending"
+    },
+    {
+      "ordinal": 16,
+      "sourceNumber": "",
+      "sourceAnchor": "",
+      "kind": "example-or-exercise",
+      "context": "We have seen that algebra is very important in verifying trigonometric identities, but it is just as critical in simplifying trigonometric expressions before solving. Being familiar with the basic properties and formulas of algebra, such as the difference of squares formula, the perfect square formula, or substitution, will simplify the work involved with trigonometric expressions and equations.\n\nFor example, the equation \\((\\sin x+1)(\\sin x−1)=0\\) resembles the equation \\((x+1)(x−1)=0\\), which uses the factored form of the difference of squares. Using algebra makes finding a solution straightforward and familiar. We can set each factor equal to zero and solve. This is one example of recognizing algebraic patterns in trigonometric expressions or equations.\n\nAnother example is the difference of squares formula, \\(a^2−b^2=(a−b)(a+b)\\), which is widely used in many areas other than mathematics, such as engineering, architecture, and physics. We can also create our own identities by continually expanding an expression and making the appropriate substitutions. Using algebraic properties and formulas makes many trigonometric equations easier to understand and solve.",
+      "original": "Example \\(\\PageIndex{7B}\\): Rewriting a Trigonometric Expression Using the Difference of Squares\n\nRewrite the trigonometric expression using the difference of squares: \\(4{cos}^2 \\theta−1\\).\n\nSolution\n\nNotice that both the coefficient and the trigonometric expression in the first term are squared, and the square of the number 1 is 1. This is the difference of squares.\n\n\\[\\begin{align*} 4{\\cos}^2 \\theta-1&= {(2\\cos \\theta)}^2-1\\\\ &= (2\\cos \\theta-1)(2\\cos \\theta+1) \\end{align*}\\]\n\nAnalysis\n\nIf this expression were written in the form of an equation set equal to zero, we could solve each factor using the zero factor property. We could also use substitution like we did in the previous problem and let \\(\\cos \\theta=x\\), rewrite the expression as \\(4x^2−1\\), and factor \\((2x−1)(2x+1)\\). Then replace \\(x\\) with \\(\\cos \\theta\\) and solve for the angle.",
+      "prompt": "Example \\(\\PageIndex{7B}\\): Rewriting a Trigonometric Expression Using the Difference of Squares\n\nRewrite the trigonometric expression using the difference of squares: \\(4{cos}^2 \\theta−1\\).\n\nSolution\n\nNotice that both the coefficient and the trigonometric expression in the first term are squared, and the square of the number 1 is 1. This is the difference of squares.\n\n\\[\\begin{align*} 4{\\cos}^2 \\theta-1&= {(2\\cos \\theta)}^2-1\\\\ &= (2\\cos \\theta-1)(2\\cos \\theta+1) \\end{align*}\\]\n\nAnalysis\n\nIf this expression were written in the form of an equation set equal to zero, we could solve each factor using the zero factor property. We could also use substitution like we did in the previous problem and let \\(\\cos \\theta=x\\), rewrite the expression as \\(4x^2−1\\), and factor \\((2x−1)(2x+1)\\). Then replace \\(x\\) with \\(\\cos \\theta\\) and solve for the angle.",
+      "sourceAnswers": [],
+      "hasFigure": false,
+      "status": "draft",
+      "answerVerified": false,
+      "translationStatus": "pending",
+      "mappingStatus": "pending"
+    },
+    {
+      "ordinal": 17,
+      "sourceNumber": "",
+      "sourceAnchor": "",
+      "kind": "exercise-candidate",
+      "context": "We have seen that algebra is very important in verifying trigonometric identities, but it is just as critical in simplifying trigonometric expressions before solving. Being familiar with the basic properties and formulas of algebra, such as the difference of squares formula, the perfect square formula, or substitution, will simplify the work involved with trigonometric expressions and equations.\n\nFor example, the equation \\((\\sin x+1)(\\sin x−1)=0\\) resembles the equation \\((x+1)(x−1)=0\\), which uses the factored form of the difference of squares. Using algebra makes finding a solution straightforward and familiar. We can set each factor equal to zero and solve. This is one example of recognizing algebraic patterns in trigonometric expressions or equations.\n\nAnother example is the difference of squares formula, \\(a^2−b^2=(a−b)(a+b)\\), which is widely used in many areas other than mathematics, such as engineering, architecture, and physics. We can also create our own identities by continually expanding an expression and making the appropriate substitutions. Using algebraic properties and formulas makes many trigonometric equations easier to understand and solve.",
+      "original": "Exercise \\(\\PageIndex{4}\\)\n\nRewrite the trigonometric expression using the difference of squares: \\(25−9{\\sin}^2 \\theta\\).\n\nAnswer\n\nThis is a difference of squares formula: \\(25−9{\\sin}^2 \\theta=(5−3\\sin \\theta)(5+3\\sin \\theta)\\).",
+      "prompt": "Exercise \\(\\PageIndex{4}\\)\n\nRewrite the trigonometric expression using the difference of squares: \\(25−9{\\sin}^2 \\theta\\).",
+      "sourceAnswers": [
+        "This is a difference of squares formula: \\(25−9{\\sin}^2 \\theta=(5−3\\sin \\theta)(5+3\\sin \\theta)\\)."
+      ],
+      "hasFigure": false,
+      "status": "draft",
+      "answerVerified": false,
+      "translationStatus": "pending",
+      "mappingStatus": "pending"
+    },
+    {
+      "ordinal": 18,
+      "sourceNumber": "",
+      "sourceAnchor": "",
+      "kind": "example-or-exercise",
+      "context": "We have seen that algebra is very important in verifying trigonometric identities, but it is just as critical in simplifying trigonometric expressions before solving. Being familiar with the basic properties and formulas of algebra, such as the difference of squares formula, the perfect square formula, or substitution, will simplify the work involved with trigonometric expressions and equations.\n\nFor example, the equation \\((\\sin x+1)(\\sin x−1)=0\\) resembles the equation \\((x+1)(x−1)=0\\), which uses the factored form of the difference of squares. Using algebra makes finding a solution straightforward and familiar. We can set each factor equal to zero and solve. This is one example of recognizing algebraic patterns in trigonometric expressions or equations.\n\nAnother example is the difference of squares formula, \\(a^2−b^2=(a−b)(a+b)\\), which is widely used in many areas other than mathematics, such as engineering, architecture, and physics. We can also create our own identities by continually expanding an expression and making the appropriate substitutions. Using algebraic properties and formulas makes many trigonometric equations easier to understand and solve.",
+      "original": "Example \\(\\PageIndex{8}\\): Simplify by Rewriting and Using Substitution\n\nSimplify the expression by rewriting and using identities:\n\n\\({\\csc}^2 \\theta−{\\cot}^2 \\theta\\)\n\nSolution\n\nWe can start with the Pythagorean identity.\n\n\\[\\begin{align*} 1+{\\cot}^2 \\theta&= {\\csc}^2 \\theta\\\\ \\text{Now we can simplify by substituting } 1+{\\cot}^2 \\theta \\text{ for } {\\csc}^2 \\theta\\\\ {\\csc}^2 \\theta-{\\cot}^2 \\theta&= 1+{\\cot}^2 \\theta-{\\cot}^2 \\theta\\\\ &= 1 \\end{align*}\\]",
+      "prompt": "Example \\(\\PageIndex{8}\\): Simplify by Rewriting and Using Substitution\n\nSimplify the expression by rewriting and using identities:\n\n\\({\\csc}^2 \\theta−{\\cot}^2 \\theta\\)\n\nSolution\n\nWe can start with the Pythagorean identity.\n\n\\[\\begin{align*} 1+{\\cot}^2 \\theta&= {\\csc}^2 \\theta\\\\ \\text{Now we can simplify by substituting } 1+{\\cot}^2 \\theta \\text{ for } {\\csc}^2 \\theta\\\\ {\\csc}^2 \\theta-{\\cot}^2 \\theta&= 1+{\\cot}^2 \\theta-{\\cot}^2 \\theta\\\\ &= 1 \\end{align*}\\]",
+      "sourceAnswers": [],
+      "hasFigure": false,
+      "status": "draft",
+      "answerVerified": false,
+      "translationStatus": "pending",
+      "mappingStatus": "pending"
+    },
+    {
+      "ordinal": 19,
+      "sourceNumber": "",
+      "sourceAnchor": "",
+      "kind": "exercise-candidate",
+      "context": "We have seen that algebra is very important in verifying trigonometric identities, but it is just as critical in simplifying trigonometric expressions before solving. Being familiar with the basic properties and formulas of algebra, such as the difference of squares formula, the perfect square formula, or substitution, will simplify the work involved with trigonometric expressions and equations.\n\nFor example, the equation \\((\\sin x+1)(\\sin x−1)=0\\) resembles the equation \\((x+1)(x−1)=0\\), which uses the factored form of the difference of squares. Using algebra makes finding a solution straightforward and familiar. We can set each factor equal to zero and solve. This is one example of recognizing algebraic patterns in trigonometric expressions or equations.\n\nAnother example is the difference of squares formula, \\(a^2−b^2=(a−b)(a+b)\\), which is widely used in many areas other than mathematics, such as engineering, architecture, and physics. We can also create our own identities by continually expanding an expression and making the appropriate substitutions. Using algebraic properties and formulas makes many trigonometric equations easier to understand and solve.",
+      "original": "Exercise \\(\\PageIndex{5}\\)\n\nUse algebraic techniques to verify the identity: \\(\\dfrac{\\cos \\theta}{1+\\sin \\theta}=\\dfrac{1−\\sin \\theta}{\\cos \\theta}\\).\n\n(Hint: Multiply the numerator and denominator on the left side by \\(1−\\sin \\theta\\).)\n\nAnswer\n\n\\[\\begin{align*} \\dfrac{\\cos \\theta}{1+\\sin \\theta}\\left(\\dfrac{1-\\sin \\theta}{1-\\sin \\theta}\\right)&= \\dfrac{\\cos \\theta (1-\\sin \\theta)}{1-{\\sin}^2 \\theta}\\\\ &= \\dfrac{\\cos \\theta (1-\\sin \\theta)}{{\\cos}^2 \\theta}\\\\ &= \\dfrac{1-\\sin \\theta}{\\cos \\theta} \\end{align*}\\]",
+      "prompt": "Exercise \\(\\PageIndex{5}\\)\n\nUse algebraic techniques to verify the identity: \\(\\dfrac{\\cos \\theta}{1+\\sin \\theta}=\\dfrac{1−\\sin \\theta}{\\cos \\theta}\\).\n\n(Hint: Multiply the numerator and denominator on the left side by \\(1−\\sin \\theta\\).)",
+      "sourceAnswers": [
+        "\\[\\begin{align*} \\dfrac{\\cos \\theta}{1+\\sin \\theta}\\left(\\dfrac{1-\\sin \\theta}{1-\\sin \\theta}\\right)&= \\dfrac{\\cos \\theta (1-\\sin \\theta)}{1-{\\sin}^2 \\theta}\\\\ &= \\dfrac{\\cos \\theta (1-\\sin \\theta)}{{\\cos}^2 \\theta}\\\\ &= \\dfrac{1-\\sin \\theta}{\\cos \\theta} \\end{align*}\\]"
+      ],
+      "hasFigure": false,
+      "status": "draft",
+      "answerVerified": false,
+      "translationStatus": "pending",
+      "mappingStatus": "pending"
+    }
+  ],
+  "license": "CC BY 4.0",
+  "licenseEvidence": "This page titled 9.1: Solving Trigonometric Equations with Identities was last modified on Thu, 26 Dec 2024 22:30:50 GMT and is shared under a CC BY  4.0  license and was authored, remixed, and/or curated by OpenStax via source content that was edited to the style and standards of the LibreTexts platform.",
+  "url": "https://math.libretexts.org/Bookshelves/Algebra/Algebra_and_Trigonometry_1e_(OpenStax)/09:_Trigonometric_Identities_and_Equations/9.01:_Solving_Trigonometric_Equations_with_Identities",
+  "sha256": "d5ff87acbe21d92c2f73bb7b08e5b617bfc3dee16ae12b185f7e5e58ec33f189",
+  "checkedAt": "2026-10-07",
+  "id": "9eca62fe1821ef0aff87",
+  "bookId": "algebra-trigonometry",
+  "licenseInherited": false,
+  "licenseSource": "https://math.libretexts.org/Bookshelves/Algebra/Algebra_and_Trigonometry_1e_(OpenStax)/09:_Trigonometric_Identities_and_Equations/9.01:_Solving_Trigonometric_Equations_with_Identities",
+  "licenseUrl": "https://creativecommons.org/licenses/by/4.0/",
+  "authors": "OpenStax / Jay Abramson et al.",
+  "book": "Algebra and Trigonometry 1e",
+  "reviewStatus": "unreviewed",
+  "sourceLanguage": "en",
+  "translationStatus": "pending"
+}

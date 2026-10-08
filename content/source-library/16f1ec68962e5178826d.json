@@ -1,0 +1,687 @@
+{
+  "title": "10.4: Evaluate and Graph Logarithmic Functions",
+  "originalText": "Learning Objectives\n\nBy the end of this section, you will be able to:\n\nConvert between exponential and logarithmic form\n\nEvaluate logarithmic functions\n\nGraph Logarithmic functions\n\nSolve logarithmic equations\n\nUse logarithmic models in applications\n\nBefore you get started, take this readiness quiz.\n\n1. Solve: \\(x^{2}=81\\).\n\n    If you missed this problem, review Example 6.46.\n\n2. Evaluate: \\(3^{−2}\\).\n\n    If you missed this problem, review Example 5.15.\n\n3. Solve: \\(2^{4}=3x−5\\).\n\n    If you missed this problem, review Example 2.2.\n\nWe have spent some time finding the inverse of many functions. It works well to ‘undo’ an operation with another operation. Subtracting ‘undoes’ addition, multiplication ‘undoes’ division, taking the square root ‘undoes’ squaring.\n\nAs we studied the exponential function, we saw that it is one-to-one as its graphs pass the horizontal line test. This means an exponential function does have an inverse. If we try our algebraic method for finding an inverse, we run into a problem.\n\n\\(f(x)=a^{x}\\)\n\nRewrite with \\(y=f(x)\\).\n\n\\(y=a^{x}\\)\n\nInterchange the variables \\(x\\) and \\(y\\).\n\n\\(x=a^{y}\\)\n\nSolve for \\(y\\).\n\nOops! We have no way to solve for \\(y\\)!\n\nTo deal with this we define the logarithm function with base a to be the inverse of the exponential function \\(f(x)=a^{x}\\). We use the notation \\(f^{−1}(x)=log_{a}x\\) and say the inverse function of the exponential function is the logarithmic function.\n\nDefinition \\(\\PageIndex{1}\\): Logarithmic Function\n\nThe function \\(f(x)=\\log_{a}x\\) is the logarithmic function with base \\(a\\), where \\(a>0,x>0\\), and \\(a≠1\\).\n\n\\(y=\\log _{a} x\\) is equivalent to \\(x=a^{y}\\)\n\nConvert Between Exponential and Logarithmic Form\n\nSince the equations \\(y=\\log _{a} x\\) and \\(x=a^{y}\\) are equivalent, we can go back and forth between them. This will often be the method to solve some exponential and logarithmic equations. To help with converting back and forth let’s take a close look at the equations. See Figure 10.3.1. Notice the positions of the exponent and base.\n\n[Figure: This figure shows the expression y equals log sub a of x, where y is the exponent and a is the base. Next to this expression we have x equals a to the y, where again y is the exponent and a is the base.]\n\nFigure 10.3.1\n\nIf we realize the logarithm is the exponent it makes the conversion easier. You may want to repeat, “base to the exponent give us the number.”\n\nExample \\(\\PageIndex{1}\\)\n\nConvert to logarithmic form:\n\n1. \\(2^{3}=8\\)\n\n2. \\(5^{\\frac{1}{2}}=\\sqrt{5}\\)\n\n3. \\(\\left(\\frac{1}{2}\\right)^{x}=\\frac{1}{16}\\)\n\nSolution:\n\n[Figure: In part (a) we have 2 to the 3 power equals 8, where the 2 is red and the 3 is blue. Following this, we have blue y equals log sub red a of x. Then 3 equals log sub 2 of 8. Hence, if 2 cubed equals 8, then 3 equals log sub 2 of 8. In part (b) we have 5 to the 1 over 2 power equals square root of 5, where the 5 is red and the 1 over 2 is blue. Following this, we have blue y equals log sub red a of x. Then 1 over 2 equals log sub 5 of the square root of 5. Hence, if 5 to the 1 over 2 power equals the square root of 5, then 1 over 2 equals log sub 5 of the square root of 5. In part (c) we have 1 over 2 to the x power equals 1 over 16, where the 1 over 2 is red and the x is blue. Following this, we have blue y equals log sub red a of x. Then x equals log sub 1 over 2 of 1 over 16. Hence, if 1 over 2 to the x power equals 1 over 16, then x equals log sub 1 over 2 of 1 over 16.]\n\nFigure 10.3.2\n\nExercise \\(\\PageIndex{1}\\)\n\nConvert to logarithmic form:\n\n1. \\(3^{2}=9\\)\n\n2. \\(7^{\\frac{1}{2}}=\\sqrt{7}\\)\n\n3. \\(\\left(\\frac{1}{3}\\right)^{x}=\\frac{1}{27}\\)\n\nAnswer\n\n1. \\(\\log _{3} 9=2\\)\n\n2. \\(\\log _{7} \\sqrt{7}=\\frac{1}{2}\\)\n\n3. \\(\\log _{\\frac{1}{3}} \\frac{1}{27}=x\\)\n\nExercise \\(\\PageIndex{2}\\)\n\nConvert to logarithmic form:\n\n1. \\(4^{3}=64\\)\n\n2. \\(4^{\\frac{1}{3}}=\\sqrt[3]{4}\\)\n\n3. \\(\\left(\\frac{1}{2}\\right)^{x}=\\frac{1}{32}\\)\n\nAnswer\n\n1. \\(\\log _{4} 64=3\\)\n\n2. \\(\\log _{4} \\sqrt[3]{4}=\\frac{1}{3}\\)\n\n3. \\(\\log _{\\frac{1}{2}} \\frac{1}{32}=x\\)\n\nIn the next example we do the reverse—convert logarithmic form to exponential form.\n\nExample \\(\\PageIndex{2}\\)\n\nConvert to exponential form:\n\n1. \\(2=\\log _{8} 64\\)\n\n2. \\(0=\\log _{4} 1\\)\n\n3. \\(-3=\\log _{10} \\frac{1}{1000}\\)\n\nSolution:\n\n[Figure: In part (a) we have 2 equals log sub 8 of 64, where the 2 is blue and the 8 is red. Following this, we have x equals red a to the blue y power. Then 64 equals 8 squared. Hence, if 2 equals log sub 8 of 64, then 64 equals 8 squared. In part (b) we have 0 equals log sub 4 of 1, where the 0 is blue and the 4 is red. Following this, we have x equals red a to the blue y power. Then 1 equals 4 to the zero power. Hence, if 0 equals log sub 4 of 1, then 1 equals 4 to the zero power. In part (c) we have negative 3 equals log sub 10 of 1 over 1000, where the negative 3 is blue and the 10 is red. Following this, we have x equals red a to the blue y power. Then 1 over 1000 equals 10 to the negative three power. Hence, if negative 3 equals log sub 10 of 1 over 1000, then 1 over 1000 equals 10 to the negative 3 power.]\n\nFigure 10.3.3\n\nExercise \\(\\PageIndex{3}\\)\n\nConvert to exponential form:\n\n1. \\(3=\\log _{4} 64\\)\n\n2. \\(0=\\log _{x} 1\\)\n\n3. \\(-2=\\log _{10} \\frac{1}{100}\\)\n\nAnswer\n\n1. \\(64=4^{3}\\)\n\n2. \\(1=x^{0}\\)\n\n3. \\(\\frac{1}{100}=10^{-2}\\)\n\nExercise \\(\\PageIndex{4}\\)\n\nConvert to exponential form:\n\n1. \\(3=\\log _{3} 27\\)\n\n2. \\(0=\\log _{x} 1\\)\n\n3. \\(-1=\\log _{10} \\frac{1}{10}\\)\n\nAnswer\n\n1. \\(27=3^{3}\\)\n\n2. \\(1=x^{0}\\)\n\n3. \\(\\frac{1}{10}=10^{-1}\\)\n\nEvaluate Logarithmic Functions\n\nWe can solve and evaluate logarithmic equations by using the technique of converting the equation to its equivalent exponential equation.\n\nExample \\(\\PageIndex{3}\\)\n\nFind the value of \\(x\\):\n\n1. \\(\\log _{x} 36=2\\)\n\n2. \\(\\log _{4} x=3\\)\n\n3. \\(\\log _{\\frac{1}{2}} \\frac{1}{8}=x\\)\n\nSolution:\n\na.\n\n\\(\\log _{x} 36=2\\)\n\nConvert to exponential form.\n\n\\(x^{2}=36\\)\n\nSolve the quadratic.\n\n\\(x=6, \\quad \\cancel{x=-6}\\)\n\nThe base of a logarithmic function must be positive, so we eliminate \\(x=−6\\).\n\n\\(x=6 \\quad\\) Therefore, \\(\\log _{6} 36=2\\)\n\nb.\n\n\\(\\log _{4} x=3\\)\n\nConvert to exponential form.\n\n\\(4^{3}=x\\)\n\nSimplify.\n\n\\(x=64 \\quad\\) Therefore \\(, \\log _{4} 64=3\\)\n\nc.\n\n\\(\\log _{\\frac{1}{2}} \\frac{1}{8}=x\\)\n\nConvert to exponential form.\n\n\\(\\left(\\frac{1}{2}\\right)^{x}=\\frac{1}{8}\\)\n\nRewrite \\(\\frac{1}{8}\\) as \\(\\left(\\frac{1}{2}\\right)^{3}\\).\n\n\\(\\left(\\frac{1}{2}\\right)^{x}=\\left(\\frac{1}{2}\\right)^{3}\\)\n\nWith the same base, the exponents must be equal.\n\n\\(x=3 \\quad\\) Therefore \\(\\log _{\\frac{1}{2}} \\frac{1}{8}=3\\)\n\nExercise \\(\\PageIndex{5}\\)\n\nFind the value of \\(x\\):\n\n1. \\(\\log _{x} 64=2\\)\n\n2. \\(\\log _{5} x=3\\)\n\n3. \\(\\log _{\\frac{1}{2}} \\frac{1}{4}=x\\)\n\nAnswer\n\n1. \\(x=8\\)\n\n2. \\(x=125\\)\n\n3. \\(x=2\\)\n\nExercise \\(\\PageIndex{6}\\)\n\nFind the value of \\(x\\):\n\n1. \\(\\log _{x} 81=2\\)\n\n2. \\(\\log _{3} x=5\\)\n\n3. \\(\\log _{\\frac{1}{3}} \\frac{1}{27}=x\\)\n\nAnswer\n\n1. \\(x=9\\)\n\n2. \\(x=243\\)\n\n3. \\(x=3\\)\n\nWhen see an expression such as \\(log_{3}27\\), we can find its exact value two ways. By inspection we realize it means “\\(3\\) to what power will be \\(27\\)”? Since \\(3^{3}=27\\), we know \\(log_{3}27=3\\). An alternate way is to set the expression equal to \\(x\\) and then convert it into an exponential equation.\n\nExample \\(\\PageIndex{4}\\)\n\nFind the exact value of each logarithm without using a calculator:\n\n1. \\(\\log _{5} 25\\)\n\n2. \\(\\log _{9} 3\\)\n\n3. \\(\\log _{2} \\frac{1}{16}\\)\n\nSolution:\n\na.\n\n\\(\\log _{5} 25\\)\n\n\\(5\\) to what power will be \\(25\\)?\n\n\\(\\log _{5} 25=2\\)\n\nOr\n\nSet the expression equal to \\(x\\).\n\n\\(\\log _{5} 25=x\\)\n\nChange to exponential form.\n\n\\(5^{x}=25\\)\n\nRewrite \\(25\\) as \\(5^{2}\\).\n\n\\(5^{x}=5^{2}\\)\n\nWith the same base the exponents must be equal.\n\n\\(x=2 \\quad\\) Therefore \\(, \\log _{5} 25=2\\).\n\nb.\n\n\\(\\log _{9} 3\\)\n\nSet the expression equal to \\(x\\).\n\n\\(\\log _{9} 3=x\\)\n\nChange to exponential form.\n\n\\(9^{x}=3\\)\n\nRewrite \\(9\\) as \\(3^{2}\\).\n\n\\(\\left(3^{2}\\right)^{x}=3^{1}\\)\n\nSimplify the exponents.\n\n\\(3^{2 x}=3^{1}\\)\n\nWith the same base the exponents must be equal.\n\n\\(2 x=1\\)\n\nSolve the equation.\n\n\\(x=\\frac{1}{2} \\quad\\) Therefore \\(, \\log _{9} 3=\\frac{1}{2}\\).\n\nc.\n\n\\(\\log _{2} \\frac{1}{16}\\)\n\nSet the expression equal to \\(x\\).\n\n\\(\\log _{2} \\frac{1}{16}=x\\)\n\nChange to exponential form.\n\n\\(2^{x}=\\frac{1}{16}\\)\n\nRewrite \\(16\\) as \\(2^{4}\\).\n\n\\(2^{x}=\\frac{1}{2^{4}}\\)\n\n\\(2^{x}=2^{-4}\\)\n\nWith the same base the exponents must be equal.\n\n\\(x=-4 \\quad\\) Therefore \\(, \\log _{2} \\frac{1}{16}=-4\\).\n\nExercise \\(\\PageIndex{7}\\)\n\nFind the exact value of each logarithm without using a calculator:\n\n1. \\(\\log _{12} 144\\)\n\n2. \\(\\log _{4} 2\\)\n\n3. \\(\\log _{2} \\frac{1}{32}\\)\n\nAnswer\n\n1. \\(2\\)\n\n2. \\(\\frac{1}{2}\\)\n\n3. \\(-5\\)\n\nExercise \\(\\PageIndex{8}\\)\n\nFind the exact value of each logarithm without using a calculator:\n\n1. \\(\\log _{9} 81\\)\n\n2. \\(\\log _{8} 2\\)\n\n3. \\(\\log _{3} \\frac{1}{9}\\)\n\nAnswer\n\n1. \\(2\\)\n\n2. \\(\\frac{1}{3}\\)\n\n3. \\(-2\\)\n\nGraph Logarithmic Functions\n\nTo graph a logarithmic function \\(y=log_{a}x\\), it is easiest to convert the equation to its exponential form, \\(x=a^{y}\\). Generally, when we look for ordered pairs for the graph of a function, we usually choose an \\(x\\)-value and then determine its corresponding \\(y\\)-value. In this case you may find it easier to choose \\(y\\)-values and then determine its corresponding \\(x\\)-value.\n\nExample \\(\\PageIndex{5}\\)\n\nGraph \\(y=\\log _{2} x\\).\n\nSolution:\n\nTo graph the function, we will first rewrite the logarithmic equation, \\(y=\\log _{2} x\\), in exponential form, \\(2^{y}=x\\).\n\nWe will use point plotting to graph the function. It will be easier to start with values of \\(y\\) and then get \\(x\\).\n\n    Table 10.3.1\n\n            \\(y\\)\t\n            \\(2^{y}=x\\)\t\n            \\((x,y)\\)\t\n\n            \\(-2\\)\t\n            \\(2^{-2}=\\frac{1}{2^{2}}=\\frac{1}{4}\\)\t\n            \\((\\frac{1}{4},2)\\)\t\n\n            \\(-1\\)\t\n            \\(2^{-1}=\\frac{1}{2^{1}}=\\frac{1}{2}\\)\t\n            \\((\\frac{1}{2},-1)\\)\t\n\n            \\(0\\)\t\n            \\(2^{0}=1\\)\t\n            \\((1,0)\\)\t\n\n            \\(1\\)\t\n            \\(2^{1}=2\\)\t\n            \\((2,1)\\)\t\n\n            \\(2\\)\t\n            \\(2^{2}=4\\)\t\n            \\((4,2)\\)\t\n\n            \\(3\\)\t\n            \\(2^{3}=8\\)\t\n            \\((8,3)\\)\t\n\n[Figure: This figure shows the logarithmic curve going through the points (1 over 2, negative 1), (1, 0), and (2, 1).]\n\nFigure 10.3.4\n\nExercise \\(\\PageIndex{9}\\)\n\nGraph: \\(y=\\log _{3} x\\).\n\nAnswer\n\n[Figure: This figure shows the logarithmic curve going through the points (1 over 3, negative 1), (1, 0), and (3, 1).]\n\nFigure 10.3.5\n\nExercise \\(\\PageIndex{10}\\)\n\nGraph: \\(y=\\log _{5} x\\).\n\nAnswer\n\n[Figure: This figure shows the logarithmic curve going through the points (1 over 5, negative 1), (1, 0), and (5, 1).]\n\nFigure 10.3.6\n\nThe graphs of \\(y=\\log _{2} x, y=\\log _{3} x\\), and \\(y=\\log _{5} x\\) are the shape we expect from a logarithmic function where \\(a>1\\).\n\nWe notice that for each function the graph contains the point \\((1,0)\\). This make sense because \\(0=log_{a}1\\) means \\(a^{0}=1\\) which is true for any \\(a\\).\n\nThe graph of each function, also contains the point \\((a,1)\\). This makes sense as \\(1=\\log _{a} a\\) means \\(a^{1}=a\\). which is true for any \\(a\\).\n\nNotice too, the graph of each function \\(y=\\log _{a} x\\) also contains the point \\(\\left(\\frac{1}{a},-1\\right)\\). This makes sense as \\(-1=\\log _{a} \\frac{1}{a}\\) means \\(a^{-1}=\\frac{1}{a}\\), which is true for any \\(a\\).\n\nLook at each graph again. Now we will see that many characteristics of the logarithm function are simply ’mirror images’ of the characteristics of the corresponding exponential function.\n\nWhat is the domain of the function? The graph never hits the \\(y\\)-axis. The domain is all positive numbers. We write the domain in interval notation as \\((0,∞)\\).\n\nWhat is the range for each function? From the graphs we can see that the range is the set of all real numbers. There is no restriction on the range. We write the range in interval notation as \\((−∞,∞)\\).\n\nWhen the graph approaches the \\(y\\)-axis so very closely but will never cross it, we call the line \\(x=0\\), the \\(y\\)-axis, a vertical asymptote.\n\n    Table 10.3.2: Properties of the Graph of \\(y=\\log _{a} x\\) When \\(a>1\\)\n\n            Domain\t\n            \\((0, \\infty)\\)\t\n\n            Range\t\n            \\((-\\infty, \\infty)\\)\t\n\n            \\(x\\)-intercept\t\n            \\((1,0)\\)\t\n\n            \\(y\\)-intercept\t\n            None\t\n\n            Contains\t\n            \\((a, 1),\\left(\\frac{1}{a},-1\\right)\\)\t\n\n            Asymptote\t\n            \\(y\\)-axis\t\n\n[Figure: This figure shows the logarithmic curve going through the points (1 over a, negative 1), (1, 0), and (a, 1).]\n\nFigure 10.3.7\n\nOur next example looks at the graph of \\(y=log_{a}x\\) when \\(0<a<1\\).\n\nExample \\(\\PageIndex{6}\\)\n\nGraph \\(y=\\log _{\\frac{1}{3}} x\\).\n\nSolution:\n\nTo graph the function, we will first rewrite the logarithmic equation, \\(y=\\log _{\\frac{1}{3}} x\\), in exponential form, \\(\\left(\\frac{1}{3}\\right)^{y}=x\\).\n\nWe will use point plotting to graph the function. It will be easier to start with values of \\(y\\) and then get \\(x\\).\n\n    Table 10.3.3\n\n            \\(y\\)\t\n            \\(\\left(\\frac{1}{3}\\right)^{y}=x\\)\t\n            \\((x,y)\\)\t\n\n            \\(-2\\)\t\n            \\(\\left(\\frac{1}{3}\\right)^{-2}=3^{2}=9\\)\t\n            \\((9,-2)\\)\t\n\n            \\(-1\\)\t\n            \\(\\left(\\frac{1}{3}\\right)^{-1}=3^{1}=3\\)\t\n            \\((3,-1)\\)\t\n\n            \\(0\\)\t\n            \\(\\left(\\frac{1}{3}\\right)^{0}=1\\)\t\n            \\((1,0)\\)\t\n\n            \\(1\\)\t\n            \\(\\left(\\frac{1}{3}\\right)^{1}=\\frac{1}{3}\\)\t\n            \\(\\left(\\frac{1}{3}, 1\\right)\\)\t\n\n            \\(2\\)\t\n            \\(\\left(\\frac{1}{3}\\right)^{2}=\\frac{1}{9}\\)\t\n            \\(\\left(\\frac{1}{9}, 2\\right)\\)\t\n\n            \\(3\\)\t\n            \\(\\left(\\frac{1}{3}\\right)^{3}=\\frac{1}{27}\\)\t\n            \\(\\left(\\frac{1}{27}, 3\\right)\\)\t\n\n[Figure: This figure shows the logarithmic curve going through the points (1 over 3, 1), (1, 0), and (3, negative 1).]\n\nExercise \\(\\PageIndex{11}\\)\n\nGraph: \\(y=\\log _{\\frac{1}{2}} x\\).\n\nAnswer\n\n[Figure: This figure shows the logarithmic curve going through the points (1 over 2, 1), (1, 0), and (2, negative 1).]\n\nExercise \\(\\PageIndex{12}\\)\n\nGraph: \\(y=\\log _{\\frac{1}{4}} x\\).\n\nAnswer\n\n[Figure: This figure shows the logarithmic curve going through the points (1 over 4, 1), (1, 0), and (4, negative 1).]\n\nNow, let’s look at the graphs \\(y=\\log _{\\frac{1}{2}} x, y=\\log _{\\frac{1}{3}} x\\) and \\(y=\\log _{\\frac{1}{4}} x\\), so we can identify some of the properties of logarithmic functions where \\(0<a<1\\).\n\nThe graphs of all have the same basic shape. While this is the shape we expect from a logarithmic function where \\(0<a<1\\).\n\nWe notice, that for each function again, the graph contains the points,\\((1,0),(a, 1),\\left(\\frac{1}{a},-1\\right)\\). This make sense for the same reasons we argued above.\n\nWe notice the domain and range are also the same—the domain is \\((0,∞)\\) and the range is \\((−∞,∞)\\). The \\(y\\)-axis is again the vertical asymptote.\n\nWe will summarize these properties in the chart below. Which also include when \\(a>1\\).\n\n    Table 10.3.4: Properties of the Graph of \\(y=\\log _{a} x\\)\n\n            When \\(a>1\\)\t\n            When \\(0<a<1\\)\t\n\n            1\\)\">Domain\t\n            \\((0, \\infty)\\)\t\n            Domain\t\n            \\((0, \\infty)\\)\t\n\n            1\\)\">Range\t\n            \\((-\\infty, \\infty)\\)\t\n            Range\t\n            \\((-\\infty, \\infty)\\)\t\n\n            1\\)\">\\(x\\)-intercept\t\n            \\((1,0)\\)\t\n            \\(x\\)-intercept\t\n            \\((1,0)\\)\t\n\n            1\\)\">\\(y\\)-intercept\t\n            None\t\n            \\(y\\)-intercept\t\n            None\t\n\n            1\\)\">Contains\t\n            \\((a, 1),\\left(\\frac{1}{a},-1\\right)\\)\t\n            Contains\t\n            \\((a, 1),\\left(\\frac{1}{a},-1\\right)\\)\t\n\n            1\\)\">Asymptote\t\n            \\(y\\) -axis\t\n            Asymptote\t\n            \\(y\\) -axis\t\n\n            1\\)\">Basic shape\t\n            Increasing\t\n            Basic shape\t\n            Decreasing\t\n\n[Figure: This figure shows that, for a greater than 1, the logarithmic curve going through the points (1 over a, negative 1), (1, 0), and (a, 1). This figure shows that, for a greater than 0 and less than 1, the logarithmic curve going through the points (a, 1), (1, 0), and (1 over a, negative 1).]\n\nFigure 10.3.11\n\nWe talked earlier about how the logarithmic function \\(f^{-1}(x)=\\log _{a} x\\) is the inverse of the exponential function \\(f(x)=a^{x}\\). The graphs in Figure 10.3.12 show both the exponential (blue) and logarithmic (red) functions on the same graph for both \\(a>1\\) and \\(0<a<1\\).\n\n[Figure: This figure shows that, for a greater than 1, the logarithmic curve going through the points (1 over a, negative 1), (1, 0), and (a, 1). It also shows the exponential curve going through the points (1, 1 over a), (0, 1), and (1, a) along with the line y equals x. The logarithmic curve is a mirror image of the exponential curve across the y equals x line. This figure shows that, for a greater than 0 and less than 1, the logarithmic curve going through the points (a, 1), (1, 0), and (1 over a, negative 1). It also shows the exponential curve going through the points (negative 1, 1 over a), (0, 1), and (1, a) along with the line y equals x. The logarithmic curve is a mirror image of the exponential curve across the y equals x line.]\n\nFigure 10.3.12\n\nNotice how the graphs are reflections of each other through the line \\(y=x\\). We know this is true of inverse functions. Keeping a visual in your mind of these graphs will help you remember the domain and range of each function. Notice the \\(x\\)-axis is the horizontal asymptote for the exponential functions and the \\(y\\)-axis is the vertical asymptote for the logarithmic functions.\n\nSolve Logarithmic Equations\n\nWhen we talked about exponential functions, we introduced the number \\(e\\). Just as \\(e\\) was a base for an exponential function, it can be used a base for logarithmic functions too. The logarithmic function with base \\(e\\) is called the natural logarithmic function. The function \\(f(x)=\\log _{e} x\\) is generally written \\(f(x)=\\ln x\\) and we read it as “el en of \\(x\\).”\n\nDefinition \\(\\PageIndex{2}\\): Natural Logarithmic Function\n\nThe function \\(f(x)=\\ln x\\) is the natural logarithmic function with base \\(e\\), where \\(x>0\\).\n\n\\(y=\\ln x\\) is equivalent to \\(x=e^{y}\\)\n\nWhen the base of the logarithm function is \\(10\\), we call it the common logarithmic function and the base is not shown. If the base \\(a\\) of a logarithm is not shown, we assume it is \\(10\\).\n\nDefinition \\(\\PageIndex{3}\\): Common Logarithmic Function\n\nThe function \\(f(x)=\\log x\\) is the common logarithmic function with base \\(10\\), where \\(x>0\\).\n\n\\(y=\\log x\\) is equivalent to \\(x=10^{y}\\)\n\n[Figure: It will be important for you to use your calculator to evaluate both common and natural logarithms. Find the log and ln keys on your calculator.]\n\nTo solve logarithmic equations, one strategy is to change the equation to exponential form and then solve the exponential equation as we did before. As we solve logarithmic equations, \\(y=log_{a}x\\), we need to remember that for the base \\(a\\), \\(a>0\\) and \\(a≠1\\). Also, the domain is \\(x>0\\). Just as with radical equations, we must check our solutions to eliminate any extraneous solutions.\n\nExample \\(\\PageIndex{7}\\)\n\nSolve:\n\n1. \\(\\log _{a} 49=2\\)\n\n2. \\(\\ln x=3\\)\n\nSolution:\n\na.\n\n\\(\\log _{a} 49=2\\)\n\nRewrite in exponential form.\n\n\\(a^{2}=49\\)\n\nSolve the equation using the square root property.\n\n\\(a=\\pm 7\\)\n\nThe base cannot be negative, so we eliminate \\(a=-7\\).\n\n\\(a=7, \\quad \\cancel{a=-7}\\)\n\nCheck. \\(a=7\\)\n\n\\(\\begin{aligned} \\log _{a} 49&=2 \\\\ \\log_{7}49&\\stackrel{?}{=}2 \\\\ 7^{2}&\\stackrel{?}{=}49 \\\\ 49&=49 \\end{aligned}\\)\n\nb.\n\n\\(\\ln x=3\\)\n\nRewrite in exponential form.\n\n\\(e^{3}=x\\)\n\nCheck. \\(x=e^{3}\\)\n\n\\(\\begin{aligned} \\ln x &=3 \\\\ \\ln e^{3} & \\stackrel{?}{=} 3 \\\\ e^{3} &=e^{3} \\end{aligned}\\)\n\nExercise \\(\\PageIndex{13}\\)\n\nSolve:\n\n1. \\(\\log _{a} 121=2\\)\n\n2. \\(\\ln x=7\\)\n\nAnswer\n\n1. \\(a=11\\)\n\n2. \\(x=e^{7}\\)\n\nExercise \\(\\PageIndex{14}\\)\n\nSolve:\n\n1. \\(\\log _{a} 64=3\\)\n\n2. \\(\\ln x=9\\)\n\nAnswer\n\n1. \\(a=4\\)\n\n2. \\(x=e^{9}\\)\n\nExample \\(\\PageIndex{8}\\)\n\nSolve:\n\n1. \\(\\log _{2}(3 x-5)=4\\)\n\n2. \\(\\ln e^{2 x}=4\\)\n\nSolution:\n\na.\n\n\\(\\log _{2}(3 x-5)=4\\)\n\nRewrite in exponential form.\n\n\\(2^{4}=3 x-5\\)\n\nSimplify.\n\n\\(16=3 x-5\\)\n\nSolve the equation.\n\n\\(21=3 x\\)\n\n\\(7=x\\)\n\nCheck. \\(x=7\\)\n\n\\(\\begin{aligned} \\log _{2}(3 x-5)&=4 \\\\ \\log_{2}(3\\cdot7-5)&\\stackrel{?}{=}4\\\\ \\log_{2}(16)&\\stackrel{?}{=}4 \\\\ 2^{4}& \\stackrel{?}{=}16 \\\\ 16&=16 \\end{aligned}\\)\n\nb.\n\n\\(\\ln e^{2 x}=4\\)\n\nRewrite in exponential form.\n\n\\(e^{4}=e^{2 x}\\)\n\nSince the bases are the same the exponents are equal.\n\n\\(4=2 x\\)\n\nSolve the equation.\n\n\\(2=x\\)\n\nCheck. \\(x=2\\)\n\n\\(\\begin{aligned} \\ln e^{2 x} &=4 \\\\ \\ln e^{2 \\cdot 2} & \\stackrel{?}{=} 4 \\\\ \\ln e^{4} &=4 \\\\ e^{4} &=e^{4} \\end{aligned}\\)\n\nExercise \\(\\PageIndex{15}\\)\n\nSolve:\n\n1. \\(\\log _{2}(5 x-1)=6\\)\n\n2. \\(\\ln e^{3 x}=6\\)\n\nAnswer\n\n1. \\(x=13\\)\n\n2. \\(x=2\\)\n\nExercise \\(\\PageIndex{16}\\)\n\nSolve:\n\n1. \\(\\log _{3}(4 x+3)=3\\)\n\n2. \\(\\ln e^{4 x}=4\\)\n\nAnswer\n\n1. \\(x=6\\)\n\n2. \\(x=1\\)\n\nUse Logarithmic Models in Applications\n\nThere are many applications that are modeled by logarithmic equations. We will first look at the logarithmic equation that gives the decibel (dB) level of sound. Decibels range from \\(0\\), which is barely audible to \\(160\\), which can rupture an eardrum. The \\(10^{−12}\\) in the formula represents the intensity of sound that is barely audible.\n\nDefinition \\(\\PageIndex{4}\\)\n\nDecibel Level of Sound\n\nThe loudness level, \\(D\\), measured in decibels, of a sound of intensity, \\(I\\), measured in watts per square inch is\n\n\\(D=10 \\log \\left(\\frac{I}{10^{-12}}\\right)\\)\n\nExample \\(\\PageIndex{9}\\)\n\nExtended exposure to noise that measures \\(85\\) dB can cause permanent damage to the inner ear which will result in hearing loss. What is the decibel level of music coming through ear phones with intensity \\(10^{−2}\\) watts per square inch?\n\nSolution:\n\n[Figure: .]\n\n            Substitute in the intensity level, \\(I\\).\t\n\n[Figure: .]\n\n            Simplify.\t\n\n[Figure: .]\n\n            Since \\(\\log 10^{10}=10\\).\t\n\n[Figure: .]\n\n            Multiply.\t\n\n[Figure: .]\n\n            The decibel level of music coming through earphones is \\(100\\) dB.\t\n\nExercise \\(\\PageIndex{17}\\)\n\nWhat is the decibel level of one of the new quiet dishwashers with intensity \\(10^{−7}\\) watts per square inch?\n\nAnswer\n\nThe quiet dishwashers have a decibel level of \\(50\\) dB.\n\nExercise \\(\\PageIndex{18}\\)\n\nWhat is the decibel level heavy city traffic with intensity \\(10^{−3}\\) watts per square inch?\n\nAnswer\n\nThe decibel level of heavy traffic is \\(90\\) dB.\n\nThe magnitude \\(R\\) of an earthquake is measured by a logarithmic scale called the Richter scale. The model is \\(R=\\log I\\), where \\(I\\) is the intensity of the shock wave. This model provides a way to measure earthquake intensity.\n\nDefinition \\(\\PageIndex{5}\\): Earthquake Intensity\n\nThe magnitude \\(R\\) of an earthquake is measured by\\(R=\\log I\\), where \\(I\\) is the intensity of its shock wave.\n\nExample \\(\\PageIndex{10}\\)\n\nIn 1906, San Francisco experienced an intense earthquake with a magnitude of \\(7.8\\) on the Richter scale. Over \\(80\\)% of the city was destroyed by the resulting fires. In 2014, Los Angeles experienced a moderate earthquake that measured \\(5.1\\) on the Richter scale and caused $\\(108\\) million dollars of damage. Compare the intensities of the two earthquakes.\n\nSolution:\n\nTo compare the intensities, we first need to convert the magnitudes to intensities using the log formula. Then we will set up a ratio to compare the intensities.\n\nConvert the magnitudes to intensities.\n\n\\(R=\\log I\\)\n\n1906 earthquake\n\n\\(7.8=\\log I\\)\n\nConvert to exponential form.\n\n\\(I=10^{7.8}\\)\n\n2014 earthquake\n\n\\(5.1=\\log I\\)\n\nConvert to exponential form.\n\n\\(I=10^{5.1}\\)\n\nForm a ratio of the intensities.\n\n\\(\\frac{\\text { Intensity for } 1906}{\\text { Intensity for } 2014}\\)\n\nSubstitute in the values.\n\n\\(\\frac{10^{7.8}}{10^{5.1}}\\)\n\nDivide by subtracting the exponents.\n\n\\(10^{2.7}\\)\n\nEvaluate.\n\n\\(501\\)\n\nThe intensity of the 1906 earthquake was about \\(501\\) times the intensity of the 2014 earthquake.\n\nExercise \\(\\PageIndex{19}\\)\n\nIn 1906, San Francisco experienced an intense earthquake with a magnitude of \\(7.8\\) on the Richter scale. In 1989, the Loma Prieta earthquake also affected the San Francisco area, and measured \\(6.9\\) on the Richter scale. Compare the intensities of the two earthquakes.\n\nAnswer\n\nThe intensity of the 1906 earthquake was about \\(8\\) times the intensity of the 1989 earthquake.\n\nExercise \\(\\PageIndex{20}\\)\n\nIn 2014, Chile experienced an intense earthquake with a magnitude of \\(8.2\\) on the Richter scale. In 2014, Los Angeles also experienced an earthquake which measured \\(5.1\\) on the Richter scale. Compare the intensities of the two earthquakes.\n\nAnswer\n\nThe intensity of the earthquake in Chile was about \\(1,259\\) times the intensity of the earthquake in Los Angeles.\n\nAccess these online resources for additional instruction and practice with evaluating and graphing logarithmic functions.\n\nRe-writing logarithmic equations in exponential form\n\nSimplifying Logarithmic Expressions\n\nGraphing logarithmic functions\n\nUsing logarithms to calculate decibel levels\n\nKey Concepts\n\nProperties of the Graph of \\(y=\\log _{a} x\\):\n\n            When \\(a>1\\)\t\n            When \\(0<a<1\\)\t\n\n            1\\)\">Domain\t\n            \\((0, \\infty)\\)\t\n            Domain\t\n            \\((0, \\infty)\\)\t\n\n            1\\)\">Range\t\n            \\((-\\infty, \\infty)\\)\t\n            Range\t\n            \\((-\\infty, \\infty)\\)\t\n\n            1\\)\">\\(x\\)-intercept\t\n            \\((1,0)\\)\t\n            \\(x\\)-intercept\t\n            \\((1,0)\\)\t\n\n            1\\)\">\\(y\\)-intercept\t\n            None\t\n            \\(y\\)-intercept\t\n            None\t\n\n            1\\)\">Contains\t\n            \\((a, 1),\\left(\\frac{1}{a},-1\\right)\\)\t\n            Contains\t\n            \\((a, 1),\\left(\\frac{1}{a},-1\\right)\\)\t\n\n            1\\)\">Asymptote\t\n            \\(y\\) -axis\t\n            Asymptote\t\n            \\(y\\) -axis\t\n\n            1\\)\">Basic shape\t\n            Increasing\t\n            Basic shape\t\n            Decreasing\t\n\n[Figure: This figure shows that, for a greater than 1, the logarithmic curve going through the points (1 over a, negative 1), (1, 0), and (a, 1). This figure shows that, for a greater than 0 and less than 1, the logarithmic curve going through the points (a, 1), (1, 0), and (1 over a, negative 1).]\n\nFigure 10.3.11\n\nDecibel Level of Sound: The loudness level, \\(D\\), measured in decibels, of a sound of intensity, \\(I\\), measured in watts per square inch is \\(D=10 \\log \\left(\\frac{I}{10^{-12}}\\right)\\).\n\nEarthquake Intensity: The magnitude \\(R\\) of an earthquake is measured by \\(R=\\log I\\), where \\(I\\) is the intensity of its shock wave.\n\nGlossary\n\ncommon logarithmic function\n\nThe function \\(f(x)=\\log x\\) is the common logarithmic function with base \\(10\\), where \\(x>0\\).\n\n\\(y=\\log x\\) is equivalent to \\(x=10^{y}\\)\n\nlogarithmic function\n\nThe function \\(f(x)=\\log _{a} x\\) is the logarithmic function with base \\(a\\), where \\(a>0,x>0\\), and \\(a≠1\\).\n\n\\(y=\\log _{a} x\\) is equivalent to \\(x=a^{y}\\)\n\nnatural logarithmic function\n\nThe function \\(f(x)=\\ln x\\) is the natural logarithmic function with base \\(e\\), where \\(x>0\\).\n\n\\(y=\\ln x\\) is equivalent to \\(x=e^{y}\\)\n\nThis page titled 10.4: Evaluate and Graph Logarithmic Functions was last modified on Sun, 28 May 2023 08:08:09 GMT and is shared under a CC BY  4.0  license and was authored, remixed, and/or curated by OpenStax via source content that was edited to the style and standards of the LibreTexts platform.",
+  "figures": [
+    {
+      "url": "https://math.libretexts.org/@api/deki/files/21152/CNX_IntAlg_Figure_10_03_001.jpg?revision=1",
+      "alt": "This figure shows the expression y equals log sub a of x, where y is the exponent and a is the base. Next to this expression we have x equals a to the y, where again y is the exponent and a is the base.",
+      "credit": ""
+    },
+    {
+      "url": "https://math.libretexts.org/@api/deki/files/21238/CNX_IntAlg_Figure_10_03_002_img.jpg?revision=1",
+      "alt": "In part (a) we have 2 to the 3 power equals 8, where the 2 is red and the 3 is blue. Following this, we have blue y equals log sub red a of x. Then 3 equals log sub 2 of 8. Hence, if 2 cubed equals 8, then 3 equals log sub 2 of 8. In part (b) we have 5 to the 1 over 2 power equals square root of 5, where the 5 is red and the 1 over 2 is blue. Following this, we have blue y equals log sub red a of x. Then 1 over 2 equals log sub 5 of the square root of 5. Hence, if 5 to the 1 over 2 power equals the square root of 5, then 1 over 2 equals log sub 5 of the square root of 5. In part (c) we have 1 over 2 to the x power equals 1 over 16, where the 1 over 2 is red and the x is blue. Following this, we have blue y equals log sub red a of x. Then x equals log sub 1 over 2 of 1 over 16. Hence, if 1 over 2 to the x power equals 1 over 16, then x equals log sub 1 over 2 of 1 over 16.",
+      "credit": ""
+    },
+    {
+      "url": "https://math.libretexts.org/@api/deki/files/21241/CNX_IntAlg_Figure_10_03_003_img.jpg?revision=1",
+      "alt": "In part (a) we have 2 equals log sub 8 of 64, where the 2 is blue and the 8 is red. Following this, we have x equals red a to the blue y power. Then 64 equals 8 squared. Hence, if 2 equals log sub 8 of 64, then 64 equals 8 squared. In part (b) we have 0 equals log sub 4 of 1, where the 0 is blue and the 4 is red. Following this, we have x equals red a to the blue y power. Then 1 equals 4 to the zero power. Hence, if 0 equals log sub 4 of 1, then 1 equals 4 to the zero power. In part (c) we have negative 3 equals log sub 10 of 1 over 1000, where the negative 3 is blue and the 10 is red. Following this, we have x equals red a to the blue y power. Then 1 over 1000 equals 10 to the negative three power. Hence, if negative 3 equals log sub 10 of 1 over 1000, then 1 over 1000 equals 10 to the negative 3 power.",
+      "credit": ""
+    },
+    {
+      "url": "https://math.libretexts.org/@api/deki/files/21273/CNX_IntAlg_Figure_10_03_004_img.jpg?revision=1",
+      "alt": "This figure shows the logarithmic curve going through the points (1 over 2, negative 1), (1, 0), and (2, 1).",
+      "credit": ""
+    },
+    {
+      "url": "https://math.libretexts.org/@api/deki/files/21224/CNX_IntAlg_Figure_10_03_301_img.jpg?revision=1",
+      "alt": "This figure shows the logarithmic curve going through the points (1 over 3, negative 1), (1, 0), and (3, 1).",
+      "credit": ""
+    },
+    {
+      "url": "https://math.libretexts.org/@api/deki/files/21223/CNX_IntAlg_Figure_10_03_302_img.jpg?revision=1",
+      "alt": "This figure shows the logarithmic curve going through the points (1 over 5, negative 1), (1, 0), and (5, 1).",
+      "credit": ""
+    },
+    {
+      "url": "https://math.libretexts.org/@api/deki/files/21158/CNX_IntAlg_Figure_10_03_005_img.jpg?revision=1",
+      "alt": "This figure shows the logarithmic curve going through the points (1 over a, negative 1), (1, 0), and (a, 1).",
+      "credit": ""
+    },
+    {
+      "url": "https://math.libretexts.org/@api/deki/files/21153/CNX_IntAlg_Figure_10_03_006_img.jpg?revision=1",
+      "alt": "This figure shows the logarithmic curve going through the points (1 over 3, 1), (1, 0), and (3, negative 1).",
+      "credit": ""
+    },
+    {
+      "url": "https://math.libretexts.org/@api/deki/files/21232/CNX_IntAlg_Figure_10_03_303_img.jpg?revision=1",
+      "alt": "This figure shows the logarithmic curve going through the points (1 over 2, 1), (1, 0), and (2, negative 1).",
+      "credit": ""
+    },
+    {
+      "url": "https://math.libretexts.org/@api/deki/files/21156/CNX_IntAlg_Figure_10_03_304_img.jpg?revision=1",
+      "alt": "This figure shows the logarithmic curve going through the points (1 over 4, 1), (1, 0), and (4, negative 1).",
+      "credit": ""
+    },
+    {
+      "url": "https://math.libretexts.org/@api/deki/files/21173/CNX_IntAlg_Figure_10_03_007_img.jpg?revision=1",
+      "alt": "This figure shows that, for a greater than 1, the logarithmic curve going through the points (1 over a, negative 1), (1, 0), and (a, 1). This figure shows that, for a greater than 0 and less than 1, the logarithmic curve going through the points (a, 1), (1, 0), and (1 over a, negative 1).",
+      "credit": ""
+    },
+    {
+      "url": "https://math.libretexts.org/@api/deki/files/21176/CNX_IntAlg_Figure_10_03_008_img.jpg?revision=1",
+      "alt": "This figure shows that, for a greater than 1, the logarithmic curve going through the points (1 over a, negative 1), (1, 0), and (a, 1). It also shows the exponential curve going through the points (1, 1 over a), (0, 1), and (1, a) along with the line y equals x. The logarithmic curve is a mirror image of the exponential curve across the y equals x line. This figure shows that, for a greater than 0 and less than 1, the logarithmic curve going through the points (a, 1), (1, 0), and (1 over a, negative 1). It also shows the exponential curve going through the points (negative 1, 1 over a), (0, 1), and (1, a) along with the line y equals x. The logarithmic curve is a mirror image of the exponential curve across the y equals x line.",
+      "credit": ""
+    },
+    {
+      "url": "https://math.libretexts.org/@api/deki/files/21201/CNX_IntAlg_Figure_10_03_009_img.jpg?revision=1",
+      "alt": "It will be important for you to use your calculator to evaluate both common and natural logarithms. Find the log and ln keys on your calculator.",
+      "credit": ""
+    },
+    {
+      "url": "https://math.libretexts.org/@api/deki/files/21292/CNX_IntAlg_Figure_10_03_010a_img.jpg?revision=1",
+      "alt": ".",
+      "credit": ""
+    },
+    {
+      "url": "https://math.libretexts.org/@api/deki/files/21449/CNX_IntAlg_Figure_10_03_010b_img.jpg?revision=1",
+      "alt": ".",
+      "credit": ""
+    },
+    {
+      "url": "https://math.libretexts.org/@api/deki/files/21217/CNX_IntAlg_Figure_10_03_010c_img.jpg?revision=1",
+      "alt": ".",
+      "credit": ""
+    },
+    {
+      "url": "https://math.libretexts.org/@api/deki/files/21234/CNX_IntAlg_Figure_10_03_010d_img.jpg?revision=1",
+      "alt": ".",
+      "credit": ""
+    },
+    {
+      "url": "https://math.libretexts.org/@api/deki/files/21391/CNX_IntAlg_Figure_10_03_010e_img.jpg?revision=1",
+      "alt": ".",
+      "credit": ""
+    },
+    {
+      "url": "https://math.libretexts.org/@api/deki/files/21173/CNX_IntAlg_Figure_10_03_007_img.jpg?revision=1",
+      "alt": "This figure shows that, for a greater than 1, the logarithmic curve going through the points (1 over a, negative 1), (1, 0), and (a, 1). This figure shows that, for a greater than 0 and less than 1, the logarithmic curve going through the points (a, 1), (1, 0), and (1 over a, negative 1).",
+      "credit": ""
+    }
+  ],
+  "references": [
+    {
+      "text": "Re-writing logarithmic equations in exponential form",
+      "url": "https://openstax.org/l/37logasexponent"
+    },
+    {
+      "text": "Simplifying Logarithmic Expressions",
+      "url": "https://openstax.org/l/37Simplifylog"
+    },
+    {
+      "text": "Graphing logarithmic functions",
+      "url": "https://openstax.org/l/37Graphlog"
+    },
+    {
+      "text": "Using logarithms to calculate decibel levels",
+      "url": "https://openstax.org/l/37Finddecibel"
+    },
+    {
+      "text": "10.4: Evaluate and Graph Logarithmic Functions",
+      "url": "https://math.libretexts.org/Bookshelves/Algebra/Intermediate_Algebra_1e_(OpenStax)/10%3A_Exponential_and_Logarithmic_Functions/10.04%3A_Evaluate_and_Graph_Logarithmic_Functions"
+    },
+    {
+      "text": "CC BY  4.0",
+      "url": "https://creativecommons.org/licenses/by/4.0"
+    },
+    {
+      "text": "OpenStax",
+      "url": "https://openstax.org/"
+    },
+    {
+      "text": "source content",
+      "url": "https://openstax.org/details/books/intermediate-algebra-2e"
+    }
+  ],
+  "exercises": [
+    {
+      "ordinal": 1,
+      "sourceNumber": "1",
+      "sourceAnchor": "",
+      "kind": "exercise-candidate",
+      "context": "By the end of this section, you will be able to:\n\nBefore you get started, take this readiness quiz.",
+      "original": "1. Solve: \\(x^{2}=81\\).\n\n    If you missed this problem, review Example 6.46.",
+      "prompt": "1. Solve: \\(x^{2}=81\\).\n\n    If you missed this problem, review Example 6.46.",
+      "sourceAnswers": [],
+      "hasFigure": false,
+      "status": "draft",
+      "answerVerified": false,
+      "translationStatus": "pending",
+      "mappingStatus": "pending"
+    },
+    {
+      "ordinal": 2,
+      "sourceNumber": "2",
+      "sourceAnchor": "",
+      "kind": "exercise-candidate",
+      "context": "By the end of this section, you will be able to:\n\nBefore you get started, take this readiness quiz.",
+      "original": "2. Evaluate: \\(3^{−2}\\).\n\n    If you missed this problem, review Example 5.15.",
+      "prompt": "2. Evaluate: \\(3^{−2}\\).\n\n    If you missed this problem, review Example 5.15.",
+      "sourceAnswers": [],
+      "hasFigure": false,
+      "status": "draft",
+      "answerVerified": false,
+      "translationStatus": "pending",
+      "mappingStatus": "pending"
+    },
+    {
+      "ordinal": 3,
+      "sourceNumber": "3",
+      "sourceAnchor": "",
+      "kind": "exercise-candidate",
+      "context": "By the end of this section, you will be able to:\n\nBefore you get started, take this readiness quiz.",
+      "original": "3. Solve: \\(2^{4}=3x−5\\).\n\n    If you missed this problem, review Example 2.2.",
+      "prompt": "3. Solve: \\(2^{4}=3x−5\\).\n\n    If you missed this problem, review Example 2.2.",
+      "sourceAnswers": [],
+      "hasFigure": false,
+      "status": "draft",
+      "answerVerified": false,
+      "translationStatus": "pending",
+      "mappingStatus": "pending"
+    },
+    {
+      "ordinal": 4,
+      "sourceNumber": "",
+      "sourceAnchor": "",
+      "kind": "example-or-exercise",
+      "context": "Convert Between Exponential and Logarithmic Form\n\nSince the equations \\(y=\\log _{a} x\\) and \\(x=a^{y}\\) are equivalent, we can go back and forth between them. This will often be the method to solve some exponential and logarithmic equations. To help with converting back and forth let’s take a close look at the equations. See Figure 10.3.1. Notice the positions of the exponent and base.\n\nIf we realize the logarithm is the exponent it makes the conversion easier. You may want to repeat, “base to the exponent give us the number.”",
+      "original": "Example \\(\\PageIndex{1}\\)\n\nConvert to logarithmic form:\n\n1. \\(2^{3}=8\\)\n\n2. \\(5^{\\frac{1}{2}}=\\sqrt{5}\\)\n\n3. \\(\\left(\\frac{1}{2}\\right)^{x}=\\frac{1}{16}\\)\n\nSolution:\n\n[Figure: In part (a) we have 2 to the 3 power equals 8, where the 2 is red and the 3 is blue. Following this, we have blue y equals log sub red a of x. Then 3 equals log sub 2 of 8. Hence, if 2 cubed equals 8, then 3 equals log sub 2 of 8. In part (b) we have 5 to the 1 over 2 power equals square root of 5, where the 5 is red and the 1 over 2 is blue. Following this, we have blue y equals log sub red a of x. Then 1 over 2 equals log sub 5 of the square root of 5. Hence, if 5 to the 1 over 2 power equals the square root of 5, then 1 over 2 equals log sub 5 of the square root of 5. In part (c) we have 1 over 2 to the x power equals 1 over 16, where the 1 over 2 is red and the x is blue. Following this, we have blue y equals log sub red a of x. Then x equals log sub 1 over 2 of 1 over 16. Hence, if 1 over 2 to the x power equals 1 over 16, then x equals log sub 1 over 2 of 1 over 16.]\n\nFigure 10.3.2",
+      "prompt": "Example \\(\\PageIndex{1}\\)\n\nConvert to logarithmic form:\n\n1. \\(2^{3}=8\\)\n\n2. \\(5^{\\frac{1}{2}}=\\sqrt{5}\\)\n\n3. \\(\\left(\\frac{1}{2}\\right)^{x}=\\frac{1}{16}\\)\n\nSolution:\n\n[Figure: In part (a) we have 2 to the 3 power equals 8, where the 2 is red and the 3 is blue. Following this, we have blue y equals log sub red a of x. Then 3 equals log sub 2 of 8. Hence, if 2 cubed equals 8, then 3 equals log sub 2 of 8. In part (b) we have 5 to the 1 over 2 power equals square root of 5, where the 5 is red and the 1 over 2 is blue. Following this, we have blue y equals log sub red a of x. Then 1 over 2 equals log sub 5 of the square root of 5. Hence, if 5 to the 1 over 2 power equals the square root of 5, then 1 over 2 equals log sub 5 of the square root of 5. In part (c) we have 1 over 2 to the x power equals 1 over 16, where the 1 over 2 is red and the x is blue. Following this, we have blue y equals log sub red a of x. Then x equals log sub 1 over 2 of 1 over 16. Hence, if 1 over 2 to the x power equals 1 over 16, then x equals log sub 1 over 2 of 1 over 16.]\n\nFigure 10.3.2",
+      "sourceAnswers": [],
+      "hasFigure": true,
+      "status": "draft",
+      "answerVerified": false,
+      "translationStatus": "pending",
+      "mappingStatus": "pending"
+    },
+    {
+      "ordinal": 5,
+      "sourceNumber": "",
+      "sourceAnchor": "",
+      "kind": "exercise-candidate",
+      "context": "Convert Between Exponential and Logarithmic Form\n\nSince the equations \\(y=\\log _{a} x\\) and \\(x=a^{y}\\) are equivalent, we can go back and forth between them. This will often be the method to solve some exponential and logarithmic equations. To help with converting back and forth let’s take a close look at the equations. See Figure 10.3.1. Notice the positions of the exponent and base.\n\nIf we realize the logarithm is the exponent it makes the conversion easier. You may want to repeat, “base to the exponent give us the number.”",
+      "original": "Exercise \\(\\PageIndex{1}\\)\n\nConvert to logarithmic form:\n\n1. \\(3^{2}=9\\)\n\n2. \\(7^{\\frac{1}{2}}=\\sqrt{7}\\)\n\n3. \\(\\left(\\frac{1}{3}\\right)^{x}=\\frac{1}{27}\\)\n\nAnswer\n\n1. \\(\\log _{3} 9=2\\)\n\n2. \\(\\log _{7} \\sqrt{7}=\\frac{1}{2}\\)\n\n3. \\(\\log _{\\frac{1}{3}} \\frac{1}{27}=x\\)",
+      "prompt": "Exercise \\(\\PageIndex{1}\\)\n\nConvert to logarithmic form:\n\n1. \\(3^{2}=9\\)\n\n2. \\(7^{\\frac{1}{2}}=\\sqrt{7}\\)\n\n3. \\(\\left(\\frac{1}{3}\\right)^{x}=\\frac{1}{27}\\)",
+      "sourceAnswers": [
+        "1. \\(\\log _{3} 9=2\\)\n\n2. \\(\\log _{7} \\sqrt{7}=\\frac{1}{2}\\)\n\n3. \\(\\log _{\\frac{1}{3}} \\frac{1}{27}=x\\)"
+      ],
+      "hasFigure": false,
+      "status": "draft",
+      "answerVerified": false,
+      "translationStatus": "pending",
+      "mappingStatus": "pending"
+    },
+    {
+      "ordinal": 6,
+      "sourceNumber": "",
+      "sourceAnchor": "",
+      "kind": "exercise-candidate",
+      "context": "Convert Between Exponential and Logarithmic Form\n\nSince the equations \\(y=\\log _{a} x\\) and \\(x=a^{y}\\) are equivalent, we can go back and forth between them. This will often be the method to solve some exponential and logarithmic equations. To help with converting back and forth let’s take a close look at the equations. See Figure 10.3.1. Notice the positions of the exponent and base.\n\nIf we realize the logarithm is the exponent it makes the conversion easier. You may want to repeat, “base to the exponent give us the number.”",
+      "original": "Exercise \\(\\PageIndex{2}\\)\n\nConvert to logarithmic form:\n\n1. \\(4^{3}=64\\)\n\n2. \\(4^{\\frac{1}{3}}=\\sqrt[3]{4}\\)\n\n3. \\(\\left(\\frac{1}{2}\\right)^{x}=\\frac{1}{32}\\)\n\nAnswer\n\n1. \\(\\log _{4} 64=3\\)\n\n2. \\(\\log _{4} \\sqrt[3]{4}=\\frac{1}{3}\\)\n\n3. \\(\\log _{\\frac{1}{2}} \\frac{1}{32}=x\\)",
+      "prompt": "Exercise \\(\\PageIndex{2}\\)\n\nConvert to logarithmic form:\n\n1. \\(4^{3}=64\\)\n\n2. \\(4^{\\frac{1}{3}}=\\sqrt[3]{4}\\)\n\n3. \\(\\left(\\frac{1}{2}\\right)^{x}=\\frac{1}{32}\\)",
+      "sourceAnswers": [
+        "1. \\(\\log _{4} 64=3\\)\n\n2. \\(\\log _{4} \\sqrt[3]{4}=\\frac{1}{3}\\)\n\n3. \\(\\log _{\\frac{1}{2}} \\frac{1}{32}=x\\)"
+      ],
+      "hasFigure": false,
+      "status": "draft",
+      "answerVerified": false,
+      "translationStatus": "pending",
+      "mappingStatus": "pending"
+    },
+    {
+      "ordinal": 7,
+      "sourceNumber": "",
+      "sourceAnchor": "",
+      "kind": "example-or-exercise",
+      "context": "Since the equations \\(y=\\log _{a} x\\) and \\(x=a^{y}\\) are equivalent, we can go back and forth between them. This will often be the method to solve some exponential and logarithmic equations. To help with converting back and forth let’s take a close look at the equations. See Figure 10.3.1. Notice the positions of the exponent and base.\n\nIf we realize the logarithm is the exponent it makes the conversion easier. You may want to repeat, “base to the exponent give us the number.”\n\nIn the next example we do the reverse—convert logarithmic form to exponential form.",
+      "original": "Example \\(\\PageIndex{2}\\)\n\nConvert to exponential form:\n\n1. \\(2=\\log _{8} 64\\)\n\n2. \\(0=\\log _{4} 1\\)\n\n3. \\(-3=\\log _{10} \\frac{1}{1000}\\)\n\nSolution:\n\n[Figure: In part (a) we have 2 equals log sub 8 of 64, where the 2 is blue and the 8 is red. Following this, we have x equals red a to the blue y power. Then 64 equals 8 squared. Hence, if 2 equals log sub 8 of 64, then 64 equals 8 squared. In part (b) we have 0 equals log sub 4 of 1, where the 0 is blue and the 4 is red. Following this, we have x equals red a to the blue y power. Then 1 equals 4 to the zero power. Hence, if 0 equals log sub 4 of 1, then 1 equals 4 to the zero power. In part (c) we have negative 3 equals log sub 10 of 1 over 1000, where the negative 3 is blue and the 10 is red. Following this, we have x equals red a to the blue y power. Then 1 over 1000 equals 10 to the negative three power. Hence, if negative 3 equals log sub 10 of 1 over 1000, then 1 over 1000 equals 10 to the negative 3 power.]\n\nFigure 10.3.3",
+      "prompt": "Example \\(\\PageIndex{2}\\)\n\nConvert to exponential form:\n\n1. \\(2=\\log _{8} 64\\)\n\n2. \\(0=\\log _{4} 1\\)\n\n3. \\(-3=\\log _{10} \\frac{1}{1000}\\)\n\nSolution:\n\n[Figure: In part (a) we have 2 equals log sub 8 of 64, where the 2 is blue and the 8 is red. Following this, we have x equals red a to the blue y power. Then 64 equals 8 squared. Hence, if 2 equals log sub 8 of 64, then 64 equals 8 squared. In part (b) we have 0 equals log sub 4 of 1, where the 0 is blue and the 4 is red. Following this, we have x equals red a to the blue y power. Then 1 equals 4 to the zero power. Hence, if 0 equals log sub 4 of 1, then 1 equals 4 to the zero power. In part (c) we have negative 3 equals log sub 10 of 1 over 1000, where the negative 3 is blue and the 10 is red. Following this, we have x equals red a to the blue y power. Then 1 over 1000 equals 10 to the negative three power. Hence, if negative 3 equals log sub 10 of 1 over 1000, then 1 over 1000 equals 10 to the negative 3 power.]\n\nFigure 10.3.3",
+      "sourceAnswers": [],
+      "hasFigure": true,
+      "status": "draft",
+      "answerVerified": false,
+      "translationStatus": "pending",
+      "mappingStatus": "pending"
+    },
+    {
+      "ordinal": 8,
+      "sourceNumber": "",
+      "sourceAnchor": "",
+      "kind": "exercise-candidate",
+      "context": "Since the equations \\(y=\\log _{a} x\\) and \\(x=a^{y}\\) are equivalent, we can go back and forth between them. This will often be the method to solve some exponential and logarithmic equations. To help with converting back and forth let’s take a close look at the equations. See Figure 10.3.1. Notice the positions of the exponent and base.\n\nIf we realize the logarithm is the exponent it makes the conversion easier. You may want to repeat, “base to the exponent give us the number.”\n\nIn the next example we do the reverse—convert logarithmic form to exponential form.",
+      "original": "Exercise \\(\\PageIndex{3}\\)\n\nConvert to exponential form:\n\n1. \\(3=\\log _{4} 64\\)\n\n2. \\(0=\\log _{x} 1\\)\n\n3. \\(-2=\\log _{10} \\frac{1}{100}\\)\n\nAnswer\n\n1. \\(64=4^{3}\\)\n\n2. \\(1=x^{0}\\)\n\n3. \\(\\frac{1}{100}=10^{-2}\\)",
+      "prompt": "Exercise \\(\\PageIndex{3}\\)\n\nConvert to exponential form:\n\n1. \\(3=\\log _{4} 64\\)\n\n2. \\(0=\\log _{x} 1\\)\n\n3. \\(-2=\\log _{10} \\frac{1}{100}\\)",
+      "sourceAnswers": [
+        "1. \\(64=4^{3}\\)\n\n2. \\(1=x^{0}\\)\n\n3. \\(\\frac{1}{100}=10^{-2}\\)"
+      ],
+      "hasFigure": false,
+      "status": "draft",
+      "answerVerified": false,
+      "translationStatus": "pending",
+      "mappingStatus": "pending"
+    },
+    {
+      "ordinal": 9,
+      "sourceNumber": "",
+      "sourceAnchor": "",
+      "kind": "exercise-candidate",
+      "context": "Since the equations \\(y=\\log _{a} x\\) and \\(x=a^{y}\\) are equivalent, we can go back and forth between them. This will often be the method to solve some exponential and logarithmic equations. To help with converting back and forth let’s take a close look at the equations. See Figure 10.3.1. Notice the positions of the exponent and base.\n\nIf we realize the logarithm is the exponent it makes the conversion easier. You may want to repeat, “base to the exponent give us the number.”\n\nIn the next example we do the reverse—convert logarithmic form to exponential form.",
+      "original": "Exercise \\(\\PageIndex{4}\\)\n\nConvert to exponential form:\n\n1. \\(3=\\log _{3} 27\\)\n\n2. \\(0=\\log _{x} 1\\)\n\n3. \\(-1=\\log _{10} \\frac{1}{10}\\)\n\nAnswer\n\n1. \\(27=3^{3}\\)\n\n2. \\(1=x^{0}\\)\n\n3. \\(\\frac{1}{10}=10^{-1}\\)",
+      "prompt": "Exercise \\(\\PageIndex{4}\\)\n\nConvert to exponential form:\n\n1. \\(3=\\log _{3} 27\\)\n\n2. \\(0=\\log _{x} 1\\)\n\n3. \\(-1=\\log _{10} \\frac{1}{10}\\)",
+      "sourceAnswers": [
+        "1. \\(27=3^{3}\\)\n\n2. \\(1=x^{0}\\)\n\n3. \\(\\frac{1}{10}=10^{-1}\\)"
+      ],
+      "hasFigure": false,
+      "status": "draft",
+      "answerVerified": false,
+      "translationStatus": "pending",
+      "mappingStatus": "pending"
+    },
+    {
+      "ordinal": 10,
+      "sourceNumber": "",
+      "sourceAnchor": "",
+      "kind": "example-or-exercise",
+      "context": "Evaluate Logarithmic Functions\n\nWe can solve and evaluate logarithmic equations by using the technique of converting the equation to its equivalent exponential equation.",
+      "original": "Example \\(\\PageIndex{3}\\)\n\nFind the value of \\(x\\):\n\n1. \\(\\log _{x} 36=2\\)\n\n2. \\(\\log _{4} x=3\\)\n\n3. \\(\\log _{\\frac{1}{2}} \\frac{1}{8}=x\\)\n\nSolution:\n\na.\n\n\\(\\log _{x} 36=2\\)\n\nConvert to exponential form.\n\n\\(x^{2}=36\\)\n\nSolve the quadratic.\n\n\\(x=6, \\quad \\cancel{x=-6}\\)\n\nThe base of a logarithmic function must be positive, so we eliminate \\(x=−6\\).\n\n\\(x=6 \\quad\\) Therefore, \\(\\log _{6} 36=2\\)\n\nb.\n\n\\(\\log _{4} x=3\\)\n\nConvert to exponential form.\n\n\\(4^{3}=x\\)\n\nSimplify.\n\n\\(x=64 \\quad\\) Therefore \\(, \\log _{4} 64=3\\)\n\nc.\n\n\\(\\log _{\\frac{1}{2}} \\frac{1}{8}=x\\)\n\nConvert to exponential form.\n\n\\(\\left(\\frac{1}{2}\\right)^{x}=\\frac{1}{8}\\)\n\nRewrite \\(\\frac{1}{8}\\) as \\(\\left(\\frac{1}{2}\\right)^{3}\\).\n\n\\(\\left(\\frac{1}{2}\\right)^{x}=\\left(\\frac{1}{2}\\right)^{3}\\)\n\nWith the same base, the exponents must be equal.\n\n\\(x=3 \\quad\\) Therefore \\(\\log _{\\frac{1}{2}} \\frac{1}{8}=3\\)",
+      "prompt": "Example \\(\\PageIndex{3}\\)\n\nFind the value of \\(x\\):\n\n1. \\(\\log _{x} 36=2\\)\n\n2. \\(\\log _{4} x=3\\)\n\n3. \\(\\log _{\\frac{1}{2}} \\frac{1}{8}=x\\)\n\nSolution:\n\na.\n\n\\(\\log _{x} 36=2\\)\n\nConvert to exponential form.\n\n\\(x^{2}=36\\)\n\nSolve the quadratic.\n\n\\(x=6, \\quad \\cancel{x=-6}\\)\n\nThe base of a logarithmic function must be positive, so we eliminate \\(x=−6\\).\n\n\\(x=6 \\quad\\) Therefore, \\(\\log _{6} 36=2\\)\n\nb.\n\n\\(\\log _{4} x=3\\)\n\nConvert to exponential form.\n\n\\(4^{3}=x\\)\n\nSimplify.\n\n\\(x=64 \\quad\\) Therefore \\(, \\log _{4} 64=3\\)\n\nc.\n\n\\(\\log _{\\frac{1}{2}} \\frac{1}{8}=x\\)\n\nConvert to exponential form.\n\n\\(\\left(\\frac{1}{2}\\right)^{x}=\\frac{1}{8}\\)\n\nRewrite \\(\\frac{1}{8}\\) as \\(\\left(\\frac{1}{2}\\right)^{3}\\).\n\n\\(\\left(\\frac{1}{2}\\right)^{x}=\\left(\\frac{1}{2}\\right)^{3}\\)\n\nWith the same base, the exponents must be equal.\n\n\\(x=3 \\quad\\) Therefore \\(\\log _{\\frac{1}{2}} \\frac{1}{8}=3\\)",
+      "sourceAnswers": [],
+      "hasFigure": false,
+      "status": "draft",
+      "answerVerified": false,
+      "translationStatus": "pending",
+      "mappingStatus": "pending"
+    },
+    {
+      "ordinal": 11,
+      "sourceNumber": "",
+      "sourceAnchor": "",
+      "kind": "exercise-candidate",
+      "context": "Evaluate Logarithmic Functions\n\nWe can solve and evaluate logarithmic equations by using the technique of converting the equation to its equivalent exponential equation.",
+      "original": "Exercise \\(\\PageIndex{5}\\)\n\nFind the value of \\(x\\):\n\n1. \\(\\log _{x} 64=2\\)\n\n2. \\(\\log _{5} x=3\\)\n\n3. \\(\\log _{\\frac{1}{2}} \\frac{1}{4}=x\\)\n\nAnswer\n\n1. \\(x=8\\)\n\n2. \\(x=125\\)\n\n3. \\(x=2\\)",
+      "prompt": "Exercise \\(\\PageIndex{5}\\)\n\nFind the value of \\(x\\):\n\n1. \\(\\log _{x} 64=2\\)\n\n2. \\(\\log _{5} x=3\\)\n\n3. \\(\\log _{\\frac{1}{2}} \\frac{1}{4}=x\\)",
+      "sourceAnswers": [
+        "1. \\(x=8\\)\n\n2. \\(x=125\\)\n\n3. \\(x=2\\)"
+      ],
+      "hasFigure": false,
+      "status": "draft",
+      "answerVerified": false,
+      "translationStatus": "pending",
+      "mappingStatus": "pending"
+    },
+    {
+      "ordinal": 12,
+      "sourceNumber": "",
+      "sourceAnchor": "",
+      "kind": "exercise-candidate",
+      "context": "Evaluate Logarithmic Functions\n\nWe can solve and evaluate logarithmic equations by using the technique of converting the equation to its equivalent exponential equation.",
+      "original": "Exercise \\(\\PageIndex{6}\\)\n\nFind the value of \\(x\\):\n\n1. \\(\\log _{x} 81=2\\)\n\n2. \\(\\log _{3} x=5\\)\n\n3. \\(\\log _{\\frac{1}{3}} \\frac{1}{27}=x\\)\n\nAnswer\n\n1. \\(x=9\\)\n\n2. \\(x=243\\)\n\n3. \\(x=3\\)",
+      "prompt": "Exercise \\(\\PageIndex{6}\\)\n\nFind the value of \\(x\\):\n\n1. \\(\\log _{x} 81=2\\)\n\n2. \\(\\log _{3} x=5\\)\n\n3. \\(\\log _{\\frac{1}{3}} \\frac{1}{27}=x\\)",
+      "sourceAnswers": [
+        "1. \\(x=9\\)\n\n2. \\(x=243\\)\n\n3. \\(x=3\\)"
+      ],
+      "hasFigure": false,
+      "status": "draft",
+      "answerVerified": false,
+      "translationStatus": "pending",
+      "mappingStatus": "pending"
+    },
+    {
+      "ordinal": 13,
+      "sourceNumber": "",
+      "sourceAnchor": "",
+      "kind": "example-or-exercise",
+      "context": "Evaluate Logarithmic Functions\n\nWe can solve and evaluate logarithmic equations by using the technique of converting the equation to its equivalent exponential equation.\n\nWhen see an expression such as \\(log_{3}27\\), we can find its exact value two ways. By inspection we realize it means “\\(3\\) to what power will be \\(27\\)”? Since \\(3^{3}=27\\), we know \\(log_{3}27=3\\). An alternate way is to set the expression equal to \\(x\\) and then convert it into an exponential equation.",
+      "original": "Example \\(\\PageIndex{4}\\)\n\nFind the exact value of each logarithm without using a calculator:\n\n1. \\(\\log _{5} 25\\)\n\n2. \\(\\log _{9} 3\\)\n\n3. \\(\\log _{2} \\frac{1}{16}\\)\n\nSolution:\n\na.\n\n\\(\\log _{5} 25\\)\n\n\\(5\\) to what power will be \\(25\\)?\n\n\\(\\log _{5} 25=2\\)\n\nOr\n\nSet the expression equal to \\(x\\).\n\n\\(\\log _{5} 25=x\\)\n\nChange to exponential form.\n\n\\(5^{x}=25\\)\n\nRewrite \\(25\\) as \\(5^{2}\\).\n\n\\(5^{x}=5^{2}\\)\n\nWith the same base the exponents must be equal.\n\n\\(x=2 \\quad\\) Therefore \\(, \\log _{5} 25=2\\).\n\nb.\n\n\\(\\log _{9} 3\\)\n\nSet the expression equal to \\(x\\).\n\n\\(\\log _{9} 3=x\\)\n\nChange to exponential form.\n\n\\(9^{x}=3\\)\n\nRewrite \\(9\\) as \\(3^{2}\\).\n\n\\(\\left(3^{2}\\right)^{x}=3^{1}\\)\n\nSimplify the exponents.\n\n\\(3^{2 x}=3^{1}\\)\n\nWith the same base the exponents must be equal.\n\n\\(2 x=1\\)\n\nSolve the equation.\n\n\\(x=\\frac{1}{2} \\quad\\) Therefore \\(, \\log _{9} 3=\\frac{1}{2}\\).\n\nc.\n\n\\(\\log _{2} \\frac{1}{16}\\)\n\nSet the expression equal to \\(x\\).\n\n\\(\\log _{2} \\frac{1}{16}=x\\)\n\nChange to exponential form.\n\n\\(2^{x}=\\frac{1}{16}\\)\n\nRewrite \\(16\\) as \\(2^{4}\\).\n\n\\(2^{x}=\\frac{1}{2^{4}}\\)\n\n\\(2^{x}=2^{-4}\\)\n\nWith the same base the exponents must be equal.\n\n\\(x=-4 \\quad\\) Therefore \\(, \\log _{2} \\frac{1}{16}=-4\\).",
+      "prompt": "Example \\(\\PageIndex{4}\\)\n\nFind the exact value of each logarithm without using a calculator:\n\n1. \\(\\log _{5} 25\\)\n\n2. \\(\\log _{9} 3\\)\n\n3. \\(\\log _{2} \\frac{1}{16}\\)\n\nSolution:\n\na.\n\n\\(\\log _{5} 25\\)\n\n\\(5\\) to what power will be \\(25\\)?\n\n\\(\\log _{5} 25=2\\)\n\nOr\n\nSet the expression equal to \\(x\\).\n\n\\(\\log _{5} 25=x\\)\n\nChange to exponential form.\n\n\\(5^{x}=25\\)\n\nRewrite \\(25\\) as \\(5^{2}\\).\n\n\\(5^{x}=5^{2}\\)\n\nWith the same base the exponents must be equal.\n\n\\(x=2 \\quad\\) Therefore \\(, \\log _{5} 25=2\\).\n\nb.\n\n\\(\\log _{9} 3\\)\n\nSet the expression equal to \\(x\\).\n\n\\(\\log _{9} 3=x\\)\n\nChange to exponential form.\n\n\\(9^{x}=3\\)\n\nRewrite \\(9\\) as \\(3^{2}\\).\n\n\\(\\left(3^{2}\\right)^{x}=3^{1}\\)\n\nSimplify the exponents.\n\n\\(3^{2 x}=3^{1}\\)\n\nWith the same base the exponents must be equal.\n\n\\(2 x=1\\)\n\nSolve the equation.\n\n\\(x=\\frac{1}{2} \\quad\\) Therefore \\(, \\log _{9} 3=\\frac{1}{2}\\).\n\nc.\n\n\\(\\log _{2} \\frac{1}{16}\\)\n\nSet the expression equal to \\(x\\).\n\n\\(\\log _{2} \\frac{1}{16}=x\\)\n\nChange to exponential form.\n\n\\(2^{x}=\\frac{1}{16}\\)\n\nRewrite \\(16\\) as \\(2^{4}\\).\n\n\\(2^{x}=\\frac{1}{2^{4}}\\)\n\n\\(2^{x}=2^{-4}\\)\n\nWith the same base the exponents must be equal.\n\n\\(x=-4 \\quad\\) Therefore \\(, \\log _{2} \\frac{1}{16}=-4\\).",
+      "sourceAnswers": [],
+      "hasFigure": false,
+      "status": "draft",
+      "answerVerified": false,
+      "translationStatus": "pending",
+      "mappingStatus": "pending"
+    },
+    {
+      "ordinal": 14,
+      "sourceNumber": "",
+      "sourceAnchor": "",
+      "kind": "exercise-candidate",
+      "context": "Evaluate Logarithmic Functions\n\nWe can solve and evaluate logarithmic equations by using the technique of converting the equation to its equivalent exponential equation.\n\nWhen see an expression such as \\(log_{3}27\\), we can find its exact value two ways. By inspection we realize it means “\\(3\\) to what power will be \\(27\\)”? Since \\(3^{3}=27\\), we know \\(log_{3}27=3\\). An alternate way is to set the expression equal to \\(x\\) and then convert it into an exponential equation.",
+      "original": "Exercise \\(\\PageIndex{7}\\)\n\nFind the exact value of each logarithm without using a calculator:\n\n1. \\(\\log _{12} 144\\)\n\n2. \\(\\log _{4} 2\\)\n\n3. \\(\\log _{2} \\frac{1}{32}\\)\n\nAnswer\n\n1. \\(2\\)\n\n2. \\(\\frac{1}{2}\\)\n\n3. \\(-5\\)",
+      "prompt": "Exercise \\(\\PageIndex{7}\\)\n\nFind the exact value of each logarithm without using a calculator:\n\n1. \\(\\log _{12} 144\\)\n\n2. \\(\\log _{4} 2\\)\n\n3. \\(\\log _{2} \\frac{1}{32}\\)",
+      "sourceAnswers": [
+        "1. \\(2\\)\n\n2. \\(\\frac{1}{2}\\)\n\n3. \\(-5\\)"
+      ],
+      "hasFigure": false,
+      "status": "draft",
+      "answerVerified": false,
+      "translationStatus": "pending",
+      "mappingStatus": "pending"
+    },
+    {
+      "ordinal": 15,
+      "sourceNumber": "",
+      "sourceAnchor": "",
+      "kind": "exercise-candidate",
+      "context": "Evaluate Logarithmic Functions\n\nWe can solve and evaluate logarithmic equations by using the technique of converting the equation to its equivalent exponential equation.\n\nWhen see an expression such as \\(log_{3}27\\), we can find its exact value two ways. By inspection we realize it means “\\(3\\) to what power will be \\(27\\)”? Since \\(3^{3}=27\\), we know \\(log_{3}27=3\\). An alternate way is to set the expression equal to \\(x\\) and then convert it into an exponential equation.",
+      "original": "Exercise \\(\\PageIndex{8}\\)\n\nFind the exact value of each logarithm without using a calculator:\n\n1. \\(\\log _{9} 81\\)\n\n2. \\(\\log _{8} 2\\)\n\n3. \\(\\log _{3} \\frac{1}{9}\\)\n\nAnswer\n\n1. \\(2\\)\n\n2. \\(\\frac{1}{3}\\)\n\n3. \\(-2\\)",
+      "prompt": "Exercise \\(\\PageIndex{8}\\)\n\nFind the exact value of each logarithm without using a calculator:\n\n1. \\(\\log _{9} 81\\)\n\n2. \\(\\log _{8} 2\\)\n\n3. \\(\\log _{3} \\frac{1}{9}\\)",
+      "sourceAnswers": [
+        "1. \\(2\\)\n\n2. \\(\\frac{1}{3}\\)\n\n3. \\(-2\\)"
+      ],
+      "hasFigure": false,
+      "status": "draft",
+      "answerVerified": false,
+      "translationStatus": "pending",
+      "mappingStatus": "pending"
+    },
+    {
+      "ordinal": 16,
+      "sourceNumber": "",
+      "sourceAnchor": "",
+      "kind": "example-or-exercise",
+      "context": "Graph Logarithmic Functions\n\nTo graph a logarithmic function \\(y=log_{a}x\\), it is easiest to convert the equation to its exponential form, \\(x=a^{y}\\). Generally, when we look for ordered pairs for the graph of a function, we usually choose an \\(x\\)-value and then determine its corresponding \\(y\\)-value. In this case you may find it easier to choose \\(y\\)-values and then determine its corresponding \\(x\\)-value.",
+      "original": "Example \\(\\PageIndex{5}\\)\n\nGraph \\(y=\\log _{2} x\\).\n\nSolution:\n\nTo graph the function, we will first rewrite the logarithmic equation, \\(y=\\log _{2} x\\), in exponential form, \\(2^{y}=x\\).\n\nWe will use point plotting to graph the function. It will be easier to start with values of \\(y\\) and then get \\(x\\).\n\n    Table 10.3.1\n\n            \\(y\\)\t\n            \\(2^{y}=x\\)\t\n            \\((x,y)\\)\t\n\n            \\(-2\\)\t\n            \\(2^{-2}=\\frac{1}{2^{2}}=\\frac{1}{4}\\)\t\n            \\((\\frac{1}{4},2)\\)\t\n\n            \\(-1\\)\t\n            \\(2^{-1}=\\frac{1}{2^{1}}=\\frac{1}{2}\\)\t\n            \\((\\frac{1}{2},-1)\\)\t\n\n            \\(0\\)\t\n            \\(2^{0}=1\\)\t\n            \\((1,0)\\)\t\n\n            \\(1\\)\t\n            \\(2^{1}=2\\)\t\n            \\((2,1)\\)\t\n\n            \\(2\\)\t\n            \\(2^{2}=4\\)\t\n            \\((4,2)\\)\t\n\n            \\(3\\)\t\n            \\(2^{3}=8\\)\t\n            \\((8,3)\\)\t\n\n[Figure: This figure shows the logarithmic curve going through the points (1 over 2, negative 1), (1, 0), and (2, 1).]\n\nFigure 10.3.4",
+      "prompt": "Example \\(\\PageIndex{5}\\)\n\nGraph \\(y=\\log _{2} x\\).\n\nSolution:\n\nTo graph the function, we will first rewrite the logarithmic equation, \\(y=\\log _{2} x\\), in exponential form, \\(2^{y}=x\\).\n\nWe will use point plotting to graph the function. It will be easier to start with values of \\(y\\) and then get \\(x\\).\n\n    Table 10.3.1\n\n            \\(y\\)\t\n            \\(2^{y}=x\\)\t\n            \\((x,y)\\)\t\n\n            \\(-2\\)\t\n            \\(2^{-2}=\\frac{1}{2^{2}}=\\frac{1}{4}\\)\t\n            \\((\\frac{1}{4},2)\\)\t\n\n            \\(-1\\)\t\n            \\(2^{-1}=\\frac{1}{2^{1}}=\\frac{1}{2}\\)\t\n            \\((\\frac{1}{2},-1)\\)\t\n\n            \\(0\\)\t\n            \\(2^{0}=1\\)\t\n            \\((1,0)\\)\t\n\n            \\(1\\)\t\n            \\(2^{1}=2\\)\t\n            \\((2,1)\\)\t\n\n            \\(2\\)\t\n            \\(2^{2}=4\\)\t\n            \\((4,2)\\)\t\n\n            \\(3\\)\t\n            \\(2^{3}=8\\)\t\n            \\((8,3)\\)\t\n\n[Figure: This figure shows the logarithmic curve going through the points (1 over 2, negative 1), (1, 0), and (2, 1).]\n\nFigure 10.3.4",
+      "sourceAnswers": [],
+      "hasFigure": true,
+      "status": "draft",
+      "answerVerified": false,
+      "translationStatus": "pending",
+      "mappingStatus": "pending"
+    },
+    {
+      "ordinal": 17,
+      "sourceNumber": "",
+      "sourceAnchor": "",
+      "kind": "exercise-candidate",
+      "context": "Graph Logarithmic Functions\n\nTo graph a logarithmic function \\(y=log_{a}x\\), it is easiest to convert the equation to its exponential form, \\(x=a^{y}\\). Generally, when we look for ordered pairs for the graph of a function, we usually choose an \\(x\\)-value and then determine its corresponding \\(y\\)-value. In this case you may find it easier to choose \\(y\\)-values and then determine its corresponding \\(x\\)-value.",
+      "original": "Exercise \\(\\PageIndex{9}\\)\n\nGraph: \\(y=\\log _{3} x\\).\n\nAnswer\n\n[Figure: This figure shows the logarithmic curve going through the points (1 over 3, negative 1), (1, 0), and (3, 1).]\n\nFigure 10.3.5",
+      "prompt": "Exercise \\(\\PageIndex{9}\\)\n\nGraph: \\(y=\\log _{3} x\\).",
+      "sourceAnswers": [
+        "[Figure: This figure shows the logarithmic curve going through the points (1 over 3, negative 1), (1, 0), and (3, 1).]\n\nFigure 10.3.5"
+      ],
+      "hasFigure": true,
+      "status": "draft",
+      "answerVerified": false,
+      "translationStatus": "pending",
+      "mappingStatus": "pending"
+    },
+    {
+      "ordinal": 18,
+      "sourceNumber": "",
+      "sourceAnchor": "",
+      "kind": "exercise-candidate",
+      "context": "Graph Logarithmic Functions\n\nTo graph a logarithmic function \\(y=log_{a}x\\), it is easiest to convert the equation to its exponential form, \\(x=a^{y}\\). Generally, when we look for ordered pairs for the graph of a function, we usually choose an \\(x\\)-value and then determine its corresponding \\(y\\)-value. In this case you may find it easier to choose \\(y\\)-values and then determine its corresponding \\(x\\)-value.",
+      "original": "Exercise \\(\\PageIndex{10}\\)\n\nGraph: \\(y=\\log _{5} x\\).\n\nAnswer\n\n[Figure: This figure shows the logarithmic curve going through the points (1 over 5, negative 1), (1, 0), and (5, 1).]\n\nFigure 10.3.6",
+      "prompt": "Exercise \\(\\PageIndex{10}\\)\n\nGraph: \\(y=\\log _{5} x\\).",
+      "sourceAnswers": [
+        "[Figure: This figure shows the logarithmic curve going through the points (1 over 5, negative 1), (1, 0), and (5, 1).]\n\nFigure 10.3.6"
+      ],
+      "hasFigure": true,
+      "status": "draft",
+      "answerVerified": false,
+      "translationStatus": "pending",
+      "mappingStatus": "pending"
+    },
+    {
+      "ordinal": 19,
+      "sourceNumber": "",
+      "sourceAnchor": "",
+      "kind": "example-or-exercise",
+      "context": "What is the range for each function? From the graphs we can see that the range is the set of all real numbers. There is no restriction on the range. We write the range in interval notation as \\((−∞,∞)\\).\n\nWhen the graph approaches the \\(y\\)-axis so very closely but will never cross it, we call the line \\(x=0\\), the \\(y\\)-axis, a vertical asymptote.\n\nOur next example looks at the graph of \\(y=log_{a}x\\) when \\(0<a<1\\).",
+      "original": "Example \\(\\PageIndex{6}\\)\n\nGraph \\(y=\\log _{\\frac{1}{3}} x\\).\n\nSolution:\n\nTo graph the function, we will first rewrite the logarithmic equation, \\(y=\\log _{\\frac{1}{3}} x\\), in exponential form, \\(\\left(\\frac{1}{3}\\right)^{y}=x\\).\n\nWe will use point plotting to graph the function. It will be easier to start with values of \\(y\\) and then get \\(x\\).\n\n    Table 10.3.3\n\n            \\(y\\)\t\n            \\(\\left(\\frac{1}{3}\\right)^{y}=x\\)\t\n            \\((x,y)\\)\t\n\n            \\(-2\\)\t\n            \\(\\left(\\frac{1}{3}\\right)^{-2}=3^{2}=9\\)\t\n            \\((9,-2)\\)\t\n\n            \\(-1\\)\t\n            \\(\\left(\\frac{1}{3}\\right)^{-1}=3^{1}=3\\)\t\n            \\((3,-1)\\)\t\n\n            \\(0\\)\t\n            \\(\\left(\\frac{1}{3}\\right)^{0}=1\\)\t\n            \\((1,0)\\)\t\n\n            \\(1\\)\t\n            \\(\\left(\\frac{1}{3}\\right)^{1}=\\frac{1}{3}\\)\t\n            \\(\\left(\\frac{1}{3}, 1\\right)\\)\t\n\n            \\(2\\)\t\n            \\(\\left(\\frac{1}{3}\\right)^{2}=\\frac{1}{9}\\)\t\n            \\(\\left(\\frac{1}{9}, 2\\right)\\)\t\n\n            \\(3\\)\t\n            \\(\\left(\\frac{1}{3}\\right)^{3}=\\frac{1}{27}\\)\t\n            \\(\\left(\\frac{1}{27}, 3\\right)\\)\t\n\n[Figure: This figure shows the logarithmic curve going through the points (1 over 3, 1), (1, 0), and (3, negative 1).]",
+      "prompt": "Example \\(\\PageIndex{6}\\)\n\nGraph \\(y=\\log _{\\frac{1}{3}} x\\).\n\nSolution:\n\nTo graph the function, we will first rewrite the logarithmic equation, \\(y=\\log _{\\frac{1}{3}} x\\), in exponential form, \\(\\left(\\frac{1}{3}\\right)^{y}=x\\).\n\nWe will use point plotting to graph the function. It will be easier to start with values of \\(y\\) and then get \\(x\\).\n\n    Table 10.3.3\n\n            \\(y\\)\t\n            \\(\\left(\\frac{1}{3}\\right)^{y}=x\\)\t\n            \\((x,y)\\)\t\n\n            \\(-2\\)\t\n            \\(\\left(\\frac{1}{3}\\right)^{-2}=3^{2}=9\\)\t\n            \\((9,-2)\\)\t\n\n            \\(-1\\)\t\n            \\(\\left(\\frac{1}{3}\\right)^{-1}=3^{1}=3\\)\t\n            \\((3,-1)\\)\t\n\n            \\(0\\)\t\n            \\(\\left(\\frac{1}{3}\\right)^{0}=1\\)\t\n            \\((1,0)\\)\t\n\n            \\(1\\)\t\n            \\(\\left(\\frac{1}{3}\\right)^{1}=\\frac{1}{3}\\)\t\n            \\(\\left(\\frac{1}{3}, 1\\right)\\)\t\n\n            \\(2\\)\t\n            \\(\\left(\\frac{1}{3}\\right)^{2}=\\frac{1}{9}\\)\t\n            \\(\\left(\\frac{1}{9}, 2\\right)\\)\t\n\n            \\(3\\)\t\n            \\(\\left(\\frac{1}{3}\\right)^{3}=\\frac{1}{27}\\)\t\n            \\(\\left(\\frac{1}{27}, 3\\right)\\)\t\n\n[Figure: This figure shows the logarithmic curve going through the points (1 over 3, 1), (1, 0), and (3, negative 1).]",
+      "sourceAnswers": [],
+      "hasFigure": true,
+      "status": "draft",
+      "answerVerified": false,
+      "translationStatus": "pending",
+      "mappingStatus": "pending"
+    },
+    {
+      "ordinal": 20,
+      "sourceNumber": "",
+      "sourceAnchor": "",
+      "kind": "exercise-candidate",
+      "context": "What is the range for each function? From the graphs we can see that the range is the set of all real numbers. There is no restriction on the range. We write the range in interval notation as \\((−∞,∞)\\).\n\nWhen the graph approaches the \\(y\\)-axis so very closely but will never cross it, we call the line \\(x=0\\), the \\(y\\)-axis, a vertical asymptote.\n\nOur next example looks at the graph of \\(y=log_{a}x\\) when \\(0<a<1\\).",
+      "original": "Exercise \\(\\PageIndex{11}\\)\n\nGraph: \\(y=\\log _{\\frac{1}{2}} x\\).\n\nAnswer\n\n[Figure: This figure shows the logarithmic curve going through the points (1 over 2, 1), (1, 0), and (2, negative 1).]",
+      "prompt": "Exercise \\(\\PageIndex{11}\\)\n\nGraph: \\(y=\\log _{\\frac{1}{2}} x\\).",
+      "sourceAnswers": [
+        "[Figure: This figure shows the logarithmic curve going through the points (1 over 2, 1), (1, 0), and (2, negative 1).]"
+      ],
+      "hasFigure": true,
+      "status": "draft",
+      "answerVerified": false,
+      "translationStatus": "pending",
+      "mappingStatus": "pending"
+    },
+    {
+      "ordinal": 21,
+      "sourceNumber": "",
+      "sourceAnchor": "",
+      "kind": "exercise-candidate",
+      "context": "What is the range for each function? From the graphs we can see that the range is the set of all real numbers. There is no restriction on the range. We write the range in interval notation as \\((−∞,∞)\\).\n\nWhen the graph approaches the \\(y\\)-axis so very closely but will never cross it, we call the line \\(x=0\\), the \\(y\\)-axis, a vertical asymptote.\n\nOur next example looks at the graph of \\(y=log_{a}x\\) when \\(0<a<1\\).",
+      "original": "Exercise \\(\\PageIndex{12}\\)\n\nGraph: \\(y=\\log _{\\frac{1}{4}} x\\).\n\nAnswer\n\n[Figure: This figure shows the logarithmic curve going through the points (1 over 4, 1), (1, 0), and (4, negative 1).]",
+      "prompt": "Exercise \\(\\PageIndex{12}\\)\n\nGraph: \\(y=\\log _{\\frac{1}{4}} x\\).",
+      "sourceAnswers": [
+        "[Figure: This figure shows the logarithmic curve going through the points (1 over 4, 1), (1, 0), and (4, negative 1).]"
+      ],
+      "hasFigure": true,
+      "status": "draft",
+      "answerVerified": false,
+      "translationStatus": "pending",
+      "mappingStatus": "pending"
+    },
+    {
+      "ordinal": 22,
+      "sourceNumber": "",
+      "sourceAnchor": "",
+      "kind": "example-or-exercise",
+      "context": "The function \\(f(x)=\\log x\\) is the common logarithmic function with base \\(10\\), where \\(x>0\\).\n\n\\(y=\\log x\\) is equivalent to \\(x=10^{y}\\)\n\nTo solve logarithmic equations, one strategy is to change the equation to exponential form and then solve the exponential equation as we did before. As we solve logarithmic equations, \\(y=log_{a}x\\), we need to remember that for the base \\(a\\), \\(a>0\\) and \\(a≠1\\). Also, the domain is \\(x>0\\). Just as with radical equations, we must check our solutions to eliminate any extraneous solutions.",
+      "original": "Example \\(\\PageIndex{7}\\)\n\nSolve:\n\n1. \\(\\log _{a} 49=2\\)\n\n2. \\(\\ln x=3\\)\n\nSolution:\n\na.\n\n\\(\\log _{a} 49=2\\)\n\nRewrite in exponential form.\n\n\\(a^{2}=49\\)\n\nSolve the equation using the square root property.\n\n\\(a=\\pm 7\\)\n\nThe base cannot be negative, so we eliminate \\(a=-7\\).\n\n\\(a=7, \\quad \\cancel{a=-7}\\)\n\nCheck. \\(a=7\\)\n\n\\(\\begin{aligned} \\log _{a} 49&=2 \\\\ \\log_{7}49&\\stackrel{?}{=}2 \\\\ 7^{2}&\\stackrel{?}{=}49 \\\\ 49&=49 \\end{aligned}\\)\n\nb.\n\n\\(\\ln x=3\\)\n\nRewrite in exponential form.\n\n\\(e^{3}=x\\)\n\nCheck. \\(x=e^{3}\\)\n\n\\(\\begin{aligned} \\ln x &=3 \\\\ \\ln e^{3} & \\stackrel{?}{=} 3 \\\\ e^{3} &=e^{3} \\end{aligned}\\)",
+      "prompt": "Example \\(\\PageIndex{7}\\)\n\nSolve:\n\n1. \\(\\log _{a} 49=2\\)\n\n2. \\(\\ln x=3\\)\n\nSolution:\n\na.\n\n\\(\\log _{a} 49=2\\)\n\nRewrite in exponential form.\n\n\\(a^{2}=49\\)\n\nSolve the equation using the square root property.\n\n\\(a=\\pm 7\\)\n\nThe base cannot be negative, so we eliminate \\(a=-7\\).\n\n\\(a=7, \\quad \\cancel{a=-7}\\)\n\nCheck. \\(a=7\\)\n\n\\(\\begin{aligned} \\log _{a} 49&=2 \\\\ \\log_{7}49&\\stackrel{?}{=}2 \\\\ 7^{2}&\\stackrel{?}{=}49 \\\\ 49&=49 \\end{aligned}\\)\n\nb.\n\n\\(\\ln x=3\\)\n\nRewrite in exponential form.\n\n\\(e^{3}=x\\)\n\nCheck. \\(x=e^{3}\\)\n\n\\(\\begin{aligned} \\ln x &=3 \\\\ \\ln e^{3} & \\stackrel{?}{=} 3 \\\\ e^{3} &=e^{3} \\end{aligned}\\)",
+      "sourceAnswers": [],
+      "hasFigure": false,
+      "status": "draft",
+      "answerVerified": false,
+      "translationStatus": "pending",
+      "mappingStatus": "pending"
+    },
+    {
+      "ordinal": 23,
+      "sourceNumber": "",
+      "sourceAnchor": "",
+      "kind": "exercise-candidate",
+      "context": "The function \\(f(x)=\\log x\\) is the common logarithmic function with base \\(10\\), where \\(x>0\\).\n\n\\(y=\\log x\\) is equivalent to \\(x=10^{y}\\)\n\nTo solve logarithmic equations, one strategy is to change the equation to exponential form and then solve the exponential equation as we did before. As we solve logarithmic equations, \\(y=log_{a}x\\), we need to remember that for the base \\(a\\), \\(a>0\\) and \\(a≠1\\). Also, the domain is \\(x>0\\). Just as with radical equations, we must check our solutions to eliminate any extraneous solutions.",
+      "original": "Exercise \\(\\PageIndex{13}\\)\n\nSolve:\n\n1. \\(\\log _{a} 121=2\\)\n\n2. \\(\\ln x=7\\)\n\nAnswer\n\n1. \\(a=11\\)\n\n2. \\(x=e^{7}\\)",
+      "prompt": "Exercise \\(\\PageIndex{13}\\)\n\nSolve:\n\n1. \\(\\log _{a} 121=2\\)\n\n2. \\(\\ln x=7\\)",
+      "sourceAnswers": [
+        "1. \\(a=11\\)\n\n2. \\(x=e^{7}\\)"
+      ],
+      "hasFigure": false,
+      "status": "draft",
+      "answerVerified": false,
+      "translationStatus": "pending",
+      "mappingStatus": "pending"
+    },
+    {
+      "ordinal": 24,
+      "sourceNumber": "",
+      "sourceAnchor": "",
+      "kind": "exercise-candidate",
+      "context": "The function \\(f(x)=\\log x\\) is the common logarithmic function with base \\(10\\), where \\(x>0\\).\n\n\\(y=\\log x\\) is equivalent to \\(x=10^{y}\\)\n\nTo solve logarithmic equations, one strategy is to change the equation to exponential form and then solve the exponential equation as we did before. As we solve logarithmic equations, \\(y=log_{a}x\\), we need to remember that for the base \\(a\\), \\(a>0\\) and \\(a≠1\\). Also, the domain is \\(x>0\\). Just as with radical equations, we must check our solutions to eliminate any extraneous solutions.",
+      "original": "Exercise \\(\\PageIndex{14}\\)\n\nSolve:\n\n1. \\(\\log _{a} 64=3\\)\n\n2. \\(\\ln x=9\\)\n\nAnswer\n\n1. \\(a=4\\)\n\n2. \\(x=e^{9}\\)",
+      "prompt": "Exercise \\(\\PageIndex{14}\\)\n\nSolve:\n\n1. \\(\\log _{a} 64=3\\)\n\n2. \\(\\ln x=9\\)",
+      "sourceAnswers": [
+        "1. \\(a=4\\)\n\n2. \\(x=e^{9}\\)"
+      ],
+      "hasFigure": false,
+      "status": "draft",
+      "answerVerified": false,
+      "translationStatus": "pending",
+      "mappingStatus": "pending"
+    },
+    {
+      "ordinal": 25,
+      "sourceNumber": "",
+      "sourceAnchor": "",
+      "kind": "example-or-exercise",
+      "context": "The function \\(f(x)=\\log x\\) is the common logarithmic function with base \\(10\\), where \\(x>0\\).\n\n\\(y=\\log x\\) is equivalent to \\(x=10^{y}\\)\n\nTo solve logarithmic equations, one strategy is to change the equation to exponential form and then solve the exponential equation as we did before. As we solve logarithmic equations, \\(y=log_{a}x\\), we need to remember that for the base \\(a\\), \\(a>0\\) and \\(a≠1\\). Also, the domain is \\(x>0\\). Just as with radical equations, we must check our solutions to eliminate any extraneous solutions.",
+      "original": "Example \\(\\PageIndex{8}\\)\n\nSolve:\n\n1. \\(\\log _{2}(3 x-5)=4\\)\n\n2. \\(\\ln e^{2 x}=4\\)\n\nSolution:\n\na.\n\n\\(\\log _{2}(3 x-5)=4\\)\n\nRewrite in exponential form.\n\n\\(2^{4}=3 x-5\\)\n\nSimplify.\n\n\\(16=3 x-5\\)\n\nSolve the equation.\n\n\\(21=3 x\\)\n\n\\(7=x\\)\n\nCheck. \\(x=7\\)\n\n\\(\\begin{aligned} \\log _{2}(3 x-5)&=4 \\\\ \\log_{2}(3\\cdot7-5)&\\stackrel{?}{=}4\\\\ \\log_{2}(16)&\\stackrel{?}{=}4 \\\\ 2^{4}& \\stackrel{?}{=}16 \\\\ 16&=16 \\end{aligned}\\)\n\nb.\n\n\\(\\ln e^{2 x}=4\\)\n\nRewrite in exponential form.\n\n\\(e^{4}=e^{2 x}\\)\n\nSince the bases are the same the exponents are equal.\n\n\\(4=2 x\\)\n\nSolve the equation.\n\n\\(2=x\\)\n\nCheck. \\(x=2\\)\n\n\\(\\begin{aligned} \\ln e^{2 x} &=4 \\\\ \\ln e^{2 \\cdot 2} & \\stackrel{?}{=} 4 \\\\ \\ln e^{4} &=4 \\\\ e^{4} &=e^{4} \\end{aligned}\\)",
+      "prompt": "Example \\(\\PageIndex{8}\\)\n\nSolve:\n\n1. \\(\\log _{2}(3 x-5)=4\\)\n\n2. \\(\\ln e^{2 x}=4\\)\n\nSolution:\n\na.\n\n\\(\\log _{2}(3 x-5)=4\\)\n\nRewrite in exponential form.\n\n\\(2^{4}=3 x-5\\)\n\nSimplify.\n\n\\(16=3 x-5\\)\n\nSolve the equation.\n\n\\(21=3 x\\)\n\n\\(7=x\\)\n\nCheck. \\(x=7\\)\n\n\\(\\begin{aligned} \\log _{2}(3 x-5)&=4 \\\\ \\log_{2}(3\\cdot7-5)&\\stackrel{?}{=}4\\\\ \\log_{2}(16)&\\stackrel{?}{=}4 \\\\ 2^{4}& \\stackrel{?}{=}16 \\\\ 16&=16 \\end{aligned}\\)\n\nb.\n\n\\(\\ln e^{2 x}=4\\)\n\nRewrite in exponential form.\n\n\\(e^{4}=e^{2 x}\\)\n\nSince the bases are the same the exponents are equal.\n\n\\(4=2 x\\)\n\nSolve the equation.\n\n\\(2=x\\)\n\nCheck. \\(x=2\\)\n\n\\(\\begin{aligned} \\ln e^{2 x} &=4 \\\\ \\ln e^{2 \\cdot 2} & \\stackrel{?}{=} 4 \\\\ \\ln e^{4} &=4 \\\\ e^{4} &=e^{4} \\end{aligned}\\)",
+      "sourceAnswers": [],
+      "hasFigure": false,
+      "status": "draft",
+      "answerVerified": false,
+      "translationStatus": "pending",
+      "mappingStatus": "pending"
+    },
+    {
+      "ordinal": 26,
+      "sourceNumber": "",
+      "sourceAnchor": "",
+      "kind": "exercise-candidate",
+      "context": "The function \\(f(x)=\\log x\\) is the common logarithmic function with base \\(10\\), where \\(x>0\\).\n\n\\(y=\\log x\\) is equivalent to \\(x=10^{y}\\)\n\nTo solve logarithmic equations, one strategy is to change the equation to exponential form and then solve the exponential equation as we did before. As we solve logarithmic equations, \\(y=log_{a}x\\), we need to remember that for the base \\(a\\), \\(a>0\\) and \\(a≠1\\). Also, the domain is \\(x>0\\). Just as with radical equations, we must check our solutions to eliminate any extraneous solutions.",
+      "original": "Exercise \\(\\PageIndex{15}\\)\n\nSolve:\n\n1. \\(\\log _{2}(5 x-1)=6\\)\n\n2. \\(\\ln e^{3 x}=6\\)\n\nAnswer\n\n1. \\(x=13\\)\n\n2. \\(x=2\\)",
+      "prompt": "Exercise \\(\\PageIndex{15}\\)\n\nSolve:\n\n1. \\(\\log _{2}(5 x-1)=6\\)\n\n2. \\(\\ln e^{3 x}=6\\)",
+      "sourceAnswers": [
+        "1. \\(x=13\\)\n\n2. \\(x=2\\)"
+      ],
+      "hasFigure": false,
+      "status": "draft",
+      "answerVerified": false,
+      "translationStatus": "pending",
+      "mappingStatus": "pending"
+    },
+    {
+      "ordinal": 27,
+      "sourceNumber": "",
+      "sourceAnchor": "",
+      "kind": "exercise-candidate",
+      "context": "The function \\(f(x)=\\log x\\) is the common logarithmic function with base \\(10\\), where \\(x>0\\).\n\n\\(y=\\log x\\) is equivalent to \\(x=10^{y}\\)\n\nTo solve logarithmic equations, one strategy is to change the equation to exponential form and then solve the exponential equation as we did before. As we solve logarithmic equations, \\(y=log_{a}x\\), we need to remember that for the base \\(a\\), \\(a>0\\) and \\(a≠1\\). Also, the domain is \\(x>0\\). Just as with radical equations, we must check our solutions to eliminate any extraneous solutions.",
+      "original": "Exercise \\(\\PageIndex{16}\\)\n\nSolve:\n\n1. \\(\\log _{3}(4 x+3)=3\\)\n\n2. \\(\\ln e^{4 x}=4\\)\n\nAnswer\n\n1. \\(x=6\\)\n\n2. \\(x=1\\)",
+      "prompt": "Exercise \\(\\PageIndex{16}\\)\n\nSolve:\n\n1. \\(\\log _{3}(4 x+3)=3\\)\n\n2. \\(\\ln e^{4 x}=4\\)",
+      "sourceAnswers": [
+        "1. \\(x=6\\)\n\n2. \\(x=1\\)"
+      ],
+      "hasFigure": false,
+      "status": "draft",
+      "answerVerified": false,
+      "translationStatus": "pending",
+      "mappingStatus": "pending"
+    },
+    {
+      "ordinal": 28,
+      "sourceNumber": "",
+      "sourceAnchor": "",
+      "kind": "example-or-exercise",
+      "context": "Decibel Level of Sound\n\nThe loudness level, \\(D\\), measured in decibels, of a sound of intensity, \\(I\\), measured in watts per square inch is\n\n\\(D=10 \\log \\left(\\frac{I}{10^{-12}}\\right)\\)",
+      "original": "Example \\(\\PageIndex{9}\\)\n\nExtended exposure to noise that measures \\(85\\) dB can cause permanent damage to the inner ear which will result in hearing loss. What is the decibel level of music coming through ear phones with intensity \\(10^{−2}\\) watts per square inch?\n\nSolution:\n\n[Figure: .]\n\n            Substitute in the intensity level, \\(I\\).\t\n\n[Figure: .]\n\n            Simplify.\t\n\n[Figure: .]\n\n            Since \\(\\log 10^{10}=10\\).\t\n\n[Figure: .]\n\n            Multiply.\t\n\n[Figure: .]\n\n            The decibel level of music coming through earphones is \\(100\\) dB.",
+      "prompt": "Example \\(\\PageIndex{9}\\)\n\nExtended exposure to noise that measures \\(85\\) dB can cause permanent damage to the inner ear which will result in hearing loss. What is the decibel level of music coming through ear phones with intensity \\(10^{−2}\\) watts per square inch?\n\nSolution:\n\n[Figure: .]\n\n            Substitute in the intensity level, \\(I\\).\t\n\n[Figure: .]\n\n            Simplify.\t\n\n[Figure: .]\n\n            Since \\(\\log 10^{10}=10\\).\t\n\n[Figure: .]\n\n            Multiply.\t\n\n[Figure: .]\n\n            The decibel level of music coming through earphones is \\(100\\) dB.",
+      "sourceAnswers": [],
+      "hasFigure": true,
+      "status": "draft",
+      "answerVerified": false,
+      "translationStatus": "pending",
+      "mappingStatus": "pending"
+    },
+    {
+      "ordinal": 29,
+      "sourceNumber": "",
+      "sourceAnchor": "",
+      "kind": "exercise-candidate",
+      "context": "Decibel Level of Sound\n\nThe loudness level, \\(D\\), measured in decibels, of a sound of intensity, \\(I\\), measured in watts per square inch is\n\n\\(D=10 \\log \\left(\\frac{I}{10^{-12}}\\right)\\)",
+      "original": "Exercise \\(\\PageIndex{17}\\)\n\nWhat is the decibel level of one of the new quiet dishwashers with intensity \\(10^{−7}\\) watts per square inch?\n\nAnswer\n\nThe quiet dishwashers have a decibel level of \\(50\\) dB.",
+      "prompt": "Exercise \\(\\PageIndex{17}\\)\n\nWhat is the decibel level of one of the new quiet dishwashers with intensity \\(10^{−7}\\) watts per square inch?",
+      "sourceAnswers": [
+        "The quiet dishwashers have a decibel level of \\(50\\) dB."
+      ],
+      "hasFigure": false,
+      "status": "draft",
+      "answerVerified": false,
+      "translationStatus": "pending",
+      "mappingStatus": "pending"
+    },
+    {
+      "ordinal": 30,
+      "sourceNumber": "",
+      "sourceAnchor": "",
+      "kind": "exercise-candidate",
+      "context": "Decibel Level of Sound\n\nThe loudness level, \\(D\\), measured in decibels, of a sound of intensity, \\(I\\), measured in watts per square inch is\n\n\\(D=10 \\log \\left(\\frac{I}{10^{-12}}\\right)\\)",
+      "original": "Exercise \\(\\PageIndex{18}\\)\n\nWhat is the decibel level heavy city traffic with intensity \\(10^{−3}\\) watts per square inch?\n\nAnswer\n\nThe decibel level of heavy traffic is \\(90\\) dB.",
+      "prompt": "Exercise \\(\\PageIndex{18}\\)\n\nWhat is the decibel level heavy city traffic with intensity \\(10^{−3}\\) watts per square inch?",
+      "sourceAnswers": [
+        "The decibel level of heavy traffic is \\(90\\) dB."
+      ],
+      "hasFigure": false,
+      "status": "draft",
+      "answerVerified": false,
+      "translationStatus": "pending",
+      "mappingStatus": "pending"
+    },
+    {
+      "ordinal": 31,
+      "sourceNumber": "",
+      "sourceAnchor": "",
+      "kind": "example-or-exercise",
+      "context": "\\(D=10 \\log \\left(\\frac{I}{10^{-12}}\\right)\\)\n\nThe magnitude \\(R\\) of an earthquake is measured by a logarithmic scale called the Richter scale. The model is \\(R=\\log I\\), where \\(I\\) is the intensity of the shock wave. This model provides a way to measure earthquake intensity.\n\nThe magnitude \\(R\\) of an earthquake is measured by\\(R=\\log I\\), where \\(I\\) is the intensity of its shock wave.",
+      "original": "Example \\(\\PageIndex{10}\\)\n\nIn 1906, San Francisco experienced an intense earthquake with a magnitude of \\(7.8\\) on the Richter scale. Over \\(80\\)% of the city was destroyed by the resulting fires. In 2014, Los Angeles experienced a moderate earthquake that measured \\(5.1\\) on the Richter scale and caused $\\(108\\) million dollars of damage. Compare the intensities of the two earthquakes.\n\nSolution:\n\nTo compare the intensities, we first need to convert the magnitudes to intensities using the log formula. Then we will set up a ratio to compare the intensities.\n\nConvert the magnitudes to intensities.\n\n\\(R=\\log I\\)\n\n1906 earthquake\n\n\\(7.8=\\log I\\)\n\nConvert to exponential form.\n\n\\(I=10^{7.8}\\)\n\n2014 earthquake\n\n\\(5.1=\\log I\\)\n\nConvert to exponential form.\n\n\\(I=10^{5.1}\\)\n\nForm a ratio of the intensities.\n\n\\(\\frac{\\text { Intensity for } 1906}{\\text { Intensity for } 2014}\\)\n\nSubstitute in the values.\n\n\\(\\frac{10^{7.8}}{10^{5.1}}\\)\n\nDivide by subtracting the exponents.\n\n\\(10^{2.7}\\)\n\nEvaluate.\n\n\\(501\\)\n\nThe intensity of the 1906 earthquake was about \\(501\\) times the intensity of the 2014 earthquake.",
+      "prompt": "Example \\(\\PageIndex{10}\\)\n\nIn 1906, San Francisco experienced an intense earthquake with a magnitude of \\(7.8\\) on the Richter scale. Over \\(80\\)% of the city was destroyed by the resulting fires. In 2014, Los Angeles experienced a moderate earthquake that measured \\(5.1\\) on the Richter scale and caused $\\(108\\) million dollars of damage. Compare the intensities of the two earthquakes.\n\nSolution:\n\nTo compare the intensities, we first need to convert the magnitudes to intensities using the log formula. Then we will set up a ratio to compare the intensities.\n\nConvert the magnitudes to intensities.\n\n\\(R=\\log I\\)\n\n1906 earthquake\n\n\\(7.8=\\log I\\)\n\nConvert to exponential form.\n\n\\(I=10^{7.8}\\)\n\n2014 earthquake\n\n\\(5.1=\\log I\\)\n\nConvert to exponential form.\n\n\\(I=10^{5.1}\\)\n\nForm a ratio of the intensities.\n\n\\(\\frac{\\text { Intensity for } 1906}{\\text { Intensity for } 2014}\\)\n\nSubstitute in the values.\n\n\\(\\frac{10^{7.8}}{10^{5.1}}\\)\n\nDivide by subtracting the exponents.\n\n\\(10^{2.7}\\)\n\nEvaluate.\n\n\\(501\\)\n\nThe intensity of the 1906 earthquake was about \\(501\\) times the intensity of the 2014 earthquake.",
+      "sourceAnswers": [],
+      "hasFigure": false,
+      "status": "draft",
+      "answerVerified": false,
+      "translationStatus": "pending",
+      "mappingStatus": "pending"
+    },
+    {
+      "ordinal": 32,
+      "sourceNumber": "",
+      "sourceAnchor": "",
+      "kind": "exercise-candidate",
+      "context": "\\(D=10 \\log \\left(\\frac{I}{10^{-12}}\\right)\\)\n\nThe magnitude \\(R\\) of an earthquake is measured by a logarithmic scale called the Richter scale. The model is \\(R=\\log I\\), where \\(I\\) is the intensity of the shock wave. This model provides a way to measure earthquake intensity.\n\nThe magnitude \\(R\\) of an earthquake is measured by\\(R=\\log I\\), where \\(I\\) is the intensity of its shock wave.",
+      "original": "Exercise \\(\\PageIndex{19}\\)\n\nIn 1906, San Francisco experienced an intense earthquake with a magnitude of \\(7.8\\) on the Richter scale. In 1989, the Loma Prieta earthquake also affected the San Francisco area, and measured \\(6.9\\) on the Richter scale. Compare the intensities of the two earthquakes.\n\nAnswer\n\nThe intensity of the 1906 earthquake was about \\(8\\) times the intensity of the 1989 earthquake.",
+      "prompt": "Exercise \\(\\PageIndex{19}\\)\n\nIn 1906, San Francisco experienced an intense earthquake with a magnitude of \\(7.8\\) on the Richter scale. In 1989, the Loma Prieta earthquake also affected the San Francisco area, and measured \\(6.9\\) on the Richter scale. Compare the intensities of the two earthquakes.",
+      "sourceAnswers": [
+        "The intensity of the 1906 earthquake was about \\(8\\) times the intensity of the 1989 earthquake."
+      ],
+      "hasFigure": false,
+      "status": "draft",
+      "answerVerified": false,
+      "translationStatus": "pending",
+      "mappingStatus": "pending"
+    },
+    {
+      "ordinal": 33,
+      "sourceNumber": "",
+      "sourceAnchor": "",
+      "kind": "exercise-candidate",
+      "context": "\\(D=10 \\log \\left(\\frac{I}{10^{-12}}\\right)\\)\n\nThe magnitude \\(R\\) of an earthquake is measured by a logarithmic scale called the Richter scale. The model is \\(R=\\log I\\), where \\(I\\) is the intensity of the shock wave. This model provides a way to measure earthquake intensity.\n\nThe magnitude \\(R\\) of an earthquake is measured by\\(R=\\log I\\), where \\(I\\) is the intensity of its shock wave.",
+      "original": "Exercise \\(\\PageIndex{20}\\)\n\nIn 2014, Chile experienced an intense earthquake with a magnitude of \\(8.2\\) on the Richter scale. In 2014, Los Angeles also experienced an earthquake which measured \\(5.1\\) on the Richter scale. Compare the intensities of the two earthquakes.\n\nAnswer\n\nThe intensity of the earthquake in Chile was about \\(1,259\\) times the intensity of the earthquake in Los Angeles.",
+      "prompt": "Exercise \\(\\PageIndex{20}\\)\n\nIn 2014, Chile experienced an intense earthquake with a magnitude of \\(8.2\\) on the Richter scale. In 2014, Los Angeles also experienced an earthquake which measured \\(5.1\\) on the Richter scale. Compare the intensities of the two earthquakes.",
+      "sourceAnswers": [
+        "The intensity of the earthquake in Chile was about \\(1,259\\) times the intensity of the earthquake in Los Angeles."
+      ],
+      "hasFigure": false,
+      "status": "draft",
+      "answerVerified": false,
+      "translationStatus": "pending",
+      "mappingStatus": "pending"
+    }
+  ],
+  "license": "CC BY 4.0",
+  "licenseEvidence": "This page titled 10.4: Evaluate and Graph Logarithmic Functions was last modified on Sun, 28 May 2023 08:08:09 GMT and is shared under a CC BY  4.0  license and was authored, remixed, and/or curated by OpenStax via source content that was edited to the style and standards of the LibreTexts platform.",
+  "url": "https://math.libretexts.org/Bookshelves/Algebra/Intermediate_Algebra_1e_(OpenStax)/10:_Exponential_and_Logarithmic_Functions/10.04:_Evaluate_and_Graph_Logarithmic_Functions",
+  "sha256": "7ba90c3045dea81061d56ed903e8f1b32e59ade22e228a93b02710e62ddfed60",
+  "checkedAt": "2026-10-07",
+  "id": "16f1ec68962e5178826d",
+  "bookId": "intermediate-algebra",
+  "licenseInherited": false,
+  "licenseSource": "https://math.libretexts.org/Bookshelves/Algebra/Intermediate_Algebra_1e_(OpenStax)/10:_Exponential_and_Logarithmic_Functions/10.04:_Evaluate_and_Graph_Logarithmic_Functions",
+  "licenseUrl": "https://creativecommons.org/licenses/by/4.0/",
+  "authors": "OpenStax / Lynn Marecek, Andrea Honeycutt Mathis",
+  "book": "Intermediate Algebra 1e",
+  "reviewStatus": "unreviewed",
+  "sourceLanguage": "en",
+  "translationStatus": "pending"
+}

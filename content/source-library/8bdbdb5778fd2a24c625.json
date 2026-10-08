@@ -1,0 +1,622 @@
+{
+  "title": "5.7:  Functions",
+  "originalText": "Learning Objectives\n\n1. Use function notation.\n\n2. Determine if a relation is a function with different representations.\n\n3. Apply the vertical line test.\n\n4. Determine the domain and range of a function.\n\nIn this section, we will learn about relations and functions. As we go about our daily lives, we have many data items or quantities that are paired to our names. Our social security number, student ID number, email address, phone number, and our birthday are matched to our name. There is a relationship between our name and each of those items. When your teacher gets their class roster, the names of all the students in the class are listed in one column and then the student ID number is likely to be in the next column. If we think of the correspondence as a set of ordered pairs, where the first element is a student name and the second element is that student’s ID number, we call this a relation.\n\n(Student name, Student ID #)\n\nThe set of all the names of the students in the class is called the domain of the relation and the set of all student ID numbers paired with these students is the range of the relation. In general terms, a relation is any set of ordered pairs, (\\(x,y\\)). All the \\(x\\)-values in the ordered pairs together make up the domain. All the \\(y\\)-values in the ordered pairs together make up the range.\n\n[Figure: A rear view of a student raising her hand as she sits at her desk. A teacher standing at the front of the classroom is pointing at the student.]\n\nFigure  \\(\\PageIndex{1}\\): A small group of elementary students learning from their teacher. (credit: modification of work \"Our school\" by Woodleywonderworks/Flickr, CC BY 2.0 )\n\nThere are many situations similar to the student's name and student ID # where one variable is paired or matched with another. The set of ordered pairs that records this matching is a relation. A special type of relation, called a function, occurs extensively in mathematics. A function is a relation that assigns to each element in its domain exactly one element in the range. For each ordered pair in the relation, each \\(x\\)-value is matched with only one \\(y\\)-value.\n\nLet us look at the relation between your friends and their birthdays in Figure \\(\\PageIndex{2}\\). Every friend has a birthday, but no one has two birthdays. It is okay for two people to share a birthday. It is okay that Danny and Stephen share July 24 as their birthday and that June and Liz share August 2. Since each person has exactly one birthday, the relation is a function.\n\n[Figure: Mapping of names and birthdays. Names and birthdays are as follows. Alison: April 25. Penelope: May 23. June: August 2. Gregory: September 15. Geoffrey: January 12. Lauren: May 10. Stephen: July 24. Alice: February 3. Liz: August 2. Danny: July 24.]\n\nFigure \\(\\PageIndex{2}\\): Birthday Mapping\n\nUse Function Notation\n\nIt is very convenient to name a function; most often functions are named \\(f, g, h, F, G\\), or \\(H\\). In any function, for each \\(x\\)-value from the domain, we get a corresponding \\(y\\)-value in the range. In the function \\(f\\), we write this range value \\(y\\) as \\(f(x)\\). This notation \\(f(x)\\) is called function notation and is read \"f of \\(x\\) \" or \"the value of f at \\(x\\).\" In this case the parentheses do not indicate multiplication.\n\nWe call \\(x\\) the independent variable as it can be any value in the domain. We call \\(y\\) the dependent variable as its value depends on \\(x\\). Much like when you first encountered the variable \\(x\\), function notation may be rather unsettling. But the more you use the notation, the more familiar you become with the notation, and the more comfortable you will be with it.\n\nLet's review the equation \\(y=4 x-5\\). To find the value of \\(y\\) when \\(x=2\\), we know to substitute \\(x=2\\) into the equation and then simplify.\n\n            \\(y=4 x-5\\)\t\n\n            Let \\(x=2\\).\t\n            \\(\\begin{array}{l}y=4 \\cdot 2-5 \\\\ y=3\\end{array}\\)\t\n\nThe value of the function at \\(x=2\\) is 3 . We do the same thing using function notation, the equation \\(y=4 x-5\\) can be written as \\(f(x)=4 x-5\\). To find the value when \\(x=2\\), we write:\n\n            \\(f(x)=4 x-5\\)\t\n\n            Let \\(x=2\\).\t\n            \\(\\begin{array}{l}f(2)=4 \\cdot 2-5 \\\\ f(2)=3\\end{array}\\)\t\n\nThe value of the function at \\(x=2\\) is 3. This process of finding the value of \\(f(x)\\) for a given value of \\(x\\) is called evaluating the function.\n\nExample \\(\\PageIndex{1}\\): Evaluating the Function\n\nFor the function \\(f(x)=2 x^2+3 x-1\\), evaluate the function.\n\n1. \\(f(3)\\)\n\n2. \\(f(-2)\\)\n\n3. \\(f(a)\\)\n\nAnswer\n\n1. To evaluate \\(f(3)\\), substitute 3 , for \\(x\\).\n\nSimplify.\n\n\\[\\begin{array}{l}\n\n    f(x)=2 x^2+3 x-1 \\\\\n\n    f(\\mathbf{3})=2(\\mathbf{3})^2+3 \\cdot \\mathbf{3}-1 \\\\\n\n    f(3)=2 \\cdot 9+3 \\cdot 3-1 \\\\\n\n    f(3)=18+9-1 \\\\\n\n    f(3)=26\n\n    \\end{array} \\nonumber \\]\n\n2. To evaluate \\(f(-2)\\), substitute -2 for \\(x\\).\n\nSimplify.\n\n\\[\\begin{aligned}\n\n    f(x) & =2 x^2+3 x-1 \\\\\n\n    f(-2) & =2(-2)^2+3(-2)-1 \\\\\n\n    f(-2) & =2 \\cdot 4+(-6)-1 \\\\\n\n    f(-2) & =8+(-6)-1 \\\\\n\n    f(-2) & =1\n\n    \\end{aligned} \\nonumber \\]\n\n3. To evaluate \\(f(a)\\), substitute \\(a\\) for \\(x\\).\n\nSimplify.\n\n\\[\\begin{array}{l}\n\n    f(x)=2 x^2+3 x-1 \\\\\n\n    f(\\boldsymbol{a})=2(\\boldsymbol{a})^2+3 \\cdot \\boldsymbol{a}-1 \\\\\n\n    f(a)=2 a^2+3 a-1\n\n    \\end{array} \\nonumber \\]\n\nYour Turn \\(\\PageIndex{1}\\)\n\nFor the function \\(f\\left( x \\right) = 3{x^2} - 2x + 1\\), evaluate the function.\n\n1. \\(f\\left( 3 \\right)\\)\n\n2. \\(f\\left( { - 1} \\right)\\)\n\n3. \\(f\\left( t \\right)\\)\n\nExample \\(\\PageIndex{2}\\): Evaluating the Function in an Application\n\nThe number of unread emails in Sylvia's inbox is 75 . This number grows by 10 unread emails a day. The function \\(N(t)=75+10 t\\) represents the relation between the number of emails, \\(N\\), and the time, \\(t\\), measured in days. Find \\(N(5)\\). Explain what this result means.\n\nAnswer\n\nFind \\(N(5)\\). Explain what this result means.\n\n    Substitute in \\(t=5\\).\n\n    Simplify.\n\n\\[\\begin{aligned}\n\n    N(\\mathbf{5}) & =75+10 \\cdot \\mathbf{5} \\\\\n\n    N(t) & =75+10 t \\\\\n\n    N(5) & =75+50 \\\\\n\n    N(5) & =125\n\n    \\end{aligned} \\nonumber \\]\n\nIf 5 is the number of days, \\(N(5)\\) is the number of unread emails after 5 days. After 5 days, there are 125 unread emails in Sylvia's inbox.\n\nYour Turn \\(\\PageIndex{2}\\)\n\nThe number of unread emails in Bryan’s account is 100. This number grows by 15 unread emails a day. The function \\(N\\left( t \\right) = 100 + 15t\\) represents the relation between the number of emails, \\(N\\), and the time, \\(t\\), measured in days. Find \\(N\\)(7). Explain what the result means.\n\nDetermining If a Relation Is a Function with Different Representations\n\nWe can determine whether a relation is a function by identifying the input and the output values. If each input value leads to only one output value, classify the relation as a function. If any input value leads to two or more outputs, do not classify the relation as a function.\n\nWe will review three different representations of relations and determine if they are functions: ordered pairs, mapping, and equations.\n\nExample \\(\\PageIndex{3}\\): Determining If a Relation Is a Function with a Set of Ordered Pairs\n\nUse the set of ordered pairs to determine whether the relation is a function.\n\n1. \\(\\{(-3,27),(-2,8),(-1,1),(0,0),(1,1),(2,8),(3,27)\\}\\)\n\n2. \\(\\{(9,-3),(4,-2),(1,-1),(0,0),(1,1),(4,2),(9,3)\\}\\)\\(\\)\\(\\)\n\nAnswer\n\n1. Each \\(x\\)-value is matched with only one \\(y\\)-value. This relation is a function.\n\n2. The \\(x\\)-value 9 is matched with two \\(y\\)-values, both 3 and -3. This relation is not a function.\n\nYour Turn \\(\\PageIndex{3}\\)\n\nUse the set of ordered pairs to determine whether the relation is a function.\n\n1. \\(\\left\\{ {\\left( {-3,-6} \\right),\\left( {-2,-4} \\right),\\left( {-1,-2} \\right),\\left( {0,0} \\right),\\left( {1,2} \\right),\\left( {2,4} \\right),\\left( {3,6} \\right)} \\right\\}\\)\n\n2. \\(\\{(8,-4),(4,-2),(2,-1),(0,0),(2,1),(4,2),(8,4)\\}\\)\n\nA mapping is sometimes used to show a relation. The arrows show the pairing of the elements of the domain with the elements of the range. Consider the example of the relation between your friends and their birthdays used in Figure 5.60. In this particular example, the domain is the set of people’s names, and the range is the set of their birthdays. This mapping was a function because everybody’s name maps to exactly one birthday.\n\nExample \\(\\PageIndex{4}\\): Determining If a Relation Is a Function with Mapping\n\nUse the mapping in Figure \\(\\PageIndex{3}\\) to determine whether the relation is a function.\n\n[Figure: Mapping of names and phone numbers. The names and corresponding phone numbers are as follows. Lydia: 321-549-3327 home and 321-964-7324 cell. Eugene: 427-658-2314 cell. Janet: 427-658-2314 cell. Rick: 798-367-8541 cell. Marty: 684-358-7961 home and 684-369-7231 cell.]\n\nFigure \\(\\PageIndex{3}\\)\n\nAnswer\n\nBoth Lydia and Marty have two phone numbers. Each \\(x\\)-value is not matched with only one \\(y\\)-value. This relation is not a function.\n\nYour Turn \\(\\PageIndex{5}\\)\n\nUse the mapping in the given figure to determine whether the relation is a function.\n\n[Figure: Mapping of names and phone numbers. The names and corresponding phone numbers are as follows. Neal: 753-469-9731 cell. Krystal: 684-369-7231 cell. Kelvin: 123-567-4839 work. George: 123-567-4839 work and 639-847-6971 cell. Christa: 567-534-2970 work. Mike: 798-367-8541 cell and 567-534-2970 work.]\n\nFigure \\(\\PageIndex{4}\\)\n\nIn algebra functions will usually be represented by an equation. It is easiest to see if the equation is a function when it is solved for \\(y\\). If each value of \\(x\\) results in only one value of \\(y\\), then the equation defines a function.\n\nExercise \\(\\PageIndex{6}\\)\n\nDetermine whether each equation is a function. Assume \\(x\\) is the independent variable.\n\n1. \\(2 x+y=7\\)\n\n2. \\(y=x^2+1\\)\n\n3. \\(x+y^2=3\\)\n\nAnswer\n\n1. \\(2 x+y=7\\)\n\nFor each value of \\(x\\), we multiply it by -2 and then add 7 to get the \\(y\\)-value.\n\n    For example, if \\(x=3\\) :\n\n\\[\\begin{array}{l}\n\n    y=-2 x+7 \\\\\n\n    y=-2 \\cdot \\mathbf{3}+7 \\\\\n\n    y=1\n\n    \\end{array} \\nonumber \\]\n\nWe have that when \\(x=3\\), then \\(y=1\\). It would work similarly for any value of \\(x\\). Since each value of \\(x\\), corresponds to only one value of \\(y\\) the equation defines a function.\n\n2. \\(y=x^2+1\\)\n\nFor each value of \\(x\\), we square it and then add 1 to get the \\(y\\)-value.\n\n    For example, if \\(x=2\\)\n\n\\[\\begin{array}{l}\n\n    y=x^2+1 \\\\\n\n    y=\\mathbf{2}^2+1 \\\\\n\n    y=5\n\n    \\end{array} \\nonumber \\]\n\nWe have that when \\(x=2\\), then \\(y=5\\). It would work similarly for any value of \\(x\\). Since each value of \\(x\\) corresponds to only one value of \\(y\\), the equation defines a function.\n\n3. \\(x+y^2=3\\)\n\n\\[x+y^2=3 \\nonumber \\]\n\nIsolate the \\(y\\) term.\n\n\\[y^2=-x+3 \\nonumber \\]\n\nLet us substitute \\(x=2\\).\n\n\\[\\begin{array}{l}\n\n    y^2=-\\mathbf{2}+3 \\\\\n\n    y^2=1\n\n    \\end{array} \\nonumber \\]\n\nThis gives us two values for \\(y\\).\n\n\\[y=1, y=-1 \\nonumber \\]\n\nWe have shown that when \\(x=2\\), then \\(y=1\\) and \\(y=-1\\). It would work similarly for any value of \\(x\\). Since each value of \\(x\\) does not corresponds to only one value of \\(y\\) the equation does not define a function.\n\nYour Turn \\(\\PageIndex{6}\\)\n\nDetermine whether each equation is a function.\n\n1. \\(\\backslash(4 x+y=-3 \\backslash)\\)\n\n2. \\(\\backslash\\left(x+\\left\\{y^{\\wedge} 2\\right\\}=1 \\backslash\\right)\\)\n\n3. \\(\\backslash\\left(y-\\left\\{x^{\\wedge} 2\\right\\}=2 \\backslash\\right)\\)\n\nVideo\n\nRelations and Functions\n\nApplying the Vertical Line Test\n\nWe reviewed how to determine if a relation is a function. The relations we looked at were expressed as a set of ordered pairs, a mapping, or an equation. We will now cover how to tell if a graph is that of a function.\n\nAn ordered pair \\((x, y)\\) is a solution of a linear equation, if the equation is a true statement when the \\(x\\)-values and \\(y\\) -values of the ordered pair are substituted into the equation. The graph of a linear equation is a straight line where every point on the line is a solution of the equation, and every solution of this equation is a point on this line. Figure  \n\n[Figure: A line is plotted on an x y coordinate plane. The x and y axes range from negative 6 to 6, in increments of 1. The line passes through the points, (negative 5, 5), (0, 2), and (5, negative 1). Note: all values are approximate.]\n\nFigure 5.58: Graph of te Equation \\(y=2x-3\\)\n\nA relation is a function if every element of the domain has exactly one value in the range. The relation defined by the equation \\(y=2x−3is a function. If we look at the graph, each vertical dashed line only intersects the solid line at one point. This makes sense as in a function, for every \\(x\\)-value there is only oney-value. If the vertical line hit the graph twice, the \\(x\\)-value would be mapped to twoy-values, and so the graph would not represent a function. This leads us a graphical method of determining functions called the\\)vertical line test, which states that a set of points in a rectangular coordinate system is the graph of a function if every vertical line intersects the graph in at most one point. If any vertical line intersects the graph in more than one point, the graph does not represent a function.\n\nExample \\(\\PageIndex{7}\\): Applying the Vertical Line Test\n\nDetermine whether the graph (Figure \\(\\PageIndex{6}\\)) is the graph of a function applying the vertical line test.\n\n[Figure: A line is plotted on an x y coordinate plane. The x and y axes range from negative 6 to 6, in increments of 1. The line passes through the points, (negative 5, 5), (0, 2), and (5, negative 1). Note: all values are approximate.]\n\nFigure \\(\\PageIndex{6}\\)\n\nAnswer\n\nOn the graph (Figure \\(\\PageIndex{7}\\)), only three vertical dashed lines are drawn. However, it can be determined that any vertical dashed line that is drawn will intersect the solid line at exactly one point. It is the graph of a function.\n\n[Figure: A line is plotted on an x y coordinate plane. The x and y axes range from negative 6 to 6, in increments of 1. The line passes through the points, (negative 5, 5), (0, 2), and (5, negative 1). Three vertical dashed lines are present. The first line lies between the points, (negative 5, 5) and (negative 5, negative 5). The second line lies between the points, (negative 3, 5) and (negative 3, negative 5). The third line lies between the points, (3, 5) and (3, negative 5). Note: all values are approximate.]\n\nFigure \\(\\PageIndex{7}\\)\n\nYour Turn \\(\\PageIndex{7}\\)\n\nDetermine whether the graph is the graph of a function.\n\n[Figure: A parabola is plotted on an x y coordinate plane. The x-axis ranges from negative 6 to 6, in increments of 1. The y-axis ranges from negative 2 to 10, in increments of 1. The parabola opens up and it passes through the points, (negative 3, 8), (negative 2, 3), (negative 1, 0), (0, negative 1), (1, 0), (2, 3), and (3, 8).Note: all values are approximate.]\n\nFigure \\(\\PageIndex{8}\\)\n\nExample \\(\\PageIndex{8}\\): Applying the Vertical Line Test to a Parabola\n\nDetermine whether the graph is the graph of a function (Figure \\(\\PageIndex{9}\\)).\n\n[Figure: A parabola is plotted on an x y coordinate plane. The x and y axes range from negative 6 to 6, in increments of 1. The parabola opens to the right and it passes through the points, (3, 2), (0, 1), (negative 1, 0), (0, negative 1), and (3, negative 2). Note: all values are approximate.]\n\nFigure \\(\\PageIndex{9}\\)\n\nYour Turn \\(\\PageIndex{8}\\)\n\nDetermine whether the graph is the graph of a function.\n\n[Figure: An ellipse is plotted on an x y coordinate plane. The x and y axes range from negative 6 to 6, in increments of 1. The center of the ellipse is at (0, 0). The ellipse passes through the points, (negative 2, 0), (0, 3), (2, 0), and (0, negative 3).]\n\nFigure \\(\\PageIndex{10}\\)\n\nDetermining the Domain and Range of a Function\n\nFor the function \\( y = f(x)\\), \\(x\\) is the independent variable as it can be any value in the domain, and \\(y\\) is the dependent variable since its value depends on \\(x\\). For the function \\( y = f(x)\\), the values of \\(x\\) make up the domain and the values of \\(y\\) make up the range.\n\nExample \\(\\PageIndex{9}\\): Finding the Domain and Range of Ordered Pairs\n\nFor \\(\\{(1,1),(2,4),(3,9),(4,16),(5,25)\\}\\):\n\n1. Find the domain of the relation.\n\n2. Find the range of the relation.\n\nAnswer\n\n1. The domain is the set of all \\(x\\)-values of the relation: \\(\\{1,2,3,4,5\\}\\)\n\n    2. The range is the set of all \\(y\\)-values of the relation: \\(\\{1,4,9,16,25\\}\\)\n\nYour Turn \\(\\PageIndex{9}\\)\n\nFor the relation \\(\\left\\{ {\\left( {1,1} \\right),\\left( {2,8} \\right),\\left( {3,27} \\right),\\left( {4,64} \\right),\\left( {5,125} \\right)} \\right\\}\\):\n\n1. Find the domain of the relation.\n\n2. Find the range of the relation.\n\nExample \\(\\PageIndex{10}\\): Finding the Domain and Range on a Graph\n\nUse Figure \\(\\PageIndex{11}\\) to:\n\n1. List the ordered pairs of the relation.\n\n2. Find the domain of the relation.\n\n3. Find the range of the relation.\n\n[Figure: Six points are plotted on an x y coordinate plane. The x and y axes range from negative 6 to 6, in increments of 1. The points are plotted at the following coordinates: (negative 3, negative 1), (negative 3, 4), (0, 3), (1, 5), (2, negative 2), and (4, negative 2).]\n\nFigure \\(\\PageIndex{11}\\)\n\nAnswer\n\n1. The ordered pairs of the relation are: \\(\\{(1,5),(-3,-1),(4,-2),(0,3),(2,-2),(-3,4)\\}\\).\n\n    2. The domain is the set of all \\(x\\)-values of the relation: \\(\\{-3,0,1,2,4\\}\\). Notice that while -3 repeats, it is only listed once.\n\n    3. The range is the set of all \\(y\\)-values of the relation: \\(\\{-2,-1,3,4,5\\}\\). Notice that while -2 repeats, it is only listed once.\n\nYour Turn \\(\\PageIndex{10}\\)\n\nUse the given figure to:\n\n1. List the ordered pairs of the relation.\n\n2. Find the domain of the relation.\n\n3. Find the range of the relation.\n\n[Figure: Six points are plotted on an x y coordinate plane. The x and y axes range from negative 6 to 6, in increments of 1. The points are plotted at the following coordinates: (negative 3, 3), (negative 2, 2), (negative 1, 0), (0, negative 1), (2, negative 2), and (4, negative 4).]\n\nFigure \\(\\PageIndex{12}\\)\n\nVideo\n\nDomain and Range on Graphs\n\nWho Knew?: Function and Function Notation\n\nIn 1673, Gottfried Leibniz, the German mathematician who co-invented calculus, seems to be the first person to use the word function in a mathematical sense, although his use of it does not exactly fit with the modern use and definition. The person who is credited with the modern definition of function is Swiss mathematician Johann Bernoulli, who wrote about it in a letter to Leibniz in 1698. Supposedly, Leibniz wrote Bernoulli back, approving of this use of the word. In 1734, the use of the notation \\(f(x)\\) for a function was first used by Swiss mathematician Leonhard Euler (pronounced “Oiler”). Euler had a knack for inventing notation. He also introduced the notation \\(e\\) for the base of natural logs (1727), \\(i\\) for the square root of \\(−1\\) (1777), \\(∑\\) for summation (1755), and many others. Euler also introduced many other ideas associated with functions. Euler defined exponential functions and defined logarithmic functions as their inverse; he also introduced the beta and gamma functions, and was the first person to consider the trigonometric identities (sine, cosine, etc.) as functions.\n\nCheck Your Understanding\n\n1.. If \\(f\\left( x \\right) = 2x-8\\) then \\(f\\left(3\\right) = -2\\).\n\n1. \n\nTrue\n\n2. \n\nFalse\n\n2.. \\(\\left\\{ {\\left( {1,2} \\right),\\left( {2,3} \\right),\\left( {3,4} \\right),\\left( {2,1} \\right),\\left( {3,2} \\right),\\left( {4,3} \\right)} \\right\\}\\) represent the ordered pairs of a function.\n\n1. \n\nTrue\n\n2. \n\nFalse\n\n3.. The graph shown represents the graph of a function:\n\n[Figure: Two functions are graphed on an x y coordinate plane. The x and y axes range from negative 10 to 10, in increments of 1. The first function passes through the points, (negative 6, 9), (negative 2, 4.5), (1, 0), (negative 2, negative 4.5), and (negative 6, negative 9). The second function passes through the points, (9, 6), (7, 3.5), (5, 0), (7, negative 3.5), and (9, negative 6). Note: all values are approximate.]\n\n1. \n\nTrue\n\n2. \n\nFalse\n\n4.. The figure shown represents the mapping of a function.\n\n[Figure: Mapping of two sets of values. Mapping infers the following data: 10, 15; 20, 45; 30, 25; and 40, 35.]\n\n1. \n\nTrue\n\n2. \n\nFalse\n\n5.. The domain of the mapping in the figure is \\(\\left\\{ {15,25,35,45} \\right\\}\\).\n\n1. \n\nTrue\n\n2. \n\nFalse\n\nThis page titled 5.7:  Functions was last modified on Thu, 02 Jan 2025 11:25:04 GMT and is shared under a CC BY  4.0  license and was authored, remixed, and/or curated by OpenStax via source content that was edited to the style and standards of the LibreTexts platform.",
+  "figures": [
+    {
+      "url": "https://math.libretexts.org/@api/deki/files/109562/6ddb296ca4d72f31dd58148f3a80fb98beda04af?revision=1&size=bestfit&width=761&height=551",
+      "alt": "A rear view of a student raising her hand as she sits at her desk. A teacher standing at the front of the classroom is pointing at the student.",
+      "credit": ""
+    },
+    {
+      "url": "https://math.libretexts.org/@api/deki/files/109560/12095c2ee07d7c92f7d3e2497dcc979ec6052f22?revision=1&size=bestfit&width=413&height=388",
+      "alt": "Mapping of names and birthdays. Names and birthdays are as follows. Alison: April 25. Penelope: May 23. June: August 2. Gregory: September 15. Geoffrey: January 12. Lauren: May 10. Stephen: July 24. Alice: February 3. Liz: August 2. Danny: July 24.",
+      "credit": ""
+    },
+    {
+      "url": "https://math.libretexts.org/@api/deki/files/109563/b51a4a48c76c17799ad813a481fc45820bc732fb?revision=1&size=bestfit&width=527&height=284",
+      "alt": "Mapping of names and phone numbers. The names and corresponding phone numbers are as follows. Lydia: 321-549-3327 home and 321-964-7324 cell. Eugene: 427-658-2314 cell. Janet: 427-658-2314 cell. Rick: 798-367-8541 cell. Marty: 684-358-7961 home and 684-369-7231 cell.",
+      "credit": ""
+    },
+    {
+      "url": "https://math.libretexts.org/@api/deki/files/109559/CS_Figure_05_07_004.jpg?revision=1&size=bestfit&width=533&height=325",
+      "alt": "Mapping of names and phone numbers. The names and corresponding phone numbers are as follows. Neal: 753-469-9731 cell. Krystal: 684-369-7231 cell. Kelvin: 123-567-4839 work. George: 123-567-4839 work and 639-847-6971 cell. Christa: 567-534-2970 work. Mike: 798-367-8541 cell and 567-534-2970 work.",
+      "credit": ""
+    },
+    {
+      "url": "https://math.libretexts.org/@api/deki/files/109556/49b2d1e4e61de793efabd3373b893b79c9a57bc3?revision=1",
+      "alt": "A line is plotted on an x y coordinate plane. The x and y axes range from negative 6 to 6, in increments of 1. The line passes through the points, (negative 5, 5), (0, 2), and (5, negative 1). Note: all values are approximate.",
+      "credit": ""
+    },
+    {
+      "url": "https://math.libretexts.org/@api/deki/files/109566/a06f7c7f823fe712795e92ab4729bcd46334c022?revision=1&size=bestfit&width=458&height=467",
+      "alt": "A line is plotted on an x y coordinate plane. The x and y axes range from negative 6 to 6, in increments of 1. The line passes through the points, (negative 5, 5), (0, 2), and (5, negative 1). Note: all values are approximate.",
+      "credit": ""
+    },
+    {
+      "url": "https://math.libretexts.org/@api/deki/files/109570/8ed40ded0c67c68d01f44d112aecf11b673aa0b6?revision=1&size=bestfit&width=419&height=427",
+      "alt": "A line is plotted on an x y coordinate plane. The x and y axes range from negative 6 to 6, in increments of 1. The line passes through the points, (negative 5, 5), (0, 2), and (5, negative 1). Three vertical dashed lines are present. The first line lies between the points, (negative 5, 5) and (negative 5, negative 5). The second line lies between the points, (negative 3, 5) and (negative 3, negative 5). The third line lies between the points, (3, 5) and (3, negative 5). Note: all values are approximate.",
+      "credit": ""
+    },
+    {
+      "url": "https://math.libretexts.org/@api/deki/files/109569/CS_Figure_05_07_008.jpg?revision=1&size=bestfit&width=439&height=448",
+      "alt": "A parabola is plotted on an x y coordinate plane. The x-axis ranges from negative 6 to 6, in increments of 1. The y-axis ranges from negative 2 to 10, in increments of 1. The parabola opens up and it passes through the points, (negative 3, 8), (negative 2, 3), (negative 1, 0), (0, negative 1), (1, 0), (2, 3), and (3, 8).Note: all values are approximate.",
+      "credit": ""
+    },
+    {
+      "url": "https://math.libretexts.org/@api/deki/files/109572/e3ca27ffeefc5440ac618298ee8934bab509d7e7?revision=1&size=bestfit&width=482&height=492",
+      "alt": "A parabola is plotted on an x y coordinate plane. The x and y axes range from negative 6 to 6, in increments of 1. The parabola opens to the right and it passes through the points, (3, 2), (0, 1), (negative 1, 0), (0, negative 1), and (3, negative 2). Note: all values are approximate.",
+      "credit": ""
+    },
+    {
+      "url": "https://math.libretexts.org/@api/deki/files/109579/CS_Figure_05_07_011.jpg?revision=1&size=bestfit&width=465&height=474",
+      "alt": "An ellipse is plotted on an x y coordinate plane. The x and y axes range from negative 6 to 6, in increments of 1. The center of the ellipse is at (0, 0). The ellipse passes through the points, (negative 2, 0), (0, 3), (2, 0), and (0, negative 3).",
+      "credit": ""
+    },
+    {
+      "url": "https://math.libretexts.org/@api/deki/files/109581/652419903d17fd63b191c05167d66ce1961b6951?revision=1&size=bestfit&width=448&height=457",
+      "alt": "Six points are plotted on an x y coordinate plane. The x and y axes range from negative 6 to 6, in increments of 1. The points are plotted at the following coordinates: (negative 3, negative 1), (negative 3, 4), (0, 3), (1, 5), (2, negative 2), and (4, negative 2).",
+      "credit": ""
+    },
+    {
+      "url": "https://math.libretexts.org/@api/deki/files/109582/CS_Figure_05_07_013.jpg?revision=1&size=bestfit&width=440&height=449",
+      "alt": "Six points are plotted on an x y coordinate plane. The x and y axes range from negative 6 to 6, in increments of 1. The points are plotted at the following coordinates: (negative 3, 3), (negative 2, 2), (negative 1, 0), (0, negative 1), (2, negative 2), and (4, negative 4).",
+      "credit": ""
+    },
+    {
+      "url": "https://math.libretexts.org/@api/deki/files/109584/CS_Figure_05_07_014.jpg?revision=1",
+      "alt": "Two functions are graphed on an x y coordinate plane. The x and y axes range from negative 10 to 10, in increments of 1. The first function passes through the points, (negative 6, 9), (negative 2, 4.5), (1, 0), (negative 2, negative 4.5), and (negative 6, negative 9). The second function passes through the points, (9, 6), (7, 3.5), (5, 0), (7, negative 3.5), and (9, negative 6). Note: all values are approximate.",
+      "credit": ""
+    },
+    {
+      "url": "https://math.libretexts.org/@api/deki/files/109586/CS_Figure_05_07_015.jpg?revision=1",
+      "alt": "Mapping of two sets of values. Mapping infers the following data: 10, 15; 20, 45; 30, 25; and 40, 35.",
+      "credit": ""
+    }
+  ],
+  "references": [
+    {
+      "text": "5.7:  Functions",
+      "url": "https://math.libretexts.org/Bookshelves/Applied_Mathematics/Contemporary_Mathematics_(OpenStax)/05%3A__Algebra/5.07%3A__Functions"
+    },
+    {
+      "text": "CC BY  4.0",
+      "url": "https://creativecommons.org/licenses/by/4.0"
+    },
+    {
+      "text": "OpenStax",
+      "url": "https://openstax.org/"
+    },
+    {
+      "text": "source content",
+      "url": "https://openstax.org/details/books/contemporary-mathematics"
+    }
+  ],
+  "exercises": [
+    {
+      "ordinal": 1,
+      "sourceNumber": "1",
+      "sourceAnchor": "",
+      "kind": "exercise-candidate",
+      "context": "",
+      "original": "1. Use function notation.",
+      "prompt": "1. Use function notation.",
+      "sourceAnswers": [],
+      "hasFigure": false,
+      "status": "draft",
+      "answerVerified": false,
+      "translationStatus": "pending",
+      "mappingStatus": "pending"
+    },
+    {
+      "ordinal": 2,
+      "sourceNumber": "2",
+      "sourceAnchor": "",
+      "kind": "exercise-candidate",
+      "context": "",
+      "original": "2. Determine if a relation is a function with different representations.",
+      "prompt": "2. Determine if a relation is a function with different representations.",
+      "sourceAnswers": [],
+      "hasFigure": false,
+      "status": "draft",
+      "answerVerified": false,
+      "translationStatus": "pending",
+      "mappingStatus": "pending"
+    },
+    {
+      "ordinal": 3,
+      "sourceNumber": "3",
+      "sourceAnchor": "",
+      "kind": "exercise-candidate",
+      "context": "",
+      "original": "3. Apply the vertical line test.",
+      "prompt": "3. Apply the vertical line test.",
+      "sourceAnswers": [],
+      "hasFigure": false,
+      "status": "draft",
+      "answerVerified": false,
+      "translationStatus": "pending",
+      "mappingStatus": "pending"
+    },
+    {
+      "ordinal": 4,
+      "sourceNumber": "4",
+      "sourceAnchor": "",
+      "kind": "exercise-candidate",
+      "context": "",
+      "original": "4. Determine the domain and range of a function.",
+      "prompt": "4. Determine the domain and range of a function.",
+      "sourceAnswers": [],
+      "hasFigure": false,
+      "status": "draft",
+      "answerVerified": false,
+      "translationStatus": "pending",
+      "mappingStatus": "pending"
+    },
+    {
+      "ordinal": 5,
+      "sourceNumber": "",
+      "sourceAnchor": "",
+      "kind": "example-or-exercise",
+      "context": "We call \\(x\\) the independent variable as it can be any value in the domain. We call \\(y\\) the dependent variable as its value depends on \\(x\\). Much like when you first encountered the variable \\(x\\), function notation may be rather unsettling. But the more you use the notation, the more familiar you become with the notation, and the more comfortable you will be with it.\n\nLet's review the equation \\(y=4 x-5\\). To find the value of \\(y\\) when \\(x=2\\), we know to substitute \\(x=2\\) into the equation and then simplify.\n\nThe value of the function at \\(x=2\\) is 3 . We do the same thing using function notation, the equation \\(y=4 x-5\\) can be written as \\(f(x)=4 x-5\\). To find the value when \\(x=2\\), we write:\n\nThe value of the function at \\(x=2\\) is 3. This process of finding the value of \\(f(x)\\) for a given value of \\(x\\) is called evaluating the function.",
+      "original": "Example \\(\\PageIndex{1}\\): Evaluating the Function\n\nFor the function \\(f(x)=2 x^2+3 x-1\\), evaluate the function.\n\n1. \\(f(3)\\)\n\n2. \\(f(-2)\\)\n\n3. \\(f(a)\\)\n\nAnswer\n\n1. To evaluate \\(f(3)\\), substitute 3 , for \\(x\\).\n\nSimplify.\n\n\\[\\begin{array}{l}\n\n    f(x)=2 x^2+3 x-1 \\\\\n\n    f(\\mathbf{3})=2(\\mathbf{3})^2+3 \\cdot \\mathbf{3}-1 \\\\\n\n    f(3)=2 \\cdot 9+3 \\cdot 3-1 \\\\\n\n    f(3)=18+9-1 \\\\\n\n    f(3)=26\n\n    \\end{array} \\nonumber \\]\n\n2. To evaluate \\(f(-2)\\), substitute -2 for \\(x\\).\n\nSimplify.\n\n\\[\\begin{aligned}\n\n    f(x) & =2 x^2+3 x-1 \\\\\n\n    f(-2) & =2(-2)^2+3(-2)-1 \\\\\n\n    f(-2) & =2 \\cdot 4+(-6)-1 \\\\\n\n    f(-2) & =8+(-6)-1 \\\\\n\n    f(-2) & =1\n\n    \\end{aligned} \\nonumber \\]\n\n3. To evaluate \\(f(a)\\), substitute \\(a\\) for \\(x\\).\n\nSimplify.\n\n\\[\\begin{array}{l}\n\n    f(x)=2 x^2+3 x-1 \\\\\n\n    f(\\boldsymbol{a})=2(\\boldsymbol{a})^2+3 \\cdot \\boldsymbol{a}-1 \\\\\n\n    f(a)=2 a^2+3 a-1\n\n    \\end{array} \\nonumber \\]",
+      "prompt": "Example \\(\\PageIndex{1}\\): Evaluating the Function\n\nFor the function \\(f(x)=2 x^2+3 x-1\\), evaluate the function.\n\n1. \\(f(3)\\)\n\n2. \\(f(-2)\\)\n\n3. \\(f(a)\\)",
+      "sourceAnswers": [
+        "1. To evaluate \\(f(3)\\), substitute 3 , for \\(x\\).\n\nSimplify.\n\n\\[\\begin{array}{l}\n\n    f(x)=2 x^2+3 x-1 \\\\\n\n    f(\\mathbf{3})=2(\\mathbf{3})^2+3 \\cdot \\mathbf{3}-1 \\\\\n\n    f(3)=2 \\cdot 9+3 \\cdot 3-1 \\\\\n\n    f(3)=18+9-1 \\\\\n\n    f(3)=26\n\n    \\end{array} \\nonumber \\]\n\n2. To evaluate \\(f(-2)\\), substitute -2 for \\(x\\).\n\nSimplify.\n\n\\[\\begin{aligned}\n\n    f(x) & =2 x^2+3 x-1 \\\\\n\n    f(-2) & =2(-2)^2+3(-2)-1 \\\\\n\n    f(-2) & =2 \\cdot 4+(-6)-1 \\\\\n\n    f(-2) & =8+(-6)-1 \\\\\n\n    f(-2) & =1\n\n    \\end{aligned} \\nonumber \\]\n\n3. To evaluate \\(f(a)\\), substitute \\(a\\) for \\(x\\).\n\nSimplify.\n\n\\[\\begin{array}{l}\n\n    f(x)=2 x^2+3 x-1 \\\\\n\n    f(\\boldsymbol{a})=2(\\boldsymbol{a})^2+3 \\cdot \\boldsymbol{a}-1 \\\\\n\n    f(a)=2 a^2+3 a-1\n\n    \\end{array} \\nonumber \\]"
+      ],
+      "hasFigure": false,
+      "status": "draft",
+      "answerVerified": false,
+      "translationStatus": "pending",
+      "mappingStatus": "pending"
+    },
+    {
+      "ordinal": 6,
+      "sourceNumber": "1",
+      "sourceAnchor": "",
+      "kind": "exercise-candidate",
+      "context": "The value of the function at \\(x=2\\) is 3 . We do the same thing using function notation, the equation \\(y=4 x-5\\) can be written as \\(f(x)=4 x-5\\). To find the value when \\(x=2\\), we write:\n\nThe value of the function at \\(x=2\\) is 3. This process of finding the value of \\(f(x)\\) for a given value of \\(x\\) is called evaluating the function.\n\nFor the function \\(f\\left( x \\right) = 3{x^2} - 2x + 1\\), evaluate the function.",
+      "original": "1. \\(f\\left( 3 \\right)\\)",
+      "prompt": "1. \\(f\\left( 3 \\right)\\)",
+      "sourceAnswers": [],
+      "hasFigure": false,
+      "status": "draft",
+      "answerVerified": false,
+      "translationStatus": "pending",
+      "mappingStatus": "pending"
+    },
+    {
+      "ordinal": 7,
+      "sourceNumber": "2",
+      "sourceAnchor": "",
+      "kind": "exercise-candidate",
+      "context": "The value of the function at \\(x=2\\) is 3 . We do the same thing using function notation, the equation \\(y=4 x-5\\) can be written as \\(f(x)=4 x-5\\). To find the value when \\(x=2\\), we write:\n\nThe value of the function at \\(x=2\\) is 3. This process of finding the value of \\(f(x)\\) for a given value of \\(x\\) is called evaluating the function.\n\nFor the function \\(f\\left( x \\right) = 3{x^2} - 2x + 1\\), evaluate the function.",
+      "original": "2. \\(f\\left( { - 1} \\right)\\)",
+      "prompt": "2. \\(f\\left( { - 1} \\right)\\)",
+      "sourceAnswers": [],
+      "hasFigure": false,
+      "status": "draft",
+      "answerVerified": false,
+      "translationStatus": "pending",
+      "mappingStatus": "pending"
+    },
+    {
+      "ordinal": 8,
+      "sourceNumber": "3",
+      "sourceAnchor": "",
+      "kind": "exercise-candidate",
+      "context": "The value of the function at \\(x=2\\) is 3 . We do the same thing using function notation, the equation \\(y=4 x-5\\) can be written as \\(f(x)=4 x-5\\). To find the value when \\(x=2\\), we write:\n\nThe value of the function at \\(x=2\\) is 3. This process of finding the value of \\(f(x)\\) for a given value of \\(x\\) is called evaluating the function.\n\nFor the function \\(f\\left( x \\right) = 3{x^2} - 2x + 1\\), evaluate the function.",
+      "original": "3. \\(f\\left( t \\right)\\)",
+      "prompt": "3. \\(f\\left( t \\right)\\)",
+      "sourceAnswers": [],
+      "hasFigure": false,
+      "status": "draft",
+      "answerVerified": false,
+      "translationStatus": "pending",
+      "mappingStatus": "pending"
+    },
+    {
+      "ordinal": 9,
+      "sourceNumber": "",
+      "sourceAnchor": "",
+      "kind": "example-or-exercise",
+      "context": "The value of the function at \\(x=2\\) is 3 . We do the same thing using function notation, the equation \\(y=4 x-5\\) can be written as \\(f(x)=4 x-5\\). To find the value when \\(x=2\\), we write:\n\nThe value of the function at \\(x=2\\) is 3. This process of finding the value of \\(f(x)\\) for a given value of \\(x\\) is called evaluating the function.\n\nFor the function \\(f\\left( x \\right) = 3{x^2} - 2x + 1\\), evaluate the function.",
+      "original": "Example \\(\\PageIndex{2}\\): Evaluating the Function in an Application\n\nThe number of unread emails in Sylvia's inbox is 75 . This number grows by 10 unread emails a day. The function \\(N(t)=75+10 t\\) represents the relation between the number of emails, \\(N\\), and the time, \\(t\\), measured in days. Find \\(N(5)\\). Explain what this result means.\n\nAnswer\n\nFind \\(N(5)\\). Explain what this result means.\n\n    Substitute in \\(t=5\\).\n\n    Simplify.\n\n\\[\\begin{aligned}\n\n    N(\\mathbf{5}) & =75+10 \\cdot \\mathbf{5} \\\\\n\n    N(t) & =75+10 t \\\\\n\n    N(5) & =75+50 \\\\\n\n    N(5) & =125\n\n    \\end{aligned} \\nonumber \\]\n\nIf 5 is the number of days, \\(N(5)\\) is the number of unread emails after 5 days. After 5 days, there are 125 unread emails in Sylvia's inbox.",
+      "prompt": "Example \\(\\PageIndex{2}\\): Evaluating the Function in an Application\n\nThe number of unread emails in Sylvia's inbox is 75 . This number grows by 10 unread emails a day. The function \\(N(t)=75+10 t\\) represents the relation between the number of emails, \\(N\\), and the time, \\(t\\), measured in days. Find \\(N(5)\\). Explain what this result means.",
+      "sourceAnswers": [
+        "Find \\(N(5)\\). Explain what this result means.\n\n    Substitute in \\(t=5\\).\n\n    Simplify.\n\n\\[\\begin{aligned}\n\n    N(\\mathbf{5}) & =75+10 \\cdot \\mathbf{5} \\\\\n\n    N(t) & =75+10 t \\\\\n\n    N(5) & =75+50 \\\\\n\n    N(5) & =125\n\n    \\end{aligned} \\nonumber \\]\n\nIf 5 is the number of days, \\(N(5)\\) is the number of unread emails after 5 days. After 5 days, there are 125 unread emails in Sylvia's inbox."
+      ],
+      "hasFigure": false,
+      "status": "draft",
+      "answerVerified": false,
+      "translationStatus": "pending",
+      "mappingStatus": "pending"
+    },
+    {
+      "ordinal": 10,
+      "sourceNumber": "",
+      "sourceAnchor": "",
+      "kind": "example-or-exercise",
+      "context": "Determining If a Relation Is a Function with Different Representations\n\nWe can determine whether a relation is a function by identifying the input and the output values. If each input value leads to only one output value, classify the relation as a function. If any input value leads to two or more outputs, do not classify the relation as a function.\n\nWe will review three different representations of relations and determine if they are functions: ordered pairs, mapping, and equations.",
+      "original": "Example \\(\\PageIndex{3}\\): Determining If a Relation Is a Function with a Set of Ordered Pairs\n\nUse the set of ordered pairs to determine whether the relation is a function.\n\n1. \\(\\{(-3,27),(-2,8),(-1,1),(0,0),(1,1),(2,8),(3,27)\\}\\)\n\n2. \\(\\{(9,-3),(4,-2),(1,-1),(0,0),(1,1),(4,2),(9,3)\\}\\)\\(\\)\\(\\)\n\nAnswer\n\n1. Each \\(x\\)-value is matched with only one \\(y\\)-value. This relation is a function.\n\n2. The \\(x\\)-value 9 is matched with two \\(y\\)-values, both 3 and -3. This relation is not a function.",
+      "prompt": "Example \\(\\PageIndex{3}\\): Determining If a Relation Is a Function with a Set of Ordered Pairs\n\nUse the set of ordered pairs to determine whether the relation is a function.\n\n1. \\(\\{(-3,27),(-2,8),(-1,1),(0,0),(1,1),(2,8),(3,27)\\}\\)\n\n2. \\(\\{(9,-3),(4,-2),(1,-1),(0,0),(1,1),(4,2),(9,3)\\}\\)\\(\\)\\(\\)",
+      "sourceAnswers": [
+        "1. Each \\(x\\)-value is matched with only one \\(y\\)-value. This relation is a function.\n\n2. The \\(x\\)-value 9 is matched with two \\(y\\)-values, both 3 and -3. This relation is not a function."
+      ],
+      "hasFigure": false,
+      "status": "draft",
+      "answerVerified": false,
+      "translationStatus": "pending",
+      "mappingStatus": "pending"
+    },
+    {
+      "ordinal": 11,
+      "sourceNumber": "1",
+      "sourceAnchor": "",
+      "kind": "exercise-candidate",
+      "context": "We can determine whether a relation is a function by identifying the input and the output values. If each input value leads to only one output value, classify the relation as a function. If any input value leads to two or more outputs, do not classify the relation as a function.\n\nWe will review three different representations of relations and determine if they are functions: ordered pairs, mapping, and equations.\n\nUse the set of ordered pairs to determine whether the relation is a function.",
+      "original": "1. \\(\\left\\{ {\\left( {-3,-6} \\right),\\left( {-2,-4} \\right),\\left( {-1,-2} \\right),\\left( {0,0} \\right),\\left( {1,2} \\right),\\left( {2,4} \\right),\\left( {3,6} \\right)} \\right\\}\\)",
+      "prompt": "1. \\(\\left\\{ {\\left( {-3,-6} \\right),\\left( {-2,-4} \\right),\\left( {-1,-2} \\right),\\left( {0,0} \\right),\\left( {1,2} \\right),\\left( {2,4} \\right),\\left( {3,6} \\right)} \\right\\}\\)",
+      "sourceAnswers": [],
+      "hasFigure": false,
+      "status": "draft",
+      "answerVerified": false,
+      "translationStatus": "pending",
+      "mappingStatus": "pending"
+    },
+    {
+      "ordinal": 12,
+      "sourceNumber": "2",
+      "sourceAnchor": "",
+      "kind": "exercise-candidate",
+      "context": "We can determine whether a relation is a function by identifying the input and the output values. If each input value leads to only one output value, classify the relation as a function. If any input value leads to two or more outputs, do not classify the relation as a function.\n\nWe will review three different representations of relations and determine if they are functions: ordered pairs, mapping, and equations.\n\nUse the set of ordered pairs to determine whether the relation is a function.",
+      "original": "2. \\(\\{(8,-4),(4,-2),(2,-1),(0,0),(2,1),(4,2),(8,4)\\}\\)",
+      "prompt": "2. \\(\\{(8,-4),(4,-2),(2,-1),(0,0),(2,1),(4,2),(8,4)\\}\\)",
+      "sourceAnswers": [],
+      "hasFigure": false,
+      "status": "draft",
+      "answerVerified": false,
+      "translationStatus": "pending",
+      "mappingStatus": "pending"
+    },
+    {
+      "ordinal": 13,
+      "sourceNumber": "",
+      "sourceAnchor": "",
+      "kind": "example-or-exercise",
+      "context": "We will review three different representations of relations and determine if they are functions: ordered pairs, mapping, and equations.\n\nUse the set of ordered pairs to determine whether the relation is a function.\n\nA mapping is sometimes used to show a relation. The arrows show the pairing of the elements of the domain with the elements of the range. Consider the example of the relation between your friends and their birthdays used in Figure 5.60. In this particular example, the domain is the set of people’s names, and the range is the set of their birthdays. This mapping was a function because everybody’s name maps to exactly one birthday.",
+      "original": "Example \\(\\PageIndex{4}\\): Determining If a Relation Is a Function with Mapping\n\nUse the mapping in Figure \\(\\PageIndex{3}\\) to determine whether the relation is a function.\n\n[Figure: Mapping of names and phone numbers. The names and corresponding phone numbers are as follows. Lydia: 321-549-3327 home and 321-964-7324 cell. Eugene: 427-658-2314 cell. Janet: 427-658-2314 cell. Rick: 798-367-8541 cell. Marty: 684-358-7961 home and 684-369-7231 cell.]\n\nFigure \\(\\PageIndex{3}\\)\n\nAnswer\n\nBoth Lydia and Marty have two phone numbers. Each \\(x\\)-value is not matched with only one \\(y\\)-value. This relation is not a function.",
+      "prompt": "Example \\(\\PageIndex{4}\\): Determining If a Relation Is a Function with Mapping\n\nUse the mapping in Figure \\(\\PageIndex{3}\\) to determine whether the relation is a function.\n\n[Figure: Mapping of names and phone numbers. The names and corresponding phone numbers are as follows. Lydia: 321-549-3327 home and 321-964-7324 cell. Eugene: 427-658-2314 cell. Janet: 427-658-2314 cell. Rick: 798-367-8541 cell. Marty: 684-358-7961 home and 684-369-7231 cell.]\n\nFigure \\(\\PageIndex{3}\\)",
+      "sourceAnswers": [
+        "Both Lydia and Marty have two phone numbers. Each \\(x\\)-value is not matched with only one \\(y\\)-value. This relation is not a function."
+      ],
+      "hasFigure": true,
+      "status": "draft",
+      "answerVerified": false,
+      "translationStatus": "pending",
+      "mappingStatus": "pending"
+    },
+    {
+      "ordinal": 14,
+      "sourceNumber": "",
+      "sourceAnchor": "",
+      "kind": "exercise-candidate",
+      "context": "A mapping is sometimes used to show a relation. The arrows show the pairing of the elements of the domain with the elements of the range. Consider the example of the relation between your friends and their birthdays used in Figure 5.60. In this particular example, the domain is the set of people’s names, and the range is the set of their birthdays. This mapping was a function because everybody’s name maps to exactly one birthday.\n\nUse the mapping in the given figure to determine whether the relation is a function.\n\nIn algebra functions will usually be represented by an equation. It is easiest to see if the equation is a function when it is solved for \\(y\\). If each value of \\(x\\) results in only one value of \\(y\\), then the equation defines a function.",
+      "original": "Exercise \\(\\PageIndex{6}\\)\n\nDetermine whether each equation is a function. Assume \\(x\\) is the independent variable.\n\n1. \\(2 x+y=7\\)\n\n2. \\(y=x^2+1\\)\n\n3. \\(x+y^2=3\\)\n\nAnswer\n\n1. \\(2 x+y=7\\)\n\nFor each value of \\(x\\), we multiply it by -2 and then add 7 to get the \\(y\\)-value.\n\n    For example, if \\(x=3\\) :\n\n\\[\\begin{array}{l}\n\n    y=-2 x+7 \\\\\n\n    y=-2 \\cdot \\mathbf{3}+7 \\\\\n\n    y=1\n\n    \\end{array} \\nonumber \\]\n\nWe have that when \\(x=3\\), then \\(y=1\\). It would work similarly for any value of \\(x\\). Since each value of \\(x\\), corresponds to only one value of \\(y\\) the equation defines a function.\n\n2. \\(y=x^2+1\\)\n\nFor each value of \\(x\\), we square it and then add 1 to get the \\(y\\)-value.\n\n    For example, if \\(x=2\\)\n\n\\[\\begin{array}{l}\n\n    y=x^2+1 \\\\\n\n    y=\\mathbf{2}^2+1 \\\\\n\n    y=5\n\n    \\end{array} \\nonumber \\]\n\nWe have that when \\(x=2\\), then \\(y=5\\). It would work similarly for any value of \\(x\\). Since each value of \\(x\\) corresponds to only one value of \\(y\\), the equation defines a function.\n\n3. \\(x+y^2=3\\)\n\n\\[x+y^2=3 \\nonumber \\]\n\nIsolate the \\(y\\) term.\n\n\\[y^2=-x+3 \\nonumber \\]\n\nLet us substitute \\(x=2\\).\n\n\\[\\begin{array}{l}\n\n    y^2=-\\mathbf{2}+3 \\\\\n\n    y^2=1\n\n    \\end{array} \\nonumber \\]\n\nThis gives us two values for \\(y\\).\n\n\\[y=1, y=-1 \\nonumber \\]\n\nWe have shown that when \\(x=2\\), then \\(y=1\\) and \\(y=-1\\). It would work similarly for any value of \\(x\\). Since each value of \\(x\\) does not corresponds to only one value of \\(y\\) the equation does not define a function.",
+      "prompt": "Exercise \\(\\PageIndex{6}\\)\n\nDetermine whether each equation is a function. Assume \\(x\\) is the independent variable.\n\n1. \\(2 x+y=7\\)\n\n2. \\(y=x^2+1\\)\n\n3. \\(x+y^2=3\\)",
+      "sourceAnswers": [
+        "1. \\(2 x+y=7\\)\n\nFor each value of \\(x\\), we multiply it by -2 and then add 7 to get the \\(y\\)-value.\n\n    For example, if \\(x=3\\) :\n\n\\[\\begin{array}{l}\n\n    y=-2 x+7 \\\\\n\n    y=-2 \\cdot \\mathbf{3}+7 \\\\\n\n    y=1\n\n    \\end{array} \\nonumber \\]\n\nWe have that when \\(x=3\\), then \\(y=1\\). It would work similarly for any value of \\(x\\). Since each value of \\(x\\), corresponds to only one value of \\(y\\) the equation defines a function.\n\n2. \\(y=x^2+1\\)\n\nFor each value of \\(x\\), we square it and then add 1 to get the \\(y\\)-value.\n\n    For example, if \\(x=2\\)\n\n\\[\\begin{array}{l}\n\n    y=x^2+1 \\\\\n\n    y=\\mathbf{2}^2+1 \\\\\n\n    y=5\n\n    \\end{array} \\nonumber \\]\n\nWe have that when \\(x=2\\), then \\(y=5\\). It would work similarly for any value of \\(x\\). Since each value of \\(x\\) corresponds to only one value of \\(y\\), the equation defines a function.\n\n3. \\(x+y^2=3\\)\n\n\\[x+y^2=3 \\nonumber \\]\n\nIsolate the \\(y\\) term.\n\n\\[y^2=-x+3 \\nonumber \\]\n\nLet us substitute \\(x=2\\).\n\n\\[\\begin{array}{l}\n\n    y^2=-\\mathbf{2}+3 \\\\\n\n    y^2=1\n\n    \\end{array} \\nonumber \\]\n\nThis gives us two values for \\(y\\).\n\n\\[y=1, y=-1 \\nonumber \\]\n\nWe have shown that when \\(x=2\\), then \\(y=1\\) and \\(y=-1\\). It would work similarly for any value of \\(x\\). Since each value of \\(x\\) does not corresponds to only one value of \\(y\\) the equation does not define a function."
+      ],
+      "hasFigure": false,
+      "status": "draft",
+      "answerVerified": false,
+      "translationStatus": "pending",
+      "mappingStatus": "pending"
+    },
+    {
+      "ordinal": 15,
+      "sourceNumber": "",
+      "sourceAnchor": "",
+      "kind": "example-or-exercise",
+      "context": "We reviewed how to determine if a relation is a function. The relations we looked at were expressed as a set of ordered pairs, a mapping, or an equation. We will now cover how to tell if a graph is that of a function.\n\nAn ordered pair \\((x, y)\\) is a solution of a linear equation, if the equation is a true statement when the \\(x\\)-values and \\(y\\) -values of the ordered pair are substituted into the equation. The graph of a linear equation is a straight line where every point on the line is a solution of the equation, and every solution of this equation is a point on this line. Figure\n\nA relation is a function if every element of the domain has exactly one value in the range. The relation defined by the equation \\(y=2x−3is a function. If we look at the graph, each vertical dashed line only intersects the solid line at one point. This makes sense as in a function, for every \\(x\\)-value there is only oney-value. If the vertical line hit the graph twice, the \\(x\\)-value would be mapped to twoy-values, and so the graph would not represent a function. This leads us a graphical method of determining functions called the\\)vertical line test, which states that a set of points in a rectangular coordinate system is the graph of a function if every vertical line intersects the graph in at most one point. If any vertical line intersects the graph in more than one point, the graph does not represent a function.",
+      "original": "Example \\(\\PageIndex{7}\\): Applying the Vertical Line Test\n\nDetermine whether the graph (Figure \\(\\PageIndex{6}\\)) is the graph of a function applying the vertical line test.\n\n[Figure: A line is plotted on an x y coordinate plane. The x and y axes range from negative 6 to 6, in increments of 1. The line passes through the points, (negative 5, 5), (0, 2), and (5, negative 1). Note: all values are approximate.]\n\nFigure \\(\\PageIndex{6}\\)\n\nAnswer\n\nOn the graph (Figure \\(\\PageIndex{7}\\)), only three vertical dashed lines are drawn. However, it can be determined that any vertical dashed line that is drawn will intersect the solid line at exactly one point. It is the graph of a function.\n\n[Figure: A line is plotted on an x y coordinate plane. The x and y axes range from negative 6 to 6, in increments of 1. The line passes through the points, (negative 5, 5), (0, 2), and (5, negative 1). Three vertical dashed lines are present. The first line lies between the points, (negative 5, 5) and (negative 5, negative 5). The second line lies between the points, (negative 3, 5) and (negative 3, negative 5). The third line lies between the points, (3, 5) and (3, negative 5). Note: all values are approximate.]\n\nFigure \\(\\PageIndex{7}\\)",
+      "prompt": "Example \\(\\PageIndex{7}\\): Applying the Vertical Line Test\n\nDetermine whether the graph (Figure \\(\\PageIndex{6}\\)) is the graph of a function applying the vertical line test.\n\n[Figure: A line is plotted on an x y coordinate plane. The x and y axes range from negative 6 to 6, in increments of 1. The line passes through the points, (negative 5, 5), (0, 2), and (5, negative 1). Note: all values are approximate.]\n\nFigure \\(\\PageIndex{6}\\)",
+      "sourceAnswers": [
+        "On the graph (Figure \\(\\PageIndex{7}\\)), only three vertical dashed lines are drawn. However, it can be determined that any vertical dashed line that is drawn will intersect the solid line at exactly one point. It is the graph of a function.\n\n[Figure: A line is plotted on an x y coordinate plane. The x and y axes range from negative 6 to 6, in increments of 1. The line passes through the points, (negative 5, 5), (0, 2), and (5, negative 1). Three vertical dashed lines are present. The first line lies between the points, (negative 5, 5) and (negative 5, negative 5). The second line lies between the points, (negative 3, 5) and (negative 3, negative 5). The third line lies between the points, (3, 5) and (3, negative 5). Note: all values are approximate.]\n\nFigure \\(\\PageIndex{7}\\)"
+      ],
+      "hasFigure": true,
+      "status": "draft",
+      "answerVerified": false,
+      "translationStatus": "pending",
+      "mappingStatus": "pending"
+    },
+    {
+      "ordinal": 16,
+      "sourceNumber": "",
+      "sourceAnchor": "",
+      "kind": "example-or-exercise",
+      "context": "An ordered pair \\((x, y)\\) is a solution of a linear equation, if the equation is a true statement when the \\(x\\)-values and \\(y\\) -values of the ordered pair are substituted into the equation. The graph of a linear equation is a straight line where every point on the line is a solution of the equation, and every solution of this equation is a point on this line. Figure\n\nA relation is a function if every element of the domain has exactly one value in the range. The relation defined by the equation \\(y=2x−3is a function. If we look at the graph, each vertical dashed line only intersects the solid line at one point. This makes sense as in a function, for every \\(x\\)-value there is only oney-value. If the vertical line hit the graph twice, the \\(x\\)-value would be mapped to twoy-values, and so the graph would not represent a function. This leads us a graphical method of determining functions called the\\)vertical line test, which states that a set of points in a rectangular coordinate system is the graph of a function if every vertical line intersects the graph in at most one point. If any vertical line intersects the graph in more than one point, the graph does not represent a function.\n\nDetermine whether the graph is the graph of a function.",
+      "original": "Example \\(\\PageIndex{8}\\): Applying the Vertical Line Test to a Parabola\n\nDetermine whether the graph is the graph of a function (Figure \\(\\PageIndex{9}\\)).\n\n[Figure: A parabola is plotted on an x y coordinate plane. The x and y axes range from negative 6 to 6, in increments of 1. The parabola opens to the right and it passes through the points, (3, 2), (0, 1), (negative 1, 0), (0, negative 1), and (3, negative 2). Note: all values are approximate.]\n\nFigure \\(\\PageIndex{9}\\)",
+      "prompt": "Example \\(\\PageIndex{8}\\): Applying the Vertical Line Test to a Parabola\n\nDetermine whether the graph is the graph of a function (Figure \\(\\PageIndex{9}\\)).\n\n[Figure: A parabola is plotted on an x y coordinate plane. The x and y axes range from negative 6 to 6, in increments of 1. The parabola opens to the right and it passes through the points, (3, 2), (0, 1), (negative 1, 0), (0, negative 1), and (3, negative 2). Note: all values are approximate.]\n\nFigure \\(\\PageIndex{9}\\)",
+      "sourceAnswers": [],
+      "hasFigure": true,
+      "status": "draft",
+      "answerVerified": false,
+      "translationStatus": "pending",
+      "mappingStatus": "pending"
+    },
+    {
+      "ordinal": 17,
+      "sourceNumber": "",
+      "sourceAnchor": "",
+      "kind": "example-or-exercise",
+      "context": "Determining the Domain and Range of a Function\n\nFor the function \\( y = f(x)\\), \\(x\\) is the independent variable as it can be any value in the domain, and \\(y\\) is the dependent variable since its value depends on \\(x\\). For the function \\( y = f(x)\\), the values of \\(x\\) make up the domain and the values of \\(y\\) make up the range.",
+      "original": "Example \\(\\PageIndex{9}\\): Finding the Domain and Range of Ordered Pairs\n\nFor \\(\\{(1,1),(2,4),(3,9),(4,16),(5,25)\\}\\):\n\n1. Find the domain of the relation.\n\n2. Find the range of the relation.\n\nAnswer\n\n1. The domain is the set of all \\(x\\)-values of the relation: \\(\\{1,2,3,4,5\\}\\)\n\n    2. The range is the set of all \\(y\\)-values of the relation: \\(\\{1,4,9,16,25\\}\\)",
+      "prompt": "Example \\(\\PageIndex{9}\\): Finding the Domain and Range of Ordered Pairs\n\nFor \\(\\{(1,1),(2,4),(3,9),(4,16),(5,25)\\}\\):\n\n1. Find the domain of the relation.\n\n2. Find the range of the relation.",
+      "sourceAnswers": [
+        "1. The domain is the set of all \\(x\\)-values of the relation: \\(\\{1,2,3,4,5\\}\\)\n\n    2. The range is the set of all \\(y\\)-values of the relation: \\(\\{1,4,9,16,25\\}\\)"
+      ],
+      "hasFigure": false,
+      "status": "draft",
+      "answerVerified": false,
+      "translationStatus": "pending",
+      "mappingStatus": "pending"
+    },
+    {
+      "ordinal": 18,
+      "sourceNumber": "1",
+      "sourceAnchor": "",
+      "kind": "exercise-candidate",
+      "context": "Determining the Domain and Range of a Function\n\nFor the function \\( y = f(x)\\), \\(x\\) is the independent variable as it can be any value in the domain, and \\(y\\) is the dependent variable since its value depends on \\(x\\). For the function \\( y = f(x)\\), the values of \\(x\\) make up the domain and the values of \\(y\\) make up the range.\n\nFor the relation \\(\\left\\{ {\\left( {1,1} \\right),\\left( {2,8} \\right),\\left( {3,27} \\right),\\left( {4,64} \\right),\\left( {5,125} \\right)} \\right\\}\\):",
+      "original": "1. Find the domain of the relation.",
+      "prompt": "1. Find the domain of the relation.",
+      "sourceAnswers": [],
+      "hasFigure": false,
+      "status": "draft",
+      "answerVerified": false,
+      "translationStatus": "pending",
+      "mappingStatus": "pending"
+    },
+    {
+      "ordinal": 19,
+      "sourceNumber": "2",
+      "sourceAnchor": "",
+      "kind": "exercise-candidate",
+      "context": "Determining the Domain and Range of a Function\n\nFor the function \\( y = f(x)\\), \\(x\\) is the independent variable as it can be any value in the domain, and \\(y\\) is the dependent variable since its value depends on \\(x\\). For the function \\( y = f(x)\\), the values of \\(x\\) make up the domain and the values of \\(y\\) make up the range.\n\nFor the relation \\(\\left\\{ {\\left( {1,1} \\right),\\left( {2,8} \\right),\\left( {3,27} \\right),\\left( {4,64} \\right),\\left( {5,125} \\right)} \\right\\}\\):",
+      "original": "2. Find the range of the relation.",
+      "prompt": "2. Find the range of the relation.",
+      "sourceAnswers": [],
+      "hasFigure": false,
+      "status": "draft",
+      "answerVerified": false,
+      "translationStatus": "pending",
+      "mappingStatus": "pending"
+    },
+    {
+      "ordinal": 20,
+      "sourceNumber": "",
+      "sourceAnchor": "",
+      "kind": "example-or-exercise",
+      "context": "Determining the Domain and Range of a Function\n\nFor the function \\( y = f(x)\\), \\(x\\) is the independent variable as it can be any value in the domain, and \\(y\\) is the dependent variable since its value depends on \\(x\\). For the function \\( y = f(x)\\), the values of \\(x\\) make up the domain and the values of \\(y\\) make up the range.\n\nFor the relation \\(\\left\\{ {\\left( {1,1} \\right),\\left( {2,8} \\right),\\left( {3,27} \\right),\\left( {4,64} \\right),\\left( {5,125} \\right)} \\right\\}\\):",
+      "original": "Example \\(\\PageIndex{10}\\): Finding the Domain and Range on a Graph\n\nUse Figure \\(\\PageIndex{11}\\) to:\n\n1. List the ordered pairs of the relation.\n\n2. Find the domain of the relation.\n\n3. Find the range of the relation.\n\n[Figure: Six points are plotted on an x y coordinate plane. The x and y axes range from negative 6 to 6, in increments of 1. The points are plotted at the following coordinates: (negative 3, negative 1), (negative 3, 4), (0, 3), (1, 5), (2, negative 2), and (4, negative 2).]\n\nFigure \\(\\PageIndex{11}\\)\n\nAnswer\n\n1. The ordered pairs of the relation are: \\(\\{(1,5),(-3,-1),(4,-2),(0,3),(2,-2),(-3,4)\\}\\).\n\n    2. The domain is the set of all \\(x\\)-values of the relation: \\(\\{-3,0,1,2,4\\}\\). Notice that while -3 repeats, it is only listed once.\n\n    3. The range is the set of all \\(y\\)-values of the relation: \\(\\{-2,-1,3,4,5\\}\\). Notice that while -2 repeats, it is only listed once.",
+      "prompt": "Example \\(\\PageIndex{10}\\): Finding the Domain and Range on a Graph\n\nUse Figure \\(\\PageIndex{11}\\) to:\n\n1. List the ordered pairs of the relation.\n\n2. Find the domain of the relation.\n\n3. Find the range of the relation.\n\n[Figure: Six points are plotted on an x y coordinate plane. The x and y axes range from negative 6 to 6, in increments of 1. The points are plotted at the following coordinates: (negative 3, negative 1), (negative 3, 4), (0, 3), (1, 5), (2, negative 2), and (4, negative 2).]\n\nFigure \\(\\PageIndex{11}\\)",
+      "sourceAnswers": [
+        "1. The ordered pairs of the relation are: \\(\\{(1,5),(-3,-1),(4,-2),(0,3),(2,-2),(-3,4)\\}\\).\n\n    2. The domain is the set of all \\(x\\)-values of the relation: \\(\\{-3,0,1,2,4\\}\\). Notice that while -3 repeats, it is only listed once.\n\n    3. The range is the set of all \\(y\\)-values of the relation: \\(\\{-2,-1,3,4,5\\}\\). Notice that while -2 repeats, it is only listed once."
+      ],
+      "hasFigure": true,
+      "status": "draft",
+      "answerVerified": false,
+      "translationStatus": "pending",
+      "mappingStatus": "pending"
+    },
+    {
+      "ordinal": 21,
+      "sourceNumber": "1",
+      "sourceAnchor": "",
+      "kind": "exercise-candidate",
+      "context": "For the function \\( y = f(x)\\), \\(x\\) is the independent variable as it can be any value in the domain, and \\(y\\) is the dependent variable since its value depends on \\(x\\). For the function \\( y = f(x)\\), the values of \\(x\\) make up the domain and the values of \\(y\\) make up the range.\n\nFor the relation \\(\\left\\{ {\\left( {1,1} \\right),\\left( {2,8} \\right),\\left( {3,27} \\right),\\left( {4,64} \\right),\\left( {5,125} \\right)} \\right\\}\\):\n\nUse the given figure to:",
+      "original": "1. List the ordered pairs of the relation.",
+      "prompt": "1. List the ordered pairs of the relation.",
+      "sourceAnswers": [],
+      "hasFigure": false,
+      "status": "draft",
+      "answerVerified": false,
+      "translationStatus": "pending",
+      "mappingStatus": "pending"
+    },
+    {
+      "ordinal": 22,
+      "sourceNumber": "2",
+      "sourceAnchor": "",
+      "kind": "exercise-candidate",
+      "context": "For the function \\( y = f(x)\\), \\(x\\) is the independent variable as it can be any value in the domain, and \\(y\\) is the dependent variable since its value depends on \\(x\\). For the function \\( y = f(x)\\), the values of \\(x\\) make up the domain and the values of \\(y\\) make up the range.\n\nFor the relation \\(\\left\\{ {\\left( {1,1} \\right),\\left( {2,8} \\right),\\left( {3,27} \\right),\\left( {4,64} \\right),\\left( {5,125} \\right)} \\right\\}\\):\n\nUse the given figure to:",
+      "original": "2. Find the domain of the relation.",
+      "prompt": "2. Find the domain of the relation.",
+      "sourceAnswers": [],
+      "hasFigure": false,
+      "status": "draft",
+      "answerVerified": false,
+      "translationStatus": "pending",
+      "mappingStatus": "pending"
+    },
+    {
+      "ordinal": 23,
+      "sourceNumber": "3",
+      "sourceAnchor": "",
+      "kind": "exercise-candidate",
+      "context": "For the function \\( y = f(x)\\), \\(x\\) is the independent variable as it can be any value in the domain, and \\(y\\) is the dependent variable since its value depends on \\(x\\). For the function \\( y = f(x)\\), the values of \\(x\\) make up the domain and the values of \\(y\\) make up the range.\n\nFor the relation \\(\\left\\{ {\\left( {1,1} \\right),\\left( {2,8} \\right),\\left( {3,27} \\right),\\left( {4,64} \\right),\\left( {5,125} \\right)} \\right\\}\\):\n\nUse the given figure to:",
+      "original": "3. Find the range of the relation.",
+      "prompt": "3. Find the range of the relation.",
+      "sourceAnswers": [],
+      "hasFigure": false,
+      "status": "draft",
+      "answerVerified": false,
+      "translationStatus": "pending",
+      "mappingStatus": "pending"
+    },
+    {
+      "ordinal": 24,
+      "sourceNumber": "1",
+      "sourceAnchor": "",
+      "kind": "exercise-candidate",
+      "context": "Check Your Understanding",
+      "original": "1. \n\nTrue",
+      "prompt": "1. \n\nTrue",
+      "sourceAnswers": [],
+      "hasFigure": false,
+      "status": "draft",
+      "answerVerified": false,
+      "translationStatus": "pending",
+      "mappingStatus": "pending"
+    },
+    {
+      "ordinal": 25,
+      "sourceNumber": "2",
+      "sourceAnchor": "",
+      "kind": "exercise-candidate",
+      "context": "Check Your Understanding",
+      "original": "2. \n\nFalse",
+      "prompt": "2. \n\nFalse",
+      "sourceAnswers": [],
+      "hasFigure": false,
+      "status": "draft",
+      "answerVerified": false,
+      "translationStatus": "pending",
+      "mappingStatus": "pending"
+    },
+    {
+      "ordinal": 26,
+      "sourceNumber": "1",
+      "sourceAnchor": "",
+      "kind": "exercise-candidate",
+      "context": "Check Your Understanding",
+      "original": "1. \n\nTrue",
+      "prompt": "1. \n\nTrue",
+      "sourceAnswers": [],
+      "hasFigure": false,
+      "status": "draft",
+      "answerVerified": false,
+      "translationStatus": "pending",
+      "mappingStatus": "pending"
+    },
+    {
+      "ordinal": 27,
+      "sourceNumber": "2",
+      "sourceAnchor": "",
+      "kind": "exercise-candidate",
+      "context": "Check Your Understanding",
+      "original": "2. \n\nFalse",
+      "prompt": "2. \n\nFalse",
+      "sourceAnswers": [],
+      "hasFigure": false,
+      "status": "draft",
+      "answerVerified": false,
+      "translationStatus": "pending",
+      "mappingStatus": "pending"
+    },
+    {
+      "ordinal": 28,
+      "sourceNumber": "1",
+      "sourceAnchor": "",
+      "kind": "exercise-candidate",
+      "context": "Check Your Understanding\n\n[Figure: Two functions are graphed on an x y coordinate plane. The x and y axes range from negative 10 to 10, in increments of 1. The first function passes through the points, (negative 6, 9), (negative 2, 4.5), (1, 0), (negative 2, negative 4.5), and (negative 6, negative 9). The second function passes through the points, (9, 6), (7, 3.5), (5, 0), (7, negative 3.5), and (9, negative 6). Note: all values are approximate.]",
+      "original": "1. \n\nTrue",
+      "prompt": "1. \n\nTrue",
+      "sourceAnswers": [],
+      "hasFigure": false,
+      "status": "draft",
+      "answerVerified": false,
+      "translationStatus": "pending",
+      "mappingStatus": "pending"
+    },
+    {
+      "ordinal": 29,
+      "sourceNumber": "2",
+      "sourceAnchor": "",
+      "kind": "exercise-candidate",
+      "context": "Check Your Understanding\n\n[Figure: Two functions are graphed on an x y coordinate plane. The x and y axes range from negative 10 to 10, in increments of 1. The first function passes through the points, (negative 6, 9), (negative 2, 4.5), (1, 0), (negative 2, negative 4.5), and (negative 6, negative 9). The second function passes through the points, (9, 6), (7, 3.5), (5, 0), (7, negative 3.5), and (9, negative 6). Note: all values are approximate.]",
+      "original": "2. \n\nFalse",
+      "prompt": "2. \n\nFalse",
+      "sourceAnswers": [],
+      "hasFigure": false,
+      "status": "draft",
+      "answerVerified": false,
+      "translationStatus": "pending",
+      "mappingStatus": "pending"
+    },
+    {
+      "ordinal": 30,
+      "sourceNumber": "1",
+      "sourceAnchor": "",
+      "kind": "exercise-candidate",
+      "context": "Check Your Understanding\n\n[Figure: Two functions are graphed on an x y coordinate plane. The x and y axes range from negative 10 to 10, in increments of 1. The first function passes through the points, (negative 6, 9), (negative 2, 4.5), (1, 0), (negative 2, negative 4.5), and (negative 6, negative 9). The second function passes through the points, (9, 6), (7, 3.5), (5, 0), (7, negative 3.5), and (9, negative 6). Note: all values are approximate.]\n\n[Figure: Mapping of two sets of values. Mapping infers the following data: 10, 15; 20, 45; 30, 25; and 40, 35.]",
+      "original": "1. \n\nTrue",
+      "prompt": "1. \n\nTrue",
+      "sourceAnswers": [],
+      "hasFigure": false,
+      "status": "draft",
+      "answerVerified": false,
+      "translationStatus": "pending",
+      "mappingStatus": "pending"
+    },
+    {
+      "ordinal": 31,
+      "sourceNumber": "2",
+      "sourceAnchor": "",
+      "kind": "exercise-candidate",
+      "context": "Check Your Understanding\n\n[Figure: Two functions are graphed on an x y coordinate plane. The x and y axes range from negative 10 to 10, in increments of 1. The first function passes through the points, (negative 6, 9), (negative 2, 4.5), (1, 0), (negative 2, negative 4.5), and (negative 6, negative 9). The second function passes through the points, (9, 6), (7, 3.5), (5, 0), (7, negative 3.5), and (9, negative 6). Note: all values are approximate.]\n\n[Figure: Mapping of two sets of values. Mapping infers the following data: 10, 15; 20, 45; 30, 25; and 40, 35.]",
+      "original": "2. \n\nFalse",
+      "prompt": "2. \n\nFalse",
+      "sourceAnswers": [],
+      "hasFigure": false,
+      "status": "draft",
+      "answerVerified": false,
+      "translationStatus": "pending",
+      "mappingStatus": "pending"
+    },
+    {
+      "ordinal": 32,
+      "sourceNumber": "1",
+      "sourceAnchor": "",
+      "kind": "exercise-candidate",
+      "context": "Check Your Understanding\n\n[Figure: Two functions are graphed on an x y coordinate plane. The x and y axes range from negative 10 to 10, in increments of 1. The first function passes through the points, (negative 6, 9), (negative 2, 4.5), (1, 0), (negative 2, negative 4.5), and (negative 6, negative 9). The second function passes through the points, (9, 6), (7, 3.5), (5, 0), (7, negative 3.5), and (9, negative 6). Note: all values are approximate.]\n\n[Figure: Mapping of two sets of values. Mapping infers the following data: 10, 15; 20, 45; 30, 25; and 40, 35.]",
+      "original": "1. \n\nTrue",
+      "prompt": "1. \n\nTrue",
+      "sourceAnswers": [],
+      "hasFigure": false,
+      "status": "draft",
+      "answerVerified": false,
+      "translationStatus": "pending",
+      "mappingStatus": "pending"
+    },
+    {
+      "ordinal": 33,
+      "sourceNumber": "2",
+      "sourceAnchor": "",
+      "kind": "exercise-candidate",
+      "context": "Check Your Understanding\n\n[Figure: Two functions are graphed on an x y coordinate plane. The x and y axes range from negative 10 to 10, in increments of 1. The first function passes through the points, (negative 6, 9), (negative 2, 4.5), (1, 0), (negative 2, negative 4.5), and (negative 6, negative 9). The second function passes through the points, (9, 6), (7, 3.5), (5, 0), (7, negative 3.5), and (9, negative 6). Note: all values are approximate.]\n\n[Figure: Mapping of two sets of values. Mapping infers the following data: 10, 15; 20, 45; 30, 25; and 40, 35.]",
+      "original": "2. \n\nFalse",
+      "prompt": "2. \n\nFalse",
+      "sourceAnswers": [],
+      "hasFigure": false,
+      "status": "draft",
+      "answerVerified": false,
+      "translationStatus": "pending",
+      "mappingStatus": "pending"
+    }
+  ],
+  "license": "CC BY 4.0",
+  "licenseEvidence": "This page titled 5.7:  Functions was last modified on Thu, 02 Jan 2025 11:25:04 GMT and is shared under a CC BY  4.0  license and was authored, remixed, and/or curated by OpenStax via source content that was edited to the style and standards of the LibreTexts platform.",
+  "url": "https://math.libretexts.org/Bookshelves/Applied_Mathematics/Contemporary_Mathematics_(OpenStax)/05:__Algebra/5.07:__Functions",
+  "sha256": "0307c6aa9f01e29ee1376b4fea416e1aeba94f7cc9a98fc65a4a11a259ea82d4",
+  "checkedAt": "2026-10-07",
+  "id": "8bdbdb5778fd2a24c625",
+  "bookId": "contemporary",
+  "licenseInherited": false,
+  "licenseSource": "https://math.libretexts.org/Bookshelves/Applied_Mathematics/Contemporary_Mathematics_(OpenStax)/05:__Algebra/5.07:__Functions",
+  "licenseUrl": "https://creativecommons.org/licenses/by/4.0/",
+  "authors": "OpenStax / Donna Kirk et al.",
+  "book": "Contemporary Mathematics",
+  "reviewStatus": "unreviewed",
+  "sourceLanguage": "en",
+  "translationStatus": "pending"
+}

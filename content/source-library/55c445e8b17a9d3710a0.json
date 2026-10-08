@@ -1,0 +1,730 @@
+{
+  "title": "13.5: Counting Principles",
+  "originalText": "Learning Objectives\n\nSolve counting problems using the Addition Principle.\n\nSolve counting problems using the Multiplication Principle.\n\nSolve counting problems using permutations involving n distinct objects.\n\nSolve counting problems using combinations.\n\nFind the number of subsets of a given set.\n\nSolve counting problems using permutations involving n non-distinct objects.\n\nA new company sells customizable cases for tablets and smartphones. Each case comes in a variety of colors and can be personalized for an additional fee with images or a monogram. A customer can choose not to personalize or could choose to have one, two, or three images or a monogram. The customer can choose the order of the images and the letters in the monogram. The company is working with an agency to develop a marketing campaign with a focus on the huge number of options they offer. Counting the possibilities is challenging!\n\nWe encounter a wide variety of counting problems every day. There is a branch of mathematics devoted to the study of counting problems such as this one. Other applications of counting include secure passwords, horse racing outcomes, and college scheduling choices. We will examine this type of mathematics in this section.\n\nUsing the Addition Principle\n\nThe company that sells customizable cases offers cases for tablets and smartphones. There are \\(3\\) supported tablet models and \\(5\\) supported smartphone models. The Addition Principle tells us that we can add the number of tablet options to the number of smartphone options to find the total number of options. By the Addition Principle, there are \\(8\\) total options, as we can see in Figure \\(\\PageIndex{1}\\).\n\n[Figure: The addition of 3 iPods and 4 iPhones.]\n\nFigure \\(\\PageIndex{1}\\)\n\nTHE ADDITION PRINCIPLE\n\nAccording to the Addition Principle, if one event can occur in \\(m\\) ways and a second event with no common outcomes can occur in \\(n\\) ways, then the first or second event can occur in \\(m+n\\) ways.\n\nExample \\(\\PageIndex{1}\\): Using the Addition Principle\n\nThere are \\(2\\) vegetarian entrée options and \\(5\\) meat entrée options on a dinner menu. What is the total number of entrée options?\n\nSolution\n\nWe can add the number of vegetarian options to the number of meat options to find the total number of entrée options.\n\n[Figure: The addition of the type of options for an entree.]\n\nThere are \\(7\\) total options.\n\nExercise \\(\\PageIndex{1}\\)\n\nA student is shopping for a new computer. He is deciding among \\(3\\) desktop computers and \\(4\\) laptop computers. What is the total number of computer options?\n\nAnswer\n\n\\(7\\)\n\nUsing the Multiplication Principle\n\nThe Multiplication Principle applies when we are making more than one selection. Suppose we are choosing an appetizer, an entrée, and a dessert. If there are \\(2\\) appetizer options, \\(3\\) entrée options, and \\(2\\) dessert options on a fixed-price dinner menu, there are a total of \\(12\\) possible choices of one each as shown in the tree diagram in Figure \\(\\PageIndex{2}\\).\n\n[Figure: A tree diagram of the different menu combinations.]\n\nFigure \\(\\PageIndex{2}\\)\n\nThe possible choices are:\n\n1. soup, chicken, cake\n\n2. soup, chicken, pudding\n\n3. soup, fish, cake\n\n4. soup, fish, pudding\n\n5. soup, steak, cake\n\n6. soup, steak, pudding\n\n7. salad, chicken, cake\n\n8. salad, chicken, pudding\n\n9. salad, fish, cake\n\n10. salad, fish, pudding\n\n11. salad, steak, cake\n\n12. salad, steak, pudding We can also find the total number of possible dinners by multiplying.\n\nWe could also conclude that there are \\(12\\) possible dinner choices simply by applying the Multiplication Principle.\n\n\\(\\# \\text{of appetizer options} \\times \\# \\text {of entree options} \\times \\# \\text {of dessert options}\\)\n\n\\(2  × 3  ×  2=12\\)\n\nTHE MULTIPLICATION PRINCIPLE\n\nAccording to the Multiplication Principle, if one event can occur in \\(m\\) ways and a second event can occur in \\(n\\) ways after the first event has occurred, then the two events can occur in \\(m×n\\) ways. This is also known as the Fundamental Counting Principle.\n\nExample \\(\\PageIndex{2}\\): Using the Multiplication Principle\n\nDiane packed \\(2\\) skirts, \\(4\\) blouses, and a sweater for her business trip. She will need to choose a skirt and a blouse for each outfit and decide whether to wear the sweater. Use the Multiplication Principle to find the total number of possible outfits.\n\nSolution\n\nTo find the total number of outfits, find the product of the number of skirt options, the number of blouse options, and the number of sweater options.\n\n[Figure: The multiplication of number of skirt options (2) times the number of blouse options (4) times the number of sweater options (2) which equals 16.]\n\nThere are \\(16\\) possible outfits.\n\nExercise \\(\\PageIndex{2}\\)\n\nA restaurant offers a breakfast special that includes a breakfast sandwich, a side dish, and a beverage. There are \\(3\\) types of breakfast sandwiches, \\(4\\) side dish options, and \\(5\\) beverage choices. Find the total number of possible breakfast specials.\n\nAnswer\n\nThere are \\(60\\) possible breakfast specials.\n\nFinding the Number of Permutations of \\(n\\) Distinct Objects\n\nThe Multiplication Principle can be used to solve a variety of problem types. One type of problem involves placing objects in order. We arrange letters into words and digits into numbers, line up for photographs, decorate rooms, and more. An ordering of objects is called a permutation.\n\nFinding the Number of Permutations of \\(n\\) Distinct Objects Using the Multiplication Principle\n\nTo solve permutation problems, it is often helpful to draw line segments for each option. That enables us to determine the number of each option so we can multiply. For instance, suppose we have four paintings, and we want to find the number of ways we can hang three of the paintings in order on the wall. We can draw three lines to represent the three places on the wall.\n\n[Figure: CNX_Precalc_Figure_11_05_005.jpg]\n\nThere are four options for the first place, so we write a \\(4\\) on the first line.\n\n[Figure: Four times two blanks spots.]\n\nAfter the first place has been filled, there are three options for the second place so we write a \\(3\\) on the second line.\n\n[Figure: Four times three times one blank spot.]\n\nAfter the second place has been filled, there are two options for the third place so we write a \\(2\\) on the third line. Finally, we find the product.\n\n[Figure: CNX_Precalc_Figure_11_05_008.jpg]\n\nThere are \\(24\\) possible permutations of the paintings.\n\nHow to: Given \\(n\\) distinct options, determine how many permutations there are.\n\n1. Determine how many options there are for the first situation.\n\n2. Determine how many options are left for the second situation.\n\n3. Continue until all of the spots are filled.\n\n4. Multiply the numbers together.\n\nExample \\(\\PageIndex{3}\\): Finding the Number of Permutations Using the Multiplication Principle\n\nAt a swimming competition, nine swimmers compete in a race.\n\n1. How many ways can they place first, second, and third?\n\n2. How many ways can they place first, second, and third if a swimmer named Ariel wins first place? (Assume there is only one contestant named Ariel.)\n\n3. How many ways can all nine swimmers line up for a photo?\n\nSolution\n\n1. Draw lines for each place.\n\n[Figure: CNX_Precalc_Figure_11_05_009.jpg]\n\nThere are \\(9\\) options for first place. Once someone has won first place, there are \\(8\\) remaining options for second place. Once first and second place have been won, there are \\(7\\) remaining options for third place.\n\n[Figure: CNX_Precalc_Figure_11_05_010.jpg]\n\nMultiply to find that there are \\(504\\) ways for the swimmers to place.\n\n2. Draw lines for describing each place.\n\n[Figure: CNX_Precalc_Figure_11_05_011.jpg]\n\nWe know Ariel must win first place, so there is only \\(1\\) option for first place. There are \\(8\\) remaining options for second place, and then \\(7\\) remaining options for third place.\n\n[Figure: CNX_Precalc_Figure_11_05_012.jpg]\n\nMultiply to find that there are \\(56\\) ways for the swimmers to place if Ariel wins first.\n\n3. Draw lines for describing each place in the photo.\n\n[Figure: CNX_Precalc_Figure_11_05_013.jpg]\n\nThere are \\(9\\) choices for the first spot, then \\(8\\) for the second, \\(7\\) for the third, \\(6\\) for the fourth, and so on until only \\(1\\) person remains for the last spot.\n\n[Figure: CNX_Precalc_Figure_11_05_014.jpg]\n\nThere are \\(362,880\\) possible permutations for the swimmers to line up.\n\nAnalysis\n\nNote that in part c, we found there were \\(9!\\) ways for \\(9\\) people to line up. The number of permutations of \\(n\\) distinct objects can always be found by \\(n!\\).\n\nExercise \\(\\PageIndex{3A}\\)\n\nA family of five is having portraits taken. Use the Multiplication Principle to find the following:\n\n1. How many ways can the family line up for the portrait?\n\n2. How many ways can the photographer line up \\(3\\) family members?\n\n3. How many ways can the family line up for the portrait if the parents are required to stand on each end?\n\nAnswer a\n\n\\(120\\)\n\nAnswer b\n\n\\(60\\)\n\nAnswer c\n\n\\(12\\)\n\nFinding the Number of Permutations of n Distinct Objects Using a Formula\n\nFor some permutation problems, it is inconvenient to use the Multiplication Principle because there are so many numbers to multiply. Fortunately, we can solve these problems using a formula. Before we learn the formula, let’s look at two common notations for permutations. If we have a set of \\(n\\) objects and we want to choose \\(r\\) objects from the set in order, we write \\(P(n,r)\\). Another way to write this is \\(nP_r\\), a notation commonly seen on computers and calculators. To calculate \\(P(n,r)\\), we begin by finding \\(n!\\), the number of ways to line up all nn objects. We then divide by \\((n−r)!\\) to cancel out the \\((n−r)\\) items that we do not wish to line up.\n\nLet’s see how this works with a simple example. Imagine a club of six people. They need to elect a president, a vice president, and a treasurer. Six people can be elected president, any one of the five remaining people can be elected vice president, and any of the remaining four people could be elected treasurer. The number of ways this may be done is \\(6×5×4=120\\). Using factorials, we get the same result.\n\n\\(\\dfrac{6!}{3!}=\\dfrac{6·5·4·3!}{3!}=6·5·4=120 \\)\n\nThere are \\(120\\) ways to select \\(3\\) officers in order from a club with \\(6\\) members. We refer to this as a permutation of \\(6\\) taken \\(3\\) at a time. The general formula is as follows.\n\n\\[P(n,r)=\\dfrac{n!}{(n−r)!}\\]\n\nNote that the formula stills works if we are choosing all \\(n\\) objects and placing them in order. In that case we would be dividing by \\((n−n)!\\) or \\(0!\\), which we said earlier is equal to \\(1\\). So the number of permutations of \\(n\\) objects taken \\(n\\) at a time is \\(\\dfrac{n!}{1}\\) or just \\(n!\\).\n\nNote: FORMULA FOR PERMUTATIONS OF N DISTINCT OBJECTS\n\nGiven \\(n\\) distinct objects, the number of ways to select \\(r\\) objects from the set in order is\n\n\\[P(n,r)=\\dfrac{n!}{(n−r)!}\\]\n\nHow to: Given a word problem, evaluate the possible permutations.\n\n1. Identify \\(n\\) from the given information.\n\n2. Identify \\(r\\) from the given information.\n\n3. Replace \\(n\\) and \\(r\\) in the formula with the given values.\n\n4. Evaluate.\n\nExample \\(\\PageIndex{4}\\): Finding the Number of Permutations Using the Formula\n\nA professor is creating an exam of \\(9\\) questions from a test bank of \\(12\\) questions. How many ways can she select and arrange the questions?\n\nSolution\n\nSubstitute \\(n=12\\) and \\(r=9\\) into the permutation formula and simplify.\n\n\\[\\begin{align*} P(n,r)&=\\dfrac{n!}{(n-r)!}\\\\ P(12,9)&=\\dfrac{12!}{(12-9)!}\\\\ &=\\dfrac{12!}{3!}\\\\ &=79,833,600 \\end{align*}\\]\n\nThere are \\(79,833,600\\) possible permutations of exam questions!\n\nAnalysis\n\nWe can also use a calculator to find permutations. For this problem, we would enter \\(12\\), press the \\(nP_r\\)  function, enter \\(9\\), and then press the equal sign. The \\(nP_r\\)  function may be located under the MATH menu with probability commands.\n\nQ&A\n\nCould we have solved the example above using the Multiplication Principle?\n\nYes. We could have multiplied \\(15⋅14⋅13⋅12⋅11⋅10⋅9⋅8⋅7⋅6⋅5⋅4\\) to find the same answer.\n\nExercise \\(\\PageIndex{4A}\\)\n\nA play has a cast of \\(7\\) actors preparing to make their curtain call. Use the permutation formula to find the following.\n\nHow many ways can the \\(7\\) actors line up?\n\nAnswer\n\n\\(P(7,7)=5,040\\)\n\nExercise \\(\\PageIndex{4B}\\)\n\nHow many ways can \\(5\\) of the \\(7\\) actors be chosen to line up?\n\nAnswer\n\n\\(P(7,5)=2,520\\)\n\nFind the Number of Combinations Using the Formula\n\nSo far, we have looked at problems asking us to put objects in order. There are many problems in which we want to select a few objects from a group of objects, but we do not care about the order. When we are selecting objects and the order does not matter, we are dealing with combinations. A selection of \\(r\\) objects from a set of \\(n\\) objects where the order does not matter can be written as \\(C(n,r)\\). Just as with permutations, \\(C(n,r)\\) can also be written as \\(nC_r\\). In this case, the general formula is as follows.\n\n\\[C(n,r)=\\dfrac{n!}{r!(n−r)!} \\label{combo}\\]\n\nAn earlier problem considered choosing \\(3\\) of \\(4\\) possible paintings to hang on a wall. We found that there were \\(24\\) ways to select \\(3\\) of the \\(4\\) paintings in order. But what if we did not care about the order? We would expect a smaller number because selecting paintings \\(1, 2, 3\\) would be the same as selecting paintings \\(2, 3, 1\\). To find the number of ways to select \\(3\\) of the \\(4\\) paintings, disregarding the order of the paintings, divide the number of permutations by the number of ways to order \\(3\\) paintings. There are \\(3!=3·2·1=6\\) ways to order \\(3\\) paintings. There are \\(\\dfrac{24}{6}\\), or \\(4\\) ways to select \\(3\\) of the \\(4\\) paintings. This number makes sense because every time we are selecting \\(3\\) paintings, we are not selecting \\(1\\) painting. There are \\(4\\) paintings we could choose not to select, so there are \\(4\\) ways to select \\(3\\) of the \\(4\\) paintings.\n\nNote: FORMULA FOR COMBINATIONS OF N DISTINCT OBJECTS\n\nGiven \\(n\\) distinct objects, the number of ways to select \\(r\\) objects from the set is\n\n\\[C(n,r)=\\dfrac{n!}{r!(n−r)!}\\]\n\nHow to: Given a number of options, determine the possible number of combinations.\n\n1. Identify \\(n\\) from the given information.\n\n2. Identify \\(r\\) from the given information.\n\n3. Replace \\(n\\) and \\(r\\) in the formula with the given values.\n\n4. Evaluate.\n\nExample \\(\\PageIndex{5}\\): Finding the Number of Combinations Using the Formula\n\nA fast food restaurant offers five side dish options. Your meal comes with two side dishes.\n\n1. How many ways can you select your side dishes?\n\n2. How many ways can you select \\(3\\) side dishes?\n\nSolution\n\n1. We want to choose \\(2\\) side dishes from \\(5\\) options.\n\n\\(C(5,2)=\\dfrac{5!}{2!(5−2)!}=10\\)\n\n2. We want to choose \\(3\\) side dishes from \\(5\\) options.\n\n\\(C(5,3)=\\dfrac{5!}{3!(5−3)!}=10\\)\n\nAnalysis\n\nWe can also use a graphing calculator to find combinations. Enter 5, then press \\(nC_r\\), enter 3, and then press the equal sign. The \\(nC_r\\), function may be located under the MATH menu with probability commands.\n\nQ&A\n\nIs it a coincidence that parts (a) and (b) in the example above have the same answers?\n\nNo. When we choose r objects from n objects, we are not choosing \\((n–r)\\) objects. Therefore, \\(C(n,r)=C(n,n–r)\\).\n\nExercise \\(\\PageIndex{5}\\)\n\nAn ice cream shop offers \\(10\\) flavors of ice cream. How many ways are there to choose \\(3\\) flavors for a banana split?\n\nAnswer\n\n\\(C(10,3)=120\\)\n\nFinding the Number of Subsets of a Set\n\nWe have looked only at combination problems in which we chose exactly rr objects. In some problems, we want to consider choosing every possible number of objects. Consider, for example, a pizza restaurant that offers \\(5\\) toppings. Any number of toppings can be ordered. How many different pizzas are possible?\n\nTo answer this question, we need to consider pizzas with any number of toppings. There is \\(C(5,0)=1\\) way to order a pizza with no toppings. There are \\(C(5,1)=5\\) ways to order a pizza with exactly one topping. If we continue this process, we get\n\n\\(C(5,0)+C(5,1)+C(5,2)+C(5,3)+C(5,4)+C(5,5)=32\\)\n\nThere are \\(32\\) possible pizzas. This result is equal to \\(2^5\\).\n\nWe are presented with a sequence of choices. For each of the nn objects we have two choices: include it in the subset or not. So for the whole subset we have made nn  choices, each with two options. So there are a total of \\(2·2·2·…·2\\) possible resulting subsets, all the way from the empty subset, which we obtain when we say “no” each time, to the original set itself, which we obtain when we say “yes” each time.\n\nNote: FORMULA FOR THE NUMBER OF SUBSETS OF A SET\n\nA set containing n distinct objects has \\(2^n\\) subsets.\n\nExample \\(\\PageIndex{6}\\): Finding the Number of Subsets of a Set\n\nA restaurant offers butter, cheese, chives, and sour cream as toppings for a baked potato. How many different ways are there to order a potato?\n\nSolution\n\nWe are looking for the number of subsets of a set with \\(4\\) objects. Substitute \\(n=4\\) into the formula.\n\n\\[\\begin{align*} 2^n&=2^4\\\\ &=16 \\end{align*}\\]\n\nThere are \\(16\\) possible ways to order a potato.\n\nExercise \\(\\PageIndex{6}\\)\n\nA sundae bar at a wedding has \\(6\\) toppings to choose from. Any number of toppings can be chosen. How many different sundaes are possible?\n\nAnswer\n\n\\(64\\) sundaes\n\nFinding the Number of Permutations of n Non-Distinct Objects\n\nWe have studied permutations where all of the objects involved were distinct. What happens if some of the objects are indistinguishable? For example, suppose there is a sheet of \\(12\\) stickers. If all of the stickers were distinct, there would be \\(12!\\) ways to order the stickers. However, \\(4\\) of the stickers are identical stars, and \\(3\\) are identical moons. Because all of the objects are not distinct, many of the \\(12!\\) permutations we counted are duplicates. The general formula for this situation is as follows.\n\n\\[\\dfrac{n!}{r_1!r_2!…r_k!}\\]\n\nIn this example, we need to divide by the number of ways to order the \\(4\\) stars and the ways to order the \\(3\\) moons to find the number of unique permutations of the stickers. There are \\(4!\\) ways to order the stars and \\(3!\\) ways to order the moon.\n\n\\(\\dfrac{12!}{4!3!}=3,326,400\\)\n\nThere are \\(3,326,400\\) ways to order the sheet of stickers.\n\nNote: FORMULA FOR FINDING THE NUMBER OF PERMUTATIONS OF \\(N\\) NON-DISTINCT OBJECTS\n\nIf there are nn elements in a set and \\(r_1\\) are alike, \\(r_2\\) are alike, \\(r_3\\) are alike, and so on through \\(r_k\\), the number of permutations can be found by\n\n\\[\\dfrac{n!}{r_1!r_2!…r_k!}\\]\n\nExample \\(\\PageIndex{7}\\): Finding the Number of Permutations of \\(n\\) Non-Distinct Objects\n\nFind the number of rearrangements of the letters in the word DISTINCT.\n\nSolution\n\nThere are \\(8\\) letters. Both \\(I\\) and \\(T\\) are repeated \\(2\\) times. Substitute \\(n=8\\), \\(r_1=2\\), and \\(r_2=2\\) into the formula.\n\n\\(\\dfrac{8!}{2!2!}=10,080\\)\n\nThere are \\(10,080\\) arrangements.\n\nExercise \\(\\PageIndex{7}\\)\n\nFind the number of rearrangements of the letters in the word CARRIER.\n\nAnswer\n\n\\(840\\)\n\nMedia\n\nAccess these online resources for additional instruction and practice with combinations and permutations.\n\nCombinations\n\nPermutations\n\nKey Equations\n\n            number of permutations of \\(n\\) distinct objects taken \\(r\\) at a time\t\n            \\(P(n,r)=\\dfrac{n!}{(n−r)!}\\)\t\n\n            number of combinations of \\(n\\) distinct objects taken \\(r\\) at a time\t\n            \\(C(n,r)=\\dfrac{n!}{r!(n−r)!}\\)\t\n\n            number of permutations of \\(n\\) non-distinct objects\t\n            \\(\\dfrac{n!}{r1!r2!…rk!}\\)\t\n\nKey Concepts\n\nIf one event can occur in \\(m\\) ways and a second event with no common outcomes can occur in \\(n\\) ways, then the first or second event can occur in \\(m+n\\) ways. See Example \\(\\PageIndex{1}\\).\n\nIf one event can occur in \\(m\\) ways and a second event can occur in \\(n\\) ways after the first event has occurred, then the two events can occur in \\(m×n\\) ways. See Example \\(\\PageIndex{2}\\).\n\nA permutation is an ordering of \\(n\\) objects.\n\nIf we have a set of \\(n\\) objects and we want to choose \\(r\\) objects from the set in order, we write \\(P(n,r)\\).\n\nPermutation problems can be solved using the Multiplication Principle or the formula for \\(P(n,r)\\). See Example \\(\\PageIndex{3}\\) and Example \\(\\PageIndex{4}\\).\n\nA selection of objects where the order does not matter is a combination.\n\nGiven \\(n\\) distinct objects, the number of ways to select \\(r\\) objects from the set is \\(C(n,r)\\) and can be found using a formula. See Example \\(\\PageIndex{5}\\).\n\nA set containing \\(n\\) distinct objects has \\(2n\\) subsets. See Example \\(\\PageIndex{6}\\).\n\nFor counting problems involving non-distinct objects, we need to divide to avoid counting duplicate permutations. See Example \\(\\PageIndex{7}\\).\n\nContributors and Attributions\n\nJay Abramson (Arizona State University) with contributing authors. Textbook content produced by OpenStax College is licensed under a Creative Commons Attribution License 4.0 license. Download for free at https://openstax.org/details/books/precalculus.\n\nThis page titled 13.5: Counting Principles was last modified on Sun, 27 Apr 2025 18:28:28 GMT and is shared under a CC BY  4.0  license and was authored, remixed, and/or curated by OpenStax via source content that was edited to the style and standards of the LibreTexts platform.",
+  "figures": [
+    {
+      "url": "https://math.libretexts.org/@api/deki/files/7624/CNX_Precalc_Figure_11_05_001n.jpg?revision=1",
+      "alt": "The addition of 3 iPods and 4 iPhones.",
+      "credit": ""
+    },
+    {
+      "url": "https://math.libretexts.org/@api/deki/files/131052/CNX_Precalc_Figure_11_05_002_8gtc.jpg?revision=1",
+      "alt": "The addition of the type of options for an entree.",
+      "credit": ""
+    },
+    {
+      "url": "https://math.libretexts.org/@api/deki/files/7625/CNX_Precalc_Figure_11_05_003.jpg?revision=1",
+      "alt": "A tree diagram of the different menu combinations.",
+      "credit": ""
+    },
+    {
+      "url": "https://math.libretexts.org/@api/deki/files/7626/CNX_Precalc_Figure_11_05_004.jpg?revision=1",
+      "alt": "The multiplication of number of skirt options (2) times the number of blouse options (4) times the number of sweater options (2) which equals 16.",
+      "credit": ""
+    },
+    {
+      "url": "https://math.libretexts.org/@api/deki/files/7627/CNX_Precalc_Figure_11_05_005.jpg?revision=1",
+      "alt": "CNX_Precalc_Figure_11_05_005.jpg",
+      "credit": ""
+    },
+    {
+      "url": "https://math.libretexts.org/@api/deki/files/7628/CNX_Precalc_Figure_11_05_006.jpg?revision=1",
+      "alt": "Four times two blanks spots.",
+      "credit": ""
+    },
+    {
+      "url": "https://math.libretexts.org/@api/deki/files/7629/CNX_Precalc_Figure_11_05_007.jpg?revision=1",
+      "alt": "Four times three times one blank spot.",
+      "credit": ""
+    },
+    {
+      "url": "https://math.libretexts.org/@api/deki/files/7630/CNX_Precalc_Figure_11_05_008.jpg?revision=1",
+      "alt": "CNX_Precalc_Figure_11_05_008.jpg",
+      "credit": ""
+    },
+    {
+      "url": "https://math.libretexts.org/@api/deki/files/7631/CNX_Precalc_Figure_11_05_009.jpg?revision=1",
+      "alt": "CNX_Precalc_Figure_11_05_009.jpg",
+      "credit": ""
+    },
+    {
+      "url": "https://math.libretexts.org/@api/deki/files/7632/CNX_Precalc_Figure_11_05_010.jpg?revision=1",
+      "alt": "CNX_Precalc_Figure_11_05_010.jpg",
+      "credit": ""
+    },
+    {
+      "url": "https://math.libretexts.org/@api/deki/files/7633/CNX_Precalc_Figure_11_05_011.jpg?revision=1",
+      "alt": "CNX_Precalc_Figure_11_05_011.jpg",
+      "credit": ""
+    },
+    {
+      "url": "https://math.libretexts.org/@api/deki/files/7634/CNX_Precalc_Figure_11_05_012.jpg?revision=1",
+      "alt": "CNX_Precalc_Figure_11_05_012.jpg",
+      "credit": ""
+    },
+    {
+      "url": "https://math.libretexts.org/@api/deki/files/7635/CNX_Precalc_Figure_11_05_013.jpg?revision=1",
+      "alt": "CNX_Precalc_Figure_11_05_013.jpg",
+      "credit": ""
+    },
+    {
+      "url": "https://math.libretexts.org/@api/deki/files/7636/CNX_Precalc_Figure_11_05_014.jpg?revision=1",
+      "alt": "CNX_Precalc_Figure_11_05_014.jpg",
+      "credit": ""
+    }
+  ],
+  "references": [
+    {
+      "text": "Combinations",
+      "url": "http://openstaxcollege.org/l/combinations"
+    },
+    {
+      "text": "Permutations",
+      "url": "http://openstaxcollege.org/l/permutations"
+    },
+    {
+      "text": "Creative Commons Attribution License 4.0",
+      "url": "http://creativecommons.org/licenses/by/4.0/"
+    },
+    {
+      "text": "https://openstax.org/details/books/precalculus",
+      "url": "https://openstax.org/details/books/precalculus"
+    },
+    {
+      "text": "13.5: Counting Principles",
+      "url": "https://math.libretexts.org/Bookshelves/Algebra/Algebra_and_Trigonometry_1e_(OpenStax)/13%3A_Sequences_Probability_and_Counting_Theory/13.05%3A_Counting_Principles"
+    },
+    {
+      "text": "CC BY  4.0",
+      "url": "https://creativecommons.org/licenses/by/4.0"
+    },
+    {
+      "text": "OpenStax",
+      "url": "https://openstax.org/"
+    },
+    {
+      "text": "source content",
+      "url": "https://openstax.org/details/books/precalculus"
+    }
+  ],
+  "exercises": [
+    {
+      "ordinal": 1,
+      "sourceNumber": "",
+      "sourceAnchor": "",
+      "kind": "example-or-exercise",
+      "context": "Using the Addition Principle\n\nThe company that sells customizable cases offers cases for tablets and smartphones. There are \\(3\\) supported tablet models and \\(5\\) supported smartphone models. The Addition Principle tells us that we can add the number of tablet options to the number of smartphone options to find the total number of options. By the Addition Principle, there are \\(8\\) total options, as we can see in Figure \\(\\PageIndex{1}\\).\n\nAccording to the Addition Principle, if one event can occur in \\(m\\) ways and a second event with no common outcomes can occur in \\(n\\) ways, then the first or second event can occur in \\(m+n\\) ways.",
+      "original": "Example \\(\\PageIndex{1}\\): Using the Addition Principle\n\nThere are \\(2\\) vegetarian entrée options and \\(5\\) meat entrée options on a dinner menu. What is the total number of entrée options?\n\nSolution\n\nWe can add the number of vegetarian options to the number of meat options to find the total number of entrée options.\n\n[Figure: The addition of the type of options for an entree.]\n\nThere are \\(7\\) total options.",
+      "prompt": "Example \\(\\PageIndex{1}\\): Using the Addition Principle\n\nThere are \\(2\\) vegetarian entrée options and \\(5\\) meat entrée options on a dinner menu. What is the total number of entrée options?\n\nSolution\n\nWe can add the number of vegetarian options to the number of meat options to find the total number of entrée options.\n\n[Figure: The addition of the type of options for an entree.]\n\nThere are \\(7\\) total options.",
+      "sourceAnswers": [],
+      "hasFigure": true,
+      "status": "draft",
+      "answerVerified": false,
+      "translationStatus": "pending",
+      "mappingStatus": "pending"
+    },
+    {
+      "ordinal": 2,
+      "sourceNumber": "",
+      "sourceAnchor": "",
+      "kind": "exercise-candidate",
+      "context": "Using the Addition Principle\n\nThe company that sells customizable cases offers cases for tablets and smartphones. There are \\(3\\) supported tablet models and \\(5\\) supported smartphone models. The Addition Principle tells us that we can add the number of tablet options to the number of smartphone options to find the total number of options. By the Addition Principle, there are \\(8\\) total options, as we can see in Figure \\(\\PageIndex{1}\\).\n\nAccording to the Addition Principle, if one event can occur in \\(m\\) ways and a second event with no common outcomes can occur in \\(n\\) ways, then the first or second event can occur in \\(m+n\\) ways.",
+      "original": "Exercise \\(\\PageIndex{1}\\)\n\nA student is shopping for a new computer. He is deciding among \\(3\\) desktop computers and \\(4\\) laptop computers. What is the total number of computer options?\n\nAnswer\n\n\\(7\\)",
+      "prompt": "Exercise \\(\\PageIndex{1}\\)\n\nA student is shopping for a new computer. He is deciding among \\(3\\) desktop computers and \\(4\\) laptop computers. What is the total number of computer options?",
+      "sourceAnswers": [
+        "\\(7\\)"
+      ],
+      "hasFigure": false,
+      "status": "draft",
+      "answerVerified": false,
+      "translationStatus": "pending",
+      "mappingStatus": "pending"
+    },
+    {
+      "ordinal": 3,
+      "sourceNumber": "1",
+      "sourceAnchor": "",
+      "kind": "exercise-candidate",
+      "context": "Using the Multiplication Principle\n\nThe Multiplication Principle applies when we are making more than one selection. Suppose we are choosing an appetizer, an entrée, and a dessert. If there are \\(2\\) appetizer options, \\(3\\) entrée options, and \\(2\\) dessert options on a fixed-price dinner menu, there are a total of \\(12\\) possible choices of one each as shown in the tree diagram in Figure \\(\\PageIndex{2}\\).\n\nThe possible choices are:",
+      "original": "1. soup, chicken, cake",
+      "prompt": "1. soup, chicken, cake",
+      "sourceAnswers": [],
+      "hasFigure": false,
+      "status": "draft",
+      "answerVerified": false,
+      "translationStatus": "pending",
+      "mappingStatus": "pending"
+    },
+    {
+      "ordinal": 4,
+      "sourceNumber": "2",
+      "sourceAnchor": "",
+      "kind": "exercise-candidate",
+      "context": "Using the Multiplication Principle\n\nThe Multiplication Principle applies when we are making more than one selection. Suppose we are choosing an appetizer, an entrée, and a dessert. If there are \\(2\\) appetizer options, \\(3\\) entrée options, and \\(2\\) dessert options on a fixed-price dinner menu, there are a total of \\(12\\) possible choices of one each as shown in the tree diagram in Figure \\(\\PageIndex{2}\\).\n\nThe possible choices are:",
+      "original": "2. soup, chicken, pudding",
+      "prompt": "2. soup, chicken, pudding",
+      "sourceAnswers": [],
+      "hasFigure": false,
+      "status": "draft",
+      "answerVerified": false,
+      "translationStatus": "pending",
+      "mappingStatus": "pending"
+    },
+    {
+      "ordinal": 5,
+      "sourceNumber": "3",
+      "sourceAnchor": "",
+      "kind": "exercise-candidate",
+      "context": "Using the Multiplication Principle\n\nThe Multiplication Principle applies when we are making more than one selection. Suppose we are choosing an appetizer, an entrée, and a dessert. If there are \\(2\\) appetizer options, \\(3\\) entrée options, and \\(2\\) dessert options on a fixed-price dinner menu, there are a total of \\(12\\) possible choices of one each as shown in the tree diagram in Figure \\(\\PageIndex{2}\\).\n\nThe possible choices are:",
+      "original": "3. soup, fish, cake",
+      "prompt": "3. soup, fish, cake",
+      "sourceAnswers": [],
+      "hasFigure": false,
+      "status": "draft",
+      "answerVerified": false,
+      "translationStatus": "pending",
+      "mappingStatus": "pending"
+    },
+    {
+      "ordinal": 6,
+      "sourceNumber": "4",
+      "sourceAnchor": "",
+      "kind": "exercise-candidate",
+      "context": "Using the Multiplication Principle\n\nThe Multiplication Principle applies when we are making more than one selection. Suppose we are choosing an appetizer, an entrée, and a dessert. If there are \\(2\\) appetizer options, \\(3\\) entrée options, and \\(2\\) dessert options on a fixed-price dinner menu, there are a total of \\(12\\) possible choices of one each as shown in the tree diagram in Figure \\(\\PageIndex{2}\\).\n\nThe possible choices are:",
+      "original": "4. soup, fish, pudding",
+      "prompt": "4. soup, fish, pudding",
+      "sourceAnswers": [],
+      "hasFigure": false,
+      "status": "draft",
+      "answerVerified": false,
+      "translationStatus": "pending",
+      "mappingStatus": "pending"
+    },
+    {
+      "ordinal": 7,
+      "sourceNumber": "5",
+      "sourceAnchor": "",
+      "kind": "exercise-candidate",
+      "context": "Using the Multiplication Principle\n\nThe Multiplication Principle applies when we are making more than one selection. Suppose we are choosing an appetizer, an entrée, and a dessert. If there are \\(2\\) appetizer options, \\(3\\) entrée options, and \\(2\\) dessert options on a fixed-price dinner menu, there are a total of \\(12\\) possible choices of one each as shown in the tree diagram in Figure \\(\\PageIndex{2}\\).\n\nThe possible choices are:",
+      "original": "5. soup, steak, cake",
+      "prompt": "5. soup, steak, cake",
+      "sourceAnswers": [],
+      "hasFigure": false,
+      "status": "draft",
+      "answerVerified": false,
+      "translationStatus": "pending",
+      "mappingStatus": "pending"
+    },
+    {
+      "ordinal": 8,
+      "sourceNumber": "6",
+      "sourceAnchor": "",
+      "kind": "exercise-candidate",
+      "context": "Using the Multiplication Principle\n\nThe Multiplication Principle applies when we are making more than one selection. Suppose we are choosing an appetizer, an entrée, and a dessert. If there are \\(2\\) appetizer options, \\(3\\) entrée options, and \\(2\\) dessert options on a fixed-price dinner menu, there are a total of \\(12\\) possible choices of one each as shown in the tree diagram in Figure \\(\\PageIndex{2}\\).\n\nThe possible choices are:",
+      "original": "6. soup, steak, pudding",
+      "prompt": "6. soup, steak, pudding",
+      "sourceAnswers": [],
+      "hasFigure": false,
+      "status": "draft",
+      "answerVerified": false,
+      "translationStatus": "pending",
+      "mappingStatus": "pending"
+    },
+    {
+      "ordinal": 9,
+      "sourceNumber": "7",
+      "sourceAnchor": "",
+      "kind": "exercise-candidate",
+      "context": "Using the Multiplication Principle\n\nThe Multiplication Principle applies when we are making more than one selection. Suppose we are choosing an appetizer, an entrée, and a dessert. If there are \\(2\\) appetizer options, \\(3\\) entrée options, and \\(2\\) dessert options on a fixed-price dinner menu, there are a total of \\(12\\) possible choices of one each as shown in the tree diagram in Figure \\(\\PageIndex{2}\\).\n\nThe possible choices are:",
+      "original": "7. salad, chicken, cake",
+      "prompt": "7. salad, chicken, cake",
+      "sourceAnswers": [],
+      "hasFigure": false,
+      "status": "draft",
+      "answerVerified": false,
+      "translationStatus": "pending",
+      "mappingStatus": "pending"
+    },
+    {
+      "ordinal": 10,
+      "sourceNumber": "8",
+      "sourceAnchor": "",
+      "kind": "exercise-candidate",
+      "context": "Using the Multiplication Principle\n\nThe Multiplication Principle applies when we are making more than one selection. Suppose we are choosing an appetizer, an entrée, and a dessert. If there are \\(2\\) appetizer options, \\(3\\) entrée options, and \\(2\\) dessert options on a fixed-price dinner menu, there are a total of \\(12\\) possible choices of one each as shown in the tree diagram in Figure \\(\\PageIndex{2}\\).\n\nThe possible choices are:",
+      "original": "8. salad, chicken, pudding",
+      "prompt": "8. salad, chicken, pudding",
+      "sourceAnswers": [],
+      "hasFigure": false,
+      "status": "draft",
+      "answerVerified": false,
+      "translationStatus": "pending",
+      "mappingStatus": "pending"
+    },
+    {
+      "ordinal": 11,
+      "sourceNumber": "9",
+      "sourceAnchor": "",
+      "kind": "exercise-candidate",
+      "context": "Using the Multiplication Principle\n\nThe Multiplication Principle applies when we are making more than one selection. Suppose we are choosing an appetizer, an entrée, and a dessert. If there are \\(2\\) appetizer options, \\(3\\) entrée options, and \\(2\\) dessert options on a fixed-price dinner menu, there are a total of \\(12\\) possible choices of one each as shown in the tree diagram in Figure \\(\\PageIndex{2}\\).\n\nThe possible choices are:",
+      "original": "9. salad, fish, cake",
+      "prompt": "9. salad, fish, cake",
+      "sourceAnswers": [],
+      "hasFigure": false,
+      "status": "draft",
+      "answerVerified": false,
+      "translationStatus": "pending",
+      "mappingStatus": "pending"
+    },
+    {
+      "ordinal": 12,
+      "sourceNumber": "10",
+      "sourceAnchor": "",
+      "kind": "exercise-candidate",
+      "context": "Using the Multiplication Principle\n\nThe Multiplication Principle applies when we are making more than one selection. Suppose we are choosing an appetizer, an entrée, and a dessert. If there are \\(2\\) appetizer options, \\(3\\) entrée options, and \\(2\\) dessert options on a fixed-price dinner menu, there are a total of \\(12\\) possible choices of one each as shown in the tree diagram in Figure \\(\\PageIndex{2}\\).\n\nThe possible choices are:",
+      "original": "10. salad, fish, pudding",
+      "prompt": "10. salad, fish, pudding",
+      "sourceAnswers": [],
+      "hasFigure": false,
+      "status": "draft",
+      "answerVerified": false,
+      "translationStatus": "pending",
+      "mappingStatus": "pending"
+    },
+    {
+      "ordinal": 13,
+      "sourceNumber": "11",
+      "sourceAnchor": "",
+      "kind": "exercise-candidate",
+      "context": "Using the Multiplication Principle\n\nThe Multiplication Principle applies when we are making more than one selection. Suppose we are choosing an appetizer, an entrée, and a dessert. If there are \\(2\\) appetizer options, \\(3\\) entrée options, and \\(2\\) dessert options on a fixed-price dinner menu, there are a total of \\(12\\) possible choices of one each as shown in the tree diagram in Figure \\(\\PageIndex{2}\\).\n\nThe possible choices are:",
+      "original": "11. salad, steak, cake",
+      "prompt": "11. salad, steak, cake",
+      "sourceAnswers": [],
+      "hasFigure": false,
+      "status": "draft",
+      "answerVerified": false,
+      "translationStatus": "pending",
+      "mappingStatus": "pending"
+    },
+    {
+      "ordinal": 14,
+      "sourceNumber": "12",
+      "sourceAnchor": "",
+      "kind": "exercise-candidate",
+      "context": "Using the Multiplication Principle\n\nThe Multiplication Principle applies when we are making more than one selection. Suppose we are choosing an appetizer, an entrée, and a dessert. If there are \\(2\\) appetizer options, \\(3\\) entrée options, and \\(2\\) dessert options on a fixed-price dinner menu, there are a total of \\(12\\) possible choices of one each as shown in the tree diagram in Figure \\(\\PageIndex{2}\\).\n\nThe possible choices are:",
+      "original": "12. salad, steak, pudding We can also find the total number of possible dinners by multiplying.",
+      "prompt": "12. salad, steak, pudding We can also find the total number of possible dinners by multiplying.",
+      "sourceAnswers": [],
+      "hasFigure": false,
+      "status": "draft",
+      "answerVerified": false,
+      "translationStatus": "pending",
+      "mappingStatus": "pending"
+    },
+    {
+      "ordinal": 15,
+      "sourceNumber": "",
+      "sourceAnchor": "",
+      "kind": "example-or-exercise",
+      "context": "\\(\\# \\text{of appetizer options} \\times \\# \\text {of entree options} \\times \\# \\text {of dessert options}\\)\n\n\\(2  × 3  ×  2=12\\)\n\nAccording to the Multiplication Principle, if one event can occur in \\(m\\) ways and a second event can occur in \\(n\\) ways after the first event has occurred, then the two events can occur in \\(m×n\\) ways. This is also known as the Fundamental Counting Principle.",
+      "original": "Example \\(\\PageIndex{2}\\): Using the Multiplication Principle\n\nDiane packed \\(2\\) skirts, \\(4\\) blouses, and a sweater for her business trip. She will need to choose a skirt and a blouse for each outfit and decide whether to wear the sweater. Use the Multiplication Principle to find the total number of possible outfits.\n\nSolution\n\nTo find the total number of outfits, find the product of the number of skirt options, the number of blouse options, and the number of sweater options.\n\n[Figure: The multiplication of number of skirt options (2) times the number of blouse options (4) times the number of sweater options (2) which equals 16.]\n\nThere are \\(16\\) possible outfits.",
+      "prompt": "Example \\(\\PageIndex{2}\\): Using the Multiplication Principle\n\nDiane packed \\(2\\) skirts, \\(4\\) blouses, and a sweater for her business trip. She will need to choose a skirt and a blouse for each outfit and decide whether to wear the sweater. Use the Multiplication Principle to find the total number of possible outfits.\n\nSolution\n\nTo find the total number of outfits, find the product of the number of skirt options, the number of blouse options, and the number of sweater options.\n\n[Figure: The multiplication of number of skirt options (2) times the number of blouse options (4) times the number of sweater options (2) which equals 16.]\n\nThere are \\(16\\) possible outfits.",
+      "sourceAnswers": [],
+      "hasFigure": true,
+      "status": "draft",
+      "answerVerified": false,
+      "translationStatus": "pending",
+      "mappingStatus": "pending"
+    },
+    {
+      "ordinal": 16,
+      "sourceNumber": "",
+      "sourceAnchor": "",
+      "kind": "exercise-candidate",
+      "context": "\\(\\# \\text{of appetizer options} \\times \\# \\text {of entree options} \\times \\# \\text {of dessert options}\\)\n\n\\(2  × 3  ×  2=12\\)\n\nAccording to the Multiplication Principle, if one event can occur in \\(m\\) ways and a second event can occur in \\(n\\) ways after the first event has occurred, then the two events can occur in \\(m×n\\) ways. This is also known as the Fundamental Counting Principle.",
+      "original": "Exercise \\(\\PageIndex{2}\\)\n\nA restaurant offers a breakfast special that includes a breakfast sandwich, a side dish, and a beverage. There are \\(3\\) types of breakfast sandwiches, \\(4\\) side dish options, and \\(5\\) beverage choices. Find the total number of possible breakfast specials.\n\nAnswer\n\nThere are \\(60\\) possible breakfast specials.",
+      "prompt": "Exercise \\(\\PageIndex{2}\\)\n\nA restaurant offers a breakfast special that includes a breakfast sandwich, a side dish, and a beverage. There are \\(3\\) types of breakfast sandwiches, \\(4\\) side dish options, and \\(5\\) beverage choices. Find the total number of possible breakfast specials.",
+      "sourceAnswers": [
+        "There are \\(60\\) possible breakfast specials."
+      ],
+      "hasFigure": false,
+      "status": "draft",
+      "answerVerified": false,
+      "translationStatus": "pending",
+      "mappingStatus": "pending"
+    },
+    {
+      "ordinal": 17,
+      "sourceNumber": "1",
+      "sourceAnchor": "",
+      "kind": "exercise-candidate",
+      "context": "After the second place has been filled, there are two options for the third place so we write a \\(2\\) on the third line. Finally, we find the product.\n\n[Figure: CNX_Precalc_Figure_11_05_008.jpg]\n\nThere are \\(24\\) possible permutations of the paintings.",
+      "original": "1. Determine how many options there are for the first situation.",
+      "prompt": "1. Determine how many options there are for the first situation.",
+      "sourceAnswers": [],
+      "hasFigure": false,
+      "status": "draft",
+      "answerVerified": false,
+      "translationStatus": "pending",
+      "mappingStatus": "pending"
+    },
+    {
+      "ordinal": 18,
+      "sourceNumber": "2",
+      "sourceAnchor": "",
+      "kind": "exercise-candidate",
+      "context": "After the second place has been filled, there are two options for the third place so we write a \\(2\\) on the third line. Finally, we find the product.\n\n[Figure: CNX_Precalc_Figure_11_05_008.jpg]\n\nThere are \\(24\\) possible permutations of the paintings.",
+      "original": "2. Determine how many options are left for the second situation.",
+      "prompt": "2. Determine how many options are left for the second situation.",
+      "sourceAnswers": [],
+      "hasFigure": false,
+      "status": "draft",
+      "answerVerified": false,
+      "translationStatus": "pending",
+      "mappingStatus": "pending"
+    },
+    {
+      "ordinal": 19,
+      "sourceNumber": "3",
+      "sourceAnchor": "",
+      "kind": "exercise-candidate",
+      "context": "After the second place has been filled, there are two options for the third place so we write a \\(2\\) on the third line. Finally, we find the product.\n\n[Figure: CNX_Precalc_Figure_11_05_008.jpg]\n\nThere are \\(24\\) possible permutations of the paintings.",
+      "original": "3. Continue until all of the spots are filled.",
+      "prompt": "3. Continue until all of the spots are filled.",
+      "sourceAnswers": [],
+      "hasFigure": false,
+      "status": "draft",
+      "answerVerified": false,
+      "translationStatus": "pending",
+      "mappingStatus": "pending"
+    },
+    {
+      "ordinal": 20,
+      "sourceNumber": "4",
+      "sourceAnchor": "",
+      "kind": "exercise-candidate",
+      "context": "After the second place has been filled, there are two options for the third place so we write a \\(2\\) on the third line. Finally, we find the product.\n\n[Figure: CNX_Precalc_Figure_11_05_008.jpg]\n\nThere are \\(24\\) possible permutations of the paintings.",
+      "original": "4. Multiply the numbers together.",
+      "prompt": "4. Multiply the numbers together.",
+      "sourceAnswers": [],
+      "hasFigure": false,
+      "status": "draft",
+      "answerVerified": false,
+      "translationStatus": "pending",
+      "mappingStatus": "pending"
+    },
+    {
+      "ordinal": 21,
+      "sourceNumber": "",
+      "sourceAnchor": "",
+      "kind": "example-or-exercise",
+      "context": "After the second place has been filled, there are two options for the third place so we write a \\(2\\) on the third line. Finally, we find the product.\n\n[Figure: CNX_Precalc_Figure_11_05_008.jpg]\n\nThere are \\(24\\) possible permutations of the paintings.",
+      "original": "Example \\(\\PageIndex{3}\\): Finding the Number of Permutations Using the Multiplication Principle\n\nAt a swimming competition, nine swimmers compete in a race.\n\n1. How many ways can they place first, second, and third?\n\n2. How many ways can they place first, second, and third if a swimmer named Ariel wins first place? (Assume there is only one contestant named Ariel.)\n\n3. How many ways can all nine swimmers line up for a photo?\n\nSolution\n\n1. Draw lines for each place.\n\n[Figure: CNX_Precalc_Figure_11_05_009.jpg]\n\nThere are \\(9\\) options for first place. Once someone has won first place, there are \\(8\\) remaining options for second place. Once first and second place have been won, there are \\(7\\) remaining options for third place.\n\n[Figure: CNX_Precalc_Figure_11_05_010.jpg]\n\nMultiply to find that there are \\(504\\) ways for the swimmers to place.\n\n2. Draw lines for describing each place.\n\n[Figure: CNX_Precalc_Figure_11_05_011.jpg]\n\nWe know Ariel must win first place, so there is only \\(1\\) option for first place. There are \\(8\\) remaining options for second place, and then \\(7\\) remaining options for third place.\n\n[Figure: CNX_Precalc_Figure_11_05_012.jpg]\n\nMultiply to find that there are \\(56\\) ways for the swimmers to place if Ariel wins first.\n\n3. Draw lines for describing each place in the photo.\n\n[Figure: CNX_Precalc_Figure_11_05_013.jpg]\n\nThere are \\(9\\) choices for the first spot, then \\(8\\) for the second, \\(7\\) for the third, \\(6\\) for the fourth, and so on until only \\(1\\) person remains for the last spot.\n\n[Figure: CNX_Precalc_Figure_11_05_014.jpg]\n\nThere are \\(362,880\\) possible permutations for the swimmers to line up.",
+      "prompt": "Example \\(\\PageIndex{3}\\): Finding the Number of Permutations Using the Multiplication Principle\n\nAt a swimming competition, nine swimmers compete in a race.\n\n1. How many ways can they place first, second, and third?\n\n2. How many ways can they place first, second, and third if a swimmer named Ariel wins first place? (Assume there is only one contestant named Ariel.)\n\n3. How many ways can all nine swimmers line up for a photo?\n\nSolution\n\n1. Draw lines for each place.\n\n[Figure: CNX_Precalc_Figure_11_05_009.jpg]\n\nThere are \\(9\\) options for first place. Once someone has won first place, there are \\(8\\) remaining options for second place. Once first and second place have been won, there are \\(7\\) remaining options for third place.\n\n[Figure: CNX_Precalc_Figure_11_05_010.jpg]\n\nMultiply to find that there are \\(504\\) ways for the swimmers to place.\n\n2. Draw lines for describing each place.\n\n[Figure: CNX_Precalc_Figure_11_05_011.jpg]\n\nWe know Ariel must win first place, so there is only \\(1\\) option for first place. There are \\(8\\) remaining options for second place, and then \\(7\\) remaining options for third place.\n\n[Figure: CNX_Precalc_Figure_11_05_012.jpg]\n\nMultiply to find that there are \\(56\\) ways for the swimmers to place if Ariel wins first.\n\n3. Draw lines for describing each place in the photo.\n\n[Figure: CNX_Precalc_Figure_11_05_013.jpg]\n\nThere are \\(9\\) choices for the first spot, then \\(8\\) for the second, \\(7\\) for the third, \\(6\\) for the fourth, and so on until only \\(1\\) person remains for the last spot.\n\n[Figure: CNX_Precalc_Figure_11_05_014.jpg]\n\nThere are \\(362,880\\) possible permutations for the swimmers to line up.",
+      "sourceAnswers": [],
+      "hasFigure": true,
+      "status": "draft",
+      "answerVerified": false,
+      "translationStatus": "pending",
+      "mappingStatus": "pending"
+    },
+    {
+      "ordinal": 22,
+      "sourceNumber": "",
+      "sourceAnchor": "",
+      "kind": "exercise-candidate",
+      "context": "Analysis\n\nNote that in part c, we found there were \\(9!\\) ways for \\(9\\) people to line up. The number of permutations of \\(n\\) distinct objects can always be found by \\(n!\\).",
+      "original": "Exercise \\(\\PageIndex{3A}\\)\n\nA family of five is having portraits taken. Use the Multiplication Principle to find the following:\n\n1. How many ways can the family line up for the portrait?\n\n2. How many ways can the photographer line up \\(3\\) family members?\n\n3. How many ways can the family line up for the portrait if the parents are required to stand on each end?\n\nAnswer a\n\n\\(120\\)\n\nAnswer b\n\n\\(60\\)\n\nAnswer c\n\n\\(12\\)",
+      "prompt": "Exercise \\(\\PageIndex{3A}\\)\n\nA family of five is having portraits taken. Use the Multiplication Principle to find the following:\n\n1. How many ways can the family line up for the portrait?\n\n2. How many ways can the photographer line up \\(3\\) family members?\n\n3. How many ways can the family line up for the portrait if the parents are required to stand on each end?",
+      "sourceAnswers": [
+        "\\(120\\)",
+        "\\(60\\)",
+        "\\(12\\)"
+      ],
+      "hasFigure": false,
+      "status": "draft",
+      "answerVerified": false,
+      "translationStatus": "pending",
+      "mappingStatus": "pending"
+    },
+    {
+      "ordinal": 23,
+      "sourceNumber": "1",
+      "sourceAnchor": "",
+      "kind": "exercise-candidate",
+      "context": "Note that the formula stills works if we are choosing all \\(n\\) objects and placing them in order. In that case we would be dividing by \\((n−n)!\\) or \\(0!\\), which we said earlier is equal to \\(1\\). So the number of permutations of \\(n\\) objects taken \\(n\\) at a time is \\(\\dfrac{n!}{1}\\) or just \\(n!\\).\n\nGiven \\(n\\) distinct objects, the number of ways to select \\(r\\) objects from the set in order is\n\n\\[P(n,r)=\\dfrac{n!}{(n−r)!}\\]",
+      "original": "1. Identify \\(n\\) from the given information.",
+      "prompt": "1. Identify \\(n\\) from the given information.",
+      "sourceAnswers": [],
+      "hasFigure": false,
+      "status": "draft",
+      "answerVerified": false,
+      "translationStatus": "pending",
+      "mappingStatus": "pending"
+    },
+    {
+      "ordinal": 24,
+      "sourceNumber": "2",
+      "sourceAnchor": "",
+      "kind": "exercise-candidate",
+      "context": "Note that the formula stills works if we are choosing all \\(n\\) objects and placing them in order. In that case we would be dividing by \\((n−n)!\\) or \\(0!\\), which we said earlier is equal to \\(1\\). So the number of permutations of \\(n\\) objects taken \\(n\\) at a time is \\(\\dfrac{n!}{1}\\) or just \\(n!\\).\n\nGiven \\(n\\) distinct objects, the number of ways to select \\(r\\) objects from the set in order is\n\n\\[P(n,r)=\\dfrac{n!}{(n−r)!}\\]",
+      "original": "2. Identify \\(r\\) from the given information.",
+      "prompt": "2. Identify \\(r\\) from the given information.",
+      "sourceAnswers": [],
+      "hasFigure": false,
+      "status": "draft",
+      "answerVerified": false,
+      "translationStatus": "pending",
+      "mappingStatus": "pending"
+    },
+    {
+      "ordinal": 25,
+      "sourceNumber": "3",
+      "sourceAnchor": "",
+      "kind": "exercise-candidate",
+      "context": "Note that the formula stills works if we are choosing all \\(n\\) objects and placing them in order. In that case we would be dividing by \\((n−n)!\\) or \\(0!\\), which we said earlier is equal to \\(1\\). So the number of permutations of \\(n\\) objects taken \\(n\\) at a time is \\(\\dfrac{n!}{1}\\) or just \\(n!\\).\n\nGiven \\(n\\) distinct objects, the number of ways to select \\(r\\) objects from the set in order is\n\n\\[P(n,r)=\\dfrac{n!}{(n−r)!}\\]",
+      "original": "3. Replace \\(n\\) and \\(r\\) in the formula with the given values.",
+      "prompt": "3. Replace \\(n\\) and \\(r\\) in the formula with the given values.",
+      "sourceAnswers": [],
+      "hasFigure": false,
+      "status": "draft",
+      "answerVerified": false,
+      "translationStatus": "pending",
+      "mappingStatus": "pending"
+    },
+    {
+      "ordinal": 26,
+      "sourceNumber": "4",
+      "sourceAnchor": "",
+      "kind": "exercise-candidate",
+      "context": "Note that the formula stills works if we are choosing all \\(n\\) objects and placing them in order. In that case we would be dividing by \\((n−n)!\\) or \\(0!\\), which we said earlier is equal to \\(1\\). So the number of permutations of \\(n\\) objects taken \\(n\\) at a time is \\(\\dfrac{n!}{1}\\) or just \\(n!\\).\n\nGiven \\(n\\) distinct objects, the number of ways to select \\(r\\) objects from the set in order is\n\n\\[P(n,r)=\\dfrac{n!}{(n−r)!}\\]",
+      "original": "4. Evaluate.",
+      "prompt": "4. Evaluate.",
+      "sourceAnswers": [],
+      "hasFigure": false,
+      "status": "draft",
+      "answerVerified": false,
+      "translationStatus": "pending",
+      "mappingStatus": "pending"
+    },
+    {
+      "ordinal": 27,
+      "sourceNumber": "",
+      "sourceAnchor": "",
+      "kind": "example-or-exercise",
+      "context": "Note that the formula stills works if we are choosing all \\(n\\) objects and placing them in order. In that case we would be dividing by \\((n−n)!\\) or \\(0!\\), which we said earlier is equal to \\(1\\). So the number of permutations of \\(n\\) objects taken \\(n\\) at a time is \\(\\dfrac{n!}{1}\\) or just \\(n!\\).\n\nGiven \\(n\\) distinct objects, the number of ways to select \\(r\\) objects from the set in order is\n\n\\[P(n,r)=\\dfrac{n!}{(n−r)!}\\]",
+      "original": "Example \\(\\PageIndex{4}\\): Finding the Number of Permutations Using the Formula\n\nA professor is creating an exam of \\(9\\) questions from a test bank of \\(12\\) questions. How many ways can she select and arrange the questions?\n\nSolution\n\nSubstitute \\(n=12\\) and \\(r=9\\) into the permutation formula and simplify.\n\n\\[\\begin{align*} P(n,r)&=\\dfrac{n!}{(n-r)!}\\\\ P(12,9)&=\\dfrac{12!}{(12-9)!}\\\\ &=\\dfrac{12!}{3!}\\\\ &=79,833,600 \\end{align*}\\]\n\nThere are \\(79,833,600\\) possible permutations of exam questions!",
+      "prompt": "Example \\(\\PageIndex{4}\\): Finding the Number of Permutations Using the Formula\n\nA professor is creating an exam of \\(9\\) questions from a test bank of \\(12\\) questions. How many ways can she select and arrange the questions?\n\nSolution\n\nSubstitute \\(n=12\\) and \\(r=9\\) into the permutation formula and simplify.\n\n\\[\\begin{align*} P(n,r)&=\\dfrac{n!}{(n-r)!}\\\\ P(12,9)&=\\dfrac{12!}{(12-9)!}\\\\ &=\\dfrac{12!}{3!}\\\\ &=79,833,600 \\end{align*}\\]\n\nThere are \\(79,833,600\\) possible permutations of exam questions!",
+      "sourceAnswers": [],
+      "hasFigure": false,
+      "status": "draft",
+      "answerVerified": false,
+      "translationStatus": "pending",
+      "mappingStatus": "pending"
+    },
+    {
+      "ordinal": 28,
+      "sourceNumber": "",
+      "sourceAnchor": "",
+      "kind": "exercise-candidate",
+      "context": "Could we have solved the example above using the Multiplication Principle?\n\nYes. We could have multiplied \\(15⋅14⋅13⋅12⋅11⋅10⋅9⋅8⋅7⋅6⋅5⋅4\\) to find the same answer.",
+      "original": "Exercise \\(\\PageIndex{4A}\\)\n\nA play has a cast of \\(7\\) actors preparing to make their curtain call. Use the permutation formula to find the following.\n\nHow many ways can the \\(7\\) actors line up?\n\nAnswer\n\n\\(P(7,7)=5,040\\)",
+      "prompt": "Exercise \\(\\PageIndex{4A}\\)\n\nA play has a cast of \\(7\\) actors preparing to make their curtain call. Use the permutation formula to find the following.\n\nHow many ways can the \\(7\\) actors line up?",
+      "sourceAnswers": [
+        "\\(P(7,7)=5,040\\)"
+      ],
+      "hasFigure": false,
+      "status": "draft",
+      "answerVerified": false,
+      "translationStatus": "pending",
+      "mappingStatus": "pending"
+    },
+    {
+      "ordinal": 29,
+      "sourceNumber": "",
+      "sourceAnchor": "",
+      "kind": "exercise-candidate",
+      "context": "Could we have solved the example above using the Multiplication Principle?\n\nYes. We could have multiplied \\(15⋅14⋅13⋅12⋅11⋅10⋅9⋅8⋅7⋅6⋅5⋅4\\) to find the same answer.",
+      "original": "Exercise \\(\\PageIndex{4B}\\)\n\nHow many ways can \\(5\\) of the \\(7\\) actors be chosen to line up?\n\nAnswer\n\n\\(P(7,5)=2,520\\)",
+      "prompt": "Exercise \\(\\PageIndex{4B}\\)\n\nHow many ways can \\(5\\) of the \\(7\\) actors be chosen to line up?",
+      "sourceAnswers": [
+        "\\(P(7,5)=2,520\\)"
+      ],
+      "hasFigure": false,
+      "status": "draft",
+      "answerVerified": false,
+      "translationStatus": "pending",
+      "mappingStatus": "pending"
+    },
+    {
+      "ordinal": 30,
+      "sourceNumber": "1",
+      "sourceAnchor": "",
+      "kind": "exercise-candidate",
+      "context": "An earlier problem considered choosing \\(3\\) of \\(4\\) possible paintings to hang on a wall. We found that there were \\(24\\) ways to select \\(3\\) of the \\(4\\) paintings in order. But what if we did not care about the order? We would expect a smaller number because selecting paintings \\(1, 2, 3\\) would be the same as selecting paintings \\(2, 3, 1\\). To find the number of ways to select \\(3\\) of the \\(4\\) paintings, disregarding the order of the paintings, divide the number of permutations by the number of ways to order \\(3\\) paintings. There are \\(3!=3·2·1=6\\) ways to order \\(3\\) paintings. There are \\(\\dfrac{24}{6}\\), or \\(4\\) ways to select \\(3\\) of the \\(4\\) paintings. This number makes sense because every time we are selecting \\(3\\) paintings, we are not selecting \\(1\\) painting. There are \\(4\\) paintings we could choose not to select, so there are \\(4\\) ways to select \\(3\\) of the \\(4\\) paintings.\n\nGiven \\(n\\) distinct objects, the number of ways to select \\(r\\) objects from the set is\n\n\\[C(n,r)=\\dfrac{n!}{r!(n−r)!}\\]",
+      "original": "1. Identify \\(n\\) from the given information.",
+      "prompt": "1. Identify \\(n\\) from the given information.",
+      "sourceAnswers": [],
+      "hasFigure": false,
+      "status": "draft",
+      "answerVerified": false,
+      "translationStatus": "pending",
+      "mappingStatus": "pending"
+    },
+    {
+      "ordinal": 31,
+      "sourceNumber": "2",
+      "sourceAnchor": "",
+      "kind": "exercise-candidate",
+      "context": "An earlier problem considered choosing \\(3\\) of \\(4\\) possible paintings to hang on a wall. We found that there were \\(24\\) ways to select \\(3\\) of the \\(4\\) paintings in order. But what if we did not care about the order? We would expect a smaller number because selecting paintings \\(1, 2, 3\\) would be the same as selecting paintings \\(2, 3, 1\\). To find the number of ways to select \\(3\\) of the \\(4\\) paintings, disregarding the order of the paintings, divide the number of permutations by the number of ways to order \\(3\\) paintings. There are \\(3!=3·2·1=6\\) ways to order \\(3\\) paintings. There are \\(\\dfrac{24}{6}\\), or \\(4\\) ways to select \\(3\\) of the \\(4\\) paintings. This number makes sense because every time we are selecting \\(3\\) paintings, we are not selecting \\(1\\) painting. There are \\(4\\) paintings we could choose not to select, so there are \\(4\\) ways to select \\(3\\) of the \\(4\\) paintings.\n\nGiven \\(n\\) distinct objects, the number of ways to select \\(r\\) objects from the set is\n\n\\[C(n,r)=\\dfrac{n!}{r!(n−r)!}\\]",
+      "original": "2. Identify \\(r\\) from the given information.",
+      "prompt": "2. Identify \\(r\\) from the given information.",
+      "sourceAnswers": [],
+      "hasFigure": false,
+      "status": "draft",
+      "answerVerified": false,
+      "translationStatus": "pending",
+      "mappingStatus": "pending"
+    },
+    {
+      "ordinal": 32,
+      "sourceNumber": "3",
+      "sourceAnchor": "",
+      "kind": "exercise-candidate",
+      "context": "An earlier problem considered choosing \\(3\\) of \\(4\\) possible paintings to hang on a wall. We found that there were \\(24\\) ways to select \\(3\\) of the \\(4\\) paintings in order. But what if we did not care about the order? We would expect a smaller number because selecting paintings \\(1, 2, 3\\) would be the same as selecting paintings \\(2, 3, 1\\). To find the number of ways to select \\(3\\) of the \\(4\\) paintings, disregarding the order of the paintings, divide the number of permutations by the number of ways to order \\(3\\) paintings. There are \\(3!=3·2·1=6\\) ways to order \\(3\\) paintings. There are \\(\\dfrac{24}{6}\\), or \\(4\\) ways to select \\(3\\) of the \\(4\\) paintings. This number makes sense because every time we are selecting \\(3\\) paintings, we are not selecting \\(1\\) painting. There are \\(4\\) paintings we could choose not to select, so there are \\(4\\) ways to select \\(3\\) of the \\(4\\) paintings.\n\nGiven \\(n\\) distinct objects, the number of ways to select \\(r\\) objects from the set is\n\n\\[C(n,r)=\\dfrac{n!}{r!(n−r)!}\\]",
+      "original": "3. Replace \\(n\\) and \\(r\\) in the formula with the given values.",
+      "prompt": "3. Replace \\(n\\) and \\(r\\) in the formula with the given values.",
+      "sourceAnswers": [],
+      "hasFigure": false,
+      "status": "draft",
+      "answerVerified": false,
+      "translationStatus": "pending",
+      "mappingStatus": "pending"
+    },
+    {
+      "ordinal": 33,
+      "sourceNumber": "4",
+      "sourceAnchor": "",
+      "kind": "exercise-candidate",
+      "context": "An earlier problem considered choosing \\(3\\) of \\(4\\) possible paintings to hang on a wall. We found that there were \\(24\\) ways to select \\(3\\) of the \\(4\\) paintings in order. But what if we did not care about the order? We would expect a smaller number because selecting paintings \\(1, 2, 3\\) would be the same as selecting paintings \\(2, 3, 1\\). To find the number of ways to select \\(3\\) of the \\(4\\) paintings, disregarding the order of the paintings, divide the number of permutations by the number of ways to order \\(3\\) paintings. There are \\(3!=3·2·1=6\\) ways to order \\(3\\) paintings. There are \\(\\dfrac{24}{6}\\), or \\(4\\) ways to select \\(3\\) of the \\(4\\) paintings. This number makes sense because every time we are selecting \\(3\\) paintings, we are not selecting \\(1\\) painting. There are \\(4\\) paintings we could choose not to select, so there are \\(4\\) ways to select \\(3\\) of the \\(4\\) paintings.\n\nGiven \\(n\\) distinct objects, the number of ways to select \\(r\\) objects from the set is\n\n\\[C(n,r)=\\dfrac{n!}{r!(n−r)!}\\]",
+      "original": "4. Evaluate.",
+      "prompt": "4. Evaluate.",
+      "sourceAnswers": [],
+      "hasFigure": false,
+      "status": "draft",
+      "answerVerified": false,
+      "translationStatus": "pending",
+      "mappingStatus": "pending"
+    },
+    {
+      "ordinal": 34,
+      "sourceNumber": "",
+      "sourceAnchor": "",
+      "kind": "example-or-exercise",
+      "context": "An earlier problem considered choosing \\(3\\) of \\(4\\) possible paintings to hang on a wall. We found that there were \\(24\\) ways to select \\(3\\) of the \\(4\\) paintings in order. But what if we did not care about the order? We would expect a smaller number because selecting paintings \\(1, 2, 3\\) would be the same as selecting paintings \\(2, 3, 1\\). To find the number of ways to select \\(3\\) of the \\(4\\) paintings, disregarding the order of the paintings, divide the number of permutations by the number of ways to order \\(3\\) paintings. There are \\(3!=3·2·1=6\\) ways to order \\(3\\) paintings. There are \\(\\dfrac{24}{6}\\), or \\(4\\) ways to select \\(3\\) of the \\(4\\) paintings. This number makes sense because every time we are selecting \\(3\\) paintings, we are not selecting \\(1\\) painting. There are \\(4\\) paintings we could choose not to select, so there are \\(4\\) ways to select \\(3\\) of the \\(4\\) paintings.\n\nGiven \\(n\\) distinct objects, the number of ways to select \\(r\\) objects from the set is\n\n\\[C(n,r)=\\dfrac{n!}{r!(n−r)!}\\]",
+      "original": "Example \\(\\PageIndex{5}\\): Finding the Number of Combinations Using the Formula\n\nA fast food restaurant offers five side dish options. Your meal comes with two side dishes.\n\n1. How many ways can you select your side dishes?\n\n2. How many ways can you select \\(3\\) side dishes?\n\nSolution\n\n1. We want to choose \\(2\\) side dishes from \\(5\\) options.\n\n\\(C(5,2)=\\dfrac{5!}{2!(5−2)!}=10\\)\n\n2. We want to choose \\(3\\) side dishes from \\(5\\) options.\n\n\\(C(5,3)=\\dfrac{5!}{3!(5−3)!}=10\\)",
+      "prompt": "Example \\(\\PageIndex{5}\\): Finding the Number of Combinations Using the Formula\n\nA fast food restaurant offers five side dish options. Your meal comes with two side dishes.\n\n1. How many ways can you select your side dishes?\n\n2. How many ways can you select \\(3\\) side dishes?\n\nSolution\n\n1. We want to choose \\(2\\) side dishes from \\(5\\) options.\n\n\\(C(5,2)=\\dfrac{5!}{2!(5−2)!}=10\\)\n\n2. We want to choose \\(3\\) side dishes from \\(5\\) options.\n\n\\(C(5,3)=\\dfrac{5!}{3!(5−3)!}=10\\)",
+      "sourceAnswers": [],
+      "hasFigure": false,
+      "status": "draft",
+      "answerVerified": false,
+      "translationStatus": "pending",
+      "mappingStatus": "pending"
+    },
+    {
+      "ordinal": 35,
+      "sourceNumber": "",
+      "sourceAnchor": "",
+      "kind": "exercise-candidate",
+      "context": "Is it a coincidence that parts (a) and (b) in the example above have the same answers?\n\nNo. When we choose r objects from n objects, we are not choosing \\((n–r)\\) objects. Therefore, \\(C(n,r)=C(n,n–r)\\).",
+      "original": "Exercise \\(\\PageIndex{5}\\)\n\nAn ice cream shop offers \\(10\\) flavors of ice cream. How many ways are there to choose \\(3\\) flavors for a banana split?\n\nAnswer\n\n\\(C(10,3)=120\\)",
+      "prompt": "Exercise \\(\\PageIndex{5}\\)\n\nAn ice cream shop offers \\(10\\) flavors of ice cream. How many ways are there to choose \\(3\\) flavors for a banana split?",
+      "sourceAnswers": [
+        "\\(C(10,3)=120\\)"
+      ],
+      "hasFigure": false,
+      "status": "draft",
+      "answerVerified": false,
+      "translationStatus": "pending",
+      "mappingStatus": "pending"
+    },
+    {
+      "ordinal": 36,
+      "sourceNumber": "",
+      "sourceAnchor": "",
+      "kind": "example-or-exercise",
+      "context": "There are \\(32\\) possible pizzas. This result is equal to \\(2^5\\).\n\nWe are presented with a sequence of choices. For each of the nn objects we have two choices: include it in the subset or not. So for the whole subset we have made nn  choices, each with two options. So there are a total of \\(2·2·2·…·2\\) possible resulting subsets, all the way from the empty subset, which we obtain when we say “no” each time, to the original set itself, which we obtain when we say “yes” each time.\n\nA set containing n distinct objects has \\(2^n\\) subsets.",
+      "original": "Example \\(\\PageIndex{6}\\): Finding the Number of Subsets of a Set\n\nA restaurant offers butter, cheese, chives, and sour cream as toppings for a baked potato. How many different ways are there to order a potato?\n\nSolution\n\nWe are looking for the number of subsets of a set with \\(4\\) objects. Substitute \\(n=4\\) into the formula.\n\n\\[\\begin{align*} 2^n&=2^4\\\\ &=16 \\end{align*}\\]\n\nThere are \\(16\\) possible ways to order a potato.",
+      "prompt": "Example \\(\\PageIndex{6}\\): Finding the Number of Subsets of a Set\n\nA restaurant offers butter, cheese, chives, and sour cream as toppings for a baked potato. How many different ways are there to order a potato?\n\nSolution\n\nWe are looking for the number of subsets of a set with \\(4\\) objects. Substitute \\(n=4\\) into the formula.\n\n\\[\\begin{align*} 2^n&=2^4\\\\ &=16 \\end{align*}\\]\n\nThere are \\(16\\) possible ways to order a potato.",
+      "sourceAnswers": [],
+      "hasFigure": false,
+      "status": "draft",
+      "answerVerified": false,
+      "translationStatus": "pending",
+      "mappingStatus": "pending"
+    },
+    {
+      "ordinal": 37,
+      "sourceNumber": "",
+      "sourceAnchor": "",
+      "kind": "exercise-candidate",
+      "context": "There are \\(32\\) possible pizzas. This result is equal to \\(2^5\\).\n\nWe are presented with a sequence of choices. For each of the nn objects we have two choices: include it in the subset or not. So for the whole subset we have made nn  choices, each with two options. So there are a total of \\(2·2·2·…·2\\) possible resulting subsets, all the way from the empty subset, which we obtain when we say “no” each time, to the original set itself, which we obtain when we say “yes” each time.\n\nA set containing n distinct objects has \\(2^n\\) subsets.",
+      "original": "Exercise \\(\\PageIndex{6}\\)\n\nA sundae bar at a wedding has \\(6\\) toppings to choose from. Any number of toppings can be chosen. How many different sundaes are possible?\n\nAnswer\n\n\\(64\\) sundaes",
+      "prompt": "Exercise \\(\\PageIndex{6}\\)\n\nA sundae bar at a wedding has \\(6\\) toppings to choose from. Any number of toppings can be chosen. How many different sundaes are possible?",
+      "sourceAnswers": [
+        "\\(64\\) sundaes"
+      ],
+      "hasFigure": false,
+      "status": "draft",
+      "answerVerified": false,
+      "translationStatus": "pending",
+      "mappingStatus": "pending"
+    },
+    {
+      "ordinal": 38,
+      "sourceNumber": "",
+      "sourceAnchor": "",
+      "kind": "example-or-exercise",
+      "context": "There are \\(3,326,400\\) ways to order the sheet of stickers.\n\nIf there are nn elements in a set and \\(r_1\\) are alike, \\(r_2\\) are alike, \\(r_3\\) are alike, and so on through \\(r_k\\), the number of permutations can be found by\n\n\\[\\dfrac{n!}{r_1!r_2!…r_k!}\\]",
+      "original": "Example \\(\\PageIndex{7}\\): Finding the Number of Permutations of \\(n\\) Non-Distinct Objects\n\nFind the number of rearrangements of the letters in the word DISTINCT.\n\nSolution\n\nThere are \\(8\\) letters. Both \\(I\\) and \\(T\\) are repeated \\(2\\) times. Substitute \\(n=8\\), \\(r_1=2\\), and \\(r_2=2\\) into the formula.\n\n\\(\\dfrac{8!}{2!2!}=10,080\\)\n\nThere are \\(10,080\\) arrangements.",
+      "prompt": "Example \\(\\PageIndex{7}\\): Finding the Number of Permutations of \\(n\\) Non-Distinct Objects\n\nFind the number of rearrangements of the letters in the word DISTINCT.\n\nSolution\n\nThere are \\(8\\) letters. Both \\(I\\) and \\(T\\) are repeated \\(2\\) times. Substitute \\(n=8\\), \\(r_1=2\\), and \\(r_2=2\\) into the formula.\n\n\\(\\dfrac{8!}{2!2!}=10,080\\)\n\nThere are \\(10,080\\) arrangements.",
+      "sourceAnswers": [],
+      "hasFigure": false,
+      "status": "draft",
+      "answerVerified": false,
+      "translationStatus": "pending",
+      "mappingStatus": "pending"
+    },
+    {
+      "ordinal": 39,
+      "sourceNumber": "",
+      "sourceAnchor": "",
+      "kind": "exercise-candidate",
+      "context": "There are \\(3,326,400\\) ways to order the sheet of stickers.\n\nIf there are nn elements in a set and \\(r_1\\) are alike, \\(r_2\\) are alike, \\(r_3\\) are alike, and so on through \\(r_k\\), the number of permutations can be found by\n\n\\[\\dfrac{n!}{r_1!r_2!…r_k!}\\]",
+      "original": "Exercise \\(\\PageIndex{7}\\)\n\nFind the number of rearrangements of the letters in the word CARRIER.\n\nAnswer\n\n\\(840\\)",
+      "prompt": "Exercise \\(\\PageIndex{7}\\)\n\nFind the number of rearrangements of the letters in the word CARRIER.",
+      "sourceAnswers": [
+        "\\(840\\)"
+      ],
+      "hasFigure": false,
+      "status": "draft",
+      "answerVerified": false,
+      "translationStatus": "pending",
+      "mappingStatus": "pending"
+    }
+  ],
+  "license": "CC BY 4.0",
+  "licenseEvidence": "This page titled 13.5: Counting Principles was last modified on Sun, 27 Apr 2025 18:28:28 GMT and is shared under a CC BY  4.0  license and was authored, remixed, and/or curated by OpenStax via source content that was edited to the style and standards of the LibreTexts platform.",
+  "url": "https://math.libretexts.org/Bookshelves/Algebra/Algebra_and_Trigonometry_1e_(OpenStax)/13:_Sequences_Probability_and_Counting_Theory/13.05:_Counting_Principles",
+  "sha256": "0ba380a1ccd5dd7783917a207136abc31c04dc20971267467e221006731296a2",
+  "checkedAt": "2026-10-07",
+  "id": "55c445e8b17a9d3710a0",
+  "bookId": "algebra-trigonometry",
+  "licenseInherited": false,
+  "licenseSource": "https://math.libretexts.org/Bookshelves/Algebra/Algebra_and_Trigonometry_1e_(OpenStax)/13:_Sequences_Probability_and_Counting_Theory/13.05:_Counting_Principles",
+  "licenseUrl": "https://creativecommons.org/licenses/by/4.0/",
+  "authors": "OpenStax / Jay Abramson et al.",
+  "book": "Algebra and Trigonometry 1e",
+  "reviewStatus": "unreviewed",
+  "sourceLanguage": "en",
+  "translationStatus": "pending"
+}

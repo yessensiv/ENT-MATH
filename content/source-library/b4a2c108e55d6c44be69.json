@@ -1,0 +1,565 @@
+{
+  "title": "9.5: Solve Quadratic Equations in Quadratic Form",
+  "originalText": "Learning Objectives\n\nBy the end of this section, you will be able to:\n\nSolve equations in quadratic form\n\nBefore you get started\n\n... take this readiness quiz.\n\n1. Factor by substitution: \\(y^{4}-y^{2}-20\\).\n\n2. Factor by substitution: \\((y-4)^{2}+8(y-4)+15\\).\n\n3. Simplify\n\n1. \\(x^{\\frac{1}{2}} \\cdot x^{\\frac{1}{4}}\\)\n\n2. \\(\\left(x^{\\frac{1}{3}}\\right)^{2}\\)\n\n3. \\(\\left(x^{-1}\\right)^{2}\\)\n\nSolve Equations in Quadratic Form\n\nSometimes when we factored trinomials, the trinomial did not appear to be in the \\(ax^{2}+bx+c\\) form. So we factored by substitution allowing us to make it fit the \\(ax^{2}+bx+c\\) form. We used the standard \\(u\\) for the substitution.\n\nTo factor the expression \\(x^{4}-4 x^{2}-5\\), we noticed the variable part of the middle term is \\(x^{2}\\) and its square, \\(x^{4}\\), is the variable part of the first term. (We know \\(\\left(x^{2}\\right)^{2}=x^{4}\\).) So we let \\(u=x^{2}\\) and factored.\n\n            \\(x^{4}-4 x^{2}-5\\)\t\n\n            \\(\\left(\\color{red}x^2 \\color{black} \\right)^{2}-4\\left( \\color{red}x^{2} \\color{black}\\right)-5\\)\t\n\n            Let \\(u=x^{2}\\) and substitute.\t\n            \\(\\color{red}u \\color{black}^{2}-4 \\color{red}u \\color{black}-5\\)\t\n\n            Factor the trinomial.\t\n            \\((u+1)(u-5)\\)\t\n\n            Replace \\(u\\) with \\(x^{2}\\).\t\n            \\(\\left( \\color{red}x^{2} \\color{black} + 1\\right)\\left( \\color{red}x^2 \\color{black}-5\\right)\\)\t\n\nSimilarly, sometimes an equation is not in the \\(ax^{2}+bx+c=0\\) form but looks much like a quadratic equation. Then, we can often make a thoughtful substitution that will allow us to make it fit the \\(ax^{2}+bx+c=0\\) form. If we can make it fit the form, we can then use all of our methods to solve quadratic equations.\n\nNotice that in the quadratic equation \\(ax^{2}+bx+c=0\\), the middle term has a variable, \\(x\\), and its square, \\(x^{2}\\), is the variable part of the first term. Look for this relationship as you try to find a substitution.\n\nAgain, we will use the standard \\(u\\) to make a substitution that will put the equation in quadratic form. If the substitution gives us an equation of the form \\(ax^{2}+bx+c=0\\), we say the original equation was of quadratic form.\n\nThe next example shows the steps for solving an equation in quadratic form.\n\nExample \\(\\PageIndex{1}\\) How to Solve Equations in Quadratic Form\n\nSolve: \\(6 x^{4}-7 x^{2}+2=0\\)\n\nSolution:\n\n            Step 1: Identify a substitution that will put the equation in quadratic form.\t\n            Since \\(\\left(x^{2}\\right)^{2}=x^{4}\\), we let \\(u=x^{2}\\).\t\n            \\(6 x^{4}-7 x^{2}+2=0\\)\t\n\n            Step 2: Rewrite the equation with the substitution to put it in quadratic form.\t\n\nRewrite to prepare for the substitution.\n\nSubstitute \\(u=x^{2}\\).\n\n            \\(\\begin{aligned}6\\color{black}{\\left(\\color{red}{x^{2}}\\right)}^{2}-7\\color{red}{ x^{2}}\\color{black}{+}2&=0 \\\\ \\color{black}{6 \\color{red}{u}^{2}}-7 \\color{red}{u}\\color{black}{+}2&=0\\end{aligned}\\)\t\n\n            Step 3: Solve the quadratic equation for \\(u\\).\t\n\nWe can solve by factoring.\n\nUse the Zero Product Property.\n\n            \\(\\begin{aligned}(2 u-1)(3 u-2) &=0 \\\\ 2 u-1=0, 3 u-2&=0 \\\\ 2 u =1,3 u&=2 \\\\ u =\\frac{1}{2} u&=\\frac{2}{3} \\end{aligned}\\)\t\n\n            Step 4: Substitute the original variable back into the results, using the substitution.\t\n            Replace \\(u\\) with \\(x^{2}\\).\t\n            \\(x^{2}=\\frac{1}{2} \\quad x^{2}=\\frac{2}{3}\\)\t\n\n            Step 5: Solve for the original variable.\t\n            Solve for \\(x\\), using the Square Root Property.\t\n\n\\(\\begin{array}{ll}{x=\\pm \\sqrt{\\frac{1}{2}}} & {x=\\pm \\sqrt{\\frac{2}{3}}} \\\\ {x=\\pm \\frac{\\sqrt{2}}{2}} & {x=\\pm \\frac{\\sqrt{6}}{3}}\\end{array}\\)\n\nThere are four solutions.\n\n\\(\\begin{array}{ll}{x=\\frac{\\sqrt{2}}{2}} & {x=\\frac{\\sqrt{6}}{3}} \\\\ {x=-\\frac{\\sqrt{2}}{2}} & {x=-\\frac{\\sqrt{6}}{3}}\\end{array}\\)\n\n            Step 6: Check the solutions.\t\n            Check all four solutions. We will show one check here.\t\n\n\\(\\begin{aligned}x&=\\frac{\\sqrt{2}}{2} \\\\ 6 x^{4}-7 x^{2}+2&=0 \\\\ 6\\left(\\frac{\\sqrt{2}}{2}\\right)^{4}-7\\left(\\frac{\\sqrt{2}}{2}\\right)^{2}+2 &\\stackrel{?}{=} 0\\\\ 6\\left(\\frac{4}{16} \\right)-7\\left(\\frac{2}{4} \\right)^{2}+2&\\stackrel{?}{=}0 \\\\ \\frac{3}{2}-\\frac{7}{2}+\\frac{4}{2}&\\stackrel{?}{=}0 \\\\ 0&=0 \\end{aligned}\\)\n\nWe leave the other checks to you!\n\nExercise \\(\\PageIndex{1}\\)\n\nSolve: \\(x^{4}-6 x^{2}+8=0\\).\n\nAnswer\n\n\\(x=\\sqrt{2}, x=-\\sqrt{2}, x=2, x=-2\\)\n\nExercise \\(\\PageIndex{2}\\)\n\nSolve: \\(x^{4}-11 x^{2}+28=0\\).\n\nAnswer\n\n\\(x=\\sqrt{7}, x=-\\sqrt{7}, x=2, x=-2\\)\n\nWe summarize the steps to solve an equation in quadratic form.\n\nSolve Equations in Quadratic Form\n\n1. Identify a substitution that will put the equation in quadratic form.\n\n2. Rewrite the equation with the substitution to put it in quadratic form.\n\n3. Solve the quadratic equation for \\(u\\).\n\n4. Substitute the original variable back into the results, using the substitution.\n\n5. Solve for the original variable.\n\n6. Check the solutions.\n\nIn the next example, the binomial in the middle term, \\((x-2)\\) is squared in the first term. If we let \\(u=x-2\\) and substitute, our trinomial will be in \\(a x^{2}+b x+c\\) form.\n\nExample \\(\\PageIndex{2}\\)\n\nSolve: \\((x-2)^{2}+7(x-2)+12=0\\).\n\nSolution:\n\n            \\((x-2)^{2}+7(x-2)+12=0\\)\t\n\n            Prepare for the substitution.\t\n            \\(\\color{red}(x-2)\\color{black}^{2}+7\\color{red}(x-2) \\color{black} +12=0\\)\t\n\n            Let \\(u=x-2\\) and substitute.\t\n            \\(\\color{red}u^{\\color{black}2} \\color{black}+ 7 \\color{red}u \\color{black}+12=0\\)\t\n\n            Solve by factoring.\t\n\n\\((u+3)(u+4)=0\\)\n\n\\(\\begin{gathered}\n\n            u+3=0, \\quad u+4=0 \\\\\n\n            u=-3, \\quad u=-4\n\n            \\end{gathered}\\)\n\nReplace \\(u\\) with \\(x-2\\).\n\n\\(x-2=-3, \\quad x-2=-4\\)\n\nSolve for \\(x\\).\n\n\\(x=-1, \\quad x=-2\\)\n\nCheck:\n\n[Figure: .]\n\nFigure 9.4.14\n\nExercise \\(\\PageIndex{3}\\)\n\nSolve: \\((x-5)^{2}+6(x-5)+8=0\\).\n\nAnswer\n\n\\(x=3, x=1\\)\n\nExercise \\(\\PageIndex{4}\\)\n\nSolve: \\((y-4)^{2}+8(y-4)+15=0\\).\n\nAnswer\n\n\\(y=-1, y=1\\)\n\nIn the next example, we notice that \\((\\sqrt{x})^{2}=x\\). Also, remember that when we square both sides of an equation, we may introduce extraneous roots. Be sure to check your answers!\n\nExample \\(\\PageIndex{3}\\)\n\nSolve: \\(x-3 \\sqrt{x}+2=0\\).\n\nSolution:\n\nThe \\(\\sqrt{x}\\) in the middle term, is squared in the first term \\((\\sqrt{x})^{2}=x\\). If we let \\(u=\\sqrt{x}\\) and substitute, our trinomial will be in \\(a x^{2}+b x+c=0\\) form.\n\n            \\(x-3 \\sqrt{x}+2=0\\)\t\n\n            Rewrite the trinomial to prepare for the substitution.\t\n\n[Figure: .]\n\n            Let \\(u=\\sqrt{x}\\) and substitute.\t\n\n[Figure: .]\n\n            Solve by factoring.\t\n\n\\((u-2)(u-1)=0\\)\n\n\\(u-2=0, \\quad u-1=0\\)\n\n            \\(u=2, \\quad u=1\\)\\)\n\n            Replace \\(u\\) with \\(\\sqrt{x}\\).\t\n\n\\(\\sqrt{x}=2, \\quad \\sqrt{x}=1\\)\n\n            Solve for \\(x\\), by squaring both sides.\t\n            \\(x=4, \\quad x=1\\)\t\n\nCheck:\n\n[Figure: .]\n\nExercise \\(\\PageIndex{5}\\)\n\nSolve: \\(x-7 \\sqrt{x}+12=0\\).\n\nAnswer\n\n\\(x=9, x=16\\)\n\nExercise \\(\\PageIndex{6}\\)\n\nSolve: \\(x-6 \\sqrt{x}+8=0\\).\n\nAnswer\n\n\\(x=4, x=16\\)\n\nSubstitutions for rational exponents can also help us solve an equation in quadratic form. Think of the properties of exponents as you begin the next example.\n\nExample \\(\\PageIndex{4}\\)\n\nSolve: \\(x^{\\frac{2}{3}}-2 x^{\\frac{1}{3}}-24=0\\).\n\nSolution:\n\nThe \\(x^{\\frac{1}{3}}\\) in the middle term is squared in the first term \\(\\left(x^{\\frac{1}{3}}\\right)^{2}=x^{\\frac{2}{3}}\\). If we let \\(u=x^{\\frac{1}{3}}\\) and substitute, our trinomial will be in \\(a x^{2}+b x+c=0\\) form.\n\n            \\(x^{\\frac{2}{3}}-2 x^{\\frac{1}{3}}-24=0\\)\t\n\n            Rewrite the trinomial to prepare for the substitution.\t\n\n[Figure: .]\n\n            Let \\(u=x^{\\frac{1}{3}}\\)\t\n\n[Figure: .]\n\n            Solve by factoring.\t\n\n\\((u-6)(u+4)=0\\)\n\n\\(u-6=0, \\quad u+4=0\\)\n\n\\(u=6, \\quad u=-4\\)\n\n            Replace \\(u\\) with \\(x^{\\frac{1}{3}}\\).\t\n\n\\(x^{\\frac{1}{3}}=6, \\quad x^{\\frac{1}{3}}=-4\\)\n\n            Solve for \\(x\\) by cubing both sides.\t\n\n\\(\\left(x^{\\frac{1}{3}}\\right)^{3}=(6)^{3}, \\quad\\left(x^{\\frac{1}{3}}\\right)^{3}=(-4)^{3}\\)\n\n\\(x=216, \\quad x=-64\\)\n\nCheck:\n\n[Figure: .]\n\nFigure 9.4.33\n\nExercise \\(\\PageIndex{7}\\)\n\nSolve: \\(x^{\\frac{2}{3}}-5 x^{\\frac{1}{3}}-14=0\\).\n\nAnswer\n\n\\(x=-8, x=343\\)\n\nExercise \\(\\PageIndex{8}\\)\n\nSolve: \\(x^{\\frac{1}{2}}+8 x^{\\frac{1}{4}}+15=0\\).\n\nAnswer\n\n\\(x=81, x=625\\)\n\nIn the next example, we need to keep in mind the definition of a negative exponent as well as the properties of exponents.\n\nExample \\(\\PageIndex{5}\\)\n\nSolve: \\(3 x^{-2}-7 x^{-1}+2=0\\).\n\nSolution:\n\nThe \\(x^{−1}\\) in the middle term is squared in the first term \\(\\left(x^{-1}\\right)^{2}=x^{-2}\\). If we let \\(u=x^{−1}\\) and substitute, our trinomial will be in \\(a x^{2}+b x+c=0\\) form.\n\n            \\(3 x^{-2}-7 x^{-1}+2=0\\)\t\n\n            Rewrite the trinomial to prepare for the substitution.\t\n\n[Figure: .]\n\n            Let \\(u=x^{-1}\\) and substitute.\t\n\n[Figure: .]\n\n            Solve by factoring.\t\n            \\((3 u-1)(u-2)=0\\)\t\n\n            \\(3 u-1=0, \\quad u-2=0\\)\t\n\n            \\(u=\\frac{1}{3}, \\quad u=2\\)\t\n\n            Replace \\(u\\) with \\(x^{-1}\\).\t\n            \\(x^{-1}=\\frac{1}{3}, \\quad x^{-1}=2\\)\t\n\n            Solve for \\(x\\) by taking the reciprocal since \\(x^{-1}=\\frac{1}{x}\\).\t\n            \\(x=3, \\quad x=\\frac{1}{2}\\)\t\n\nCheck:\n\n[Figure: .]\n\nFigure 9.4.42\n\nExercise \\(\\PageIndex{9}\\)\n\nSolve: \\(8 x^{-2}-10 x^{-1}+3=0\\).\n\nAnswer\n\n\\(x=\\frac{4}{3}, x=2\\)\n\nExercise \\(\\PageIndex{10}\\)\n\nSolve: \\(6 x^{-2}-23 x^{-1}+20=0\\).\n\nAnswer\n\n\\(x=\\frac{2}{5}, x=\\frac{3}{4}\\)\n\nAccess this online video for additional instruction and practice with solving quadratic equations: https://www.youtube.com/watch?v=7X-CZMbpxuw\n\nKey Concepts\n\nHow to solve equations in quadratic form.\n\n1. Identify a substitution that will put the equation in quadratic form.\n\n2. Rewrite the equation with the substitution to put it in quadratic form.\n\n3. Solve the quadratic equation for \\(u\\).\n\n4. Substitute the original variable back into the results, using the substitution.\n\n5. Solve for the original variable.\n\n6. Check the solutions.\n\nThis page titled 9.5: Solve Quadratic Equations in Quadratic Form was last modified on Tue, 01 Mar 2022 17:40:22 GMT and is shared under a CC BY  4.0  license and was authored, remixed, and/or curated by OpenStax via source content that was edited to the style and standards of the LibreTexts platform.",
+  "figures": [
+    {
+      "url": "https://math.libretexts.org/@api/deki/files/21928/CNX_IntAlg_Figure_09_04_003a_img.jpg?revision=1",
+      "alt": ".",
+      "credit": ""
+    },
+    {
+      "url": "https://math.libretexts.org/@api/deki/files/21865/CNX_IntAlg_Figure_09_04_004c_img.jpg?revision=1",
+      "alt": ".",
+      "credit": ""
+    },
+    {
+      "url": "https://math.libretexts.org/@api/deki/files/21918/CNX_IntAlg_Figure_09_04_004d_img.jpg?revision=1",
+      "alt": ".",
+      "credit": ""
+    },
+    {
+      "url": "https://math.libretexts.org/@api/deki/files/21847/CNX_IntAlg_Figure_09_04_004a_img.jpg?revision=1",
+      "alt": ".",
+      "credit": ""
+    },
+    {
+      "url": "https://math.libretexts.org/@api/deki/files/35964/CNX_IntAlg_Figure_09_04_005c_img.jpg?revision=1",
+      "alt": ".",
+      "credit": ""
+    },
+    {
+      "url": "https://math.libretexts.org/@api/deki/files/21984/CNX_IntAlg_Figure_09_04_005d_img.jpg?revision=1",
+      "alt": ".",
+      "credit": ""
+    },
+    {
+      "url": "https://math.libretexts.org/@api/deki/files/22023/CNX_IntAlg_Figure_09_04_005a_img.jpg?revision=1",
+      "alt": ".",
+      "credit": ""
+    },
+    {
+      "url": "https://math.libretexts.org/@api/deki/files/22096/CNX_IntAlg_Figure_09_04_006c_img.jpg?revision=1",
+      "alt": ".",
+      "credit": ""
+    },
+    {
+      "url": "https://math.libretexts.org/@api/deki/files/22069/CNX_IntAlg_Figure_09_04_006d_img.jpg?revision=1",
+      "alt": ".",
+      "credit": ""
+    },
+    {
+      "url": "https://math.libretexts.org/@api/deki/files/22185/CNX_IntAlg_Figure_09_04_006a_img.jpg?revision=1",
+      "alt": ".",
+      "credit": ""
+    }
+  ],
+  "references": [
+    {
+      "text": "https://www.youtube.com/watch?v=7X-CZMbpxuw",
+      "url": "https://www.youtube.com/watch?v=7X-CZMbpxuw"
+    },
+    {
+      "text": "9.5: Solve Quadratic Equations in Quadratic Form",
+      "url": "https://math.libretexts.org/Bookshelves/Algebra/Intermediate_Algebra_1e_(OpenStax)/09%3A_Quadratic_Equations_and_Functions/905%3A_Solve_Quadratic_Equations_in_Quadratic_Form"
+    },
+    {
+      "text": "CC BY  4.0",
+      "url": "https://creativecommons.org/licenses/by/4.0"
+    },
+    {
+      "text": "OpenStax",
+      "url": "https://openstax.org/"
+    },
+    {
+      "text": "source content",
+      "url": "https://openstax.org/details/books/intermediate-algebra-2e"
+    }
+  ],
+  "exercises": [
+    {
+      "ordinal": 1,
+      "sourceNumber": "1",
+      "sourceAnchor": "",
+      "kind": "exercise-candidate",
+      "context": "By the end of this section, you will be able to:\n\n... take this readiness quiz.",
+      "original": "1. Factor by substitution: \\(y^{4}-y^{2}-20\\).",
+      "prompt": "1. Factor by substitution: \\(y^{4}-y^{2}-20\\).",
+      "sourceAnswers": [],
+      "hasFigure": false,
+      "status": "draft",
+      "answerVerified": false,
+      "translationStatus": "pending",
+      "mappingStatus": "pending"
+    },
+    {
+      "ordinal": 2,
+      "sourceNumber": "2",
+      "sourceAnchor": "",
+      "kind": "exercise-candidate",
+      "context": "By the end of this section, you will be able to:\n\n... take this readiness quiz.",
+      "original": "2. Factor by substitution: \\((y-4)^{2}+8(y-4)+15\\).",
+      "prompt": "2. Factor by substitution: \\((y-4)^{2}+8(y-4)+15\\).",
+      "sourceAnswers": [],
+      "hasFigure": false,
+      "status": "draft",
+      "answerVerified": false,
+      "translationStatus": "pending",
+      "mappingStatus": "pending"
+    },
+    {
+      "ordinal": 3,
+      "sourceNumber": "3",
+      "sourceAnchor": "",
+      "kind": "exercise-candidate",
+      "context": "By the end of this section, you will be able to:\n\n... take this readiness quiz.",
+      "original": "3. Simplify\n\n1. \\(x^{\\frac{1}{2}} \\cdot x^{\\frac{1}{4}}\\)\n\n2. \\(\\left(x^{\\frac{1}{3}}\\right)^{2}\\)\n\n3. \\(\\left(x^{-1}\\right)^{2}\\)",
+      "prompt": "3. Simplify\n\n1. \\(x^{\\frac{1}{2}} \\cdot x^{\\frac{1}{4}}\\)\n\n2. \\(\\left(x^{\\frac{1}{3}}\\right)^{2}\\)\n\n3. \\(\\left(x^{-1}\\right)^{2}\\)",
+      "sourceAnswers": [],
+      "hasFigure": false,
+      "status": "draft",
+      "answerVerified": false,
+      "translationStatus": "pending",
+      "mappingStatus": "pending"
+    },
+    {
+      "ordinal": 4,
+      "sourceNumber": "",
+      "sourceAnchor": "",
+      "kind": "example-or-exercise",
+      "context": "Notice that in the quadratic equation \\(ax^{2}+bx+c=0\\), the middle term has a variable, \\(x\\), and its square, \\(x^{2}\\), is the variable part of the first term. Look for this relationship as you try to find a substitution.\n\nAgain, we will use the standard \\(u\\) to make a substitution that will put the equation in quadratic form. If the substitution gives us an equation of the form \\(ax^{2}+bx+c=0\\), we say the original equation was of quadratic form.\n\nThe next example shows the steps for solving an equation in quadratic form.",
+      "original": "Example \\(\\PageIndex{1}\\) How to Solve Equations in Quadratic Form\n\nSolve: \\(6 x^{4}-7 x^{2}+2=0\\)\n\nSolution:\n\n            Step 1: Identify a substitution that will put the equation in quadratic form.\t\n            Since \\(\\left(x^{2}\\right)^{2}=x^{4}\\), we let \\(u=x^{2}\\).\t\n            \\(6 x^{4}-7 x^{2}+2=0\\)\t\n\n            Step 2: Rewrite the equation with the substitution to put it in quadratic form.\t\n\nRewrite to prepare for the substitution.\n\nSubstitute \\(u=x^{2}\\).\n\n            \\(\\begin{aligned}6\\color{black}{\\left(\\color{red}{x^{2}}\\right)}^{2}-7\\color{red}{ x^{2}}\\color{black}{+}2&=0 \\\\ \\color{black}{6 \\color{red}{u}^{2}}-7 \\color{red}{u}\\color{black}{+}2&=0\\end{aligned}\\)\t\n\n            Step 3: Solve the quadratic equation for \\(u\\).\t\n\nWe can solve by factoring.\n\nUse the Zero Product Property.\n\n            \\(\\begin{aligned}(2 u-1)(3 u-2) &=0 \\\\ 2 u-1=0, 3 u-2&=0 \\\\ 2 u =1,3 u&=2 \\\\ u =\\frac{1}{2} u&=\\frac{2}{3} \\end{aligned}\\)\t\n\n            Step 4: Substitute the original variable back into the results, using the substitution.\t\n            Replace \\(u\\) with \\(x^{2}\\).\t\n            \\(x^{2}=\\frac{1}{2} \\quad x^{2}=\\frac{2}{3}\\)\t\n\n            Step 5: Solve for the original variable.\t\n            Solve for \\(x\\), using the Square Root Property.\t\n\n\\(\\begin{array}{ll}{x=\\pm \\sqrt{\\frac{1}{2}}} & {x=\\pm \\sqrt{\\frac{2}{3}}} \\\\ {x=\\pm \\frac{\\sqrt{2}}{2}} & {x=\\pm \\frac{\\sqrt{6}}{3}}\\end{array}\\)\n\nThere are four solutions.\n\n\\(\\begin{array}{ll}{x=\\frac{\\sqrt{2}}{2}} & {x=\\frac{\\sqrt{6}}{3}} \\\\ {x=-\\frac{\\sqrt{2}}{2}} & {x=-\\frac{\\sqrt{6}}{3}}\\end{array}\\)\n\n            Step 6: Check the solutions.\t\n            Check all four solutions. We will show one check here.\t\n\n\\(\\begin{aligned}x&=\\frac{\\sqrt{2}}{2} \\\\ 6 x^{4}-7 x^{2}+2&=0 \\\\ 6\\left(\\frac{\\sqrt{2}}{2}\\right)^{4}-7\\left(\\frac{\\sqrt{2}}{2}\\right)^{2}+2 &\\stackrel{?}{=} 0\\\\ 6\\left(\\frac{4}{16} \\right)-7\\left(\\frac{2}{4} \\right)^{2}+2&\\stackrel{?}{=}0 \\\\ \\frac{3}{2}-\\frac{7}{2}+\\frac{4}{2}&\\stackrel{?}{=}0 \\\\ 0&=0 \\end{aligned}\\)\n\nWe leave the other checks to you!",
+      "prompt": "Example \\(\\PageIndex{1}\\) How to Solve Equations in Quadratic Form\n\nSolve: \\(6 x^{4}-7 x^{2}+2=0\\)\n\nSolution:\n\n            Step 1: Identify a substitution that will put the equation in quadratic form.\t\n            Since \\(\\left(x^{2}\\right)^{2}=x^{4}\\), we let \\(u=x^{2}\\).\t\n            \\(6 x^{4}-7 x^{2}+2=0\\)\t\n\n            Step 2: Rewrite the equation with the substitution to put it in quadratic form.\t\n\nRewrite to prepare for the substitution.\n\nSubstitute \\(u=x^{2}\\).\n\n            \\(\\begin{aligned}6\\color{black}{\\left(\\color{red}{x^{2}}\\right)}^{2}-7\\color{red}{ x^{2}}\\color{black}{+}2&=0 \\\\ \\color{black}{6 \\color{red}{u}^{2}}-7 \\color{red}{u}\\color{black}{+}2&=0\\end{aligned}\\)\t\n\n            Step 3: Solve the quadratic equation for \\(u\\).\t\n\nWe can solve by factoring.\n\nUse the Zero Product Property.\n\n            \\(\\begin{aligned}(2 u-1)(3 u-2) &=0 \\\\ 2 u-1=0, 3 u-2&=0 \\\\ 2 u =1,3 u&=2 \\\\ u =\\frac{1}{2} u&=\\frac{2}{3} \\end{aligned}\\)\t\n\n            Step 4: Substitute the original variable back into the results, using the substitution.\t\n            Replace \\(u\\) with \\(x^{2}\\).\t\n            \\(x^{2}=\\frac{1}{2} \\quad x^{2}=\\frac{2}{3}\\)\t\n\n            Step 5: Solve for the original variable.\t\n            Solve for \\(x\\), using the Square Root Property.\t\n\n\\(\\begin{array}{ll}{x=\\pm \\sqrt{\\frac{1}{2}}} & {x=\\pm \\sqrt{\\frac{2}{3}}} \\\\ {x=\\pm \\frac{\\sqrt{2}}{2}} & {x=\\pm \\frac{\\sqrt{6}}{3}}\\end{array}\\)\n\nThere are four solutions.\n\n\\(\\begin{array}{ll}{x=\\frac{\\sqrt{2}}{2}} & {x=\\frac{\\sqrt{6}}{3}} \\\\ {x=-\\frac{\\sqrt{2}}{2}} & {x=-\\frac{\\sqrt{6}}{3}}\\end{array}\\)\n\n            Step 6: Check the solutions.\t\n            Check all four solutions. We will show one check here.\t\n\n\\(\\begin{aligned}x&=\\frac{\\sqrt{2}}{2} \\\\ 6 x^{4}-7 x^{2}+2&=0 \\\\ 6\\left(\\frac{\\sqrt{2}}{2}\\right)^{4}-7\\left(\\frac{\\sqrt{2}}{2}\\right)^{2}+2 &\\stackrel{?}{=} 0\\\\ 6\\left(\\frac{4}{16} \\right)-7\\left(\\frac{2}{4} \\right)^{2}+2&\\stackrel{?}{=}0 \\\\ \\frac{3}{2}-\\frac{7}{2}+\\frac{4}{2}&\\stackrel{?}{=}0 \\\\ 0&=0 \\end{aligned}\\)\n\nWe leave the other checks to you!",
+      "sourceAnswers": [],
+      "hasFigure": false,
+      "status": "draft",
+      "answerVerified": false,
+      "translationStatus": "pending",
+      "mappingStatus": "pending"
+    },
+    {
+      "ordinal": 5,
+      "sourceNumber": "",
+      "sourceAnchor": "",
+      "kind": "exercise-candidate",
+      "context": "Notice that in the quadratic equation \\(ax^{2}+bx+c=0\\), the middle term has a variable, \\(x\\), and its square, \\(x^{2}\\), is the variable part of the first term. Look for this relationship as you try to find a substitution.\n\nAgain, we will use the standard \\(u\\) to make a substitution that will put the equation in quadratic form. If the substitution gives us an equation of the form \\(ax^{2}+bx+c=0\\), we say the original equation was of quadratic form.\n\nThe next example shows the steps for solving an equation in quadratic form.",
+      "original": "Exercise \\(\\PageIndex{1}\\)\n\nSolve: \\(x^{4}-6 x^{2}+8=0\\).\n\nAnswer\n\n\\(x=\\sqrt{2}, x=-\\sqrt{2}, x=2, x=-2\\)",
+      "prompt": "Exercise \\(\\PageIndex{1}\\)\n\nSolve: \\(x^{4}-6 x^{2}+8=0\\).",
+      "sourceAnswers": [
+        "\\(x=\\sqrt{2}, x=-\\sqrt{2}, x=2, x=-2\\)"
+      ],
+      "hasFigure": false,
+      "status": "draft",
+      "answerVerified": false,
+      "translationStatus": "pending",
+      "mappingStatus": "pending"
+    },
+    {
+      "ordinal": 6,
+      "sourceNumber": "",
+      "sourceAnchor": "",
+      "kind": "exercise-candidate",
+      "context": "Notice that in the quadratic equation \\(ax^{2}+bx+c=0\\), the middle term has a variable, \\(x\\), and its square, \\(x^{2}\\), is the variable part of the first term. Look for this relationship as you try to find a substitution.\n\nAgain, we will use the standard \\(u\\) to make a substitution that will put the equation in quadratic form. If the substitution gives us an equation of the form \\(ax^{2}+bx+c=0\\), we say the original equation was of quadratic form.\n\nThe next example shows the steps for solving an equation in quadratic form.",
+      "original": "Exercise \\(\\PageIndex{2}\\)\n\nSolve: \\(x^{4}-11 x^{2}+28=0\\).\n\nAnswer\n\n\\(x=\\sqrt{7}, x=-\\sqrt{7}, x=2, x=-2\\)",
+      "prompt": "Exercise \\(\\PageIndex{2}\\)\n\nSolve: \\(x^{4}-11 x^{2}+28=0\\).",
+      "sourceAnswers": [
+        "\\(x=\\sqrt{7}, x=-\\sqrt{7}, x=2, x=-2\\)"
+      ],
+      "hasFigure": false,
+      "status": "draft",
+      "answerVerified": false,
+      "translationStatus": "pending",
+      "mappingStatus": "pending"
+    },
+    {
+      "ordinal": 7,
+      "sourceNumber": "1",
+      "sourceAnchor": "",
+      "kind": "exercise-candidate",
+      "context": "Again, we will use the standard \\(u\\) to make a substitution that will put the equation in quadratic form. If the substitution gives us an equation of the form \\(ax^{2}+bx+c=0\\), we say the original equation was of quadratic form.\n\nThe next example shows the steps for solving an equation in quadratic form.\n\nWe summarize the steps to solve an equation in quadratic form.",
+      "original": "1. Identify a substitution that will put the equation in quadratic form.",
+      "prompt": "1. Identify a substitution that will put the equation in quadratic form.",
+      "sourceAnswers": [],
+      "hasFigure": false,
+      "status": "draft",
+      "answerVerified": false,
+      "translationStatus": "pending",
+      "mappingStatus": "pending"
+    },
+    {
+      "ordinal": 8,
+      "sourceNumber": "2",
+      "sourceAnchor": "",
+      "kind": "exercise-candidate",
+      "context": "Again, we will use the standard \\(u\\) to make a substitution that will put the equation in quadratic form. If the substitution gives us an equation of the form \\(ax^{2}+bx+c=0\\), we say the original equation was of quadratic form.\n\nThe next example shows the steps for solving an equation in quadratic form.\n\nWe summarize the steps to solve an equation in quadratic form.",
+      "original": "2. Rewrite the equation with the substitution to put it in quadratic form.",
+      "prompt": "2. Rewrite the equation with the substitution to put it in quadratic form.",
+      "sourceAnswers": [],
+      "hasFigure": false,
+      "status": "draft",
+      "answerVerified": false,
+      "translationStatus": "pending",
+      "mappingStatus": "pending"
+    },
+    {
+      "ordinal": 9,
+      "sourceNumber": "3",
+      "sourceAnchor": "",
+      "kind": "exercise-candidate",
+      "context": "Again, we will use the standard \\(u\\) to make a substitution that will put the equation in quadratic form. If the substitution gives us an equation of the form \\(ax^{2}+bx+c=0\\), we say the original equation was of quadratic form.\n\nThe next example shows the steps for solving an equation in quadratic form.\n\nWe summarize the steps to solve an equation in quadratic form.",
+      "original": "3. Solve the quadratic equation for \\(u\\).",
+      "prompt": "3. Solve the quadratic equation for \\(u\\).",
+      "sourceAnswers": [],
+      "hasFigure": false,
+      "status": "draft",
+      "answerVerified": false,
+      "translationStatus": "pending",
+      "mappingStatus": "pending"
+    },
+    {
+      "ordinal": 10,
+      "sourceNumber": "4",
+      "sourceAnchor": "",
+      "kind": "exercise-candidate",
+      "context": "Again, we will use the standard \\(u\\) to make a substitution that will put the equation in quadratic form. If the substitution gives us an equation of the form \\(ax^{2}+bx+c=0\\), we say the original equation was of quadratic form.\n\nThe next example shows the steps for solving an equation in quadratic form.\n\nWe summarize the steps to solve an equation in quadratic form.",
+      "original": "4. Substitute the original variable back into the results, using the substitution.",
+      "prompt": "4. Substitute the original variable back into the results, using the substitution.",
+      "sourceAnswers": [],
+      "hasFigure": false,
+      "status": "draft",
+      "answerVerified": false,
+      "translationStatus": "pending",
+      "mappingStatus": "pending"
+    },
+    {
+      "ordinal": 11,
+      "sourceNumber": "5",
+      "sourceAnchor": "",
+      "kind": "exercise-candidate",
+      "context": "Again, we will use the standard \\(u\\) to make a substitution that will put the equation in quadratic form. If the substitution gives us an equation of the form \\(ax^{2}+bx+c=0\\), we say the original equation was of quadratic form.\n\nThe next example shows the steps for solving an equation in quadratic form.\n\nWe summarize the steps to solve an equation in quadratic form.",
+      "original": "5. Solve for the original variable.",
+      "prompt": "5. Solve for the original variable.",
+      "sourceAnswers": [],
+      "hasFigure": false,
+      "status": "draft",
+      "answerVerified": false,
+      "translationStatus": "pending",
+      "mappingStatus": "pending"
+    },
+    {
+      "ordinal": 12,
+      "sourceNumber": "6",
+      "sourceAnchor": "",
+      "kind": "exercise-candidate",
+      "context": "Again, we will use the standard \\(u\\) to make a substitution that will put the equation in quadratic form. If the substitution gives us an equation of the form \\(ax^{2}+bx+c=0\\), we say the original equation was of quadratic form.\n\nThe next example shows the steps for solving an equation in quadratic form.\n\nWe summarize the steps to solve an equation in quadratic form.",
+      "original": "6. Check the solutions.",
+      "prompt": "6. Check the solutions.",
+      "sourceAnswers": [],
+      "hasFigure": false,
+      "status": "draft",
+      "answerVerified": false,
+      "translationStatus": "pending",
+      "mappingStatus": "pending"
+    },
+    {
+      "ordinal": 13,
+      "sourceNumber": "",
+      "sourceAnchor": "",
+      "kind": "example-or-exercise",
+      "context": "The next example shows the steps for solving an equation in quadratic form.\n\nWe summarize the steps to solve an equation in quadratic form.\n\nIn the next example, the binomial in the middle term, \\((x-2)\\) is squared in the first term. If we let \\(u=x-2\\) and substitute, our trinomial will be in \\(a x^{2}+b x+c\\) form.",
+      "original": "Example \\(\\PageIndex{2}\\)\n\nSolve: \\((x-2)^{2}+7(x-2)+12=0\\).\n\nSolution:\n\n            \\((x-2)^{2}+7(x-2)+12=0\\)\t\n\n            Prepare for the substitution.\t\n            \\(\\color{red}(x-2)\\color{black}^{2}+7\\color{red}(x-2) \\color{black} +12=0\\)\t\n\n            Let \\(u=x-2\\) and substitute.\t\n            \\(\\color{red}u^{\\color{black}2} \\color{black}+ 7 \\color{red}u \\color{black}+12=0\\)\t\n\n            Solve by factoring.\t\n\n\\((u+3)(u+4)=0\\)\n\n\\(\\begin{gathered}\n\n            u+3=0, \\quad u+4=0 \\\\\n\n            u=-3, \\quad u=-4\n\n            \\end{gathered}\\)\n\nReplace \\(u\\) with \\(x-2\\).\n\n\\(x-2=-3, \\quad x-2=-4\\)\n\nSolve for \\(x\\).\n\n\\(x=-1, \\quad x=-2\\)\n\nCheck:\n\n[Figure: .]\n\nFigure 9.4.14",
+      "prompt": "Example \\(\\PageIndex{2}\\)\n\nSolve: \\((x-2)^{2}+7(x-2)+12=0\\).\n\nSolution:\n\n            \\((x-2)^{2}+7(x-2)+12=0\\)\t\n\n            Prepare for the substitution.\t\n            \\(\\color{red}(x-2)\\color{black}^{2}+7\\color{red}(x-2) \\color{black} +12=0\\)\t\n\n            Let \\(u=x-2\\) and substitute.\t\n            \\(\\color{red}u^{\\color{black}2} \\color{black}+ 7 \\color{red}u \\color{black}+12=0\\)\t\n\n            Solve by factoring.\t\n\n\\((u+3)(u+4)=0\\)\n\n\\(\\begin{gathered}\n\n            u+3=0, \\quad u+4=0 \\\\\n\n            u=-3, \\quad u=-4\n\n            \\end{gathered}\\)\n\nReplace \\(u\\) with \\(x-2\\).\n\n\\(x-2=-3, \\quad x-2=-4\\)\n\nSolve for \\(x\\).\n\n\\(x=-1, \\quad x=-2\\)\n\nCheck:\n\n[Figure: .]\n\nFigure 9.4.14",
+      "sourceAnswers": [],
+      "hasFigure": true,
+      "status": "draft",
+      "answerVerified": false,
+      "translationStatus": "pending",
+      "mappingStatus": "pending"
+    },
+    {
+      "ordinal": 14,
+      "sourceNumber": "",
+      "sourceAnchor": "",
+      "kind": "exercise-candidate",
+      "context": "The next example shows the steps for solving an equation in quadratic form.\n\nWe summarize the steps to solve an equation in quadratic form.\n\nIn the next example, the binomial in the middle term, \\((x-2)\\) is squared in the first term. If we let \\(u=x-2\\) and substitute, our trinomial will be in \\(a x^{2}+b x+c\\) form.",
+      "original": "Exercise \\(\\PageIndex{3}\\)\n\nSolve: \\((x-5)^{2}+6(x-5)+8=0\\).\n\nAnswer\n\n\\(x=3, x=1\\)",
+      "prompt": "Exercise \\(\\PageIndex{3}\\)\n\nSolve: \\((x-5)^{2}+6(x-5)+8=0\\).",
+      "sourceAnswers": [
+        "\\(x=3, x=1\\)"
+      ],
+      "hasFigure": false,
+      "status": "draft",
+      "answerVerified": false,
+      "translationStatus": "pending",
+      "mappingStatus": "pending"
+    },
+    {
+      "ordinal": 15,
+      "sourceNumber": "",
+      "sourceAnchor": "",
+      "kind": "exercise-candidate",
+      "context": "The next example shows the steps for solving an equation in quadratic form.\n\nWe summarize the steps to solve an equation in quadratic form.\n\nIn the next example, the binomial in the middle term, \\((x-2)\\) is squared in the first term. If we let \\(u=x-2\\) and substitute, our trinomial will be in \\(a x^{2}+b x+c\\) form.",
+      "original": "Exercise \\(\\PageIndex{4}\\)\n\nSolve: \\((y-4)^{2}+8(y-4)+15=0\\).\n\nAnswer\n\n\\(y=-1, y=1\\)",
+      "prompt": "Exercise \\(\\PageIndex{4}\\)\n\nSolve: \\((y-4)^{2}+8(y-4)+15=0\\).",
+      "sourceAnswers": [
+        "\\(y=-1, y=1\\)"
+      ],
+      "hasFigure": false,
+      "status": "draft",
+      "answerVerified": false,
+      "translationStatus": "pending",
+      "mappingStatus": "pending"
+    },
+    {
+      "ordinal": 16,
+      "sourceNumber": "",
+      "sourceAnchor": "",
+      "kind": "example-or-exercise",
+      "context": "We summarize the steps to solve an equation in quadratic form.\n\nIn the next example, the binomial in the middle term, \\((x-2)\\) is squared in the first term. If we let \\(u=x-2\\) and substitute, our trinomial will be in \\(a x^{2}+b x+c\\) form.\n\nIn the next example, we notice that \\((\\sqrt{x})^{2}=x\\). Also, remember that when we square both sides of an equation, we may introduce extraneous roots. Be sure to check your answers!",
+      "original": "Example \\(\\PageIndex{3}\\)\n\nSolve: \\(x-3 \\sqrt{x}+2=0\\).\n\nSolution:\n\nThe \\(\\sqrt{x}\\) in the middle term, is squared in the first term \\((\\sqrt{x})^{2}=x\\). If we let \\(u=\\sqrt{x}\\) and substitute, our trinomial will be in \\(a x^{2}+b x+c=0\\) form.\n\n            \\(x-3 \\sqrt{x}+2=0\\)\t\n\n            Rewrite the trinomial to prepare for the substitution.\t\n\n[Figure: .]\n\n            Let \\(u=\\sqrt{x}\\) and substitute.\t\n\n[Figure: .]\n\n            Solve by factoring.\t\n\n\\((u-2)(u-1)=0\\)\n\n\\(u-2=0, \\quad u-1=0\\)\n\n            \\(u=2, \\quad u=1\\)\\)\n\n            Replace \\(u\\) with \\(\\sqrt{x}\\).\t\n\n\\(\\sqrt{x}=2, \\quad \\sqrt{x}=1\\)\n\n            Solve for \\(x\\), by squaring both sides.\t\n            \\(x=4, \\quad x=1\\)\t\n\nCheck:\n\n[Figure: .]",
+      "prompt": "Example \\(\\PageIndex{3}\\)\n\nSolve: \\(x-3 \\sqrt{x}+2=0\\).\n\nSolution:\n\nThe \\(\\sqrt{x}\\) in the middle term, is squared in the first term \\((\\sqrt{x})^{2}=x\\). If we let \\(u=\\sqrt{x}\\) and substitute, our trinomial will be in \\(a x^{2}+b x+c=0\\) form.\n\n            \\(x-3 \\sqrt{x}+2=0\\)\t\n\n            Rewrite the trinomial to prepare for the substitution.\t\n\n[Figure: .]\n\n            Let \\(u=\\sqrt{x}\\) and substitute.\t\n\n[Figure: .]\n\n            Solve by factoring.\t\n\n\\((u-2)(u-1)=0\\)\n\n\\(u-2=0, \\quad u-1=0\\)\n\n            \\(u=2, \\quad u=1\\)\\)\n\n            Replace \\(u\\) with \\(\\sqrt{x}\\).\t\n\n\\(\\sqrt{x}=2, \\quad \\sqrt{x}=1\\)\n\n            Solve for \\(x\\), by squaring both sides.\t\n            \\(x=4, \\quad x=1\\)\t\n\nCheck:\n\n[Figure: .]",
+      "sourceAnswers": [],
+      "hasFigure": true,
+      "status": "draft",
+      "answerVerified": false,
+      "translationStatus": "pending",
+      "mappingStatus": "pending"
+    },
+    {
+      "ordinal": 17,
+      "sourceNumber": "",
+      "sourceAnchor": "",
+      "kind": "exercise-candidate",
+      "context": "We summarize the steps to solve an equation in quadratic form.\n\nIn the next example, the binomial in the middle term, \\((x-2)\\) is squared in the first term. If we let \\(u=x-2\\) and substitute, our trinomial will be in \\(a x^{2}+b x+c\\) form.\n\nIn the next example, we notice that \\((\\sqrt{x})^{2}=x\\). Also, remember that when we square both sides of an equation, we may introduce extraneous roots. Be sure to check your answers!",
+      "original": "Exercise \\(\\PageIndex{5}\\)\n\nSolve: \\(x-7 \\sqrt{x}+12=0\\).\n\nAnswer\n\n\\(x=9, x=16\\)",
+      "prompt": "Exercise \\(\\PageIndex{5}\\)\n\nSolve: \\(x-7 \\sqrt{x}+12=0\\).",
+      "sourceAnswers": [
+        "\\(x=9, x=16\\)"
+      ],
+      "hasFigure": false,
+      "status": "draft",
+      "answerVerified": false,
+      "translationStatus": "pending",
+      "mappingStatus": "pending"
+    },
+    {
+      "ordinal": 18,
+      "sourceNumber": "",
+      "sourceAnchor": "",
+      "kind": "exercise-candidate",
+      "context": "We summarize the steps to solve an equation in quadratic form.\n\nIn the next example, the binomial in the middle term, \\((x-2)\\) is squared in the first term. If we let \\(u=x-2\\) and substitute, our trinomial will be in \\(a x^{2}+b x+c\\) form.\n\nIn the next example, we notice that \\((\\sqrt{x})^{2}=x\\). Also, remember that when we square both sides of an equation, we may introduce extraneous roots. Be sure to check your answers!",
+      "original": "Exercise \\(\\PageIndex{6}\\)\n\nSolve: \\(x-6 \\sqrt{x}+8=0\\).\n\nAnswer\n\n\\(x=4, x=16\\)",
+      "prompt": "Exercise \\(\\PageIndex{6}\\)\n\nSolve: \\(x-6 \\sqrt{x}+8=0\\).",
+      "sourceAnswers": [
+        "\\(x=4, x=16\\)"
+      ],
+      "hasFigure": false,
+      "status": "draft",
+      "answerVerified": false,
+      "translationStatus": "pending",
+      "mappingStatus": "pending"
+    },
+    {
+      "ordinal": 19,
+      "sourceNumber": "",
+      "sourceAnchor": "",
+      "kind": "example-or-exercise",
+      "context": "In the next example, the binomial in the middle term, \\((x-2)\\) is squared in the first term. If we let \\(u=x-2\\) and substitute, our trinomial will be in \\(a x^{2}+b x+c\\) form.\n\nIn the next example, we notice that \\((\\sqrt{x})^{2}=x\\). Also, remember that when we square both sides of an equation, we may introduce extraneous roots. Be sure to check your answers!\n\nSubstitutions for rational exponents can also help us solve an equation in quadratic form. Think of the properties of exponents as you begin the next example.",
+      "original": "Example \\(\\PageIndex{4}\\)\n\nSolve: \\(x^{\\frac{2}{3}}-2 x^{\\frac{1}{3}}-24=0\\).\n\nSolution:\n\nThe \\(x^{\\frac{1}{3}}\\) in the middle term is squared in the first term \\(\\left(x^{\\frac{1}{3}}\\right)^{2}=x^{\\frac{2}{3}}\\). If we let \\(u=x^{\\frac{1}{3}}\\) and substitute, our trinomial will be in \\(a x^{2}+b x+c=0\\) form.\n\n            \\(x^{\\frac{2}{3}}-2 x^{\\frac{1}{3}}-24=0\\)\t\n\n            Rewrite the trinomial to prepare for the substitution.\t\n\n[Figure: .]\n\n            Let \\(u=x^{\\frac{1}{3}}\\)\t\n\n[Figure: .]\n\n            Solve by factoring.\t\n\n\\((u-6)(u+4)=0\\)\n\n\\(u-6=0, \\quad u+4=0\\)\n\n\\(u=6, \\quad u=-4\\)\n\n            Replace \\(u\\) with \\(x^{\\frac{1}{3}}\\).\t\n\n\\(x^{\\frac{1}{3}}=6, \\quad x^{\\frac{1}{3}}=-4\\)\n\n            Solve for \\(x\\) by cubing both sides.\t\n\n\\(\\left(x^{\\frac{1}{3}}\\right)^{3}=(6)^{3}, \\quad\\left(x^{\\frac{1}{3}}\\right)^{3}=(-4)^{3}\\)\n\n\\(x=216, \\quad x=-64\\)\n\nCheck:\n\n[Figure: .]\n\nFigure 9.4.33",
+      "prompt": "Example \\(\\PageIndex{4}\\)\n\nSolve: \\(x^{\\frac{2}{3}}-2 x^{\\frac{1}{3}}-24=0\\).\n\nSolution:\n\nThe \\(x^{\\frac{1}{3}}\\) in the middle term is squared in the first term \\(\\left(x^{\\frac{1}{3}}\\right)^{2}=x^{\\frac{2}{3}}\\). If we let \\(u=x^{\\frac{1}{3}}\\) and substitute, our trinomial will be in \\(a x^{2}+b x+c=0\\) form.\n\n            \\(x^{\\frac{2}{3}}-2 x^{\\frac{1}{3}}-24=0\\)\t\n\n            Rewrite the trinomial to prepare for the substitution.\t\n\n[Figure: .]\n\n            Let \\(u=x^{\\frac{1}{3}}\\)\t\n\n[Figure: .]\n\n            Solve by factoring.\t\n\n\\((u-6)(u+4)=0\\)\n\n\\(u-6=0, \\quad u+4=0\\)\n\n\\(u=6, \\quad u=-4\\)\n\n            Replace \\(u\\) with \\(x^{\\frac{1}{3}}\\).\t\n\n\\(x^{\\frac{1}{3}}=6, \\quad x^{\\frac{1}{3}}=-4\\)\n\n            Solve for \\(x\\) by cubing both sides.\t\n\n\\(\\left(x^{\\frac{1}{3}}\\right)^{3}=(6)^{3}, \\quad\\left(x^{\\frac{1}{3}}\\right)^{3}=(-4)^{3}\\)\n\n\\(x=216, \\quad x=-64\\)\n\nCheck:\n\n[Figure: .]\n\nFigure 9.4.33",
+      "sourceAnswers": [],
+      "hasFigure": true,
+      "status": "draft",
+      "answerVerified": false,
+      "translationStatus": "pending",
+      "mappingStatus": "pending"
+    },
+    {
+      "ordinal": 20,
+      "sourceNumber": "",
+      "sourceAnchor": "",
+      "kind": "exercise-candidate",
+      "context": "In the next example, the binomial in the middle term, \\((x-2)\\) is squared in the first term. If we let \\(u=x-2\\) and substitute, our trinomial will be in \\(a x^{2}+b x+c\\) form.\n\nIn the next example, we notice that \\((\\sqrt{x})^{2}=x\\). Also, remember that when we square both sides of an equation, we may introduce extraneous roots. Be sure to check your answers!\n\nSubstitutions for rational exponents can also help us solve an equation in quadratic form. Think of the properties of exponents as you begin the next example.",
+      "original": "Exercise \\(\\PageIndex{7}\\)\n\nSolve: \\(x^{\\frac{2}{3}}-5 x^{\\frac{1}{3}}-14=0\\).\n\nAnswer\n\n\\(x=-8, x=343\\)",
+      "prompt": "Exercise \\(\\PageIndex{7}\\)\n\nSolve: \\(x^{\\frac{2}{3}}-5 x^{\\frac{1}{3}}-14=0\\).",
+      "sourceAnswers": [
+        "\\(x=-8, x=343\\)"
+      ],
+      "hasFigure": false,
+      "status": "draft",
+      "answerVerified": false,
+      "translationStatus": "pending",
+      "mappingStatus": "pending"
+    },
+    {
+      "ordinal": 21,
+      "sourceNumber": "",
+      "sourceAnchor": "",
+      "kind": "exercise-candidate",
+      "context": "In the next example, the binomial in the middle term, \\((x-2)\\) is squared in the first term. If we let \\(u=x-2\\) and substitute, our trinomial will be in \\(a x^{2}+b x+c\\) form.\n\nIn the next example, we notice that \\((\\sqrt{x})^{2}=x\\). Also, remember that when we square both sides of an equation, we may introduce extraneous roots. Be sure to check your answers!\n\nSubstitutions for rational exponents can also help us solve an equation in quadratic form. Think of the properties of exponents as you begin the next example.",
+      "original": "Exercise \\(\\PageIndex{8}\\)\n\nSolve: \\(x^{\\frac{1}{2}}+8 x^{\\frac{1}{4}}+15=0\\).\n\nAnswer\n\n\\(x=81, x=625\\)",
+      "prompt": "Exercise \\(\\PageIndex{8}\\)\n\nSolve: \\(x^{\\frac{1}{2}}+8 x^{\\frac{1}{4}}+15=0\\).",
+      "sourceAnswers": [
+        "\\(x=81, x=625\\)"
+      ],
+      "hasFigure": false,
+      "status": "draft",
+      "answerVerified": false,
+      "translationStatus": "pending",
+      "mappingStatus": "pending"
+    },
+    {
+      "ordinal": 22,
+      "sourceNumber": "",
+      "sourceAnchor": "",
+      "kind": "example-or-exercise",
+      "context": "In the next example, we notice that \\((\\sqrt{x})^{2}=x\\). Also, remember that when we square both sides of an equation, we may introduce extraneous roots. Be sure to check your answers!\n\nSubstitutions for rational exponents can also help us solve an equation in quadratic form. Think of the properties of exponents as you begin the next example.\n\nIn the next example, we need to keep in mind the definition of a negative exponent as well as the properties of exponents.",
+      "original": "Example \\(\\PageIndex{5}\\)\n\nSolve: \\(3 x^{-2}-7 x^{-1}+2=0\\).\n\nSolution:\n\nThe \\(x^{−1}\\) in the middle term is squared in the first term \\(\\left(x^{-1}\\right)^{2}=x^{-2}\\). If we let \\(u=x^{−1}\\) and substitute, our trinomial will be in \\(a x^{2}+b x+c=0\\) form.\n\n            \\(3 x^{-2}-7 x^{-1}+2=0\\)\t\n\n            Rewrite the trinomial to prepare for the substitution.\t\n\n[Figure: .]\n\n            Let \\(u=x^{-1}\\) and substitute.\t\n\n[Figure: .]\n\n            Solve by factoring.\t\n            \\((3 u-1)(u-2)=0\\)\t\n\n            \\(3 u-1=0, \\quad u-2=0\\)\t\n\n            \\(u=\\frac{1}{3}, \\quad u=2\\)\t\n\n            Replace \\(u\\) with \\(x^{-1}\\).\t\n            \\(x^{-1}=\\frac{1}{3}, \\quad x^{-1}=2\\)\t\n\n            Solve for \\(x\\) by taking the reciprocal since \\(x^{-1}=\\frac{1}{x}\\).\t\n            \\(x=3, \\quad x=\\frac{1}{2}\\)\t\n\nCheck:\n\n[Figure: .]\n\nFigure 9.4.42",
+      "prompt": "Example \\(\\PageIndex{5}\\)\n\nSolve: \\(3 x^{-2}-7 x^{-1}+2=0\\).\n\nSolution:\n\nThe \\(x^{−1}\\) in the middle term is squared in the first term \\(\\left(x^{-1}\\right)^{2}=x^{-2}\\). If we let \\(u=x^{−1}\\) and substitute, our trinomial will be in \\(a x^{2}+b x+c=0\\) form.\n\n            \\(3 x^{-2}-7 x^{-1}+2=0\\)\t\n\n            Rewrite the trinomial to prepare for the substitution.\t\n\n[Figure: .]\n\n            Let \\(u=x^{-1}\\) and substitute.\t\n\n[Figure: .]\n\n            Solve by factoring.\t\n            \\((3 u-1)(u-2)=0\\)\t\n\n            \\(3 u-1=0, \\quad u-2=0\\)\t\n\n            \\(u=\\frac{1}{3}, \\quad u=2\\)\t\n\n            Replace \\(u\\) with \\(x^{-1}\\).\t\n            \\(x^{-1}=\\frac{1}{3}, \\quad x^{-1}=2\\)\t\n\n            Solve for \\(x\\) by taking the reciprocal since \\(x^{-1}=\\frac{1}{x}\\).\t\n            \\(x=3, \\quad x=\\frac{1}{2}\\)\t\n\nCheck:\n\n[Figure: .]\n\nFigure 9.4.42",
+      "sourceAnswers": [],
+      "hasFigure": true,
+      "status": "draft",
+      "answerVerified": false,
+      "translationStatus": "pending",
+      "mappingStatus": "pending"
+    },
+    {
+      "ordinal": 23,
+      "sourceNumber": "",
+      "sourceAnchor": "",
+      "kind": "exercise-candidate",
+      "context": "In the next example, we notice that \\((\\sqrt{x})^{2}=x\\). Also, remember that when we square both sides of an equation, we may introduce extraneous roots. Be sure to check your answers!\n\nSubstitutions for rational exponents can also help us solve an equation in quadratic form. Think of the properties of exponents as you begin the next example.\n\nIn the next example, we need to keep in mind the definition of a negative exponent as well as the properties of exponents.",
+      "original": "Exercise \\(\\PageIndex{9}\\)\n\nSolve: \\(8 x^{-2}-10 x^{-1}+3=0\\).\n\nAnswer\n\n\\(x=\\frac{4}{3}, x=2\\)",
+      "prompt": "Exercise \\(\\PageIndex{9}\\)\n\nSolve: \\(8 x^{-2}-10 x^{-1}+3=0\\).",
+      "sourceAnswers": [
+        "\\(x=\\frac{4}{3}, x=2\\)"
+      ],
+      "hasFigure": false,
+      "status": "draft",
+      "answerVerified": false,
+      "translationStatus": "pending",
+      "mappingStatus": "pending"
+    },
+    {
+      "ordinal": 24,
+      "sourceNumber": "",
+      "sourceAnchor": "",
+      "kind": "exercise-candidate",
+      "context": "In the next example, we notice that \\((\\sqrt{x})^{2}=x\\). Also, remember that when we square both sides of an equation, we may introduce extraneous roots. Be sure to check your answers!\n\nSubstitutions for rational exponents can also help us solve an equation in quadratic form. Think of the properties of exponents as you begin the next example.\n\nIn the next example, we need to keep in mind the definition of a negative exponent as well as the properties of exponents.",
+      "original": "Exercise \\(\\PageIndex{10}\\)\n\nSolve: \\(6 x^{-2}-23 x^{-1}+20=0\\).\n\nAnswer\n\n\\(x=\\frac{2}{5}, x=\\frac{3}{4}\\)",
+      "prompt": "Exercise \\(\\PageIndex{10}\\)\n\nSolve: \\(6 x^{-2}-23 x^{-1}+20=0\\).",
+      "sourceAnswers": [
+        "\\(x=\\frac{2}{5}, x=\\frac{3}{4}\\)"
+      ],
+      "hasFigure": false,
+      "status": "draft",
+      "answerVerified": false,
+      "translationStatus": "pending",
+      "mappingStatus": "pending"
+    },
+    {
+      "ordinal": 25,
+      "sourceNumber": "1",
+      "sourceAnchor": "",
+      "kind": "exercise-candidate",
+      "context": "Key Concepts",
+      "original": "1. Identify a substitution that will put the equation in quadratic form.",
+      "prompt": "1. Identify a substitution that will put the equation in quadratic form.",
+      "sourceAnswers": [],
+      "hasFigure": false,
+      "status": "draft",
+      "answerVerified": false,
+      "translationStatus": "pending",
+      "mappingStatus": "pending"
+    },
+    {
+      "ordinal": 26,
+      "sourceNumber": "2",
+      "sourceAnchor": "",
+      "kind": "exercise-candidate",
+      "context": "Key Concepts",
+      "original": "2. Rewrite the equation with the substitution to put it in quadratic form.",
+      "prompt": "2. Rewrite the equation with the substitution to put it in quadratic form.",
+      "sourceAnswers": [],
+      "hasFigure": false,
+      "status": "draft",
+      "answerVerified": false,
+      "translationStatus": "pending",
+      "mappingStatus": "pending"
+    },
+    {
+      "ordinal": 27,
+      "sourceNumber": "3",
+      "sourceAnchor": "",
+      "kind": "exercise-candidate",
+      "context": "Key Concepts",
+      "original": "3. Solve the quadratic equation for \\(u\\).",
+      "prompt": "3. Solve the quadratic equation for \\(u\\).",
+      "sourceAnswers": [],
+      "hasFigure": false,
+      "status": "draft",
+      "answerVerified": false,
+      "translationStatus": "pending",
+      "mappingStatus": "pending"
+    },
+    {
+      "ordinal": 28,
+      "sourceNumber": "4",
+      "sourceAnchor": "",
+      "kind": "exercise-candidate",
+      "context": "Key Concepts",
+      "original": "4. Substitute the original variable back into the results, using the substitution.",
+      "prompt": "4. Substitute the original variable back into the results, using the substitution.",
+      "sourceAnswers": [],
+      "hasFigure": false,
+      "status": "draft",
+      "answerVerified": false,
+      "translationStatus": "pending",
+      "mappingStatus": "pending"
+    },
+    {
+      "ordinal": 29,
+      "sourceNumber": "5",
+      "sourceAnchor": "",
+      "kind": "exercise-candidate",
+      "context": "Key Concepts",
+      "original": "5. Solve for the original variable.",
+      "prompt": "5. Solve for the original variable.",
+      "sourceAnswers": [],
+      "hasFigure": false,
+      "status": "draft",
+      "answerVerified": false,
+      "translationStatus": "pending",
+      "mappingStatus": "pending"
+    },
+    {
+      "ordinal": 30,
+      "sourceNumber": "6",
+      "sourceAnchor": "",
+      "kind": "exercise-candidate",
+      "context": "Key Concepts",
+      "original": "6. Check the solutions.",
+      "prompt": "6. Check the solutions.",
+      "sourceAnswers": [],
+      "hasFigure": false,
+      "status": "draft",
+      "answerVerified": false,
+      "translationStatus": "pending",
+      "mappingStatus": "pending"
+    }
+  ],
+  "license": "CC BY 4.0",
+  "licenseEvidence": "This page titled 9.5: Solve Quadratic Equations in Quadratic Form was last modified on Tue, 01 Mar 2022 17:40:22 GMT and is shared under a CC BY  4.0  license and was authored, remixed, and/or curated by OpenStax via source content that was edited to the style and standards of the LibreTexts platform.",
+  "url": "https://math.libretexts.org/Bookshelves/Algebra/Intermediate_Algebra_1e_(OpenStax)/09:_Quadratic_Equations_and_Functions/905:_Solve_Quadratic_Equations_in_Quadratic_Form",
+  "sha256": "cbff31996e1dd95cc5cec00a1d9e39545dc3778dc902b65ae0f85aa8855ad15a",
+  "checkedAt": "2026-10-07",
+  "id": "b4a2c108e55d6c44be69",
+  "bookId": "intermediate-algebra",
+  "licenseInherited": false,
+  "licenseSource": "https://math.libretexts.org/Bookshelves/Algebra/Intermediate_Algebra_1e_(OpenStax)/09:_Quadratic_Equations_and_Functions/905:_Solve_Quadratic_Equations_in_Quadratic_Form",
+  "licenseUrl": "https://creativecommons.org/licenses/by/4.0/",
+  "authors": "OpenStax / Lynn Marecek, Andrea Honeycutt Mathis",
+  "book": "Intermediate Algebra 1e",
+  "reviewStatus": "unreviewed",
+  "sourceLanguage": "en",
+  "translationStatus": "pending"
+}

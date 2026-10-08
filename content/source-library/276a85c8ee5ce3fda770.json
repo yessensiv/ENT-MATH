@@ -1,0 +1,728 @@
+{
+  "title": "10.3: Evaluate and Graph Exponential Functions",
+  "originalText": "Learning Objectives\n\nBy the end of this section, you will be able to:\n\nGraph exponential functions\n\nSolve Exponential equations\n\nUse exponential models in applications\n\nBefore you get started, take this readiness quiz.\n\n1. Simplify: \\(\\left(\\frac{x^{3}}{x^{2}}\\right)\\).\n\n    If you missed this problem, review Example 5.13.\n\n2. Evaluate: a. \\(2^{0}\\) b. \\(\\left(\\frac{1}{3}\\right)^{0}\\).\n\n    If you missed this problem, review Example 5.14.\n\n3. Evaluate: a. \\(2^{−1}\\) b. \\(\\left(\\frac{1}{3}\\right)^{-1}\\).\n\n    If you missed this problem, review Example 5.15.\n\nGraph Exponential Functions\n\nThe functions we have studied so far do not give us a model for many naturally occurring phenomena. From the growth of populations and the spread of viruses to radioactive decay and compounding interest, the models are very different from what we have studied so far. These models involve exponential functions.\n\nAn exponential function is a function of the form \\(f(x)=a^{x}\\) where \\(a>0\\) and \\(a≠1\\).\n\nDefinition \\(\\PageIndex{1}\\)\n\nAn exponential function, where \\(a>0\\) and \\(a≠1\\), is a function of the form\n\n\\(f(x)=a^{x}\\)\n\nNotice that in this function, the variable is the exponent. In our functions so far, the variables were the base.\n\n[Figure: This figure shows three functions: f of x equals negative 3x plus 4, which is marked as linear; f of x equals 2x squared plus 5x minus 3, which is marked as quadratic; and f of x equals 6 to the x power, which is marked exponential. For the functions marked linear and quadratic, x is the base. For the function marked exponential, x is the exponent for the base 6.]\n\nFigure 10.2.1\n\nOur definition says \\(a≠1\\). If we let \\(a=1\\), then \\(f(x)=a^{x}\\) becomes \\(f(x)=1^{x}\\). Since \\(1^{x}=1\\) for all real numbers, \\(f(x)=1\\). This is the constant function.\n\nOur definition also says \\(a>0\\). If we let a base be negative, say \\(−4\\), then \\(f(x)=(−4)^{x}\\) is not a real number when \\(x=\\frac{1}{2}\\).\n\n\\(\\begin{aligned} f(x) &=(-4)^{x} \\\\ f\\left(\\frac{1}{2}\\right) &=(-4)^{\\frac{1}{2}} \\\\ f\\left(\\frac{1}{2}\\right) &=\\sqrt{-4} \\text { not a real number } \\end{aligned}\\)\n\nIn fact, \\(f(x)=(−4)^{x}\\) would not be a real number any time \\(x\\) is a fraction with an even denominator. So our definition requires \\(a>0\\).\n\nBy graphing a few exponential functions, we will be able to see their unique properties.\n\nExample \\(\\PageIndex{1}\\)\n\nOn the same coordinate system graph \\(f(x)=2^{x}\\) and \\(g(x)=3^{x}\\).\n\nSolution:\n\nWe will use point plotting to graph the functions.\n\n[Figure: This table has seven rows and five columns. The first row is header row and reads x, f of x equals 2 to the x power, (x, f of x), g of x equals 3 to the x power, and (x, g of x). The second row reads negative 2, 2 to the negative 2 power equals 1 divided by 2 squared which equals 1 over 4, (negative 2, 1 over 4), 3 to the negative 2 power equals 1 divided by 3 squared which equals 1 over 9, (negative 2, 1 over 9). The third row reads negative 1, 2 to the negative 1 power equals 1 divided by 2 to the first power which equals 1 over 2, (negative 1, 1 over 2), 3 to the negative 1 power equals 1 divided by 3 to the first power which equals 1 over 3, (negative 1, 1 over 3). The fourth row reads 0, 2 to the 0 power equals 1, (0, 1), 3 to the 0 power equals 1, (0, 1). The fifth row reads 1, 2 to the 1 power equals 2, (1, 2), 3 to the 1 power equals 9, (1, 3). The sixth row reads 2, 2 to the 2 power equals 4, (2, 4), 3 to the 2 power equals 9, (2, 9). The seventh row reads 3, 2 to the 3 power equals 8, (3, 8), 3 to the 3 power equals 27, (3, 27).]\n\nFigure 10.2.2\n\n[Figure: This figure shows two curves. The first curve is marked in blue and passes through the points (negative 1, 1 over 2), (0, 1), and (1, 2). The second curve is marked in red and passes through the points (negative 1, 1 over 3), (0, 1), and (1, 3).]\n\nFigure 10.2.3\n\nExercise \\(\\PageIndex{1}\\)\n\nGraph: \\(f(x)=4^{x}\\).\n\nAnswer\n\n[Figure: This figure shows a curve that slopes swiftly upward from just above (negative 3, 0) through (0, 1) up to (1, 4).]\n\nFigure 10.2.4\n\nExercise \\(\\PageIndex{2}\\)\n\nGraph: \\(g(x)=5^{x}\\)\n\nAnswer\n\n[Figure: This figure shows a curve that slopes swiftly upward from just above (negative 3, 0) through (0, 1) up to (1, 5).]\n\nFigure 10.2.5\n\nIf we look at the graphs from the previous Example 10.2.1 and Exercises 10.2.1 and 10.2.2, we can identify some of the properties of exponential functions.\n\nThe graphs of \\(f(x)=2^{x}\\) and \\(g(x)=3^{x}\\), as well as the graphs of \\(f(x)=4^{x}\\) and \\(g(x)=5^{x}\\), all have the same basic shape. This is the shape we expect from an exponential function where \\(a>1\\).\n\nWe notice, that for each function, the graph contains the point \\((0,1)\\). This make sense because \\(a^{0}=1\\) for any \\(a\\).\n\nThe graph of each function, \\(f(x)=a^{x}\\) also contains the point \\((1,a)\\). The graph of \\(f(x)=2^{x}\\) contained \\((1,2)\\) and the graph of \\(g(x)=3^{x}\\) contained \\((1,3)\\). This makes sense as \\(a^{1}=a\\).\n\nNotice too, the graph of each function \\(f(x)=a^{x}\\) also contains the point \\((−1,\\frac{1}{a})\\). The graph of \\(f(x)=2^{x}\\) contained \\((−1,\\frac{1}{2})\\) and the graph of \\(g(x)=3^{x}\\) contained \\((−1,\\frac{1}{3})\\).This makes sense as \\(a^{−1}=\\frac{1}{a}\\).\n\nWhat is the domain for each function? From the graphs we can see that the domain is the set of all real numbers. There is no restriction on the domain. We write the domain in interval notation as \\((−∞,∞)\\).\n\nLook at each graph. What is the range of the function? The graph never hits the \\(x\\)-axis. The range is all positive numbers. We write the range in interval notation as \\((0,∞)\\).\n\nWhenever a graph of a function approaches a line but never touches it, we call that line an asymptote. For the exponential functions we are looking at, the graph approaches the \\(x\\)-axis very closely but will never cross it, we call the line \\(y=0\\), the \\(x\\)-axis, a horizontal asymptote.\n\nProperties of the Graph of \\(f(x)=a^{x}\\) when \\(a>1\\)\n\n            Domain\t\n            \\((-\\infty, \\infty)\\)\t\n\n            Range\t\n            \\((0, \\infty)\\)\t\n\n            \\(x\\)-intercept\t\n            None\t\n\n            \\(y\\)-intercept\t\n            \\((0,1)\\)\t\n\n            Contains\t\n            \\((1, a),\\left(-1, \\frac{1}{a}\\right)\\)\t\n\n            Asymptote\t\n            \\(x\\)-axis, the line \\(y=0\\)\t\n\nTable 10.2.1\n\n[Figure: This figure shows a curve that slopes upward from (negative 1, 1 over a) through (0, 1), up to (1, a).]\n\nFigure 10.2.6\n\nOur definition of an exponential function \\(f(x)=a^{x}\\) says \\(a>0\\), but the examples and discussion so far has been about functions where \\(a>1\\). What happens when \\(0<a<1\\) The next example will explore this possibility.\n\nExample \\(\\PageIndex{2}\\)\n\nOn the same coordinate system, graph \\(f(x)=\\left(\\frac{1}{2}\\right)^{x}\\) and \\(g(x)=\\left(\\frac{1}{3}\\right)^{x}\\).\n\nSolution:\n\nWe will use point plotting to graph the functions.\n\n[Figure: This table has seven rows and five columns. The first row is header row and reads x, f of x, equals 1 over 2 to the x power, (x, f of x), g of x equals 1 over 3 to the x power, and (x, g of x). The second row reads negative 2, 1 over 2 to the negative 2 power equals 2 squared which equals 4, (negative 2, 4), 3 to the negative 2 power equals 3 squared which equals 9, (negative 2, 9). The third row reads negative 1, 1 over 2 to the negative 1 power equals 2 to the first power which equals 2, (negative 1, 2), 1 over 3 to the negative 1 power equals 3 to the first power which equals 3, (negative 1, 3). The fourth row reads 0, 1 over 2 to the 0 power equals 1, (0, 1), 1 over 3 to the 0 power equals 1, (0, 1). The fifth row reads 1, 1 over 2 to the 1 power equals 1 over 2, (1, 1 over 2), 1 over 3 to the 1 power equals 1 over 3, (1, 1 over 3). The sixth row reads 2, 1 over 2 to the 2 power equals 1 over 4, (2, 1 over 4), 1 over 3 to the 2 power equals 1 over 9, (2, 1 over 9). The seventh row reads 3, 1 over 2 to the 3 power equals 1 over 8, (3, 1 over 8), 1 over 3 to the 3 power equals 1 over 27, (3, 1 over 27).]\n\nFigure 10.2.7\n\n[Figure: This figure shows two curves. The first curve is marked in blue and passes through the points (negative 1, 2), (0, 1), and (1, 1 over 2). The second curve is marked in red and passes through the points (negative 1, 3), (0, 1), and (1, 1 over 3).]\n\nFigure 10.2.8\n\nExercise \\(\\PageIndex{3}\\)\n\nGraph: \\(f(x)=\\left(\\frac{1}{4}\\right)^{x}\\).\n\nAnswer\n\n[Figure: This figure shows a curve that passes through (negative 1, 4), (0, 1) to a point just above (3, 0).]\n\nFigure 10.2.9\n\nExercise \\(\\PageIndex{4}\\)\n\nGraph: \\(g(x)=\\left(\\frac{1}{5}\\right)^{x}\\).\n\nAnswer\n\n[Figure: This figure shows a curve that passes through (negative 1, 5), (0, 1) to a point just above (3, 0).]\n\nFigure 10.2.10\n\nNow let’s look at the graphs from the previous Example 10.2.2 and Exercises 10.2.3 and 10.2.4 so we can now identify some of the properties of exponential functions where \\(0<a<1\\).\n\nThe graphs of \\(f(x)=\\left(\\frac{1}{2}\\right)^{x}\\) and \\(g(x)=\\left(\\frac{1}{3}\\right)^{x}\\) as well as the graphs of \\(f(x)=\\left(\\frac{1}{4}\\right)^{x}\\) and \\(g(x)=\\left(\\frac{1}{5}\\right)^{x}\\) all have the same basic shape. While this is the shape we expect from an exponential function where \\(0<a<1\\), the graphs go down from left to right while the previous graphs, when \\(a>1\\), went from up from left to right.\n\nWe notice that for each function, the graph still contains the point \\((0, 1)\\). This make sense because \\(a^{0}=1\\) for any \\(a\\).\n\nAs before, the graph of each function, \\(f(x)=a^{x}\\), also contains the point \\((1,a)\\). The graph of \\(f(x)=\\left(\\frac{1}{2}\\right)^{x}\\) contained \\(\\left(1, \\frac{1}{2}\\right)\\) and the graph of \\(g(x)=\\left(\\frac{1}{3}\\right)^{x}\\) contained \\(\\left(1, \\frac{1}{3}\\right)\\). This makes sense as \\(a^{1}=a\\).\n\nNotice too that the graph of each function, \\(f(x)=a^{x}\\), also contains the point \\(\\left(-1, \\frac{1}{a}\\right)\\). The graph of \\(f(x)=\\left(\\frac{1}{2}\\right)^{x}\\) contained \\((−1,2)\\) and the graph of \\(g(x)=\\left(\\frac{1}{3}\\right)^{x}\\) contained \\((−1,3)\\). This makes sense as \\(a^{-1}=\\frac{1}{a}\\).\n\nWhat is the domain and range for each function? From the graphs we can see that the domain is the set of all real numbers and we write the domain in interval notation as \\((−∞,∞)\\). Again, the graph never hits the \\(x\\)-axis. The range is all positive numbers. We write the range in interval notation as \\((0,∞)\\).\n\nWe will summarize these properties in the chart below. Which also include when \\(a>1\\).\n\nProperties of the Graph of \\(f(x)=a^{x}\\)\n\n            When \\(a>1\\)\t\n            When \\(0<a<1\\)\t\n\n            1\\)\">Domain\t\n            \\((-\\infty, \\infty)\\)\t\n            Domain\t\n            \\((-\\infty, \\infty)\\)\t\n\n            1\\)\">Range\t\n            \\((0, \\infty)\\)\t\n            Range\t\n            \\((0, \\infty)\\)\t\n\n            1\\)\">\\(x\\)-intercept\t\n            none\t\n            \\(x\\)-intercept\t\n            none\t\n\n            1\\)\">\\(y\\)-intercept\t\n            \\((0,1)\\)\t\n            \\(y\\)-intercept\t\n            \\((0,1)\\)\t\n\n            1\\)\">Contains\t\n            \\((1, a),\\left(-1, \\frac{1}{a}\\right)\\)\t\n            Contains\t\n            \\((1, a),\\left(-1, \\frac{1}{a}\\right)\\)\t\n\n            1\\)\">Asymptote\t\n\n\\(x\\)-axis, the line \\(y=0\\)\n\n            Asymptote\t\n            \\(x\\)-axis, the line \\(y=0\\)\t\n\n            1\\)\">Basic Shape\t\n            increasing\t\n            Basic Shape\t\n            decreasing\t\n\nTable 10.2.2\n\n[Figure: This figure has two parts. On the left, we have a curve that passes through (negative 1, 1 over a) through (0, 1) to (1, a). On the right, where a is noted to be less than 1, we have a curve that passes through (negative 1, 1 over a) through (0, 1) to (1, a).]\n\nFigure 10.2.11\n\nIt is important for us to notice that both of these graphs are one-to-one, as they both pass the horizontal line test. This means the exponential function will have an inverse. We will look at this later.\n\nWhen we graphed quadratic functions, we were able to graph using translation rather than just plotting points. Will that work in graphing exponential functions?\n\nExample \\(\\PageIndex{3}\\)\n\nOn the same coordinate system graph \\(f(x)=2^{x}\\) and \\(g(x)=2^{x+1}\\).\n\nSolution:\n\nWe will use point plotting to graph the functions.\n\n[Figure: This table has seven rows and five columns. The first row is header row and reads x, f of x equals 2 to the x power, (x, f of x), g of x equals 2 to the x plus 1 power, and (x, g of x). The second row reads negative 2, 2 to the negative 2 power equals 1 divided by 2 squared which equals 1 over 4, (negative 2, 1 over 4), 2 to the negative 2 plus 1 power equals 1 divided by 2 to the first power which equals 1 over 2, (negative 2, 1 over 2). The third row reads negative 1, 2 to the negative 1 power equals 1 divided by 2 to the first power which equals 1 over 2, (negative 1, 1 over 2), 2 to the negative 1 plus 1 power equals 2 to the 0 power which equals 1, (negative 1, 1). The fourth row reads 0, 2 to the 0 power equals 1, (0, 1), 2 to the 0 plus 1 power equals 2 to the 1 power which equals 2, (0, 2). The fifth row reads 1, 2 to the 1 power equals 2, (1, 2), 2 to the 1 plus 1 power equals 2 to the second power which equals 4, (1, 4). The sixth row reads 2, 2 to the 2 power equals 4, (2, 4), 2 to the 2 plus 1 power equals 2 to the third power which equals 8, (2, 8). The seventh row reads 3, 2 to the 3 power equals 8, (3, 8), 2 to the 3 plus 1 power equals 2 to the fourth power which equals 16, (3, 16).]\n\nFigure 10.2.12\n\n[Figure: This figure shows two curves. The first curve is marked in blue and passes through the points (negative 1, 1 over 2), (0, 1) and (1, 2). The second curve is marked in red and passes through the points (negative 1, 1), (0, 2) and (1, 4).]\n\nFigure 10.2.13\n\nExercise \\(\\PageIndex{5}\\)\n\nOn the same coordinate system, graph: \\(f(x)=2^{x}\\) and \\(g(x)=2^{x-1}\\).\n\nAnswer\n\n[Figure: This figure shows the graphs of two functions. The first function f of x equals 2 to the x power is marked in blue and corresponds to a curve that passes through the points (negative 1, 1 over 2), (0, 1) and (1, 2). The second function g of x equals 2 to the x minus 1 power is marked in red and passes through the points (0, 1 over 2), (1, 1), and (2, 2).]\n\nFigure 10.2.14\n\nExercise \\(\\PageIndex{6}\\)\n\nOn the same coordinate system, graph \\(f(x)=3^{x}\\) and \\(g(x)=3^{x+1}\\).\n\nAnswer\n\n[Figure: This figure shows the graphs of two functions. The first function f of x equals 3 to the x power is marked in blue and corresponds to a curve that passes through the points (negative 1, 1 over 3), (0, 1) and (1, 3). The second function g of x equals 3 to the x plus 1 power is marked in red and passes through the points (negative 2, 1 over 3), (negative 1, 1), and (0, 3).]\n\nFigure 10.2.15\n\nLooking at the graphs of the functions \\(f(x)=2^{x}\\) and \\(g(x)=2^{x+1}\\) in the last example, we see that adding one in the exponent caused a horizontal shift of one unit to the left. Recognizing this pattern allows us to graph other functions with the same pattern by translation.\n\nLet’s now consider another situation that might be graphed more easily by translation, once we recognize the pattern.\n\nExample \\(\\PageIndex{4}\\)\n\nOn the same coordinate system graph \\(f(x)=3^{x}\\) and \\(g(x)=3^{x}-2\\).\n\nSolution:\n\nWe will use point plotting to graph the functions.\n\n[Figure: This table has five rows and six columns. The first row is header row and reads x, f of x equals 3 to the x power, (x, f of x), g of x equals 3 to the x power minus 2, and (x, g of x). The second row reads negative 2, 3 to the negative 2 power equals 1 over 9, (negative 2, 1 over 9), 3 to the negative 2 power minus 2 equals 1 over 9 minus 2 which equals negative 17 over 9, (negative 2, negative 17 over 9). The third row reads negative 1, 3 to the negative 1 power equals 1 over 3, (negative 1, 1 over 3), 3 to the negative 1 power minus 2 equals 1 over 3 minus 2 which equals negative 5 over 3, (negative 1, negative 5 over 3). The fourth row reads 0, 3 to the 0 power equals 1, (0, 1), 3 to the 0 power minus 2 equals 1 minus 2 which equals negative 1, (0, negative 1). The fifth row reads 1, 3 to the 1 power equals 3, (1, 3), 3 to the 1 power minus 2 equals 3 minus 2 which equals 1, (1, 1). The sixth row reads 2, 3 squared equals 9, (2, 9), 3 squared minus 2 equals 9 minus 2 which equals 7, (2, 7).]\n\nFigure 10.2.16\n\n[Figure: This figure shows two curves. The first curve is marked in blue and passes through the points (negative 1, 1 over 3), (0, 1), and (1, 3). The second curve is marked in red and passes through the points (negative 1, negative 5 over 3), (0, negative 1), and (1, 1).]\n\nFigure 10.2.17\n\nExercise \\(\\PageIndex{7}\\)\n\nOn the same coordinate system, graph \\(f(x)=3^{x}\\) and \\(g(x)=3^{x}+2\\).\n\nAnswer\n\n[Figure: This figure shows the graphs of two functions. The first function f of x equals 3 to the x power is marked in blue and corresponds to a curve that passes through the points (negative 1, 1 over 3), (0, 1) and (1, 3). The second function g of x equals 3 to the x power plus 2 is marked in red and passes through the points (negative 1, 7 over 3), (0, 3) and (1, 5).]\n\nFigure 10.2.18\n\nExercise \\(\\PageIndex{8}\\)\n\nOn the same coordinate system, graph \\(f(x)=4^{x}\\) and \\(g(x)=4^{x}-2\\).\n\nAnswer\n\n[Figure: This figure shows the graphs of two functions. The first function f of x equals 4 to the x power is marked in blue and corresponds to a curve that passes through the points (negative 1, 1 over 4), (0, 1) and (1, 4). The second function g of x equals 4 to the x power minus 2 is marked in red and passes through the points (negative 1, negative 7 over 4), (0, negative 1), and (1, 2).]\n\nFigure 10.2.19\n\nLooking at the graphs of the functions \\(f(x)=3^{x}\\) and \\(g(x)=3^{x}−2\\) in the last example, we see that subtracting \\(2\\) caused a vertical shift of down two units. Notice that the horizontal asymptote also shifted down \\(2\\) units. Recognizing this pattern allows us to graph other functions with the same pattern by translation.\n\nAll of our exponential functions have had either an integer or a rational number as the base. We will now look at an exponential function with an irrational number as the base.\n\nBefore we can look at this exponential function, we need to define the irrational number, \\(e\\). This number is used as a base in many applications in the sciences and business that are modeled by exponential functions. The number is defined as the value of \\(\\left(1+\\frac{1}{n}\\right)^{n}\\) as \\(n\\) gets larger and larger. We say, as \\(n\\) approaches infinity, or increases without bound. The table shows the value of \\(\\left(1+\\frac{1}{n}\\right)^{n}\\) for several values of \\(n\\).\n\n            \\(n\\)\t\n            \\(\\left(1+\\frac{1}{n}\\right)^{n}\\)\t\n\n            \\(1\\)\t\n            \\(2\\)\t\n\n            \\(2\\)\t\n            \\(2.25\\)\t\n\n            \\(5\\)\t\n            \\(2.48832\\)\t\n\n            \\(10\\)\t\n            \\(2.59374246\\)\t\n\n            \\(100\\)\t\n            \\(2.704813829 \\ldots\\)\t\n\n            \\(1,000\\)\t\n            \\(2.716923932 \\ldots\\)\t\n\n            \\(10,000\\)\t\n            \\(2.718145927 \\ldots\\)\t\n\n            \\(100,000\\)\t\n            \\(2.718268237 \\ldots\\)\t\n\n            \\(1,000,000\\)\t\n            \\(2.718280469 \\ldots\\)\t\n\n            \\(1,000,000,000\\)\t\n            \\(2.718281827 \\ldots\\)\t\n\nTable 10.2.3\n\n\\(e \\approx 2.718281827\\)\n\nThe number \\(e\\) is like the number \\(π\\) in that we use a symbol to represent it because its decimal representation never stops or repeats. The irrational number \\(e\\) is called the natural base.\n\nDefinition \\(\\PageIndex{2}\\)\n\nNatural Base \\(e\\)\n\nThe number \\(e\\) is defined as the value of \\(\\left(1+\\frac{1}{n}\\right)^{n}\\), as \\(n\\) increases without bound. We say, as \\(n\\) approaches infinity,\n\n\\(e \\approx 2.718281827\\)\n\nThe exponential function whose base is \\(e\\), \\(f(x)=e^{x}\\) is called the natural exponential function.\n\nDefinition \\(\\PageIndex{3}\\)\n\nNatural Exponential Function\n\nThe natural exponential function is an exponential function whose base is \\(e\\)\n\n\\(f(x)=e^{x}\\)\n\nThe domain is \\((−∞,∞)\\) and the range is \\((0,∞)\\).\n\nLet’s graph the function \\(f(x)=e^{x}\\) on the same coordinate system as \\(g(x)=2^{x}\\) and \\(h(x)=3^{x}\\).\n\n[Figure: This figure shows the graphs of three functions. The first function, f of x equals 2 to the x, is marked in red and passes through the points (negative 1, negative 1 over 2), (0, negative 1), and (2, 1). The second function, f of x equals 3 to the x power, is marked in green and corresponds to a curve that passes through the points (negative 1, 1 over 3), (0, 1) and (1, 3). The third function, f of x equals e to the x power, is marked in blue and corresponds to a curve that passes through the points (negative 1, 1 over e), (0, 1) and (0, e).]\n\nFigure 10.2.20\n\nNotice that the graph of \\(f(x)=e^{x}\\) is “between” the graphs of \\(g(x)=2^{x}\\) and \\(h(x)=3^{x}\\).Does this make sense as \\(2<e<3\\)?\n\nSolve Exponential Equations\n\nEquations that include an exponential expression \\(a^{x}\\) are called exponential equations. To solve them we use a property that says as long as \\(a>0\\) and \\(a≠1\\), if \\(a^{x}=a^{y}\\) then it is true that \\(x=y\\). In other words, in an exponential equation, if the bases are equal then the exponents are equal.\n\nDefinition \\(\\PageIndex{4}\\)\n\nOne-to-One Property of Exponential Equations\n\nFor \\(a>0\\) and \\(a≠1\\),\n\nIf \\(a^{x}=a^{y}\\),then \\(x=y\\).\n\nTo use this property, we must be certain that both sides of the equation are written with the same base.\n\nExample \\(\\PageIndex{5}\\) How to Solve an Exponential Equation\n\nSolve: \\(3^{2 x-5}=27\\).\n\nSolution:\n\n            Step 1: Write both sides of the equation with the same base.\t\n            Since the left side has base \\(3\\), we write the right side with base \\(3\\). \\(27=3^{3}\\)\t\n            \\(3^{2 x-5}=27\\)\n\n            \\(3^{2 x-5}=3^{3}\\)\t\n\n            Step 2: Write a new equation by setting the exponents equal.\t\n            Since the bases are the same, the exponents must be equal.\t\n            \\(2x-5=3\\)\t\n\n            Step 3: Solve the equation.\t\n\nAdd \\(5\\) to each side.\n\nDivide by \\(2\\).\n\n            \\(\\begin{aligned} 2 x &=8 \\\\ x &=4 \\end{aligned}\\)\t\n\n            Step 4: Check the solution.\t\n            Substitute \\(x=4\\) into the original equation.\t\n            \\(\\begin{aligned} 3^{2 x-5} &=27 \\\\ 3^{2 \\cdot \\color{red}{4}\\color{black}{-}5} & \\stackrel{?}{=} 27 \\\\ 3^{3} &\\stackrel{?}{=}27 \\\\ 27 &=27 \\end{aligned}\\)\t\n\nTable 10.2.4\n\nExercise \\(\\PageIndex{9}\\)\n\nSolve: \\(3^{3 x-2}=81\\).\n\nAnswer\n\n\\(x=2\\)\n\nExercise \\(\\PageIndex{10}\\)\n\nSolve: \\(7^{x-3}=7\\).\n\nAnswer\n\n\\(x=4\\)\n\nThe steps are summarized below.\n\nHow to Solve an Exponential Function\n\n1. Write both sides of the equation with the same base, if possible.\n\n2. Write a new equation by setting the exponents equal.\n\n3. Solve the equation.\n\n4. Check the solution.\n\nIn the next example, we will use our properties on exponents.\n\nExample \\(\\PageIndex{6}\\)\n\nSolve \\(\\frac{e^{x^{2}}}{e^{3}}=e^{2 x}\\).\n\nSolution:\n\n            \\(\\frac{e^{x^{2}}}{e^{3}}=e^{2 x}\\)\t\n\n            Use the Property of Exponents: \\(\\frac{a^{m}}{a^{n}}=a^{m-n}\\).\t\n            \\(e^{x^{2}-3}=e^{2 x}\\)\t\n\n            Write a new equation by setting the exponents equal.\t\n            \\(x^{2}-3=2 x\\)\t\n\n            Solve the equation.\t\n            \\(x^{2}-2 x-3=0\\)\t\n\n            \\((x-3)(x+1)=0\\)\t\n\n            \\(x=3, x=-1\\)\t\n\n            Check the solutions.\t\n\n[Figure: .]\n\nTable 10.2.5\n\nExercise \\(\\PageIndex{11}\\)\n\nSolve: \\(\\frac{e^{x^{2}}}{e^{x}}=e^{2}\\).\n\nAnswer\n\n\\(x=-1, x=2\\)\n\nExercise \\(\\PageIndex{12}\\)\n\nSolve: \\(\\frac{e^{x^{2}}}{e^{x}}=e^{6}\\).\n\nAnswer\n\n\\(x=-2, x=3\\)\n\nUse Exponential Models in Applications\n\nExponential functions model many situations. If you own a bank account, you have experienced the use of an exponential function. There are two formulas that are used to determine the balance in the account when interest is earned. If a principal, \\(P\\), is invested at an interest rate, \\(r\\), for \\(t\\) years, the new balance, \\(A\\), will depend on how often the interest is compounded. If the interest is compounded \\(n\\) times a year we use the formula \\(A=P\\left(1+\\frac{r}{n}\\right)^{n t}\\). If the interest is compounded continuously, we use the formula \\(A=Pe^{rt}\\). These are the formulas for compound interest.\n\nDefinition \\(\\PageIndex{5}\\)\n\nCompound Interest\n\nFor a principal, \\(P\\), invested at an interest rate, \\(r\\), for \\(t\\) years, the new balance, \\(A\\), is:\n\n\\(\\begin{array}{ll}{A=P\\left(1+\\frac{r}{n}\\right)^{n t}} & {\\text { when compounded } n \\text { times a year. }} \\\\ {A=P e^{r t}} & {\\text { when compounded continuously. }}\\end{array}\\)\n\nAs you work with the Interest formulas, it is often helpful to identify the values of the variables first and then substitute them into the formula.\n\nExample \\(\\PageIndex{7}\\)\n\nA total of $\\(10,000\\) was invested in a college fund for a new grandchild. If the interest rate is \\(5\\)%, how much will be in the account in \\(18\\) years by each method of compounding?\n\n1. compound quarterly\n\n2. compound monthly\n\n3. compound continuously\n\nSolution:\n\nIdentify the values of each variable in the formulas. Remember to express the percent as a decimal.\n\n\\(\\begin{aligned} A &=? \\\\ P &=\\$ 10,000 \\\\ r &=0.05 \\\\ t &=18 \\text { years } \\end{aligned}\\)\n\na. For quarterly compounding, \\(n=4\\). There are \\(4\\) quarters in a year.\n\n\\(A=P\\left(1+\\frac{r}{n}\\right)^{n t}\\)\n\nSubstitute the values in the formula.\n\n\\(A=10,000\\left(1+\\frac{0.05}{4}\\right)^{4 \\cdot 18}\\)\n\nCompute the amount. Be careful to consider the order of operations as you enter the expression into your calculator.\n\n\\(A=\\$ 24,459.20\\)\n\nb. For monthly compounding, \\(n=12\\).There are \\(12\\) months in a year.\n\n\\(A=P\\left(1+\\frac{r}{n}\\right)^{n t}\\)\n\nSubstitute the values in the formula.\n\n\\(A=10,000\\left(1+\\frac{0.05}{12}\\right)^{12 \\cdot 18}\\)\n\nCompute the amount.\n\n\\(A=\\$ 24,550.08\\)\n\nc. For compounding continuously,\n\n\\(A=P e^{r t}\\)\n\nSubstitute the values in the formula.\n\n\\(A=10,000 e^{0.05 \\cdot 18}\\)\n\nCompute the amount.\n\n\\(A=\\$ 24,596.03\\)\n\nExercise \\(\\PageIndex{13}\\)\n\nAngela invested $\\(15,000\\) in a savings account. If the interest rate is \\(4\\)%, how much will be in the account in \\(10\\) years by each method of compounding?\n\n1. compound quarterly\n\n2. compound monthly\n\n3. compound continuously\n\nAnswer\n\n1. $\\(22,332.96\\)\n\n2. $\\(22,362.49\\)\n\n3. $\\(22,377.37\\)\n\nExercise \\(\\PageIndex{14}\\)\n\nAllan invested $\\(10,000\\) in a mutual fund. If the interest rate is \\(5\\)%, how much will be in the account in \\(15\\) years by each method of compounding?\n\n1. compound quarterly\n\n2. compound monthly\n\n3. compound continuously\n\nAnswer\n\n1. $\\(21,071.81\\)\n\n2. $\\(21,137.04\\)\n\n3. $\\(21,170.00\\)\n\nOther topics that are modeled by exponential functions involve growth and decay. Both also use the formula \\(A=Pe^{rt}\\) we used for the growth of money. For growth and decay, generally we use \\(A_{0}\\), as the original amount instead of calling it \\(P\\), the principal. We see that exponential growth has a positive rate of growth and exponential decay has a negative rate of growth.\n\nDefinition \\(\\PageIndex{6}\\)\n\nExponential Growth and Decay\n\nFor an original amount, \\(A_{0}\\), that grows or decays at a rate, \\(r\\), for a certain time, \\(t\\), the final amount, \\(A\\), is:\n\n\\(A=A_{0} e^{r t}\\)\n\nExponential growth is typically seen in the growth of populations of humans or animals or bacteria. Our next example looks at the growth of a virus.\n\nExample \\(\\PageIndex{8}\\)\n\nChris is a researcher at the Center for Disease Control and Prevention and he is trying to understand the behavior of a new and dangerous virus. He starts his experiment with \\(100\\) of the virus that grows at a rate of \\(25\\)% per hour. He will check on the virus in \\(24\\) hours. How many viruses will he find?\n\nSolution:\n\nIdentify the values of each variable in the formulas. Be sure to put the percent in decimal form. Be sure the units match--the rate is per hour and the time is in hours.\n\n\\(\\begin{aligned} A &=? \\\\ A_{0} &=100 \\\\ r &=0.25 / \\text { hour } \\\\ t &=24 \\text { hours } \\end{aligned}\\)\n\nSubstitute the values in the formula: \\(A=A_{0} e^{r t}\\).\n\n\\(A=100 e^{0.25 \\cdot 24}\\)\n\nCompute the amount.\n\n\\(A=40,342.88\\)\n\nRound to the nearest whole virus.\n\n\\(A=40,343\\)\n\nThe researcher will find \\(40,343\\) viruses.\n\nExercise \\(\\PageIndex{15}\\)\n\nAnother researcher at the Center for Disease Control and Prevention, Lisa, is studying the growth of a bacteria. She starts his experiment with \\(50\\) of the bacteria that grows at a rate of \\(15\\)% per hour. He will check on the bacteria every \\(8\\) hours. How many bacteria will he find in \\(8\\) hours?\n\nAnswer\n\nShe will find \\(166\\) bacteria.\n\nExercise \\(\\PageIndex{16}\\)\n\nMaria, a biologist is observing the growth pattern of a virus. She starts with \\(100\\) of the virus that grows at a rate of \\(10\\)% per hour. She will check on the virus in \\(24\\) hours. How many viruses will she find?\n\nAnswer\n\nShe will find \\(1,102\\) viruses.\n\nAccess these online resources for additional instruction and practice with evaluating and graphing exponential functions.\n\nGraphing Exponential Functions\n\nSolving Exponential Equations\n\nApplications of Exponential Functions\n\nContinuously Compound Interest\n\nRadioactive Decay and Exponential Growth\n\nKey Concepts\n\nProperties of the Graph of \\(f(x)=a^{x}\\):\n\n            When \\(a>1\\)\t\n            When \\(0<a<1\\)\t\n\n            1\\)\">Domain\t\n            \\((-\\infty, \\infty)\\)\t\n            Domain\t\n            \\((-\\infty, \\infty)\\)\t\n\n            1\\)\">Range\t\n            \\((0, \\infty)\\)\t\n            Range\t\n            \\((0, \\infty)\\)\t\n\n            1\\)\">\\(x\\)-intercept\t\n            none\t\n            \\(x\\)-intercept\t\n            none\t\n\n            1\\)\">\\(y\\)-intercept\t\n            \\((0,1)\\)\t\n            \\(y\\)-intercept\t\n            \\((0,1)\\)\t\n\n            1\\)\">Contains\t\n            \\((1, a),\\left(-1, \\frac{1}{a}\\right)\\)\t\n            Contains\t\n            \\((1, a),\\left(-1, \\frac{1}{a}\\right)\\)\t\n\n            1\\)\">Asymptote\t\n\n\\(x\\)-axis, the line \\(y=0\\)\n\n            Asymptote\t\n            \\(x\\)-axis, the line \\(y=0\\)\t\n\n            1\\)\">Basic Shape\t\n            increasing\t\n            Basic Shape\t\n            decreasing\t\n\nTable 10.2.2\n\n[Figure: This figure has two parts. On the left, we have a curve that passes through (negative 1, 1 over a) through (0, 1) to (1, a). On the right, where a is noted to be less than 1, we have a curve that passes through (negative 1, 1 over a) through (0, 1) to (1, a).]\n\nFigure 10.2.11\n\nOne-to-One Property of Exponential Equations:\n\n    For \\(a>0\\) and \\(a≠1\\),\n\n\\(A=A_{0} e^{r t}\\)\n\nHow to Solve an Exponential Equation\n\n1. Write both sides of the equation with the same base, if possible.\n\n2. Write a new equation by setting the exponents equal.\n\n3. Solve the equation.\n\n4. Check the solution.\n\nCompound Interest: For a principal, \\(P\\), invested at an interest rate, \\(r\\), for \\(t\\) years, the new balance, \\(A\\), is\n\n    \\(\\begin{array}{ll}{A=P\\left(1+\\frac{r}{n}\\right)^{n t}} & {\\text { when compounded } n \\text { times a year. }} \\\\ {A=P e^{r t}} & {\\text { when compounded continuously. }}\\end{array}\\)\n\nExponential Growth and Decay: For an original amount, \\(A_{0}\\) that grows or decays at a rate, \\(r\\), for a certain time \\(t\\), the final amount, \\(A\\), is \\(A=A_{0}e^{rt}\\).\n\nGlossary\n\nasymptote\n\nA line which a graph of a function approaches closely but never touches.\n\nexponential function\n\nAn exponential function, where \\(a>0\\) and \\(a≠1\\), is a function of the form \\(f(x)=a^{x}\\).\n\nnatural base\n\nThe number \\(e\\) is defined as the value of \\((1+\\frac{1}{n})^{n}\\), as \\(n\\) gets larger and larger. We say, as \\(n\\) increases without bound, \\(e≈2.718281827...\\)\n\nnatural exponential function\n\nThe natural exponential function is an exponential function whose base is \\(e\\): \\(f(x)=e^{x}\\). The domain is \\((−∞,∞)\\) and the range is \\((0,∞)\\).\n\nThis page titled 10.3: Evaluate and Graph Exponential Functions was last modified on Mon, 14 Feb 2022 01:05:31 GMT and is shared under a CC BY  4.0  license and was authored, remixed, and/or curated by OpenStax via source content that was edited to the style and standards of the LibreTexts platform.",
+  "figures": [
+    {
+      "url": "https://math.libretexts.org/@api/deki/files/21227/CNX_IntAlg_Figure_10_02_001_img.jpg?revision=1",
+      "alt": "This figure shows three functions: f of x equals negative 3x plus 4, which is marked as linear; f of x equals 2x squared plus 5x minus 3, which is marked as quadratic; and f of x equals 6 to the x power, which is marked exponential. For the functions marked linear and quadratic, x is the base. For the function marked exponential, x is the exponent for the base 6.",
+      "credit": ""
+    },
+    {
+      "url": "https://math.libretexts.org/@api/deki/files/21229/CNX_IntAlg_Figure_10_02_002_img.jpg?revision=1",
+      "alt": "This table has seven rows and five columns. The first row is header row and reads x, f of x equals 2 to the x power, (x, f of x), g of x equals 3 to the x power, and (x, g of x). The second row reads negative 2, 2 to the negative 2 power equals 1 divided by 2 squared which equals 1 over 4, (negative 2, 1 over 4), 3 to the negative 2 power equals 1 divided by 3 squared which equals 1 over 9, (negative 2, 1 over 9). The third row reads negative 1, 2 to the negative 1 power equals 1 divided by 2 to the first power which equals 1 over 2, (negative 1, 1 over 2), 3 to the negative 1 power equals 1 divided by 3 to the first power which equals 1 over 3, (negative 1, 1 over 3). The fourth row reads 0, 2 to the 0 power equals 1, (0, 1), 3 to the 0 power equals 1, (0, 1). The fifth row reads 1, 2 to the 1 power equals 2, (1, 2), 3 to the 1 power equals 9, (1, 3). The sixth row reads 2, 2 to the 2 power equals 4, (2, 4), 3 to the 2 power equals 9, (2, 9). The seventh row reads 3, 2 to the 3 power equals 8, (3, 8), 3 to the 3 power equals 27, (3, 27).",
+      "credit": ""
+    },
+    {
+      "url": "https://math.libretexts.org/@api/deki/files/21228/CNX_IntAlg_Figure_10_02_003_img.jpg?revision=1",
+      "alt": "This figure shows two curves. The first curve is marked in blue and passes through the points (negative 1, 1 over 2), (0, 1), and (1, 2). The second curve is marked in red and passes through the points (negative 1, 1 over 3), (0, 1), and (1, 3).",
+      "credit": ""
+    },
+    {
+      "url": "https://math.libretexts.org/@api/deki/files/21244/CNX_IntAlg_Figure_10_02_301_img.jpg?revision=1",
+      "alt": "This figure shows a curve that slopes swiftly upward from just above (negative 3, 0) through (0, 1) up to (1, 4).",
+      "credit": ""
+    },
+    {
+      "url": "https://math.libretexts.org/@api/deki/files/21295/CNX_IntAlg_Figure_10_02_302_img.jpg?revision=1",
+      "alt": "This figure shows a curve that slopes swiftly upward from just above (negative 3, 0) through (0, 1) up to (1, 5).",
+      "credit": ""
+    },
+    {
+      "url": "https://math.libretexts.org/@api/deki/files/21243/CNX_IntAlg_Figure_10_02_004_img.jpg?revision=1",
+      "alt": "This figure shows a curve that slopes upward from (negative 1, 1 over a) through (0, 1), up to (1, a).",
+      "credit": ""
+    },
+    {
+      "url": "https://math.libretexts.org/@api/deki/files/21452/CNX_IntAlg_Figure_10_02_005_img.jpg?revision=1",
+      "alt": "This table has seven rows and five columns. The first row is header row and reads x, f of x, equals 1 over 2 to the x power, (x, f of x), g of x equals 1 over 3 to the x power, and (x, g of x). The second row reads negative 2, 1 over 2 to the negative 2 power equals 2 squared which equals 4, (negative 2, 4), 3 to the negative 2 power equals 3 squared which equals 9, (negative 2, 9). The third row reads negative 1, 1 over 2 to the negative 1 power equals 2 to the first power which equals 2, (negative 1, 2), 1 over 3 to the negative 1 power equals 3 to the first power which equals 3, (negative 1, 3). The fourth row reads 0, 1 over 2 to the 0 power equals 1, (0, 1), 1 over 3 to the 0 power equals 1, (0, 1). The fifth row reads 1, 1 over 2 to the 1 power equals 1 over 2, (1, 1 over 2), 1 over 3 to the 1 power equals 1 over 3, (1, 1 over 3). The sixth row reads 2, 1 over 2 to the 2 power equals 1 over 4, (2, 1 over 4), 1 over 3 to the 2 power equals 1 over 9, (2, 1 over 9). The seventh row reads 3, 1 over 2 to the 3 power equals 1 over 8, (3, 1 over 8), 1 over 3 to the 3 power equals 1 over 27, (3, 1 over 27).",
+      "credit": ""
+    },
+    {
+      "url": "https://math.libretexts.org/@api/deki/files/21297/CNX_IntAlg_Figure_10_02_006_img.jpg?revision=1",
+      "alt": "This figure shows two curves. The first curve is marked in blue and passes through the points (negative 1, 2), (0, 1), and (1, 1 over 2). The second curve is marked in red and passes through the points (negative 1, 3), (0, 1), and (1, 1 over 3).",
+      "credit": ""
+    },
+    {
+      "url": "https://math.libretexts.org/@api/deki/files/21385/CNX_IntAlg_Figure_10_02_303_img.jpg?revision=1",
+      "alt": "This figure shows a curve that passes through (negative 1, 4), (0, 1) to a point just above (3, 0).",
+      "credit": ""
+    },
+    {
+      "url": "https://math.libretexts.org/@api/deki/files/21245/CNX_IntAlg_Figure_10_02_304_img.jpg?revision=1",
+      "alt": "This figure shows a curve that passes through (negative 1, 5), (0, 1) to a point just above (3, 0).",
+      "credit": ""
+    },
+    {
+      "url": "https://math.libretexts.org/@api/deki/files/21315/CNX_IntAlg_Figure_10_02_007_img.jpg?revision=1",
+      "alt": "This figure has two parts. On the left, we have a curve that passes through (negative 1, 1 over a) through (0, 1) to (1, a). On the right, where a is noted to be less than 1, we have a curve that passes through (negative 1, 1 over a) through (0, 1) to (1, a).",
+      "credit": ""
+    },
+    {
+      "url": "https://math.libretexts.org/@api/deki/files/21311/CNX_IntAlg_Figure_10_02_008_img.jpg?revision=1",
+      "alt": "This table has seven rows and five columns. The first row is header row and reads x, f of x equals 2 to the x power, (x, f of x), g of x equals 2 to the x plus 1 power, and (x, g of x). The second row reads negative 2, 2 to the negative 2 power equals 1 divided by 2 squared which equals 1 over 4, (negative 2, 1 over 4), 2 to the negative 2 plus 1 power equals 1 divided by 2 to the first power which equals 1 over 2, (negative 2, 1 over 2). The third row reads negative 1, 2 to the negative 1 power equals 1 divided by 2 to the first power which equals 1 over 2, (negative 1, 1 over 2), 2 to the negative 1 plus 1 power equals 2 to the 0 power which equals 1, (negative 1, 1). The fourth row reads 0, 2 to the 0 power equals 1, (0, 1), 2 to the 0 plus 1 power equals 2 to the 1 power which equals 2, (0, 2). The fifth row reads 1, 2 to the 1 power equals 2, (1, 2), 2 to the 1 plus 1 power equals 2 to the second power which equals 4, (1, 4). The sixth row reads 2, 2 to the 2 power equals 4, (2, 4), 2 to the 2 plus 1 power equals 2 to the third power which equals 8, (2, 8). The seventh row reads 3, 2 to the 3 power equals 8, (3, 8), 2 to the 3 plus 1 power equals 2 to the fourth power which equals 16, (3, 16).",
+      "credit": ""
+    },
+    {
+      "url": "https://math.libretexts.org/@api/deki/files/21422/CNX_IntAlg_Figure_10_02_009_img.jpg?revision=1",
+      "alt": "This figure shows two curves. The first curve is marked in blue and passes through the points (negative 1, 1 over 2), (0, 1) and (1, 2). The second curve is marked in red and passes through the points (negative 1, 1), (0, 2) and (1, 4).",
+      "credit": ""
+    },
+    {
+      "url": "https://math.libretexts.org/@api/deki/files/21266/CNX_IntAlg_Figure_10_02_305_img.jpg?revision=1",
+      "alt": "This figure shows the graphs of two functions. The first function f of x equals 2 to the x power is marked in blue and corresponds to a curve that passes through the points (negative 1, 1 over 2), (0, 1) and (1, 2). The second function g of x equals 2 to the x minus 1 power is marked in red and passes through the points (0, 1 over 2), (1, 1), and (2, 2).",
+      "credit": ""
+    },
+    {
+      "url": "https://math.libretexts.org/@api/deki/files/21268/CNX_IntAlg_Figure_10_02_306_img.jpg?revision=1",
+      "alt": "This figure shows the graphs of two functions. The first function f of x equals 3 to the x power is marked in blue and corresponds to a curve that passes through the points (negative 1, 1 over 3), (0, 1) and (1, 3). The second function g of x equals 3 to the x plus 1 power is marked in red and passes through the points (negative 2, 1 over 3), (negative 1, 1), and (0, 3).",
+      "credit": ""
+    },
+    {
+      "url": "https://math.libretexts.org/@api/deki/files/21267/CNX_IntAlg_Figure_10_02_010_img.jpg?revision=1",
+      "alt": "This table has five rows and six columns. The first row is header row and reads x, f of x equals 3 to the x power, (x, f of x), g of x equals 3 to the x power minus 2, and (x, g of x). The second row reads negative 2, 3 to the negative 2 power equals 1 over 9, (negative 2, 1 over 9), 3 to the negative 2 power minus 2 equals 1 over 9 minus 2 which equals negative 17 over 9, (negative 2, negative 17 over 9). The third row reads negative 1, 3 to the negative 1 power equals 1 over 3, (negative 1, 1 over 3), 3 to the negative 1 power minus 2 equals 1 over 3 minus 2 which equals negative 5 over 3, (negative 1, negative 5 over 3). The fourth row reads 0, 3 to the 0 power equals 1, (0, 1), 3 to the 0 power minus 2 equals 1 minus 2 which equals negative 1, (0, negative 1). The fifth row reads 1, 3 to the 1 power equals 3, (1, 3), 3 to the 1 power minus 2 equals 3 minus 2 which equals 1, (1, 1). The sixth row reads 2, 3 squared equals 9, (2, 9), 3 squared minus 2 equals 9 minus 2 which equals 7, (2, 7).",
+      "credit": ""
+    },
+    {
+      "url": "https://math.libretexts.org/@api/deki/files/21454/CNX_IntAlg_Figure_10_02_011_img.jpg?revision=1",
+      "alt": "This figure shows two curves. The first curve is marked in blue and passes through the points (negative 1, 1 over 3), (0, 1), and (1, 3). The second curve is marked in red and passes through the points (negative 1, negative 5 over 3), (0, negative 1), and (1, 1).",
+      "credit": ""
+    },
+    {
+      "url": "https://math.libretexts.org/@api/deki/files/21288/CNX_IntAlg_Figure_10_02_307_img.jpg?revision=1",
+      "alt": "This figure shows the graphs of two functions. The first function f of x equals 3 to the x power is marked in blue and corresponds to a curve that passes through the points (negative 1, 1 over 3), (0, 1) and (1, 3). The second function g of x equals 3 to the x power plus 2 is marked in red and passes through the points (negative 1, 7 over 3), (0, 3) and (1, 5).",
+      "credit": ""
+    },
+    {
+      "url": "https://math.libretexts.org/@api/deki/files/21299/CNX_IntAlg_Figure_10_02_308_img.jpg?revision=1",
+      "alt": "This figure shows the graphs of two functions. The first function f of x equals 4 to the x power is marked in blue and corresponds to a curve that passes through the points (negative 1, 1 over 4), (0, 1) and (1, 4). The second function g of x equals 4 to the x power minus 2 is marked in red and passes through the points (negative 1, negative 7 over 4), (0, negative 1), and (1, 2).",
+      "credit": ""
+    },
+    {
+      "url": "https://math.libretexts.org/@api/deki/files/21371/CNX_IntAlg_Figure_10_02_012.jpg?revision=1",
+      "alt": "This figure shows the graphs of three functions. The first function, f of x equals 2 to the x, is marked in red and passes through the points (negative 1, negative 1 over 2), (0, negative 1), and (2, 1). The second function, f of x equals 3 to the x power, is marked in green and corresponds to a curve that passes through the points (negative 1, 1 over 3), (0, 1) and (1, 3). The third function, f of x equals e to the x power, is marked in blue and corresponds to a curve that passes through the points (negative 1, 1 over e), (0, 1) and (0, e).",
+      "credit": ""
+    },
+    {
+      "url": "https://math.libretexts.org/@api/deki/files/21303/CNX_IntAlg_Figure_10_02_014a_img.jpg?revision=1",
+      "alt": ".",
+      "credit": ""
+    },
+    {
+      "url": "https://math.libretexts.org/@api/deki/files/21315/CNX_IntAlg_Figure_10_02_007_img.jpg?revision=1",
+      "alt": "This figure has two parts. On the left, we have a curve that passes through (negative 1, 1 over a) through (0, 1) to (1, a). On the right, where a is noted to be less than 1, we have a curve that passes through (negative 1, 1 over a) through (0, 1) to (1, a).",
+      "credit": ""
+    }
+  ],
+  "references": [
+    {
+      "text": "Graphing Exponential Functions",
+      "url": "https://openstax.org/l/37Graphexponent"
+    },
+    {
+      "text": "Solving Exponential Equations",
+      "url": "https://openstax.org/l/37Solvelikebase"
+    },
+    {
+      "text": "Applications of Exponential Functions",
+      "url": "https://openstax.org/l/37Exponentapp"
+    },
+    {
+      "text": "Continuously Compound Interest",
+      "url": "https://openstax.org/l/37Compoundint"
+    },
+    {
+      "text": "Radioactive Decay and Exponential Growth",
+      "url": "https://openstax.org/l/37Exponentdecay"
+    },
+    {
+      "text": "10.3: Evaluate and Graph Exponential Functions",
+      "url": "https://math.libretexts.org/Bookshelves/Algebra/Intermediate_Algebra_1e_(OpenStax)/10%3A_Exponential_and_Logarithmic_Functions/10.03%3A_Evaluate_and_Graph_Exponential_Functions"
+    },
+    {
+      "text": "CC BY  4.0",
+      "url": "https://creativecommons.org/licenses/by/4.0"
+    },
+    {
+      "text": "OpenStax",
+      "url": "https://openstax.org/"
+    },
+    {
+      "text": "source content",
+      "url": "https://openstax.org/details/books/intermediate-algebra-2e"
+    }
+  ],
+  "exercises": [
+    {
+      "ordinal": 1,
+      "sourceNumber": "1",
+      "sourceAnchor": "",
+      "kind": "exercise-candidate",
+      "context": "By the end of this section, you will be able to:\n\nBefore you get started, take this readiness quiz.",
+      "original": "1. Simplify: \\(\\left(\\frac{x^{3}}{x^{2}}\\right)\\).\n\n    If you missed this problem, review Example 5.13.",
+      "prompt": "1. Simplify: \\(\\left(\\frac{x^{3}}{x^{2}}\\right)\\).\n\n    If you missed this problem, review Example 5.13.",
+      "sourceAnswers": [],
+      "hasFigure": false,
+      "status": "draft",
+      "answerVerified": false,
+      "translationStatus": "pending",
+      "mappingStatus": "pending"
+    },
+    {
+      "ordinal": 2,
+      "sourceNumber": "2",
+      "sourceAnchor": "",
+      "kind": "exercise-candidate",
+      "context": "By the end of this section, you will be able to:\n\nBefore you get started, take this readiness quiz.",
+      "original": "2. Evaluate: a. \\(2^{0}\\) b. \\(\\left(\\frac{1}{3}\\right)^{0}\\).\n\n    If you missed this problem, review Example 5.14.",
+      "prompt": "2. Evaluate: a. \\(2^{0}\\) b. \\(\\left(\\frac{1}{3}\\right)^{0}\\).\n\n    If you missed this problem, review Example 5.14.",
+      "sourceAnswers": [],
+      "hasFigure": false,
+      "status": "draft",
+      "answerVerified": false,
+      "translationStatus": "pending",
+      "mappingStatus": "pending"
+    },
+    {
+      "ordinal": 3,
+      "sourceNumber": "3",
+      "sourceAnchor": "",
+      "kind": "exercise-candidate",
+      "context": "By the end of this section, you will be able to:\n\nBefore you get started, take this readiness quiz.",
+      "original": "3. Evaluate: a. \\(2^{−1}\\) b. \\(\\left(\\frac{1}{3}\\right)^{-1}\\).\n\n    If you missed this problem, review Example 5.15.",
+      "prompt": "3. Evaluate: a. \\(2^{−1}\\) b. \\(\\left(\\frac{1}{3}\\right)^{-1}\\).\n\n    If you missed this problem, review Example 5.15.",
+      "sourceAnswers": [],
+      "hasFigure": false,
+      "status": "draft",
+      "answerVerified": false,
+      "translationStatus": "pending",
+      "mappingStatus": "pending"
+    },
+    {
+      "ordinal": 4,
+      "sourceNumber": "",
+      "sourceAnchor": "",
+      "kind": "example-or-exercise",
+      "context": "\\(\\begin{aligned} f(x) &=(-4)^{x} \\\\ f\\left(\\frac{1}{2}\\right) &=(-4)^{\\frac{1}{2}} \\\\ f\\left(\\frac{1}{2}\\right) &=\\sqrt{-4} \\text { not a real number } \\end{aligned}\\)\n\nIn fact, \\(f(x)=(−4)^{x}\\) would not be a real number any time \\(x\\) is a fraction with an even denominator. So our definition requires \\(a>0\\).\n\nBy graphing a few exponential functions, we will be able to see their unique properties.",
+      "original": "Example \\(\\PageIndex{1}\\)\n\nOn the same coordinate system graph \\(f(x)=2^{x}\\) and \\(g(x)=3^{x}\\).\n\nSolution:\n\nWe will use point plotting to graph the functions.\n\n[Figure: This table has seven rows and five columns. The first row is header row and reads x, f of x equals 2 to the x power, (x, f of x), g of x equals 3 to the x power, and (x, g of x). The second row reads negative 2, 2 to the negative 2 power equals 1 divided by 2 squared which equals 1 over 4, (negative 2, 1 over 4), 3 to the negative 2 power equals 1 divided by 3 squared which equals 1 over 9, (negative 2, 1 over 9). The third row reads negative 1, 2 to the negative 1 power equals 1 divided by 2 to the first power which equals 1 over 2, (negative 1, 1 over 2), 3 to the negative 1 power equals 1 divided by 3 to the first power which equals 1 over 3, (negative 1, 1 over 3). The fourth row reads 0, 2 to the 0 power equals 1, (0, 1), 3 to the 0 power equals 1, (0, 1). The fifth row reads 1, 2 to the 1 power equals 2, (1, 2), 3 to the 1 power equals 9, (1, 3). The sixth row reads 2, 2 to the 2 power equals 4, (2, 4), 3 to the 2 power equals 9, (2, 9). The seventh row reads 3, 2 to the 3 power equals 8, (3, 8), 3 to the 3 power equals 27, (3, 27).]\n\nFigure 10.2.2\n\n[Figure: This figure shows two curves. The first curve is marked in blue and passes through the points (negative 1, 1 over 2), (0, 1), and (1, 2). The second curve is marked in red and passes through the points (negative 1, 1 over 3), (0, 1), and (1, 3).]\n\nFigure 10.2.3",
+      "prompt": "Example \\(\\PageIndex{1}\\)\n\nOn the same coordinate system graph \\(f(x)=2^{x}\\) and \\(g(x)=3^{x}\\).\n\nSolution:\n\nWe will use point plotting to graph the functions.\n\n[Figure: This table has seven rows and five columns. The first row is header row and reads x, f of x equals 2 to the x power, (x, f of x), g of x equals 3 to the x power, and (x, g of x). The second row reads negative 2, 2 to the negative 2 power equals 1 divided by 2 squared which equals 1 over 4, (negative 2, 1 over 4), 3 to the negative 2 power equals 1 divided by 3 squared which equals 1 over 9, (negative 2, 1 over 9). The third row reads negative 1, 2 to the negative 1 power equals 1 divided by 2 to the first power which equals 1 over 2, (negative 1, 1 over 2), 3 to the negative 1 power equals 1 divided by 3 to the first power which equals 1 over 3, (negative 1, 1 over 3). The fourth row reads 0, 2 to the 0 power equals 1, (0, 1), 3 to the 0 power equals 1, (0, 1). The fifth row reads 1, 2 to the 1 power equals 2, (1, 2), 3 to the 1 power equals 9, (1, 3). The sixth row reads 2, 2 to the 2 power equals 4, (2, 4), 3 to the 2 power equals 9, (2, 9). The seventh row reads 3, 2 to the 3 power equals 8, (3, 8), 3 to the 3 power equals 27, (3, 27).]\n\nFigure 10.2.2\n\n[Figure: This figure shows two curves. The first curve is marked in blue and passes through the points (negative 1, 1 over 2), (0, 1), and (1, 2). The second curve is marked in red and passes through the points (negative 1, 1 over 3), (0, 1), and (1, 3).]\n\nFigure 10.2.3",
+      "sourceAnswers": [],
+      "hasFigure": true,
+      "status": "draft",
+      "answerVerified": false,
+      "translationStatus": "pending",
+      "mappingStatus": "pending"
+    },
+    {
+      "ordinal": 5,
+      "sourceNumber": "",
+      "sourceAnchor": "",
+      "kind": "exercise-candidate",
+      "context": "\\(\\begin{aligned} f(x) &=(-4)^{x} \\\\ f\\left(\\frac{1}{2}\\right) &=(-4)^{\\frac{1}{2}} \\\\ f\\left(\\frac{1}{2}\\right) &=\\sqrt{-4} \\text { not a real number } \\end{aligned}\\)\n\nIn fact, \\(f(x)=(−4)^{x}\\) would not be a real number any time \\(x\\) is a fraction with an even denominator. So our definition requires \\(a>0\\).\n\nBy graphing a few exponential functions, we will be able to see their unique properties.",
+      "original": "Exercise \\(\\PageIndex{1}\\)\n\nGraph: \\(f(x)=4^{x}\\).\n\nAnswer\n\n[Figure: This figure shows a curve that slopes swiftly upward from just above (negative 3, 0) through (0, 1) up to (1, 4).]\n\nFigure 10.2.4",
+      "prompt": "Exercise \\(\\PageIndex{1}\\)\n\nGraph: \\(f(x)=4^{x}\\).",
+      "sourceAnswers": [
+        "[Figure: This figure shows a curve that slopes swiftly upward from just above (negative 3, 0) through (0, 1) up to (1, 4).]\n\nFigure 10.2.4"
+      ],
+      "hasFigure": true,
+      "status": "draft",
+      "answerVerified": false,
+      "translationStatus": "pending",
+      "mappingStatus": "pending"
+    },
+    {
+      "ordinal": 6,
+      "sourceNumber": "",
+      "sourceAnchor": "",
+      "kind": "exercise-candidate",
+      "context": "\\(\\begin{aligned} f(x) &=(-4)^{x} \\\\ f\\left(\\frac{1}{2}\\right) &=(-4)^{\\frac{1}{2}} \\\\ f\\left(\\frac{1}{2}\\right) &=\\sqrt{-4} \\text { not a real number } \\end{aligned}\\)\n\nIn fact, \\(f(x)=(−4)^{x}\\) would not be a real number any time \\(x\\) is a fraction with an even denominator. So our definition requires \\(a>0\\).\n\nBy graphing a few exponential functions, we will be able to see their unique properties.",
+      "original": "Exercise \\(\\PageIndex{2}\\)\n\nGraph: \\(g(x)=5^{x}\\)\n\nAnswer\n\n[Figure: This figure shows a curve that slopes swiftly upward from just above (negative 3, 0) through (0, 1) up to (1, 5).]\n\nFigure 10.2.5",
+      "prompt": "Exercise \\(\\PageIndex{2}\\)\n\nGraph: \\(g(x)=5^{x}\\)",
+      "sourceAnswers": [
+        "[Figure: This figure shows a curve that slopes swiftly upward from just above (negative 3, 0) through (0, 1) up to (1, 5).]\n\nFigure 10.2.5"
+      ],
+      "hasFigure": true,
+      "status": "draft",
+      "answerVerified": false,
+      "translationStatus": "pending",
+      "mappingStatus": "pending"
+    },
+    {
+      "ordinal": 7,
+      "sourceNumber": "",
+      "sourceAnchor": "",
+      "kind": "example-or-exercise",
+      "context": "Properties of the Graph of \\(f(x)=a^{x}\\) when \\(a>1\\)\n\nOur definition of an exponential function \\(f(x)=a^{x}\\) says \\(a>0\\), but the examples and discussion so far has been about functions where \\(a>1\\). What happens when \\(0<a<1\\) The next example will explore this possibility.",
+      "original": "Example \\(\\PageIndex{2}\\)\n\nOn the same coordinate system, graph \\(f(x)=\\left(\\frac{1}{2}\\right)^{x}\\) and \\(g(x)=\\left(\\frac{1}{3}\\right)^{x}\\).\n\nSolution:\n\nWe will use point plotting to graph the functions.\n\n[Figure: This table has seven rows and five columns. The first row is header row and reads x, f of x, equals 1 over 2 to the x power, (x, f of x), g of x equals 1 over 3 to the x power, and (x, g of x). The second row reads negative 2, 1 over 2 to the negative 2 power equals 2 squared which equals 4, (negative 2, 4), 3 to the negative 2 power equals 3 squared which equals 9, (negative 2, 9). The third row reads negative 1, 1 over 2 to the negative 1 power equals 2 to the first power which equals 2, (negative 1, 2), 1 over 3 to the negative 1 power equals 3 to the first power which equals 3, (negative 1, 3). The fourth row reads 0, 1 over 2 to the 0 power equals 1, (0, 1), 1 over 3 to the 0 power equals 1, (0, 1). The fifth row reads 1, 1 over 2 to the 1 power equals 1 over 2, (1, 1 over 2), 1 over 3 to the 1 power equals 1 over 3, (1, 1 over 3). The sixth row reads 2, 1 over 2 to the 2 power equals 1 over 4, (2, 1 over 4), 1 over 3 to the 2 power equals 1 over 9, (2, 1 over 9). The seventh row reads 3, 1 over 2 to the 3 power equals 1 over 8, (3, 1 over 8), 1 over 3 to the 3 power equals 1 over 27, (3, 1 over 27).]\n\nFigure 10.2.7\n\n[Figure: This figure shows two curves. The first curve is marked in blue and passes through the points (negative 1, 2), (0, 1), and (1, 1 over 2). The second curve is marked in red and passes through the points (negative 1, 3), (0, 1), and (1, 1 over 3).]\n\nFigure 10.2.8",
+      "prompt": "Example \\(\\PageIndex{2}\\)\n\nOn the same coordinate system, graph \\(f(x)=\\left(\\frac{1}{2}\\right)^{x}\\) and \\(g(x)=\\left(\\frac{1}{3}\\right)^{x}\\).\n\nSolution:\n\nWe will use point plotting to graph the functions.\n\n[Figure: This table has seven rows and five columns. The first row is header row and reads x, f of x, equals 1 over 2 to the x power, (x, f of x), g of x equals 1 over 3 to the x power, and (x, g of x). The second row reads negative 2, 1 over 2 to the negative 2 power equals 2 squared which equals 4, (negative 2, 4), 3 to the negative 2 power equals 3 squared which equals 9, (negative 2, 9). The third row reads negative 1, 1 over 2 to the negative 1 power equals 2 to the first power which equals 2, (negative 1, 2), 1 over 3 to the negative 1 power equals 3 to the first power which equals 3, (negative 1, 3). The fourth row reads 0, 1 over 2 to the 0 power equals 1, (0, 1), 1 over 3 to the 0 power equals 1, (0, 1). The fifth row reads 1, 1 over 2 to the 1 power equals 1 over 2, (1, 1 over 2), 1 over 3 to the 1 power equals 1 over 3, (1, 1 over 3). The sixth row reads 2, 1 over 2 to the 2 power equals 1 over 4, (2, 1 over 4), 1 over 3 to the 2 power equals 1 over 9, (2, 1 over 9). The seventh row reads 3, 1 over 2 to the 3 power equals 1 over 8, (3, 1 over 8), 1 over 3 to the 3 power equals 1 over 27, (3, 1 over 27).]\n\nFigure 10.2.7\n\n[Figure: This figure shows two curves. The first curve is marked in blue and passes through the points (negative 1, 2), (0, 1), and (1, 1 over 2). The second curve is marked in red and passes through the points (negative 1, 3), (0, 1), and (1, 1 over 3).]\n\nFigure 10.2.8",
+      "sourceAnswers": [],
+      "hasFigure": true,
+      "status": "draft",
+      "answerVerified": false,
+      "translationStatus": "pending",
+      "mappingStatus": "pending"
+    },
+    {
+      "ordinal": 8,
+      "sourceNumber": "",
+      "sourceAnchor": "",
+      "kind": "exercise-candidate",
+      "context": "Properties of the Graph of \\(f(x)=a^{x}\\) when \\(a>1\\)\n\nOur definition of an exponential function \\(f(x)=a^{x}\\) says \\(a>0\\), but the examples and discussion so far has been about functions where \\(a>1\\). What happens when \\(0<a<1\\) The next example will explore this possibility.",
+      "original": "Exercise \\(\\PageIndex{3}\\)\n\nGraph: \\(f(x)=\\left(\\frac{1}{4}\\right)^{x}\\).\n\nAnswer\n\n[Figure: This figure shows a curve that passes through (negative 1, 4), (0, 1) to a point just above (3, 0).]\n\nFigure 10.2.9",
+      "prompt": "Exercise \\(\\PageIndex{3}\\)\n\nGraph: \\(f(x)=\\left(\\frac{1}{4}\\right)^{x}\\).",
+      "sourceAnswers": [
+        "[Figure: This figure shows a curve that passes through (negative 1, 4), (0, 1) to a point just above (3, 0).]\n\nFigure 10.2.9"
+      ],
+      "hasFigure": true,
+      "status": "draft",
+      "answerVerified": false,
+      "translationStatus": "pending",
+      "mappingStatus": "pending"
+    },
+    {
+      "ordinal": 9,
+      "sourceNumber": "",
+      "sourceAnchor": "",
+      "kind": "exercise-candidate",
+      "context": "Properties of the Graph of \\(f(x)=a^{x}\\) when \\(a>1\\)\n\nOur definition of an exponential function \\(f(x)=a^{x}\\) says \\(a>0\\), but the examples and discussion so far has been about functions where \\(a>1\\). What happens when \\(0<a<1\\) The next example will explore this possibility.",
+      "original": "Exercise \\(\\PageIndex{4}\\)\n\nGraph: \\(g(x)=\\left(\\frac{1}{5}\\right)^{x}\\).\n\nAnswer\n\n[Figure: This figure shows a curve that passes through (negative 1, 5), (0, 1) to a point just above (3, 0).]\n\nFigure 10.2.10",
+      "prompt": "Exercise \\(\\PageIndex{4}\\)\n\nGraph: \\(g(x)=\\left(\\frac{1}{5}\\right)^{x}\\).",
+      "sourceAnswers": [
+        "[Figure: This figure shows a curve that passes through (negative 1, 5), (0, 1) to a point just above (3, 0).]\n\nFigure 10.2.10"
+      ],
+      "hasFigure": true,
+      "status": "draft",
+      "answerVerified": false,
+      "translationStatus": "pending",
+      "mappingStatus": "pending"
+    },
+    {
+      "ordinal": 10,
+      "sourceNumber": "",
+      "sourceAnchor": "",
+      "kind": "example-or-exercise",
+      "context": "\\(x\\)-axis, the line \\(y=0\\)\n\nIt is important for us to notice that both of these graphs are one-to-one, as they both pass the horizontal line test. This means the exponential function will have an inverse. We will look at this later.\n\nWhen we graphed quadratic functions, we were able to graph using translation rather than just plotting points. Will that work in graphing exponential functions?",
+      "original": "Example \\(\\PageIndex{3}\\)\n\nOn the same coordinate system graph \\(f(x)=2^{x}\\) and \\(g(x)=2^{x+1}\\).\n\nSolution:\n\nWe will use point plotting to graph the functions.\n\n[Figure: This table has seven rows and five columns. The first row is header row and reads x, f of x equals 2 to the x power, (x, f of x), g of x equals 2 to the x plus 1 power, and (x, g of x). The second row reads negative 2, 2 to the negative 2 power equals 1 divided by 2 squared which equals 1 over 4, (negative 2, 1 over 4), 2 to the negative 2 plus 1 power equals 1 divided by 2 to the first power which equals 1 over 2, (negative 2, 1 over 2). The third row reads negative 1, 2 to the negative 1 power equals 1 divided by 2 to the first power which equals 1 over 2, (negative 1, 1 over 2), 2 to the negative 1 plus 1 power equals 2 to the 0 power which equals 1, (negative 1, 1). The fourth row reads 0, 2 to the 0 power equals 1, (0, 1), 2 to the 0 plus 1 power equals 2 to the 1 power which equals 2, (0, 2). The fifth row reads 1, 2 to the 1 power equals 2, (1, 2), 2 to the 1 plus 1 power equals 2 to the second power which equals 4, (1, 4). The sixth row reads 2, 2 to the 2 power equals 4, (2, 4), 2 to the 2 plus 1 power equals 2 to the third power which equals 8, (2, 8). The seventh row reads 3, 2 to the 3 power equals 8, (3, 8), 2 to the 3 plus 1 power equals 2 to the fourth power which equals 16, (3, 16).]\n\nFigure 10.2.12\n\n[Figure: This figure shows two curves. The first curve is marked in blue and passes through the points (negative 1, 1 over 2), (0, 1) and (1, 2). The second curve is marked in red and passes through the points (negative 1, 1), (0, 2) and (1, 4).]\n\nFigure 10.2.13",
+      "prompt": "Example \\(\\PageIndex{3}\\)\n\nOn the same coordinate system graph \\(f(x)=2^{x}\\) and \\(g(x)=2^{x+1}\\).\n\nSolution:\n\nWe will use point plotting to graph the functions.\n\n[Figure: This table has seven rows and five columns. The first row is header row and reads x, f of x equals 2 to the x power, (x, f of x), g of x equals 2 to the x plus 1 power, and (x, g of x). The second row reads negative 2, 2 to the negative 2 power equals 1 divided by 2 squared which equals 1 over 4, (negative 2, 1 over 4), 2 to the negative 2 plus 1 power equals 1 divided by 2 to the first power which equals 1 over 2, (negative 2, 1 over 2). The third row reads negative 1, 2 to the negative 1 power equals 1 divided by 2 to the first power which equals 1 over 2, (negative 1, 1 over 2), 2 to the negative 1 plus 1 power equals 2 to the 0 power which equals 1, (negative 1, 1). The fourth row reads 0, 2 to the 0 power equals 1, (0, 1), 2 to the 0 plus 1 power equals 2 to the 1 power which equals 2, (0, 2). The fifth row reads 1, 2 to the 1 power equals 2, (1, 2), 2 to the 1 plus 1 power equals 2 to the second power which equals 4, (1, 4). The sixth row reads 2, 2 to the 2 power equals 4, (2, 4), 2 to the 2 plus 1 power equals 2 to the third power which equals 8, (2, 8). The seventh row reads 3, 2 to the 3 power equals 8, (3, 8), 2 to the 3 plus 1 power equals 2 to the fourth power which equals 16, (3, 16).]\n\nFigure 10.2.12\n\n[Figure: This figure shows two curves. The first curve is marked in blue and passes through the points (negative 1, 1 over 2), (0, 1) and (1, 2). The second curve is marked in red and passes through the points (negative 1, 1), (0, 2) and (1, 4).]\n\nFigure 10.2.13",
+      "sourceAnswers": [],
+      "hasFigure": true,
+      "status": "draft",
+      "answerVerified": false,
+      "translationStatus": "pending",
+      "mappingStatus": "pending"
+    },
+    {
+      "ordinal": 11,
+      "sourceNumber": "",
+      "sourceAnchor": "",
+      "kind": "exercise-candidate",
+      "context": "\\(x\\)-axis, the line \\(y=0\\)\n\nIt is important for us to notice that both of these graphs are one-to-one, as they both pass the horizontal line test. This means the exponential function will have an inverse. We will look at this later.\n\nWhen we graphed quadratic functions, we were able to graph using translation rather than just plotting points. Will that work in graphing exponential functions?",
+      "original": "Exercise \\(\\PageIndex{5}\\)\n\nOn the same coordinate system, graph: \\(f(x)=2^{x}\\) and \\(g(x)=2^{x-1}\\).\n\nAnswer\n\n[Figure: This figure shows the graphs of two functions. The first function f of x equals 2 to the x power is marked in blue and corresponds to a curve that passes through the points (negative 1, 1 over 2), (0, 1) and (1, 2). The second function g of x equals 2 to the x minus 1 power is marked in red and passes through the points (0, 1 over 2), (1, 1), and (2, 2).]\n\nFigure 10.2.14",
+      "prompt": "Exercise \\(\\PageIndex{5}\\)\n\nOn the same coordinate system, graph: \\(f(x)=2^{x}\\) and \\(g(x)=2^{x-1}\\).",
+      "sourceAnswers": [
+        "[Figure: This figure shows the graphs of two functions. The first function f of x equals 2 to the x power is marked in blue and corresponds to a curve that passes through the points (negative 1, 1 over 2), (0, 1) and (1, 2). The second function g of x equals 2 to the x minus 1 power is marked in red and passes through the points (0, 1 over 2), (1, 1), and (2, 2).]\n\nFigure 10.2.14"
+      ],
+      "hasFigure": true,
+      "status": "draft",
+      "answerVerified": false,
+      "translationStatus": "pending",
+      "mappingStatus": "pending"
+    },
+    {
+      "ordinal": 12,
+      "sourceNumber": "",
+      "sourceAnchor": "",
+      "kind": "exercise-candidate",
+      "context": "\\(x\\)-axis, the line \\(y=0\\)\n\nIt is important for us to notice that both of these graphs are one-to-one, as they both pass the horizontal line test. This means the exponential function will have an inverse. We will look at this later.\n\nWhen we graphed quadratic functions, we were able to graph using translation rather than just plotting points. Will that work in graphing exponential functions?",
+      "original": "Exercise \\(\\PageIndex{6}\\)\n\nOn the same coordinate system, graph \\(f(x)=3^{x}\\) and \\(g(x)=3^{x+1}\\).\n\nAnswer\n\n[Figure: This figure shows the graphs of two functions. The first function f of x equals 3 to the x power is marked in blue and corresponds to a curve that passes through the points (negative 1, 1 over 3), (0, 1) and (1, 3). The second function g of x equals 3 to the x plus 1 power is marked in red and passes through the points (negative 2, 1 over 3), (negative 1, 1), and (0, 3).]\n\nFigure 10.2.15",
+      "prompt": "Exercise \\(\\PageIndex{6}\\)\n\nOn the same coordinate system, graph \\(f(x)=3^{x}\\) and \\(g(x)=3^{x+1}\\).",
+      "sourceAnswers": [
+        "[Figure: This figure shows the graphs of two functions. The first function f of x equals 3 to the x power is marked in blue and corresponds to a curve that passes through the points (negative 1, 1 over 3), (0, 1) and (1, 3). The second function g of x equals 3 to the x plus 1 power is marked in red and passes through the points (negative 2, 1 over 3), (negative 1, 1), and (0, 3).]\n\nFigure 10.2.15"
+      ],
+      "hasFigure": true,
+      "status": "draft",
+      "answerVerified": false,
+      "translationStatus": "pending",
+      "mappingStatus": "pending"
+    },
+    {
+      "ordinal": 13,
+      "sourceNumber": "",
+      "sourceAnchor": "",
+      "kind": "example-or-exercise",
+      "context": "When we graphed quadratic functions, we were able to graph using translation rather than just plotting points. Will that work in graphing exponential functions?\n\nLooking at the graphs of the functions \\(f(x)=2^{x}\\) and \\(g(x)=2^{x+1}\\) in the last example, we see that adding one in the exponent caused a horizontal shift of one unit to the left. Recognizing this pattern allows us to graph other functions with the same pattern by translation.\n\nLet’s now consider another situation that might be graphed more easily by translation, once we recognize the pattern.",
+      "original": "Example \\(\\PageIndex{4}\\)\n\nOn the same coordinate system graph \\(f(x)=3^{x}\\) and \\(g(x)=3^{x}-2\\).\n\nSolution:\n\nWe will use point plotting to graph the functions.\n\n[Figure: This table has five rows and six columns. The first row is header row and reads x, f of x equals 3 to the x power, (x, f of x), g of x equals 3 to the x power minus 2, and (x, g of x). The second row reads negative 2, 3 to the negative 2 power equals 1 over 9, (negative 2, 1 over 9), 3 to the negative 2 power minus 2 equals 1 over 9 minus 2 which equals negative 17 over 9, (negative 2, negative 17 over 9). The third row reads negative 1, 3 to the negative 1 power equals 1 over 3, (negative 1, 1 over 3), 3 to the negative 1 power minus 2 equals 1 over 3 minus 2 which equals negative 5 over 3, (negative 1, negative 5 over 3). The fourth row reads 0, 3 to the 0 power equals 1, (0, 1), 3 to the 0 power minus 2 equals 1 minus 2 which equals negative 1, (0, negative 1). The fifth row reads 1, 3 to the 1 power equals 3, (1, 3), 3 to the 1 power minus 2 equals 3 minus 2 which equals 1, (1, 1). The sixth row reads 2, 3 squared equals 9, (2, 9), 3 squared minus 2 equals 9 minus 2 which equals 7, (2, 7).]\n\nFigure 10.2.16\n\n[Figure: This figure shows two curves. The first curve is marked in blue and passes through the points (negative 1, 1 over 3), (0, 1), and (1, 3). The second curve is marked in red and passes through the points (negative 1, negative 5 over 3), (0, negative 1), and (1, 1).]\n\nFigure 10.2.17",
+      "prompt": "Example \\(\\PageIndex{4}\\)\n\nOn the same coordinate system graph \\(f(x)=3^{x}\\) and \\(g(x)=3^{x}-2\\).\n\nSolution:\n\nWe will use point plotting to graph the functions.\n\n[Figure: This table has five rows and six columns. The first row is header row and reads x, f of x equals 3 to the x power, (x, f of x), g of x equals 3 to the x power minus 2, and (x, g of x). The second row reads negative 2, 3 to the negative 2 power equals 1 over 9, (negative 2, 1 over 9), 3 to the negative 2 power minus 2 equals 1 over 9 minus 2 which equals negative 17 over 9, (negative 2, negative 17 over 9). The third row reads negative 1, 3 to the negative 1 power equals 1 over 3, (negative 1, 1 over 3), 3 to the negative 1 power minus 2 equals 1 over 3 minus 2 which equals negative 5 over 3, (negative 1, negative 5 over 3). The fourth row reads 0, 3 to the 0 power equals 1, (0, 1), 3 to the 0 power minus 2 equals 1 minus 2 which equals negative 1, (0, negative 1). The fifth row reads 1, 3 to the 1 power equals 3, (1, 3), 3 to the 1 power minus 2 equals 3 minus 2 which equals 1, (1, 1). The sixth row reads 2, 3 squared equals 9, (2, 9), 3 squared minus 2 equals 9 minus 2 which equals 7, (2, 7).]\n\nFigure 10.2.16\n\n[Figure: This figure shows two curves. The first curve is marked in blue and passes through the points (negative 1, 1 over 3), (0, 1), and (1, 3). The second curve is marked in red and passes through the points (negative 1, negative 5 over 3), (0, negative 1), and (1, 1).]\n\nFigure 10.2.17",
+      "sourceAnswers": [],
+      "hasFigure": true,
+      "status": "draft",
+      "answerVerified": false,
+      "translationStatus": "pending",
+      "mappingStatus": "pending"
+    },
+    {
+      "ordinal": 14,
+      "sourceNumber": "",
+      "sourceAnchor": "",
+      "kind": "exercise-candidate",
+      "context": "When we graphed quadratic functions, we were able to graph using translation rather than just plotting points. Will that work in graphing exponential functions?\n\nLooking at the graphs of the functions \\(f(x)=2^{x}\\) and \\(g(x)=2^{x+1}\\) in the last example, we see that adding one in the exponent caused a horizontal shift of one unit to the left. Recognizing this pattern allows us to graph other functions with the same pattern by translation.\n\nLet’s now consider another situation that might be graphed more easily by translation, once we recognize the pattern.",
+      "original": "Exercise \\(\\PageIndex{7}\\)\n\nOn the same coordinate system, graph \\(f(x)=3^{x}\\) and \\(g(x)=3^{x}+2\\).\n\nAnswer\n\n[Figure: This figure shows the graphs of two functions. The first function f of x equals 3 to the x power is marked in blue and corresponds to a curve that passes through the points (negative 1, 1 over 3), (0, 1) and (1, 3). The second function g of x equals 3 to the x power plus 2 is marked in red and passes through the points (negative 1, 7 over 3), (0, 3) and (1, 5).]\n\nFigure 10.2.18",
+      "prompt": "Exercise \\(\\PageIndex{7}\\)\n\nOn the same coordinate system, graph \\(f(x)=3^{x}\\) and \\(g(x)=3^{x}+2\\).",
+      "sourceAnswers": [
+        "[Figure: This figure shows the graphs of two functions. The first function f of x equals 3 to the x power is marked in blue and corresponds to a curve that passes through the points (negative 1, 1 over 3), (0, 1) and (1, 3). The second function g of x equals 3 to the x power plus 2 is marked in red and passes through the points (negative 1, 7 over 3), (0, 3) and (1, 5).]\n\nFigure 10.2.18"
+      ],
+      "hasFigure": true,
+      "status": "draft",
+      "answerVerified": false,
+      "translationStatus": "pending",
+      "mappingStatus": "pending"
+    },
+    {
+      "ordinal": 15,
+      "sourceNumber": "",
+      "sourceAnchor": "",
+      "kind": "exercise-candidate",
+      "context": "When we graphed quadratic functions, we were able to graph using translation rather than just plotting points. Will that work in graphing exponential functions?\n\nLooking at the graphs of the functions \\(f(x)=2^{x}\\) and \\(g(x)=2^{x+1}\\) in the last example, we see that adding one in the exponent caused a horizontal shift of one unit to the left. Recognizing this pattern allows us to graph other functions with the same pattern by translation.\n\nLet’s now consider another situation that might be graphed more easily by translation, once we recognize the pattern.",
+      "original": "Exercise \\(\\PageIndex{8}\\)\n\nOn the same coordinate system, graph \\(f(x)=4^{x}\\) and \\(g(x)=4^{x}-2\\).\n\nAnswer\n\n[Figure: This figure shows the graphs of two functions. The first function f of x equals 4 to the x power is marked in blue and corresponds to a curve that passes through the points (negative 1, 1 over 4), (0, 1) and (1, 4). The second function g of x equals 4 to the x power minus 2 is marked in red and passes through the points (negative 1, negative 7 over 4), (0, negative 1), and (1, 2).]\n\nFigure 10.2.19",
+      "prompt": "Exercise \\(\\PageIndex{8}\\)\n\nOn the same coordinate system, graph \\(f(x)=4^{x}\\) and \\(g(x)=4^{x}-2\\).",
+      "sourceAnswers": [
+        "[Figure: This figure shows the graphs of two functions. The first function f of x equals 4 to the x power is marked in blue and corresponds to a curve that passes through the points (negative 1, 1 over 4), (0, 1) and (1, 4). The second function g of x equals 4 to the x power minus 2 is marked in red and passes through the points (negative 1, negative 7 over 4), (0, negative 1), and (1, 2).]\n\nFigure 10.2.19"
+      ],
+      "hasFigure": true,
+      "status": "draft",
+      "answerVerified": false,
+      "translationStatus": "pending",
+      "mappingStatus": "pending"
+    },
+    {
+      "ordinal": 16,
+      "sourceNumber": "",
+      "sourceAnchor": "",
+      "kind": "example-or-exercise",
+      "context": "For \\(a>0\\) and \\(a≠1\\),\n\nIf \\(a^{x}=a^{y}\\),then \\(x=y\\).\n\nTo use this property, we must be certain that both sides of the equation are written with the same base.",
+      "original": "Example \\(\\PageIndex{5}\\) How to Solve an Exponential Equation\n\nSolve: \\(3^{2 x-5}=27\\).\n\nSolution:\n\n            Step 1: Write both sides of the equation with the same base.\t\n            Since the left side has base \\(3\\), we write the right side with base \\(3\\). \\(27=3^{3}\\)\t\n            \\(3^{2 x-5}=27\\)\n\n            \\(3^{2 x-5}=3^{3}\\)\t\n\n            Step 2: Write a new equation by setting the exponents equal.\t\n            Since the bases are the same, the exponents must be equal.\t\n            \\(2x-5=3\\)\t\n\n            Step 3: Solve the equation.\t\n\nAdd \\(5\\) to each side.\n\nDivide by \\(2\\).\n\n            \\(\\begin{aligned} 2 x &=8 \\\\ x &=4 \\end{aligned}\\)\t\n\n            Step 4: Check the solution.\t\n            Substitute \\(x=4\\) into the original equation.\t\n            \\(\\begin{aligned} 3^{2 x-5} &=27 \\\\ 3^{2 \\cdot \\color{red}{4}\\color{black}{-}5} & \\stackrel{?}{=} 27 \\\\ 3^{3} &\\stackrel{?}{=}27 \\\\ 27 &=27 \\end{aligned}\\)\t\n\nTable 10.2.4",
+      "prompt": "Example \\(\\PageIndex{5}\\) How to Solve an Exponential Equation\n\nSolve: \\(3^{2 x-5}=27\\).\n\nSolution:\n\n            Step 1: Write both sides of the equation with the same base.\t\n            Since the left side has base \\(3\\), we write the right side with base \\(3\\). \\(27=3^{3}\\)\t\n            \\(3^{2 x-5}=27\\)\n\n            \\(3^{2 x-5}=3^{3}\\)\t\n\n            Step 2: Write a new equation by setting the exponents equal.\t\n            Since the bases are the same, the exponents must be equal.\t\n            \\(2x-5=3\\)\t\n\n            Step 3: Solve the equation.\t\n\nAdd \\(5\\) to each side.\n\nDivide by \\(2\\).\n\n            \\(\\begin{aligned} 2 x &=8 \\\\ x &=4 \\end{aligned}\\)\t\n\n            Step 4: Check the solution.\t\n            Substitute \\(x=4\\) into the original equation.\t\n            \\(\\begin{aligned} 3^{2 x-5} &=27 \\\\ 3^{2 \\cdot \\color{red}{4}\\color{black}{-}5} & \\stackrel{?}{=} 27 \\\\ 3^{3} &\\stackrel{?}{=}27 \\\\ 27 &=27 \\end{aligned}\\)\t\n\nTable 10.2.4",
+      "sourceAnswers": [],
+      "hasFigure": false,
+      "status": "draft",
+      "answerVerified": false,
+      "translationStatus": "pending",
+      "mappingStatus": "pending"
+    },
+    {
+      "ordinal": 17,
+      "sourceNumber": "",
+      "sourceAnchor": "",
+      "kind": "exercise-candidate",
+      "context": "For \\(a>0\\) and \\(a≠1\\),\n\nIf \\(a^{x}=a^{y}\\),then \\(x=y\\).\n\nTo use this property, we must be certain that both sides of the equation are written with the same base.",
+      "original": "Exercise \\(\\PageIndex{9}\\)\n\nSolve: \\(3^{3 x-2}=81\\).\n\nAnswer\n\n\\(x=2\\)",
+      "prompt": "Exercise \\(\\PageIndex{9}\\)\n\nSolve: \\(3^{3 x-2}=81\\).",
+      "sourceAnswers": [
+        "\\(x=2\\)"
+      ],
+      "hasFigure": false,
+      "status": "draft",
+      "answerVerified": false,
+      "translationStatus": "pending",
+      "mappingStatus": "pending"
+    },
+    {
+      "ordinal": 18,
+      "sourceNumber": "",
+      "sourceAnchor": "",
+      "kind": "exercise-candidate",
+      "context": "For \\(a>0\\) and \\(a≠1\\),\n\nIf \\(a^{x}=a^{y}\\),then \\(x=y\\).\n\nTo use this property, we must be certain that both sides of the equation are written with the same base.",
+      "original": "Exercise \\(\\PageIndex{10}\\)\n\nSolve: \\(7^{x-3}=7\\).\n\nAnswer\n\n\\(x=4\\)",
+      "prompt": "Exercise \\(\\PageIndex{10}\\)\n\nSolve: \\(7^{x-3}=7\\).",
+      "sourceAnswers": [
+        "\\(x=4\\)"
+      ],
+      "hasFigure": false,
+      "status": "draft",
+      "answerVerified": false,
+      "translationStatus": "pending",
+      "mappingStatus": "pending"
+    },
+    {
+      "ordinal": 19,
+      "sourceNumber": "1",
+      "sourceAnchor": "",
+      "kind": "exercise-candidate",
+      "context": "How to Solve an Exponential Function",
+      "original": "1. Write both sides of the equation with the same base, if possible.",
+      "prompt": "1. Write both sides of the equation with the same base, if possible.",
+      "sourceAnswers": [],
+      "hasFigure": false,
+      "status": "draft",
+      "answerVerified": false,
+      "translationStatus": "pending",
+      "mappingStatus": "pending"
+    },
+    {
+      "ordinal": 20,
+      "sourceNumber": "2",
+      "sourceAnchor": "",
+      "kind": "exercise-candidate",
+      "context": "How to Solve an Exponential Function",
+      "original": "2. Write a new equation by setting the exponents equal.",
+      "prompt": "2. Write a new equation by setting the exponents equal.",
+      "sourceAnswers": [],
+      "hasFigure": false,
+      "status": "draft",
+      "answerVerified": false,
+      "translationStatus": "pending",
+      "mappingStatus": "pending"
+    },
+    {
+      "ordinal": 21,
+      "sourceNumber": "3",
+      "sourceAnchor": "",
+      "kind": "exercise-candidate",
+      "context": "How to Solve an Exponential Function",
+      "original": "3. Solve the equation.",
+      "prompt": "3. Solve the equation.",
+      "sourceAnswers": [],
+      "hasFigure": false,
+      "status": "draft",
+      "answerVerified": false,
+      "translationStatus": "pending",
+      "mappingStatus": "pending"
+    },
+    {
+      "ordinal": 22,
+      "sourceNumber": "4",
+      "sourceAnchor": "",
+      "kind": "exercise-candidate",
+      "context": "How to Solve an Exponential Function",
+      "original": "4. Check the solution.",
+      "prompt": "4. Check the solution.",
+      "sourceAnswers": [],
+      "hasFigure": false,
+      "status": "draft",
+      "answerVerified": false,
+      "translationStatus": "pending",
+      "mappingStatus": "pending"
+    },
+    {
+      "ordinal": 23,
+      "sourceNumber": "",
+      "sourceAnchor": "",
+      "kind": "example-or-exercise",
+      "context": "How to Solve an Exponential Function\n\nIn the next example, we will use our properties on exponents.",
+      "original": "Example \\(\\PageIndex{6}\\)\n\nSolve \\(\\frac{e^{x^{2}}}{e^{3}}=e^{2 x}\\).\n\nSolution:\n\n            \\(\\frac{e^{x^{2}}}{e^{3}}=e^{2 x}\\)\t\n\n            Use the Property of Exponents: \\(\\frac{a^{m}}{a^{n}}=a^{m-n}\\).\t\n            \\(e^{x^{2}-3}=e^{2 x}\\)\t\n\n            Write a new equation by setting the exponents equal.\t\n            \\(x^{2}-3=2 x\\)\t\n\n            Solve the equation.\t\n            \\(x^{2}-2 x-3=0\\)\t\n\n            \\((x-3)(x+1)=0\\)\t\n\n            \\(x=3, x=-1\\)\t\n\n            Check the solutions.\t\n\n[Figure: .]\n\nTable 10.2.5",
+      "prompt": "Example \\(\\PageIndex{6}\\)\n\nSolve \\(\\frac{e^{x^{2}}}{e^{3}}=e^{2 x}\\).\n\nSolution:\n\n            \\(\\frac{e^{x^{2}}}{e^{3}}=e^{2 x}\\)\t\n\n            Use the Property of Exponents: \\(\\frac{a^{m}}{a^{n}}=a^{m-n}\\).\t\n            \\(e^{x^{2}-3}=e^{2 x}\\)\t\n\n            Write a new equation by setting the exponents equal.\t\n            \\(x^{2}-3=2 x\\)\t\n\n            Solve the equation.\t\n            \\(x^{2}-2 x-3=0\\)\t\n\n            \\((x-3)(x+1)=0\\)\t\n\n            \\(x=3, x=-1\\)\t\n\n            Check the solutions.\t\n\n[Figure: .]\n\nTable 10.2.5",
+      "sourceAnswers": [],
+      "hasFigure": true,
+      "status": "draft",
+      "answerVerified": false,
+      "translationStatus": "pending",
+      "mappingStatus": "pending"
+    },
+    {
+      "ordinal": 24,
+      "sourceNumber": "",
+      "sourceAnchor": "",
+      "kind": "exercise-candidate",
+      "context": "How to Solve an Exponential Function\n\nIn the next example, we will use our properties on exponents.",
+      "original": "Exercise \\(\\PageIndex{11}\\)\n\nSolve: \\(\\frac{e^{x^{2}}}{e^{x}}=e^{2}\\).\n\nAnswer\n\n\\(x=-1, x=2\\)",
+      "prompt": "Exercise \\(\\PageIndex{11}\\)\n\nSolve: \\(\\frac{e^{x^{2}}}{e^{x}}=e^{2}\\).",
+      "sourceAnswers": [
+        "\\(x=-1, x=2\\)"
+      ],
+      "hasFigure": false,
+      "status": "draft",
+      "answerVerified": false,
+      "translationStatus": "pending",
+      "mappingStatus": "pending"
+    },
+    {
+      "ordinal": 25,
+      "sourceNumber": "",
+      "sourceAnchor": "",
+      "kind": "exercise-candidate",
+      "context": "How to Solve an Exponential Function\n\nIn the next example, we will use our properties on exponents.",
+      "original": "Exercise \\(\\PageIndex{12}\\)\n\nSolve: \\(\\frac{e^{x^{2}}}{e^{x}}=e^{6}\\).\n\nAnswer\n\n\\(x=-2, x=3\\)",
+      "prompt": "Exercise \\(\\PageIndex{12}\\)\n\nSolve: \\(\\frac{e^{x^{2}}}{e^{x}}=e^{6}\\).",
+      "sourceAnswers": [
+        "\\(x=-2, x=3\\)"
+      ],
+      "hasFigure": false,
+      "status": "draft",
+      "answerVerified": false,
+      "translationStatus": "pending",
+      "mappingStatus": "pending"
+    },
+    {
+      "ordinal": 26,
+      "sourceNumber": "",
+      "sourceAnchor": "",
+      "kind": "example-or-exercise",
+      "context": "For a principal, \\(P\\), invested at an interest rate, \\(r\\), for \\(t\\) years, the new balance, \\(A\\), is:\n\n\\(\\begin{array}{ll}{A=P\\left(1+\\frac{r}{n}\\right)^{n t}} & {\\text { when compounded } n \\text { times a year. }} \\\\ {A=P e^{r t}} & {\\text { when compounded continuously. }}\\end{array}\\)\n\nAs you work with the Interest formulas, it is often helpful to identify the values of the variables first and then substitute them into the formula.",
+      "original": "Example \\(\\PageIndex{7}\\)\n\nA total of $\\(10,000\\) was invested in a college fund for a new grandchild. If the interest rate is \\(5\\)%, how much will be in the account in \\(18\\) years by each method of compounding?\n\n1. compound quarterly\n\n2. compound monthly\n\n3. compound continuously\n\nSolution:\n\nIdentify the values of each variable in the formulas. Remember to express the percent as a decimal.\n\n\\(\\begin{aligned} A &=? \\\\ P &=\\$ 10,000 \\\\ r &=0.05 \\\\ t &=18 \\text { years } \\end{aligned}\\)\n\na. For quarterly compounding, \\(n=4\\). There are \\(4\\) quarters in a year.\n\n\\(A=P\\left(1+\\frac{r}{n}\\right)^{n t}\\)\n\nSubstitute the values in the formula.\n\n\\(A=10,000\\left(1+\\frac{0.05}{4}\\right)^{4 \\cdot 18}\\)\n\nCompute the amount. Be careful to consider the order of operations as you enter the expression into your calculator.\n\n\\(A=\\$ 24,459.20\\)\n\nb. For monthly compounding, \\(n=12\\).There are \\(12\\) months in a year.\n\n\\(A=P\\left(1+\\frac{r}{n}\\right)^{n t}\\)\n\nSubstitute the values in the formula.\n\n\\(A=10,000\\left(1+\\frac{0.05}{12}\\right)^{12 \\cdot 18}\\)\n\nCompute the amount.\n\n\\(A=\\$ 24,550.08\\)\n\nc. For compounding continuously,\n\n\\(A=P e^{r t}\\)\n\nSubstitute the values in the formula.\n\n\\(A=10,000 e^{0.05 \\cdot 18}\\)\n\nCompute the amount.\n\n\\(A=\\$ 24,596.03\\)",
+      "prompt": "Example \\(\\PageIndex{7}\\)\n\nA total of $\\(10,000\\) was invested in a college fund for a new grandchild. If the interest rate is \\(5\\)%, how much will be in the account in \\(18\\) years by each method of compounding?\n\n1. compound quarterly\n\n2. compound monthly\n\n3. compound continuously\n\nSolution:\n\nIdentify the values of each variable in the formulas. Remember to express the percent as a decimal.\n\n\\(\\begin{aligned} A &=? \\\\ P &=\\$ 10,000 \\\\ r &=0.05 \\\\ t &=18 \\text { years } \\end{aligned}\\)\n\na. For quarterly compounding, \\(n=4\\). There are \\(4\\) quarters in a year.\n\n\\(A=P\\left(1+\\frac{r}{n}\\right)^{n t}\\)\n\nSubstitute the values in the formula.\n\n\\(A=10,000\\left(1+\\frac{0.05}{4}\\right)^{4 \\cdot 18}\\)\n\nCompute the amount. Be careful to consider the order of operations as you enter the expression into your calculator.\n\n\\(A=\\$ 24,459.20\\)\n\nb. For monthly compounding, \\(n=12\\).There are \\(12\\) months in a year.\n\n\\(A=P\\left(1+\\frac{r}{n}\\right)^{n t}\\)\n\nSubstitute the values in the formula.\n\n\\(A=10,000\\left(1+\\frac{0.05}{12}\\right)^{12 \\cdot 18}\\)\n\nCompute the amount.\n\n\\(A=\\$ 24,550.08\\)\n\nc. For compounding continuously,\n\n\\(A=P e^{r t}\\)\n\nSubstitute the values in the formula.\n\n\\(A=10,000 e^{0.05 \\cdot 18}\\)\n\nCompute the amount.\n\n\\(A=\\$ 24,596.03\\)",
+      "sourceAnswers": [],
+      "hasFigure": false,
+      "status": "draft",
+      "answerVerified": false,
+      "translationStatus": "pending",
+      "mappingStatus": "pending"
+    },
+    {
+      "ordinal": 27,
+      "sourceNumber": "",
+      "sourceAnchor": "",
+      "kind": "exercise-candidate",
+      "context": "For a principal, \\(P\\), invested at an interest rate, \\(r\\), for \\(t\\) years, the new balance, \\(A\\), is:\n\n\\(\\begin{array}{ll}{A=P\\left(1+\\frac{r}{n}\\right)^{n t}} & {\\text { when compounded } n \\text { times a year. }} \\\\ {A=P e^{r t}} & {\\text { when compounded continuously. }}\\end{array}\\)\n\nAs you work with the Interest formulas, it is often helpful to identify the values of the variables first and then substitute them into the formula.",
+      "original": "Exercise \\(\\PageIndex{13}\\)\n\nAngela invested $\\(15,000\\) in a savings account. If the interest rate is \\(4\\)%, how much will be in the account in \\(10\\) years by each method of compounding?\n\n1. compound quarterly\n\n2. compound monthly\n\n3. compound continuously\n\nAnswer\n\n1. $\\(22,332.96\\)\n\n2. $\\(22,362.49\\)\n\n3. $\\(22,377.37\\)",
+      "prompt": "Exercise \\(\\PageIndex{13}\\)\n\nAngela invested $\\(15,000\\) in a savings account. If the interest rate is \\(4\\)%, how much will be in the account in \\(10\\) years by each method of compounding?\n\n1. compound quarterly\n\n2. compound monthly\n\n3. compound continuously",
+      "sourceAnswers": [
+        "1. $\\(22,332.96\\)\n\n2. $\\(22,362.49\\)\n\n3. $\\(22,377.37\\)"
+      ],
+      "hasFigure": false,
+      "status": "draft",
+      "answerVerified": false,
+      "translationStatus": "pending",
+      "mappingStatus": "pending"
+    },
+    {
+      "ordinal": 28,
+      "sourceNumber": "",
+      "sourceAnchor": "",
+      "kind": "exercise-candidate",
+      "context": "For a principal, \\(P\\), invested at an interest rate, \\(r\\), for \\(t\\) years, the new balance, \\(A\\), is:\n\n\\(\\begin{array}{ll}{A=P\\left(1+\\frac{r}{n}\\right)^{n t}} & {\\text { when compounded } n \\text { times a year. }} \\\\ {A=P e^{r t}} & {\\text { when compounded continuously. }}\\end{array}\\)\n\nAs you work with the Interest formulas, it is often helpful to identify the values of the variables first and then substitute them into the formula.",
+      "original": "Exercise \\(\\PageIndex{14}\\)\n\nAllan invested $\\(10,000\\) in a mutual fund. If the interest rate is \\(5\\)%, how much will be in the account in \\(15\\) years by each method of compounding?\n\n1. compound quarterly\n\n2. compound monthly\n\n3. compound continuously\n\nAnswer\n\n1. $\\(21,071.81\\)\n\n2. $\\(21,137.04\\)\n\n3. $\\(21,170.00\\)",
+      "prompt": "Exercise \\(\\PageIndex{14}\\)\n\nAllan invested $\\(10,000\\) in a mutual fund. If the interest rate is \\(5\\)%, how much will be in the account in \\(15\\) years by each method of compounding?\n\n1. compound quarterly\n\n2. compound monthly\n\n3. compound continuously",
+      "sourceAnswers": [
+        "1. $\\(21,071.81\\)\n\n2. $\\(21,137.04\\)\n\n3. $\\(21,170.00\\)"
+      ],
+      "hasFigure": false,
+      "status": "draft",
+      "answerVerified": false,
+      "translationStatus": "pending",
+      "mappingStatus": "pending"
+    },
+    {
+      "ordinal": 29,
+      "sourceNumber": "",
+      "sourceAnchor": "",
+      "kind": "example-or-exercise",
+      "context": "For an original amount, \\(A_{0}\\), that grows or decays at a rate, \\(r\\), for a certain time, \\(t\\), the final amount, \\(A\\), is:\n\n\\(A=A_{0} e^{r t}\\)\n\nExponential growth is typically seen in the growth of populations of humans or animals or bacteria. Our next example looks at the growth of a virus.",
+      "original": "Example \\(\\PageIndex{8}\\)\n\nChris is a researcher at the Center for Disease Control and Prevention and he is trying to understand the behavior of a new and dangerous virus. He starts his experiment with \\(100\\) of the virus that grows at a rate of \\(25\\)% per hour. He will check on the virus in \\(24\\) hours. How many viruses will he find?\n\nSolution:\n\nIdentify the values of each variable in the formulas. Be sure to put the percent in decimal form. Be sure the units match--the rate is per hour and the time is in hours.\n\n\\(\\begin{aligned} A &=? \\\\ A_{0} &=100 \\\\ r &=0.25 / \\text { hour } \\\\ t &=24 \\text { hours } \\end{aligned}\\)\n\nSubstitute the values in the formula: \\(A=A_{0} e^{r t}\\).\n\n\\(A=100 e^{0.25 \\cdot 24}\\)\n\nCompute the amount.\n\n\\(A=40,342.88\\)\n\nRound to the nearest whole virus.\n\n\\(A=40,343\\)\n\nThe researcher will find \\(40,343\\) viruses.",
+      "prompt": "Example \\(\\PageIndex{8}\\)\n\nChris is a researcher at the Center for Disease Control and Prevention and he is trying to understand the behavior of a new and dangerous virus. He starts his experiment with \\(100\\) of the virus that grows at a rate of \\(25\\)% per hour. He will check on the virus in \\(24\\) hours. How many viruses will he find?\n\nSolution:\n\nIdentify the values of each variable in the formulas. Be sure to put the percent in decimal form. Be sure the units match--the rate is per hour and the time is in hours.\n\n\\(\\begin{aligned} A &=? \\\\ A_{0} &=100 \\\\ r &=0.25 / \\text { hour } \\\\ t &=24 \\text { hours } \\end{aligned}\\)\n\nSubstitute the values in the formula: \\(A=A_{0} e^{r t}\\).\n\n\\(A=100 e^{0.25 \\cdot 24}\\)\n\nCompute the amount.\n\n\\(A=40,342.88\\)\n\nRound to the nearest whole virus.\n\n\\(A=40,343\\)\n\nThe researcher will find \\(40,343\\) viruses.",
+      "sourceAnswers": [],
+      "hasFigure": false,
+      "status": "draft",
+      "answerVerified": false,
+      "translationStatus": "pending",
+      "mappingStatus": "pending"
+    },
+    {
+      "ordinal": 30,
+      "sourceNumber": "",
+      "sourceAnchor": "",
+      "kind": "exercise-candidate",
+      "context": "For an original amount, \\(A_{0}\\), that grows or decays at a rate, \\(r\\), for a certain time, \\(t\\), the final amount, \\(A\\), is:\n\n\\(A=A_{0} e^{r t}\\)\n\nExponential growth is typically seen in the growth of populations of humans or animals or bacteria. Our next example looks at the growth of a virus.",
+      "original": "Exercise \\(\\PageIndex{15}\\)\n\nAnother researcher at the Center for Disease Control and Prevention, Lisa, is studying the growth of a bacteria. She starts his experiment with \\(50\\) of the bacteria that grows at a rate of \\(15\\)% per hour. He will check on the bacteria every \\(8\\) hours. How many bacteria will he find in \\(8\\) hours?\n\nAnswer\n\nShe will find \\(166\\) bacteria.",
+      "prompt": "Exercise \\(\\PageIndex{15}\\)\n\nAnother researcher at the Center for Disease Control and Prevention, Lisa, is studying the growth of a bacteria. She starts his experiment with \\(50\\) of the bacteria that grows at a rate of \\(15\\)% per hour. He will check on the bacteria every \\(8\\) hours. How many bacteria will he find in \\(8\\) hours?",
+      "sourceAnswers": [
+        "She will find \\(166\\) bacteria."
+      ],
+      "hasFigure": false,
+      "status": "draft",
+      "answerVerified": false,
+      "translationStatus": "pending",
+      "mappingStatus": "pending"
+    },
+    {
+      "ordinal": 31,
+      "sourceNumber": "",
+      "sourceAnchor": "",
+      "kind": "exercise-candidate",
+      "context": "For an original amount, \\(A_{0}\\), that grows or decays at a rate, \\(r\\), for a certain time, \\(t\\), the final amount, \\(A\\), is:\n\n\\(A=A_{0} e^{r t}\\)\n\nExponential growth is typically seen in the growth of populations of humans or animals or bacteria. Our next example looks at the growth of a virus.",
+      "original": "Exercise \\(\\PageIndex{16}\\)\n\nMaria, a biologist is observing the growth pattern of a virus. She starts with \\(100\\) of the virus that grows at a rate of \\(10\\)% per hour. She will check on the virus in \\(24\\) hours. How many viruses will she find?\n\nAnswer\n\nShe will find \\(1,102\\) viruses.",
+      "prompt": "Exercise \\(\\PageIndex{16}\\)\n\nMaria, a biologist is observing the growth pattern of a virus. She starts with \\(100\\) of the virus that grows at a rate of \\(10\\)% per hour. She will check on the virus in \\(24\\) hours. How many viruses will she find?",
+      "sourceAnswers": [
+        "She will find \\(1,102\\) viruses."
+      ],
+      "hasFigure": false,
+      "status": "draft",
+      "answerVerified": false,
+      "translationStatus": "pending",
+      "mappingStatus": "pending"
+    },
+    {
+      "ordinal": 32,
+      "sourceNumber": "1",
+      "sourceAnchor": "",
+      "kind": "exercise-candidate",
+      "context": "Key Concepts\n\n\\(x\\)-axis, the line \\(y=0\\)\n\n\\(A=A_{0} e^{r t}\\)",
+      "original": "1. Write both sides of the equation with the same base, if possible.",
+      "prompt": "1. Write both sides of the equation with the same base, if possible.",
+      "sourceAnswers": [],
+      "hasFigure": false,
+      "status": "draft",
+      "answerVerified": false,
+      "translationStatus": "pending",
+      "mappingStatus": "pending"
+    },
+    {
+      "ordinal": 33,
+      "sourceNumber": "2",
+      "sourceAnchor": "",
+      "kind": "exercise-candidate",
+      "context": "Key Concepts\n\n\\(x\\)-axis, the line \\(y=0\\)\n\n\\(A=A_{0} e^{r t}\\)",
+      "original": "2. Write a new equation by setting the exponents equal.",
+      "prompt": "2. Write a new equation by setting the exponents equal.",
+      "sourceAnswers": [],
+      "hasFigure": false,
+      "status": "draft",
+      "answerVerified": false,
+      "translationStatus": "pending",
+      "mappingStatus": "pending"
+    },
+    {
+      "ordinal": 34,
+      "sourceNumber": "3",
+      "sourceAnchor": "",
+      "kind": "exercise-candidate",
+      "context": "Key Concepts\n\n\\(x\\)-axis, the line \\(y=0\\)\n\n\\(A=A_{0} e^{r t}\\)",
+      "original": "3. Solve the equation.",
+      "prompt": "3. Solve the equation.",
+      "sourceAnswers": [],
+      "hasFigure": false,
+      "status": "draft",
+      "answerVerified": false,
+      "translationStatus": "pending",
+      "mappingStatus": "pending"
+    },
+    {
+      "ordinal": 35,
+      "sourceNumber": "4",
+      "sourceAnchor": "",
+      "kind": "exercise-candidate",
+      "context": "Key Concepts\n\n\\(x\\)-axis, the line \\(y=0\\)\n\n\\(A=A_{0} e^{r t}\\)",
+      "original": "4. Check the solution.",
+      "prompt": "4. Check the solution.",
+      "sourceAnswers": [],
+      "hasFigure": false,
+      "status": "draft",
+      "answerVerified": false,
+      "translationStatus": "pending",
+      "mappingStatus": "pending"
+    }
+  ],
+  "license": "CC BY 4.0",
+  "licenseEvidence": "This page titled 10.3: Evaluate and Graph Exponential Functions was last modified on Mon, 14 Feb 2022 01:05:31 GMT and is shared under a CC BY  4.0  license and was authored, remixed, and/or curated by OpenStax via source content that was edited to the style and standards of the LibreTexts platform.",
+  "url": "https://math.libretexts.org/Bookshelves/Algebra/Intermediate_Algebra_1e_(OpenStax)/10:_Exponential_and_Logarithmic_Functions/10.03:_Evaluate_and_Graph_Exponential_Functions",
+  "sha256": "13146830bc4a98b0cc8a9c23e9aa5808dd1f1be53e9afdf98df3e130eef5f7f0",
+  "checkedAt": "2026-10-07",
+  "id": "276a85c8ee5ce3fda770",
+  "bookId": "intermediate-algebra",
+  "licenseInherited": false,
+  "licenseSource": "https://math.libretexts.org/Bookshelves/Algebra/Intermediate_Algebra_1e_(OpenStax)/10:_Exponential_and_Logarithmic_Functions/10.03:_Evaluate_and_Graph_Exponential_Functions",
+  "licenseUrl": "https://creativecommons.org/licenses/by/4.0/",
+  "authors": "OpenStax / Lynn Marecek, Andrea Honeycutt Mathis",
+  "book": "Intermediate Algebra 1e",
+  "reviewStatus": "unreviewed",
+  "sourceLanguage": "en",
+  "translationStatus": "pending"
+}

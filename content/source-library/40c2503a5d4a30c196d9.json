@@ -1,0 +1,313 @@
+{
+  "title": "11.2: Systems of Linear Equations with Three Variables",
+  "originalText": "Learning Objectives\n\nSolve systems of three equations in three variables.\n\nIdentify inconsistent systems of equations containing three variables.\n\nExpress the solution of a system of dependent equations containing three variables.\n\nJohn received an inheritance of \\($12,000\\) that he divided into three parts and invested in three ways: in a money-market fund paying \\(3\\%\\) annual interest; in municipal bonds paying \\(4\\%\\) annual interest; and in mutual funds paying \\(7\\%\\) annual interest. John invested \\($4,000\\) more in municipal funds than in municipal bonds. He earned \\($670\\) in interest the first year. How much did John invest in each type of fund?\n\n[Figure: CNX_Precalc_Figure_09_02_005n.jpg]\n\nFigure \\(\\PageIndex{1}\\): (credit: “Elembis,” Wikimedia Commons)\n\nUnderstanding the correct approach to setting up problems such as this one makes finding a solution a matter of following a pattern. We will solve this and similar problems involving three equations and three variables in this section. Doing so uses similar techniques as those used to solve systems of two equations in two variables. However, finding solutions to systems of three equations requires a bit more organization and a touch of visual gymnastics.\n\nSolving Systems of Three Equations in Three Variables\n\nIn order to solve systems of equations in three variables, known as three-by-three systems, the primary tool we will be using is called Gaussian elimination, named after the prolific German mathematician Karl Friedrich Gauss. While there is no definitive order in which operations are to be performed, there are specific guidelines as to what type of moves can be made. We may number the equations to keep track of the steps we apply. The goal is to eliminate one variable at a time to achieve upper triangular form, the ideal form for a three-by-three system because it allows for straightforward back-substitution to find a solution \\((x,y,z)\\), which we call an ordered triple. A system in upper triangular form looks like the following:\n\n\\[\\begin{align*} Ax+By+Cz &= D \\nonumber \\\\[4pt] Ey+Fz &= G \\nonumber \\\\[4pt] Hz &= K \\nonumber \\end{align*} \\nonumber\\]\n\nThe third equation can be solved for \\(z\\),and then we back-substitute to find \\(y\\) and \\(x\\). To write the system in upper triangular form, we can perform the following operations:\n\n1. Interchange the order of any two equations.\n\n2. Multiply both sides of an equation by a nonzero constant.\n\n3. Add a nonzero multiple of one equation to another equation.\n\nThe solution set to a three-by-three system is an ordered triple \\({(x,y,z)}\\). Graphically, the ordered triple defines the point that is the intersection of three planes in space. You can visualize such an intersection by imagining any corner in a rectangular room. A corner is defined by three planes: two adjoining walls and the floor (or ceiling). Any point where two walls and the floor meet represents the intersection of three planes.\n\nNUMBER OF POSSIBLE SolutionS\n\nFigure \\(\\PageIndex{2}\\) and Figure \\(\\PageIndex{3}\\) illustrate possible solution scenarios for three-by-three systems.\n\nSystems that have a single solution are those which, after elimination, result in a solution set consisting of an ordered triple \\({(x,y,z)}\\). Graphically, the ordered triple defines a point that is the intersection of three planes in space.\n\nSystems that have an infinite number of solutions are those which, after elimination, result in an expression that is always true, such as \\(0=0\\). Graphically, an infinite number of solutions represents a line or coincident plane that serves as the intersection of three planes in space.\n\nSystems that have no solution are those that, after elimination, result in a statement that is a contradiction, such as \\(3=0\\). Graphically, a system with no solution is represented by three planes with no point in common.\n\n[Figure: 11.3.2.png]\n\nFigure \\(\\PageIndex{2}\\): (a)Three planes intersect at a single point, representing a three-by-three system with a single solution. (b) Three planes intersect in a line, representing a three-by-three system with infinite solutions.\n\n[Figure: 11.3.3.png]\n\nFigure \\(\\PageIndex{3}\\): All three figures represent three-by-three systems with no solution. (a) The three planes intersect with each other, but not at a common point. (b) Two of the planes are parallel and intersect with the third plane, but not with each other. (c) All three planes are parallel, so there is no point of intersection.\n\nExample \\(\\PageIndex{1}\\): Determining Whether an Ordered Triple Is a Solution to a System\n\nDetermine whether the ordered triple \\((3,−2,1)\\) is a solution to the system.\n\n\\[\\begin{align*} x+y+z &= 2 \\nonumber \\\\[4pt] 6x−4y+5z &= 31 \\nonumber \\\\[4pt] 5x+2y+2z &= 13 \\nonumber \\end{align*} \\nonumber\\]\n\nSolution\n\nWe will check each equation by substituting in the values of the ordered triple for \\( x,y\\), and \\(z\\).\n\n\\[\\begin{array}{rrr} { \\text{} \\nonumber \\\\[4pt] x+y+z=2 \\nonumber \\\\[4pt] (3)+(−2)+(1)=2 \\nonumber \\\\[4pt] \\text{True}} & {6x−4y+5z=31 \\nonumber \\\\[4pt] 6(3)−4(−2)+5(1)=31 \\nonumber \\\\[4pt] 18+8+5=31 \\nonumber \\\\[4pt] \\text{True} } & { 5x+2y+2z = 13 \\nonumber \\\\[4pt] 5(3)+2(−2)+2(1)=13 \\nonumber \\\\[4pt] 15−4+2=13 \\nonumber \\\\[4pt] \\text{True}} \\end{array}\\]\n\nThe ordered triple \\((3,−2,1)\\) is indeed a solution to the system.\n\nHow to: Given a linear system of three equations, solve for three unknowns\n\n1. Pick any pair of equations and solve for one variable.\n\n2. Pick another pair of equations and solve for the same variable.\n\n3. You have created a system of two equations in two unknowns. Solve the resulting two-by-two system.\n\n4. Back-substitute known variables into any one of the original equations and solve for the missing variable.\n\nExample \\(\\PageIndex{2}\\): Solving a System of Three Equations in Three Variables by Elimination\n\nFind a solution to the following system:\n\n\\[\\begin{align} x−2y+3z=9 \\; &(1) \\nonumber \\\\[4pt] −x+3y−z=−6 \\; &(2) \\nonumber \\\\[4pt] 2x−5y+5z=17 \\; &(3) \\nonumber \\end{align} \\nonumber\\]\n\nSolution\n\nThere will always be several choices as to where to begin, but the most obvious first step here is to eliminate \\(x\\) by adding equations (1) and (2).\n\n\\[\\begin{align} x−2y+3z=9 \\; \\; &(1) \\nonumber \\\\[4pt] \\underline{−x+3y−z=−6 }\\; \\; &(2) \\nonumber \\\\[4pt] y+2z=3 \\;\\; &(4) \\nonumber \\end{align} \\nonumber\\]\n\nThe second step is multiplying equation (1) by \\(−2\\) and adding the result to equation (3). These two steps will eliminate the variable \\(x\\).\n\n\\[\\begin{align} −2x+4y−6z=−18\\; &(1) \\;\\;\\;\\; \\text{ multiplied by }−2 \\nonumber \\\\[4pt] \\underline{2x−5y+5z=17} \\; & (3) \\nonumber \\\\[4pt]−y−z=−1 \\; &(5) \\nonumber \\end{align} \\nonumber\\]\n\nIn equations (4) and (5), we have created a new two-by-two system. We can solve for \\(z\\) by adding the two equations.\n\n\\[\\begin{align} y+2z=3 \\; &(4) \\nonumber \\\\[4pt] \\underline{−y−z=−1} \\; & (5) \\nonumber \\\\[4pt] z=2 \\; & (6) \\nonumber \\end{align} \\nonumber\\]\n\nChoosing one equation from each new system, we obtain the upper triangular form:\n\n\\[\\begin{align} x−2y+3z=9 \\; &(1) \\nonumber \\\\[4pt] y+2z =3 \\; &(4) \\nonumber \\\\[4pt] z=2 \\; &(6) \\nonumber \\end{align} \\nonumber\\]\n\nNext, we back-substitute \\(z=2\\) into equation (4) and solve for \\(y\\).\n\n\\[\\begin{align} y+2(2) &=3 \\nonumber \\\\[4pt] y+4 &= 3 \\nonumber \\\\[4pt] y &= −1 \\nonumber \\end{align} \\nonumber\\]\n\nFinally, we can back-substitute \\(z=2\\) and \\(y=−1\\) into equation (1). This will yield the solution for \\(x\\).\n\n\\[\\begin{align} x−2(−1)+3(2) &= 9 \\nonumber \\\\[4pt] x+2+6 &=9 \\nonumber \\\\[4pt] x &= 1 \\nonumber \\end{align} \\nonumber\\]\n\nThe solution is the ordered triple \\((1,−1,2)\\). See Figure \\(\\PageIndex{4}\\).\n\n[Figure: 11.3.4.png]\n\nFigure \\(\\PageIndex{4}\\)\n\nExample \\(\\PageIndex{3}\\): Solving a Real-World Problem Using a System of Three Equations in Three Variables\n\nIn the problem posed at the beginning of the section, John invested his inheritance of \\($12,000\\) in three different funds: part in a money-market fund paying \\(3\\%\\) interest annually; part in municipal bonds paying \\(4\\%\\) annually; and the rest in mutual funds paying \\(7\\%\\) annually. John invested \\($4,000\\) more in mutual funds than he invested in municipal bonds. The total interest earned in one year was \\($670\\). How much did he invest in each type of fund?\n\nSolution\n\nTo solve this problem, we use all of the information given and set up three equations. First, we assign a variable to each of the three investment amounts:\n\n\\[\\begin{align} x &= \\text{amount invested in money-market fund} \\nonumber \\\\[4pt] y &= \\text{amount invested in municipal bonds} \\nonumber \\\\[4pt] z &= \\text{amount invested in mutual funds} \\nonumber \\end{align} \\nonumber\\]\n\nThe first equation indicates that the sum of the three principal amounts is \\($12,000\\).\n\n\\[x+y+z=12,000 \\nonumber\\]\n\nWe form the second equation according to the information that John invested \\($4,000\\) more in mutual funds than he invested in municipal bonds.\n\n\\[z=y+4,000 \\nonumber\\]\n\nThe third equation shows that the total amount of interest earned from each fund equals \\($670\\).\n\n\\[0.03x+0.04y+0.07z=670 \\nonumber\\]\n\nThen, we write the three equations as a system.\n\n\\[\\begin{align} x+y+z &=12,000 \\nonumber \\\\[4pt] −y+z &= 4,000 \\nonumber \\\\[4pt] 0.03x+0.04y+0.07z &= 670 \\nonumber \\end{align} \\nonumber\\]\n\nTo make the calculations simpler, we can multiply the third equation by \\(100\\). Thus,\n\n\\[\\begin{align} x+y+z &=12,000 \\; &(1) \\nonumber \\\\[4pt] −y+z &= 4,000 \\; &(2) \\nonumber \\\\[4pt] 3x+4y+7z &= 67,000 \\; &(3) \\nonumber \\end{align} \\nonumber\\]\n\nStep 1. Interchange equation (2) and equation (3) so that the two equations with three variables will line up.\n\n\\[\\begin{align} x+y+z &= 12,000 \\nonumber \\\\[4pt] 3x+4y+7z &= 67,000 \\nonumber \\\\[4pt] −y+z &= 4,000 \\nonumber \\end{align} \\nonumber\\]\n\nStep 2. Multiply equation (1) by \\(−3\\) and add to equation (2). Write the result as row 2.\n\n\\[\\begin{align} x+y+z &= 12,000 \\nonumber \\\\[4pt] y+4z &= 31,000 \\nonumber \\\\[4pt] −y+z &= 4,000 \\nonumber \\end{align} \\nonumber\\]\n\nStep 3. Add equation (2) to equation (3) and write the result as equation (3).\n\n\\[\\begin{align} x+y+z &= 12,000 \\nonumber \\\\[4pt] y+4z &= 31,000 \\nonumber \\\\[4pt] 5z &= 35,000 \\nonumber \\end{align} \\nonumber\\]\n\nStep 4. Solve for \\(z\\) in equation (3). Back-substitute that value in equation (2) and solve for \\(y\\). Then, back-substitute the values for \\(z\\) and \\(y\\) into equation (1) and solve for \\(x\\).\n\n\\[\\begin{align} 5z &= 35,000 \\nonumber \\\\[4pt] z &= 7,000 \\nonumber \\\\[4pt] \\nonumber \\\\[4pt] y+4(7,000) &= 31,000 \\nonumber \\\\[4pt] y &=3,000 \\nonumber \\\\[4pt] \\nonumber \\\\[4pt] x+3,000+7,000 &= 12,000 \\nonumber \\\\[4pt] x &= 2,000 \\nonumber \\end{align} \\nonumber\\]\n\nJohn invested \\($2,000\\) in a money-market fund, \\($3,000\\) in municipal bonds, and \\($7,000\\) in mutual funds.\n\nExercise \\(\\PageIndex{1}\\)\n\nSolve the system of equations in three variables.\n\n\\[\\begin{align} 2x+y−2z &= −1 \\nonumber \\\\[4pt] 3x−3y−z &= 5 \\nonumber \\\\[4pt] x−2y+3z &= 6 \\nonumber \\end{align} \\nonumber\\]\n\nAnswer\n\n\\((1,−1,1)\\)\n\nIdentifying Inconsistent Systems of Equations Containing Three Variables\n\nJust as with systems of equations in two variables, we may come across an inconsistent system of equations in three variables, which means that it does not have a solution that satisfies all three equations. The equations could represent three parallel planes, two parallel planes and one intersecting plane, or three planes that intersect the other two but not at the same location. The process of elimination will result in a false statement, such as \\(3=7\\) or some other contradiction.\n\nExample \\(\\PageIndex{4}\\): Solving an Inconsistent System of Three Equations in Three Variables\n\nSolve the following system.\n\n\\[\\begin{align} x−3y+z &=4 \\label{4.1}\\\\[4pt] −x+2y−5z &=3 \\label{4.2} \\\\[4pt] 5x−13y+13z &=8 \\label{4.3} \\end{align} \\nonumber\\]\n\nSolution\n\nLooking at the coefficients of \\(x\\), we can see that we can eliminate \\(x\\) by adding Equation \\ref{4.1} to Equation \\ref{4.2}.\n\n\\[\\begin{align} x−3y+z = 4 &(1) \\nonumber \\\\[4pt] \\underline{−x+2y−5z=3} & (2) \\nonumber \\\\[4pt] −y−4z =7 & (4) \\nonumber \\end{align} \\nonumber\\]\n\nNext, we multiply equation (1) by \\(−5\\) and add it to equation (3).\n\n\\[\\begin{align} −5x+15y−5z =−20 & (1) \\;\\;\\;\\;\\; \\text{multiplied by }−5 \\nonumber \\\\[4pt] \\underline{5x−13y+13z=8} &(3) \\nonumber \\\\[4pt] 2y+8z=−12 &(5) \\nonumber \\end{align} \\nonumber\\]\n\nThen, we multiply equation (4) by 2 and add it to equation (5).\n\n\\[\\begin{align} −2y−8z=14 & (4) \\;\\;\\;\\;\\; \\text{multiplied by }2 \\nonumber \\\\[4pt] \\underline{2y+8z=−12} & (5) \\nonumber \\\\[4pt] 0=2 & \\nonumber \\end{align} \\nonumber\\]\n\nThe final equation \\(0=2\\) is a contradiction, so we conclude that the system of equations in inconsistent and, therefore, has no solution.\n\nAnalysis\n\nIn this system, each plane intersects the other two, but not at the same location. Therefore, the system is inconsistent.\n\nExercise \\(\\PageIndex{2}\\)\n\nSolve the system of three equations in three variables.\n\n\\[\\begin{align} x+y+z &= 2 \\nonumber \\\\[4pt] y−3z &=1 \\nonumber \\\\[4pt] 2x+y+5z &=0 \\nonumber \\end{align} \\nonumber\\]\n\nAnswer\n\nNo solution.\n\nExpressing the Solution of a System of Dependent Equations Containing Three Variables\n\nWe know from working with systems of equations in two variables that a dependent system of equations has an infinite number of solutions. The same is true for dependent systems of equations in three variables. An infinite number of solutions can result from several situations. The three planes could be the same, so that a solution to one equation will be the solution to the other two equations. All three equations could be different but they intersect on a line, which has infinite solutions. Or two of the equations could be the same and intersect the third on a line.\n\nExample \\(\\PageIndex{5}\\): Finding the Solution to a Dependent System of Equations\n\nFind the solution to the given system of three equations in three variables.\n\n\\[\\begin{align} 2x+y−3z &= 0 &(1) \\nonumber \\\\[4pt] 4x+2y−6z &=0 &(2) \\nonumber \\\\[4pt] x−y+z &= 0 &(3) \\nonumber \\end{align} \\nonumber\\]\n\nSolution\n\nFirst, we can multiply equation (1) by \\(−2\\) and add it to equation (2).\n\n\\[\\begin{align} −4x−2y+6z =0 & (1) \\;\\;\\;\\;\\; \\text{multiplied by }−2 \\nonumber \\\\[4pt] \\underline{4x+2y−6z=0} & (2) \\nonumber \\\\[4pt] 0=0& \\nonumber \\end{align} \\nonumber\\]\n\nWe do not need to proceed any further. The result we get is an identity, \\(0=0\\), which tells us that this system has an infinite number of solutions. There are other ways to begin to solve this system, such as multiplying equation (3) by \\(−2\\), and adding it to equation (1). We then perform the same steps as above and find the same result, \\(0=0\\).\n\nWhen a system is dependent, we can find general expressions for the solutions. Adding equations (1) and (3), we have\n\n\\[\\begin{align} 2x+y−3z &= 0 \\nonumber \\\\[4pt]x−y+z &= 0 \\nonumber \\\\[4pt] 3x−2z &= 0 \\nonumber \\end{align} \\nonumber\\]\n\nWe then solve the resulting equation for \\(z\\).\n\n\\[\\begin{align} 3x−2z &= 0 \\nonumber \\\\[4pt] z &= \\dfrac{3}{2}x \\nonumber \\end{align} \\nonumber\\]\n\nWe back-substitute the expression for \\(z\\) into one of the equations and solve for \\(y\\).\n\n\\[\\begin{align} 2x+y−3 (\\dfrac{3}{2}x) &= 0 \\nonumber \\\\[4pt] 2x+y−\\dfrac{9}{2}x &= 0 \\nonumber \\\\[4pt] y &= \\dfrac{9}{2}x−2x \\nonumber \\\\[4pt] y &=\\dfrac{5}{2}x \\nonumber \\end{align} \\nonumber\\]\n\nSo the general solution is \\(\\left(x,\\dfrac{5}{2}x,\\dfrac{3}{2}x\\right)\\). In this solution, \\(x\\) can be any real number. The values of \\(y\\) and \\(z\\) are dependent on the value selected for \\(x\\).\n\nAnalysis\n\nAs shown in Figure \\(\\PageIndex{5}\\), two of the planes are the same and they intersect the third plane on a line. The solution set is infinite, as all points along the intersection line will satisfy all three equations.\n\n[Figure: CNX_Precalc_Figure_09_02_009_d0ee.jpg]\n\nFigure \\(\\PageIndex{5}\\)\n\nQ&A: Does the generic solution to a dependent system always have to be written in terms of \\(x\\)?\n\nNo, you can write the generic solution in terms of any of the variables, but it is common to write it in terms of \\(x\\) and if needed \\(x\\) and \\(y\\).\n\nExercise \\(\\PageIndex{3}\\):\n\nSolve the following system.\n\n\\[\\begin{align} x+y+z &= 7 \\nonumber \\\\[4pt] 3x−2y−z &= 4 \\nonumber \\\\[4pt] x+6y+5z &= 24 \\nonumber \\end{align} \\nonumber\\]\n\nAnswer\n\nInfinite number of solutions of the form \\((x,4x−11,−5x+18)\\).\n\nMedia\n\nAccess these online resources for additional instruction and practice with systems of equations in three variables.\n\nEx 1: System of Three Equations with Three Unknowns Using Elimination\n\nEx. 2: System of Three Equations with Three Unknowns Using Elimination\n\nKey Concepts\n\nA solution set is an ordered triple {(x,y,z)} that represents the intersection of three planes in space. See Example \\(\\PageIndex{1}\\).\n\nA system of three equations in three variables can be solved by using a series of steps that forces a variable to be eliminated. The steps include interchanging the order of equations, multiplying both sides of an equation by a nonzero constant, and adding a nonzero multiple of one equation to another equation. See Example \\(\\PageIndex{2}\\).\n\nSystems of three equations in three variables are useful for solving many different types of real-world problems. See Example \\(\\PageIndex{3}\\).\n\nA system of equations in three variables is inconsistent if no solution exists. After performing elimination operations, the result is a contradiction. See Example \\(\\PageIndex{4}\\).\n\nSystems of equations in three variables that are inconsistent could result from three parallel planes, two parallel planes and one intersecting plane, or three planes that intersect the other two but not at the same location.\n\nA system of equations in three variables is dependent if it has an infinite number of solutions. After performing elimination operations, the result is an identity. See Example \\(\\PageIndex{5}\\).\n\nSystems of equations in three variables that are dependent could result from three identical planes, three planes intersecting at a line, or two identical planes that intersect the third on a line.\n\nContributors\n\nJay Abramson (Arizona State University) with contributing authors. Textbook content produced by OpenStax College is licensed under a Creative Commons Attribution License 4.0 license. Download for free at https://openstax.org/details/books/precalculus.\n\nThis page titled 11.2: Systems of Linear Equations with Three Variables was last modified on Sun, 27 Apr 2025 18:28:33 GMT and is shared under a CC BY  4.0  license and was authored, remixed, and/or curated by OpenStax via source content that was edited to the style and standards of the LibreTexts platform.",
+  "figures": [
+    {
+      "url": "https://math.libretexts.org/@api/deki/files/7538/CNX_Precalc_Figure_09_02_005n.jpg?revision=1&size=bestfit&width=412&height=310",
+      "alt": "CNX_Precalc_Figure_09_02_005n.jpg",
+      "credit": ""
+    },
+    {
+      "url": "https://math.libretexts.org/@api/deki/files/7563/11.3.2.png?revision=1",
+      "alt": "11.3.2.png",
+      "credit": ""
+    },
+    {
+      "url": "https://math.libretexts.org/@api/deki/files/7564/11.3.3.png?revision=1",
+      "alt": "11.3.3.png",
+      "credit": ""
+    },
+    {
+      "url": "https://math.libretexts.org/@api/deki/files/7565/11.3.4.png?revision=1",
+      "alt": "11.3.4.png",
+      "credit": ""
+    },
+    {
+      "url": "https://math.libretexts.org/@api/deki/files/131053/CNX_Precalc_Figure_09_02_009_d0ee.jpg?revision=1&size=bestfit&width=402&height=238",
+      "alt": "CNX_Precalc_Figure_09_02_009_d0ee.jpg",
+      "credit": ""
+    }
+  ],
+  "references": [
+    {
+      "text": "Ex 1: System of Three Equations with Three Unknowns Using Elimination",
+      "url": "http://openstaxcollege.org/l/systhree"
+    },
+    {
+      "text": "Ex. 2: System of Three Equations with Three Unknowns Using Elimination",
+      "url": "http://openstaxcollege.org/l/systhelim"
+    },
+    {
+      "text": "Creative Commons Attribution License 4.0",
+      "url": "http://creativecommons.org/licenses/by/4.0/"
+    },
+    {
+      "text": "https://openstax.org/details/books/precalculus",
+      "url": "https://openstax.org/details/books/precalculus"
+    },
+    {
+      "text": "11.2: Systems of Linear Equations with Three Variables",
+      "url": "https://math.libretexts.org/Bookshelves/Algebra/Algebra_and_Trigonometry_1e_(OpenStax)/11%3A_Systems_of_Equations_and_Inequalities/11.02%3A_Systems_of_Linear_Equations_with_Three_Variables"
+    },
+    {
+      "text": "CC BY  4.0",
+      "url": "https://creativecommons.org/licenses/by/4.0"
+    },
+    {
+      "text": "OpenStax",
+      "url": "https://openstax.org/"
+    },
+    {
+      "text": "source content",
+      "url": "https://openstax.org/details/books/precalculus"
+    }
+  ],
+  "exercises": [
+    {
+      "ordinal": 1,
+      "sourceNumber": "1",
+      "sourceAnchor": "",
+      "kind": "exercise-candidate",
+      "context": "In order to solve systems of equations in three variables, known as three-by-three systems, the primary tool we will be using is called Gaussian elimination, named after the prolific German mathematician Karl Friedrich Gauss. While there is no definitive order in which operations are to be performed, there are specific guidelines as to what type of moves can be made. We may number the equations to keep track of the steps we apply. The goal is to eliminate one variable at a time to achieve upper triangular form, the ideal form for a three-by-three system because it allows for straightforward back-substitution to find a solution \\((x,y,z)\\), which we call an ordered triple. A system in upper triangular form looks like the following:\n\n\\[\\begin{align*} Ax+By+Cz &= D \\nonumber \\\\[4pt] Ey+Fz &= G \\nonumber \\\\[4pt] Hz &= K \\nonumber \\end{align*} \\nonumber\\]\n\nThe third equation can be solved for \\(z\\),and then we back-substitute to find \\(y\\) and \\(x\\). To write the system in upper triangular form, we can perform the following operations:",
+      "original": "1. Interchange the order of any two equations.",
+      "prompt": "1. Interchange the order of any two equations.",
+      "sourceAnswers": [],
+      "hasFigure": false,
+      "status": "draft",
+      "answerVerified": false,
+      "translationStatus": "pending",
+      "mappingStatus": "pending"
+    },
+    {
+      "ordinal": 2,
+      "sourceNumber": "2",
+      "sourceAnchor": "",
+      "kind": "exercise-candidate",
+      "context": "In order to solve systems of equations in three variables, known as three-by-three systems, the primary tool we will be using is called Gaussian elimination, named after the prolific German mathematician Karl Friedrich Gauss. While there is no definitive order in which operations are to be performed, there are specific guidelines as to what type of moves can be made. We may number the equations to keep track of the steps we apply. The goal is to eliminate one variable at a time to achieve upper triangular form, the ideal form for a three-by-three system because it allows for straightforward back-substitution to find a solution \\((x,y,z)\\), which we call an ordered triple. A system in upper triangular form looks like the following:\n\n\\[\\begin{align*} Ax+By+Cz &= D \\nonumber \\\\[4pt] Ey+Fz &= G \\nonumber \\\\[4pt] Hz &= K \\nonumber \\end{align*} \\nonumber\\]\n\nThe third equation can be solved for \\(z\\),and then we back-substitute to find \\(y\\) and \\(x\\). To write the system in upper triangular form, we can perform the following operations:",
+      "original": "2. Multiply both sides of an equation by a nonzero constant.",
+      "prompt": "2. Multiply both sides of an equation by a nonzero constant.",
+      "sourceAnswers": [],
+      "hasFigure": false,
+      "status": "draft",
+      "answerVerified": false,
+      "translationStatus": "pending",
+      "mappingStatus": "pending"
+    },
+    {
+      "ordinal": 3,
+      "sourceNumber": "3",
+      "sourceAnchor": "",
+      "kind": "exercise-candidate",
+      "context": "In order to solve systems of equations in three variables, known as three-by-three systems, the primary tool we will be using is called Gaussian elimination, named after the prolific German mathematician Karl Friedrich Gauss. While there is no definitive order in which operations are to be performed, there are specific guidelines as to what type of moves can be made. We may number the equations to keep track of the steps we apply. The goal is to eliminate one variable at a time to achieve upper triangular form, the ideal form for a three-by-three system because it allows for straightforward back-substitution to find a solution \\((x,y,z)\\), which we call an ordered triple. A system in upper triangular form looks like the following:\n\n\\[\\begin{align*} Ax+By+Cz &= D \\nonumber \\\\[4pt] Ey+Fz &= G \\nonumber \\\\[4pt] Hz &= K \\nonumber \\end{align*} \\nonumber\\]\n\nThe third equation can be solved for \\(z\\),and then we back-substitute to find \\(y\\) and \\(x\\). To write the system in upper triangular form, we can perform the following operations:",
+      "original": "3. Add a nonzero multiple of one equation to another equation.",
+      "prompt": "3. Add a nonzero multiple of one equation to another equation.",
+      "sourceAnswers": [],
+      "hasFigure": false,
+      "status": "draft",
+      "answerVerified": false,
+      "translationStatus": "pending",
+      "mappingStatus": "pending"
+    },
+    {
+      "ordinal": 4,
+      "sourceNumber": "",
+      "sourceAnchor": "",
+      "kind": "example-or-exercise",
+      "context": "The third equation can be solved for \\(z\\),and then we back-substitute to find \\(y\\) and \\(x\\). To write the system in upper triangular form, we can perform the following operations:\n\nThe solution set to a three-by-three system is an ordered triple \\({(x,y,z)}\\). Graphically, the ordered triple defines the point that is the intersection of three planes in space. You can visualize such an intersection by imagining any corner in a rectangular room. A corner is defined by three planes: two adjoining walls and the floor (or ceiling). Any point where two walls and the floor meet represents the intersection of three planes.\n\nFigure \\(\\PageIndex{2}\\) and Figure \\(\\PageIndex{3}\\) illustrate possible solution scenarios for three-by-three systems.",
+      "original": "Example \\(\\PageIndex{1}\\): Determining Whether an Ordered Triple Is a Solution to a System\n\nDetermine whether the ordered triple \\((3,−2,1)\\) is a solution to the system.\n\n\\[\\begin{align*} x+y+z &= 2 \\nonumber \\\\[4pt] 6x−4y+5z &= 31 \\nonumber \\\\[4pt] 5x+2y+2z &= 13 \\nonumber \\end{align*} \\nonumber\\]\n\nSolution\n\nWe will check each equation by substituting in the values of the ordered triple for \\( x,y\\), and \\(z\\).\n\n\\[\\begin{array}{rrr} { \\text{} \\nonumber \\\\[4pt] x+y+z=2 \\nonumber \\\\[4pt] (3)+(−2)+(1)=2 \\nonumber \\\\[4pt] \\text{True}} & {6x−4y+5z=31 \\nonumber \\\\[4pt] 6(3)−4(−2)+5(1)=31 \\nonumber \\\\[4pt] 18+8+5=31 \\nonumber \\\\[4pt] \\text{True} } & { 5x+2y+2z = 13 \\nonumber \\\\[4pt] 5(3)+2(−2)+2(1)=13 \\nonumber \\\\[4pt] 15−4+2=13 \\nonumber \\\\[4pt] \\text{True}} \\end{array}\\]\n\nThe ordered triple \\((3,−2,1)\\) is indeed a solution to the system.",
+      "prompt": "Example \\(\\PageIndex{1}\\): Determining Whether an Ordered Triple Is a Solution to a System\n\nDetermine whether the ordered triple \\((3,−2,1)\\) is a solution to the system.\n\n\\[\\begin{align*} x+y+z &= 2 \\nonumber \\\\[4pt] 6x−4y+5z &= 31 \\nonumber \\\\[4pt] 5x+2y+2z &= 13 \\nonumber \\end{align*} \\nonumber\\]\n\nSolution\n\nWe will check each equation by substituting in the values of the ordered triple for \\( x,y\\), and \\(z\\).\n\n\\[\\begin{array}{rrr} { \\text{} \\nonumber \\\\[4pt] x+y+z=2 \\nonumber \\\\[4pt] (3)+(−2)+(1)=2 \\nonumber \\\\[4pt] \\text{True}} & {6x−4y+5z=31 \\nonumber \\\\[4pt] 6(3)−4(−2)+5(1)=31 \\nonumber \\\\[4pt] 18+8+5=31 \\nonumber \\\\[4pt] \\text{True} } & { 5x+2y+2z = 13 \\nonumber \\\\[4pt] 5(3)+2(−2)+2(1)=13 \\nonumber \\\\[4pt] 15−4+2=13 \\nonumber \\\\[4pt] \\text{True}} \\end{array}\\]\n\nThe ordered triple \\((3,−2,1)\\) is indeed a solution to the system.",
+      "sourceAnswers": [],
+      "hasFigure": false,
+      "status": "draft",
+      "answerVerified": false,
+      "translationStatus": "pending",
+      "mappingStatus": "pending"
+    },
+    {
+      "ordinal": 5,
+      "sourceNumber": "1",
+      "sourceAnchor": "",
+      "kind": "exercise-candidate",
+      "context": "The third equation can be solved for \\(z\\),and then we back-substitute to find \\(y\\) and \\(x\\). To write the system in upper triangular form, we can perform the following operations:\n\nThe solution set to a three-by-three system is an ordered triple \\({(x,y,z)}\\). Graphically, the ordered triple defines the point that is the intersection of three planes in space. You can visualize such an intersection by imagining any corner in a rectangular room. A corner is defined by three planes: two adjoining walls and the floor (or ceiling). Any point where two walls and the floor meet represents the intersection of three planes.\n\nFigure \\(\\PageIndex{2}\\) and Figure \\(\\PageIndex{3}\\) illustrate possible solution scenarios for three-by-three systems.",
+      "original": "1. Pick any pair of equations and solve for one variable.",
+      "prompt": "1. Pick any pair of equations and solve for one variable.",
+      "sourceAnswers": [],
+      "hasFigure": false,
+      "status": "draft",
+      "answerVerified": false,
+      "translationStatus": "pending",
+      "mappingStatus": "pending"
+    },
+    {
+      "ordinal": 6,
+      "sourceNumber": "2",
+      "sourceAnchor": "",
+      "kind": "exercise-candidate",
+      "context": "The third equation can be solved for \\(z\\),and then we back-substitute to find \\(y\\) and \\(x\\). To write the system in upper triangular form, we can perform the following operations:\n\nThe solution set to a three-by-three system is an ordered triple \\({(x,y,z)}\\). Graphically, the ordered triple defines the point that is the intersection of three planes in space. You can visualize such an intersection by imagining any corner in a rectangular room. A corner is defined by three planes: two adjoining walls and the floor (or ceiling). Any point where two walls and the floor meet represents the intersection of three planes.\n\nFigure \\(\\PageIndex{2}\\) and Figure \\(\\PageIndex{3}\\) illustrate possible solution scenarios for three-by-three systems.",
+      "original": "2. Pick another pair of equations and solve for the same variable.",
+      "prompt": "2. Pick another pair of equations and solve for the same variable.",
+      "sourceAnswers": [],
+      "hasFigure": false,
+      "status": "draft",
+      "answerVerified": false,
+      "translationStatus": "pending",
+      "mappingStatus": "pending"
+    },
+    {
+      "ordinal": 7,
+      "sourceNumber": "3",
+      "sourceAnchor": "",
+      "kind": "exercise-candidate",
+      "context": "The third equation can be solved for \\(z\\),and then we back-substitute to find \\(y\\) and \\(x\\). To write the system in upper triangular form, we can perform the following operations:\n\nThe solution set to a three-by-three system is an ordered triple \\({(x,y,z)}\\). Graphically, the ordered triple defines the point that is the intersection of three planes in space. You can visualize such an intersection by imagining any corner in a rectangular room. A corner is defined by three planes: two adjoining walls and the floor (or ceiling). Any point where two walls and the floor meet represents the intersection of three planes.\n\nFigure \\(\\PageIndex{2}\\) and Figure \\(\\PageIndex{3}\\) illustrate possible solution scenarios for three-by-three systems.",
+      "original": "3. You have created a system of two equations in two unknowns. Solve the resulting two-by-two system.",
+      "prompt": "3. You have created a system of two equations in two unknowns. Solve the resulting two-by-two system.",
+      "sourceAnswers": [],
+      "hasFigure": false,
+      "status": "draft",
+      "answerVerified": false,
+      "translationStatus": "pending",
+      "mappingStatus": "pending"
+    },
+    {
+      "ordinal": 8,
+      "sourceNumber": "4",
+      "sourceAnchor": "",
+      "kind": "exercise-candidate",
+      "context": "The third equation can be solved for \\(z\\),and then we back-substitute to find \\(y\\) and \\(x\\). To write the system in upper triangular form, we can perform the following operations:\n\nThe solution set to a three-by-three system is an ordered triple \\({(x,y,z)}\\). Graphically, the ordered triple defines the point that is the intersection of three planes in space. You can visualize such an intersection by imagining any corner in a rectangular room. A corner is defined by three planes: two adjoining walls and the floor (or ceiling). Any point where two walls and the floor meet represents the intersection of three planes.\n\nFigure \\(\\PageIndex{2}\\) and Figure \\(\\PageIndex{3}\\) illustrate possible solution scenarios for three-by-three systems.",
+      "original": "4. Back-substitute known variables into any one of the original equations and solve for the missing variable.",
+      "prompt": "4. Back-substitute known variables into any one of the original equations and solve for the missing variable.",
+      "sourceAnswers": [],
+      "hasFigure": false,
+      "status": "draft",
+      "answerVerified": false,
+      "translationStatus": "pending",
+      "mappingStatus": "pending"
+    },
+    {
+      "ordinal": 9,
+      "sourceNumber": "",
+      "sourceAnchor": "",
+      "kind": "example-or-exercise",
+      "context": "The third equation can be solved for \\(z\\),and then we back-substitute to find \\(y\\) and \\(x\\). To write the system in upper triangular form, we can perform the following operations:\n\nThe solution set to a three-by-three system is an ordered triple \\({(x,y,z)}\\). Graphically, the ordered triple defines the point that is the intersection of three planes in space. You can visualize such an intersection by imagining any corner in a rectangular room. A corner is defined by three planes: two adjoining walls and the floor (or ceiling). Any point where two walls and the floor meet represents the intersection of three planes.\n\nFigure \\(\\PageIndex{2}\\) and Figure \\(\\PageIndex{3}\\) illustrate possible solution scenarios for three-by-three systems.",
+      "original": "Example \\(\\PageIndex{2}\\): Solving a System of Three Equations in Three Variables by Elimination\n\nFind a solution to the following system:\n\n\\[\\begin{align} x−2y+3z=9 \\; &(1) \\nonumber \\\\[4pt] −x+3y−z=−6 \\; &(2) \\nonumber \\\\[4pt] 2x−5y+5z=17 \\; &(3) \\nonumber \\end{align} \\nonumber\\]\n\nSolution\n\nThere will always be several choices as to where to begin, but the most obvious first step here is to eliminate \\(x\\) by adding equations (1) and (2).\n\n\\[\\begin{align} x−2y+3z=9 \\; \\; &(1) \\nonumber \\\\[4pt] \\underline{−x+3y−z=−6 }\\; \\; &(2) \\nonumber \\\\[4pt] y+2z=3 \\;\\; &(4) \\nonumber \\end{align} \\nonumber\\]\n\nThe second step is multiplying equation (1) by \\(−2\\) and adding the result to equation (3). These two steps will eliminate the variable \\(x\\).\n\n\\[\\begin{align} −2x+4y−6z=−18\\; &(1) \\;\\;\\;\\; \\text{ multiplied by }−2 \\nonumber \\\\[4pt] \\underline{2x−5y+5z=17} \\; & (3) \\nonumber \\\\[4pt]−y−z=−1 \\; &(5) \\nonumber \\end{align} \\nonumber\\]\n\nIn equations (4) and (5), we have created a new two-by-two system. We can solve for \\(z\\) by adding the two equations.\n\n\\[\\begin{align} y+2z=3 \\; &(4) \\nonumber \\\\[4pt] \\underline{−y−z=−1} \\; & (5) \\nonumber \\\\[4pt] z=2 \\; & (6) \\nonumber \\end{align} \\nonumber\\]\n\nChoosing one equation from each new system, we obtain the upper triangular form:\n\n\\[\\begin{align} x−2y+3z=9 \\; &(1) \\nonumber \\\\[4pt] y+2z =3 \\; &(4) \\nonumber \\\\[4pt] z=2 \\; &(6) \\nonumber \\end{align} \\nonumber\\]\n\nNext, we back-substitute \\(z=2\\) into equation (4) and solve for \\(y\\).\n\n\\[\\begin{align} y+2(2) &=3 \\nonumber \\\\[4pt] y+4 &= 3 \\nonumber \\\\[4pt] y &= −1 \\nonumber \\end{align} \\nonumber\\]\n\nFinally, we can back-substitute \\(z=2\\) and \\(y=−1\\) into equation (1). This will yield the solution for \\(x\\).\n\n\\[\\begin{align} x−2(−1)+3(2) &= 9 \\nonumber \\\\[4pt] x+2+6 &=9 \\nonumber \\\\[4pt] x &= 1 \\nonumber \\end{align} \\nonumber\\]\n\nThe solution is the ordered triple \\((1,−1,2)\\). See Figure \\(\\PageIndex{4}\\).\n\n[Figure: 11.3.4.png]\n\nFigure \\(\\PageIndex{4}\\)",
+      "prompt": "Example \\(\\PageIndex{2}\\): Solving a System of Three Equations in Three Variables by Elimination\n\nFind a solution to the following system:\n\n\\[\\begin{align} x−2y+3z=9 \\; &(1) \\nonumber \\\\[4pt] −x+3y−z=−6 \\; &(2) \\nonumber \\\\[4pt] 2x−5y+5z=17 \\; &(3) \\nonumber \\end{align} \\nonumber\\]\n\nSolution\n\nThere will always be several choices as to where to begin, but the most obvious first step here is to eliminate \\(x\\) by adding equations (1) and (2).\n\n\\[\\begin{align} x−2y+3z=9 \\; \\; &(1) \\nonumber \\\\[4pt] \\underline{−x+3y−z=−6 }\\; \\; &(2) \\nonumber \\\\[4pt] y+2z=3 \\;\\; &(4) \\nonumber \\end{align} \\nonumber\\]\n\nThe second step is multiplying equation (1) by \\(−2\\) and adding the result to equation (3). These two steps will eliminate the variable \\(x\\).\n\n\\[\\begin{align} −2x+4y−6z=−18\\; &(1) \\;\\;\\;\\; \\text{ multiplied by }−2 \\nonumber \\\\[4pt] \\underline{2x−5y+5z=17} \\; & (3) \\nonumber \\\\[4pt]−y−z=−1 \\; &(5) \\nonumber \\end{align} \\nonumber\\]\n\nIn equations (4) and (5), we have created a new two-by-two system. We can solve for \\(z\\) by adding the two equations.\n\n\\[\\begin{align} y+2z=3 \\; &(4) \\nonumber \\\\[4pt] \\underline{−y−z=−1} \\; & (5) \\nonumber \\\\[4pt] z=2 \\; & (6) \\nonumber \\end{align} \\nonumber\\]\n\nChoosing one equation from each new system, we obtain the upper triangular form:\n\n\\[\\begin{align} x−2y+3z=9 \\; &(1) \\nonumber \\\\[4pt] y+2z =3 \\; &(4) \\nonumber \\\\[4pt] z=2 \\; &(6) \\nonumber \\end{align} \\nonumber\\]\n\nNext, we back-substitute \\(z=2\\) into equation (4) and solve for \\(y\\).\n\n\\[\\begin{align} y+2(2) &=3 \\nonumber \\\\[4pt] y+4 &= 3 \\nonumber \\\\[4pt] y &= −1 \\nonumber \\end{align} \\nonumber\\]\n\nFinally, we can back-substitute \\(z=2\\) and \\(y=−1\\) into equation (1). This will yield the solution for \\(x\\).\n\n\\[\\begin{align} x−2(−1)+3(2) &= 9 \\nonumber \\\\[4pt] x+2+6 &=9 \\nonumber \\\\[4pt] x &= 1 \\nonumber \\end{align} \\nonumber\\]\n\nThe solution is the ordered triple \\((1,−1,2)\\). See Figure \\(\\PageIndex{4}\\).\n\n[Figure: 11.3.4.png]\n\nFigure \\(\\PageIndex{4}\\)",
+      "sourceAnswers": [],
+      "hasFigure": true,
+      "status": "draft",
+      "answerVerified": false,
+      "translationStatus": "pending",
+      "mappingStatus": "pending"
+    },
+    {
+      "ordinal": 10,
+      "sourceNumber": "",
+      "sourceAnchor": "",
+      "kind": "example-or-exercise",
+      "context": "The third equation can be solved for \\(z\\),and then we back-substitute to find \\(y\\) and \\(x\\). To write the system in upper triangular form, we can perform the following operations:\n\nThe solution set to a three-by-three system is an ordered triple \\({(x,y,z)}\\). Graphically, the ordered triple defines the point that is the intersection of three planes in space. You can visualize such an intersection by imagining any corner in a rectangular room. A corner is defined by three planes: two adjoining walls and the floor (or ceiling). Any point where two walls and the floor meet represents the intersection of three planes.\n\nFigure \\(\\PageIndex{2}\\) and Figure \\(\\PageIndex{3}\\) illustrate possible solution scenarios for three-by-three systems.",
+      "original": "Example \\(\\PageIndex{3}\\): Solving a Real-World Problem Using a System of Three Equations in Three Variables\n\nIn the problem posed at the beginning of the section, John invested his inheritance of \\($12,000\\) in three different funds: part in a money-market fund paying \\(3\\%\\) interest annually; part in municipal bonds paying \\(4\\%\\) annually; and the rest in mutual funds paying \\(7\\%\\) annually. John invested \\($4,000\\) more in mutual funds than he invested in municipal bonds. The total interest earned in one year was \\($670\\). How much did he invest in each type of fund?\n\nSolution\n\nTo solve this problem, we use all of the information given and set up three equations. First, we assign a variable to each of the three investment amounts:\n\n\\[\\begin{align} x &= \\text{amount invested in money-market fund} \\nonumber \\\\[4pt] y &= \\text{amount invested in municipal bonds} \\nonumber \\\\[4pt] z &= \\text{amount invested in mutual funds} \\nonumber \\end{align} \\nonumber\\]\n\nThe first equation indicates that the sum of the three principal amounts is \\($12,000\\).\n\n\\[x+y+z=12,000 \\nonumber\\]\n\nWe form the second equation according to the information that John invested \\($4,000\\) more in mutual funds than he invested in municipal bonds.\n\n\\[z=y+4,000 \\nonumber\\]\n\nThe third equation shows that the total amount of interest earned from each fund equals \\($670\\).\n\n\\[0.03x+0.04y+0.07z=670 \\nonumber\\]\n\nThen, we write the three equations as a system.\n\n\\[\\begin{align} x+y+z &=12,000 \\nonumber \\\\[4pt] −y+z &= 4,000 \\nonumber \\\\[4pt] 0.03x+0.04y+0.07z &= 670 \\nonumber \\end{align} \\nonumber\\]\n\nTo make the calculations simpler, we can multiply the third equation by \\(100\\). Thus,\n\n\\[\\begin{align} x+y+z &=12,000 \\; &(1) \\nonumber \\\\[4pt] −y+z &= 4,000 \\; &(2) \\nonumber \\\\[4pt] 3x+4y+7z &= 67,000 \\; &(3) \\nonumber \\end{align} \\nonumber\\]\n\nStep 1. Interchange equation (2) and equation (3) so that the two equations with three variables will line up.\n\n\\[\\begin{align} x+y+z &= 12,000 \\nonumber \\\\[4pt] 3x+4y+7z &= 67,000 \\nonumber \\\\[4pt] −y+z &= 4,000 \\nonumber \\end{align} \\nonumber\\]\n\nStep 2. Multiply equation (1) by \\(−3\\) and add to equation (2). Write the result as row 2.\n\n\\[\\begin{align} x+y+z &= 12,000 \\nonumber \\\\[4pt] y+4z &= 31,000 \\nonumber \\\\[4pt] −y+z &= 4,000 \\nonumber \\end{align} \\nonumber\\]\n\nStep 3. Add equation (2) to equation (3) and write the result as equation (3).\n\n\\[\\begin{align} x+y+z &= 12,000 \\nonumber \\\\[4pt] y+4z &= 31,000 \\nonumber \\\\[4pt] 5z &= 35,000 \\nonumber \\end{align} \\nonumber\\]\n\nStep 4. Solve for \\(z\\) in equation (3). Back-substitute that value in equation (2) and solve for \\(y\\). Then, back-substitute the values for \\(z\\) and \\(y\\) into equation (1) and solve for \\(x\\).\n\n\\[\\begin{align} 5z &= 35,000 \\nonumber \\\\[4pt] z &= 7,000 \\nonumber \\\\[4pt] \\nonumber \\\\[4pt] y+4(7,000) &= 31,000 \\nonumber \\\\[4pt] y &=3,000 \\nonumber \\\\[4pt] \\nonumber \\\\[4pt] x+3,000+7,000 &= 12,000 \\nonumber \\\\[4pt] x &= 2,000 \\nonumber \\end{align} \\nonumber\\]\n\nJohn invested \\($2,000\\) in a money-market fund, \\($3,000\\) in municipal bonds, and \\($7,000\\) in mutual funds.",
+      "prompt": "Example \\(\\PageIndex{3}\\): Solving a Real-World Problem Using a System of Three Equations in Three Variables\n\nIn the problem posed at the beginning of the section, John invested his inheritance of \\($12,000\\) in three different funds: part in a money-market fund paying \\(3\\%\\) interest annually; part in municipal bonds paying \\(4\\%\\) annually; and the rest in mutual funds paying \\(7\\%\\) annually. John invested \\($4,000\\) more in mutual funds than he invested in municipal bonds. The total interest earned in one year was \\($670\\). How much did he invest in each type of fund?\n\nSolution\n\nTo solve this problem, we use all of the information given and set up three equations. First, we assign a variable to each of the three investment amounts:\n\n\\[\\begin{align} x &= \\text{amount invested in money-market fund} \\nonumber \\\\[4pt] y &= \\text{amount invested in municipal bonds} \\nonumber \\\\[4pt] z &= \\text{amount invested in mutual funds} \\nonumber \\end{align} \\nonumber\\]\n\nThe first equation indicates that the sum of the three principal amounts is \\($12,000\\).\n\n\\[x+y+z=12,000 \\nonumber\\]\n\nWe form the second equation according to the information that John invested \\($4,000\\) more in mutual funds than he invested in municipal bonds.\n\n\\[z=y+4,000 \\nonumber\\]\n\nThe third equation shows that the total amount of interest earned from each fund equals \\($670\\).\n\n\\[0.03x+0.04y+0.07z=670 \\nonumber\\]\n\nThen, we write the three equations as a system.\n\n\\[\\begin{align} x+y+z &=12,000 \\nonumber \\\\[4pt] −y+z &= 4,000 \\nonumber \\\\[4pt] 0.03x+0.04y+0.07z &= 670 \\nonumber \\end{align} \\nonumber\\]\n\nTo make the calculations simpler, we can multiply the third equation by \\(100\\). Thus,\n\n\\[\\begin{align} x+y+z &=12,000 \\; &(1) \\nonumber \\\\[4pt] −y+z &= 4,000 \\; &(2) \\nonumber \\\\[4pt] 3x+4y+7z &= 67,000 \\; &(3) \\nonumber \\end{align} \\nonumber\\]\n\nStep 1. Interchange equation (2) and equation (3) so that the two equations with three variables will line up.\n\n\\[\\begin{align} x+y+z &= 12,000 \\nonumber \\\\[4pt] 3x+4y+7z &= 67,000 \\nonumber \\\\[4pt] −y+z &= 4,000 \\nonumber \\end{align} \\nonumber\\]\n\nStep 2. Multiply equation (1) by \\(−3\\) and add to equation (2). Write the result as row 2.\n\n\\[\\begin{align} x+y+z &= 12,000 \\nonumber \\\\[4pt] y+4z &= 31,000 \\nonumber \\\\[4pt] −y+z &= 4,000 \\nonumber \\end{align} \\nonumber\\]\n\nStep 3. Add equation (2) to equation (3) and write the result as equation (3).\n\n\\[\\begin{align} x+y+z &= 12,000 \\nonumber \\\\[4pt] y+4z &= 31,000 \\nonumber \\\\[4pt] 5z &= 35,000 \\nonumber \\end{align} \\nonumber\\]\n\nStep 4. Solve for \\(z\\) in equation (3). Back-substitute that value in equation (2) and solve for \\(y\\). Then, back-substitute the values for \\(z\\) and \\(y\\) into equation (1) and solve for \\(x\\).\n\n\\[\\begin{align} 5z &= 35,000 \\nonumber \\\\[4pt] z &= 7,000 \\nonumber \\\\[4pt] \\nonumber \\\\[4pt] y+4(7,000) &= 31,000 \\nonumber \\\\[4pt] y &=3,000 \\nonumber \\\\[4pt] \\nonumber \\\\[4pt] x+3,000+7,000 &= 12,000 \\nonumber \\\\[4pt] x &= 2,000 \\nonumber \\end{align} \\nonumber\\]\n\nJohn invested \\($2,000\\) in a money-market fund, \\($3,000\\) in municipal bonds, and \\($7,000\\) in mutual funds.",
+      "sourceAnswers": [],
+      "hasFigure": false,
+      "status": "draft",
+      "answerVerified": false,
+      "translationStatus": "pending",
+      "mappingStatus": "pending"
+    },
+    {
+      "ordinal": 11,
+      "sourceNumber": "",
+      "sourceAnchor": "",
+      "kind": "exercise-candidate",
+      "context": "The third equation can be solved for \\(z\\),and then we back-substitute to find \\(y\\) and \\(x\\). To write the system in upper triangular form, we can perform the following operations:\n\nThe solution set to a three-by-three system is an ordered triple \\({(x,y,z)}\\). Graphically, the ordered triple defines the point that is the intersection of three planes in space. You can visualize such an intersection by imagining any corner in a rectangular room. A corner is defined by three planes: two adjoining walls and the floor (or ceiling). Any point where two walls and the floor meet represents the intersection of three planes.\n\nFigure \\(\\PageIndex{2}\\) and Figure \\(\\PageIndex{3}\\) illustrate possible solution scenarios for three-by-three systems.",
+      "original": "Exercise \\(\\PageIndex{1}\\)\n\nSolve the system of equations in three variables.\n\n\\[\\begin{align} 2x+y−2z &= −1 \\nonumber \\\\[4pt] 3x−3y−z &= 5 \\nonumber \\\\[4pt] x−2y+3z &= 6 \\nonumber \\end{align} \\nonumber\\]\n\nAnswer\n\n\\((1,−1,1)\\)",
+      "prompt": "Exercise \\(\\PageIndex{1}\\)\n\nSolve the system of equations in three variables.\n\n\\[\\begin{align} 2x+y−2z &= −1 \\nonumber \\\\[4pt] 3x−3y−z &= 5 \\nonumber \\\\[4pt] x−2y+3z &= 6 \\nonumber \\end{align} \\nonumber\\]",
+      "sourceAnswers": [
+        "\\((1,−1,1)\\)"
+      ],
+      "hasFigure": false,
+      "status": "draft",
+      "answerVerified": false,
+      "translationStatus": "pending",
+      "mappingStatus": "pending"
+    },
+    {
+      "ordinal": 12,
+      "sourceNumber": "",
+      "sourceAnchor": "",
+      "kind": "example-or-exercise",
+      "context": "Identifying Inconsistent Systems of Equations Containing Three Variables\n\nJust as with systems of equations in two variables, we may come across an inconsistent system of equations in three variables, which means that it does not have a solution that satisfies all three equations. The equations could represent three parallel planes, two parallel planes and one intersecting plane, or three planes that intersect the other two but not at the same location. The process of elimination will result in a false statement, such as \\(3=7\\) or some other contradiction.",
+      "original": "Example \\(\\PageIndex{4}\\): Solving an Inconsistent System of Three Equations in Three Variables\n\nSolve the following system.\n\n\\[\\begin{align} x−3y+z &=4 \\label{4.1}\\\\[4pt] −x+2y−5z &=3 \\label{4.2} \\\\[4pt] 5x−13y+13z &=8 \\label{4.3} \\end{align} \\nonumber\\]\n\nSolution\n\nLooking at the coefficients of \\(x\\), we can see that we can eliminate \\(x\\) by adding Equation \\ref{4.1} to Equation \\ref{4.2}.\n\n\\[\\begin{align} x−3y+z = 4 &(1) \\nonumber \\\\[4pt] \\underline{−x+2y−5z=3} & (2) \\nonumber \\\\[4pt] −y−4z =7 & (4) \\nonumber \\end{align} \\nonumber\\]\n\nNext, we multiply equation (1) by \\(−5\\) and add it to equation (3).\n\n\\[\\begin{align} −5x+15y−5z =−20 & (1) \\;\\;\\;\\;\\; \\text{multiplied by }−5 \\nonumber \\\\[4pt] \\underline{5x−13y+13z=8} &(3) \\nonumber \\\\[4pt] 2y+8z=−12 &(5) \\nonumber \\end{align} \\nonumber\\]\n\nThen, we multiply equation (4) by 2 and add it to equation (5).\n\n\\[\\begin{align} −2y−8z=14 & (4) \\;\\;\\;\\;\\; \\text{multiplied by }2 \\nonumber \\\\[4pt] \\underline{2y+8z=−12} & (5) \\nonumber \\\\[4pt] 0=2 & \\nonumber \\end{align} \\nonumber\\]\n\nThe final equation \\(0=2\\) is a contradiction, so we conclude that the system of equations in inconsistent and, therefore, has no solution.",
+      "prompt": "Example \\(\\PageIndex{4}\\): Solving an Inconsistent System of Three Equations in Three Variables\n\nSolve the following system.\n\n\\[\\begin{align} x−3y+z &=4 \\label{4.1}\\\\[4pt] −x+2y−5z &=3 \\label{4.2} \\\\[4pt] 5x−13y+13z &=8 \\label{4.3} \\end{align} \\nonumber\\]\n\nSolution\n\nLooking at the coefficients of \\(x\\), we can see that we can eliminate \\(x\\) by adding Equation \\ref{4.1} to Equation \\ref{4.2}.\n\n\\[\\begin{align} x−3y+z = 4 &(1) \\nonumber \\\\[4pt] \\underline{−x+2y−5z=3} & (2) \\nonumber \\\\[4pt] −y−4z =7 & (4) \\nonumber \\end{align} \\nonumber\\]\n\nNext, we multiply equation (1) by \\(−5\\) and add it to equation (3).\n\n\\[\\begin{align} −5x+15y−5z =−20 & (1) \\;\\;\\;\\;\\; \\text{multiplied by }−5 \\nonumber \\\\[4pt] \\underline{5x−13y+13z=8} &(3) \\nonumber \\\\[4pt] 2y+8z=−12 &(5) \\nonumber \\end{align} \\nonumber\\]\n\nThen, we multiply equation (4) by 2 and add it to equation (5).\n\n\\[\\begin{align} −2y−8z=14 & (4) \\;\\;\\;\\;\\; \\text{multiplied by }2 \\nonumber \\\\[4pt] \\underline{2y+8z=−12} & (5) \\nonumber \\\\[4pt] 0=2 & \\nonumber \\end{align} \\nonumber\\]\n\nThe final equation \\(0=2\\) is a contradiction, so we conclude that the system of equations in inconsistent and, therefore, has no solution.",
+      "sourceAnswers": [],
+      "hasFigure": false,
+      "status": "draft",
+      "answerVerified": false,
+      "translationStatus": "pending",
+      "mappingStatus": "pending"
+    },
+    {
+      "ordinal": 13,
+      "sourceNumber": "",
+      "sourceAnchor": "",
+      "kind": "exercise-candidate",
+      "context": "Analysis\n\nIn this system, each plane intersects the other two, but not at the same location. Therefore, the system is inconsistent.",
+      "original": "Exercise \\(\\PageIndex{2}\\)\n\nSolve the system of three equations in three variables.\n\n\\[\\begin{align} x+y+z &= 2 \\nonumber \\\\[4pt] y−3z &=1 \\nonumber \\\\[4pt] 2x+y+5z &=0 \\nonumber \\end{align} \\nonumber\\]\n\nAnswer\n\nNo solution.",
+      "prompt": "Exercise \\(\\PageIndex{2}\\)\n\nSolve the system of three equations in three variables.\n\n\\[\\begin{align} x+y+z &= 2 \\nonumber \\\\[4pt] y−3z &=1 \\nonumber \\\\[4pt] 2x+y+5z &=0 \\nonumber \\end{align} \\nonumber\\]",
+      "sourceAnswers": [
+        "No solution."
+      ],
+      "hasFigure": false,
+      "status": "draft",
+      "answerVerified": false,
+      "translationStatus": "pending",
+      "mappingStatus": "pending"
+    },
+    {
+      "ordinal": 14,
+      "sourceNumber": "",
+      "sourceAnchor": "",
+      "kind": "example-or-exercise",
+      "context": "Expressing the Solution of a System of Dependent Equations Containing Three Variables\n\nWe know from working with systems of equations in two variables that a dependent system of equations has an infinite number of solutions. The same is true for dependent systems of equations in three variables. An infinite number of solutions can result from several situations. The three planes could be the same, so that a solution to one equation will be the solution to the other two equations. All three equations could be different but they intersect on a line, which has infinite solutions. Or two of the equations could be the same and intersect the third on a line.",
+      "original": "Example \\(\\PageIndex{5}\\): Finding the Solution to a Dependent System of Equations\n\nFind the solution to the given system of three equations in three variables.\n\n\\[\\begin{align} 2x+y−3z &= 0 &(1) \\nonumber \\\\[4pt] 4x+2y−6z &=0 &(2) \\nonumber \\\\[4pt] x−y+z &= 0 &(3) \\nonumber \\end{align} \\nonumber\\]\n\nSolution\n\nFirst, we can multiply equation (1) by \\(−2\\) and add it to equation (2).\n\n\\[\\begin{align} −4x−2y+6z =0 & (1) \\;\\;\\;\\;\\; \\text{multiplied by }−2 \\nonumber \\\\[4pt] \\underline{4x+2y−6z=0} & (2) \\nonumber \\\\[4pt] 0=0& \\nonumber \\end{align} \\nonumber\\]\n\nWe do not need to proceed any further. The result we get is an identity, \\(0=0\\), which tells us that this system has an infinite number of solutions. There are other ways to begin to solve this system, such as multiplying equation (3) by \\(−2\\), and adding it to equation (1). We then perform the same steps as above and find the same result, \\(0=0\\).\n\nWhen a system is dependent, we can find general expressions for the solutions. Adding equations (1) and (3), we have\n\n\\[\\begin{align} 2x+y−3z &= 0 \\nonumber \\\\[4pt]x−y+z &= 0 \\nonumber \\\\[4pt] 3x−2z &= 0 \\nonumber \\end{align} \\nonumber\\]\n\nWe then solve the resulting equation for \\(z\\).\n\n\\[\\begin{align} 3x−2z &= 0 \\nonumber \\\\[4pt] z &= \\dfrac{3}{2}x \\nonumber \\end{align} \\nonumber\\]\n\nWe back-substitute the expression for \\(z\\) into one of the equations and solve for \\(y\\).\n\n\\[\\begin{align} 2x+y−3 (\\dfrac{3}{2}x) &= 0 \\nonumber \\\\[4pt] 2x+y−\\dfrac{9}{2}x &= 0 \\nonumber \\\\[4pt] y &= \\dfrac{9}{2}x−2x \\nonumber \\\\[4pt] y &=\\dfrac{5}{2}x \\nonumber \\end{align} \\nonumber\\]\n\nSo the general solution is \\(\\left(x,\\dfrac{5}{2}x,\\dfrac{3}{2}x\\right)\\). In this solution, \\(x\\) can be any real number. The values of \\(y\\) and \\(z\\) are dependent on the value selected for \\(x\\).",
+      "prompt": "Example \\(\\PageIndex{5}\\): Finding the Solution to a Dependent System of Equations\n\nFind the solution to the given system of three equations in three variables.\n\n\\[\\begin{align} 2x+y−3z &= 0 &(1) \\nonumber \\\\[4pt] 4x+2y−6z &=0 &(2) \\nonumber \\\\[4pt] x−y+z &= 0 &(3) \\nonumber \\end{align} \\nonumber\\]\n\nSolution\n\nFirst, we can multiply equation (1) by \\(−2\\) and add it to equation (2).\n\n\\[\\begin{align} −4x−2y+6z =0 & (1) \\;\\;\\;\\;\\; \\text{multiplied by }−2 \\nonumber \\\\[4pt] \\underline{4x+2y−6z=0} & (2) \\nonumber \\\\[4pt] 0=0& \\nonumber \\end{align} \\nonumber\\]\n\nWe do not need to proceed any further. The result we get is an identity, \\(0=0\\), which tells us that this system has an infinite number of solutions. There are other ways to begin to solve this system, such as multiplying equation (3) by \\(−2\\), and adding it to equation (1). We then perform the same steps as above and find the same result, \\(0=0\\).\n\nWhen a system is dependent, we can find general expressions for the solutions. Adding equations (1) and (3), we have\n\n\\[\\begin{align} 2x+y−3z &= 0 \\nonumber \\\\[4pt]x−y+z &= 0 \\nonumber \\\\[4pt] 3x−2z &= 0 \\nonumber \\end{align} \\nonumber\\]\n\nWe then solve the resulting equation for \\(z\\).\n\n\\[\\begin{align} 3x−2z &= 0 \\nonumber \\\\[4pt] z &= \\dfrac{3}{2}x \\nonumber \\end{align} \\nonumber\\]\n\nWe back-substitute the expression for \\(z\\) into one of the equations and solve for \\(y\\).\n\n\\[\\begin{align} 2x+y−3 (\\dfrac{3}{2}x) &= 0 \\nonumber \\\\[4pt] 2x+y−\\dfrac{9}{2}x &= 0 \\nonumber \\\\[4pt] y &= \\dfrac{9}{2}x−2x \\nonumber \\\\[4pt] y &=\\dfrac{5}{2}x \\nonumber \\end{align} \\nonumber\\]\n\nSo the general solution is \\(\\left(x,\\dfrac{5}{2}x,\\dfrac{3}{2}x\\right)\\). In this solution, \\(x\\) can be any real number. The values of \\(y\\) and \\(z\\) are dependent on the value selected for \\(x\\).",
+      "sourceAnswers": [],
+      "hasFigure": false,
+      "status": "draft",
+      "answerVerified": false,
+      "translationStatus": "pending",
+      "mappingStatus": "pending"
+    },
+    {
+      "ordinal": 15,
+      "sourceNumber": "",
+      "sourceAnchor": "",
+      "kind": "exercise-candidate",
+      "context": "Analysis\n\nAs shown in Figure \\(\\PageIndex{5}\\), two of the planes are the same and they intersect the third plane on a line. The solution set is infinite, as all points along the intersection line will satisfy all three equations.\n\nNo, you can write the generic solution in terms of any of the variables, but it is common to write it in terms of \\(x\\) and if needed \\(x\\) and \\(y\\).",
+      "original": "Exercise \\(\\PageIndex{3}\\):\n\nSolve the following system.\n\n\\[\\begin{align} x+y+z &= 7 \\nonumber \\\\[4pt] 3x−2y−z &= 4 \\nonumber \\\\[4pt] x+6y+5z &= 24 \\nonumber \\end{align} \\nonumber\\]\n\nAnswer\n\nInfinite number of solutions of the form \\((x,4x−11,−5x+18)\\).",
+      "prompt": "Exercise \\(\\PageIndex{3}\\):\n\nSolve the following system.\n\n\\[\\begin{align} x+y+z &= 7 \\nonumber \\\\[4pt] 3x−2y−z &= 4 \\nonumber \\\\[4pt] x+6y+5z &= 24 \\nonumber \\end{align} \\nonumber\\]",
+      "sourceAnswers": [
+        "Infinite number of solutions of the form \\((x,4x−11,−5x+18)\\)."
+      ],
+      "hasFigure": false,
+      "status": "draft",
+      "answerVerified": false,
+      "translationStatus": "pending",
+      "mappingStatus": "pending"
+    }
+  ],
+  "license": "CC BY 4.0",
+  "licenseEvidence": "This page titled 11.2: Systems of Linear Equations with Three Variables was last modified on Sun, 27 Apr 2025 18:28:33 GMT and is shared under a CC BY  4.0  license and was authored, remixed, and/or curated by OpenStax via source content that was edited to the style and standards of the LibreTexts platform.",
+  "url": "https://math.libretexts.org/Bookshelves/Algebra/Algebra_and_Trigonometry_1e_(OpenStax)/11:_Systems_of_Equations_and_Inequalities/11.02:_Systems_of_Linear_Equations_with_Three_Variables",
+  "sha256": "1bdbfb9c42cad295a7b927c7ff000a10e94ceeaa15a149af2d398c65594199e7",
+  "checkedAt": "2026-10-07",
+  "id": "40c2503a5d4a30c196d9",
+  "bookId": "algebra-trigonometry",
+  "licenseInherited": false,
+  "licenseSource": "https://math.libretexts.org/Bookshelves/Algebra/Algebra_and_Trigonometry_1e_(OpenStax)/11:_Systems_of_Equations_and_Inequalities/11.02:_Systems_of_Linear_Equations_with_Three_Variables",
+  "licenseUrl": "https://creativecommons.org/licenses/by/4.0/",
+  "authors": "OpenStax / Jay Abramson et al.",
+  "book": "Algebra and Trigonometry 1e",
+  "reviewStatus": "unreviewed",
+  "sourceLanguage": "en",
+  "translationStatus": "pending"
+}

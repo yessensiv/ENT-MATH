@@ -1,0 +1,561 @@
+{
+  "title": "1.2: Exponents and Scientific Notation",
+  "originalText": "Learning Objectives\n\nVarious rules of Exponents\n\nScientific Notation\n\nMathematicians, scientists, and economists commonly encounter very large and very small numbers. But it may not be obvious how common such figures are in everyday life. For instance, a pixel is the smallest unit of light that can be perceived and recorded by a digital camera. A particular camera might record an image that is \\(2,048\\) pixels by \\(1,536\\) pixels, which is a very high resolution picture. It can also perceive a color depth (gradations in colors) of up to \\(48\\) bits per frame, and can shoot the equivalent of \\(24\\) frames per second. The maximum possible number of bits of information used to film a one-hour (\\(3,600\\)-second) digital film is then an extremely large number.\n\nUsing a calculator, we enter \\(2,048×1\\), \\(536×48×24×3\\), \\(600\\) and press ENTER. The calculator displays \\(1.304596316E13\\). What does this mean? The “\\(E13\\)” portion of the result represents the exponent \\(13\\) of ten, so there are a maximum of approximately \\(1.3\\times10^{13}\\) bits of data in that one-hour film. In this section, we review rules of exponents first and then apply them to calculations involving very large or small numbers.\n\nUsing the Product Rule of Exponents\n\nConsider the product \\(x^3\\times x^4\\). Both terms have the same base, \\(x\\), but they are raised to different exponents. Expand each expression, and then rewrite the resulting expression.\n\n\\[ \\begin{align*} x^3 \\times x^4 &= \\overbrace{x \\times x \\times x}^{\\text{3 factors}} \\times \\overbrace{ x \\times x \\times x\\times x}^{\\text{4 factors}} \\\\[4pt] &= \\overbrace{x\\times x\\times x\\times x\\times x\\times x\\times x}^{\\text{7 factors}} \\\\[4pt] &=x^7 \\end{align*}\\]\n\nThe result is that \\(x^3\\times x^4=x^{3+4}=x^7\\).\n\nNotice that the exponent of the product is the sum of the exponents of the terms. In other words, when multiplying exponential expressions with the same base, we write the result with the common base and add the exponents. This is the product rule of exponents.\n\n\\[a^m\\times a^n=a^{m+n}\\]\n\nNow consider an example with real numbers.\n\n\\(2^3\\times2^4=2^{3+4}=2^7\\)\n\nWe can always check that this is true by simplifying each exponential expression. We find that \\(2^3\\) is \\(8\\), \\(2^4\\) is \\(16\\), and \\(2^7\\) is \\(128\\). The product \\(8\\times16\\) equals \\(128\\), so the relationship is true. We can use the product rule of exponents to simplify expressions that are a product of two numbers or expressions with the same base but different exponents.\n\nTHE PRODUCT RULE OF EXPONENTS\n\nFor any real number a and natural numbers \\(m\\) and \\(n\\), the product rule of exponents states that\n\n\\[a^m\\times a^n=a^{m+n} \\label{prod}\\]\n\nExample \\(\\PageIndex{1}\\): Using the Product Rule\n\nWrite each of the following products with a single base. Do not simplify further.\n\n1. \\(t^5\\times t^3\\)\n\n2. \\((−3)^5\\times(−3)\\)\n\n3. \\(x^2\\times x^5\\times x^3\\)\n\nSolution\n\nUse the product rule (Equation \\ref{prod}) to simplify each expression.\n\n1. \\(t^5\\times t^3=t^{5+3}=t^8\\)\n\n2. \\((−3)^5\\times(−3)=(−3)^5\\times(−3)^1=(−3)^{5+1}=(−3)^6\\)\n\n3. \\(x^2\\times x^5\\times x^3\\)\n\nAt first, it may appear that we cannot simplify a product of three factors. However, using the associative property of multiplication, begin by simplifying the first two.\n\n\\[x^2\\times x^5\\times x^3=(x^2\\times x^5) \\times x^3=(x^{2+5})\\times x^3=x^7\\times x^3=x^{7+3}=x^{10} \\nonumber\\]\n\nNotice we get the same result by adding the three exponents in one step.\n\n\\[x^2\\times x^5\\times x^3=x^{2+5+3}=x^{10} \\nonumber\\]\n\nExercise \\(\\PageIndex{1}\\)\n\nWrite each of the following products with a single base. Do not simplify further.\n\n1. \\(k^6\\times k^9\\)\n\n2. \\(\\left(\\dfrac{2}{y}\\right)^4\\times\\left(\\dfrac{2}{y}\\right)\\)\n\n3. \\(t^3\\times t^6\\times t^5\\)\n\nAnswer a\n\n\\(k^{15}\\)\n\nAnswer b\n\n\\(\\left(\\dfrac{2}{y}\\right)^5\\)\n\nAnswer c\n\n\\(t^{14}\\)\n\nUsing the Quotient Rule of Exponents\n\nThe quotient rule of exponents allows us to simplify an expression that divides two numbers with the same base but different exponents. In a similar way to the product rule, we can simplify an expression such as \\(\\dfrac{y^m}{y^n}\\), where \\(m>n\\). Consider the example \\(\\dfrac{y^9}{y^5}\\). Perform the division by canceling common factors.\n\n\\[\\begin{align*} \\dfrac{y^9}{y^5} &= \\dfrac{y\\cdot y\\cdot y\\cdot y\\cdot y\\cdot y\\cdot y\\cdot y\\cdot y}{y\\cdot y\\cdot y\\cdot y\\cdot y}\\\\ &= \\dfrac{y\\cdot y\\cdot y\\cdot y}{1}\\\\ &= y^4 \\end{align*}\\]\n\nNotice that the exponent of the quotient is the difference between the exponents of the divisor and dividend.\n\n\\[\\dfrac{a^m}{a^n}=a^{m−n}\\]\n\nIn other words, when dividing exponential expressions with the same base, we write the result with the common base and subtract the exponents.\n\n\\(\\dfrac{y^9}{y^5}=y^{9−5}=y^4\\)\n\nFor the time being, we must be aware of the condition \\(m>n\\). Otherwise, the difference \\(m-n\\) could be zero or negative. Those possibilities will be explored shortly. Also, instead of qualifying variables as nonzero each time, we will simplify matters and assume from here on that all variables represent nonzero real numbers.\n\nTHE QUOTIENT RULE OF EXPONENTS\n\nFor any real number \\(a\\) and natural numbers \\(m\\) and \\(n\\), such that \\(m>n\\), the quotient rule of exponents states that\n\n\\[\\dfrac{a^m}{a^n}=a^{m−n} \\label{quot}\\]\n\nExample \\(\\PageIndex{2}\\): Using the Quotient Rule\n\nWrite each of the following products with a single base. Do not simplify further.\n\n1. \\(\\dfrac{(−2)^{14}}{(−2)^{9}}\\)\n\n2. \\(\\dfrac{t^{23}}{t^{15}}\\)\n\n3. \\(\\dfrac{(z\\sqrt{2})^5}{z\\sqrt{2}}\\)\n\nSolution\n\nUse the quotient rule (Equation \\ref{quot}) to simplify each expression.\n\n1. \\(\\dfrac{(−2)^{14}}{(−2)^{9}}=(−2)^{14−9}=(−2)^5\\)\n\n2. \\(\\dfrac{t^{23}}{t^{15}}\\)=t^{23−15}=t^8\\)\n\n3. \\(\\dfrac{(z\\sqrt{2})^5}{z\\sqrt{2}}=(z\\sqrt{2})^{5−1}=(z\\sqrt{2})^4\\)\n\nExercise \\(\\PageIndex{2}\\)\n\nWrite each of the following products with a single base. Do not simplify further.\n\n1. \\(\\dfrac{s^{75}}{s^{68}}\\)\n\n2. \\(\\dfrac{(−3)^6}{−3}\\)\n\n3. \\(\\dfrac{(ef^2)^5}{(ef^2)^3}\\)\n\nAnswer a\n\n\\(s^7\\)\n\nAnswer b\n\n\\((−3)^5\\)\n\nAnswer c\n\n\\((ef^2)^2\\)\n\nUsing the Power Rule of Exponents\n\nSuppose an exponential expression is raised to some power. Can we simplify the result? Yes. To do this, we use the power rule of exponents. Consider the expression \\((x^2)^3\\). The expression inside the parentheses is multiplied twice because it has an exponent of \\(2\\). Then the result is multiplied three times because the entire expression has an exponent of \\(3\\).\n\n\\[\\begin{align*} (x^2)^3 &= (x^2)\\times(x^2)\\times(x^2)\\\\ &= x\\times x\\times x\\times x\\times x\\times x\\\\ &= x^6 \\end{align*}\\]\n\nThe exponent of the answer is the product of the exponents: \\((x^2)^3=x^{2⋅3}=x^6\\). In other words, when raising an exponential expression to a power, we write the result with the common base and the product of the exponents.\n\n\\[(a^m)^n=a^{m⋅n}\\]\n\nBe careful to distinguish between uses of the product rule and the power rule. When using the product rule, different terms with the same bases are raised to exponents. In this case, you add the exponents. When using the power rule, a term in exponential notation is raised to a power. In this case, you multiply the exponents.\n\n    Table \\(\\PageIndex{1}\\)\n\n            Product Rule\t\n            Power Rule\t\n\n            \\(5^3\\times5^4=5^{3+4}=5^7\\) \t\n            \\((5^3)^4=5^{3\\times4}=5^{12}\\)\t\n\n            \\(x^5\\times x^2=x^{5+2}=x^7\\) \t\n            \\((x^5)^2=x^{5\\times2}=x^{10}\\)\t\n\n            \\((3a)^7\\times(3a)^{10}=(3a)^{7+10}=(3a)^{17}\\)\t\n            \\(((3a)^7)^{10}=(3a)^{7\\times10}=(3a)^{70}\\)\t\n\nTHE POWER RULE OF EXPONENTS\n\nFor any real number a and positive integers m and n, the power rule of exponents states that\n\n\\[(a^m)^n=a^{m⋅n} \\label{power}\\]\n\nExample \\(\\PageIndex{3}\\): Using the Power Rule\n\nWrite each of the following products with a single base. Do not simplify further.\n\n1. \\((x^2)^7\\)\n\n2. \\(((2t)^5)^3\\)\n\n3. \\(((−3)^5)^{11}\\)\n\nSolution\n\nUse the power rule (Equation \\ref{power}) to simplify each expression.\n\n1. \\((x^2)^7=x^{2⋅7}=x^{14}\\)\n\n2. \\(((2t)^5)^3=(2t)^{5⋅3}=(2t)^{15}\\)\n\n3. \\(((−3)^5)^{11}=(−3)^{5⋅11}=(−3)^{55}\\)\n\nExercise \\(\\PageIndex{3}\\)\n\nWrite each of the following products with a single base. Do not simplify further.\n\n1. \\(((3y)^8)^3\\)\n\n2. \\((t^5)^7\\)\n\n3. \\(((−g)^4)^4\\)\n\nAnswer a\n\n\\((3y)^{24}\\)\n\nAnswer b\n\n\\(t^{35}\\)\n\nAnswer c\n\n\\((−g)^{16}\\)\n\nUsing the Zero Exponent Rule of Exponents\n\nReturn to the quotient rule. We made the condition that \\(m>n\\) so that the difference \\(m−n\\) would never be zero or negative. What would happen if \\(m=n\\) ? In this case, we would use the zero exponent rule of exponents to simplify the expression to \\(1\\). To see how this is done, let us begin with an example.\n\n\\[\\dfrac{t^8}{t^8}=1 \\nonumber\\]\n\nIf we were to simplify the original expression using the quotient rule, we would have\n\n\\[\\dfrac{t^8}{t^8}=t^{8−8}=t^0 \\nonumber\\]\n\nIf we equate the two answers, the result is \\(t^0=1\\). This is true for any nonzero real number, or any variable representing a real number.\n\n\\[a^0=1 \\nonumber\\]\n\nThe sole exception is the expression \\(0^0\\). This appears later in more advanced courses, but for now, we will consider the value to be undefined.\n\nTHE ZERO EXPONENT RULE OF EXPONENTS\n\nFor any nonzero real number a, the zero exponent rule of exponents states that\n\n\\[a^0=1\\]\n\nExample \\(\\PageIndex{4}\\): Using the Zero Exponent Rule\n\nSimplify each expression using the zero exponent rule of exponents.\n\n1. \\(\\dfrac{c^3}{c^3}\\)\n\n2. \\(\\dfrac{-3x^5}{x^5}\\)\n\n3. \\(\\dfrac{(j^2k)^4}{(j^2k)\\times(j^2k)^3}\\)\n\n4. \\(\\dfrac{5(rs^2)^2}{(rs^2)^2}\\)\n\nSolution\n\nUse the zero exponent and other rules to simplify each expression.\n\na. \\[\\begin{align*} \\dfrac{c^3}{c^3} &= c^{3-3}\\\\ &= c^0\\\\ &= 1 \\end{align*}\\]\n\nb. \\[\\begin{align*} \\dfrac{-3x^5}{x^5} &= -3\\times\\dfrac{x^5}{x^5}\\\\ &= -3\\times x^{5-5}\\\\ &= -3\\times x^0\\\\ &= -3\\times 1\\\\ &= -3 \\end{align*}\\]\n\nc. \\[\\begin{align*} \\dfrac{(j^2k)^4}{(j^2k)\\times(j^2k)^3} &= \\dfrac{(j^2k)^4}{(j^2k)^{1+3}} && \\text{ Use the product rule in the denominator}\\\\ &= \\dfrac{(j^2k)^4}{(j^2k)^4} && \\text{ Simplify}\\\\ &= (j^2k)^{4-4} && \\text{ Use the quotient rule}\\\\ &= (j^2k)^0 && \\text{ Simplify}\\\\ &= 1 \\end{align*}\\]\n\nd. \\[\\begin{align*} \\dfrac{5(rs^2)^2}{(rs^2)^2} &= 5(rs^2)^{2-2} && \\text{ Use the quotient rule}\\\\ &= 5(rs^2)^0 && \\text{ Simplify}\\\\ &= 5\\times1 && \\text{ Use the zero exponent rule}\\\\ &= 5 && \\text{ Simplify} \\end{align*}\\]\n\nExercise \\(\\PageIndex{4}\\)\n\nSimplify each expression using the zero exponent rule of exponents.\n\n1. \\(\\dfrac{t^7}{t^7}\\)\n\n2. \\(\\dfrac{(de^2)^{11}}{2(de^2)^{11}}\\)\n\n3. \\(\\dfrac{w^4\\times w^2}{w^6}\\)\n\n4. \\(\\dfrac{t^3\\times t^4}{t^2\\times t^5}\\)\n\nAnswer a\n\n\\(1\\)\n\nAnswer b\n\n\\(\\dfrac{1}{2}\\)\n\nAnswer c\n\n\\(1\\)\n\nAnswer d\n\n\\(1\\)\n\nUsing the Negative Rule of Exponents\n\nAnother useful result occurs if we relax the condition that \\(m>n\\) in the quotient rule even further. For example, can we simplify \\(\\dfrac{t^3}{t^5}\\)? When \\(m<n\\) —that is, where the difference \\(m−n\\) is negative—we can use the negative rule of exponents to simplify the expression to its reciprocal.\n\nDivide one exponential expression by another with a larger exponent. Use our example, \\(\\dfrac{t^3}{t^5}\\).\n\n\\[\\begin{align*} \\dfrac{t^3}{t^5} &= \\dfrac{t\\times t\\times t}{t\\times t\\times t\\times t\\times t} \\\\ &= \\dfrac{1}{t\\times t}\\\\ &= \\dfrac{1}{h^2} \\end{align*}\\]\n\nIf we were to simplify the original expression using the quotient rule, we would have\n\n\\[\\begin{align*} \\dfrac{t^3}{t^5} &= h^{3-5} \\\\ &= h^{-2} \\end{align*}\\]\n\nPutting the answers together, we have \\(h^{−2}=\\dfrac{1}{h^2}\\). This is true for any nonzero real number, or any variable representing a nonzero real number.\n\nA factor with a negative exponent becomes the same factor with a positive exponent if it is moved across the fraction bar—from numerator to denominator or vice versa.\n\n\\(a^{−n}=\\dfrac{1}{a^n}\\) and \\(a^n=\\dfrac{1}{a^{−n}}\\)\n\nWe have shown that the exponential expression an is defined when \\(n\\) is a natural number, \\(0\\), or the negative of a natural number. That means that an is defined for any integer \\(n\\). Also, the product and quotient rules and all of the rules we will look at soon hold for any integer \\(n\\).\n\nTHE NEGATIVE RULE OF EXPONENTS\n\nFor any nonzero real number a and natural number n, the negative rule of exponents states that\n\n\\[a^{−n}=\\dfrac{1}{a^n}\\]\n\nExample \\(\\PageIndex{5}\\): Using the Negative Exponent Rule\n\nWrite each of the following quotients with a single base. Do not simplify further. Write answers with positive exponents.\n\n1. \\(\\dfrac{\\theta^3}{\\theta^{10}}\\)\n\n2. \\(\\dfrac{z^2\\times z}{z^4}\\)\n\n3. \\(\\dfrac{(-5t^3)^4}{(-5t^3)^8}\\)\n\nSolution\n\n1. \\(\\dfrac{\\theta^3}{\\theta^{10}}=\\theta^{3-10}=\\theta^{-7}=\\dfrac{1}{\\theta^7}\\)\n\n2. \\(\\dfrac{z^2\\times z}{z^4}=\\dfrac{z^{2+1}}{z^4}=\\dfrac{z^3}{z^4}=z^{3-4}=z^{-1}=\\dfrac{1}{z}\\)\n\n3. \\(\\dfrac{(-5t^3)^4}{(-5t^3)^8}=(-5t^3)^{4-8}=(-5t^3)^{-4}=\\dfrac{1}{(-5t^3)^4}\\)\n\nExercise \\(\\PageIndex{5}\\)\n\nWrite each of the following quotients with a single base. Do not simplify further. Write answers with positive exponents.\n\n1. \\(\\dfrac{(-3t)^2}{(-3t)^8}\\)\n\n2. \\(\\dfrac{f^{47}}{f^{49}\\times f}\\)\n\n3. \\(\\dfrac{2k^4}{5k^7}\\)\n\nAnswer a\n\n\\(\\dfrac{1}{(-3t)^6}\\)\n\nAnswer b\n\n\\(\\dfrac{1}{f^3}\\)\n\nAnswer c\n\n\\(\\dfrac{2}{5k^3}\\)​\n\nExample \\(\\PageIndex{6}\\): Using the Product and Quotient Rules\n\nWrite each of the following products with a single base. Do not simplify further. Write answers with positive exponents.\n\n1. \\(b^2\\times b^{-8}\\)\n\n2. \\((-x)^5\\times(-x)^{-5}\\)\n\n3. \\(\\dfrac{-7z}{(-7z)^5}\\)\n\nSolution\n\n1. \\(b^2\\times b^{-8}=b^{2-8}=b^{-6}=\\dfrac{1}{b^6}\\)\n\n2. \\((-x)^5\\times(-x)^{-5}=(-x)^{5-5}=(-x)^0=1\\)\n\n3. \\(\\dfrac{-7z}{(-7z)^5}= \\dfrac{(-7z)^1}{(-7z)^5}=(-7z)^{1-5}=(-7z)^{-4}=\\dfrac{1}{(-7z)^4}\\)\n\nExercise \\(\\PageIndex{6}\\)\n\nWrite each of the following products with a single base. Do not simplify further. Write answers with positive exponents.\n\n1. \\(t^{-11}\\times t^6\\)\n\n2. \\(\\dfrac{25^{12}}{25^{13}}\\)\n\nAnswer a\n\n\\(t^{-5}=\\dfrac{1}{t^5}\\)\n\nAnswer b\n\n\\(\\dfrac{1}{25}\\)\n\nFinding the Power of a Product\n\nTo simplify the power of a product of two exponential expressions, we can use the power of a product rule of exponents, which breaks up the power of a product of factors into the product of the powers of the factors. For instance, consider \\((pq)^3\\). We begin by using the associative and commutative properties of multiplication to regroup the factors.\n\n\\[\\begin{align*} (pq)^3 &= (pq)\\times(pq)\\times(pq)\\\\ &= p\\times q\\times p\\times q\\times p\\times q\\\\ &= p^3\\times q^3 \\end{align*}\\]\n\nIn other words, \\((pq)^3=p^3\\times q^3\\).\n\nTHE POWER OF A PRODUCT RULE OF EXPONENTS\n\nFor any real numbers a and b and any integer n, the power of a product rule of exponents states that\n\n\\[(ab)^n=a^nb^n\\]​\n\nExample \\(\\PageIndex{7}\\): Using the Power of a Product Rule\n\nSimplify each of the following products as much as possible using the power of a product rule. Write answers with positive exponents.\n\n1. \\((ab^2)^3\\)\n\n2. \\((2t)^{15}\\)\n\n3. \\((-2w^3)^3\\)\n\n4. \\(\\dfrac{1}{(-7z)^4}\\)\n\n5. \\((e^{-2}f^2)^7\\)\n\nSolution\n\nUse the product and quotient rules and the new definitions to simplify each expression.\n\n1. \\((ab^2)^3=(a)^3\\times(b^2)^3=a^{1\\times3}\\times b^{2\\times3}=a^3b^6\\)\n\n2. \\((2t)^{15}=(2)^{15}\\times(t)^{15}=2^{15}t^{15}=32,768t^{15}\\)\n\n3. \\((−2w^3)^3=(−2)^3\\times(w^3)^3=−8\\times w^{3\\times3}=−8w^9\\)\n\n4. \\(\\dfrac{1}{(-7z)^4}=\\dfrac{1}{(-7)^4\\times(z)^4}=\\dfrac{1}{2401z^4}\\)\n\n5. \\((e^{-2}f^2)^7=(e^{−2})^7\\times(f^2)^7=e^{−2\\times7}\\times f^{2\\times7}=e^{−14}f^{14}=\\dfrac{f^{14}}{e^{14}}\\)\n\nExercise \\(\\PageIndex{7}\\)\n\nSimplify each of the following products as much as possible using the power of a product rule. Write answers with positive exponents.\n\n1. \\((g^2h^3)^5\\)\n\n2. \\((5t)^3\\)\n\n3. \\((-3y^5)^3\\)\n\n4. \\(\\dfrac{1}{(a^6b^7)^3}\\)\n\n5. \\((r^3s^{-2})^4\\)\n\nAnswer a\n\n\\(g^{10}h^{15}\\)\n\nAnswer b\n\n\\(125t^3\\)\n\nAnswer c\n\n\\(-27y^{15}\\)\n\nAnswer d\n\n\\(\\dfrac{1}{a^{18}b^{21}}\\)\n\nAnswer e\n\n\\(\\dfrac{r^{12}}{s^8}\\)\n\nFinding the Power of a Quotient\n\nTo simplify the power of a quotient of two expressions, we can use the power of a quotient rule, which states that the power of a quotient of factors is the quotient of the powers of the factors. For example, let’s look at the following example.\n\n\\[(e^{−2}f^2)^7=\\dfrac{f^{14}}{e^{14}}\\]\n\nLet’s rewrite the original problem differently and look at the result.\n\n\\[\\begin{align*} (e^{-2}f^2)^7 &= \\left(\\dfrac{f^2}{e^2}\\right)^7\\\\ &= \\dfrac{f^{14}}{e^{14}} \\end{align*}\\]\n\nIt appears from the last two steps that we can use the power of a product rule as a power of a quotient rule.\n\n\\[\\begin{align*} (e^{-2}f^2)^7 &= \\left(\\dfrac{f^2}{e^2}\\right)^7\\\\ &= \\dfrac{(f^2)^7}{(e^2)^7}\\\\ &= \\dfrac{f^{2\\times7}}{e^{2\\times7}}\\\\ &= \\dfrac{f^{14}}{e^{14}} \\end{align*}\\]\n\nTHE POWER OF A QUOTIENT RULE OF EXPONENTS\n\nFor any real numbers a and b and any integer n, the power of a quotient rule of exponents states that\n\n\\[\\left(\\dfrac{a}{b}\\right)^n=\\dfrac{a^n}{b^n}\\]\n\nExample \\(\\PageIndex{8}\\): Using the Power of a Quotient Rule\n\nSimplify each of the following quotients as much as possible using the power of a quotient rule. Write answers with positive exponents.\n\n1. \\(\\left(\\dfrac{4}{z^{11}}\\right)^3\\)\n\n2. \\(\\left(\\dfrac{p}{q^3}\\right)^6\\)\n\n3. \\(\\left(\\dfrac{-1}{t^2}\\right)^{27}\\)\n\n4. \\((j^3k^{-2})^4\\)\n\n5. \\((m^{-2}n^{-2})^3\\)\n\nSolution\n\n1. \\(\\left(\\dfrac{4}{z^{11}}\\right)^3=\\dfrac{(4)^3}{(z^{11})^3}=\\dfrac{64}{z^{11\\times3}}=\\dfrac{64}{z^{33}}\\)\n\n2. \\(\\left(\\dfrac{p}{q^3}\\right)^6=\\dfrac{(p)^6}{(q^3)^6}=\\dfrac{p^{1\\times6}}{q^{3\\times6}}=\\dfrac{p^6}{q^{18}}\\)\n\n3. \\(\\left(\\dfrac{-1}{t^2}\\right)^{27}=\\dfrac{(-1)^{27}}{(t^2)^{27}}=\\dfrac{-1}{t^{2\\times27}}=\\dfrac{-1}{t^{54}}=-\\dfrac{1}{t^{54}}\\)\n\n4. \\((j^3k^{-2})^4=\\left(\\dfrac{j^3}{k^2}\\right)^4=\\dfrac{(j^3)^4}{(k^2)^4}=\\dfrac{j^{3\\times4}}{k^{2\\times4}}=\\dfrac{j^{12}}{k^8}\\)\n\n5. \\((m^{-2}n^{-2})^3=\\left(\\dfrac{1}{m^2n^2}\\right)^3=\\dfrac{(1)^3}{(m^2n^2)^3}=\\dfrac{1}{(m^2)^3(n^2)^3}=\\dfrac{1}{m^{2\\times3}n^{2\\times3}}=\\dfrac{1}{m^6n^6}\\)\n\nExercise \\(\\PageIndex{8}\\)\n\nSimplify each of the following quotients as much as possible using the power of a quotient rule. Write answers with positive exponents.\n\n1. \\(\\left(\\dfrac{b^5}{c}\\right)^3\\)\n\n2. \\(\\left(\\dfrac{5}{u^8}\\right)^4\\)\n\n3. \\(\\left(\\dfrac{-1}{w^3}\\right)^{35}\\)\n\n4. \\((p^{-4}q^3)^8\\)\n\n5. \\((c^{-5}d^{-3})^4\\)\n\nAnswer a\n\n\\(\\dfrac{b^{15}}{c^3}\\)\n\nAnswer b\n\n\\(\\dfrac{625}{u^{32}}\\)\n\nAnswer c\n\n\\(\\dfrac{-1}{w^{105}}\\)\n\nAnswer d\n\n\\(\\dfrac{q^{24}}{p^{32}}\\)\n\nAnswer e\n\n\\(\\dfrac{1}{c^{20}d^{12}}\\)\n\nSimplifying Exponential Expressions\n\nRecall that to simplify an expression means to rewrite it by combing terms or exponents; in other words, to write the expression more simply with fewer terms. The rules for exponents may be combined to simplify expressions.\n\nExample \\(\\PageIndex{9}\\): Simplifying Exponential Expressions\n\nSimplify each expression and write the answer with positive exponents only.\n\n1. \\((6m^2n^{-1})^3\\)\n\n2. \\(17^5\\times17^{-4}\\times17^{-3}\\)\n\n3. \\(\\left(\\dfrac{u^{-1}v}{v^{-1}}\\right)^2\\)\n\n4. \\((-2a^3b^{-1})(5a^{-2}b^2)\\)\n\n5. \\((x^2\\sqrt{2})^4(x^2\\sqrt{2})^{-4}\\)\n\n6. \\(\\dfrac{(3w^2)^5}{(6w^{-2})^2}\\)\n\nSolution\n\n1. \\[\\begin{align*} (6m^2n^{-1})^3 &= (6)^3(m^2)^3(n^{-1})^3 && \\text{ The power of a product rule}\\\\ &= 6^3m^{2\\times3}n^{-1\\times3} && \\text{ The power rule}\\\\ &= 216m^6n^{-3} && \\text{ The power rule}\\\\ &= \\dfrac{216m^6}{n^3} && \\text{ The negative exponent rule} \\end{align*}\\]\n\n2. \\[\\begin{align*} 17^5\\times17^{-4}\\times17^{-3} &= 17^{5-4-3} && \\text{ The product rule}\\\\ &= 17^{-2} && \\text{ Simplify}\\\\ &= \\dfrac{1}{17^2} \\text{ or } \\dfrac{1}{289} && \\text{ The negative exponent rule} \\end{align*}\\]\n\n3. \\[\\begin{align*} \\left ( \\dfrac{u^{-1}v}{v^{-1}} \\right )^2 &= \\dfrac{(u^{-1}v)^2}{(v^{-1})^2} && \\text{ The power of a quotient rule}\\\\ &= \\dfrac{u^{-2}v^2}{v^{-2}} && \\text{ The power of a product rule}\\\\ &= u^{-2}v^{2-(-2)} && \\text{ The quotient rule}\\\\ &= u^{-2}v^4 && \\text{ Simplify}\\\\ &= \\dfrac{v^4}{u^2} && \\text{ The negative exponent rule} \\end{align*}\\]\n\n4. \\[\\begin{align*} \\left (-2a^3b^{-1} \\right ) \\left(5a^{-2}b^2 \\right ) &= \\left (x^2\\sqrt{2} \\right )^{4-4} && \\text{ Commutative and associative laws of multiplication}\\\\ &= -10\\times a^{3-2}\\times b^{-1+2} && \\text{ The product rule}\\\\ &= -10ab && \\text{ Simplify} \\end{align*}\\]\n\n5. \\[\\begin{align*} \\left (x^2\\sqrt{2})^4(x^2\\sqrt{2} \\right )^{-4} &= \\left (x^2\\sqrt{2} \\right )^{4-4} && \\text{ The product rule}\\\\ &= \\left (x^2\\sqrt{2} \\right )^0 && \\text{ Simplify}\\\\ &= 1 && \\text{ The zero exponent rule} \\end{align*}\\]\n\n6. \\[\\begin{align*} \\dfrac{(3w^2)^5}{(6w^{-2})^2} &= \\dfrac{(3)^5\\times(w^2)^5}{(6)^2\\times(w^{-2})^2} && \\text{ The power of a product rule}\\\\ &= \\dfrac{3^5w^{2\\times5}}{6^2w^{-2\\times2}} && \\text{ The power rule}\\\\ &= \\dfrac{243w^{10}}{36w^{-4}} && \\text{ Simplify}\\\\ &= \\dfrac{27w^{10-(-4)}}{4} && \\text{ The quotient rule and reduce fraction}\\\\ &= \\dfrac{27w^{14}}{4} && \\text{ Simplify} \\end{align*}\\]\n\nUsing Scientific Notation\n\nRecall at the beginning of the section that we found the number \\(1.3\\times10^{13}\\) when describing bits of information in digital images. Other extreme numbers include the width of a human hair, which is about \\(0.00005\\; m\\), and the radius of an electron, which is about \\(0.00000000000047\\; m\\). How can we effectively work read, compare, and calculate with numbers such as these?\n\nA shorthand method of writing very small and very large numbers is called scientific notation, in which we express numbers in terms of exponents of \\(10\\). To write a number in scientific notation, move the decimal point to the right of the first digit in the number. Write the digits as a decimal number between \\(1\\) and \\(10\\). Count the number of places \\(n\\) that you moved the decimal point. Multiply the decimal number by \\(10\\) raised to a power of \\(n\\). If you moved the decimal left as in a very large number, \\(n\\) is positive. If you moved the decimal right as in a small large number, \\(n\\) is negative.\n\nFor example, consider the number \\(2,780,418\\). Move the decimal left until it is to the right of the first nonzero digit, which is \\(2\\).\n\n[Figure: The number 2,780,418 is written with an arrow extending to another number: 2.780418. An arrow tracking the movement of the decimal point runs underneath the number. Above the number a label on the number reads: 6 places left.]\n\nWe obtain \\(2.780418\\) by moving the decimal point \\(6\\) places to the left. Therefore, the exponent of \\(10\\) is \\(6\\), and it is positive because we moved the decimal point to the left. This is what we should expect for a large number.\n\n\\(2.780418\\times{10}^6\\)\n\nWorking with small numbers is similar. Take, for example, the radius of an electron, \\(0.00000000000047\\; m\\). Perform the same series of steps as above, except move the decimal point to the right.\n\n[Figure: The number 0.00000000000047 is written with an arrow extending to another number: 00000000000004.7. An arrow tracking the movement of the decimal point runs underneath the number. Above the number a label on the number reads: 13 places right.]\n\nBe careful not to include the leading \\(0\\) in your count. We move the decimal point \\(13\\) places to the right, so the exponent of \\(10\\) is \\(13\\). The exponent is negative because we moved the decimal point to the right. This is what we should expect for a small number.\n\n\\(4.7\\times{10}^{−13}\\)\n\nSCIENTIFIC NOTATION\n\nA number is written in scientific notation if it is written in the form \\(a\\times{10}^n\\), where \\(1≤|a|<10\\) and \\(n\\) is an integer.\n\nExample \\(\\PageIndex{10}\\): Converting Standard Notation to Scientific Notation\n\nWrite each number in scientific notation.\n\n1. Distance to Andromeda Galaxy from Earth: \\(24,000,000,000,000,000,000,000\\; m\\)\n\n2. Diameter of Andromeda Galaxy: \\(1,300,000,000,000,000,000,000\\; m\\)\n\n3. Number of stars in Andromeda Galaxy: \\(1,000,000,000,000\\)\n\n4. Diameter of electron: \\(0.00000000000094\\; m\\)\n\n5. Probability of being struck by lightning in any single year: \\(0.00000143\\)\n\nSolution\n\na. \\(24,000,000,000,000,000,000,000\\; m\\) \\(22\\) places\n\n\\(2.4\\times{10}^{22}\\; m\\)\n\nb. \\(1,300,000,000,000,000,000,000\\; m\\) \\(21\\) places\n\n\\(1.3\\times{10}^{21}\\; m\\)\n\nc. \\(1,000,000,000,000\\) \\(12\\) places\n\n\\(1\\times{10}^{12}\\)\n\nd. \\(0.00000000000094\\; m\\) \\(13\\) places\n\n\\(9.4\\times{10}^{-13}\\; m\\)\n\ne. \\(0.00000143\\) \\(6\\) places\n\n\\(1.43\\times{10}^6\\)\n\nAnalysis\n\nObserve that, if the given number is greater than \\(1\\), as in examples a–c, the exponent of \\(10\\) is positive; and if the number is less than \\(1\\), as in examples d–e, the exponent is negative.\n\nExercise \\(\\PageIndex{10}\\)\n\nWrite each number in scientific notation.\n\n1. U.S. national debt per taxpayer (April 2014): \\(\\$152,000\\)\n\n2. World population (April 2014): \\(7,158,000,000\\)\n\n3. World gross national income (April 2014): \\(\\$85,500,000,000,000\\)\n\n4. Time for light to travel \\(1\\; m: 0.00000000334\\; s\\)\n\n5. Probability of winning lottery (match \\(6\\) of \\(49\\) possible numbers): \\(0.0000000715\\)\n\nAnswer a\n\n\\(\\$1.52\\times{10}^5\\)\n\nAnswer b\n\n\\(7.158\\times{10}^9\\)\n\nAnswer c\n\n\\(\\$8.55\\times{10}^{13}\\)\n\nAnswer d\n\n\\(3.34\\times{10}^{-9}\\)\n\nAnswer e\n\n\\(7.15\\times{10}^{-8}\\)\n\nConverting from Scientific to Standard Notation\n\nTo convert a number in scientific notation to standard notation, simply reverse the process. Move the decimal n places to the right if \\(n\\) is positive or \\(n\\) places to the left if \\(n\\) is negative and add zeros as needed. Remember, if \\(n\\) is positive, the value of the number is greater than \\(1\\), and if \\(n\\) is negative, the value of the number is less than one.\n\nExample \\(\\PageIndex{11}\\): Converting Scientific Notation to Standard Notation\n\nConvert each number in scientific notation to standard notation.\n\n1. \\(3.547\\times{10}^{14}\\)\n\n2. \\(−2\\times{10}^6\\)\n\n3. \\(7.91\\times{10}^{−7}\\)\n\n4. \\(−8.05\\times{10}^{−12}\\)\n\nSolution\n\na. \\(3.547\\times{10}^{14}\\)\n\n\\(3.54700000000000\\)\n\n\\(\\rightarrow14\\) places\n\n\\(354,700,000,000,000\\)\n\nb. \\(−2\\times{10}^6\\)\n\n\\(−2.000000\\)\n\n\\(\\rightarrow6\\) places\n\n\\(−2,000,000\\)\n\nc. \\(7.91\\times{10}^{−7}\\)\n\n\\(0000007.91\\)\n\n\\(\\rightarrow7\\) places\n\n\\(0.000000791\\)\n\nd. \\(−8.05\\times{10}^{−12}\\)\n\n\\(−000000000008.05\\)\n\n\\(\\rightarrow12\\) places\n\n\\(−0.00000000000805\\)\n\nExercise \\(\\PageIndex{11}\\)\n\nConvert each number in scientific notation to standard notation.\n\n1. \\(7.03\\times{10}^5\\)\n\n2. \\(−8.16\\times{10}^{11}\\)\n\n3. \\(−3.9\\times{10}^{−13}\\)\n\n4. \\(8\\times{10}^{−6}\\)\n\nAnswer a\n\n\\(703,000\\)\n\nAnswer b\n\n\\(−816,000,000,000\\)\n\nAnswer c\n\n\\(−0.00000000000039\\)\n\nAnswer d\n\n\\(0.000008\\)\n\nUsing Scientific Notation in Applications\n\nScientific notation, used with the rules of exponents, makes calculating with large or small numbers much easier than doing so using standard notation. For example, suppose we are asked to calculate the number of atoms in \\(1\\; L\\) of water. Each water molecule contains \\(3\\) atoms (\\(2\\) hydrogen and \\(1\\) oxygen). The average drop of water contains around \\(1.32\\times{10}{21}\\) molecules of water and \\(1\\; L\\) of water holds about \\(1.22\\times{10}^{4}\\) average drops. Therefore, there are approximately \\(3⋅(1.32\\times{10}^{21})⋅(1.22\\times{10}^4)≈4.83\\times{10}^{25}\\) atoms in \\(1\\; L\\) of water. We simply multiply the decimal terms and add the exponents. Imagine having to perform the calculation without using scientific notation!\n\nWhen performing calculations with scientific notation, be sure to write the answer in proper scientific notation. For example, consider the product \\((7\\times{10}^4)⋅(5\\times{10}^6)=35\\times{10}^{10}\\). The answer is not in proper scientific notation because \\(35\\) is greater than \\(10\\). Consider \\(35\\) as \\(3.5\\times10\\). That adds a ten to the exponent of the answer.\n\n\\((35)\\times{10}^{10}=(3.5\\times10)\\times{10}^{10}=3.5\\times(10\\times{10}^{10})=3.5\\times{10}^{11}\\)\n\nExample \\(\\PageIndex{12}\\): Using Scientific Notation\n\nPerform the operations and write the answer in scientific notation.\n\n1. \\((8.14\\times{10}^{−7})(6.5\\times{10}^{10})\\)\n\n2. \\((4\\times{10}^5)÷(−1.52\\times{10}^{9})\\)\n\n3. \\((2.7\\times{10}^5)(6.04\\times{10}^{13})\\)\n\n4. \\((1.2\\times{10}^8)÷(9.6\\times{10}^5)\\)\n\n5. \\((3.33\\times{10}^4)(−1.05\\times{10}^7)(5.62\\times{10}^5)\\)\n\nSolutions\n\n1. \\[\\begin{align*} (8.14\\times{10}^{-7})(6.5\\times{10}^{10}) &= (8.14\\times6.5)({10}^{-7}\\times{10}^{10}) \\text{ Commutative and associative properties of multiplication}\\\\ &= (52.91)({10}^3) \\text{ Product rule of exponents}\\\\ &= 5.291\\times{10}^4 \\text{ Scientific notation} \\end{align*}\\]\n\n2. \\[\\begin{align*} (4\\times{10}^5)\\div (-1.52\\times{10}^{9}) &= \\left(\\dfrac{4}{-1.52}\\right)\\left(\\dfrac{{10}^5}{{10}^9}\\right) \\text{ Commutative and associative properties of multiplication}\\\\ &\\approx (-2.63)({10}^{-4}) \\text{ Quotient rule of exponents}\\\\ &= -2.63\\times{10}^{-4} \\text{ Scientific notation} \\end{align*}\\]\n\n3. \\[\\begin{align*} (2.7\\times{10}^5)(6.04\\times{10}^{13}) &= (2.7\\times6.04)({10}^5\\times{10}^{13}) \\text{ Commutative and associative properties of multiplication}\\\\ &= (16.308)({10}^{18}) \\text{ Product rule of exponents}\\\\ &= 1.6308\\times{10}^{19} \\text{ Scientific notation} \\end{align*}\\]\n\n4. \\[\\begin{align*} (1.2\\times{10}^8)÷(9.6\\times{10}^5) &= \\left(\\dfrac{1.2}{9.6}\\right)\\left(\\dfrac{{10}^8}{{10}^5}\\right) \\text{ Commutative and associative properties of multiplication}\\\\ &= (0.125)({10}^3) \\text{ Quotient rule of exponents}\\\\ &= 1.25\\times{10}^2 \\text{ Scientific notation} \\end{align*}\\]\n\n5. \\[\\begin{align*} (3.33\\times{10}^4)(-1.05\\times{10}^7)(5.62\\times{10}^5) &= [3.33\\times(-1.05)\\times5.62]({10}^4\\times{10}^7\\times{10}^5)\\\\ &\\approx (-19.65)({10}^{16})\\\\ &= -1.965\\times{10}^{17} \\end{align*}\\]\n\nExercise \\(\\PageIndex{12}\\)\n\nPerform the operations and write the answer in scientific notation.\n\n1. \\((−7.5\\times{10}^8)(1.13\\times{10}^{−2})\\)\n\n2. \\((1.24\\times{10}^{11})÷(1.55\\times{10}^{18})\\)\n\n3. \\((3.72\\times{10}^9)(8\\times{10}^3)\\)\n\n4. \\((9.933\\times{10}^{23})÷(−2.31\\times{10}^{17})\\)\n\n5. \\((−6.04\\times{10}^9)(7.3\\times{10}^2)(−2.81\\times{10}^2)\\)\n\nAnswer a\n\n\\(−8.475\\times{10}^6\\)\n\nAnswer b\n\n\\(8\\times{10}^{−8}\\)\n\nAnswer c\n\n\\(2.976\\times{10}^{13}\\)\n\nAnswer d\n\n\\(−4.3\\times{10}^6\\)\n\nAnswer e\n\n\\(≈1.24\\times{10}^{15}\\)\n\nExample \\(\\PageIndex{13}\\): Applying Scientific Notation to Solve Problems\n\nIn April 2014, the population of the United States was about \\(308,000,000\\) people. The national debt was about \\(\\$17,547,000,000,000\\). Write each number in scientific notation, rounding figures to two decimal places, and find the amount of the debt per U.S. citizen. Write the answer in both scientific and standard notations.\n\nSolution\n\nThe population was \\(308,000,000=3.08\\times{10}^8\\).\n\nThe national debt was \\($17,547,000,000,000≈$1.75\\times{10}^{13}\\).\n\nTo find the amount of debt per citizen, divide the national debt by the number of citizens.\n\n\\[\\begin{align*} (1.75\\times{10}^{13})\\div (3.08\\times{10}^8)&=\\left(\\dfrac{1.75}{3.08}\\right)({10}^5)\\\\ &\\approx 0.57\\times{10}^5\\\\ &=5.7\\times{10}^4 \\end{align*}\\]\n\nThe debt per citizen at the time was about \\($5.7\\times{10}^4\\), or \\($57,000\\).\n\nExercise \\(\\PageIndex{13}\\)\n\nAn average human body contains around \\(30,000,000,000,000\\) red blood cells. Each cell measures approximately \\(0.000008\\; m\\) long. Write each number in scientific notation and find the total length if the cells were laid end-to-end. Write the answer in both scientific and standard notations.\n\nAnswer\n\nNumber of cells: \\(3\\times{10}^{13}\\); length of a cell: \\(8\\times{10}^{−6}\\; m\\); total length: \\(2.4\\times{10}^8\\; m\\) or \\(240,000,000\\; m\\).\n\nAccess these online resources for additional instruction and practice with exponents and scientific notation.\n\nExponential Notation\n\nProperties of Exponents\n\nZero Exponent\n\nSimplify Exponent Expressions\n\nQuotient Rule for Exponents\n\nScientific Notation\n\nConverting to Decimal Notation\n\nKey Equations\n\n    Rules of Exponents For nonzero real numbers a and b and integers m and n\n\n            Product rule\t\n            \\(a^m⋅a^n=a^{m+n}\\)\t\n\n            Quotient rule\t\n            \\(\\dfrac{a^m}{a^n}=a^{m−n}\\)\t\n\n            Power rule\t\n            \\((a^m)^n=a^{m⋅n}\\)\t\n\n            Zero exponent rule\t\n            \\(a^0=1\\)\t\n\n            Negative rule\t\n            \\(a^{−n}=\\dfrac{1}{a^n}\\)\t\n\n            Power of a product rule\t\n            \\((a⋅b)^n=a^n⋅b^n\\)\t\n\n            Power of a quotient rule\t\n            \\(\\left(\\dfrac{a}{b}\\right)^n=\\dfrac{a^n}{b^n}\\)\t\n\nKey Concepts\n\nProducts of exponential expressions with the same base can be simplified by adding exponents. See Example.\n\nQuotients of exponential expressions with the same base can be simplified by subtracting exponents. See Example.\n\nPowers of exponential expressions with the same base can be simplified by multiplying exponents. See Example.\n\nAn expression with exponent zero is defined as 1. See Example.\n\nAn expression with a negative exponent is defined as a reciprocal. See Example and Example.\n\nThe power of a product of factors is the same as the product of the powers of the same factors. See Example.\n\nThe power of a quotient of factors is the same as the quotient of the powers of the same factors. See Example.\n\nThe rules for exponential expressions can be combined to simplify more complicated expressions. See Example.\n\nScientific notation uses powers of 10 to simplify very large or very small numbers. See Example and Example.\n\nScientific notation may be used to simplify calculations with very large or very small numbers. See Example and Example.\n\nThis page titled 1.2: Exponents and Scientific Notation was last modified on Thu, 26 Dec 2024 22:30:45 GMT and is shared under a CC BY  4.0  license and was authored, remixed, and/or curated by OpenStax via source content that was edited to the style and standards of the LibreTexts platform.",
+  "figures": [
+    {
+      "url": "https://math.libretexts.org/@api/deki/files/19206/CNX_CAT_Figure_01_02_001.jpg?revision=1",
+      "alt": "The number 2,780,418 is written with an arrow extending to another number: 2.780418. An arrow tracking the movement of the decimal point runs underneath the number. Above the number a label on the number reads: 6 places left.",
+      "credit": ""
+    },
+    {
+      "url": "https://math.libretexts.org/@api/deki/files/19190/CNX_CAT_Figure_01_02_002.jpg?revision=1",
+      "alt": "The number 0.00000000000047 is written with an arrow extending to another number: 00000000000004.7. An arrow tracking the movement of the decimal point runs underneath the number. Above the number a label on the number reads: 13 places right.",
+      "credit": ""
+    }
+  ],
+  "references": [
+    {
+      "text": "Exponential Notation",
+      "url": "http://openstaxcollege.org/l/exponnot"
+    },
+    {
+      "text": "Properties of Exponents",
+      "url": "http://openstaxcollege.org/l/exponprops"
+    },
+    {
+      "text": "Zero Exponent",
+      "url": "http://openstaxcollege.org/l/zeroexponent"
+    },
+    {
+      "text": "Simplify Exponent Expressions",
+      "url": "http://openstaxcollege.org/l/exponexpres"
+    },
+    {
+      "text": "Quotient Rule for Exponents",
+      "url": "http://openstaxcollege.org/l/quotofexpon"
+    },
+    {
+      "text": "Scientific Notation",
+      "url": "http://openstaxcollege.org/l/scientificnota"
+    },
+    {
+      "text": "Converting to Decimal Notation",
+      "url": "http://openstaxcollege.org/l/decimalnota"
+    },
+    {
+      "text": "Example",
+      "url": "https://math.libretexts.org/Bookshelves/Algebra/Algebra_and_Trigonometry_1e_(OpenStax)/01:_Prerequisites/1.02:_Exponents_and_Scientific_Notation#Example+1.3.1"
+    },
+    {
+      "text": "Example",
+      "url": "https://math.libretexts.org/Bookshelves/Algebra/Algebra_and_Trigonometry_1e_(OpenStax)/01:_Prerequisites/1.02:_Exponents_and_Scientific_Notation#Example+1.3.2"
+    },
+    {
+      "text": "Example",
+      "url": "https://math.libretexts.org/Bookshelves/Algebra/Algebra_and_Trigonometry_1e_(OpenStax)/01:_Prerequisites/1.02:_Exponents_and_Scientific_Notation#Example+1.3.3"
+    },
+    {
+      "text": "Example",
+      "url": "https://math.libretexts.org/Bookshelves/Algebra/Algebra_and_Trigonometry_1e_(OpenStax)/01:_Prerequisites/1.02:_Exponents_and_Scientific_Notation#Example+1.3.4"
+    },
+    {
+      "text": "Example",
+      "url": "https://math.libretexts.org/Bookshelves/Algebra/Algebra_and_Trigonometry_1e_(OpenStax)/01:_Prerequisites/1.02:_Exponents_and_Scientific_Notation#Example+1.3.5"
+    },
+    {
+      "text": "Example",
+      "url": "https://math.libretexts.org/Bookshelves/Algebra/Algebra_and_Trigonometry_1e_(OpenStax)/01:_Prerequisites/1.02:_Exponents_and_Scientific_Notation#Example+1.3.6"
+    },
+    {
+      "text": "Example",
+      "url": "https://math.libretexts.org/Bookshelves/Algebra/Algebra_and_Trigonometry_1e_(OpenStax)/01:_Prerequisites/1.02:_Exponents_and_Scientific_Notation#Example+1.3.7"
+    },
+    {
+      "text": "Example",
+      "url": "https://math.libretexts.org/Bookshelves/Algebra/Algebra_and_Trigonometry_1e_(OpenStax)/01:_Prerequisites/1.02:_Exponents_and_Scientific_Notation#Example+1.3.8"
+    },
+    {
+      "text": "Example",
+      "url": "https://math.libretexts.org/Bookshelves/Algebra/Algebra_and_Trigonometry_1e_(OpenStax)/01:_Prerequisites/1.02:_Exponents_and_Scientific_Notation#Example+1.3.10"
+    },
+    {
+      "text": "Example",
+      "url": "https://math.libretexts.org/Bookshelves/Algebra/Algebra_and_Trigonometry_1e_(OpenStax)/01:_Prerequisites/1.02:_Exponents_and_Scientific_Notation#Example+1.3.10"
+    },
+    {
+      "text": "Example",
+      "url": "https://math.libretexts.org/Bookshelves/Algebra/Algebra_and_Trigonometry_1e_(OpenStax)/01:_Prerequisites/1.02:_Exponents_and_Scientific_Notation#Example+1.3.11"
+    },
+    {
+      "text": "Example",
+      "url": "https://math.libretexts.org/Bookshelves/Algebra/Algebra_and_Trigonometry_1e_(OpenStax)/01:_Prerequisites/1.02:_Exponents_and_Scientific_Notation#Example+1.3.12"
+    },
+    {
+      "text": "Example",
+      "url": "https://math.libretexts.org/Bookshelves/Algebra/Algebra_and_Trigonometry_1e_(OpenStax)/01:_Prerequisites/1.02:_Exponents_and_Scientific_Notation#Example+1.3.13"
+    },
+    {
+      "text": "1.2: Exponents and Scientific Notation",
+      "url": "https://math.libretexts.org/Bookshelves/Algebra/Algebra_and_Trigonometry_1e_(OpenStax)/01%3A_Prerequisites/1.02%3A_Exponents_and_Scientific_Notation"
+    },
+    {
+      "text": "CC BY  4.0",
+      "url": "https://creativecommons.org/licenses/by/4.0"
+    },
+    {
+      "text": "OpenStax",
+      "url": "https://openstax.org/"
+    },
+    {
+      "text": "source content",
+      "url": "https://openstax.org/details/books/precalculus"
+    }
+  ],
+  "exercises": [
+    {
+      "ordinal": 1,
+      "sourceNumber": "",
+      "sourceAnchor": "",
+      "kind": "example-or-exercise",
+      "context": "We can always check that this is true by simplifying each exponential expression. We find that \\(2^3\\) is \\(8\\), \\(2^4\\) is \\(16\\), and \\(2^7\\) is \\(128\\). The product \\(8\\times16\\) equals \\(128\\), so the relationship is true. We can use the product rule of exponents to simplify expressions that are a product of two numbers or expressions with the same base but different exponents.\n\nFor any real number a and natural numbers \\(m\\) and \\(n\\), the product rule of exponents states that\n\n\\[a^m\\times a^n=a^{m+n} \\label{prod}\\]",
+      "original": "Example \\(\\PageIndex{1}\\): Using the Product Rule\n\nWrite each of the following products with a single base. Do not simplify further.\n\n1. \\(t^5\\times t^3\\)\n\n2. \\((−3)^5\\times(−3)\\)\n\n3. \\(x^2\\times x^5\\times x^3\\)\n\nSolution\n\nUse the product rule (Equation \\ref{prod}) to simplify each expression.\n\n1. \\(t^5\\times t^3=t^{5+3}=t^8\\)\n\n2. \\((−3)^5\\times(−3)=(−3)^5\\times(−3)^1=(−3)^{5+1}=(−3)^6\\)\n\n3. \\(x^2\\times x^5\\times x^3\\)\n\nAt first, it may appear that we cannot simplify a product of three factors. However, using the associative property of multiplication, begin by simplifying the first two.\n\n\\[x^2\\times x^5\\times x^3=(x^2\\times x^5) \\times x^3=(x^{2+5})\\times x^3=x^7\\times x^3=x^{7+3}=x^{10} \\nonumber\\]\n\nNotice we get the same result by adding the three exponents in one step.\n\n\\[x^2\\times x^5\\times x^3=x^{2+5+3}=x^{10} \\nonumber\\]",
+      "prompt": "Example \\(\\PageIndex{1}\\): Using the Product Rule\n\nWrite each of the following products with a single base. Do not simplify further.\n\n1. \\(t^5\\times t^3\\)\n\n2. \\((−3)^5\\times(−3)\\)\n\n3. \\(x^2\\times x^5\\times x^3\\)\n\nSolution\n\nUse the product rule (Equation \\ref{prod}) to simplify each expression.\n\n1. \\(t^5\\times t^3=t^{5+3}=t^8\\)\n\n2. \\((−3)^5\\times(−3)=(−3)^5\\times(−3)^1=(−3)^{5+1}=(−3)^6\\)\n\n3. \\(x^2\\times x^5\\times x^3\\)\n\nAt first, it may appear that we cannot simplify a product of three factors. However, using the associative property of multiplication, begin by simplifying the first two.\n\n\\[x^2\\times x^5\\times x^3=(x^2\\times x^5) \\times x^3=(x^{2+5})\\times x^3=x^7\\times x^3=x^{7+3}=x^{10} \\nonumber\\]\n\nNotice we get the same result by adding the three exponents in one step.\n\n\\[x^2\\times x^5\\times x^3=x^{2+5+3}=x^{10} \\nonumber\\]",
+      "sourceAnswers": [],
+      "hasFigure": false,
+      "status": "draft",
+      "answerVerified": false,
+      "translationStatus": "pending",
+      "mappingStatus": "pending"
+    },
+    {
+      "ordinal": 2,
+      "sourceNumber": "",
+      "sourceAnchor": "",
+      "kind": "exercise-candidate",
+      "context": "We can always check that this is true by simplifying each exponential expression. We find that \\(2^3\\) is \\(8\\), \\(2^4\\) is \\(16\\), and \\(2^7\\) is \\(128\\). The product \\(8\\times16\\) equals \\(128\\), so the relationship is true. We can use the product rule of exponents to simplify expressions that are a product of two numbers or expressions with the same base but different exponents.\n\nFor any real number a and natural numbers \\(m\\) and \\(n\\), the product rule of exponents states that\n\n\\[a^m\\times a^n=a^{m+n} \\label{prod}\\]",
+      "original": "Exercise \\(\\PageIndex{1}\\)\n\nWrite each of the following products with a single base. Do not simplify further.\n\n1. \\(k^6\\times k^9\\)\n\n2. \\(\\left(\\dfrac{2}{y}\\right)^4\\times\\left(\\dfrac{2}{y}\\right)\\)\n\n3. \\(t^3\\times t^6\\times t^5\\)\n\nAnswer a\n\n\\(k^{15}\\)\n\nAnswer b\n\n\\(\\left(\\dfrac{2}{y}\\right)^5\\)\n\nAnswer c\n\n\\(t^{14}\\)",
+      "prompt": "Exercise \\(\\PageIndex{1}\\)\n\nWrite each of the following products with a single base. Do not simplify further.\n\n1. \\(k^6\\times k^9\\)\n\n2. \\(\\left(\\dfrac{2}{y}\\right)^4\\times\\left(\\dfrac{2}{y}\\right)\\)\n\n3. \\(t^3\\times t^6\\times t^5\\)",
+      "sourceAnswers": [
+        "\\(k^{15}\\)",
+        "\\(\\left(\\dfrac{2}{y}\\right)^5\\)",
+        "\\(t^{14}\\)"
+      ],
+      "hasFigure": false,
+      "status": "draft",
+      "answerVerified": false,
+      "translationStatus": "pending",
+      "mappingStatus": "pending"
+    },
+    {
+      "ordinal": 3,
+      "sourceNumber": "",
+      "sourceAnchor": "",
+      "kind": "example-or-exercise",
+      "context": "For the time being, we must be aware of the condition \\(m>n\\). Otherwise, the difference \\(m-n\\) could be zero or negative. Those possibilities will be explored shortly. Also, instead of qualifying variables as nonzero each time, we will simplify matters and assume from here on that all variables represent nonzero real numbers.\n\nFor any real number \\(a\\) and natural numbers \\(m\\) and \\(n\\), such that \\(m>n\\), the quotient rule of exponents states that\n\n\\[\\dfrac{a^m}{a^n}=a^{m−n} \\label{quot}\\]",
+      "original": "Example \\(\\PageIndex{2}\\): Using the Quotient Rule\n\nWrite each of the following products with a single base. Do not simplify further.\n\n1. \\(\\dfrac{(−2)^{14}}{(−2)^{9}}\\)\n\n2. \\(\\dfrac{t^{23}}{t^{15}}\\)\n\n3. \\(\\dfrac{(z\\sqrt{2})^5}{z\\sqrt{2}}\\)\n\nSolution\n\nUse the quotient rule (Equation \\ref{quot}) to simplify each expression.\n\n1. \\(\\dfrac{(−2)^{14}}{(−2)^{9}}=(−2)^{14−9}=(−2)^5\\)\n\n2. \\(\\dfrac{t^{23}}{t^{15}}\\)=t^{23−15}=t^8\\)\n\n3. \\(\\dfrac{(z\\sqrt{2})^5}{z\\sqrt{2}}=(z\\sqrt{2})^{5−1}=(z\\sqrt{2})^4\\)",
+      "prompt": "Example \\(\\PageIndex{2}\\): Using the Quotient Rule\n\nWrite each of the following products with a single base. Do not simplify further.\n\n1. \\(\\dfrac{(−2)^{14}}{(−2)^{9}}\\)\n\n2. \\(\\dfrac{t^{23}}{t^{15}}\\)\n\n3. \\(\\dfrac{(z\\sqrt{2})^5}{z\\sqrt{2}}\\)\n\nSolution\n\nUse the quotient rule (Equation \\ref{quot}) to simplify each expression.\n\n1. \\(\\dfrac{(−2)^{14}}{(−2)^{9}}=(−2)^{14−9}=(−2)^5\\)\n\n2. \\(\\dfrac{t^{23}}{t^{15}}\\)=t^{23−15}=t^8\\)\n\n3. \\(\\dfrac{(z\\sqrt{2})^5}{z\\sqrt{2}}=(z\\sqrt{2})^{5−1}=(z\\sqrt{2})^4\\)",
+      "sourceAnswers": [],
+      "hasFigure": false,
+      "status": "draft",
+      "answerVerified": false,
+      "translationStatus": "pending",
+      "mappingStatus": "pending"
+    },
+    {
+      "ordinal": 4,
+      "sourceNumber": "",
+      "sourceAnchor": "",
+      "kind": "exercise-candidate",
+      "context": "For the time being, we must be aware of the condition \\(m>n\\). Otherwise, the difference \\(m-n\\) could be zero or negative. Those possibilities will be explored shortly. Also, instead of qualifying variables as nonzero each time, we will simplify matters and assume from here on that all variables represent nonzero real numbers.\n\nFor any real number \\(a\\) and natural numbers \\(m\\) and \\(n\\), such that \\(m>n\\), the quotient rule of exponents states that\n\n\\[\\dfrac{a^m}{a^n}=a^{m−n} \\label{quot}\\]",
+      "original": "Exercise \\(\\PageIndex{2}\\)\n\nWrite each of the following products with a single base. Do not simplify further.\n\n1. \\(\\dfrac{s^{75}}{s^{68}}\\)\n\n2. \\(\\dfrac{(−3)^6}{−3}\\)\n\n3. \\(\\dfrac{(ef^2)^5}{(ef^2)^3}\\)\n\nAnswer a\n\n\\(s^7\\)\n\nAnswer b\n\n\\((−3)^5\\)\n\nAnswer c\n\n\\((ef^2)^2\\)",
+      "prompt": "Exercise \\(\\PageIndex{2}\\)\n\nWrite each of the following products with a single base. Do not simplify further.\n\n1. \\(\\dfrac{s^{75}}{s^{68}}\\)\n\n2. \\(\\dfrac{(−3)^6}{−3}\\)\n\n3. \\(\\dfrac{(ef^2)^5}{(ef^2)^3}\\)",
+      "sourceAnswers": [
+        "\\(s^7\\)",
+        "\\((−3)^5\\)",
+        "\\((ef^2)^2\\)"
+      ],
+      "hasFigure": false,
+      "status": "draft",
+      "answerVerified": false,
+      "translationStatus": "pending",
+      "mappingStatus": "pending"
+    },
+    {
+      "ordinal": 5,
+      "sourceNumber": "",
+      "sourceAnchor": "",
+      "kind": "example-or-exercise",
+      "context": "Be careful to distinguish between uses of the product rule and the power rule. When using the product rule, different terms with the same bases are raised to exponents. In this case, you add the exponents. When using the power rule, a term in exponential notation is raised to a power. In this case, you multiply the exponents.\n\nFor any real number a and positive integers m and n, the power rule of exponents states that\n\n\\[(a^m)^n=a^{m⋅n} \\label{power}\\]",
+      "original": "Example \\(\\PageIndex{3}\\): Using the Power Rule\n\nWrite each of the following products with a single base. Do not simplify further.\n\n1. \\((x^2)^7\\)\n\n2. \\(((2t)^5)^3\\)\n\n3. \\(((−3)^5)^{11}\\)\n\nSolution\n\nUse the power rule (Equation \\ref{power}) to simplify each expression.\n\n1. \\((x^2)^7=x^{2⋅7}=x^{14}\\)\n\n2. \\(((2t)^5)^3=(2t)^{5⋅3}=(2t)^{15}\\)\n\n3. \\(((−3)^5)^{11}=(−3)^{5⋅11}=(−3)^{55}\\)",
+      "prompt": "Example \\(\\PageIndex{3}\\): Using the Power Rule\n\nWrite each of the following products with a single base. Do not simplify further.\n\n1. \\((x^2)^7\\)\n\n2. \\(((2t)^5)^3\\)\n\n3. \\(((−3)^5)^{11}\\)\n\nSolution\n\nUse the power rule (Equation \\ref{power}) to simplify each expression.\n\n1. \\((x^2)^7=x^{2⋅7}=x^{14}\\)\n\n2. \\(((2t)^5)^3=(2t)^{5⋅3}=(2t)^{15}\\)\n\n3. \\(((−3)^5)^{11}=(−3)^{5⋅11}=(−3)^{55}\\)",
+      "sourceAnswers": [],
+      "hasFigure": false,
+      "status": "draft",
+      "answerVerified": false,
+      "translationStatus": "pending",
+      "mappingStatus": "pending"
+    },
+    {
+      "ordinal": 6,
+      "sourceNumber": "",
+      "sourceAnchor": "",
+      "kind": "exercise-candidate",
+      "context": "Be careful to distinguish between uses of the product rule and the power rule. When using the product rule, different terms with the same bases are raised to exponents. In this case, you add the exponents. When using the power rule, a term in exponential notation is raised to a power. In this case, you multiply the exponents.\n\nFor any real number a and positive integers m and n, the power rule of exponents states that\n\n\\[(a^m)^n=a^{m⋅n} \\label{power}\\]",
+      "original": "Exercise \\(\\PageIndex{3}\\)\n\nWrite each of the following products with a single base. Do not simplify further.\n\n1. \\(((3y)^8)^3\\)\n\n2. \\((t^5)^7\\)\n\n3. \\(((−g)^4)^4\\)\n\nAnswer a\n\n\\((3y)^{24}\\)\n\nAnswer b\n\n\\(t^{35}\\)\n\nAnswer c\n\n\\((−g)^{16}\\)",
+      "prompt": "Exercise \\(\\PageIndex{3}\\)\n\nWrite each of the following products with a single base. Do not simplify further.\n\n1. \\(((3y)^8)^3\\)\n\n2. \\((t^5)^7\\)\n\n3. \\(((−g)^4)^4\\)",
+      "sourceAnswers": [
+        "\\((3y)^{24}\\)",
+        "\\(t^{35}\\)",
+        "\\((−g)^{16}\\)"
+      ],
+      "hasFigure": false,
+      "status": "draft",
+      "answerVerified": false,
+      "translationStatus": "pending",
+      "mappingStatus": "pending"
+    },
+    {
+      "ordinal": 7,
+      "sourceNumber": "",
+      "sourceAnchor": "",
+      "kind": "example-or-exercise",
+      "context": "The sole exception is the expression \\(0^0\\). This appears later in more advanced courses, but for now, we will consider the value to be undefined.\n\nFor any nonzero real number a, the zero exponent rule of exponents states that\n\n\\[a^0=1\\]",
+      "original": "Example \\(\\PageIndex{4}\\): Using the Zero Exponent Rule\n\nSimplify each expression using the zero exponent rule of exponents.\n\n1. \\(\\dfrac{c^3}{c^3}\\)\n\n2. \\(\\dfrac{-3x^5}{x^5}\\)\n\n3. \\(\\dfrac{(j^2k)^4}{(j^2k)\\times(j^2k)^3}\\)\n\n4. \\(\\dfrac{5(rs^2)^2}{(rs^2)^2}\\)\n\nSolution\n\nUse the zero exponent and other rules to simplify each expression.\n\na. \\[\\begin{align*} \\dfrac{c^3}{c^3} &= c^{3-3}\\\\ &= c^0\\\\ &= 1 \\end{align*}\\]\n\nb. \\[\\begin{align*} \\dfrac{-3x^5}{x^5} &= -3\\times\\dfrac{x^5}{x^5}\\\\ &= -3\\times x^{5-5}\\\\ &= -3\\times x^0\\\\ &= -3\\times 1\\\\ &= -3 \\end{align*}\\]\n\nc. \\[\\begin{align*} \\dfrac{(j^2k)^4}{(j^2k)\\times(j^2k)^3} &= \\dfrac{(j^2k)^4}{(j^2k)^{1+3}} && \\text{ Use the product rule in the denominator}\\\\ &= \\dfrac{(j^2k)^4}{(j^2k)^4} && \\text{ Simplify}\\\\ &= (j^2k)^{4-4} && \\text{ Use the quotient rule}\\\\ &= (j^2k)^0 && \\text{ Simplify}\\\\ &= 1 \\end{align*}\\]\n\nd. \\[\\begin{align*} \\dfrac{5(rs^2)^2}{(rs^2)^2} &= 5(rs^2)^{2-2} && \\text{ Use the quotient rule}\\\\ &= 5(rs^2)^0 && \\text{ Simplify}\\\\ &= 5\\times1 && \\text{ Use the zero exponent rule}\\\\ &= 5 && \\text{ Simplify} \\end{align*}\\]",
+      "prompt": "Example \\(\\PageIndex{4}\\): Using the Zero Exponent Rule\n\nSimplify each expression using the zero exponent rule of exponents.\n\n1. \\(\\dfrac{c^3}{c^3}\\)\n\n2. \\(\\dfrac{-3x^5}{x^5}\\)\n\n3. \\(\\dfrac{(j^2k)^4}{(j^2k)\\times(j^2k)^3}\\)\n\n4. \\(\\dfrac{5(rs^2)^2}{(rs^2)^2}\\)\n\nSolution\n\nUse the zero exponent and other rules to simplify each expression.\n\na. \\[\\begin{align*} \\dfrac{c^3}{c^3} &= c^{3-3}\\\\ &= c^0\\\\ &= 1 \\end{align*}\\]\n\nb. \\[\\begin{align*} \\dfrac{-3x^5}{x^5} &= -3\\times\\dfrac{x^5}{x^5}\\\\ &= -3\\times x^{5-5}\\\\ &= -3\\times x^0\\\\ &= -3\\times 1\\\\ &= -3 \\end{align*}\\]\n\nc. \\[\\begin{align*} \\dfrac{(j^2k)^4}{(j^2k)\\times(j^2k)^3} &= \\dfrac{(j^2k)^4}{(j^2k)^{1+3}} && \\text{ Use the product rule in the denominator}\\\\ &= \\dfrac{(j^2k)^4}{(j^2k)^4} && \\text{ Simplify}\\\\ &= (j^2k)^{4-4} && \\text{ Use the quotient rule}\\\\ &= (j^2k)^0 && \\text{ Simplify}\\\\ &= 1 \\end{align*}\\]\n\nd. \\[\\begin{align*} \\dfrac{5(rs^2)^2}{(rs^2)^2} &= 5(rs^2)^{2-2} && \\text{ Use the quotient rule}\\\\ &= 5(rs^2)^0 && \\text{ Simplify}\\\\ &= 5\\times1 && \\text{ Use the zero exponent rule}\\\\ &= 5 && \\text{ Simplify} \\end{align*}\\]",
+      "sourceAnswers": [],
+      "hasFigure": false,
+      "status": "draft",
+      "answerVerified": false,
+      "translationStatus": "pending",
+      "mappingStatus": "pending"
+    },
+    {
+      "ordinal": 8,
+      "sourceNumber": "",
+      "sourceAnchor": "",
+      "kind": "exercise-candidate",
+      "context": "The sole exception is the expression \\(0^0\\). This appears later in more advanced courses, but for now, we will consider the value to be undefined.\n\nFor any nonzero real number a, the zero exponent rule of exponents states that\n\n\\[a^0=1\\]",
+      "original": "Exercise \\(\\PageIndex{4}\\)\n\nSimplify each expression using the zero exponent rule of exponents.\n\n1. \\(\\dfrac{t^7}{t^7}\\)\n\n2. \\(\\dfrac{(de^2)^{11}}{2(de^2)^{11}}\\)\n\n3. \\(\\dfrac{w^4\\times w^2}{w^6}\\)\n\n4. \\(\\dfrac{t^3\\times t^4}{t^2\\times t^5}\\)\n\nAnswer a\n\n\\(1\\)\n\nAnswer b\n\n\\(\\dfrac{1}{2}\\)\n\nAnswer c\n\n\\(1\\)\n\nAnswer d\n\n\\(1\\)",
+      "prompt": "Exercise \\(\\PageIndex{4}\\)\n\nSimplify each expression using the zero exponent rule of exponents.\n\n1. \\(\\dfrac{t^7}{t^7}\\)\n\n2. \\(\\dfrac{(de^2)^{11}}{2(de^2)^{11}}\\)\n\n3. \\(\\dfrac{w^4\\times w^2}{w^6}\\)\n\n4. \\(\\dfrac{t^3\\times t^4}{t^2\\times t^5}\\)",
+      "sourceAnswers": [
+        "\\(1\\)",
+        "\\(\\dfrac{1}{2}\\)",
+        "\\(1\\)",
+        "\\(1\\)"
+      ],
+      "hasFigure": false,
+      "status": "draft",
+      "answerVerified": false,
+      "translationStatus": "pending",
+      "mappingStatus": "pending"
+    },
+    {
+      "ordinal": 9,
+      "sourceNumber": "",
+      "sourceAnchor": "",
+      "kind": "example-or-exercise",
+      "context": "We have shown that the exponential expression an is defined when \\(n\\) is a natural number, \\(0\\), or the negative of a natural number. That means that an is defined for any integer \\(n\\). Also, the product and quotient rules and all of the rules we will look at soon hold for any integer \\(n\\).\n\nFor any nonzero real number a and natural number n, the negative rule of exponents states that\n\n\\[a^{−n}=\\dfrac{1}{a^n}\\]",
+      "original": "Example \\(\\PageIndex{5}\\): Using the Negative Exponent Rule\n\nWrite each of the following quotients with a single base. Do not simplify further. Write answers with positive exponents.\n\n1. \\(\\dfrac{\\theta^3}{\\theta^{10}}\\)\n\n2. \\(\\dfrac{z^2\\times z}{z^4}\\)\n\n3. \\(\\dfrac{(-5t^3)^4}{(-5t^3)^8}\\)\n\nSolution\n\n1. \\(\\dfrac{\\theta^3}{\\theta^{10}}=\\theta^{3-10}=\\theta^{-7}=\\dfrac{1}{\\theta^7}\\)\n\n2. \\(\\dfrac{z^2\\times z}{z^4}=\\dfrac{z^{2+1}}{z^4}=\\dfrac{z^3}{z^4}=z^{3-4}=z^{-1}=\\dfrac{1}{z}\\)\n\n3. \\(\\dfrac{(-5t^3)^4}{(-5t^3)^8}=(-5t^3)^{4-8}=(-5t^3)^{-4}=\\dfrac{1}{(-5t^3)^4}\\)",
+      "prompt": "Example \\(\\PageIndex{5}\\): Using the Negative Exponent Rule\n\nWrite each of the following quotients with a single base. Do not simplify further. Write answers with positive exponents.\n\n1. \\(\\dfrac{\\theta^3}{\\theta^{10}}\\)\n\n2. \\(\\dfrac{z^2\\times z}{z^4}\\)\n\n3. \\(\\dfrac{(-5t^3)^4}{(-5t^3)^8}\\)\n\nSolution\n\n1. \\(\\dfrac{\\theta^3}{\\theta^{10}}=\\theta^{3-10}=\\theta^{-7}=\\dfrac{1}{\\theta^7}\\)\n\n2. \\(\\dfrac{z^2\\times z}{z^4}=\\dfrac{z^{2+1}}{z^4}=\\dfrac{z^3}{z^4}=z^{3-4}=z^{-1}=\\dfrac{1}{z}\\)\n\n3. \\(\\dfrac{(-5t^3)^4}{(-5t^3)^8}=(-5t^3)^{4-8}=(-5t^3)^{-4}=\\dfrac{1}{(-5t^3)^4}\\)",
+      "sourceAnswers": [],
+      "hasFigure": false,
+      "status": "draft",
+      "answerVerified": false,
+      "translationStatus": "pending",
+      "mappingStatus": "pending"
+    },
+    {
+      "ordinal": 10,
+      "sourceNumber": "",
+      "sourceAnchor": "",
+      "kind": "exercise-candidate",
+      "context": "We have shown that the exponential expression an is defined when \\(n\\) is a natural number, \\(0\\), or the negative of a natural number. That means that an is defined for any integer \\(n\\). Also, the product and quotient rules and all of the rules we will look at soon hold for any integer \\(n\\).\n\nFor any nonzero real number a and natural number n, the negative rule of exponents states that\n\n\\[a^{−n}=\\dfrac{1}{a^n}\\]",
+      "original": "Exercise \\(\\PageIndex{5}\\)\n\nWrite each of the following quotients with a single base. Do not simplify further. Write answers with positive exponents.\n\n1. \\(\\dfrac{(-3t)^2}{(-3t)^8}\\)\n\n2. \\(\\dfrac{f^{47}}{f^{49}\\times f}\\)\n\n3. \\(\\dfrac{2k^4}{5k^7}\\)\n\nAnswer a\n\n\\(\\dfrac{1}{(-3t)^6}\\)\n\nAnswer b\n\n\\(\\dfrac{1}{f^3}\\)\n\nAnswer c\n\n\\(\\dfrac{2}{5k^3}\\)​",
+      "prompt": "Exercise \\(\\PageIndex{5}\\)\n\nWrite each of the following quotients with a single base. Do not simplify further. Write answers with positive exponents.\n\n1. \\(\\dfrac{(-3t)^2}{(-3t)^8}\\)\n\n2. \\(\\dfrac{f^{47}}{f^{49}\\times f}\\)\n\n3. \\(\\dfrac{2k^4}{5k^7}\\)",
+      "sourceAnswers": [
+        "\\(\\dfrac{1}{(-3t)^6}\\)",
+        "\\(\\dfrac{1}{f^3}\\)",
+        "\\(\\dfrac{2}{5k^3}\\)​"
+      ],
+      "hasFigure": false,
+      "status": "draft",
+      "answerVerified": false,
+      "translationStatus": "pending",
+      "mappingStatus": "pending"
+    },
+    {
+      "ordinal": 11,
+      "sourceNumber": "",
+      "sourceAnchor": "",
+      "kind": "example-or-exercise",
+      "context": "We have shown that the exponential expression an is defined when \\(n\\) is a natural number, \\(0\\), or the negative of a natural number. That means that an is defined for any integer \\(n\\). Also, the product and quotient rules and all of the rules we will look at soon hold for any integer \\(n\\).\n\nFor any nonzero real number a and natural number n, the negative rule of exponents states that\n\n\\[a^{−n}=\\dfrac{1}{a^n}\\]",
+      "original": "Example \\(\\PageIndex{6}\\): Using the Product and Quotient Rules\n\nWrite each of the following products with a single base. Do not simplify further. Write answers with positive exponents.\n\n1. \\(b^2\\times b^{-8}\\)\n\n2. \\((-x)^5\\times(-x)^{-5}\\)\n\n3. \\(\\dfrac{-7z}{(-7z)^5}\\)\n\nSolution\n\n1. \\(b^2\\times b^{-8}=b^{2-8}=b^{-6}=\\dfrac{1}{b^6}\\)\n\n2. \\((-x)^5\\times(-x)^{-5}=(-x)^{5-5}=(-x)^0=1\\)\n\n3. \\(\\dfrac{-7z}{(-7z)^5}= \\dfrac{(-7z)^1}{(-7z)^5}=(-7z)^{1-5}=(-7z)^{-4}=\\dfrac{1}{(-7z)^4}\\)",
+      "prompt": "Example \\(\\PageIndex{6}\\): Using the Product and Quotient Rules\n\nWrite each of the following products with a single base. Do not simplify further. Write answers with positive exponents.\n\n1. \\(b^2\\times b^{-8}\\)\n\n2. \\((-x)^5\\times(-x)^{-5}\\)\n\n3. \\(\\dfrac{-7z}{(-7z)^5}\\)\n\nSolution\n\n1. \\(b^2\\times b^{-8}=b^{2-8}=b^{-6}=\\dfrac{1}{b^6}\\)\n\n2. \\((-x)^5\\times(-x)^{-5}=(-x)^{5-5}=(-x)^0=1\\)\n\n3. \\(\\dfrac{-7z}{(-7z)^5}= \\dfrac{(-7z)^1}{(-7z)^5}=(-7z)^{1-5}=(-7z)^{-4}=\\dfrac{1}{(-7z)^4}\\)",
+      "sourceAnswers": [],
+      "hasFigure": false,
+      "status": "draft",
+      "answerVerified": false,
+      "translationStatus": "pending",
+      "mappingStatus": "pending"
+    },
+    {
+      "ordinal": 12,
+      "sourceNumber": "",
+      "sourceAnchor": "",
+      "kind": "exercise-candidate",
+      "context": "We have shown that the exponential expression an is defined when \\(n\\) is a natural number, \\(0\\), or the negative of a natural number. That means that an is defined for any integer \\(n\\). Also, the product and quotient rules and all of the rules we will look at soon hold for any integer \\(n\\).\n\nFor any nonzero real number a and natural number n, the negative rule of exponents states that\n\n\\[a^{−n}=\\dfrac{1}{a^n}\\]",
+      "original": "Exercise \\(\\PageIndex{6}\\)\n\nWrite each of the following products with a single base. Do not simplify further. Write answers with positive exponents.\n\n1. \\(t^{-11}\\times t^6\\)\n\n2. \\(\\dfrac{25^{12}}{25^{13}}\\)\n\nAnswer a\n\n\\(t^{-5}=\\dfrac{1}{t^5}\\)\n\nAnswer b\n\n\\(\\dfrac{1}{25}\\)",
+      "prompt": "Exercise \\(\\PageIndex{6}\\)\n\nWrite each of the following products with a single base. Do not simplify further. Write answers with positive exponents.\n\n1. \\(t^{-11}\\times t^6\\)\n\n2. \\(\\dfrac{25^{12}}{25^{13}}\\)",
+      "sourceAnswers": [
+        "\\(t^{-5}=\\dfrac{1}{t^5}\\)",
+        "\\(\\dfrac{1}{25}\\)"
+      ],
+      "hasFigure": false,
+      "status": "draft",
+      "answerVerified": false,
+      "translationStatus": "pending",
+      "mappingStatus": "pending"
+    },
+    {
+      "ordinal": 13,
+      "sourceNumber": "",
+      "sourceAnchor": "",
+      "kind": "example-or-exercise",
+      "context": "In other words, \\((pq)^3=p^3\\times q^3\\).\n\nFor any real numbers a and b and any integer n, the power of a product rule of exponents states that\n\n\\[(ab)^n=a^nb^n\\]​",
+      "original": "Example \\(\\PageIndex{7}\\): Using the Power of a Product Rule\n\nSimplify each of the following products as much as possible using the power of a product rule. Write answers with positive exponents.\n\n1. \\((ab^2)^3\\)\n\n2. \\((2t)^{15}\\)\n\n3. \\((-2w^3)^3\\)\n\n4. \\(\\dfrac{1}{(-7z)^4}\\)\n\n5. \\((e^{-2}f^2)^7\\)\n\nSolution\n\nUse the product and quotient rules and the new definitions to simplify each expression.\n\n1. \\((ab^2)^3=(a)^3\\times(b^2)^3=a^{1\\times3}\\times b^{2\\times3}=a^3b^6\\)\n\n2. \\((2t)^{15}=(2)^{15}\\times(t)^{15}=2^{15}t^{15}=32,768t^{15}\\)\n\n3. \\((−2w^3)^3=(−2)^3\\times(w^3)^3=−8\\times w^{3\\times3}=−8w^9\\)\n\n4. \\(\\dfrac{1}{(-7z)^4}=\\dfrac{1}{(-7)^4\\times(z)^4}=\\dfrac{1}{2401z^4}\\)\n\n5. \\((e^{-2}f^2)^7=(e^{−2})^7\\times(f^2)^7=e^{−2\\times7}\\times f^{2\\times7}=e^{−14}f^{14}=\\dfrac{f^{14}}{e^{14}}\\)",
+      "prompt": "Example \\(\\PageIndex{7}\\): Using the Power of a Product Rule\n\nSimplify each of the following products as much as possible using the power of a product rule. Write answers with positive exponents.\n\n1. \\((ab^2)^3\\)\n\n2. \\((2t)^{15}\\)\n\n3. \\((-2w^3)^3\\)\n\n4. \\(\\dfrac{1}{(-7z)^4}\\)\n\n5. \\((e^{-2}f^2)^7\\)\n\nSolution\n\nUse the product and quotient rules and the new definitions to simplify each expression.\n\n1. \\((ab^2)^3=(a)^3\\times(b^2)^3=a^{1\\times3}\\times b^{2\\times3}=a^3b^6\\)\n\n2. \\((2t)^{15}=(2)^{15}\\times(t)^{15}=2^{15}t^{15}=32,768t^{15}\\)\n\n3. \\((−2w^3)^3=(−2)^3\\times(w^3)^3=−8\\times w^{3\\times3}=−8w^9\\)\n\n4. \\(\\dfrac{1}{(-7z)^4}=\\dfrac{1}{(-7)^4\\times(z)^4}=\\dfrac{1}{2401z^4}\\)\n\n5. \\((e^{-2}f^2)^7=(e^{−2})^7\\times(f^2)^7=e^{−2\\times7}\\times f^{2\\times7}=e^{−14}f^{14}=\\dfrac{f^{14}}{e^{14}}\\)",
+      "sourceAnswers": [],
+      "hasFigure": false,
+      "status": "draft",
+      "answerVerified": false,
+      "translationStatus": "pending",
+      "mappingStatus": "pending"
+    },
+    {
+      "ordinal": 14,
+      "sourceNumber": "",
+      "sourceAnchor": "",
+      "kind": "exercise-candidate",
+      "context": "In other words, \\((pq)^3=p^3\\times q^3\\).\n\nFor any real numbers a and b and any integer n, the power of a product rule of exponents states that\n\n\\[(ab)^n=a^nb^n\\]​",
+      "original": "Exercise \\(\\PageIndex{7}\\)\n\nSimplify each of the following products as much as possible using the power of a product rule. Write answers with positive exponents.\n\n1. \\((g^2h^3)^5\\)\n\n2. \\((5t)^3\\)\n\n3. \\((-3y^5)^3\\)\n\n4. \\(\\dfrac{1}{(a^6b^7)^3}\\)\n\n5. \\((r^3s^{-2})^4\\)\n\nAnswer a\n\n\\(g^{10}h^{15}\\)\n\nAnswer b\n\n\\(125t^3\\)\n\nAnswer c\n\n\\(-27y^{15}\\)\n\nAnswer d\n\n\\(\\dfrac{1}{a^{18}b^{21}}\\)\n\nAnswer e\n\n\\(\\dfrac{r^{12}}{s^8}\\)",
+      "prompt": "Exercise \\(\\PageIndex{7}\\)\n\nSimplify each of the following products as much as possible using the power of a product rule. Write answers with positive exponents.\n\n1. \\((g^2h^3)^5\\)\n\n2. \\((5t)^3\\)\n\n3. \\((-3y^5)^3\\)\n\n4. \\(\\dfrac{1}{(a^6b^7)^3}\\)\n\n5. \\((r^3s^{-2})^4\\)",
+      "sourceAnswers": [
+        "\\(g^{10}h^{15}\\)",
+        "\\(125t^3\\)",
+        "\\(-27y^{15}\\)",
+        "\\(\\dfrac{1}{a^{18}b^{21}}\\)",
+        "\\(\\dfrac{r^{12}}{s^8}\\)"
+      ],
+      "hasFigure": false,
+      "status": "draft",
+      "answerVerified": false,
+      "translationStatus": "pending",
+      "mappingStatus": "pending"
+    },
+    {
+      "ordinal": 15,
+      "sourceNumber": "",
+      "sourceAnchor": "",
+      "kind": "example-or-exercise",
+      "context": "\\[\\begin{align*} (e^{-2}f^2)^7 &= \\left(\\dfrac{f^2}{e^2}\\right)^7\\\\ &= \\dfrac{(f^2)^7}{(e^2)^7}\\\\ &= \\dfrac{f^{2\\times7}}{e^{2\\times7}}\\\\ &= \\dfrac{f^{14}}{e^{14}} \\end{align*}\\]\n\nFor any real numbers a and b and any integer n, the power of a quotient rule of exponents states that\n\n\\[\\left(\\dfrac{a}{b}\\right)^n=\\dfrac{a^n}{b^n}\\]",
+      "original": "Example \\(\\PageIndex{8}\\): Using the Power of a Quotient Rule\n\nSimplify each of the following quotients as much as possible using the power of a quotient rule. Write answers with positive exponents.\n\n1. \\(\\left(\\dfrac{4}{z^{11}}\\right)^3\\)\n\n2. \\(\\left(\\dfrac{p}{q^3}\\right)^6\\)\n\n3. \\(\\left(\\dfrac{-1}{t^2}\\right)^{27}\\)\n\n4. \\((j^3k^{-2})^4\\)\n\n5. \\((m^{-2}n^{-2})^3\\)\n\nSolution\n\n1. \\(\\left(\\dfrac{4}{z^{11}}\\right)^3=\\dfrac{(4)^3}{(z^{11})^3}=\\dfrac{64}{z^{11\\times3}}=\\dfrac{64}{z^{33}}\\)\n\n2. \\(\\left(\\dfrac{p}{q^3}\\right)^6=\\dfrac{(p)^6}{(q^3)^6}=\\dfrac{p^{1\\times6}}{q^{3\\times6}}=\\dfrac{p^6}{q^{18}}\\)\n\n3. \\(\\left(\\dfrac{-1}{t^2}\\right)^{27}=\\dfrac{(-1)^{27}}{(t^2)^{27}}=\\dfrac{-1}{t^{2\\times27}}=\\dfrac{-1}{t^{54}}=-\\dfrac{1}{t^{54}}\\)\n\n4. \\((j^3k^{-2})^4=\\left(\\dfrac{j^3}{k^2}\\right)^4=\\dfrac{(j^3)^4}{(k^2)^4}=\\dfrac{j^{3\\times4}}{k^{2\\times4}}=\\dfrac{j^{12}}{k^8}\\)\n\n5. \\((m^{-2}n^{-2})^3=\\left(\\dfrac{1}{m^2n^2}\\right)^3=\\dfrac{(1)^3}{(m^2n^2)^3}=\\dfrac{1}{(m^2)^3(n^2)^3}=\\dfrac{1}{m^{2\\times3}n^{2\\times3}}=\\dfrac{1}{m^6n^6}\\)",
+      "prompt": "Example \\(\\PageIndex{8}\\): Using the Power of a Quotient Rule\n\nSimplify each of the following quotients as much as possible using the power of a quotient rule. Write answers with positive exponents.\n\n1. \\(\\left(\\dfrac{4}{z^{11}}\\right)^3\\)\n\n2. \\(\\left(\\dfrac{p}{q^3}\\right)^6\\)\n\n3. \\(\\left(\\dfrac{-1}{t^2}\\right)^{27}\\)\n\n4. \\((j^3k^{-2})^4\\)\n\n5. \\((m^{-2}n^{-2})^3\\)\n\nSolution\n\n1. \\(\\left(\\dfrac{4}{z^{11}}\\right)^3=\\dfrac{(4)^3}{(z^{11})^3}=\\dfrac{64}{z^{11\\times3}}=\\dfrac{64}{z^{33}}\\)\n\n2. \\(\\left(\\dfrac{p}{q^3}\\right)^6=\\dfrac{(p)^6}{(q^3)^6}=\\dfrac{p^{1\\times6}}{q^{3\\times6}}=\\dfrac{p^6}{q^{18}}\\)\n\n3. \\(\\left(\\dfrac{-1}{t^2}\\right)^{27}=\\dfrac{(-1)^{27}}{(t^2)^{27}}=\\dfrac{-1}{t^{2\\times27}}=\\dfrac{-1}{t^{54}}=-\\dfrac{1}{t^{54}}\\)\n\n4. \\((j^3k^{-2})^4=\\left(\\dfrac{j^3}{k^2}\\right)^4=\\dfrac{(j^3)^4}{(k^2)^4}=\\dfrac{j^{3\\times4}}{k^{2\\times4}}=\\dfrac{j^{12}}{k^8}\\)\n\n5. \\((m^{-2}n^{-2})^3=\\left(\\dfrac{1}{m^2n^2}\\right)^3=\\dfrac{(1)^3}{(m^2n^2)^3}=\\dfrac{1}{(m^2)^3(n^2)^3}=\\dfrac{1}{m^{2\\times3}n^{2\\times3}}=\\dfrac{1}{m^6n^6}\\)",
+      "sourceAnswers": [],
+      "hasFigure": false,
+      "status": "draft",
+      "answerVerified": false,
+      "translationStatus": "pending",
+      "mappingStatus": "pending"
+    },
+    {
+      "ordinal": 16,
+      "sourceNumber": "",
+      "sourceAnchor": "",
+      "kind": "exercise-candidate",
+      "context": "\\[\\begin{align*} (e^{-2}f^2)^7 &= \\left(\\dfrac{f^2}{e^2}\\right)^7\\\\ &= \\dfrac{(f^2)^7}{(e^2)^7}\\\\ &= \\dfrac{f^{2\\times7}}{e^{2\\times7}}\\\\ &= \\dfrac{f^{14}}{e^{14}} \\end{align*}\\]\n\nFor any real numbers a and b and any integer n, the power of a quotient rule of exponents states that\n\n\\[\\left(\\dfrac{a}{b}\\right)^n=\\dfrac{a^n}{b^n}\\]",
+      "original": "Exercise \\(\\PageIndex{8}\\)\n\nSimplify each of the following quotients as much as possible using the power of a quotient rule. Write answers with positive exponents.\n\n1. \\(\\left(\\dfrac{b^5}{c}\\right)^3\\)\n\n2. \\(\\left(\\dfrac{5}{u^8}\\right)^4\\)\n\n3. \\(\\left(\\dfrac{-1}{w^3}\\right)^{35}\\)\n\n4. \\((p^{-4}q^3)^8\\)\n\n5. \\((c^{-5}d^{-3})^4\\)\n\nAnswer a\n\n\\(\\dfrac{b^{15}}{c^3}\\)\n\nAnswer b\n\n\\(\\dfrac{625}{u^{32}}\\)\n\nAnswer c\n\n\\(\\dfrac{-1}{w^{105}}\\)\n\nAnswer d\n\n\\(\\dfrac{q^{24}}{p^{32}}\\)\n\nAnswer e\n\n\\(\\dfrac{1}{c^{20}d^{12}}\\)",
+      "prompt": "Exercise \\(\\PageIndex{8}\\)\n\nSimplify each of the following quotients as much as possible using the power of a quotient rule. Write answers with positive exponents.\n\n1. \\(\\left(\\dfrac{b^5}{c}\\right)^3\\)\n\n2. \\(\\left(\\dfrac{5}{u^8}\\right)^4\\)\n\n3. \\(\\left(\\dfrac{-1}{w^3}\\right)^{35}\\)\n\n4. \\((p^{-4}q^3)^8\\)\n\n5. \\((c^{-5}d^{-3})^4\\)",
+      "sourceAnswers": [
+        "\\(\\dfrac{b^{15}}{c^3}\\)",
+        "\\(\\dfrac{625}{u^{32}}\\)",
+        "\\(\\dfrac{-1}{w^{105}}\\)",
+        "\\(\\dfrac{q^{24}}{p^{32}}\\)",
+        "\\(\\dfrac{1}{c^{20}d^{12}}\\)"
+      ],
+      "hasFigure": false,
+      "status": "draft",
+      "answerVerified": false,
+      "translationStatus": "pending",
+      "mappingStatus": "pending"
+    },
+    {
+      "ordinal": 17,
+      "sourceNumber": "",
+      "sourceAnchor": "",
+      "kind": "example-or-exercise",
+      "context": "Simplifying Exponential Expressions\n\nRecall that to simplify an expression means to rewrite it by combing terms or exponents; in other words, to write the expression more simply with fewer terms. The rules for exponents may be combined to simplify expressions.",
+      "original": "Example \\(\\PageIndex{9}\\): Simplifying Exponential Expressions\n\nSimplify each expression and write the answer with positive exponents only.\n\n1. \\((6m^2n^{-1})^3\\)\n\n2. \\(17^5\\times17^{-4}\\times17^{-3}\\)\n\n3. \\(\\left(\\dfrac{u^{-1}v}{v^{-1}}\\right)^2\\)\n\n4. \\((-2a^3b^{-1})(5a^{-2}b^2)\\)\n\n5. \\((x^2\\sqrt{2})^4(x^2\\sqrt{2})^{-4}\\)\n\n6. \\(\\dfrac{(3w^2)^5}{(6w^{-2})^2}\\)\n\nSolution\n\n1. \\[\\begin{align*} (6m^2n^{-1})^3 &= (6)^3(m^2)^3(n^{-1})^3 && \\text{ The power of a product rule}\\\\ &= 6^3m^{2\\times3}n^{-1\\times3} && \\text{ The power rule}\\\\ &= 216m^6n^{-3} && \\text{ The power rule}\\\\ &= \\dfrac{216m^6}{n^3} && \\text{ The negative exponent rule} \\end{align*}\\]\n\n2. \\[\\begin{align*} 17^5\\times17^{-4}\\times17^{-3} &= 17^{5-4-3} && \\text{ The product rule}\\\\ &= 17^{-2} && \\text{ Simplify}\\\\ &= \\dfrac{1}{17^2} \\text{ or } \\dfrac{1}{289} && \\text{ The negative exponent rule} \\end{align*}\\]\n\n3. \\[\\begin{align*} \\left ( \\dfrac{u^{-1}v}{v^{-1}} \\right )^2 &= \\dfrac{(u^{-1}v)^2}{(v^{-1})^2} && \\text{ The power of a quotient rule}\\\\ &= \\dfrac{u^{-2}v^2}{v^{-2}} && \\text{ The power of a product rule}\\\\ &= u^{-2}v^{2-(-2)} && \\text{ The quotient rule}\\\\ &= u^{-2}v^4 && \\text{ Simplify}\\\\ &= \\dfrac{v^4}{u^2} && \\text{ The negative exponent rule} \\end{align*}\\]\n\n4. \\[\\begin{align*} \\left (-2a^3b^{-1} \\right ) \\left(5a^{-2}b^2 \\right ) &= \\left (x^2\\sqrt{2} \\right )^{4-4} && \\text{ Commutative and associative laws of multiplication}\\\\ &= -10\\times a^{3-2}\\times b^{-1+2} && \\text{ The product rule}\\\\ &= -10ab && \\text{ Simplify} \\end{align*}\\]\n\n5. \\[\\begin{align*} \\left (x^2\\sqrt{2})^4(x^2\\sqrt{2} \\right )^{-4} &= \\left (x^2\\sqrt{2} \\right )^{4-4} && \\text{ The product rule}\\\\ &= \\left (x^2\\sqrt{2} \\right )^0 && \\text{ Simplify}\\\\ &= 1 && \\text{ The zero exponent rule} \\end{align*}\\]\n\n6. \\[\\begin{align*} \\dfrac{(3w^2)^5}{(6w^{-2})^2} &= \\dfrac{(3)^5\\times(w^2)^5}{(6)^2\\times(w^{-2})^2} && \\text{ The power of a product rule}\\\\ &= \\dfrac{3^5w^{2\\times5}}{6^2w^{-2\\times2}} && \\text{ The power rule}\\\\ &= \\dfrac{243w^{10}}{36w^{-4}} && \\text{ Simplify}\\\\ &= \\dfrac{27w^{10-(-4)}}{4} && \\text{ The quotient rule and reduce fraction}\\\\ &= \\dfrac{27w^{14}}{4} && \\text{ Simplify} \\end{align*}\\]",
+      "prompt": "Example \\(\\PageIndex{9}\\): Simplifying Exponential Expressions\n\nSimplify each expression and write the answer with positive exponents only.\n\n1. \\((6m^2n^{-1})^3\\)\n\n2. \\(17^5\\times17^{-4}\\times17^{-3}\\)\n\n3. \\(\\left(\\dfrac{u^{-1}v}{v^{-1}}\\right)^2\\)\n\n4. \\((-2a^3b^{-1})(5a^{-2}b^2)\\)\n\n5. \\((x^2\\sqrt{2})^4(x^2\\sqrt{2})^{-4}\\)\n\n6. \\(\\dfrac{(3w^2)^5}{(6w^{-2})^2}\\)\n\nSolution\n\n1. \\[\\begin{align*} (6m^2n^{-1})^3 &= (6)^3(m^2)^3(n^{-1})^3 && \\text{ The power of a product rule}\\\\ &= 6^3m^{2\\times3}n^{-1\\times3} && \\text{ The power rule}\\\\ &= 216m^6n^{-3} && \\text{ The power rule}\\\\ &= \\dfrac{216m^6}{n^3} && \\text{ The negative exponent rule} \\end{align*}\\]\n\n2. \\[\\begin{align*} 17^5\\times17^{-4}\\times17^{-3} &= 17^{5-4-3} && \\text{ The product rule}\\\\ &= 17^{-2} && \\text{ Simplify}\\\\ &= \\dfrac{1}{17^2} \\text{ or } \\dfrac{1}{289} && \\text{ The negative exponent rule} \\end{align*}\\]\n\n3. \\[\\begin{align*} \\left ( \\dfrac{u^{-1}v}{v^{-1}} \\right )^2 &= \\dfrac{(u^{-1}v)^2}{(v^{-1})^2} && \\text{ The power of a quotient rule}\\\\ &= \\dfrac{u^{-2}v^2}{v^{-2}} && \\text{ The power of a product rule}\\\\ &= u^{-2}v^{2-(-2)} && \\text{ The quotient rule}\\\\ &= u^{-2}v^4 && \\text{ Simplify}\\\\ &= \\dfrac{v^4}{u^2} && \\text{ The negative exponent rule} \\end{align*}\\]\n\n4. \\[\\begin{align*} \\left (-2a^3b^{-1} \\right ) \\left(5a^{-2}b^2 \\right ) &= \\left (x^2\\sqrt{2} \\right )^{4-4} && \\text{ Commutative and associative laws of multiplication}\\\\ &= -10\\times a^{3-2}\\times b^{-1+2} && \\text{ The product rule}\\\\ &= -10ab && \\text{ Simplify} \\end{align*}\\]\n\n5. \\[\\begin{align*} \\left (x^2\\sqrt{2})^4(x^2\\sqrt{2} \\right )^{-4} &= \\left (x^2\\sqrt{2} \\right )^{4-4} && \\text{ The product rule}\\\\ &= \\left (x^2\\sqrt{2} \\right )^0 && \\text{ Simplify}\\\\ &= 1 && \\text{ The zero exponent rule} \\end{align*}\\]\n\n6. \\[\\begin{align*} \\dfrac{(3w^2)^5}{(6w^{-2})^2} &= \\dfrac{(3)^5\\times(w^2)^5}{(6)^2\\times(w^{-2})^2} && \\text{ The power of a product rule}\\\\ &= \\dfrac{3^5w^{2\\times5}}{6^2w^{-2\\times2}} && \\text{ The power rule}\\\\ &= \\dfrac{243w^{10}}{36w^{-4}} && \\text{ Simplify}\\\\ &= \\dfrac{27w^{10-(-4)}}{4} && \\text{ The quotient rule and reduce fraction}\\\\ &= \\dfrac{27w^{14}}{4} && \\text{ Simplify} \\end{align*}\\]",
+      "sourceAnswers": [],
+      "hasFigure": false,
+      "status": "draft",
+      "answerVerified": false,
+      "translationStatus": "pending",
+      "mappingStatus": "pending"
+    },
+    {
+      "ordinal": 18,
+      "sourceNumber": "",
+      "sourceAnchor": "",
+      "kind": "example-or-exercise",
+      "context": "[Figure: The number 0.00000000000047 is written with an arrow extending to another number: 00000000000004.7. An arrow tracking the movement of the decimal point runs underneath the number. Above the number a label on the number reads: 13 places right.]\n\nBe careful not to include the leading \\(0\\) in your count. We move the decimal point \\(13\\) places to the right, so the exponent of \\(10\\) is \\(13\\). The exponent is negative because we moved the decimal point to the right. This is what we should expect for a small number.\n\nA number is written in scientific notation if it is written in the form \\(a\\times{10}^n\\), where \\(1≤|a|<10\\) and \\(n\\) is an integer.",
+      "original": "Example \\(\\PageIndex{10}\\): Converting Standard Notation to Scientific Notation\n\nWrite each number in scientific notation.\n\n1. Distance to Andromeda Galaxy from Earth: \\(24,000,000,000,000,000,000,000\\; m\\)\n\n2. Diameter of Andromeda Galaxy: \\(1,300,000,000,000,000,000,000\\; m\\)\n\n3. Number of stars in Andromeda Galaxy: \\(1,000,000,000,000\\)\n\n4. Diameter of electron: \\(0.00000000000094\\; m\\)\n\n5. Probability of being struck by lightning in any single year: \\(0.00000143\\)\n\nSolution\n\na. \\(24,000,000,000,000,000,000,000\\; m\\) \\(22\\) places\n\n\\(2.4\\times{10}^{22}\\; m\\)\n\nb. \\(1,300,000,000,000,000,000,000\\; m\\) \\(21\\) places\n\n\\(1.3\\times{10}^{21}\\; m\\)\n\nc. \\(1,000,000,000,000\\) \\(12\\) places\n\n\\(1\\times{10}^{12}\\)\n\nd. \\(0.00000000000094\\; m\\) \\(13\\) places\n\n\\(9.4\\times{10}^{-13}\\; m\\)\n\ne. \\(0.00000143\\) \\(6\\) places\n\n\\(1.43\\times{10}^6\\)\n\nAnalysis\n\nObserve that, if the given number is greater than \\(1\\), as in examples a–c, the exponent of \\(10\\) is positive; and if the number is less than \\(1\\), as in examples d–e, the exponent is negative.",
+      "prompt": "Example \\(\\PageIndex{10}\\): Converting Standard Notation to Scientific Notation\n\nWrite each number in scientific notation.\n\n1. Distance to Andromeda Galaxy from Earth: \\(24,000,000,000,000,000,000,000\\; m\\)\n\n2. Diameter of Andromeda Galaxy: \\(1,300,000,000,000,000,000,000\\; m\\)\n\n3. Number of stars in Andromeda Galaxy: \\(1,000,000,000,000\\)\n\n4. Diameter of electron: \\(0.00000000000094\\; m\\)\n\n5. Probability of being struck by lightning in any single year: \\(0.00000143\\)\n\nSolution\n\na. \\(24,000,000,000,000,000,000,000\\; m\\) \\(22\\) places\n\n\\(2.4\\times{10}^{22}\\; m\\)\n\nb. \\(1,300,000,000,000,000,000,000\\; m\\) \\(21\\) places\n\n\\(1.3\\times{10}^{21}\\; m\\)\n\nc. \\(1,000,000,000,000\\) \\(12\\) places\n\n\\(1\\times{10}^{12}\\)\n\nd. \\(0.00000000000094\\; m\\) \\(13\\) places\n\n\\(9.4\\times{10}^{-13}\\; m\\)\n\ne. \\(0.00000143\\) \\(6\\) places\n\n\\(1.43\\times{10}^6\\)\n\nAnalysis\n\nObserve that, if the given number is greater than \\(1\\), as in examples a–c, the exponent of \\(10\\) is positive; and if the number is less than \\(1\\), as in examples d–e, the exponent is negative.",
+      "sourceAnswers": [],
+      "hasFigure": false,
+      "status": "draft",
+      "answerVerified": false,
+      "translationStatus": "pending",
+      "mappingStatus": "pending"
+    },
+    {
+      "ordinal": 19,
+      "sourceNumber": "",
+      "sourceAnchor": "",
+      "kind": "exercise-candidate",
+      "context": "[Figure: The number 0.00000000000047 is written with an arrow extending to another number: 00000000000004.7. An arrow tracking the movement of the decimal point runs underneath the number. Above the number a label on the number reads: 13 places right.]\n\nBe careful not to include the leading \\(0\\) in your count. We move the decimal point \\(13\\) places to the right, so the exponent of \\(10\\) is \\(13\\). The exponent is negative because we moved the decimal point to the right. This is what we should expect for a small number.\n\nA number is written in scientific notation if it is written in the form \\(a\\times{10}^n\\), where \\(1≤|a|<10\\) and \\(n\\) is an integer.",
+      "original": "Exercise \\(\\PageIndex{10}\\)\n\nWrite each number in scientific notation.\n\n1. U.S. national debt per taxpayer (April 2014): \\(\\$152,000\\)\n\n2. World population (April 2014): \\(7,158,000,000\\)\n\n3. World gross national income (April 2014): \\(\\$85,500,000,000,000\\)\n\n4. Time for light to travel \\(1\\; m: 0.00000000334\\; s\\)\n\n5. Probability of winning lottery (match \\(6\\) of \\(49\\) possible numbers): \\(0.0000000715\\)\n\nAnswer a\n\n\\(\\$1.52\\times{10}^5\\)\n\nAnswer b\n\n\\(7.158\\times{10}^9\\)\n\nAnswer c\n\n\\(\\$8.55\\times{10}^{13}\\)\n\nAnswer d\n\n\\(3.34\\times{10}^{-9}\\)\n\nAnswer e\n\n\\(7.15\\times{10}^{-8}\\)",
+      "prompt": "Exercise \\(\\PageIndex{10}\\)\n\nWrite each number in scientific notation.\n\n1. U.S. national debt per taxpayer (April 2014): \\(\\$152,000\\)\n\n2. World population (April 2014): \\(7,158,000,000\\)\n\n3. World gross national income (April 2014): \\(\\$85,500,000,000,000\\)\n\n4. Time for light to travel \\(1\\; m: 0.00000000334\\; s\\)\n\n5. Probability of winning lottery (match \\(6\\) of \\(49\\) possible numbers): \\(0.0000000715\\)",
+      "sourceAnswers": [
+        "\\(\\$1.52\\times{10}^5\\)",
+        "\\(7.158\\times{10}^9\\)",
+        "\\(\\$8.55\\times{10}^{13}\\)",
+        "\\(3.34\\times{10}^{-9}\\)",
+        "\\(7.15\\times{10}^{-8}\\)"
+      ],
+      "hasFigure": false,
+      "status": "draft",
+      "answerVerified": false,
+      "translationStatus": "pending",
+      "mappingStatus": "pending"
+    },
+    {
+      "ordinal": 20,
+      "sourceNumber": "",
+      "sourceAnchor": "",
+      "kind": "example-or-exercise",
+      "context": "Converting from Scientific to Standard Notation\n\nTo convert a number in scientific notation to standard notation, simply reverse the process. Move the decimal n places to the right if \\(n\\) is positive or \\(n\\) places to the left if \\(n\\) is negative and add zeros as needed. Remember, if \\(n\\) is positive, the value of the number is greater than \\(1\\), and if \\(n\\) is negative, the value of the number is less than one.",
+      "original": "Example \\(\\PageIndex{11}\\): Converting Scientific Notation to Standard Notation\n\nConvert each number in scientific notation to standard notation.\n\n1. \\(3.547\\times{10}^{14}\\)\n\n2. \\(−2\\times{10}^6\\)\n\n3. \\(7.91\\times{10}^{−7}\\)\n\n4. \\(−8.05\\times{10}^{−12}\\)\n\nSolution\n\na. \\(3.547\\times{10}^{14}\\)\n\n\\(3.54700000000000\\)\n\n\\(\\rightarrow14\\) places\n\n\\(354,700,000,000,000\\)\n\nb. \\(−2\\times{10}^6\\)\n\n\\(−2.000000\\)\n\n\\(\\rightarrow6\\) places\n\n\\(−2,000,000\\)\n\nc. \\(7.91\\times{10}^{−7}\\)\n\n\\(0000007.91\\)\n\n\\(\\rightarrow7\\) places\n\n\\(0.000000791\\)\n\nd. \\(−8.05\\times{10}^{−12}\\)\n\n\\(−000000000008.05\\)\n\n\\(\\rightarrow12\\) places\n\n\\(−0.00000000000805\\)",
+      "prompt": "Example \\(\\PageIndex{11}\\): Converting Scientific Notation to Standard Notation\n\nConvert each number in scientific notation to standard notation.\n\n1. \\(3.547\\times{10}^{14}\\)\n\n2. \\(−2\\times{10}^6\\)\n\n3. \\(7.91\\times{10}^{−7}\\)\n\n4. \\(−8.05\\times{10}^{−12}\\)\n\nSolution\n\na. \\(3.547\\times{10}^{14}\\)\n\n\\(3.54700000000000\\)\n\n\\(\\rightarrow14\\) places\n\n\\(354,700,000,000,000\\)\n\nb. \\(−2\\times{10}^6\\)\n\n\\(−2.000000\\)\n\n\\(\\rightarrow6\\) places\n\n\\(−2,000,000\\)\n\nc. \\(7.91\\times{10}^{−7}\\)\n\n\\(0000007.91\\)\n\n\\(\\rightarrow7\\) places\n\n\\(0.000000791\\)\n\nd. \\(−8.05\\times{10}^{−12}\\)\n\n\\(−000000000008.05\\)\n\n\\(\\rightarrow12\\) places\n\n\\(−0.00000000000805\\)",
+      "sourceAnswers": [],
+      "hasFigure": false,
+      "status": "draft",
+      "answerVerified": false,
+      "translationStatus": "pending",
+      "mappingStatus": "pending"
+    },
+    {
+      "ordinal": 21,
+      "sourceNumber": "",
+      "sourceAnchor": "",
+      "kind": "exercise-candidate",
+      "context": "Converting from Scientific to Standard Notation\n\nTo convert a number in scientific notation to standard notation, simply reverse the process. Move the decimal n places to the right if \\(n\\) is positive or \\(n\\) places to the left if \\(n\\) is negative and add zeros as needed. Remember, if \\(n\\) is positive, the value of the number is greater than \\(1\\), and if \\(n\\) is negative, the value of the number is less than one.",
+      "original": "Exercise \\(\\PageIndex{11}\\)\n\nConvert each number in scientific notation to standard notation.\n\n1. \\(7.03\\times{10}^5\\)\n\n2. \\(−8.16\\times{10}^{11}\\)\n\n3. \\(−3.9\\times{10}^{−13}\\)\n\n4. \\(8\\times{10}^{−6}\\)\n\nAnswer a\n\n\\(703,000\\)\n\nAnswer b\n\n\\(−816,000,000,000\\)\n\nAnswer c\n\n\\(−0.00000000000039\\)\n\nAnswer d\n\n\\(0.000008\\)",
+      "prompt": "Exercise \\(\\PageIndex{11}\\)\n\nConvert each number in scientific notation to standard notation.\n\n1. \\(7.03\\times{10}^5\\)\n\n2. \\(−8.16\\times{10}^{11}\\)\n\n3. \\(−3.9\\times{10}^{−13}\\)\n\n4. \\(8\\times{10}^{−6}\\)",
+      "sourceAnswers": [
+        "\\(703,000\\)",
+        "\\(−816,000,000,000\\)",
+        "\\(−0.00000000000039\\)",
+        "\\(0.000008\\)"
+      ],
+      "hasFigure": false,
+      "status": "draft",
+      "answerVerified": false,
+      "translationStatus": "pending",
+      "mappingStatus": "pending"
+    },
+    {
+      "ordinal": 22,
+      "sourceNumber": "",
+      "sourceAnchor": "",
+      "kind": "example-or-exercise",
+      "context": "Scientific notation, used with the rules of exponents, makes calculating with large or small numbers much easier than doing so using standard notation. For example, suppose we are asked to calculate the number of atoms in \\(1\\; L\\) of water. Each water molecule contains \\(3\\) atoms (\\(2\\) hydrogen and \\(1\\) oxygen). The average drop of water contains around \\(1.32\\times{10}{21}\\) molecules of water and \\(1\\; L\\) of water holds about \\(1.22\\times{10}^{4}\\) average drops. Therefore, there are approximately \\(3⋅(1.32\\times{10}^{21})⋅(1.22\\times{10}^4)≈4.83\\times{10}^{25}\\) atoms in \\(1\\; L\\) of water. We simply multiply the decimal terms and add the exponents. Imagine having to perform the calculation without using scientific notation!\n\nWhen performing calculations with scientific notation, be sure to write the answer in proper scientific notation. For example, consider the product \\((7\\times{10}^4)⋅(5\\times{10}^6)=35\\times{10}^{10}\\). The answer is not in proper scientific notation because \\(35\\) is greater than \\(10\\). Consider \\(35\\) as \\(3.5\\times10\\). That adds a ten to the exponent of the answer.\n\n\\((35)\\times{10}^{10}=(3.5\\times10)\\times{10}^{10}=3.5\\times(10\\times{10}^{10})=3.5\\times{10}^{11}\\)",
+      "original": "Example \\(\\PageIndex{12}\\): Using Scientific Notation\n\nPerform the operations and write the answer in scientific notation.\n\n1. \\((8.14\\times{10}^{−7})(6.5\\times{10}^{10})\\)\n\n2. \\((4\\times{10}^5)÷(−1.52\\times{10}^{9})\\)\n\n3. \\((2.7\\times{10}^5)(6.04\\times{10}^{13})\\)\n\n4. \\((1.2\\times{10}^8)÷(9.6\\times{10}^5)\\)\n\n5. \\((3.33\\times{10}^4)(−1.05\\times{10}^7)(5.62\\times{10}^5)\\)\n\nSolutions\n\n1. \\[\\begin{align*} (8.14\\times{10}^{-7})(6.5\\times{10}^{10}) &= (8.14\\times6.5)({10}^{-7}\\times{10}^{10}) \\text{ Commutative and associative properties of multiplication}\\\\ &= (52.91)({10}^3) \\text{ Product rule of exponents}\\\\ &= 5.291\\times{10}^4 \\text{ Scientific notation} \\end{align*}\\]\n\n2. \\[\\begin{align*} (4\\times{10}^5)\\div (-1.52\\times{10}^{9}) &= \\left(\\dfrac{4}{-1.52}\\right)\\left(\\dfrac{{10}^5}{{10}^9}\\right) \\text{ Commutative and associative properties of multiplication}\\\\ &\\approx (-2.63)({10}^{-4}) \\text{ Quotient rule of exponents}\\\\ &= -2.63\\times{10}^{-4} \\text{ Scientific notation} \\end{align*}\\]\n\n3. \\[\\begin{align*} (2.7\\times{10}^5)(6.04\\times{10}^{13}) &= (2.7\\times6.04)({10}^5\\times{10}^{13}) \\text{ Commutative and associative properties of multiplication}\\\\ &= (16.308)({10}^{18}) \\text{ Product rule of exponents}\\\\ &= 1.6308\\times{10}^{19} \\text{ Scientific notation} \\end{align*}\\]\n\n4. \\[\\begin{align*} (1.2\\times{10}^8)÷(9.6\\times{10}^5) &= \\left(\\dfrac{1.2}{9.6}\\right)\\left(\\dfrac{{10}^8}{{10}^5}\\right) \\text{ Commutative and associative properties of multiplication}\\\\ &= (0.125)({10}^3) \\text{ Quotient rule of exponents}\\\\ &= 1.25\\times{10}^2 \\text{ Scientific notation} \\end{align*}\\]\n\n5. \\[\\begin{align*} (3.33\\times{10}^4)(-1.05\\times{10}^7)(5.62\\times{10}^5) &= [3.33\\times(-1.05)\\times5.62]({10}^4\\times{10}^7\\times{10}^5)\\\\ &\\approx (-19.65)({10}^{16})\\\\ &= -1.965\\times{10}^{17} \\end{align*}\\]",
+      "prompt": "Example \\(\\PageIndex{12}\\): Using Scientific Notation\n\nPerform the operations and write the answer in scientific notation.\n\n1. \\((8.14\\times{10}^{−7})(6.5\\times{10}^{10})\\)\n\n2. \\((4\\times{10}^5)÷(−1.52\\times{10}^{9})\\)\n\n3. \\((2.7\\times{10}^5)(6.04\\times{10}^{13})\\)\n\n4. \\((1.2\\times{10}^8)÷(9.6\\times{10}^5)\\)\n\n5. \\((3.33\\times{10}^4)(−1.05\\times{10}^7)(5.62\\times{10}^5)\\)\n\nSolutions\n\n1. \\[\\begin{align*} (8.14\\times{10}^{-7})(6.5\\times{10}^{10}) &= (8.14\\times6.5)({10}^{-7}\\times{10}^{10}) \\text{ Commutative and associative properties of multiplication}\\\\ &= (52.91)({10}^3) \\text{ Product rule of exponents}\\\\ &= 5.291\\times{10}^4 \\text{ Scientific notation} \\end{align*}\\]\n\n2. \\[\\begin{align*} (4\\times{10}^5)\\div (-1.52\\times{10}^{9}) &= \\left(\\dfrac{4}{-1.52}\\right)\\left(\\dfrac{{10}^5}{{10}^9}\\right) \\text{ Commutative and associative properties of multiplication}\\\\ &\\approx (-2.63)({10}^{-4}) \\text{ Quotient rule of exponents}\\\\ &= -2.63\\times{10}^{-4} \\text{ Scientific notation} \\end{align*}\\]\n\n3. \\[\\begin{align*} (2.7\\times{10}^5)(6.04\\times{10}^{13}) &= (2.7\\times6.04)({10}^5\\times{10}^{13}) \\text{ Commutative and associative properties of multiplication}\\\\ &= (16.308)({10}^{18}) \\text{ Product rule of exponents}\\\\ &= 1.6308\\times{10}^{19} \\text{ Scientific notation} \\end{align*}\\]\n\n4. \\[\\begin{align*} (1.2\\times{10}^8)÷(9.6\\times{10}^5) &= \\left(\\dfrac{1.2}{9.6}\\right)\\left(\\dfrac{{10}^8}{{10}^5}\\right) \\text{ Commutative and associative properties of multiplication}\\\\ &= (0.125)({10}^3) \\text{ Quotient rule of exponents}\\\\ &= 1.25\\times{10}^2 \\text{ Scientific notation} \\end{align*}\\]\n\n5. \\[\\begin{align*} (3.33\\times{10}^4)(-1.05\\times{10}^7)(5.62\\times{10}^5) &= [3.33\\times(-1.05)\\times5.62]({10}^4\\times{10}^7\\times{10}^5)\\\\ &\\approx (-19.65)({10}^{16})\\\\ &= -1.965\\times{10}^{17} \\end{align*}\\]",
+      "sourceAnswers": [],
+      "hasFigure": false,
+      "status": "draft",
+      "answerVerified": false,
+      "translationStatus": "pending",
+      "mappingStatus": "pending"
+    },
+    {
+      "ordinal": 23,
+      "sourceNumber": "",
+      "sourceAnchor": "",
+      "kind": "exercise-candidate",
+      "context": "Scientific notation, used with the rules of exponents, makes calculating with large or small numbers much easier than doing so using standard notation. For example, suppose we are asked to calculate the number of atoms in \\(1\\; L\\) of water. Each water molecule contains \\(3\\) atoms (\\(2\\) hydrogen and \\(1\\) oxygen). The average drop of water contains around \\(1.32\\times{10}{21}\\) molecules of water and \\(1\\; L\\) of water holds about \\(1.22\\times{10}^{4}\\) average drops. Therefore, there are approximately \\(3⋅(1.32\\times{10}^{21})⋅(1.22\\times{10}^4)≈4.83\\times{10}^{25}\\) atoms in \\(1\\; L\\) of water. We simply multiply the decimal terms and add the exponents. Imagine having to perform the calculation without using scientific notation!\n\nWhen performing calculations with scientific notation, be sure to write the answer in proper scientific notation. For example, consider the product \\((7\\times{10}^4)⋅(5\\times{10}^6)=35\\times{10}^{10}\\). The answer is not in proper scientific notation because \\(35\\) is greater than \\(10\\). Consider \\(35\\) as \\(3.5\\times10\\). That adds a ten to the exponent of the answer.\n\n\\((35)\\times{10}^{10}=(3.5\\times10)\\times{10}^{10}=3.5\\times(10\\times{10}^{10})=3.5\\times{10}^{11}\\)",
+      "original": "Exercise \\(\\PageIndex{12}\\)\n\nPerform the operations and write the answer in scientific notation.\n\n1. \\((−7.5\\times{10}^8)(1.13\\times{10}^{−2})\\)\n\n2. \\((1.24\\times{10}^{11})÷(1.55\\times{10}^{18})\\)\n\n3. \\((3.72\\times{10}^9)(8\\times{10}^3)\\)\n\n4. \\((9.933\\times{10}^{23})÷(−2.31\\times{10}^{17})\\)\n\n5. \\((−6.04\\times{10}^9)(7.3\\times{10}^2)(−2.81\\times{10}^2)\\)\n\nAnswer a\n\n\\(−8.475\\times{10}^6\\)\n\nAnswer b\n\n\\(8\\times{10}^{−8}\\)\n\nAnswer c\n\n\\(2.976\\times{10}^{13}\\)\n\nAnswer d\n\n\\(−4.3\\times{10}^6\\)\n\nAnswer e\n\n\\(≈1.24\\times{10}^{15}\\)",
+      "prompt": "Exercise \\(\\PageIndex{12}\\)\n\nPerform the operations and write the answer in scientific notation.\n\n1. \\((−7.5\\times{10}^8)(1.13\\times{10}^{−2})\\)\n\n2. \\((1.24\\times{10}^{11})÷(1.55\\times{10}^{18})\\)\n\n3. \\((3.72\\times{10}^9)(8\\times{10}^3)\\)\n\n4. \\((9.933\\times{10}^{23})÷(−2.31\\times{10}^{17})\\)\n\n5. \\((−6.04\\times{10}^9)(7.3\\times{10}^2)(−2.81\\times{10}^2)\\)",
+      "sourceAnswers": [
+        "\\(−8.475\\times{10}^6\\)",
+        "\\(8\\times{10}^{−8}\\)",
+        "\\(2.976\\times{10}^{13}\\)",
+        "\\(−4.3\\times{10}^6\\)",
+        "\\(≈1.24\\times{10}^{15}\\)"
+      ],
+      "hasFigure": false,
+      "status": "draft",
+      "answerVerified": false,
+      "translationStatus": "pending",
+      "mappingStatus": "pending"
+    },
+    {
+      "ordinal": 24,
+      "sourceNumber": "",
+      "sourceAnchor": "",
+      "kind": "example-or-exercise",
+      "context": "Scientific notation, used with the rules of exponents, makes calculating with large or small numbers much easier than doing so using standard notation. For example, suppose we are asked to calculate the number of atoms in \\(1\\; L\\) of water. Each water molecule contains \\(3\\) atoms (\\(2\\) hydrogen and \\(1\\) oxygen). The average drop of water contains around \\(1.32\\times{10}{21}\\) molecules of water and \\(1\\; L\\) of water holds about \\(1.22\\times{10}^{4}\\) average drops. Therefore, there are approximately \\(3⋅(1.32\\times{10}^{21})⋅(1.22\\times{10}^4)≈4.83\\times{10}^{25}\\) atoms in \\(1\\; L\\) of water. We simply multiply the decimal terms and add the exponents. Imagine having to perform the calculation without using scientific notation!\n\nWhen performing calculations with scientific notation, be sure to write the answer in proper scientific notation. For example, consider the product \\((7\\times{10}^4)⋅(5\\times{10}^6)=35\\times{10}^{10}\\). The answer is not in proper scientific notation because \\(35\\) is greater than \\(10\\). Consider \\(35\\) as \\(3.5\\times10\\). That adds a ten to the exponent of the answer.\n\n\\((35)\\times{10}^{10}=(3.5\\times10)\\times{10}^{10}=3.5\\times(10\\times{10}^{10})=3.5\\times{10}^{11}\\)",
+      "original": "Example \\(\\PageIndex{13}\\): Applying Scientific Notation to Solve Problems\n\nIn April 2014, the population of the United States was about \\(308,000,000\\) people. The national debt was about \\(\\$17,547,000,000,000\\). Write each number in scientific notation, rounding figures to two decimal places, and find the amount of the debt per U.S. citizen. Write the answer in both scientific and standard notations.\n\nSolution\n\nThe population was \\(308,000,000=3.08\\times{10}^8\\).\n\nThe national debt was \\($17,547,000,000,000≈$1.75\\times{10}^{13}\\).\n\nTo find the amount of debt per citizen, divide the national debt by the number of citizens.\n\n\\[\\begin{align*} (1.75\\times{10}^{13})\\div (3.08\\times{10}^8)&=\\left(\\dfrac{1.75}{3.08}\\right)({10}^5)\\\\ &\\approx 0.57\\times{10}^5\\\\ &=5.7\\times{10}^4 \\end{align*}\\]\n\nThe debt per citizen at the time was about \\($5.7\\times{10}^4\\), or \\($57,000\\).",
+      "prompt": "Example \\(\\PageIndex{13}\\): Applying Scientific Notation to Solve Problems\n\nIn April 2014, the population of the United States was about \\(308,000,000\\) people. The national debt was about \\(\\$17,547,000,000,000\\). Write each number in scientific notation, rounding figures to two decimal places, and find the amount of the debt per U.S. citizen. Write the answer in both scientific and standard notations.\n\nSolution\n\nThe population was \\(308,000,000=3.08\\times{10}^8\\).\n\nThe national debt was \\($17,547,000,000,000≈$1.75\\times{10}^{13}\\).\n\nTo find the amount of debt per citizen, divide the national debt by the number of citizens.\n\n\\[\\begin{align*} (1.75\\times{10}^{13})\\div (3.08\\times{10}^8)&=\\left(\\dfrac{1.75}{3.08}\\right)({10}^5)\\\\ &\\approx 0.57\\times{10}^5\\\\ &=5.7\\times{10}^4 \\end{align*}\\]\n\nThe debt per citizen at the time was about \\($5.7\\times{10}^4\\), or \\($57,000\\).",
+      "sourceAnswers": [],
+      "hasFigure": false,
+      "status": "draft",
+      "answerVerified": false,
+      "translationStatus": "pending",
+      "mappingStatus": "pending"
+    },
+    {
+      "ordinal": 25,
+      "sourceNumber": "",
+      "sourceAnchor": "",
+      "kind": "exercise-candidate",
+      "context": "Scientific notation, used with the rules of exponents, makes calculating with large or small numbers much easier than doing so using standard notation. For example, suppose we are asked to calculate the number of atoms in \\(1\\; L\\) of water. Each water molecule contains \\(3\\) atoms (\\(2\\) hydrogen and \\(1\\) oxygen). The average drop of water contains around \\(1.32\\times{10}{21}\\) molecules of water and \\(1\\; L\\) of water holds about \\(1.22\\times{10}^{4}\\) average drops. Therefore, there are approximately \\(3⋅(1.32\\times{10}^{21})⋅(1.22\\times{10}^4)≈4.83\\times{10}^{25}\\) atoms in \\(1\\; L\\) of water. We simply multiply the decimal terms and add the exponents. Imagine having to perform the calculation without using scientific notation!\n\nWhen performing calculations with scientific notation, be sure to write the answer in proper scientific notation. For example, consider the product \\((7\\times{10}^4)⋅(5\\times{10}^6)=35\\times{10}^{10}\\). The answer is not in proper scientific notation because \\(35\\) is greater than \\(10\\). Consider \\(35\\) as \\(3.5\\times10\\). That adds a ten to the exponent of the answer.\n\n\\((35)\\times{10}^{10}=(3.5\\times10)\\times{10}^{10}=3.5\\times(10\\times{10}^{10})=3.5\\times{10}^{11}\\)",
+      "original": "Exercise \\(\\PageIndex{13}\\)\n\nAn average human body contains around \\(30,000,000,000,000\\) red blood cells. Each cell measures approximately \\(0.000008\\; m\\) long. Write each number in scientific notation and find the total length if the cells were laid end-to-end. Write the answer in both scientific and standard notations.\n\nAnswer\n\nNumber of cells: \\(3\\times{10}^{13}\\); length of a cell: \\(8\\times{10}^{−6}\\; m\\); total length: \\(2.4\\times{10}^8\\; m\\) or \\(240,000,000\\; m\\).",
+      "prompt": "Exercise \\(\\PageIndex{13}\\)\n\nAn average human body contains around \\(30,000,000,000,000\\) red blood cells. Each cell measures approximately \\(0.000008\\; m\\) long. Write each number in scientific notation and find the total length if the cells were laid end-to-end. Write the answer in both scientific and standard notations.",
+      "sourceAnswers": [
+        "Number of cells: \\(3\\times{10}^{13}\\); length of a cell: \\(8\\times{10}^{−6}\\; m\\); total length: \\(2.4\\times{10}^8\\; m\\) or \\(240,000,000\\; m\\)."
+      ],
+      "hasFigure": false,
+      "status": "draft",
+      "answerVerified": false,
+      "translationStatus": "pending",
+      "mappingStatus": "pending"
+    }
+  ],
+  "license": "CC BY 4.0",
+  "licenseEvidence": "This page titled 1.2: Exponents and Scientific Notation was last modified on Thu, 26 Dec 2024 22:30:45 GMT and is shared under a CC BY  4.0  license and was authored, remixed, and/or curated by OpenStax via source content that was edited to the style and standards of the LibreTexts platform.",
+  "url": "https://math.libretexts.org/Bookshelves/Algebra/Algebra_and_Trigonometry_1e_(OpenStax)/01:_Prerequisites/1.02:_Exponents_and_Scientific_Notation",
+  "sha256": "e407bcb782bff5fde6fadd53e03ff7d382aa87f3a446ce26fc50f6eb972aed13",
+  "checkedAt": "2026-10-07",
+  "id": "0b83e2184b800f514169",
+  "bookId": "algebra-trigonometry",
+  "licenseInherited": false,
+  "licenseSource": "https://math.libretexts.org/Bookshelves/Algebra/Algebra_and_Trigonometry_1e_(OpenStax)/01:_Prerequisites/1.02:_Exponents_and_Scientific_Notation",
+  "licenseUrl": "https://creativecommons.org/licenses/by/4.0/",
+  "authors": "OpenStax / Jay Abramson et al.",
+  "book": "Algebra and Trigonometry 1e",
+  "reviewStatus": "unreviewed",
+  "sourceLanguage": "en",
+  "translationStatus": "pending"
+}

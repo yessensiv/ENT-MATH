@@ -1,0 +1,416 @@
+{
+  "title": "13.3: Geometric Sequences",
+  "originalText": "Learning Objectives\n\nFind the common ratio for a geometric sequence.\n\nList the terms of a geometric sequence.\n\nUse a recursive formula for a geometric sequence.\n\nUse an explicit formula for a geometric sequence.\n\nMany jobs offer an annual cost-of-living increase to keep salaries consistent with inflation. Suppose, for example, a recent college graduate finds a position as a sales manager earning an annual salary of \\($26,000\\). He is promised a \\(2\\%\\) cost of living increase each year. His annual salary in any given year can be found by multiplying his salary from the previous year by \\(102\\%\\). His salary will be \\($26,520\\) after one year; \\($27,050.40\\) after two years; \\($27,591.41\\) after three years; and so on. When a salary increases by a constant rate each year, the salary grows by a constant factor. In this section, we will review sequences that grow in this way.\n\nFinding Common Ratios\n\nThe yearly salary values described form a geometric sequence because they change by a constant factor each year. Each term of a geometric sequence increases or decreases by a constant factor called the common ratio. The sequence below is an example of a geometric sequence because each term increases by a constant factor of 6. Multiplying any term of the sequence by the common ratio 6 generates the subsequent term.\n\n[Figure: A sequence , {1, 6, 36, 216, 1296, ...} that shows all the numbers have a common ratio of 6.]\n\nDefinition: GEOMETRIC SEQUENCE\n\nA geometric sequence is one in which any term divided by the previous term is a constant. This constant is called the common ratio of the sequence. The common ratio can be found by dividing any term in the sequence by the previous term. If \\(a_1\\) is the initial term of a geometric sequence and \\(r\\) is the common ratio, the sequence will be\n\n\\[\\{a_1, a_1r,a_1r^2,a_1r^3,...\\} .\\]\n\nHow to: Given a set of numbers, determine if they represent a geometric sequence.\n\n1. Divide each term by the previous term.\n\n2. Compare the quotients. If they are the same, a common ratio exists and the sequence is geometric.\n\nExample \\(\\PageIndex{1}\\): Finding Common Ratios\n\nIs the sequence geometric? If so, find the common ratio.\n\n1. \\(1\\), \\(2\\), \\(4\\), \\(8\\), \\(16\\),...\n\n2. \\(48\\), \\(12\\), \\(4\\), \\(2\\),...\n\nSolution\n\nDivide each term by the previous term to determine whether a common ratio exists.\n\n1. \\(\\dfrac{2}{1}=2\\) \\(\\dfrac{4}{2}=2\\) \\(\\dfrac{8}{4}=2\\) \\(\\dfrac{16}{8}=2\\)\n\nThe sequence is geometric because there is a common ratio. The common ratio is \\(2\\).\n\n2. \\(\\dfrac{12}{48}=\\dfrac{1}{4}\\) \\(\\dfrac{4}{12}=\\dfrac{1}{3}\\) \\(\\dfrac{2}{4}=\\dfrac{1}{2}\\)\n\nThe sequence is not geometric because there is not a common ratio.\n\nAnalysis\n\nThe graph of each sequence is shown in Figure \\(\\PageIndex{1}\\). It seems from the graphs that both (a) and (b) appear have the form of the graph of an exponential function in this viewing window. However, we know that (a) is geometric and so this interpretation holds, but (b) is not.\n\n[Figure: Graph of two sequences where graph (a) is geometric and graph (b) is exponential.]\n\nFigure \\(\\PageIndex{1}\\)\n\nQ&A\n\nIf you are told that a sequence is geometric, do you have to divide every term by the previous term to find the common ratio?\n\nNo. If you know that the sequence is geometric, you can choose any one term in the sequence and divide it by the previous term to find the common ratio.\n\nExercise \\(\\PageIndex{1A}\\)\n\nIs the sequence geometric? If so, find the common ratio.\n\n\\(5\\), \\(10\\), \\(15\\), \\(20\\),...\n\nAnswer\n\nThe sequence is not geometric because \\(\\dfrac{10}{5}≠\\dfrac{15}{10}\\)\n\nExercise \\(\\PageIndex{1B}\\)\n\nIs the sequence geometric? If so, find the common ratio.\n\n\\(100\\), \\(20\\), \\(4\\), \\(\\dfrac{4}{5}\\),...\n\nAnswer\n\nThe sequence is geometric. The common ratio is \\(\\dfrac{1}{5}\\)\n\nWriting Terms of Geometric Sequences\n\nNow that we can identify a geometric sequence, we will learn how to find the terms of a geometric sequence if we are given the first term and the common ratio. The terms of a geometric sequence can be found by beginning with the first term and multiplying by the common ratio repeatedly. For instance, if the first term of a geometric sequence is \\(a_1=−2\\) and the common ratio is \\(r=4\\), we can find subsequent terms by multiplying \\(−2⋅4\\) to get \\(−8\\) then multiplying the result \\(−8⋅4\\) to get \\(−32\\) and so on.\n\n\\[\\begin{align*} a_1 &= −2 \\\\ a_2 &= (−2⋅4)=−8 \\\\ a_3 &= (−8⋅4)=−32 \\\\ a_4 &= (−32⋅4)=128 \\end{align*}\\]\n\nThe first four terms are \\(\\{–2, –8, –32, –128\\}\\).\n\nHow to: Given the first term and the common factor, find the first four terms of a geometric sequence.\n\n1. Multiply the initial term, \\(a_1\\), by the common ratio to find the next term, \\(a_2\\).\n\n2. Repeat the process, using \\(a_n=a_2\\) to find \\(a_3\\) and then use \\(a_3\\) to find \\(a_4\\), until all four terms have been identified.\n\n3. Write the terms separated by commons within brackets.\n\nExample \\(\\PageIndex{2}\\): Writing the Terms of a Geometric Sequence\n\nList the first four terms of the geometric sequence with \\(a_1=5\\) and \\(r=–2\\).\n\nSolution\n\nMultiply \\(a_1\\) by \\(−2\\) to find \\(a_2\\). Repeat the process, using \\(a_2\\) to find \\(a_3\\), and so on.\n\n\\[\\begin{align*} a_1 &= 5 \\\\ a_2 &= −2a_1=−10 \\\\ a_3 &= −2a_2=20 \\\\ a_4 &= −2a_3=−40 \\end{align*}\\]\n\nThe first four terms are \\(\\{5,–10,20,–40\\}\\).\n\nExercise \\(\\PageIndex{2}\\)\n\nList the first five terms of the geometric sequence with \\(a_1=18\\) and \\(r=\\dfrac{1}{3}\\).\n\nAnswer\n\n\\(\\left \\{18, 6, 2, \\dfrac{2}{3}, \\dfrac{2}{9} \\right \\} \\)\n\nUsing Recursive Formulas for Geometric Sequences\n\nA recursive formula allows us to find any term of a geometric sequence by using the previous term. Each term is the product of the common ratio and the previous term. For example, suppose the common ratio is \\(9\\). Then each term is nine times the previous term. As with any recursive formula, the initial term must be given.\n\nNote: RECURSIVE FORMULA FOR A GEOMETRIC SEQUENCE\n\nThe recursive formula for a geometric sequence with common ratio r and first term \\(a_1\\) is\n\n\\[a_n=ra_{n−1},\\;\\;\\; n≥2\\]\n\nHow to: Given the first several terms of a geometric sequence, write its recursive formula.\n\n1. State the initial term.\n\n2. Find the common ratio by dividing any term by the preceding term.\n\n3. Substitute the common ratio into the recursive formula for a geometric sequence.\n\nExample \\(\\PageIndex{3}\\): Using Recursive Formulas for Geometric Sequences\n\nWrite a recursive formula for the following geometric sequence.\n\n\\(\\{6, 9, 13.5, 20.25, ...\\} \\nonumber\\)\n\nSolution\n\nThe first term is given as \\(6\\). The common ratio can be found by dividing the second term by the first term.\n\n\\(r=\\dfrac{9}{6}=1.5 \\nonumber\\)\n\nSubstitute the common ratio into the recursive formula for geometric sequences and define \\(a_1\\).\n\n\\[\\begin{align*} a_n &= ra_{n−1} \\\\ a_n &= 1.5a_{n−1} \\text{ for }n≥2 \\\\ a_1 &= 6 \\end{align*}\\]\n\nAnalysis\n\nThe sequence of data points follows an exponential pattern. The common ratio is also the base of an exponential function as shown in Figure \\(\\PageIndex{2}\\).\n\n[Figure: Graph of the geometric sequence.]\n\nFigure \\(\\PageIndex{2}\\)\n\nQ&A\n\nDo we have to divide the second term by the first term to find the common ratio?\n\nNo. We can divide any term in the sequence by the previous term. It is, however, most common to divide the second term by the first term because it is often the easiest method of finding the common ratio.\n\nExercise \\(\\PageIndex{3}\\)\n\nWrite a recursive formula for the following geometric sequence.\n\n\\(\\{2, \\frac{4}{3}, \\frac{8}{9}, \\frac{16}{27}, ...\\}\\)\n\nAnswer\n\n\\(\\begin{align*}a_1 &= 2 \\\\ a_n &= \\dfrac{2}{3}a_{n−1} \\text{ for }n≥2 \\end{align*}\\)\n\nUsing Explicit Formulas for Geometric Sequences\n\nBecause a geometric sequence is an exponential function whose domain is the set of positive integers, and the common ratio is the base of the function, we can write explicit formulas that allow us to find particular terms.\n\n\\[a_n=a_1r^{n−1}\\]\n\nLet’s take a look at the sequence \\(\\{18, 36, 72, 144, 288, ...\\}\\). This is a geometric sequence with a common ratio of \\(2\\) and an exponential function with a base of \\(2\\). An explicit formula for this sequence is\n\n\\(a_n=18·2^{n−1}\\)\n\nThe graph of the sequence is shown in Figure \\(\\PageIndex{3}\\).\n\n[Figure: Graph of the geometric sequence.]\n\nFigure \\(\\PageIndex{3}\\)\n\nNote: EXPLICIT FORMULA FOR A GEOMETRIC SEQUENCE\n\nThe \\(n^{th}\\) term of a geometric sequence is given by the explicit formula:\n\n\\[a_n=a_1r^{n−1}\\]\n\nExample \\(\\PageIndex{4}\\): Writing Terms of Geometric Sequences Using the Explicit Formula\n\nGiven a geometric sequence with \\(a_1=3\\) and \\(a_4=24\\), find \\(a_2\\).\n\nSolution\n\nThe sequence can be written in terms of the initial term and the common ratio \\(r\\).\n\n\\(3\\), \\(3r\\), \\(3r^2\\), \\(3r^3\\),...\n\nFind the common ratio using the given fourth term.\n\n\\[\\begin{align*} a_n&=a_1r^{n-1} \\\\ a_4&=3r^3 \\qquad \\text{Write the fourth term of sequence in terms of }\\alpha_1 \\text{ and } r \\\\ 24&=3r^3 \\qquad \\text{Substitute }24 \\text{ for }a_4 \\\\ 8&=r^3 \\qquad \\text{Divide} \\\\ r&=2 \\qquad \\text{Solve for the common ratio} \\end{align*}\\]\n\nFind the second term by multiplying the first term by the common ratio.\n\n\\[\\begin{align*} a_2 &= 2 \\\\ a_1 &= 2(3) \\\\ & = 6 \\end{align*}\\]\n\nAnalysis\n\nThe common ratio is multiplied by the first term once to find the second term, twice to find the third term, three times to find the fourth term, and so on. The tenth term could be found by multiplying the first term by the common ratio nine times or by multiplying by the common ratio raised to the ninth power.\n\nExercise \\(\\PageIndex{4}\\)\n\nGiven a geometric sequence with \\(a_2=4\\) and \\(2a_3=32\\), find \\(a_6\\).\n\nAnswer\n\n\\(a_6=16,384\\)\n\nExample \\(\\PageIndex{5}\\): Writing an Explicit Formula for the nth Term of a Geometric Sequence\n\nWrite an explicit formula for the nth term of the following geometric sequence.\n\n\\(\\{2, 10, 50, 250, ...\\}\\)\n\nSolution\n\nThe first term is \\(2\\). The common ratio can be found by dividing the second term by the first term.\n\n\\(\\dfrac{10}{2}=5\\)\n\nThe common ratio is \\(5\\). Substitute the common ratio and the first term of the sequence into the formula.\n\n\\[\\begin{align*}a_n &= a_1r^{(n−1)} \\\\ a_n &= 2⋅5^{n−1} \\end{align*}\\]\n\nThe graph of this sequence in Figure \\(\\PageIndex{4}\\) shows an exponential pattern.\n\n[Figure: Graph of the geometric sequence.]\n\nFigure \\(\\PageIndex{4}\\)\n\nExercise \\(\\PageIndex{5}\\)\n\nWrite an explicit formula for the following geometric sequence.\n\n\\(\\{–1, 3, –9, 27, ...\\}\\)\n\nAnswer\n\n\\(a_n=−{(−3)}^{n−1}\\)\n\nSolving Application Problems with Geometric Sequences\n\nIn real-world scenarios involving arithmetic sequences, we may need to use an initial term of \\(a_0\\) instead of \\(a_1\\). In these problems, we can alter the explicit formula slightly by using the following formula:\n\n\\(a_n=a_0r^n\\)\n\nExample \\(\\PageIndex{6}\\): Solving Application Problems with Geometric Sequences\n\nIn 2013, the number of students in a small school is \\(284\\). It is estimated that the student population will increase by \\(4\\%\\) each year.\n\n1. Write a formula for the student population.\n\n2. Estimate the student population in 2020.\n\nSolution\n\n1. The situation can be modeled by a geometric sequence with an initial term of \\(284\\). The student population will be \\(104\\%\\) of the prior year, so the common ratio is \\(1.04\\).\n\nLet \\(P\\) be the student population and \\(n\\) be the number of years after 2013. Using the explicit formula for a geometric sequence we get\n\n\\(P_n =284⋅{1.04}^n\\)\n\n2. We can find the number of years since 2013 by subtracting.\n\n\\(2020−2013=7\\)\n\nWe are looking for the population after \\(7\\) years. We can substitute \\(7\\) for \\(n\\) to estimate the population in 2020.\n\n\\(P_7=284⋅{1.04}^7≈374\\)\n\nThe student population will be about \\(374\\) in 2020.\n\nExercise \\(\\PageIndex{6}\\)\n\nA business starts a new website. Initially the number of hits is \\(293\\) due to the curiosity factor. The business estimates the number of hits will increase by \\(2.6%\\) per week.\n\n1. Write a formula for the number of hits.\n\n2. Estimate the number of hits in \\(5\\) weeks.\n\nAnswer a\n\n\\(P_n = 293⋅1.026a^n\\)\n\nAnswer b\n\nThe number of hits will be about \\(333\\).\n\nMedia\n\nAccess these online resources for additional instruction and practice with geometric sequences.\n\nGeometric Sequences\n\nDetermine the Type of Sequence\n\nFind the Formula for a Sequence\n\nKey Equations\n\n            recursive formula for nth term of a geometric sequence\t\n            \\(a_n=ra_{n−1}\\), \\(n≥2\\)\t\n\n            explicit formula for nth term of a geometric sequence\t\n            \\(a_n=a_1r^{n−1}\\)\t\n\nKey Concepts\n\nA geometric sequence is a sequence in which the ratio between any two consecutive terms is a constant.\n\nThe constant ratio between two consecutive terms is called the common ratio.\n\nThe common ratio can be found by dividing any term in the sequence by the previous term. See Example \\(\\PageIndex{1}\\).\n\nThe terms of a geometric sequence can be found by beginning with the first term and multiplying by the common ratio repeatedly. See Example \\(\\PageIndex{2}\\) and Example \\(\\PageIndex{4}\\).\n\nA recursive formula for a geometric sequence with common ratio \\(r\\) is given by \\(a_n=ra_{n–1}\\) for \\(n≥2\\).\n\nAs with any recursive formula, the initial term of the sequence must be given. See Example \\(\\PageIndex{3}\\).\n\nAn explicit formula for a geometric sequence with common ratio \\(r\\) is given by \\(a_n=a_1r^{n–1}\\). See Example \\(\\PageIndex{5}\\).\n\nIn application problems, we sometimes alter the explicit formula slightly to \\(a_n=a_0r^n\\). See Example \\(\\PageIndex{6}\\).\n\nContributors and Attributions\n\nJay Abramson (Arizona State University) with contributing authors. Textbook content produced by OpenStax College is licensed under a Creative Commons Attribution License 4.0 license. Download for free at https://openstax.org/details/books/precalculus.\n\nThis page titled 13.3: Geometric Sequences was last modified on Sun, 27 Apr 2025 18:27:18 GMT and is shared under a CC BY  4.0  license and was authored, remixed, and/or curated by OpenStax via source content that was edited to the style and standards of the LibreTexts platform.",
+  "figures": [
+    {
+      "url": "https://math.libretexts.org/@api/deki/files/5915/CNX_Precalc_Figure_11_03_001.jpg?revision=1&size=bestfit&width=487&height=68",
+      "alt": "A sequence , {1, 6, 36, 216, 1296, ...} that shows all the numbers have a common ratio of 6.",
+      "credit": ""
+    },
+    {
+      "url": "https://math.libretexts.org/@api/deki/files/5916/13.4.1.png?revision=2&size=bestfit&width=630&height=285",
+      "alt": "Graph of two sequences where graph (a) is geometric and graph (b) is exponential.",
+      "credit": ""
+    },
+    {
+      "url": "https://math.libretexts.org/@api/deki/files/5920/13.4.2.png?revision=1&size=bestfit&width=280&height=213",
+      "alt": "Graph of the geometric sequence.",
+      "credit": ""
+    },
+    {
+      "url": "https://math.libretexts.org/@api/deki/files/5918/CNX_Precalc_Figure_11_03_004.jpg?revision=1&size=bestfit&width=487&height=440",
+      "alt": "Graph of the geometric sequence.",
+      "credit": ""
+    },
+    {
+      "url": "https://math.libretexts.org/@api/deki/files/5921/13.4.4.png?revision=1&size=bestfit&width=326&height=289",
+      "alt": "Graph of the geometric sequence.",
+      "credit": ""
+    }
+  ],
+  "references": [
+    {
+      "text": "Geometric Sequences",
+      "url": "http://openstaxcollege.org/l/geometricseq"
+    },
+    {
+      "text": "Determine the Type of Sequence",
+      "url": "http://openstaxcollege.org/l/sequencetype"
+    },
+    {
+      "text": "Find the Formula for a Sequence",
+      "url": "http://openstaxcollege.org/l/sequenceformula"
+    },
+    {
+      "text": "Creative Commons Attribution License 4.0",
+      "url": "http://creativecommons.org/licenses/by/4.0/"
+    },
+    {
+      "text": "https://openstax.org/details/books/precalculus",
+      "url": "https://openstax.org/details/books/precalculus"
+    },
+    {
+      "text": "13.3: Geometric Sequences",
+      "url": "https://math.libretexts.org/Bookshelves/Algebra/Algebra_and_Trigonometry_1e_(OpenStax)/13%3A_Sequences_Probability_and_Counting_Theory/13.03%3A_Geometric_Sequences"
+    },
+    {
+      "text": "CC BY  4.0",
+      "url": "https://creativecommons.org/licenses/by/4.0"
+    },
+    {
+      "text": "OpenStax",
+      "url": "https://openstax.org/"
+    },
+    {
+      "text": "source content",
+      "url": "https://openstax.org/details/books/precalculus"
+    }
+  ],
+  "exercises": [
+    {
+      "ordinal": 1,
+      "sourceNumber": "1",
+      "sourceAnchor": "",
+      "kind": "exercise-candidate",
+      "context": "[Figure: A sequence , {1, 6, 36, 216, 1296, ...} that shows all the numbers have a common ratio of 6.]\n\nA geometric sequence is one in which any term divided by the previous term is a constant. This constant is called the common ratio of the sequence. The common ratio can be found by dividing any term in the sequence by the previous term. If \\(a_1\\) is the initial term of a geometric sequence and \\(r\\) is the common ratio, the sequence will be\n\n\\[\\{a_1, a_1r,a_1r^2,a_1r^3,...\\} .\\]",
+      "original": "1. Divide each term by the previous term.",
+      "prompt": "1. Divide each term by the previous term.",
+      "sourceAnswers": [],
+      "hasFigure": false,
+      "status": "draft",
+      "answerVerified": false,
+      "translationStatus": "pending",
+      "mappingStatus": "pending"
+    },
+    {
+      "ordinal": 2,
+      "sourceNumber": "2",
+      "sourceAnchor": "",
+      "kind": "exercise-candidate",
+      "context": "[Figure: A sequence , {1, 6, 36, 216, 1296, ...} that shows all the numbers have a common ratio of 6.]\n\nA geometric sequence is one in which any term divided by the previous term is a constant. This constant is called the common ratio of the sequence. The common ratio can be found by dividing any term in the sequence by the previous term. If \\(a_1\\) is the initial term of a geometric sequence and \\(r\\) is the common ratio, the sequence will be\n\n\\[\\{a_1, a_1r,a_1r^2,a_1r^3,...\\} .\\]",
+      "original": "2. Compare the quotients. If they are the same, a common ratio exists and the sequence is geometric.",
+      "prompt": "2. Compare the quotients. If they are the same, a common ratio exists and the sequence is geometric.",
+      "sourceAnswers": [],
+      "hasFigure": false,
+      "status": "draft",
+      "answerVerified": false,
+      "translationStatus": "pending",
+      "mappingStatus": "pending"
+    },
+    {
+      "ordinal": 3,
+      "sourceNumber": "",
+      "sourceAnchor": "",
+      "kind": "example-or-exercise",
+      "context": "[Figure: A sequence , {1, 6, 36, 216, 1296, ...} that shows all the numbers have a common ratio of 6.]\n\nA geometric sequence is one in which any term divided by the previous term is a constant. This constant is called the common ratio of the sequence. The common ratio can be found by dividing any term in the sequence by the previous term. If \\(a_1\\) is the initial term of a geometric sequence and \\(r\\) is the common ratio, the sequence will be\n\n\\[\\{a_1, a_1r,a_1r^2,a_1r^3,...\\} .\\]",
+      "original": "Example \\(\\PageIndex{1}\\): Finding Common Ratios\n\nIs the sequence geometric? If so, find the common ratio.\n\n1. \\(1\\), \\(2\\), \\(4\\), \\(8\\), \\(16\\),...\n\n2. \\(48\\), \\(12\\), \\(4\\), \\(2\\),...\n\nSolution\n\nDivide each term by the previous term to determine whether a common ratio exists.\n\n1. \\(\\dfrac{2}{1}=2\\) \\(\\dfrac{4}{2}=2\\) \\(\\dfrac{8}{4}=2\\) \\(\\dfrac{16}{8}=2\\)\n\nThe sequence is geometric because there is a common ratio. The common ratio is \\(2\\).\n\n2. \\(\\dfrac{12}{48}=\\dfrac{1}{4}\\) \\(\\dfrac{4}{12}=\\dfrac{1}{3}\\) \\(\\dfrac{2}{4}=\\dfrac{1}{2}\\)\n\nThe sequence is not geometric because there is not a common ratio.",
+      "prompt": "Example \\(\\PageIndex{1}\\): Finding Common Ratios\n\nIs the sequence geometric? If so, find the common ratio.\n\n1. \\(1\\), \\(2\\), \\(4\\), \\(8\\), \\(16\\),...\n\n2. \\(48\\), \\(12\\), \\(4\\), \\(2\\),...\n\nSolution\n\nDivide each term by the previous term to determine whether a common ratio exists.\n\n1. \\(\\dfrac{2}{1}=2\\) \\(\\dfrac{4}{2}=2\\) \\(\\dfrac{8}{4}=2\\) \\(\\dfrac{16}{8}=2\\)\n\nThe sequence is geometric because there is a common ratio. The common ratio is \\(2\\).\n\n2. \\(\\dfrac{12}{48}=\\dfrac{1}{4}\\) \\(\\dfrac{4}{12}=\\dfrac{1}{3}\\) \\(\\dfrac{2}{4}=\\dfrac{1}{2}\\)\n\nThe sequence is not geometric because there is not a common ratio.",
+      "sourceAnswers": [],
+      "hasFigure": false,
+      "status": "draft",
+      "answerVerified": false,
+      "translationStatus": "pending",
+      "mappingStatus": "pending"
+    },
+    {
+      "ordinal": 4,
+      "sourceNumber": "",
+      "sourceAnchor": "",
+      "kind": "exercise-candidate",
+      "context": "If you are told that a sequence is geometric, do you have to divide every term by the previous term to find the common ratio?\n\nNo. If you know that the sequence is geometric, you can choose any one term in the sequence and divide it by the previous term to find the common ratio.",
+      "original": "Exercise \\(\\PageIndex{1A}\\)\n\nIs the sequence geometric? If so, find the common ratio.\n\n\\(5\\), \\(10\\), \\(15\\), \\(20\\),...\n\nAnswer\n\nThe sequence is not geometric because \\(\\dfrac{10}{5}≠\\dfrac{15}{10}\\)",
+      "prompt": "Exercise \\(\\PageIndex{1A}\\)\n\nIs the sequence geometric? If so, find the common ratio.\n\n\\(5\\), \\(10\\), \\(15\\), \\(20\\),...",
+      "sourceAnswers": [
+        "The sequence is not geometric because \\(\\dfrac{10}{5}≠\\dfrac{15}{10}\\)"
+      ],
+      "hasFigure": false,
+      "status": "draft",
+      "answerVerified": false,
+      "translationStatus": "pending",
+      "mappingStatus": "pending"
+    },
+    {
+      "ordinal": 5,
+      "sourceNumber": "",
+      "sourceAnchor": "",
+      "kind": "exercise-candidate",
+      "context": "If you are told that a sequence is geometric, do you have to divide every term by the previous term to find the common ratio?\n\nNo. If you know that the sequence is geometric, you can choose any one term in the sequence and divide it by the previous term to find the common ratio.",
+      "original": "Exercise \\(\\PageIndex{1B}\\)\n\nIs the sequence geometric? If so, find the common ratio.\n\n\\(100\\), \\(20\\), \\(4\\), \\(\\dfrac{4}{5}\\),...\n\nAnswer\n\nThe sequence is geometric. The common ratio is \\(\\dfrac{1}{5}\\)",
+      "prompt": "Exercise \\(\\PageIndex{1B}\\)\n\nIs the sequence geometric? If so, find the common ratio.\n\n\\(100\\), \\(20\\), \\(4\\), \\(\\dfrac{4}{5}\\),...",
+      "sourceAnswers": [
+        "The sequence is geometric. The common ratio is \\(\\dfrac{1}{5}\\)"
+      ],
+      "hasFigure": false,
+      "status": "draft",
+      "answerVerified": false,
+      "translationStatus": "pending",
+      "mappingStatus": "pending"
+    },
+    {
+      "ordinal": 6,
+      "sourceNumber": "1",
+      "sourceAnchor": "",
+      "kind": "exercise-candidate",
+      "context": "Now that we can identify a geometric sequence, we will learn how to find the terms of a geometric sequence if we are given the first term and the common ratio. The terms of a geometric sequence can be found by beginning with the first term and multiplying by the common ratio repeatedly. For instance, if the first term of a geometric sequence is \\(a_1=−2\\) and the common ratio is \\(r=4\\), we can find subsequent terms by multiplying \\(−2⋅4\\) to get \\(−8\\) then multiplying the result \\(−8⋅4\\) to get \\(−32\\) and so on.\n\n\\[\\begin{align*} a_1 &= −2 \\\\ a_2 &= (−2⋅4)=−8 \\\\ a_3 &= (−8⋅4)=−32 \\\\ a_4 &= (−32⋅4)=128 \\end{align*}\\]\n\nThe first four terms are \\(\\{–2, –8, –32, –128\\}\\).",
+      "original": "1. Multiply the initial term, \\(a_1\\), by the common ratio to find the next term, \\(a_2\\).",
+      "prompt": "1. Multiply the initial term, \\(a_1\\), by the common ratio to find the next term, \\(a_2\\).",
+      "sourceAnswers": [],
+      "hasFigure": false,
+      "status": "draft",
+      "answerVerified": false,
+      "translationStatus": "pending",
+      "mappingStatus": "pending"
+    },
+    {
+      "ordinal": 7,
+      "sourceNumber": "2",
+      "sourceAnchor": "",
+      "kind": "exercise-candidate",
+      "context": "Now that we can identify a geometric sequence, we will learn how to find the terms of a geometric sequence if we are given the first term and the common ratio. The terms of a geometric sequence can be found by beginning with the first term and multiplying by the common ratio repeatedly. For instance, if the first term of a geometric sequence is \\(a_1=−2\\) and the common ratio is \\(r=4\\), we can find subsequent terms by multiplying \\(−2⋅4\\) to get \\(−8\\) then multiplying the result \\(−8⋅4\\) to get \\(−32\\) and so on.\n\n\\[\\begin{align*} a_1 &= −2 \\\\ a_2 &= (−2⋅4)=−8 \\\\ a_3 &= (−8⋅4)=−32 \\\\ a_4 &= (−32⋅4)=128 \\end{align*}\\]\n\nThe first four terms are \\(\\{–2, –8, –32, –128\\}\\).",
+      "original": "2. Repeat the process, using \\(a_n=a_2\\) to find \\(a_3\\) and then use \\(a_3\\) to find \\(a_4\\), until all four terms have been identified.",
+      "prompt": "2. Repeat the process, using \\(a_n=a_2\\) to find \\(a_3\\) and then use \\(a_3\\) to find \\(a_4\\), until all four terms have been identified.",
+      "sourceAnswers": [],
+      "hasFigure": false,
+      "status": "draft",
+      "answerVerified": false,
+      "translationStatus": "pending",
+      "mappingStatus": "pending"
+    },
+    {
+      "ordinal": 8,
+      "sourceNumber": "3",
+      "sourceAnchor": "",
+      "kind": "exercise-candidate",
+      "context": "Now that we can identify a geometric sequence, we will learn how to find the terms of a geometric sequence if we are given the first term and the common ratio. The terms of a geometric sequence can be found by beginning with the first term and multiplying by the common ratio repeatedly. For instance, if the first term of a geometric sequence is \\(a_1=−2\\) and the common ratio is \\(r=4\\), we can find subsequent terms by multiplying \\(−2⋅4\\) to get \\(−8\\) then multiplying the result \\(−8⋅4\\) to get \\(−32\\) and so on.\n\n\\[\\begin{align*} a_1 &= −2 \\\\ a_2 &= (−2⋅4)=−8 \\\\ a_3 &= (−8⋅4)=−32 \\\\ a_4 &= (−32⋅4)=128 \\end{align*}\\]\n\nThe first four terms are \\(\\{–2, –8, –32, –128\\}\\).",
+      "original": "3. Write the terms separated by commons within brackets.",
+      "prompt": "3. Write the terms separated by commons within brackets.",
+      "sourceAnswers": [],
+      "hasFigure": false,
+      "status": "draft",
+      "answerVerified": false,
+      "translationStatus": "pending",
+      "mappingStatus": "pending"
+    },
+    {
+      "ordinal": 9,
+      "sourceNumber": "",
+      "sourceAnchor": "",
+      "kind": "example-or-exercise",
+      "context": "Now that we can identify a geometric sequence, we will learn how to find the terms of a geometric sequence if we are given the first term and the common ratio. The terms of a geometric sequence can be found by beginning with the first term and multiplying by the common ratio repeatedly. For instance, if the first term of a geometric sequence is \\(a_1=−2\\) and the common ratio is \\(r=4\\), we can find subsequent terms by multiplying \\(−2⋅4\\) to get \\(−8\\) then multiplying the result \\(−8⋅4\\) to get \\(−32\\) and so on.\n\n\\[\\begin{align*} a_1 &= −2 \\\\ a_2 &= (−2⋅4)=−8 \\\\ a_3 &= (−8⋅4)=−32 \\\\ a_4 &= (−32⋅4)=128 \\end{align*}\\]\n\nThe first four terms are \\(\\{–2, –8, –32, –128\\}\\).",
+      "original": "Example \\(\\PageIndex{2}\\): Writing the Terms of a Geometric Sequence\n\nList the first four terms of the geometric sequence with \\(a_1=5\\) and \\(r=–2\\).\n\nSolution\n\nMultiply \\(a_1\\) by \\(−2\\) to find \\(a_2\\). Repeat the process, using \\(a_2\\) to find \\(a_3\\), and so on.\n\n\\[\\begin{align*} a_1 &= 5 \\\\ a_2 &= −2a_1=−10 \\\\ a_3 &= −2a_2=20 \\\\ a_4 &= −2a_3=−40 \\end{align*}\\]\n\nThe first four terms are \\(\\{5,–10,20,–40\\}\\).",
+      "prompt": "Example \\(\\PageIndex{2}\\): Writing the Terms of a Geometric Sequence\n\nList the first four terms of the geometric sequence with \\(a_1=5\\) and \\(r=–2\\).\n\nSolution\n\nMultiply \\(a_1\\) by \\(−2\\) to find \\(a_2\\). Repeat the process, using \\(a_2\\) to find \\(a_3\\), and so on.\n\n\\[\\begin{align*} a_1 &= 5 \\\\ a_2 &= −2a_1=−10 \\\\ a_3 &= −2a_2=20 \\\\ a_4 &= −2a_3=−40 \\end{align*}\\]\n\nThe first four terms are \\(\\{5,–10,20,–40\\}\\).",
+      "sourceAnswers": [],
+      "hasFigure": false,
+      "status": "draft",
+      "answerVerified": false,
+      "translationStatus": "pending",
+      "mappingStatus": "pending"
+    },
+    {
+      "ordinal": 10,
+      "sourceNumber": "",
+      "sourceAnchor": "",
+      "kind": "exercise-candidate",
+      "context": "Now that we can identify a geometric sequence, we will learn how to find the terms of a geometric sequence if we are given the first term and the common ratio. The terms of a geometric sequence can be found by beginning with the first term and multiplying by the common ratio repeatedly. For instance, if the first term of a geometric sequence is \\(a_1=−2\\) and the common ratio is \\(r=4\\), we can find subsequent terms by multiplying \\(−2⋅4\\) to get \\(−8\\) then multiplying the result \\(−8⋅4\\) to get \\(−32\\) and so on.\n\n\\[\\begin{align*} a_1 &= −2 \\\\ a_2 &= (−2⋅4)=−8 \\\\ a_3 &= (−8⋅4)=−32 \\\\ a_4 &= (−32⋅4)=128 \\end{align*}\\]\n\nThe first four terms are \\(\\{–2, –8, –32, –128\\}\\).",
+      "original": "Exercise \\(\\PageIndex{2}\\)\n\nList the first five terms of the geometric sequence with \\(a_1=18\\) and \\(r=\\dfrac{1}{3}\\).\n\nAnswer\n\n\\(\\left \\{18, 6, 2, \\dfrac{2}{3}, \\dfrac{2}{9} \\right \\} \\)",
+      "prompt": "Exercise \\(\\PageIndex{2}\\)\n\nList the first five terms of the geometric sequence with \\(a_1=18\\) and \\(r=\\dfrac{1}{3}\\).",
+      "sourceAnswers": [
+        "\\(\\left \\{18, 6, 2, \\dfrac{2}{3}, \\dfrac{2}{9} \\right \\} \\)"
+      ],
+      "hasFigure": false,
+      "status": "draft",
+      "answerVerified": false,
+      "translationStatus": "pending",
+      "mappingStatus": "pending"
+    },
+    {
+      "ordinal": 11,
+      "sourceNumber": "1",
+      "sourceAnchor": "",
+      "kind": "exercise-candidate",
+      "context": "A recursive formula allows us to find any term of a geometric sequence by using the previous term. Each term is the product of the common ratio and the previous term. For example, suppose the common ratio is \\(9\\). Then each term is nine times the previous term. As with any recursive formula, the initial term must be given.\n\nThe recursive formula for a geometric sequence with common ratio r and first term \\(a_1\\) is\n\n\\[a_n=ra_{n−1},\\;\\;\\; n≥2\\]",
+      "original": "1. State the initial term.",
+      "prompt": "1. State the initial term.",
+      "sourceAnswers": [],
+      "hasFigure": false,
+      "status": "draft",
+      "answerVerified": false,
+      "translationStatus": "pending",
+      "mappingStatus": "pending"
+    },
+    {
+      "ordinal": 12,
+      "sourceNumber": "2",
+      "sourceAnchor": "",
+      "kind": "exercise-candidate",
+      "context": "A recursive formula allows us to find any term of a geometric sequence by using the previous term. Each term is the product of the common ratio and the previous term. For example, suppose the common ratio is \\(9\\). Then each term is nine times the previous term. As with any recursive formula, the initial term must be given.\n\nThe recursive formula for a geometric sequence with common ratio r and first term \\(a_1\\) is\n\n\\[a_n=ra_{n−1},\\;\\;\\; n≥2\\]",
+      "original": "2. Find the common ratio by dividing any term by the preceding term.",
+      "prompt": "2. Find the common ratio by dividing any term by the preceding term.",
+      "sourceAnswers": [],
+      "hasFigure": false,
+      "status": "draft",
+      "answerVerified": false,
+      "translationStatus": "pending",
+      "mappingStatus": "pending"
+    },
+    {
+      "ordinal": 13,
+      "sourceNumber": "3",
+      "sourceAnchor": "",
+      "kind": "exercise-candidate",
+      "context": "A recursive formula allows us to find any term of a geometric sequence by using the previous term. Each term is the product of the common ratio and the previous term. For example, suppose the common ratio is \\(9\\). Then each term is nine times the previous term. As with any recursive formula, the initial term must be given.\n\nThe recursive formula for a geometric sequence with common ratio r and first term \\(a_1\\) is\n\n\\[a_n=ra_{n−1},\\;\\;\\; n≥2\\]",
+      "original": "3. Substitute the common ratio into the recursive formula for a geometric sequence.",
+      "prompt": "3. Substitute the common ratio into the recursive formula for a geometric sequence.",
+      "sourceAnswers": [],
+      "hasFigure": false,
+      "status": "draft",
+      "answerVerified": false,
+      "translationStatus": "pending",
+      "mappingStatus": "pending"
+    },
+    {
+      "ordinal": 14,
+      "sourceNumber": "",
+      "sourceAnchor": "",
+      "kind": "example-or-exercise",
+      "context": "A recursive formula allows us to find any term of a geometric sequence by using the previous term. Each term is the product of the common ratio and the previous term. For example, suppose the common ratio is \\(9\\). Then each term is nine times the previous term. As with any recursive formula, the initial term must be given.\n\nThe recursive formula for a geometric sequence with common ratio r and first term \\(a_1\\) is\n\n\\[a_n=ra_{n−1},\\;\\;\\; n≥2\\]",
+      "original": "Example \\(\\PageIndex{3}\\): Using Recursive Formulas for Geometric Sequences\n\nWrite a recursive formula for the following geometric sequence.\n\n\\(\\{6, 9, 13.5, 20.25, ...\\} \\nonumber\\)",
+      "prompt": "Example \\(\\PageIndex{3}\\): Using Recursive Formulas for Geometric Sequences\n\nWrite a recursive formula for the following geometric sequence.\n\n\\(\\{6, 9, 13.5, 20.25, ...\\} \\nonumber\\)",
+      "sourceAnswers": [],
+      "hasFigure": false,
+      "status": "draft",
+      "answerVerified": false,
+      "translationStatus": "pending",
+      "mappingStatus": "pending"
+    },
+    {
+      "ordinal": 15,
+      "sourceNumber": "",
+      "sourceAnchor": "",
+      "kind": "exercise-candidate",
+      "context": "Do we have to divide the second term by the first term to find the common ratio?\n\nNo. We can divide any term in the sequence by the previous term. It is, however, most common to divide the second term by the first term because it is often the easiest method of finding the common ratio.",
+      "original": "Exercise \\(\\PageIndex{3}\\)\n\nWrite a recursive formula for the following geometric sequence.\n\n\\(\\{2, \\frac{4}{3}, \\frac{8}{9}, \\frac{16}{27}, ...\\}\\)\n\nAnswer\n\n\\(\\begin{align*}a_1 &= 2 \\\\ a_n &= \\dfrac{2}{3}a_{n−1} \\text{ for }n≥2 \\end{align*}\\)",
+      "prompt": "Exercise \\(\\PageIndex{3}\\)\n\nWrite a recursive formula for the following geometric sequence.\n\n\\(\\{2, \\frac{4}{3}, \\frac{8}{9}, \\frac{16}{27}, ...\\}\\)",
+      "sourceAnswers": [
+        "\\(\\begin{align*}a_1 &= 2 \\\\ a_n &= \\dfrac{2}{3}a_{n−1} \\text{ for }n≥2 \\end{align*}\\)"
+      ],
+      "hasFigure": false,
+      "status": "draft",
+      "answerVerified": false,
+      "translationStatus": "pending",
+      "mappingStatus": "pending"
+    },
+    {
+      "ordinal": 16,
+      "sourceNumber": "",
+      "sourceAnchor": "",
+      "kind": "example-or-exercise",
+      "context": "The graph of the sequence is shown in Figure \\(\\PageIndex{3}\\).\n\nThe \\(n^{th}\\) term of a geometric sequence is given by the explicit formula:\n\n\\[a_n=a_1r^{n−1}\\]",
+      "original": "Example \\(\\PageIndex{4}\\): Writing Terms of Geometric Sequences Using the Explicit Formula\n\nGiven a geometric sequence with \\(a_1=3\\) and \\(a_4=24\\), find \\(a_2\\).\n\nSolution\n\nThe sequence can be written in terms of the initial term and the common ratio \\(r\\).\n\n\\(3\\), \\(3r\\), \\(3r^2\\), \\(3r^3\\),...\n\nFind the common ratio using the given fourth term.\n\n\\[\\begin{align*} a_n&=a_1r^{n-1} \\\\ a_4&=3r^3 \\qquad \\text{Write the fourth term of sequence in terms of }\\alpha_1 \\text{ and } r \\\\ 24&=3r^3 \\qquad \\text{Substitute }24 \\text{ for }a_4 \\\\ 8&=r^3 \\qquad \\text{Divide} \\\\ r&=2 \\qquad \\text{Solve for the common ratio} \\end{align*}\\]\n\nFind the second term by multiplying the first term by the common ratio.\n\n\\[\\begin{align*} a_2 &= 2 \\\\ a_1 &= 2(3) \\\\ & = 6 \\end{align*}\\]",
+      "prompt": "Example \\(\\PageIndex{4}\\): Writing Terms of Geometric Sequences Using the Explicit Formula\n\nGiven a geometric sequence with \\(a_1=3\\) and \\(a_4=24\\), find \\(a_2\\).\n\nSolution\n\nThe sequence can be written in terms of the initial term and the common ratio \\(r\\).\n\n\\(3\\), \\(3r\\), \\(3r^2\\), \\(3r^3\\),...\n\nFind the common ratio using the given fourth term.\n\n\\[\\begin{align*} a_n&=a_1r^{n-1} \\\\ a_4&=3r^3 \\qquad \\text{Write the fourth term of sequence in terms of }\\alpha_1 \\text{ and } r \\\\ 24&=3r^3 \\qquad \\text{Substitute }24 \\text{ for }a_4 \\\\ 8&=r^3 \\qquad \\text{Divide} \\\\ r&=2 \\qquad \\text{Solve for the common ratio} \\end{align*}\\]\n\nFind the second term by multiplying the first term by the common ratio.\n\n\\[\\begin{align*} a_2 &= 2 \\\\ a_1 &= 2(3) \\\\ & = 6 \\end{align*}\\]",
+      "sourceAnswers": [],
+      "hasFigure": false,
+      "status": "draft",
+      "answerVerified": false,
+      "translationStatus": "pending",
+      "mappingStatus": "pending"
+    },
+    {
+      "ordinal": 17,
+      "sourceNumber": "",
+      "sourceAnchor": "",
+      "kind": "exercise-candidate",
+      "context": "Analysis\n\nThe common ratio is multiplied by the first term once to find the second term, twice to find the third term, three times to find the fourth term, and so on. The tenth term could be found by multiplying the first term by the common ratio nine times or by multiplying by the common ratio raised to the ninth power.",
+      "original": "Exercise \\(\\PageIndex{4}\\)\n\nGiven a geometric sequence with \\(a_2=4\\) and \\(2a_3=32\\), find \\(a_6\\).\n\nAnswer\n\n\\(a_6=16,384\\)",
+      "prompt": "Exercise \\(\\PageIndex{4}\\)\n\nGiven a geometric sequence with \\(a_2=4\\) and \\(2a_3=32\\), find \\(a_6\\).",
+      "sourceAnswers": [
+        "\\(a_6=16,384\\)"
+      ],
+      "hasFigure": false,
+      "status": "draft",
+      "answerVerified": false,
+      "translationStatus": "pending",
+      "mappingStatus": "pending"
+    },
+    {
+      "ordinal": 18,
+      "sourceNumber": "",
+      "sourceAnchor": "",
+      "kind": "example-or-exercise",
+      "context": "Analysis\n\nThe common ratio is multiplied by the first term once to find the second term, twice to find the third term, three times to find the fourth term, and so on. The tenth term could be found by multiplying the first term by the common ratio nine times or by multiplying by the common ratio raised to the ninth power.",
+      "original": "Example \\(\\PageIndex{5}\\): Writing an Explicit Formula for the nth Term of a Geometric Sequence\n\nWrite an explicit formula for the nth term of the following geometric sequence.\n\n\\(\\{2, 10, 50, 250, ...\\}\\)\n\nSolution\n\nThe first term is \\(2\\). The common ratio can be found by dividing the second term by the first term.\n\n\\(\\dfrac{10}{2}=5\\)\n\nThe common ratio is \\(5\\). Substitute the common ratio and the first term of the sequence into the formula.\n\n\\[\\begin{align*}a_n &= a_1r^{(n−1)} \\\\ a_n &= 2⋅5^{n−1} \\end{align*}\\]\n\nThe graph of this sequence in Figure \\(\\PageIndex{4}\\) shows an exponential pattern.\n\n[Figure: Graph of the geometric sequence.]\n\nFigure \\(\\PageIndex{4}\\)",
+      "prompt": "Example \\(\\PageIndex{5}\\): Writing an Explicit Formula for the nth Term of a Geometric Sequence\n\nWrite an explicit formula for the nth term of the following geometric sequence.\n\n\\(\\{2, 10, 50, 250, ...\\}\\)\n\nSolution\n\nThe first term is \\(2\\). The common ratio can be found by dividing the second term by the first term.\n\n\\(\\dfrac{10}{2}=5\\)\n\nThe common ratio is \\(5\\). Substitute the common ratio and the first term of the sequence into the formula.\n\n\\[\\begin{align*}a_n &= a_1r^{(n−1)} \\\\ a_n &= 2⋅5^{n−1} \\end{align*}\\]\n\nThe graph of this sequence in Figure \\(\\PageIndex{4}\\) shows an exponential pattern.\n\n[Figure: Graph of the geometric sequence.]\n\nFigure \\(\\PageIndex{4}\\)",
+      "sourceAnswers": [],
+      "hasFigure": true,
+      "status": "draft",
+      "answerVerified": false,
+      "translationStatus": "pending",
+      "mappingStatus": "pending"
+    },
+    {
+      "ordinal": 19,
+      "sourceNumber": "",
+      "sourceAnchor": "",
+      "kind": "exercise-candidate",
+      "context": "Analysis\n\nThe common ratio is multiplied by the first term once to find the second term, twice to find the third term, three times to find the fourth term, and so on. The tenth term could be found by multiplying the first term by the common ratio nine times or by multiplying by the common ratio raised to the ninth power.",
+      "original": "Exercise \\(\\PageIndex{5}\\)\n\nWrite an explicit formula for the following geometric sequence.\n\n\\(\\{–1, 3, –9, 27, ...\\}\\)\n\nAnswer\n\n\\(a_n=−{(−3)}^{n−1}\\)",
+      "prompt": "Exercise \\(\\PageIndex{5}\\)\n\nWrite an explicit formula for the following geometric sequence.\n\n\\(\\{–1, 3, –9, 27, ...\\}\\)",
+      "sourceAnswers": [
+        "\\(a_n=−{(−3)}^{n−1}\\)"
+      ],
+      "hasFigure": false,
+      "status": "draft",
+      "answerVerified": false,
+      "translationStatus": "pending",
+      "mappingStatus": "pending"
+    },
+    {
+      "ordinal": 20,
+      "sourceNumber": "",
+      "sourceAnchor": "",
+      "kind": "example-or-exercise",
+      "context": "Solving Application Problems with Geometric Sequences\n\nIn real-world scenarios involving arithmetic sequences, we may need to use an initial term of \\(a_0\\) instead of \\(a_1\\). In these problems, we can alter the explicit formula slightly by using the following formula:\n\n\\(a_n=a_0r^n\\)",
+      "original": "Example \\(\\PageIndex{6}\\): Solving Application Problems with Geometric Sequences\n\nIn 2013, the number of students in a small school is \\(284\\). It is estimated that the student population will increase by \\(4\\%\\) each year.\n\n1. Write a formula for the student population.\n\n2. Estimate the student population in 2020.\n\nSolution\n\n1. The situation can be modeled by a geometric sequence with an initial term of \\(284\\). The student population will be \\(104\\%\\) of the prior year, so the common ratio is \\(1.04\\).\n\nLet \\(P\\) be the student population and \\(n\\) be the number of years after 2013. Using the explicit formula for a geometric sequence we get\n\n\\(P_n =284⋅{1.04}^n\\)\n\n2. We can find the number of years since 2013 by subtracting.\n\n\\(2020−2013=7\\)\n\nWe are looking for the population after \\(7\\) years. We can substitute \\(7\\) for \\(n\\) to estimate the population in 2020.\n\n\\(P_7=284⋅{1.04}^7≈374\\)\n\nThe student population will be about \\(374\\) in 2020.",
+      "prompt": "Example \\(\\PageIndex{6}\\): Solving Application Problems with Geometric Sequences\n\nIn 2013, the number of students in a small school is \\(284\\). It is estimated that the student population will increase by \\(4\\%\\) each year.\n\n1. Write a formula for the student population.\n\n2. Estimate the student population in 2020.\n\nSolution\n\n1. The situation can be modeled by a geometric sequence with an initial term of \\(284\\). The student population will be \\(104\\%\\) of the prior year, so the common ratio is \\(1.04\\).\n\nLet \\(P\\) be the student population and \\(n\\) be the number of years after 2013. Using the explicit formula for a geometric sequence we get\n\n\\(P_n =284⋅{1.04}^n\\)\n\n2. We can find the number of years since 2013 by subtracting.\n\n\\(2020−2013=7\\)\n\nWe are looking for the population after \\(7\\) years. We can substitute \\(7\\) for \\(n\\) to estimate the population in 2020.\n\n\\(P_7=284⋅{1.04}^7≈374\\)\n\nThe student population will be about \\(374\\) in 2020.",
+      "sourceAnswers": [],
+      "hasFigure": false,
+      "status": "draft",
+      "answerVerified": false,
+      "translationStatus": "pending",
+      "mappingStatus": "pending"
+    },
+    {
+      "ordinal": 21,
+      "sourceNumber": "",
+      "sourceAnchor": "",
+      "kind": "exercise-candidate",
+      "context": "Solving Application Problems with Geometric Sequences\n\nIn real-world scenarios involving arithmetic sequences, we may need to use an initial term of \\(a_0\\) instead of \\(a_1\\). In these problems, we can alter the explicit formula slightly by using the following formula:\n\n\\(a_n=a_0r^n\\)",
+      "original": "Exercise \\(\\PageIndex{6}\\)\n\nA business starts a new website. Initially the number of hits is \\(293\\) due to the curiosity factor. The business estimates the number of hits will increase by \\(2.6%\\) per week.\n\n1. Write a formula for the number of hits.\n\n2. Estimate the number of hits in \\(5\\) weeks.\n\nAnswer a\n\n\\(P_n = 293⋅1.026a^n\\)\n\nAnswer b\n\nThe number of hits will be about \\(333\\).",
+      "prompt": "Exercise \\(\\PageIndex{6}\\)\n\nA business starts a new website. Initially the number of hits is \\(293\\) due to the curiosity factor. The business estimates the number of hits will increase by \\(2.6%\\) per week.\n\n1. Write a formula for the number of hits.\n\n2. Estimate the number of hits in \\(5\\) weeks.",
+      "sourceAnswers": [
+        "\\(P_n = 293⋅1.026a^n\\)",
+        "The number of hits will be about \\(333\\)."
+      ],
+      "hasFigure": false,
+      "status": "draft",
+      "answerVerified": false,
+      "translationStatus": "pending",
+      "mappingStatus": "pending"
+    }
+  ],
+  "license": "CC BY 4.0",
+  "licenseEvidence": "This page titled 13.3: Geometric Sequences was last modified on Sun, 27 Apr 2025 18:27:18 GMT and is shared under a CC BY  4.0  license and was authored, remixed, and/or curated by OpenStax via source content that was edited to the style and standards of the LibreTexts platform.",
+  "url": "https://math.libretexts.org/Bookshelves/Algebra/Algebra_and_Trigonometry_1e_(OpenStax)/13:_Sequences_Probability_and_Counting_Theory/13.03:_Geometric_Sequences",
+  "sha256": "a3630ae9825734a910c49def14d0ce97921c0c13fb80a7a9860898cf7e9580a5",
+  "checkedAt": "2026-10-07",
+  "id": "752110e9563693f86c10",
+  "bookId": "algebra-trigonometry",
+  "licenseInherited": false,
+  "licenseSource": "https://math.libretexts.org/Bookshelves/Algebra/Algebra_and_Trigonometry_1e_(OpenStax)/13:_Sequences_Probability_and_Counting_Theory/13.03:_Geometric_Sequences",
+  "licenseUrl": "https://creativecommons.org/licenses/by/4.0/",
+  "authors": "OpenStax / Jay Abramson et al.",
+  "book": "Algebra and Trigonometry 1e",
+  "reviewStatus": "unreviewed",
+  "sourceLanguage": "en",
+  "translationStatus": "pending"
+}

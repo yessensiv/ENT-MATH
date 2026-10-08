@@ -1,0 +1,764 @@
+{
+  "title": "11.4: Ellipses",
+  "originalText": "Learning Objectives\n\nBy the end of this section, you will be able to:\n\nGraph an ellipse with center at the origin\n\nFind the equation of an ellipse with center at the origin\n\nGraph an ellipse with center not at the origin\n\nSolve application with ellipses\n\nBefore you get started, take this readiness quiz.\n\n1. Graph \\(y=(x-1)^{2}-2\\) using transformations.\n\n    If you missed this problem, review Example 9.57.\n\n2. Complete the square: \\(x^{2}-8 x=8\\).\n\n    If you missed this problem, review Example 9.12.\n\n3. Write in standard form. \\(y=2 x^{2}-12 x+14\\)\n\n    If you missed this problem, review Example 9.59.\n\nGraph an Ellipse with Center at the Origin\n\nThe next conic section we will look at is an ellipse. We define an ellipse as all points in a plane where the sum of the distances from two fixed points is constant. Each of the given points is called a focus of the ellipse.\n\nDefinition \\(\\PageIndex{1}\\)\n\nAn ellipse is all points in a plane where the sum of the distances from two fixed points is constant. Each of the fixed points is called a focus of the ellipse.\n\n[Figure: This figure shows a double cone intersected by a plane to form an ellipse.]\n\nFigure 11.3.1\n\nWe can draw an ellipse by taking some fixed length of flexible string and attaching the ends to two thumbtacks. We use a pen to pull the string taut and rotate it around the two thumbtacks. The figure that results is an ellipse.\n\n[Figure: This figure shows a pen attached to two strings, the other ends of which are attached to two thumbtacks. The strings are pulled taut and the pen is rotated to draw an ellipse. The thumbtacks are labeled F subscript 1 and F subscript 2.]\n\nFigure 11.3.2\n\nA line drawn through the foci intersect the ellipse in two points. Each point is called a vertex of the ellipse. The segment connecting the vertices is called the major axis. The midpoint of the segment is called the center of the ellipse. A segment perpendicular to the major axis that passes through the center and intersects the ellipse in two points is called the minor axis.\n\n[Figure: This figure shows two ellipses. In each, two points within the ellipse are labeled foci. A line drawn through the foci intersects the ellipse in two points. Each point is labeled a vertex. In The figure on the left, the segment connecting the vertices is called the major axis. A segment perpendicular to the major axis that passes through its midpoint and intersects the ellipse in two points is labeled minor axis. The major axis is longer than the minor axis. In The figure on the right, the segment through the foci, connecting the vertices is shorter and is labeled minor axis. Its midpoint is labeled center.]\n\nFigure 11.3.3\n\nWe mentioned earlier that our goal is to connect the geometry of a conic with algebra. Placing the ellipse on a rectangular coordinate system gives us that opportunity. In the figure, we placed the ellipse so the foci \\(((−c,0),(c,0))\\) are on the \\(x\\)-axis and the center is the origin.\n\n[Figure: The figure on the left shows an ellipse with its center at the origin of the coordinate axes and its foci at points minus (c, 0) and (c, 0). A segment connects (negative c, 0) to a point (x, y) on the ellipse. The segment is labeled d subscript 1. Another segment, labeled d subscript 2 connects (c, 0) to (x, y). The figure on the right shows an ellipse with center at the origin, foci (negative c, 0) and (c, 0) and vertices (negative a, 0) and (a, 0). The point where the ellipse intersects the y axis is labeled (0, b). The segments connecting (0, 0) to (c, 0), (c, 0) to (0, b) and (0, b) to (0, 0) form a tight angled triangle with sides c, a and b respectively. The equation is a squared equals b squared plus c squared.]\n\nFigure 11.3.4\n\nThe definition states the sum of the distance from the foci to a point \\((x,y)\\) is constant. So \\(d_{1}+d_{2}\\) is a constant that we will call \\(2a\\) so, \\(d_{1}+d_{2}=2 a\\). We will use the distance formula to lead us to an algebraic formula for an ellipse.\n\n\\(d_{1} \\quad+\\quad \\quad d_{2} \\quad=\\quad 2 a\\)\n\nUse the distance formula to find \\(d_{1},d_{2}\\).\n\n\\(\\sqrt{(x-(-c))^{2}+(y-0)^{2}}+\\sqrt{(x-c)^{2}+(y-0)^{2}}=2 a\\)\n\nAfter eliminating radicals and simplifying,we get:\n\n\\(\\frac{x^{2}}{a^{2}}+\\frac{y^{2}}{a^{2}-c^{2}}=1\\)\n\nTo simplify the equation of the ellipse, we let \\(a^{2}−c^{2}=b^{2}\\).So, the equation of an ellipse centered at the origin in standard form is:\n\n\\(\\frac{x^{2}}{a^{2}}+\\frac{y^{2}}{b^{2}}=1\\)\n\nTo graph the ellipse, it will be helpful to know the intercepts. We will find the \\(x\\)-intercepts and \\(y\\)-intercepts using the formula.\n\n\\(y\\)-intercepts\n\nLet \\(x=0\\).\n\n\\(\\begin{aligned} \\frac{x^{2}}{a^{2}}+\\frac{y^{2}}{b^{2}} &=1 \\\\ \\frac{0^{2}}{a^{2}}+\\frac{y^{2}}{a^{2}} &=1 \\\\ \\frac{y^{2}}{b^{2}} &=1 \\\\ y^{2} &=b^{2} \\\\ y &=\\pm b \\end{aligned}\\)\n\nThe \\(y\\)-intercepts are \\((0,b)\\) and \\((0, -b)\\).\n\n\\(x\\)-intercepts\n\nLet \\(y=0\\).\n\n\\(\\begin{aligned} \\frac{x^{2}}{a^{2}}+\\frac{y^{2}}{b^{2}} &=1 \\\\ \\frac{x^{2}}{a^{2}}+\\frac{0^{2}}{b^{2}} &=1 \\\\ \\frac{x^{2}}{a^{2}} &=1 \\\\ x^{2} &=a^{2} \\\\ x &=\\pm a \\end{aligned}\\)\n\nThe \\(x\\)-intercepts are \\((a,0)\\) and \\((-a,0)\\).\n\nDefinition \\(\\PageIndex{2}\\)\n\nStandard Form of the Equation an Ellipse with Center \\((0,0)\\)\n\nThe standard form of the equation of an ellipse with center \\((0,​​0)\\), is\n\n\\(\\frac{x^{2}}{a^{2}}+\\frac{y^{2}}{b^{2}}=1\\)\n\nThe \\(x\\)-intercepts are \\((a,0)\\) and \\((−a,0)\\).\n\nThe \\(y\\)-intercepts are \\((0,b)\\) and \\((0,−b)\\).\n\n[Figure: Two figures show ellipses with their centers on the origin of the coordinate axes. They intersect the x axis at points (negative a, 0) and (a, 0) and the y axis at points (0, b) and (0, negative b). In the figure on the left the major axis of the ellipse is along the x axis and in the figure on the right, it is along the y axis.]\n\nFigure 11.3.5\n\nNotice that when the major axis is horizontal, the value of \\(a\\) will be greater than the value of \\(b\\) and when the major axis is vertical, the value of \\(b\\) will be greater than the value of \\(a\\). We will use this information to graph an ellipse that is centered at the origin.\n\nEllipse with Center \\((0,0)\\)\n\n            \\(\\frac{x^{2}}{a^{2}}+\\frac{y^{2}}{b^{2}}=1\\)\t\n            \\(a>b\\)\t\n            \\(b>a\\)\t\n\n            Major axis\t\n            on the \\(x\\)-axis.\t\n            on the \\(y\\)-axis\t\n\n            \\(x\\)-intercepts\t\n            \\((-a, 0),(a, 0)\\)\t\n\n            \\(y\\)-intercepts\t\n            \\((0,-b),(0, b)\\)\t\n\nTable 11.3.1\n\nExample \\(\\PageIndex{1}\\)\n\nGraph: \\(\\frac{x^{2}}{4}+\\frac{y^{2}}{9}=1\\).\n\nSolution:\n\n            Step 1. Write the equation in standard form.\t\n            It is in standard form.\t\n            \\(\\frac{x^{2}}{4}+\\frac{y^{2}}{9}=1\\)\t\n\n            Step 2. Determine whether the major axis is horizontal or vertical.\t\n            Since \\(9>4\\) and \\(9\\) is in the \\(y^{2}\\) term, the major axis is vertical.\t\n            Major axis is vertical.\t\n\n            Step 3. Find the endpoints of the major axis.\t\n\nThe endpoints will be the \\(y\\)-intercepts.\n\nSince \\(b^{2}=9\\), then \\(b=\\pm 3\\).\n\nThe endpoints of the major axis are \\((0,3),(0,-3)\\).\n\n            The endpoints of the major axis are \\((0,3),(0,-3)\\).\t\n\n            Step 4. Find the endpoints of the minor axis.\t\n            The endpoints will be the \\(x\\)-intercepts.\n\nSince \\(a^{2}=4\\), then \\(a=\\pm 2\\).\n\nThe endpoints of the major axis are \\((2,0),(-2,0)\\).\n\n            The endpoints of the major axis are \\((2,0),(-2,0)\\).\t\n\n            Step 5. Sketch the ellipse.\t\n\n[Figure: Screenshot (147).png]\n\nTable 11.3.2\n\nExercise \\(\\PageIndex{1}\\)\n\nGraph: \\(\\frac{x^{2}}{4}+\\frac{y^{2}}{16}=1\\).\n\nAnswer\n\n[Figure: This graph shows an ellipse with x intercepts (negative 2, 0) and (2, 0) and y intercepts (0, 4) and (0, negative 4).]\n\nFigure 11.3.7\n\nExercise \\(\\PageIndex{2}\\)\n\nGraph: \\(\\frac{x^{2}}{9}+\\frac{y^{2}}{16}=1\\).\n\nAnswer\n\n[Figure: This graph shows an ellipse with x intercepts (negative 3, 0) and (3, 0) and y intercepts (0, 4) and (0, negative 4).]\n\nFigure 11.3.8\n\nWe summarize the steps for reference.\n\nHOW TO GRAPH AN ELLIPSE WITH CENTER \\((0,0)\\).\n\n1. Write the equation in standard form.\n\n2. Determine whether the major axis is horizontal or vertical.\n\n3. Find the endpoints of the major axis.\n\n4. Find the endpoints of the minor axis\n\n5. Sketch the ellipse.\n\nSometimes our equation will first need to be put in standard form.\n\nExample \\(\\PageIndex{2}\\)\n\nGraph \\(x^{2}+4 y^{2}=16\\).\n\nSolution:\n\n            We recognize this as the equation of an\n\n            ellipse since both the \\(x\\) and \\(y\\) terms are\n\n            squared and have different coefficients.\t\n            \\(x^{2}+4 y^{2}=16\\)\t\n\n            To get the equation in standard form, divide\n\n            both sides by \\(16\\) so that the equation is equal\n\n            to \\(1\\).\t\n            \\(\\frac{x^{2}}{16}+\\frac{4 y^{2}}{16}=\\frac{16}{16}\\)\t\n\n            Simplify.\t\n            \\(\\frac{x^{2}}{16}+\\frac{y^{2}}{4}=1\\)\t\n\n            The equation is in standard form.\n\n            The ellipse is centered at the origin.\t\n            The center is \\((0,0)\\).\t\n\n            Since \\(16>4\\) and \\(16\\) is in the \\(x^{2}\\) term,\n\n            the major axis is horizontal.\t\n\n            \\(a^{2}=16, a=\\pm 4\\)\n\n            \\(b^{2}=4, \\quad b=\\pm 2\\)\t\n\n            The vertices are \\((4,0),(−4,0)\\).\n\n            The endpoints of the minor axis are\n\n            \\((0,2),(0,−2)\\).\t\n\n            Sketch the parabola.\t\n\n[Figure: .]\n\nTable 11.3.3\n\nExercise \\(\\PageIndex{3}\\)\n\nGraph \\(9 x^{2}+16 y^{2}=144\\).\n\nAnswer\n\n[Figure: This graph shows an ellipse with x intercepts (negative 4, 0) and (4, 0) and y intercepts (0, 3) and (0, negative 3).]\n\nFigure 11.3.10\n\nExercise \\(\\PageIndex{4}\\)\n\nGraph \\(16 x^{2}+25 y^{2}=400\\).\n\nAnswer\n\n[Figure: This graph shows an ellipse with x intercepts (negative 5, 0) and (5, 0) and y intercepts (0, 4) and (0, negative 4).]\n\nFigure 11.3.11\n\nFind the Equation of an Ellipse with Center at the Origin\n\nIf we are given the graph of an ellipse, we can find the equation of the ellipse.\n\nExample \\(\\PageIndex{3}\\)\n\nFind the equation of the ellipse shown.\n\n[Figure: This graph shows an ellipse with x intercepts (negative 4, 0) and (4, 0) and y intercepts (0, 3) and (0, negative 3).]\n\nFigure 11.3.12\n\nSolution:\n\nWe recognize this as an ellipse that is centered at the origin.\n\n\\(\\frac{x^{2}}{a^{2}}+\\frac{y^{2}}{b^{2}}=1\\)\n\nSince the major axis is horizontal and the distance from the center to the vertex is \\(4\\), we know \\(a=4\\) and so \\(a^{2}=16\\).\n\n\\(\\frac{x^{2}}{16}+\\frac{y^{2}}{b^{2}}=1\\)\n\nThe minor axis is vertical and the distance from the center to the ellipse is \\(3\\), we know \\(b=3\\) and so \\(b^{2}=9\\).\n\n\\(\\frac{x^{2}}{16}+\\frac{y^{2}}{9}=1\\)\n\nExercise \\(\\PageIndex{5}\\)\n\nFind the equation of the ellipse shown.\n\n[Figure: This graph shows an ellipse with x intercepts (negative 2, 0) and (2, 0) and y intercepts (0, 5) and (0, negative 5).]\n\nFigure 11.3.13\n\nAnswer\n\n\\(\\frac{x^{2}}{4}+\\frac{y^{2}}{25}=1\\)\n\nExercise \\(\\PageIndex{6}\\)\n\nFind the equation of the ellipse shown.\n\n[Figure: This graph shows an ellipse with x intercepts (negative 3, 0) and (3, 0) and y intercepts (0, 2) and (0, negative 2).]\n\nFigure 11.3.14\n\nAnswer\n\n\\(\\frac{x^{2}}{9}+\\frac{y^{2}}{4}=1\\)\n\nGraph an Ellipse with Center Not at the Origin\n\nThe ellipses we have looked at so far have all been centered at the origin. We will now look at ellipses whose center is \\((h,k)\\).\n\nThe equation is \\(\\frac{(x-h)^{2}}{a^{2}}+\\frac{(y-k)^{2}}{b^{2}}=1\\) and when \\(a>b\\), the major axis is horizontal so the distance from the center to the vertex is \\(a\\). When \\(b>a\\), the major axis is vertical so the distance from the center to the vertex is \\(b\\).\n\nDefinition \\(\\PageIndex{3}\\)\n\nStandard Form of the Equation an Ellipse with Center \\((h,k)\\)\n\nThe standard form of the equation of an ellipse with center \\((h,k)\\), is\n\n\\(\\frac{(x-h)^{2}}{a^{2}}+\\frac{(y-k)^{2}}{b^{2}}=1\\)\n\nWhen \\(a>b\\), the major axis is horizontal so the distance from the center to the vertex is \\(a\\).\n\nWhen \\(b>a\\), the major axis is vertical so the distance from the center to the vertex is \\(b\\).\n\nExample \\(\\PageIndex{4}\\)\n\nGraph: \\(\\frac{(x-3)^{2}}{9}+\\frac{(y-1)^{2}}{4}=1\\).\n\nSolution:\n\n            The equation is in standard form, \\(\\frac{(x-h)^{2}}{a^{2}}+\\frac{(y-k)^{2}}{b^{2}}=1\\).\t\n            \\(\\frac{(x-3)^{2}}{9}+\\frac{(y-1)^{2}}{4}=1\\)\t\n\n            The ellipse is centered at \\((h,k)\\).\t\n            The center is \\((3,1)\\).\t\n\n            Since \\(9>4\\) and \\(9\\) is in the \\(x^{2}\\) term, the major axis is horizontal.\t\n\n            \\(a^{2}=9, a=\\pm 3\\)\n\n            \\(b^{2}=4, b=\\pm 2\\)\t\n            The distance from the center to the vertices is \\(3\\).\n\n            The distance from the center to the endpoints of the\n\n            minor axis is \\(2\\).\t\n\n            Sketch the ellipse.\t\n\n[Figure: .]\n\nTable 11.3.4\n\nExercise \\(\\PageIndex{7}\\)\n\nGraph: \\(\\frac{(x+3)^{2}}{4}+\\frac{(y-5)^{2}}{16}=1\\).\n\nAnswer\n\n[Figure: This graph shows an ellipse with center at (negative 3, 5), vertices at (negative 3, 9) and (negative 3, 1) and endpoints of minor axis at (negative 5, 5) and (negative 1, 5).]\n\nFigure 11.3.16\n\nExercise \\(\\PageIndex{8}\\)\n\nGraph: \\(\\frac{(x-1)^{2}}{25}+\\frac{(y+3)^{2}}{16}=1\\).\n\nAnswer\n\n[Figure: This graph shows an ellipse with center at 1, negative 3, vertices at (negative 4, negative 3) and (6, negative 3) and endpoints of minor axis at 1, 1) and (negative 1, negative 7).]\n\nFigure 11.3.17\n\nIf we look at the equations of \\(\\frac{x^{2}}{9}+\\frac{y^{2}}{4}=1\\) and \\(\\frac{(x-3)^{2}}{9}+\\frac{(y-1)^{2}}{4}=1\\), we see that they are both ellipses with \\(a=3\\) and \\(b=2\\). So they will have the same size and shape. They are different in that they do not have the same center.\n\n[Figure: The equation in the first figure is x squared upon 9 plus y squared upon 4 equals 1. Here, a is 3 and b is 2. The ellipse is graphed with center at (0, 0). The equation on the right is open parentheses x minus 3 close parentheses squared upon 9 plus open parentheses y minus 1 close parentheses squared upon 4 equals 1. Here, too, a is 3 and b is 2, but the center is (3, 1). The ellipse is shown on the same graph along with the first ellipse. The center is shown to have moved 3 units right and 1 unit up.]\n\nFigure 11.3.18\n\nNotice in the graph above that we could have graphed \\(\\frac{(x-3)^{2}}{9}+\\frac{(y-1)^{2}}{4}=1\\) by translations. We moved the original ellipse to the right \\(3\\) units and then up \\(1\\) unit.\n\n[Figure: This graph shows an ellipse translated from center (0, 0) to center (3, 1). The center has moved 3 units right and 1 unit up. The original ellipse has vertices at (negative 3, 0) and (3, 0) and endpoint of minor axis at (negative 2, 0) and (2, 0). The translated ellipse has vertices at (0, 1) and (6, 1) and endpoints of minor axis at (3, negative 1) and (3, 3).]\n\nFigure 11.3.19\n\nIn the next example we will use the translation method to graph the ellipse.\n\nExample \\(\\PageIndex{5}\\)\n\nGraph \\(\\frac{(x+4)^{2}}{16}+\\frac{(y-6)^{2}}{9}=1\\) by translation.\n\nSolution:\n\nThis ellipse will have the same size and shape as \\(\\frac{x^{2}}{16}+\\frac{y^{2}}{9}=1\\) whose center is \\((0,0)\\). We graph this ellipse first.\n\n            The center is \\((0,0)\\).\t\n            Center \\((0,0)\\)\t\n\n            Since \\(16>9\\), the major axis is horizontal.\t\n\n            \\(a^{2}=16, a=\\pm 4\\)\n\n            \\(b^{2}=9, \\quad b=\\pm 3\\)\t\n            The vertices are \\((4,0),(−4,0)\\).\n\n            The endpoints of the minor axis are\n\n            \\((0,3),(0,−3)\\).\t\n\n            Sketch the ellipse.\t\n\n[Figure: .]\n\n            The original equation is in standard form, \\(\\frac{(x-h)^{2}}{a^{2}}+\\frac{(y-k)^{2}}{b^{2}}=1\\).\t\n            \\(\\frac{(x-(-4))^{2}}{16}+\\frac{(y-6)^{2}}{9}=1\\)\t\n\n            The ellipse is centered at \\((h,k)\\).\t\n            The center is \\((-4,6)\\).\t\n\n            We translate the graph of \\(\\frac{x^{2}}{16}+\\frac{y^{2}}{9}=1\\) four\n\n            units to the left and then up \\(6\\) units.\n\n            Verify that the center is \\((−4,6)\\).\n\n            The new ellipse is the ellipse whose equation\n\n            is\n\n            \\(\\frac{(x+4)^{2}}{16}+\\frac{(y-6)^{2}}{9}=1\\).\t\n\n[Figure: .]\n\nTable 11.3.5\n\nExercise \\(\\PageIndex{9}\\)\n\nGraph \\(\\frac{(x-5)^{2}}{9}+\\frac{(y+4)^{2}}{4}=1\\) by translation.\n\nAnswer\n\n[Figure: This graph shows an ellipse with center (5, negative 4), vertices (2, negative 4) and (8, negative 4) and endpoints of minor axis (5, negative 2) and (5, negative 6).]\n\nFigure 11.3.22\n\nExercise \\(\\PageIndex{10}\\)\n\nGraph \\(\\frac{(x+6)^{2}}{16}+\\frac{(y+2)^{2}}{25}=1\\) by translation.\n\nAnswer\n\n[Figure: This graph shows an ellipse with center (negative 6, negative 2), vertices (negative 6, 3) and (negative 6, negative 7) and endpoints of minor axis (negative 10, negative 2), and (negative 2, negative 2).]\n\nFigure 11.3.23\n\nWhen an equation has both an \\(x^{2}\\) and a \\(y^{2}\\) with different coefficients, we verify that it is an ellipsis by putting it in standard form. We will then be able to graph the equation.\n\nExample \\(\\PageIndex{6}\\)\n\nWrite the equation \\(x^{2}+4 y^{2}-4 x+24 y+24=0\\) in standard form and graph.\n\nSolution:\n\nWe put the equation in standard form by completing the squares in both \\(x\\) and \\(y\\).\n\n            \\(x^{2}+4 y^{2}-4 x+24 y+24=0\\)\t\n\n            Rewrite grouping the \\(x\\) terms and \\(y\\) terms.\t\n\n[Figure: .]\n\n            Make the coefficients of \\(x^{2}\\) and \\(y^{2}\\) equal \\(1\\).\t\n\n[Figure: .]\n\n            Complete the squares.\t\n\n[Figure: .]\n\n            Write as binomial squares.\t\n\n[Figure: .]\n\n            Divide both sides by \\(16\\) to get \\(1\\) on the right.\t\n\n[Figure: .]\n\n            Simplify.\t\n\n[Figure: .]\n\n            The equation is in standard form, \\(\\frac{(x-h)^{2}}{a^{2}}+\\frac{(y-k)^{2}}{b^{2}}=1\\)\t\n\n[Figure: .]\n\n            The ellipse is centered at \\((h,k)\\).\t\n            The center is \\((2,-3)\\).\t\n\nSince \\(16>4\\) and \\(16\\) is in the \\(x^{2}\\) term, the major axis is horizontal.\n\n\\(a^{2}=16, a=\\pm 4\\)\n\n            \\(b^{2}=4, \\quad b=\\pm 2\\)\n\nThe distance from the center to the vertices is \\(4\\).\n\nThe distance from the center to the endpoints of the minor axis is \\(2\\).\n\n            Sketch the ellipse.\t\n\n[Figure: .]\n\nTable 11.3.6\n\nExercise \\(\\PageIndex{11}\\)\n\n1. Write the equation \\(6 x^{2}+4 y^{2}+12 x-32 y+34=0\\) in standard form and\n\n2. Graph.\n\nAnswer\n\n1. \\(\\frac{(x+1)^{2}}{6}+\\frac{(y-4)^{2}}{9}=1\\)\n\n2.  \n\n[Figure: This graph shows an ellipse with center (negative 1, 4), vertices minus (1, 1) and (negative 1, 7) and endpoints of minor axis approximately (negative 3.5, 4) and (approximately 1.5, 4).]\n\nFigure 11.3.32\n\nExercise \\(\\PageIndex{12}\\)\n\n1. Write the equation \\(4 x^{2}+y^{2}-16 x-6 y+9=0\\) in standard form and\n\n2. Graph.\n\nAnswer\n\n1. \\(\\frac{(x-2)^{2}}{4}+\\frac{(y-3)^{2}}{16}=1\\)\n\n2.  \n\n[Figure: This graph shows an ellipse with center (2, 3), vertices (2, negative 1) and (2, 7) and endpoints of minor axis (0, 3) and (4, 3).]\n\nFigure 11.3.33\n\nSolve Application with Ellipses\n\nThe orbits of the planets around the sun follow elliptical paths.\n\nExample \\(\\PageIndex{7}\\)\n\nPluto (a dwarf planet) moves in an elliptical orbit around the Sun. The closest Pluto gets to the Sun is approximately \\(30\\) astronomical units (AU) and the furthest is approximately \\(50\\) AU. The Sun is one of the foci of the elliptical orbit. Letting the ellipse center at the origin and labeling the axes in AU, the orbit will look like the figure below. Use the graph to write an equation for the elliptical orbit of Pluto.\n\n[Figure: This graph shows an ellipse with center (0, 0) and vertices (negative 40, 0) and (40, 0). The sun is shown at point (10, 0). This is 30 units from the right vertex and 50 units from the left vertex.]\n\nFigure 11.3.34\n\nSolution:\n\nWe recognize this as an ellipse that is centered at the origin.\n\n\\(\\frac{x^{2}}{a^{2}}+\\frac{y^{2}}{b^{2}}=1\\)\n\nSince the major axis is horizontal and the distance from the center to the vertex is \\(40\\), we know \\(a=40\\) and so \\(a^{2}=1600\\).\n\n\\(\\frac{x^{2}}{1600}+\\frac{y^{2}}{b^{2}}=1\\)\n\nThe minor axis is vertical but the end points aren’t given.To find \\(b\\) we will use the location of the Sun. Since the Sun is a focus of the ellipse at the point \\((10,0)\\),we know \\(c=10\\). Use this to solve for \\(b^{2}\\).\n\n\\(b^{2}=a^{2}-c^{2}\\)\n\n\\(b^{2}=40^{2}-10^{2}\\)\n\n\\(b^{2}=1600-100\\)\n\n\\(b^{2}=1500\\)\n\nSubstitute \\(a^{2}\\) and \\(b^{2}\\) into the standard form of the ellipse.\n\n\\(\\frac{x^{2}}{1600}+\\frac{y^{2}}{1500}=1\\)\n\nExercise \\(\\PageIndex{13}\\)\n\nA planet moves in an elliptical orbit around its sun. The closest the planet gets to the sun is approximately \\(20\\) AU and the furthest is approximately \\(30\\) AU. The sun is one of the foci of the elliptical orbit. Letting the ellipse center at the origin and labeling the axes in AU, the orbit will look like the figure below. Use the graph to write an equation for the elliptical orbit of the planet.\n\n[Figure: This graph shows an ellipse with center (0, 0) and vertices (negative 25, 0) and (25, 0). The sun is shown at point (5, 0). This is 20 units from the right vertex and 30 units from the left vertex.]\n\nFigure 11.3.35\n\nAnswer\n\n\\(\\frac{x^{2}}{625}+\\frac{y^{2}}{600}=1\\)\n\nExercise \\(\\PageIndex{14}\\)\n\nA planet moves in an elliptical orbit around its sun. The closest the planet gets to the sun is approximately \\(20\\) AU and the furthest is approximately \\(50\\) AU. The sun is one of the foci of the elliptical orbit. Letting the ellipse center at the origin and labeling the axes in AU, the orbit will look like the figure below. Use the graph to write an equation for the elliptical orbit of the planet.\n\n[Figure: This graph shows an ellipse with center (0, 0) and vertices (negative 35, 0) and (35, 0). The sun is shown at point (15, 0). This is 20 units from the right vertex and 50 units from the left vertex.]\n\nFigure 11.3.36\n\nAnswer\n\n\\(\\frac{x^{2}}{1225}+\\frac{y^{2}}{1000}=1\\)\n\nAccess these online resources for additional instructions and practice with ellipses.\n\nConic Sections: Graphing Ellipses Part 1\n\nConic Sections: Graphing Ellipses Part 2\n\nEquation for Ellipse From Graph\n\nKey Concepts\n\nEllipse: An ellipse is all points in a plane where the sum of the distances from two fixed points is constant. Each of the fixed points is called a focus of the ellipse.\n\n[Figure: This figure shows two ellipses. In each, two points within the ellipse are labeled foci. A line drawn through the foci intersects the ellipse in two points. Each point is labeled a vertex. In The figure on the left, the segment connecting the vertices is called the major axis. A segment perpendicular to the major axis that passes through its midpoint and intersects the ellipse in two points is labeled minor axis. The major axis is longer than the minor axis. In The figure on the right, the segment through the foci, connecting the vertices is shorter and is labeled minor axis. Its midpoint is labeled center.]\n\nFigure 11.3.37\n\nIf we draw a line through the foci intersects the ellipse in two points—each is called a vertex of the ellipse.\n\n    The segment connecting the vertices is called the major axis.\n\n    The midpoint of the segment is called the center of the ellipse.\n\n    A segment perpendicular to the major axis that passes through the center and intersects the ellipse in two points is called the minor axis.\n\nStandard Form of the Equation an Ellipse with Center \\((0,0)\\): The standard form of the equation of an ellipse with center \\((0,0)\\), is\n\n\\(\\frac{x^{2}}{a^{2}}+\\frac{y^{2}}{b^{2}}=1\\)\n\n    The \\(x\\)-intercepts are \\((a,0)\\) and \\((−a,0)\\).\n\n    The \\(y\\)-intercepts are \\((0,b)\\) and \\((0,−b)\\).\n\nHow to an Ellipse with Center \\((0,0)\\)\n\n1. Write the equation in standard form.\n\n2. Determine whether the major axis is horizontal or vertical.\n\n3. Find the endpoints of the major axis.\n\n4. Find the endpoints of the minor axis\n\n5. Sketch the ellipse.\n\nStandard Form of the Equation an Ellipse with Center \\((h,k)\\): The standard form of the equation of an ellipse with center \\((h,k)\\), is\n\n\\(\\frac{(x-h)^{2}}{a^{2}}+\\frac{(y-k)^{2}}{b^{2}}=1\\)\n\n    When \\(a>b\\), the major axis is horizontal so the distance from the center to the vertex is \\(a\\).\n\n    When \\(b>a\\), the major axis is vertical so the distance from the center to the vertex is \\(b\\).\n\nGlossary\n\nellipse\n\nAn ellipse is all points in a plane where the sum of the distances from two fixed points is constant.\n\nThis page titled 11.4: Ellipses was last modified on Mon, 14 Feb 2022 01:07:29 GMT and is shared under a CC BY  4.0  license and was authored, remixed, and/or curated by OpenStax via source content that was edited to the style and standards of the LibreTexts platform.",
+  "figures": [
+    {
+      "url": "https://math.libretexts.org/@api/deki/files/21226/CNX_IntAlg_Figure_11_03_001_img.jpg?revision=1",
+      "alt": "This figure shows a double cone intersected by a plane to form an ellipse.",
+      "credit": ""
+    },
+    {
+      "url": "https://math.libretexts.org/@api/deki/files/21240/CNX_IntAlg_Figure_11_03_002_img.jpg?revision=1",
+      "alt": "This figure shows a pen attached to two strings, the other ends of which are attached to two thumbtacks. The strings are pulled taut and the pen is rotated to draw an ellipse. The thumbtacks are labeled F subscript 1 and F subscript 2.",
+      "credit": ""
+    },
+    {
+      "url": "https://math.libretexts.org/@api/deki/files/21478/CNX_IntAlg_Figure_11_03_003_img.jpg?revision=1",
+      "alt": "This figure shows two ellipses. In each, two points within the ellipse are labeled foci. A line drawn through the foci intersects the ellipse in two points. Each point is labeled a vertex. In The figure on the left, the segment connecting the vertices is called the major axis. A segment perpendicular to the major axis that passes through its midpoint and intersects the ellipse in two points is labeled minor axis. The major axis is longer than the minor axis. In The figure on the right, the segment through the foci, connecting the vertices is shorter and is labeled minor axis. Its midpoint is labeled center.",
+      "credit": ""
+    },
+    {
+      "url": "https://math.libretexts.org/@api/deki/files/21280/CNX_IntAlg_Figure_11_03_004_img.jpg?revision=1",
+      "alt": "The figure on the left shows an ellipse with its center at the origin of the coordinate axes and its foci at points minus (c, 0) and (c, 0). A segment connects (negative c, 0) to a point (x, y) on the ellipse. The segment is labeled d subscript 1. Another segment, labeled d subscript 2 connects (c, 0) to (x, y). The figure on the right shows an ellipse with center at the origin, foci (negative c, 0) and (c, 0) and vertices (negative a, 0) and (a, 0). The point where the ellipse intersects the y axis is labeled (0, b). The segments connecting (0, 0) to (c, 0), (c, 0) to (0, b) and (0, b) to (0, 0) form a tight angled triangle with sides c, a and b respectively. The equation is a squared equals b squared plus c squared.",
+      "credit": ""
+    },
+    {
+      "url": "https://math.libretexts.org/@api/deki/files/21162/CNX_IntAlg_Figure_11_03_005_img.jpg?revision=1",
+      "alt": "Two figures show ellipses with their centers on the origin of the coordinate axes. They intersect the x axis at points (negative a, 0) and (a, 0) and the y axis at points (0, b) and (0, negative b). In the figure on the left the major axis of the ellipse is along the x axis and in the figure on the right, it is along the y axis.",
+      "credit": ""
+    },
+    {
+      "url": "https://math.libretexts.org/@api/deki/files/14512/Screenshot_(147).png?revision=1",
+      "alt": "Screenshot (147).png",
+      "credit": ""
+    },
+    {
+      "url": "https://math.libretexts.org/@api/deki/files/21166/CNX_IntAlg_Figure_11_03_302_img.jpg?revision=1",
+      "alt": "This graph shows an ellipse with x intercepts (negative 2, 0) and (2, 0) and y intercepts (0, 4) and (0, negative 4).",
+      "credit": ""
+    },
+    {
+      "url": "https://math.libretexts.org/@api/deki/files/21165/CNX_IntAlg_Figure_11_03_303_img.jpg?revision=1",
+      "alt": "This graph shows an ellipse with x intercepts (negative 3, 0) and (3, 0) and y intercepts (0, 4) and (0, negative 4).",
+      "credit": ""
+    },
+    {
+      "url": "https://math.libretexts.org/@api/deki/files/21278/CNX_IntAlg_Figure_11_03_007a_img.jpg?revision=1",
+      "alt": ".",
+      "credit": ""
+    },
+    {
+      "url": "https://math.libretexts.org/@api/deki/files/21242/CNX_IntAlg_Figure_11_03_304_img.jpg?revision=1",
+      "alt": "This graph shows an ellipse with x intercepts (negative 4, 0) and (4, 0) and y intercepts (0, 3) and (0, negative 3).",
+      "credit": ""
+    },
+    {
+      "url": "https://math.libretexts.org/@api/deki/files/21175/CNX_IntAlg_Figure_11_03_305_img.jpg?revision=1",
+      "alt": "This graph shows an ellipse with x intercepts (negative 5, 0) and (5, 0) and y intercepts (0, 4) and (0, negative 4).",
+      "credit": ""
+    },
+    {
+      "url": "https://math.libretexts.org/@api/deki/files/21180/CNX_IntAlg_Figure_11_03_008_img.jpg?revision=1",
+      "alt": "This graph shows an ellipse with x intercepts (negative 4, 0) and (4, 0) and y intercepts (0, 3) and (0, negative 3).",
+      "credit": ""
+    },
+    {
+      "url": "https://math.libretexts.org/@api/deki/files/21291/CNX_IntAlg_Figure_11_03_009_img.jpg?revision=1",
+      "alt": "This graph shows an ellipse with x intercepts (negative 2, 0) and (2, 0) and y intercepts (0, 5) and (0, negative 5).",
+      "credit": ""
+    },
+    {
+      "url": "https://math.libretexts.org/@api/deki/files/21259/CNX_IntAlg_Figure_11_03_010_img.jpg?revision=1",
+      "alt": "This graph shows an ellipse with x intercepts (negative 3, 0) and (3, 0) and y intercepts (0, 2) and (0, negative 2).",
+      "credit": ""
+    },
+    {
+      "url": "https://math.libretexts.org/@api/deki/files/21187/CNX_IntAlg_Figure_11_03_011a_img.jpg?revision=1",
+      "alt": ".",
+      "credit": ""
+    },
+    {
+      "url": "https://math.libretexts.org/@api/deki/files/21199/CNX_IntAlg_Figure_11_03_306_img.jpg?revision=1",
+      "alt": "This graph shows an ellipse with center at (negative 3, 5), vertices at (negative 3, 9) and (negative 3, 1) and endpoints of minor axis at (negative 5, 5) and (negative 1, 5).",
+      "credit": ""
+    },
+    {
+      "url": "https://math.libretexts.org/@api/deki/files/35904/CNX_IntAlg_Figure_11_03_307_img.jpg?revision=1",
+      "alt": "This graph shows an ellipse with center at 1, negative 3, vertices at (negative 4, negative 3) and (6, negative 3) and endpoints of minor axis at 1, 1) and (negative 1, negative 7).",
+      "credit": ""
+    },
+    {
+      "url": "https://math.libretexts.org/@api/deki/files/21296/CNX_IntAlg_Figure_11_03_012_img.jpg?revision=1",
+      "alt": "The equation in the first figure is x squared upon 9 plus y squared upon 4 equals 1. Here, a is 3 and b is 2. The ellipse is graphed with center at (0, 0). The equation on the right is open parentheses x minus 3 close parentheses squared upon 9 plus open parentheses y minus 1 close parentheses squared upon 4 equals 1. Here, too, a is 3 and b is 2, but the center is (3, 1). The ellipse is shown on the same graph along with the first ellipse. The center is shown to have moved 3 units right and 1 unit up.",
+      "credit": ""
+    },
+    {
+      "url": "https://math.libretexts.org/@api/deki/files/21412/CNX_IntAlg_Figure_11_03_013_img.jpg?revision=1",
+      "alt": "This graph shows an ellipse translated from center (0, 0) to center (3, 1). The center has moved 3 units right and 1 unit up. The original ellipse has vertices at (negative 3, 0) and (3, 0) and endpoint of minor axis at (negative 2, 0) and (2, 0). The translated ellipse has vertices at (0, 1) and (6, 1) and endpoints of minor axis at (3, negative 1) and (3, 3).",
+      "credit": ""
+    },
+    {
+      "url": "https://math.libretexts.org/@api/deki/files/21370/CNX_IntAlg_Figure_11_03_014a_img.jpg?revision=1",
+      "alt": ".",
+      "credit": ""
+    },
+    {
+      "url": "https://math.libretexts.org/@api/deki/files/21301/CNX_IntAlg_Figure_11_03_014b_img.jpg?revision=1",
+      "alt": ".",
+      "credit": ""
+    },
+    {
+      "url": "https://math.libretexts.org/@api/deki/files/21312/CNX_IntAlg_Figure_11_03_308_img.jpg?revision=1",
+      "alt": "This graph shows an ellipse with center (5, negative 4), vertices (2, negative 4) and (8, negative 4) and endpoints of minor axis (5, negative 2) and (5, negative 6).",
+      "credit": ""
+    },
+    {
+      "url": "https://math.libretexts.org/@api/deki/files/21316/CNX_IntAlg_Figure_11_03_309_img.jpg?revision=1",
+      "alt": "This graph shows an ellipse with center (negative 6, negative 2), vertices (negative 6, 3) and (negative 6, negative 7) and endpoints of minor axis (negative 10, negative 2), and (negative 2, negative 2).",
+      "credit": ""
+    },
+    {
+      "url": "https://math.libretexts.org/@api/deki/files/21319/CNX_IntAlg_Figure_11_03_015a_img.jpg?revision=1",
+      "alt": ".",
+      "credit": ""
+    },
+    {
+      "url": "https://math.libretexts.org/@api/deki/files/21356/CNX_IntAlg_Figure_11_03_015b_img.jpg?revision=1",
+      "alt": ".",
+      "credit": ""
+    },
+    {
+      "url": "https://math.libretexts.org/@api/deki/files/21403/CNX_IntAlg_Figure_11_03_015c_img.jpg?revision=1",
+      "alt": ".",
+      "credit": ""
+    },
+    {
+      "url": "https://math.libretexts.org/@api/deki/files/21426/CNX_IntAlg_Figure_11_03_015d_img.jpg?revision=1",
+      "alt": ".",
+      "credit": ""
+    },
+    {
+      "url": "https://math.libretexts.org/@api/deki/files/21430/CNX_IntAlg_Figure_11_03_015e_img.jpg?revision=1",
+      "alt": ".",
+      "credit": ""
+    },
+    {
+      "url": "https://math.libretexts.org/@api/deki/files/21432/CNX_IntAlg_Figure_11_03_015f_img.jpg?revision=1",
+      "alt": ".",
+      "credit": ""
+    },
+    {
+      "url": "https://math.libretexts.org/@api/deki/files/21421/CNX_IntAlg_Figure_11_03_015g_img.jpg?revision=1",
+      "alt": ".",
+      "credit": ""
+    },
+    {
+      "url": "https://math.libretexts.org/@api/deki/files/21460/CNX_IntAlg_Figure_11_03_015h_img.jpg?revision=1",
+      "alt": ".",
+      "credit": ""
+    },
+    {
+      "url": "https://math.libretexts.org/@api/deki/files/21463/CNX_IntAlg_Figure_11_03_310_img.jpg?revision=1",
+      "alt": "This graph shows an ellipse with center (negative 1, 4), vertices minus (1, 1) and (negative 1, 7) and endpoints of minor axis approximately (negative 3.5, 4) and (approximately 1.5, 4).",
+      "credit": ""
+    },
+    {
+      "url": "https://math.libretexts.org/@api/deki/files/21447/CNX_IntAlg_Figure_11_03_311_img.jpg?revision=1",
+      "alt": "This graph shows an ellipse with center (2, 3), vertices (2, negative 1) and (2, 7) and endpoints of minor axis (0, 3) and (4, 3).",
+      "credit": ""
+    },
+    {
+      "url": "https://math.libretexts.org/@api/deki/files/21510/CNX_IntAlg_Figure_11_03_016_img.jpg?revision=1",
+      "alt": "This graph shows an ellipse with center (0, 0) and vertices (negative 40, 0) and (40, 0). The sun is shown at point (10, 0). This is 30 units from the right vertex and 50 units from the left vertex.",
+      "credit": ""
+    },
+    {
+      "url": "https://math.libretexts.org/@api/deki/files/21512/CNX_IntAlg_Figure_11_03_017_img.jpg?revision=1",
+      "alt": "This graph shows an ellipse with center (0, 0) and vertices (negative 25, 0) and (25, 0). The sun is shown at point (5, 0). This is 20 units from the right vertex and 30 units from the left vertex.",
+      "credit": ""
+    },
+    {
+      "url": "https://math.libretexts.org/@api/deki/files/21513/CNX_IntAlg_Figure_11_03_018_img.jpg?revision=1",
+      "alt": "This graph shows an ellipse with center (0, 0) and vertices (negative 35, 0) and (35, 0). The sun is shown at point (15, 0). This is 20 units from the right vertex and 50 units from the left vertex.",
+      "credit": ""
+    },
+    {
+      "url": "https://math.libretexts.org/@api/deki/files/21499/CNX_IntAlg_Figure_11_03_020_img.jpg?revision=1",
+      "alt": "This figure shows two ellipses. In each, two points within the ellipse are labeled foci. A line drawn through the foci intersects the ellipse in two points. Each point is labeled a vertex. In The figure on the left, the segment connecting the vertices is called the major axis. A segment perpendicular to the major axis that passes through its midpoint and intersects the ellipse in two points is labeled minor axis. The major axis is longer than the minor axis. In The figure on the right, the segment through the foci, connecting the vertices is shorter and is labeled minor axis. Its midpoint is labeled center.",
+      "credit": ""
+    }
+  ],
+  "references": [
+    {
+      "text": "11.4: Ellipses",
+      "url": "https://math.libretexts.org/Bookshelves/Algebra/Intermediate_Algebra_1e_(OpenStax)/11%3A_Conics/11.04%3A_Ellipses"
+    },
+    {
+      "text": "CC BY  4.0",
+      "url": "https://creativecommons.org/licenses/by/4.0"
+    },
+    {
+      "text": "OpenStax",
+      "url": "https://openstax.org/"
+    },
+    {
+      "text": "source content",
+      "url": "https://openstax.org/details/books/intermediate-algebra-2e"
+    }
+  ],
+  "exercises": [
+    {
+      "ordinal": 1,
+      "sourceNumber": "1",
+      "sourceAnchor": "",
+      "kind": "exercise-candidate",
+      "context": "By the end of this section, you will be able to:\n\nBefore you get started, take this readiness quiz.",
+      "original": "1. Graph \\(y=(x-1)^{2}-2\\) using transformations.\n\n    If you missed this problem, review Example 9.57.",
+      "prompt": "1. Graph \\(y=(x-1)^{2}-2\\) using transformations.\n\n    If you missed this problem, review Example 9.57.",
+      "sourceAnswers": [],
+      "hasFigure": false,
+      "status": "draft",
+      "answerVerified": false,
+      "translationStatus": "pending",
+      "mappingStatus": "pending"
+    },
+    {
+      "ordinal": 2,
+      "sourceNumber": "2",
+      "sourceAnchor": "",
+      "kind": "exercise-candidate",
+      "context": "By the end of this section, you will be able to:\n\nBefore you get started, take this readiness quiz.",
+      "original": "2. Complete the square: \\(x^{2}-8 x=8\\).\n\n    If you missed this problem, review Example 9.12.",
+      "prompt": "2. Complete the square: \\(x^{2}-8 x=8\\).\n\n    If you missed this problem, review Example 9.12.",
+      "sourceAnswers": [],
+      "hasFigure": false,
+      "status": "draft",
+      "answerVerified": false,
+      "translationStatus": "pending",
+      "mappingStatus": "pending"
+    },
+    {
+      "ordinal": 3,
+      "sourceNumber": "3",
+      "sourceAnchor": "",
+      "kind": "exercise-candidate",
+      "context": "By the end of this section, you will be able to:\n\nBefore you get started, take this readiness quiz.",
+      "original": "3. Write in standard form. \\(y=2 x^{2}-12 x+14\\)\n\n    If you missed this problem, review Example 9.59.",
+      "prompt": "3. Write in standard form. \\(y=2 x^{2}-12 x+14\\)\n\n    If you missed this problem, review Example 9.59.",
+      "sourceAnswers": [],
+      "hasFigure": false,
+      "status": "draft",
+      "answerVerified": false,
+      "translationStatus": "pending",
+      "mappingStatus": "pending"
+    },
+    {
+      "ordinal": 4,
+      "sourceNumber": "",
+      "sourceAnchor": "",
+      "kind": "example-or-exercise",
+      "context": "The \\(y\\)-intercepts are \\((0,b)\\) and \\((0,−b)\\).\n\nNotice that when the major axis is horizontal, the value of \\(a\\) will be greater than the value of \\(b\\) and when the major axis is vertical, the value of \\(b\\) will be greater than the value of \\(a\\). We will use this information to graph an ellipse that is centered at the origin.\n\nEllipse with Center \\((0,0)\\)",
+      "original": "Example \\(\\PageIndex{1}\\)\n\nGraph: \\(\\frac{x^{2}}{4}+\\frac{y^{2}}{9}=1\\).\n\nSolution:\n\n            Step 1. Write the equation in standard form.\t\n            It is in standard form.\t\n            \\(\\frac{x^{2}}{4}+\\frac{y^{2}}{9}=1\\)\t\n\n            Step 2. Determine whether the major axis is horizontal or vertical.\t\n            Since \\(9>4\\) and \\(9\\) is in the \\(y^{2}\\) term, the major axis is vertical.\t\n            Major axis is vertical.\t\n\n            Step 3. Find the endpoints of the major axis.\t\n\nThe endpoints will be the \\(y\\)-intercepts.\n\nSince \\(b^{2}=9\\), then \\(b=\\pm 3\\).\n\nThe endpoints of the major axis are \\((0,3),(0,-3)\\).\n\n            The endpoints of the major axis are \\((0,3),(0,-3)\\).\t\n\n            Step 4. Find the endpoints of the minor axis.\t\n            The endpoints will be the \\(x\\)-intercepts.\n\nSince \\(a^{2}=4\\), then \\(a=\\pm 2\\).\n\nThe endpoints of the major axis are \\((2,0),(-2,0)\\).\n\n            The endpoints of the major axis are \\((2,0),(-2,0)\\).\t\n\n            Step 5. Sketch the ellipse.\t\n\n[Figure: Screenshot (147).png]\n\nTable 11.3.2",
+      "prompt": "Example \\(\\PageIndex{1}\\)\n\nGraph: \\(\\frac{x^{2}}{4}+\\frac{y^{2}}{9}=1\\).\n\nSolution:\n\n            Step 1. Write the equation in standard form.\t\n            It is in standard form.\t\n            \\(\\frac{x^{2}}{4}+\\frac{y^{2}}{9}=1\\)\t\n\n            Step 2. Determine whether the major axis is horizontal or vertical.\t\n            Since \\(9>4\\) and \\(9\\) is in the \\(y^{2}\\) term, the major axis is vertical.\t\n            Major axis is vertical.\t\n\n            Step 3. Find the endpoints of the major axis.\t\n\nThe endpoints will be the \\(y\\)-intercepts.\n\nSince \\(b^{2}=9\\), then \\(b=\\pm 3\\).\n\nThe endpoints of the major axis are \\((0,3),(0,-3)\\).\n\n            The endpoints of the major axis are \\((0,3),(0,-3)\\).\t\n\n            Step 4. Find the endpoints of the minor axis.\t\n            The endpoints will be the \\(x\\)-intercepts.\n\nSince \\(a^{2}=4\\), then \\(a=\\pm 2\\).\n\nThe endpoints of the major axis are \\((2,0),(-2,0)\\).\n\n            The endpoints of the major axis are \\((2,0),(-2,0)\\).\t\n\n            Step 5. Sketch the ellipse.\t\n\n[Figure: Screenshot (147).png]\n\nTable 11.3.2",
+      "sourceAnswers": [],
+      "hasFigure": true,
+      "status": "draft",
+      "answerVerified": false,
+      "translationStatus": "pending",
+      "mappingStatus": "pending"
+    },
+    {
+      "ordinal": 5,
+      "sourceNumber": "",
+      "sourceAnchor": "",
+      "kind": "exercise-candidate",
+      "context": "The \\(y\\)-intercepts are \\((0,b)\\) and \\((0,−b)\\).\n\nNotice that when the major axis is horizontal, the value of \\(a\\) will be greater than the value of \\(b\\) and when the major axis is vertical, the value of \\(b\\) will be greater than the value of \\(a\\). We will use this information to graph an ellipse that is centered at the origin.\n\nEllipse with Center \\((0,0)\\)",
+      "original": "Exercise \\(\\PageIndex{1}\\)\n\nGraph: \\(\\frac{x^{2}}{4}+\\frac{y^{2}}{16}=1\\).\n\nAnswer\n\n[Figure: This graph shows an ellipse with x intercepts (negative 2, 0) and (2, 0) and y intercepts (0, 4) and (0, negative 4).]\n\nFigure 11.3.7",
+      "prompt": "Exercise \\(\\PageIndex{1}\\)\n\nGraph: \\(\\frac{x^{2}}{4}+\\frac{y^{2}}{16}=1\\).",
+      "sourceAnswers": [
+        "[Figure: This graph shows an ellipse with x intercepts (negative 2, 0) and (2, 0) and y intercepts (0, 4) and (0, negative 4).]\n\nFigure 11.3.7"
+      ],
+      "hasFigure": true,
+      "status": "draft",
+      "answerVerified": false,
+      "translationStatus": "pending",
+      "mappingStatus": "pending"
+    },
+    {
+      "ordinal": 6,
+      "sourceNumber": "",
+      "sourceAnchor": "",
+      "kind": "exercise-candidate",
+      "context": "The \\(y\\)-intercepts are \\((0,b)\\) and \\((0,−b)\\).\n\nNotice that when the major axis is horizontal, the value of \\(a\\) will be greater than the value of \\(b\\) and when the major axis is vertical, the value of \\(b\\) will be greater than the value of \\(a\\). We will use this information to graph an ellipse that is centered at the origin.\n\nEllipse with Center \\((0,0)\\)",
+      "original": "Exercise \\(\\PageIndex{2}\\)\n\nGraph: \\(\\frac{x^{2}}{9}+\\frac{y^{2}}{16}=1\\).\n\nAnswer\n\n[Figure: This graph shows an ellipse with x intercepts (negative 3, 0) and (3, 0) and y intercepts (0, 4) and (0, negative 4).]\n\nFigure 11.3.8",
+      "prompt": "Exercise \\(\\PageIndex{2}\\)\n\nGraph: \\(\\frac{x^{2}}{9}+\\frac{y^{2}}{16}=1\\).",
+      "sourceAnswers": [
+        "[Figure: This graph shows an ellipse with x intercepts (negative 3, 0) and (3, 0) and y intercepts (0, 4) and (0, negative 4).]\n\nFigure 11.3.8"
+      ],
+      "hasFigure": true,
+      "status": "draft",
+      "answerVerified": false,
+      "translationStatus": "pending",
+      "mappingStatus": "pending"
+    },
+    {
+      "ordinal": 7,
+      "sourceNumber": "1",
+      "sourceAnchor": "",
+      "kind": "exercise-candidate",
+      "context": "HOW TO GRAPH AN ELLIPSE WITH CENTER \\((0,0)\\).",
+      "original": "1. Write the equation in standard form.",
+      "prompt": "1. Write the equation in standard form.",
+      "sourceAnswers": [],
+      "hasFigure": false,
+      "status": "draft",
+      "answerVerified": false,
+      "translationStatus": "pending",
+      "mappingStatus": "pending"
+    },
+    {
+      "ordinal": 8,
+      "sourceNumber": "2",
+      "sourceAnchor": "",
+      "kind": "exercise-candidate",
+      "context": "HOW TO GRAPH AN ELLIPSE WITH CENTER \\((0,0)\\).",
+      "original": "2. Determine whether the major axis is horizontal or vertical.",
+      "prompt": "2. Determine whether the major axis is horizontal or vertical.",
+      "sourceAnswers": [],
+      "hasFigure": false,
+      "status": "draft",
+      "answerVerified": false,
+      "translationStatus": "pending",
+      "mappingStatus": "pending"
+    },
+    {
+      "ordinal": 9,
+      "sourceNumber": "3",
+      "sourceAnchor": "",
+      "kind": "exercise-candidate",
+      "context": "HOW TO GRAPH AN ELLIPSE WITH CENTER \\((0,0)\\).",
+      "original": "3. Find the endpoints of the major axis.",
+      "prompt": "3. Find the endpoints of the major axis.",
+      "sourceAnswers": [],
+      "hasFigure": false,
+      "status": "draft",
+      "answerVerified": false,
+      "translationStatus": "pending",
+      "mappingStatus": "pending"
+    },
+    {
+      "ordinal": 10,
+      "sourceNumber": "4",
+      "sourceAnchor": "",
+      "kind": "exercise-candidate",
+      "context": "HOW TO GRAPH AN ELLIPSE WITH CENTER \\((0,0)\\).",
+      "original": "4. Find the endpoints of the minor axis",
+      "prompt": "4. Find the endpoints of the minor axis",
+      "sourceAnswers": [],
+      "hasFigure": false,
+      "status": "draft",
+      "answerVerified": false,
+      "translationStatus": "pending",
+      "mappingStatus": "pending"
+    },
+    {
+      "ordinal": 11,
+      "sourceNumber": "5",
+      "sourceAnchor": "",
+      "kind": "exercise-candidate",
+      "context": "HOW TO GRAPH AN ELLIPSE WITH CENTER \\((0,0)\\).",
+      "original": "5. Sketch the ellipse.",
+      "prompt": "5. Sketch the ellipse.",
+      "sourceAnswers": [],
+      "hasFigure": false,
+      "status": "draft",
+      "answerVerified": false,
+      "translationStatus": "pending",
+      "mappingStatus": "pending"
+    },
+    {
+      "ordinal": 12,
+      "sourceNumber": "",
+      "sourceAnchor": "",
+      "kind": "example-or-exercise",
+      "context": "HOW TO GRAPH AN ELLIPSE WITH CENTER \\((0,0)\\).\n\nSometimes our equation will first need to be put in standard form.",
+      "original": "Example \\(\\PageIndex{2}\\)\n\nGraph \\(x^{2}+4 y^{2}=16\\).\n\nSolution:\n\n            We recognize this as the equation of an\n\n            ellipse since both the \\(x\\) and \\(y\\) terms are\n\n            squared and have different coefficients.\t\n            \\(x^{2}+4 y^{2}=16\\)\t\n\n            To get the equation in standard form, divide\n\n            both sides by \\(16\\) so that the equation is equal\n\n            to \\(1\\).\t\n            \\(\\frac{x^{2}}{16}+\\frac{4 y^{2}}{16}=\\frac{16}{16}\\)\t\n\n            Simplify.\t\n            \\(\\frac{x^{2}}{16}+\\frac{y^{2}}{4}=1\\)\t\n\n            The equation is in standard form.\n\n            The ellipse is centered at the origin.\t\n            The center is \\((0,0)\\).\t\n\n            Since \\(16>4\\) and \\(16\\) is in the \\(x^{2}\\) term,\n\n            the major axis is horizontal.\t\n\n            \\(a^{2}=16, a=\\pm 4\\)\n\n            \\(b^{2}=4, \\quad b=\\pm 2\\)\t\n\n            The vertices are \\((4,0),(−4,0)\\).\n\n            The endpoints of the minor axis are\n\n            \\((0,2),(0,−2)\\).\t\n\n            Sketch the parabola.\t\n\n[Figure: .]\n\nTable 11.3.3",
+      "prompt": "Example \\(\\PageIndex{2}\\)\n\nGraph \\(x^{2}+4 y^{2}=16\\).\n\nSolution:\n\n            We recognize this as the equation of an\n\n            ellipse since both the \\(x\\) and \\(y\\) terms are\n\n            squared and have different coefficients.\t\n            \\(x^{2}+4 y^{2}=16\\)\t\n\n            To get the equation in standard form, divide\n\n            both sides by \\(16\\) so that the equation is equal\n\n            to \\(1\\).\t\n            \\(\\frac{x^{2}}{16}+\\frac{4 y^{2}}{16}=\\frac{16}{16}\\)\t\n\n            Simplify.\t\n            \\(\\frac{x^{2}}{16}+\\frac{y^{2}}{4}=1\\)\t\n\n            The equation is in standard form.\n\n            The ellipse is centered at the origin.\t\n            The center is \\((0,0)\\).\t\n\n            Since \\(16>4\\) and \\(16\\) is in the \\(x^{2}\\) term,\n\n            the major axis is horizontal.\t\n\n            \\(a^{2}=16, a=\\pm 4\\)\n\n            \\(b^{2}=4, \\quad b=\\pm 2\\)\t\n\n            The vertices are \\((4,0),(−4,0)\\).\n\n            The endpoints of the minor axis are\n\n            \\((0,2),(0,−2)\\).\t\n\n            Sketch the parabola.\t\n\n[Figure: .]\n\nTable 11.3.3",
+      "sourceAnswers": [],
+      "hasFigure": true,
+      "status": "draft",
+      "answerVerified": false,
+      "translationStatus": "pending",
+      "mappingStatus": "pending"
+    },
+    {
+      "ordinal": 13,
+      "sourceNumber": "",
+      "sourceAnchor": "",
+      "kind": "exercise-candidate",
+      "context": "HOW TO GRAPH AN ELLIPSE WITH CENTER \\((0,0)\\).\n\nSometimes our equation will first need to be put in standard form.",
+      "original": "Exercise \\(\\PageIndex{3}\\)\n\nGraph \\(9 x^{2}+16 y^{2}=144\\).\n\nAnswer\n\n[Figure: This graph shows an ellipse with x intercepts (negative 4, 0) and (4, 0) and y intercepts (0, 3) and (0, negative 3).]\n\nFigure 11.3.10",
+      "prompt": "Exercise \\(\\PageIndex{3}\\)\n\nGraph \\(9 x^{2}+16 y^{2}=144\\).",
+      "sourceAnswers": [
+        "[Figure: This graph shows an ellipse with x intercepts (negative 4, 0) and (4, 0) and y intercepts (0, 3) and (0, negative 3).]\n\nFigure 11.3.10"
+      ],
+      "hasFigure": true,
+      "status": "draft",
+      "answerVerified": false,
+      "translationStatus": "pending",
+      "mappingStatus": "pending"
+    },
+    {
+      "ordinal": 14,
+      "sourceNumber": "",
+      "sourceAnchor": "",
+      "kind": "exercise-candidate",
+      "context": "HOW TO GRAPH AN ELLIPSE WITH CENTER \\((0,0)\\).\n\nSometimes our equation will first need to be put in standard form.",
+      "original": "Exercise \\(\\PageIndex{4}\\)\n\nGraph \\(16 x^{2}+25 y^{2}=400\\).\n\nAnswer\n\n[Figure: This graph shows an ellipse with x intercepts (negative 5, 0) and (5, 0) and y intercepts (0, 4) and (0, negative 4).]\n\nFigure 11.3.11",
+      "prompt": "Exercise \\(\\PageIndex{4}\\)\n\nGraph \\(16 x^{2}+25 y^{2}=400\\).",
+      "sourceAnswers": [
+        "[Figure: This graph shows an ellipse with x intercepts (negative 5, 0) and (5, 0) and y intercepts (0, 4) and (0, negative 4).]\n\nFigure 11.3.11"
+      ],
+      "hasFigure": true,
+      "status": "draft",
+      "answerVerified": false,
+      "translationStatus": "pending",
+      "mappingStatus": "pending"
+    },
+    {
+      "ordinal": 15,
+      "sourceNumber": "",
+      "sourceAnchor": "",
+      "kind": "example-or-exercise",
+      "context": "Find the Equation of an Ellipse with Center at the Origin\n\nIf we are given the graph of an ellipse, we can find the equation of the ellipse.",
+      "original": "Example \\(\\PageIndex{3}\\)\n\nFind the equation of the ellipse shown.\n\n[Figure: This graph shows an ellipse with x intercepts (negative 4, 0) and (4, 0) and y intercepts (0, 3) and (0, negative 3).]\n\nFigure 11.3.12\n\nSolution:\n\nWe recognize this as an ellipse that is centered at the origin.\n\n\\(\\frac{x^{2}}{a^{2}}+\\frac{y^{2}}{b^{2}}=1\\)\n\nSince the major axis is horizontal and the distance from the center to the vertex is \\(4\\), we know \\(a=4\\) and so \\(a^{2}=16\\).\n\n\\(\\frac{x^{2}}{16}+\\frac{y^{2}}{b^{2}}=1\\)\n\nThe minor axis is vertical and the distance from the center to the ellipse is \\(3\\), we know \\(b=3\\) and so \\(b^{2}=9\\).\n\n\\(\\frac{x^{2}}{16}+\\frac{y^{2}}{9}=1\\)",
+      "prompt": "Example \\(\\PageIndex{3}\\)\n\nFind the equation of the ellipse shown.\n\n[Figure: This graph shows an ellipse with x intercepts (negative 4, 0) and (4, 0) and y intercepts (0, 3) and (0, negative 3).]\n\nFigure 11.3.12\n\nSolution:\n\nWe recognize this as an ellipse that is centered at the origin.\n\n\\(\\frac{x^{2}}{a^{2}}+\\frac{y^{2}}{b^{2}}=1\\)\n\nSince the major axis is horizontal and the distance from the center to the vertex is \\(4\\), we know \\(a=4\\) and so \\(a^{2}=16\\).\n\n\\(\\frac{x^{2}}{16}+\\frac{y^{2}}{b^{2}}=1\\)\n\nThe minor axis is vertical and the distance from the center to the ellipse is \\(3\\), we know \\(b=3\\) and so \\(b^{2}=9\\).\n\n\\(\\frac{x^{2}}{16}+\\frac{y^{2}}{9}=1\\)",
+      "sourceAnswers": [],
+      "hasFigure": true,
+      "status": "draft",
+      "answerVerified": false,
+      "translationStatus": "pending",
+      "mappingStatus": "pending"
+    },
+    {
+      "ordinal": 16,
+      "sourceNumber": "",
+      "sourceAnchor": "",
+      "kind": "exercise-candidate",
+      "context": "Find the Equation of an Ellipse with Center at the Origin\n\nIf we are given the graph of an ellipse, we can find the equation of the ellipse.",
+      "original": "Exercise \\(\\PageIndex{5}\\)\n\nFind the equation of the ellipse shown.\n\n[Figure: This graph shows an ellipse with x intercepts (negative 2, 0) and (2, 0) and y intercepts (0, 5) and (0, negative 5).]\n\nFigure 11.3.13\n\nAnswer\n\n\\(\\frac{x^{2}}{4}+\\frac{y^{2}}{25}=1\\)",
+      "prompt": "Exercise \\(\\PageIndex{5}\\)\n\nFind the equation of the ellipse shown.\n\n[Figure: This graph shows an ellipse with x intercepts (negative 2, 0) and (2, 0) and y intercepts (0, 5) and (0, negative 5).]\n\nFigure 11.3.13",
+      "sourceAnswers": [
+        "\\(\\frac{x^{2}}{4}+\\frac{y^{2}}{25}=1\\)"
+      ],
+      "hasFigure": true,
+      "status": "draft",
+      "answerVerified": false,
+      "translationStatus": "pending",
+      "mappingStatus": "pending"
+    },
+    {
+      "ordinal": 17,
+      "sourceNumber": "",
+      "sourceAnchor": "",
+      "kind": "exercise-candidate",
+      "context": "Find the Equation of an Ellipse with Center at the Origin\n\nIf we are given the graph of an ellipse, we can find the equation of the ellipse.",
+      "original": "Exercise \\(\\PageIndex{6}\\)\n\nFind the equation of the ellipse shown.\n\n[Figure: This graph shows an ellipse with x intercepts (negative 3, 0) and (3, 0) and y intercepts (0, 2) and (0, negative 2).]\n\nFigure 11.3.14\n\nAnswer\n\n\\(\\frac{x^{2}}{9}+\\frac{y^{2}}{4}=1\\)",
+      "prompt": "Exercise \\(\\PageIndex{6}\\)\n\nFind the equation of the ellipse shown.\n\n[Figure: This graph shows an ellipse with x intercepts (negative 3, 0) and (3, 0) and y intercepts (0, 2) and (0, negative 2).]\n\nFigure 11.3.14",
+      "sourceAnswers": [
+        "\\(\\frac{x^{2}}{9}+\\frac{y^{2}}{4}=1\\)"
+      ],
+      "hasFigure": true,
+      "status": "draft",
+      "answerVerified": false,
+      "translationStatus": "pending",
+      "mappingStatus": "pending"
+    },
+    {
+      "ordinal": 18,
+      "sourceNumber": "",
+      "sourceAnchor": "",
+      "kind": "example-or-exercise",
+      "context": "\\(\\frac{(x-h)^{2}}{a^{2}}+\\frac{(y-k)^{2}}{b^{2}}=1\\)\n\nWhen \\(a>b\\), the major axis is horizontal so the distance from the center to the vertex is \\(a\\).\n\nWhen \\(b>a\\), the major axis is vertical so the distance from the center to the vertex is \\(b\\).",
+      "original": "Example \\(\\PageIndex{4}\\)\n\nGraph: \\(\\frac{(x-3)^{2}}{9}+\\frac{(y-1)^{2}}{4}=1\\).\n\nSolution:\n\n            The equation is in standard form, \\(\\frac{(x-h)^{2}}{a^{2}}+\\frac{(y-k)^{2}}{b^{2}}=1\\).\t\n            \\(\\frac{(x-3)^{2}}{9}+\\frac{(y-1)^{2}}{4}=1\\)\t\n\n            The ellipse is centered at \\((h,k)\\).\t\n            The center is \\((3,1)\\).\t\n\n            Since \\(9>4\\) and \\(9\\) is in the \\(x^{2}\\) term, the major axis is horizontal.\t\n\n            \\(a^{2}=9, a=\\pm 3\\)\n\n            \\(b^{2}=4, b=\\pm 2\\)\t\n            The distance from the center to the vertices is \\(3\\).\n\n            The distance from the center to the endpoints of the\n\n            minor axis is \\(2\\).\t\n\n            Sketch the ellipse.\t\n\n[Figure: .]\n\nTable 11.3.4",
+      "prompt": "Example \\(\\PageIndex{4}\\)\n\nGraph: \\(\\frac{(x-3)^{2}}{9}+\\frac{(y-1)^{2}}{4}=1\\).\n\nSolution:\n\n            The equation is in standard form, \\(\\frac{(x-h)^{2}}{a^{2}}+\\frac{(y-k)^{2}}{b^{2}}=1\\).\t\n            \\(\\frac{(x-3)^{2}}{9}+\\frac{(y-1)^{2}}{4}=1\\)\t\n\n            The ellipse is centered at \\((h,k)\\).\t\n            The center is \\((3,1)\\).\t\n\n            Since \\(9>4\\) and \\(9\\) is in the \\(x^{2}\\) term, the major axis is horizontal.\t\n\n            \\(a^{2}=9, a=\\pm 3\\)\n\n            \\(b^{2}=4, b=\\pm 2\\)\t\n            The distance from the center to the vertices is \\(3\\).\n\n            The distance from the center to the endpoints of the\n\n            minor axis is \\(2\\).\t\n\n            Sketch the ellipse.\t\n\n[Figure: .]\n\nTable 11.3.4",
+      "sourceAnswers": [],
+      "hasFigure": true,
+      "status": "draft",
+      "answerVerified": false,
+      "translationStatus": "pending",
+      "mappingStatus": "pending"
+    },
+    {
+      "ordinal": 19,
+      "sourceNumber": "",
+      "sourceAnchor": "",
+      "kind": "exercise-candidate",
+      "context": "\\(\\frac{(x-h)^{2}}{a^{2}}+\\frac{(y-k)^{2}}{b^{2}}=1\\)\n\nWhen \\(a>b\\), the major axis is horizontal so the distance from the center to the vertex is \\(a\\).\n\nWhen \\(b>a\\), the major axis is vertical so the distance from the center to the vertex is \\(b\\).",
+      "original": "Exercise \\(\\PageIndex{7}\\)\n\nGraph: \\(\\frac{(x+3)^{2}}{4}+\\frac{(y-5)^{2}}{16}=1\\).\n\nAnswer\n\n[Figure: This graph shows an ellipse with center at (negative 3, 5), vertices at (negative 3, 9) and (negative 3, 1) and endpoints of minor axis at (negative 5, 5) and (negative 1, 5).]\n\nFigure 11.3.16",
+      "prompt": "Exercise \\(\\PageIndex{7}\\)\n\nGraph: \\(\\frac{(x+3)^{2}}{4}+\\frac{(y-5)^{2}}{16}=1\\).",
+      "sourceAnswers": [
+        "[Figure: This graph shows an ellipse with center at (negative 3, 5), vertices at (negative 3, 9) and (negative 3, 1) and endpoints of minor axis at (negative 5, 5) and (negative 1, 5).]\n\nFigure 11.3.16"
+      ],
+      "hasFigure": true,
+      "status": "draft",
+      "answerVerified": false,
+      "translationStatus": "pending",
+      "mappingStatus": "pending"
+    },
+    {
+      "ordinal": 20,
+      "sourceNumber": "",
+      "sourceAnchor": "",
+      "kind": "exercise-candidate",
+      "context": "\\(\\frac{(x-h)^{2}}{a^{2}}+\\frac{(y-k)^{2}}{b^{2}}=1\\)\n\nWhen \\(a>b\\), the major axis is horizontal so the distance from the center to the vertex is \\(a\\).\n\nWhen \\(b>a\\), the major axis is vertical so the distance from the center to the vertex is \\(b\\).",
+      "original": "Exercise \\(\\PageIndex{8}\\)\n\nGraph: \\(\\frac{(x-1)^{2}}{25}+\\frac{(y+3)^{2}}{16}=1\\).\n\nAnswer\n\n[Figure: This graph shows an ellipse with center at 1, negative 3, vertices at (negative 4, negative 3) and (6, negative 3) and endpoints of minor axis at 1, 1) and (negative 1, negative 7).]\n\nFigure 11.3.17",
+      "prompt": "Exercise \\(\\PageIndex{8}\\)\n\nGraph: \\(\\frac{(x-1)^{2}}{25}+\\frac{(y+3)^{2}}{16}=1\\).",
+      "sourceAnswers": [
+        "[Figure: This graph shows an ellipse with center at 1, negative 3, vertices at (negative 4, negative 3) and (6, negative 3) and endpoints of minor axis at 1, 1) and (negative 1, negative 7).]\n\nFigure 11.3.17"
+      ],
+      "hasFigure": true,
+      "status": "draft",
+      "answerVerified": false,
+      "translationStatus": "pending",
+      "mappingStatus": "pending"
+    },
+    {
+      "ordinal": 21,
+      "sourceNumber": "",
+      "sourceAnchor": "",
+      "kind": "example-or-exercise",
+      "context": "If we look at the equations of \\(\\frac{x^{2}}{9}+\\frac{y^{2}}{4}=1\\) and \\(\\frac{(x-3)^{2}}{9}+\\frac{(y-1)^{2}}{4}=1\\), we see that they are both ellipses with \\(a=3\\) and \\(b=2\\). So they will have the same size and shape. They are different in that they do not have the same center.\n\nNotice in the graph above that we could have graphed \\(\\frac{(x-3)^{2}}{9}+\\frac{(y-1)^{2}}{4}=1\\) by translations. We moved the original ellipse to the right \\(3\\) units and then up \\(1\\) unit.\n\nIn the next example we will use the translation method to graph the ellipse.",
+      "original": "Example \\(\\PageIndex{5}\\)\n\nGraph \\(\\frac{(x+4)^{2}}{16}+\\frac{(y-6)^{2}}{9}=1\\) by translation.\n\nSolution:\n\nThis ellipse will have the same size and shape as \\(\\frac{x^{2}}{16}+\\frac{y^{2}}{9}=1\\) whose center is \\((0,0)\\). We graph this ellipse first.\n\n            The center is \\((0,0)\\).\t\n            Center \\((0,0)\\)\t\n\n            Since \\(16>9\\), the major axis is horizontal.\t\n\n            \\(a^{2}=16, a=\\pm 4\\)\n\n            \\(b^{2}=9, \\quad b=\\pm 3\\)\t\n            The vertices are \\((4,0),(−4,0)\\).\n\n            The endpoints of the minor axis are\n\n            \\((0,3),(0,−3)\\).\t\n\n            Sketch the ellipse.\t\n\n[Figure: .]\n\n            The original equation is in standard form, \\(\\frac{(x-h)^{2}}{a^{2}}+\\frac{(y-k)^{2}}{b^{2}}=1\\).\t\n            \\(\\frac{(x-(-4))^{2}}{16}+\\frac{(y-6)^{2}}{9}=1\\)\t\n\n            The ellipse is centered at \\((h,k)\\).\t\n            The center is \\((-4,6)\\).\t\n\n            We translate the graph of \\(\\frac{x^{2}}{16}+\\frac{y^{2}}{9}=1\\) four\n\n            units to the left and then up \\(6\\) units.\n\n            Verify that the center is \\((−4,6)\\).\n\n            The new ellipse is the ellipse whose equation\n\n            is\n\n            \\(\\frac{(x+4)^{2}}{16}+\\frac{(y-6)^{2}}{9}=1\\).\t\n\n[Figure: .]\n\nTable 11.3.5",
+      "prompt": "Example \\(\\PageIndex{5}\\)\n\nGraph \\(\\frac{(x+4)^{2}}{16}+\\frac{(y-6)^{2}}{9}=1\\) by translation.\n\nSolution:\n\nThis ellipse will have the same size and shape as \\(\\frac{x^{2}}{16}+\\frac{y^{2}}{9}=1\\) whose center is \\((0,0)\\). We graph this ellipse first.\n\n            The center is \\((0,0)\\).\t\n            Center \\((0,0)\\)\t\n\n            Since \\(16>9\\), the major axis is horizontal.\t\n\n            \\(a^{2}=16, a=\\pm 4\\)\n\n            \\(b^{2}=9, \\quad b=\\pm 3\\)\t\n            The vertices are \\((4,0),(−4,0)\\).\n\n            The endpoints of the minor axis are\n\n            \\((0,3),(0,−3)\\).\t\n\n            Sketch the ellipse.\t\n\n[Figure: .]\n\n            The original equation is in standard form, \\(\\frac{(x-h)^{2}}{a^{2}}+\\frac{(y-k)^{2}}{b^{2}}=1\\).\t\n            \\(\\frac{(x-(-4))^{2}}{16}+\\frac{(y-6)^{2}}{9}=1\\)\t\n\n            The ellipse is centered at \\((h,k)\\).\t\n            The center is \\((-4,6)\\).\t\n\n            We translate the graph of \\(\\frac{x^{2}}{16}+\\frac{y^{2}}{9}=1\\) four\n\n            units to the left and then up \\(6\\) units.\n\n            Verify that the center is \\((−4,6)\\).\n\n            The new ellipse is the ellipse whose equation\n\n            is\n\n            \\(\\frac{(x+4)^{2}}{16}+\\frac{(y-6)^{2}}{9}=1\\).\t\n\n[Figure: .]\n\nTable 11.3.5",
+      "sourceAnswers": [],
+      "hasFigure": true,
+      "status": "draft",
+      "answerVerified": false,
+      "translationStatus": "pending",
+      "mappingStatus": "pending"
+    },
+    {
+      "ordinal": 22,
+      "sourceNumber": "",
+      "sourceAnchor": "",
+      "kind": "exercise-candidate",
+      "context": "If we look at the equations of \\(\\frac{x^{2}}{9}+\\frac{y^{2}}{4}=1\\) and \\(\\frac{(x-3)^{2}}{9}+\\frac{(y-1)^{2}}{4}=1\\), we see that they are both ellipses with \\(a=3\\) and \\(b=2\\). So they will have the same size and shape. They are different in that they do not have the same center.\n\nNotice in the graph above that we could have graphed \\(\\frac{(x-3)^{2}}{9}+\\frac{(y-1)^{2}}{4}=1\\) by translations. We moved the original ellipse to the right \\(3\\) units and then up \\(1\\) unit.\n\nIn the next example we will use the translation method to graph the ellipse.",
+      "original": "Exercise \\(\\PageIndex{9}\\)\n\nGraph \\(\\frac{(x-5)^{2}}{9}+\\frac{(y+4)^{2}}{4}=1\\) by translation.\n\nAnswer\n\n[Figure: This graph shows an ellipse with center (5, negative 4), vertices (2, negative 4) and (8, negative 4) and endpoints of minor axis (5, negative 2) and (5, negative 6).]\n\nFigure 11.3.22",
+      "prompt": "Exercise \\(\\PageIndex{9}\\)\n\nGraph \\(\\frac{(x-5)^{2}}{9}+\\frac{(y+4)^{2}}{4}=1\\) by translation.",
+      "sourceAnswers": [
+        "[Figure: This graph shows an ellipse with center (5, negative 4), vertices (2, negative 4) and (8, negative 4) and endpoints of minor axis (5, negative 2) and (5, negative 6).]\n\nFigure 11.3.22"
+      ],
+      "hasFigure": true,
+      "status": "draft",
+      "answerVerified": false,
+      "translationStatus": "pending",
+      "mappingStatus": "pending"
+    },
+    {
+      "ordinal": 23,
+      "sourceNumber": "",
+      "sourceAnchor": "",
+      "kind": "exercise-candidate",
+      "context": "If we look at the equations of \\(\\frac{x^{2}}{9}+\\frac{y^{2}}{4}=1\\) and \\(\\frac{(x-3)^{2}}{9}+\\frac{(y-1)^{2}}{4}=1\\), we see that they are both ellipses with \\(a=3\\) and \\(b=2\\). So they will have the same size and shape. They are different in that they do not have the same center.\n\nNotice in the graph above that we could have graphed \\(\\frac{(x-3)^{2}}{9}+\\frac{(y-1)^{2}}{4}=1\\) by translations. We moved the original ellipse to the right \\(3\\) units and then up \\(1\\) unit.\n\nIn the next example we will use the translation method to graph the ellipse.",
+      "original": "Exercise \\(\\PageIndex{10}\\)\n\nGraph \\(\\frac{(x+6)^{2}}{16}+\\frac{(y+2)^{2}}{25}=1\\) by translation.\n\nAnswer\n\n[Figure: This graph shows an ellipse with center (negative 6, negative 2), vertices (negative 6, 3) and (negative 6, negative 7) and endpoints of minor axis (negative 10, negative 2), and (negative 2, negative 2).]\n\nFigure 11.3.23",
+      "prompt": "Exercise \\(\\PageIndex{10}\\)\n\nGraph \\(\\frac{(x+6)^{2}}{16}+\\frac{(y+2)^{2}}{25}=1\\) by translation.",
+      "sourceAnswers": [
+        "[Figure: This graph shows an ellipse with center (negative 6, negative 2), vertices (negative 6, 3) and (negative 6, negative 7) and endpoints of minor axis (negative 10, negative 2), and (negative 2, negative 2).]\n\nFigure 11.3.23"
+      ],
+      "hasFigure": true,
+      "status": "draft",
+      "answerVerified": false,
+      "translationStatus": "pending",
+      "mappingStatus": "pending"
+    },
+    {
+      "ordinal": 24,
+      "sourceNumber": "",
+      "sourceAnchor": "",
+      "kind": "example-or-exercise",
+      "context": "Notice in the graph above that we could have graphed \\(\\frac{(x-3)^{2}}{9}+\\frac{(y-1)^{2}}{4}=1\\) by translations. We moved the original ellipse to the right \\(3\\) units and then up \\(1\\) unit.\n\nIn the next example we will use the translation method to graph the ellipse.\n\nWhen an equation has both an \\(x^{2}\\) and a \\(y^{2}\\) with different coefficients, we verify that it is an ellipsis by putting it in standard form. We will then be able to graph the equation.",
+      "original": "Example \\(\\PageIndex{6}\\)\n\nWrite the equation \\(x^{2}+4 y^{2}-4 x+24 y+24=0\\) in standard form and graph.\n\nSolution:\n\nWe put the equation in standard form by completing the squares in both \\(x\\) and \\(y\\).\n\n            \\(x^{2}+4 y^{2}-4 x+24 y+24=0\\)\t\n\n            Rewrite grouping the \\(x\\) terms and \\(y\\) terms.\t\n\n[Figure: .]\n\n            Make the coefficients of \\(x^{2}\\) and \\(y^{2}\\) equal \\(1\\).\t\n\n[Figure: .]\n\n            Complete the squares.\t\n\n[Figure: .]\n\n            Write as binomial squares.\t\n\n[Figure: .]\n\n            Divide both sides by \\(16\\) to get \\(1\\) on the right.\t\n\n[Figure: .]\n\n            Simplify.\t\n\n[Figure: .]\n\n            The equation is in standard form, \\(\\frac{(x-h)^{2}}{a^{2}}+\\frac{(y-k)^{2}}{b^{2}}=1\\)\t\n\n[Figure: .]\n\n            The ellipse is centered at \\((h,k)\\).\t\n            The center is \\((2,-3)\\).\t\n\nSince \\(16>4\\) and \\(16\\) is in the \\(x^{2}\\) term, the major axis is horizontal.\n\n\\(a^{2}=16, a=\\pm 4\\)\n\n            \\(b^{2}=4, \\quad b=\\pm 2\\)\n\nThe distance from the center to the vertices is \\(4\\).\n\nThe distance from the center to the endpoints of the minor axis is \\(2\\).\n\n            Sketch the ellipse.\t\n\n[Figure: .]\n\nTable 11.3.6",
+      "prompt": "Example \\(\\PageIndex{6}\\)\n\nWrite the equation \\(x^{2}+4 y^{2}-4 x+24 y+24=0\\) in standard form and graph.\n\nSolution:\n\nWe put the equation in standard form by completing the squares in both \\(x\\) and \\(y\\).\n\n            \\(x^{2}+4 y^{2}-4 x+24 y+24=0\\)\t\n\n            Rewrite grouping the \\(x\\) terms and \\(y\\) terms.\t\n\n[Figure: .]\n\n            Make the coefficients of \\(x^{2}\\) and \\(y^{2}\\) equal \\(1\\).\t\n\n[Figure: .]\n\n            Complete the squares.\t\n\n[Figure: .]\n\n            Write as binomial squares.\t\n\n[Figure: .]\n\n            Divide both sides by \\(16\\) to get \\(1\\) on the right.\t\n\n[Figure: .]\n\n            Simplify.\t\n\n[Figure: .]\n\n            The equation is in standard form, \\(\\frac{(x-h)^{2}}{a^{2}}+\\frac{(y-k)^{2}}{b^{2}}=1\\)\t\n\n[Figure: .]\n\n            The ellipse is centered at \\((h,k)\\).\t\n            The center is \\((2,-3)\\).\t\n\nSince \\(16>4\\) and \\(16\\) is in the \\(x^{2}\\) term, the major axis is horizontal.\n\n\\(a^{2}=16, a=\\pm 4\\)\n\n            \\(b^{2}=4, \\quad b=\\pm 2\\)\n\nThe distance from the center to the vertices is \\(4\\).\n\nThe distance from the center to the endpoints of the minor axis is \\(2\\).\n\n            Sketch the ellipse.\t\n\n[Figure: .]\n\nTable 11.3.6",
+      "sourceAnswers": [],
+      "hasFigure": true,
+      "status": "draft",
+      "answerVerified": false,
+      "translationStatus": "pending",
+      "mappingStatus": "pending"
+    },
+    {
+      "ordinal": 25,
+      "sourceNumber": "",
+      "sourceAnchor": "",
+      "kind": "exercise-candidate",
+      "context": "Notice in the graph above that we could have graphed \\(\\frac{(x-3)^{2}}{9}+\\frac{(y-1)^{2}}{4}=1\\) by translations. We moved the original ellipse to the right \\(3\\) units and then up \\(1\\) unit.\n\nIn the next example we will use the translation method to graph the ellipse.\n\nWhen an equation has both an \\(x^{2}\\) and a \\(y^{2}\\) with different coefficients, we verify that it is an ellipsis by putting it in standard form. We will then be able to graph the equation.",
+      "original": "Exercise \\(\\PageIndex{11}\\)\n\n1. Write the equation \\(6 x^{2}+4 y^{2}+12 x-32 y+34=0\\) in standard form and\n\n2. Graph.\n\nAnswer\n\n1. \\(\\frac{(x+1)^{2}}{6}+\\frac{(y-4)^{2}}{9}=1\\)\n\n2.  \n\n[Figure: This graph shows an ellipse with center (negative 1, 4), vertices minus (1, 1) and (negative 1, 7) and endpoints of minor axis approximately (negative 3.5, 4) and (approximately 1.5, 4).]\n\nFigure 11.3.32",
+      "prompt": "Exercise \\(\\PageIndex{11}\\)\n\n1. Write the equation \\(6 x^{2}+4 y^{2}+12 x-32 y+34=0\\) in standard form and\n\n2. Graph.",
+      "sourceAnswers": [
+        "1. \\(\\frac{(x+1)^{2}}{6}+\\frac{(y-4)^{2}}{9}=1\\)\n\n2.  \n\n[Figure: This graph shows an ellipse with center (negative 1, 4), vertices minus (1, 1) and (negative 1, 7) and endpoints of minor axis approximately (negative 3.5, 4) and (approximately 1.5, 4).]\n\nFigure 11.3.32"
+      ],
+      "hasFigure": true,
+      "status": "draft",
+      "answerVerified": false,
+      "translationStatus": "pending",
+      "mappingStatus": "pending"
+    },
+    {
+      "ordinal": 26,
+      "sourceNumber": "",
+      "sourceAnchor": "",
+      "kind": "exercise-candidate",
+      "context": "Notice in the graph above that we could have graphed \\(\\frac{(x-3)^{2}}{9}+\\frac{(y-1)^{2}}{4}=1\\) by translations. We moved the original ellipse to the right \\(3\\) units and then up \\(1\\) unit.\n\nIn the next example we will use the translation method to graph the ellipse.\n\nWhen an equation has both an \\(x^{2}\\) and a \\(y^{2}\\) with different coefficients, we verify that it is an ellipsis by putting it in standard form. We will then be able to graph the equation.",
+      "original": "Exercise \\(\\PageIndex{12}\\)\n\n1. Write the equation \\(4 x^{2}+y^{2}-16 x-6 y+9=0\\) in standard form and\n\n2. Graph.\n\nAnswer\n\n1. \\(\\frac{(x-2)^{2}}{4}+\\frac{(y-3)^{2}}{16}=1\\)\n\n2.  \n\n[Figure: This graph shows an ellipse with center (2, 3), vertices (2, negative 1) and (2, 7) and endpoints of minor axis (0, 3) and (4, 3).]\n\nFigure 11.3.33",
+      "prompt": "Exercise \\(\\PageIndex{12}\\)\n\n1. Write the equation \\(4 x^{2}+y^{2}-16 x-6 y+9=0\\) in standard form and\n\n2. Graph.",
+      "sourceAnswers": [
+        "1. \\(\\frac{(x-2)^{2}}{4}+\\frac{(y-3)^{2}}{16}=1\\)\n\n2.  \n\n[Figure: This graph shows an ellipse with center (2, 3), vertices (2, negative 1) and (2, 7) and endpoints of minor axis (0, 3) and (4, 3).]\n\nFigure 11.3.33"
+      ],
+      "hasFigure": true,
+      "status": "draft",
+      "answerVerified": false,
+      "translationStatus": "pending",
+      "mappingStatus": "pending"
+    },
+    {
+      "ordinal": 27,
+      "sourceNumber": "",
+      "sourceAnchor": "",
+      "kind": "example-or-exercise",
+      "context": "Solve Application with Ellipses\n\nThe orbits of the planets around the sun follow elliptical paths.",
+      "original": "Example \\(\\PageIndex{7}\\)\n\nPluto (a dwarf planet) moves in an elliptical orbit around the Sun. The closest Pluto gets to the Sun is approximately \\(30\\) astronomical units (AU) and the furthest is approximately \\(50\\) AU. The Sun is one of the foci of the elliptical orbit. Letting the ellipse center at the origin and labeling the axes in AU, the orbit will look like the figure below. Use the graph to write an equation for the elliptical orbit of Pluto.\n\n[Figure: This graph shows an ellipse with center (0, 0) and vertices (negative 40, 0) and (40, 0). The sun is shown at point (10, 0). This is 30 units from the right vertex and 50 units from the left vertex.]\n\nFigure 11.3.34\n\nSolution:\n\nWe recognize this as an ellipse that is centered at the origin.\n\n\\(\\frac{x^{2}}{a^{2}}+\\frac{y^{2}}{b^{2}}=1\\)\n\nSince the major axis is horizontal and the distance from the center to the vertex is \\(40\\), we know \\(a=40\\) and so \\(a^{2}=1600\\).\n\n\\(\\frac{x^{2}}{1600}+\\frac{y^{2}}{b^{2}}=1\\)\n\nThe minor axis is vertical but the end points aren’t given.To find \\(b\\) we will use the location of the Sun. Since the Sun is a focus of the ellipse at the point \\((10,0)\\),we know \\(c=10\\). Use this to solve for \\(b^{2}\\).\n\n\\(b^{2}=a^{2}-c^{2}\\)\n\n\\(b^{2}=40^{2}-10^{2}\\)\n\n\\(b^{2}=1600-100\\)\n\n\\(b^{2}=1500\\)\n\nSubstitute \\(a^{2}\\) and \\(b^{2}\\) into the standard form of the ellipse.\n\n\\(\\frac{x^{2}}{1600}+\\frac{y^{2}}{1500}=1\\)",
+      "prompt": "Example \\(\\PageIndex{7}\\)\n\nPluto (a dwarf planet) moves in an elliptical orbit around the Sun. The closest Pluto gets to the Sun is approximately \\(30\\) astronomical units (AU) and the furthest is approximately \\(50\\) AU. The Sun is one of the foci of the elliptical orbit. Letting the ellipse center at the origin and labeling the axes in AU, the orbit will look like the figure below. Use the graph to write an equation for the elliptical orbit of Pluto.\n\n[Figure: This graph shows an ellipse with center (0, 0) and vertices (negative 40, 0) and (40, 0). The sun is shown at point (10, 0). This is 30 units from the right vertex and 50 units from the left vertex.]\n\nFigure 11.3.34\n\nSolution:\n\nWe recognize this as an ellipse that is centered at the origin.\n\n\\(\\frac{x^{2}}{a^{2}}+\\frac{y^{2}}{b^{2}}=1\\)\n\nSince the major axis is horizontal and the distance from the center to the vertex is \\(40\\), we know \\(a=40\\) and so \\(a^{2}=1600\\).\n\n\\(\\frac{x^{2}}{1600}+\\frac{y^{2}}{b^{2}}=1\\)\n\nThe minor axis is vertical but the end points aren’t given.To find \\(b\\) we will use the location of the Sun. Since the Sun is a focus of the ellipse at the point \\((10,0)\\),we know \\(c=10\\). Use this to solve for \\(b^{2}\\).\n\n\\(b^{2}=a^{2}-c^{2}\\)\n\n\\(b^{2}=40^{2}-10^{2}\\)\n\n\\(b^{2}=1600-100\\)\n\n\\(b^{2}=1500\\)\n\nSubstitute \\(a^{2}\\) and \\(b^{2}\\) into the standard form of the ellipse.\n\n\\(\\frac{x^{2}}{1600}+\\frac{y^{2}}{1500}=1\\)",
+      "sourceAnswers": [],
+      "hasFigure": true,
+      "status": "draft",
+      "answerVerified": false,
+      "translationStatus": "pending",
+      "mappingStatus": "pending"
+    },
+    {
+      "ordinal": 28,
+      "sourceNumber": "",
+      "sourceAnchor": "",
+      "kind": "exercise-candidate",
+      "context": "Solve Application with Ellipses\n\nThe orbits of the planets around the sun follow elliptical paths.",
+      "original": "Exercise \\(\\PageIndex{13}\\)\n\nA planet moves in an elliptical orbit around its sun. The closest the planet gets to the sun is approximately \\(20\\) AU and the furthest is approximately \\(30\\) AU. The sun is one of the foci of the elliptical orbit. Letting the ellipse center at the origin and labeling the axes in AU, the orbit will look like the figure below. Use the graph to write an equation for the elliptical orbit of the planet.\n\n[Figure: This graph shows an ellipse with center (0, 0) and vertices (negative 25, 0) and (25, 0). The sun is shown at point (5, 0). This is 20 units from the right vertex and 30 units from the left vertex.]\n\nFigure 11.3.35\n\nAnswer\n\n\\(\\frac{x^{2}}{625}+\\frac{y^{2}}{600}=1\\)",
+      "prompt": "Exercise \\(\\PageIndex{13}\\)\n\nA planet moves in an elliptical orbit around its sun. The closest the planet gets to the sun is approximately \\(20\\) AU and the furthest is approximately \\(30\\) AU. The sun is one of the foci of the elliptical orbit. Letting the ellipse center at the origin and labeling the axes in AU, the orbit will look like the figure below. Use the graph to write an equation for the elliptical orbit of the planet.\n\n[Figure: This graph shows an ellipse with center (0, 0) and vertices (negative 25, 0) and (25, 0). The sun is shown at point (5, 0). This is 20 units from the right vertex and 30 units from the left vertex.]\n\nFigure 11.3.35",
+      "sourceAnswers": [
+        "\\(\\frac{x^{2}}{625}+\\frac{y^{2}}{600}=1\\)"
+      ],
+      "hasFigure": true,
+      "status": "draft",
+      "answerVerified": false,
+      "translationStatus": "pending",
+      "mappingStatus": "pending"
+    },
+    {
+      "ordinal": 29,
+      "sourceNumber": "",
+      "sourceAnchor": "",
+      "kind": "exercise-candidate",
+      "context": "Solve Application with Ellipses\n\nThe orbits of the planets around the sun follow elliptical paths.",
+      "original": "Exercise \\(\\PageIndex{14}\\)\n\nA planet moves in an elliptical orbit around its sun. The closest the planet gets to the sun is approximately \\(20\\) AU and the furthest is approximately \\(50\\) AU. The sun is one of the foci of the elliptical orbit. Letting the ellipse center at the origin and labeling the axes in AU, the orbit will look like the figure below. Use the graph to write an equation for the elliptical orbit of the planet.\n\n[Figure: This graph shows an ellipse with center (0, 0) and vertices (negative 35, 0) and (35, 0). The sun is shown at point (15, 0). This is 20 units from the right vertex and 50 units from the left vertex.]\n\nFigure 11.3.36\n\nAnswer\n\n\\(\\frac{x^{2}}{1225}+\\frac{y^{2}}{1000}=1\\)",
+      "prompt": "Exercise \\(\\PageIndex{14}\\)\n\nA planet moves in an elliptical orbit around its sun. The closest the planet gets to the sun is approximately \\(20\\) AU and the furthest is approximately \\(50\\) AU. The sun is one of the foci of the elliptical orbit. Letting the ellipse center at the origin and labeling the axes in AU, the orbit will look like the figure below. Use the graph to write an equation for the elliptical orbit of the planet.\n\n[Figure: This graph shows an ellipse with center (0, 0) and vertices (negative 35, 0) and (35, 0). The sun is shown at point (15, 0). This is 20 units from the right vertex and 50 units from the left vertex.]\n\nFigure 11.3.36",
+      "sourceAnswers": [
+        "\\(\\frac{x^{2}}{1225}+\\frac{y^{2}}{1000}=1\\)"
+      ],
+      "hasFigure": true,
+      "status": "draft",
+      "answerVerified": false,
+      "translationStatus": "pending",
+      "mappingStatus": "pending"
+    },
+    {
+      "ordinal": 30,
+      "sourceNumber": "1",
+      "sourceAnchor": "",
+      "kind": "exercise-candidate",
+      "context": "Figure 11.3.37\n\n\\(\\frac{x^{2}}{a^{2}}+\\frac{y^{2}}{b^{2}}=1\\)",
+      "original": "1. Write the equation in standard form.",
+      "prompt": "1. Write the equation in standard form.",
+      "sourceAnswers": [],
+      "hasFigure": false,
+      "status": "draft",
+      "answerVerified": false,
+      "translationStatus": "pending",
+      "mappingStatus": "pending"
+    },
+    {
+      "ordinal": 31,
+      "sourceNumber": "2",
+      "sourceAnchor": "",
+      "kind": "exercise-candidate",
+      "context": "Figure 11.3.37\n\n\\(\\frac{x^{2}}{a^{2}}+\\frac{y^{2}}{b^{2}}=1\\)",
+      "original": "2. Determine whether the major axis is horizontal or vertical.",
+      "prompt": "2. Determine whether the major axis is horizontal or vertical.",
+      "sourceAnswers": [],
+      "hasFigure": false,
+      "status": "draft",
+      "answerVerified": false,
+      "translationStatus": "pending",
+      "mappingStatus": "pending"
+    },
+    {
+      "ordinal": 32,
+      "sourceNumber": "3",
+      "sourceAnchor": "",
+      "kind": "exercise-candidate",
+      "context": "Figure 11.3.37\n\n\\(\\frac{x^{2}}{a^{2}}+\\frac{y^{2}}{b^{2}}=1\\)",
+      "original": "3. Find the endpoints of the major axis.",
+      "prompt": "3. Find the endpoints of the major axis.",
+      "sourceAnswers": [],
+      "hasFigure": false,
+      "status": "draft",
+      "answerVerified": false,
+      "translationStatus": "pending",
+      "mappingStatus": "pending"
+    },
+    {
+      "ordinal": 33,
+      "sourceNumber": "4",
+      "sourceAnchor": "",
+      "kind": "exercise-candidate",
+      "context": "Figure 11.3.37\n\n\\(\\frac{x^{2}}{a^{2}}+\\frac{y^{2}}{b^{2}}=1\\)",
+      "original": "4. Find the endpoints of the minor axis",
+      "prompt": "4. Find the endpoints of the minor axis",
+      "sourceAnswers": [],
+      "hasFigure": false,
+      "status": "draft",
+      "answerVerified": false,
+      "translationStatus": "pending",
+      "mappingStatus": "pending"
+    },
+    {
+      "ordinal": 34,
+      "sourceNumber": "5",
+      "sourceAnchor": "",
+      "kind": "exercise-candidate",
+      "context": "Figure 11.3.37\n\n\\(\\frac{x^{2}}{a^{2}}+\\frac{y^{2}}{b^{2}}=1\\)",
+      "original": "5. Sketch the ellipse.",
+      "prompt": "5. Sketch the ellipse.",
+      "sourceAnswers": [],
+      "hasFigure": false,
+      "status": "draft",
+      "answerVerified": false,
+      "translationStatus": "pending",
+      "mappingStatus": "pending"
+    }
+  ],
+  "license": "CC BY 4.0",
+  "licenseEvidence": "This page titled 11.4: Ellipses was last modified on Mon, 14 Feb 2022 01:07:29 GMT and is shared under a CC BY  4.0  license and was authored, remixed, and/or curated by OpenStax via source content that was edited to the style and standards of the LibreTexts platform.",
+  "url": "https://math.libretexts.org/Bookshelves/Algebra/Intermediate_Algebra_1e_(OpenStax)/11:_Conics/11.04:_Ellipses",
+  "sha256": "a8f5354e1fa14dd1f60333f20bb0bdd6b3a97815a2bc4955c84300f1ca1165ca",
+  "checkedAt": "2026-10-07",
+  "id": "34f4f05fecaa2d6080cf",
+  "bookId": "intermediate-algebra",
+  "licenseInherited": false,
+  "licenseSource": "https://math.libretexts.org/Bookshelves/Algebra/Intermediate_Algebra_1e_(OpenStax)/11:_Conics/11.04:_Ellipses",
+  "licenseUrl": "https://creativecommons.org/licenses/by/4.0/",
+  "authors": "OpenStax / Lynn Marecek, Andrea Honeycutt Mathis",
+  "book": "Intermediate Algebra 1e",
+  "reviewStatus": "unreviewed",
+  "sourceLanguage": "en",
+  "translationStatus": "pending"
+}

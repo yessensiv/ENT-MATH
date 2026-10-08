@@ -1,0 +1,685 @@
+{
+  "title": "2.6: Other Types of Equations",
+  "originalText": "Learning Objectives\n\nSolve equations involving rational exponents.\n\nSolve equations using factoring.\n\nSolve radical equations.\n\nSolve absolute value equations.\n\nSolve other types of equations.\n\nWe have solved linear equations, rational equations, and quadratic equations using several methods. However, there are many other types of equations, and we will investigate a few more types in this section. We will look at equations involving rational exponents, polynomial equations, radical equations, absolute value equations, equations in quadratic form, and some rational equations that can be transformed into quadratics. Solving any equation, however, employs the same basic algebraic rules. We will learn some new techniques as they apply to certain equations, but the algebra never changes.\n\nSolving Equations Involving Rational Exponents\n\nRational exponents are exponents that are fractions, where the numerator is a power and the denominator is a root. For example, \\({16}^{\\tfrac{1}{2}}\\) is another way of writing \\(\\sqrt{16}\\); \\(8^{\\tfrac{1}{3}}\\) is another way of writing \\(\\sqrt[3]{8}\\). The ability to work with rational exponents is a useful skill, as it is highly applicable in calculus.\n\nWe can solve equations in which a variable is raised to a rational exponent by raising both sides of the equation to the reciprocal of the exponent. The reason we raise the equation to the reciprocal of the exponent is because we want to eliminate the exponent on the variable term, and a number multiplied by its reciprocal equals \\(1\\). For example,\n\n\\[\\dfrac{2}{3}\\left (\\dfrac{3}{2} \\right )=1 \\nonumber\\]\n\n\\[3\\left (\\dfrac{1}{3} \\right )=1, \\nonumber\\]\n\nand so on.\n\nRATIONAL EXPONENTS\n\nA rational exponent indicates a power in the numerator and a root in the denominator. There are multiple ways of writing an expression, a variable, or a number with a rational exponent:\n\n\\[a^{\\tfrac{m}{n}}={\\left (a^{\\tfrac{1}{n}} \\right )}^m={a^m}^{\\tfrac{1}{n}}=\\sqrt[n]{a^m}={(\\sqrt[n]{a})}^m\\]\n\nExample \\(\\PageIndex{1}\\): Evaluating a Number Raised to a Rational Exponent\n\nEvaluate \\(8^{\\tfrac{2}{3}}\\)\n\nSolution\n\nWhether we take the root first or the power first depends on the number. It is easy to find the cube root of \\(8\\), so rewrite \\(8^{\\tfrac{2}{3}}\\) as \\({\\left (8^{\\tfrac{1}{3}} \\right )}^2\\).\n\n\\[\\begin{align*} {\\left (8^{\\tfrac{1}{3}} \\right )}^2&= {(2)}^2\\\\ &= 4 \\end{align*}\\]\n\nExercise \\(\\PageIndex{1}\\)\n\nEvaluate \\({64}^{-\\tfrac{1}{3}}\\)\n\nAnswer\n\n\\(\\dfrac{1}{4}\\)\n\nExample \\(\\PageIndex{2}\\): Solve the Equation Including a Variable Raised to a Rational Exponent\n\nSolve the equation in which a variable is raised to a rational exponent: \\(x^{\\tfrac{5}{4}} = 32\\).\n\nSolution\n\nThe way to remove the exponent on \\(x\\) is by raising both sides of the equation to a power that is the reciprocal of \\(\\dfrac{5}{4}\\), which is \\(\\dfrac{4}{5}\\).\n\n\\[\\begin{align*} x^{\\tfrac{5}{4}}&= 32\\\\ {\\left(x^{\\tfrac{5}{4}}\\right)}^{\\tfrac{4}{5}}&= {\\left(32\\right)}^{\\tfrac{4}{5}}\\\\ x&= (2)^4\\\\ &= 16 \\end{align*}\\]\n\nExercise \\(\\PageIndex{2}\\)\n\nSolve the equation \\(x^{\\tfrac{3}{2}} = 125\\).\n\nAnswer\n\n\\(25\\)\n\nExample \\(\\PageIndex{3}\\): Solving an Equation Involving Rational Exponents and Factoring\n\nSolve \\(3x^{\\tfrac{3}{4}} = x^{\\tfrac{1}{2}}\\).\n\nSolution\n\nThis equation involves rational exponents as well as factoring rational exponents. Let us take this one step at a time. First, put the variable terms on one side of the equal sign and set the equation equal to zero.\n\n\\[\\begin{align*} 3x^{\\tfrac{3}{4}}-\\left(x^{\\tfrac{1}{2}}\\right)&= x^{\\tfrac{1}{2}}-\\left(x^{\\tfrac{1}{2}}\\right)\\\\ 3x^{\\tfrac{3}{4}}-x^{\\tfrac{1}{2}}&= 0 \\end{align*}\\]\n\nNow, it looks like we should factor the left side, but what do we factor out? We can always factor the term with the lowest exponent. Rewrite \\(x^{\\tfrac{1}{2}}\\) as \\(x^{\\tfrac{2}{4}}\\). Then, factor out \\(x^{\\tfrac{2}{4}}\\) from both terms on the left.\n\n\\[\\begin{align*} 3x^{\\tfrac{3}{4}}-x^{\\tfrac{1}{2}}&= 0\\\\ x^{\\tfrac{2}{4}}\\left (3x^{\\tfrac{1}{4}}-1 \\right )&= 0 \\end{align*}\\]\n\nWhere did \\(x^{\\tfrac{1}{4}}\\) come from? Remember, when we multiply two numbers with the same base, we add the exponents. Therefore, if we multiply \\(x^{\\tfrac{2}{4}}\\) back in using the distributive property, we get the expression we had before the factoring, which is what should happen. We need an exponent such that when added to \\(\\dfrac{2}{4}\\) equals \\(\\dfrac{3}{4}\\). Thus, the exponent on \\(x\\) in the parentheses is \\(\\dfrac{1}{4}\\).\n\nLet us continue. Now we have two factors and can use the zero factor theorem.\n\n\\[\\begin{align*}\n\nx^{\\tfrac{2}{4}}\\left (3x^{\\tfrac{1}{4}}-1 \\right )&= 0\\\\\n\nx^{\\tfrac{2}{4}}&= 0\\\\\n\nx&= 0\\\\\n\n3x^{\\tfrac{1}{4}}-1&= 0\\\\\n\n3x^{\\tfrac{1}{4}}&= 1\\\\\n\nx^{\\tfrac{1}{4}}&= \\dfrac{1}{3},\\qquad \\text{Divide both sides by 3.}\\\\\n\n{\\left (x^{\\tfrac{1}{4}} \\right )}^4&= {\\left (\\dfrac{1}{3} \\right )}^4, \\qquad \\text{Raise both sides to the reciprocal of } \\dfrac{1}{4}\\\\\n\nx&= \\dfrac{1}{81}\n\n\\end{align*}\\]\n\nThe two solutions are \\(0\\) and \\(\\dfrac{1}{81}\\).\n\nExercise \\(\\PageIndex{3}\\)\n\nSolve: \\({\\left(x+5\\right)}^{\\tfrac{3}{2}}=8\\).\n\nAnswer\n\n\\(-1\\)\n\nSolving Equations Using Factoring\n\nWe have used factoring to solve quadratic equations, but it is a technique that we can use with many types of polynomial equations, which are equations that contain a string of terms including numerical coefficients and variables. When we are faced with an equation containing polynomials of degree higher than \\(2\\), we can often solve them by factoring.\n\nPOLYNOMIAL EQUATIONS\n\nA polynomial of degree \\(n\\) is an expression of the type\n\n\\[a_nx^n+a_{n−1}x^{n−1}+⋅⋅⋅+a_2x^2+a_1x+a_0\\]\n\nwhere \\(n\\) is a positive integer and \\(a_n ,…, a_0\\) are real numbers and \\(a_n≠0\\).\n\nSetting the polynomial equal to zero gives a polynomial equation. The total number of solutions (real and complex) to a polynomial equation is equal to the highest exponent \\(n\\).\n\nExample \\(\\PageIndex{4}\\): Solving a Polynomial by Factoring\n\nSolve the polynomial by factoring: \\(5x^4 = 80x^2\\).\n\nSolution\n\nFirst, set the equation equal to zero. Then factor out what is common to both terms, the GCF.\n\n\\[\\begin{align*} 5x^4-80x^2&= 0\\\\ 5x^2(x^2-16)&= 0 \\end{align*}\\]\n\nNotice that we have the difference of squares in the factor \\(x^2−16\\), which we will continue to factor and obtain two solutions. The first term, \\(5x^2\\), generates, technically, two solutions as the exponent is \\(2\\), but they are the same solution.\n\n\\[\\begin{align*} 5x^2&= 0\\\\ x&=0\\\\ x^2-16&= 0\\\\ (x+4)(x-4)&= 0\\\\ x&= 4\\\\ x&= -4 \\end{align*}\\]\n\nThe solutions are \\(0\\) (double solution), \\(4\\), and \\(−4\\).\n\nAnalysis\n\nWe can see the solutions on the graph in Figure \\(\\PageIndex{1}\\). The x-coordinates of the points where the graph crosses the \\(x\\)-axis are the solutions—the \\(x\\)-intercepts. Notice on the graph that at the solution \\(0\\), the graph touches the \\(x\\)-axis and bounces back. It does not cross the \\(x\\)-axis. This is typical of double solutions.\n\n[Figure: Coordinate plane with the x-axis ranging from negative 5 to 5 and the y-axis ranging from negative 400 to 500 in intervals of 100. The function five times x to the fourth power minus eighty x squared equals zero is graphed along with the points (negative 4,0), (0,0), and (4,0).]\n\nFigure \\(\\PageIndex{1}\\)\n\nExercise \\(\\PageIndex{4}\\)\n\nSolve by factoring: \\(12x^4 = 3x^2\\).\n\nAnswer\n\n\\(x=0, x=12, x=−12\\)\n\nExample \\(\\PageIndex{5}\\): Solve a Polynomial by Grouping\n\nSolve a polynomial by grouping: \\(x^3+x^2−9x−9=0\\).\n\nSolution\n\nThis polynomial consists of \\(4\\) terms, which we can solve by grouping. Grouping procedures require factoring the first two terms and then factoring the last two terms. If the factors in the parentheses are identical, we can continue the process and solve, unless more factoring is suggested.\n\n\\[\\begin{align*} x^3+x^2-9x-9&= 0\\\\ x^2(x+1)-9(x+1)&= 0\\\\ (x^2-9)(x+1)&= 0 \\end{align*}\\]\n\nThe grouping process ends here, as we can factor \\(x^2−9\\) using the difference of squares formula.\n\n\\[\\begin{align*} (x^2-9)(x+1)&= 0\\\\ (x-3)(x+3)(x+1)&= 0\\\\ x&= 3\\\\ x&= -3\\\\ x&= -1 \\end{align*}\\]\n\nThe solutions are \\(3\\), \\(−3\\), and \\(−1\\). Note that the highest exponent is \\(3\\) and we obtained \\(3\\) solutions. We can see the solutions, the x-intercepts, on the graph in Figure \\(\\PageIndex{2}\\).\n\n[Figure: Coordinate plane with the x-axis ranging from negative 5 to 5 and the y-axis ranging from negative 30 to 20 in intervals of 5. The function x cubed plus x squared minus nine times x minus nine equals zero is graphed along with the points (negative 3,0), (negative 1,0), and (3,0).]\n\nFigure \\(\\PageIndex{2}\\)\n\nAnalysis\n\nWe looked at solving quadratic equations by factoring when the leading coefficient is \\(1\\). When the leading coefficient is not \\(1\\), we solved by grouping. Grouping requires four terms, which we obtained by splitting the linear term of quadratic equations. We can also use grouping for some polynomials of degree higher than \\(2\\), as we saw here, since there were already four terms.\n\nSolving Radical Equations\n\nRadical equations are equations that contain variables in the radicand (the expression under a radical symbol), such as\n\n\\[\\sqrt{3x+18}=x \\nonumber\\]\n\n\\[\\sqrt{x+3}=x-3 \\nonumber\\]\n\n\\[\\sqrt{x+5}-\\sqrt{x-3}=2 \\nonumber\\]\n\nRadical equations may have one or more radical terms, and are solved by eliminating each radical, one at a time. We have to be careful when solving radical equations, as it is not unusual to find extraneous solutions, roots that are not, in fact, solutions to the equation. These solutions are not due to a mistake in the solving method, but result from the process of raising both sides of an equation to a power. However, checking each answer in the original equation will confirm the true solutions.\n\nRADICAL EQUATIONS\n\nAn equation containing terms with a variable in the radicand is called a radical equation.\n\nHowto: Given a radical equation, solve it\n\n1. Isolate the radical expression on one side of the equal sign. Put all remaining terms on the other side.\n\n2. If the radical is a square root, then square both sides of the equation. If it is a cube root, then raise both sides of the equation to the third power. In other words, for an \\(n^{th}\\) root radical, raise both sides to the \\(n^{th}\\) power. Doing so eliminates the radical symbol.\n\n3. Solve the remaining equation.\n\n4. If a radical term still remains, repeat steps 1–2.\n\n5. Confirm solutions by substituting them into the original equation.\n\nExample \\(\\PageIndex{6}\\): Solving an Equation with One Radical\n\nSolve \\(\\sqrt{15−2x}=x\\).\n\nSolution\n\nThe radical is already isolated on the left side of the equal side, so proceed to square both sides.\n\n\\[\\begin{align*} \\sqrt{15-2x}&= x\\\\ {\\left (\\sqrt{15-2x} \\right )}^2&= {(x)}^2\\\\ 15-2x&= x^2 \\end{align*}\\]\n\nWe see that the remaining equation is a quadratic. Set it equal to zero and solve.\n\n\\[\\begin{align*} 0&= x^2+2x-15\\\\ 0&= (x+5)(x-3)\\\\ x&= -5\\\\ x&= 3 \\end{align*}\\]\n\nThe proposed solutions are \\(−5\\) and \\(3\\). Let us check each solution back in the original equation. First, check \\(x=−5\\).\n\n\\[\\begin{align*} \\sqrt{15-2x}&= x\\\\ \\sqrt{15-2(-5)}&=-5\\\\ \\sqrt{25}&= -5\\\\ 5&\\neq -5 \\end{align*}\\]\n\nThis is an extraneous solution. While no mistake was made solving the equation, we found a solution that does not satisfy the original equation.\n\nCheck \\(x=3\\).\n\n\\[\\begin{align*} \\sqrt{15-2x}&= x\\\\ \\sqrt{15-2(3)}&= 3\\\\ \\sqrt{9}&= 3\\\\ 3&= 3 \\end{align*}\\]\n\nThe solution is \\(3\\).\n\nExercise \\(\\PageIndex{5}\\)\n\nSolve the radical equation: \\(\\sqrt{x+3}=3x-1\\)\n\nAnswer\n\n\\(x=1\\), extraneous solution \\(x=−\\dfrac{2}{9}\\)\n\nExample \\(\\PageIndex{7}\\): Solving a Radical Equation Containing Two Radicals\n\nSolve \\(\\sqrt{2x+3}+\\sqrt{x-2}=4\\)\n\nSolution\n\nAs this equation contains two radicals, we isolate one radical, eliminate it, and then isolate the second radical.\n\n\\[\\sqrt{2x+3}+\\sqrt{x-2}=4 \\nonumber\\]\n\n\\[\\begin{align*} \\sqrt{2x+3}&= 4-\\sqrt{x-2} \\qquad \\text{Subtract } \\sqrt{x-2} \\text{ from both sides}\\\\ {\\left (\\sqrt{2x+3} \\right )}^2&= {\\left (4-\\sqrt{x-2} \\right )}^2\\qquad \\text{Square both sides} \\end{align*}\\]\n\nUse the perfect square formula to expand the right side: \\({(a−b)}^2=a^2−2ab+b^2\\).\n\n\\[\\begin{align*} 2x+3&= {(4)}^2-2(4)\\sqrt{x-2}+{(\\sqrt{x-2})}^2\\\\ 2x+3&= 16-8\\sqrt{x-2}+(x-2)\\\\ 2x+3&= 14+x-8\\sqrt{x-2} \\qquad \\text{Combine like terms}\\\\ x-11&= -8\\sqrt{x-2} \\qquad \\text{Isolate the second radical}\\\\ {(x-11)}^2&= {(-8\\sqrt{x-2})}^2 \\qquad \\text{Square both sides}\\\\ x^2-22x+121&= 64(x-2) \\end{align*}\\]\n\nNow that both radicals have been eliminated, set the quadratic equal to zero and solve.\n\n\\[\\begin{align*} x^2-22x+121&= 64x-128\\\\ x^2-86x+249&= 0\\\\ (x-3)(x-83)&= 0\\\\ x&= 3\\\\ x&= 83 \\end{align*}\\]\n\nThe proposed solutions are \\(3\\) and \\(83\\). Check each solution in the original equation.\n\n\\[\\begin{align*} \\sqrt{2x+3}+\\sqrt{x-2}&= 4\\\\ \\sqrt{2x+3}&= 4-\\sqrt{x-2}\\\\ \\sqrt{2(3)+3}&= 4-\\sqrt{(3)-2}\\\\ \\sqrt{9}&= 4-\\sqrt{1}\\\\ 3&= 3 \\end{align*}\\]\n\nOne solution is \\(3\\).\n\nCheck \\(x=83\\).\n\n\\[\\begin{align*} \\sqrt{2x+3}+\\sqrt{x-2}&= 4\\\\ \\sqrt{2x+3}&= 4-\\sqrt{x-2}\\\\ \\sqrt{2(83)+3}&= 4-\\sqrt{(83)-2}\\\\ \\sqrt{169}&= 4-\\sqrt{81}\\\\ 13&\\neq -5 \\end{align*}\\]\n\nThe only solution is \\(3\\). We see that \\(x=83\\) is an extraneous solution.\n\nExercise \\(\\PageIndex{6}\\)\n\nSolve the equation with two radicals: \\(\\sqrt{3x+7}+\\sqrt{x+2}=1\\)\n\nAnswer\n\n\\(x=−2\\), extraneous solution \\(x=−1\\)\n\nSolving an Absolute Value Equation\n\nNext, we will learn how to solve an absolute value equation. To solve an equation such as \\(|2x−6|=8\\), we notice that the absolute value will be equal to \\(8\\) if the quantity inside the absolute value bars is \\(8\\) or \\(−8\\). This leads to two different equations we can solve independently.\n\n\\[\\begin{align*} 2x-6&= 8\\\\ 2x&= 14\\\\ x&= 7 \\end{align*}\\]\n\nOR\n\n\\[\\begin{align*} 2x-6&= -8\\\\ 2x&= -2\\\\ x&= -1 \\end{align*}\\]\n\nKnowing how to solve problems involving absolute value functions is useful. For example, we may need to identify numbers or points on a line that are at a specified distance from a given reference point.\n\nABSOLUTE VALUE EQUATIONS\n\nThe absolute value of \\(x\\) is written as \\(|x|\\). It has the following properties:\n\nIf \\(x≥0\\), then \\(|x|=x\\).If \\(x<0\\), then \\(x=−x\\).\n\nFor real numbers \\(A\\) and \\(B\\), an equation of the form \\(|A|=B\\), with \\(B≥0\\), will have solutions when \\(A=B\\) or \\(A=−B\\). If \\(B<0\\), the equation \\(|A|=B\\) has no solution.\n\nAn absolute value equation in the form \\(|ax+b|=c\\) has the following properties:\n\nIf \\(c<0\\),\\(|ax+b|=c\\) has no solution.\n\nIf \\(c=0\\),\\(|ax+b|=c\\)has one solution.\n\nIf \\(c>0\\),\\(|ax+b|=c\\) has two solutions.\n\nHow to\n\nGiven an absolute value equation, solve it.\n\n1. Isolate the absolute value expression on one side of the equal sign.\n\n2. If \\(c>0\\), write and solve two equations: \\(ax+b=c\\) and \\(ax+b=−c\\).\n\nExample \\(\\PageIndex{8}\\): Solving Absolute Value Equations\n\nSolve the following absolute value equations:\n\n1. \\(|6x+4|=8\\)\n\n2. \\(|3x+4|=−9\\)\n\n3. \\(|3x−5|−4=6\\)\n\n4. \\(|−5x+10|=0\\)\n\nSolution\n\n1. \\(|6x+4|=8\\)\n\nWrite two equations and solve each:\n\n\\[\\begin{align*} 6x+4&= 8\\\\ 6x&= 4\\\\ x&= \\dfrac{2}{3} \\end{align*}\\]\n\nOR\n\n\\[\\begin{align*} 6x+4&= -8\\\\ 6x&= -12\\\\ x&= -2 \\end{align*}\\]\n\nThe two solutions are \\(\\dfrac{2}{3}\\) and \\(−2\\).\n\n2. \\(|3x+4|=−9\\)\n\nThere is no solution as an absolute value cannot be negative.\n\n3. \\(|3x−5|−4=6\\)\n\nIsolate the absolute value expression and then write two equations.\n\n\\[\\begin{align*} |3x-5|-4&= 6\\\\ |3x-5|&= 10\\\\ 3x-5&= 10\\\\ 3x&= 15\\\\ x&= 5 \\end{align*}\\]\n\nOR\n\n\\[\\begin{align*} 3x-5&= -10\\\\ 3x=-5\\\\ x=\\dfrac{5}{3} \\end{align*}\\]\n\nThere are two solutions: \\(5\\), and \\(-\\dfrac{5}{3}\\).\n\n4. \\(|−5x+10|=0\\)\n\nThe equation is set equal to zero, so we have to write only one equation.\n\n\\[\\begin{align*} -5x+10&= 0\\\\ -5x&= -10\\\\ x&= 2 \\end{align*}\\]\n\nThere is one solution: \\(2\\).\n\nExercise \\(\\PageIndex{7}\\)\n\nSolve the absolute value equation: \\(|1−4x|+8=13\\).\n\nAnswer\n\n\\(x=−1, x=\\dfrac{3}{2}\\)\n\nSolving Other Types of Equations\n\nThere are many other types of equations in addition to the ones we have discussed so far. We will see more of them throughout the text. Here, we will discuss equations that are in quadratic form, and rational equations that result in a quadratic.\n\nSolving Equations in Quadratic Form\n\nEquations in quadratic form are equations with three terms. The first term has a power other than \\(2\\). The middle term has an exponent that is one-half the exponent of the leading term. The third term is a constant. We can solve equations in this form as if they were quadratic. A few examples of these equations include \\(x^4−5x^2+4=0\\),\\(x^6+7x^3−8=0\\), and \\(x^{\\tfrac{2}{3}} +4x^{\\tfrac{1}{3}}+2=0\\). In each one, doubling the exponent of the middle term equals the exponent on the leading term. We can solve these equations by substituting a variable for the middle term.\n\nQUADRATIC FORM\n\nIf the exponent on the middle term is one-half of the exponent on the leading term, we have an equation in quadratic form, which we can solve as if it were a quadratic. We substitute a variable for the middle term to solve equations in quadratic form.\n\nHowto: Given an equation quadratic in form, solve it\n\n1. Identify the exponent on the leading term and determine whether it is double the exponent on the middle term.\n\n2. If it is, substitute a variable, such as \\(u\\), for the variable portion of the middle term.\n\n3. Rewrite the equation so that it takes on the standard form of a quadratic.\n\n4. Solve using one of the usual methods for solving a quadratic.\n\n5. Replace the substitution variable with the original term.\n\n6. Solve the remaining equation.\n\nExample \\(\\PageIndex{9}\\): Solving a Fourth-degree Equation in Quadratic Form\n\nSolve this fourth-degree equation: \\(3x^4−2x^2−1=0\\).\n\nSolution\n\nThis equation fits the main criteria, that the power on the leading term is double the power on the middle term. Next, we will make a substitution for the variable term in the middle. Let \\(u =x^2\\). Rewrite the equation in \\(u\\).\n\n\\[3u^2−2u−1=0 \\nonumber\\]\n\nNow solve the quadratic.\n\n\\[\\begin{align*} 3u^2-2u-1&= 0\\\\ (3u+1)(u-1)&= 0 \\end{align*}\\]\n\nSolve each factor and replace the original term for \\(u\\).\n\n\\[\\begin{align*} 3u+1&= 0\\\\ 3u&= -1\\\\ u&= -\\dfrac{1}{3}\\\\ x^2&= -\\dfrac{1}{3}\\\\ x&= \\pm i\\sqrt{\\dfrac{1}{3}}\\\\ u-1&= 0\\\\ u&= 1\\\\ x^2&= 1\\\\ x&= \\pm 1 \\end{align*}\\]\n\nThe solutions are \\(x=±i\\sqrt{\\dfrac{1}{3}}\\) and \\(x=±1\\)\n\nExercise \\(\\PageIndex{8}\\)\n\nSolve using substitution: \\(x^4−8x^2−9=0\\).\n\nAnswer\n\n\\(x=−3,3,−i,i\\)\n\nExample \\(\\PageIndex{10}\\): Solving an Equation in Quadratic Form Containing a Binomial\n\nSolve the equation in quadratic form: \\({(x+2)}^2+11(x+2)−12=0\\).\n\nSolution\n\nThis equation contains a binomial in place of the single variable. The tendency is to expand what is presented. However, recognizing that it fits the criteria for being in quadratic form makes all the difference in the solving process. First, make a substitution, letting \\(u =x+2\\). Then rewrite the equation in \\(u\\).\n\n\\[\\begin{align*} u^2+11u-12&= 0\\\\ (u+12)(u-1)&= 0 \\end{align*}\\]\n\nSolve using the zero-factor property and then replace \\(u\\) with the original expression.\n\n\\[\\begin{align*} u+12&= 0\\\\ u&= -12\\\\ x+2&= -12\\\\ x&= -14 \\end{align*}\\]\n\nThe second factor results in\n\n\\[\\begin{align*} u-1&= 0\\\\ u&= 1\\\\ x+2&= 1\\\\ x&= -1 \\end{align*}\\]\n\nWe have two solutions: \\(−14\\), and \\(−1\\).\n\nExercise \\(\\PageIndex{9}\\)\n\nSolve: \\({(x−5)}^2−4(x−5)−21=0\\).\n\nAnswer\n\n\\(x=2,x=12\\)\n\nSolving Rational Equations Resulting in a Quadratic\n\nEarlier, we solved rational equations. Sometimes, solving a rational equation results in a quadratic. When this happens, we continue the solution by simplifying the quadratic equation by one of the methods we have seen. It may turn out that there is no solution.\n\nExample \\(\\PageIndex{11}\\): Solving a Rational Equation Leading to a Quadratic\n\nSolve the following rational equation: \\(\\dfrac{-4x}{x-1}+\\dfrac{4}{x+1}=\\dfrac{-8}{x^2-1}\\)\n\nSolution\n\nWe want all denominators in factored form to find the LCD. Two of the denominators cannot be factored further. However, \\(x^2−1=(x+1)(x−1)\\). Then, the LCD is \\((x+1)(x−1)\\). Next, we multiply the whole equation by the LCD.\n\n\\[\\begin{align*} (x+1)(x-1)\\left (\\dfrac{-4x}{x-1}+\\dfrac{4}{x+1} \\right )&= \\left (\\dfrac{-8}{x^2-1} \\right )(x+1)(x-1)\\\\ -4x(x+1)+4(x-1)&= -8\\\\ -4x^2-4x+4x-4&= -8\\\\ -4x^2+4&= 0\\\\\n\n-4(x^2-1)&= 0\\\\ -4(x+1)(x-1)&= 0\\\\ x&= -1\\\\ x&= 1 \\end{align*}\\]\n\nIn this case, either solution produces a zero in the denominator in the original equation. Thus, there is no solution.\n\nExercise \\(\\PageIndex{10}\\)\n\nSolve \\(\\dfrac{3x+2}{x-2}+\\dfrac{1}{x}=\\dfrac{-2}{x^2-2x}\\)\n\nAnswer\n\n\\(x=−1, x= 0\\) is not a solution.\n\nMedia\n\nAccess these online resources for additional instruction and practice with different types of equations.\n\n1. Rational Equation with no Solution\n\n2. Solving equations with rational exponents using reciprocal powers\n\n3. Solving radical equations part 1 of 2\n\n4. Solving radical equations part 2 of 2\n\nKey Concepts\n\nRational exponents can be rewritten several ways depending on what is most convenient for the problem. To solve, both sides of the equation are raised to a power that will render the exponent on the variable equal to \\(1\\). See Example, Example, and Example.\n\nFactoring extends to higher-order polynomials when it involves factoring out the GCF or factoring by grouping. See Example and Example.\n\nWe can solve radical equations by isolating the radical and raising both sides of the equation to a power that matches the index. See Example and Example.\n\nTo solve absolute value equations, we need to write two equations, one for the positive value and one for the negative value. See Example.\n\nEquations in quadratic form are easy to spot, as the exponent on the first term is double the exponent on the second term and the third term is a constant. We may also see a binomial in place of the single variable. We use substitution to solve. See Example and Example.\n\nSolving a rational equation may also lead to a quadratic equation or an equation in quadratic form. See Example.\n\nThis page titled 2.6: Other Types of Equations was last modified on Thu, 26 Dec 2024 22:30:45 GMT and is shared under a CC BY  4.0  license and was authored, remixed, and/or curated by OpenStax via source content that was edited to the style and standards of the LibreTexts platform.",
+  "figures": [
+    {
+      "url": "https://math.libretexts.org/@api/deki/files/12008/fig_2.7.1.jpg?revision=1",
+      "alt": "Coordinate plane with the x-axis ranging from negative 5 to 5 and the y-axis ranging from negative 400 to 500 in intervals of 100. The function five times x to the fourth power minus eighty x squared equals zero is graphed along with the points (negative 4,0), (0,0), and (4,0).",
+      "credit": ""
+    },
+    {
+      "url": "https://math.libretexts.org/@api/deki/files/12009/fig_2.7.2.jpg?revision=1",
+      "alt": "Coordinate plane with the x-axis ranging from negative 5 to 5 and the y-axis ranging from negative 30 to 20 in intervals of 5. The function x cubed plus x squared minus nine times x minus nine equals zero is graphed along with the points (negative 3,0), (negative 1,0), and (3,0).",
+      "credit": ""
+    }
+  ],
+  "references": [
+    {
+      "text": "Example",
+      "url": "https://math.libretexts.org/Bookshelves/Algebra/Algebra_and_Trigonometry_1e_(OpenStax)/02:_Equations_and_Inequalities/2.06:_Other_Types_of_Equations#Example+2.7.1"
+    },
+    {
+      "text": "Example",
+      "url": "https://math.libretexts.org/Bookshelves/Algebra/Algebra_and_Trigonometry_1e_(OpenStax)/02:_Equations_and_Inequalities/2.06:_Other_Types_of_Equations#Example+2.7.2"
+    },
+    {
+      "text": "Example",
+      "url": "https://math.libretexts.org/Bookshelves/Algebra/Algebra_and_Trigonometry_1e_(OpenStax)/02:_Equations_and_Inequalities/2.06:_Other_Types_of_Equations#Example+2.7.3"
+    },
+    {
+      "text": "Example",
+      "url": "https://math.libretexts.org/Bookshelves/Algebra/Algebra_and_Trigonometry_1e_(OpenStax)/02:_Equations_and_Inequalities/2.06:_Other_Types_of_Equations#Example+2.7.4"
+    },
+    {
+      "text": "Example",
+      "url": "https://math.libretexts.org/Bookshelves/Algebra/Algebra_and_Trigonometry_1e_(OpenStax)/02:_Equations_and_Inequalities/2.06:_Other_Types_of_Equations#Example+2.7.5"
+    },
+    {
+      "text": "Example",
+      "url": "https://math.libretexts.org/Bookshelves/Algebra/Algebra_and_Trigonometry_1e_(OpenStax)/02:_Equations_and_Inequalities/2.06:_Other_Types_of_Equations#Example+2.7.6"
+    },
+    {
+      "text": "Example",
+      "url": "https://math.libretexts.org/Bookshelves/Algebra/Algebra_and_Trigonometry_1e_(OpenStax)/02:_Equations_and_Inequalities/2.06:_Other_Types_of_Equations#Example+2.7.7"
+    },
+    {
+      "text": "Example",
+      "url": "https://math.libretexts.org/Bookshelves/Algebra/Algebra_and_Trigonometry_1e_(OpenStax)/02:_Equations_and_Inequalities/2.06:_Other_Types_of_Equations#Example+2.7.8"
+    },
+    {
+      "text": "Example",
+      "url": "https://math.libretexts.org/Bookshelves/Algebra/Algebra_and_Trigonometry_1e_(OpenStax)/02:_Equations_and_Inequalities/2.06:_Other_Types_of_Equations#Example+2.7.9"
+    },
+    {
+      "text": "Example",
+      "url": "https://math.libretexts.org/Bookshelves/Algebra/Algebra_and_Trigonometry_1e_(OpenStax)/02:_Equations_and_Inequalities/2.06:_Other_Types_of_Equations#Example+2.7.10"
+    },
+    {
+      "text": "Example",
+      "url": "https://math.libretexts.org/Bookshelves/Algebra/Algebra_and_Trigonometry_1e_(OpenStax)/02:_Equations_and_Inequalities/2.06:_Other_Types_of_Equations#Example+2.7.11"
+    },
+    {
+      "text": "2.6: Other Types of Equations",
+      "url": "https://math.libretexts.org/Bookshelves/Algebra/Algebra_and_Trigonometry_1e_(OpenStax)/02%3A_Equations_and_Inequalities/2.06%3A_Other_Types_of_Equations"
+    },
+    {
+      "text": "CC BY  4.0",
+      "url": "https://creativecommons.org/licenses/by/4.0"
+    },
+    {
+      "text": "OpenStax",
+      "url": "https://openstax.org/"
+    },
+    {
+      "text": "source content",
+      "url": "https://openstax.org/details/books/precalculus"
+    }
+  ],
+  "exercises": [
+    {
+      "ordinal": 1,
+      "sourceNumber": "",
+      "sourceAnchor": "",
+      "kind": "example-or-exercise",
+      "context": "and so on.\n\nA rational exponent indicates a power in the numerator and a root in the denominator. There are multiple ways of writing an expression, a variable, or a number with a rational exponent:\n\n\\[a^{\\tfrac{m}{n}}={\\left (a^{\\tfrac{1}{n}} \\right )}^m={a^m}^{\\tfrac{1}{n}}=\\sqrt[n]{a^m}={(\\sqrt[n]{a})}^m\\]",
+      "original": "Example \\(\\PageIndex{1}\\): Evaluating a Number Raised to a Rational Exponent\n\nEvaluate \\(8^{\\tfrac{2}{3}}\\)\n\nSolution\n\nWhether we take the root first or the power first depends on the number. It is easy to find the cube root of \\(8\\), so rewrite \\(8^{\\tfrac{2}{3}}\\) as \\({\\left (8^{\\tfrac{1}{3}} \\right )}^2\\).\n\n\\[\\begin{align*} {\\left (8^{\\tfrac{1}{3}} \\right )}^2&= {(2)}^2\\\\ &= 4 \\end{align*}\\]",
+      "prompt": "Example \\(\\PageIndex{1}\\): Evaluating a Number Raised to a Rational Exponent\n\nEvaluate \\(8^{\\tfrac{2}{3}}\\)\n\nSolution\n\nWhether we take the root first or the power first depends on the number. It is easy to find the cube root of \\(8\\), so rewrite \\(8^{\\tfrac{2}{3}}\\) as \\({\\left (8^{\\tfrac{1}{3}} \\right )}^2\\).\n\n\\[\\begin{align*} {\\left (8^{\\tfrac{1}{3}} \\right )}^2&= {(2)}^2\\\\ &= 4 \\end{align*}\\]",
+      "sourceAnswers": [],
+      "hasFigure": false,
+      "status": "draft",
+      "answerVerified": false,
+      "translationStatus": "pending",
+      "mappingStatus": "pending"
+    },
+    {
+      "ordinal": 2,
+      "sourceNumber": "",
+      "sourceAnchor": "",
+      "kind": "exercise-candidate",
+      "context": "and so on.\n\nA rational exponent indicates a power in the numerator and a root in the denominator. There are multiple ways of writing an expression, a variable, or a number with a rational exponent:\n\n\\[a^{\\tfrac{m}{n}}={\\left (a^{\\tfrac{1}{n}} \\right )}^m={a^m}^{\\tfrac{1}{n}}=\\sqrt[n]{a^m}={(\\sqrt[n]{a})}^m\\]",
+      "original": "Exercise \\(\\PageIndex{1}\\)\n\nEvaluate \\({64}^{-\\tfrac{1}{3}}\\)\n\nAnswer\n\n\\(\\dfrac{1}{4}\\)",
+      "prompt": "Exercise \\(\\PageIndex{1}\\)\n\nEvaluate \\({64}^{-\\tfrac{1}{3}}\\)",
+      "sourceAnswers": [
+        "\\(\\dfrac{1}{4}\\)"
+      ],
+      "hasFigure": false,
+      "status": "draft",
+      "answerVerified": false,
+      "translationStatus": "pending",
+      "mappingStatus": "pending"
+    },
+    {
+      "ordinal": 3,
+      "sourceNumber": "",
+      "sourceAnchor": "",
+      "kind": "example-or-exercise",
+      "context": "and so on.\n\nA rational exponent indicates a power in the numerator and a root in the denominator. There are multiple ways of writing an expression, a variable, or a number with a rational exponent:\n\n\\[a^{\\tfrac{m}{n}}={\\left (a^{\\tfrac{1}{n}} \\right )}^m={a^m}^{\\tfrac{1}{n}}=\\sqrt[n]{a^m}={(\\sqrt[n]{a})}^m\\]",
+      "original": "Example \\(\\PageIndex{2}\\): Solve the Equation Including a Variable Raised to a Rational Exponent\n\nSolve the equation in which a variable is raised to a rational exponent: \\(x^{\\tfrac{5}{4}} = 32\\).\n\nSolution\n\nThe way to remove the exponent on \\(x\\) is by raising both sides of the equation to a power that is the reciprocal of \\(\\dfrac{5}{4}\\), which is \\(\\dfrac{4}{5}\\).\n\n\\[\\begin{align*} x^{\\tfrac{5}{4}}&= 32\\\\ {\\left(x^{\\tfrac{5}{4}}\\right)}^{\\tfrac{4}{5}}&= {\\left(32\\right)}^{\\tfrac{4}{5}}\\\\ x&= (2)^4\\\\ &= 16 \\end{align*}\\]",
+      "prompt": "Example \\(\\PageIndex{2}\\): Solve the Equation Including a Variable Raised to a Rational Exponent\n\nSolve the equation in which a variable is raised to a rational exponent: \\(x^{\\tfrac{5}{4}} = 32\\).\n\nSolution\n\nThe way to remove the exponent on \\(x\\) is by raising both sides of the equation to a power that is the reciprocal of \\(\\dfrac{5}{4}\\), which is \\(\\dfrac{4}{5}\\).\n\n\\[\\begin{align*} x^{\\tfrac{5}{4}}&= 32\\\\ {\\left(x^{\\tfrac{5}{4}}\\right)}^{\\tfrac{4}{5}}&= {\\left(32\\right)}^{\\tfrac{4}{5}}\\\\ x&= (2)^4\\\\ &= 16 \\end{align*}\\]",
+      "sourceAnswers": [],
+      "hasFigure": false,
+      "status": "draft",
+      "answerVerified": false,
+      "translationStatus": "pending",
+      "mappingStatus": "pending"
+    },
+    {
+      "ordinal": 4,
+      "sourceNumber": "",
+      "sourceAnchor": "",
+      "kind": "exercise-candidate",
+      "context": "and so on.\n\nA rational exponent indicates a power in the numerator and a root in the denominator. There are multiple ways of writing an expression, a variable, or a number with a rational exponent:\n\n\\[a^{\\tfrac{m}{n}}={\\left (a^{\\tfrac{1}{n}} \\right )}^m={a^m}^{\\tfrac{1}{n}}=\\sqrt[n]{a^m}={(\\sqrt[n]{a})}^m\\]",
+      "original": "Exercise \\(\\PageIndex{2}\\)\n\nSolve the equation \\(x^{\\tfrac{3}{2}} = 125\\).\n\nAnswer\n\n\\(25\\)",
+      "prompt": "Exercise \\(\\PageIndex{2}\\)\n\nSolve the equation \\(x^{\\tfrac{3}{2}} = 125\\).",
+      "sourceAnswers": [
+        "\\(25\\)"
+      ],
+      "hasFigure": false,
+      "status": "draft",
+      "answerVerified": false,
+      "translationStatus": "pending",
+      "mappingStatus": "pending"
+    },
+    {
+      "ordinal": 5,
+      "sourceNumber": "",
+      "sourceAnchor": "",
+      "kind": "example-or-exercise",
+      "context": "and so on.\n\nA rational exponent indicates a power in the numerator and a root in the denominator. There are multiple ways of writing an expression, a variable, or a number with a rational exponent:\n\n\\[a^{\\tfrac{m}{n}}={\\left (a^{\\tfrac{1}{n}} \\right )}^m={a^m}^{\\tfrac{1}{n}}=\\sqrt[n]{a^m}={(\\sqrt[n]{a})}^m\\]",
+      "original": "Example \\(\\PageIndex{3}\\): Solving an Equation Involving Rational Exponents and Factoring\n\nSolve \\(3x^{\\tfrac{3}{4}} = x^{\\tfrac{1}{2}}\\).\n\nSolution\n\nThis equation involves rational exponents as well as factoring rational exponents. Let us take this one step at a time. First, put the variable terms on one side of the equal sign and set the equation equal to zero.\n\n\\[\\begin{align*} 3x^{\\tfrac{3}{4}}-\\left(x^{\\tfrac{1}{2}}\\right)&= x^{\\tfrac{1}{2}}-\\left(x^{\\tfrac{1}{2}}\\right)\\\\ 3x^{\\tfrac{3}{4}}-x^{\\tfrac{1}{2}}&= 0 \\end{align*}\\]\n\nNow, it looks like we should factor the left side, but what do we factor out? We can always factor the term with the lowest exponent. Rewrite \\(x^{\\tfrac{1}{2}}\\) as \\(x^{\\tfrac{2}{4}}\\). Then, factor out \\(x^{\\tfrac{2}{4}}\\) from both terms on the left.\n\n\\[\\begin{align*} 3x^{\\tfrac{3}{4}}-x^{\\tfrac{1}{2}}&= 0\\\\ x^{\\tfrac{2}{4}}\\left (3x^{\\tfrac{1}{4}}-1 \\right )&= 0 \\end{align*}\\]\n\nWhere did \\(x^{\\tfrac{1}{4}}\\) come from? Remember, when we multiply two numbers with the same base, we add the exponents. Therefore, if we multiply \\(x^{\\tfrac{2}{4}}\\) back in using the distributive property, we get the expression we had before the factoring, which is what should happen. We need an exponent such that when added to \\(\\dfrac{2}{4}\\) equals \\(\\dfrac{3}{4}\\). Thus, the exponent on \\(x\\) in the parentheses is \\(\\dfrac{1}{4}\\).\n\nLet us continue. Now we have two factors and can use the zero factor theorem.\n\n\\[\\begin{align*}\n\nx^{\\tfrac{2}{4}}\\left (3x^{\\tfrac{1}{4}}-1 \\right )&= 0\\\\\n\nx^{\\tfrac{2}{4}}&= 0\\\\\n\nx&= 0\\\\\n\n3x^{\\tfrac{1}{4}}-1&= 0\\\\\n\n3x^{\\tfrac{1}{4}}&= 1\\\\\n\nx^{\\tfrac{1}{4}}&= \\dfrac{1}{3},\\qquad \\text{Divide both sides by 3.}\\\\\n\n{\\left (x^{\\tfrac{1}{4}} \\right )}^4&= {\\left (\\dfrac{1}{3} \\right )}^4, \\qquad \\text{Raise both sides to the reciprocal of } \\dfrac{1}{4}\\\\\n\nx&= \\dfrac{1}{81}\n\n\\end{align*}\\]\n\nThe two solutions are \\(0\\) and \\(\\dfrac{1}{81}\\).",
+      "prompt": "Example \\(\\PageIndex{3}\\): Solving an Equation Involving Rational Exponents and Factoring\n\nSolve \\(3x^{\\tfrac{3}{4}} = x^{\\tfrac{1}{2}}\\).\n\nSolution\n\nThis equation involves rational exponents as well as factoring rational exponents. Let us take this one step at a time. First, put the variable terms on one side of the equal sign and set the equation equal to zero.\n\n\\[\\begin{align*} 3x^{\\tfrac{3}{4}}-\\left(x^{\\tfrac{1}{2}}\\right)&= x^{\\tfrac{1}{2}}-\\left(x^{\\tfrac{1}{2}}\\right)\\\\ 3x^{\\tfrac{3}{4}}-x^{\\tfrac{1}{2}}&= 0 \\end{align*}\\]\n\nNow, it looks like we should factor the left side, but what do we factor out? We can always factor the term with the lowest exponent. Rewrite \\(x^{\\tfrac{1}{2}}\\) as \\(x^{\\tfrac{2}{4}}\\). Then, factor out \\(x^{\\tfrac{2}{4}}\\) from both terms on the left.\n\n\\[\\begin{align*} 3x^{\\tfrac{3}{4}}-x^{\\tfrac{1}{2}}&= 0\\\\ x^{\\tfrac{2}{4}}\\left (3x^{\\tfrac{1}{4}}-1 \\right )&= 0 \\end{align*}\\]\n\nWhere did \\(x^{\\tfrac{1}{4}}\\) come from? Remember, when we multiply two numbers with the same base, we add the exponents. Therefore, if we multiply \\(x^{\\tfrac{2}{4}}\\) back in using the distributive property, we get the expression we had before the factoring, which is what should happen. We need an exponent such that when added to \\(\\dfrac{2}{4}\\) equals \\(\\dfrac{3}{4}\\). Thus, the exponent on \\(x\\) in the parentheses is \\(\\dfrac{1}{4}\\).\n\nLet us continue. Now we have two factors and can use the zero factor theorem.\n\n\\[\\begin{align*}\n\nx^{\\tfrac{2}{4}}\\left (3x^{\\tfrac{1}{4}}-1 \\right )&= 0\\\\\n\nx^{\\tfrac{2}{4}}&= 0\\\\\n\nx&= 0\\\\\n\n3x^{\\tfrac{1}{4}}-1&= 0\\\\\n\n3x^{\\tfrac{1}{4}}&= 1\\\\\n\nx^{\\tfrac{1}{4}}&= \\dfrac{1}{3},\\qquad \\text{Divide both sides by 3.}\\\\\n\n{\\left (x^{\\tfrac{1}{4}} \\right )}^4&= {\\left (\\dfrac{1}{3} \\right )}^4, \\qquad \\text{Raise both sides to the reciprocal of } \\dfrac{1}{4}\\\\\n\nx&= \\dfrac{1}{81}\n\n\\end{align*}\\]\n\nThe two solutions are \\(0\\) and \\(\\dfrac{1}{81}\\).",
+      "sourceAnswers": [],
+      "hasFigure": false,
+      "status": "draft",
+      "answerVerified": false,
+      "translationStatus": "pending",
+      "mappingStatus": "pending"
+    },
+    {
+      "ordinal": 6,
+      "sourceNumber": "",
+      "sourceAnchor": "",
+      "kind": "exercise-candidate",
+      "context": "and so on.\n\nA rational exponent indicates a power in the numerator and a root in the denominator. There are multiple ways of writing an expression, a variable, or a number with a rational exponent:\n\n\\[a^{\\tfrac{m}{n}}={\\left (a^{\\tfrac{1}{n}} \\right )}^m={a^m}^{\\tfrac{1}{n}}=\\sqrt[n]{a^m}={(\\sqrt[n]{a})}^m\\]",
+      "original": "Exercise \\(\\PageIndex{3}\\)\n\nSolve: \\({\\left(x+5\\right)}^{\\tfrac{3}{2}}=8\\).\n\nAnswer\n\n\\(-1\\)",
+      "prompt": "Exercise \\(\\PageIndex{3}\\)\n\nSolve: \\({\\left(x+5\\right)}^{\\tfrac{3}{2}}=8\\).",
+      "sourceAnswers": [
+        "\\(-1\\)"
+      ],
+      "hasFigure": false,
+      "status": "draft",
+      "answerVerified": false,
+      "translationStatus": "pending",
+      "mappingStatus": "pending"
+    },
+    {
+      "ordinal": 7,
+      "sourceNumber": "",
+      "sourceAnchor": "",
+      "kind": "example-or-exercise",
+      "context": "\\[a_nx^n+a_{n−1}x^{n−1}+⋅⋅⋅+a_2x^2+a_1x+a_0\\]\n\nwhere \\(n\\) is a positive integer and \\(a_n ,…, a_0\\) are real numbers and \\(a_n≠0\\).\n\nSetting the polynomial equal to zero gives a polynomial equation. The total number of solutions (real and complex) to a polynomial equation is equal to the highest exponent \\(n\\).",
+      "original": "Example \\(\\PageIndex{4}\\): Solving a Polynomial by Factoring\n\nSolve the polynomial by factoring: \\(5x^4 = 80x^2\\).\n\nSolution\n\nFirst, set the equation equal to zero. Then factor out what is common to both terms, the GCF.\n\n\\[\\begin{align*} 5x^4-80x^2&= 0\\\\ 5x^2(x^2-16)&= 0 \\end{align*}\\]\n\nNotice that we have the difference of squares in the factor \\(x^2−16\\), which we will continue to factor and obtain two solutions. The first term, \\(5x^2\\), generates, technically, two solutions as the exponent is \\(2\\), but they are the same solution.\n\n\\[\\begin{align*} 5x^2&= 0\\\\ x&=0\\\\ x^2-16&= 0\\\\ (x+4)(x-4)&= 0\\\\ x&= 4\\\\ x&= -4 \\end{align*}\\]\n\nThe solutions are \\(0\\) (double solution), \\(4\\), and \\(−4\\).\n\nAnalysis\n\nWe can see the solutions on the graph in Figure \\(\\PageIndex{1}\\). The x-coordinates of the points where the graph crosses the \\(x\\)-axis are the solutions—the \\(x\\)-intercepts. Notice on the graph that at the solution \\(0\\), the graph touches the \\(x\\)-axis and bounces back. It does not cross the \\(x\\)-axis. This is typical of double solutions.\n\n[Figure: Coordinate plane with the x-axis ranging from negative 5 to 5 and the y-axis ranging from negative 400 to 500 in intervals of 100. The function five times x to the fourth power minus eighty x squared equals zero is graphed along with the points (negative 4,0), (0,0), and (4,0).]\n\nFigure \\(\\PageIndex{1}\\)",
+      "prompt": "Example \\(\\PageIndex{4}\\): Solving a Polynomial by Factoring\n\nSolve the polynomial by factoring: \\(5x^4 = 80x^2\\).\n\nSolution\n\nFirst, set the equation equal to zero. Then factor out what is common to both terms, the GCF.\n\n\\[\\begin{align*} 5x^4-80x^2&= 0\\\\ 5x^2(x^2-16)&= 0 \\end{align*}\\]\n\nNotice that we have the difference of squares in the factor \\(x^2−16\\), which we will continue to factor and obtain two solutions. The first term, \\(5x^2\\), generates, technically, two solutions as the exponent is \\(2\\), but they are the same solution.\n\n\\[\\begin{align*} 5x^2&= 0\\\\ x&=0\\\\ x^2-16&= 0\\\\ (x+4)(x-4)&= 0\\\\ x&= 4\\\\ x&= -4 \\end{align*}\\]\n\nThe solutions are \\(0\\) (double solution), \\(4\\), and \\(−4\\).\n\nAnalysis\n\nWe can see the solutions on the graph in Figure \\(\\PageIndex{1}\\). The x-coordinates of the points where the graph crosses the \\(x\\)-axis are the solutions—the \\(x\\)-intercepts. Notice on the graph that at the solution \\(0\\), the graph touches the \\(x\\)-axis and bounces back. It does not cross the \\(x\\)-axis. This is typical of double solutions.\n\n[Figure: Coordinate plane with the x-axis ranging from negative 5 to 5 and the y-axis ranging from negative 400 to 500 in intervals of 100. The function five times x to the fourth power minus eighty x squared equals zero is graphed along with the points (negative 4,0), (0,0), and (4,0).]\n\nFigure \\(\\PageIndex{1}\\)",
+      "sourceAnswers": [],
+      "hasFigure": true,
+      "status": "draft",
+      "answerVerified": false,
+      "translationStatus": "pending",
+      "mappingStatus": "pending"
+    },
+    {
+      "ordinal": 8,
+      "sourceNumber": "",
+      "sourceAnchor": "",
+      "kind": "exercise-candidate",
+      "context": "\\[a_nx^n+a_{n−1}x^{n−1}+⋅⋅⋅+a_2x^2+a_1x+a_0\\]\n\nwhere \\(n\\) is a positive integer and \\(a_n ,…, a_0\\) are real numbers and \\(a_n≠0\\).\n\nSetting the polynomial equal to zero gives a polynomial equation. The total number of solutions (real and complex) to a polynomial equation is equal to the highest exponent \\(n\\).",
+      "original": "Exercise \\(\\PageIndex{4}\\)\n\nSolve by factoring: \\(12x^4 = 3x^2\\).\n\nAnswer\n\n\\(x=0, x=12, x=−12\\)",
+      "prompt": "Exercise \\(\\PageIndex{4}\\)\n\nSolve by factoring: \\(12x^4 = 3x^2\\).",
+      "sourceAnswers": [
+        "\\(x=0, x=12, x=−12\\)"
+      ],
+      "hasFigure": false,
+      "status": "draft",
+      "answerVerified": false,
+      "translationStatus": "pending",
+      "mappingStatus": "pending"
+    },
+    {
+      "ordinal": 9,
+      "sourceNumber": "",
+      "sourceAnchor": "",
+      "kind": "example-or-exercise",
+      "context": "\\[a_nx^n+a_{n−1}x^{n−1}+⋅⋅⋅+a_2x^2+a_1x+a_0\\]\n\nwhere \\(n\\) is a positive integer and \\(a_n ,…, a_0\\) are real numbers and \\(a_n≠0\\).\n\nSetting the polynomial equal to zero gives a polynomial equation. The total number of solutions (real and complex) to a polynomial equation is equal to the highest exponent \\(n\\).",
+      "original": "Example \\(\\PageIndex{5}\\): Solve a Polynomial by Grouping\n\nSolve a polynomial by grouping: \\(x^3+x^2−9x−9=0\\).\n\nSolution\n\nThis polynomial consists of \\(4\\) terms, which we can solve by grouping. Grouping procedures require factoring the first two terms and then factoring the last two terms. If the factors in the parentheses are identical, we can continue the process and solve, unless more factoring is suggested.\n\n\\[\\begin{align*} x^3+x^2-9x-9&= 0\\\\ x^2(x+1)-9(x+1)&= 0\\\\ (x^2-9)(x+1)&= 0 \\end{align*}\\]\n\nThe grouping process ends here, as we can factor \\(x^2−9\\) using the difference of squares formula.\n\n\\[\\begin{align*} (x^2-9)(x+1)&= 0\\\\ (x-3)(x+3)(x+1)&= 0\\\\ x&= 3\\\\ x&= -3\\\\ x&= -1 \\end{align*}\\]\n\nThe solutions are \\(3\\), \\(−3\\), and \\(−1\\). Note that the highest exponent is \\(3\\) and we obtained \\(3\\) solutions. We can see the solutions, the x-intercepts, on the graph in Figure \\(\\PageIndex{2}\\).\n\n[Figure: Coordinate plane with the x-axis ranging from negative 5 to 5 and the y-axis ranging from negative 30 to 20 in intervals of 5. The function x cubed plus x squared minus nine times x minus nine equals zero is graphed along with the points (negative 3,0), (negative 1,0), and (3,0).]\n\nFigure \\(\\PageIndex{2}\\)\n\nAnalysis\n\nWe looked at solving quadratic equations by factoring when the leading coefficient is \\(1\\). When the leading coefficient is not \\(1\\), we solved by grouping. Grouping requires four terms, which we obtained by splitting the linear term of quadratic equations. We can also use grouping for some polynomials of degree higher than \\(2\\), as we saw here, since there were already four terms.",
+      "prompt": "Example \\(\\PageIndex{5}\\): Solve a Polynomial by Grouping\n\nSolve a polynomial by grouping: \\(x^3+x^2−9x−9=0\\).\n\nSolution\n\nThis polynomial consists of \\(4\\) terms, which we can solve by grouping. Grouping procedures require factoring the first two terms and then factoring the last two terms. If the factors in the parentheses are identical, we can continue the process and solve, unless more factoring is suggested.\n\n\\[\\begin{align*} x^3+x^2-9x-9&= 0\\\\ x^2(x+1)-9(x+1)&= 0\\\\ (x^2-9)(x+1)&= 0 \\end{align*}\\]\n\nThe grouping process ends here, as we can factor \\(x^2−9\\) using the difference of squares formula.\n\n\\[\\begin{align*} (x^2-9)(x+1)&= 0\\\\ (x-3)(x+3)(x+1)&= 0\\\\ x&= 3\\\\ x&= -3\\\\ x&= -1 \\end{align*}\\]\n\nThe solutions are \\(3\\), \\(−3\\), and \\(−1\\). Note that the highest exponent is \\(3\\) and we obtained \\(3\\) solutions. We can see the solutions, the x-intercepts, on the graph in Figure \\(\\PageIndex{2}\\).\n\n[Figure: Coordinate plane with the x-axis ranging from negative 5 to 5 and the y-axis ranging from negative 30 to 20 in intervals of 5. The function x cubed plus x squared minus nine times x minus nine equals zero is graphed along with the points (negative 3,0), (negative 1,0), and (3,0).]\n\nFigure \\(\\PageIndex{2}\\)\n\nAnalysis\n\nWe looked at solving quadratic equations by factoring when the leading coefficient is \\(1\\). When the leading coefficient is not \\(1\\), we solved by grouping. Grouping requires four terms, which we obtained by splitting the linear term of quadratic equations. We can also use grouping for some polynomials of degree higher than \\(2\\), as we saw here, since there were already four terms.",
+      "sourceAnswers": [],
+      "hasFigure": true,
+      "status": "draft",
+      "answerVerified": false,
+      "translationStatus": "pending",
+      "mappingStatus": "pending"
+    },
+    {
+      "ordinal": 10,
+      "sourceNumber": "1",
+      "sourceAnchor": "",
+      "kind": "exercise-candidate",
+      "context": "\\[\\sqrt{x+5}-\\sqrt{x-3}=2 \\nonumber\\]\n\nRadical equations may have one or more radical terms, and are solved by eliminating each radical, one at a time. We have to be careful when solving radical equations, as it is not unusual to find extraneous solutions, roots that are not, in fact, solutions to the equation. These solutions are not due to a mistake in the solving method, but result from the process of raising both sides of an equation to a power. However, checking each answer in the original equation will confirm the true solutions.\n\nAn equation containing terms with a variable in the radicand is called a radical equation.",
+      "original": "1. Isolate the radical expression on one side of the equal sign. Put all remaining terms on the other side.",
+      "prompt": "1. Isolate the radical expression on one side of the equal sign. Put all remaining terms on the other side.",
+      "sourceAnswers": [],
+      "hasFigure": false,
+      "status": "draft",
+      "answerVerified": false,
+      "translationStatus": "pending",
+      "mappingStatus": "pending"
+    },
+    {
+      "ordinal": 11,
+      "sourceNumber": "2",
+      "sourceAnchor": "",
+      "kind": "exercise-candidate",
+      "context": "\\[\\sqrt{x+5}-\\sqrt{x-3}=2 \\nonumber\\]\n\nRadical equations may have one or more radical terms, and are solved by eliminating each radical, one at a time. We have to be careful when solving radical equations, as it is not unusual to find extraneous solutions, roots that are not, in fact, solutions to the equation. These solutions are not due to a mistake in the solving method, but result from the process of raising both sides of an equation to a power. However, checking each answer in the original equation will confirm the true solutions.\n\nAn equation containing terms with a variable in the radicand is called a radical equation.",
+      "original": "2. If the radical is a square root, then square both sides of the equation. If it is a cube root, then raise both sides of the equation to the third power. In other words, for an \\(n^{th}\\) root radical, raise both sides to the \\(n^{th}\\) power. Doing so eliminates the radical symbol.",
+      "prompt": "2. If the radical is a square root, then square both sides of the equation. If it is a cube root, then raise both sides of the equation to the third power. In other words, for an \\(n^{th}\\) root radical, raise both sides to the \\(n^{th}\\) power. Doing so eliminates the radical symbol.",
+      "sourceAnswers": [],
+      "hasFigure": false,
+      "status": "draft",
+      "answerVerified": false,
+      "translationStatus": "pending",
+      "mappingStatus": "pending"
+    },
+    {
+      "ordinal": 12,
+      "sourceNumber": "3",
+      "sourceAnchor": "",
+      "kind": "exercise-candidate",
+      "context": "\\[\\sqrt{x+5}-\\sqrt{x-3}=2 \\nonumber\\]\n\nRadical equations may have one or more radical terms, and are solved by eliminating each radical, one at a time. We have to be careful when solving radical equations, as it is not unusual to find extraneous solutions, roots that are not, in fact, solutions to the equation. These solutions are not due to a mistake in the solving method, but result from the process of raising both sides of an equation to a power. However, checking each answer in the original equation will confirm the true solutions.\n\nAn equation containing terms with a variable in the radicand is called a radical equation.",
+      "original": "3. Solve the remaining equation.",
+      "prompt": "3. Solve the remaining equation.",
+      "sourceAnswers": [],
+      "hasFigure": false,
+      "status": "draft",
+      "answerVerified": false,
+      "translationStatus": "pending",
+      "mappingStatus": "pending"
+    },
+    {
+      "ordinal": 13,
+      "sourceNumber": "4",
+      "sourceAnchor": "",
+      "kind": "exercise-candidate",
+      "context": "\\[\\sqrt{x+5}-\\sqrt{x-3}=2 \\nonumber\\]\n\nRadical equations may have one or more radical terms, and are solved by eliminating each radical, one at a time. We have to be careful when solving radical equations, as it is not unusual to find extraneous solutions, roots that are not, in fact, solutions to the equation. These solutions are not due to a mistake in the solving method, but result from the process of raising both sides of an equation to a power. However, checking each answer in the original equation will confirm the true solutions.\n\nAn equation containing terms with a variable in the radicand is called a radical equation.",
+      "original": "4. If a radical term still remains, repeat steps 1–2.",
+      "prompt": "4. If a radical term still remains, repeat steps 1–2.",
+      "sourceAnswers": [],
+      "hasFigure": false,
+      "status": "draft",
+      "answerVerified": false,
+      "translationStatus": "pending",
+      "mappingStatus": "pending"
+    },
+    {
+      "ordinal": 14,
+      "sourceNumber": "5",
+      "sourceAnchor": "",
+      "kind": "exercise-candidate",
+      "context": "\\[\\sqrt{x+5}-\\sqrt{x-3}=2 \\nonumber\\]\n\nRadical equations may have one or more radical terms, and are solved by eliminating each radical, one at a time. We have to be careful when solving radical equations, as it is not unusual to find extraneous solutions, roots that are not, in fact, solutions to the equation. These solutions are not due to a mistake in the solving method, but result from the process of raising both sides of an equation to a power. However, checking each answer in the original equation will confirm the true solutions.\n\nAn equation containing terms with a variable in the radicand is called a radical equation.",
+      "original": "5. Confirm solutions by substituting them into the original equation.",
+      "prompt": "5. Confirm solutions by substituting them into the original equation.",
+      "sourceAnswers": [],
+      "hasFigure": false,
+      "status": "draft",
+      "answerVerified": false,
+      "translationStatus": "pending",
+      "mappingStatus": "pending"
+    },
+    {
+      "ordinal": 15,
+      "sourceNumber": "",
+      "sourceAnchor": "",
+      "kind": "example-or-exercise",
+      "context": "\\[\\sqrt{x+5}-\\sqrt{x-3}=2 \\nonumber\\]\n\nRadical equations may have one or more radical terms, and are solved by eliminating each radical, one at a time. We have to be careful when solving radical equations, as it is not unusual to find extraneous solutions, roots that are not, in fact, solutions to the equation. These solutions are not due to a mistake in the solving method, but result from the process of raising both sides of an equation to a power. However, checking each answer in the original equation will confirm the true solutions.\n\nAn equation containing terms with a variable in the radicand is called a radical equation.",
+      "original": "Example \\(\\PageIndex{6}\\): Solving an Equation with One Radical\n\nSolve \\(\\sqrt{15−2x}=x\\).\n\nSolution\n\nThe radical is already isolated on the left side of the equal side, so proceed to square both sides.\n\n\\[\\begin{align*} \\sqrt{15-2x}&= x\\\\ {\\left (\\sqrt{15-2x} \\right )}^2&= {(x)}^2\\\\ 15-2x&= x^2 \\end{align*}\\]\n\nWe see that the remaining equation is a quadratic. Set it equal to zero and solve.\n\n\\[\\begin{align*} 0&= x^2+2x-15\\\\ 0&= (x+5)(x-3)\\\\ x&= -5\\\\ x&= 3 \\end{align*}\\]\n\nThe proposed solutions are \\(−5\\) and \\(3\\). Let us check each solution back in the original equation. First, check \\(x=−5\\).\n\n\\[\\begin{align*} \\sqrt{15-2x}&= x\\\\ \\sqrt{15-2(-5)}&=-5\\\\ \\sqrt{25}&= -5\\\\ 5&\\neq -5 \\end{align*}\\]\n\nThis is an extraneous solution. While no mistake was made solving the equation, we found a solution that does not satisfy the original equation.\n\nCheck \\(x=3\\).\n\n\\[\\begin{align*} \\sqrt{15-2x}&= x\\\\ \\sqrt{15-2(3)}&= 3\\\\ \\sqrt{9}&= 3\\\\ 3&= 3 \\end{align*}\\]\n\nThe solution is \\(3\\).",
+      "prompt": "Example \\(\\PageIndex{6}\\): Solving an Equation with One Radical\n\nSolve \\(\\sqrt{15−2x}=x\\).\n\nSolution\n\nThe radical is already isolated on the left side of the equal side, so proceed to square both sides.\n\n\\[\\begin{align*} \\sqrt{15-2x}&= x\\\\ {\\left (\\sqrt{15-2x} \\right )}^2&= {(x)}^2\\\\ 15-2x&= x^2 \\end{align*}\\]\n\nWe see that the remaining equation is a quadratic. Set it equal to zero and solve.\n\n\\[\\begin{align*} 0&= x^2+2x-15\\\\ 0&= (x+5)(x-3)\\\\ x&= -5\\\\ x&= 3 \\end{align*}\\]\n\nThe proposed solutions are \\(−5\\) and \\(3\\). Let us check each solution back in the original equation. First, check \\(x=−5\\).\n\n\\[\\begin{align*} \\sqrt{15-2x}&= x\\\\ \\sqrt{15-2(-5)}&=-5\\\\ \\sqrt{25}&= -5\\\\ 5&\\neq -5 \\end{align*}\\]\n\nThis is an extraneous solution. While no mistake was made solving the equation, we found a solution that does not satisfy the original equation.\n\nCheck \\(x=3\\).\n\n\\[\\begin{align*} \\sqrt{15-2x}&= x\\\\ \\sqrt{15-2(3)}&= 3\\\\ \\sqrt{9}&= 3\\\\ 3&= 3 \\end{align*}\\]\n\nThe solution is \\(3\\).",
+      "sourceAnswers": [],
+      "hasFigure": false,
+      "status": "draft",
+      "answerVerified": false,
+      "translationStatus": "pending",
+      "mappingStatus": "pending"
+    },
+    {
+      "ordinal": 16,
+      "sourceNumber": "",
+      "sourceAnchor": "",
+      "kind": "exercise-candidate",
+      "context": "\\[\\sqrt{x+5}-\\sqrt{x-3}=2 \\nonumber\\]\n\nRadical equations may have one or more radical terms, and are solved by eliminating each radical, one at a time. We have to be careful when solving radical equations, as it is not unusual to find extraneous solutions, roots that are not, in fact, solutions to the equation. These solutions are not due to a mistake in the solving method, but result from the process of raising both sides of an equation to a power. However, checking each answer in the original equation will confirm the true solutions.\n\nAn equation containing terms with a variable in the radicand is called a radical equation.",
+      "original": "Exercise \\(\\PageIndex{5}\\)\n\nSolve the radical equation: \\(\\sqrt{x+3}=3x-1\\)\n\nAnswer\n\n\\(x=1\\), extraneous solution \\(x=−\\dfrac{2}{9}\\)",
+      "prompt": "Exercise \\(\\PageIndex{5}\\)\n\nSolve the radical equation: \\(\\sqrt{x+3}=3x-1\\)",
+      "sourceAnswers": [
+        "\\(x=1\\), extraneous solution \\(x=−\\dfrac{2}{9}\\)"
+      ],
+      "hasFigure": false,
+      "status": "draft",
+      "answerVerified": false,
+      "translationStatus": "pending",
+      "mappingStatus": "pending"
+    },
+    {
+      "ordinal": 17,
+      "sourceNumber": "",
+      "sourceAnchor": "",
+      "kind": "example-or-exercise",
+      "context": "\\[\\sqrt{x+5}-\\sqrt{x-3}=2 \\nonumber\\]\n\nRadical equations may have one or more radical terms, and are solved by eliminating each radical, one at a time. We have to be careful when solving radical equations, as it is not unusual to find extraneous solutions, roots that are not, in fact, solutions to the equation. These solutions are not due to a mistake in the solving method, but result from the process of raising both sides of an equation to a power. However, checking each answer in the original equation will confirm the true solutions.\n\nAn equation containing terms with a variable in the radicand is called a radical equation.",
+      "original": "Example \\(\\PageIndex{7}\\): Solving a Radical Equation Containing Two Radicals\n\nSolve \\(\\sqrt{2x+3}+\\sqrt{x-2}=4\\)\n\nSolution\n\nAs this equation contains two radicals, we isolate one radical, eliminate it, and then isolate the second radical.\n\n\\[\\sqrt{2x+3}+\\sqrt{x-2}=4 \\nonumber\\]\n\n\\[\\begin{align*} \\sqrt{2x+3}&= 4-\\sqrt{x-2} \\qquad \\text{Subtract } \\sqrt{x-2} \\text{ from both sides}\\\\ {\\left (\\sqrt{2x+3} \\right )}^2&= {\\left (4-\\sqrt{x-2} \\right )}^2\\qquad \\text{Square both sides} \\end{align*}\\]\n\nUse the perfect square formula to expand the right side: \\({(a−b)}^2=a^2−2ab+b^2\\).\n\n\\[\\begin{align*} 2x+3&= {(4)}^2-2(4)\\sqrt{x-2}+{(\\sqrt{x-2})}^2\\\\ 2x+3&= 16-8\\sqrt{x-2}+(x-2)\\\\ 2x+3&= 14+x-8\\sqrt{x-2} \\qquad \\text{Combine like terms}\\\\ x-11&= -8\\sqrt{x-2} \\qquad \\text{Isolate the second radical}\\\\ {(x-11)}^2&= {(-8\\sqrt{x-2})}^2 \\qquad \\text{Square both sides}\\\\ x^2-22x+121&= 64(x-2) \\end{align*}\\]\n\nNow that both radicals have been eliminated, set the quadratic equal to zero and solve.\n\n\\[\\begin{align*} x^2-22x+121&= 64x-128\\\\ x^2-86x+249&= 0\\\\ (x-3)(x-83)&= 0\\\\ x&= 3\\\\ x&= 83 \\end{align*}\\]\n\nThe proposed solutions are \\(3\\) and \\(83\\). Check each solution in the original equation.\n\n\\[\\begin{align*} \\sqrt{2x+3}+\\sqrt{x-2}&= 4\\\\ \\sqrt{2x+3}&= 4-\\sqrt{x-2}\\\\ \\sqrt{2(3)+3}&= 4-\\sqrt{(3)-2}\\\\ \\sqrt{9}&= 4-\\sqrt{1}\\\\ 3&= 3 \\end{align*}\\]\n\nOne solution is \\(3\\).\n\nCheck \\(x=83\\).\n\n\\[\\begin{align*} \\sqrt{2x+3}+\\sqrt{x-2}&= 4\\\\ \\sqrt{2x+3}&= 4-\\sqrt{x-2}\\\\ \\sqrt{2(83)+3}&= 4-\\sqrt{(83)-2}\\\\ \\sqrt{169}&= 4-\\sqrt{81}\\\\ 13&\\neq -5 \\end{align*}\\]\n\nThe only solution is \\(3\\). We see that \\(x=83\\) is an extraneous solution.",
+      "prompt": "Example \\(\\PageIndex{7}\\): Solving a Radical Equation Containing Two Radicals\n\nSolve \\(\\sqrt{2x+3}+\\sqrt{x-2}=4\\)\n\nSolution\n\nAs this equation contains two radicals, we isolate one radical, eliminate it, and then isolate the second radical.\n\n\\[\\sqrt{2x+3}+\\sqrt{x-2}=4 \\nonumber\\]\n\n\\[\\begin{align*} \\sqrt{2x+3}&= 4-\\sqrt{x-2} \\qquad \\text{Subtract } \\sqrt{x-2} \\text{ from both sides}\\\\ {\\left (\\sqrt{2x+3} \\right )}^2&= {\\left (4-\\sqrt{x-2} \\right )}^2\\qquad \\text{Square both sides} \\end{align*}\\]\n\nUse the perfect square formula to expand the right side: \\({(a−b)}^2=a^2−2ab+b^2\\).\n\n\\[\\begin{align*} 2x+3&= {(4)}^2-2(4)\\sqrt{x-2}+{(\\sqrt{x-2})}^2\\\\ 2x+3&= 16-8\\sqrt{x-2}+(x-2)\\\\ 2x+3&= 14+x-8\\sqrt{x-2} \\qquad \\text{Combine like terms}\\\\ x-11&= -8\\sqrt{x-2} \\qquad \\text{Isolate the second radical}\\\\ {(x-11)}^2&= {(-8\\sqrt{x-2})}^2 \\qquad \\text{Square both sides}\\\\ x^2-22x+121&= 64(x-2) \\end{align*}\\]\n\nNow that both radicals have been eliminated, set the quadratic equal to zero and solve.\n\n\\[\\begin{align*} x^2-22x+121&= 64x-128\\\\ x^2-86x+249&= 0\\\\ (x-3)(x-83)&= 0\\\\ x&= 3\\\\ x&= 83 \\end{align*}\\]\n\nThe proposed solutions are \\(3\\) and \\(83\\). Check each solution in the original equation.\n\n\\[\\begin{align*} \\sqrt{2x+3}+\\sqrt{x-2}&= 4\\\\ \\sqrt{2x+3}&= 4-\\sqrt{x-2}\\\\ \\sqrt{2(3)+3}&= 4-\\sqrt{(3)-2}\\\\ \\sqrt{9}&= 4-\\sqrt{1}\\\\ 3&= 3 \\end{align*}\\]\n\nOne solution is \\(3\\).\n\nCheck \\(x=83\\).\n\n\\[\\begin{align*} \\sqrt{2x+3}+\\sqrt{x-2}&= 4\\\\ \\sqrt{2x+3}&= 4-\\sqrt{x-2}\\\\ \\sqrt{2(83)+3}&= 4-\\sqrt{(83)-2}\\\\ \\sqrt{169}&= 4-\\sqrt{81}\\\\ 13&\\neq -5 \\end{align*}\\]\n\nThe only solution is \\(3\\). We see that \\(x=83\\) is an extraneous solution.",
+      "sourceAnswers": [],
+      "hasFigure": false,
+      "status": "draft",
+      "answerVerified": false,
+      "translationStatus": "pending",
+      "mappingStatus": "pending"
+    },
+    {
+      "ordinal": 18,
+      "sourceNumber": "",
+      "sourceAnchor": "",
+      "kind": "exercise-candidate",
+      "context": "\\[\\sqrt{x+5}-\\sqrt{x-3}=2 \\nonumber\\]\n\nRadical equations may have one or more radical terms, and are solved by eliminating each radical, one at a time. We have to be careful when solving radical equations, as it is not unusual to find extraneous solutions, roots that are not, in fact, solutions to the equation. These solutions are not due to a mistake in the solving method, but result from the process of raising both sides of an equation to a power. However, checking each answer in the original equation will confirm the true solutions.\n\nAn equation containing terms with a variable in the radicand is called a radical equation.",
+      "original": "Exercise \\(\\PageIndex{6}\\)\n\nSolve the equation with two radicals: \\(\\sqrt{3x+7}+\\sqrt{x+2}=1\\)\n\nAnswer\n\n\\(x=−2\\), extraneous solution \\(x=−1\\)",
+      "prompt": "Exercise \\(\\PageIndex{6}\\)\n\nSolve the equation with two radicals: \\(\\sqrt{3x+7}+\\sqrt{x+2}=1\\)",
+      "sourceAnswers": [
+        "\\(x=−2\\), extraneous solution \\(x=−1\\)"
+      ],
+      "hasFigure": false,
+      "status": "draft",
+      "answerVerified": false,
+      "translationStatus": "pending",
+      "mappingStatus": "pending"
+    },
+    {
+      "ordinal": 19,
+      "sourceNumber": "1",
+      "sourceAnchor": "",
+      "kind": "exercise-candidate",
+      "context": "Given an absolute value equation, solve it.",
+      "original": "1. Isolate the absolute value expression on one side of the equal sign.",
+      "prompt": "1. Isolate the absolute value expression on one side of the equal sign.",
+      "sourceAnswers": [],
+      "hasFigure": false,
+      "status": "draft",
+      "answerVerified": false,
+      "translationStatus": "pending",
+      "mappingStatus": "pending"
+    },
+    {
+      "ordinal": 20,
+      "sourceNumber": "2",
+      "sourceAnchor": "",
+      "kind": "exercise-candidate",
+      "context": "Given an absolute value equation, solve it.",
+      "original": "2. If \\(c>0\\), write and solve two equations: \\(ax+b=c\\) and \\(ax+b=−c\\).",
+      "prompt": "2. If \\(c>0\\), write and solve two equations: \\(ax+b=c\\) and \\(ax+b=−c\\).",
+      "sourceAnswers": [],
+      "hasFigure": false,
+      "status": "draft",
+      "answerVerified": false,
+      "translationStatus": "pending",
+      "mappingStatus": "pending"
+    },
+    {
+      "ordinal": 21,
+      "sourceNumber": "",
+      "sourceAnchor": "",
+      "kind": "example-or-exercise",
+      "context": "Given an absolute value equation, solve it.",
+      "original": "Example \\(\\PageIndex{8}\\): Solving Absolute Value Equations\n\nSolve the following absolute value equations:\n\n1. \\(|6x+4|=8\\)\n\n2. \\(|3x+4|=−9\\)\n\n3. \\(|3x−5|−4=6\\)\n\n4. \\(|−5x+10|=0\\)\n\nSolution\n\n1. \\(|6x+4|=8\\)\n\nWrite two equations and solve each:\n\n\\[\\begin{align*} 6x+4&= 8\\\\ 6x&= 4\\\\ x&= \\dfrac{2}{3} \\end{align*}\\]\n\nOR\n\n\\[\\begin{align*} 6x+4&= -8\\\\ 6x&= -12\\\\ x&= -2 \\end{align*}\\]\n\nThe two solutions are \\(\\dfrac{2}{3}\\) and \\(−2\\).\n\n2. \\(|3x+4|=−9\\)\n\nThere is no solution as an absolute value cannot be negative.\n\n3. \\(|3x−5|−4=6\\)\n\nIsolate the absolute value expression and then write two equations.\n\n\\[\\begin{align*} |3x-5|-4&= 6\\\\ |3x-5|&= 10\\\\ 3x-5&= 10\\\\ 3x&= 15\\\\ x&= 5 \\end{align*}\\]\n\nOR\n\n\\[\\begin{align*} 3x-5&= -10\\\\ 3x=-5\\\\ x=\\dfrac{5}{3} \\end{align*}\\]\n\nThere are two solutions: \\(5\\), and \\(-\\dfrac{5}{3}\\).\n\n4. \\(|−5x+10|=0\\)\n\nThe equation is set equal to zero, so we have to write only one equation.\n\n\\[\\begin{align*} -5x+10&= 0\\\\ -5x&= -10\\\\ x&= 2 \\end{align*}\\]\n\nThere is one solution: \\(2\\).",
+      "prompt": "Example \\(\\PageIndex{8}\\): Solving Absolute Value Equations\n\nSolve the following absolute value equations:\n\n1. \\(|6x+4|=8\\)\n\n2. \\(|3x+4|=−9\\)\n\n3. \\(|3x−5|−4=6\\)\n\n4. \\(|−5x+10|=0\\)\n\nSolution\n\n1. \\(|6x+4|=8\\)\n\nWrite two equations and solve each:\n\n\\[\\begin{align*} 6x+4&= 8\\\\ 6x&= 4\\\\ x&= \\dfrac{2}{3} \\end{align*}\\]\n\nOR\n\n\\[\\begin{align*} 6x+4&= -8\\\\ 6x&= -12\\\\ x&= -2 \\end{align*}\\]\n\nThe two solutions are \\(\\dfrac{2}{3}\\) and \\(−2\\).\n\n2. \\(|3x+4|=−9\\)\n\nThere is no solution as an absolute value cannot be negative.\n\n3. \\(|3x−5|−4=6\\)\n\nIsolate the absolute value expression and then write two equations.\n\n\\[\\begin{align*} |3x-5|-4&= 6\\\\ |3x-5|&= 10\\\\ 3x-5&= 10\\\\ 3x&= 15\\\\ x&= 5 \\end{align*}\\]\n\nOR\n\n\\[\\begin{align*} 3x-5&= -10\\\\ 3x=-5\\\\ x=\\dfrac{5}{3} \\end{align*}\\]\n\nThere are two solutions: \\(5\\), and \\(-\\dfrac{5}{3}\\).\n\n4. \\(|−5x+10|=0\\)\n\nThe equation is set equal to zero, so we have to write only one equation.\n\n\\[\\begin{align*} -5x+10&= 0\\\\ -5x&= -10\\\\ x&= 2 \\end{align*}\\]\n\nThere is one solution: \\(2\\).",
+      "sourceAnswers": [],
+      "hasFigure": false,
+      "status": "draft",
+      "answerVerified": false,
+      "translationStatus": "pending",
+      "mappingStatus": "pending"
+    },
+    {
+      "ordinal": 22,
+      "sourceNumber": "",
+      "sourceAnchor": "",
+      "kind": "exercise-candidate",
+      "context": "Given an absolute value equation, solve it.",
+      "original": "Exercise \\(\\PageIndex{7}\\)\n\nSolve the absolute value equation: \\(|1−4x|+8=13\\).\n\nAnswer\n\n\\(x=−1, x=\\dfrac{3}{2}\\)",
+      "prompt": "Exercise \\(\\PageIndex{7}\\)\n\nSolve the absolute value equation: \\(|1−4x|+8=13\\).",
+      "sourceAnswers": [
+        "\\(x=−1, x=\\dfrac{3}{2}\\)"
+      ],
+      "hasFigure": false,
+      "status": "draft",
+      "answerVerified": false,
+      "translationStatus": "pending",
+      "mappingStatus": "pending"
+    },
+    {
+      "ordinal": 23,
+      "sourceNumber": "1",
+      "sourceAnchor": "",
+      "kind": "exercise-candidate",
+      "context": "Solving Equations in Quadratic Form\n\nEquations in quadratic form are equations with three terms. The first term has a power other than \\(2\\). The middle term has an exponent that is one-half the exponent of the leading term. The third term is a constant. We can solve equations in this form as if they were quadratic. A few examples of these equations include \\(x^4−5x^2+4=0\\),\\(x^6+7x^3−8=0\\), and \\(x^{\\tfrac{2}{3}} +4x^{\\tfrac{1}{3}}+2=0\\). In each one, doubling the exponent of the middle term equals the exponent on the leading term. We can solve these equations by substituting a variable for the middle term.\n\nIf the exponent on the middle term is one-half of the exponent on the leading term, we have an equation in quadratic form, which we can solve as if it were a quadratic. We substitute a variable for the middle term to solve equations in quadratic form.",
+      "original": "1. Identify the exponent on the leading term and determine whether it is double the exponent on the middle term.",
+      "prompt": "1. Identify the exponent on the leading term and determine whether it is double the exponent on the middle term.",
+      "sourceAnswers": [],
+      "hasFigure": false,
+      "status": "draft",
+      "answerVerified": false,
+      "translationStatus": "pending",
+      "mappingStatus": "pending"
+    },
+    {
+      "ordinal": 24,
+      "sourceNumber": "2",
+      "sourceAnchor": "",
+      "kind": "exercise-candidate",
+      "context": "Solving Equations in Quadratic Form\n\nEquations in quadratic form are equations with three terms. The first term has a power other than \\(2\\). The middle term has an exponent that is one-half the exponent of the leading term. The third term is a constant. We can solve equations in this form as if they were quadratic. A few examples of these equations include \\(x^4−5x^2+4=0\\),\\(x^6+7x^3−8=0\\), and \\(x^{\\tfrac{2}{3}} +4x^{\\tfrac{1}{3}}+2=0\\). In each one, doubling the exponent of the middle term equals the exponent on the leading term. We can solve these equations by substituting a variable for the middle term.\n\nIf the exponent on the middle term is one-half of the exponent on the leading term, we have an equation in quadratic form, which we can solve as if it were a quadratic. We substitute a variable for the middle term to solve equations in quadratic form.",
+      "original": "2. If it is, substitute a variable, such as \\(u\\), for the variable portion of the middle term.",
+      "prompt": "2. If it is, substitute a variable, such as \\(u\\), for the variable portion of the middle term.",
+      "sourceAnswers": [],
+      "hasFigure": false,
+      "status": "draft",
+      "answerVerified": false,
+      "translationStatus": "pending",
+      "mappingStatus": "pending"
+    },
+    {
+      "ordinal": 25,
+      "sourceNumber": "3",
+      "sourceAnchor": "",
+      "kind": "exercise-candidate",
+      "context": "Solving Equations in Quadratic Form\n\nEquations in quadratic form are equations with three terms. The first term has a power other than \\(2\\). The middle term has an exponent that is one-half the exponent of the leading term. The third term is a constant. We can solve equations in this form as if they were quadratic. A few examples of these equations include \\(x^4−5x^2+4=0\\),\\(x^6+7x^3−8=0\\), and \\(x^{\\tfrac{2}{3}} +4x^{\\tfrac{1}{3}}+2=0\\). In each one, doubling the exponent of the middle term equals the exponent on the leading term. We can solve these equations by substituting a variable for the middle term.\n\nIf the exponent on the middle term is one-half of the exponent on the leading term, we have an equation in quadratic form, which we can solve as if it were a quadratic. We substitute a variable for the middle term to solve equations in quadratic form.",
+      "original": "3. Rewrite the equation so that it takes on the standard form of a quadratic.",
+      "prompt": "3. Rewrite the equation so that it takes on the standard form of a quadratic.",
+      "sourceAnswers": [],
+      "hasFigure": false,
+      "status": "draft",
+      "answerVerified": false,
+      "translationStatus": "pending",
+      "mappingStatus": "pending"
+    },
+    {
+      "ordinal": 26,
+      "sourceNumber": "4",
+      "sourceAnchor": "",
+      "kind": "exercise-candidate",
+      "context": "Solving Equations in Quadratic Form\n\nEquations in quadratic form are equations with three terms. The first term has a power other than \\(2\\). The middle term has an exponent that is one-half the exponent of the leading term. The third term is a constant. We can solve equations in this form as if they were quadratic. A few examples of these equations include \\(x^4−5x^2+4=0\\),\\(x^6+7x^3−8=0\\), and \\(x^{\\tfrac{2}{3}} +4x^{\\tfrac{1}{3}}+2=0\\). In each one, doubling the exponent of the middle term equals the exponent on the leading term. We can solve these equations by substituting a variable for the middle term.\n\nIf the exponent on the middle term is one-half of the exponent on the leading term, we have an equation in quadratic form, which we can solve as if it were a quadratic. We substitute a variable for the middle term to solve equations in quadratic form.",
+      "original": "4. Solve using one of the usual methods for solving a quadratic.",
+      "prompt": "4. Solve using one of the usual methods for solving a quadratic.",
+      "sourceAnswers": [],
+      "hasFigure": false,
+      "status": "draft",
+      "answerVerified": false,
+      "translationStatus": "pending",
+      "mappingStatus": "pending"
+    },
+    {
+      "ordinal": 27,
+      "sourceNumber": "5",
+      "sourceAnchor": "",
+      "kind": "exercise-candidate",
+      "context": "Solving Equations in Quadratic Form\n\nEquations in quadratic form are equations with three terms. The first term has a power other than \\(2\\). The middle term has an exponent that is one-half the exponent of the leading term. The third term is a constant. We can solve equations in this form as if they were quadratic. A few examples of these equations include \\(x^4−5x^2+4=0\\),\\(x^6+7x^3−8=0\\), and \\(x^{\\tfrac{2}{3}} +4x^{\\tfrac{1}{3}}+2=0\\). In each one, doubling the exponent of the middle term equals the exponent on the leading term. We can solve these equations by substituting a variable for the middle term.\n\nIf the exponent on the middle term is one-half of the exponent on the leading term, we have an equation in quadratic form, which we can solve as if it were a quadratic. We substitute a variable for the middle term to solve equations in quadratic form.",
+      "original": "5. Replace the substitution variable with the original term.",
+      "prompt": "5. Replace the substitution variable with the original term.",
+      "sourceAnswers": [],
+      "hasFigure": false,
+      "status": "draft",
+      "answerVerified": false,
+      "translationStatus": "pending",
+      "mappingStatus": "pending"
+    },
+    {
+      "ordinal": 28,
+      "sourceNumber": "6",
+      "sourceAnchor": "",
+      "kind": "exercise-candidate",
+      "context": "Solving Equations in Quadratic Form\n\nEquations in quadratic form are equations with three terms. The first term has a power other than \\(2\\). The middle term has an exponent that is one-half the exponent of the leading term. The third term is a constant. We can solve equations in this form as if they were quadratic. A few examples of these equations include \\(x^4−5x^2+4=0\\),\\(x^6+7x^3−8=0\\), and \\(x^{\\tfrac{2}{3}} +4x^{\\tfrac{1}{3}}+2=0\\). In each one, doubling the exponent of the middle term equals the exponent on the leading term. We can solve these equations by substituting a variable for the middle term.\n\nIf the exponent on the middle term is one-half of the exponent on the leading term, we have an equation in quadratic form, which we can solve as if it were a quadratic. We substitute a variable for the middle term to solve equations in quadratic form.",
+      "original": "6. Solve the remaining equation.",
+      "prompt": "6. Solve the remaining equation.",
+      "sourceAnswers": [],
+      "hasFigure": false,
+      "status": "draft",
+      "answerVerified": false,
+      "translationStatus": "pending",
+      "mappingStatus": "pending"
+    },
+    {
+      "ordinal": 29,
+      "sourceNumber": "",
+      "sourceAnchor": "",
+      "kind": "example-or-exercise",
+      "context": "Solving Equations in Quadratic Form\n\nEquations in quadratic form are equations with three terms. The first term has a power other than \\(2\\). The middle term has an exponent that is one-half the exponent of the leading term. The third term is a constant. We can solve equations in this form as if they were quadratic. A few examples of these equations include \\(x^4−5x^2+4=0\\),\\(x^6+7x^3−8=0\\), and \\(x^{\\tfrac{2}{3}} +4x^{\\tfrac{1}{3}}+2=0\\). In each one, doubling the exponent of the middle term equals the exponent on the leading term. We can solve these equations by substituting a variable for the middle term.\n\nIf the exponent on the middle term is one-half of the exponent on the leading term, we have an equation in quadratic form, which we can solve as if it were a quadratic. We substitute a variable for the middle term to solve equations in quadratic form.",
+      "original": "Example \\(\\PageIndex{9}\\): Solving a Fourth-degree Equation in Quadratic Form\n\nSolve this fourth-degree equation: \\(3x^4−2x^2−1=0\\).\n\nSolution\n\nThis equation fits the main criteria, that the power on the leading term is double the power on the middle term. Next, we will make a substitution for the variable term in the middle. Let \\(u =x^2\\). Rewrite the equation in \\(u\\).\n\n\\[3u^2−2u−1=0 \\nonumber\\]\n\nNow solve the quadratic.\n\n\\[\\begin{align*} 3u^2-2u-1&= 0\\\\ (3u+1)(u-1)&= 0 \\end{align*}\\]\n\nSolve each factor and replace the original term for \\(u\\).\n\n\\[\\begin{align*} 3u+1&= 0\\\\ 3u&= -1\\\\ u&= -\\dfrac{1}{3}\\\\ x^2&= -\\dfrac{1}{3}\\\\ x&= \\pm i\\sqrt{\\dfrac{1}{3}}\\\\ u-1&= 0\\\\ u&= 1\\\\ x^2&= 1\\\\ x&= \\pm 1 \\end{align*}\\]\n\nThe solutions are \\(x=±i\\sqrt{\\dfrac{1}{3}}\\) and \\(x=±1\\)",
+      "prompt": "Example \\(\\PageIndex{9}\\): Solving a Fourth-degree Equation in Quadratic Form\n\nSolve this fourth-degree equation: \\(3x^4−2x^2−1=0\\).\n\nSolution\n\nThis equation fits the main criteria, that the power on the leading term is double the power on the middle term. Next, we will make a substitution for the variable term in the middle. Let \\(u =x^2\\). Rewrite the equation in \\(u\\).\n\n\\[3u^2−2u−1=0 \\nonumber\\]\n\nNow solve the quadratic.\n\n\\[\\begin{align*} 3u^2-2u-1&= 0\\\\ (3u+1)(u-1)&= 0 \\end{align*}\\]\n\nSolve each factor and replace the original term for \\(u\\).\n\n\\[\\begin{align*} 3u+1&= 0\\\\ 3u&= -1\\\\ u&= -\\dfrac{1}{3}\\\\ x^2&= -\\dfrac{1}{3}\\\\ x&= \\pm i\\sqrt{\\dfrac{1}{3}}\\\\ u-1&= 0\\\\ u&= 1\\\\ x^2&= 1\\\\ x&= \\pm 1 \\end{align*}\\]\n\nThe solutions are \\(x=±i\\sqrt{\\dfrac{1}{3}}\\) and \\(x=±1\\)",
+      "sourceAnswers": [],
+      "hasFigure": false,
+      "status": "draft",
+      "answerVerified": false,
+      "translationStatus": "pending",
+      "mappingStatus": "pending"
+    },
+    {
+      "ordinal": 30,
+      "sourceNumber": "",
+      "sourceAnchor": "",
+      "kind": "exercise-candidate",
+      "context": "Solving Equations in Quadratic Form\n\nEquations in quadratic form are equations with three terms. The first term has a power other than \\(2\\). The middle term has an exponent that is one-half the exponent of the leading term. The third term is a constant. We can solve equations in this form as if they were quadratic. A few examples of these equations include \\(x^4−5x^2+4=0\\),\\(x^6+7x^3−8=0\\), and \\(x^{\\tfrac{2}{3}} +4x^{\\tfrac{1}{3}}+2=0\\). In each one, doubling the exponent of the middle term equals the exponent on the leading term. We can solve these equations by substituting a variable for the middle term.\n\nIf the exponent on the middle term is one-half of the exponent on the leading term, we have an equation in quadratic form, which we can solve as if it were a quadratic. We substitute a variable for the middle term to solve equations in quadratic form.",
+      "original": "Exercise \\(\\PageIndex{8}\\)\n\nSolve using substitution: \\(x^4−8x^2−9=0\\).\n\nAnswer\n\n\\(x=−3,3,−i,i\\)",
+      "prompt": "Exercise \\(\\PageIndex{8}\\)\n\nSolve using substitution: \\(x^4−8x^2−9=0\\).",
+      "sourceAnswers": [
+        "\\(x=−3,3,−i,i\\)"
+      ],
+      "hasFigure": false,
+      "status": "draft",
+      "answerVerified": false,
+      "translationStatus": "pending",
+      "mappingStatus": "pending"
+    },
+    {
+      "ordinal": 31,
+      "sourceNumber": "",
+      "sourceAnchor": "",
+      "kind": "example-or-exercise",
+      "context": "Solving Equations in Quadratic Form\n\nEquations in quadratic form are equations with three terms. The first term has a power other than \\(2\\). The middle term has an exponent that is one-half the exponent of the leading term. The third term is a constant. We can solve equations in this form as if they were quadratic. A few examples of these equations include \\(x^4−5x^2+4=0\\),\\(x^6+7x^3−8=0\\), and \\(x^{\\tfrac{2}{3}} +4x^{\\tfrac{1}{3}}+2=0\\). In each one, doubling the exponent of the middle term equals the exponent on the leading term. We can solve these equations by substituting a variable for the middle term.\n\nIf the exponent on the middle term is one-half of the exponent on the leading term, we have an equation in quadratic form, which we can solve as if it were a quadratic. We substitute a variable for the middle term to solve equations in quadratic form.",
+      "original": "Example \\(\\PageIndex{10}\\): Solving an Equation in Quadratic Form Containing a Binomial\n\nSolve the equation in quadratic form: \\({(x+2)}^2+11(x+2)−12=0\\).\n\nSolution\n\nThis equation contains a binomial in place of the single variable. The tendency is to expand what is presented. However, recognizing that it fits the criteria for being in quadratic form makes all the difference in the solving process. First, make a substitution, letting \\(u =x+2\\). Then rewrite the equation in \\(u\\).\n\n\\[\\begin{align*} u^2+11u-12&= 0\\\\ (u+12)(u-1)&= 0 \\end{align*}\\]\n\nSolve using the zero-factor property and then replace \\(u\\) with the original expression.\n\n\\[\\begin{align*} u+12&= 0\\\\ u&= -12\\\\ x+2&= -12\\\\ x&= -14 \\end{align*}\\]\n\nThe second factor results in\n\n\\[\\begin{align*} u-1&= 0\\\\ u&= 1\\\\ x+2&= 1\\\\ x&= -1 \\end{align*}\\]\n\nWe have two solutions: \\(−14\\), and \\(−1\\).",
+      "prompt": "Example \\(\\PageIndex{10}\\): Solving an Equation in Quadratic Form Containing a Binomial\n\nSolve the equation in quadratic form: \\({(x+2)}^2+11(x+2)−12=0\\).\n\nSolution\n\nThis equation contains a binomial in place of the single variable. The tendency is to expand what is presented. However, recognizing that it fits the criteria for being in quadratic form makes all the difference in the solving process. First, make a substitution, letting \\(u =x+2\\). Then rewrite the equation in \\(u\\).\n\n\\[\\begin{align*} u^2+11u-12&= 0\\\\ (u+12)(u-1)&= 0 \\end{align*}\\]\n\nSolve using the zero-factor property and then replace \\(u\\) with the original expression.\n\n\\[\\begin{align*} u+12&= 0\\\\ u&= -12\\\\ x+2&= -12\\\\ x&= -14 \\end{align*}\\]\n\nThe second factor results in\n\n\\[\\begin{align*} u-1&= 0\\\\ u&= 1\\\\ x+2&= 1\\\\ x&= -1 \\end{align*}\\]\n\nWe have two solutions: \\(−14\\), and \\(−1\\).",
+      "sourceAnswers": [],
+      "hasFigure": false,
+      "status": "draft",
+      "answerVerified": false,
+      "translationStatus": "pending",
+      "mappingStatus": "pending"
+    },
+    {
+      "ordinal": 32,
+      "sourceNumber": "",
+      "sourceAnchor": "",
+      "kind": "exercise-candidate",
+      "context": "Solving Equations in Quadratic Form\n\nEquations in quadratic form are equations with three terms. The first term has a power other than \\(2\\). The middle term has an exponent that is one-half the exponent of the leading term. The third term is a constant. We can solve equations in this form as if they were quadratic. A few examples of these equations include \\(x^4−5x^2+4=0\\),\\(x^6+7x^3−8=0\\), and \\(x^{\\tfrac{2}{3}} +4x^{\\tfrac{1}{3}}+2=0\\). In each one, doubling the exponent of the middle term equals the exponent on the leading term. We can solve these equations by substituting a variable for the middle term.\n\nIf the exponent on the middle term is one-half of the exponent on the leading term, we have an equation in quadratic form, which we can solve as if it were a quadratic. We substitute a variable for the middle term to solve equations in quadratic form.",
+      "original": "Exercise \\(\\PageIndex{9}\\)\n\nSolve: \\({(x−5)}^2−4(x−5)−21=0\\).\n\nAnswer\n\n\\(x=2,x=12\\)",
+      "prompt": "Exercise \\(\\PageIndex{9}\\)\n\nSolve: \\({(x−5)}^2−4(x−5)−21=0\\).",
+      "sourceAnswers": [
+        "\\(x=2,x=12\\)"
+      ],
+      "hasFigure": false,
+      "status": "draft",
+      "answerVerified": false,
+      "translationStatus": "pending",
+      "mappingStatus": "pending"
+    },
+    {
+      "ordinal": 33,
+      "sourceNumber": "",
+      "sourceAnchor": "",
+      "kind": "example-or-exercise",
+      "context": "Solving Rational Equations Resulting in a Quadratic\n\nEarlier, we solved rational equations. Sometimes, solving a rational equation results in a quadratic. When this happens, we continue the solution by simplifying the quadratic equation by one of the methods we have seen. It may turn out that there is no solution.",
+      "original": "Example \\(\\PageIndex{11}\\): Solving a Rational Equation Leading to a Quadratic\n\nSolve the following rational equation: \\(\\dfrac{-4x}{x-1}+\\dfrac{4}{x+1}=\\dfrac{-8}{x^2-1}\\)\n\nSolution\n\nWe want all denominators in factored form to find the LCD. Two of the denominators cannot be factored further. However, \\(x^2−1=(x+1)(x−1)\\). Then, the LCD is \\((x+1)(x−1)\\). Next, we multiply the whole equation by the LCD.\n\n\\[\\begin{align*} (x+1)(x-1)\\left (\\dfrac{-4x}{x-1}+\\dfrac{4}{x+1} \\right )&= \\left (\\dfrac{-8}{x^2-1} \\right )(x+1)(x-1)\\\\ -4x(x+1)+4(x-1)&= -8\\\\ -4x^2-4x+4x-4&= -8\\\\ -4x^2+4&= 0\\\\\n\n-4(x^2-1)&= 0\\\\ -4(x+1)(x-1)&= 0\\\\ x&= -1\\\\ x&= 1 \\end{align*}\\]\n\nIn this case, either solution produces a zero in the denominator in the original equation. Thus, there is no solution.",
+      "prompt": "Example \\(\\PageIndex{11}\\): Solving a Rational Equation Leading to a Quadratic\n\nSolve the following rational equation: \\(\\dfrac{-4x}{x-1}+\\dfrac{4}{x+1}=\\dfrac{-8}{x^2-1}\\)\n\nSolution\n\nWe want all denominators in factored form to find the LCD. Two of the denominators cannot be factored further. However, \\(x^2−1=(x+1)(x−1)\\). Then, the LCD is \\((x+1)(x−1)\\). Next, we multiply the whole equation by the LCD.\n\n\\[\\begin{align*} (x+1)(x-1)\\left (\\dfrac{-4x}{x-1}+\\dfrac{4}{x+1} \\right )&= \\left (\\dfrac{-8}{x^2-1} \\right )(x+1)(x-1)\\\\ -4x(x+1)+4(x-1)&= -8\\\\ -4x^2-4x+4x-4&= -8\\\\ -4x^2+4&= 0\\\\\n\n-4(x^2-1)&= 0\\\\ -4(x+1)(x-1)&= 0\\\\ x&= -1\\\\ x&= 1 \\end{align*}\\]\n\nIn this case, either solution produces a zero in the denominator in the original equation. Thus, there is no solution.",
+      "sourceAnswers": [],
+      "hasFigure": false,
+      "status": "draft",
+      "answerVerified": false,
+      "translationStatus": "pending",
+      "mappingStatus": "pending"
+    },
+    {
+      "ordinal": 34,
+      "sourceNumber": "",
+      "sourceAnchor": "",
+      "kind": "exercise-candidate",
+      "context": "Solving Rational Equations Resulting in a Quadratic\n\nEarlier, we solved rational equations. Sometimes, solving a rational equation results in a quadratic. When this happens, we continue the solution by simplifying the quadratic equation by one of the methods we have seen. It may turn out that there is no solution.",
+      "original": "Exercise \\(\\PageIndex{10}\\)\n\nSolve \\(\\dfrac{3x+2}{x-2}+\\dfrac{1}{x}=\\dfrac{-2}{x^2-2x}\\)\n\nAnswer\n\n\\(x=−1, x= 0\\) is not a solution.",
+      "prompt": "Exercise \\(\\PageIndex{10}\\)\n\nSolve \\(\\dfrac{3x+2}{x-2}+\\dfrac{1}{x}=\\dfrac{-2}{x^2-2x}\\)",
+      "sourceAnswers": [
+        "\\(x=−1, x= 0\\) is not a solution."
+      ],
+      "hasFigure": false,
+      "status": "draft",
+      "answerVerified": false,
+      "translationStatus": "pending",
+      "mappingStatus": "pending"
+    },
+    {
+      "ordinal": 35,
+      "sourceNumber": "1",
+      "sourceAnchor": "",
+      "kind": "exercise-candidate",
+      "context": "Solving Rational Equations Resulting in a Quadratic\n\nEarlier, we solved rational equations. Sometimes, solving a rational equation results in a quadratic. When this happens, we continue the solution by simplifying the quadratic equation by one of the methods we have seen. It may turn out that there is no solution.\n\nAccess these online resources for additional instruction and practice with different types of equations.",
+      "original": "1. Rational Equation with no Solution",
+      "prompt": "1. Rational Equation with no Solution",
+      "sourceAnswers": [],
+      "hasFigure": false,
+      "status": "draft",
+      "answerVerified": false,
+      "translationStatus": "pending",
+      "mappingStatus": "pending"
+    },
+    {
+      "ordinal": 36,
+      "sourceNumber": "2",
+      "sourceAnchor": "",
+      "kind": "exercise-candidate",
+      "context": "Solving Rational Equations Resulting in a Quadratic\n\nEarlier, we solved rational equations. Sometimes, solving a rational equation results in a quadratic. When this happens, we continue the solution by simplifying the quadratic equation by one of the methods we have seen. It may turn out that there is no solution.\n\nAccess these online resources for additional instruction and practice with different types of equations.",
+      "original": "2. Solving equations with rational exponents using reciprocal powers",
+      "prompt": "2. Solving equations with rational exponents using reciprocal powers",
+      "sourceAnswers": [],
+      "hasFigure": false,
+      "status": "draft",
+      "answerVerified": false,
+      "translationStatus": "pending",
+      "mappingStatus": "pending"
+    },
+    {
+      "ordinal": 37,
+      "sourceNumber": "3",
+      "sourceAnchor": "",
+      "kind": "exercise-candidate",
+      "context": "Solving Rational Equations Resulting in a Quadratic\n\nEarlier, we solved rational equations. Sometimes, solving a rational equation results in a quadratic. When this happens, we continue the solution by simplifying the quadratic equation by one of the methods we have seen. It may turn out that there is no solution.\n\nAccess these online resources for additional instruction and practice with different types of equations.",
+      "original": "3. Solving radical equations part 1 of 2",
+      "prompt": "3. Solving radical equations part 1 of 2",
+      "sourceAnswers": [],
+      "hasFigure": false,
+      "status": "draft",
+      "answerVerified": false,
+      "translationStatus": "pending",
+      "mappingStatus": "pending"
+    },
+    {
+      "ordinal": 38,
+      "sourceNumber": "4",
+      "sourceAnchor": "",
+      "kind": "exercise-candidate",
+      "context": "Solving Rational Equations Resulting in a Quadratic\n\nEarlier, we solved rational equations. Sometimes, solving a rational equation results in a quadratic. When this happens, we continue the solution by simplifying the quadratic equation by one of the methods we have seen. It may turn out that there is no solution.\n\nAccess these online resources for additional instruction and practice with different types of equations.",
+      "original": "4. Solving radical equations part 2 of 2",
+      "prompt": "4. Solving radical equations part 2 of 2",
+      "sourceAnswers": [],
+      "hasFigure": false,
+      "status": "draft",
+      "answerVerified": false,
+      "translationStatus": "pending",
+      "mappingStatus": "pending"
+    }
+  ],
+  "license": "CC BY 4.0",
+  "licenseEvidence": "This page titled 2.6: Other Types of Equations was last modified on Thu, 26 Dec 2024 22:30:45 GMT and is shared under a CC BY  4.0  license and was authored, remixed, and/or curated by OpenStax via source content that was edited to the style and standards of the LibreTexts platform.",
+  "url": "https://math.libretexts.org/Bookshelves/Algebra/Algebra_and_Trigonometry_1e_(OpenStax)/02:_Equations_and_Inequalities/2.06:_Other_Types_of_Equations",
+  "sha256": "be1e177b2166cd8db6f5405b9d6ee5b8618476a9992df692e6d6c42c8378c373",
+  "checkedAt": "2026-10-07",
+  "id": "3ecbe737080712aeafe5",
+  "bookId": "algebra-trigonometry",
+  "licenseInherited": false,
+  "licenseSource": "https://math.libretexts.org/Bookshelves/Algebra/Algebra_and_Trigonometry_1e_(OpenStax)/02:_Equations_and_Inequalities/2.06:_Other_Types_of_Equations",
+  "licenseUrl": "https://creativecommons.org/licenses/by/4.0/",
+  "authors": "OpenStax / Jay Abramson et al.",
+  "book": "Algebra and Trigonometry 1e",
+  "reviewStatus": "unreviewed",
+  "sourceLanguage": "en",
+  "translationStatus": "pending"
+}

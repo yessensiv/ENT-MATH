@@ -1,0 +1,420 @@
+{
+  "title": "9.8: Solving Systems with Inverses",
+  "originalText": "Learning Objectives\n\nIn this section, you will:\n\nFind the inverse of a matrix.\n\nSolve a system of linear equations using an inverse matrix.\n\nNancy plans to invest $10,500 into two different bonds to spread out her risk. The first bond has an annual return of 10%, and the second bond has an annual return of 6%. In order to receive an 8.5% return from the two bonds, how much should Nancy invest in each bond? What is the best method to solve this problem?\n\nThere are several ways we can solve this problem. As we have seen in previous sections, systems of equations and matrices are useful in solving real-world problems involving finance. After studying this section, we will have the tools to solve the bond problem using the inverse of a matrix.\n\nFinding the Inverse of a Matrix\n\nWe know that the multiplicative inverse of a real number aa is a−1,a−1, and aa−1=a−1a=(1a)a=1.aa−1=a−1a=(1a)a=1. For example, 2−1=122−1=12 and (12)2=1.(12)2=1. The multiplicative inverse of a matrix is similar in concept, except that the product of matrix AA and its inverse A−1A−1 equals the identity matrix. The identity matrix is a square matrix containing ones down the main diagonal and zeros everywhere else. We identify identity matrices by InIn where nn represents the dimension of the matrix. [link] and the following equations.\n\nI2=[1001]I2=[ 1001 ]\n\nI3=⎡⎣⎢100010001⎤⎦⎥I3=[ 100010001 ]\n\nThe identity matrix acts as a 1 in matrix algebra. For example, AI=IA=A.AI=IA=A.\n\nA matrix that has a multiplicative inverse has the properties\n\nAA−1=IA−1A=IAA−1=IA−1A=I\n\nA matrix that has a multiplicative inverse is called an invertible matrix. Only a square matrix may have a multiplicative inverse, as the reversibility, AA−1=A−1A=I,AA−1=A−1A=I, is a requirement. Not all square matrices have an inverse, but if AA is invertible, then A−1A−1 is unique. We will look at two methods for finding the inverse of a 2×22×2 matrix and a third method that can be used on both 2×22×2 and 3×33×3 matrices.\n\nTHE IDENTITY MATRIX AND MULTIPLICATIVE INVERSE\n\nThe identity matrix, In,In, is a square matrix containing ones down the main diagonal and zeros everywhere else.\n\nI2=[1001]I3=⎡⎣⎢100010001⎤⎦⎥       2×2                3×3I2=[ 1001 ]I3=[ 100010001 ]       2×2                3×3\n\nIf AA is an n×nn×n matrix and BB is an n×nn×n matrix such that AB=BA=In,AB=BA=In, then B=A−1,B=A−1, the multiplicative inverse of a matrix A.A.\n\nEXAMPLE 1\n\nShowing That the Identity Matrix Acts as a 1\n\nGiven matrix A, show that AI=IA=A.AI=IA=A.\n\nA=[3−245]A=[ 34−25 ]\n\nHOW TO\n\nGiven two matrices, show that one is the multiplicative inverse of the other.\n\n1. Given matrix AA of order n×nn×n and matrix BB of order n×nn×n multiply AB.AB.\n\n2. If AB=I,AB=I, then find the product BA.BA. If BA=I,BA=I, then B=A−1B=A−1 and A=B−1.A=B−1.\n\nEXAMPLE 2\n\nShowing That Matrix A Is the Multiplicative Inverse of Matrix B\n\nShow that the given matrices are multiplicative inverses of each other.\n\nA=[1−25−9],B=[−92−51]A=[ 15−2−9 ],B=[ −9−521 ]\n\nTRY IT #1\n\nShow that the following two matrices are inverses of each other.\n\nA=[1−14−3],B=[−31−41]A=[ 14−1−3 ],B=[ −3−411 ]\n\nFinding the Multiplicative Inverse Using Matrix Multiplication\n\nWe can now determine whether two matrices are inverses, but how would we find the inverse of a given matrix? Since we know that the product of a matrix and its inverse is the identity matrix, we can find the inverse of a matrix by setting up an equation using matrix multiplication.\n\nEXAMPLE 3\n\nFinding the Multiplicative Inverse Using Matrix Multiplication\n\nUse matrix multiplication to find the inverse of the given matrix.\n\nA=[12−2−3]A=[ 1−22−3 ]\n\nFinding the Multiplicative Inverse by Augmenting with the Identity\n\nAnother way to find the multiplicative inverse is by augmenting with the identity. When matrix AA is transformed into I,I, the augmented matrix II transforms into A−1.A−1.\n\nFor example, given\n\nA=[2513]A=[ 2153 ]\n\naugment AA with the identity\n\n[2513∣∣∣1001][ 2153|1001 ]\n\nPerform row operations with the goal of turning AA into the identity.\n\n1. Switch row 1 and row 2.\n\n[5231∣∣∣0110][ 5321|0110 ]\n\n2. Multiply row 2 by −2−2 and add to row 1.\n\n[1211∣∣∣−2110][ 1121|−2110 ]\n\n3. Multiply row 1 by −2−2 and add to row 2.\n\n[101−1∣∣∣−251−2][ 110−1|−215−2 ]\n\n4. Add row 2 to row 1.\n\n[100−1∣∣∣35−1−2][ 100−1|3−15−2 ]\n\n5. Multiply row 2 by −1.−1.\n\n[1001∣∣∣3−5−12][ 1001|3−1−52 ]\n\nThe matrix we have found is A−1.A−1.\n\nA−1=[3−5−12]A−1=[ 3−1−52 ]\n\nFinding the Multiplicative Inverse of 2×2 Matrices Using a Formula\n\nWhen we need to find the multiplicative inverse of a 2×22×2 matrix, we can use a special formula instead of using matrix multiplication or augmenting with the identity.\n\nIf AA is a 2×22×2 matrix, such as\n\nA=[acbd]A=[ abcd ]\n\nthe multiplicative inverse of AA is given by the formula\n\nA−1=1ad−bc[d−c−ba]A−1=1ad−bc[ d−b−ca ]\n\nwhere ad−bc≠0.ad−bc≠0. If ad−bc=0,ad−bc=0, then AA has no inverse.\n\nEXAMPLE 4\n\nUsing the Formula to Find the Multiplicative Inverse of Matrix A\n\nUse the formula to find the multiplicative inverse of\n\nA=[12−2−3]A=[ 1−22−3 ]\n\nAnalysis\n\nWe can check that our formula works by using one of the other methods to calculate the inverse. Let’s augment AA with the identity.\n\n[12−2−3∣∣∣1001][ 1−22−3|1001 ]\n\nPerform row operations with the goal of turning AA into the identity.\n\n1. Multiply row 1 by −2−2 and add to row 2.\n\n[10−21∣∣∣1−201][ 1−201|10−21 ]\n\n2. Multiply row 1 by 2 and add to row 1.\n\n[1001∣∣∣−3−221][ 1001|−32−21 ]\n\nSo, we have verified our original solution.\n\nA−1=[−3−221]A−1=[ −32−21 ]\n\nTRY IT #2\n\nUse the formula to find the inverse of matrix A.A. Verify your answer by augmenting with the identity matrix.\n\nA=[12−13]A=[ 1−123 ]\n\nEXAMPLE 5\n\nFinding the Inverse of the Matrix, If It Exists\n\nFind the inverse, if it exists, of the given matrix.\n\nA=[3162]A=[ 3612 ]\n\n1.  \n\n2.  \n\n3.  \n\nFinding the Multiplicative Inverse of 3×3 Matrices\n\nUnfortunately, we do not have a formula similar to the one for a 2×22×2 matrix to find the inverse of a 3×33×3 matrix. Instead, we will augment the original matrix with the identity matrix and use row operations to obtain the inverse.\n\nGiven a 3×33×3 matrix\n\nA=⎡⎣⎢232334111⎤⎦⎥A=[ 231331241 ]\n\naugment AA with the identity matrix\n\nA∣∣∣∣I=⎡⎣⎢232334111 ∣∣∣∣ 100010001⎤⎦⎥A|I=[ 231331241 | 100010001 ]\n\nTo begin, we write the augmented matrix with the identity on the right and AA on the left. Performing elementary row operations so that the identity matrix appears on the left, we will obtain the inverse matrix on the right. We will find the inverse of this matrix in the next example.\n\nHOW TO\n\nGiven a 3×33×3 matrix, find the inverse\n\n1. Write the original matrix augmented with the identity matrix on the right.\n\n2. Use elementary row operations so that the identity appears on the left.\n\n3. What is obtained on the right is the inverse of the original matrix.\n\n4. Use matrix multiplication to show that AA−1=IAA−1=I and A−1A=I.A−1A=I.\n\nEXAMPLE 6\n\nFinding the Inverse of a 3 × 3 Matrix\n\nGiven the 3×33×3 matrix A,A, find the inverse.\n\nA=⎡⎣⎢232334111⎤⎦⎥A=[ 231331241 ]\n\nAnalysis\n\nTo prove that B=A−1,B=A−1, let’s multiply the two matrices together to see if the product equals the identity, if AA−1=IAA−1=I and A−1A=I.A−1A=I.\n\nAA−1=⎡⎣⎢232334111⎤⎦⎥  ⎡⎣⎢−1−1610−201−3⎤⎦⎥=⎡⎣⎢2(−1)+3(−1)+1(6)3(−1)+3(−1)+1(6)2(−1)+4(−1)+1(6)2(1)+3(0)+1(−2)3(1)+3(0)+1(−2)2(1)+4(0)+1(−2)2(0)+3(1)+1(−3)3(0)+3(1)+1(−3)2(0)+4(1)+1(−3)⎤⎦⎥=⎡⎣⎢100010001⎤⎦⎥AA−1=[ 231331241 ]  [ −110−1016−2−3 ]=[ 2(−1)+3(−1)+1(6)2(1)+3(0)+1(−2)2(0)+3(1)+1(−3)3(−1)+3(−1)+1(6)3(1)+3(0)+1(−2)3(0)+3(1)+1(−3)2(−1)+4(−1)+1(6)2(1)+4(0)+1(−2)2(0)+4(1)+1(−3) ]=[ 100010001 ]\n\nA−1A=⎡⎣⎢−1−1610−201−3⎤⎦⎥  ⎡⎣⎢232334111⎤⎦⎥=⎡⎣⎢−1(2)+1(3)+0(2)−1(2)+0(3)+1(2)6(2)+−2(3)+−3(2)−1(3)+1(3)+0(4)−1(3)+0(3)+1(4)6(3)+−2(3)+−3(4)−1(1)+1(1)+0(1)−1(1)+0(1)+1(1)6(1)+−2(1)+−3(1)⎤⎦⎥=⎡⎣⎢100010001⎤⎦⎥A−1A=[ −110−1016−2−3 ]  [ 231331241 ]=[ −1(2)+1(3)+0(2)−1(3)+1(3)+0(4)−1(1)+1(1)+0(1)−1(2)+0(3)+1(2)−1(3)+0(3)+1(4)−1(1)+0(1)+1(1)6(2)+−2(3)+−3(2)6(3)+−2(3)+−3(4)6(1)+−2(1)+−3(1) ]=[ 100010001 ]\n\nTRY IT #3\n\nFind the inverse of the 3×33×3 matrix.\n\nA=⎡⎣⎢2−10−1711311−7−2⎤⎦⎥A=[ 2−1711−111−703−2 ]\n\nSolving a System of Linear Equations Using the Inverse of a Matrix\n\nSolving a system of linear equations using the inverse of a matrix requires the definition of two new matrices: XX is the matrix representing the variables of the system, and BB is the matrix representing the constants. Using matrix multiplication, we may define a system of equations with the same number of equations as variables as\n\nAX=BAX=B\n\nTo solve a system of linear equations using an inverse matrix, let AA be the coefficient matrix, let XX be the variable matrix, and let BB be the constant matrix. Thus, we want to solve a system AX=B.AX=B. For example, look at the following system of equations.\n\na1x+b1y=c1a2x+b2y=c2a1x+b1y=c1a2x+b2y=c2\n\nFrom this system, the coefficient matrix is\n\nA=[a1a2b1b2]A=[ a1b1a2b2 ]\n\nThe variable matrix is\n\nX=[xy]X=[ xy ]\n\nAnd the constant matrix is\n\nB=[c1c2]B=[ c1c2 ]\n\nThen AX=BAX=B looks like\n\n[a1a2b1b2]  [xy]=[c1c2][ a1b1a2b2 ]  [ xy ]=[ c1c2 ]\n\nRecall the discussion earlier in this section regarding multiplying a real number by its inverse, (2−1)2=(12)2=1.(2−1)2=(12)2=1. To solve a single linear equation ax=bax=b for x,x, we would simply multiply both sides of the equation by the multiplicative inverse (reciprocal) of a.a. Thus,\n\n ax=b (1a)ax=(1a)b(a−1  )ax=(a−1)b[(a−1)a]x=(a−1)b           1x=(a−1)b             x=(a−1)b ax=b (1a)ax=(1a)b(a−1  )ax=(a−1)b[(a−1)a]x=(a−1)b           1x=(a−1)b             x=(a−1)b\n\nThe only difference between a solving a linear equation and a system of equations written in matrix form is that finding the inverse of a matrix is more complicated, and matrix multiplication is a longer process. However, the goal is the same—to isolate the variable.\n\nWe will investigate this idea in detail, but it is helpful to begin with a 2×22×2 system and then move on to a 3×33×3 system.\n\nSOLVING A SYSTEM OF EQUATIONS USING THE INVERSE OF A MATRIX\n\nGiven a system of equations, write the coefficient matrix A,A, the variable matrix X,X, and the constant matrix B.B. Then\n\nAX=BAX=B\n\nMultiply both sides by the inverse of AA to obtain the solution.\n\n(A−1)AX=(A−1)B[(A−1)A]X=(A−1)BIX=(A−1)BX=(A−1)B(A−1)AX=(A−1)B[ (A−1)A ]X=(A−1)BIX=(A−1)BX=(A−1)B\n\nQ&A\n\nIf the coefficient matrix does not have an inverse, does that mean the system has no solution?\n\nNo, if the coefficient matrix is not invertible, the system could be inconsistent and have no solution, or be dependent and have infinitely many solutions.\n\nEXAMPLE 7\n\nSolving a 2 × 2 System Using the Inverse of a Matrix\n\nSolve the given system of equations using the inverse of a matrix.\n\n3x+8y=54x+11y=73x+8y=54x+11y=7\n\nQ&A\n\nCan we solve for XX by finding the product BA−1?BA−1?\n\nNo, recall that matrix multiplication is not commutative, so A−1B≠BA−1.A−1B≠BA−1. Consider our steps for solving the matrix equation.\n\n(A−1)AX=(A−1)B[(A−1)A]X=(A−1)BIX=(A−1)BX=(A−1)B(A−1)AX=(A−1)B[ (A−1)A ]X=(A−1)BIX=(A−1)BX=(A−1)B\n\nNotice in the first step we multiplied both sides of the equation by A−1,A−1, but the A−1A−1 was to the left of AA on the left side and to the left of BB on the right side. Because matrix multiplication is not commutative, order matters.\n\nEXAMPLE 8\n\nSolving a 3 × 3 System Using the Inverse of a Matrix\n\nSolve the following system using the inverse of a matrix.\n\n5x+15y+56z=35−4x−11y−41z=−26−x−3y−11z=−75x+15y+56z=35−4x−11y−41z=−26−x−3y−11z=−7\n\nTRY IT #4\n\nSolve the system using the inverse of the coefficient matrix.\n\n 2x−17y+11z=0 −x+11y−7z=8              3y−2z=−2 2x−17y+11z=0 −x+11y−7z=8              3y−2z=−2\n\nHOW TO\n\nGiven a system of equations, solve with matrix inverses using a calculator.\n\n1. Save the coefficient matrix and the constant matrix as matrix variables [A][ A ] and [B].[ B ].\n\n2. Enter the multiplication into the calculator, calling up each matrix variable as needed.\n\n3. If the coefficient matrix is invertible, the calculator will present the solution matrix; if the coefficient matrix is not invertible, the calculator will present an error message.\n\nEXAMPLE 9\n\nUsing a Calculator to Solve a System of Equations with Matrix Inverses\n\nSolve the system of equations with matrix inverses using a calculator\n\n2x+3y+z=323x+3y+z=−272x+4y+z=−22x+3y+z=323x+3y+z=−272x+4y+z=−2\n\nMEDIA\n\nAccess these online resources for additional instruction and practice with solving systems with inverses.\n\nThe Identity Matrix\n\nDetermining Inverse Matrices\n\nUsing a Matrix Equation to Solve a System of Equations\n\n9.7 Section Exercises\n\nVerbal\n\n1. \n\nIn a previous section, we showed that matrix multiplication is not commutative, that is, AB≠BAAB≠BA in most cases. Can you explain why matrix multiplication is commutative for matrix inverses, that is, A−1A=AA−1?A−1A=AA−1?\n\n2. \n\nDoes every 2×22×2 matrix have an inverse? Explain why or why not. Explain what condition is necessary for an inverse to exist.\n\n3. \n\nCan you explain whether a 2×22×2 matrix with an entire row of zeros can have an inverse?\n\n4. \n\nCan a matrix with an entire column of zeros have an inverse? Explain why or why not.\n\n5. \n\nCan a matrix with zeros on the diagonal have an inverse? If so, find an example. If not, prove why not. For simplicity, assume a 2×22×2 matrix.\n\nAlgebraic\n\nIn the following exercises, show that matrix AA is the inverse of matrix B.B.\n\n6. \n\nA=[1−101],B=[1101]A=[ 10−11 ],B=[ 1011 ]\n\n7. \n\nA=[1324],B=[−2321−12]A=[ 1234 ],B=[ −2132−12 ]\n\n8. \n\nA=[4750],B=[01517−435]A=[ 4570 ],B=[ 01715−435 ]\n\n9. \n\nA=[−2312−1],B=[−2−6−1−4]A=[ −2123−1 ],B=[ −2−1−6−4 ]\n\n10. \n\nA=⎡⎣⎢1000111−11⎤⎦⎥,B=12⎡⎣⎢20011−1−111⎤⎦⎥A=[ 10101−1011 ],B=12[ 21−10110−11 ]\n\n11. \n\nA=⎡⎣⎢141206329⎤⎦⎥,B=14⎡⎣⎢617−120−32−2−54⎤⎦⎥A=[ 123402169 ],B=14[ 60−217−3−5−1224 ]\n\n12. \n\nA=⎡⎣⎢3158162112⎤⎦⎥,B=136⎡⎣⎢−67−184−26−22−615⎤⎦⎥A=[ 3821115612 ],B=136[ −684−67−261−1−225 ]\n\nFor the following exercises, find the multiplicative inverse of each matrix, if it exists.\n\n13. \n\n[31−29][ 3−219 ]\n\n14. \n\n[−2321][ −2231 ]\n\n15. \n\n[−3972][ −3792 ]\n\n16. \n\n[−4−5−38][ −4−3−58 ]\n\n17. \n\n[1212][ 1122 ]\n\n18. \n\n[0110][ 0110 ]\n\n19. \n\n[0.511.5−0.5][ 0.51.51−0.5 ]\n\n20. \n\n⎡⎣⎢1−23010672⎤⎦⎥[ 106−217302 ]\n\n21. \n\n⎡⎣⎢041110−305⎤⎦⎥[ 01−3410105 ]\n\n22. \n\n⎡⎣⎢1−3−224−4−11−5⎤⎦⎥[ 12−1−341−2−4−5 ]\n\n23. \n\n⎡⎣⎢12495−2−367⎤⎦⎥[ 19−32564−27 ]\n\n24. \n\n⎡⎣⎢1−41−2843−122⎤⎦⎥[ 1−23−48−12142 ]\n\n25. \n\n⎡⎣⎢⎢121316121417121518⎤⎦⎥⎥[ 121212131415161718 ]\n\n26. \n\n⎡⎣⎢147258369⎤⎦⎥[ 123456789 ]\n\nFor the following exercises, solve the system using the inverse of a 2×22×2 matrix.\n\n27. \n\n5x−6y=−614x+3y=−25x−6y=−614x+3y=−2\n\n28. \n\n8x+4y=−1003x−4y=18x+4y=−1003x−4y=1\n\n29. \n\n3x−2y=6−x+5y=−23x−2y=6−x+5y=−2\n\n30. \n\n5x−4y=−54x+y=2.35x−4y=−54x+y=2.3\n\n31. \n\n−3x−4y=912x+4y=−6−3x−4y=912x+4y=−6\n\n32. \n\n−2x+3y=310−x+5y=12−2x+3y=310−x+5y=12\n\n33. \n\n85x−45y=25−85x+15y=71085x−45y=25−85x+15y=710\n\n34. \n\n12x+15y=−1412x−35y=−9412x+15y=−1412x−35y=−94\n\nFor the following exercises, solve a system using the inverse of a 3×33×3 matrix.\n\n35. \n\n3x−2y+5z=215x+4y=37x−2y−5z=53x−2y+5z=215x+4y=37x−2y−5z=5\n\n36. \n\n4x+4y+4z=402x−3y+4z=−12−x+3y+4z=94x+4y+4z=402x−3y+4z=−12−x+3y+4z=9\n\n37. \n\n6x−5y−z=31−x+2y+z=−63x+3y+2z=136x−5y−z=31−x+2y+z=−63x+3y+2z=13\n\n38. \n\n6x−5y+2z=−42x+5y−z=122x+5y+z=126x−5y+2z=−42x+5y−z=122x+5y+z=12\n\n39. \n\n4x−2y+3z=−122x+2y−9z=336y−4z=14x−2y+3z=−122x+2y−9z=336y−4z=1\n\n40. \n\n110x−15y+4z=−41215x−20y+25z=−101310x+4y−310z=23110x−15y+4z=−41215x−20y+25z=−101310x+4y−310z=23\n\n41. \n\n12x−15y+15z=31100−34x−14y+12z=740−45x−12y+32z=1412x−15y+15z=31100−34x−14y+12z=740−45x−12y+32z=14\n\n42. \n\n0.1x+0.2y+0.3z=−1.40.1x−0.2y+0.3z=0.60.4y+0.9z=−20.1x+0.2y+0.3z=−1.40.1x−0.2y+0.3z=0.60.4y+0.9z=−2\n\nTechnology\n\nFor the following exercises, use a calculator to solve the system of equations with matrix inverses.\n\n43. \n\n2x−y=−3−x+2y=2.32x−y=−3−x+2y=2.3\n\n44. \n\n−12x−32y=−432052x+115y=314−12x−32y=−432052x+115y=314\n\n45. \n\n12.3x−2y−2.5z=236.9x+7y−7.5z=−78y−5z=−1012.3x−2y−2.5z=236.9x+7y−7.5z=−78y−5z=−10\n\n46. \n\n0.5x−3y+6z=−0.80.7x−2y=−0.060.5x+4y+5z=00.5x−3y+6z=−0.80.7x−2y=−0.060.5x+4y+5z=0\n\nExtensions\n\nFor the following exercises, find the inverse of the given matrix.\n\n47. \n\n⎡⎣⎢⎢⎢⎢1000011010110101⎤⎦⎥⎥⎥⎥[ 1010010101100011 ]\n\n48. \n\n⎡⎣⎢⎢⎢⎢−1001002−320−105201⎤⎦⎥⎥⎥⎥[ −1025000202−101−301 ]\n\n49. \n\n⎡⎣⎢⎢⎢⎢101−5−214030−210231⎤⎦⎥⎥⎥⎥[ 1−230010214−23−5011 ]\n\n50. \n\n⎡⎣⎢⎢⎢⎢⎢⎢1000022020013012000230110⎤⎦⎥⎥⎥⎥⎥⎥[ 1202302100003010200100120 ]\n\n51. \n\n⎡⎣⎢⎢⎢⎢⎢⎢⎢⎢⎢100001010001001001000101000011000001⎤⎦⎥⎥⎥⎥⎥⎥⎥⎥⎥[ 100000010000001000000100000010111111 ]\n\nReal-World Applications\n\nFor the following exercises, write a system of equations that represents the situation. Then, solve the system using the inverse of a matrix.\n\n52. \n\n2,400 tickets were sold for a basketball game. If the prices for floor 1 and floor 2 were different, and the total amount of money brought in is $64,000, how much was the price of each ticket?\n\n53. \n\nIn the previous exercise, if you were told there were 400 more tickets sold for floor 2 than floor 1, how much was the price of each ticket?\n\n54. \n\nA food drive collected two different types of canned goods, green beans and kidney beans. The total number of collected cans was 350 and the total weight of all donated food was 348 lb, 12 oz. If the green bean cans weigh 2 oz less than the kidney bean cans, how many of each can was donated?\n\n55. \n\nStudents were asked to bring their favorite fruit to class. 95% of the fruits consisted of banana, apple, and oranges. If oranges were twice as popular as bananas, and apples were 5% less popular than bananas, what are the percentages of each individual fruit?\n\n56. \n\nA sorority held a bake sale to raise money and sold brownies and chocolate chip cookies. They priced the brownies at $1 and the chocolate chip cookies at $0.75. They raised $700 and sold 850 items. How many brownies and how many cookies were sold?\n\n57. \n\nA clothing store needs to order new inventory. It has three different types of hats for sale: straw hats, beanies, and cowboy hats. The straw hat is priced at $13.99, the beanie at $7.99, and the cowboy hat at $14.49. If 100 hats were sold this past quarter, $1,119 was taken in by sales, and the amount of beanies sold was 10 more than cowboy hats, how many of each should the clothing store order to replace those already sold?\n\n58. \n\nAnna, Ashley, and Andrea weigh a combined 370 lb. If Andrea weighs 20 lb more than Ashley, and Anna weighs 1.5 times as much as Ashley, how much does each girl weigh?\n\n59. \n\nThree roommates shared a package of 12 ice cream bars, but no one remembers who ate how many. If Tom ate twice as many ice cream bars as Joe, and Albert ate three less than Tom, how many ice cream bars did each roommate eat?\n\n60. \n\nA farmer constructed a chicken coop out of chicken wire, wood, and plywood. The chicken wire cost $2 per square foot, the wood $10 per square foot, and the plywood $5 per square foot. The farmer spent a total of $51, and the total amount of materials used was 14ft2.14ft2. He used 3 ft23 ft2 more chicken wire than plywood. How much of each material in did the farmer use?\n\n61. \n\nJay has lemon, orange, and pomegranate trees in his backyard. An orange weighs 8 oz, a lemon 5 oz, and a pomegranate 11 oz. Jay picked 142 pieces of fruit weighing a total of 70 lb, 10 oz. He picked 15.5 times more oranges than pomegranates. How many of each fruit did Jay pick?\n\nSecurityError: document exceeded 100,000 nodes. (click for details)\n\nCallstack:\n    at (Under_Construction/Precalculus_2e_(OpenStax)/09:_Systems_of_Equations_and_Inequalities/9.08:_Solving_Systems_with_Inverses), /content/body/div/div/div/section[2]/div/div[10]/section/div/div/section/details/section/div/div/div[3]/script/math/semantics/mrow/mrow/mtable/mtr[3]/mtd/mrow/mrow/mrow/mtable/mtr[1]/mtd[2]/mrow/mn\n\nThis page titled 9.8: Solving Systems with Inverses was last modified on Sun, 28 May 2023 07:30:40 GMT and is shared under a CC BY  4.0  license and was authored, remixed, and/or curated by OpenStax via source content that was edited to the style and standards of the LibreTexts platform.",
+  "figures": [],
+  "references": [
+    {
+      "text": "[link]",
+      "url": "https://openstax.org/books/precalculus/pages/9-7-solving-systems-with-inverses#Equation_09_07_01"
+    },
+    {
+      "text": "The Identity Matrix",
+      "url": "http://openstax.org/l/identmatrix"
+    },
+    {
+      "text": "Determining Inverse Matrices",
+      "url": "http://openstax.org/l/inversematrix"
+    },
+    {
+      "text": "Using a Matrix Equation to Solve a System of Equations",
+      "url": "http://openstax.org/l/matrixsystem"
+    },
+    {
+      "text": "1",
+      "url": "https://openstax.org/books/precalculus/pages/chapter-9#fs-id1165137548741-solution"
+    },
+    {
+      "text": "3",
+      "url": "https://openstax.org/books/precalculus/pages/chapter-9#fs-id1165135547596-solution"
+    },
+    {
+      "text": "5",
+      "url": "https://openstax.org/books/precalculus/pages/chapter-9#fs-id1165135702546-solution"
+    },
+    {
+      "text": "7",
+      "url": "https://openstax.org/books/precalculus/pages/chapter-9#fs-id1165137629353-solution"
+    },
+    {
+      "text": "9",
+      "url": "https://openstax.org/books/precalculus/pages/chapter-9#fs-id1165137417445-solution"
+    },
+    {
+      "text": "11",
+      "url": "https://openstax.org/books/precalculus/pages/chapter-9#fs-id1165135481914-solution"
+    },
+    {
+      "text": "13",
+      "url": "https://openstax.org/books/precalculus/pages/chapter-9#fs-id1165134282180-solution"
+    },
+    {
+      "text": "15",
+      "url": "https://openstax.org/books/precalculus/pages/chapter-9#fs-id1165137387518-solution"
+    },
+    {
+      "text": "17",
+      "url": "https://openstax.org/books/precalculus/pages/chapter-9#fs-id1165133103275-solution"
+    },
+    {
+      "text": "19",
+      "url": "https://openstax.org/books/precalculus/pages/chapter-9#fs-id1165134185464-solution"
+    },
+    {
+      "text": "21",
+      "url": "https://openstax.org/books/precalculus/pages/chapter-9#fs-id1165133141439-solution"
+    },
+    {
+      "text": "23",
+      "url": "https://openstax.org/books/precalculus/pages/chapter-9#fs-id1165134159676-solution"
+    },
+    {
+      "text": "25",
+      "url": "https://openstax.org/books/precalculus/pages/chapter-9#fs-id1165135397109-solution"
+    },
+    {
+      "text": "27",
+      "url": "https://openstax.org/books/precalculus/pages/chapter-9#fs-id1165134319666-solution"
+    },
+    {
+      "text": "29",
+      "url": "https://openstax.org/books/precalculus/pages/chapter-9#fs-id1165131884588-solution"
+    },
+    {
+      "text": "31",
+      "url": "https://openstax.org/books/precalculus/pages/chapter-9#fs-id1165135205038-solution"
+    },
+    {
+      "text": "33",
+      "url": "https://openstax.org/books/precalculus/pages/chapter-9#fs-id1165131958337-solution"
+    },
+    {
+      "text": "35",
+      "url": "https://openstax.org/books/precalculus/pages/chapter-9#fs-id1165132079352-solution"
+    },
+    {
+      "text": "37",
+      "url": "https://openstax.org/books/precalculus/pages/chapter-9#fs-id1165134226706-solution"
+    },
+    {
+      "text": "39",
+      "url": "https://openstax.org/books/precalculus/pages/chapter-9#fs-id1165134185366-solution"
+    },
+    {
+      "text": "41",
+      "url": "https://openstax.org/books/precalculus/pages/chapter-9#fs-id1165135421457-solution"
+    },
+    {
+      "text": "43",
+      "url": "https://openstax.org/books/precalculus/pages/chapter-9#fs-id1165134356166-solution"
+    },
+    {
+      "text": "45",
+      "url": "https://openstax.org/books/precalculus/pages/chapter-9#fs-id1165135652325-solution"
+    },
+    {
+      "text": "47",
+      "url": "https://openstax.org/books/precalculus/pages/chapter-9#fs-id1165135339479-solution"
+    },
+    {
+      "text": "49",
+      "url": "https://openstax.org/books/precalculus/pages/chapter-9#fs-id1165135191959-solution"
+    },
+    {
+      "text": "51",
+      "url": "https://openstax.org/books/precalculus/pages/chapter-9#fs-id1165134385542-solution"
+    },
+    {
+      "text": "53",
+      "url": "https://openstax.org/books/precalculus/pages/chapter-9#fs-id1165133260348-solution"
+    },
+    {
+      "text": "55",
+      "url": "https://openstax.org/books/precalculus/pages/chapter-9#fs-id1165134081432-solution"
+    },
+    {
+      "text": "57",
+      "url": "https://openstax.org/books/precalculus/pages/chapter-9#fs-id1165135705944-solution"
+    },
+    {
+      "text": "59",
+      "url": "https://openstax.org/books/precalculus/pages/chapter-9#fs-id1165137501545-solution"
+    },
+    {
+      "text": "61",
+      "url": "https://openstax.org/books/precalculus/pages/chapter-9#fs-id1165134531903-solution"
+    },
+    {
+      "text": "9.8: Solving Systems with Inverses",
+      "url": "https://math.libretexts.org/Bookshelves/Precalculus/Precalculus_2e_(OpenStax)/09%3A_Systems_of_Equations_and_Inequalities/9.08%3A_Solving_Systems_with_Inverses"
+    },
+    {
+      "text": "CC BY  4.0",
+      "url": "https://creativecommons.org/licenses/by/4.0"
+    },
+    {
+      "text": "OpenStax",
+      "url": "https://openstax.org/"
+    },
+    {
+      "text": "source content",
+      "url": "https://openstax.org/details/books/precalculus"
+    }
+  ],
+  "exercises": [
+    {
+      "ordinal": 1,
+      "sourceNumber": "1",
+      "sourceAnchor": "",
+      "kind": "exercise-candidate",
+      "context": "Given two matrices, show that one is the multiplicative inverse of the other.",
+      "original": "1. Given matrix AA of order n×nn×n and matrix BB of order n×nn×n multiply AB.AB.",
+      "prompt": "1. Given matrix AA of order n×nn×n and matrix BB of order n×nn×n multiply AB.AB.",
+      "sourceAnswers": [],
+      "hasFigure": false,
+      "status": "draft",
+      "answerVerified": false,
+      "translationStatus": "pending",
+      "mappingStatus": "pending"
+    },
+    {
+      "ordinal": 2,
+      "sourceNumber": "2",
+      "sourceAnchor": "",
+      "kind": "exercise-candidate",
+      "context": "Given two matrices, show that one is the multiplicative inverse of the other.",
+      "original": "2. If AB=I,AB=I, then find the product BA.BA. If BA=I,BA=I, then B=A−1B=A−1 and A=B−1.A=B−1.",
+      "prompt": "2. If AB=I,AB=I, then find the product BA.BA. If BA=I,BA=I, then B=A−1B=A−1 and A=B−1.A=B−1.",
+      "sourceAnswers": [],
+      "hasFigure": false,
+      "status": "draft",
+      "answerVerified": false,
+      "translationStatus": "pending",
+      "mappingStatus": "pending"
+    },
+    {
+      "ordinal": 3,
+      "sourceNumber": "1",
+      "sourceAnchor": "",
+      "kind": "exercise-candidate",
+      "context": "augment AA with the identity\n\n[2513∣∣∣1001][ 2153|1001 ]\n\nPerform row operations with the goal of turning AA into the identity.",
+      "original": "1. Switch row 1 and row 2.\n\n[5231∣∣∣0110][ 5321|0110 ]",
+      "prompt": "1. Switch row 1 and row 2.\n\n[5231∣∣∣0110][ 5321|0110 ]",
+      "sourceAnswers": [],
+      "hasFigure": false,
+      "status": "draft",
+      "answerVerified": false,
+      "translationStatus": "pending",
+      "mappingStatus": "pending"
+    },
+    {
+      "ordinal": 4,
+      "sourceNumber": "2",
+      "sourceAnchor": "",
+      "kind": "exercise-candidate",
+      "context": "augment AA with the identity\n\n[2513∣∣∣1001][ 2153|1001 ]\n\nPerform row operations with the goal of turning AA into the identity.",
+      "original": "2. Multiply row 2 by −2−2 and add to row 1.\n\n[1211∣∣∣−2110][ 1121|−2110 ]",
+      "prompt": "2. Multiply row 2 by −2−2 and add to row 1.\n\n[1211∣∣∣−2110][ 1121|−2110 ]",
+      "sourceAnswers": [],
+      "hasFigure": false,
+      "status": "draft",
+      "answerVerified": false,
+      "translationStatus": "pending",
+      "mappingStatus": "pending"
+    },
+    {
+      "ordinal": 5,
+      "sourceNumber": "3",
+      "sourceAnchor": "",
+      "kind": "exercise-candidate",
+      "context": "augment AA with the identity\n\n[2513∣∣∣1001][ 2153|1001 ]\n\nPerform row operations with the goal of turning AA into the identity.",
+      "original": "3. Multiply row 1 by −2−2 and add to row 2.\n\n[101−1∣∣∣−251−2][ 110−1|−215−2 ]",
+      "prompt": "3. Multiply row 1 by −2−2 and add to row 2.\n\n[101−1∣∣∣−251−2][ 110−1|−215−2 ]",
+      "sourceAnswers": [],
+      "hasFigure": false,
+      "status": "draft",
+      "answerVerified": false,
+      "translationStatus": "pending",
+      "mappingStatus": "pending"
+    },
+    {
+      "ordinal": 6,
+      "sourceNumber": "4",
+      "sourceAnchor": "",
+      "kind": "exercise-candidate",
+      "context": "augment AA with the identity\n\n[2513∣∣∣1001][ 2153|1001 ]\n\nPerform row operations with the goal of turning AA into the identity.",
+      "original": "4. Add row 2 to row 1.\n\n[100−1∣∣∣35−1−2][ 100−1|3−15−2 ]",
+      "prompt": "4. Add row 2 to row 1.\n\n[100−1∣∣∣35−1−2][ 100−1|3−15−2 ]",
+      "sourceAnswers": [],
+      "hasFigure": false,
+      "status": "draft",
+      "answerVerified": false,
+      "translationStatus": "pending",
+      "mappingStatus": "pending"
+    },
+    {
+      "ordinal": 7,
+      "sourceNumber": "5",
+      "sourceAnchor": "",
+      "kind": "exercise-candidate",
+      "context": "augment AA with the identity\n\n[2513∣∣∣1001][ 2153|1001 ]\n\nPerform row operations with the goal of turning AA into the identity.",
+      "original": "5. Multiply row 2 by −1.−1.\n\n[1001∣∣∣3−5−12][ 1001|3−1−52 ]",
+      "prompt": "5. Multiply row 2 by −1.−1.\n\n[1001∣∣∣3−5−12][ 1001|3−1−52 ]",
+      "sourceAnswers": [],
+      "hasFigure": false,
+      "status": "draft",
+      "answerVerified": false,
+      "translationStatus": "pending",
+      "mappingStatus": "pending"
+    },
+    {
+      "ordinal": 8,
+      "sourceNumber": "1",
+      "sourceAnchor": "",
+      "kind": "exercise-candidate",
+      "context": "We can check that our formula works by using one of the other methods to calculate the inverse. Let’s augment AA with the identity.\n\n[12−2−3∣∣∣1001][ 1−22−3|1001 ]\n\nPerform row operations with the goal of turning AA into the identity.",
+      "original": "1. Multiply row 1 by −2−2 and add to row 2.\n\n[10−21∣∣∣1−201][ 1−201|10−21 ]",
+      "prompt": "1. Multiply row 1 by −2−2 and add to row 2.\n\n[10−21∣∣∣1−201][ 1−201|10−21 ]",
+      "sourceAnswers": [],
+      "hasFigure": false,
+      "status": "draft",
+      "answerVerified": false,
+      "translationStatus": "pending",
+      "mappingStatus": "pending"
+    },
+    {
+      "ordinal": 9,
+      "sourceNumber": "2",
+      "sourceAnchor": "",
+      "kind": "exercise-candidate",
+      "context": "We can check that our formula works by using one of the other methods to calculate the inverse. Let’s augment AA with the identity.\n\n[12−2−3∣∣∣1001][ 1−22−3|1001 ]\n\nPerform row operations with the goal of turning AA into the identity.",
+      "original": "2. Multiply row 1 by 2 and add to row 1.\n\n[1001∣∣∣−3−221][ 1001|−32−21 ]",
+      "prompt": "2. Multiply row 1 by 2 and add to row 1.\n\n[1001∣∣∣−3−221][ 1001|−32−21 ]",
+      "sourceAnswers": [],
+      "hasFigure": false,
+      "status": "draft",
+      "answerVerified": false,
+      "translationStatus": "pending",
+      "mappingStatus": "pending"
+    },
+    {
+      "ordinal": 10,
+      "sourceNumber": "1",
+      "sourceAnchor": "",
+      "kind": "exercise-candidate",
+      "context": "Given a 3×33×3 matrix, find the inverse",
+      "original": "1. Write the original matrix augmented with the identity matrix on the right.",
+      "prompt": "1. Write the original matrix augmented with the identity matrix on the right.",
+      "sourceAnswers": [],
+      "hasFigure": false,
+      "status": "draft",
+      "answerVerified": false,
+      "translationStatus": "pending",
+      "mappingStatus": "pending"
+    },
+    {
+      "ordinal": 11,
+      "sourceNumber": "2",
+      "sourceAnchor": "",
+      "kind": "exercise-candidate",
+      "context": "Given a 3×33×3 matrix, find the inverse",
+      "original": "2. Use elementary row operations so that the identity appears on the left.",
+      "prompt": "2. Use elementary row operations so that the identity appears on the left.",
+      "sourceAnswers": [],
+      "hasFigure": false,
+      "status": "draft",
+      "answerVerified": false,
+      "translationStatus": "pending",
+      "mappingStatus": "pending"
+    },
+    {
+      "ordinal": 12,
+      "sourceNumber": "3",
+      "sourceAnchor": "",
+      "kind": "exercise-candidate",
+      "context": "Given a 3×33×3 matrix, find the inverse",
+      "original": "3. What is obtained on the right is the inverse of the original matrix.",
+      "prompt": "3. What is obtained on the right is the inverse of the original matrix.",
+      "sourceAnswers": [],
+      "hasFigure": false,
+      "status": "draft",
+      "answerVerified": false,
+      "translationStatus": "pending",
+      "mappingStatus": "pending"
+    },
+    {
+      "ordinal": 13,
+      "sourceNumber": "4",
+      "sourceAnchor": "",
+      "kind": "exercise-candidate",
+      "context": "Given a 3×33×3 matrix, find the inverse",
+      "original": "4. Use matrix multiplication to show that AA−1=IAA−1=I and A−1A=I.A−1A=I.",
+      "prompt": "4. Use matrix multiplication to show that AA−1=IAA−1=I and A−1A=I.A−1A=I.",
+      "sourceAnswers": [],
+      "hasFigure": false,
+      "status": "draft",
+      "answerVerified": false,
+      "translationStatus": "pending",
+      "mappingStatus": "pending"
+    },
+    {
+      "ordinal": 14,
+      "sourceNumber": "1",
+      "sourceAnchor": "",
+      "kind": "exercise-candidate",
+      "context": "Given a system of equations, solve with matrix inverses using a calculator.",
+      "original": "1. Save the coefficient matrix and the constant matrix as matrix variables [A][ A ] and [B].[ B ].",
+      "prompt": "1. Save the coefficient matrix and the constant matrix as matrix variables [A][ A ] and [B].[ B ].",
+      "sourceAnswers": [],
+      "hasFigure": false,
+      "status": "draft",
+      "answerVerified": false,
+      "translationStatus": "pending",
+      "mappingStatus": "pending"
+    },
+    {
+      "ordinal": 15,
+      "sourceNumber": "2",
+      "sourceAnchor": "",
+      "kind": "exercise-candidate",
+      "context": "Given a system of equations, solve with matrix inverses using a calculator.",
+      "original": "2. Enter the multiplication into the calculator, calling up each matrix variable as needed.",
+      "prompt": "2. Enter the multiplication into the calculator, calling up each matrix variable as needed.",
+      "sourceAnswers": [],
+      "hasFigure": false,
+      "status": "draft",
+      "answerVerified": false,
+      "translationStatus": "pending",
+      "mappingStatus": "pending"
+    },
+    {
+      "ordinal": 16,
+      "sourceNumber": "3",
+      "sourceAnchor": "",
+      "kind": "exercise-candidate",
+      "context": "Given a system of equations, solve with matrix inverses using a calculator.",
+      "original": "3. If the coefficient matrix is invertible, the calculator will present the solution matrix; if the coefficient matrix is not invertible, the calculator will present an error message.",
+      "prompt": "3. If the coefficient matrix is invertible, the calculator will present the solution matrix; if the coefficient matrix is not invertible, the calculator will present an error message.",
+      "sourceAnswers": [],
+      "hasFigure": false,
+      "status": "draft",
+      "answerVerified": false,
+      "translationStatus": "pending",
+      "mappingStatus": "pending"
+    }
+  ],
+  "license": "CC BY 4.0",
+  "licenseEvidence": "This page titled 9.8: Solving Systems with Inverses was last modified on Sun, 28 May 2023 07:30:40 GMT and is shared under a CC BY  4.0  license and was authored, remixed, and/or curated by OpenStax via source content that was edited to the style and standards of the LibreTexts platform.",
+  "url": "https://math.libretexts.org/Bookshelves/Precalculus/Precalculus_2e_(OpenStax)/09:_Systems_of_Equations_and_Inequalities/9.08:_Solving_Systems_with_Inverses",
+  "sha256": "644cbfecbb3faea6d78fed4a561adbc13ac9da1227613644214cde0e9c641f41",
+  "checkedAt": "2026-10-07",
+  "id": "2f7ddb025c48e78e9406",
+  "bookId": "precalculus",
+  "licenseInherited": false,
+  "licenseSource": "https://math.libretexts.org/Bookshelves/Precalculus/Precalculus_2e_(OpenStax)/09:_Systems_of_Equations_and_Inequalities/9.08:_Solving_Systems_with_Inverses",
+  "licenseUrl": "https://creativecommons.org/licenses/by/4.0/",
+  "authors": "OpenStax / Jay Abramson et al.",
+  "book": "Precalculus 2e",
+  "reviewStatus": "unreviewed",
+  "sourceLanguage": "en",
+  "translationStatus": "pending"
+}

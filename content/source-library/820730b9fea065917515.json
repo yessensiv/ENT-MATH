@@ -1,0 +1,416 @@
+{
+  "title": "6.8: Fitting Exponential Models to Data",
+  "originalText": "Learning Objectives\n\nBuild an exponential model from data.\n\nBuild a logarithmic model from data.\n\nBuild a logistic model from data.\n\nIn previous sections of this chapter, we were either given a function explicitly to graph or evaluate, or we were given a set of points that were guaranteed to lie on the curve. Then we used algebra to find the equation that fit the points exactly. In this section, we use a modeling technique called regression analysis to find a curve that models data collected from real-world observations. With regression analysis, we don’t expect all the points to lie perfectly on the curve. The idea is to find a model that best fits the data. Then we use the model to make predictions about future events.\n\nDo not be confused by the word model. In mathematics, we often use the terms function, equation, and model interchangeably, even though they each have their own formal definition. The term model is typically used to indicate that the equation or function approximates a real-world situation.\n\nWe will concentrate on three types of regression models in this section: exponential, logarithmic, and logistic. Having already worked with each of these functions gives us an advantage. Knowing their formal definitions, the behavior of their graphs, and some of their real-world applications gives us the opportunity to deepen our understanding. As each regression model is presented, key features and definitions of its associated function are included for review. Take a moment to rethink each of these functions, reflect on the work we’ve done so far, and then explore the ways regression is used to model real-world phenomena.\n\nBuilding an Exponential Model from Data\n\nAs we’ve learned, there are a multitude of situations that can be modeled by exponential functions, such as investment growth, radioactive decay, atmospheric pressure changes, and temperatures of a cooling object. What do these phenomena have in common? For one thing, all the models either increase or decrease as time moves forward. But that’s not the whole story. It’s the way data increase or decrease that helps us determine whether it is best modeled by an exponential equation. Knowing the behavior of exponential functions in general allows us to recognize when to use exponential regression, so let’s review exponential growth and decay.\n\nRecall that exponential functions have the form \\(y=ab^x\\) or \\(y=A_0e^{kx}\\). When performing regression analysis, we use the form most commonly used on graphing utilities, \\(y=ab^x\\). Take a moment to reflect on the characteristics we’ve already learned about the exponential function \\(y=ab^x\\) (assume \\(a>0\\)):\n\n\\(b\\) must be greater than zero and not equal to one.\n\nThe initial value of the model is \\(y=a\\).\n\nIf \\(b>1\\), the function models exponential growth. As \\(x\\) increases, the outputs of the model increase slowly at first, but then increase more and more rapidly, without bound.\n\nIf \\(0<b<1\\), the function models exponential decay. As \\(x\\) increases, the outputs for the model decrease rapidly at first and then level off to become asymptotic to the x-axis. In other words, the outputs never become equal to or less than zero.\n\nAs part of the results, your calculator will display a number known as the correlation coefficient, labeled by the variable \\(r\\), or \\(r^2\\). (You may have to change the calculator’s settings for these to be shown.) The values are an indication of the “goodness of fit” of the regression equation to the data. We more commonly use the value of \\(r^2\\) instead of \\(r\\), but the closer either value is to \\(1\\), the better the regression equation approximates the data.\n\nEXPONENTIAL REGRESSION\n\nExponential regression is used to model situations in which growth begins slowly and then accelerates rapidly without bound, or where decay begins rapidly and then slows down to get closer and closer to zero. We use the command “ExpReg” on a graphing utility to fit an exponential function to a set of data points. This returns an equation of the form,\n\n\\[y=ab^x\\]\n\nNote that:\n\n\\(b\\) must be non-negative.\n\nwhen \\(b>1\\), we have an exponential growth model.\n\nwhen \\(0<b<1\\), we have an exponential decay model.\n\nHow to: Given a set of data, perform exponential regression using a graphing utility\n\n1. Use the STAT then EDIT menu to enter given data.\n\n1. Clear any existing data from the lists.\n\n2. List the input values in the L1 column.\n\n3. List the output values in the L2 column.\n\n2. Graph and observe a scatter plot of the data using the STATPLOT feature.\n\n1. Use ZOOM [9] to adjust axes to fit the data.\n\n2. Verify the data follow an exponential pattern.\n\n3. Find the equation that models the data.\n\n1. Select “ExpReg” from the STAT then CALC menu.\n\n2. Use the values returned for a and b to record the model, \\(y=ab^x\\).\n\n4. Graph the model in the same window as the scatterplot to verify it is a good fit for the data.\n\nExample \\(\\PageIndex{1}\\): Using Exponential Regression to Fit a Model to Data\n\nIn 2007, a university study was published investigating the crash risk of alcohol impaired driving. Data from \\(2,871\\) crashes were used to measure the association of a person’s blood alcohol level (BAC) with the risk of being in an accident. Table \\(\\PageIndex{1}\\) shows results from the study. The relative risk is a measure of how many times more likely a person is to crash. So, for example, a person with a BAC of \\(0.09\\) is \\(3.54\\) times as likely to crash as a person who has not been drinking alcohol.\n\n    Table \\(\\PageIndex{1}\\)\n\n            BAC\t\n            0\t\n            0.01\t\n            0.03\t\n            0.05\t\n            0.07\t\n            0.09\t\n\n            Relative Risk of Crashing\t\n            1\t\n            1.03\t\n            1.06\t\n            1.38\t\n            2.09\t\n            3.54\t\n\n            BAC\t\n            0.11\t\n            0.13\t\n            0.15\t\n            0.17\t\n            0.19\t\n            0.21\t\n\n            Relative Risk of Crashing\t\n            6.41\t\n            12.6\t\n            22.1\t\n            39.05\t\n            65.32\t\n            99.78\t\n\n1. Let \\(x\\) represent the BAC level, and let \\(y\\) represent the corresponding relative risk. Use exponential regression to fit a model to these data.\n\n2. After \\(6\\) drinks, a person weighing \\(160\\) pounds will have a BAC of about \\(0.16\\). How many times more likely is a person with this weight to crash if they drive after having a \\(6\\)-pack of beer? Round to the nearest hundredth.\n\nSolution\n\n1. Using the STAT then EDIT menu on a graphing utility, list the BAC values in L1 and the relative risk values in L2. Then use the STATPLOT feature to verify that the scatterplot follows the exponential pattern shown in Figure \\(\\PageIndex{1}\\):\n\n[Figure: Graph of a scattered plot.]\n\nFigure \\(\\PageIndex{1}\\)\n\nUse the “ExpReg” command from the STAT then CALC menu to obtain the exponential model,\n\n\\(y=0.58304829{(2.20720213E10)}^x\\)\n\nConverting from scientific notation, we have:\n\n\\(y=0.58304829{(22,072,021,300)}^x\\)\n\nNotice that \\(r^2≈0.97\\) which indicates the model is a good fit to the data. To see this, graph the model in the same window as the scatterplot to verify it is a good fit as shown in Figure \\(\\PageIndex{2}\\):\n\n[Figure: Graph of a scattered plot with an estimation line.]\n\nFigure \\(\\PageIndex{2}\\)\n\n2. Use the model to estimate the risk associated with a BAC of \\(0.16\\). Substitute \\(0.16\\) for \\(x\\) in the model and solve for \\(y\\).\n\n\\[\\begin{align*} y&= 0.58304829{(22,072,021,300)}^x \\qquad \\text{Use the regression model found in part } (a)\\\\ &= 0.58304829{(22,072,021,300)}^{0.16} \\qquad \\text{Substitute 0.16 for x}\\\\ &\\approx 26.35 \\qquad \\text{Round to the nearest hundredth} \\end{align*}\\]\n\nIf a \\(160\\)-pound person drives after having \\(6\\) drinks, he or she is about \\(26.35\\) times more likely to crash than if driving while sober.\n\nExercise \\(\\PageIndex{1}\\)\n\nTable \\(\\PageIndex{2}\\) shows a recent graduate’s credit card balance each month after graduation.\n\n    Table \\(\\PageIndex{2}\\)\n\n            Month\t\n            1\t\n            2\t\n            3\t\n            4\t\n            5\t\n            6\t\n            7\t\n            8\t\n\n            Debt ($)\t\n            620.00\t\n            761.88\t\n            899.80\t\n            1039.93\t\n            1270.63\t\n            1589.04\t\n            1851.31\t\n            2154.92\t\n\n1. Use exponential regression to fit a model to these data.\n\n2. If spending continues at this rate, what will the graduate’s credit card debt be one year after graduating?\n\nAnswer a\n\nThe exponential regression model that fits these data is \\(y=522.88585984{(1.19645256)}^x\\).\n\nAnswer b\n\nIf spending continues at this rate, the graduate’s credit card debt will be \\($4,499.38\\) after one year.\n\nQ&A: Is it reasonable to assume that an exponential regression model will represent a situation indefinitely?\n\nNo. Remember that models are formed by real-world data gathered for regression. It is usually reasonable to make estimates within the interval of original observation (interpolation). However, when a model is used to make predictions, it is important to use reasoning skills to determine whether the model makes sense for inputs far beyond the original observation interval (extrapolation).\n\nBuilding a Logarithmic Model from Data\n\nJust as with exponential functions, there are many real-world applications for logarithmic functions: intensity of sound, pH levels of solutions, yields of chemical reactions, production of goods, and growth of infants. As with exponential models, data modeled by logarithmic functions are either always increasing or always decreasing as time moves forward. Again, it is the way they increase or decrease that helps us determine whether a logarithmic model is best.\n\nRecall that logarithmic functions increase or decrease rapidly at first, but then steadily slow as time moves on. By reflecting on the characteristics we’ve already learned about this function, we can better analyze real world situations that reflect this type of growth or decay. When performing logarithmic regression analysis, we use the form of the logarithmic function most commonly used on graphing utilities, \\(y=a+b\\ln(x)\\). For this function\n\nAll input values, \\(x\\),must be greater than zero.\n\nThe point \\((1,a)\\) is on the graph of the model.\n\nIf \\(b>0\\),the model is increasing. Growth increases rapidly at first and then steadily slows over time.\n\nIf \\(b<0\\),the model is decreasing. Decay occurs rapidly at first and then steadily slows over time.\n\nLOGARITHMIC REGRESSION\n\nLogarithmic regression is used to model situations where growth or decay accelerates rapidly at first and then slows over time. We use the command “LnReg” on a graphing utility to fit a logarithmic function to a set of data points. This returns an equation of the form,\n\n\\[y=a+b\\ln(x)\\]\n\nNote that\n\nall input values, \\(x\\),must be non-negative.\n\nwhen \\(b>0\\), the model is increasing.\n\nwhen \\(b<0\\), the model is decreasing.\n\nHow to: Given a set of data, perform logarithmic regression using a graphing utility\n\n1. Use the STAT then EDIT menu to enter given data.\n\n1. Clear any existing data from the lists.\n\n2. List the input values in the L1 column.\n\n3. List the output values in the L2 column.\n\n2. Graph and observe a scatter plot of the data using the STATPLOT feature.\n\n1. Use ZOOM [9] to adjust axes to fit the data.\n\n2. Verify the data follow a logarithmic pattern.\n\n3. Find the equation that models the data.\n\n1. Select “LnReg” from the STAT then CALC menu.\n\n2. Use the values returned for a and b to record the model, \\(y=a+b\\ln(x)\\).\n\n4. Graph the model in the same window as the scatterplot to verify it is a good fit for the data.\n\nExample \\(\\PageIndex{2}\\): Using Logarithmic Regression to Fit a Model to Data\n\nDue to advances in medicine and higher standards of living, life expectancy has been increasing in most developed countries since the beginning of the 20^(th) century. Table \\(\\PageIndex{3}\\) shows the average life expectancies, in years, of Americans from 1900–2010.\n\n    Table \\(\\PageIndex{3}\\)\n\n            Year\t\n            1900\t\n            1910\t\n            1920\t\n            1930\t\n            1940\t\n            1950\t\n\n            Life Expectancy(Years)\t\n            47.3\t\n            50.0\t\n            54.1\t\n            59.7\t\n            62.9\t\n            68.2\t\n\n            Year\t\n            1960\t\n            1970\t\n            1980\t\n            1990\t\n            2000\t\n            2010\t\n\n            Life Expectancy(Years)\t\n            69.7\t\n            70.8\t\n            73.7\t\n            75.4\t\n            76.8\t\n            78.7\t\n\n1. Let \\(x\\) represent time in decades starting with \\(x=1\\) for the year 1900, \\(x=2\\) for the year 1910, and so on. Let \\(y\\) represent the corresponding life expectancy. Use logarithmic regression to fit a model to these data.\n\n2. Use the model to predict the average American life expectancy for the year 2030.\n\nSolution\n\n1. Using the STAT then EDIT menu on a graphing utility, list the years using values \\(1–12\\) in L1 and the corresponding life expectancy in L2. Then use the STATPLOT feature to verify that the scatterplot follows a logarithmic pattern as shown in Figure \\(\\PageIndex{3}\\):\n\n[Figure: Graph of a scattered plot.]\n\nFigure \\(\\PageIndex{3}\\)\n\nUse the “LnReg” command from the STAT then CALC menu to obtain the logarithmic model,\n\n\\(y=42.52722583+13.85752327\\ln(x)\\)\n\nNext, graph the model in the same window as the scatterplot to verify it is a good fit as shown in Figure \\(\\PageIndex{4}\\):\n\n[Figure: Graph of a scattered plot with an estimation line.]\n\nFigure \\(\\PageIndex{4}\\)\n\n2. To predict the life expectancy of an American in the year \\(2030\\), substitute \\(x=14\\)  for the in the model and solve for \\(y\\):\n\n\\[\\begin{align*} y&= 42.52722583+13.85752327\\ln(x) \\qquad \\text{Use the regression model found in part } (a)\\\\ &= 42.52722583+13.85752327\\ln(14) \\qquad \\text{Substitute 14 for x}\\\\ &\\approx 79.1 \\qquad \\text{Round to the nearest tenth} \\end{align*}\\]\n\nIf life expectancy continues to increase at this pace, the average life expectancy of an American will be \\(79.1\\) by the year \\(2030\\).\n\nExercise \\(\\PageIndex{2}\\)\n\nSales of a video game released in the year 2000 took off at first, but then steadily slowed as time moved on. Table \\(\\PageIndex{4}\\) shows the number of games sold, in thousands, from the years 2000–2010.\n\n    Table \\(\\PageIndex{4}\\)\n\n            Year\t\n            2000\t\n            2001\t\n            2002\t\n            2003\t\n            2004\t\n            2005\t\n\n            Number Sold (thousands)\t\n            142\t\n            149\t\n            154\t\n            155\t\n            159\t\n            161\t\n\n            Year\t\n            2006\t\n            2007\t\n            2008\t\n            2009\t\n            2010\t\n            -\t\n\n            Number Sold (thousands)\t\n            163\t\n            164\t\n            164\t\n            166\t\n            167\t\n            -\t\n\nLet \\(x\\) represent time in years starting with \\(x=1\\) for the year 2000. Let \\(y\\) represent the number of games sold in thousands.\n\n1. Use logarithmic regression to fit a model to these data.\n\n2. If games continue to sell at this rate, how many games will sell in 2015? Round to the nearest thousand.\n\nAnswer a\n\nThe logarithmic regression model that fits these data is \\(y=141.91242949+10.45366573\\ln(x)\\) \n\nAnswer b\n\nIf sales continue at this rate, about \\(171,000\\) games will be sold in the year \\(2015\\).\n\nBuilding a Logistic Model from Data\n\nLike exponential and logarithmic growth, logistic growth increases over time. One of the most notable differences with logistic growth models is that, at a certain point, growth steadily slows and the function approaches an upper bound, or limiting value. Because of this, logistic regression is best for modeling phenomena where there are limits in expansion, such as availability of living space or nutrients.\n\nIt is worth pointing out that logistic functions actually model resource-limited exponential growth. There are many examples of this type of growth in real-world situations, including population growth and spread of disease, rumors, and even stains in fabric. When performing logistic regression analysis, we use the form most commonly used on graphing utilities:\n\n\\(y=\\dfrac{c}{1+ae^{−bx}}\\)\n\nRecall that:\n\n\\(\\dfrac{c}{1+a}\\) is the initial value of the model.\n\nwhen \\(b>0\\), the model increases rapidly at first until it reaches its point of maximum growth rate, \\((\\dfrac{\\ln(a)}{b}, \\dfrac{c}{2})\\). At that point, growth steadily slows and the function becomes asymptotic to the upper bound \\(y=c\\).\n\n\\(c\\)  is the limiting value, sometimes called the carrying capacity, of the model.\n\nLOGISTIC REGRESSION\n\nLogistic regression is used to model situations where growth accelerates rapidly at first and then steadily slows to an upper limit. We use the command “Logistic” on a graphing utility to fit a logistic function to a set of data points. This returns an equation of the form\n\n\\[y=\\dfrac{c}{1+ae^{−bx}}\\]\n\nNote that\n\nThe initial value of the model is \\(\\dfrac{c}{1+a}\\).\n\nOutput values for the model grow closer and closer to \\(y=c\\) as time increases.\n\nHow to: Given a set of data, perform logistic regression using a graphing utility\n\n1. Use the STAT then EDIT menu to enter given data.\n\n1. Clear any existing data from the lists.\n\n2. List the input values in the L1 column.\n\n3. List the output values in the L2 column.\n\n2. Graph and observe a scatter plot of the data using the STATPLOT feature.\n\n1. Use ZOOM [9] to adjust axes to fit the data.\n\n2. Verify the data follow a logistic pattern.\n\n3. Find the equation that models the data.\n\n1. Select “Logistic” from the STAT then CALC menu.\n\n2. Use the values returned for \\(a\\), \\(b\\), and \\(c\\) to record the model, \\(y=\\dfrac{c}{1+ae^{−bx}}\\).\n\n4. Graph the model in the same window as the scatterplot to verify it is a good fit for the data.\n\nExample \\(\\PageIndex{3}\\): Using Logistic Regression to Fit a Model to Data\n\nMobile telephone service has increased rapidly in America since the mid 1990s. Today, almost all residents have cellular service. Table \\(\\PageIndex{5}\\) shows the percentage of Americans with cellular service between the years 1995 and 2012.\n\n    Table \\(\\PageIndex{5}\\)\n\n            Year\t\n            Americans with Cellular Service (%)\t\n            Year\t\n            Americans with Cellular Service (%)\t\n\n            1995\t\n            12.69\t\n            2004\t\n            62.852\t\n\n            1996\t\n            16.35\t\n            2005\t\n            68.63\t\n\n            1997\t\n            20.29\t\n            2006\t\n            76.64\t\n\n            1998\t\n            25.08\t\n            2007\t\n            82.47\t\n\n            1999\t\n            30.81\t\n            2008\t\n            85.68\t\n\n            2000\t\n            38.75\t\n            2009\t\n            89.14\t\n\n            2001\t\n            45.00\t\n            2010\t\n            91.86\t\n\n            2002\t\n            49.16\t\n            2011\t\n            95.28\t\n\n            2003\t\n            55.15\t\n            2012\t\n            98.17\t\n\n1. Let \\(x\\) represent time in years starting with \\(x=0\\) for the year 1995. Let \\(y\\) represent the corresponding percentage of residents with cellular service. Use logistic regression to fit a model to these data.\n\n2. Use the model to calculate the percentage of Americans with cell service in the year 2013. Round to the nearest tenth of a percent.\n\n3. Discuss the value returned for the upper limit, \\(c\\). What does this tell you about the model? What would the limiting value be if the model were exact?\n\nSolution\n\n1. Using the STAT then EDIT menu on a graphing utility, list the years using values \\(0–15\\) in L1 and the corresponding percentage in L2. Then use the STATPLOT feature to verify that the scatterplot follows a logistic pattern as shown in Figure \\(\\PageIndex{5}\\):\n\n[Figure: Graph of a scattered plot.]\n\nFigure \\(\\PageIndex{5}\\)\n\nUse the “Logistic” command from the STAT then CALC menu to obtain the logistic model,\n\n\\[y=105.73795261+6.88328979e^{−0.2595440013x}\\]\n\nNext, graph the model in the same window as shown in Figure \\(\\PageIndex{6}\\) the scatterplot to verify it is a good fit:\n\n[Figure: Graph of a scattered plot with an estimation line.]\n\nFigure \\(\\PageIndex{6}\\)\n\n2. To approximate the percentage of Americans with cellular service in the year 2013, substitute \\(x=18\\) for the in the model and solve for \\(y\\):\n\n\\[\\begin{align*} y&= \\dfrac{105.7379526}{1+6.88328979e^{-0.2595440013x}} \\qquad \\text{Use the regression model found in part } (a)\\\\ &= \\dfrac{105.7379526}{1+6.88328979e^{-0.2595440013(18)}} \\qquad \\text{Substitute 18 for x}\\\\ &\\approx 99.3 \\qquad \\text{Round to the nearest tenth} \\end{align*}\\]\n\nAccording to the model, about 98.8% of Americans had cellular service in 2013.\n\n3. The model gives a limiting value of about \\(105\\). This means that the maximum possible percentage of Americans with cellular service would be \\(105%\\), which is impossible. (How could over \\(100%\\) of a population have cellular service?) If the model were exact, the limiting value would be \\(c=100\\) and the model’s outputs would get very close to, but never actually reach \\(100%\\). After all, there will always be someone out there without cellular service!\n\nExercise \\(\\PageIndex{3}\\)\n\nTable \\(\\PageIndex{6}\\) shows the population, in thousands, of harbor seals in the Wadden Sea over the years 1997 to 2012.\n\n    Table \\(\\PageIndex{6}\\)\n\n            Year\t\n            Seal Population (Thousands)\t\n            Year\t\n            Seal Population (Thousands)\t\n\n            1997\t\n            3.493\t\n            2005\t\n            19.590\t\n\n            1998\t\n            5.282\t\n            2006\t\n            21.955\t\n\n            1999\t\n            6.357\t\n            2007\t\n            22.862\t\n\n            2000\t\n            9.201\t\n            2008\t\n            23.869\t\n\n            2001\t\n            11.224\t\n            2009\t\n            24.243\t\n\n            2002\t\n            12.964\t\n            2010\t\n            24.344\t\n\n            2003\t\n            16.226\t\n            2011\t\n            24.919\t\n\n            2004\t\n            18.137\t\n            2012\t\n            25.108\t\n\nLet \\(x\\) represent time in years starting with \\(x=0\\) for the year 1997. Let \\(y\\) represent the number of seals in thousands.\n\n1. Use logistic regression to fit a model to these data.\n\n2. Use the model to predict the seal population for the year 2020.\n\n3. To the nearest whole number, what is the limiting value of this model?\n\nAnswer a\n\nThe logistic regression model that fits these data is \\(y=\\dfrac{25.65665979}{1+6.113686306e^{−0.3852149008x}}\\).\n\nAnswer b\n\nIf the population continues to grow at this rate, there will be about \\(25,634\\) seals in 2020.\n\nAnswer c\n\nTo the nearest whole number, the carrying capacity is \\(25,657\\).\n\nMedia\n\nAccess this online resource for additional instruction and practice with exponential function models.\n\nExponential Regression on a Calculator\n\nVisit this website for additional practice questions from Learningpod.\n\nKey Concepts\n\nExponential regression is used to model situations where growth begins slowly and then accelerates rapidly without bound, or where decay begins rapidly and then slows down to get closer and closer to zero.\n\nWe use the command “ExpReg” on a graphing utility to fit function of the form \\(y=ab^x\\) to a set of data points. See Example \\(\\PageIndex{1}\\).\n\nLogarithmic regression is used to model situations where growth or decay accelerates rapidly at first and then slows over time.\n\nWe use the command “LnReg” on a graphing utility to fit a function of the form \\(y=a+b\\ln(x)\\) to a set of data points. See Example \\(\\PageIndex{2}\\).\n\nLogistic regression is used to model situations where growth accelerates rapidly at first and then steadily slows as the function approaches an upper limit.\n\nWe use the command “Logistic” on a graphing utility to fit a function of the form \\(y=\\dfrac{c}{1+ae^{−bx}}\\) to a set of data points. See Example \\(\\PageIndex{3}\\).\n\nContributors and Attributions\n\nJay Abramson (Arizona State University) with contributing authors. Textbook content produced by OpenStax College is licensed under a Creative Commons Attribution License 4.0 license. Download for free at https://openstax.org/details/books/precalculus.\n\nThis page titled 6.8: Fitting Exponential Models to Data was last modified on Sun, 27 Apr 2025 18:27:16 GMT and is shared under a CC BY  4.0  license and was authored, remixed, and/or curated by OpenStax via source content that was edited to the style and standards of the LibreTexts platform.",
+  "figures": [
+    {
+      "url": "https://math.libretexts.org/@api/deki/files/12257/fig_6.9.1.jpg?revision=1",
+      "alt": "Graph of a scattered plot.",
+      "credit": ""
+    },
+    {
+      "url": "https://math.libretexts.org/@api/deki/files/12258/fig_6.9.2.jpg?revision=1",
+      "alt": "Graph of a scattered plot with an estimation line.",
+      "credit": ""
+    },
+    {
+      "url": "https://math.libretexts.org/@api/deki/files/12259/fig_6.9.3.jpg?revision=1",
+      "alt": "Graph of a scattered plot.",
+      "credit": ""
+    },
+    {
+      "url": "https://math.libretexts.org/@api/deki/files/12260/fig_6.9.4.jpg?revision=1",
+      "alt": "Graph of a scattered plot with an estimation line.",
+      "credit": ""
+    },
+    {
+      "url": "https://math.libretexts.org/@api/deki/files/12261/fig_6.9.5.jpg?revision=1",
+      "alt": "Graph of a scattered plot.",
+      "credit": ""
+    },
+    {
+      "url": "https://math.libretexts.org/@api/deki/files/12262/fig_6.9.6.jpg?revision=1",
+      "alt": "Graph of a scattered plot with an estimation line.",
+      "credit": ""
+    }
+  ],
+  "references": [
+    {
+      "text": "regression analysis",
+      "url": "https://stats.libretexts.org/Textbook_Maps/Map%3A_Introductory_Statistics_(OpenStax)/12%3A_Linear_Regression_and_Correlation"
+    },
+    {
+      "text": "Exponential Regression on a Calculator",
+      "url": "http://openstaxcollege.org/l/pregresscalc"
+    },
+    {
+      "text": "this website",
+      "url": "http://openstaxcollege.org/l/PreCalcLPC04"
+    },
+    {
+      "text": "Creative Commons Attribution License 4.0",
+      "url": "http://creativecommons.org/licenses/by/4.0/"
+    },
+    {
+      "text": "https://openstax.org/details/books/precalculus",
+      "url": "https://openstax.org/details/books/precalculus"
+    },
+    {
+      "text": "6.8: Fitting Exponential Models to Data",
+      "url": "https://math.libretexts.org/Bookshelves/Algebra/Algebra_and_Trigonometry_1e_(OpenStax)/06%3A_Exponential_and_Logarithmic_Functions/6.08%3A_Fitting_Exponential_Models_to_Data"
+    },
+    {
+      "text": "CC BY  4.0",
+      "url": "https://creativecommons.org/licenses/by/4.0"
+    },
+    {
+      "text": "OpenStax",
+      "url": "https://openstax.org/"
+    },
+    {
+      "text": "source content",
+      "url": "https://openstax.org/details/books/precalculus"
+    }
+  ],
+  "exercises": [
+    {
+      "ordinal": 1,
+      "sourceNumber": "1",
+      "sourceAnchor": "",
+      "kind": "exercise-candidate",
+      "context": "Exponential regression is used to model situations in which growth begins slowly and then accelerates rapidly without bound, or where decay begins rapidly and then slows down to get closer and closer to zero. We use the command “ExpReg” on a graphing utility to fit an exponential function to a set of data points. This returns an equation of the form,\n\n\\[y=ab^x\\]\n\nNote that:",
+      "original": "1. Use the STAT then EDIT menu to enter given data.\n\n1. Clear any existing data from the lists.\n\n2. List the input values in the L1 column.\n\n3. List the output values in the L2 column.",
+      "prompt": "1. Use the STAT then EDIT menu to enter given data.\n\n1. Clear any existing data from the lists.\n\n2. List the input values in the L1 column.\n\n3. List the output values in the L2 column.",
+      "sourceAnswers": [],
+      "hasFigure": false,
+      "status": "draft",
+      "answerVerified": false,
+      "translationStatus": "pending",
+      "mappingStatus": "pending"
+    },
+    {
+      "ordinal": 2,
+      "sourceNumber": "2",
+      "sourceAnchor": "",
+      "kind": "exercise-candidate",
+      "context": "Exponential regression is used to model situations in which growth begins slowly and then accelerates rapidly without bound, or where decay begins rapidly and then slows down to get closer and closer to zero. We use the command “ExpReg” on a graphing utility to fit an exponential function to a set of data points. This returns an equation of the form,\n\n\\[y=ab^x\\]\n\nNote that:",
+      "original": "2. Graph and observe a scatter plot of the data using the STATPLOT feature.\n\n1. Use ZOOM [9] to adjust axes to fit the data.\n\n2. Verify the data follow an exponential pattern.",
+      "prompt": "2. Graph and observe a scatter plot of the data using the STATPLOT feature.\n\n1. Use ZOOM [9] to adjust axes to fit the data.\n\n2. Verify the data follow an exponential pattern.",
+      "sourceAnswers": [],
+      "hasFigure": false,
+      "status": "draft",
+      "answerVerified": false,
+      "translationStatus": "pending",
+      "mappingStatus": "pending"
+    },
+    {
+      "ordinal": 3,
+      "sourceNumber": "3",
+      "sourceAnchor": "",
+      "kind": "exercise-candidate",
+      "context": "Exponential regression is used to model situations in which growth begins slowly and then accelerates rapidly without bound, or where decay begins rapidly and then slows down to get closer and closer to zero. We use the command “ExpReg” on a graphing utility to fit an exponential function to a set of data points. This returns an equation of the form,\n\n\\[y=ab^x\\]\n\nNote that:",
+      "original": "3. Find the equation that models the data.\n\n1. Select “ExpReg” from the STAT then CALC menu.\n\n2. Use the values returned for a and b to record the model, \\(y=ab^x\\).",
+      "prompt": "3. Find the equation that models the data.\n\n1. Select “ExpReg” from the STAT then CALC menu.\n\n2. Use the values returned for a and b to record the model, \\(y=ab^x\\).",
+      "sourceAnswers": [],
+      "hasFigure": false,
+      "status": "draft",
+      "answerVerified": false,
+      "translationStatus": "pending",
+      "mappingStatus": "pending"
+    },
+    {
+      "ordinal": 4,
+      "sourceNumber": "4",
+      "sourceAnchor": "",
+      "kind": "exercise-candidate",
+      "context": "Exponential regression is used to model situations in which growth begins slowly and then accelerates rapidly without bound, or where decay begins rapidly and then slows down to get closer and closer to zero. We use the command “ExpReg” on a graphing utility to fit an exponential function to a set of data points. This returns an equation of the form,\n\n\\[y=ab^x\\]\n\nNote that:",
+      "original": "4. Graph the model in the same window as the scatterplot to verify it is a good fit for the data.",
+      "prompt": "4. Graph the model in the same window as the scatterplot to verify it is a good fit for the data.",
+      "sourceAnswers": [],
+      "hasFigure": false,
+      "status": "draft",
+      "answerVerified": false,
+      "translationStatus": "pending",
+      "mappingStatus": "pending"
+    },
+    {
+      "ordinal": 5,
+      "sourceNumber": "1",
+      "sourceAnchor": "",
+      "kind": "exercise-candidate",
+      "context": "Note that:\n\nExample \\(\\PageIndex{1}\\): Using Exponential Regression to Fit a Model to Data\n\nIn 2007, a university study was published investigating the crash risk of alcohol impaired driving. Data from \\(2,871\\) crashes were used to measure the association of a person’s blood alcohol level (BAC) with the risk of being in an accident. Table \\(\\PageIndex{1}\\) shows results from the study. The relative risk is a measure of how many times more likely a person is to crash. So, for example, a person with a BAC of \\(0.09\\) is \\(3.54\\) times as likely to crash as a person who has not been drinking alcohol.",
+      "original": "1. Let \\(x\\) represent the BAC level, and let \\(y\\) represent the corresponding relative risk. Use exponential regression to fit a model to these data.",
+      "prompt": "1. Let \\(x\\) represent the BAC level, and let \\(y\\) represent the corresponding relative risk. Use exponential regression to fit a model to these data.",
+      "sourceAnswers": [],
+      "hasFigure": false,
+      "status": "draft",
+      "answerVerified": false,
+      "translationStatus": "pending",
+      "mappingStatus": "pending"
+    },
+    {
+      "ordinal": 6,
+      "sourceNumber": "2",
+      "sourceAnchor": "",
+      "kind": "exercise-candidate",
+      "context": "Note that:\n\nExample \\(\\PageIndex{1}\\): Using Exponential Regression to Fit a Model to Data\n\nIn 2007, a university study was published investigating the crash risk of alcohol impaired driving. Data from \\(2,871\\) crashes were used to measure the association of a person’s blood alcohol level (BAC) with the risk of being in an accident. Table \\(\\PageIndex{1}\\) shows results from the study. The relative risk is a measure of how many times more likely a person is to crash. So, for example, a person with a BAC of \\(0.09\\) is \\(3.54\\) times as likely to crash as a person who has not been drinking alcohol.",
+      "original": "2. After \\(6\\) drinks, a person weighing \\(160\\) pounds will have a BAC of about \\(0.16\\). How many times more likely is a person with this weight to crash if they drive after having a \\(6\\)-pack of beer? Round to the nearest hundredth.",
+      "prompt": "2. After \\(6\\) drinks, a person weighing \\(160\\) pounds will have a BAC of about \\(0.16\\). How many times more likely is a person with this weight to crash if they drive after having a \\(6\\)-pack of beer? Round to the nearest hundredth.",
+      "sourceAnswers": [],
+      "hasFigure": false,
+      "status": "draft",
+      "answerVerified": false,
+      "translationStatus": "pending",
+      "mappingStatus": "pending"
+    },
+    {
+      "ordinal": 7,
+      "sourceNumber": "1",
+      "sourceAnchor": "",
+      "kind": "exercise-candidate",
+      "context": "Note that:\n\nExample \\(\\PageIndex{1}\\): Using Exponential Regression to Fit a Model to Data\n\nIn 2007, a university study was published investigating the crash risk of alcohol impaired driving. Data from \\(2,871\\) crashes were used to measure the association of a person’s blood alcohol level (BAC) with the risk of being in an accident. Table \\(\\PageIndex{1}\\) shows results from the study. The relative risk is a measure of how many times more likely a person is to crash. So, for example, a person with a BAC of \\(0.09\\) is \\(3.54\\) times as likely to crash as a person who has not been drinking alcohol.",
+      "original": "1. Using the STAT then EDIT menu on a graphing utility, list the BAC values in L1 and the relative risk values in L2. Then use the STATPLOT feature to verify that the scatterplot follows the exponential pattern shown in Figure \\(\\PageIndex{1}\\):",
+      "prompt": "1. Using the STAT then EDIT menu on a graphing utility, list the BAC values in L1 and the relative risk values in L2. Then use the STATPLOT feature to verify that the scatterplot follows the exponential pattern shown in Figure \\(\\PageIndex{1}\\):",
+      "sourceAnswers": [],
+      "hasFigure": false,
+      "status": "draft",
+      "answerVerified": false,
+      "translationStatus": "pending",
+      "mappingStatus": "pending"
+    },
+    {
+      "ordinal": 8,
+      "sourceNumber": "2",
+      "sourceAnchor": "",
+      "kind": "exercise-candidate",
+      "context": "Converting from scientific notation, we have:\n\n\\(y=0.58304829{(22,072,021,300)}^x\\)\n\nNotice that \\(r^2≈0.97\\) which indicates the model is a good fit to the data. To see this, graph the model in the same window as the scatterplot to verify it is a good fit as shown in Figure \\(\\PageIndex{2}\\):",
+      "original": "2. Use the model to estimate the risk associated with a BAC of \\(0.16\\). Substitute \\(0.16\\) for \\(x\\) in the model and solve for \\(y\\).",
+      "prompt": "2. Use the model to estimate the risk associated with a BAC of \\(0.16\\). Substitute \\(0.16\\) for \\(x\\) in the model and solve for \\(y\\).",
+      "sourceAnswers": [],
+      "hasFigure": false,
+      "status": "draft",
+      "answerVerified": false,
+      "translationStatus": "pending",
+      "mappingStatus": "pending"
+    },
+    {
+      "ordinal": 9,
+      "sourceNumber": "",
+      "sourceAnchor": "",
+      "kind": "exercise-candidate",
+      "context": "Notice that \\(r^2≈0.97\\) which indicates the model is a good fit to the data. To see this, graph the model in the same window as the scatterplot to verify it is a good fit as shown in Figure \\(\\PageIndex{2}\\):\n\n\\[\\begin{align*} y&= 0.58304829{(22,072,021,300)}^x \\qquad \\text{Use the regression model found in part } (a)\\\\ &= 0.58304829{(22,072,021,300)}^{0.16} \\qquad \\text{Substitute 0.16 for x}\\\\ &\\approx 26.35 \\qquad \\text{Round to the nearest hundredth} \\end{align*}\\]\n\nIf a \\(160\\)-pound person drives after having \\(6\\) drinks, he or she is about \\(26.35\\) times more likely to crash than if driving while sober.",
+      "original": "Exercise \\(\\PageIndex{1}\\)\n\nTable \\(\\PageIndex{2}\\) shows a recent graduate’s credit card balance each month after graduation.\n\n    Table \\(\\PageIndex{2}\\)\n\n            Month\t\n            1\t\n            2\t\n            3\t\n            4\t\n            5\t\n            6\t\n            7\t\n            8\t\n\n            Debt ($)\t\n            620.00\t\n            761.88\t\n            899.80\t\n            1039.93\t\n            1270.63\t\n            1589.04\t\n            1851.31\t\n            2154.92\t\n\n1. Use exponential regression to fit a model to these data.\n\n2. If spending continues at this rate, what will the graduate’s credit card debt be one year after graduating?\n\nAnswer a\n\nThe exponential regression model that fits these data is \\(y=522.88585984{(1.19645256)}^x\\).\n\nAnswer b\n\nIf spending continues at this rate, the graduate’s credit card debt will be \\($4,499.38\\) after one year.",
+      "prompt": "Exercise \\(\\PageIndex{1}\\)\n\nTable \\(\\PageIndex{2}\\) shows a recent graduate’s credit card balance each month after graduation.\n\n    Table \\(\\PageIndex{2}\\)\n\n            Month\t\n            1\t\n            2\t\n            3\t\n            4\t\n            5\t\n            6\t\n            7\t\n            8\t\n\n            Debt ($)\t\n            620.00\t\n            761.88\t\n            899.80\t\n            1039.93\t\n            1270.63\t\n            1589.04\t\n            1851.31\t\n            2154.92\t\n\n1. Use exponential regression to fit a model to these data.\n\n2. If spending continues at this rate, what will the graduate’s credit card debt be one year after graduating?",
+      "sourceAnswers": [
+        "The exponential regression model that fits these data is \\(y=522.88585984{(1.19645256)}^x\\).",
+        "If spending continues at this rate, the graduate’s credit card debt will be \\($4,499.38\\) after one year."
+      ],
+      "hasFigure": false,
+      "status": "draft",
+      "answerVerified": false,
+      "translationStatus": "pending",
+      "mappingStatus": "pending"
+    },
+    {
+      "ordinal": 10,
+      "sourceNumber": "1",
+      "sourceAnchor": "",
+      "kind": "exercise-candidate",
+      "context": "Logarithmic regression is used to model situations where growth or decay accelerates rapidly at first and then slows over time. We use the command “LnReg” on a graphing utility to fit a logarithmic function to a set of data points. This returns an equation of the form,\n\n\\[y=a+b\\ln(x)\\]\n\nNote that",
+      "original": "1. Use the STAT then EDIT menu to enter given data.\n\n1. Clear any existing data from the lists.\n\n2. List the input values in the L1 column.\n\n3. List the output values in the L2 column.",
+      "prompt": "1. Use the STAT then EDIT menu to enter given data.\n\n1. Clear any existing data from the lists.\n\n2. List the input values in the L1 column.\n\n3. List the output values in the L2 column.",
+      "sourceAnswers": [],
+      "hasFigure": false,
+      "status": "draft",
+      "answerVerified": false,
+      "translationStatus": "pending",
+      "mappingStatus": "pending"
+    },
+    {
+      "ordinal": 11,
+      "sourceNumber": "2",
+      "sourceAnchor": "",
+      "kind": "exercise-candidate",
+      "context": "Logarithmic regression is used to model situations where growth or decay accelerates rapidly at first and then slows over time. We use the command “LnReg” on a graphing utility to fit a logarithmic function to a set of data points. This returns an equation of the form,\n\n\\[y=a+b\\ln(x)\\]\n\nNote that",
+      "original": "2. Graph and observe a scatter plot of the data using the STATPLOT feature.\n\n1. Use ZOOM [9] to adjust axes to fit the data.\n\n2. Verify the data follow a logarithmic pattern.",
+      "prompt": "2. Graph and observe a scatter plot of the data using the STATPLOT feature.\n\n1. Use ZOOM [9] to adjust axes to fit the data.\n\n2. Verify the data follow a logarithmic pattern.",
+      "sourceAnswers": [],
+      "hasFigure": false,
+      "status": "draft",
+      "answerVerified": false,
+      "translationStatus": "pending",
+      "mappingStatus": "pending"
+    },
+    {
+      "ordinal": 12,
+      "sourceNumber": "3",
+      "sourceAnchor": "",
+      "kind": "exercise-candidate",
+      "context": "Logarithmic regression is used to model situations where growth or decay accelerates rapidly at first and then slows over time. We use the command “LnReg” on a graphing utility to fit a logarithmic function to a set of data points. This returns an equation of the form,\n\n\\[y=a+b\\ln(x)\\]\n\nNote that",
+      "original": "3. Find the equation that models the data.\n\n1. Select “LnReg” from the STAT then CALC menu.\n\n2. Use the values returned for a and b to record the model, \\(y=a+b\\ln(x)\\).",
+      "prompt": "3. Find the equation that models the data.\n\n1. Select “LnReg” from the STAT then CALC menu.\n\n2. Use the values returned for a and b to record the model, \\(y=a+b\\ln(x)\\).",
+      "sourceAnswers": [],
+      "hasFigure": false,
+      "status": "draft",
+      "answerVerified": false,
+      "translationStatus": "pending",
+      "mappingStatus": "pending"
+    },
+    {
+      "ordinal": 13,
+      "sourceNumber": "4",
+      "sourceAnchor": "",
+      "kind": "exercise-candidate",
+      "context": "Logarithmic regression is used to model situations where growth or decay accelerates rapidly at first and then slows over time. We use the command “LnReg” on a graphing utility to fit a logarithmic function to a set of data points. This returns an equation of the form,\n\n\\[y=a+b\\ln(x)\\]\n\nNote that",
+      "original": "4. Graph the model in the same window as the scatterplot to verify it is a good fit for the data.",
+      "prompt": "4. Graph the model in the same window as the scatterplot to verify it is a good fit for the data.",
+      "sourceAnswers": [],
+      "hasFigure": false,
+      "status": "draft",
+      "answerVerified": false,
+      "translationStatus": "pending",
+      "mappingStatus": "pending"
+    },
+    {
+      "ordinal": 14,
+      "sourceNumber": "",
+      "sourceAnchor": "",
+      "kind": "example-or-exercise",
+      "context": "Logarithmic regression is used to model situations where growth or decay accelerates rapidly at first and then slows over time. We use the command “LnReg” on a graphing utility to fit a logarithmic function to a set of data points. This returns an equation of the form,\n\n\\[y=a+b\\ln(x)\\]\n\nNote that",
+      "original": "Example \\(\\PageIndex{2}\\): Using Logarithmic Regression to Fit a Model to Data\n\nDue to advances in medicine and higher standards of living, life expectancy has been increasing in most developed countries since the beginning of the 20^(th) century. Table \\(\\PageIndex{3}\\) shows the average life expectancies, in years, of Americans from 1900–2010.\n\n    Table \\(\\PageIndex{3}\\)\n\n            Year\t\n            1900\t\n            1910\t\n            1920\t\n            1930\t\n            1940\t\n            1950\t\n\n            Life Expectancy(Years)\t\n            47.3\t\n            50.0\t\n            54.1\t\n            59.7\t\n            62.9\t\n            68.2\t\n\n            Year\t\n            1960\t\n            1970\t\n            1980\t\n            1990\t\n            2000\t\n            2010\t\n\n            Life Expectancy(Years)\t\n            69.7\t\n            70.8\t\n            73.7\t\n            75.4\t\n            76.8\t\n            78.7\t\n\n1. Let \\(x\\) represent time in decades starting with \\(x=1\\) for the year 1900, \\(x=2\\) for the year 1910, and so on. Let \\(y\\) represent the corresponding life expectancy. Use logarithmic regression to fit a model to these data.\n\n2. Use the model to predict the average American life expectancy for the year 2030.\n\nSolution\n\n1. Using the STAT then EDIT menu on a graphing utility, list the years using values \\(1–12\\) in L1 and the corresponding life expectancy in L2. Then use the STATPLOT feature to verify that the scatterplot follows a logarithmic pattern as shown in Figure \\(\\PageIndex{3}\\):\n\n[Figure: Graph of a scattered plot.]\n\nFigure \\(\\PageIndex{3}\\)\n\nUse the “LnReg” command from the STAT then CALC menu to obtain the logarithmic model,\n\n\\(y=42.52722583+13.85752327\\ln(x)\\)\n\nNext, graph the model in the same window as the scatterplot to verify it is a good fit as shown in Figure \\(\\PageIndex{4}\\):\n\n[Figure: Graph of a scattered plot with an estimation line.]\n\nFigure \\(\\PageIndex{4}\\)\n\n2. To predict the life expectancy of an American in the year \\(2030\\), substitute \\(x=14\\)  for the in the model and solve for \\(y\\):\n\n\\[\\begin{align*} y&= 42.52722583+13.85752327\\ln(x) \\qquad \\text{Use the regression model found in part } (a)\\\\ &= 42.52722583+13.85752327\\ln(14) \\qquad \\text{Substitute 14 for x}\\\\ &\\approx 79.1 \\qquad \\text{Round to the nearest tenth} \\end{align*}\\]\n\nIf life expectancy continues to increase at this pace, the average life expectancy of an American will be \\(79.1\\) by the year \\(2030\\).",
+      "prompt": "Example \\(\\PageIndex{2}\\): Using Logarithmic Regression to Fit a Model to Data\n\nDue to advances in medicine and higher standards of living, life expectancy has been increasing in most developed countries since the beginning of the 20^(th) century. Table \\(\\PageIndex{3}\\) shows the average life expectancies, in years, of Americans from 1900–2010.\n\n    Table \\(\\PageIndex{3}\\)\n\n            Year\t\n            1900\t\n            1910\t\n            1920\t\n            1930\t\n            1940\t\n            1950\t\n\n            Life Expectancy(Years)\t\n            47.3\t\n            50.0\t\n            54.1\t\n            59.7\t\n            62.9\t\n            68.2\t\n\n            Year\t\n            1960\t\n            1970\t\n            1980\t\n            1990\t\n            2000\t\n            2010\t\n\n            Life Expectancy(Years)\t\n            69.7\t\n            70.8\t\n            73.7\t\n            75.4\t\n            76.8\t\n            78.7\t\n\n1. Let \\(x\\) represent time in decades starting with \\(x=1\\) for the year 1900, \\(x=2\\) for the year 1910, and so on. Let \\(y\\) represent the corresponding life expectancy. Use logarithmic regression to fit a model to these data.\n\n2. Use the model to predict the average American life expectancy for the year 2030.\n\nSolution\n\n1. Using the STAT then EDIT menu on a graphing utility, list the years using values \\(1–12\\) in L1 and the corresponding life expectancy in L2. Then use the STATPLOT feature to verify that the scatterplot follows a logarithmic pattern as shown in Figure \\(\\PageIndex{3}\\):\n\n[Figure: Graph of a scattered plot.]\n\nFigure \\(\\PageIndex{3}\\)\n\nUse the “LnReg” command from the STAT then CALC menu to obtain the logarithmic model,\n\n\\(y=42.52722583+13.85752327\\ln(x)\\)\n\nNext, graph the model in the same window as the scatterplot to verify it is a good fit as shown in Figure \\(\\PageIndex{4}\\):\n\n[Figure: Graph of a scattered plot with an estimation line.]\n\nFigure \\(\\PageIndex{4}\\)\n\n2. To predict the life expectancy of an American in the year \\(2030\\), substitute \\(x=14\\)  for the in the model and solve for \\(y\\):\n\n\\[\\begin{align*} y&= 42.52722583+13.85752327\\ln(x) \\qquad \\text{Use the regression model found in part } (a)\\\\ &= 42.52722583+13.85752327\\ln(14) \\qquad \\text{Substitute 14 for x}\\\\ &\\approx 79.1 \\qquad \\text{Round to the nearest tenth} \\end{align*}\\]\n\nIf life expectancy continues to increase at this pace, the average life expectancy of an American will be \\(79.1\\) by the year \\(2030\\).",
+      "sourceAnswers": [],
+      "hasFigure": true,
+      "status": "draft",
+      "answerVerified": false,
+      "translationStatus": "pending",
+      "mappingStatus": "pending"
+    },
+    {
+      "ordinal": 15,
+      "sourceNumber": "",
+      "sourceAnchor": "",
+      "kind": "exercise-candidate",
+      "context": "Logarithmic regression is used to model situations where growth or decay accelerates rapidly at first and then slows over time. We use the command “LnReg” on a graphing utility to fit a logarithmic function to a set of data points. This returns an equation of the form,\n\n\\[y=a+b\\ln(x)\\]\n\nNote that",
+      "original": "Exercise \\(\\PageIndex{2}\\)\n\nSales of a video game released in the year 2000 took off at first, but then steadily slowed as time moved on. Table \\(\\PageIndex{4}\\) shows the number of games sold, in thousands, from the years 2000–2010.\n\n    Table \\(\\PageIndex{4}\\)\n\n            Year\t\n            2000\t\n            2001\t\n            2002\t\n            2003\t\n            2004\t\n            2005\t\n\n            Number Sold (thousands)\t\n            142\t\n            149\t\n            154\t\n            155\t\n            159\t\n            161\t\n\n            Year\t\n            2006\t\n            2007\t\n            2008\t\n            2009\t\n            2010\t\n            -\t\n\n            Number Sold (thousands)\t\n            163\t\n            164\t\n            164\t\n            166\t\n            167\t\n            -\t\n\nLet \\(x\\) represent time in years starting with \\(x=1\\) for the year 2000. Let \\(y\\) represent the number of games sold in thousands.\n\n1. Use logarithmic regression to fit a model to these data.\n\n2. If games continue to sell at this rate, how many games will sell in 2015? Round to the nearest thousand.\n\nAnswer a\n\nThe logarithmic regression model that fits these data is \\(y=141.91242949+10.45366573\\ln(x)\\) \n\nAnswer b\n\nIf sales continue at this rate, about \\(171,000\\) games will be sold in the year \\(2015\\).",
+      "prompt": "Exercise \\(\\PageIndex{2}\\)\n\nSales of a video game released in the year 2000 took off at first, but then steadily slowed as time moved on. Table \\(\\PageIndex{4}\\) shows the number of games sold, in thousands, from the years 2000–2010.\n\n    Table \\(\\PageIndex{4}\\)\n\n            Year\t\n            2000\t\n            2001\t\n            2002\t\n            2003\t\n            2004\t\n            2005\t\n\n            Number Sold (thousands)\t\n            142\t\n            149\t\n            154\t\n            155\t\n            159\t\n            161\t\n\n            Year\t\n            2006\t\n            2007\t\n            2008\t\n            2009\t\n            2010\t\n            -\t\n\n            Number Sold (thousands)\t\n            163\t\n            164\t\n            164\t\n            166\t\n            167\t\n            -\t\n\nLet \\(x\\) represent time in years starting with \\(x=1\\) for the year 2000. Let \\(y\\) represent the number of games sold in thousands.\n\n1. Use logarithmic regression to fit a model to these data.\n\n2. If games continue to sell at this rate, how many games will sell in 2015? Round to the nearest thousand.",
+      "sourceAnswers": [
+        "The logarithmic regression model that fits these data is \\(y=141.91242949+10.45366573\\ln(x)\\)",
+        "If sales continue at this rate, about \\(171,000\\) games will be sold in the year \\(2015\\)."
+      ],
+      "hasFigure": false,
+      "status": "draft",
+      "answerVerified": false,
+      "translationStatus": "pending",
+      "mappingStatus": "pending"
+    },
+    {
+      "ordinal": 16,
+      "sourceNumber": "1",
+      "sourceAnchor": "",
+      "kind": "exercise-candidate",
+      "context": "Logistic regression is used to model situations where growth accelerates rapidly at first and then steadily slows to an upper limit. We use the command “Logistic” on a graphing utility to fit a logistic function to a set of data points. This returns an equation of the form\n\n\\[y=\\dfrac{c}{1+ae^{−bx}}\\]\n\nNote that",
+      "original": "1. Use the STAT then EDIT menu to enter given data.\n\n1. Clear any existing data from the lists.\n\n2. List the input values in the L1 column.\n\n3. List the output values in the L2 column.",
+      "prompt": "1. Use the STAT then EDIT menu to enter given data.\n\n1. Clear any existing data from the lists.\n\n2. List the input values in the L1 column.\n\n3. List the output values in the L2 column.",
+      "sourceAnswers": [],
+      "hasFigure": false,
+      "status": "draft",
+      "answerVerified": false,
+      "translationStatus": "pending",
+      "mappingStatus": "pending"
+    },
+    {
+      "ordinal": 17,
+      "sourceNumber": "2",
+      "sourceAnchor": "",
+      "kind": "exercise-candidate",
+      "context": "Logistic regression is used to model situations where growth accelerates rapidly at first and then steadily slows to an upper limit. We use the command “Logistic” on a graphing utility to fit a logistic function to a set of data points. This returns an equation of the form\n\n\\[y=\\dfrac{c}{1+ae^{−bx}}\\]\n\nNote that",
+      "original": "2. Graph and observe a scatter plot of the data using the STATPLOT feature.\n\n1. Use ZOOM [9] to adjust axes to fit the data.\n\n2. Verify the data follow a logistic pattern.",
+      "prompt": "2. Graph and observe a scatter plot of the data using the STATPLOT feature.\n\n1. Use ZOOM [9] to adjust axes to fit the data.\n\n2. Verify the data follow a logistic pattern.",
+      "sourceAnswers": [],
+      "hasFigure": false,
+      "status": "draft",
+      "answerVerified": false,
+      "translationStatus": "pending",
+      "mappingStatus": "pending"
+    },
+    {
+      "ordinal": 18,
+      "sourceNumber": "3",
+      "sourceAnchor": "",
+      "kind": "exercise-candidate",
+      "context": "Logistic regression is used to model situations where growth accelerates rapidly at first and then steadily slows to an upper limit. We use the command “Logistic” on a graphing utility to fit a logistic function to a set of data points. This returns an equation of the form\n\n\\[y=\\dfrac{c}{1+ae^{−bx}}\\]\n\nNote that",
+      "original": "3. Find the equation that models the data.\n\n1. Select “Logistic” from the STAT then CALC menu.\n\n2. Use the values returned for \\(a\\), \\(b\\), and \\(c\\) to record the model, \\(y=\\dfrac{c}{1+ae^{−bx}}\\).",
+      "prompt": "3. Find the equation that models the data.\n\n1. Select “Logistic” from the STAT then CALC menu.\n\n2. Use the values returned for \\(a\\), \\(b\\), and \\(c\\) to record the model, \\(y=\\dfrac{c}{1+ae^{−bx}}\\).",
+      "sourceAnswers": [],
+      "hasFigure": false,
+      "status": "draft",
+      "answerVerified": false,
+      "translationStatus": "pending",
+      "mappingStatus": "pending"
+    },
+    {
+      "ordinal": 19,
+      "sourceNumber": "4",
+      "sourceAnchor": "",
+      "kind": "exercise-candidate",
+      "context": "Logistic regression is used to model situations where growth accelerates rapidly at first and then steadily slows to an upper limit. We use the command “Logistic” on a graphing utility to fit a logistic function to a set of data points. This returns an equation of the form\n\n\\[y=\\dfrac{c}{1+ae^{−bx}}\\]\n\nNote that",
+      "original": "4. Graph the model in the same window as the scatterplot to verify it is a good fit for the data.",
+      "prompt": "4. Graph the model in the same window as the scatterplot to verify it is a good fit for the data.",
+      "sourceAnswers": [],
+      "hasFigure": false,
+      "status": "draft",
+      "answerVerified": false,
+      "translationStatus": "pending",
+      "mappingStatus": "pending"
+    },
+    {
+      "ordinal": 20,
+      "sourceNumber": "",
+      "sourceAnchor": "",
+      "kind": "example-or-exercise",
+      "context": "Logistic regression is used to model situations where growth accelerates rapidly at first and then steadily slows to an upper limit. We use the command “Logistic” on a graphing utility to fit a logistic function to a set of data points. This returns an equation of the form\n\n\\[y=\\dfrac{c}{1+ae^{−bx}}\\]\n\nNote that",
+      "original": "Example \\(\\PageIndex{3}\\): Using Logistic Regression to Fit a Model to Data\n\nMobile telephone service has increased rapidly in America since the mid 1990s. Today, almost all residents have cellular service. Table \\(\\PageIndex{5}\\) shows the percentage of Americans with cellular service between the years 1995 and 2012.\n\n    Table \\(\\PageIndex{5}\\)\n\n            Year\t\n            Americans with Cellular Service (%)\t\n            Year\t\n            Americans with Cellular Service (%)\t\n\n            1995\t\n            12.69\t\n            2004\t\n            62.852\t\n\n            1996\t\n            16.35\t\n            2005\t\n            68.63\t\n\n            1997\t\n            20.29\t\n            2006\t\n            76.64\t\n\n            1998\t\n            25.08\t\n            2007\t\n            82.47\t\n\n            1999\t\n            30.81\t\n            2008\t\n            85.68\t\n\n            2000\t\n            38.75\t\n            2009\t\n            89.14\t\n\n            2001\t\n            45.00\t\n            2010\t\n            91.86\t\n\n            2002\t\n            49.16\t\n            2011\t\n            95.28\t\n\n            2003\t\n            55.15\t\n            2012\t\n            98.17\t\n\n1. Let \\(x\\) represent time in years starting with \\(x=0\\) for the year 1995. Let \\(y\\) represent the corresponding percentage of residents with cellular service. Use logistic regression to fit a model to these data.\n\n2. Use the model to calculate the percentage of Americans with cell service in the year 2013. Round to the nearest tenth of a percent.\n\n3. Discuss the value returned for the upper limit, \\(c\\). What does this tell you about the model? What would the limiting value be if the model were exact?\n\nSolution\n\n1. Using the STAT then EDIT menu on a graphing utility, list the years using values \\(0–15\\) in L1 and the corresponding percentage in L2. Then use the STATPLOT feature to verify that the scatterplot follows a logistic pattern as shown in Figure \\(\\PageIndex{5}\\):\n\n[Figure: Graph of a scattered plot.]\n\nFigure \\(\\PageIndex{5}\\)\n\nUse the “Logistic” command from the STAT then CALC menu to obtain the logistic model,\n\n\\[y=105.73795261+6.88328979e^{−0.2595440013x}\\]\n\nNext, graph the model in the same window as shown in Figure \\(\\PageIndex{6}\\) the scatterplot to verify it is a good fit:\n\n[Figure: Graph of a scattered plot with an estimation line.]\n\nFigure \\(\\PageIndex{6}\\)\n\n2. To approximate the percentage of Americans with cellular service in the year 2013, substitute \\(x=18\\) for the in the model and solve for \\(y\\):\n\n\\[\\begin{align*} y&= \\dfrac{105.7379526}{1+6.88328979e^{-0.2595440013x}} \\qquad \\text{Use the regression model found in part } (a)\\\\ &= \\dfrac{105.7379526}{1+6.88328979e^{-0.2595440013(18)}} \\qquad \\text{Substitute 18 for x}\\\\ &\\approx 99.3 \\qquad \\text{Round to the nearest tenth} \\end{align*}\\]\n\nAccording to the model, about 98.8% of Americans had cellular service in 2013.\n\n3. The model gives a limiting value of about \\(105\\). This means that the maximum possible percentage of Americans with cellular service would be \\(105%\\), which is impossible. (How could over \\(100%\\) of a population have cellular service?) If the model were exact, the limiting value would be \\(c=100\\) and the model’s outputs would get very close to, but never actually reach \\(100%\\). After all, there will always be someone out there without cellular service!",
+      "prompt": "Example \\(\\PageIndex{3}\\): Using Logistic Regression to Fit a Model to Data\n\nMobile telephone service has increased rapidly in America since the mid 1990s. Today, almost all residents have cellular service. Table \\(\\PageIndex{5}\\) shows the percentage of Americans with cellular service between the years 1995 and 2012.\n\n    Table \\(\\PageIndex{5}\\)\n\n            Year\t\n            Americans with Cellular Service (%)\t\n            Year\t\n            Americans with Cellular Service (%)\t\n\n            1995\t\n            12.69\t\n            2004\t\n            62.852\t\n\n            1996\t\n            16.35\t\n            2005\t\n            68.63\t\n\n            1997\t\n            20.29\t\n            2006\t\n            76.64\t\n\n            1998\t\n            25.08\t\n            2007\t\n            82.47\t\n\n            1999\t\n            30.81\t\n            2008\t\n            85.68\t\n\n            2000\t\n            38.75\t\n            2009\t\n            89.14\t\n\n            2001\t\n            45.00\t\n            2010\t\n            91.86\t\n\n            2002\t\n            49.16\t\n            2011\t\n            95.28\t\n\n            2003\t\n            55.15\t\n            2012\t\n            98.17\t\n\n1. Let \\(x\\) represent time in years starting with \\(x=0\\) for the year 1995. Let \\(y\\) represent the corresponding percentage of residents with cellular service. Use logistic regression to fit a model to these data.\n\n2. Use the model to calculate the percentage of Americans with cell service in the year 2013. Round to the nearest tenth of a percent.\n\n3. Discuss the value returned for the upper limit, \\(c\\). What does this tell you about the model? What would the limiting value be if the model were exact?\n\nSolution\n\n1. Using the STAT then EDIT menu on a graphing utility, list the years using values \\(0–15\\) in L1 and the corresponding percentage in L2. Then use the STATPLOT feature to verify that the scatterplot follows a logistic pattern as shown in Figure \\(\\PageIndex{5}\\):\n\n[Figure: Graph of a scattered plot.]\n\nFigure \\(\\PageIndex{5}\\)\n\nUse the “Logistic” command from the STAT then CALC menu to obtain the logistic model,\n\n\\[y=105.73795261+6.88328979e^{−0.2595440013x}\\]\n\nNext, graph the model in the same window as shown in Figure \\(\\PageIndex{6}\\) the scatterplot to verify it is a good fit:\n\n[Figure: Graph of a scattered plot with an estimation line.]\n\nFigure \\(\\PageIndex{6}\\)\n\n2. To approximate the percentage of Americans with cellular service in the year 2013, substitute \\(x=18\\) for the in the model and solve for \\(y\\):\n\n\\[\\begin{align*} y&= \\dfrac{105.7379526}{1+6.88328979e^{-0.2595440013x}} \\qquad \\text{Use the regression model found in part } (a)\\\\ &= \\dfrac{105.7379526}{1+6.88328979e^{-0.2595440013(18)}} \\qquad \\text{Substitute 18 for x}\\\\ &\\approx 99.3 \\qquad \\text{Round to the nearest tenth} \\end{align*}\\]\n\nAccording to the model, about 98.8% of Americans had cellular service in 2013.\n\n3. The model gives a limiting value of about \\(105\\). This means that the maximum possible percentage of Americans with cellular service would be \\(105%\\), which is impossible. (How could over \\(100%\\) of a population have cellular service?) If the model were exact, the limiting value would be \\(c=100\\) and the model’s outputs would get very close to, but never actually reach \\(100%\\). After all, there will always be someone out there without cellular service!",
+      "sourceAnswers": [],
+      "hasFigure": true,
+      "status": "draft",
+      "answerVerified": false,
+      "translationStatus": "pending",
+      "mappingStatus": "pending"
+    },
+    {
+      "ordinal": 21,
+      "sourceNumber": "",
+      "sourceAnchor": "",
+      "kind": "exercise-candidate",
+      "context": "Logistic regression is used to model situations where growth accelerates rapidly at first and then steadily slows to an upper limit. We use the command “Logistic” on a graphing utility to fit a logistic function to a set of data points. This returns an equation of the form\n\n\\[y=\\dfrac{c}{1+ae^{−bx}}\\]\n\nNote that",
+      "original": "Exercise \\(\\PageIndex{3}\\)\n\nTable \\(\\PageIndex{6}\\) shows the population, in thousands, of harbor seals in the Wadden Sea over the years 1997 to 2012.\n\n    Table \\(\\PageIndex{6}\\)\n\n            Year\t\n            Seal Population (Thousands)\t\n            Year\t\n            Seal Population (Thousands)\t\n\n            1997\t\n            3.493\t\n            2005\t\n            19.590\t\n\n            1998\t\n            5.282\t\n            2006\t\n            21.955\t\n\n            1999\t\n            6.357\t\n            2007\t\n            22.862\t\n\n            2000\t\n            9.201\t\n            2008\t\n            23.869\t\n\n            2001\t\n            11.224\t\n            2009\t\n            24.243\t\n\n            2002\t\n            12.964\t\n            2010\t\n            24.344\t\n\n            2003\t\n            16.226\t\n            2011\t\n            24.919\t\n\n            2004\t\n            18.137\t\n            2012\t\n            25.108\t\n\nLet \\(x\\) represent time in years starting with \\(x=0\\) for the year 1997. Let \\(y\\) represent the number of seals in thousands.\n\n1. Use logistic regression to fit a model to these data.\n\n2. Use the model to predict the seal population for the year 2020.\n\n3. To the nearest whole number, what is the limiting value of this model?\n\nAnswer a\n\nThe logistic regression model that fits these data is \\(y=\\dfrac{25.65665979}{1+6.113686306e^{−0.3852149008x}}\\).\n\nAnswer b\n\nIf the population continues to grow at this rate, there will be about \\(25,634\\) seals in 2020.\n\nAnswer c\n\nTo the nearest whole number, the carrying capacity is \\(25,657\\).",
+      "prompt": "Exercise \\(\\PageIndex{3}\\)\n\nTable \\(\\PageIndex{6}\\) shows the population, in thousands, of harbor seals in the Wadden Sea over the years 1997 to 2012.\n\n    Table \\(\\PageIndex{6}\\)\n\n            Year\t\n            Seal Population (Thousands)\t\n            Year\t\n            Seal Population (Thousands)\t\n\n            1997\t\n            3.493\t\n            2005\t\n            19.590\t\n\n            1998\t\n            5.282\t\n            2006\t\n            21.955\t\n\n            1999\t\n            6.357\t\n            2007\t\n            22.862\t\n\n            2000\t\n            9.201\t\n            2008\t\n            23.869\t\n\n            2001\t\n            11.224\t\n            2009\t\n            24.243\t\n\n            2002\t\n            12.964\t\n            2010\t\n            24.344\t\n\n            2003\t\n            16.226\t\n            2011\t\n            24.919\t\n\n            2004\t\n            18.137\t\n            2012\t\n            25.108\t\n\nLet \\(x\\) represent time in years starting with \\(x=0\\) for the year 1997. Let \\(y\\) represent the number of seals in thousands.\n\n1. Use logistic regression to fit a model to these data.\n\n2. Use the model to predict the seal population for the year 2020.\n\n3. To the nearest whole number, what is the limiting value of this model?",
+      "sourceAnswers": [
+        "The logistic regression model that fits these data is \\(y=\\dfrac{25.65665979}{1+6.113686306e^{−0.3852149008x}}\\).",
+        "If the population continues to grow at this rate, there will be about \\(25,634\\) seals in 2020.",
+        "To the nearest whole number, the carrying capacity is \\(25,657\\)."
+      ],
+      "hasFigure": false,
+      "status": "draft",
+      "answerVerified": false,
+      "translationStatus": "pending",
+      "mappingStatus": "pending"
+    }
+  ],
+  "license": "CC BY 4.0",
+  "licenseEvidence": "This page titled 6.8: Fitting Exponential Models to Data was last modified on Sun, 27 Apr 2025 18:27:16 GMT and is shared under a CC BY  4.0  license and was authored, remixed, and/or curated by OpenStax via source content that was edited to the style and standards of the LibreTexts platform.",
+  "url": "https://math.libretexts.org/Bookshelves/Algebra/Algebra_and_Trigonometry_1e_(OpenStax)/06:_Exponential_and_Logarithmic_Functions/6.08:_Fitting_Exponential_Models_to_Data",
+  "sha256": "13f48b08b95f68b11eed1c10a6bd9940b7971fc5c21c926901b50badf690849e",
+  "checkedAt": "2026-10-07",
+  "id": "820730b9fea065917515",
+  "bookId": "algebra-trigonometry",
+  "licenseInherited": false,
+  "licenseSource": "https://math.libretexts.org/Bookshelves/Algebra/Algebra_and_Trigonometry_1e_(OpenStax)/06:_Exponential_and_Logarithmic_Functions/6.08:_Fitting_Exponential_Models_to_Data",
+  "licenseUrl": "https://creativecommons.org/licenses/by/4.0/",
+  "authors": "OpenStax / Jay Abramson et al.",
+  "book": "Algebra and Trigonometry 1e",
+  "reviewStatus": "unreviewed",
+  "sourceLanguage": "en",
+  "translationStatus": "pending"
+}

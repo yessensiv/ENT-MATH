@@ -1,0 +1,375 @@
+{
+  "title": "11.8: Solving Systems with Cramer's Rule",
+  "originalText": "Learning Objectives\n\nEvaluate 2 × 2 determinants.\n\nUse Cramer’s Rule to solve a system of equations in two variables.\n\nEvaluate 3 × 3 determinants.\n\nUse Cramer’s Rule to solve a system of three equations in three variables.\n\nKnow the properties of determinants.\n\nWe have learned how to solve systems of equations in two variables and three variables, and by multiple methods: substitution, addition, Gaussian elimination, using the inverse of a matrix, and graphing. Some of these methods are easier to apply than others and are more appropriate in certain situations. In this section, we will study two more strategies for solving systems of equations.\n\nEvaluating the Determinant of a 2 × 2 Matrix\n\nA determinant is a real number that can be very useful in mathematics because it has multiple applications, such as calculating area, volume, and other quantities. Here, we will use determinants to reveal whether a matrix is invertible by using the entries of a square matrix to determine whether there is a solution to the system of equations. Perhaps one of the more interesting applications, however, is their use in cryptography. Secure signals or messages are sometimes sent encoded in a matrix. The data can only be decrypted with an invertible matrix and the determinant. For our purposes, we focus on the determinant as an indication of the invertibility of the matrix. Calculating the determinant of a matrix involves following the specific patterns that are outlined in this section.\n\nFIND THE DETERMINANT OF A 2 × 2 MATRIX\n\nThe determinant of a 2 × 2 matrix, given\n\n\\(A=\\begin{bmatrix}a&b\\\\c&d\\end{bmatrix}\\)\n\nis defined as\n\n[Figure: imageedit_25_3266671773.png]\n\nNotice the change in notation. There are several ways to indicate the determinant, including \\(\\det(A)\\) and replacing the brackets in a matrix with straight lines, \\(| A |\\).\n\nExample \\(\\PageIndex{1}\\): Finding the Determinant of a \\(2 × 2\\) Matrix\n\nFind the determinant of the given matrix.\n\n\\(A=\\begin{bmatrix}5&2\\\\−6&3\\end{bmatrix}\\)\n\nSolution\n\n\\[\\begin{align*} \\det(A)&= \\begin{vmatrix}5&2\\\\-6&3\\end{vmatrix}\\\\ &= 5(3)-(-6)(2)\\\\ &= 27 \\end{align*}\\]\n\nUsing Cramer’s Rule to Solve a System of Two Equations in Two Variables\n\nWe will now introduce a final method for solving systems of equations that uses determinants. Known as Cramer’s Rule, this technique dates back to the middle of the 18th century and is named for its innovator, the Swiss mathematician Gabriel Cramer (1704-1752), who introduced it in 1750 in Introduction à l'Analyse des lignes Courbes algébriques. Cramer’s Rule is a viable and efficient method for finding solutions to systems with an arbitrary number of unknowns, provided that we have the same number of equations as unknowns.\n\nCramer’s Rule will give us the unique solution to a system of equations, if it exists. However, if the system has no solution or an infinite number of solutions, this will be indicated by a determinant of zero. To find out if the system is inconsistent or dependent, another method, such as elimination, will have to be used.\n\nTo understand Cramer’s Rule, let’s look closely at how we solve systems of linear equations using basic row operations. Consider a system of two equations in two variables.\n\n\\[\\begin{align} a_1x+b_1y&= c_1 (1) \\label{eq1}\\\\ a_2x+b_2y&= c_2 (2) \\label{eq2}\\\\ \\end{align}\\]\n\nWe eliminate one variable using row operations and solve for the other. Say that we wish to solve for \\(x\\). If Equation \\ref{eq2} is multiplied by the opposite of the coefficient of \\(y\\) in Equation \\ref{eq1}, Equation \\ref{eq1} is multiplied by the coefficient of \\(y\\) in Equation \\ref{eq2}, and we add the two equations, the variable \\(y\\) will be eliminated.\n\n\\[\\begin{align*} &b_2a_1x+b_2b_1y = b_2c_1 & \\text{Multiply }R_1 \\text{ by }b_2 \\\\ -&\\underline{b_1a_2x−b_1b_2y=−b_1c_2} & \\text{Multiply }R_2 \\text{ by }−b_1 \\\\ & b_2a_1x−b_1a_2x=b_2c_1−b_1c_2 \\end{align*}\\]\n\nNow, solve for \\(x\\).\n\n\\[\\begin{align*} b_2a_1x−b_1a_2x &= b_2c_1−b_1c_2 \\\\ x(b_2a_1−b_1a_2) &= b_2c_1−b_1c_2 \\\\ x &= \\dfrac{b_2c_1−b_1c_2}{b_2a_1−b_1a_2}=\\dfrac{\\begin{bmatrix}c_1&b_1\\\\c_2&b_2\\end{bmatrix}}{\\begin{bmatrix}a_1&b_1\\\\a_2&b_2\\end{bmatrix}} \\end{align*}\\]\n\nSimilarly, to solve for \\(y\\),we will eliminate \\(x\\).\n\n\\[\\begin{align*} & a_2a_1x+a_2b_1y = a_2c_1 & \\text{Multiply }R_1  \\text{ by }a_2 \\\\ -& \\underline{a_1a_2x−a_1b_2y=−a_1c_2} & \\text{Multiply }R_2 \\text{ by }−a_1 \\\\ & a_2b_1y−a_1b_2y =a_2c_1−a_1c_2 \\end{align*}\\]\n\nSolving for \\(y\\) gives\n\n\\[ \\begin{align*} a_2b_1y−a_1b_2y &= a_2c_1−a_1c_2 \\\\ y(a_2b_1−a_1b_2) &= a_2c_1−a_1c_2 \\\\ y &= \\dfrac{a_2c_1−a_1c_2}{a_2b_1−a_1b_2}=\\dfrac{a_1c_2−a_2c_1}{a_1b_2−a_2b_1}=\\dfrac{\\begin{bmatrix}a_1&c_1\\\\a_2&c_2\\end{bmatrix}}{\\begin{bmatrix}a_1&b_1\\\\a_2&b_2\\end{bmatrix}} \\end{align*}\\]\n\nNotice that the denominator for both \\(x\\) and \\(y\\) is the determinant of the coefficient matrix.\n\nWe can use these formulas to solve for \\(x\\) and \\(y\\), but Cramer’s Rule also introduces new notation:\n\n\\(D\\):determinant of the coefficient matrix\n\n\\(D_x\\):determinant of the numerator in the solution of \\(x\\)\n\n\\[x=\\dfrac{D_x}{D}\\]\n\n\\(D_y\\):determinant of the numerator in the solution of \\(y\\)\n\n\\[y=\\dfrac{D_y}{D}\\]\n\nThe key to Cramer’s Rule is replacing the variable column of interest with the constant column and calculating the determinants. We can then express \\(x\\) and \\(y\\) as a quotient of two determinants.\n\nCRAMER’S RULE FOR \\(2×2\\) SYSTEMS\n\nCramer’s Rule is a method that uses determinants to solve systems of equations that have the same number of equations as variables.\n\nConsider a system of two linear equations in two variables.\n\n\\[\\begin{align*} a_1x+b_1y&= c_1\\\\ a_2x+b_2y&= c_2 \\end{align*}\\]\n\nThe solution using Cramer’s Rule is given as\n\n\\[\\begin{align} x&= \\dfrac{D_x}{D} = \\dfrac{\\begin{bmatrix}c_1&b_1\\\\c_2&b_2\\end{bmatrix}}{\\begin{bmatrix}a_1&b_1\\\\a_2&b_2\\end{bmatrix}}\\; , D\\neq 0\\\\ y&= \\dfrac{D_y}{D} = \\dfrac{\\begin{bmatrix}a_1&c_1\\\\a_2&c_2\\end{bmatrix}}{\\begin{bmatrix}a_1&b_1\\\\a_2&b_2\\end{bmatrix}}\\; , D\\neq 0 \\end{align}\\]\n\nIf we are solving for \\(x\\), the \\(x\\) column is replaced with the constant column. If we are solving for \\(y\\), the \\(y\\) column is replaced with the constant column.\n\nExample \\(\\PageIndex{2}\\): Using Cramer’s Rule to Solve a \\(2 × 2\\) System\n\nSolve the following \\(2 × 2\\) system using Cramer’s Rule.\n\n\\[\\begin{align*} 12x+3y&= 15\\\\ 2x-3y&= 13 \\end{align*}\\]\n\nSolution\n\nSolve for \\(x\\).\n\n\\[\\begin{align*} x&= \\dfrac{D_x}{D}\\\\ &= \\dfrac{\\begin{bmatrix}15&3\\\\13&-3\\end{bmatrix}}{\\begin{bmatrix}12&3\\\\2&-3\\end{bmatrix}}\\\\ &= \\dfrac{-45-39}{-36-6}\\\\ &= \\dfrac{-84}{-42}\\\\ &= 2 \\end{align*}\\]\n\nSolve for \\(y\\).\n\n\\[\\begin{align*} y&= \\dfrac{D_y}{D}\\\\ &= \\dfrac{\\begin{bmatrix}12&15\\\\2&13\\end{bmatrix}}{\\begin{bmatrix}12&3\\\\2&-3\\end{bmatrix}}\\\\ &= \\dfrac{156-30}{-36-6}\\\\ &= -\\dfrac{126}{42}\\\\ &= -3 \\end{align*}\\]\n\nThe solution is \\((2,−3)\\).\n\nExercise \\(\\PageIndex{1}\\)\n\nUse Cramer’s Rule to solve the \\(2 × 2\\) system of equations.\n\n\\[\\begin{align*} x+2y&= -11\\\\ -2x+y&= -13 \\end{align*}\\]\n\nAnswer\n\n\\((3,−7)\\)\n\nEvaluating the Determinant of a 3 × 3 Matrix\n\nFinding the determinant of a 2×2 matrix is straightforward, but finding the determinant of a 3×3 matrix is more complicated. One method is to augment the 3×3 matrix with a repetition of the first two columns, giving a 3×5 matrix. Then we calculate the sum of the products of entries down each of the three diagonals (upper left to lower right), and subtract the products of entries up each of the three diagonals (lower left to upper right). This is more easily understood with a visual and an example.\n\nFind the determinant of the 3×3 matrix.\n\n\\(A=\\begin{bmatrix}a_1&b_1&c_1\\\\a_2&b_2&c_2\\\\a_3&b_3&c_3\\end{bmatrix}\\)\n\n1. Augment \\(A\\) with the first two columns.\n\n\\(\\det(A)=\\left| \\begin{array}{ccc|cc} a_1&b_1&c_1&a_1&b_1\\\\a_2&b_2&c_2&a_2&b_2\\\\a_3&b_3&c_3&a_3&b_3\\end{array} \\right|\\)\n\n2. From upper left to lower right: Multiply the entries down the first diagonal. Add the result to the product of entries down the second diagonal. Add this result to the product of the entries down the third diagonal.\n\n3. From lower left to upper right: Subtract the product of entries up the first diagonal. From this result subtract the product of entries up the second diagonal. From this result, subtract the product of entries up the third diagonal.\n\n[Figure: imageedit_29_4168042663.png]\n\nThe algebra is as follows:\n\n\\(| A |=a_1b_2c_3+b_1c_2a_3+c_1a_2b_3−a_3b_2c_1−b_3c_2a_1−c_3a_2b_1\\)\n\nExample \\(\\PageIndex{3}\\): Finding the Determinant of a 3 × 3 Matrix\n\nFind the determinant of the \\(3 × 3\\) matrix given\n\n\\(A=\\begin{bmatrix}0&2&1\\\\3&−1&1\\\\4&0&1\\end{bmatrix}\\)\n\nSolution\n\nAugment the matrix with the first two columns and then follow the formula. Thus,\n\n\\[\\begin{align*} | A | &= \\left| \\begin{array}{ccc|cc}0&2&1&0&2\\\\3&-1&1&3&-1\\\\4&0&1&4&0\\end{array}\\right| \\\\ &= 0(−1)(1)+2(1)(4)+1(3)(0)−4(−1)(1)−0(1)(0)−1(3)(2) \\\\ &=0+8+0+4−0−6 \\\\ &= 6 \\end{align*}\\]\n\nExercise \\(\\PageIndex{2}\\)\n\nFind the determinant of the 3 × 3 matrix.\n\n\\(\\det(A)=\\begin{vmatrix}1&−3&7\\\\1&1&1\\\\1&−2&3\\end{vmatrix}\\)\n\nAnswer\n\n\\(−10\\)\n\nQ&A: Can we use the same method to find the determinant of a larger matrix?\n\nNo, this method only works for 2 × 2 and 3 × 3 matrices. For larger matrices it is best to use a graphing utility or computer software.\n\nUsing Cramer’s Rule to Solve a System of Three Equations in Three Variables\n\nNow that we can find the determinant of a \\(3 × 3\\) matrix, we can apply Cramer’s Rule to solve a system of three equations in three variables. Cramer’s Rule is straightforward, following a pattern consistent with Cramer’s Rule for \\(2 × 2\\) matrices. As the order of the matrix increases to \\(3 × 3\\), however, there are many more calculations required.\n\nWhen we calculate the determinant to be zero, Cramer’s Rule gives no indication as to whether the system has no solution or an infinite number of solutions. To find out, we have to perform elimination on the system.\n\nConsider a \\(3 × 3\\) system of equations.\n\n\\[\\begin{align} a_1x+b_1y+c_1z &= \\color{blue}d_1 \\\\ a_2x+b_2y+c_2z &= \\color{blue}d_2 \\\\ a_3x+b_3y+c_3z &= \\color{blue}d_3 \\\\ \\end{align}\\]\n\n\\(x=\\dfrac{D_x}{D}\\), \\(y=\\dfrac{D_y}{D}\\), \\(z=\\dfrac{D_z}{D}\\), \\(D≠0\\)\n\nwhere\n\n\\[D = \\begin{vmatrix} a_1 & b_1 & c_1\\\\ a_2 & b_2 & c_2\\\\ a_3 & b_3 & c_3 \\end{vmatrix}\\; ,\\; D_x = \\begin{vmatrix} \\color{blue}d_1 & b_1 & c_1\\\\ \\color{blue}d_2 & b_2 & c_2\\\\ \\color{blue}d_3 & b_3 & c_3 \\end{vmatrix}\\; ,\\; D_y = \\begin{vmatrix} a_1 & \\color{blue}d_1 & c_1\\\\ a_2 & \\color{blue}d_2 & c_2\\\\ a_3 & \\color{blue}d_3 & c_3 \\end{vmatrix}\\; ,\\; D_z = \\begin{vmatrix} a_1 & b_1 & \\color{blue}d_1\\\\ a_2 & b_2 & \\color{blue}d_2\\\\ a_3 & b_3 & \\color{blue}d_3 \\end{vmatrix}\\]\n\nIf we are writing the determinant \\(D_x\\),we replace the \\(x\\) column with the constant column. If we are writing the determinant \\(D_y\\),we replace they y column with the constant column. If we are writing the determinant \\(D_z\\),we replace the \\(z\\) column with the constant column. Always check the answer.\n\nExample \\(\\PageIndex{4}\\): Solving a \\(3 × 3\\) System Using Cramer’s Rule\n\nFind the solution to the given \\(3 × 3\\) system using Cramer’s Rule.\n\n\\[\\begin{align*} x+y-z&= 6\\\\ 3x-2y+z&= -5\\\\ x+3y-2z&= 14 \\end{align*}\\]\n\nSolution\n\nUse Cramer’s Rule.\n\n\\(D=\\begin{vmatrix}1&1&−1\\\\3&−2&1\\\\1&3&−2\\end{vmatrix}\\), \\(D_x=\\begin{vmatrix}6&1&−1\\\\−5&−2&1\\\\14&3&−2\\end{vmatrix}\\), \\(D_y=\\begin{vmatrix}1&6&−1\\\\3&−5&1\\\\1&14&−2\\end{vmatrix}\\), \\(D_z=\\begin{vmatrix}1&1&6\\\\3&−2&−5\\\\1&3&14\\end{vmatrix}\\)\n\nThen,\n\n\\[\\begin{align*} x&= \\dfrac{D_x}{D}&= \\dfrac{-3}{-3}&= 1\\\\ y&= \\dfrac{D_y}{D}&= \\dfrac{-9}{-3}&= 3\\\\ z&= \\dfrac{D_z}{D}&= \\dfrac{6}{-3}&= -2\\\\ \\end{align*}\\]\n\nThe solution is \\((1,3,−2)\\).\n\nExercise \\(\\PageIndex{3}\\)\n\nUse Cramer’s Rule to solve the \\(3 × 3\\) matrix.\n\n\\[\\begin{align*} x-3y+7z&= 13\\\\ x+y+z&= 1\\\\ x-2y+3z&= 4 \\end{align*}\\]\n\nAnswer\n\n\\(\\left(−2,\\dfrac{3}{5},\\dfrac{12}{5}\\right)\\)\n\nExample \\(\\PageIndex{5A}\\): Using Cramer’s Rule to Solve an Inconsistent System\n\nSolve the system of equations using Cramer’s Rule.\n\n\\[\\begin{align} 3x-2y&= 4 \\label{eq3}\\\\ 6x-4y&= 0 \\label{eq4}\\end{align}\\]\n\nSolution\n\nWe begin by finding the determinants \\(D\\), \\(D_x\\),and \\(D_y\\).\n\n\\(D=\\begin{vmatrix}3&−2\\\\6&−4\\end{vmatrix}=3(−4)−6(−2)=0\\)\n\nWe know that a determinant of zero means that either the system has no solution or it has an infinite number of solutions. To see which one, we use the process of elimination. Our goal is to eliminate one of the variables.\n\n1. Multiply Equation \\ref{eq3} by \\(−2\\).\n\n2. Add the result to Equation \\ref{eq4}.\n\n\\[\\begin{align*} &−6x+4y=−8 \\\\ &\\;\\;\\;\\underline{6x−4y=0} \\\\ &\\;\\;\\;\\;\\;\\;\\;\\;\\;\\; 0=−8 \\end{align*}\\]\n\nWe obtain the equation \\(0=−8\\), which is false. Therefore, the system has no solution. Graphing the system reveals two parallel lines. See Figure \\(\\PageIndex{1}\\).\n\n[Figure: alt]\n\nFigure \\(\\PageIndex{1}\\)\n\nExample \\(\\PageIndex{5B}\\): Use Cramer’s Rule to Solve a Dependent System\n\nSolve the system with an infinite number of solutions.\n\n\\[\\begin{align} x-2y+3z&= 0 \\label{eq5}\\\\ 3x+y-2z&= 0 \\label{eq6}\\\\ 2x-4y+6z&= 0 \\label{eq7} \\end{align}\\]\n\nSolution\n\nLet’s find the determinant first. Set up a matrix augmented by the first two columns.\n\n\\(\\left| \\begin{array}{ccc|cc}1&−2&3&1&-2\\\\3&1&−2&3&1\\\\2&−4&6&2&-4\\end{array}\\right|\\)\n\nThen,\n\n\\(1(1)(6)+(−2)(−2)(2)+3(3)(−4)−2(1)(3)−(−4)(−2)(1)−6(3)(−2)=0\\)\n\nAs the determinant equals zero, there is either no solution or an infinite number of solutions. We have to perform elimination to find out.\n\n1. Multiply Equation \\ref{eq5} by \\(−2\\) and add the result to Equation \\ref{eq7}:\n\n\\[\\begin{align*} &−2x+4y−6x=0 \\\\ &\\;\\;\\underline{2x−4y+6z=0} \\\\ &\\;\\;\\;\\;\\;\\;\\;\\;\\;\\;\\;\\;\\;\\;\\;\\;0=0 \\end{align*}\\]\n\n2. Obtaining an answer of \\(0=0\\), a statement that is always true, means that the system has an infinite number of solutions. Graphing the system, we can see that two of the planes are the same and they both intersect the third plane on a line. See Figure \\(\\PageIndex{2}\\).\n\n[Figure: alt]\n\nFigure \\(\\PageIndex{2}\\)\n\nUnderstanding Properties of Determinants\n\nThere are many properties of determinants. Listed here are some properties that may be helpful in calculating the determinant of a matrix.\n\nPROPERTIES OF DETERMINANTS\n\n1. If the matrix is in upper triangular form, the determinant equals the product of entries down the main diagonal.\n\n2. When two rows are interchanged, the determinant changes sign.\n\n3. If either two rows or two columns are identical, the determinant equals zero.\n\n4. If a matrix contains either a row of zeros or a column of zeros, the determinant equals zero.\n\n5. The determinant of an inverse matrix \\(A^{−1}\\) is the reciprocal of the determinant of the matrix \\(A\\).\n\n6. If any row or column is multiplied by a constant, the determinant is multiplied by the same factor.\n\nExample \\(\\PageIndex{6}\\): Illustrating Properties of Determinants\n\nIllustrate each of the properties of determinants.\n\nSolution\n\nProperty 1 states that if the matrix is in upper triangular form, the determinant is the product of the entries down the main diagonal.\n\n\\(A=\\begin{bmatrix}1&2&3\\\\0&2&1\\\\0&0&−1\\end{bmatrix}\\)\n\nAugment \\(A\\) with the first two columns.\n\n\\(A=\\left[ \\begin{array}{ccc|cc}1&2&3&1&2\\\\0&2&1&0&2\\\\0&0&−1&0&0\\end{array}\\right]\\)\n\nThen\n\n\\[\\begin{align*} \\det(A)&= 1(2)(-1)+2(1)(0)+3(0)(0)-0(2)(3)-0(1)(1)+1(0)(2)\\\\ &= -2 \\end{align*}\\]\n\nProperty 2 states that interchanging rows changes the sign. Given\n\n\\[\\begin{align*} A&=\\begin{bmatrix}-1&5\\\\4&-3\\end{bmatrix}\\\\ \\det(A)&= (-1)(-3)-(4)(5)\\\\ &= 3-20\\\\ &= -17 \\end{align*}\\]\n\n\\[\\begin{align*} B&= \\begin{bmatrix}4&-3\\\\-1&5\\end{bmatrix}\\\\ \\det(B)&= (4)(5)-(-1)(-3)\\\\ &= 20-3\\\\ &= 17 \\end{align*}\\]\n\nProperty 3 states that if two rows or two columns are identical, the determinant equals zero.\n\n\\[\\begin{align*} A&=\\left[ \\begin{array}{ccc|cc}1&2&2&1&2\\\\2&2&2&2&2\\\\-1&2&2&-1&2\\end{array}\\right]\\\\ \\det(A)&=1(2)(2)+2(2)(-1)+2(2)(2)+1(2)(2)-2(2)(1)-2(2)(2)\\\\ &=4-4+8+4-4-8\\\\ &=0 \\end{align*}\\]\n\nProperty 4 states that if a row or column equals zero, the determinant equals zero. Thus,\n\n\\[\\begin{align*} A&=\\begin{bmatrix}1&2\\\\0&0\\end{bmatrix}\\\\ \\det(A)&=1(0)-2(0)\\\\ &=0 \\end{align*}\\]\n\nProperty 5 states that the determinant of an inverse matrix \\(A^{−1}\\) is the reciprocal of the determinant \\(A\\). Thus,\n\n\\[\\begin{align*} A&=\\begin{bmatrix}1&2\\\\3&4\\end{bmatrix}\\\\ \\det(A)&=1(4)-3(2)\\\\ &=-2 \\end{align*}\\]\n\n\\[\\begin{align*} A^{-1}&=\\begin{bmatrix}-2&1\\\\\\dfrac{3}{2}&-\\dfrac{1}{2}\\end{bmatrix}\\\\ \\det(A^{-1})&=-2\\left(-\\dfrac{1}{2}\\right)-\\dfrac{3}{2}(1)\\\\ &=-\\dfrac{1}{2} \\end{align*}\\]\n\nProperty 6 states that if any row or column of a matrix is multiplied by a constant, the determinant is multiplied by the same factor. Thus,\n\n\\[\\begin{align*} A&=\\begin{bmatrix}1&2\\\\3&4\\end{bmatrix}\\\\ \\det(A)&=1(4)-2(3)\\\\ &=-2 \\end{align*}\\]\n\n\\[\\begin{align*} B&=\\begin{bmatrix}2(1)&2(2)\\\\3&4\\end{bmatrix}\\\\ \\det(B)&=2(4)-3(4)\\\\ &=-4 \\end{align*}\\]\n\nExample \\(\\PageIndex{7}\\): Using Cramer’s Rule and Determinant Properties to Solve a System\n\nFind the solution to the given \\(3 × 3\\) system.\n\n\\[\\begin{align} 2x+4y+4z&=2 \\label{eq8}\\\\ 3x+7y+7z&=-5 \\label{eq9}\\\\ x+2y+2z&=4 \\label{eq10}\\end{align}\\]\n\nSolution\n\nUsing Cramer’s Rule, we have\n\n\\(D=\\begin{bmatrix}2&4&4\\\\3&7&7\\\\1&2&2\\end{bmatrix}\\)\n\nNotice that the second and third columns are identical. According to Property 3, the determinant will be zero, so there is either no solution or an infinite number of solutions. We have to perform elimination to find out.\n\n1. Multiply Equation \\ref{eq10} by \\(–2\\) and add the result to Equation \\ref{eq8}.\n\n\\[\\begin{align*} -2x-4y-4x&=-8\\\\ 2x+4y+4z&=2\\\\ 0&=-6 \\end{align*}\\]\n\nObtaining a statement that is a contradiction means that the system has no solution.\n\nMedia\n\nAccess these online resources for additional instruction and practice with Cramer’s Rule.\n\nSolve a System of Two Equations Using Cramer's Rule\n\nSolve a Systems of Three Equations using Cramer's Rule\n\nKey Concepts\n\nThe determinant for \\(\\begin{bmatrix}a&b\\\\c&d\\end{bmatrix}\\) is \\(ad−bc\\). See Example \\(\\PageIndex{1}\\).\n\nCramer’s Rule replaces a variable column with the constant column. Solutions are \\(x=\\dfrac{D_x}{D}\\), \\(y=\\dfrac{D_y}{D}\\). See Example \\(\\PageIndex{2}\\).\n\nTo find the determinant of a \\(3×3\\) matrix, augment with the first two columns. Add the three diagonal entries (upper left to lower right) and subtract the three diagonal entries (lower left to upper right). See Example \\(\\PageIndex{3}\\).\n\nTo solve a system of three equations in three variables using Cramer’s Rule, replace a variable column with the constant column for each desired solution: \\(x=\\dfrac{D_x}{D}\\), \\(y=\\dfrac{D_y}{D}\\), \\(z=\\dfrac{D_z}{D}\\). See Example \\(\\PageIndex{4}\\).\n\nCramer’s Rule is also useful for finding the solution of a system of equations with no solution or infinite solutions. See Example \\(\\PageIndex{5}\\) and Example \\(\\PageIndex{6}\\).\n\nCertain properties of determinants are useful for solving problems. For example:\n\nIf the matrix is in upper triangular form, the determinant equals the product of entries down the main diagonal.\n\nWhen two rows are interchanged, the determinant changes sign.\n\nIf either two rows or two columns are identical, the determinant equals zero.\n\nIf a matrix contains either a row of zeros or a column of zeros, the determinant equals zero.\n\nThe determinant of an inverse matrix \\(A^{−1}\\) is the reciprocal of the determinant of the matrix \\(A\\).\n\nIf any row or column is multiplied by a constant, the determinant is multiplied by the same factor. See Example \\(\\PageIndex{7}\\) and Example \\(\\PageIndex{8}\\).\n\nThis page titled 11.8: Solving Systems with Cramer's Rule was last modified on Thu, 26 Dec 2024 22:30:53 GMT and is shared under a CC BY  4.0  license and was authored, remixed, and/or curated by OpenStax via source content that was edited to the style and standards of the LibreTexts platform.",
+  "figures": [
+    {
+      "url": "https://math.libretexts.org/@api/deki/files/14566/imageedit_25_3266671773.png?revision=1",
+      "alt": "imageedit_25_3266671773.png",
+      "credit": ""
+    },
+    {
+      "url": "https://math.libretexts.org/@api/deki/files/14567/imageedit_29_4168042663.png?revision=1",
+      "alt": "imageedit_29_4168042663.png",
+      "credit": ""
+    },
+    {
+      "url": "https://math.libretexts.org/@api/deki/files/7570/CNX_Precalc_Figure_09_08_003.jpg?revision=1",
+      "alt": "alt",
+      "credit": ""
+    },
+    {
+      "url": "https://math.libretexts.org/@api/deki/files/7571/CNX_Precalc_Figure_09_08_005.jpg?revision=1",
+      "alt": "alt",
+      "credit": ""
+    }
+  ],
+  "references": [
+    {
+      "text": "Solve a System of Two Equations Using Cramer's Rule",
+      "url": "http://openstaxcollege.org/l/system2cramer"
+    },
+    {
+      "text": "Solve a Systems of Three Equations using Cramer's Rule",
+      "url": "http://openstaxcollege.org/l/system3cramer"
+    },
+    {
+      "text": "11.8: Solving Systems with Cramer's Rule",
+      "url": "https://math.libretexts.org/Bookshelves/Algebra/Algebra_and_Trigonometry_1e_(OpenStax)/11%3A_Systems_of_Equations_and_Inequalities/11.08%3A_Solving_Systems_with_Cramer's_Rule"
+    },
+    {
+      "text": "CC BY  4.0",
+      "url": "https://creativecommons.org/licenses/by/4.0"
+    },
+    {
+      "text": "OpenStax",
+      "url": "https://openstax.org/"
+    },
+    {
+      "text": "source content",
+      "url": "https://openstax.org/details/books/precalculus"
+    }
+  ],
+  "exercises": [
+    {
+      "ordinal": 1,
+      "sourceNumber": "",
+      "sourceAnchor": "",
+      "kind": "example-or-exercise",
+      "context": "is defined as\n\n[Figure: imageedit_25_3266671773.png]\n\nNotice the change in notation. There are several ways to indicate the determinant, including \\(\\det(A)\\) and replacing the brackets in a matrix with straight lines, \\(| A |\\).",
+      "original": "Example \\(\\PageIndex{1}\\): Finding the Determinant of a \\(2 × 2\\) Matrix\n\nFind the determinant of the given matrix.\n\n\\(A=\\begin{bmatrix}5&2\\\\−6&3\\end{bmatrix}\\)\n\nSolution\n\n\\[\\begin{align*} \\det(A)&= \\begin{vmatrix}5&2\\\\-6&3\\end{vmatrix}\\\\ &= 5(3)-(-6)(2)\\\\ &= 27 \\end{align*}\\]",
+      "prompt": "Example \\(\\PageIndex{1}\\): Finding the Determinant of a \\(2 × 2\\) Matrix\n\nFind the determinant of the given matrix.\n\n\\(A=\\begin{bmatrix}5&2\\\\−6&3\\end{bmatrix}\\)\n\nSolution\n\n\\[\\begin{align*} \\det(A)&= \\begin{vmatrix}5&2\\\\-6&3\\end{vmatrix}\\\\ &= 5(3)-(-6)(2)\\\\ &= 27 \\end{align*}\\]",
+      "sourceAnswers": [],
+      "hasFigure": false,
+      "status": "draft",
+      "answerVerified": false,
+      "translationStatus": "pending",
+      "mappingStatus": "pending"
+    },
+    {
+      "ordinal": 2,
+      "sourceNumber": "",
+      "sourceAnchor": "",
+      "kind": "example-or-exercise",
+      "context": "The solution using Cramer’s Rule is given as\n\n\\[\\begin{align} x&= \\dfrac{D_x}{D} = \\dfrac{\\begin{bmatrix}c_1&b_1\\\\c_2&b_2\\end{bmatrix}}{\\begin{bmatrix}a_1&b_1\\\\a_2&b_2\\end{bmatrix}}\\; , D\\neq 0\\\\ y&= \\dfrac{D_y}{D} = \\dfrac{\\begin{bmatrix}a_1&c_1\\\\a_2&c_2\\end{bmatrix}}{\\begin{bmatrix}a_1&b_1\\\\a_2&b_2\\end{bmatrix}}\\; , D\\neq 0 \\end{align}\\]\n\nIf we are solving for \\(x\\), the \\(x\\) column is replaced with the constant column. If we are solving for \\(y\\), the \\(y\\) column is replaced with the constant column.",
+      "original": "Example \\(\\PageIndex{2}\\): Using Cramer’s Rule to Solve a \\(2 × 2\\) System\n\nSolve the following \\(2 × 2\\) system using Cramer’s Rule.\n\n\\[\\begin{align*} 12x+3y&= 15\\\\ 2x-3y&= 13 \\end{align*}\\]\n\nSolution\n\nSolve for \\(x\\).\n\n\\[\\begin{align*} x&= \\dfrac{D_x}{D}\\\\ &= \\dfrac{\\begin{bmatrix}15&3\\\\13&-3\\end{bmatrix}}{\\begin{bmatrix}12&3\\\\2&-3\\end{bmatrix}}\\\\ &= \\dfrac{-45-39}{-36-6}\\\\ &= \\dfrac{-84}{-42}\\\\ &= 2 \\end{align*}\\]\n\nSolve for \\(y\\).\n\n\\[\\begin{align*} y&= \\dfrac{D_y}{D}\\\\ &= \\dfrac{\\begin{bmatrix}12&15\\\\2&13\\end{bmatrix}}{\\begin{bmatrix}12&3\\\\2&-3\\end{bmatrix}}\\\\ &= \\dfrac{156-30}{-36-6}\\\\ &= -\\dfrac{126}{42}\\\\ &= -3 \\end{align*}\\]\n\nThe solution is \\((2,−3)\\).",
+      "prompt": "Example \\(\\PageIndex{2}\\): Using Cramer’s Rule to Solve a \\(2 × 2\\) System\n\nSolve the following \\(2 × 2\\) system using Cramer’s Rule.\n\n\\[\\begin{align*} 12x+3y&= 15\\\\ 2x-3y&= 13 \\end{align*}\\]\n\nSolution\n\nSolve for \\(x\\).\n\n\\[\\begin{align*} x&= \\dfrac{D_x}{D}\\\\ &= \\dfrac{\\begin{bmatrix}15&3\\\\13&-3\\end{bmatrix}}{\\begin{bmatrix}12&3\\\\2&-3\\end{bmatrix}}\\\\ &= \\dfrac{-45-39}{-36-6}\\\\ &= \\dfrac{-84}{-42}\\\\ &= 2 \\end{align*}\\]\n\nSolve for \\(y\\).\n\n\\[\\begin{align*} y&= \\dfrac{D_y}{D}\\\\ &= \\dfrac{\\begin{bmatrix}12&15\\\\2&13\\end{bmatrix}}{\\begin{bmatrix}12&3\\\\2&-3\\end{bmatrix}}\\\\ &= \\dfrac{156-30}{-36-6}\\\\ &= -\\dfrac{126}{42}\\\\ &= -3 \\end{align*}\\]\n\nThe solution is \\((2,−3)\\).",
+      "sourceAnswers": [],
+      "hasFigure": false,
+      "status": "draft",
+      "answerVerified": false,
+      "translationStatus": "pending",
+      "mappingStatus": "pending"
+    },
+    {
+      "ordinal": 3,
+      "sourceNumber": "",
+      "sourceAnchor": "",
+      "kind": "exercise-candidate",
+      "context": "The solution using Cramer’s Rule is given as\n\n\\[\\begin{align} x&= \\dfrac{D_x}{D} = \\dfrac{\\begin{bmatrix}c_1&b_1\\\\c_2&b_2\\end{bmatrix}}{\\begin{bmatrix}a_1&b_1\\\\a_2&b_2\\end{bmatrix}}\\; , D\\neq 0\\\\ y&= \\dfrac{D_y}{D} = \\dfrac{\\begin{bmatrix}a_1&c_1\\\\a_2&c_2\\end{bmatrix}}{\\begin{bmatrix}a_1&b_1\\\\a_2&b_2\\end{bmatrix}}\\; , D\\neq 0 \\end{align}\\]\n\nIf we are solving for \\(x\\), the \\(x\\) column is replaced with the constant column. If we are solving for \\(y\\), the \\(y\\) column is replaced with the constant column.",
+      "original": "Exercise \\(\\PageIndex{1}\\)\n\nUse Cramer’s Rule to solve the \\(2 × 2\\) system of equations.\n\n\\[\\begin{align*} x+2y&= -11\\\\ -2x+y&= -13 \\end{align*}\\]\n\nAnswer\n\n\\((3,−7)\\)",
+      "prompt": "Exercise \\(\\PageIndex{1}\\)\n\nUse Cramer’s Rule to solve the \\(2 × 2\\) system of equations.\n\n\\[\\begin{align*} x+2y&= -11\\\\ -2x+y&= -13 \\end{align*}\\]",
+      "sourceAnswers": [
+        "\\((3,−7)\\)"
+      ],
+      "hasFigure": false,
+      "status": "draft",
+      "answerVerified": false,
+      "translationStatus": "pending",
+      "mappingStatus": "pending"
+    },
+    {
+      "ordinal": 4,
+      "sourceNumber": "1",
+      "sourceAnchor": "",
+      "kind": "exercise-candidate",
+      "context": "Finding the determinant of a 2×2 matrix is straightforward, but finding the determinant of a 3×3 matrix is more complicated. One method is to augment the 3×3 matrix with a repetition of the first two columns, giving a 3×5 matrix. Then we calculate the sum of the products of entries down each of the three diagonals (upper left to lower right), and subtract the products of entries up each of the three diagonals (lower left to upper right). This is more easily understood with a visual and an example.\n\nFind the determinant of the 3×3 matrix.\n\n\\(A=\\begin{bmatrix}a_1&b_1&c_1\\\\a_2&b_2&c_2\\\\a_3&b_3&c_3\\end{bmatrix}\\)",
+      "original": "1. Augment \\(A\\) with the first two columns.\n\n\\(\\det(A)=\\left| \\begin{array}{ccc|cc} a_1&b_1&c_1&a_1&b_1\\\\a_2&b_2&c_2&a_2&b_2\\\\a_3&b_3&c_3&a_3&b_3\\end{array} \\right|\\)",
+      "prompt": "1. Augment \\(A\\) with the first two columns.\n\n\\(\\det(A)=\\left| \\begin{array}{ccc|cc} a_1&b_1&c_1&a_1&b_1\\\\a_2&b_2&c_2&a_2&b_2\\\\a_3&b_3&c_3&a_3&b_3\\end{array} \\right|\\)",
+      "sourceAnswers": [],
+      "hasFigure": false,
+      "status": "draft",
+      "answerVerified": false,
+      "translationStatus": "pending",
+      "mappingStatus": "pending"
+    },
+    {
+      "ordinal": 5,
+      "sourceNumber": "2",
+      "sourceAnchor": "",
+      "kind": "exercise-candidate",
+      "context": "Finding the determinant of a 2×2 matrix is straightforward, but finding the determinant of a 3×3 matrix is more complicated. One method is to augment the 3×3 matrix with a repetition of the first two columns, giving a 3×5 matrix. Then we calculate the sum of the products of entries down each of the three diagonals (upper left to lower right), and subtract the products of entries up each of the three diagonals (lower left to upper right). This is more easily understood with a visual and an example.\n\nFind the determinant of the 3×3 matrix.\n\n\\(A=\\begin{bmatrix}a_1&b_1&c_1\\\\a_2&b_2&c_2\\\\a_3&b_3&c_3\\end{bmatrix}\\)",
+      "original": "2. From upper left to lower right: Multiply the entries down the first diagonal. Add the result to the product of entries down the second diagonal. Add this result to the product of the entries down the third diagonal.",
+      "prompt": "2. From upper left to lower right: Multiply the entries down the first diagonal. Add the result to the product of entries down the second diagonal. Add this result to the product of the entries down the third diagonal.",
+      "sourceAnswers": [],
+      "hasFigure": false,
+      "status": "draft",
+      "answerVerified": false,
+      "translationStatus": "pending",
+      "mappingStatus": "pending"
+    },
+    {
+      "ordinal": 6,
+      "sourceNumber": "3",
+      "sourceAnchor": "",
+      "kind": "exercise-candidate",
+      "context": "Finding the determinant of a 2×2 matrix is straightforward, but finding the determinant of a 3×3 matrix is more complicated. One method is to augment the 3×3 matrix with a repetition of the first two columns, giving a 3×5 matrix. Then we calculate the sum of the products of entries down each of the three diagonals (upper left to lower right), and subtract the products of entries up each of the three diagonals (lower left to upper right). This is more easily understood with a visual and an example.\n\nFind the determinant of the 3×3 matrix.\n\n\\(A=\\begin{bmatrix}a_1&b_1&c_1\\\\a_2&b_2&c_2\\\\a_3&b_3&c_3\\end{bmatrix}\\)",
+      "original": "3. From lower left to upper right: Subtract the product of entries up the first diagonal. From this result subtract the product of entries up the second diagonal. From this result, subtract the product of entries up the third diagonal.",
+      "prompt": "3. From lower left to upper right: Subtract the product of entries up the first diagonal. From this result subtract the product of entries up the second diagonal. From this result, subtract the product of entries up the third diagonal.",
+      "sourceAnswers": [],
+      "hasFigure": false,
+      "status": "draft",
+      "answerVerified": false,
+      "translationStatus": "pending",
+      "mappingStatus": "pending"
+    },
+    {
+      "ordinal": 7,
+      "sourceNumber": "",
+      "sourceAnchor": "",
+      "kind": "example-or-exercise",
+      "context": "[Figure: imageedit_29_4168042663.png]\n\nThe algebra is as follows:\n\n\\(| A |=a_1b_2c_3+b_1c_2a_3+c_1a_2b_3−a_3b_2c_1−b_3c_2a_1−c_3a_2b_1\\)",
+      "original": "Example \\(\\PageIndex{3}\\): Finding the Determinant of a 3 × 3 Matrix\n\nFind the determinant of the \\(3 × 3\\) matrix given\n\n\\(A=\\begin{bmatrix}0&2&1\\\\3&−1&1\\\\4&0&1\\end{bmatrix}\\)\n\nSolution\n\nAugment the matrix with the first two columns and then follow the formula. Thus,\n\n\\[\\begin{align*} | A | &= \\left| \\begin{array}{ccc|cc}0&2&1&0&2\\\\3&-1&1&3&-1\\\\4&0&1&4&0\\end{array}\\right| \\\\ &= 0(−1)(1)+2(1)(4)+1(3)(0)−4(−1)(1)−0(1)(0)−1(3)(2) \\\\ &=0+8+0+4−0−6 \\\\ &= 6 \\end{align*}\\]",
+      "prompt": "Example \\(\\PageIndex{3}\\): Finding the Determinant of a 3 × 3 Matrix\n\nFind the determinant of the \\(3 × 3\\) matrix given\n\n\\(A=\\begin{bmatrix}0&2&1\\\\3&−1&1\\\\4&0&1\\end{bmatrix}\\)\n\nSolution\n\nAugment the matrix with the first two columns and then follow the formula. Thus,\n\n\\[\\begin{align*} | A | &= \\left| \\begin{array}{ccc|cc}0&2&1&0&2\\\\3&-1&1&3&-1\\\\4&0&1&4&0\\end{array}\\right| \\\\ &= 0(−1)(1)+2(1)(4)+1(3)(0)−4(−1)(1)−0(1)(0)−1(3)(2) \\\\ &=0+8+0+4−0−6 \\\\ &= 6 \\end{align*}\\]",
+      "sourceAnswers": [],
+      "hasFigure": false,
+      "status": "draft",
+      "answerVerified": false,
+      "translationStatus": "pending",
+      "mappingStatus": "pending"
+    },
+    {
+      "ordinal": 8,
+      "sourceNumber": "",
+      "sourceAnchor": "",
+      "kind": "exercise-candidate",
+      "context": "[Figure: imageedit_29_4168042663.png]\n\nThe algebra is as follows:\n\n\\(| A |=a_1b_2c_3+b_1c_2a_3+c_1a_2b_3−a_3b_2c_1−b_3c_2a_1−c_3a_2b_1\\)",
+      "original": "Exercise \\(\\PageIndex{2}\\)\n\nFind the determinant of the 3 × 3 matrix.\n\n\\(\\det(A)=\\begin{vmatrix}1&−3&7\\\\1&1&1\\\\1&−2&3\\end{vmatrix}\\)\n\nAnswer\n\n\\(−10\\)",
+      "prompt": "Exercise \\(\\PageIndex{2}\\)\n\nFind the determinant of the 3 × 3 matrix.\n\n\\(\\det(A)=\\begin{vmatrix}1&−3&7\\\\1&1&1\\\\1&−2&3\\end{vmatrix}\\)",
+      "sourceAnswers": [
+        "\\(−10\\)"
+      ],
+      "hasFigure": false,
+      "status": "draft",
+      "answerVerified": false,
+      "translationStatus": "pending",
+      "mappingStatus": "pending"
+    },
+    {
+      "ordinal": 9,
+      "sourceNumber": "",
+      "sourceAnchor": "",
+      "kind": "example-or-exercise",
+      "context": "where\n\n\\[D = \\begin{vmatrix} a_1 & b_1 & c_1\\\\ a_2 & b_2 & c_2\\\\ a_3 & b_3 & c_3 \\end{vmatrix}\\; ,\\; D_x = \\begin{vmatrix} \\color{blue}d_1 & b_1 & c_1\\\\ \\color{blue}d_2 & b_2 & c_2\\\\ \\color{blue}d_3 & b_3 & c_3 \\end{vmatrix}\\; ,\\; D_y = \\begin{vmatrix} a_1 & \\color{blue}d_1 & c_1\\\\ a_2 & \\color{blue}d_2 & c_2\\\\ a_3 & \\color{blue}d_3 & c_3 \\end{vmatrix}\\; ,\\; D_z = \\begin{vmatrix} a_1 & b_1 & \\color{blue}d_1\\\\ a_2 & b_2 & \\color{blue}d_2\\\\ a_3 & b_3 & \\color{blue}d_3 \\end{vmatrix}\\]\n\nIf we are writing the determinant \\(D_x\\),we replace the \\(x\\) column with the constant column. If we are writing the determinant \\(D_y\\),we replace they y column with the constant column. If we are writing the determinant \\(D_z\\),we replace the \\(z\\) column with the constant column. Always check the answer.",
+      "original": "Example \\(\\PageIndex{4}\\): Solving a \\(3 × 3\\) System Using Cramer’s Rule\n\nFind the solution to the given \\(3 × 3\\) system using Cramer’s Rule.\n\n\\[\\begin{align*} x+y-z&= 6\\\\ 3x-2y+z&= -5\\\\ x+3y-2z&= 14 \\end{align*}\\]\n\nSolution\n\nUse Cramer’s Rule.\n\n\\(D=\\begin{vmatrix}1&1&−1\\\\3&−2&1\\\\1&3&−2\\end{vmatrix}\\), \\(D_x=\\begin{vmatrix}6&1&−1\\\\−5&−2&1\\\\14&3&−2\\end{vmatrix}\\), \\(D_y=\\begin{vmatrix}1&6&−1\\\\3&−5&1\\\\1&14&−2\\end{vmatrix}\\), \\(D_z=\\begin{vmatrix}1&1&6\\\\3&−2&−5\\\\1&3&14\\end{vmatrix}\\)\n\nThen,\n\n\\[\\begin{align*} x&= \\dfrac{D_x}{D}&= \\dfrac{-3}{-3}&= 1\\\\ y&= \\dfrac{D_y}{D}&= \\dfrac{-9}{-3}&= 3\\\\ z&= \\dfrac{D_z}{D}&= \\dfrac{6}{-3}&= -2\\\\ \\end{align*}\\]\n\nThe solution is \\((1,3,−2)\\).",
+      "prompt": "Example \\(\\PageIndex{4}\\): Solving a \\(3 × 3\\) System Using Cramer’s Rule\n\nFind the solution to the given \\(3 × 3\\) system using Cramer’s Rule.\n\n\\[\\begin{align*} x+y-z&= 6\\\\ 3x-2y+z&= -5\\\\ x+3y-2z&= 14 \\end{align*}\\]\n\nSolution\n\nUse Cramer’s Rule.\n\n\\(D=\\begin{vmatrix}1&1&−1\\\\3&−2&1\\\\1&3&−2\\end{vmatrix}\\), \\(D_x=\\begin{vmatrix}6&1&−1\\\\−5&−2&1\\\\14&3&−2\\end{vmatrix}\\), \\(D_y=\\begin{vmatrix}1&6&−1\\\\3&−5&1\\\\1&14&−2\\end{vmatrix}\\), \\(D_z=\\begin{vmatrix}1&1&6\\\\3&−2&−5\\\\1&3&14\\end{vmatrix}\\)\n\nThen,\n\n\\[\\begin{align*} x&= \\dfrac{D_x}{D}&= \\dfrac{-3}{-3}&= 1\\\\ y&= \\dfrac{D_y}{D}&= \\dfrac{-9}{-3}&= 3\\\\ z&= \\dfrac{D_z}{D}&= \\dfrac{6}{-3}&= -2\\\\ \\end{align*}\\]\n\nThe solution is \\((1,3,−2)\\).",
+      "sourceAnswers": [],
+      "hasFigure": false,
+      "status": "draft",
+      "answerVerified": false,
+      "translationStatus": "pending",
+      "mappingStatus": "pending"
+    },
+    {
+      "ordinal": 10,
+      "sourceNumber": "",
+      "sourceAnchor": "",
+      "kind": "exercise-candidate",
+      "context": "where\n\n\\[D = \\begin{vmatrix} a_1 & b_1 & c_1\\\\ a_2 & b_2 & c_2\\\\ a_3 & b_3 & c_3 \\end{vmatrix}\\; ,\\; D_x = \\begin{vmatrix} \\color{blue}d_1 & b_1 & c_1\\\\ \\color{blue}d_2 & b_2 & c_2\\\\ \\color{blue}d_3 & b_3 & c_3 \\end{vmatrix}\\; ,\\; D_y = \\begin{vmatrix} a_1 & \\color{blue}d_1 & c_1\\\\ a_2 & \\color{blue}d_2 & c_2\\\\ a_3 & \\color{blue}d_3 & c_3 \\end{vmatrix}\\; ,\\; D_z = \\begin{vmatrix} a_1 & b_1 & \\color{blue}d_1\\\\ a_2 & b_2 & \\color{blue}d_2\\\\ a_3 & b_3 & \\color{blue}d_3 \\end{vmatrix}\\]\n\nIf we are writing the determinant \\(D_x\\),we replace the \\(x\\) column with the constant column. If we are writing the determinant \\(D_y\\),we replace they y column with the constant column. If we are writing the determinant \\(D_z\\),we replace the \\(z\\) column with the constant column. Always check the answer.",
+      "original": "Exercise \\(\\PageIndex{3}\\)\n\nUse Cramer’s Rule to solve the \\(3 × 3\\) matrix.\n\n\\[\\begin{align*} x-3y+7z&= 13\\\\ x+y+z&= 1\\\\ x-2y+3z&= 4 \\end{align*}\\]\n\nAnswer\n\n\\(\\left(−2,\\dfrac{3}{5},\\dfrac{12}{5}\\right)\\)",
+      "prompt": "Exercise \\(\\PageIndex{3}\\)\n\nUse Cramer’s Rule to solve the \\(3 × 3\\) matrix.\n\n\\[\\begin{align*} x-3y+7z&= 13\\\\ x+y+z&= 1\\\\ x-2y+3z&= 4 \\end{align*}\\]",
+      "sourceAnswers": [
+        "\\(\\left(−2,\\dfrac{3}{5},\\dfrac{12}{5}\\right)\\)"
+      ],
+      "hasFigure": false,
+      "status": "draft",
+      "answerVerified": false,
+      "translationStatus": "pending",
+      "mappingStatus": "pending"
+    },
+    {
+      "ordinal": 11,
+      "sourceNumber": "",
+      "sourceAnchor": "",
+      "kind": "example-or-exercise",
+      "context": "where\n\n\\[D = \\begin{vmatrix} a_1 & b_1 & c_1\\\\ a_2 & b_2 & c_2\\\\ a_3 & b_3 & c_3 \\end{vmatrix}\\; ,\\; D_x = \\begin{vmatrix} \\color{blue}d_1 & b_1 & c_1\\\\ \\color{blue}d_2 & b_2 & c_2\\\\ \\color{blue}d_3 & b_3 & c_3 \\end{vmatrix}\\; ,\\; D_y = \\begin{vmatrix} a_1 & \\color{blue}d_1 & c_1\\\\ a_2 & \\color{blue}d_2 & c_2\\\\ a_3 & \\color{blue}d_3 & c_3 \\end{vmatrix}\\; ,\\; D_z = \\begin{vmatrix} a_1 & b_1 & \\color{blue}d_1\\\\ a_2 & b_2 & \\color{blue}d_2\\\\ a_3 & b_3 & \\color{blue}d_3 \\end{vmatrix}\\]\n\nIf we are writing the determinant \\(D_x\\),we replace the \\(x\\) column with the constant column. If we are writing the determinant \\(D_y\\),we replace they y column with the constant column. If we are writing the determinant \\(D_z\\),we replace the \\(z\\) column with the constant column. Always check the answer.",
+      "original": "Example \\(\\PageIndex{5A}\\): Using Cramer’s Rule to Solve an Inconsistent System\n\nSolve the system of equations using Cramer’s Rule.\n\n\\[\\begin{align} 3x-2y&= 4 \\label{eq3}\\\\ 6x-4y&= 0 \\label{eq4}\\end{align}\\]\n\nSolution\n\nWe begin by finding the determinants \\(D\\), \\(D_x\\),and \\(D_y\\).\n\n\\(D=\\begin{vmatrix}3&−2\\\\6&−4\\end{vmatrix}=3(−4)−6(−2)=0\\)\n\nWe know that a determinant of zero means that either the system has no solution or it has an infinite number of solutions. To see which one, we use the process of elimination. Our goal is to eliminate one of the variables.\n\n1. Multiply Equation \\ref{eq3} by \\(−2\\).\n\n2. Add the result to Equation \\ref{eq4}.\n\n\\[\\begin{align*} &−6x+4y=−8 \\\\ &\\;\\;\\;\\underline{6x−4y=0} \\\\ &\\;\\;\\;\\;\\;\\;\\;\\;\\;\\; 0=−8 \\end{align*}\\]\n\nWe obtain the equation \\(0=−8\\), which is false. Therefore, the system has no solution. Graphing the system reveals two parallel lines. See Figure \\(\\PageIndex{1}\\).\n\n[Figure: alt]\n\nFigure \\(\\PageIndex{1}\\)",
+      "prompt": "Example \\(\\PageIndex{5A}\\): Using Cramer’s Rule to Solve an Inconsistent System\n\nSolve the system of equations using Cramer’s Rule.\n\n\\[\\begin{align} 3x-2y&= 4 \\label{eq3}\\\\ 6x-4y&= 0 \\label{eq4}\\end{align}\\]\n\nSolution\n\nWe begin by finding the determinants \\(D\\), \\(D_x\\),and \\(D_y\\).\n\n\\(D=\\begin{vmatrix}3&−2\\\\6&−4\\end{vmatrix}=3(−4)−6(−2)=0\\)\n\nWe know that a determinant of zero means that either the system has no solution or it has an infinite number of solutions. To see which one, we use the process of elimination. Our goal is to eliminate one of the variables.\n\n1. Multiply Equation \\ref{eq3} by \\(−2\\).\n\n2. Add the result to Equation \\ref{eq4}.\n\n\\[\\begin{align*} &−6x+4y=−8 \\\\ &\\;\\;\\;\\underline{6x−4y=0} \\\\ &\\;\\;\\;\\;\\;\\;\\;\\;\\;\\; 0=−8 \\end{align*}\\]\n\nWe obtain the equation \\(0=−8\\), which is false. Therefore, the system has no solution. Graphing the system reveals two parallel lines. See Figure \\(\\PageIndex{1}\\).\n\n[Figure: alt]\n\nFigure \\(\\PageIndex{1}\\)",
+      "sourceAnswers": [],
+      "hasFigure": true,
+      "status": "draft",
+      "answerVerified": false,
+      "translationStatus": "pending",
+      "mappingStatus": "pending"
+    },
+    {
+      "ordinal": 12,
+      "sourceNumber": "",
+      "sourceAnchor": "",
+      "kind": "example-or-exercise",
+      "context": "where\n\n\\[D = \\begin{vmatrix} a_1 & b_1 & c_1\\\\ a_2 & b_2 & c_2\\\\ a_3 & b_3 & c_3 \\end{vmatrix}\\; ,\\; D_x = \\begin{vmatrix} \\color{blue}d_1 & b_1 & c_1\\\\ \\color{blue}d_2 & b_2 & c_2\\\\ \\color{blue}d_3 & b_3 & c_3 \\end{vmatrix}\\; ,\\; D_y = \\begin{vmatrix} a_1 & \\color{blue}d_1 & c_1\\\\ a_2 & \\color{blue}d_2 & c_2\\\\ a_3 & \\color{blue}d_3 & c_3 \\end{vmatrix}\\; ,\\; D_z = \\begin{vmatrix} a_1 & b_1 & \\color{blue}d_1\\\\ a_2 & b_2 & \\color{blue}d_2\\\\ a_3 & b_3 & \\color{blue}d_3 \\end{vmatrix}\\]\n\nIf we are writing the determinant \\(D_x\\),we replace the \\(x\\) column with the constant column. If we are writing the determinant \\(D_y\\),we replace they y column with the constant column. If we are writing the determinant \\(D_z\\),we replace the \\(z\\) column with the constant column. Always check the answer.",
+      "original": "Example \\(\\PageIndex{5B}\\): Use Cramer’s Rule to Solve a Dependent System\n\nSolve the system with an infinite number of solutions.\n\n\\[\\begin{align} x-2y+3z&= 0 \\label{eq5}\\\\ 3x+y-2z&= 0 \\label{eq6}\\\\ 2x-4y+6z&= 0 \\label{eq7} \\end{align}\\]\n\nSolution\n\nLet’s find the determinant first. Set up a matrix augmented by the first two columns.\n\n\\(\\left| \\begin{array}{ccc|cc}1&−2&3&1&-2\\\\3&1&−2&3&1\\\\2&−4&6&2&-4\\end{array}\\right|\\)\n\nThen,\n\n\\(1(1)(6)+(−2)(−2)(2)+3(3)(−4)−2(1)(3)−(−4)(−2)(1)−6(3)(−2)=0\\)\n\nAs the determinant equals zero, there is either no solution or an infinite number of solutions. We have to perform elimination to find out.\n\n1. Multiply Equation \\ref{eq5} by \\(−2\\) and add the result to Equation \\ref{eq7}:\n\n\\[\\begin{align*} &−2x+4y−6x=0 \\\\ &\\;\\;\\underline{2x−4y+6z=0} \\\\ &\\;\\;\\;\\;\\;\\;\\;\\;\\;\\;\\;\\;\\;\\;\\;\\;0=0 \\end{align*}\\]\n\n2. Obtaining an answer of \\(0=0\\), a statement that is always true, means that the system has an infinite number of solutions. Graphing the system, we can see that two of the planes are the same and they both intersect the third plane on a line. See Figure \\(\\PageIndex{2}\\).\n\n[Figure: alt]\n\nFigure \\(\\PageIndex{2}\\)",
+      "prompt": "Example \\(\\PageIndex{5B}\\): Use Cramer’s Rule to Solve a Dependent System\n\nSolve the system with an infinite number of solutions.\n\n\\[\\begin{align} x-2y+3z&= 0 \\label{eq5}\\\\ 3x+y-2z&= 0 \\label{eq6}\\\\ 2x-4y+6z&= 0 \\label{eq7} \\end{align}\\]\n\nSolution\n\nLet’s find the determinant first. Set up a matrix augmented by the first two columns.\n\n\\(\\left| \\begin{array}{ccc|cc}1&−2&3&1&-2\\\\3&1&−2&3&1\\\\2&−4&6&2&-4\\end{array}\\right|\\)\n\nThen,\n\n\\(1(1)(6)+(−2)(−2)(2)+3(3)(−4)−2(1)(3)−(−4)(−2)(1)−6(3)(−2)=0\\)\n\nAs the determinant equals zero, there is either no solution or an infinite number of solutions. We have to perform elimination to find out.\n\n1. Multiply Equation \\ref{eq5} by \\(−2\\) and add the result to Equation \\ref{eq7}:\n\n\\[\\begin{align*} &−2x+4y−6x=0 \\\\ &\\;\\;\\underline{2x−4y+6z=0} \\\\ &\\;\\;\\;\\;\\;\\;\\;\\;\\;\\;\\;\\;\\;\\;\\;\\;0=0 \\end{align*}\\]\n\n2. Obtaining an answer of \\(0=0\\), a statement that is always true, means that the system has an infinite number of solutions. Graphing the system, we can see that two of the planes are the same and they both intersect the third plane on a line. See Figure \\(\\PageIndex{2}\\).\n\n[Figure: alt]\n\nFigure \\(\\PageIndex{2}\\)",
+      "sourceAnswers": [],
+      "hasFigure": true,
+      "status": "draft",
+      "answerVerified": false,
+      "translationStatus": "pending",
+      "mappingStatus": "pending"
+    },
+    {
+      "ordinal": 13,
+      "sourceNumber": "1",
+      "sourceAnchor": "",
+      "kind": "exercise-candidate",
+      "context": "Understanding Properties of Determinants\n\nThere are many properties of determinants. Listed here are some properties that may be helpful in calculating the determinant of a matrix.",
+      "original": "1. If the matrix is in upper triangular form, the determinant equals the product of entries down the main diagonal.",
+      "prompt": "1. If the matrix is in upper triangular form, the determinant equals the product of entries down the main diagonal.",
+      "sourceAnswers": [],
+      "hasFigure": false,
+      "status": "draft",
+      "answerVerified": false,
+      "translationStatus": "pending",
+      "mappingStatus": "pending"
+    },
+    {
+      "ordinal": 14,
+      "sourceNumber": "2",
+      "sourceAnchor": "",
+      "kind": "exercise-candidate",
+      "context": "Understanding Properties of Determinants\n\nThere are many properties of determinants. Listed here are some properties that may be helpful in calculating the determinant of a matrix.",
+      "original": "2. When two rows are interchanged, the determinant changes sign.",
+      "prompt": "2. When two rows are interchanged, the determinant changes sign.",
+      "sourceAnswers": [],
+      "hasFigure": false,
+      "status": "draft",
+      "answerVerified": false,
+      "translationStatus": "pending",
+      "mappingStatus": "pending"
+    },
+    {
+      "ordinal": 15,
+      "sourceNumber": "3",
+      "sourceAnchor": "",
+      "kind": "exercise-candidate",
+      "context": "Understanding Properties of Determinants\n\nThere are many properties of determinants. Listed here are some properties that may be helpful in calculating the determinant of a matrix.",
+      "original": "3. If either two rows or two columns are identical, the determinant equals zero.",
+      "prompt": "3. If either two rows or two columns are identical, the determinant equals zero.",
+      "sourceAnswers": [],
+      "hasFigure": false,
+      "status": "draft",
+      "answerVerified": false,
+      "translationStatus": "pending",
+      "mappingStatus": "pending"
+    },
+    {
+      "ordinal": 16,
+      "sourceNumber": "4",
+      "sourceAnchor": "",
+      "kind": "exercise-candidate",
+      "context": "Understanding Properties of Determinants\n\nThere are many properties of determinants. Listed here are some properties that may be helpful in calculating the determinant of a matrix.",
+      "original": "4. If a matrix contains either a row of zeros or a column of zeros, the determinant equals zero.",
+      "prompt": "4. If a matrix contains either a row of zeros or a column of zeros, the determinant equals zero.",
+      "sourceAnswers": [],
+      "hasFigure": false,
+      "status": "draft",
+      "answerVerified": false,
+      "translationStatus": "pending",
+      "mappingStatus": "pending"
+    },
+    {
+      "ordinal": 17,
+      "sourceNumber": "5",
+      "sourceAnchor": "",
+      "kind": "exercise-candidate",
+      "context": "Understanding Properties of Determinants\n\nThere are many properties of determinants. Listed here are some properties that may be helpful in calculating the determinant of a matrix.",
+      "original": "5. The determinant of an inverse matrix \\(A^{−1}\\) is the reciprocal of the determinant of the matrix \\(A\\).",
+      "prompt": "5. The determinant of an inverse matrix \\(A^{−1}\\) is the reciprocal of the determinant of the matrix \\(A\\).",
+      "sourceAnswers": [],
+      "hasFigure": false,
+      "status": "draft",
+      "answerVerified": false,
+      "translationStatus": "pending",
+      "mappingStatus": "pending"
+    },
+    {
+      "ordinal": 18,
+      "sourceNumber": "6",
+      "sourceAnchor": "",
+      "kind": "exercise-candidate",
+      "context": "Understanding Properties of Determinants\n\nThere are many properties of determinants. Listed here are some properties that may be helpful in calculating the determinant of a matrix.",
+      "original": "6. If any row or column is multiplied by a constant, the determinant is multiplied by the same factor.",
+      "prompt": "6. If any row or column is multiplied by a constant, the determinant is multiplied by the same factor.",
+      "sourceAnswers": [],
+      "hasFigure": false,
+      "status": "draft",
+      "answerVerified": false,
+      "translationStatus": "pending",
+      "mappingStatus": "pending"
+    },
+    {
+      "ordinal": 19,
+      "sourceNumber": "",
+      "sourceAnchor": "",
+      "kind": "example-or-exercise",
+      "context": "Understanding Properties of Determinants\n\nThere are many properties of determinants. Listed here are some properties that may be helpful in calculating the determinant of a matrix.",
+      "original": "Example \\(\\PageIndex{6}\\): Illustrating Properties of Determinants\n\nIllustrate each of the properties of determinants.\n\nSolution\n\nProperty 1 states that if the matrix is in upper triangular form, the determinant is the product of the entries down the main diagonal.\n\n\\(A=\\begin{bmatrix}1&2&3\\\\0&2&1\\\\0&0&−1\\end{bmatrix}\\)\n\nAugment \\(A\\) with the first two columns.\n\n\\(A=\\left[ \\begin{array}{ccc|cc}1&2&3&1&2\\\\0&2&1&0&2\\\\0&0&−1&0&0\\end{array}\\right]\\)\n\nThen\n\n\\[\\begin{align*} \\det(A)&= 1(2)(-1)+2(1)(0)+3(0)(0)-0(2)(3)-0(1)(1)+1(0)(2)\\\\ &= -2 \\end{align*}\\]\n\nProperty 2 states that interchanging rows changes the sign. Given\n\n\\[\\begin{align*} A&=\\begin{bmatrix}-1&5\\\\4&-3\\end{bmatrix}\\\\ \\det(A)&= (-1)(-3)-(4)(5)\\\\ &= 3-20\\\\ &= -17 \\end{align*}\\]\n\n\\[\\begin{align*} B&= \\begin{bmatrix}4&-3\\\\-1&5\\end{bmatrix}\\\\ \\det(B)&= (4)(5)-(-1)(-3)\\\\ &= 20-3\\\\ &= 17 \\end{align*}\\]\n\nProperty 3 states that if two rows or two columns are identical, the determinant equals zero.\n\n\\[\\begin{align*} A&=\\left[ \\begin{array}{ccc|cc}1&2&2&1&2\\\\2&2&2&2&2\\\\-1&2&2&-1&2\\end{array}\\right]\\\\ \\det(A)&=1(2)(2)+2(2)(-1)+2(2)(2)+1(2)(2)-2(2)(1)-2(2)(2)\\\\ &=4-4+8+4-4-8\\\\ &=0 \\end{align*}\\]\n\nProperty 4 states that if a row or column equals zero, the determinant equals zero. Thus,\n\n\\[\\begin{align*} A&=\\begin{bmatrix}1&2\\\\0&0\\end{bmatrix}\\\\ \\det(A)&=1(0)-2(0)\\\\ &=0 \\end{align*}\\]\n\nProperty 5 states that the determinant of an inverse matrix \\(A^{−1}\\) is the reciprocal of the determinant \\(A\\). Thus,\n\n\\[\\begin{align*} A&=\\begin{bmatrix}1&2\\\\3&4\\end{bmatrix}\\\\ \\det(A)&=1(4)-3(2)\\\\ &=-2 \\end{align*}\\]\n\n\\[\\begin{align*} A^{-1}&=\\begin{bmatrix}-2&1\\\\\\dfrac{3}{2}&-\\dfrac{1}{2}\\end{bmatrix}\\\\ \\det(A^{-1})&=-2\\left(-\\dfrac{1}{2}\\right)-\\dfrac{3}{2}(1)\\\\ &=-\\dfrac{1}{2} \\end{align*}\\]\n\nProperty 6 states that if any row or column of a matrix is multiplied by a constant, the determinant is multiplied by the same factor. Thus,\n\n\\[\\begin{align*} A&=\\begin{bmatrix}1&2\\\\3&4\\end{bmatrix}\\\\ \\det(A)&=1(4)-2(3)\\\\ &=-2 \\end{align*}\\]\n\n\\[\\begin{align*} B&=\\begin{bmatrix}2(1)&2(2)\\\\3&4\\end{bmatrix}\\\\ \\det(B)&=2(4)-3(4)\\\\ &=-4 \\end{align*}\\]",
+      "prompt": "Example \\(\\PageIndex{6}\\): Illustrating Properties of Determinants\n\nIllustrate each of the properties of determinants.\n\nSolution\n\nProperty 1 states that if the matrix is in upper triangular form, the determinant is the product of the entries down the main diagonal.\n\n\\(A=\\begin{bmatrix}1&2&3\\\\0&2&1\\\\0&0&−1\\end{bmatrix}\\)\n\nAugment \\(A\\) with the first two columns.\n\n\\(A=\\left[ \\begin{array}{ccc|cc}1&2&3&1&2\\\\0&2&1&0&2\\\\0&0&−1&0&0\\end{array}\\right]\\)\n\nThen\n\n\\[\\begin{align*} \\det(A)&= 1(2)(-1)+2(1)(0)+3(0)(0)-0(2)(3)-0(1)(1)+1(0)(2)\\\\ &= -2 \\end{align*}\\]\n\nProperty 2 states that interchanging rows changes the sign. Given\n\n\\[\\begin{align*} A&=\\begin{bmatrix}-1&5\\\\4&-3\\end{bmatrix}\\\\ \\det(A)&= (-1)(-3)-(4)(5)\\\\ &= 3-20\\\\ &= -17 \\end{align*}\\]\n\n\\[\\begin{align*} B&= \\begin{bmatrix}4&-3\\\\-1&5\\end{bmatrix}\\\\ \\det(B)&= (4)(5)-(-1)(-3)\\\\ &= 20-3\\\\ &= 17 \\end{align*}\\]\n\nProperty 3 states that if two rows or two columns are identical, the determinant equals zero.\n\n\\[\\begin{align*} A&=\\left[ \\begin{array}{ccc|cc}1&2&2&1&2\\\\2&2&2&2&2\\\\-1&2&2&-1&2\\end{array}\\right]\\\\ \\det(A)&=1(2)(2)+2(2)(-1)+2(2)(2)+1(2)(2)-2(2)(1)-2(2)(2)\\\\ &=4-4+8+4-4-8\\\\ &=0 \\end{align*}\\]\n\nProperty 4 states that if a row or column equals zero, the determinant equals zero. Thus,\n\n\\[\\begin{align*} A&=\\begin{bmatrix}1&2\\\\0&0\\end{bmatrix}\\\\ \\det(A)&=1(0)-2(0)\\\\ &=0 \\end{align*}\\]\n\nProperty 5 states that the determinant of an inverse matrix \\(A^{−1}\\) is the reciprocal of the determinant \\(A\\). Thus,\n\n\\[\\begin{align*} A&=\\begin{bmatrix}1&2\\\\3&4\\end{bmatrix}\\\\ \\det(A)&=1(4)-3(2)\\\\ &=-2 \\end{align*}\\]\n\n\\[\\begin{align*} A^{-1}&=\\begin{bmatrix}-2&1\\\\\\dfrac{3}{2}&-\\dfrac{1}{2}\\end{bmatrix}\\\\ \\det(A^{-1})&=-2\\left(-\\dfrac{1}{2}\\right)-\\dfrac{3}{2}(1)\\\\ &=-\\dfrac{1}{2} \\end{align*}\\]\n\nProperty 6 states that if any row or column of a matrix is multiplied by a constant, the determinant is multiplied by the same factor. Thus,\n\n\\[\\begin{align*} A&=\\begin{bmatrix}1&2\\\\3&4\\end{bmatrix}\\\\ \\det(A)&=1(4)-2(3)\\\\ &=-2 \\end{align*}\\]\n\n\\[\\begin{align*} B&=\\begin{bmatrix}2(1)&2(2)\\\\3&4\\end{bmatrix}\\\\ \\det(B)&=2(4)-3(4)\\\\ &=-4 \\end{align*}\\]",
+      "sourceAnswers": [],
+      "hasFigure": false,
+      "status": "draft",
+      "answerVerified": false,
+      "translationStatus": "pending",
+      "mappingStatus": "pending"
+    },
+    {
+      "ordinal": 20,
+      "sourceNumber": "",
+      "sourceAnchor": "",
+      "kind": "example-or-exercise",
+      "context": "Understanding Properties of Determinants\n\nThere are many properties of determinants. Listed here are some properties that may be helpful in calculating the determinant of a matrix.",
+      "original": "Example \\(\\PageIndex{7}\\): Using Cramer’s Rule and Determinant Properties to Solve a System\n\nFind the solution to the given \\(3 × 3\\) system.\n\n\\[\\begin{align} 2x+4y+4z&=2 \\label{eq8}\\\\ 3x+7y+7z&=-5 \\label{eq9}\\\\ x+2y+2z&=4 \\label{eq10}\\end{align}\\]\n\nSolution\n\nUsing Cramer’s Rule, we have\n\n\\(D=\\begin{bmatrix}2&4&4\\\\3&7&7\\\\1&2&2\\end{bmatrix}\\)\n\nNotice that the second and third columns are identical. According to Property 3, the determinant will be zero, so there is either no solution or an infinite number of solutions. We have to perform elimination to find out.\n\n1. Multiply Equation \\ref{eq10} by \\(–2\\) and add the result to Equation \\ref{eq8}.\n\n\\[\\begin{align*} -2x-4y-4x&=-8\\\\ 2x+4y+4z&=2\\\\ 0&=-6 \\end{align*}\\]\n\nObtaining a statement that is a contradiction means that the system has no solution.",
+      "prompt": "Example \\(\\PageIndex{7}\\): Using Cramer’s Rule and Determinant Properties to Solve a System\n\nFind the solution to the given \\(3 × 3\\) system.\n\n\\[\\begin{align} 2x+4y+4z&=2 \\label{eq8}\\\\ 3x+7y+7z&=-5 \\label{eq9}\\\\ x+2y+2z&=4 \\label{eq10}\\end{align}\\]\n\nSolution\n\nUsing Cramer’s Rule, we have\n\n\\(D=\\begin{bmatrix}2&4&4\\\\3&7&7\\\\1&2&2\\end{bmatrix}\\)\n\nNotice that the second and third columns are identical. According to Property 3, the determinant will be zero, so there is either no solution or an infinite number of solutions. We have to perform elimination to find out.\n\n1. Multiply Equation \\ref{eq10} by \\(–2\\) and add the result to Equation \\ref{eq8}.\n\n\\[\\begin{align*} -2x-4y-4x&=-8\\\\ 2x+4y+4z&=2\\\\ 0&=-6 \\end{align*}\\]\n\nObtaining a statement that is a contradiction means that the system has no solution.",
+      "sourceAnswers": [],
+      "hasFigure": false,
+      "status": "draft",
+      "answerVerified": false,
+      "translationStatus": "pending",
+      "mappingStatus": "pending"
+    }
+  ],
+  "license": "CC BY 4.0",
+  "licenseEvidence": "This page titled 11.8: Solving Systems with Cramer's Rule was last modified on Thu, 26 Dec 2024 22:30:53 GMT and is shared under a CC BY  4.0  license and was authored, remixed, and/or curated by OpenStax via source content that was edited to the style and standards of the LibreTexts platform.",
+  "url": "https://math.libretexts.org/Bookshelves/Algebra/Algebra_and_Trigonometry_1e_(OpenStax)/11:_Systems_of_Equations_and_Inequalities/11.08:_Solving_Systems_with_Cramer%27s_Rule",
+  "sha256": "7fa8ab1c41825daecde051af2b841f90420c20de71600cb8684fc06d25d29a83",
+  "checkedAt": "2026-10-07",
+  "id": "1779c252329aa4f6575b",
+  "bookId": "algebra-trigonometry",
+  "licenseInherited": false,
+  "licenseSource": "https://math.libretexts.org/Bookshelves/Algebra/Algebra_and_Trigonometry_1e_(OpenStax)/11:_Systems_of_Equations_and_Inequalities/11.08:_Solving_Systems_with_Cramer%27s_Rule",
+  "licenseUrl": "https://creativecommons.org/licenses/by/4.0/",
+  "authors": "OpenStax / Jay Abramson et al.",
+  "book": "Algebra and Trigonometry 1e",
+  "reviewStatus": "unreviewed",
+  "sourceLanguage": "en",
+  "translationStatus": "pending"
+}

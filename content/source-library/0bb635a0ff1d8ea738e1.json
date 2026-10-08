@@ -1,0 +1,500 @@
+{
+  "title": "10.3: Polar Coordinates",
+  "originalText": "Learning Objectives\n\nPlot points using polar coordinates.\n\nConvert from polar coordinates to rectangular coordinates.\n\nConvert from rectangular coordinates to polar coordinates.\n\nTransform equations between polar and rectangular forms.\n\nIdentify and graph polar equations by converting to rectangular equations.\n\nOver \\(12\\) kilometers from port, a sailboat encounters rough weather and is blown off course by a \\(16\\)-knot wind (see Figure \\(\\PageIndex{1}\\)). How can the sailor indicate his location to the Coast Guard? In this section, we will investigate a method of representing location that is different from a standard coordinate grid.\n\n[Figure: An illustration of a boat on the polar grid.]\n\nFigure \\(\\PageIndex{1}\\)\n\nPlotting Points Using Polar Coordinates\n\nWhen we think about plotting points in the plane, we usually think of rectangular coordinates \\((x,y)\\) in the Cartesian coordinate plane. However, there are other ways of writing a coordinate pair and other types of grid systems. In this section, we introduce to polar coordinates, which are points labeled \\((r,\\theta)\\) and plotted on a polar grid. The polar grid is represented as a series of concentric circles radiating out from the pole, or the origin of the coordinate plane.\n\nThe polar grid is scaled as the unit circle with the positive \\(x\\)-axis now viewed as the polar axis and the origin as the pole. The first coordinate \\(r\\) is the radius or length of the directed line segment from the pole. The angle \\(\\theta\\), measured in radians, indicates the direction of \\(r\\). We move counterclockwise from the polar axis by an angle of \\(\\theta\\),and measure a directed line segment the length of \\(r\\) in the direction of \\(\\theta\\). Even though we measure \\(\\theta\\) first and then \\(r\\), the polar point is written with the \\(r\\)-coordinate first. For example, to plot the point \\(\\left(2,\\dfrac{\\pi}{4}\\right)\\),we would move \\(\\dfrac{\\pi}{4}\\) units in the counterclockwise direction and then a length of \\(2\\) from the pole. This point is plotted on the grid in Figure \\(\\PageIndex{2}\\).\n\n[Figure: Polar grid with point (2, pi/4) plotted.]\n\nFigure \\(\\PageIndex{2}\\)\n\nExample \\(\\PageIndex{1}\\): Plotting a Point on the Polar Grid\n\nPlot the point \\(\\left(3,\\dfrac{\\pi}{2}\\right)\\) on the polar grid.\n\nSolution\n\nThe angle \\(\\dfrac{\\pi}{2}\\) is found by sweeping in a counterclockwise direction \\(90°\\) from the polar axis. The point is located at a length of \\(3\\) units from the pole in the \\(\\dfrac{\\pi}{2}\\) direction, as shown in Figure \\(\\PageIndex{3}\\).\n\n[Figure: Polar grid with point (3, pi/2) plotted.]\n\nFigure \\(\\PageIndex{3}\\)\n\nExercise \\(\\PageIndex{1}\\)\n\nPlot the point \\(\\left(2, \\dfrac{\\pi}{3}\\right)\\) in the polar grid.\n\nAnswer\n\n[Figure: Polar grid with point (2, pi/3) plotted.]\n\nFigure \\(\\PageIndex{4}\\)\n\nExample \\(\\PageIndex{2}\\): Plotting a Point in the Polar Coordinate System with a Negative Component\n\nPlot the point \\(\\left(−2, \\dfrac{\\pi}{6}\\right)\\) on the polar grid.\n\nSolution\n\nWe know that \\(\\dfrac{\\pi}{6}\\) is located in the first quadrant. However, \\(r=−2\\). We can approach plotting a point with a negative \\(r\\) in two ways:\n\n1. Plot the point \\(\\left(2,\\dfrac{\\pi}{6}\\right)\\) by moving \\(\\dfrac{\\pi}{6}\\) in the counterclockwise direction and extending a directed line segment \\(2\\) units into the first quadrant. Then retrace the directed line segment back through the pole, and continue \\(2\\) units into the third quadrant;\n\n2. Move \\(\\dfrac{\\pi}{6}\\) in the counterclockwise direction, and draw the directed line segment from the pole \\(2\\) units in the negative direction, into the third quadrant.\n\nSee Figure \\(\\PageIndex{5a}\\). Compare this to the graph of the polar coordinate \\((2,π6)\\) shown in Figure \\(\\PageIndex{5b}\\).\n\n[Figure: Two polar grids. Points (2, pi/6) and (-2, pi/6) are plotted. They are reflections across the origin in Q1 and Q3. ]\n\nFigure \\(\\PageIndex{5}\\)\n\nExercise \\(\\PageIndex{2}\\)\n\nPlot the points \\(\\left(3,−\\dfrac{\\pi}{6}\\right)\\) and \\(\\left(2,\\dfrac{9\\pi}{4}\\right)\\) on the same polar grid.\n\nAnswer\n\n[Figure: Points (2, 9pi/4) and (3, -pi/6) are plotted in the polar grid.]\n\nFigure \\(\\PageIndex{6}\\)\n\nConverting from Polar Coordinates to Rectangular Coordinates\n\nWhen given a set of polar coordinates, we may need to convert them to rectangular coordinates. To do so, we can recall the relationships that exist among the variables \\(x\\), \\(y\\), \\(r\\), and \\(\\theta\\).\n\n\\(\\cos \\theta=\\dfrac{x}{r}\\rightarrow x=r \\cos \\theta\\)\n\n\\(\\sin \\theta=\\dfrac{y}{r}\\rightarrow y=r \\sin \\theta\\)\n\nDropping a perpendicular from the point in the plane to the x-axis forms a right triangle, as illustrated in Figure \\(\\PageIndex{7}\\). An easy way to remember the equations above is to think of \\(\\cos \\theta\\) as the adjacent side over the hypotenuse and \\(\\sin \\theta\\) as the opposite side over the hypotenuse.\n\n[Figure: Comparison between polar coordinates and rectangular coordinates. There is a right triangle plotted on the x,y axis. The sides are a horizontal line on the x-axis of length x, a vertical line extending from thex-axis to some point in quadrant 1, and a hypotenuse r extending from the origin to that same point in quadrant 1. The vertices are at the origin (0,0), some point along the x-axis at (x,0), and that point in quadrant 1. This last point is (x,y) or (r, theta), depending which system of coordinates you use.]\n\nFigure \\(\\PageIndex{7}\\)\n\nCONVERTING FROM POLAR COORDINATES TO RECTANGULAR COORDINATES\n\nTo convert polar coordinates \\((r, \\theta)\\) to rectangular coordinates \\((x, y)\\), let\n\n\\[\\cos \\theta=\\dfrac{x}{r}\\rightarrow x=r \\cos \\theta\\]\n\n\\[\\sin \\theta=\\dfrac{y}{r}\\rightarrow y=r \\sin \\theta\\]\n\nHow to: Given polar coordinates, convert to rectangular coordinates.\n\n1. Given the polar coordinate \\((r,\\theta)\\), write \\(x=r \\cos \\theta\\) and \\(y=r \\sin \\theta\\).\n\n2. Evaluate \\(\\cos \\theta\\) and \\(\\sin \\theta\\).\n\n3. Multiply \\(\\cos \\theta\\) by \\(r\\) to find the \\(x\\)-coordinate of the rectangular form.\n\n4. Multiply \\(\\sin \\theta\\) by \\(r\\) to find the \\(y\\)-coordinate of the rectangular form.\n\nExample \\(\\PageIndex{3A}\\): Writing Polar Coordinates as Rectangular Coordinates\n\nWrite the polar coordinates \\(\\left(3,\\dfrac{\\pi}{2}\\right)\\) as rectangular coordinates.\n\nSolution\n\nUse the equivalent relationships.\n\n\\[\\begin{align*} x&= r \\cos \\theta\\\\ x&= 3 \\cos \\dfrac{\\pi}{2}\\\\ &= 0\\\\ y&= r \\sin \\theta\\\\ y&= 3 \\sin \\dfrac{\\pi}{2}\\\\ &= 3 \\end{align*}\\]\n\nThe rectangular coordinates are \\((0,3)\\). See Figure \\(\\PageIndex{8}\\).\n\n[Figure: Illustration of (3, pi/2) in polar coordinates and (0,3) in rectangular coordinates - they are the same point!]\n\nFigure \\(\\PageIndex{8}\\)\n\nExample \\(\\PageIndex{3B}\\): Writing Polar Coordinates as Rectangular Coordinates\n\nWrite the polar coordinates \\((−2,0)\\) as rectangular coordinates.\n\nSolution\n\nSee Figure \\(\\PageIndex{9}\\). Writing the polar coordinates as rectangular, we have\n\n\\[\\begin{align*} x&= r \\cos \\theta\\\\ x&= -2 \\cos(0)\\\\ &= -2\\\\ y&= r \\sin \\theta\\\\ y&= -2 \\sin(0)\\\\ &= 0 \\end{align*}\\]\n\nThe rectangular coordinates are also \\((−2,0)\\).\n\n[Figure: Illustration of (-2, 0) in polar coordinates and (-2,0) in rectangular coordinates - they are the same point!]\n\nFigure \\(\\PageIndex{9}\\)\n\nExercise \\(\\PageIndex{3}\\)\n\nWrite the polar coordinates \\(\\left(−1,\\dfrac{2\\pi}{3}\\right)\\) as rectangular coordinates.\n\nAnswer\n\n\\((x,y)=\\left(\\dfrac{1}{2},−\\dfrac{\\sqrt{3}}{2}\\right)\\)\n\nConverting from Rectangular Coordinates to Polar Coordinates\n\nTo convert rectangular coordinates to polar coordinates, we will use two other familiar relationships. With this conversion, however, we need to be aware that a set of rectangular coordinates will yield more than one polar point.\n\nCONVERTING FROM RECTANGULAR COORDINATES TO POLAR COORDINATES\n\nConverting from rectangular coordinates to polar coordinates requires the use of one or more of the relationships illustrated in Figure \\(\\PageIndex{10}\\).\n\n\\(\\cos \\theta=\\dfrac{x}{r}\\) or \\(x=r \\cos \\theta\\)\n\n\\(\\sin \\theta=\\dfrac{y}{r}\\) or \\(y=r \\sin \\theta\\)\n\n\\(r^2=x^2+y^2\\)\n\n\\(\\tan \\theta=\\dfrac{y}{x}\\)\n\n[Figure: CNX_Precalc_Figure_08_03_010new.jpg]\n\nFigure \\(\\PageIndex{10}\\)\n\nExample \\(\\PageIndex{4}\\): Writing Rectangular Coordinates as Polar Coordinates\n\nConvert the rectangular coordinates \\((3,3)\\) to polar coordinates.\n\nSolution\n\nWe see that the original point \\((3,3)\\) is in the first quadrant. To find \\(\\theta\\), use the formula \\(\\tan \\theta=\\dfrac{y}{x}\\). This gives\n\n\\[\\begin{align*} \\tan \\theta&= \\dfrac{3}{3}\\\\ \\tan \\theta&= 1\\\\ {\\tan}^{-1}(1)&= \\dfrac{\\pi}{4} \\end{align*}\\]\n\nTo find \\(r\\), we substitute the values for \\(x\\) and \\(y\\) into the formula \\(r=\\sqrt{x^2+y^2}\\). We know that \\(r\\) must be positive, as \\(\\dfrac{\\pi}{4}\\) is in the first quadrant. Thus\n\n\\[\\begin{align*} r&= \\sqrt{3^2+3^2}\\\\ r&= \\sqrt{9+9}\\\\ r&= \\sqrt{18}\\\\ &= 3\\sqrt{2} \\end{align*}\\]\n\nSo, \\(r=3\\sqrt{2}\\) and \\(\\theta=\\dfrac{\\pi}{4}\\), giving us the polar point \\((3\\sqrt{2},\\dfrac{\\pi}{4})\\). See Figure \\(\\PageIndex{11}\\).\n\n[Figure: Illustration of (3rad2, pi/4) in polar coordinates and (3,3) in rectangular coordinates - they are the same point!]\n\nFigure \\(\\PageIndex{11}\\)\n\nAnalysis\n\nThere are other sets of polar coordinates that will be the same as our first solution. For example, the points \\(\\left(−3\\sqrt{2}, \\dfrac{5\\pi}{4}\\right)\\) and \\(\\left(3\\sqrt{2},−\\dfrac{7\\pi}{4}\\right)\\) will coincide with the original solution of \\(\\left(3\\sqrt{2}, \\dfrac{\\pi}{4}\\right)\\). The point \\(\\left(−3\\sqrt{2}, \\dfrac{5\\pi}{4}\\right)\\) indicates a move further counterclockwise by \\(\\pi\\), which is directly opposite \\(\\dfrac{\\pi}{4}\\). The radius is expressed as \\(−3\\sqrt{2}\\). However, the angle \\(\\dfrac{5\\pi}{4}\\) is located in the third quadrant and, as \\(r\\) is negative, we extend the directed line segment in the opposite direction, into the first quadrant. This is the same point as \\(\\left(3\\sqrt{2}, \\dfrac{\\pi}{4}\\right)\\). The point \\(\\left(3\\sqrt{2}, −\\dfrac{7\\pi}{4}\\right)\\) is a move further clockwise by \\(−\\dfrac{7\\pi}{4}\\), from \\(\\dfrac{\\pi}{4}\\). The radius, \\(3\\sqrt{2}\\), is the same.\n\nTransforming Equations between Polar and Rectangular Forms\n\nWe can now convert coordinates between polar and rectangular form. Converting equations can be more difficult, but it can be beneficial to be able to convert between the two forms. Since there are a number of polar equations that cannot be expressed clearly in Cartesian form, and vice versa, we can use the same procedures we used to convert points between the coordinate systems. We can then use a graphing calculator to graph either the rectangular form or the polar form of the equation.\n\nHow to: Given an equation in polar form, graph it using a graphing calculator\n\n1. Change the MODE to POL, representing polar form.\n\n2. Press the Y= button to bring up a screen allowing the input of six equations: \\(r_1\\), \\(r_2\\),..., \\(r_6\\).\n\n3. Enter the polar equation, set equal to \\(r\\).\n\n4. Press GRAPH.\n\nExample \\(\\PageIndex{5A}\\): Writing a Cartesian Equation in Polar Form\n\nWrite the Cartesian equation \\(x^2+y^2=9\\) in polar form.\n\nSolution\n\nThe goal is to eliminate \\(x\\) and \\(y\\) from the equation and introduce \\(r\\) and \\(\\theta\\). Ideally, we would write the equation \\(r\\) as a function of \\(\\theta\\). To obtain the polar form, we will use the relationships between \\((x,y)\\) and \\((r,\\theta)\\). Since \\(x=r \\cos \\theta\\) and \\(y=r \\sin \\theta\\), we can substitute and solve for \\(r\\).\n\n\\(\\begin{align*} {(r \\cos \\theta)}^2+{(r \\sin \\theta)}^2&= 9\\\\ r^2 {\\cos}^2 \\theta+r^2 {\\sin}^2 \\theta&= 9\\\\ r^2({\\cos}^2 \\theta+{\\sin}^2 \\theta)&= 9\\\\ r^2(1)&= 9\\qquad \\text {Substitute } {\\cos}^2 \\theta+{\\sin}^2 \\theta=1\\\\ r&= \\pm 3\\qquad \\text {Use the square root property.} \\end{align*}\\)\n\nThus, \\(x^2+y^2=9\\),\\(r=3\\),and \\(r=−3\\) should generate the same graph. See Figure \\(\\PageIndex{12}\\).\n\n[Figure: Plotting a circle of radius 3 with center at the origin in polar and rectangular coordinates. It is the same in both systems.]\n\nFigure \\(\\PageIndex{12}\\): (a) Cartesian form \\(x^2+y^2=9\\) (b) Polar form \\(r=3\\)\n\nTo graph a circle in rectangular form, we must first solve for \\(y\\).\n\n\\[\\begin{align*} x^2+y^2&= 9\\\\ y^2&= 9-x^2\\\\ y&= \\pm \\sqrt{9-x^2} \\end{align*}\\]\n\nNote that this is two separate functions, since a circle fails the vertical line test. Therefore, we need to enter the positive and negative square roots into the calculator separately, as two equations in the form \\(Y_1=\\sqrt{9−x^2}\\) and \\(Y_2=−\\sqrt{9−x^2}\\). Press GRAPH.\n\nExample \\(\\PageIndex{5B}\\): Rewriting a Cartesian Equation as a Polar Equation\n\nRewrite the Cartesian equation \\(x^2+y^2=6y\\) as a polar equation.\n\nSolution\n\nThis equation appears similar to the previous example, but it requires different steps to convert the equation.\n\nWe can still follow the same procedures we have already learned and make the following substitutions:\n\n\\(\\begin{array}{ll} r^2=6y & \\text{Use }x^2+y^2=r^2. \\\\ r^2=6r \\sin \\theta & \\text{Substitute }y=r \\sin \\theta. \\\\ r^2−6r \\sin \\theta=0 & \\text{Set equal to }0. \\\\ r(r−6 \\sin \\theta)=0 & \\text{Factor and solve.} \\\\ r=0 & \\text{We reject }r=0 \\text{, as it only represents one point, }(0,0). \\\\ \\text{or }r=6 \\sin \\theta \\end{array}\\)\n\nTherefore, the equations \\(x^2+y^2=6y\\) and \\(r=6 \\sin \\theta\\) should give us the same graph. See Figure \\(\\PageIndex{13}\\).\n\n[Figure: Plots of the equations stated above - the plots are the same in both rectangular and polar coordinates. They are circles.]\n\nFigure \\(\\PageIndex{13}\\): (a) Cartesian form \\(x^2+y^2=6y\\) (b) polar form \\(r=6 \\sin \\theta\\)\n\nThe Cartesian or rectangular equation is plotted on the rectangular grid, and the polar equation is plotted on the polar grid. Clearly, the graphs are identical.\n\nExercise \\(\\PageIndex{4A}\\):\n\nRewriting a Cartesian Equation in Polar Form\n\nRewrite the Cartesian equation \\(y=3x+2\\) as a polar equation.\n\nAnswer\n\nWe will use the relationships \\(x=r \\cos \\theta\\) and \\(y=r \\sin \\theta\\).\n\n\\(\\begin{array}{cl} y=3x+2 \\\\ r \\sin \\theta=3r \\cos \\theta+2 \\\\ r \\sin \\theta−3r \\cos \\theta=2 \\\\ r(\\sin \\theta−3 \\cos \\theta)=2 & \\text{Isolate }r. \\\\ r=\\dfrac{2}{\\sin \\theta−3\\cos \\theta} & \\text{Solve for }r. \\end{array}\\)\n\nExercise \\(\\PageIndex{4B}\\):\n\nRewrite the Cartesian equation \\(y^2=3−x^2\\) in polar form.\n\nAnswer\n\n\\(r=\\sqrt{3}\\)\n\nIdentify and Graph Polar Equations by Converting to Rectangular Equations\n\nWe have learned how to convert rectangular coordinates to polar coordinates, and we have seen that the points are indeed the same. We have also transformed polar equations to rectangular equations and vice versa. Now we will demonstrate that their graphs, while drawn on different grids, are identical.\n\nExample \\(\\PageIndex{6A}\\): Graphing a Polar Equation by Converting to a Rectangular Equation\n\nCovert the polar equation \\(r=2 \\sec \\theta\\) to a rectangular equation, and draw its corresponding graph.\n\nSolution\n\nThe conversion is\n\n\\[\\begin{align*} r &=2 \\sec \\theta \\\\ r &= \\dfrac{2}{\\cos \\theta} \\\\ r \\cos \\theta &=2 \\\\ x &=2 \\end{align*}\\]\n\nNotice that the equation \\(r=2 \\sec \\theta\\) drawn on the polar grid is clearly the same as the vertical line \\(x=2\\) drawn on the rectangular grid (see Figure \\(\\PageIndex{14}\\)). Just as \\(x=c\\) is the standard form for a vertical line in rectangular form, \\(r=c \\sec \\theta\\) is the standard form for a vertical line in polar form.\n\n[Figure: Plots of the equations stated above - the plots are the same in both rectangular and polar coordinates. They are lines.]\n\nFigure \\(\\PageIndex{14}\\): (a) Polar grid (b) Rectangular coordinate system\n\nA similar discussion would demonstrate that the graph of the function \\(r=2 \\csc \\theta\\) will be the horizontal line \\(y=2\\). In fact, \\(r=c \\csc \\theta\\) is the standard form for a horizontal line in polar form, corresponding to the rectangular form \\(y=c\\).\n\nExample \\(\\PageIndex{6B}\\): Rewriting a Polar Equation in Cartesian Form\n\nRewrite the polar equation \\(r=\\dfrac{3}{1−2 \\cos \\theta}\\) as a Cartesian equation.\n\nSolution\n\nThe goal is to eliminate \\(\\theta\\) and \\(r\\),and introduce \\(x\\) and \\(y\\). We clear the fraction, and then use substitution. In order to replace \\(r\\) with \\(x\\) and \\(y\\), we must use the expression \\(x^2+y^2=r^2\\).\n\n\\(\\begin{array} r =\\dfrac{3}{1−2 \\cos \\theta} \\\\ r(1−2 \\cos \\theta)=3 \\\\ r\\left(1−2\\left(\\dfrac{x}{r}\\right)\\right)=3 & \\text{Use }\\cos \\theta=\\dfrac{x}{r} \\text{ to eliminate }\\theta. \\\\ r−2x=3 \\\\ r=3+2x & \\text{Isolate }r. \\\\ r^2={(3+2x)}^2 & \\text{Square both sides.} \\\\ x^2+y^2={(3+2x)}^2 & \\text{Use }x^2+y^2=r^2. \\end{array}\\)\n\nThe Cartesian equation is \\(x^2+y^2={(3+2x)}^2\\). However, to graph it, especially using a graphing calculator or computer program, we want to isolate \\(y\\).\n\n\\[\\begin{align*} x^2+y^2 &= {(3+2x)}^2 \\\\ y^2 &= {(3+2x)}^2-x^2 \\\\ y &= \\pm {(3+2x)}^2-x^2 \\end{align*}\\]\n\nWhen our entire equation has been changed from \\(r\\) and \\(\\theta\\) to \\(x\\) and \\(y\\), we can stop, unless asked to solve for \\(y\\) or simplify. See Figure \\(\\PageIndex{15}\\).\n\n[Figure: Plots of the equations stated above - the plots are the same in both rectangular and polar coordinates. They are hyperbolas.]\n\nFigure \\(\\PageIndex{15}\\)\n\nThe “hour-glass” shape of the graph is called a hyperbola. Hyperbolas have many interesting geometric features and applications, which we will investigate further in Analytic Geometry.\n\nAnalysis\n\nIn this example, the right side of the equation can be expanded and the equation simplified further, as shown above. However, the equation cannot be written as a single function in Cartesian form. We may wish to write the rectangular equation in the hyperbola’s standard form. To do this, we can start with the initial equation.\n\n\\(\\begin{array}{ll} x^2+y^2={(3+2x)}^2 \\\\ x^2+y^2−{(3+2x)}^2=0 \\\\ x^2+y^2−(9+12x+4x^2)=0 \\\\ x^2+y^2−9−12x−4x^2=0 \\\\ −3x^2−12x+y^2=9 & \\text{Multiply through by }−1. \\\\ 3x^2+12x−y^2=−9 \\\\ 3(x^2+4x)−y2=−9 & \\text{Organize terms to complete the square for }x. \\\\ 3(x^2+4x+4)−y^2=−9+12 \\\\ 3{(x+2)}^2−y^2=3 \\\\ {(x+2)}^2−\\dfrac{y^2}{3}=1\\end{array}\\)\n\nExercise \\(\\PageIndex{5}\\)\n\nRewrite the polar equation \\(r=2 \\sin \\theta\\) in Cartesian form.\n\nAnswer\n\n\\(x^2+y^2=2y\\) or, in the standard form for a circle, \\(x^2+{(y−1)}^2=1\\)\n\nExample \\(\\PageIndex{7}\\): Rewriting a Polar Equation in Cartesian Form\n\nRewrite the polar equation \\(r=\\sin(2\\theta)\\) in Cartesian form.\n\nSolution\n\n\\(\\begin{array}{cl} r=\\sin(2\\theta) & \\text{Use the double angle identity for sine.} \\\\ r=2 \\sin \\theta \\cos \\theta & \\text{Use }\\cos \\theta=\\dfrac{x}{r} \\text{ and } \\sin \\theta=\\dfrac{y}{r}. \\\\ r=2 \\dfrac{x}{r})(\\dfrac{y}{r}) & \\text{ Simplify.} \\\\ r=\\dfrac{2xy}{r^2} & \\text{Multiply both sides by }r^2. \\\\ r^3=2xy \\\\ {(x^2+y^2)}^3=2xy & \\text{As }x^2+y^2=r^2, r=\\sqrt{x^2+y^2}. \\end{array}\\)\n\nThis equation can also be written as\n\n\\({(x^2+y^2)}^{\\frac{3}{2}}=2xy \\text{ or }x^2+y^2={(2xy)}^{\\frac{2}{3}}\\)\n\nMedia\n\nAccess these online resources for additional instruction and practice with polar coordinates.\n\nIntroduction to Polar Coordinates\n\nComparing Polar and Rectangular Coordinates\n\nKey Equations\n\nConversion formulas\n\n\\(\\cos \\theta=\\dfrac{x}{r} \\rightarrow x=r \\cos\\theta\\)\n\n\\(\\sin \\theta=\\dfrac{y}{r} \\rightarrow y=r \\sin \\theta\\)\n\n\\(r^2=x^2+y^2\\)\n\n\\(\\tan \\theta=\\dfrac{y}{x}\\)\n\nKey Concepts\n\nThe polar grid is represented as a series of concentric circles radiating out from the pole, or origin.\n\nTo plot a point in the form \\((r,\\theta)\\), \\(\\theta>0\\), move in a counterclockwise direction from the polar axis by an angle of \\(\\theta\\), and then extend a directed line segment from the pole the length of \\(r\\) in the direction of \\(\\theta\\). If \\(\\theta\\) is negative, move in a clockwise direction, and extend a directed line segment the length of \\(r\\) in the direction of \\(\\theta\\). See Example \\(\\PageIndex{1}\\).\n\nIf \\(r\\) is negative, extend the directed line segment in the opposite direction of \\(\\theta\\). See Example \\(\\PageIndex{2}\\).\n\nTo convert from polar coordinates to rectangular coordinates, use the formulas \\(x=r \\cos \\theta\\) and \\(y=r \\sin \\theta\\). See Example \\(\\PageIndex{3}\\) and Example \\(\\PageIndex{4}\\).\n\nTo convert from rectangular coordinates to polar coordinates, use one or more of the formulas: \\(\\cos \\theta=\\dfrac{x}{r}\\), \\(\\sin \\theta=\\dfrac{y}{r}\\), \\(\\tan \\theta=\\dfrac{y}{x}\\), and \\(r=\\sqrt{x^2+y^2}\\). See Example \\(\\PageIndex{5}\\).\n\nTransforming equations between polar and rectangular forms means making the appropriate substitutions based on the available formulas, together with algebraic manipulations. See Example \\(\\PageIndex{6}\\), Example \\(\\PageIndex{7}\\), and Example \\(\\PageIndex{8}\\).\n\nUsing the appropriate substitutions makes it possible to rewrite a polar equation as a rectangular equation, and then graph it in the rectangular plane. See Example \\(\\PageIndex{9}\\), Example \\(\\PageIndex{10}\\), and Example \\(\\PageIndex{11}\\).\n\nThis page titled 10.3: Polar Coordinates was last modified on Sun, 27 Apr 2025 18:27:21 GMT and is shared under a CC BY  4.0  license and was authored, remixed, and/or curated by OpenStax via source content that was edited to the style and standards of the LibreTexts platform.",
+  "figures": [
+    {
+      "url": "https://math.libretexts.org/@api/deki/files/7403/CNX_Precalc_Figure_08_03_001.jpg?revision=1",
+      "alt": "An illustration of a boat on the polar grid.",
+      "credit": ""
+    },
+    {
+      "url": "https://math.libretexts.org/@api/deki/files/7404/CNX_Precalc_Figure_08_03_002.jpg?revision=1",
+      "alt": "Polar grid with point (2, pi/4) plotted.",
+      "credit": ""
+    },
+    {
+      "url": "https://math.libretexts.org/@api/deki/files/7405/CNX_Precalc_Figure_08_03_003.jpg?revision=1&size=bestfit&width=448&height=339",
+      "alt": "Polar grid with point (3, pi/2) plotted.",
+      "credit": ""
+    },
+    {
+      "url": "https://math.libretexts.org/@api/deki/files/7406/CNX_Precalc_Figure_08_03_004.jpg?revision=1",
+      "alt": "Polar grid with point (2, pi/3) plotted.",
+      "credit": ""
+    },
+    {
+      "url": "https://math.libretexts.org/@api/deki/files/7407/CNX_Precalc_Figure_08_03_005.jpg?revision=1&size=bestfit&width=547&height=302",
+      "alt": "Two polar grids. Points (2, pi/6) and (-2, pi/6) are plotted. They are reflections across the origin in Q1 and Q3. ",
+      "credit": ""
+    },
+    {
+      "url": "https://math.libretexts.org/@api/deki/files/7418/CNX_Precalc_Figure_08_03_006_(1).jpg?revision=1",
+      "alt": "Points (2, 9pi/4) and (3, -pi/6) are plotted in the polar grid.",
+      "credit": ""
+    },
+    {
+      "url": "https://math.libretexts.org/@api/deki/files/7409/CNX_Precalc_Figure_08_03_007.jpg?revision=1",
+      "alt": "Comparison between polar coordinates and rectangular coordinates. There is a right triangle plotted on the x,y axis. The sides are a horizontal line on the x-axis of length x, a vertical line extending from thex-axis to some point in quadrant 1, and a hypotenuse r extending from the origin to that same point in quadrant 1. The vertices are at the origin (0,0), some point along the x-axis at (x,0), and that point in quadrant 1. This last point is (x,y) or (r, theta), depending which system of coordinates you use.",
+      "credit": ""
+    },
+    {
+      "url": "https://math.libretexts.org/@api/deki/files/7410/CNX_Precalc_Figure_08_03_008.jpg?revision=1&size=bestfit&width=713&height=295",
+      "alt": "Illustration of (3, pi/2) in polar coordinates and (0,3) in rectangular coordinates - they are the same point!",
+      "credit": ""
+    },
+    {
+      "url": "https://math.libretexts.org/@api/deki/files/7411/CNX_Precalc_Figure_08_03_009.jpg?revision=1",
+      "alt": "Illustration of (-2, 0) in polar coordinates and (-2,0) in rectangular coordinates - they are the same point!",
+      "credit": ""
+    },
+    {
+      "url": "https://math.libretexts.org/@api/deki/files/7412/CNX_Precalc_Figure_08_03_010new.jpg?revision=1",
+      "alt": "CNX_Precalc_Figure_08_03_010new.jpg",
+      "credit": ""
+    },
+    {
+      "url": "https://math.libretexts.org/@api/deki/files/7413/CNX_Precalc_Figure_08_03_011.jpg?revision=1&size=bestfit&width=716&height=275",
+      "alt": "Illustration of (3rad2, pi/4) in polar coordinates and (3,3) in rectangular coordinates - they are the same point!",
+      "credit": ""
+    },
+    {
+      "url": "https://math.libretexts.org/@api/deki/files/7414/CNX_Precalc_Figure_08_03_016.jpg?revision=1",
+      "alt": "Plotting a circle of radius 3 with center at the origin in polar and rectangular coordinates. It is the same in both systems.",
+      "credit": ""
+    },
+    {
+      "url": "https://math.libretexts.org/@api/deki/files/7415/CNX_Precalc_Figure_08_03_012.jpg?revision=1",
+      "alt": "Plots of the equations stated above - the plots are the same in both rectangular and polar coordinates. They are circles.",
+      "credit": ""
+    },
+    {
+      "url": "https://math.libretexts.org/@api/deki/files/7416/CNX_Precalc_Figure_08_03_013.jpg?revision=1",
+      "alt": "Plots of the equations stated above - the plots are the same in both rectangular and polar coordinates. They are lines.",
+      "credit": ""
+    },
+    {
+      "url": "https://math.libretexts.org/@api/deki/files/7417/CNX_Precalc_Figure_08_03_015.jpg?revision=1&size=bestfit&width=720&height=355",
+      "alt": "Plots of the equations stated above - the plots are the same in both rectangular and polar coordinates. They are hyperbolas.",
+      "credit": ""
+    }
+  ],
+  "references": [
+    {
+      "text": "Analytic Geometry",
+      "url": "https://math.libretexts.org/Bookshelves/Algebra/Algebra_and_Trigonometry_1e_(OpenStax)/12%3A_Analytic_Geometry"
+    },
+    {
+      "text": "Introduction to Polar Coordinates",
+      "url": "http://openstaxcollege.org/l/intropolar"
+    },
+    {
+      "text": "Comparing Polar and Rectangular Coordinates",
+      "url": "http://openstaxcollege.org/l/polarrect"
+    },
+    {
+      "text": "10.3: Polar Coordinates",
+      "url": "https://math.libretexts.org/Bookshelves/Algebra/Algebra_and_Trigonometry_1e_(OpenStax)/10%3A_Further_Applications_of_Trigonometry/10.03%3A_Polar_Coordinates"
+    },
+    {
+      "text": "CC BY  4.0",
+      "url": "https://creativecommons.org/licenses/by/4.0"
+    },
+    {
+      "text": "OpenStax",
+      "url": "https://openstax.org/"
+    },
+    {
+      "text": "source content",
+      "url": "https://openstax.org/details/books/precalculus"
+    }
+  ],
+  "exercises": [
+    {
+      "ordinal": 1,
+      "sourceNumber": "",
+      "sourceAnchor": "",
+      "kind": "example-or-exercise",
+      "context": "Plotting Points Using Polar Coordinates\n\nWhen we think about plotting points in the plane, we usually think of rectangular coordinates \\((x,y)\\) in the Cartesian coordinate plane. However, there are other ways of writing a coordinate pair and other types of grid systems. In this section, we introduce to polar coordinates, which are points labeled \\((r,\\theta)\\) and plotted on a polar grid. The polar grid is represented as a series of concentric circles radiating out from the pole, or the origin of the coordinate plane.\n\nThe polar grid is scaled as the unit circle with the positive \\(x\\)-axis now viewed as the polar axis and the origin as the pole. The first coordinate \\(r\\) is the radius or length of the directed line segment from the pole. The angle \\(\\theta\\), measured in radians, indicates the direction of \\(r\\). We move counterclockwise from the polar axis by an angle of \\(\\theta\\),and measure a directed line segment the length of \\(r\\) in the direction of \\(\\theta\\). Even though we measure \\(\\theta\\) first and then \\(r\\), the polar point is written with the \\(r\\)-coordinate first. For example, to plot the point \\(\\left(2,\\dfrac{\\pi}{4}\\right)\\),we would move \\(\\dfrac{\\pi}{4}\\) units in the counterclockwise direction and then a length of \\(2\\) from the pole. This point is plotted on the grid in Figure \\(\\PageIndex{2}\\).",
+      "original": "Example \\(\\PageIndex{1}\\): Plotting a Point on the Polar Grid\n\nPlot the point \\(\\left(3,\\dfrac{\\pi}{2}\\right)\\) on the polar grid.\n\nSolution\n\nThe angle \\(\\dfrac{\\pi}{2}\\) is found by sweeping in a counterclockwise direction \\(90°\\) from the polar axis. The point is located at a length of \\(3\\) units from the pole in the \\(\\dfrac{\\pi}{2}\\) direction, as shown in Figure \\(\\PageIndex{3}\\).\n\n[Figure: Polar grid with point (3, pi/2) plotted.]\n\nFigure \\(\\PageIndex{3}\\)",
+      "prompt": "Example \\(\\PageIndex{1}\\): Plotting a Point on the Polar Grid\n\nPlot the point \\(\\left(3,\\dfrac{\\pi}{2}\\right)\\) on the polar grid.\n\nSolution\n\nThe angle \\(\\dfrac{\\pi}{2}\\) is found by sweeping in a counterclockwise direction \\(90°\\) from the polar axis. The point is located at a length of \\(3\\) units from the pole in the \\(\\dfrac{\\pi}{2}\\) direction, as shown in Figure \\(\\PageIndex{3}\\).\n\n[Figure: Polar grid with point (3, pi/2) plotted.]\n\nFigure \\(\\PageIndex{3}\\)",
+      "sourceAnswers": [],
+      "hasFigure": true,
+      "status": "draft",
+      "answerVerified": false,
+      "translationStatus": "pending",
+      "mappingStatus": "pending"
+    },
+    {
+      "ordinal": 2,
+      "sourceNumber": "",
+      "sourceAnchor": "",
+      "kind": "exercise-candidate",
+      "context": "Plotting Points Using Polar Coordinates\n\nWhen we think about plotting points in the plane, we usually think of rectangular coordinates \\((x,y)\\) in the Cartesian coordinate plane. However, there are other ways of writing a coordinate pair and other types of grid systems. In this section, we introduce to polar coordinates, which are points labeled \\((r,\\theta)\\) and plotted on a polar grid. The polar grid is represented as a series of concentric circles radiating out from the pole, or the origin of the coordinate plane.\n\nThe polar grid is scaled as the unit circle with the positive \\(x\\)-axis now viewed as the polar axis and the origin as the pole. The first coordinate \\(r\\) is the radius or length of the directed line segment from the pole. The angle \\(\\theta\\), measured in radians, indicates the direction of \\(r\\). We move counterclockwise from the polar axis by an angle of \\(\\theta\\),and measure a directed line segment the length of \\(r\\) in the direction of \\(\\theta\\). Even though we measure \\(\\theta\\) first and then \\(r\\), the polar point is written with the \\(r\\)-coordinate first. For example, to plot the point \\(\\left(2,\\dfrac{\\pi}{4}\\right)\\),we would move \\(\\dfrac{\\pi}{4}\\) units in the counterclockwise direction and then a length of \\(2\\) from the pole. This point is plotted on the grid in Figure \\(\\PageIndex{2}\\).",
+      "original": "Exercise \\(\\PageIndex{1}\\)\n\nPlot the point \\(\\left(2, \\dfrac{\\pi}{3}\\right)\\) in the polar grid.\n\nAnswer\n\n[Figure: Polar grid with point (2, pi/3) plotted.]\n\nFigure \\(\\PageIndex{4}\\)",
+      "prompt": "Exercise \\(\\PageIndex{1}\\)\n\nPlot the point \\(\\left(2, \\dfrac{\\pi}{3}\\right)\\) in the polar grid.",
+      "sourceAnswers": [
+        "[Figure: Polar grid with point (2, pi/3) plotted.]\n\nFigure \\(\\PageIndex{4}\\)"
+      ],
+      "hasFigure": true,
+      "status": "draft",
+      "answerVerified": false,
+      "translationStatus": "pending",
+      "mappingStatus": "pending"
+    },
+    {
+      "ordinal": 3,
+      "sourceNumber": "",
+      "sourceAnchor": "",
+      "kind": "example-or-exercise",
+      "context": "Plotting Points Using Polar Coordinates\n\nWhen we think about plotting points in the plane, we usually think of rectangular coordinates \\((x,y)\\) in the Cartesian coordinate plane. However, there are other ways of writing a coordinate pair and other types of grid systems. In this section, we introduce to polar coordinates, which are points labeled \\((r,\\theta)\\) and plotted on a polar grid. The polar grid is represented as a series of concentric circles radiating out from the pole, or the origin of the coordinate plane.\n\nThe polar grid is scaled as the unit circle with the positive \\(x\\)-axis now viewed as the polar axis and the origin as the pole. The first coordinate \\(r\\) is the radius or length of the directed line segment from the pole. The angle \\(\\theta\\), measured in radians, indicates the direction of \\(r\\). We move counterclockwise from the polar axis by an angle of \\(\\theta\\),and measure a directed line segment the length of \\(r\\) in the direction of \\(\\theta\\). Even though we measure \\(\\theta\\) first and then \\(r\\), the polar point is written with the \\(r\\)-coordinate first. For example, to plot the point \\(\\left(2,\\dfrac{\\pi}{4}\\right)\\),we would move \\(\\dfrac{\\pi}{4}\\) units in the counterclockwise direction and then a length of \\(2\\) from the pole. This point is plotted on the grid in Figure \\(\\PageIndex{2}\\).",
+      "original": "Example \\(\\PageIndex{2}\\): Plotting a Point in the Polar Coordinate System with a Negative Component\n\nPlot the point \\(\\left(−2, \\dfrac{\\pi}{6}\\right)\\) on the polar grid.\n\nSolution\n\nWe know that \\(\\dfrac{\\pi}{6}\\) is located in the first quadrant. However, \\(r=−2\\). We can approach plotting a point with a negative \\(r\\) in two ways:\n\n1. Plot the point \\(\\left(2,\\dfrac{\\pi}{6}\\right)\\) by moving \\(\\dfrac{\\pi}{6}\\) in the counterclockwise direction and extending a directed line segment \\(2\\) units into the first quadrant. Then retrace the directed line segment back through the pole, and continue \\(2\\) units into the third quadrant;\n\n2. Move \\(\\dfrac{\\pi}{6}\\) in the counterclockwise direction, and draw the directed line segment from the pole \\(2\\) units in the negative direction, into the third quadrant.\n\nSee Figure \\(\\PageIndex{5a}\\). Compare this to the graph of the polar coordinate \\((2,π6)\\) shown in Figure \\(\\PageIndex{5b}\\).\n\n[Figure: Two polar grids. Points (2, pi/6) and (-2, pi/6) are plotted. They are reflections across the origin in Q1 and Q3. ]\n\nFigure \\(\\PageIndex{5}\\)",
+      "prompt": "Example \\(\\PageIndex{2}\\): Plotting a Point in the Polar Coordinate System with a Negative Component\n\nPlot the point \\(\\left(−2, \\dfrac{\\pi}{6}\\right)\\) on the polar grid.\n\nSolution\n\nWe know that \\(\\dfrac{\\pi}{6}\\) is located in the first quadrant. However, \\(r=−2\\). We can approach plotting a point with a negative \\(r\\) in two ways:\n\n1. Plot the point \\(\\left(2,\\dfrac{\\pi}{6}\\right)\\) by moving \\(\\dfrac{\\pi}{6}\\) in the counterclockwise direction and extending a directed line segment \\(2\\) units into the first quadrant. Then retrace the directed line segment back through the pole, and continue \\(2\\) units into the third quadrant;\n\n2. Move \\(\\dfrac{\\pi}{6}\\) in the counterclockwise direction, and draw the directed line segment from the pole \\(2\\) units in the negative direction, into the third quadrant.\n\nSee Figure \\(\\PageIndex{5a}\\). Compare this to the graph of the polar coordinate \\((2,π6)\\) shown in Figure \\(\\PageIndex{5b}\\).\n\n[Figure: Two polar grids. Points (2, pi/6) and (-2, pi/6) are plotted. They are reflections across the origin in Q1 and Q3. ]\n\nFigure \\(\\PageIndex{5}\\)",
+      "sourceAnswers": [],
+      "hasFigure": true,
+      "status": "draft",
+      "answerVerified": false,
+      "translationStatus": "pending",
+      "mappingStatus": "pending"
+    },
+    {
+      "ordinal": 4,
+      "sourceNumber": "",
+      "sourceAnchor": "",
+      "kind": "exercise-candidate",
+      "context": "Plotting Points Using Polar Coordinates\n\nWhen we think about plotting points in the plane, we usually think of rectangular coordinates \\((x,y)\\) in the Cartesian coordinate plane. However, there are other ways of writing a coordinate pair and other types of grid systems. In this section, we introduce to polar coordinates, which are points labeled \\((r,\\theta)\\) and plotted on a polar grid. The polar grid is represented as a series of concentric circles radiating out from the pole, or the origin of the coordinate plane.\n\nThe polar grid is scaled as the unit circle with the positive \\(x\\)-axis now viewed as the polar axis and the origin as the pole. The first coordinate \\(r\\) is the radius or length of the directed line segment from the pole. The angle \\(\\theta\\), measured in radians, indicates the direction of \\(r\\). We move counterclockwise from the polar axis by an angle of \\(\\theta\\),and measure a directed line segment the length of \\(r\\) in the direction of \\(\\theta\\). Even though we measure \\(\\theta\\) first and then \\(r\\), the polar point is written with the \\(r\\)-coordinate first. For example, to plot the point \\(\\left(2,\\dfrac{\\pi}{4}\\right)\\),we would move \\(\\dfrac{\\pi}{4}\\) units in the counterclockwise direction and then a length of \\(2\\) from the pole. This point is plotted on the grid in Figure \\(\\PageIndex{2}\\).",
+      "original": "Exercise \\(\\PageIndex{2}\\)\n\nPlot the points \\(\\left(3,−\\dfrac{\\pi}{6}\\right)\\) and \\(\\left(2,\\dfrac{9\\pi}{4}\\right)\\) on the same polar grid.\n\nAnswer\n\n[Figure: Points (2, 9pi/4) and (3, -pi/6) are plotted in the polar grid.]\n\nFigure \\(\\PageIndex{6}\\)",
+      "prompt": "Exercise \\(\\PageIndex{2}\\)\n\nPlot the points \\(\\left(3,−\\dfrac{\\pi}{6}\\right)\\) and \\(\\left(2,\\dfrac{9\\pi}{4}\\right)\\) on the same polar grid.",
+      "sourceAnswers": [
+        "[Figure: Points (2, 9pi/4) and (3, -pi/6) are plotted in the polar grid.]\n\nFigure \\(\\PageIndex{6}\\)"
+      ],
+      "hasFigure": true,
+      "status": "draft",
+      "answerVerified": false,
+      "translationStatus": "pending",
+      "mappingStatus": "pending"
+    },
+    {
+      "ordinal": 5,
+      "sourceNumber": "1",
+      "sourceAnchor": "",
+      "kind": "exercise-candidate",
+      "context": "To convert polar coordinates \\((r, \\theta)\\) to rectangular coordinates \\((x, y)\\), let\n\n\\[\\cos \\theta=\\dfrac{x}{r}\\rightarrow x=r \\cos \\theta\\]\n\n\\[\\sin \\theta=\\dfrac{y}{r}\\rightarrow y=r \\sin \\theta\\]",
+      "original": "1. Given the polar coordinate \\((r,\\theta)\\), write \\(x=r \\cos \\theta\\) and \\(y=r \\sin \\theta\\).",
+      "prompt": "1. Given the polar coordinate \\((r,\\theta)\\), write \\(x=r \\cos \\theta\\) and \\(y=r \\sin \\theta\\).",
+      "sourceAnswers": [],
+      "hasFigure": false,
+      "status": "draft",
+      "answerVerified": false,
+      "translationStatus": "pending",
+      "mappingStatus": "pending"
+    },
+    {
+      "ordinal": 6,
+      "sourceNumber": "2",
+      "sourceAnchor": "",
+      "kind": "exercise-candidate",
+      "context": "To convert polar coordinates \\((r, \\theta)\\) to rectangular coordinates \\((x, y)\\), let\n\n\\[\\cos \\theta=\\dfrac{x}{r}\\rightarrow x=r \\cos \\theta\\]\n\n\\[\\sin \\theta=\\dfrac{y}{r}\\rightarrow y=r \\sin \\theta\\]",
+      "original": "2. Evaluate \\(\\cos \\theta\\) and \\(\\sin \\theta\\).",
+      "prompt": "2. Evaluate \\(\\cos \\theta\\) and \\(\\sin \\theta\\).",
+      "sourceAnswers": [],
+      "hasFigure": false,
+      "status": "draft",
+      "answerVerified": false,
+      "translationStatus": "pending",
+      "mappingStatus": "pending"
+    },
+    {
+      "ordinal": 7,
+      "sourceNumber": "3",
+      "sourceAnchor": "",
+      "kind": "exercise-candidate",
+      "context": "To convert polar coordinates \\((r, \\theta)\\) to rectangular coordinates \\((x, y)\\), let\n\n\\[\\cos \\theta=\\dfrac{x}{r}\\rightarrow x=r \\cos \\theta\\]\n\n\\[\\sin \\theta=\\dfrac{y}{r}\\rightarrow y=r \\sin \\theta\\]",
+      "original": "3. Multiply \\(\\cos \\theta\\) by \\(r\\) to find the \\(x\\)-coordinate of the rectangular form.",
+      "prompt": "3. Multiply \\(\\cos \\theta\\) by \\(r\\) to find the \\(x\\)-coordinate of the rectangular form.",
+      "sourceAnswers": [],
+      "hasFigure": false,
+      "status": "draft",
+      "answerVerified": false,
+      "translationStatus": "pending",
+      "mappingStatus": "pending"
+    },
+    {
+      "ordinal": 8,
+      "sourceNumber": "4",
+      "sourceAnchor": "",
+      "kind": "exercise-candidate",
+      "context": "To convert polar coordinates \\((r, \\theta)\\) to rectangular coordinates \\((x, y)\\), let\n\n\\[\\cos \\theta=\\dfrac{x}{r}\\rightarrow x=r \\cos \\theta\\]\n\n\\[\\sin \\theta=\\dfrac{y}{r}\\rightarrow y=r \\sin \\theta\\]",
+      "original": "4. Multiply \\(\\sin \\theta\\) by \\(r\\) to find the \\(y\\)-coordinate of the rectangular form.",
+      "prompt": "4. Multiply \\(\\sin \\theta\\) by \\(r\\) to find the \\(y\\)-coordinate of the rectangular form.",
+      "sourceAnswers": [],
+      "hasFigure": false,
+      "status": "draft",
+      "answerVerified": false,
+      "translationStatus": "pending",
+      "mappingStatus": "pending"
+    },
+    {
+      "ordinal": 9,
+      "sourceNumber": "",
+      "sourceAnchor": "",
+      "kind": "example-or-exercise",
+      "context": "To convert polar coordinates \\((r, \\theta)\\) to rectangular coordinates \\((x, y)\\), let\n\n\\[\\cos \\theta=\\dfrac{x}{r}\\rightarrow x=r \\cos \\theta\\]\n\n\\[\\sin \\theta=\\dfrac{y}{r}\\rightarrow y=r \\sin \\theta\\]",
+      "original": "Example \\(\\PageIndex{3A}\\): Writing Polar Coordinates as Rectangular Coordinates\n\nWrite the polar coordinates \\(\\left(3,\\dfrac{\\pi}{2}\\right)\\) as rectangular coordinates.\n\nSolution\n\nUse the equivalent relationships.\n\n\\[\\begin{align*} x&= r \\cos \\theta\\\\ x&= 3 \\cos \\dfrac{\\pi}{2}\\\\ &= 0\\\\ y&= r \\sin \\theta\\\\ y&= 3 \\sin \\dfrac{\\pi}{2}\\\\ &= 3 \\end{align*}\\]\n\nThe rectangular coordinates are \\((0,3)\\). See Figure \\(\\PageIndex{8}\\).\n\n[Figure: Illustration of (3, pi/2) in polar coordinates and (0,3) in rectangular coordinates - they are the same point!]\n\nFigure \\(\\PageIndex{8}\\)",
+      "prompt": "Example \\(\\PageIndex{3A}\\): Writing Polar Coordinates as Rectangular Coordinates\n\nWrite the polar coordinates \\(\\left(3,\\dfrac{\\pi}{2}\\right)\\) as rectangular coordinates.\n\nSolution\n\nUse the equivalent relationships.\n\n\\[\\begin{align*} x&= r \\cos \\theta\\\\ x&= 3 \\cos \\dfrac{\\pi}{2}\\\\ &= 0\\\\ y&= r \\sin \\theta\\\\ y&= 3 \\sin \\dfrac{\\pi}{2}\\\\ &= 3 \\end{align*}\\]\n\nThe rectangular coordinates are \\((0,3)\\). See Figure \\(\\PageIndex{8}\\).\n\n[Figure: Illustration of (3, pi/2) in polar coordinates and (0,3) in rectangular coordinates - they are the same point!]\n\nFigure \\(\\PageIndex{8}\\)",
+      "sourceAnswers": [],
+      "hasFigure": true,
+      "status": "draft",
+      "answerVerified": false,
+      "translationStatus": "pending",
+      "mappingStatus": "pending"
+    },
+    {
+      "ordinal": 10,
+      "sourceNumber": "",
+      "sourceAnchor": "",
+      "kind": "example-or-exercise",
+      "context": "To convert polar coordinates \\((r, \\theta)\\) to rectangular coordinates \\((x, y)\\), let\n\n\\[\\cos \\theta=\\dfrac{x}{r}\\rightarrow x=r \\cos \\theta\\]\n\n\\[\\sin \\theta=\\dfrac{y}{r}\\rightarrow y=r \\sin \\theta\\]",
+      "original": "Example \\(\\PageIndex{3B}\\): Writing Polar Coordinates as Rectangular Coordinates\n\nWrite the polar coordinates \\((−2,0)\\) as rectangular coordinates.\n\nSolution\n\nSee Figure \\(\\PageIndex{9}\\). Writing the polar coordinates as rectangular, we have\n\n\\[\\begin{align*} x&= r \\cos \\theta\\\\ x&= -2 \\cos(0)\\\\ &= -2\\\\ y&= r \\sin \\theta\\\\ y&= -2 \\sin(0)\\\\ &= 0 \\end{align*}\\]\n\nThe rectangular coordinates are also \\((−2,0)\\).\n\n[Figure: Illustration of (-2, 0) in polar coordinates and (-2,0) in rectangular coordinates - they are the same point!]\n\nFigure \\(\\PageIndex{9}\\)",
+      "prompt": "Example \\(\\PageIndex{3B}\\): Writing Polar Coordinates as Rectangular Coordinates\n\nWrite the polar coordinates \\((−2,0)\\) as rectangular coordinates.\n\nSolution\n\nSee Figure \\(\\PageIndex{9}\\). Writing the polar coordinates as rectangular, we have\n\n\\[\\begin{align*} x&= r \\cos \\theta\\\\ x&= -2 \\cos(0)\\\\ &= -2\\\\ y&= r \\sin \\theta\\\\ y&= -2 \\sin(0)\\\\ &= 0 \\end{align*}\\]\n\nThe rectangular coordinates are also \\((−2,0)\\).\n\n[Figure: Illustration of (-2, 0) in polar coordinates and (-2,0) in rectangular coordinates - they are the same point!]\n\nFigure \\(\\PageIndex{9}\\)",
+      "sourceAnswers": [],
+      "hasFigure": true,
+      "status": "draft",
+      "answerVerified": false,
+      "translationStatus": "pending",
+      "mappingStatus": "pending"
+    },
+    {
+      "ordinal": 11,
+      "sourceNumber": "",
+      "sourceAnchor": "",
+      "kind": "exercise-candidate",
+      "context": "To convert polar coordinates \\((r, \\theta)\\) to rectangular coordinates \\((x, y)\\), let\n\n\\[\\cos \\theta=\\dfrac{x}{r}\\rightarrow x=r \\cos \\theta\\]\n\n\\[\\sin \\theta=\\dfrac{y}{r}\\rightarrow y=r \\sin \\theta\\]",
+      "original": "Exercise \\(\\PageIndex{3}\\)\n\nWrite the polar coordinates \\(\\left(−1,\\dfrac{2\\pi}{3}\\right)\\) as rectangular coordinates.\n\nAnswer\n\n\\((x,y)=\\left(\\dfrac{1}{2},−\\dfrac{\\sqrt{3}}{2}\\right)\\)",
+      "prompt": "Exercise \\(\\PageIndex{3}\\)\n\nWrite the polar coordinates \\(\\left(−1,\\dfrac{2\\pi}{3}\\right)\\) as rectangular coordinates.",
+      "sourceAnswers": [
+        "\\((x,y)=\\left(\\dfrac{1}{2},−\\dfrac{\\sqrt{3}}{2}\\right)\\)"
+      ],
+      "hasFigure": false,
+      "status": "draft",
+      "answerVerified": false,
+      "translationStatus": "pending",
+      "mappingStatus": "pending"
+    },
+    {
+      "ordinal": 12,
+      "sourceNumber": "",
+      "sourceAnchor": "",
+      "kind": "example-or-exercise",
+      "context": "\\(\\sin \\theta=\\dfrac{y}{r}\\) or \\(y=r \\sin \\theta\\)\n\n\\(r^2=x^2+y^2\\)\n\n\\(\\tan \\theta=\\dfrac{y}{x}\\)",
+      "original": "Example \\(\\PageIndex{4}\\): Writing Rectangular Coordinates as Polar Coordinates\n\nConvert the rectangular coordinates \\((3,3)\\) to polar coordinates.",
+      "prompt": "Example \\(\\PageIndex{4}\\): Writing Rectangular Coordinates as Polar Coordinates\n\nConvert the rectangular coordinates \\((3,3)\\) to polar coordinates.",
+      "sourceAnswers": [],
+      "hasFigure": false,
+      "status": "draft",
+      "answerVerified": false,
+      "translationStatus": "pending",
+      "mappingStatus": "pending"
+    },
+    {
+      "ordinal": 13,
+      "sourceNumber": "1",
+      "sourceAnchor": "",
+      "kind": "exercise-candidate",
+      "context": "Transforming Equations between Polar and Rectangular Forms\n\nWe can now convert coordinates between polar and rectangular form. Converting equations can be more difficult, but it can be beneficial to be able to convert between the two forms. Since there are a number of polar equations that cannot be expressed clearly in Cartesian form, and vice versa, we can use the same procedures we used to convert points between the coordinate systems. We can then use a graphing calculator to graph either the rectangular form or the polar form of the equation.",
+      "original": "1. Change the MODE to POL, representing polar form.",
+      "prompt": "1. Change the MODE to POL, representing polar form.",
+      "sourceAnswers": [],
+      "hasFigure": false,
+      "status": "draft",
+      "answerVerified": false,
+      "translationStatus": "pending",
+      "mappingStatus": "pending"
+    },
+    {
+      "ordinal": 14,
+      "sourceNumber": "2",
+      "sourceAnchor": "",
+      "kind": "exercise-candidate",
+      "context": "Transforming Equations between Polar and Rectangular Forms\n\nWe can now convert coordinates between polar and rectangular form. Converting equations can be more difficult, but it can be beneficial to be able to convert between the two forms. Since there are a number of polar equations that cannot be expressed clearly in Cartesian form, and vice versa, we can use the same procedures we used to convert points between the coordinate systems. We can then use a graphing calculator to graph either the rectangular form or the polar form of the equation.",
+      "original": "2. Press the Y= button to bring up a screen allowing the input of six equations: \\(r_1\\), \\(r_2\\),..., \\(r_6\\).",
+      "prompt": "2. Press the Y= button to bring up a screen allowing the input of six equations: \\(r_1\\), \\(r_2\\),..., \\(r_6\\).",
+      "sourceAnswers": [],
+      "hasFigure": false,
+      "status": "draft",
+      "answerVerified": false,
+      "translationStatus": "pending",
+      "mappingStatus": "pending"
+    },
+    {
+      "ordinal": 15,
+      "sourceNumber": "3",
+      "sourceAnchor": "",
+      "kind": "exercise-candidate",
+      "context": "Transforming Equations between Polar and Rectangular Forms\n\nWe can now convert coordinates between polar and rectangular form. Converting equations can be more difficult, but it can be beneficial to be able to convert between the two forms. Since there are a number of polar equations that cannot be expressed clearly in Cartesian form, and vice versa, we can use the same procedures we used to convert points between the coordinate systems. We can then use a graphing calculator to graph either the rectangular form or the polar form of the equation.",
+      "original": "3. Enter the polar equation, set equal to \\(r\\).",
+      "prompt": "3. Enter the polar equation, set equal to \\(r\\).",
+      "sourceAnswers": [],
+      "hasFigure": false,
+      "status": "draft",
+      "answerVerified": false,
+      "translationStatus": "pending",
+      "mappingStatus": "pending"
+    },
+    {
+      "ordinal": 16,
+      "sourceNumber": "4",
+      "sourceAnchor": "",
+      "kind": "exercise-candidate",
+      "context": "Transforming Equations between Polar and Rectangular Forms\n\nWe can now convert coordinates between polar and rectangular form. Converting equations can be more difficult, but it can be beneficial to be able to convert between the two forms. Since there are a number of polar equations that cannot be expressed clearly in Cartesian form, and vice versa, we can use the same procedures we used to convert points between the coordinate systems. We can then use a graphing calculator to graph either the rectangular form or the polar form of the equation.",
+      "original": "4. Press GRAPH.",
+      "prompt": "4. Press GRAPH.",
+      "sourceAnswers": [],
+      "hasFigure": false,
+      "status": "draft",
+      "answerVerified": false,
+      "translationStatus": "pending",
+      "mappingStatus": "pending"
+    },
+    {
+      "ordinal": 17,
+      "sourceNumber": "",
+      "sourceAnchor": "",
+      "kind": "example-or-exercise",
+      "context": "Transforming Equations between Polar and Rectangular Forms\n\nWe can now convert coordinates between polar and rectangular form. Converting equations can be more difficult, but it can be beneficial to be able to convert between the two forms. Since there are a number of polar equations that cannot be expressed clearly in Cartesian form, and vice versa, we can use the same procedures we used to convert points between the coordinate systems. We can then use a graphing calculator to graph either the rectangular form or the polar form of the equation.",
+      "original": "Example \\(\\PageIndex{5A}\\): Writing a Cartesian Equation in Polar Form\n\nWrite the Cartesian equation \\(x^2+y^2=9\\) in polar form.\n\nSolution\n\nThe goal is to eliminate \\(x\\) and \\(y\\) from the equation and introduce \\(r\\) and \\(\\theta\\). Ideally, we would write the equation \\(r\\) as a function of \\(\\theta\\). To obtain the polar form, we will use the relationships between \\((x,y)\\) and \\((r,\\theta)\\). Since \\(x=r \\cos \\theta\\) and \\(y=r \\sin \\theta\\), we can substitute and solve for \\(r\\).\n\n\\(\\begin{align*} {(r \\cos \\theta)}^2+{(r \\sin \\theta)}^2&= 9\\\\ r^2 {\\cos}^2 \\theta+r^2 {\\sin}^2 \\theta&= 9\\\\ r^2({\\cos}^2 \\theta+{\\sin}^2 \\theta)&= 9\\\\ r^2(1)&= 9\\qquad \\text {Substitute } {\\cos}^2 \\theta+{\\sin}^2 \\theta=1\\\\ r&= \\pm 3\\qquad \\text {Use the square root property.} \\end{align*}\\)\n\nThus, \\(x^2+y^2=9\\),\\(r=3\\),and \\(r=−3\\) should generate the same graph. See Figure \\(\\PageIndex{12}\\).\n\n[Figure: Plotting a circle of radius 3 with center at the origin in polar and rectangular coordinates. It is the same in both systems.]\n\nFigure \\(\\PageIndex{12}\\): (a) Cartesian form \\(x^2+y^2=9\\) (b) Polar form \\(r=3\\)\n\nTo graph a circle in rectangular form, we must first solve for \\(y\\).\n\n\\[\\begin{align*} x^2+y^2&= 9\\\\ y^2&= 9-x^2\\\\ y&= \\pm \\sqrt{9-x^2} \\end{align*}\\]\n\nNote that this is two separate functions, since a circle fails the vertical line test. Therefore, we need to enter the positive and negative square roots into the calculator separately, as two equations in the form \\(Y_1=\\sqrt{9−x^2}\\) and \\(Y_2=−\\sqrt{9−x^2}\\). Press GRAPH.",
+      "prompt": "Example \\(\\PageIndex{5A}\\): Writing a Cartesian Equation in Polar Form\n\nWrite the Cartesian equation \\(x^2+y^2=9\\) in polar form.\n\nSolution\n\nThe goal is to eliminate \\(x\\) and \\(y\\) from the equation and introduce \\(r\\) and \\(\\theta\\). Ideally, we would write the equation \\(r\\) as a function of \\(\\theta\\). To obtain the polar form, we will use the relationships between \\((x,y)\\) and \\((r,\\theta)\\). Since \\(x=r \\cos \\theta\\) and \\(y=r \\sin \\theta\\), we can substitute and solve for \\(r\\).\n\n\\(\\begin{align*} {(r \\cos \\theta)}^2+{(r \\sin \\theta)}^2&= 9\\\\ r^2 {\\cos}^2 \\theta+r^2 {\\sin}^2 \\theta&= 9\\\\ r^2({\\cos}^2 \\theta+{\\sin}^2 \\theta)&= 9\\\\ r^2(1)&= 9\\qquad \\text {Substitute } {\\cos}^2 \\theta+{\\sin}^2 \\theta=1\\\\ r&= \\pm 3\\qquad \\text {Use the square root property.} \\end{align*}\\)\n\nThus, \\(x^2+y^2=9\\),\\(r=3\\),and \\(r=−3\\) should generate the same graph. See Figure \\(\\PageIndex{12}\\).\n\n[Figure: Plotting a circle of radius 3 with center at the origin in polar and rectangular coordinates. It is the same in both systems.]\n\nFigure \\(\\PageIndex{12}\\): (a) Cartesian form \\(x^2+y^2=9\\) (b) Polar form \\(r=3\\)\n\nTo graph a circle in rectangular form, we must first solve for \\(y\\).\n\n\\[\\begin{align*} x^2+y^2&= 9\\\\ y^2&= 9-x^2\\\\ y&= \\pm \\sqrt{9-x^2} \\end{align*}\\]\n\nNote that this is two separate functions, since a circle fails the vertical line test. Therefore, we need to enter the positive and negative square roots into the calculator separately, as two equations in the form \\(Y_1=\\sqrt{9−x^2}\\) and \\(Y_2=−\\sqrt{9−x^2}\\). Press GRAPH.",
+      "sourceAnswers": [],
+      "hasFigure": true,
+      "status": "draft",
+      "answerVerified": false,
+      "translationStatus": "pending",
+      "mappingStatus": "pending"
+    },
+    {
+      "ordinal": 18,
+      "sourceNumber": "",
+      "sourceAnchor": "",
+      "kind": "example-or-exercise",
+      "context": "Transforming Equations between Polar and Rectangular Forms\n\nWe can now convert coordinates between polar and rectangular form. Converting equations can be more difficult, but it can be beneficial to be able to convert between the two forms. Since there are a number of polar equations that cannot be expressed clearly in Cartesian form, and vice versa, we can use the same procedures we used to convert points between the coordinate systems. We can then use a graphing calculator to graph either the rectangular form or the polar form of the equation.",
+      "original": "Example \\(\\PageIndex{5B}\\): Rewriting a Cartesian Equation as a Polar Equation\n\nRewrite the Cartesian equation \\(x^2+y^2=6y\\) as a polar equation.\n\nSolution\n\nThis equation appears similar to the previous example, but it requires different steps to convert the equation.\n\nWe can still follow the same procedures we have already learned and make the following substitutions:\n\n\\(\\begin{array}{ll} r^2=6y & \\text{Use }x^2+y^2=r^2. \\\\ r^2=6r \\sin \\theta & \\text{Substitute }y=r \\sin \\theta. \\\\ r^2−6r \\sin \\theta=0 & \\text{Set equal to }0. \\\\ r(r−6 \\sin \\theta)=0 & \\text{Factor and solve.} \\\\ r=0 & \\text{We reject }r=0 \\text{, as it only represents one point, }(0,0). \\\\ \\text{or }r=6 \\sin \\theta \\end{array}\\)\n\nTherefore, the equations \\(x^2+y^2=6y\\) and \\(r=6 \\sin \\theta\\) should give us the same graph. See Figure \\(\\PageIndex{13}\\).\n\n[Figure: Plots of the equations stated above - the plots are the same in both rectangular and polar coordinates. They are circles.]\n\nFigure \\(\\PageIndex{13}\\): (a) Cartesian form \\(x^2+y^2=6y\\) (b) polar form \\(r=6 \\sin \\theta\\)\n\nThe Cartesian or rectangular equation is plotted on the rectangular grid, and the polar equation is plotted on the polar grid. Clearly, the graphs are identical.",
+      "prompt": "Example \\(\\PageIndex{5B}\\): Rewriting a Cartesian Equation as a Polar Equation\n\nRewrite the Cartesian equation \\(x^2+y^2=6y\\) as a polar equation.\n\nSolution\n\nThis equation appears similar to the previous example, but it requires different steps to convert the equation.\n\nWe can still follow the same procedures we have already learned and make the following substitutions:\n\n\\(\\begin{array}{ll} r^2=6y & \\text{Use }x^2+y^2=r^2. \\\\ r^2=6r \\sin \\theta & \\text{Substitute }y=r \\sin \\theta. \\\\ r^2−6r \\sin \\theta=0 & \\text{Set equal to }0. \\\\ r(r−6 \\sin \\theta)=0 & \\text{Factor and solve.} \\\\ r=0 & \\text{We reject }r=0 \\text{, as it only represents one point, }(0,0). \\\\ \\text{or }r=6 \\sin \\theta \\end{array}\\)\n\nTherefore, the equations \\(x^2+y^2=6y\\) and \\(r=6 \\sin \\theta\\) should give us the same graph. See Figure \\(\\PageIndex{13}\\).\n\n[Figure: Plots of the equations stated above - the plots are the same in both rectangular and polar coordinates. They are circles.]\n\nFigure \\(\\PageIndex{13}\\): (a) Cartesian form \\(x^2+y^2=6y\\) (b) polar form \\(r=6 \\sin \\theta\\)\n\nThe Cartesian or rectangular equation is plotted on the rectangular grid, and the polar equation is plotted on the polar grid. Clearly, the graphs are identical.",
+      "sourceAnswers": [],
+      "hasFigure": true,
+      "status": "draft",
+      "answerVerified": false,
+      "translationStatus": "pending",
+      "mappingStatus": "pending"
+    },
+    {
+      "ordinal": 19,
+      "sourceNumber": "",
+      "sourceAnchor": "",
+      "kind": "exercise-candidate",
+      "context": "Transforming Equations between Polar and Rectangular Forms\n\nWe can now convert coordinates between polar and rectangular form. Converting equations can be more difficult, but it can be beneficial to be able to convert between the two forms. Since there are a number of polar equations that cannot be expressed clearly in Cartesian form, and vice versa, we can use the same procedures we used to convert points between the coordinate systems. We can then use a graphing calculator to graph either the rectangular form or the polar form of the equation.",
+      "original": "Exercise \\(\\PageIndex{4A}\\):\n\nRewriting a Cartesian Equation in Polar Form\n\nRewrite the Cartesian equation \\(y=3x+2\\) as a polar equation.\n\nAnswer\n\nWe will use the relationships \\(x=r \\cos \\theta\\) and \\(y=r \\sin \\theta\\).\n\n\\(\\begin{array}{cl} y=3x+2 \\\\ r \\sin \\theta=3r \\cos \\theta+2 \\\\ r \\sin \\theta−3r \\cos \\theta=2 \\\\ r(\\sin \\theta−3 \\cos \\theta)=2 & \\text{Isolate }r. \\\\ r=\\dfrac{2}{\\sin \\theta−3\\cos \\theta} & \\text{Solve for }r. \\end{array}\\)",
+      "prompt": "Exercise \\(\\PageIndex{4A}\\):\n\nRewriting a Cartesian Equation in Polar Form\n\nRewrite the Cartesian equation \\(y=3x+2\\) as a polar equation.",
+      "sourceAnswers": [
+        "We will use the relationships \\(x=r \\cos \\theta\\) and \\(y=r \\sin \\theta\\).\n\n\\(\\begin{array}{cl} y=3x+2 \\\\ r \\sin \\theta=3r \\cos \\theta+2 \\\\ r \\sin \\theta−3r \\cos \\theta=2 \\\\ r(\\sin \\theta−3 \\cos \\theta)=2 & \\text{Isolate }r. \\\\ r=\\dfrac{2}{\\sin \\theta−3\\cos \\theta} & \\text{Solve for }r. \\end{array}\\)"
+      ],
+      "hasFigure": false,
+      "status": "draft",
+      "answerVerified": false,
+      "translationStatus": "pending",
+      "mappingStatus": "pending"
+    },
+    {
+      "ordinal": 20,
+      "sourceNumber": "",
+      "sourceAnchor": "",
+      "kind": "exercise-candidate",
+      "context": "Transforming Equations between Polar and Rectangular Forms\n\nWe can now convert coordinates between polar and rectangular form. Converting equations can be more difficult, but it can be beneficial to be able to convert between the two forms. Since there are a number of polar equations that cannot be expressed clearly in Cartesian form, and vice versa, we can use the same procedures we used to convert points between the coordinate systems. We can then use a graphing calculator to graph either the rectangular form or the polar form of the equation.",
+      "original": "Exercise \\(\\PageIndex{4B}\\):\n\nRewrite the Cartesian equation \\(y^2=3−x^2\\) in polar form.\n\nAnswer\n\n\\(r=\\sqrt{3}\\)",
+      "prompt": "Exercise \\(\\PageIndex{4B}\\):\n\nRewrite the Cartesian equation \\(y^2=3−x^2\\) in polar form.",
+      "sourceAnswers": [
+        "\\(r=\\sqrt{3}\\)"
+      ],
+      "hasFigure": false,
+      "status": "draft",
+      "answerVerified": false,
+      "translationStatus": "pending",
+      "mappingStatus": "pending"
+    },
+    {
+      "ordinal": 21,
+      "sourceNumber": "",
+      "sourceAnchor": "",
+      "kind": "example-or-exercise",
+      "context": "Identify and Graph Polar Equations by Converting to Rectangular Equations\n\nWe have learned how to convert rectangular coordinates to polar coordinates, and we have seen that the points are indeed the same. We have also transformed polar equations to rectangular equations and vice versa. Now we will demonstrate that their graphs, while drawn on different grids, are identical.",
+      "original": "Example \\(\\PageIndex{6A}\\): Graphing a Polar Equation by Converting to a Rectangular Equation\n\nCovert the polar equation \\(r=2 \\sec \\theta\\) to a rectangular equation, and draw its corresponding graph.\n\nSolution\n\nThe conversion is\n\n\\[\\begin{align*} r &=2 \\sec \\theta \\\\ r &= \\dfrac{2}{\\cos \\theta} \\\\ r \\cos \\theta &=2 \\\\ x &=2 \\end{align*}\\]\n\nNotice that the equation \\(r=2 \\sec \\theta\\) drawn on the polar grid is clearly the same as the vertical line \\(x=2\\) drawn on the rectangular grid (see Figure \\(\\PageIndex{14}\\)). Just as \\(x=c\\) is the standard form for a vertical line in rectangular form, \\(r=c \\sec \\theta\\) is the standard form for a vertical line in polar form.\n\n[Figure: Plots of the equations stated above - the plots are the same in both rectangular and polar coordinates. They are lines.]\n\nFigure \\(\\PageIndex{14}\\): (a) Polar grid (b) Rectangular coordinate system\n\nA similar discussion would demonstrate that the graph of the function \\(r=2 \\csc \\theta\\) will be the horizontal line \\(y=2\\). In fact, \\(r=c \\csc \\theta\\) is the standard form for a horizontal line in polar form, corresponding to the rectangular form \\(y=c\\).",
+      "prompt": "Example \\(\\PageIndex{6A}\\): Graphing a Polar Equation by Converting to a Rectangular Equation\n\nCovert the polar equation \\(r=2 \\sec \\theta\\) to a rectangular equation, and draw its corresponding graph.\n\nSolution\n\nThe conversion is\n\n\\[\\begin{align*} r &=2 \\sec \\theta \\\\ r &= \\dfrac{2}{\\cos \\theta} \\\\ r \\cos \\theta &=2 \\\\ x &=2 \\end{align*}\\]\n\nNotice that the equation \\(r=2 \\sec \\theta\\) drawn on the polar grid is clearly the same as the vertical line \\(x=2\\) drawn on the rectangular grid (see Figure \\(\\PageIndex{14}\\)). Just as \\(x=c\\) is the standard form for a vertical line in rectangular form, \\(r=c \\sec \\theta\\) is the standard form for a vertical line in polar form.\n\n[Figure: Plots of the equations stated above - the plots are the same in both rectangular and polar coordinates. They are lines.]\n\nFigure \\(\\PageIndex{14}\\): (a) Polar grid (b) Rectangular coordinate system\n\nA similar discussion would demonstrate that the graph of the function \\(r=2 \\csc \\theta\\) will be the horizontal line \\(y=2\\). In fact, \\(r=c \\csc \\theta\\) is the standard form for a horizontal line in polar form, corresponding to the rectangular form \\(y=c\\).",
+      "sourceAnswers": [],
+      "hasFigure": true,
+      "status": "draft",
+      "answerVerified": false,
+      "translationStatus": "pending",
+      "mappingStatus": "pending"
+    },
+    {
+      "ordinal": 22,
+      "sourceNumber": "",
+      "sourceAnchor": "",
+      "kind": "example-or-exercise",
+      "context": "Identify and Graph Polar Equations by Converting to Rectangular Equations\n\nWe have learned how to convert rectangular coordinates to polar coordinates, and we have seen that the points are indeed the same. We have also transformed polar equations to rectangular equations and vice versa. Now we will demonstrate that their graphs, while drawn on different grids, are identical.",
+      "original": "Example \\(\\PageIndex{6B}\\): Rewriting a Polar Equation in Cartesian Form\n\nRewrite the polar equation \\(r=\\dfrac{3}{1−2 \\cos \\theta}\\) as a Cartesian equation.\n\nSolution\n\nThe goal is to eliminate \\(\\theta\\) and \\(r\\),and introduce \\(x\\) and \\(y\\). We clear the fraction, and then use substitution. In order to replace \\(r\\) with \\(x\\) and \\(y\\), we must use the expression \\(x^2+y^2=r^2\\).\n\n\\(\\begin{array} r =\\dfrac{3}{1−2 \\cos \\theta} \\\\ r(1−2 \\cos \\theta)=3 \\\\ r\\left(1−2\\left(\\dfrac{x}{r}\\right)\\right)=3 & \\text{Use }\\cos \\theta=\\dfrac{x}{r} \\text{ to eliminate }\\theta. \\\\ r−2x=3 \\\\ r=3+2x & \\text{Isolate }r. \\\\ r^2={(3+2x)}^2 & \\text{Square both sides.} \\\\ x^2+y^2={(3+2x)}^2 & \\text{Use }x^2+y^2=r^2. \\end{array}\\)\n\nThe Cartesian equation is \\(x^2+y^2={(3+2x)}^2\\). However, to graph it, especially using a graphing calculator or computer program, we want to isolate \\(y\\).\n\n\\[\\begin{align*} x^2+y^2 &= {(3+2x)}^2 \\\\ y^2 &= {(3+2x)}^2-x^2 \\\\ y &= \\pm {(3+2x)}^2-x^2 \\end{align*}\\]\n\nWhen our entire equation has been changed from \\(r\\) and \\(\\theta\\) to \\(x\\) and \\(y\\), we can stop, unless asked to solve for \\(y\\) or simplify. See Figure \\(\\PageIndex{15}\\).\n\n[Figure: Plots of the equations stated above - the plots are the same in both rectangular and polar coordinates. They are hyperbolas.]\n\nFigure \\(\\PageIndex{15}\\)\n\nThe “hour-glass” shape of the graph is called a hyperbola. Hyperbolas have many interesting geometric features and applications, which we will investigate further in Analytic Geometry.\n\nAnalysis\n\nIn this example, the right side of the equation can be expanded and the equation simplified further, as shown above. However, the equation cannot be written as a single function in Cartesian form. We may wish to write the rectangular equation in the hyperbola’s standard form. To do this, we can start with the initial equation.\n\n\\(\\begin{array}{ll} x^2+y^2={(3+2x)}^2 \\\\ x^2+y^2−{(3+2x)}^2=0 \\\\ x^2+y^2−(9+12x+4x^2)=0 \\\\ x^2+y^2−9−12x−4x^2=0 \\\\ −3x^2−12x+y^2=9 & \\text{Multiply through by }−1. \\\\ 3x^2+12x−y^2=−9 \\\\ 3(x^2+4x)−y2=−9 & \\text{Organize terms to complete the square for }x. \\\\ 3(x^2+4x+4)−y^2=−9+12 \\\\ 3{(x+2)}^2−y^2=3 \\\\ {(x+2)}^2−\\dfrac{y^2}{3}=1\\end{array}\\)",
+      "prompt": "Example \\(\\PageIndex{6B}\\): Rewriting a Polar Equation in Cartesian Form\n\nRewrite the polar equation \\(r=\\dfrac{3}{1−2 \\cos \\theta}\\) as a Cartesian equation.\n\nSolution\n\nThe goal is to eliminate \\(\\theta\\) and \\(r\\),and introduce \\(x\\) and \\(y\\). We clear the fraction, and then use substitution. In order to replace \\(r\\) with \\(x\\) and \\(y\\), we must use the expression \\(x^2+y^2=r^2\\).\n\n\\(\\begin{array} r =\\dfrac{3}{1−2 \\cos \\theta} \\\\ r(1−2 \\cos \\theta)=3 \\\\ r\\left(1−2\\left(\\dfrac{x}{r}\\right)\\right)=3 & \\text{Use }\\cos \\theta=\\dfrac{x}{r} \\text{ to eliminate }\\theta. \\\\ r−2x=3 \\\\ r=3+2x & \\text{Isolate }r. \\\\ r^2={(3+2x)}^2 & \\text{Square both sides.} \\\\ x^2+y^2={(3+2x)}^2 & \\text{Use }x^2+y^2=r^2. \\end{array}\\)\n\nThe Cartesian equation is \\(x^2+y^2={(3+2x)}^2\\). However, to graph it, especially using a graphing calculator or computer program, we want to isolate \\(y\\).\n\n\\[\\begin{align*} x^2+y^2 &= {(3+2x)}^2 \\\\ y^2 &= {(3+2x)}^2-x^2 \\\\ y &= \\pm {(3+2x)}^2-x^2 \\end{align*}\\]\n\nWhen our entire equation has been changed from \\(r\\) and \\(\\theta\\) to \\(x\\) and \\(y\\), we can stop, unless asked to solve for \\(y\\) or simplify. See Figure \\(\\PageIndex{15}\\).\n\n[Figure: Plots of the equations stated above - the plots are the same in both rectangular and polar coordinates. They are hyperbolas.]\n\nFigure \\(\\PageIndex{15}\\)\n\nThe “hour-glass” shape of the graph is called a hyperbola. Hyperbolas have many interesting geometric features and applications, which we will investigate further in Analytic Geometry.\n\nAnalysis\n\nIn this example, the right side of the equation can be expanded and the equation simplified further, as shown above. However, the equation cannot be written as a single function in Cartesian form. We may wish to write the rectangular equation in the hyperbola’s standard form. To do this, we can start with the initial equation.\n\n\\(\\begin{array}{ll} x^2+y^2={(3+2x)}^2 \\\\ x^2+y^2−{(3+2x)}^2=0 \\\\ x^2+y^2−(9+12x+4x^2)=0 \\\\ x^2+y^2−9−12x−4x^2=0 \\\\ −3x^2−12x+y^2=9 & \\text{Multiply through by }−1. \\\\ 3x^2+12x−y^2=−9 \\\\ 3(x^2+4x)−y2=−9 & \\text{Organize terms to complete the square for }x. \\\\ 3(x^2+4x+4)−y^2=−9+12 \\\\ 3{(x+2)}^2−y^2=3 \\\\ {(x+2)}^2−\\dfrac{y^2}{3}=1\\end{array}\\)",
+      "sourceAnswers": [],
+      "hasFigure": true,
+      "status": "draft",
+      "answerVerified": false,
+      "translationStatus": "pending",
+      "mappingStatus": "pending"
+    },
+    {
+      "ordinal": 23,
+      "sourceNumber": "",
+      "sourceAnchor": "",
+      "kind": "exercise-candidate",
+      "context": "Identify and Graph Polar Equations by Converting to Rectangular Equations\n\nWe have learned how to convert rectangular coordinates to polar coordinates, and we have seen that the points are indeed the same. We have also transformed polar equations to rectangular equations and vice versa. Now we will demonstrate that their graphs, while drawn on different grids, are identical.",
+      "original": "Exercise \\(\\PageIndex{5}\\)\n\nRewrite the polar equation \\(r=2 \\sin \\theta\\) in Cartesian form.\n\nAnswer\n\n\\(x^2+y^2=2y\\) or, in the standard form for a circle, \\(x^2+{(y−1)}^2=1\\)",
+      "prompt": "Exercise \\(\\PageIndex{5}\\)\n\nRewrite the polar equation \\(r=2 \\sin \\theta\\) in Cartesian form.",
+      "sourceAnswers": [
+        "\\(x^2+y^2=2y\\) or, in the standard form for a circle, \\(x^2+{(y−1)}^2=1\\)"
+      ],
+      "hasFigure": false,
+      "status": "draft",
+      "answerVerified": false,
+      "translationStatus": "pending",
+      "mappingStatus": "pending"
+    },
+    {
+      "ordinal": 24,
+      "sourceNumber": "",
+      "sourceAnchor": "",
+      "kind": "example-or-exercise",
+      "context": "Identify and Graph Polar Equations by Converting to Rectangular Equations\n\nWe have learned how to convert rectangular coordinates to polar coordinates, and we have seen that the points are indeed the same. We have also transformed polar equations to rectangular equations and vice versa. Now we will demonstrate that their graphs, while drawn on different grids, are identical.",
+      "original": "Example \\(\\PageIndex{7}\\): Rewriting a Polar Equation in Cartesian Form\n\nRewrite the polar equation \\(r=\\sin(2\\theta)\\) in Cartesian form.\n\nSolution\n\n\\(\\begin{array}{cl} r=\\sin(2\\theta) & \\text{Use the double angle identity for sine.} \\\\ r=2 \\sin \\theta \\cos \\theta & \\text{Use }\\cos \\theta=\\dfrac{x}{r} \\text{ and } \\sin \\theta=\\dfrac{y}{r}. \\\\ r=2 \\dfrac{x}{r})(\\dfrac{y}{r}) & \\text{ Simplify.} \\\\ r=\\dfrac{2xy}{r^2} & \\text{Multiply both sides by }r^2. \\\\ r^3=2xy \\\\ {(x^2+y^2)}^3=2xy & \\text{As }x^2+y^2=r^2, r=\\sqrt{x^2+y^2}. \\end{array}\\)\n\nThis equation can also be written as\n\n\\({(x^2+y^2)}^{\\frac{3}{2}}=2xy \\text{ or }x^2+y^2={(2xy)}^{\\frac{2}{3}}\\)",
+      "prompt": "Example \\(\\PageIndex{7}\\): Rewriting a Polar Equation in Cartesian Form\n\nRewrite the polar equation \\(r=\\sin(2\\theta)\\) in Cartesian form.\n\nSolution\n\n\\(\\begin{array}{cl} r=\\sin(2\\theta) & \\text{Use the double angle identity for sine.} \\\\ r=2 \\sin \\theta \\cos \\theta & \\text{Use }\\cos \\theta=\\dfrac{x}{r} \\text{ and } \\sin \\theta=\\dfrac{y}{r}. \\\\ r=2 \\dfrac{x}{r})(\\dfrac{y}{r}) & \\text{ Simplify.} \\\\ r=\\dfrac{2xy}{r^2} & \\text{Multiply both sides by }r^2. \\\\ r^3=2xy \\\\ {(x^2+y^2)}^3=2xy & \\text{As }x^2+y^2=r^2, r=\\sqrt{x^2+y^2}. \\end{array}\\)\n\nThis equation can also be written as\n\n\\({(x^2+y^2)}^{\\frac{3}{2}}=2xy \\text{ or }x^2+y^2={(2xy)}^{\\frac{2}{3}}\\)",
+      "sourceAnswers": [],
+      "hasFigure": false,
+      "status": "draft",
+      "answerVerified": false,
+      "translationStatus": "pending",
+      "mappingStatus": "pending"
+    }
+  ],
+  "license": "CC BY 4.0",
+  "licenseEvidence": "This page titled 10.3: Polar Coordinates was last modified on Sun, 27 Apr 2025 18:27:21 GMT and is shared under a CC BY  4.0  license and was authored, remixed, and/or curated by OpenStax via source content that was edited to the style and standards of the LibreTexts platform.",
+  "url": "https://math.libretexts.org/Bookshelves/Algebra/Algebra_and_Trigonometry_1e_(OpenStax)/10:_Further_Applications_of_Trigonometry/10.03:_Polar_Coordinates",
+  "sha256": "d627fb18a0aa6874137ef82567e31004e22ac96b9c1c684692064ba8a6946eeb",
+  "checkedAt": "2026-10-07",
+  "id": "0bb635a0ff1d8ea738e1",
+  "bookId": "algebra-trigonometry",
+  "licenseInherited": false,
+  "licenseSource": "https://math.libretexts.org/Bookshelves/Algebra/Algebra_and_Trigonometry_1e_(OpenStax)/10:_Further_Applications_of_Trigonometry/10.03:_Polar_Coordinates",
+  "licenseUrl": "https://creativecommons.org/licenses/by/4.0/",
+  "authors": "OpenStax / Jay Abramson et al.",
+  "book": "Algebra and Trigonometry 1e",
+  "reviewStatus": "unreviewed",
+  "sourceLanguage": "en",
+  "translationStatus": "pending"
+}

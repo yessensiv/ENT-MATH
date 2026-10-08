@@ -1,0 +1,457 @@
+{
+  "title": "5.4: Dividing Polynomials",
+  "originalText": "Learning Objectives\n\nUse long division to divide polynomials.\n\nUse synthetic division to divide polynomials.\n\nThe exterior of the Lincoln Memorial in Washington, D.C., is a large rectangular solid with length \\(61.5\\) meters (m), width \\(40\\) m, and height \\(30\\) m.\\(^1\\)\n\nWe can easily find the volume using elementary geometry.\n\n\\[\\begin{align*} V&=l \\; {\\cdot} \\; w \\; {\\cdot} \\; h \\\\ &=61.5 \\; {\\cdot} \\; 40 \\; {\\cdot} \\; 30 \\\\ &=73,800 \\end{align*}\\]\n\nSo the volume is \\(73,800\\) cubic meters (\\(m^3\\)).\n\n[Figure: alt]\n\nFigure \\(\\PageIndex{1}\\): Lincoln Memorial, Washington, D.C. (credit: Ron Cogswell, Flickr)\n\nSuppose we knew the volume, length, and width. We could divide to find the height.\n\n\\[\\begin{align*} h&=\\dfrac{V}{l{\\cdot}w} \\\\&=\\dfrac{73,800}{61.5{\\cdot}40} \\\\ &=30 \\end{align*}\\]\n\nAs we can confirm from the dimensions above, the height is 30 m. We can use similar methods to find any of the missing dimensions. We can also use the same method if any or all of the measurements contain variable expressions. For example, suppose the volume of a rectangular solid is given by the polynomial \\(3x^4−3x^3−33x^2+54x\\). The length of the solid is given by \\(3x\\); the width is given by \\(x−2\\).\n\nTo find the height of the solid, we can use polynomial division, which is the focus of this section.\n\nUsing Long Division to Divide Polynomials\n\nWe are familiar with the long division algorithm for ordinary arithmetic. We begin by dividing into the digits of the dividend that have the greatest place value. We divide, multiply, subtract, include the digit in the next place value position, and repeat. For example, let’s divide 178 by 3 using long division.\n\n[Figure: alt]\n\nAnother way to look at the solution is as a sum of parts. This should look familiar, since it is the same method used to check division in elementary arithmetic.\n\n\\[\\begin{align*} \\text{dividend}&=(\\text{divisor}{\\cdot}\\text{quotient})+\\text{remainder} \\\\ 178&=(3{\\cdot}59)+1 \\\\ &=177+1 \\\\ &=178\\end{align*}\\]\n\nWe call this the Division Algorithm and will discuss it more formally after looking at an example.\n\nDivision of polynomials that contain more than one term has similarities to long division of whole numbers. We can write a polynomial dividend as the product of the divisor and the quotient added to the remainder. The terms of the polynomial division correspond to the digits (and place values) of the whole number division. This method allows us to divide two polynomials. For example, if we were to divide \\(2x^3−3x^2+4x+5\\) by \\(x+2\\) using the long division algorithm, it would look like this:\n\n\\[\\require{enclose}\\begin{array} {rll} \\large x+2\\enclose{longdiv}{ 2x^3-3x^2+4x+5\\phantom{0}} & \\qquad &\\large\\text{Set up the division problem.}\\\\[8pt]\n\n\\large 2x^2 \\hspace{5.45em} & \\qquad & \\large2x^3\\text{ divided by }x\\text{ is }2x^2.\\\\[-3pt]\n\n\\large x+2\\enclose{longdiv}{ 2x^3-3x^2+4x+5\\phantom{0}} & \\qquad &\\\\[8pt]\n\n\\large 2x^2 \\hspace{5.45em} & \\qquad & \\\\[-3pt]\n\n\\large x+2\\enclose{longdiv}{ 2x^3-3x^2+4x+5\\phantom{0}} & \\qquad &\\\\[-3pt]\n\n\\large \\underline{-\\left( 2x^3 + 4x^2 \\right)} \\hspace{4.9em} & \\qquad & \\large\\text{Multiply }x+2\\text{ by }2x^2\\text{ and subtract.}\\\\[-3pt]\n\n\\large -7x^2+4x \\hspace{2.8em} & \\qquad & \\large\\text{Bring down the next term.} \\\\[8pt]\n\n\\large 2x^2 - 7x\\hspace{2.85em} & \\qquad & \\large -7x^2\\text{ divided by }x\\text{ is }-7x.\\\\[-3pt]\n\n\\large x+2\\enclose{longdiv}{ 2x^3-3x^2+4x+5\\phantom{0}} & \\qquad &\\\\[-3pt]\n\n\\large \\underline{-\\left( 2x^3 + 4x^2 \\right)} \\hspace{4.9em} & \\qquad & \\\\[-3pt]\n\n\\large -7x^2+4x \\hspace{2.8em} & \\qquad & \\\\[-3pt]\n\n\\large \\underline{-\\left( -7x^2 - 14x \\right)} \\hspace{2.0em} & \\qquad & \\large\\text{Multiply }x+2\\text{ by }-7x.\\\\[-3pt]\n\n\\large 18x+5 \\phantom{0} & \\qquad & \\large\\text{Subtract and bring down the next term.} \\\\[8pt]\n\n\\large 2x^2 - 7x+18 & \\qquad & \\large 18x\\text{ divided by }x\\text{ is }18.\\\\[-3pt]\n\n\\large x+2\\enclose{longdiv}{ 2x^3-3x^2+4x+5\\phantom{0}} & \\qquad &\\\\[-3pt]\n\n\\large \\underline{-\\left( 2x^3 + 4x^2 \\right)} \\hspace{4.9em} & \\qquad & \\\\[-3pt]\n\n\\large -7x^2+4x \\hspace{2.8em} & \\qquad & \\\\[-3pt]\n\n\\large \\underline{-\\left( -7x^2 - 14x \\right)} \\hspace{2.0em} & \\qquad & \\\\[-3pt]\n\n\\large 18x+\\phantom{0}5  & \\qquad &  \\\\[-3pt]\n\n\\large \\underline{-\\left( 18x + 36 \\right)} \\hspace{-0.45em} & \\qquad & \\large\\text{Multiply }x+2\\text{ by }18.\\\\[-3pt]\n\n\\large -31 & \\qquad & \\large\\text{Subtract.} \\\\[8pt]\n\n\\end{array} \\nonumber\\]\n\nWe have found\n\n\\[\\dfrac{2x^3−3x^2+4x+5}{x+2}=2x^2−7x+18−\\dfrac{31}{x+2} \\nonumber\\]\n\nor\n\n\\[ 2x^3−3x^2+4x+5=(x+2)(2x^2−7x+18)−31 \\nonumber\\]\n\nWe can identify the dividend, the divisor, the quotient, and the remainder.\n\nWriting the result in this manner illustrates the Division Algorithm.\n\nThe Division Algorithm\n\nThe Division Algorithm states that, given a polynomial dividend \\(f(x)\\) and a non-zero polynomial divisor \\(d(x)\\) where the degree of \\(d(x)\\) is less than or equal to the degree of \\(f(x)\\), there exist unique polynomials \\(q(x)\\) and \\(r(x)\\) such that\n\n\\[f(x)=d(x)q(x)+r(x)\\]\n\n\\(q(x)\\) is the quotient and \\(r(x)\\) is the remainder. The remainder is either equal to zero or has degree strictly less than \\(d(x)\\).\n\nIf \\(r(x)=0\\), then \\(d(x)\\) divides evenly into \\(f(x)\\). This means that, in this case, both \\(d(x)\\) and \\(q(x)\\) are factors of \\(f(x)\\).\n\nGiven a polynomial and a binomial, use long division to divide the polynomial by the binomial\n\n1. Set up the division problem.\n\n2. Determine the first term of the quotient by dividing the leading term of the dividend by the leading term of the divisor.\n\n3. Multiply the answer by the divisor and write it below the like terms of the dividend.\n\n4. Subtract the bottom binomial from the top binomial.\n\n5. Bring down the next term of the dividend.\n\n6. Repeat steps 2–5 until reaching the last term of the dividend.\n\n7. If the remainder is non-zero, express as a fraction using the divisor as the denominator.\n\nExample \\(\\PageIndex{1}\\): Using Long Division to Divide a Second-Degree Polynomial\n\nDivide \\(5x^2+3x−2\\) by \\(x+1\\).\n\nSolution\n\n[Figure: alt]\n\nThe quotient is \\(5x−2\\). The remainder is 0. We write the result as\n\n\\[\\dfrac{5x^2+3x−2}{x+1}=5x−2 \\nonumber\\]\n\nor\n\n\\[5x^2+3x−2=(x+1)(5x−2) \\nonumber\\]\n\nAnalysis\n\nThis division problem had a remainder of 0. This tells us that the dividend is divided evenly by the divisor, and that the divisor is a factor of the dividend.\n\nExample \\(\\PageIndex{2}\\): Using Long Division to Divide a Third-Degree Polynomial\n\nDivide \\(6x^3+11x^2−31x+15\\) by \\(3x−2\\).\n\nSolution\n\n\\[\\require{enclose}\\begin{array} {rll}\n\n\\large 2x^2 + \\phantom{0}5x-\\phantom{0}7 & \\qquad & \\large 6x^3\\text{ divided by }3x\\text{ is }2x^2.\\\\[-3pt]\n\n\\large 3x-2\\enclose{longdiv}{ 6x^3+11x^2-31x+15} & \\qquad &\\\\[-3pt]\n\n\\large \\underline{-\\left( 6x^3 - 4x^2 \\right)} \\hspace{5.8em} & \\qquad & \\large\\text{Multiply }3x-2\\text{ by }2x^2. \\\\[-3pt]\n\n\\large 15x^2-31x \\hspace{3.0em} & \\qquad & \\large\\text{Subtract. Bring down next term. }15x^2\\text{ divided by }3x\\text{ is }5x. \\\\[-3pt]\n\n\\large \\underline{-\\left( 15x^2 - 10x \\right)} \\hspace{2.5em} & \\qquad & \\large\\text{Multiply }3x-2\\text{ by }5x. \\\\[-3pt]\n\n\\large -21x+15  \\hspace{0.5em}& \\qquad & \\large\\text{Subtract. Bring down next term. }-21x\\text{ divided by }3x\\text{ is }-7. \\\\[-3pt]\n\n\\large \\underline{-\\left( -21x + 14 \\right)} \\hspace{0.1em} & \\qquad & \\large\\text{Multiply }3x-2\\text{ by }-7.\\\\[-3pt]\n\n\\large 1 \\hspace{0.5em}& \\qquad & \\large\\text{Subtract. The remainder is 1.} \\\\[8pt]\n\n\\end{array} \\nonumber\\]\n\nThere is a remainder of 1. We can express the result as:\n\n\\[\\dfrac{6x^3+11x^2−31x+15}{3x−2}=2x^2+5x−7+\\dfrac{1}{3x−2} \\nonumber\\]\n\nAnalysis\n\nWe can check our work by using the Division Algorithm to rewrite the solution. Then multiply.\n\n\\[(3x−2)(2x^2+5x−7)+1=6x^3+11x^2−31x+15 \\nonumber\\]\n\nNotice, as we write our result,\n\nthe dividend is \\(6x^3+11x^2−31x+15\\)\n\nthe divisor is \\(3x−2\\)\n\nthe quotient is \\(2x^2+5x−7\\)\n\nthe remainder is \\(1\\)\n\nTry It! \\(\\PageIndex{2}\\)\n\nDivide \\(16x^3−12x^2+20x−3\\) by \\(4x+5\\).\n\nSolution\n\n\\(4x^2−8x+15−\\dfrac{78}{4x+5}\\)\n\nUsing Synthetic Division to Divide Polynomials\n\nAs we’ve seen, long division of polynomials can involve many steps and be quite cumbersome. Synthetic division is a shorthand method of dividing polynomials for the special case of dividing by a linear factor whose leading coefficient is \\(1.\\)\n\nTo illustrate the process, recall the example at the beginning of the section.\n\nDivide \\(2x^3−3x^2+4x+5\\) by \\(x+2\\) using the long division algorithm.\n\nThe final form of the process looked like this:\n\n\\[\\require{enclose}\\begin{array} {rl} \\large 2x^2 - 7x+18 & \\\\[-3pt]\n\n\\large x+2\\enclose{longdiv}{ 2x^3-3x^2+4x+5\\phantom{0}} & \\\\[-3pt]\n\n\\large \\underline{-\\left( 2x^3 + 4x^2 \\right)} \\hspace{4.9em} & \\\\[-3pt]\n\n\\large -7x^2+4x \\hspace{2.8em} & \\\\[-3pt]\n\n\\large \\underline{-\\left( -7x^2 - 14x \\right)} \\hspace{2.0em} &\\\\[-3pt]\n\n\\large 18x+\\phantom{0}5  & \\\\[-3pt]\n\n\\large \\underline{-\\left( 18x + 36 \\right)} \\hspace{-0.45em} & \\\\[-3pt]\n\n\\large -31 & \\\\[8pt]\n\n\\end{array} \\nonumber\\]\n\nThere is a lot of repetition in the table. If we don’t write the variables but, instead, line up their coefficients in columns under the division sign and also eliminate the partial products, we already have a simpler version of the entire problem.\n\n[Figure: alt]\n\nSynthetic division carries this simplification even a few more steps. Collapse the table by moving each of the rows up to fill any vacant spots. Also, instead of dividing by 2, as we would in division of whole numbers, then multiplying and subtracting the middle product, we change the sign of the “divisor” to –2, multiply and add. The process starts by bringing down the leading coefficient.\n\n[Figure: alt]\n\nWe then multiply it by the “divisor” and add, repeating this process column by column, until there are no entries left. The bottom row represents the coefficients of the quotient; the last entry of the bottom row is the remainder. In this case, the quotient is \\(2x^2–7x+18\\) and the remainder is \\(–31.\\) The process will be made more clear in Example \\(\\PageIndex{3}\\).\n\nSynthetic Division\n\nSynthetic division is a shortcut that can be used when the divisor is a binomial in the form \\(x−k\\). In synthetic division, only the coefficients are used in the division process.\n\nGiven two polynomials, use synthetic division to divide\n\n1. Write \\(k\\) for the divisor.\n\n2. Write the coefficients of the dividend.\n\n3. Bring the lead coefficient down.\n\n4. Multiply the lead coefficient by \\(k\\). Write the product in the next column.\n\n5. Add the terms of the second column.\n\n6. Multiply the result by \\(k\\). Write the product in the next column.\n\n7. Repeat steps 5 and 6 for the remaining columns.\n\n8. Use the bottom numbers to write the quotient. The number in the last column is the remainder and has degree 0, the next number from the right has degree 1, the next number from the right has degree 2, and so on.\n\nExample \\(\\PageIndex{3}\\): Using Synthetic Division to Divide a Second-Degree Polynomial\n\nUse synthetic division to divide \\(5x^2−3x−36\\) by \\(x−3\\).\n\nSolution\n\nBegin by setting up the synthetic division. Write \\(k\\) and the coefficients.\n\n[Figure: alt]\n\nBring down the lead coefficient. Multiply the lead coefficient by \\(k\\).\n\n[Figure: alt]\n\nContinue by adding the numbers in the second column. Multiply the resulting number by \\(k\\).Write the result in the next column. Then add the numbers in the third column.\n\n[Figure: alt]\n\nThe result is \\(5x+12\\). The remainder is 0. So \\(x−3\\) is a factor of the original polynomial.\n\nAnalysis\n\nJust as with long division, we can check our work by multiplying the quotient by the divisor and adding the remainder.\n\n\\[(x−3)(5x+12)+0=5x^2−3x−36 \\nonumber\\]\n\nExample \\(\\PageIndex{4}\\): Using Synthetic Division to Divide a Third-Degree Polynomial\n\nUse synthetic division to divide \\(4x^3+10x^2−6x−20\\) by \\(x+2\\).\n\nSolution\n\nThe binomial divisor is \\(x+2\\) so \\(k=−2\\). Add each column, multiply the result by –2, and repeat until the last column is reached.\n\n\\[ \\large{\\begin{array}{c}-2\\\\ \\\\ \\\\\n\n\\end{array}}\n\n{\\begin{align*}&\\\\[0pt]\n\n&{\\begin{array}{r|}\\\\[0pt]\n\n \\\\[0pt] \\end{array}}\\\\[1pt]\n\n & \\\\[2pt]& \\end{align*}}\\!\\!\n\n{\\begin{array}{rrrr}\n\n4 & 10 & -6 & -20 \\\\\n\n& -8  & -4 & 20 \\\\\n\n\\hline 4 & 2 & -10 & 0\n\n\\end{array}}\n\n\\nonumber\\]\n\nThe result is \\(4x^2+2x−10\\).\n\nThe remainder is 0. Thus, \\(x+2\\) is a factor of \\(4x^3+10x^2−6x−20\\).\n\nAnalysis\n\nThe graph of the polynomial function \\(f(x)=4x^3+10x^2−6x−20\\) in Figure \\(\\PageIndex{2}\\) shows a zero at \\(x=k=−2\\). This confirms that \\(x+2\\) is a factor of \\(4x^3+10x^2−6x−20\\).\n\n[Figure: alt]\n\nFigure \\(\\PageIndex{2}\\)\n\nExample \\(\\PageIndex{5}\\): Using Synthetic Division to Divide a Fourth-Degree Polynomial\n\nUse synthetic division to divide \\(−9x^4+10x^3+7x^2−6\\) by \\(x−1\\).\n\nSolution\n\nNotice there is no \\(x\\)-term. We will use a zero as the coefficient for that term.\n\n\\[ \\large{\\begin{array}{c}1\\\\ \\\\ \\\\\n\n\\end{array}}\n\n{\\begin{align*}&\\\\[0pt]\n\n&{\\begin{array}{r|}\\\\[0pt]\n\n \\\\[0pt] \\end{array}}\\\\[1pt]\n\n & \\\\[2pt]& \\end{align*}}\\!\\!\n\n{\\begin{array}{rrrrr}\n\n-9 & 10 & 7 & 0 &-6\\\\\n\n& -9 & 1 & 8 & 8 \\\\\n\n\\hline -9 & 1& 8 & 8 & 2\n\n\\end{array}}\n\n\\nonumber\\]\n\nThe result is \\(−9x^3+x^2+8x+8+\\dfrac{2}{x−1}\\).\n\nTry It! \\(\\PageIndex{3}\\)\n\nUse synthetic division to divide \\(3x^4+18x^3−3x+40\\) by \\(x+7\\).\n\nSolution\n\n\\(3x^3−3x^2+21x−150+\\dfrac{1090}{x+7}\\)\n\nUsing Polynomial Division to Solve Application Problems\n\nPolynomial division can be used to solve a variety of application problems involving expressions for area and volume. We looked at an application at the beginning of this section. Now we will solve that problem in the following example.\n\nExample \\(\\PageIndex{6}\\): Using Polynomial Division in an Application Problem\n\nThe volume of a rectangular solid is given by the polynomial \\(3x^4−3x^3−33x^2+54x\\). The length of the solid is given by \\(3x\\) and the width is given by \\(x−2\\). Find the height \\(h\\) of the solid.\n\nSolution\n\nThere are a few ways to approach this problem. We need to divide the expression for the volume of the solid by the expressions for the length and width. Let us create a sketch as in Figure \\(\\PageIndex{3}\\).  Let \\(h\\) equal the height of the box.\n\n[Figure: alt]\n\nFigure \\(\\PageIndex{3}\\)\n\nWe can now write an equation by substituting the known values into the formula for the volume of a rectangular solid.\n\n\\[\\begin{align*} V&=l{\\cdot}w{\\cdot}h \\\\ 3x^4−3x^3−33x^2+54x&=3x{\\cdot}(x−2){\\cdot}h \\end{align*}\\]\n\nTo solve for \\(h\\), first divide both sides by \\(3x\\).\n\n\\[\\dfrac{3x{\\cdot}(x−2){\\cdot}h}{3x}=\\dfrac{3x^4−3x^3−33x^2+54x}{3x} \\nonumber\\]\n\n\\[(x-2)h=\\dfrac{x^3-x^2-11x+18}{x-2} \\nonumber\\]\n\nNow solve for \\(h\\) using synthetic division.\n\n\\[h=\\dfrac{x^3−x^2−11x+18}{x−2} \\nonumber\\]\n\n\\[ \\large{\\begin{array}{c}2\\\\ \\\\ \\\\\n\n\\end{array}}\n\n{\\begin{align*}&\\\\[0pt]\n\n&{\\begin{array}{r|}\\\\[0pt]\n\n \\\\[0pt] \\end{array}}\\\\[1pt]\n\n & \\\\[2pt]& \\end{align*}}\\!\\!\n\n{\\begin{array}{rrrr}\n\n1 & -1 & -11 & 18 \\\\\n\n& 2 & 2 & -18 \\\\\n\n\\hline 1 & 1 & -9 & 0\n\n\\end{array}}\n\n\\nonumber\\]\n\nThe quotient is \\(x^2+x−9\\) and the remainder is \\(0.\\) The height of the solid is \\(x^2+x−9\\).\n\nTry It! \\(\\PageIndex{4}\\)\n\nThe area of a rectangle is given by \\(3x^3+14x^2−23x+6\\). The width of the rectangle is given by \\(x+6\\). Find an expression for the length of the rectangle.\n\nSolution\n\n\\(3x^2−4x+1\\)\n\nKey Equations\n\nDivision Algorithm \\(f(x)=d(x)q(x)+r(x)\\) where \\(q(x){\\neq}0\\)\n\nKey Concepts\n\nPolynomial long division can be used to divide a polynomial by any polynomial with equal or lower degree.\n\nThe Division Algorithm tells us that a polynomial dividend can be written as the product of the divisor and the quotient added to the remainder.\n\nSynthetic division is a shortcut that can be used to divide a polynomial by a binomial in the form \\(x−k.\\)\n\nPolynomial division can be used to solve application problems, including area and volume.\n\nFootnotes\n\n\\(^1\\) National Park Service. \"Lincoln Memorial Building Statistics.\" www.nps.gov/linc/historycultu...statistics.htm. Accessed 4/3/2014\n\nGlossary\n\nDivision Algorithm\n\ngiven a polynomial dividend \\(f(x)\\) and a non-zero polynomial divisor \\(d(x)\\) where the degree of \\(d(x)\\) is less than or equal to the degree of \\(f(x)\\), there exist unique polynomials \\(q(x)\\) and \\(r(x)\\) such that \\(f(x)=d(x)q(x)+r(x)\\) where \\(q(x)\\) is the quotient and \\(r(x)\\) is the remainder. The remainder is either equal to zero or has degree strictly less than \\(d(x)\\).\n\nsynthetic division\n\na shortcut method that can be used to divide a polynomial by a binomial of the form \\(x−k\\)\n\nThis page titled 5.4: Dividing Polynomials was last modified on Thu, 26 Dec 2024 22:30:43 GMT and is shared under a CC BY  4.0  license and was authored, remixed, and/or curated by OpenStax via source content that was edited to the style and standards of the LibreTexts platform.",
+  "figures": [
+    {
+      "url": "https://math.libretexts.org/@api/deki/files/1339/CNX_Precalc_Figure_03_05_001.jpg?revision=1",
+      "alt": "alt",
+      "credit": ""
+    },
+    {
+      "url": "https://math.libretexts.org/@api/deki/files/1340/CNX_Precalc_Figure_03_05_002.jpg?revision=1",
+      "alt": "alt",
+      "credit": ""
+    },
+    {
+      "url": "https://math.libretexts.org/@api/deki/files/1343/CNX_Precalc_revised_eq_2.png?revision=2",
+      "alt": "alt",
+      "credit": ""
+    },
+    {
+      "url": "https://math.libretexts.org/@api/deki/files/1346/CNX_Precalc_Figure_03_05_004.jpg?revision=1",
+      "alt": "alt",
+      "credit": ""
+    },
+    {
+      "url": "https://math.libretexts.org/@api/deki/files/1355/CNX_Precalc_Figure_03_05_011.jpg?revision=1",
+      "alt": "alt",
+      "credit": ""
+    },
+    {
+      "url": "https://math.libretexts.org/@api/deki/files/1349/CNX_Precalc_Figure_03_05_005.jpg?revision=1",
+      "alt": "alt",
+      "credit": ""
+    },
+    {
+      "url": "https://math.libretexts.org/@api/deki/files/1348/CNX_Precalc_Figure_03_05_006.jpg?revision=1",
+      "alt": "alt",
+      "credit": ""
+    },
+    {
+      "url": "https://math.libretexts.org/@api/deki/files/1350/CNX_Precalc_Figure_03_05_007.jpg?revision=1",
+      "alt": "alt",
+      "credit": ""
+    },
+    {
+      "url": "https://math.libretexts.org/@api/deki/files/1351/CNX_Precalc_Figure_03_05_009.jpg?revision=1",
+      "alt": "alt",
+      "credit": ""
+    },
+    {
+      "url": "https://math.libretexts.org/@api/deki/files/1353/CNX_Precalc_Figure_03_05_010.jpg?revision=1",
+      "alt": "alt",
+      "credit": ""
+    }
+  ],
+  "references": [
+    {
+      "text": "5.4: Dividing Polynomials",
+      "url": "https://math.libretexts.org/Bookshelves/Algebra/Algebra_and_Trigonometry_1e_(OpenStax)/05%3A_Polynomial_and_Rational_Functions/5.04%3A_Dividing_Polynomials"
+    },
+    {
+      "text": "CC BY  4.0",
+      "url": "https://creativecommons.org/licenses/by/4.0"
+    },
+    {
+      "text": "OpenStax",
+      "url": "https://openstax.org/"
+    },
+    {
+      "text": "source content",
+      "url": "https://openstax.org/details/books/precalculus"
+    }
+  ],
+  "exercises": [
+    {
+      "ordinal": 1,
+      "sourceNumber": "1",
+      "sourceAnchor": "",
+      "kind": "exercise-candidate",
+      "context": "\\(q(x)\\) is the quotient and \\(r(x)\\) is the remainder. The remainder is either equal to zero or has degree strictly less than \\(d(x)\\).\n\nIf \\(r(x)=0\\), then \\(d(x)\\) divides evenly into \\(f(x)\\). This means that, in this case, both \\(d(x)\\) and \\(q(x)\\) are factors of \\(f(x)\\).\n\nGiven a polynomial and a binomial, use long division to divide the polynomial by the binomial",
+      "original": "1. Set up the division problem.",
+      "prompt": "1. Set up the division problem.",
+      "sourceAnswers": [],
+      "hasFigure": false,
+      "status": "draft",
+      "answerVerified": false,
+      "translationStatus": "pending",
+      "mappingStatus": "pending"
+    },
+    {
+      "ordinal": 2,
+      "sourceNumber": "2",
+      "sourceAnchor": "",
+      "kind": "exercise-candidate",
+      "context": "\\(q(x)\\) is the quotient and \\(r(x)\\) is the remainder. The remainder is either equal to zero or has degree strictly less than \\(d(x)\\).\n\nIf \\(r(x)=0\\), then \\(d(x)\\) divides evenly into \\(f(x)\\). This means that, in this case, both \\(d(x)\\) and \\(q(x)\\) are factors of \\(f(x)\\).\n\nGiven a polynomial and a binomial, use long division to divide the polynomial by the binomial",
+      "original": "2. Determine the first term of the quotient by dividing the leading term of the dividend by the leading term of the divisor.",
+      "prompt": "2. Determine the first term of the quotient by dividing the leading term of the dividend by the leading term of the divisor.",
+      "sourceAnswers": [],
+      "hasFigure": false,
+      "status": "draft",
+      "answerVerified": false,
+      "translationStatus": "pending",
+      "mappingStatus": "pending"
+    },
+    {
+      "ordinal": 3,
+      "sourceNumber": "3",
+      "sourceAnchor": "",
+      "kind": "exercise-candidate",
+      "context": "\\(q(x)\\) is the quotient and \\(r(x)\\) is the remainder. The remainder is either equal to zero or has degree strictly less than \\(d(x)\\).\n\nIf \\(r(x)=0\\), then \\(d(x)\\) divides evenly into \\(f(x)\\). This means that, in this case, both \\(d(x)\\) and \\(q(x)\\) are factors of \\(f(x)\\).\n\nGiven a polynomial and a binomial, use long division to divide the polynomial by the binomial",
+      "original": "3. Multiply the answer by the divisor and write it below the like terms of the dividend.",
+      "prompt": "3. Multiply the answer by the divisor and write it below the like terms of the dividend.",
+      "sourceAnswers": [],
+      "hasFigure": false,
+      "status": "draft",
+      "answerVerified": false,
+      "translationStatus": "pending",
+      "mappingStatus": "pending"
+    },
+    {
+      "ordinal": 4,
+      "sourceNumber": "4",
+      "sourceAnchor": "",
+      "kind": "exercise-candidate",
+      "context": "\\(q(x)\\) is the quotient and \\(r(x)\\) is the remainder. The remainder is either equal to zero or has degree strictly less than \\(d(x)\\).\n\nIf \\(r(x)=0\\), then \\(d(x)\\) divides evenly into \\(f(x)\\). This means that, in this case, both \\(d(x)\\) and \\(q(x)\\) are factors of \\(f(x)\\).\n\nGiven a polynomial and a binomial, use long division to divide the polynomial by the binomial",
+      "original": "4. Subtract the bottom binomial from the top binomial.",
+      "prompt": "4. Subtract the bottom binomial from the top binomial.",
+      "sourceAnswers": [],
+      "hasFigure": false,
+      "status": "draft",
+      "answerVerified": false,
+      "translationStatus": "pending",
+      "mappingStatus": "pending"
+    },
+    {
+      "ordinal": 5,
+      "sourceNumber": "5",
+      "sourceAnchor": "",
+      "kind": "exercise-candidate",
+      "context": "\\(q(x)\\) is the quotient and \\(r(x)\\) is the remainder. The remainder is either equal to zero or has degree strictly less than \\(d(x)\\).\n\nIf \\(r(x)=0\\), then \\(d(x)\\) divides evenly into \\(f(x)\\). This means that, in this case, both \\(d(x)\\) and \\(q(x)\\) are factors of \\(f(x)\\).\n\nGiven a polynomial and a binomial, use long division to divide the polynomial by the binomial",
+      "original": "5. Bring down the next term of the dividend.",
+      "prompt": "5. Bring down the next term of the dividend.",
+      "sourceAnswers": [],
+      "hasFigure": false,
+      "status": "draft",
+      "answerVerified": false,
+      "translationStatus": "pending",
+      "mappingStatus": "pending"
+    },
+    {
+      "ordinal": 6,
+      "sourceNumber": "6",
+      "sourceAnchor": "",
+      "kind": "exercise-candidate",
+      "context": "\\(q(x)\\) is the quotient and \\(r(x)\\) is the remainder. The remainder is either equal to zero or has degree strictly less than \\(d(x)\\).\n\nIf \\(r(x)=0\\), then \\(d(x)\\) divides evenly into \\(f(x)\\). This means that, in this case, both \\(d(x)\\) and \\(q(x)\\) are factors of \\(f(x)\\).\n\nGiven a polynomial and a binomial, use long division to divide the polynomial by the binomial",
+      "original": "6. Repeat steps 2–5 until reaching the last term of the dividend.",
+      "prompt": "6. Repeat steps 2–5 until reaching the last term of the dividend.",
+      "sourceAnswers": [],
+      "hasFigure": false,
+      "status": "draft",
+      "answerVerified": false,
+      "translationStatus": "pending",
+      "mappingStatus": "pending"
+    },
+    {
+      "ordinal": 7,
+      "sourceNumber": "7",
+      "sourceAnchor": "",
+      "kind": "exercise-candidate",
+      "context": "\\(q(x)\\) is the quotient and \\(r(x)\\) is the remainder. The remainder is either equal to zero or has degree strictly less than \\(d(x)\\).\n\nIf \\(r(x)=0\\), then \\(d(x)\\) divides evenly into \\(f(x)\\). This means that, in this case, both \\(d(x)\\) and \\(q(x)\\) are factors of \\(f(x)\\).\n\nGiven a polynomial and a binomial, use long division to divide the polynomial by the binomial",
+      "original": "7. If the remainder is non-zero, express as a fraction using the divisor as the denominator.",
+      "prompt": "7. If the remainder is non-zero, express as a fraction using the divisor as the denominator.",
+      "sourceAnswers": [],
+      "hasFigure": false,
+      "status": "draft",
+      "answerVerified": false,
+      "translationStatus": "pending",
+      "mappingStatus": "pending"
+    },
+    {
+      "ordinal": 8,
+      "sourceNumber": "",
+      "sourceAnchor": "",
+      "kind": "example-or-exercise",
+      "context": "\\(q(x)\\) is the quotient and \\(r(x)\\) is the remainder. The remainder is either equal to zero or has degree strictly less than \\(d(x)\\).\n\nIf \\(r(x)=0\\), then \\(d(x)\\) divides evenly into \\(f(x)\\). This means that, in this case, both \\(d(x)\\) and \\(q(x)\\) are factors of \\(f(x)\\).\n\nGiven a polynomial and a binomial, use long division to divide the polynomial by the binomial",
+      "original": "Example \\(\\PageIndex{1}\\): Using Long Division to Divide a Second-Degree Polynomial\n\nDivide \\(5x^2+3x−2\\) by \\(x+1\\).\n\nSolution\n\n[Figure: alt]\n\nThe quotient is \\(5x−2\\). The remainder is 0. We write the result as\n\n\\[\\dfrac{5x^2+3x−2}{x+1}=5x−2 \\nonumber\\]\n\nor\n\n\\[5x^2+3x−2=(x+1)(5x−2) \\nonumber\\]\n\nAnalysis\n\nThis division problem had a remainder of 0. This tells us that the dividend is divided evenly by the divisor, and that the divisor is a factor of the dividend.",
+      "prompt": "Example \\(\\PageIndex{1}\\): Using Long Division to Divide a Second-Degree Polynomial\n\nDivide \\(5x^2+3x−2\\) by \\(x+1\\).\n\nSolution\n\n[Figure: alt]\n\nThe quotient is \\(5x−2\\). The remainder is 0. We write the result as\n\n\\[\\dfrac{5x^2+3x−2}{x+1}=5x−2 \\nonumber\\]\n\nor\n\n\\[5x^2+3x−2=(x+1)(5x−2) \\nonumber\\]\n\nAnalysis\n\nThis division problem had a remainder of 0. This tells us that the dividend is divided evenly by the divisor, and that the divisor is a factor of the dividend.",
+      "sourceAnswers": [],
+      "hasFigure": true,
+      "status": "draft",
+      "answerVerified": false,
+      "translationStatus": "pending",
+      "mappingStatus": "pending"
+    },
+    {
+      "ordinal": 9,
+      "sourceNumber": "",
+      "sourceAnchor": "",
+      "kind": "example-or-exercise",
+      "context": "\\(q(x)\\) is the quotient and \\(r(x)\\) is the remainder. The remainder is either equal to zero or has degree strictly less than \\(d(x)\\).\n\nIf \\(r(x)=0\\), then \\(d(x)\\) divides evenly into \\(f(x)\\). This means that, in this case, both \\(d(x)\\) and \\(q(x)\\) are factors of \\(f(x)\\).\n\nGiven a polynomial and a binomial, use long division to divide the polynomial by the binomial",
+      "original": "Example \\(\\PageIndex{2}\\): Using Long Division to Divide a Third-Degree Polynomial\n\nDivide \\(6x^3+11x^2−31x+15\\) by \\(3x−2\\).\n\nSolution\n\n\\[\\require{enclose}\\begin{array} {rll}\n\n\\large 2x^2 + \\phantom{0}5x-\\phantom{0}7 & \\qquad & \\large 6x^3\\text{ divided by }3x\\text{ is }2x^2.\\\\[-3pt]\n\n\\large 3x-2\\enclose{longdiv}{ 6x^3+11x^2-31x+15} & \\qquad &\\\\[-3pt]\n\n\\large \\underline{-\\left( 6x^3 - 4x^2 \\right)} \\hspace{5.8em} & \\qquad & \\large\\text{Multiply }3x-2\\text{ by }2x^2. \\\\[-3pt]\n\n\\large 15x^2-31x \\hspace{3.0em} & \\qquad & \\large\\text{Subtract. Bring down next term. }15x^2\\text{ divided by }3x\\text{ is }5x. \\\\[-3pt]\n\n\\large \\underline{-\\left( 15x^2 - 10x \\right)} \\hspace{2.5em} & \\qquad & \\large\\text{Multiply }3x-2\\text{ by }5x. \\\\[-3pt]\n\n\\large -21x+15  \\hspace{0.5em}& \\qquad & \\large\\text{Subtract. Bring down next term. }-21x\\text{ divided by }3x\\text{ is }-7. \\\\[-3pt]\n\n\\large \\underline{-\\left( -21x + 14 \\right)} \\hspace{0.1em} & \\qquad & \\large\\text{Multiply }3x-2\\text{ by }-7.\\\\[-3pt]\n\n\\large 1 \\hspace{0.5em}& \\qquad & \\large\\text{Subtract. The remainder is 1.} \\\\[8pt]\n\n\\end{array} \\nonumber\\]\n\nThere is a remainder of 1. We can express the result as:\n\n\\[\\dfrac{6x^3+11x^2−31x+15}{3x−2}=2x^2+5x−7+\\dfrac{1}{3x−2} \\nonumber\\]\n\nAnalysis\n\nWe can check our work by using the Division Algorithm to rewrite the solution. Then multiply.\n\n\\[(3x−2)(2x^2+5x−7)+1=6x^3+11x^2−31x+15 \\nonumber\\]\n\nNotice, as we write our result,\n\nthe dividend is \\(6x^3+11x^2−31x+15\\)\n\nthe divisor is \\(3x−2\\)\n\nthe quotient is \\(2x^2+5x−7\\)\n\nthe remainder is \\(1\\)",
+      "prompt": "Example \\(\\PageIndex{2}\\): Using Long Division to Divide a Third-Degree Polynomial\n\nDivide \\(6x^3+11x^2−31x+15\\) by \\(3x−2\\).\n\nSolution\n\n\\[\\require{enclose}\\begin{array} {rll}\n\n\\large 2x^2 + \\phantom{0}5x-\\phantom{0}7 & \\qquad & \\large 6x^3\\text{ divided by }3x\\text{ is }2x^2.\\\\[-3pt]\n\n\\large 3x-2\\enclose{longdiv}{ 6x^3+11x^2-31x+15} & \\qquad &\\\\[-3pt]\n\n\\large \\underline{-\\left( 6x^3 - 4x^2 \\right)} \\hspace{5.8em} & \\qquad & \\large\\text{Multiply }3x-2\\text{ by }2x^2. \\\\[-3pt]\n\n\\large 15x^2-31x \\hspace{3.0em} & \\qquad & \\large\\text{Subtract. Bring down next term. }15x^2\\text{ divided by }3x\\text{ is }5x. \\\\[-3pt]\n\n\\large \\underline{-\\left( 15x^2 - 10x \\right)} \\hspace{2.5em} & \\qquad & \\large\\text{Multiply }3x-2\\text{ by }5x. \\\\[-3pt]\n\n\\large -21x+15  \\hspace{0.5em}& \\qquad & \\large\\text{Subtract. Bring down next term. }-21x\\text{ divided by }3x\\text{ is }-7. \\\\[-3pt]\n\n\\large \\underline{-\\left( -21x + 14 \\right)} \\hspace{0.1em} & \\qquad & \\large\\text{Multiply }3x-2\\text{ by }-7.\\\\[-3pt]\n\n\\large 1 \\hspace{0.5em}& \\qquad & \\large\\text{Subtract. The remainder is 1.} \\\\[8pt]\n\n\\end{array} \\nonumber\\]\n\nThere is a remainder of 1. We can express the result as:\n\n\\[\\dfrac{6x^3+11x^2−31x+15}{3x−2}=2x^2+5x−7+\\dfrac{1}{3x−2} \\nonumber\\]\n\nAnalysis\n\nWe can check our work by using the Division Algorithm to rewrite the solution. Then multiply.\n\n\\[(3x−2)(2x^2+5x−7)+1=6x^3+11x^2−31x+15 \\nonumber\\]\n\nNotice, as we write our result,\n\nthe dividend is \\(6x^3+11x^2−31x+15\\)\n\nthe divisor is \\(3x−2\\)\n\nthe quotient is \\(2x^2+5x−7\\)\n\nthe remainder is \\(1\\)",
+      "sourceAnswers": [],
+      "hasFigure": false,
+      "status": "draft",
+      "answerVerified": false,
+      "translationStatus": "pending",
+      "mappingStatus": "pending"
+    },
+    {
+      "ordinal": 10,
+      "sourceNumber": "",
+      "sourceAnchor": "",
+      "kind": "exercise-candidate",
+      "context": "\\(q(x)\\) is the quotient and \\(r(x)\\) is the remainder. The remainder is either equal to zero or has degree strictly less than \\(d(x)\\).\n\nIf \\(r(x)=0\\), then \\(d(x)\\) divides evenly into \\(f(x)\\). This means that, in this case, both \\(d(x)\\) and \\(q(x)\\) are factors of \\(f(x)\\).\n\nGiven a polynomial and a binomial, use long division to divide the polynomial by the binomial",
+      "original": "Try It! \\(\\PageIndex{2}\\)\n\nDivide \\(16x^3−12x^2+20x−3\\) by \\(4x+5\\).\n\nSolution\n\n\\(4x^2−8x+15−\\dfrac{78}{4x+5}\\)",
+      "prompt": "Try It! \\(\\PageIndex{2}\\)\n\nDivide \\(16x^3−12x^2+20x−3\\) by \\(4x+5\\).",
+      "sourceAnswers": [
+        "\\(4x^2−8x+15−\\dfrac{78}{4x+5}\\)"
+      ],
+      "hasFigure": false,
+      "status": "draft",
+      "answerVerified": false,
+      "translationStatus": "pending",
+      "mappingStatus": "pending"
+    },
+    {
+      "ordinal": 11,
+      "sourceNumber": "1",
+      "sourceAnchor": "",
+      "kind": "exercise-candidate",
+      "context": "Synthetic Division\n\nSynthetic division is a shortcut that can be used when the divisor is a binomial in the form \\(x−k\\). In synthetic division, only the coefficients are used in the division process.\n\nGiven two polynomials, use synthetic division to divide",
+      "original": "1. Write \\(k\\) for the divisor.",
+      "prompt": "1. Write \\(k\\) for the divisor.",
+      "sourceAnswers": [],
+      "hasFigure": false,
+      "status": "draft",
+      "answerVerified": false,
+      "translationStatus": "pending",
+      "mappingStatus": "pending"
+    },
+    {
+      "ordinal": 12,
+      "sourceNumber": "2",
+      "sourceAnchor": "",
+      "kind": "exercise-candidate",
+      "context": "Synthetic Division\n\nSynthetic division is a shortcut that can be used when the divisor is a binomial in the form \\(x−k\\). In synthetic division, only the coefficients are used in the division process.\n\nGiven two polynomials, use synthetic division to divide",
+      "original": "2. Write the coefficients of the dividend.",
+      "prompt": "2. Write the coefficients of the dividend.",
+      "sourceAnswers": [],
+      "hasFigure": false,
+      "status": "draft",
+      "answerVerified": false,
+      "translationStatus": "pending",
+      "mappingStatus": "pending"
+    },
+    {
+      "ordinal": 13,
+      "sourceNumber": "3",
+      "sourceAnchor": "",
+      "kind": "exercise-candidate",
+      "context": "Synthetic Division\n\nSynthetic division is a shortcut that can be used when the divisor is a binomial in the form \\(x−k\\). In synthetic division, only the coefficients are used in the division process.\n\nGiven two polynomials, use synthetic division to divide",
+      "original": "3. Bring the lead coefficient down.",
+      "prompt": "3. Bring the lead coefficient down.",
+      "sourceAnswers": [],
+      "hasFigure": false,
+      "status": "draft",
+      "answerVerified": false,
+      "translationStatus": "pending",
+      "mappingStatus": "pending"
+    },
+    {
+      "ordinal": 14,
+      "sourceNumber": "4",
+      "sourceAnchor": "",
+      "kind": "exercise-candidate",
+      "context": "Synthetic Division\n\nSynthetic division is a shortcut that can be used when the divisor is a binomial in the form \\(x−k\\). In synthetic division, only the coefficients are used in the division process.\n\nGiven two polynomials, use synthetic division to divide",
+      "original": "4. Multiply the lead coefficient by \\(k\\). Write the product in the next column.",
+      "prompt": "4. Multiply the lead coefficient by \\(k\\). Write the product in the next column.",
+      "sourceAnswers": [],
+      "hasFigure": false,
+      "status": "draft",
+      "answerVerified": false,
+      "translationStatus": "pending",
+      "mappingStatus": "pending"
+    },
+    {
+      "ordinal": 15,
+      "sourceNumber": "5",
+      "sourceAnchor": "",
+      "kind": "exercise-candidate",
+      "context": "Synthetic Division\n\nSynthetic division is a shortcut that can be used when the divisor is a binomial in the form \\(x−k\\). In synthetic division, only the coefficients are used in the division process.\n\nGiven two polynomials, use synthetic division to divide",
+      "original": "5. Add the terms of the second column.",
+      "prompt": "5. Add the terms of the second column.",
+      "sourceAnswers": [],
+      "hasFigure": false,
+      "status": "draft",
+      "answerVerified": false,
+      "translationStatus": "pending",
+      "mappingStatus": "pending"
+    },
+    {
+      "ordinal": 16,
+      "sourceNumber": "6",
+      "sourceAnchor": "",
+      "kind": "exercise-candidate",
+      "context": "Synthetic Division\n\nSynthetic division is a shortcut that can be used when the divisor is a binomial in the form \\(x−k\\). In synthetic division, only the coefficients are used in the division process.\n\nGiven two polynomials, use synthetic division to divide",
+      "original": "6. Multiply the result by \\(k\\). Write the product in the next column.",
+      "prompt": "6. Multiply the result by \\(k\\). Write the product in the next column.",
+      "sourceAnswers": [],
+      "hasFigure": false,
+      "status": "draft",
+      "answerVerified": false,
+      "translationStatus": "pending",
+      "mappingStatus": "pending"
+    },
+    {
+      "ordinal": 17,
+      "sourceNumber": "7",
+      "sourceAnchor": "",
+      "kind": "exercise-candidate",
+      "context": "Synthetic Division\n\nSynthetic division is a shortcut that can be used when the divisor is a binomial in the form \\(x−k\\). In synthetic division, only the coefficients are used in the division process.\n\nGiven two polynomials, use synthetic division to divide",
+      "original": "7. Repeat steps 5 and 6 for the remaining columns.",
+      "prompt": "7. Repeat steps 5 and 6 for the remaining columns.",
+      "sourceAnswers": [],
+      "hasFigure": false,
+      "status": "draft",
+      "answerVerified": false,
+      "translationStatus": "pending",
+      "mappingStatus": "pending"
+    },
+    {
+      "ordinal": 18,
+      "sourceNumber": "8",
+      "sourceAnchor": "",
+      "kind": "exercise-candidate",
+      "context": "Synthetic Division\n\nSynthetic division is a shortcut that can be used when the divisor is a binomial in the form \\(x−k\\). In synthetic division, only the coefficients are used in the division process.\n\nGiven two polynomials, use synthetic division to divide",
+      "original": "8. Use the bottom numbers to write the quotient. The number in the last column is the remainder and has degree 0, the next number from the right has degree 1, the next number from the right has degree 2, and so on.",
+      "prompt": "8. Use the bottom numbers to write the quotient. The number in the last column is the remainder and has degree 0, the next number from the right has degree 1, the next number from the right has degree 2, and so on.",
+      "sourceAnswers": [],
+      "hasFigure": false,
+      "status": "draft",
+      "answerVerified": false,
+      "translationStatus": "pending",
+      "mappingStatus": "pending"
+    },
+    {
+      "ordinal": 19,
+      "sourceNumber": "",
+      "sourceAnchor": "",
+      "kind": "example-or-exercise",
+      "context": "Synthetic Division\n\nSynthetic division is a shortcut that can be used when the divisor is a binomial in the form \\(x−k\\). In synthetic division, only the coefficients are used in the division process.\n\nGiven two polynomials, use synthetic division to divide",
+      "original": "Example \\(\\PageIndex{3}\\): Using Synthetic Division to Divide a Second-Degree Polynomial\n\nUse synthetic division to divide \\(5x^2−3x−36\\) by \\(x−3\\).\n\nSolution\n\nBegin by setting up the synthetic division. Write \\(k\\) and the coefficients.\n\n[Figure: alt]\n\nBring down the lead coefficient. Multiply the lead coefficient by \\(k\\).\n\n[Figure: alt]\n\nContinue by adding the numbers in the second column. Multiply the resulting number by \\(k\\).Write the result in the next column. Then add the numbers in the third column.\n\n[Figure: alt]\n\nThe result is \\(5x+12\\). The remainder is 0. So \\(x−3\\) is a factor of the original polynomial.\n\nAnalysis\n\nJust as with long division, we can check our work by multiplying the quotient by the divisor and adding the remainder.\n\n\\[(x−3)(5x+12)+0=5x^2−3x−36 \\nonumber\\]",
+      "prompt": "Example \\(\\PageIndex{3}\\): Using Synthetic Division to Divide a Second-Degree Polynomial\n\nUse synthetic division to divide \\(5x^2−3x−36\\) by \\(x−3\\).\n\nSolution\n\nBegin by setting up the synthetic division. Write \\(k\\) and the coefficients.\n\n[Figure: alt]\n\nBring down the lead coefficient. Multiply the lead coefficient by \\(k\\).\n\n[Figure: alt]\n\nContinue by adding the numbers in the second column. Multiply the resulting number by \\(k\\).Write the result in the next column. Then add the numbers in the third column.\n\n[Figure: alt]\n\nThe result is \\(5x+12\\). The remainder is 0. So \\(x−3\\) is a factor of the original polynomial.\n\nAnalysis\n\nJust as with long division, we can check our work by multiplying the quotient by the divisor and adding the remainder.\n\n\\[(x−3)(5x+12)+0=5x^2−3x−36 \\nonumber\\]",
+      "sourceAnswers": [],
+      "hasFigure": true,
+      "status": "draft",
+      "answerVerified": false,
+      "translationStatus": "pending",
+      "mappingStatus": "pending"
+    },
+    {
+      "ordinal": 20,
+      "sourceNumber": "",
+      "sourceAnchor": "",
+      "kind": "example-or-exercise",
+      "context": "Synthetic Division\n\nSynthetic division is a shortcut that can be used when the divisor is a binomial in the form \\(x−k\\). In synthetic division, only the coefficients are used in the division process.\n\nGiven two polynomials, use synthetic division to divide",
+      "original": "Example \\(\\PageIndex{4}\\): Using Synthetic Division to Divide a Third-Degree Polynomial\n\nUse synthetic division to divide \\(4x^3+10x^2−6x−20\\) by \\(x+2\\).\n\nSolution\n\nThe binomial divisor is \\(x+2\\) so \\(k=−2\\). Add each column, multiply the result by –2, and repeat until the last column is reached.\n\n\\[ \\large{\\begin{array}{c}-2\\\\ \\\\ \\\\\n\n\\end{array}}\n\n{\\begin{align*}&\\\\[0pt]\n\n&{\\begin{array}{r|}\\\\[0pt]\n\n \\\\[0pt] \\end{array}}\\\\[1pt]\n\n & \\\\[2pt]& \\end{align*}}\\!\\!\n\n{\\begin{array}{rrrr}\n\n4 & 10 & -6 & -20 \\\\\n\n& -8  & -4 & 20 \\\\\n\n\\hline 4 & 2 & -10 & 0\n\n\\end{array}}\n\n\\nonumber\\]\n\nThe result is \\(4x^2+2x−10\\).\n\nThe remainder is 0. Thus, \\(x+2\\) is a factor of \\(4x^3+10x^2−6x−20\\).\n\nAnalysis\n\nThe graph of the polynomial function \\(f(x)=4x^3+10x^2−6x−20\\) in Figure \\(\\PageIndex{2}\\) shows a zero at \\(x=k=−2\\). This confirms that \\(x+2\\) is a factor of \\(4x^3+10x^2−6x−20\\).\n\n[Figure: alt]\n\nFigure \\(\\PageIndex{2}\\)",
+      "prompt": "Example \\(\\PageIndex{4}\\): Using Synthetic Division to Divide a Third-Degree Polynomial\n\nUse synthetic division to divide \\(4x^3+10x^2−6x−20\\) by \\(x+2\\).\n\nSolution\n\nThe binomial divisor is \\(x+2\\) so \\(k=−2\\). Add each column, multiply the result by –2, and repeat until the last column is reached.\n\n\\[ \\large{\\begin{array}{c}-2\\\\ \\\\ \\\\\n\n\\end{array}}\n\n{\\begin{align*}&\\\\[0pt]\n\n&{\\begin{array}{r|}\\\\[0pt]\n\n \\\\[0pt] \\end{array}}\\\\[1pt]\n\n & \\\\[2pt]& \\end{align*}}\\!\\!\n\n{\\begin{array}{rrrr}\n\n4 & 10 & -6 & -20 \\\\\n\n& -8  & -4 & 20 \\\\\n\n\\hline 4 & 2 & -10 & 0\n\n\\end{array}}\n\n\\nonumber\\]\n\nThe result is \\(4x^2+2x−10\\).\n\nThe remainder is 0. Thus, \\(x+2\\) is a factor of \\(4x^3+10x^2−6x−20\\).\n\nAnalysis\n\nThe graph of the polynomial function \\(f(x)=4x^3+10x^2−6x−20\\) in Figure \\(\\PageIndex{2}\\) shows a zero at \\(x=k=−2\\). This confirms that \\(x+2\\) is a factor of \\(4x^3+10x^2−6x−20\\).\n\n[Figure: alt]\n\nFigure \\(\\PageIndex{2}\\)",
+      "sourceAnswers": [],
+      "hasFigure": true,
+      "status": "draft",
+      "answerVerified": false,
+      "translationStatus": "pending",
+      "mappingStatus": "pending"
+    },
+    {
+      "ordinal": 21,
+      "sourceNumber": "",
+      "sourceAnchor": "",
+      "kind": "example-or-exercise",
+      "context": "Synthetic Division\n\nSynthetic division is a shortcut that can be used when the divisor is a binomial in the form \\(x−k\\). In synthetic division, only the coefficients are used in the division process.\n\nGiven two polynomials, use synthetic division to divide",
+      "original": "Example \\(\\PageIndex{5}\\): Using Synthetic Division to Divide a Fourth-Degree Polynomial\n\nUse synthetic division to divide \\(−9x^4+10x^3+7x^2−6\\) by \\(x−1\\).\n\nSolution\n\nNotice there is no \\(x\\)-term. We will use a zero as the coefficient for that term.\n\n\\[ \\large{\\begin{array}{c}1\\\\ \\\\ \\\\\n\n\\end{array}}\n\n{\\begin{align*}&\\\\[0pt]\n\n&{\\begin{array}{r|}\\\\[0pt]\n\n \\\\[0pt] \\end{array}}\\\\[1pt]\n\n & \\\\[2pt]& \\end{align*}}\\!\\!\n\n{\\begin{array}{rrrrr}\n\n-9 & 10 & 7 & 0 &-6\\\\\n\n& -9 & 1 & 8 & 8 \\\\\n\n\\hline -9 & 1& 8 & 8 & 2\n\n\\end{array}}\n\n\\nonumber\\]\n\nThe result is \\(−9x^3+x^2+8x+8+\\dfrac{2}{x−1}\\).",
+      "prompt": "Example \\(\\PageIndex{5}\\): Using Synthetic Division to Divide a Fourth-Degree Polynomial\n\nUse synthetic division to divide \\(−9x^4+10x^3+7x^2−6\\) by \\(x−1\\).\n\nSolution\n\nNotice there is no \\(x\\)-term. We will use a zero as the coefficient for that term.\n\n\\[ \\large{\\begin{array}{c}1\\\\ \\\\ \\\\\n\n\\end{array}}\n\n{\\begin{align*}&\\\\[0pt]\n\n&{\\begin{array}{r|}\\\\[0pt]\n\n \\\\[0pt] \\end{array}}\\\\[1pt]\n\n & \\\\[2pt]& \\end{align*}}\\!\\!\n\n{\\begin{array}{rrrrr}\n\n-9 & 10 & 7 & 0 &-6\\\\\n\n& -9 & 1 & 8 & 8 \\\\\n\n\\hline -9 & 1& 8 & 8 & 2\n\n\\end{array}}\n\n\\nonumber\\]\n\nThe result is \\(−9x^3+x^2+8x+8+\\dfrac{2}{x−1}\\).",
+      "sourceAnswers": [],
+      "hasFigure": false,
+      "status": "draft",
+      "answerVerified": false,
+      "translationStatus": "pending",
+      "mappingStatus": "pending"
+    },
+    {
+      "ordinal": 22,
+      "sourceNumber": "",
+      "sourceAnchor": "",
+      "kind": "exercise-candidate",
+      "context": "Synthetic Division\n\nSynthetic division is a shortcut that can be used when the divisor is a binomial in the form \\(x−k\\). In synthetic division, only the coefficients are used in the division process.\n\nGiven two polynomials, use synthetic division to divide",
+      "original": "Try It! \\(\\PageIndex{3}\\)\n\nUse synthetic division to divide \\(3x^4+18x^3−3x+40\\) by \\(x+7\\).\n\nSolution\n\n\\(3x^3−3x^2+21x−150+\\dfrac{1090}{x+7}\\)",
+      "prompt": "Try It! \\(\\PageIndex{3}\\)\n\nUse synthetic division to divide \\(3x^4+18x^3−3x+40\\) by \\(x+7\\).",
+      "sourceAnswers": [
+        "\\(3x^3−3x^2+21x−150+\\dfrac{1090}{x+7}\\)"
+      ],
+      "hasFigure": false,
+      "status": "draft",
+      "answerVerified": false,
+      "translationStatus": "pending",
+      "mappingStatus": "pending"
+    },
+    {
+      "ordinal": 23,
+      "sourceNumber": "",
+      "sourceAnchor": "",
+      "kind": "example-or-exercise",
+      "context": "Using Polynomial Division to Solve Application Problems\n\nPolynomial division can be used to solve a variety of application problems involving expressions for area and volume. We looked at an application at the beginning of this section. Now we will solve that problem in the following example.",
+      "original": "Example \\(\\PageIndex{6}\\): Using Polynomial Division in an Application Problem\n\nThe volume of a rectangular solid is given by the polynomial \\(3x^4−3x^3−33x^2+54x\\). The length of the solid is given by \\(3x\\) and the width is given by \\(x−2\\). Find the height \\(h\\) of the solid.\n\nSolution\n\nThere are a few ways to approach this problem. We need to divide the expression for the volume of the solid by the expressions for the length and width. Let us create a sketch as in Figure \\(\\PageIndex{3}\\).  Let \\(h\\) equal the height of the box.\n\n[Figure: alt]\n\nFigure \\(\\PageIndex{3}\\)\n\nWe can now write an equation by substituting the known values into the formula for the volume of a rectangular solid.\n\n\\[\\begin{align*} V&=l{\\cdot}w{\\cdot}h \\\\ 3x^4−3x^3−33x^2+54x&=3x{\\cdot}(x−2){\\cdot}h \\end{align*}\\]\n\nTo solve for \\(h\\), first divide both sides by \\(3x\\).\n\n\\[\\dfrac{3x{\\cdot}(x−2){\\cdot}h}{3x}=\\dfrac{3x^4−3x^3−33x^2+54x}{3x} \\nonumber\\]\n\n\\[(x-2)h=\\dfrac{x^3-x^2-11x+18}{x-2} \\nonumber\\]\n\nNow solve for \\(h\\) using synthetic division.\n\n\\[h=\\dfrac{x^3−x^2−11x+18}{x−2} \\nonumber\\]\n\n\\[ \\large{\\begin{array}{c}2\\\\ \\\\ \\\\\n\n\\end{array}}\n\n{\\begin{align*}&\\\\[0pt]\n\n&{\\begin{array}{r|}\\\\[0pt]\n\n \\\\[0pt] \\end{array}}\\\\[1pt]\n\n & \\\\[2pt]& \\end{align*}}\\!\\!\n\n{\\begin{array}{rrrr}\n\n1 & -1 & -11 & 18 \\\\\n\n& 2 & 2 & -18 \\\\\n\n\\hline 1 & 1 & -9 & 0\n\n\\end{array}}\n\n\\nonumber\\]\n\nThe quotient is \\(x^2+x−9\\) and the remainder is \\(0.\\) The height of the solid is \\(x^2+x−9\\).",
+      "prompt": "Example \\(\\PageIndex{6}\\): Using Polynomial Division in an Application Problem\n\nThe volume of a rectangular solid is given by the polynomial \\(3x^4−3x^3−33x^2+54x\\). The length of the solid is given by \\(3x\\) and the width is given by \\(x−2\\). Find the height \\(h\\) of the solid.\n\nSolution\n\nThere are a few ways to approach this problem. We need to divide the expression for the volume of the solid by the expressions for the length and width. Let us create a sketch as in Figure \\(\\PageIndex{3}\\).  Let \\(h\\) equal the height of the box.\n\n[Figure: alt]\n\nFigure \\(\\PageIndex{3}\\)\n\nWe can now write an equation by substituting the known values into the formula for the volume of a rectangular solid.\n\n\\[\\begin{align*} V&=l{\\cdot}w{\\cdot}h \\\\ 3x^4−3x^3−33x^2+54x&=3x{\\cdot}(x−2){\\cdot}h \\end{align*}\\]\n\nTo solve for \\(h\\), first divide both sides by \\(3x\\).\n\n\\[\\dfrac{3x{\\cdot}(x−2){\\cdot}h}{3x}=\\dfrac{3x^4−3x^3−33x^2+54x}{3x} \\nonumber\\]\n\n\\[(x-2)h=\\dfrac{x^3-x^2-11x+18}{x-2} \\nonumber\\]\n\nNow solve for \\(h\\) using synthetic division.\n\n\\[h=\\dfrac{x^3−x^2−11x+18}{x−2} \\nonumber\\]\n\n\\[ \\large{\\begin{array}{c}2\\\\ \\\\ \\\\\n\n\\end{array}}\n\n{\\begin{align*}&\\\\[0pt]\n\n&{\\begin{array}{r|}\\\\[0pt]\n\n \\\\[0pt] \\end{array}}\\\\[1pt]\n\n & \\\\[2pt]& \\end{align*}}\\!\\!\n\n{\\begin{array}{rrrr}\n\n1 & -1 & -11 & 18 \\\\\n\n& 2 & 2 & -18 \\\\\n\n\\hline 1 & 1 & -9 & 0\n\n\\end{array}}\n\n\\nonumber\\]\n\nThe quotient is \\(x^2+x−9\\) and the remainder is \\(0.\\) The height of the solid is \\(x^2+x−9\\).",
+      "sourceAnswers": [],
+      "hasFigure": true,
+      "status": "draft",
+      "answerVerified": false,
+      "translationStatus": "pending",
+      "mappingStatus": "pending"
+    },
+    {
+      "ordinal": 24,
+      "sourceNumber": "",
+      "sourceAnchor": "",
+      "kind": "exercise-candidate",
+      "context": "Using Polynomial Division to Solve Application Problems\n\nPolynomial division can be used to solve a variety of application problems involving expressions for area and volume. We looked at an application at the beginning of this section. Now we will solve that problem in the following example.",
+      "original": "Try It! \\(\\PageIndex{4}\\)\n\nThe area of a rectangle is given by \\(3x^3+14x^2−23x+6\\). The width of the rectangle is given by \\(x+6\\). Find an expression for the length of the rectangle.\n\nSolution\n\n\\(3x^2−4x+1\\)",
+      "prompt": "Try It! \\(\\PageIndex{4}\\)\n\nThe area of a rectangle is given by \\(3x^3+14x^2−23x+6\\). The width of the rectangle is given by \\(x+6\\). Find an expression for the length of the rectangle.",
+      "sourceAnswers": [
+        "\\(3x^2−4x+1\\)"
+      ],
+      "hasFigure": false,
+      "status": "draft",
+      "answerVerified": false,
+      "translationStatus": "pending",
+      "mappingStatus": "pending"
+    }
+  ],
+  "license": "CC BY 4.0",
+  "licenseEvidence": "This page titled 5.4: Dividing Polynomials was last modified on Thu, 26 Dec 2024 22:30:43 GMT and is shared under a CC BY  4.0  license and was authored, remixed, and/or curated by OpenStax via source content that was edited to the style and standards of the LibreTexts platform.",
+  "url": "https://math.libretexts.org/Bookshelves/Algebra/Algebra_and_Trigonometry_1e_(OpenStax)/05:_Polynomial_and_Rational_Functions/5.04:_Dividing_Polynomials",
+  "sha256": "ebdcc21590cd80fe7ca4b10eafe871a68f5b9a82caba7f9301e33fc85d1bd653",
+  "checkedAt": "2026-10-07",
+  "id": "35de6d7d11cfe1fcfd12",
+  "bookId": "algebra-trigonometry",
+  "licenseInherited": false,
+  "licenseSource": "https://math.libretexts.org/Bookshelves/Algebra/Algebra_and_Trigonometry_1e_(OpenStax)/05:_Polynomial_and_Rational_Functions/5.04:_Dividing_Polynomials",
+  "licenseUrl": "https://creativecommons.org/licenses/by/4.0/",
+  "authors": "OpenStax / Jay Abramson et al.",
+  "book": "Algebra and Trigonometry 1e",
+  "reviewStatus": "unreviewed",
+  "sourceLanguage": "en",
+  "translationStatus": "pending"
+}

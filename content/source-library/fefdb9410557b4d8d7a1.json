@@ -1,0 +1,756 @@
+{
+  "title": "8.6: The Normal Distribution",
+  "originalText": "[Figure: A combinational graph titled, results of 100 flips. The combinational graph includes a histogram and a normal distribution curve. The horizontal axis representing the number of heads ranges from 30 to 70, in increments of 10. The vertical axis representing frequency ranges from 0 to 800, in increments of 200. The histogram shows bars of varying heights. A normal distribution curve is drawn across the heights of the bars and it infers the following data. The curve begins at (30, 0), has a peak value at (48, 780), and ends at (70, 0).]\n\nFigure \\(\\PageIndex{1}\\): Symmetric, bell-shaped distributions arise naturally in many different situations, including coin flips.\n\nLearning Objectives\n\n1. Describe the characteristics of the normal distribution.\n\n2. Apply the 68-95-99.7 percent groups to normal distribution datasets.\n\n3. Use the normal distribution to calculate a \\(z\\)-score.\n\n4. Find and interpret percentiles and quartiles.\n\nMany datasets that result from natural phenomena tend to have histograms that are symmetric and bell-shaped. Imagine finding yourself with a whole lot of time on your hands, and nothing to keep you entertained but a coin, a pencil, and paper. You decide to flip that coin 100 times and record the number of heads. With nothing else to do, you repeat the experiment ten times total. Using a computer to simulate this series of experiments, here’s a sample for the number of heads in each trial:\n\n54, 51, 40, 42, 53, 50, 52, 52, 47, 54\n\nIt makes sense that we’d get somewhere around 50 heads when we flip the coin 100 times, and it makes sense that the result won’t always be exactly 50 heads. In our results, we can see numbers that were generally near 50 and not always 50, like we thought.\n\nMoving Toward Normality\n\nLet’s take a look at a histogram for the dataset in our section opener:\n\n[Figure: A histogram titled, results of 10 coin flips. The horizontal axis representing the number of heads ranges from 40 to 55, in increments of 1. The vertical axis representing frequency ranges from 0 to 2, in increments of 1. The histogram infers the following data. 40 to 41: 1. 42 to 43: 1. 47 to 48: 1. 50 to 51: 1. 51 to 52: 1. 52 to 53: 2. 53 to 54: 1. 54 to 55: 2.]\n\nFigure \\(\\PageIndex{1}\\)\n\nThis is interesting, but the data seem pretty sparse. There were no trials where you saw between 43 and 47 heads, for example. Those results don’t seem impossible; we just didn’t flip enough times to give them a chance to pop up. So, let’s do it again, but this time we'll perform 100 coin flips 100 times. Rather than review all 100 results, which could be overwhelming, let's instead visualize the resulting histogram.\n\n[Figure: A histogram titled, results of 100 coin flips. The horizontal axis representing the number of heads ranges from 35 to 71, in increments of 1. The vertical axis representing frequency ranges from 0 to 15, in increments of 5. The histogram infers the following data. 35 to 36: 1. 37 to 38: 1. 39 to 40: 1. 40 to 41: 1. 41 to 42: 1. 42 to 43: 3. 43 to 44: 1. 44 to 45: 6. 45 to 46: 4. 46 to 47: 7. 47 to 48: 10. 48 to 49: 6. 49 to 50: 7. 50 to 51: 13. 51 to 52: 5. 52 to 53: 5. 53 to 54: 7. 54 to 55: 5. 55 to 56: 3. 56 to 57: 4. 57 to 58: 2. 58 to 59: 2. 59 to 60: 2. 61 to 62: 2. 62 to 63: 1. 70 to 71: 1. Note: all values are approximate.]\n\nFigure \\(\\PageIndex{2}\\)\n\nFrom the histogram, we see that most of the trials resulted in between, say, 44 and 56 heads. There were some more unusual results: one trial resulted in 70 heads, which seems really unlikely (though still possible!). But we’re starting to maybe get a sense of the distribution. More data would help, though. Let’s simulate another 900 trials and add them to the histogram!\n\n[Figure: A histogram titled, results of 1000 coin flips. The horizontal axis representing the number of heads ranges from 35 to 71, in increments of 1. The vertical axis representing frequency ranges from 0 to 100, in increments of 25. The histogram infers the following data. 35 to 36: 2. 37 to 38: 4. 38 to 39: 3. 39 to 40: 9. 40 to 41: 12. 41 to 42: 10. 42 to 43: 24. 43 to 44: 33. 44 to 45: 40. 45 to 46: 55. 46 to 47: 50. 47 to 48: 73. 48 to 49: 71. 49 to 50: 83. 50 to 51: 81. 51 to 52: 85. 52 to 53: 75. 53 to 54: 58. 54 to 55: 52. 55 to 56: 38. 56 to 57: 45. 57 to 58: 27. 58 to 59: 24. 59 to 60: 13. 60 to 61: 13. 61 to 62: 13. 62 to 63: 5. 63 to 64: 3. 64 to 65: 2. 65 to 66: 2. 66 to 67: 2. 68 to 69: 2. 70 to 71: 2. Note: all values are approximate.]\n\nFigure \\(\\PageIndex{3}\\)\n\nWe can still see that 70 is a really unusual observation, though we came close in another trial (one that had 68 heads). Now, the distribution is coming more into focus: It looks quite symmetric and bell-shaped. Let’s just go ahead and take this thought experiment to an extreme conclusion: 10,000 trials.\n\n[Figure: A histogram titled, results of 10,000 coin flips. The horizontal axis representing the number of heads ranges from 30 to 70, in increments of 1. The vertical axis representing frequency ranges from 0 to 1000, in increments of 250. The histogram infers the following data. 30 to 31: 5. 33 to 34: 5. 34 to 35: 5. 35 to 36: 10. 36 to 37: 15. 37 to 38: 15. 38 to 39: 35. 39 to 40: 60. 40 to 41: 100. 41 to 42: 160. 42 to 43: 245. 43 to 44: 270. 44 to 45: 320. 45 to 46: 530. 46 to 47: 540. 47 to 48: 620. 48 to 49: 710. 49 to 50: 820. 50 to 51: 800. 51 to 52: 790. 52 to 53: 680. 53 to 54: 660. 54 to 55: 620. 55 to 56: 470. 56 to 57: 440. 57 to 58: 310. 58 to 59: 230. 59 to 60: 200. 60 to 61: 150. 61 to 62: 120. 62 to 63: 100. 63 to 64: 50. 64 to 65: 40. 65 to 66: 10. 66 to 67: 10. 67 to 68: 8. 68 to 69: 8. 69 to 70: 5. 70 to 71: 5. Note: all values are approximate.]\n\nFigure \\(\\PageIndex{4}\\)\n\nThe distribution is pretty clear now. Distributions that are symmetric and bell-shaped like this pop up in all sorts of natural phenomena, such as the heights of people in a population, the circumferences of eggs of a particular bird species, and the numbers of leaves on mature trees of a particular species. All of these have bell-shaped distributions. Additionally, the results of many types of repeated experiments generally follow this same pattern, as we saw with the coin-flipping example; this fact is the basis for much of the work done by statisticians. It’s a fact that’s important enough to have its own name: the Central Limit Theorem.\n\nPeople in Mathematics: John Kerrich\n\nHaving enough time on your hands to actually perform this coin-flipping experiment may sound far-fetched, but the English mathematician John Kerrich found himself in just such a situation. While he was studying abroad in Denmark in 1940, that country was invaded by the Germans. Kerrich was captured and placed in an internment camp, where he remained for the duration of the war. Kerrich knew that he had all kinds of time on his hands. He also studied statistics, so he knew what should happen theoretically if he flipped a coin many, many times. He also knew of nobody who had ever tested that theory with an actual, large-scale experiment. So, he did it: While he was incarcerated, Kerrich flipped a regular coin 10,000 times and recorded the results. Sure enough, the theory held up!\n\nThe Normal Distribution\n\nIn the coin flipping example above, the distribution of the number of heads for 10,000 trials was close to perfectly symmetric and bell-shaped:\n\n[Figure: A combinational graph titled, results of 100 flips. The combinational graph includes a histogram and a normal distribution curve. The horizontal axis representing the number of heads ranges from 30 to 70, in increments of 10. The vertical axis representing frequency ranges from 0 to 800, in increments of 200. The histogram shows bars of varying heights. A normal distribution curve is drawn across the heights of the bars and it infers the following data. The curve begins at (30, 0), has a peak value at (48, 780), and ends at (70, 0).]\n\nFigure \\(\\PageIndex{5}\\)\n\nBecause distributions with this shape appear so often, we have a special name for them: normal distributions. Normal distributions can be completely described using two numbers we’ve seen before: the mean of the data and the standard deviation of the data. You may remember that we described the mean as a measure of centrality; for a normal distribution, the mean tells us exactly where the center of the distribution falls. The peak of the distribution happens at the mean (and, because the distribution is symmetric, it’s also the median). The standard deviation is a measure of dispersion; for a normal distribution, it tells us how spread out the histogram looks. To illustrate these points, let’s look at some examples.\n\nExample \\(\\PageIndex{1}\\): Identifying the Mean of a Normal Distribution\n\nThis graph shows three normal distributions. What are their means?\n\n[Figure: A graph shows three normal distribution curves. The horizontal axis ranges from negative 1 to 5, in increments of 1. The three curves are described as follows. The first curve (red) begins at negative 1, has a peak value at 1, and ends at 3. The second curve (blue) begins at 0, has a peak value at 2, and ends at 4. The third curve (yellow) begins at 1, has a peak value at 3, and ends at 5. The three curves overlap each other and their peaks are of equal height.]\n\nFigure \\(\\PageIndex{6}\\)\n\nAnswer\n\nStep 1: Take a look at the three curves on the graph. Since the mean of a normal distribution occurs at the peak, we should look for the highest point on each distribution. Let’s draw a line from each curve's peak down to the axis, so we can see where these peaks occur:\n\n[Figure: A graph shows three normal distribution curves. The horizontal axis ranges from negative 1 to 5, in increments of 1. The three curves are described as follows. The first curve (red) begins at negative 1, has a peak value at 1, and ends at 3. The second curve (blue) begins at 0, has a peak value at 2, and ends at 4. The third curve (yellow) begins at 1, has a peak value at 3, and ends at 5. The three curves overlap each other and their peaks are of equal height. A vertical dashed line is drawn from each peak to the horizontal axis.]\n\nFigure \\(\\PageIndex{7}\\)\n\nStep 2: The peak of the red (leftmost) distribution occurs over the number 1 on the horizontal axis. Thus, the mean of the red distribution is 1. Similarly, the mean of the blue (middle) distribution is 2, and the mean of the yellow (rightmost) distribution is 3.\n\nYour Turn \\(\\PageIndex{1}\\)\n\nIdentify the means of these three distributions:\n\n[Figure: A graph shows three normal distribution curves. The horizontal axis ranges from 10 to 15, in increments of 1. The three curves are described as follows. The first curve (red) begins before 10, has a peak value at 11, and ends at 14. The second curve (blue) begins at 11, has a peak value at 13, and ends at 15. The third curve (yellow) begins at 11, has a peak value at 14, and ends after 15. The three curves overlap each other and their peaks are of equal height.]\n\nFigure \\(\\PageIndex{8}\\)\n\nExample \\(\\PageIndex{2}\\): Identifying the Standard Deviation of a Normal Distribution\n\nThis graph shows three distributions, all with mean 2. What are their standard deviations?\n\n[Figure: A graph shows three normal distribution curves. The horizontal axis ranges from negative 4 to 10, in increments of 2. The three curves are described as follows. The first curve (red) begins before negative 4, has a peak value at 2, and ends at 10. The second curve (blue) begins before negative 4, has a peak value at 2, and ends at 10. The third curve (yellow) begins before negative 4, has a peak value at 2, and ends after 10. The first curve has the highest peak and the third curve has the lowest peak.]\n\nFigure \\(\\PageIndex{9}\\)\n\nAnswer\n\nStep 1: Identifying the standard deviation from a graph can be a little bit tricky. Let’s focus in on the yellow (lowest peaked) curve:\n\n[Figure: A normal distribution curve. The horizontal axis ranges from negative 5 to 10, in increments of 1. The curve begins before negative 5, has a peak value at 2, and ends at 10.]\n\nFigure \\(\\PageIndex{10}\\)\n\n    Step 2: Notice that the graph curves downward in the middle, and curves upwards on the ends. Highlighted in red is the part that curves downward and in green, the part that curves upward:\n\n[Figure: A normal distribution curve. The horizontal axis ranges from negative 5 to 10, in increments of 1. The curve begins before negative 5, has a peak value at 2, and ends at 10. On the curve, from negative 1 to 5 is highlighted and it represents inflection points.]\n\nFigure \\(\\PageIndex{11}\\)\n\n    Step 3: The places where the graph changes from curving up to curving down (or vice versa) are called inflection points. Let’s identify where those occur by dropping a line straight down from each:\n\n[Figure: A normal distribution curve. The horizontal axis ranges from negative 5 to 10, in increments of 1. The curve begins before negative 5, has a peak value at 2, and ends at 10. On the curve, from negative 1 to 5 is highlighted and it represents inflection points. Dashed vertical lines are drawn from negative 1, 2, and 5 to meet the curve.]\n\nFigure \\(\\PageIndex{12}\\)\n\n    Step 4: We can estimate that the inflection points occur at \\(x=-1\\) and \\(x=5\\); the mean is at \\(x=2\\) (as shown by the middle dotted line). The difference between the mean and the location of either inflection point is the standard deviation; since \\(5-2=2-(-1)=3\\), we conclude that the standard deviation of the green distribution is 3.\n\nStep 5: Now, looking at the other two graphs, let's first identify the inflection points:\n\n[Figure: A graph shows two normal distribution curves. The horizontal axis ranges from negative 5 to 10, in increments of 1. The two curves are described as follows. The first curve (red) begins at negative 5, has a peak value at 2, and ends at 10. The second curve (blue) begins at negative 5, has a peak value at 2, and ends at 10. The first curve (red) has a higher peak than the second curve (blue).]\n\nFigure \\(\\PageIndex{13}\\)\n\nStep 6: The red (tallest peaked) distribution has inflection points at 1 and 3, and the mean is 2. Thus, the standard deviation of the red distribution is 3 - 2 = 2 - 1 = 1 3 - 2 = 2 - 1 = 1 . The blue (lower peaked) distribution has inflection points at 0 and 4, and its mean is also 2. So, the standard deviation of the blue distribution is 2.\n\nYour Turn \\(\\PageIndex{2}\\)\n\nEstimate the standard deviations of this normal distribution, centered at 5:\n\n[Figure: A normal distribution curve. The horizontal axis ranges from negative 10 to 20, in increments of 2. The curve begins before negative 10, has a peak value at 5, and ends after 20.]\n\nFigure \\(\\PageIndex{14}\\)\n\nLet’s put it all together to identify a completely unknown normal distribution.\n\nExample \\(\\PageIndex{3}\\): Identifying the Mean and Standard Deviation of a Normal Distribution\n\nUsing the graph, identify the mean and standard deviation of the normal distribution.\n\n[Figure: A normal distribution curve. The horizontal axis ranges from 45 to 70, in increments of 1. The curve begins at 45, has a peak value at 55, and ends at 70.]\n\nFigure \\(\\PageIndex{15}\\)\n\nAnswer\n\nStep 1: Let’s start by putting dots on the graph at the peak and at the inflection points, then drop lines from those points straight down to the axis:\n\n[Figure: A normal distribution curve. The horizontal axis ranges from 45 to 70, in increments of 1. The curve begins at 45, has a peak value at 55, and ends at 70. Dashed vertical lines are drawn from 52, 55, and 58 to meet the curve.]\n\nFigure \\(\\PageIndex{16}\\)\n\nStep 2: From the red (middle) line, we can see that the mean of this distribution is 55. The blue (outermost) lines are each 3 units away from the mean (at 52 and 58), so the standard deviation is 3.\n\nYour Turn \\(\\PageIndex{3}\\)\n\nIdentify the mean and standard deviation of this distribution. Anything within 5 on the standard deviation is acceptable.\n\n[Figure: A normal distribution curve. The horizontal axis ranges from 80 to 200, in increments of 5. The curve begins at 80, has a peak value at 150, and ends at 200.]\n\nFigure \\(\\PageIndex{17}\\)\n\nProperties of Normal Distributions: The 68-95-99.7 Rule\n\nThe most important property of normal distributions is tied to its standard deviation. If a dataset is perfectly normally distributed, then 68% of the data values will fall within one standard deviation of the mean. For example, suppose we have a set of data that follows the normal distribution with mean 400 and standard deviation 100. This means 68% of the data would fall between the values of 300 (one standard deviation below the mean: \\(400-100=300\\)) and 500 (one standard deviation above the mean: \\(400+100=500\\)). Looking at the histogram below, the shaded area represents 68% of the total area under the graph and above the axis:\n\n[Figure: A normal distribution curve. The horizontal axis ranges from 0 to 800, in increments of 50. The curve begins at 0, has a peak value at 400, and ends at 800. The region from 300 to 500 is shaded and marked 68 percent. The regions to the left and right of the shaded region are marked 16 percent, each.]\n\nFigure \\(\\PageIndex{18}\\)\n\nSince 68% of the area is in the shaded region, this means that \\(100%−68%=32%\\) of the area is found in the unshaded regions. We know that the distribution is symmetric, so that 32% must be divided evenly into the two unshaded tails: 16% in each.\n\nOf course, datasets in the real world are never perfect; when dealing with actual data that seem to follow a symmetric, bell-shaped distribution, we’ll give ourselves a little bit of wiggle room and say that approximately 68% of the data fall within one standard deviation of the mean.\n\nThe rule for one standard deviation can be extended to two standard deviations. Approximately 95% of a normally distributed dataset will fall within 2 standard deviations of the mean. If the mean is 400 and the standard deviation is 100, that means 95% calculation describes the way we compute standardized scores. (two standard deviations below the mean: \\(400–2×100=200\\)) and 600 (two standard deviations above the mean: \\(400+2×100=600\\)). We can visualize this in the following histogram:\n\n[Figure: A normal distribution curve. The horizontal axis ranges from 0 to 800, in increments of 50. The curve begins at 0, has a peak value at 400, and ends at 800. The region from 200 to 600 is shaded and marked 95 percent. The regions to the left and right of the shaded region are marked 2.5 percent, each.]\n\nFigure \\(\\PageIndex{19}\\)\n\nAs before, since 95% of the data are in the shaded area, that leaves 5% of the data to go into the unshaded tails. Since the histogram is symmetric, half of the 5% (that’s 2.5%) is in each.\n\nWe can even take this one step further: 99.7% of normally distributed data fall within 3 standard deviations of the mean. In this example, we’d see 99.7% of the data between 100 (calculated as \\(400 –3×100=100\\)) and 700 (calculated as \\(400+3×100=700\\)). We can see this in the histogram below, although you may need to squint to find the unshaded bits in the tails!\n\n[Figure: A normal distribution curve. The horizontal axis ranges from 0 to 800, in increments of 50. The curve begins at 0, has a peak value at 400, and ends at 800. The region from 100 to 700 is shaded and marked 99.7 percent. The regions to the left and right of the shaded region are marked 0.15 percent, each.]\n\nFigure \\(\\PageIndex{20}\\)\n\nThis observation is formally known as the 68-95-99.7 Rule.\n\n1. If data are normally distributed with mean 8 and standard deviation 2, what percent of the data falls between 4 and 12?\n\n2. If data are normally distributed with mean 25 and standard deviation 5, what percent of the data falls between 20 and 30?\n\n3. If data are normally distributed with mean 200 and standard deviation 15, what percent of the data falls between 155 and 245?\n\nAnswer\n\n1. Let’s look at a table that sets out the data values that are even multiples of the standard deviation (SD) above and below the mean:\n\n                    \\(mean-\\)3×SD\t\n                    \\(mean-\\)2×SD\t\n                    \\(mean-\\)1×SD\t\n                    Mean\t\n                    \\(mean+\\)1×SD\t\n                    \\(mean+\\)2×SD\t\n                    \\(mean+\\)3×SD\t\n\n                    2\t\n                    4\t\n                    6\t\n                    8\t\n                    10\t\n                    12\t\n                    14\t\n\nSince 4 and 12 represent two standard deviations above and below the mean, we conclude that 95% of the data will fall between them.\n\nLet’s build another table:\n\n                \\(mean-\\)3×SD\t\n                \\(mean-\\)2×SD\t\n                \\(mean-\\)1×SD\t\n                Mean\t\n                \\(mean+\\)1×SD\t\n                \\(mean+\\)2×SD\t\n                \\(mean+\\)3×SD\t\n\n                10\t\n                15\t\n                20\t\n                25\t\n                30\t\n                35\t\n                40\t\n\nWe can see that 20 and 30 represent one standard deviation above and below the mean, so 68% of the data fall in that range.\n\nLet’s make one more table:\n\n                \\(mean-\\)3×SD\t\n                \\(mean-\\)2×SD\t\n                \\(mean−\\)1×SD\t\n                Mean\t\n                \\(mean+\\)1×SD\t\n                \\(mean+\\)2×SD\t\n                \\(mean+\\)3×SD\t\n\n                155\t\n                170\t\n                185\t\n                200\t\n                215\t\n                230\t\n                245\t\n\nSince 155 and 245 are three standard deviations above and below the mean, we know that 99.7% of the data will fall between them.\n\nYour Turn \\(\\PageIndex{4}\\)\n\nIf data are distributed normally with mean 0 and standard deviation 3, what percent of the data fall between –9 and 9?\n\nIf data are distributed normally with mean 50 and standard deviation 10, what percent of the data fall between 30 and 70?\n\nIf data are distributed normally with mean 60 and standard deviation 5, what percent of the data fall between 55 and 65?\n\n1. If data are distributed normally with mean 100 and standard deviation 20, between what two values will 68% of the data fall?\n\n2. If data are distributed normally with mean 0 and standard deviation 15, between what two values will 95% of the data fall?\n\n3. If data are distributed normally with mean 14 and standard deviation 2, between what two values will 99.7% of the data fall?\n\nAnswer\n\n1. The 68-95-99.7 Rule tells us that 68% of the data will fall within one standard deviation of the mean. So, to find the values we seek, we’ll add and subtract one standard deviation from the mean: \\(100-1×20=80\\) and \\(100+1×20=120\\). Thus, we know that 68% of the data fall between 80 and 120.\n\n2. Using the 68-95-99.7 Rule again, we know that 95% of the data will fall within 2 standard deviations of the mean. Let’s add and subtract two standard deviations from that mean: \\(0-2×15=-30\\) and \\(0+2×15=30\\). So, 95% of the data will fall between -30 and 30.\n\n3. Once again, the 68-95-99.7 Rule tells us that 99.7% of the data will fall within three standard deviations of the mean. So, let’s add and subtract three standard deviations from the mean: \\(\\) and \\(14+3×2=20\\). Thus, we conclude that 99.7% of the data will fall between 8 and 20.\n\nYour Turn \\(\\PageIndex{5}\\)\n\n1. If data are distributed normally with mean 70 and standard deviation 5, between what two values will 68% of the data fall?\n\n2. If data are distributed normally with mean 40 and standard deviation 7, between what two values will 95% of the data fall?\n\n3. If data are distributed normally with mean 200 and standard deviation 30, between what two values will 99.7% of the data fall?\n\nThere are more problems we can solve using the 68-95-99.7 Rule. but first we must understand what the rule implies. Remember, the rule says that 68% of the data falls within one standard deviation of the mean. Thus, with normally distributed data with mean 100 and standard deviation 10, we have this distribution:\n\n[Figure: A normal distribution curve. The horizontal axis ranges from 60 to 140, in increments of 5. The curve begins at 60, has a peak value at 100, and ends at 140. The region from 90 to 110 is shaded in blue and marked 68 percent.]\n\nFigure \\(\\PageIndex{21}\\)\n\nSince we know that 68% of the data lie within one standard deviation of the mean, the implication is that 32% of the data must fall beyond one standard deviation away from the mean. Since the histogram is symmetric, we can conclude that half of the 32% (or 16%) is more than one standard deviation above the mean and the other half is more than one standard deviation below the mean:\n\n[Figure: A normal distribution curve. The horizontal axis ranges from 60 to 140, in increments of 5. The curve begins at 60, has a peak value at 100, and ends at 140. The region from 90 to 110 is shaded in blue and marked 68 percent. The region to the left and right of the shaded region inside the curve is shaded in red. The region from 60 to 90 is marked 16 percent. The region from 110 to 140 is marked 16 percent.]\n\nFigure \\(\\PageIndex{22}\\)\n\nFurther, we know that the middle 68% can be split in half at the peak of the histogram, leaving 34% on either side:\n\n[Figure: A normal distribution curve. The horizontal axis ranges from 60 to 140, in increments of 5. The curve begins at 60, has a peak value at 100, and ends at 140. A vertical line is drawn at 100. The region from 90 to 100 and 100 to 110 are shaded in blue and marked 34 percent, each. The region to the left and right of the shaded region inside the curve is shaded in red. The region from 60 to 90 is marked 16 percent. The region from 110 to 140 is marked 16 percent.]\n\nFigure \\(\\PageIndex{23}\\)\n\nSo, just the “68” part of the 68-95-99.7 Rule gives us four other proportions in addition to the 68% in the rule. Similarly, the “95” and “99.7” parts each give us four more proportions:\n\n[Figure: A normal distribution curve. The horizontal axis ranges from 60 to 140, in increments of 5. The curve begins at 60, has a peak value at 100, and ends at 140. A vertical line is drawn at 100. The region from 80 to 120 is shaded in blue. The region from 80 to 100 and 100 to 120 are marked 47.5 percent, each. The region to the left and right of the shaded region inside the curve is shaded in red. The region from 60 to 80 is marked 2.5 percent. The region from 120 to 140 is marked 2.5 percent.]\n\nFigure \\(\\PageIndex{24}\\)\n\n[Figure: A normal distribution curve. The horizontal axis ranges from 60 to 140, in increments of 5. The curve begins at 60, has a peak value at 100, and ends at 140. A vertical line is drawn at 100. The region from 70 to 130 is shaded in blue. The region from 70 to 100 and 100 to 130 is marked 49.85 percent, each. The region to the left and right of the shaded region inside the curve is shaded. The region from 60 to 70 is marked 0.15 percent. The region from 130 to 140 is marked 0.15 percent.]\n\nFigure \\(\\PageIndex{25}\\): Copy and Paste Caption here. (Copyright; author via source)\n\nWe can put all these together to find even more complicated proportions. For example, since the proportion between 100 and 120 is 47.5% and the proportion between 100 and 110 is 34%, we can subtract to find that the proportion between 110 and 120 is \\(47.5-34=13.5%\\):\n\n[Figure: A normal distribution curve. The horizontal axis ranges from 60 to 140, in increments of 5. The curve begins at 60, has a peak value at 100, and ends at 140. A vertical line is drawn at 100. The region from 100 to 110 is shaded in blue. The region from 110 to 120 is shaded in red. The total shaded region from 100 to 120 is marked 47.5 percent. The shaded region from 100 to 110 is marked 34 percent. The shaded region from 110 to 120 is marked 13.5 percent.]\n\nFigure \\(\\PageIndex{26}\\)\n\nAssume that we have data that are normally distributed with mean 80 and standard deviation 3.\n\n1. What proportion of the data will be greater than 86?\n\n2. What proportion of the data will be between 74 and 77?\n\n3. What proportion of the data will be between 74 and 83?\n\nAnswer\n\nBefore we can answer these questions, we must mark off sections that are multiples of the standard deviation away from the mean:\n\n[Figure: A normal distribution curve. The horizontal axis ranges from 70 to 90, in increments of 1. The curve begins at 70, has a peak value at 80, and ends at 90. Five vertical lines are drawn at 74, 77, 80, 83, and 86.]\n\nFigure \\(\\PageIndex{27}\\)\n\n1. To figure out what proportion of the data will be greater than 86, let's start by shading in the area of data that are above 86 in our figure, or the data more than two standard deviations above the mean.\n\n[Figure: A normal distribution curve. The horizontal axis ranges from 70 to 90, in increments of 1. The curve begins at 70, has a peak value at 80, and ends at 90. Five vertical lines are drawn at 74, 77, 80, 83, and 86. The region to the right of the line at 86 is shaded in blue.]\n\nFigure \\(\\PageIndex{28}\\)\n\n    We saw in Figure 8.51 that this proportion is 2.5%.\n\n2. To figure out what proportion of the data will be between 74 and 77, let's start by shading in that area of data. These are data that are more than one but less than two standard deviations below the mean.\n\n[Figure: A normal distribution curve. The horizontal axis ranges from 70 to 90, in increments of 1. The curve begins at 70, has a peak value at 80, and ends at 90. Five vertical lines are drawn at 74, 77, 80, 83, and 86. The region in between lines, 74 and 77 is shaded in blue.]\n\nFigure \\(\\PageIndex{29}\\)\n\n    From Figure 8.51, we know that the proportion of data less than two standard deviations below the mean is 47.5%. And, from YOUR TURN 8.33, we know that 34% of the data is less than one standard deviation below the mean:\n\n[Figure: A normal distribution curve. The horizontal axis ranges from 70 to 90, in increments of 1. The curve begins at 70, has a peak value at 80, and ends at 90. The region from 74 to 77 is shaded in blue. The region from 77 to 80 is shaded in red. The total shaded region from 74 to 80 is marked 47.5 percent. The shaded region from 74 to 77 is marked 13.5 percent. The shaded region from 77 to 80 is marked 34 percent.]\n\nFigure \\(\\PageIndex{30}\\)\n\n    Subtracting, we see that the proportion of data between 74 and 77 is 13.5%.\n\n3. To figure out what proportion of the data will be between 74 and 83, let's start by shading in that area of data in our figure.\n\n[Figure: A normal distribution curve. The horizontal axis ranges from 70 to 90, in increments of 1. The curve begins at 70, has a peak value at 80, and ends at 90. Five vertical lines are drawn at 74, 77, 80, 83, and 86. The region from 74 to 83 is shaded in blue.]\n\nFigure \\(\\PageIndex{31}\\)\n\n    Next, we'll break this region into two pieces at the mean:\n\n[Figure: A normal distribution curve. The horizontal axis ranges from 70 to 90, in increments of 1. The curve begins at 70, has a peak value at 80, and ends at 90. The region from 74 to 80 is shaded in blue. The region from 80 to 83 is shaded in red.]\n\nFigure \\(\\PageIndex{32}\\)\n\n    From Figure 8.51, we know the blue (leftmost) region represents 47.5% of the data. And, using YOUR TURN 8.33, we get that the red (rightmost) region covers 34% of the data. Adding those together, the proportion we want is 81.5%.\n\nYour Turn \\(\\PageIndex{6}\\)\n\nSuppose we have data that are normally distributed with mean 500 and standard deviation 100. What proportions of the data fall in these ranges?\n\n300 to 500\n\n600 to 800\n\n400 to 700\n\nStandardized Scores\n\nWhen we want to apply the 68-95-99.7 Rule, we must first figure out how many standard deviations above or below the mean our data fall. This calculation is common enough that it has its own name: the standardized score. Values above the mean have positive standardized scores, while those below the mean have negative standardized scores. Since it's common to use the letter \\(z\\) to represent a standard score, this value is also often referred to as a \\(z\\)-score.\n\nSo far, we’ve only really considered \\(z\\)-scores that are whole numbers, but in general they can be any number at all. For example, if we have data that are normally distributed with mean 80 and standard deviation 6, the value 85 is five units above the mean, which is less than one standard deviation. Dividing by the standard deviation, we get \\(\\frac{5}{6}\\). Since 85 is \\(\\frac{5}{6}\\) of one standard deviation above the mean, we’d say that the standardized score for 85 is \\(z=\\)56 (which is positive, since \\(85>80\\)). This calculation describes the way we compute standardized scores.\n\nFORMULA\n\nIf \\(x\\) is a member of a normally distributed dataset with mean \\(\\mu\\) and standard deviation \\(\\sigma\\), then the standardized score for \\(x\\) is\n\n\\[z=\\frac{x-\\mu}{\\sigma} . \\nonumber \\]\n\nIf you know a \\(z\\)-score but not the original data value \\(x\\), you can find it by solving the previous equation for \\(x\\) :\n\n\\[x=\\mu+z \\times \\sigma . \\nonumber \\]\n\n\\(\\)z×σ.\n\nCheckpoint\n\nThe symbols \\(\\)μ and \\(\\)σ are the Greek letters mu and sigma. They are the analogues of the English letters \\(m\\) and \\(s\\), which stand for mean and standard deviation.\n\nIf you convert every data value in a dataset into its \\(z\\)-score, the resulting set of data will have mean 0 and standard deviation 1. This is why we call these standardized scores: the normal distribution with mean 0 and standard deviation 1 is often called the standard normal distribution.\n\nExample \\(\\PageIndex{7}\\): Standardizing Data\n\nSuppose we have data that are normally distributed with mean 50 and standard deviation 6. Compute the standardized scores (rounded to three decimal places) for these data values:\n\n1. 52\n\n2. 40\n\n3. 68\n\nAnswer\n\nFor each of these, we'll plug the given values into the formula. Remember, the mean is \\(\\mu=50\\) and the standard deviation is \\(\\sigma=6\\) :\n\n    1. \\(z=\\frac{x-\\mu}{\\sigma}=\\frac{52-50}{6}=0.333\\)\n\n    2. \\(z=\\frac{x-\\mu}{\\sigma}=\\frac{40-50}{6}=-1.667\\)\n\n    3. \\(z=\\frac{x-\\mu}{\\sigma}=\\frac{68-50}{6}=3\\)\\(\\)\n\nYour Turn \\(\\PageIndex{7}\\)\n\nSuppose we have data that are normally distributed with mean 75 and standard deviation 5. Compute standardized scores for each of these data values: 66, 83, and 72.\n\nExample \\(\\PageIndex{8}\\): Converting Standardized Scores to Original Values\n\nSuppose we have data that are normally distributed with mean 10 and standard deviation 2. Convert the following standardized scores into data values.\n\n1. 1.4\n\n2. −0.9\n\n3. 3.5\n\nAnswer\n\nWe'll use the formula previously introduced to convert \\(z\\)-scores into \\(x\\)-values. In this case, the mean is \\(\\mu=10\\) and the standard deviation is \\(\\sigma=2\\) :\n\n1. \\(x=\\mu+z \\times \\sigma=10+1.4 \\times 2=12.8\\)\n\n    2. \\(x=\\mu+z \\times \\sigma=10+(-0.9) \\times 2=8.2\\)\n\n    3. \\(x=\\mu+z \\times \\sigma=10+3.5 \\times 2=17\\)\\(\\)\\(\\)17\n\nYour Turn \\(\\PageIndex{8}\\)\n\nSuppose you have a normally distributed dataset with mean 2 and standard deviation 20. Convert these standardized scores to data values: –2.3, 1.4, and 0.2.\n\nUsing Google Sheets to Find Normal Percentiles\n\nThe 68-95-99.7 Rule is great when we’re dealing with whole-number \\(z\\)-scores. However, if the \\(z\\)-score is not a whole number, the Rule isn’t going to help us. Luckily, we can use technology to help us out. We’ll talk here about the built-in functions in Google Sheets, but other tools work similarly.\n\nLet’s say we’re working with normally distributed data with mean 40 and standard deviation 7, and we want to know at what percentile a data value of 50 would fall. That corresponds to finding the proportion of the data that are less than 50. If we create our histogram and mark off whole-number multiples of the standard deviation like we did before, we’ll see why the 68-95-99.7 Rule isn’t going to help:\n\n[Figure: A normal distribution curve. The horizontal axis ranges from 20 to 60, in increments of 2. The curve begins before 20, has a peak value at 40, and ends after 60. Five vertical lines are drawn at 26, 33, 40, 47, and 54. The region to the left of 50 is shaded in blue.]\n\nFigure \\(\\PageIndex{33}\\)\n\nSince 50 doesn’t line up with one of our lines, the 68-95-99.7 Rule fails us. Looking back at Figure 8.51 and Figure 8.52, the best we can say is that 50 is between the 84th and 99.5th percentiles, but that’s a pretty wide range. Google Sheets has a function that can help; it’s called NORM.DIST. Here’s how to use it:\n\n1. Click in an empty cell in your worksheet.\n\n2. Type “=NORM.DIST(“\n\n3. Inside the parentheses, we must enter a list of four things, separated by commas: the data value, the mean, the standard deviation, and the word “TRUE”. These have to be entered in this order!\n\n4. Close the parentheses, and hit Enter. The result is then displayed in the cell; convert it to a percent to get the percentile.\n\nSo, for our example, we should type “=NORM.DIST(50, 40, 7, TRUE)” into an empty cell, and hit Enter. The result is 0.9234362745; converting to a percent and rounding, we can conclude that 50 is at the 92nd percentile. Let’s walk through a few more examples.\n\nExample \\(\\PageIndex{9}\\): Using Google Sheets to Find Percentiles\n\nSuppose we have data that are normally distributed with mean 28 and standard deviation 4. At what percentile do each of the following data values fall?\n\n1. 30\n\n2. 23\n\n3. 35\n\nAnswer\n\n1. By entering “=NORM.DIST(30, 28, 4, TRUE)” we find that 30 is at the 69th percentile.\n\n2. By entering “=NORM.DIST(23, 28, 4, TRUE)” we find that 23 is at the 11th percentile.\n\n3. By entering “=NORM.DIST(35, 28, 4, TRUE)” we find that 35 is at the 96th percentile.\n\nYour Turn \\(\\PageIndex{9}\\)\n\nSuppose you have data that are normally distributed with mean 20 and standard deviation 6. Determine at what percentiles these data values fall: 25, 12, and 31.\n\nGoogle Sheets can also help us go the other direction: If we want to find the data value that corresponds to a given percentile, we can use the NORM.INV function. For example, if we have normally distributed data with mean 150 and standard deviation 25, we can find the data value at the 30th percentile as follows:\n\n1. Click on an empty cell in your worksheet.\n\n2. Type “=NORM.INV(“\n\n3. Inside the parentheses, we’ll enter a list of three numbers, separated by commas: the percentile in question expressed as a decimal, the mean, and the standard deviation. These must be entered in this order!\n\n4. Close the parentheses and hit Enter. The desired data value will be in the cell!\n\nIn our example, we want the 30th percentile; converting 30% to a decimal gives us 0.3. So, we’ll type “=NORM.INV(0.3, 150, 25)” to get 136.8899872; let’s round that off to 137.\n\nExample \\(\\PageIndex{10}\\): Using Google Sheets to Find the Data Value Corresponding to a Percentile\n\nSuppose we have data that are normally distributed with mean 47 and standard deviation 9. Find the data values (rounded to the nearest tenth) corresponding to these percentiles:\n\n1. 75th (that’s the third quartile)\n\n2. 12th\n\n3. 90th\n\nAnswer\n\n1. By entering “=NORM.INV(0.75, 47, 9)” we find that 53.1 is at the 75th percentile.\n\n2. By entering “=NORM.INV(0.12, 47, 9)” we find that 36.4 is at the 12th percentile.\n\n3. By entering “=NORM.INV(0.9, 47, 9)” we find that 58.5 is at the 90th percentile.\n\nYour Turn \\(\\PageIndex{10}\\)\n\nSuppose we have data that are normally distributed with mean 5 and standard deviation 1.6. Identify which data values (rounded to the nearest tenth) correspond to these percentiles: 25th (the first quartile), 80th, and 10th.\n\nCheck Your Understanding\n\nFor each of these problems, assume we’re working with normally distributed data with mean 100 and standard deviation 12.\n\n1. What percentage of the data falls between 76 and 124? Use the 68-95-99.7 Rule.\n\n2. What percentage of the data falls between 100 and 112? Use the 68-95-99.7 Rule.\n\n3. At what percentile does 112 fall? Use the 68-95-99.7 Rule.\n\n4. What’s the \\(z\\)-score of the data value 107? Round to three decimal places.\n\n5. What data value’s \\(z\\)-score is –2.4?\n\n6. At what percentile does 107 fall? Use Google Sheets (or another technology).\n\n7. What data value is at the 90th percentile? Use Google Sheets (or another technology), and round to the nearest hundredth.\n\nThis page titled 8.6: The Normal Distribution was last modified on Thu, 02 Jan 2025 11:07:44 GMT and is shared under a CC BY  4.0  license and was authored, remixed, and/or curated by OpenStax via source content that was edited to the style and standards of the LibreTexts platform.",
+  "figures": [
+    {
+      "url": "https://math.libretexts.org/@api/deki/files/109416/39cca5174e2a6f2cc5de254ce6fafccd1e87c057?revision=1",
+      "alt": "A combinational graph titled, results of 100 flips. The combinational graph includes a histogram and a normal distribution curve. The horizontal axis representing the number of heads ranges from 30 to 70, in increments of 10. The vertical axis representing frequency ranges from 0 to 800, in increments of 200. The histogram shows bars of varying heights. A normal distribution curve is drawn across the heights of the bars and it infers the following data. The curve begins at (30, 0), has a peak value at (48, 780), and ends at (70, 0).",
+      "credit": ""
+    },
+    {
+      "url": "https://math.libretexts.org/@api/deki/files/109418/8f1e7ad1d11727c289c7b248e763ffb4e41b77ee?revision=1&size=bestfit&width=700",
+      "alt": "A histogram titled, results of 10 coin flips. The horizontal axis representing the number of heads ranges from 40 to 55, in increments of 1. The vertical axis representing frequency ranges from 0 to 2, in increments of 1. The histogram infers the following data. 40 to 41: 1. 42 to 43: 1. 47 to 48: 1. 50 to 51: 1. 51 to 52: 1. 52 to 53: 2. 53 to 54: 1. 54 to 55: 2.",
+      "credit": ""
+    },
+    {
+      "url": "https://math.libretexts.org/@api/deki/files/109419/23568558d1fb1e1b3797370b83e5e7cdeba5d60a?revision=1&size=bestfit&width=700",
+      "alt": "A histogram titled, results of 100 coin flips. The horizontal axis representing the number of heads ranges from 35 to 71, in increments of 1. The vertical axis representing frequency ranges from 0 to 15, in increments of 5. The histogram infers the following data. 35 to 36: 1. 37 to 38: 1. 39 to 40: 1. 40 to 41: 1. 41 to 42: 1. 42 to 43: 3. 43 to 44: 1. 44 to 45: 6. 45 to 46: 4. 46 to 47: 7. 47 to 48: 10. 48 to 49: 6. 49 to 50: 7. 50 to 51: 13. 51 to 52: 5. 52 to 53: 5. 53 to 54: 7. 54 to 55: 5. 55 to 56: 3. 56 to 57: 4. 57 to 58: 2. 58 to 59: 2. 59 to 60: 2. 61 to 62: 2. 62 to 63: 1. 70 to 71: 1. Note: all values are approximate.",
+      "credit": ""
+    },
+    {
+      "url": "https://math.libretexts.org/@api/deki/files/109417/f0438d5d5091259ac313125a4c00526b1dcfb6af?revision=1&size=bestfit&width=700",
+      "alt": "A histogram titled, results of 1000 coin flips. The horizontal axis representing the number of heads ranges from 35 to 71, in increments of 1. The vertical axis representing frequency ranges from 0 to 100, in increments of 25. The histogram infers the following data. 35 to 36: 2. 37 to 38: 4. 38 to 39: 3. 39 to 40: 9. 40 to 41: 12. 41 to 42: 10. 42 to 43: 24. 43 to 44: 33. 44 to 45: 40. 45 to 46: 55. 46 to 47: 50. 47 to 48: 73. 48 to 49: 71. 49 to 50: 83. 50 to 51: 81. 51 to 52: 85. 52 to 53: 75. 53 to 54: 58. 54 to 55: 52. 55 to 56: 38. 56 to 57: 45. 57 to 58: 27. 58 to 59: 24. 59 to 60: 13. 60 to 61: 13. 61 to 62: 13. 62 to 63: 5. 63 to 64: 3. 64 to 65: 2. 65 to 66: 2. 66 to 67: 2. 68 to 69: 2. 70 to 71: 2. Note: all values are approximate.",
+      "credit": ""
+    },
+    {
+      "url": "https://math.libretexts.org/@api/deki/files/109420/07e8bd12518ce02467bdf996b82eaeeaae0a2296?revision=1&size=bestfit&width=700",
+      "alt": "A histogram titled, results of 10,000 coin flips. The horizontal axis representing the number of heads ranges from 30 to 70, in increments of 1. The vertical axis representing frequency ranges from 0 to 1000, in increments of 250. The histogram infers the following data. 30 to 31: 5. 33 to 34: 5. 34 to 35: 5. 35 to 36: 10. 36 to 37: 15. 37 to 38: 15. 38 to 39: 35. 39 to 40: 60. 40 to 41: 100. 41 to 42: 160. 42 to 43: 245. 43 to 44: 270. 44 to 45: 320. 45 to 46: 530. 46 to 47: 540. 47 to 48: 620. 48 to 49: 710. 49 to 50: 820. 50 to 51: 800. 51 to 52: 790. 52 to 53: 680. 53 to 54: 660. 54 to 55: 620. 55 to 56: 470. 56 to 57: 440. 57 to 58: 310. 58 to 59: 230. 59 to 60: 200. 60 to 61: 150. 61 to 62: 120. 62 to 63: 100. 63 to 64: 50. 64 to 65: 40. 65 to 66: 10. 66 to 67: 10. 67 to 68: 8. 68 to 69: 8. 69 to 70: 5. 70 to 71: 5. Note: all values are approximate.",
+      "credit": ""
+    },
+    {
+      "url": "https://math.libretexts.org/@api/deki/files/109424/a18b5972feca28c9266a4da35fad4fb0b13c74d5?revision=1",
+      "alt": "A combinational graph titled, results of 100 flips. The combinational graph includes a histogram and a normal distribution curve. The horizontal axis representing the number of heads ranges from 30 to 70, in increments of 10. The vertical axis representing frequency ranges from 0 to 800, in increments of 200. The histogram shows bars of varying heights. A normal distribution curve is drawn across the heights of the bars and it infers the following data. The curve begins at (30, 0), has a peak value at (48, 780), and ends at (70, 0).",
+      "credit": ""
+    },
+    {
+      "url": "https://math.libretexts.org/@api/deki/files/109426/5dfdc8432b04d57b088ab5d2515e2d3188744a5b?revision=1",
+      "alt": "A graph shows three normal distribution curves. The horizontal axis ranges from negative 1 to 5, in increments of 1. The three curves are described as follows. The first curve (red) begins at negative 1, has a peak value at 1, and ends at 3. The second curve (blue) begins at 0, has a peak value at 2, and ends at 4. The third curve (yellow) begins at 1, has a peak value at 3, and ends at 5. The three curves overlap each other and their peaks are of equal height.",
+      "credit": ""
+    },
+    {
+      "url": "https://math.libretexts.org/@api/deki/files/109425/1ae123d2f71b1a233545c20cfffe56c335fa3c51?revision=1",
+      "alt": "A graph shows three normal distribution curves. The horizontal axis ranges from negative 1 to 5, in increments of 1. The three curves are described as follows. The first curve (red) begins at negative 1, has a peak value at 1, and ends at 3. The second curve (blue) begins at 0, has a peak value at 2, and ends at 4. The third curve (yellow) begins at 1, has a peak value at 3, and ends at 5. The three curves overlap each other and their peaks are of equal height. A vertical dashed line is drawn from each peak to the horizontal axis.",
+      "credit": ""
+    },
+    {
+      "url": "https://math.libretexts.org/@api/deki/files/109423/CS_Figure_08_06_071.png?revision=1&size=bestfit&width=900",
+      "alt": "A graph shows three normal distribution curves. The horizontal axis ranges from 10 to 15, in increments of 1. The three curves are described as follows. The first curve (red) begins before 10, has a peak value at 11, and ends at 14. The second curve (blue) begins at 11, has a peak value at 13, and ends at 15. The third curve (yellow) begins at 11, has a peak value at 14, and ends after 15. The three curves overlap each other and their peaks are of equal height.",
+      "credit": ""
+    },
+    {
+      "url": "https://math.libretexts.org/@api/deki/files/109427/4ba5b6853faf4a6af8b6fc88ddbec4e25d70211d?revision=1",
+      "alt": "A graph shows three normal distribution curves. The horizontal axis ranges from negative 4 to 10, in increments of 2. The three curves are described as follows. The first curve (red) begins before negative 4, has a peak value at 2, and ends at 10. The second curve (blue) begins before negative 4, has a peak value at 2, and ends at 10. The third curve (yellow) begins before negative 4, has a peak value at 2, and ends after 10. The first curve has the highest peak and the third curve has the lowest peak.",
+      "credit": ""
+    },
+    {
+      "url": "https://math.libretexts.org/@api/deki/files/109428/96f8bb2055eda4f307bf6d7f824730f58f843b40?revision=1",
+      "alt": "A normal distribution curve. The horizontal axis ranges from negative 5 to 10, in increments of 1. The curve begins before negative 5, has a peak value at 2, and ends at 10.",
+      "credit": ""
+    },
+    {
+      "url": "https://math.libretexts.org/@api/deki/files/109429/4683df8f34a43b99ec361c6fe8ae72d7a276cba8?revision=1",
+      "alt": "A normal distribution curve. The horizontal axis ranges from negative 5 to 10, in increments of 1. The curve begins before negative 5, has a peak value at 2, and ends at 10. On the curve, from negative 1 to 5 is highlighted and it represents inflection points.",
+      "credit": ""
+    },
+    {
+      "url": "https://math.libretexts.org/@api/deki/files/109430/0a6aa2b40432202ea19d04dea209eedd8f869088?revision=1",
+      "alt": "A normal distribution curve. The horizontal axis ranges from negative 5 to 10, in increments of 1. The curve begins before negative 5, has a peak value at 2, and ends at 10. On the curve, from negative 1 to 5 is highlighted and it represents inflection points. Dashed vertical lines are drawn from negative 1, 2, and 5 to meet the curve.",
+      "credit": ""
+    },
+    {
+      "url": "https://math.libretexts.org/@api/deki/files/109432/ef0368647a1c7f14ede553f32cd33586353bb5bb?revision=1",
+      "alt": "A graph shows two normal distribution curves. The horizontal axis ranges from negative 5 to 10, in increments of 1. The two curves are described as follows. The first curve (red) begins at negative 5, has a peak value at 2, and ends at 10. The second curve (blue) begins at negative 5, has a peak value at 2, and ends at 10. The first curve (red) has a higher peak than the second curve (blue).",
+      "credit": ""
+    },
+    {
+      "url": "https://math.libretexts.org/@api/deki/files/109431/CS_Figure_08_06_077.png?revision=1",
+      "alt": "A normal distribution curve. The horizontal axis ranges from negative 10 to 20, in increments of 2. The curve begins before negative 10, has a peak value at 5, and ends after 20.",
+      "credit": ""
+    },
+    {
+      "url": "https://math.libretexts.org/@api/deki/files/109437/cc70f0b72adac0e2e31ab88c6388049db110f474?revision=1",
+      "alt": "A normal distribution curve. The horizontal axis ranges from 45 to 70, in increments of 1. The curve begins at 45, has a peak value at 55, and ends at 70.",
+      "credit": ""
+    },
+    {
+      "url": "https://math.libretexts.org/@api/deki/files/109440/83422473dc13d9292201b433c215bd658f0eafc4?revision=1",
+      "alt": "A normal distribution curve. The horizontal axis ranges from 45 to 70, in increments of 1. The curve begins at 45, has a peak value at 55, and ends at 70. Dashed vertical lines are drawn from 52, 55, and 58 to meet the curve.",
+      "credit": ""
+    },
+    {
+      "url": "https://math.libretexts.org/@api/deki/files/109439/CS_Figure_08_06_080.png?revision=1",
+      "alt": "A normal distribution curve. The horizontal axis ranges from 80 to 200, in increments of 5. The curve begins at 80, has a peak value at 150, and ends at 200.",
+      "credit": ""
+    },
+    {
+      "url": "https://math.libretexts.org/@api/deki/files/109441/ac7fb9059ca4fca36739232d579ea5e3d4ef312e?revision=1",
+      "alt": "A normal distribution curve. The horizontal axis ranges from 0 to 800, in increments of 50. The curve begins at 0, has a peak value at 400, and ends at 800. The region from 300 to 500 is shaded and marked 68 percent. The regions to the left and right of the shaded region are marked 16 percent, each.",
+      "credit": ""
+    },
+    {
+      "url": "https://math.libretexts.org/@api/deki/files/109445/0d62a3585c290e9c3d8b7c724f30a56aad665034?revision=1",
+      "alt": "A normal distribution curve. The horizontal axis ranges from 0 to 800, in increments of 50. The curve begins at 0, has a peak value at 400, and ends at 800. The region from 200 to 600 is shaded and marked 95 percent. The regions to the left and right of the shaded region are marked 2.5 percent, each.",
+      "credit": ""
+    },
+    {
+      "url": "https://math.libretexts.org/@api/deki/files/109446/7b90f465fde7d645baf4de880fdee7c2b7cc0c17?revision=1",
+      "alt": "A normal distribution curve. The horizontal axis ranges from 0 to 800, in increments of 50. The curve begins at 0, has a peak value at 400, and ends at 800. The region from 100 to 700 is shaded and marked 99.7 percent. The regions to the left and right of the shaded region are marked 0.15 percent, each.",
+      "credit": ""
+    },
+    {
+      "url": "https://math.libretexts.org/@api/deki/files/109447/4cda5f7b8deb7ab0102627b6149aa960779aa37c?revision=1",
+      "alt": "A normal distribution curve. The horizontal axis ranges from 60 to 140, in increments of 5. The curve begins at 60, has a peak value at 100, and ends at 140. The region from 90 to 110 is shaded in blue and marked 68 percent.",
+      "credit": ""
+    },
+    {
+      "url": "https://math.libretexts.org/@api/deki/files/109449/ba9e1d20509de03062cc75279043b5636604aa81?revision=1",
+      "alt": "A normal distribution curve. The horizontal axis ranges from 60 to 140, in increments of 5. The curve begins at 60, has a peak value at 100, and ends at 140. The region from 90 to 110 is shaded in blue and marked 68 percent. The region to the left and right of the shaded region inside the curve is shaded in red. The region from 60 to 90 is marked 16 percent. The region from 110 to 140 is marked 16 percent.",
+      "credit": ""
+    },
+    {
+      "url": "https://math.libretexts.org/@api/deki/files/109453/07be0bf544ec0561a025c16a3d4bc4dd42321e18?revision=1",
+      "alt": "A normal distribution curve. The horizontal axis ranges from 60 to 140, in increments of 5. The curve begins at 60, has a peak value at 100, and ends at 140. A vertical line is drawn at 100. The region from 90 to 100 and 100 to 110 are shaded in blue and marked 34 percent, each. The region to the left and right of the shaded region inside the curve is shaded in red. The region from 60 to 90 is marked 16 percent. The region from 110 to 140 is marked 16 percent.",
+      "credit": ""
+    },
+    {
+      "url": "https://math.libretexts.org/@api/deki/files/109452/48db44b5fccae52b68016953a27ad0d61bfc0d5f?revision=1",
+      "alt": "A normal distribution curve. The horizontal axis ranges from 60 to 140, in increments of 5. The curve begins at 60, has a peak value at 100, and ends at 140. A vertical line is drawn at 100. The region from 80 to 120 is shaded in blue. The region from 80 to 100 and 100 to 120 are marked 47.5 percent, each. The region to the left and right of the shaded region inside the curve is shaded in red. The region from 60 to 80 is marked 2.5 percent. The region from 120 to 140 is marked 2.5 percent.",
+      "credit": ""
+    },
+    {
+      "url": "https://math.libretexts.org/@api/deki/files/109454/cbeee7879ff211b741dd61d188f64a70c3322d56?revision=1",
+      "alt": "A normal distribution curve. The horizontal axis ranges from 60 to 140, in increments of 5. The curve begins at 60, has a peak value at 100, and ends at 140. A vertical line is drawn at 100. The region from 70 to 130 is shaded in blue. The region from 70 to 100 and 100 to 130 is marked 49.85 percent, each. The region to the left and right of the shaded region inside the curve is shaded. The region from 60 to 70 is marked 0.15 percent. The region from 130 to 140 is marked 0.15 percent.",
+      "credit": ""
+    },
+    {
+      "url": "https://math.libretexts.org/@api/deki/files/109457/3d0119357b4841d6bb415f9cf1c8eeaeabb1b463?revision=1",
+      "alt": "A normal distribution curve. The horizontal axis ranges from 60 to 140, in increments of 5. The curve begins at 60, has a peak value at 100, and ends at 140. A vertical line is drawn at 100. The region from 100 to 110 is shaded in blue. The region from 110 to 120 is shaded in red. The total shaded region from 100 to 120 is marked 47.5 percent. The shaded region from 100 to 110 is marked 34 percent. The shaded region from 110 to 120 is marked 13.5 percent.",
+      "credit": ""
+    },
+    {
+      "url": "https://math.libretexts.org/@api/deki/files/109458/eed8b7ce9d44d8c0c127a09fa56fd784b20077ad?revision=1",
+      "alt": "A normal distribution curve. The horizontal axis ranges from 70 to 90, in increments of 1. The curve begins at 70, has a peak value at 80, and ends at 90. Five vertical lines are drawn at 74, 77, 80, 83, and 86.",
+      "credit": ""
+    },
+    {
+      "url": "https://math.libretexts.org/@api/deki/files/109459/e97b2a91b954e71c943e5cd4891f4d60270269fa?revision=1",
+      "alt": "A normal distribution curve. The horizontal axis ranges from 70 to 90, in increments of 1. The curve begins at 70, has a peak value at 80, and ends at 90. Five vertical lines are drawn at 74, 77, 80, 83, and 86. The region to the right of the line at 86 is shaded in blue.",
+      "credit": ""
+    },
+    {
+      "url": "https://math.libretexts.org/@api/deki/files/109464/05c0c27807b4d79c2359d1e7850d27ef397c3991?revision=1",
+      "alt": "A normal distribution curve. The horizontal axis ranges from 70 to 90, in increments of 1. The curve begins at 70, has a peak value at 80, and ends at 90. Five vertical lines are drawn at 74, 77, 80, 83, and 86. The region in between lines, 74 and 77 is shaded in blue.",
+      "credit": ""
+    },
+    {
+      "url": "https://math.libretexts.org/@api/deki/files/109467/991f07425f5023ffd45bbd94f472683b0291c7c3?revision=1",
+      "alt": "A normal distribution curve. The horizontal axis ranges from 70 to 90, in increments of 1. The curve begins at 70, has a peak value at 80, and ends at 90. The region from 74 to 77 is shaded in blue. The region from 77 to 80 is shaded in red. The total shaded region from 74 to 80 is marked 47.5 percent. The shaded region from 74 to 77 is marked 13.5 percent. The shaded region from 77 to 80 is marked 34 percent.",
+      "credit": ""
+    },
+    {
+      "url": "https://math.libretexts.org/@api/deki/files/109468/b20a134dcbde141933ab8c89ada2cc5aead1bb83?revision=1",
+      "alt": "A normal distribution curve. The horizontal axis ranges from 70 to 90, in increments of 1. The curve begins at 70, has a peak value at 80, and ends at 90. Five vertical lines are drawn at 74, 77, 80, 83, and 86. The region from 74 to 83 is shaded in blue.",
+      "credit": ""
+    },
+    {
+      "url": "https://math.libretexts.org/@api/deki/files/109466/18403628e81f0ed171fbcaaf7e5f893d56d89e82?revision=1",
+      "alt": "A normal distribution curve. The horizontal axis ranges from 70 to 90, in increments of 1. The curve begins at 70, has a peak value at 80, and ends at 90. The region from 74 to 80 is shaded in blue. The region from 80 to 83 is shaded in red.",
+      "credit": ""
+    },
+    {
+      "url": "https://math.libretexts.org/@api/deki/files/109469/6e7913ec420ab7f7e32a69533929672d0437c7a6?revision=1",
+      "alt": "A normal distribution curve. The horizontal axis ranges from 20 to 60, in increments of 2. The curve begins before 20, has a peak value at 40, and ends after 60. Five vertical lines are drawn at 26, 33, 40, 47, and 54. The region to the left of 50 is shaded in blue.",
+      "credit": ""
+    }
+  ],
+  "references": [
+    {
+      "text": "8.6: The Normal Distribution",
+      "url": "https://math.libretexts.org/Bookshelves/Applied_Mathematics/Contemporary_Mathematics_(OpenStax)/08%3A_Statistics/8.06%3A_The_Normal_Distribution"
+    },
+    {
+      "text": "CC BY  4.0",
+      "url": "https://creativecommons.org/licenses/by/4.0"
+    },
+    {
+      "text": "OpenStax",
+      "url": "https://openstax.org/"
+    },
+    {
+      "text": "source content",
+      "url": "https://openstax.org/details/books/contemporary-mathematics"
+    }
+  ],
+  "exercises": [
+    {
+      "ordinal": 1,
+      "sourceNumber": "1",
+      "sourceAnchor": "",
+      "kind": "exercise-candidate",
+      "context": "",
+      "original": "1. Describe the characteristics of the normal distribution.",
+      "prompt": "1. Describe the characteristics of the normal distribution.",
+      "sourceAnswers": [],
+      "hasFigure": false,
+      "status": "draft",
+      "answerVerified": false,
+      "translationStatus": "pending",
+      "mappingStatus": "pending"
+    },
+    {
+      "ordinal": 2,
+      "sourceNumber": "2",
+      "sourceAnchor": "",
+      "kind": "exercise-candidate",
+      "context": "",
+      "original": "2. Apply the 68-95-99.7 percent groups to normal distribution datasets.",
+      "prompt": "2. Apply the 68-95-99.7 percent groups to normal distribution datasets.",
+      "sourceAnswers": [],
+      "hasFigure": false,
+      "status": "draft",
+      "answerVerified": false,
+      "translationStatus": "pending",
+      "mappingStatus": "pending"
+    },
+    {
+      "ordinal": 3,
+      "sourceNumber": "3",
+      "sourceAnchor": "",
+      "kind": "exercise-candidate",
+      "context": "",
+      "original": "3. Use the normal distribution to calculate a \\(z\\)-score.",
+      "prompt": "3. Use the normal distribution to calculate a \\(z\\)-score.",
+      "sourceAnswers": [],
+      "hasFigure": false,
+      "status": "draft",
+      "answerVerified": false,
+      "translationStatus": "pending",
+      "mappingStatus": "pending"
+    },
+    {
+      "ordinal": 4,
+      "sourceNumber": "4",
+      "sourceAnchor": "",
+      "kind": "exercise-candidate",
+      "context": "",
+      "original": "4. Find and interpret percentiles and quartiles.",
+      "prompt": "4. Find and interpret percentiles and quartiles.",
+      "sourceAnswers": [],
+      "hasFigure": false,
+      "status": "draft",
+      "answerVerified": false,
+      "translationStatus": "pending",
+      "mappingStatus": "pending"
+    },
+    {
+      "ordinal": 5,
+      "sourceNumber": "",
+      "sourceAnchor": "",
+      "kind": "example-or-exercise",
+      "context": "The Normal Distribution\n\nIn the coin flipping example above, the distribution of the number of heads for 10,000 trials was close to perfectly symmetric and bell-shaped:\n\nBecause distributions with this shape appear so often, we have a special name for them: normal distributions. Normal distributions can be completely described using two numbers we’ve seen before: the mean of the data and the standard deviation of the data. You may remember that we described the mean as a measure of centrality; for a normal distribution, the mean tells us exactly where the center of the distribution falls. The peak of the distribution happens at the mean (and, because the distribution is symmetric, it’s also the median). The standard deviation is a measure of dispersion; for a normal distribution, it tells us how spread out the histogram looks. To illustrate these points, let’s look at some examples.",
+      "original": "Example \\(\\PageIndex{1}\\): Identifying the Mean of a Normal Distribution\n\nThis graph shows three normal distributions. What are their means?\n\n[Figure: A graph shows three normal distribution curves. The horizontal axis ranges from negative 1 to 5, in increments of 1. The three curves are described as follows. The first curve (red) begins at negative 1, has a peak value at 1, and ends at 3. The second curve (blue) begins at 0, has a peak value at 2, and ends at 4. The third curve (yellow) begins at 1, has a peak value at 3, and ends at 5. The three curves overlap each other and their peaks are of equal height.]\n\nFigure \\(\\PageIndex{6}\\)\n\nAnswer\n\nStep 1: Take a look at the three curves on the graph. Since the mean of a normal distribution occurs at the peak, we should look for the highest point on each distribution. Let’s draw a line from each curve's peak down to the axis, so we can see where these peaks occur:\n\n[Figure: A graph shows three normal distribution curves. The horizontal axis ranges from negative 1 to 5, in increments of 1. The three curves are described as follows. The first curve (red) begins at negative 1, has a peak value at 1, and ends at 3. The second curve (blue) begins at 0, has a peak value at 2, and ends at 4. The third curve (yellow) begins at 1, has a peak value at 3, and ends at 5. The three curves overlap each other and their peaks are of equal height. A vertical dashed line is drawn from each peak to the horizontal axis.]\n\nFigure \\(\\PageIndex{7}\\)\n\nStep 2: The peak of the red (leftmost) distribution occurs over the number 1 on the horizontal axis. Thus, the mean of the red distribution is 1. Similarly, the mean of the blue (middle) distribution is 2, and the mean of the yellow (rightmost) distribution is 3.",
+      "prompt": "Example \\(\\PageIndex{1}\\): Identifying the Mean of a Normal Distribution\n\nThis graph shows three normal distributions. What are their means?\n\n[Figure: A graph shows three normal distribution curves. The horizontal axis ranges from negative 1 to 5, in increments of 1. The three curves are described as follows. The first curve (red) begins at negative 1, has a peak value at 1, and ends at 3. The second curve (blue) begins at 0, has a peak value at 2, and ends at 4. The third curve (yellow) begins at 1, has a peak value at 3, and ends at 5. The three curves overlap each other and their peaks are of equal height.]\n\nFigure \\(\\PageIndex{6}\\)",
+      "sourceAnswers": [
+        "Step 1: Take a look at the three curves on the graph. Since the mean of a normal distribution occurs at the peak, we should look for the highest point on each distribution. Let’s draw a line from each curve's peak down to the axis, so we can see where these peaks occur:\n\n[Figure: A graph shows three normal distribution curves. The horizontal axis ranges from negative 1 to 5, in increments of 1. The three curves are described as follows. The first curve (red) begins at negative 1, has a peak value at 1, and ends at 3. The second curve (blue) begins at 0, has a peak value at 2, and ends at 4. The third curve (yellow) begins at 1, has a peak value at 3, and ends at 5. The three curves overlap each other and their peaks are of equal height. A vertical dashed line is drawn from each peak to the horizontal axis.]\n\nFigure \\(\\PageIndex{7}\\)\n\nStep 2: The peak of the red (leftmost) distribution occurs over the number 1 on the horizontal axis. Thus, the mean of the red distribution is 1. Similarly, the mean of the blue (middle) distribution is 2, and the mean of the yellow (rightmost) distribution is 3."
+      ],
+      "hasFigure": true,
+      "status": "draft",
+      "answerVerified": false,
+      "translationStatus": "pending",
+      "mappingStatus": "pending"
+    },
+    {
+      "ordinal": 6,
+      "sourceNumber": "",
+      "sourceAnchor": "",
+      "kind": "example-or-exercise",
+      "context": "In the coin flipping example above, the distribution of the number of heads for 10,000 trials was close to perfectly symmetric and bell-shaped:\n\nBecause distributions with this shape appear so often, we have a special name for them: normal distributions. Normal distributions can be completely described using two numbers we’ve seen before: the mean of the data and the standard deviation of the data. You may remember that we described the mean as a measure of centrality; for a normal distribution, the mean tells us exactly where the center of the distribution falls. The peak of the distribution happens at the mean (and, because the distribution is symmetric, it’s also the median). The standard deviation is a measure of dispersion; for a normal distribution, it tells us how spread out the histogram looks. To illustrate these points, let’s look at some examples.\n\nIdentify the means of these three distributions:",
+      "original": "Example \\(\\PageIndex{2}\\): Identifying the Standard Deviation of a Normal Distribution\n\nThis graph shows three distributions, all with mean 2. What are their standard deviations?\n\n[Figure: A graph shows three normal distribution curves. The horizontal axis ranges from negative 4 to 10, in increments of 2. The three curves are described as follows. The first curve (red) begins before negative 4, has a peak value at 2, and ends at 10. The second curve (blue) begins before negative 4, has a peak value at 2, and ends at 10. The third curve (yellow) begins before negative 4, has a peak value at 2, and ends after 10. The first curve has the highest peak and the third curve has the lowest peak.]\n\nFigure \\(\\PageIndex{9}\\)\n\nAnswer\n\nStep 1: Identifying the standard deviation from a graph can be a little bit tricky. Let’s focus in on the yellow (lowest peaked) curve:\n\n[Figure: A normal distribution curve. The horizontal axis ranges from negative 5 to 10, in increments of 1. The curve begins before negative 5, has a peak value at 2, and ends at 10.]\n\nFigure \\(\\PageIndex{10}\\)\n\n    Step 2: Notice that the graph curves downward in the middle, and curves upwards on the ends. Highlighted in red is the part that curves downward and in green, the part that curves upward:\n\n[Figure: A normal distribution curve. The horizontal axis ranges from negative 5 to 10, in increments of 1. The curve begins before negative 5, has a peak value at 2, and ends at 10. On the curve, from negative 1 to 5 is highlighted and it represents inflection points.]\n\nFigure \\(\\PageIndex{11}\\)\n\n    Step 3: The places where the graph changes from curving up to curving down (or vice versa) are called inflection points. Let’s identify where those occur by dropping a line straight down from each:\n\n[Figure: A normal distribution curve. The horizontal axis ranges from negative 5 to 10, in increments of 1. The curve begins before negative 5, has a peak value at 2, and ends at 10. On the curve, from negative 1 to 5 is highlighted and it represents inflection points. Dashed vertical lines are drawn from negative 1, 2, and 5 to meet the curve.]\n\nFigure \\(\\PageIndex{12}\\)\n\n    Step 4: We can estimate that the inflection points occur at \\(x=-1\\) and \\(x=5\\); the mean is at \\(x=2\\) (as shown by the middle dotted line). The difference between the mean and the location of either inflection point is the standard deviation; since \\(5-2=2-(-1)=3\\), we conclude that the standard deviation of the green distribution is 3.\n\nStep 5: Now, looking at the other two graphs, let's first identify the inflection points:\n\n[Figure: A graph shows two normal distribution curves. The horizontal axis ranges from negative 5 to 10, in increments of 1. The two curves are described as follows. The first curve (red) begins at negative 5, has a peak value at 2, and ends at 10. The second curve (blue) begins at negative 5, has a peak value at 2, and ends at 10. The first curve (red) has a higher peak than the second curve (blue).]\n\nFigure \\(\\PageIndex{13}\\)\n\nStep 6: The red (tallest peaked) distribution has inflection points at 1 and 3, and the mean is 2. Thus, the standard deviation of the red distribution is 3 - 2 = 2 - 1 = 1 3 - 2 = 2 - 1 = 1 . The blue (lower peaked) distribution has inflection points at 0 and 4, and its mean is also 2. So, the standard deviation of the blue distribution is 2.",
+      "prompt": "Example \\(\\PageIndex{2}\\): Identifying the Standard Deviation of a Normal Distribution\n\nThis graph shows three distributions, all with mean 2. What are their standard deviations?\n\n[Figure: A graph shows three normal distribution curves. The horizontal axis ranges from negative 4 to 10, in increments of 2. The three curves are described as follows. The first curve (red) begins before negative 4, has a peak value at 2, and ends at 10. The second curve (blue) begins before negative 4, has a peak value at 2, and ends at 10. The third curve (yellow) begins before negative 4, has a peak value at 2, and ends after 10. The first curve has the highest peak and the third curve has the lowest peak.]\n\nFigure \\(\\PageIndex{9}\\)",
+      "sourceAnswers": [
+        "Step 1: Identifying the standard deviation from a graph can be a little bit tricky. Let’s focus in on the yellow (lowest peaked) curve:\n\n[Figure: A normal distribution curve. The horizontal axis ranges from negative 5 to 10, in increments of 1. The curve begins before negative 5, has a peak value at 2, and ends at 10.]\n\nFigure \\(\\PageIndex{10}\\)\n\n    Step 2: Notice that the graph curves downward in the middle, and curves upwards on the ends. Highlighted in red is the part that curves downward and in green, the part that curves upward:\n\n[Figure: A normal distribution curve. The horizontal axis ranges from negative 5 to 10, in increments of 1. The curve begins before negative 5, has a peak value at 2, and ends at 10. On the curve, from negative 1 to 5 is highlighted and it represents inflection points.]\n\nFigure \\(\\PageIndex{11}\\)\n\n    Step 3: The places where the graph changes from curving up to curving down (or vice versa) are called inflection points. Let’s identify where those occur by dropping a line straight down from each:\n\n[Figure: A normal distribution curve. The horizontal axis ranges from negative 5 to 10, in increments of 1. The curve begins before negative 5, has a peak value at 2, and ends at 10. On the curve, from negative 1 to 5 is highlighted and it represents inflection points. Dashed vertical lines are drawn from negative 1, 2, and 5 to meet the curve.]\n\nFigure \\(\\PageIndex{12}\\)\n\n    Step 4: We can estimate that the inflection points occur at \\(x=-1\\) and \\(x=5\\); the mean is at \\(x=2\\) (as shown by the middle dotted line). The difference between the mean and the location of either inflection point is the standard deviation; since \\(5-2=2-(-1)=3\\), we conclude that the standard deviation of the green distribution is 3.\n\nStep 5: Now, looking at the other two graphs, let's first identify the inflection points:\n\n[Figure: A graph shows two normal distribution curves. The horizontal axis ranges from negative 5 to 10, in increments of 1. The two curves are described as follows. The first curve (red) begins at negative 5, has a peak value at 2, and ends at 10. The second curve (blue) begins at negative 5, has a peak value at 2, and ends at 10. The first curve (red) has a higher peak than the second curve (blue).]\n\nFigure \\(\\PageIndex{13}\\)\n\nStep 6: The red (tallest peaked) distribution has inflection points at 1 and 3, and the mean is 2. Thus, the standard deviation of the red distribution is 3 - 2 = 2 - 1 = 1 3 - 2 = 2 - 1 = 1 . The blue (lower peaked) distribution has inflection points at 0 and 4, and its mean is also 2. So, the standard deviation of the blue distribution is 2."
+      ],
+      "hasFigure": true,
+      "status": "draft",
+      "answerVerified": false,
+      "translationStatus": "pending",
+      "mappingStatus": "pending"
+    },
+    {
+      "ordinal": 7,
+      "sourceNumber": "",
+      "sourceAnchor": "",
+      "kind": "example-or-exercise",
+      "context": "Identify the means of these three distributions:\n\nEstimate the standard deviations of this normal distribution, centered at 5:\n\nLet’s put it all together to identify a completely unknown normal distribution.",
+      "original": "Example \\(\\PageIndex{3}\\): Identifying the Mean and Standard Deviation of a Normal Distribution\n\nUsing the graph, identify the mean and standard deviation of the normal distribution.\n\n[Figure: A normal distribution curve. The horizontal axis ranges from 45 to 70, in increments of 1. The curve begins at 45, has a peak value at 55, and ends at 70.]\n\nFigure \\(\\PageIndex{15}\\)\n\nAnswer\n\nStep 1: Let’s start by putting dots on the graph at the peak and at the inflection points, then drop lines from those points straight down to the axis:\n\n[Figure: A normal distribution curve. The horizontal axis ranges from 45 to 70, in increments of 1. The curve begins at 45, has a peak value at 55, and ends at 70. Dashed vertical lines are drawn from 52, 55, and 58 to meet the curve.]\n\nFigure \\(\\PageIndex{16}\\)\n\nStep 2: From the red (middle) line, we can see that the mean of this distribution is 55. The blue (outermost) lines are each 3 units away from the mean (at 52 and 58), so the standard deviation is 3.",
+      "prompt": "Example \\(\\PageIndex{3}\\): Identifying the Mean and Standard Deviation of a Normal Distribution\n\nUsing the graph, identify the mean and standard deviation of the normal distribution.\n\n[Figure: A normal distribution curve. The horizontal axis ranges from 45 to 70, in increments of 1. The curve begins at 45, has a peak value at 55, and ends at 70.]\n\nFigure \\(\\PageIndex{15}\\)",
+      "sourceAnswers": [
+        "Step 1: Let’s start by putting dots on the graph at the peak and at the inflection points, then drop lines from those points straight down to the axis:\n\n[Figure: A normal distribution curve. The horizontal axis ranges from 45 to 70, in increments of 1. The curve begins at 45, has a peak value at 55, and ends at 70. Dashed vertical lines are drawn from 52, 55, and 58 to meet the curve.]\n\nFigure \\(\\PageIndex{16}\\)\n\nStep 2: From the red (middle) line, we can see that the mean of this distribution is 55. The blue (outermost) lines are each 3 units away from the mean (at 52 and 58), so the standard deviation is 3."
+      ],
+      "hasFigure": true,
+      "status": "draft",
+      "answerVerified": false,
+      "translationStatus": "pending",
+      "mappingStatus": "pending"
+    },
+    {
+      "ordinal": 8,
+      "sourceNumber": "1",
+      "sourceAnchor": "",
+      "kind": "example-or-exercise",
+      "context": "As before, since 95% of the data are in the shaded area, that leaves 5% of the data to go into the unshaded tails. Since the histogram is symmetric, half of the 5% (that’s 2.5%) is in each.\n\nWe can even take this one step further: 99.7% of normally distributed data fall within 3 standard deviations of the mean. In this example, we’d see 99.7% of the data between 100 (calculated as \\(400 –3×100=100\\)) and 700 (calculated as \\(400+3×100=700\\)). We can see this in the histogram below, although you may need to squint to find the unshaded bits in the tails!\n\nThis observation is formally known as the 68-95-99.7 Rule.",
+      "original": "1. If data are normally distributed with mean 8 and standard deviation 2, what percent of the data falls between 4 and 12?\n\n2. If data are normally distributed with mean 25 and standard deviation 5, what percent of the data falls between 20 and 30?\n\n3. If data are normally distributed with mean 200 and standard deviation 15, what percent of the data falls between 155 and 245?\n\nAnswer\n\n1. Let’s look at a table that sets out the data values that are even multiples of the standard deviation (SD) above and below the mean:\n\n                    \\(mean-\\)3×SD\t\n                    \\(mean-\\)2×SD\t\n                    \\(mean-\\)1×SD\t\n                    Mean\t\n                    \\(mean+\\)1×SD\t\n                    \\(mean+\\)2×SD\t\n                    \\(mean+\\)3×SD\t\n\n                    2\t\n                    4\t\n                    6\t\n                    8\t\n                    10\t\n                    12\t\n                    14\t\n\nSince 4 and 12 represent two standard deviations above and below the mean, we conclude that 95% of the data will fall between them.",
+      "prompt": "1. If data are normally distributed with mean 8 and standard deviation 2, what percent of the data falls between 4 and 12?\n\n2. If data are normally distributed with mean 25 and standard deviation 5, what percent of the data falls between 20 and 30?\n\n3. If data are normally distributed with mean 200 and standard deviation 15, what percent of the data falls between 155 and 245?",
+      "sourceAnswers": [
+        "1. Let’s look at a table that sets out the data values that are even multiples of the standard deviation (SD) above and below the mean:\n\n                    \\(mean-\\)3×SD\t\n                    \\(mean-\\)2×SD\t\n                    \\(mean-\\)1×SD\t\n                    Mean\t\n                    \\(mean+\\)1×SD\t\n                    \\(mean+\\)2×SD\t\n                    \\(mean+\\)3×SD\t\n\n                    2\t\n                    4\t\n                    6\t\n                    8\t\n                    10\t\n                    12\t\n                    14\t\n\nSince 4 and 12 represent two standard deviations above and below the mean, we conclude that 95% of the data will fall between them."
+      ],
+      "hasFigure": false,
+      "status": "draft",
+      "answerVerified": false,
+      "translationStatus": "pending",
+      "mappingStatus": "pending"
+    },
+    {
+      "ordinal": 9,
+      "sourceNumber": "1",
+      "sourceAnchor": "",
+      "kind": "example-or-exercise",
+      "context": "If data are distributed normally with mean 0 and standard deviation 3, what percent of the data fall between –9 and 9?\n\nIf data are distributed normally with mean 50 and standard deviation 10, what percent of the data fall between 30 and 70?\n\nIf data are distributed normally with mean 60 and standard deviation 5, what percent of the data fall between 55 and 65?",
+      "original": "1. If data are distributed normally with mean 100 and standard deviation 20, between what two values will 68% of the data fall?\n\n2. If data are distributed normally with mean 0 and standard deviation 15, between what two values will 95% of the data fall?\n\n3. If data are distributed normally with mean 14 and standard deviation 2, between what two values will 99.7% of the data fall?\n\nAnswer\n\n1. The 68-95-99.7 Rule tells us that 68% of the data will fall within one standard deviation of the mean. So, to find the values we seek, we’ll add and subtract one standard deviation from the mean: \\(100-1×20=80\\) and \\(100+1×20=120\\). Thus, we know that 68% of the data fall between 80 and 120.\n\n2. Using the 68-95-99.7 Rule again, we know that 95% of the data will fall within 2 standard deviations of the mean. Let’s add and subtract two standard deviations from that mean: \\(0-2×15=-30\\) and \\(0+2×15=30\\). So, 95% of the data will fall between -30 and 30.\n\n3. Once again, the 68-95-99.7 Rule tells us that 99.7% of the data will fall within three standard deviations of the mean. So, let’s add and subtract three standard deviations from the mean: \\(\\) and \\(14+3×2=20\\). Thus, we conclude that 99.7% of the data will fall between 8 and 20.",
+      "prompt": "1. If data are distributed normally with mean 100 and standard deviation 20, between what two values will 68% of the data fall?\n\n2. If data are distributed normally with mean 0 and standard deviation 15, between what two values will 95% of the data fall?\n\n3. If data are distributed normally with mean 14 and standard deviation 2, between what two values will 99.7% of the data fall?",
+      "sourceAnswers": [
+        "1. The 68-95-99.7 Rule tells us that 68% of the data will fall within one standard deviation of the mean. So, to find the values we seek, we’ll add and subtract one standard deviation from the mean: \\(100-1×20=80\\) and \\(100+1×20=120\\). Thus, we know that 68% of the data fall between 80 and 120.\n\n2. Using the 68-95-99.7 Rule again, we know that 95% of the data will fall within 2 standard deviations of the mean. Let’s add and subtract two standard deviations from that mean: \\(0-2×15=-30\\) and \\(0+2×15=30\\). So, 95% of the data will fall between -30 and 30.\n\n3. Once again, the 68-95-99.7 Rule tells us that 99.7% of the data will fall within three standard deviations of the mean. So, let’s add and subtract three standard deviations from the mean: \\(\\) and \\(14+3×2=20\\). Thus, we conclude that 99.7% of the data will fall between 8 and 20."
+      ],
+      "hasFigure": false,
+      "status": "draft",
+      "answerVerified": false,
+      "translationStatus": "pending",
+      "mappingStatus": "pending"
+    },
+    {
+      "ordinal": 10,
+      "sourceNumber": "1",
+      "sourceAnchor": "",
+      "kind": "exercise-candidate",
+      "context": "If data are distributed normally with mean 0 and standard deviation 3, what percent of the data fall between –9 and 9?\n\nIf data are distributed normally with mean 50 and standard deviation 10, what percent of the data fall between 30 and 70?\n\nIf data are distributed normally with mean 60 and standard deviation 5, what percent of the data fall between 55 and 65?",
+      "original": "1. If data are distributed normally with mean 70 and standard deviation 5, between what two values will 68% of the data fall?",
+      "prompt": "1. If data are distributed normally with mean 70 and standard deviation 5, between what two values will 68% of the data fall?",
+      "sourceAnswers": [],
+      "hasFigure": false,
+      "status": "draft",
+      "answerVerified": false,
+      "translationStatus": "pending",
+      "mappingStatus": "pending"
+    },
+    {
+      "ordinal": 11,
+      "sourceNumber": "2",
+      "sourceAnchor": "",
+      "kind": "exercise-candidate",
+      "context": "If data are distributed normally with mean 0 and standard deviation 3, what percent of the data fall between –9 and 9?\n\nIf data are distributed normally with mean 50 and standard deviation 10, what percent of the data fall between 30 and 70?\n\nIf data are distributed normally with mean 60 and standard deviation 5, what percent of the data fall between 55 and 65?",
+      "original": "2. If data are distributed normally with mean 40 and standard deviation 7, between what two values will 95% of the data fall?",
+      "prompt": "2. If data are distributed normally with mean 40 and standard deviation 7, between what two values will 95% of the data fall?",
+      "sourceAnswers": [],
+      "hasFigure": false,
+      "status": "draft",
+      "answerVerified": false,
+      "translationStatus": "pending",
+      "mappingStatus": "pending"
+    },
+    {
+      "ordinal": 12,
+      "sourceNumber": "3",
+      "sourceAnchor": "",
+      "kind": "exercise-candidate",
+      "context": "If data are distributed normally with mean 0 and standard deviation 3, what percent of the data fall between –9 and 9?\n\nIf data are distributed normally with mean 50 and standard deviation 10, what percent of the data fall between 30 and 70?\n\nIf data are distributed normally with mean 60 and standard deviation 5, what percent of the data fall between 55 and 65?",
+      "original": "3. If data are distributed normally with mean 200 and standard deviation 30, between what two values will 99.7% of the data fall?",
+      "prompt": "3. If data are distributed normally with mean 200 and standard deviation 30, between what two values will 99.7% of the data fall?",
+      "sourceAnswers": [],
+      "hasFigure": false,
+      "status": "draft",
+      "answerVerified": false,
+      "translationStatus": "pending",
+      "mappingStatus": "pending"
+    },
+    {
+      "ordinal": 13,
+      "sourceNumber": "",
+      "sourceAnchor": "",
+      "kind": "example-or-exercise",
+      "context": "Further, we know that the middle 68% can be split in half at the peak of the histogram, leaving 34% on either side:\n\nSo, just the “68” part of the 68-95-99.7 Rule gives us four other proportions in addition to the 68% in the rule. Similarly, the “95” and “99.7” parts each give us four more proportions:\n\nWe can put all these together to find even more complicated proportions. For example, since the proportion between 100 and 120 is 47.5% and the proportion between 100 and 110 is 34%, we can subtract to find that the proportion between 110 and 120 is \\(47.5-34=13.5%\\):",
+      "original": "Assume that we have data that are normally distributed with mean 80 and standard deviation 3.\n\n1. What proportion of the data will be greater than 86?\n\n2. What proportion of the data will be between 74 and 77?\n\n3. What proportion of the data will be between 74 and 83?\n\nAnswer\n\nBefore we can answer these questions, we must mark off sections that are multiples of the standard deviation away from the mean:\n\n[Figure: A normal distribution curve. The horizontal axis ranges from 70 to 90, in increments of 1. The curve begins at 70, has a peak value at 80, and ends at 90. Five vertical lines are drawn at 74, 77, 80, 83, and 86.]\n\nFigure \\(\\PageIndex{27}\\)",
+      "prompt": "Assume that we have data that are normally distributed with mean 80 and standard deviation 3.\n\n1. What proportion of the data will be greater than 86?\n\n2. What proportion of the data will be between 74 and 77?\n\n3. What proportion of the data will be between 74 and 83?",
+      "sourceAnswers": [
+        "Before we can answer these questions, we must mark off sections that are multiples of the standard deviation away from the mean:\n\n[Figure: A normal distribution curve. The horizontal axis ranges from 70 to 90, in increments of 1. The curve begins at 70, has a peak value at 80, and ends at 90. Five vertical lines are drawn at 74, 77, 80, 83, and 86.]\n\nFigure \\(\\PageIndex{27}\\)"
+      ],
+      "hasFigure": true,
+      "status": "draft",
+      "answerVerified": false,
+      "translationStatus": "pending",
+      "mappingStatus": "pending"
+    },
+    {
+      "ordinal": 14,
+      "sourceNumber": "1",
+      "sourceAnchor": "",
+      "kind": "exercise-candidate",
+      "context": "Further, we know that the middle 68% can be split in half at the peak of the histogram, leaving 34% on either side:\n\nSo, just the “68” part of the 68-95-99.7 Rule gives us four other proportions in addition to the 68% in the rule. Similarly, the “95” and “99.7” parts each give us four more proportions:\n\nWe can put all these together to find even more complicated proportions. For example, since the proportion between 100 and 120 is 47.5% and the proportion between 100 and 110 is 34%, we can subtract to find that the proportion between 110 and 120 is \\(47.5-34=13.5%\\):",
+      "original": "1. To figure out what proportion of the data will be greater than 86, let's start by shading in the area of data that are above 86 in our figure, or the data more than two standard deviations above the mean.\n\n[Figure: A normal distribution curve. The horizontal axis ranges from 70 to 90, in increments of 1. The curve begins at 70, has a peak value at 80, and ends at 90. Five vertical lines are drawn at 74, 77, 80, 83, and 86. The region to the right of the line at 86 is shaded in blue.]\n\nFigure \\(\\PageIndex{28}\\)\n\n    We saw in Figure 8.51 that this proportion is 2.5%.",
+      "prompt": "1. To figure out what proportion of the data will be greater than 86, let's start by shading in the area of data that are above 86 in our figure, or the data more than two standard deviations above the mean.\n\n[Figure: A normal distribution curve. The horizontal axis ranges from 70 to 90, in increments of 1. The curve begins at 70, has a peak value at 80, and ends at 90. Five vertical lines are drawn at 74, 77, 80, 83, and 86. The region to the right of the line at 86 is shaded in blue.]\n\nFigure \\(\\PageIndex{28}\\)\n\n    We saw in Figure 8.51 that this proportion is 2.5%.",
+      "sourceAnswers": [],
+      "hasFigure": true,
+      "status": "draft",
+      "answerVerified": false,
+      "translationStatus": "pending",
+      "mappingStatus": "pending"
+    },
+    {
+      "ordinal": 15,
+      "sourceNumber": "2",
+      "sourceAnchor": "",
+      "kind": "exercise-candidate",
+      "context": "Further, we know that the middle 68% can be split in half at the peak of the histogram, leaving 34% on either side:\n\nSo, just the “68” part of the 68-95-99.7 Rule gives us four other proportions in addition to the 68% in the rule. Similarly, the “95” and “99.7” parts each give us four more proportions:\n\nWe can put all these together to find even more complicated proportions. For example, since the proportion between 100 and 120 is 47.5% and the proportion between 100 and 110 is 34%, we can subtract to find that the proportion between 110 and 120 is \\(47.5-34=13.5%\\):",
+      "original": "2. To figure out what proportion of the data will be between 74 and 77, let's start by shading in that area of data. These are data that are more than one but less than two standard deviations below the mean.\n\n[Figure: A normal distribution curve. The horizontal axis ranges from 70 to 90, in increments of 1. The curve begins at 70, has a peak value at 80, and ends at 90. Five vertical lines are drawn at 74, 77, 80, 83, and 86. The region in between lines, 74 and 77 is shaded in blue.]\n\nFigure \\(\\PageIndex{29}\\)\n\n    From Figure 8.51, we know that the proportion of data less than two standard deviations below the mean is 47.5%. And, from YOUR TURN 8.33, we know that 34% of the data is less than one standard deviation below the mean:\n\n[Figure: A normal distribution curve. The horizontal axis ranges from 70 to 90, in increments of 1. The curve begins at 70, has a peak value at 80, and ends at 90. The region from 74 to 77 is shaded in blue. The region from 77 to 80 is shaded in red. The total shaded region from 74 to 80 is marked 47.5 percent. The shaded region from 74 to 77 is marked 13.5 percent. The shaded region from 77 to 80 is marked 34 percent.]\n\nFigure \\(\\PageIndex{30}\\)\n\n    Subtracting, we see that the proportion of data between 74 and 77 is 13.5%.",
+      "prompt": "2. To figure out what proportion of the data will be between 74 and 77, let's start by shading in that area of data. These are data that are more than one but less than two standard deviations below the mean.\n\n[Figure: A normal distribution curve. The horizontal axis ranges from 70 to 90, in increments of 1. The curve begins at 70, has a peak value at 80, and ends at 90. Five vertical lines are drawn at 74, 77, 80, 83, and 86. The region in between lines, 74 and 77 is shaded in blue.]\n\nFigure \\(\\PageIndex{29}\\)\n\n    From Figure 8.51, we know that the proportion of data less than two standard deviations below the mean is 47.5%. And, from YOUR TURN 8.33, we know that 34% of the data is less than one standard deviation below the mean:\n\n[Figure: A normal distribution curve. The horizontal axis ranges from 70 to 90, in increments of 1. The curve begins at 70, has a peak value at 80, and ends at 90. The region from 74 to 77 is shaded in blue. The region from 77 to 80 is shaded in red. The total shaded region from 74 to 80 is marked 47.5 percent. The shaded region from 74 to 77 is marked 13.5 percent. The shaded region from 77 to 80 is marked 34 percent.]\n\nFigure \\(\\PageIndex{30}\\)\n\n    Subtracting, we see that the proportion of data between 74 and 77 is 13.5%.",
+      "sourceAnswers": [],
+      "hasFigure": true,
+      "status": "draft",
+      "answerVerified": false,
+      "translationStatus": "pending",
+      "mappingStatus": "pending"
+    },
+    {
+      "ordinal": 16,
+      "sourceNumber": "3",
+      "sourceAnchor": "",
+      "kind": "exercise-candidate",
+      "context": "Further, we know that the middle 68% can be split in half at the peak of the histogram, leaving 34% on either side:\n\nSo, just the “68” part of the 68-95-99.7 Rule gives us four other proportions in addition to the 68% in the rule. Similarly, the “95” and “99.7” parts each give us four more proportions:\n\nWe can put all these together to find even more complicated proportions. For example, since the proportion between 100 and 120 is 47.5% and the proportion between 100 and 110 is 34%, we can subtract to find that the proportion between 110 and 120 is \\(47.5-34=13.5%\\):",
+      "original": "3. To figure out what proportion of the data will be between 74 and 83, let's start by shading in that area of data in our figure.\n\n[Figure: A normal distribution curve. The horizontal axis ranges from 70 to 90, in increments of 1. The curve begins at 70, has a peak value at 80, and ends at 90. Five vertical lines are drawn at 74, 77, 80, 83, and 86. The region from 74 to 83 is shaded in blue.]\n\nFigure \\(\\PageIndex{31}\\)\n\n    Next, we'll break this region into two pieces at the mean:\n\n[Figure: A normal distribution curve. The horizontal axis ranges from 70 to 90, in increments of 1. The curve begins at 70, has a peak value at 80, and ends at 90. The region from 74 to 80 is shaded in blue. The region from 80 to 83 is shaded in red.]\n\nFigure \\(\\PageIndex{32}\\)\n\n    From Figure 8.51, we know the blue (leftmost) region represents 47.5% of the data. And, using YOUR TURN 8.33, we get that the red (rightmost) region covers 34% of the data. Adding those together, the proportion we want is 81.5%.",
+      "prompt": "3. To figure out what proportion of the data will be between 74 and 83, let's start by shading in that area of data in our figure.\n\n[Figure: A normal distribution curve. The horizontal axis ranges from 70 to 90, in increments of 1. The curve begins at 70, has a peak value at 80, and ends at 90. Five vertical lines are drawn at 74, 77, 80, 83, and 86. The region from 74 to 83 is shaded in blue.]\n\nFigure \\(\\PageIndex{31}\\)\n\n    Next, we'll break this region into two pieces at the mean:\n\n[Figure: A normal distribution curve. The horizontal axis ranges from 70 to 90, in increments of 1. The curve begins at 70, has a peak value at 80, and ends at 90. The region from 74 to 80 is shaded in blue. The region from 80 to 83 is shaded in red.]\n\nFigure \\(\\PageIndex{32}\\)\n\n    From Figure 8.51, we know the blue (leftmost) region represents 47.5% of the data. And, using YOUR TURN 8.33, we get that the red (rightmost) region covers 34% of the data. Adding those together, the proportion we want is 81.5%.",
+      "sourceAnswers": [],
+      "hasFigure": true,
+      "status": "draft",
+      "answerVerified": false,
+      "translationStatus": "pending",
+      "mappingStatus": "pending"
+    },
+    {
+      "ordinal": 17,
+      "sourceNumber": "",
+      "sourceAnchor": "",
+      "kind": "example-or-exercise",
+      "context": "\\(\\)z×σ.\n\nThe symbols \\(\\)μ and \\(\\)σ are the Greek letters mu and sigma. They are the analogues of the English letters \\(m\\) and \\(s\\), which stand for mean and standard deviation.\n\nIf you convert every data value in a dataset into its \\(z\\)-score, the resulting set of data will have mean 0 and standard deviation 1. This is why we call these standardized scores: the normal distribution with mean 0 and standard deviation 1 is often called the standard normal distribution.",
+      "original": "Example \\(\\PageIndex{7}\\): Standardizing Data\n\nSuppose we have data that are normally distributed with mean 50 and standard deviation 6. Compute the standardized scores (rounded to three decimal places) for these data values:\n\n1. 52\n\n2. 40\n\n3. 68\n\nAnswer\n\nFor each of these, we'll plug the given values into the formula. Remember, the mean is \\(\\mu=50\\) and the standard deviation is \\(\\sigma=6\\) :\n\n    1. \\(z=\\frac{x-\\mu}{\\sigma}=\\frac{52-50}{6}=0.333\\)\n\n    2. \\(z=\\frac{x-\\mu}{\\sigma}=\\frac{40-50}{6}=-1.667\\)\n\n    3. \\(z=\\frac{x-\\mu}{\\sigma}=\\frac{68-50}{6}=3\\)\\(\\)",
+      "prompt": "Example \\(\\PageIndex{7}\\): Standardizing Data\n\nSuppose we have data that are normally distributed with mean 50 and standard deviation 6. Compute the standardized scores (rounded to three decimal places) for these data values:\n\n1. 52\n\n2. 40\n\n3. 68",
+      "sourceAnswers": [
+        "For each of these, we'll plug the given values into the formula. Remember, the mean is \\(\\mu=50\\) and the standard deviation is \\(\\sigma=6\\) :\n\n    1. \\(z=\\frac{x-\\mu}{\\sigma}=\\frac{52-50}{6}=0.333\\)\n\n    2. \\(z=\\frac{x-\\mu}{\\sigma}=\\frac{40-50}{6}=-1.667\\)\n\n    3. \\(z=\\frac{x-\\mu}{\\sigma}=\\frac{68-50}{6}=3\\)\\(\\)"
+      ],
+      "hasFigure": false,
+      "status": "draft",
+      "answerVerified": false,
+      "translationStatus": "pending",
+      "mappingStatus": "pending"
+    },
+    {
+      "ordinal": 18,
+      "sourceNumber": "",
+      "sourceAnchor": "",
+      "kind": "example-or-exercise",
+      "context": "The symbols \\(\\)μ and \\(\\)σ are the Greek letters mu and sigma. They are the analogues of the English letters \\(m\\) and \\(s\\), which stand for mean and standard deviation.\n\nIf you convert every data value in a dataset into its \\(z\\)-score, the resulting set of data will have mean 0 and standard deviation 1. This is why we call these standardized scores: the normal distribution with mean 0 and standard deviation 1 is often called the standard normal distribution.\n\nSuppose we have data that are normally distributed with mean 75 and standard deviation 5. Compute standardized scores for each of these data values: 66, 83, and 72.",
+      "original": "Example \\(\\PageIndex{8}\\): Converting Standardized Scores to Original Values\n\nSuppose we have data that are normally distributed with mean 10 and standard deviation 2. Convert the following standardized scores into data values.\n\n1. 1.4\n\n2. −0.9\n\n3. 3.5\n\nAnswer\n\nWe'll use the formula previously introduced to convert \\(z\\)-scores into \\(x\\)-values. In this case, the mean is \\(\\mu=10\\) and the standard deviation is \\(\\sigma=2\\) :\n\n1. \\(x=\\mu+z \\times \\sigma=10+1.4 \\times 2=12.8\\)\n\n    2. \\(x=\\mu+z \\times \\sigma=10+(-0.9) \\times 2=8.2\\)\n\n    3. \\(x=\\mu+z \\times \\sigma=10+3.5 \\times 2=17\\)\\(\\)\\(\\)17",
+      "prompt": "Example \\(\\PageIndex{8}\\): Converting Standardized Scores to Original Values\n\nSuppose we have data that are normally distributed with mean 10 and standard deviation 2. Convert the following standardized scores into data values.\n\n1. 1.4\n\n2. −0.9\n\n3. 3.5",
+      "sourceAnswers": [
+        "We'll use the formula previously introduced to convert \\(z\\)-scores into \\(x\\)-values. In this case, the mean is \\(\\mu=10\\) and the standard deviation is \\(\\sigma=2\\) :\n\n1. \\(x=\\mu+z \\times \\sigma=10+1.4 \\times 2=12.8\\)\n\n    2. \\(x=\\mu+z \\times \\sigma=10+(-0.9) \\times 2=8.2\\)\n\n    3. \\(x=\\mu+z \\times \\sigma=10+3.5 \\times 2=17\\)\\(\\)\\(\\)17"
+      ],
+      "hasFigure": false,
+      "status": "draft",
+      "answerVerified": false,
+      "translationStatus": "pending",
+      "mappingStatus": "pending"
+    },
+    {
+      "ordinal": 19,
+      "sourceNumber": "1",
+      "sourceAnchor": "",
+      "kind": "exercise-candidate",
+      "context": "The 68-95-99.7 Rule is great when we’re dealing with whole-number \\(z\\)-scores. However, if the \\(z\\)-score is not a whole number, the Rule isn’t going to help us. Luckily, we can use technology to help us out. We’ll talk here about the built-in functions in Google Sheets, but other tools work similarly.\n\nLet’s say we’re working with normally distributed data with mean 40 and standard deviation 7, and we want to know at what percentile a data value of 50 would fall. That corresponds to finding the proportion of the data that are less than 50. If we create our histogram and mark off whole-number multiples of the standard deviation like we did before, we’ll see why the 68-95-99.7 Rule isn’t going to help:\n\nSince 50 doesn’t line up with one of our lines, the 68-95-99.7 Rule fails us. Looking back at Figure 8.51 and Figure 8.52, the best we can say is that 50 is between the 84th and 99.5th percentiles, but that’s a pretty wide range. Google Sheets has a function that can help; it’s called NORM.DIST. Here’s how to use it:",
+      "original": "1. Click in an empty cell in your worksheet.",
+      "prompt": "1. Click in an empty cell in your worksheet.",
+      "sourceAnswers": [],
+      "hasFigure": false,
+      "status": "draft",
+      "answerVerified": false,
+      "translationStatus": "pending",
+      "mappingStatus": "pending"
+    },
+    {
+      "ordinal": 20,
+      "sourceNumber": "2",
+      "sourceAnchor": "",
+      "kind": "exercise-candidate",
+      "context": "The 68-95-99.7 Rule is great when we’re dealing with whole-number \\(z\\)-scores. However, if the \\(z\\)-score is not a whole number, the Rule isn’t going to help us. Luckily, we can use technology to help us out. We’ll talk here about the built-in functions in Google Sheets, but other tools work similarly.\n\nLet’s say we’re working with normally distributed data with mean 40 and standard deviation 7, and we want to know at what percentile a data value of 50 would fall. That corresponds to finding the proportion of the data that are less than 50. If we create our histogram and mark off whole-number multiples of the standard deviation like we did before, we’ll see why the 68-95-99.7 Rule isn’t going to help:\n\nSince 50 doesn’t line up with one of our lines, the 68-95-99.7 Rule fails us. Looking back at Figure 8.51 and Figure 8.52, the best we can say is that 50 is between the 84th and 99.5th percentiles, but that’s a pretty wide range. Google Sheets has a function that can help; it’s called NORM.DIST. Here’s how to use it:",
+      "original": "2. Type “=NORM.DIST(“",
+      "prompt": "2. Type “=NORM.DIST(“",
+      "sourceAnswers": [],
+      "hasFigure": false,
+      "status": "draft",
+      "answerVerified": false,
+      "translationStatus": "pending",
+      "mappingStatus": "pending"
+    },
+    {
+      "ordinal": 21,
+      "sourceNumber": "3",
+      "sourceAnchor": "",
+      "kind": "exercise-candidate",
+      "context": "The 68-95-99.7 Rule is great when we’re dealing with whole-number \\(z\\)-scores. However, if the \\(z\\)-score is not a whole number, the Rule isn’t going to help us. Luckily, we can use technology to help us out. We’ll talk here about the built-in functions in Google Sheets, but other tools work similarly.\n\nLet’s say we’re working with normally distributed data with mean 40 and standard deviation 7, and we want to know at what percentile a data value of 50 would fall. That corresponds to finding the proportion of the data that are less than 50. If we create our histogram and mark off whole-number multiples of the standard deviation like we did before, we’ll see why the 68-95-99.7 Rule isn’t going to help:\n\nSince 50 doesn’t line up with one of our lines, the 68-95-99.7 Rule fails us. Looking back at Figure 8.51 and Figure 8.52, the best we can say is that 50 is between the 84th and 99.5th percentiles, but that’s a pretty wide range. Google Sheets has a function that can help; it’s called NORM.DIST. Here’s how to use it:",
+      "original": "3. Inside the parentheses, we must enter a list of four things, separated by commas: the data value, the mean, the standard deviation, and the word “TRUE”. These have to be entered in this order!",
+      "prompt": "3. Inside the parentheses, we must enter a list of four things, separated by commas: the data value, the mean, the standard deviation, and the word “TRUE”. These have to be entered in this order!",
+      "sourceAnswers": [],
+      "hasFigure": false,
+      "status": "draft",
+      "answerVerified": false,
+      "translationStatus": "pending",
+      "mappingStatus": "pending"
+    },
+    {
+      "ordinal": 22,
+      "sourceNumber": "4",
+      "sourceAnchor": "",
+      "kind": "exercise-candidate",
+      "context": "The 68-95-99.7 Rule is great when we’re dealing with whole-number \\(z\\)-scores. However, if the \\(z\\)-score is not a whole number, the Rule isn’t going to help us. Luckily, we can use technology to help us out. We’ll talk here about the built-in functions in Google Sheets, but other tools work similarly.\n\nLet’s say we’re working with normally distributed data with mean 40 and standard deviation 7, and we want to know at what percentile a data value of 50 would fall. That corresponds to finding the proportion of the data that are less than 50. If we create our histogram and mark off whole-number multiples of the standard deviation like we did before, we’ll see why the 68-95-99.7 Rule isn’t going to help:\n\nSince 50 doesn’t line up with one of our lines, the 68-95-99.7 Rule fails us. Looking back at Figure 8.51 and Figure 8.52, the best we can say is that 50 is between the 84th and 99.5th percentiles, but that’s a pretty wide range. Google Sheets has a function that can help; it’s called NORM.DIST. Here’s how to use it:",
+      "original": "4. Close the parentheses, and hit Enter. The result is then displayed in the cell; convert it to a percent to get the percentile.",
+      "prompt": "4. Close the parentheses, and hit Enter. The result is then displayed in the cell; convert it to a percent to get the percentile.",
+      "sourceAnswers": [],
+      "hasFigure": false,
+      "status": "draft",
+      "answerVerified": false,
+      "translationStatus": "pending",
+      "mappingStatus": "pending"
+    },
+    {
+      "ordinal": 23,
+      "sourceNumber": "",
+      "sourceAnchor": "",
+      "kind": "example-or-exercise",
+      "context": "Let’s say we’re working with normally distributed data with mean 40 and standard deviation 7, and we want to know at what percentile a data value of 50 would fall. That corresponds to finding the proportion of the data that are less than 50. If we create our histogram and mark off whole-number multiples of the standard deviation like we did before, we’ll see why the 68-95-99.7 Rule isn’t going to help:\n\nSince 50 doesn’t line up with one of our lines, the 68-95-99.7 Rule fails us. Looking back at Figure 8.51 and Figure 8.52, the best we can say is that 50 is between the 84th and 99.5th percentiles, but that’s a pretty wide range. Google Sheets has a function that can help; it’s called NORM.DIST. Here’s how to use it:\n\nSo, for our example, we should type “=NORM.DIST(50, 40, 7, TRUE)” into an empty cell, and hit Enter. The result is 0.9234362745; converting to a percent and rounding, we can conclude that 50 is at the 92nd percentile. Let’s walk through a few more examples.",
+      "original": "Example \\(\\PageIndex{9}\\): Using Google Sheets to Find Percentiles\n\nSuppose we have data that are normally distributed with mean 28 and standard deviation 4. At what percentile do each of the following data values fall?\n\n1. 30\n\n2. 23\n\n3. 35\n\nAnswer\n\n1. By entering “=NORM.DIST(30, 28, 4, TRUE)” we find that 30 is at the 69th percentile.\n\n2. By entering “=NORM.DIST(23, 28, 4, TRUE)” we find that 23 is at the 11th percentile.\n\n3. By entering “=NORM.DIST(35, 28, 4, TRUE)” we find that 35 is at the 96th percentile.",
+      "prompt": "Example \\(\\PageIndex{9}\\): Using Google Sheets to Find Percentiles\n\nSuppose we have data that are normally distributed with mean 28 and standard deviation 4. At what percentile do each of the following data values fall?\n\n1. 30\n\n2. 23\n\n3. 35",
+      "sourceAnswers": [
+        "1. By entering “=NORM.DIST(30, 28, 4, TRUE)” we find that 30 is at the 69th percentile.\n\n2. By entering “=NORM.DIST(23, 28, 4, TRUE)” we find that 23 is at the 11th percentile.\n\n3. By entering “=NORM.DIST(35, 28, 4, TRUE)” we find that 35 is at the 96th percentile."
+      ],
+      "hasFigure": false,
+      "status": "draft",
+      "answerVerified": false,
+      "translationStatus": "pending",
+      "mappingStatus": "pending"
+    },
+    {
+      "ordinal": 24,
+      "sourceNumber": "1",
+      "sourceAnchor": "",
+      "kind": "exercise-candidate",
+      "context": "So, for our example, we should type “=NORM.DIST(50, 40, 7, TRUE)” into an empty cell, and hit Enter. The result is 0.9234362745; converting to a percent and rounding, we can conclude that 50 is at the 92nd percentile. Let’s walk through a few more examples.\n\nSuppose you have data that are normally distributed with mean 20 and standard deviation 6. Determine at what percentiles these data values fall: 25, 12, and 31.\n\nGoogle Sheets can also help us go the other direction: If we want to find the data value that corresponds to a given percentile, we can use the NORM.INV function. For example, if we have normally distributed data with mean 150 and standard deviation 25, we can find the data value at the 30th percentile as follows:",
+      "original": "1. Click on an empty cell in your worksheet.",
+      "prompt": "1. Click on an empty cell in your worksheet.",
+      "sourceAnswers": [],
+      "hasFigure": false,
+      "status": "draft",
+      "answerVerified": false,
+      "translationStatus": "pending",
+      "mappingStatus": "pending"
+    },
+    {
+      "ordinal": 25,
+      "sourceNumber": "2",
+      "sourceAnchor": "",
+      "kind": "exercise-candidate",
+      "context": "So, for our example, we should type “=NORM.DIST(50, 40, 7, TRUE)” into an empty cell, and hit Enter. The result is 0.9234362745; converting to a percent and rounding, we can conclude that 50 is at the 92nd percentile. Let’s walk through a few more examples.\n\nSuppose you have data that are normally distributed with mean 20 and standard deviation 6. Determine at what percentiles these data values fall: 25, 12, and 31.\n\nGoogle Sheets can also help us go the other direction: If we want to find the data value that corresponds to a given percentile, we can use the NORM.INV function. For example, if we have normally distributed data with mean 150 and standard deviation 25, we can find the data value at the 30th percentile as follows:",
+      "original": "2. Type “=NORM.INV(“",
+      "prompt": "2. Type “=NORM.INV(“",
+      "sourceAnswers": [],
+      "hasFigure": false,
+      "status": "draft",
+      "answerVerified": false,
+      "translationStatus": "pending",
+      "mappingStatus": "pending"
+    },
+    {
+      "ordinal": 26,
+      "sourceNumber": "3",
+      "sourceAnchor": "",
+      "kind": "exercise-candidate",
+      "context": "So, for our example, we should type “=NORM.DIST(50, 40, 7, TRUE)” into an empty cell, and hit Enter. The result is 0.9234362745; converting to a percent and rounding, we can conclude that 50 is at the 92nd percentile. Let’s walk through a few more examples.\n\nSuppose you have data that are normally distributed with mean 20 and standard deviation 6. Determine at what percentiles these data values fall: 25, 12, and 31.\n\nGoogle Sheets can also help us go the other direction: If we want to find the data value that corresponds to a given percentile, we can use the NORM.INV function. For example, if we have normally distributed data with mean 150 and standard deviation 25, we can find the data value at the 30th percentile as follows:",
+      "original": "3. Inside the parentheses, we’ll enter a list of three numbers, separated by commas: the percentile in question expressed as a decimal, the mean, and the standard deviation. These must be entered in this order!",
+      "prompt": "3. Inside the parentheses, we’ll enter a list of three numbers, separated by commas: the percentile in question expressed as a decimal, the mean, and the standard deviation. These must be entered in this order!",
+      "sourceAnswers": [],
+      "hasFigure": false,
+      "status": "draft",
+      "answerVerified": false,
+      "translationStatus": "pending",
+      "mappingStatus": "pending"
+    },
+    {
+      "ordinal": 27,
+      "sourceNumber": "4",
+      "sourceAnchor": "",
+      "kind": "exercise-candidate",
+      "context": "So, for our example, we should type “=NORM.DIST(50, 40, 7, TRUE)” into an empty cell, and hit Enter. The result is 0.9234362745; converting to a percent and rounding, we can conclude that 50 is at the 92nd percentile. Let’s walk through a few more examples.\n\nSuppose you have data that are normally distributed with mean 20 and standard deviation 6. Determine at what percentiles these data values fall: 25, 12, and 31.\n\nGoogle Sheets can also help us go the other direction: If we want to find the data value that corresponds to a given percentile, we can use the NORM.INV function. For example, if we have normally distributed data with mean 150 and standard deviation 25, we can find the data value at the 30th percentile as follows:",
+      "original": "4. Close the parentheses and hit Enter. The desired data value will be in the cell!",
+      "prompt": "4. Close the parentheses and hit Enter. The desired data value will be in the cell!",
+      "sourceAnswers": [],
+      "hasFigure": false,
+      "status": "draft",
+      "answerVerified": false,
+      "translationStatus": "pending",
+      "mappingStatus": "pending"
+    },
+    {
+      "ordinal": 28,
+      "sourceNumber": "",
+      "sourceAnchor": "",
+      "kind": "example-or-exercise",
+      "context": "Suppose you have data that are normally distributed with mean 20 and standard deviation 6. Determine at what percentiles these data values fall: 25, 12, and 31.\n\nGoogle Sheets can also help us go the other direction: If we want to find the data value that corresponds to a given percentile, we can use the NORM.INV function. For example, if we have normally distributed data with mean 150 and standard deviation 25, we can find the data value at the 30th percentile as follows:\n\nIn our example, we want the 30th percentile; converting 30% to a decimal gives us 0.3. So, we’ll type “=NORM.INV(0.3, 150, 25)” to get 136.8899872; let’s round that off to 137.",
+      "original": "Example \\(\\PageIndex{10}\\): Using Google Sheets to Find the Data Value Corresponding to a Percentile\n\nSuppose we have data that are normally distributed with mean 47 and standard deviation 9. Find the data values (rounded to the nearest tenth) corresponding to these percentiles:\n\n1. 75th (that’s the third quartile)\n\n2. 12th\n\n3. 90th\n\nAnswer\n\n1. By entering “=NORM.INV(0.75, 47, 9)” we find that 53.1 is at the 75th percentile.\n\n2. By entering “=NORM.INV(0.12, 47, 9)” we find that 36.4 is at the 12th percentile.\n\n3. By entering “=NORM.INV(0.9, 47, 9)” we find that 58.5 is at the 90th percentile.",
+      "prompt": "Example \\(\\PageIndex{10}\\): Using Google Sheets to Find the Data Value Corresponding to a Percentile\n\nSuppose we have data that are normally distributed with mean 47 and standard deviation 9. Find the data values (rounded to the nearest tenth) corresponding to these percentiles:\n\n1. 75th (that’s the third quartile)\n\n2. 12th\n\n3. 90th",
+      "sourceAnswers": [
+        "1. By entering “=NORM.INV(0.75, 47, 9)” we find that 53.1 is at the 75th percentile.\n\n2. By entering “=NORM.INV(0.12, 47, 9)” we find that 36.4 is at the 12th percentile.\n\n3. By entering “=NORM.INV(0.9, 47, 9)” we find that 58.5 is at the 90th percentile."
+      ],
+      "hasFigure": false,
+      "status": "draft",
+      "answerVerified": false,
+      "translationStatus": "pending",
+      "mappingStatus": "pending"
+    },
+    {
+      "ordinal": 29,
+      "sourceNumber": "1",
+      "sourceAnchor": "",
+      "kind": "exercise-candidate",
+      "context": "Check Your Understanding\n\nFor each of these problems, assume we’re working with normally distributed data with mean 100 and standard deviation 12.",
+      "original": "1. What percentage of the data falls between 76 and 124? Use the 68-95-99.7 Rule.",
+      "prompt": "1. What percentage of the data falls between 76 and 124? Use the 68-95-99.7 Rule.",
+      "sourceAnswers": [],
+      "hasFigure": false,
+      "status": "draft",
+      "answerVerified": false,
+      "translationStatus": "pending",
+      "mappingStatus": "pending"
+    },
+    {
+      "ordinal": 30,
+      "sourceNumber": "2",
+      "sourceAnchor": "",
+      "kind": "exercise-candidate",
+      "context": "Check Your Understanding\n\nFor each of these problems, assume we’re working with normally distributed data with mean 100 and standard deviation 12.",
+      "original": "2. What percentage of the data falls between 100 and 112? Use the 68-95-99.7 Rule.",
+      "prompt": "2. What percentage of the data falls between 100 and 112? Use the 68-95-99.7 Rule.",
+      "sourceAnswers": [],
+      "hasFigure": false,
+      "status": "draft",
+      "answerVerified": false,
+      "translationStatus": "pending",
+      "mappingStatus": "pending"
+    },
+    {
+      "ordinal": 31,
+      "sourceNumber": "3",
+      "sourceAnchor": "",
+      "kind": "exercise-candidate",
+      "context": "Check Your Understanding\n\nFor each of these problems, assume we’re working with normally distributed data with mean 100 and standard deviation 12.",
+      "original": "3. At what percentile does 112 fall? Use the 68-95-99.7 Rule.",
+      "prompt": "3. At what percentile does 112 fall? Use the 68-95-99.7 Rule.",
+      "sourceAnswers": [],
+      "hasFigure": false,
+      "status": "draft",
+      "answerVerified": false,
+      "translationStatus": "pending",
+      "mappingStatus": "pending"
+    },
+    {
+      "ordinal": 32,
+      "sourceNumber": "4",
+      "sourceAnchor": "",
+      "kind": "exercise-candidate",
+      "context": "Check Your Understanding\n\nFor each of these problems, assume we’re working with normally distributed data with mean 100 and standard deviation 12.",
+      "original": "4. What’s the \\(z\\)-score of the data value 107? Round to three decimal places.",
+      "prompt": "4. What’s the \\(z\\)-score of the data value 107? Round to three decimal places.",
+      "sourceAnswers": [],
+      "hasFigure": false,
+      "status": "draft",
+      "answerVerified": false,
+      "translationStatus": "pending",
+      "mappingStatus": "pending"
+    },
+    {
+      "ordinal": 33,
+      "sourceNumber": "5",
+      "sourceAnchor": "",
+      "kind": "exercise-candidate",
+      "context": "Check Your Understanding\n\nFor each of these problems, assume we’re working with normally distributed data with mean 100 and standard deviation 12.",
+      "original": "5. What data value’s \\(z\\)-score is –2.4?",
+      "prompt": "5. What data value’s \\(z\\)-score is –2.4?",
+      "sourceAnswers": [],
+      "hasFigure": false,
+      "status": "draft",
+      "answerVerified": false,
+      "translationStatus": "pending",
+      "mappingStatus": "pending"
+    },
+    {
+      "ordinal": 34,
+      "sourceNumber": "6",
+      "sourceAnchor": "",
+      "kind": "exercise-candidate",
+      "context": "Check Your Understanding\n\nFor each of these problems, assume we’re working with normally distributed data with mean 100 and standard deviation 12.",
+      "original": "6. At what percentile does 107 fall? Use Google Sheets (or another technology).",
+      "prompt": "6. At what percentile does 107 fall? Use Google Sheets (or another technology).",
+      "sourceAnswers": [],
+      "hasFigure": false,
+      "status": "draft",
+      "answerVerified": false,
+      "translationStatus": "pending",
+      "mappingStatus": "pending"
+    },
+    {
+      "ordinal": 35,
+      "sourceNumber": "7",
+      "sourceAnchor": "",
+      "kind": "exercise-candidate",
+      "context": "Check Your Understanding\n\nFor each of these problems, assume we’re working with normally distributed data with mean 100 and standard deviation 12.",
+      "original": "7. What data value is at the 90th percentile? Use Google Sheets (or another technology), and round to the nearest hundredth.",
+      "prompt": "7. What data value is at the 90th percentile? Use Google Sheets (or another technology), and round to the nearest hundredth.",
+      "sourceAnswers": [],
+      "hasFigure": false,
+      "status": "draft",
+      "answerVerified": false,
+      "translationStatus": "pending",
+      "mappingStatus": "pending"
+    }
+  ],
+  "license": "CC BY 4.0",
+  "licenseEvidence": "This page titled 8.6: The Normal Distribution was last modified on Thu, 02 Jan 2025 11:07:44 GMT and is shared under a CC BY  4.0  license and was authored, remixed, and/or curated by OpenStax via source content that was edited to the style and standards of the LibreTexts platform.",
+  "url": "https://math.libretexts.org/Bookshelves/Applied_Mathematics/Contemporary_Mathematics_(OpenStax)/08:_Statistics/8.06:_The_Normal_Distribution",
+  "sha256": "b937ce35c4beb692001b89b70a0c701a76a217c7c1790ad893e9e64748f4781f",
+  "checkedAt": "2026-10-07",
+  "id": "fefdb9410557b4d8d7a1",
+  "bookId": "contemporary",
+  "licenseInherited": false,
+  "licenseSource": "https://math.libretexts.org/Bookshelves/Applied_Mathematics/Contemporary_Mathematics_(OpenStax)/08:_Statistics/8.06:_The_Normal_Distribution",
+  "licenseUrl": "https://creativecommons.org/licenses/by/4.0/",
+  "authors": "OpenStax / Donna Kirk et al.",
+  "book": "Contemporary Mathematics",
+  "reviewStatus": "unreviewed",
+  "sourceLanguage": "en",
+  "translationStatus": "pending"
+}

@@ -1,0 +1,293 @@
+{
+  "title": "3.4: Two Basic Rules of Probability",
+  "originalText": "When calculating probability, there are two rules to consider when determining if two events are independent or dependent and if they are mutually exclusive or not.\n\nThe Multiplication Rule\n\nIf \\(A\\) and \\(B\\) are two events defined on a sample space, then: \\(P(A \\cap B)=P(B) P(A \\mid B)\\). We can think of the intersection symbol as substituting for the word \"and\".\n\nThis rule may also be written as: \\(P(A \\mid B)=\\dfrac{P(A \\cap B)}{P(B)}\\)\n\nThis equation is read as the probability of \\(A\\) given \\(B\\) equals the probability of \\(A\\) and \\(B\\) divided by the probability of \\(B\\).\n\nIf \\(A\\) and \\(B\\) are independent, then \\(P(A \\mid B)=P(A)\\). Then \\(P(A \\cap B)=P(A \\mid B) P(B)\\) becomes \\(P(A \\cap B)=P(A)(B)\\) because the \\(P(A \\mid B)=P(A)\\) if \\(A\\) and \\(B\\) are independent.\n\nThe Addition Rule\n\nIf \\(A\\) and \\(B\\) are defined on a sample space, then: \\(P(A \\cup B)=P(A)+P(B)-P(A \\cap B)\\). We can think of the union symbol substituting for the word \"or\". The reason we subtract the intersection of \\(A\\) and \\(B\\) is to keep from double counting elements that are in both \\(A\\) and \\(B\\).\n\nIf \\(A\\) and \\(B\\) are mutually exclusive, then \\(P(A \\cap B)=0\\). Then \\(P(A \\cup B)=P(A)+P(B)-P(A \\cap B)\\) becomes \\(P(A \\cup B)=P(A)+P(B)\\).\n\nExercise \\(\\PageIndex{1}\\)\n\nKlaus is trying to choose where to go on vacation. His two choices are: \\(A=\\) New Zealand and \\(B=\\) Alaska\n\nKlaus can only afford one vacation. The probability that he chooses \\(A\\) is \\(P(A)=0.6\\) and the probability that he chooses \\(B\\) is \\(P(B)=0.35\\).\n\n\\(P(A \\cap B)=0\\) because Klaus can only afford to take one vacation\n\nTherefore, the probability that he chooses either New Zealand or Alaska is \\(P(A \\cup B)=P(A)+P(B)=0.6+0.35=0.95\\). Note that the probability that he does not choose to go anywhere on vacation must be 0.05 .\n\nTry It \\(\\PageIndex{1}\\)\n\nAnna has to buy a new car. She has two choices, car A and car B. Anna can afford only one car. The probability that Anna will buy car A is \\(P(A)=0.25\\), and the probability that Anna will buy car B is \\(P(B)=0.65\\). Find:\n\n\\(P(A\\) AND \\(B)\\)\n\n\\(P(A\\) OR \\(B)\\)\n\nExercise \\(\\PageIndex{2}\\)\n\nCarlos plays college soccer. He makes a goal 65% of the time he shoots. Carlos is going to attempt two goals in a row in the next game. A = the event Carlos is successful on his first attempt. P(A) = 0.65. B = the event Carlos is successful on his second attempt. P(B) = 0.65. Carlos tends to shoot in streaks. The probability that he makes the second goal GIVEN that he made the first goal is 0.90.\n\na. What is the probability that he makes both goals?\n\nb. What is the probability that Carlos makes either the first goal or the second goal?\n\nc. Are A and B independent?\n\nd. Are A and B mutually exclusive?\n\nAnswer\n\na. The problem is asking you to find \\(P(A \\cap B)=P(B \\cap A)\\). Since \\(P(B \\mid A)=0.90: P(B \\cap A)=\\) \\(P(B \\mid A) P(A)=(0.90)(0.65)=0.585\\)\n\nCarlos makes the first and second goals with probability 0.585 .\n\n    b. b. The problem is asking you to find \\(P(A \\cup B)\\).\n\n\\(P(A \\cup B)=P(A)+P(B)-P(A \\cap B)=0.65+0.65-0.585=0.715\\)\n\nCarlos makes either the first goal or the second goal with probability 0.715 .\n\nc. No, they are not, because \\(P(B \\cap A)=0.585\\).\n\n\\(\\begin{array}{l}\n\n    P(B) P(A)=(0.65)(0.65)=0.423 \\\\\n\n    0.423 \\neq 0.585=P(B \\cap A)\\end{array}\\)\n\nSo, \\(P(B \\cap A)\\) is not equal to \\(P(B) P(A)\\).\n\nd. No, they are not because \\(P(A \\cap B)=0.585\\).\n\nTo be mutually exclusive, \\(P(A \\cap B)\\) must equal zero.\n\nSolution\n\na. The problem is asking you to find P(A AND B) = P(B AND A). Since P(B|A) = 0.90: P(B AND A) = P(B|A) P(A) = (0.90)(0.65) = 0.585\n\nCarlos makes the first and second goals with probability 0.585.\n\nb. The problem is asking you to find P(A OR B).\n\nP(A OR B) = P(A) + P(B) - P(A AND B) = 0.65 + 0.65 - 0.585 = 0.715\n\nCarlos makes either the first goal or the second goal with probability 0.715.\n\nc. No, they are not, because P(B AND A) = 0.585.\n\nP(B)P(A) = (0.65)(0.65) = 0.423\n\n0.423 ≠ 0.585 = P(B AND A)\n\nSo, P(B AND A) is not equal to P(B)P(A).\n\nd. No, they are not because P(A and B) = 0.585.\n\nTo be mutually exclusive, P(A AND B) must equal zero.\n\nSolution\n\na. 0.98; b. 0.1401; c. 0.857; d. 0.15\n\nTry It \\(\\PageIndex{2}\\)\n\nHelen plays basketball. For free throws, she makes the shot 75% of the time. Helen must now attempt two free throws. C = the event that Helen makes the first shot. P(C) = 0.75. D = the event Helen makes the second shot. P(D) = 0.75. The probability that Helen makes the second free throw given that she made the first is 0.85. What is the probability that Helen makes both free throws?\n\nExercise \\(\\PageIndex{3}\\)\n\nA community swim team has 150 members. Seventy-five of the members are advanced swimmers. Forty-seven of the members are intermediate swimmers. The remainder are novice swimmers. Forty of the advanced swimmers practice four times a week. Thirty of the intermediate swimmers practice four times a week. Ten of the novice swimmers practice four times a week. Suppose one member of the swim team is chosen randomly.\n\na. What is the probability that the member is a novice swimmer?\n\nb. What is the probability that the member practices four times a week?\n\nc. What is the probability that the member is an advanced swimmer and practices four times a week?\n\nd. What is the probability that a member is an advanced swimmer and an intermediate swimmer? Are being an advanced swimmer and an intermediate swimmer mutually exclusive? Why or why not?\n\ne. Are being a novice swimmer and practicing four times a week independent events? Why or why not?\n\nAnswer\n\na. \\(\\dfrac{28}{150}\\)\n\nb. \\(\\dfrac{80}{150}\\)\n\nc. \\(\\dfrac{40}{150}\\)\n\nd. \\(P(\\) advanced \\(\\cap\\) intermediate \\()=0\\), so these are mutually exclusive events. A swimmer cannot be an advanced swimmer and an intermediate swimmer at the same time.\n\ne. No, these are not independent events.\n\n    \\(P\\) (novice \\(\\cap\\) practices four times per week) \\(=0.0667\\)\n\n    \\(P\\) (novice) \\(P\\) (practices four times per week) \\(=0.0996\\)\n\n    \\(0.0667 \\neq 0.0996\\)\n\nSolution\n\na. 28150\" role=\"presentation\" style=\"position: relative;\">28150\\(\\frac{28}{150}\\)\n\nb. 80150\" role=\"presentation\" style=\"position: relative;\">80150\\(\\frac{80}{150}\\)\n\nc. 40150\" role=\"presentation\" style=\"position: relative;\">40150\\(\\frac{40}{150}\\)\n\nd. P(advanced AND intermediate) = 0, so these are mutually exclusive events. A swimmer cannot be an advanced swimmer and an intermediate swimmer at the same time.\n\ne. No, these are not independent events.\n\nP(novice AND practices four times per week) = 0.0667\n\nP(novice)P(practices four times per week) = 0.0996\n\n0.0667 ≠ 0.0996\n\nSolution\n\na. 0.98; b. 0.1401; c. 0.857; d. 0.15\n\nTry It \\(\\PageIndex{3}\\)\n\nA school has 200 seniors of whom 140 will be going to college next year. Forty will be going directly to work. The remainder are taking a gap year. Fifty of the seniors going to college play sports. Thirty of the seniors going directly to work play sports. Five of the seniors taking a gap year play sports. What is the probability that a senior is taking a gap year?\n\nExercise \\(\\PageIndex{4}\\)\n\nFelicity attends Modesto JC in Modesto, CA. The probability that Felicity enrolls in a math class is 0.2 and the probability that she enrolls in a speech class is 0.65 . The probability that she enrolls in a math class \\(\\mid\\) that she enrolls in speech class is 0.25 .\n\nLet: \\(M=\\) math class, \\(S=\\) speech class, \\(M \\mid S=\\) math given speech\n\na. What is the probability that Felicity enrolls in math and speech?\n\nFind \\(P(M \\cap S)=P(M \\mid S) P(S)\\).b. What is the probability that Felicity enrolls in math or speech classes?\n\nFind \\(P(M \\cup S)=P(M)+P(S)-P(M \\cap S)\\).c. Are \\(M\\) and \\(S\\) independent? Is \\(P(M \\mid S)=P(M)\\) ?\n\nd. Are \\(M\\) and \\(S\\) mutually exclusive? Is \\(P(M \\cap S)=0\\) ?\n\nAnswer\n\na. 0.1625, b. 0.6875, c. No, d. No\n\nSolution\n\na. 0.1625, b. 0.6875, c. No, d. No\n\nSolution\n\na. 0.98; b. 0.1401; c. 0.857; d. 0.15\n\nTry It \\(\\PageIndex{4}\\)\n\nA student goes to the library. Let events \\(B=\\) the student checks out a book and \\(D=\\) the student checks out a DVD. Suppose that \\(P(B)=0.40, P(D)=0.30\\) and \\(P(D \\mid B)=0.5\\).\n\na. Find \\(P(B \\cap D)\\).\n\nb. Find \\(P(B \\cup D)\\).\n\nExercise \\(\\PageIndex{5}\\)\n\nStudies show that about one woman in seven (approximately 14.3%) who live to be 90 will develop breast cancer. Suppose that of those women who develop breast cancer, a test is negative 2% of the time. Also suppose that in the general population of women, the test for breast cancer is negative about 85% of the time. Let B = woman develops breast cancer and let N = tests negative. Suppose one woman is selected at random.\n\n1. What is the probability that the woman develops breast cancer? What is the probability that woman tests negative?\n\n2. Given that the woman has breast cancer, what is the probability that she tests negative?\n\n3. What is the probability that the woman has breast cancer AND tests negative?\n\n4. What is the probability that the woman has breast cancer or tests negative?\n\n5. Are having breast cancer and testing negative independent events?\n\n6. Are having breast cancer and testing negative mutually exclusive?\n\nAnswer\n\na. \\(P(B)=0.143 ; P(N)=0.85\\)\n\nb. \\(P(N \\mid B)=0.02\\)\n\nc. \\(P(B \\cap N)=P(B) P(N \\mid B)=(0.143)(0.02)=0.0029\\)\n\nd. \\(P(B \\cup N)=P(B)+P(N)-P(B \\cap N)=0.143+0.85-0.0029=0.9901\\)\n\ne. No. \\(P(N)=0.85 ; P(N \\mid B)=0.02\\). So, \\(P(N \\mid B)\\) does not equal \\(P(N)\\).\n\nf. No. \\(P(B \\cap N)=0.0029\\). For \\(B\\) and \\(N\\) to be mutually exclusive, \\(P(B \\cap N)\\) must be\n\nSolution\n\na. P(B) = 0.143; P(N) = 0.85\n\nb. P(N|B) = 0.02\n\nc. P(B AND N) = P(B)P(N|B) = (0.143)(0.02) = 0.0029\n\nd. P(B OR N) = P(B) + P(N) - P(B AND N) = 0.143 + 0.85 - 0.0029 = 0.9901\n\ne. No. P(N) = 0.85; P(N|B) = 0.02. So, P(N|B) does not equal P(N).\n\nf. No. P(B AND N) = 0.0029. For B and N to be mutually exclusive, P(B AND N) must be zero.\n\nSolution\n\na. 0.98; b. 0.1401; c. 0.857; d. 0.15\n\nTry It \\(\\PageIndex{5}\\)\n\nA school has 200 seniors of whom 140 will be going to college next year. Forty will be going directly to work. The remainder are taking a gap year. Fifty of the seniors going to college play sports. Thirty of the seniors going directly to work play sports. Five of the seniors taking a gap year play sports. What is the probability that a senior is going to college and plays sports?\n\nExercise \\(\\PageIndex{6}\\)\n\nRefer to the information in Example \\(\\PageIndex{5}\\). \\(P=\\) tests positive.\n\na. Given that a woman develops breast cancer, what is the probability that she tests positive. Find \\(P(P \\mid B)=1-P(N \\mid B)\\).\n\nb. What is the probability that a woman develops breast cancer and tests positive. Find \\(P(B \\cap P)=\\) \\(P(P \\mid B) P(B)\\).\n\nc. What is the probability that a woman does not develop breast cancer. Find \\(P(B)=1-P(B)\\).\n\nd. What is the probability that a woman tests positive for breast cancer. Find \\(P(P)=1-P(N)\\).\n\nAnswer\n\na. 0.98; b. 0.1401; c. 0.857; d. 0.15\n\nSolution\n\na. 0.98; b. 0.1401; c. 0.857; d. 0.15\n\nTry It \\(\\PageIndex{6}\\)\n\nA student goes to the library. Let events \\(B=\\) the student checks out a book and \\(D=\\) the student checks out a DVD. Suppose that \\(P(B)=0.40, P(D)=0.30\\) and \\(P(D \\mid B)=0.5\\).\n\na. Find \\(P(B)\\).\n\nb. Find \\(P(D \\cap B)\\).\n\nc. Find \\(P(B \\mid D)\\).\n\nd. Find \\(P(D \\cap B)\\).\n\ne. Find \\(P(D \\mid B)\\).\n\nThis page titled 3.4: Two Basic Rules of Probability was last modified on Thu, 07 May 2026 20:05:08 GMT and is shared under a CC BY  4.0  license and was authored, remixed, and/or curated by OpenStax via source content that was edited to the style and standards of the LibreTexts platform.",
+  "figures": [],
+  "references": [
+    {
+      "text": "3.4: Two Basic Rules of Probability",
+      "url": "https://stats.libretexts.org/Bookshelves/Introductory_Statistics/Introductory_Statistics_2e_(OpenStax)/03%3A_Probability_Topics/3.04%3A_Two_Basic_Rules_of_Probability"
+    },
+    {
+      "text": "CC BY  4.0",
+      "url": "https://creativecommons.org/licenses/by/4.0"
+    },
+    {
+      "text": "OpenStax",
+      "url": "https://openstax.org/"
+    },
+    {
+      "text": "source content",
+      "url": "https://openstax.org/details/books/introductory-statistics"
+    }
+  ],
+  "exercises": [
+    {
+      "ordinal": 1,
+      "sourceNumber": "",
+      "sourceAnchor": "",
+      "kind": "exercise-candidate",
+      "context": "The Addition Rule\n\nIf \\(A\\) and \\(B\\) are defined on a sample space, then: \\(P(A \\cup B)=P(A)+P(B)-P(A \\cap B)\\). We can think of the union symbol substituting for the word \"or\". The reason we subtract the intersection of \\(A\\) and \\(B\\) is to keep from double counting elements that are in both \\(A\\) and \\(B\\).\n\nIf \\(A\\) and \\(B\\) are mutually exclusive, then \\(P(A \\cap B)=0\\). Then \\(P(A \\cup B)=P(A)+P(B)-P(A \\cap B)\\) becomes \\(P(A \\cup B)=P(A)+P(B)\\).",
+      "original": "Exercise \\(\\PageIndex{1}\\)\n\nKlaus is trying to choose where to go on vacation. His two choices are: \\(A=\\) New Zealand and \\(B=\\) Alaska\n\nKlaus can only afford one vacation. The probability that he chooses \\(A\\) is \\(P(A)=0.6\\) and the probability that he chooses \\(B\\) is \\(P(B)=0.35\\).\n\n\\(P(A \\cap B)=0\\) because Klaus can only afford to take one vacation\n\nTherefore, the probability that he chooses either New Zealand or Alaska is \\(P(A \\cup B)=P(A)+P(B)=0.6+0.35=0.95\\). Note that the probability that he does not choose to go anywhere on vacation must be 0.05 .",
+      "prompt": "Exercise \\(\\PageIndex{1}\\)\n\nKlaus is trying to choose where to go on vacation. His two choices are: \\(A=\\) New Zealand and \\(B=\\) Alaska\n\nKlaus can only afford one vacation. The probability that he chooses \\(A\\) is \\(P(A)=0.6\\) and the probability that he chooses \\(B\\) is \\(P(B)=0.35\\).\n\n\\(P(A \\cap B)=0\\) because Klaus can only afford to take one vacation\n\nTherefore, the probability that he chooses either New Zealand or Alaska is \\(P(A \\cup B)=P(A)+P(B)=0.6+0.35=0.95\\). Note that the probability that he does not choose to go anywhere on vacation must be 0.05 .",
+      "sourceAnswers": [],
+      "hasFigure": false,
+      "status": "draft",
+      "answerVerified": false,
+      "translationStatus": "pending",
+      "mappingStatus": "pending"
+    },
+    {
+      "ordinal": 2,
+      "sourceNumber": "",
+      "sourceAnchor": "",
+      "kind": "exercise-candidate",
+      "context": "If \\(A\\) and \\(B\\) are defined on a sample space, then: \\(P(A \\cup B)=P(A)+P(B)-P(A \\cap B)\\). We can think of the union symbol substituting for the word \"or\". The reason we subtract the intersection of \\(A\\) and \\(B\\) is to keep from double counting elements that are in both \\(A\\) and \\(B\\).\n\nIf \\(A\\) and \\(B\\) are mutually exclusive, then \\(P(A \\cap B)=0\\). Then \\(P(A \\cup B)=P(A)+P(B)-P(A \\cap B)\\) becomes \\(P(A \\cup B)=P(A)+P(B)\\).\n\nAnna has to buy a new car. She has two choices, car A and car B. Anna can afford only one car. The probability that Anna will buy car A is \\(P(A)=0.25\\), and the probability that Anna will buy car B is \\(P(B)=0.65\\). Find:",
+      "original": "Exercise \\(\\PageIndex{2}\\)\n\nCarlos plays college soccer. He makes a goal 65% of the time he shoots. Carlos is going to attempt two goals in a row in the next game. A = the event Carlos is successful on his first attempt. P(A) = 0.65. B = the event Carlos is successful on his second attempt. P(B) = 0.65. Carlos tends to shoot in streaks. The probability that he makes the second goal GIVEN that he made the first goal is 0.90.\n\na. What is the probability that he makes both goals?\n\nb. What is the probability that Carlos makes either the first goal or the second goal?\n\nc. Are A and B independent?\n\nd. Are A and B mutually exclusive?\n\nAnswer\n\na. The problem is asking you to find \\(P(A \\cap B)=P(B \\cap A)\\). Since \\(P(B \\mid A)=0.90: P(B \\cap A)=\\) \\(P(B \\mid A) P(A)=(0.90)(0.65)=0.585\\)\n\nCarlos makes the first and second goals with probability 0.585 .\n\n    b. b. The problem is asking you to find \\(P(A \\cup B)\\).\n\n\\(P(A \\cup B)=P(A)+P(B)-P(A \\cap B)=0.65+0.65-0.585=0.715\\)\n\nCarlos makes either the first goal or the second goal with probability 0.715 .\n\nc. No, they are not, because \\(P(B \\cap A)=0.585\\).\n\n\\(\\begin{array}{l}\n\n    P(B) P(A)=(0.65)(0.65)=0.423 \\\\\n\n    0.423 \\neq 0.585=P(B \\cap A)\\end{array}\\)\n\nSo, \\(P(B \\cap A)\\) is not equal to \\(P(B) P(A)\\).\n\nd. No, they are not because \\(P(A \\cap B)=0.585\\).\n\nTo be mutually exclusive, \\(P(A \\cap B)\\) must equal zero.",
+      "prompt": "Exercise \\(\\PageIndex{2}\\)\n\nCarlos plays college soccer. He makes a goal 65% of the time he shoots. Carlos is going to attempt two goals in a row in the next game. A = the event Carlos is successful on his first attempt. P(A) = 0.65. B = the event Carlos is successful on his second attempt. P(B) = 0.65. Carlos tends to shoot in streaks. The probability that he makes the second goal GIVEN that he made the first goal is 0.90.\n\na. What is the probability that he makes both goals?\n\nb. What is the probability that Carlos makes either the first goal or the second goal?\n\nc. Are A and B independent?\n\nd. Are A and B mutually exclusive?",
+      "sourceAnswers": [
+        "a. The problem is asking you to find \\(P(A \\cap B)=P(B \\cap A)\\). Since \\(P(B \\mid A)=0.90: P(B \\cap A)=\\) \\(P(B \\mid A) P(A)=(0.90)(0.65)=0.585\\)\n\nCarlos makes the first and second goals with probability 0.585 .\n\n    b. b. The problem is asking you to find \\(P(A \\cup B)\\).\n\n\\(P(A \\cup B)=P(A)+P(B)-P(A \\cap B)=0.65+0.65-0.585=0.715\\)\n\nCarlos makes either the first goal or the second goal with probability 0.715 .\n\nc. No, they are not, because \\(P(B \\cap A)=0.585\\).\n\n\\(\\begin{array}{l}\n\n    P(B) P(A)=(0.65)(0.65)=0.423 \\\\\n\n    0.423 \\neq 0.585=P(B \\cap A)\\end{array}\\)\n\nSo, \\(P(B \\cap A)\\) is not equal to \\(P(B) P(A)\\).\n\nd. No, they are not because \\(P(A \\cap B)=0.585\\).\n\nTo be mutually exclusive, \\(P(A \\cap B)\\) must equal zero."
+      ],
+      "hasFigure": false,
+      "status": "draft",
+      "answerVerified": false,
+      "translationStatus": "pending",
+      "mappingStatus": "pending"
+    },
+    {
+      "ordinal": 3,
+      "sourceNumber": "",
+      "sourceAnchor": "element-639",
+      "kind": "exercise-candidate",
+      "context": "If \\(A\\) and \\(B\\) are defined on a sample space, then: \\(P(A \\cup B)=P(A)+P(B)-P(A \\cap B)\\). We can think of the union symbol substituting for the word \"or\". The reason we subtract the intersection of \\(A\\) and \\(B\\) is to keep from double counting elements that are in both \\(A\\) and \\(B\\).\n\nIf \\(A\\) and \\(B\\) are mutually exclusive, then \\(P(A \\cap B)=0\\). Then \\(P(A \\cup B)=P(A)+P(B)-P(A \\cap B)\\) becomes \\(P(A \\cup B)=P(A)+P(B)\\).\n\nAnna has to buy a new car. She has two choices, car A and car B. Anna can afford only one car. The probability that Anna will buy car A is \\(P(A)=0.25\\), and the probability that Anna will buy car B is \\(P(B)=0.65\\). Find:",
+      "original": "Solution\n\na. The problem is asking you to find P(A AND B) = P(B AND A). Since P(B|A) = 0.90: P(B AND A) = P(B|A) P(A) = (0.90)(0.65) = 0.585\n\nCarlos makes the first and second goals with probability 0.585.\n\nb. The problem is asking you to find P(A OR B).\n\nP(A OR B) = P(A) + P(B) - P(A AND B) = 0.65 + 0.65 - 0.585 = 0.715\n\nCarlos makes either the first goal or the second goal with probability 0.715.\n\nc. No, they are not, because P(B AND A) = 0.585.\n\nP(B)P(A) = (0.65)(0.65) = 0.423\n\n0.423 ≠ 0.585 = P(B AND A)\n\nSo, P(B AND A) is not equal to P(B)P(A).\n\nd. No, they are not because P(A and B) = 0.585.\n\nTo be mutually exclusive, P(A AND B) must equal zero.",
+      "prompt": "",
+      "sourceAnswers": [
+        "Solution\n\na. The problem is asking you to find P(A AND B) = P(B AND A). Since P(B|A) = 0.90: P(B AND A) = P(B|A) P(A) = (0.90)(0.65) = 0.585\n\nCarlos makes the first and second goals with probability 0.585.\n\nb. The problem is asking you to find P(A OR B).\n\nP(A OR B) = P(A) + P(B) - P(A AND B) = 0.65 + 0.65 - 0.585 = 0.715\n\nCarlos makes either the first goal or the second goal with probability 0.715.\n\nc. No, they are not, because P(B AND A) = 0.585.\n\nP(B)P(A) = (0.65)(0.65) = 0.423\n\n0.423 ≠ 0.585 = P(B AND A)\n\nSo, P(B AND A) is not equal to P(B)P(A).\n\nd. No, they are not because P(A and B) = 0.585.\n\nTo be mutually exclusive, P(A AND B) must equal zero."
+      ],
+      "hasFigure": false,
+      "status": "draft",
+      "answerVerified": false,
+      "translationStatus": "pending",
+      "mappingStatus": "pending"
+    },
+    {
+      "ordinal": 4,
+      "sourceNumber": "",
+      "sourceAnchor": "fs-idm109502304",
+      "kind": "exercise-candidate",
+      "context": "If \\(A\\) and \\(B\\) are defined on a sample space, then: \\(P(A \\cup B)=P(A)+P(B)-P(A \\cap B)\\). We can think of the union symbol substituting for the word \"or\". The reason we subtract the intersection of \\(A\\) and \\(B\\) is to keep from double counting elements that are in both \\(A\\) and \\(B\\).\n\nIf \\(A\\) and \\(B\\) are mutually exclusive, then \\(P(A \\cap B)=0\\). Then \\(P(A \\cup B)=P(A)+P(B)-P(A \\cap B)\\) becomes \\(P(A \\cup B)=P(A)+P(B)\\).\n\nAnna has to buy a new car. She has two choices, car A and car B. Anna can afford only one car. The probability that Anna will buy car A is \\(P(A)=0.25\\), and the probability that Anna will buy car B is \\(P(B)=0.65\\). Find:",
+      "original": "Solution\n\na. 0.98; b. 0.1401; c. 0.857; d. 0.15",
+      "prompt": "",
+      "sourceAnswers": [
+        "Solution\n\na. 0.98; b. 0.1401; c. 0.857; d. 0.15"
+      ],
+      "hasFigure": false,
+      "status": "draft",
+      "answerVerified": false,
+      "translationStatus": "pending",
+      "mappingStatus": "pending"
+    },
+    {
+      "ordinal": 5,
+      "sourceNumber": "",
+      "sourceAnchor": "",
+      "kind": "exercise-candidate",
+      "context": "If \\(A\\) and \\(B\\) are mutually exclusive, then \\(P(A \\cap B)=0\\). Then \\(P(A \\cup B)=P(A)+P(B)-P(A \\cap B)\\) becomes \\(P(A \\cup B)=P(A)+P(B)\\).\n\nAnna has to buy a new car. She has two choices, car A and car B. Anna can afford only one car. The probability that Anna will buy car A is \\(P(A)=0.25\\), and the probability that Anna will buy car B is \\(P(B)=0.65\\). Find:\n\nHelen plays basketball. For free throws, she makes the shot 75% of the time. Helen must now attempt two free throws. C = the event that Helen makes the first shot. P(C) = 0.75. D = the event Helen makes the second shot. P(D) = 0.75. The probability that Helen makes the second free throw given that she made the first is 0.85. What is the probability that Helen makes both free throws?",
+      "original": "Exercise \\(\\PageIndex{3}\\)\n\nA community swim team has 150 members. Seventy-five of the members are advanced swimmers. Forty-seven of the members are intermediate swimmers. The remainder are novice swimmers. Forty of the advanced swimmers practice four times a week. Thirty of the intermediate swimmers practice four times a week. Ten of the novice swimmers practice four times a week. Suppose one member of the swim team is chosen randomly.\n\na. What is the probability that the member is a novice swimmer?\n\nb. What is the probability that the member practices four times a week?\n\nc. What is the probability that the member is an advanced swimmer and practices four times a week?\n\nd. What is the probability that a member is an advanced swimmer and an intermediate swimmer? Are being an advanced swimmer and an intermediate swimmer mutually exclusive? Why or why not?\n\ne. Are being a novice swimmer and practicing four times a week independent events? Why or why not?\n\nAnswer\n\na. \\(\\dfrac{28}{150}\\)\n\nb. \\(\\dfrac{80}{150}\\)\n\nc. \\(\\dfrac{40}{150}\\)\n\nd. \\(P(\\) advanced \\(\\cap\\) intermediate \\()=0\\), so these are mutually exclusive events. A swimmer cannot be an advanced swimmer and an intermediate swimmer at the same time.\n\ne. No, these are not independent events.\n\n    \\(P\\) (novice \\(\\cap\\) practices four times per week) \\(=0.0667\\)\n\n    \\(P\\) (novice) \\(P\\) (practices four times per week) \\(=0.0996\\)\n\n    \\(0.0667 \\neq 0.0996\\)",
+      "prompt": "Exercise \\(\\PageIndex{3}\\)\n\nA community swim team has 150 members. Seventy-five of the members are advanced swimmers. Forty-seven of the members are intermediate swimmers. The remainder are novice swimmers. Forty of the advanced swimmers practice four times a week. Thirty of the intermediate swimmers practice four times a week. Ten of the novice swimmers practice four times a week. Suppose one member of the swim team is chosen randomly.\n\na. What is the probability that the member is a novice swimmer?\n\nb. What is the probability that the member practices four times a week?\n\nc. What is the probability that the member is an advanced swimmer and practices four times a week?\n\nd. What is the probability that a member is an advanced swimmer and an intermediate swimmer? Are being an advanced swimmer and an intermediate swimmer mutually exclusive? Why or why not?\n\ne. Are being a novice swimmer and practicing four times a week independent events? Why or why not?",
+      "sourceAnswers": [
+        "a. \\(\\dfrac{28}{150}\\)\n\nb. \\(\\dfrac{80}{150}\\)\n\nc. \\(\\dfrac{40}{150}\\)\n\nd. \\(P(\\) advanced \\(\\cap\\) intermediate \\()=0\\), so these are mutually exclusive events. A swimmer cannot be an advanced swimmer and an intermediate swimmer at the same time.\n\ne. No, these are not independent events.\n\n    \\(P\\) (novice \\(\\cap\\) practices four times per week) \\(=0.0667\\)\n\n    \\(P\\) (novice) \\(P\\) (practices four times per week) \\(=0.0996\\)\n\n    \\(0.0667 \\neq 0.0996\\)"
+      ],
+      "hasFigure": false,
+      "status": "draft",
+      "answerVerified": false,
+      "translationStatus": "pending",
+      "mappingStatus": "pending"
+    },
+    {
+      "ordinal": 6,
+      "sourceNumber": "",
+      "sourceAnchor": "element-201",
+      "kind": "exercise-candidate",
+      "context": "If \\(A\\) and \\(B\\) are mutually exclusive, then \\(P(A \\cap B)=0\\). Then \\(P(A \\cup B)=P(A)+P(B)-P(A \\cap B)\\) becomes \\(P(A \\cup B)=P(A)+P(B)\\).\n\nAnna has to buy a new car. She has two choices, car A and car B. Anna can afford only one car. The probability that Anna will buy car A is \\(P(A)=0.25\\), and the probability that Anna will buy car B is \\(P(B)=0.65\\). Find:\n\nHelen plays basketball. For free throws, she makes the shot 75% of the time. Helen must now attempt two free throws. C = the event that Helen makes the first shot. P(C) = 0.75. D = the event Helen makes the second shot. P(D) = 0.75. The probability that Helen makes the second free throw given that she made the first is 0.85. What is the probability that Helen makes both free throws?",
+      "original": "Solution\n\na. 28150\" role=\"presentation\" style=\"position: relative;\">28150\\(\\frac{28}{150}\\)\n\nb. 80150\" role=\"presentation\" style=\"position: relative;\">80150\\(\\frac{80}{150}\\)\n\nc. 40150\" role=\"presentation\" style=\"position: relative;\">40150\\(\\frac{40}{150}\\)\n\nd. P(advanced AND intermediate) = 0, so these are mutually exclusive events. A swimmer cannot be an advanced swimmer and an intermediate swimmer at the same time.\n\ne. No, these are not independent events.\n\nP(novice AND practices four times per week) = 0.0667\n\nP(novice)P(practices four times per week) = 0.0996\n\n0.0667 ≠ 0.0996",
+      "prompt": "",
+      "sourceAnswers": [
+        "Solution\n\na. 28150\" role=\"presentation\" style=\"position: relative;\">28150\\(\\frac{28}{150}\\)\n\nb. 80150\" role=\"presentation\" style=\"position: relative;\">80150\\(\\frac{80}{150}\\)\n\nc. 40150\" role=\"presentation\" style=\"position: relative;\">40150\\(\\frac{40}{150}\\)\n\nd. P(advanced AND intermediate) = 0, so these are mutually exclusive events. A swimmer cannot be an advanced swimmer and an intermediate swimmer at the same time.\n\ne. No, these are not independent events.\n\nP(novice AND practices four times per week) = 0.0667\n\nP(novice)P(practices four times per week) = 0.0996\n\n0.0667 ≠ 0.0996"
+      ],
+      "hasFigure": false,
+      "status": "draft",
+      "answerVerified": false,
+      "translationStatus": "pending",
+      "mappingStatus": "pending"
+    },
+    {
+      "ordinal": 7,
+      "sourceNumber": "",
+      "sourceAnchor": "fs-idm109502304",
+      "kind": "exercise-candidate",
+      "context": "If \\(A\\) and \\(B\\) are mutually exclusive, then \\(P(A \\cap B)=0\\). Then \\(P(A \\cup B)=P(A)+P(B)-P(A \\cap B)\\) becomes \\(P(A \\cup B)=P(A)+P(B)\\).\n\nAnna has to buy a new car. She has two choices, car A and car B. Anna can afford only one car. The probability that Anna will buy car A is \\(P(A)=0.25\\), and the probability that Anna will buy car B is \\(P(B)=0.65\\). Find:\n\nHelen plays basketball. For free throws, she makes the shot 75% of the time. Helen must now attempt two free throws. C = the event that Helen makes the first shot. P(C) = 0.75. D = the event Helen makes the second shot. P(D) = 0.75. The probability that Helen makes the second free throw given that she made the first is 0.85. What is the probability that Helen makes both free throws?",
+      "original": "Solution\n\na. 0.98; b. 0.1401; c. 0.857; d. 0.15",
+      "prompt": "",
+      "sourceAnswers": [
+        "Solution\n\na. 0.98; b. 0.1401; c. 0.857; d. 0.15"
+      ],
+      "hasFigure": false,
+      "status": "draft",
+      "answerVerified": false,
+      "translationStatus": "pending",
+      "mappingStatus": "pending"
+    },
+    {
+      "ordinal": 8,
+      "sourceNumber": "",
+      "sourceAnchor": "",
+      "kind": "exercise-candidate",
+      "context": "Anna has to buy a new car. She has two choices, car A and car B. Anna can afford only one car. The probability that Anna will buy car A is \\(P(A)=0.25\\), and the probability that Anna will buy car B is \\(P(B)=0.65\\). Find:\n\nHelen plays basketball. For free throws, she makes the shot 75% of the time. Helen must now attempt two free throws. C = the event that Helen makes the first shot. P(C) = 0.75. D = the event Helen makes the second shot. P(D) = 0.75. The probability that Helen makes the second free throw given that she made the first is 0.85. What is the probability that Helen makes both free throws?\n\nA school has 200 seniors of whom 140 will be going to college next year. Forty will be going directly to work. The remainder are taking a gap year. Fifty of the seniors going to college play sports. Thirty of the seniors going directly to work play sports. Five of the seniors taking a gap year play sports. What is the probability that a senior is taking a gap year?",
+      "original": "Exercise \\(\\PageIndex{4}\\)\n\nFelicity attends Modesto JC in Modesto, CA. The probability that Felicity enrolls in a math class is 0.2 and the probability that she enrolls in a speech class is 0.65 . The probability that she enrolls in a math class \\(\\mid\\) that she enrolls in speech class is 0.25 .\n\nLet: \\(M=\\) math class, \\(S=\\) speech class, \\(M \\mid S=\\) math given speech\n\na. What is the probability that Felicity enrolls in math and speech?\n\nFind \\(P(M \\cap S)=P(M \\mid S) P(S)\\).b. What is the probability that Felicity enrolls in math or speech classes?\n\nFind \\(P(M \\cup S)=P(M)+P(S)-P(M \\cap S)\\).c. Are \\(M\\) and \\(S\\) independent? Is \\(P(M \\mid S)=P(M)\\) ?\n\nd. Are \\(M\\) and \\(S\\) mutually exclusive? Is \\(P(M \\cap S)=0\\) ?\n\nAnswer\n\na. 0.1625, b. 0.6875, c. No, d. No",
+      "prompt": "Exercise \\(\\PageIndex{4}\\)\n\nFelicity attends Modesto JC in Modesto, CA. The probability that Felicity enrolls in a math class is 0.2 and the probability that she enrolls in a speech class is 0.65 . The probability that she enrolls in a math class \\(\\mid\\) that she enrolls in speech class is 0.25 .\n\nLet: \\(M=\\) math class, \\(S=\\) speech class, \\(M \\mid S=\\) math given speech\n\na. What is the probability that Felicity enrolls in math and speech?\n\nFind \\(P(M \\cap S)=P(M \\mid S) P(S)\\).b. What is the probability that Felicity enrolls in math or speech classes?\n\nFind \\(P(M \\cup S)=P(M)+P(S)-P(M \\cap S)\\).c. Are \\(M\\) and \\(S\\) independent? Is \\(P(M \\mid S)=P(M)\\) ?\n\nd. Are \\(M\\) and \\(S\\) mutually exclusive? Is \\(P(M \\cap S)=0\\) ?",
+      "sourceAnswers": [
+        "a. 0.1625, b. 0.6875, c. No, d. No"
+      ],
+      "hasFigure": false,
+      "status": "draft",
+      "answerVerified": false,
+      "translationStatus": "pending",
+      "mappingStatus": "pending"
+    },
+    {
+      "ordinal": 9,
+      "sourceNumber": "",
+      "sourceAnchor": "fs-idp38089552",
+      "kind": "exercise-candidate",
+      "context": "Anna has to buy a new car. She has two choices, car A and car B. Anna can afford only one car. The probability that Anna will buy car A is \\(P(A)=0.25\\), and the probability that Anna will buy car B is \\(P(B)=0.65\\). Find:\n\nHelen plays basketball. For free throws, she makes the shot 75% of the time. Helen must now attempt two free throws. C = the event that Helen makes the first shot. P(C) = 0.75. D = the event Helen makes the second shot. P(D) = 0.75. The probability that Helen makes the second free throw given that she made the first is 0.85. What is the probability that Helen makes both free throws?\n\nA school has 200 seniors of whom 140 will be going to college next year. Forty will be going directly to work. The remainder are taking a gap year. Fifty of the seniors going to college play sports. Thirty of the seniors going directly to work play sports. Five of the seniors taking a gap year play sports. What is the probability that a senior is taking a gap year?",
+      "original": "Solution\n\na. 0.1625, b. 0.6875, c. No, d. No",
+      "prompt": "",
+      "sourceAnswers": [
+        "Solution\n\na. 0.1625, b. 0.6875, c. No, d. No"
+      ],
+      "hasFigure": false,
+      "status": "draft",
+      "answerVerified": false,
+      "translationStatus": "pending",
+      "mappingStatus": "pending"
+    },
+    {
+      "ordinal": 10,
+      "sourceNumber": "",
+      "sourceAnchor": "fs-idm109502304",
+      "kind": "exercise-candidate",
+      "context": "Anna has to buy a new car. She has two choices, car A and car B. Anna can afford only one car. The probability that Anna will buy car A is \\(P(A)=0.25\\), and the probability that Anna will buy car B is \\(P(B)=0.65\\). Find:\n\nHelen plays basketball. For free throws, she makes the shot 75% of the time. Helen must now attempt two free throws. C = the event that Helen makes the first shot. P(C) = 0.75. D = the event Helen makes the second shot. P(D) = 0.75. The probability that Helen makes the second free throw given that she made the first is 0.85. What is the probability that Helen makes both free throws?\n\nA school has 200 seniors of whom 140 will be going to college next year. Forty will be going directly to work. The remainder are taking a gap year. Fifty of the seniors going to college play sports. Thirty of the seniors going directly to work play sports. Five of the seniors taking a gap year play sports. What is the probability that a senior is taking a gap year?",
+      "original": "Solution\n\na. 0.98; b. 0.1401; c. 0.857; d. 0.15",
+      "prompt": "",
+      "sourceAnswers": [
+        "Solution\n\na. 0.98; b. 0.1401; c. 0.857; d. 0.15"
+      ],
+      "hasFigure": false,
+      "status": "draft",
+      "answerVerified": false,
+      "translationStatus": "pending",
+      "mappingStatus": "pending"
+    },
+    {
+      "ordinal": 11,
+      "sourceNumber": "",
+      "sourceAnchor": "",
+      "kind": "exercise-candidate",
+      "context": "A student goes to the library. Let events \\(B=\\) the student checks out a book and \\(D=\\) the student checks out a DVD. Suppose that \\(P(B)=0.40, P(D)=0.30\\) and \\(P(D \\mid B)=0.5\\).\n\na. Find \\(P(B \\cap D)\\).\n\nb. Find \\(P(B \\cup D)\\).",
+      "original": "Exercise \\(\\PageIndex{5}\\)\n\nStudies show that about one woman in seven (approximately 14.3%) who live to be 90 will develop breast cancer. Suppose that of those women who develop breast cancer, a test is negative 2% of the time. Also suppose that in the general population of women, the test for breast cancer is negative about 85% of the time. Let B = woman develops breast cancer and let N = tests negative. Suppose one woman is selected at random.\n\n1. What is the probability that the woman develops breast cancer? What is the probability that woman tests negative?\n\n2. Given that the woman has breast cancer, what is the probability that she tests negative?\n\n3. What is the probability that the woman has breast cancer AND tests negative?\n\n4. What is the probability that the woman has breast cancer or tests negative?\n\n5. Are having breast cancer and testing negative independent events?\n\n6. Are having breast cancer and testing negative mutually exclusive?\n\nAnswer\n\na. \\(P(B)=0.143 ; P(N)=0.85\\)\n\nb. \\(P(N \\mid B)=0.02\\)\n\nc. \\(P(B \\cap N)=P(B) P(N \\mid B)=(0.143)(0.02)=0.0029\\)\n\nd. \\(P(B \\cup N)=P(B)+P(N)-P(B \\cap N)=0.143+0.85-0.0029=0.9901\\)\n\ne. No. \\(P(N)=0.85 ; P(N \\mid B)=0.02\\). So, \\(P(N \\mid B)\\) does not equal \\(P(N)\\).\n\nf. No. \\(P(B \\cap N)=0.0029\\). For \\(B\\) and \\(N\\) to be mutually exclusive, \\(P(B \\cap N)\\) must be",
+      "prompt": "Exercise \\(\\PageIndex{5}\\)\n\nStudies show that about one woman in seven (approximately 14.3%) who live to be 90 will develop breast cancer. Suppose that of those women who develop breast cancer, a test is negative 2% of the time. Also suppose that in the general population of women, the test for breast cancer is negative about 85% of the time. Let B = woman develops breast cancer and let N = tests negative. Suppose one woman is selected at random.\n\n1. What is the probability that the woman develops breast cancer? What is the probability that woman tests negative?\n\n2. Given that the woman has breast cancer, what is the probability that she tests negative?\n\n3. What is the probability that the woman has breast cancer AND tests negative?\n\n4. What is the probability that the woman has breast cancer or tests negative?\n\n5. Are having breast cancer and testing negative independent events?\n\n6. Are having breast cancer and testing negative mutually exclusive?",
+      "sourceAnswers": [
+        "a. \\(P(B)=0.143 ; P(N)=0.85\\)\n\nb. \\(P(N \\mid B)=0.02\\)\n\nc. \\(P(B \\cap N)=P(B) P(N \\mid B)=(0.143)(0.02)=0.0029\\)\n\nd. \\(P(B \\cup N)=P(B)+P(N)-P(B \\cap N)=0.143+0.85-0.0029=0.9901\\)\n\ne. No. \\(P(N)=0.85 ; P(N \\mid B)=0.02\\). So, \\(P(N \\mid B)\\) does not equal \\(P(N)\\).\n\nf. No. \\(P(B \\cap N)=0.0029\\). For \\(B\\) and \\(N\\) to be mutually exclusive, \\(P(B \\cap N)\\) must be"
+      ],
+      "hasFigure": false,
+      "status": "draft",
+      "answerVerified": false,
+      "translationStatus": "pending",
+      "mappingStatus": "pending"
+    },
+    {
+      "ordinal": 12,
+      "sourceNumber": "",
+      "sourceAnchor": "element-301",
+      "kind": "exercise-candidate",
+      "context": "A student goes to the library. Let events \\(B=\\) the student checks out a book and \\(D=\\) the student checks out a DVD. Suppose that \\(P(B)=0.40, P(D)=0.30\\) and \\(P(D \\mid B)=0.5\\).\n\na. Find \\(P(B \\cap D)\\).\n\nb. Find \\(P(B \\cup D)\\).",
+      "original": "Solution\n\na. P(B) = 0.143; P(N) = 0.85\n\nb. P(N|B) = 0.02\n\nc. P(B AND N) = P(B)P(N|B) = (0.143)(0.02) = 0.0029\n\nd. P(B OR N) = P(B) + P(N) - P(B AND N) = 0.143 + 0.85 - 0.0029 = 0.9901\n\ne. No. P(N) = 0.85; P(N|B) = 0.02. So, P(N|B) does not equal P(N).\n\nf. No. P(B AND N) = 0.0029. For B and N to be mutually exclusive, P(B AND N) must be zero.",
+      "prompt": "",
+      "sourceAnswers": [
+        "Solution\n\na. P(B) = 0.143; P(N) = 0.85\n\nb. P(N|B) = 0.02\n\nc. P(B AND N) = P(B)P(N|B) = (0.143)(0.02) = 0.0029\n\nd. P(B OR N) = P(B) + P(N) - P(B AND N) = 0.143 + 0.85 - 0.0029 = 0.9901\n\ne. No. P(N) = 0.85; P(N|B) = 0.02. So, P(N|B) does not equal P(N).\n\nf. No. P(B AND N) = 0.0029. For B and N to be mutually exclusive, P(B AND N) must be zero."
+      ],
+      "hasFigure": false,
+      "status": "draft",
+      "answerVerified": false,
+      "translationStatus": "pending",
+      "mappingStatus": "pending"
+    },
+    {
+      "ordinal": 13,
+      "sourceNumber": "",
+      "sourceAnchor": "fs-idm109502304",
+      "kind": "exercise-candidate",
+      "context": "A student goes to the library. Let events \\(B=\\) the student checks out a book and \\(D=\\) the student checks out a DVD. Suppose that \\(P(B)=0.40, P(D)=0.30\\) and \\(P(D \\mid B)=0.5\\).\n\na. Find \\(P(B \\cap D)\\).\n\nb. Find \\(P(B \\cup D)\\).",
+      "original": "Solution\n\na. 0.98; b. 0.1401; c. 0.857; d. 0.15",
+      "prompt": "",
+      "sourceAnswers": [
+        "Solution\n\na. 0.98; b. 0.1401; c. 0.857; d. 0.15"
+      ],
+      "hasFigure": false,
+      "status": "draft",
+      "answerVerified": false,
+      "translationStatus": "pending",
+      "mappingStatus": "pending"
+    },
+    {
+      "ordinal": 14,
+      "sourceNumber": "",
+      "sourceAnchor": "",
+      "kind": "exercise-candidate",
+      "context": "a. Find \\(P(B \\cap D)\\).\n\nb. Find \\(P(B \\cup D)\\).\n\nA school has 200 seniors of whom 140 will be going to college next year. Forty will be going directly to work. The remainder are taking a gap year. Fifty of the seniors going to college play sports. Thirty of the seniors going directly to work play sports. Five of the seniors taking a gap year play sports. What is the probability that a senior is going to college and plays sports?",
+      "original": "Exercise \\(\\PageIndex{6}\\)\n\nRefer to the information in Example \\(\\PageIndex{5}\\). \\(P=\\) tests positive.\n\na. Given that a woman develops breast cancer, what is the probability that she tests positive. Find \\(P(P \\mid B)=1-P(N \\mid B)\\).\n\nb. What is the probability that a woman develops breast cancer and tests positive. Find \\(P(B \\cap P)=\\) \\(P(P \\mid B) P(B)\\).\n\nc. What is the probability that a woman does not develop breast cancer. Find \\(P(B)=1-P(B)\\).\n\nd. What is the probability that a woman tests positive for breast cancer. Find \\(P(P)=1-P(N)\\).\n\nAnswer\n\na. 0.98; b. 0.1401; c. 0.857; d. 0.15",
+      "prompt": "Exercise \\(\\PageIndex{6}\\)\n\nRefer to the information in Example \\(\\PageIndex{5}\\). \\(P=\\) tests positive.\n\na. Given that a woman develops breast cancer, what is the probability that she tests positive. Find \\(P(P \\mid B)=1-P(N \\mid B)\\).\n\nb. What is the probability that a woman develops breast cancer and tests positive. Find \\(P(B \\cap P)=\\) \\(P(P \\mid B) P(B)\\).\n\nc. What is the probability that a woman does not develop breast cancer. Find \\(P(B)=1-P(B)\\).\n\nd. What is the probability that a woman tests positive for breast cancer. Find \\(P(P)=1-P(N)\\).",
+      "sourceAnswers": [
+        "a. 0.98; b. 0.1401; c. 0.857; d. 0.15"
+      ],
+      "hasFigure": false,
+      "status": "draft",
+      "answerVerified": false,
+      "translationStatus": "pending",
+      "mappingStatus": "pending"
+    },
+    {
+      "ordinal": 15,
+      "sourceNumber": "",
+      "sourceAnchor": "fs-idm109502304",
+      "kind": "exercise-candidate",
+      "context": "a. Find \\(P(B \\cap D)\\).\n\nb. Find \\(P(B \\cup D)\\).\n\nA school has 200 seniors of whom 140 will be going to college next year. Forty will be going directly to work. The remainder are taking a gap year. Fifty of the seniors going to college play sports. Thirty of the seniors going directly to work play sports. Five of the seniors taking a gap year play sports. What is the probability that a senior is going to college and plays sports?",
+      "original": "Solution\n\na. 0.98; b. 0.1401; c. 0.857; d. 0.15",
+      "prompt": "",
+      "sourceAnswers": [
+        "Solution\n\na. 0.98; b. 0.1401; c. 0.857; d. 0.15"
+      ],
+      "hasFigure": false,
+      "status": "draft",
+      "answerVerified": false,
+      "translationStatus": "pending",
+      "mappingStatus": "pending"
+    }
+  ],
+  "license": "CC BY 4.0",
+  "licenseEvidence": "This page titled 3.4: Two Basic Rules of Probability was last modified on Thu, 07 May 2026 20:05:08 GMT and is shared under a CC BY  4.0  license and was authored, remixed, and/or curated by OpenStax via source content that was edited to the style and standards of the LibreTexts platform.",
+  "url": "https://stats.libretexts.org/Bookshelves/Introductory_Statistics/Introductory_Statistics_2e_(OpenStax)/03:_Probability_Topics/3.04:_Two_Basic_Rules_of_Probability",
+  "sha256": "dff31ea76a1fa97c5bae2f4a83dc4ce55bc97ed105b770c655b2d94cc28875b3",
+  "checkedAt": "2026-10-07",
+  "id": "961b16fd796e7fc232ce",
+  "bookId": "statistics",
+  "licenseInherited": false,
+  "licenseSource": "https://stats.libretexts.org/Bookshelves/Introductory_Statistics/Introductory_Statistics_2e_(OpenStax)/03:_Probability_Topics/3.04:_Two_Basic_Rules_of_Probability",
+  "licenseUrl": "https://creativecommons.org/licenses/by/4.0/",
+  "authors": "OpenStax / Barbara Illowsky, Susan Dean",
+  "book": "Introductory Statistics 2e",
+  "reviewStatus": "unreviewed",
+  "sourceLanguage": "en",
+  "translationStatus": "pending"
+}

@@ -1,0 +1,181 @@
+{
+  "title": "13.3: Testing the Significance of the Correlation Coefficient",
+  "originalText": "The correlation coefficient, r, tells us about the strength and direction of the linear relationship between x and y. However, the reliability of the linear model also depends on how many observed data points are in the sample. We need to look at both the value of the correlation coefficient r and the sample size n, together.\n\nWe perform a hypothesis test of the  \"significance of the correlation coefficient\"  to decide whether the linear relationship in the sample data is strong enough to use to model the relationship in the population.\n\nThe sample data are used to compute r, the correlation coefficient for the sample. If we had data for the entire population, we could find the population correlation coefficient. But because we have only sample data, we cannot calculate the population correlation coefficient. The sample correlation coefficient, r, is our estimate of the unknown population correlation coefficient.\n\nThe symbol for the population correlation coefficient is ρ, the Greek letter \"rho.\"\n\nρ = population correlation coefficient (unknown)\n\nr = sample correlation coefficient (known; calculated from sample data)\n\nThe hypothesis test lets us decide whether the value of the population correlation coefficient ρ is \"close to zero\" or \"significantly different from zero\". We decide this based on the sample correlation coefficient r and the sample size n.\n\nIf the test concludes that the correlation coefficient is significantly different from zero, we say that the correlation coefficient is \"significant.\"\n\nConclusion: There is sufficient evidence to conclude that there is a significant linear relationship between x and y because the correlation coefficient is significantly different from zero.\n\nWhat the conclusion means: There is a significant linear relationship between x and y. We can use the regression line to model the linear relationship between x and y in the population.\n\nIf the test concludes that the correlation coefficient is not significantly different from zero (it is close to zero), we say that correlation coefficient is \"not significant\".\n\nConclusion: \"There is insufficient evidence to conclude that there is a significant linear relationship between x and y because the correlation coefficient is not significantly different from zero.\"\n\nWhat the conclusion means: There is not a significant linear relationship between x and y. Therefore, we CANNOT use the regression line to model a linear relationship between x and y in the population.\n\nNOTE\n\nIf r is significant and the scatter plot shows a linear trend, the line can be used to predict the value of y for values of x that are within the domain of observed x values.\n\nIf r is not significant OR if the scatter plot does not show a linear trend, the line should not be used for prediction.\n\nIf r is significant and if the scatter plot shows a linear trend, the line may NOT be appropriate or reliable for prediction OUTSIDE the domain of observed x values in the data.\n\nPERFORMING THE HYPOTHESIS TEST\n\nNull Hypothesis: H_(0): ρ = 0 \n\nAlternate Hypothesis: H_(a): ρ ≠ 0\n\nWHAT THE HYPOTHESES MEAN IN WORDS:\n\nNull Hypothesis H_(0): The population correlation coefficient IS NOT significantly different from zero. There IS NOT a significant linear relationship (correlation) between x and y in the population.\n\nAlternate Hypothesis H_(a): The population correlation coefficient IS significantly DIFFERENT FROM zero. There IS A SIGNIFICANT LINEAR RELATIONSHIP (correlation) between x and y in the population.\n\nDRAWING A CONCLUSION:There are two methods of making the decision. The two methods are equivalent and give the same result.\n\nMethod 1: Using the p-value\n\nMethod 2: Using a table of critical values\n\nIn this chapter of this textbook, we will always use a significance level of 5%, α = 0.05\n\nNOTE\n\nUsing the p-value method, you could choose any appropriate significance level you want; you are not limited to using α = 0.05. But the table of critical values provided in this textbook assumes that we are using a significance level of 5%, α = 0.05. (If we wanted to use a different significance level than 5% with the critical value method, we would need different tables of critical values that are not provided in this textbook.)\n\nMETHOD 1: Using a p-value to make a decision\n\nUsing the TI-83, 83+, 84, 84+ Calculator\n\nTo calculate the p-value using LinRegTTEST:\n\nOn the LinRegTTEST input screen, on the line prompt for β or ρ, highlight \"≠ 0\"\n\nThe output screen shows the p-value on the line that reads \"p =\".\n\n(Most computer statistical software can calculate the p-value.)\n\nIf the p-value is less than the significance level (α = 0.05):\n\nDecision: Reject the null hypothesis.\n\nConclusion: \"There is sufficient evidence to conclude that there is a significant linear relationship between x and y because the correlation coefficient is significantly different from zero.\"\n\nIf the p-value is NOT less than the significance level (α = 0.05)\n\nDecision: DO NOT REJECT the null hypothesis.\n\nConclusion: \"There is insufficient evidence to conclude that there is a significant linear relationship between x and y because the correlation coefficient is NOT significantly different from zero.\"\n\nCalculation Notes:\n\nYou will use technology to calculate the p-value. The following describes the calculations to compute the test statistics and the p-value:\n\nThe p-value is calculated using a t-distribution with n - 2 degrees of freedom.\n\nThe formula for the test statistic is t=rn&#x2212;21&#x2212;r2\" role=\"presentation\" style=\"position: relative;\">t=rn−2√1−r2√\\(t=\\frac{r\\sqrt{n−2}}{\\sqrt{1−}}\\unsupported{mfrac}{\\sqrt{{r}^{2}}}\\). The value of the test statistic, t, is shown in the computer or calculator output along with the p-value. The test statistic t has the same sign as the correlation coefficient r.\n\nThe p-value is the combined area in both tails.\n\nAn alternative way to calculate the p-value (p) given by LinRegTTest is the command 2*tcdf(abs(t),10^99, n-2) in 2nd DISTR.\n\nTHIRD-EXAM vs FINAL-EXAM EXAMPLE: p-value method\n\nConsider the third exam/final exam example.\n\nThe line of best fit is: ŷ = -173.51 + 4.83x with r = 0.6631 and there are n = 11 data points.\n\nCan the regression line be used for prediction? Given a third exam score (x value), can we use the line to predict the final exam score (predicted y value)?\n\nH_(0): ρ = 0\n\nH_(a): ρ ≠ 0\n\nα = 0.05\n\nThe p-value is 0.026 (from LinRegTTest on your calculator or from computer software).\n\nThe p-value, 0.026, is less than the significance level of α = 0.05.\n\nDecision: Reject the Null Hypothesis H_(0)\n\nConclusion: There is sufficient evidence to conclude that there is a significant linear relationship between the third exam score (x) and the final exam score (y) because the correlation coefficient is significantly different from zero.\n\nBecause r is significant and the scatter plot shows a linear trend, the regression line can be used to predict final exam scores.\n\nMETHOD 2: Using a table of Critical Values to make a decision\n\nThe 95% Critical Values of the Sample Correlation Coefficient Table can be used to give you a good idea of whether the computed value of r\" role=\"presentation\" style=\"position: relative;\">r\\(r\\) is significant or not. Compare r to the appropriate critical value in the table. If r is not between the positive and negative critical values, then the correlation coefficient is significant. If r is significant, then you may want to use the line for prediction.\n\nExample  12.7  \n\nSuppose you computed r = 0.801 using n = 10 data points. df = n - 2 = 10 - 2 = 8. The critical values associated with df = 8 are -0.632 and + 0.632. If r < negative critical value or r > positive critical value, then r is significant. Since r = 0.801 and 0.801 > 0.632, r is significant and the line may be used for prediction. If you view this example on a number line, it will help you.\n\n[Figure: Horizontal number line with values of -1, -0.632, 0, 0.632, 0.801, and 1. A dashed line above values -0.632, 0, and 0.632 indicates not significant values.]\n\nFigure  12.16   r is not significant between -0.632 and +0.632. r = 0.801 > +0.632. Therefore, r is significant.\n\nTry It  12.7\n\nFor a given line of best fit, you computed that r = 0.6501 using n = 12 data points and the critical value is 0.576. Can the line be used for prediction? Why or why not?\n\nExample  12.8  \n\nSuppose you computed r = –0.624 with 14 data points. df = 14 – 2 = 12. The critical values are –0.532 and 0.532. Since –0.624 < –0.532, r is significant and the line can be used for prediction\n\n[Figure: Horizontal number line with values of -0.624, -0.532, and 0.532.]\n\nFigure  12.17   r = –0.624 < -0.532. Therefore, r is significant.\n\nTry It  12.8\n\nFor a given line of best fit, you compute that r = 0.5204 using n = 9 data points, and the critical value is 0.666. Can the line be used for prediction? Why or why not?\n\nExample  12.9  \n\nSuppose you computed r = 0.776 and n = 6. df = 6 – 2 = 4. The critical values are –0.811 and 0.811. Since –0.811 < 0.776 < 0.811, r is not significant, and the line should not be used for prediction.\n\n[Figure: Horizontal number line with values -0.924, -0.532, and 0.532.]\n\nFigure  12.18   -0.811 < r = 0.776 < 0.811. Therefore, r is not significant.\n\nTry It  12.9\n\nFor a given line of best fit, you compute that r = –0.7204 using n = 8 data points, and the critical value is = 0.707. Can the line be used for prediction? Why or why not?\n\nTHIRD-EXAM vs FINAL-EXAM EXAMPLE: critical value method\n\nConsider the third exam/final exam example. The line of best fit is: ŷ = –173.51+4.83x with r = 0.6631 and there are n = 11 data points. Can the regression line be used for prediction? Given a third-exam score (x value), can we use the line to predict the final exam score (predicted y value)?\n\nH_(0): ρ = 0\n\nH_(a): ρ ≠ 0\n\nα = 0.05\n\nUse the \"95% Critical Value\" table for r with df = n – 2 = 11 – 2 = 9.\n\nThe critical values are –0.602 and +0.602\n\nSince 0.6631 > 0.602, r is significant.\n\nDecision: Reject the null hypothesis.\n\nConclusion:There is sufficient evidence to conclude that there is a significant linear relationship between the third exam score (x) and the final exam score (y) because the correlation coefficient is significantly different from zero.\n\nBecause r is significant and the scatter plot shows a linear trend, the regression line can be used to predict final exam scores.\n\nExample  12.10  \n\nSuppose you computed the following correlation coefficients. Using the table at the end of the chapter, determine if r is significant and the line of best fit associated with each r can be used to predict a y value. If it helps, draw a number line.\n\n1. r = –0.567 and the sample size, n, is 19. The df = n – 2 = 17. The critical value is –0.456. –0.567 < –0.456 so r is significant.\n\n2. r = 0.708 and the sample size, n, is nine. The df = n – 2 = 7. The critical value is 0.666. 0.708 > 0.666 so r is significant.\n\n3. r = 0.134 and the sample size, n, is 14. The df = 14 – 2 = 12. The critical value is 0.532. 0.134 is between –0.532 and 0.532 so r is not significant.\n\n4. r = 0 and the sample size, n, is five. No matter what the dfs are, r = 0 is between the two critical values so r is not significant.\n\nTry It  12.10\n\nFor a given line of best fit, you compute that r = 0 using n = 100 data points. Can the line be used for prediction? Why or why not?\n\nAssumptions in Testing the Significance of the Correlation Coefficient\n\nTesting the significance of the correlation coefficient requires that certain assumptions about the data are satisfied. The premise of this test is that the data are a sample of observed points taken from a larger population. We have not examined the entire population because it is not possible or feasible to do so. We are examining the sample to draw a conclusion about whether the linear relationship that we see between x and y in the sample data provides strong enough evidence so that we can conclude that there is a linear relationship between x and y in the population.\n\nThe regression line equation that we calculate from the sample data gives the best-fit line for our particular sample. We want to use this best-fit line for the sample as an estimate of the best-fit line for the population. Examining the scatterplot and testing the significance of the correlation coefficient helps us determine if it is appropriate to do this.\n\nThe assumptions underlying the test of significance are:\n\nThe relationship between the variables being correlated should be linear. The data points should fall along an approximate straight-line pattern when plotted as (x, y) data points on a scatter plot.\n\nThe y values for any particular x value are normally distributed about the line. This implies that there are more y values scattered closer to the line than are scattered farther away. Assumption (1) implies that these normal distributions are centered on the line: the means of these normal distributions of y values lie on the line.\n\nThe standard deviations of the population y values about the line are equal for each value of x. In other words, each of these normal distributions of y values has the same shape and spread about the line.\n\nThe residual errors are mutually independent (no pattern).\n\nThe data are produced from a well-designed, random sample or randomized experiment.\n\n[Figure: The left graph shows three sets of points. Each set falls in a vertical line. The points in each set are normally distributed along the line — they are densely packed in the middle and more spread out at the top and bottom. A downward sloping regression line passes through the mean of each set. The right graph shows the same regression line plotted. A vertical normal curve is shown for each line.]\n\nFigure  12.19   The y values for each x value are normally distributed about the line with the same standard deviation. For each x value, the mean of the y values lies on the regression line. More y values lie near the line than are scattered further away from the line. \n\nThis page titled 13.3: Testing the Significance of the Correlation Coefficient was last modified on Thu, 07 May 2026 20:05:11 GMT and is shared under a CC BY  4.0  license and was authored, remixed, and/or curated by OpenStax via source content that was edited to the style and standards of the LibreTexts platform.",
+  "figures": [
+    {
+      "url": "https://stats.libretexts.org/@api/deki/files/45292/81abc931204d6339ec054c874ddc139105b39492?revision=1&size=bestfit&width=1455&height=189",
+      "alt": "Horizontal number line with values of -1, -0.632, 0, 0.632, 0.801, and 1. A dashed line above values -0.632, 0, and 0.632 indicates not significant values.",
+      "credit": ""
+    },
+    {
+      "url": "https://stats.libretexts.org/@api/deki/files/45290/2f87c852124a4d68ee4bd388cbef8ef43c3fbd66?revision=1&size=bestfit&width=1458&height=101",
+      "alt": "Horizontal number line with values of -0.624, -0.532, and 0.532.",
+      "credit": ""
+    },
+    {
+      "url": "https://stats.libretexts.org/@api/deki/files/45291/e2cc9286ff9cba1bff947fc44848c9ede3d44037?revision=1&size=bestfit&width=1455&height=100",
+      "alt": "Horizontal number line with values -0.924, -0.532, and 0.532.",
+      "credit": ""
+    },
+    {
+      "url": "https://stats.libretexts.org/@api/deki/files/45293/f2c392ddc76db239c038a71359129f03914dd6a8?revision=1&size=bestfit&width=1463&height=699",
+      "alt": "The left graph shows three sets of points. Each set falls in a vertical line. The points in each set are normally distributed along the line — they are densely packed in the middle and more spread out at the top and bottom. A downward sloping regression line passes through the mean of each set. The right graph shows the same regression line plotted. A vertical normal curve is shown for each line.",
+      "credit": ""
+    }
+  ],
+  "references": [
+    {
+      "text": "13.3: Testing the Significance of the Correlation Coefficient",
+      "url": "https://stats.libretexts.org/Bookshelves/Introductory_Statistics/Introductory_Statistics_2e_(OpenStax)/13%3A_Linear_Regression_and_Correlation/13.03%3A_Testing_the_Significance_of_the_Correlation_Coefficient"
+    },
+    {
+      "text": "CC BY  4.0",
+      "url": "https://creativecommons.org/licenses/by/4.0"
+    },
+    {
+      "text": "OpenStax",
+      "url": "https://openstax.org/"
+    },
+    {
+      "text": "source content",
+      "url": "https://openstax.org/details/books/introductory-statistics"
+    }
+  ],
+  "exercises": [
+    {
+      "ordinal": 1,
+      "sourceNumber": "",
+      "sourceAnchor": "eip-97",
+      "kind": "exercise-candidate",
+      "context": "Try It  12.7",
+      "original": "For a given line of best fit, you computed that r = 0.6501 using n = 12 data points and the critical value is 0.576. Can the line be used for prediction? Why or why not?",
+      "prompt": "For a given line of best fit, you computed that r = 0.6501 using n = 12 data points and the critical value is 0.576. Can the line be used for prediction? Why or why not?",
+      "sourceAnswers": [],
+      "hasFigure": false,
+      "status": "draft",
+      "answerVerified": false,
+      "translationStatus": "pending",
+      "mappingStatus": "pending"
+    },
+    {
+      "ordinal": 2,
+      "sourceNumber": "",
+      "sourceAnchor": "eip-847",
+      "kind": "exercise-candidate",
+      "context": "Try It  12.8",
+      "original": "For a given line of best fit, you compute that r = 0.5204 using n = 9 data points, and the critical value is 0.666. Can the line be used for prediction? Why or why not?",
+      "prompt": "For a given line of best fit, you compute that r = 0.5204 using n = 9 data points, and the critical value is 0.666. Can the line be used for prediction? Why or why not?",
+      "sourceAnswers": [],
+      "hasFigure": false,
+      "status": "draft",
+      "answerVerified": false,
+      "translationStatus": "pending",
+      "mappingStatus": "pending"
+    },
+    {
+      "ordinal": 3,
+      "sourceNumber": "",
+      "sourceAnchor": "eip-610",
+      "kind": "exercise-candidate",
+      "context": "Try It  12.9",
+      "original": "For a given line of best fit, you compute that r = –0.7204 using n = 8 data points, and the critical value is = 0.707. Can the line be used for prediction? Why or why not?",
+      "prompt": "For a given line of best fit, you compute that r = –0.7204 using n = 8 data points, and the critical value is = 0.707. Can the line be used for prediction? Why or why not?",
+      "sourceAnswers": [],
+      "hasFigure": false,
+      "status": "draft",
+      "answerVerified": false,
+      "translationStatus": "pending",
+      "mappingStatus": "pending"
+    },
+    {
+      "ordinal": 4,
+      "sourceNumber": "1",
+      "sourceAnchor": "",
+      "kind": "exercise-candidate",
+      "context": "Example  12.10\n\nSuppose you computed the following correlation coefficients. Using the table at the end of the chapter, determine if r is significant and the line of best fit associated with each r can be used to predict a y value. If it helps, draw a number line.",
+      "original": "1. r = –0.567 and the sample size, n, is 19. The df = n – 2 = 17. The critical value is –0.456. –0.567 < –0.456 so r is significant.",
+      "prompt": "1. r = –0.567 and the sample size, n, is 19. The df = n – 2 = 17. The critical value is –0.456. –0.567 < –0.456 so r is significant.",
+      "sourceAnswers": [],
+      "hasFigure": false,
+      "status": "draft",
+      "answerVerified": false,
+      "translationStatus": "pending",
+      "mappingStatus": "pending"
+    },
+    {
+      "ordinal": 5,
+      "sourceNumber": "2",
+      "sourceAnchor": "",
+      "kind": "exercise-candidate",
+      "context": "Example  12.10\n\nSuppose you computed the following correlation coefficients. Using the table at the end of the chapter, determine if r is significant and the line of best fit associated with each r can be used to predict a y value. If it helps, draw a number line.",
+      "original": "2. r = 0.708 and the sample size, n, is nine. The df = n – 2 = 7. The critical value is 0.666. 0.708 > 0.666 so r is significant.",
+      "prompt": "2. r = 0.708 and the sample size, n, is nine. The df = n – 2 = 7. The critical value is 0.666. 0.708 > 0.666 so r is significant.",
+      "sourceAnswers": [],
+      "hasFigure": false,
+      "status": "draft",
+      "answerVerified": false,
+      "translationStatus": "pending",
+      "mappingStatus": "pending"
+    },
+    {
+      "ordinal": 6,
+      "sourceNumber": "3",
+      "sourceAnchor": "",
+      "kind": "exercise-candidate",
+      "context": "Example  12.10\n\nSuppose you computed the following correlation coefficients. Using the table at the end of the chapter, determine if r is significant and the line of best fit associated with each r can be used to predict a y value. If it helps, draw a number line.",
+      "original": "3. r = 0.134 and the sample size, n, is 14. The df = 14 – 2 = 12. The critical value is 0.532. 0.134 is between –0.532 and 0.532 so r is not significant.",
+      "prompt": "3. r = 0.134 and the sample size, n, is 14. The df = 14 – 2 = 12. The critical value is 0.532. 0.134 is between –0.532 and 0.532 so r is not significant.",
+      "sourceAnswers": [],
+      "hasFigure": false,
+      "status": "draft",
+      "answerVerified": false,
+      "translationStatus": "pending",
+      "mappingStatus": "pending"
+    },
+    {
+      "ordinal": 7,
+      "sourceNumber": "4",
+      "sourceAnchor": "",
+      "kind": "exercise-candidate",
+      "context": "Example  12.10\n\nSuppose you computed the following correlation coefficients. Using the table at the end of the chapter, determine if r is significant and the line of best fit associated with each r can be used to predict a y value. If it helps, draw a number line.",
+      "original": "4. r = 0 and the sample size, n, is five. No matter what the dfs are, r = 0 is between the two critical values so r is not significant.",
+      "prompt": "4. r = 0 and the sample size, n, is five. No matter what the dfs are, r = 0 is between the two critical values so r is not significant.",
+      "sourceAnswers": [],
+      "hasFigure": false,
+      "status": "draft",
+      "answerVerified": false,
+      "translationStatus": "pending",
+      "mappingStatus": "pending"
+    },
+    {
+      "ordinal": 8,
+      "sourceNumber": "",
+      "sourceAnchor": "eip-316",
+      "kind": "exercise-candidate",
+      "context": "Try It  12.10",
+      "original": "For a given line of best fit, you compute that r = 0 using n = 100 data points. Can the line be used for prediction? Why or why not?",
+      "prompt": "For a given line of best fit, you compute that r = 0 using n = 100 data points. Can the line be used for prediction? Why or why not?",
+      "sourceAnswers": [],
+      "hasFigure": false,
+      "status": "draft",
+      "answerVerified": false,
+      "translationStatus": "pending",
+      "mappingStatus": "pending"
+    }
+  ],
+  "license": "CC BY 4.0",
+  "licenseEvidence": "This page titled 13.3: Testing the Significance of the Correlation Coefficient was last modified on Thu, 07 May 2026 20:05:11 GMT and is shared under a CC BY  4.0  license and was authored, remixed, and/or curated by OpenStax via source content that was edited to the style and standards of the LibreTexts platform.",
+  "url": "https://stats.libretexts.org/Bookshelves/Introductory_Statistics/Introductory_Statistics_2e_(OpenStax)/13:_Linear_Regression_and_Correlation/13.03:_Testing_the_Significance_of_the_Correlation_Coefficient",
+  "sha256": "ed8a3122e224dfa20b1f272e6efba0549f02e37d48442c11991d49da653e04e7",
+  "checkedAt": "2026-10-07",
+  "id": "5270d8cd506eee7cd101",
+  "bookId": "statistics",
+  "licenseInherited": false,
+  "licenseSource": "https://stats.libretexts.org/Bookshelves/Introductory_Statistics/Introductory_Statistics_2e_(OpenStax)/13:_Linear_Regression_and_Correlation/13.03:_Testing_the_Significance_of_the_Correlation_Coefficient",
+  "licenseUrl": "https://creativecommons.org/licenses/by/4.0/",
+  "authors": "OpenStax / Barbara Illowsky, Susan Dean",
+  "book": "Introductory Statistics 2e",
+  "reviewStatus": "unreviewed",
+  "sourceLanguage": "en",
+  "translationStatus": "pending"
+}

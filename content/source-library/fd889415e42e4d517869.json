@@ -1,0 +1,675 @@
+{
+  "title": "12.10: Trees",
+  "originalText": "[Figure: A row of trees with no leaves.]\n\nFigure \\(\\PageIndex{1}\\): In graph theory, graphs known as trees have structures in common with live trees. (credit: “Row of trees in Roslev” by AKA CJ/Flickr, Public Domain)\n\nLearning Objectives\n\n1. Describe and identify trees.\n\n2. Determine a spanning tree for a connected graph.\n\n3. Find the minimum spanning tree for a weighted graph.\n\n4. Solve application problems involving trees.\n\nWe saved the best for last! In this last section, we will discuss arguably the most fun kinds of graphs, trees. Have you every researched your family tree? Family trees are a perfect example of the kind of trees we study in graph theory. One of the characteristics of a family tree graph is that it never loops back around, because no one is their own grandparent!\n\nWhat Is A Tree?\n\nWhether we are talking about a family tree or a tree in a forest, none of the branches ever loops back around and rejoins the trunk. This means that a tree has no cyclic subgraphs, or is acyclic. A tree also has only one component. So, a tree is a connected acyclic graph. Here are some graphs that have the same characteristic. Each of the graphs in Figure \\(\\PageIndex{2}\\) is a tree.\n\n[Figure: Three graphs. Graph T has 15 vertices. The edges are as follows: a b, b c, c d, c i, i j, j k, k o, d e, d l, e n, e m, b f, f g, and g h. Graph P has 6 vertices. The edges are as follows: t s, s r, r q, q p, and p o. Graph S has 7 vertices. The edges are as follows: u t, u v, u w, u x, u y, and u z.]\n\nFigure \\(\\PageIndex{2}\\): Graphs T, P, and S\n\nLet’s practice determining whether a graph is a tree. To do this, check if a graph is connected and has no cycles.\n\nExample \\(\\PageIndex{1}\\): Identifying Trees\n\nIdentify any trees in Figure \\(\\PageIndex{3}\\). If a graph is not a tree, explain how you know.\n\n[Figure: Three graphs. Graph M has 7 vertices. The edges are a b, b f, f g, f c, b c, b d, and d e. Graph N has 6 vertices. The edges are I j, I h, l k, and l m. The edges, I j, and l k intersect each other. Graph P has 6 vertices. The edges are s t, s r, r q, q p, and p o.]\n\nFigure \\(\\PageIndex{3}\\): Graphs M, N, and P\n\nAnswer\n\nGraph M is not a tree because it contains the cycle (b, c, f).\n\nGraph N is not a tree because it is not connected. It has two components, one with vertices h, i, j, and another with vertices k, l, m.\n\nGraph P is a tree. It has no cycles and it is connected.\n\nYour Turn \\(\\PageIndex{1}\\)\n\nThere are some configurations that are commonly used when setting up computer networks. Several of them are shown in the given figure. Which of the configurations in the figure appear to have the characteristics of a tree graph? If a configuration does not appear to have the characteristics of a tree graph, explain how you know.\n\n[Figure: Four illustrations represent the common network configurations. The first illustration represents mesh topology. Six computers are interconnected. The second illustration represents a ring topology. Five computers are connected in a ring. The third illustration represents star topology. A computer at the center is connected to five computers surrounding it. The fourth illustration represents tree topology. Two branches arise from a horizontal bus. Each branch has a computer at the center connected to five computers surrounding it]\n\nFigure \\(\\PageIndex{4}\\): Common Network Configurations\n\nTypes of Trees\n\nMathematicians have had a lot of fun naming graphs that are trees or that contain trees. For example, the graph in Figure \\(\\PageIndex{5}\\) is not a tree, but it contains two components, one containing vertices a through d, and the other containing vertices e through g, each of which would be a tree on its own. This type of structure is called a forest. There are also interesting names for trees with certain characteristics.\n\nA path graph or linear graph  is a tree graph that has exactly two vertices of degree 1 such that the only other vertices form a single path between them, which means that it can be drawn as a straight line.\n\nA star tree is a tree that has exactly one vertex of degree greater than 1 called a root, and all other vertices are adjacent to it.\n\nA starlike tree is a tree that has a single root  and several paths attached to it.\n\nA caterpillar tree is a tree that has a central path that can have vertices of any degree, with each vertex not on the central path being adjacent to a vertex on the central path and having a degree of one.\n\nA lobster tree is a tree that has a central path that can have vertices of any degree, with paths consisting of either one or two edges attached to the central path.\n\nExamples of each of these types of structures are given in Figure \\(\\PageIndex{6}\\).\n\n[Figure: Graph F has 8 vertices. The vertices are labeled a to h. Edges connect b a, b d, b c, f e, f h, and f g.]\n\nFigure \\(\\PageIndex{5}\\): Forest Graph F\n\n[Figure: Six graphs. Graph S has 7 vertices. The edges are a b, b f, f g, f c, b c, b d, and d e. Graph N has 6 vertices. The edges are I j, I h, l k, and l m. The edges, I j, and l k intersect each other. Graph P has 6 vertices. The edges are s t, s r, r q, q p, and p o. Graph Z has 12 vertices. The edges are a b, a c, a d, a e, a f, a g, a h, h i, c j, e k, and k l. Graph C has 14 vertices. The edges are m n, n z, n o, o r, o p, o x, o y, p y, p x, p s, p t, p u, p q, p v, and p w. Graph L has 26 vertices. The edges are f q, f t, f s, f e, e o, e p, p z, e d, d m, m v, d n, n y, d c, c k, k u, c l, l k, c b, b i, i t, b j, j w, b a, b g, and b h.]\n\n[Figure: Six graphs. Graph S has 7 vertices. The edges are a b, b f, f g, f c, b c, b d, and d e. Graph N has 6 vertices. The edges are I j, I h, l k, and l m. The edges, I j, and l k intersect each other. Graph P has 6 vertices. The edges are s t, s r, r q, q p, and p o. Graph Z has 12 vertices. The edges are a b, a c, a d, a e, a f, a g, a h, h i, c j, e k, and k l. Graph C has 14 vertices. The edges are m n, n z, n o, o r, o p, o x, o y, p y, p x, p s, p t, p u, p q, p v, and p w. Graph L has 26 vertices. The edges are f q, f t, f s, f e, e o, e p, p z, e d, d m, m v, d n, n y, d c, c k, k u, c l, l k, c b, b i, i t, b j, j w, b a, b g, and b h.]\n\nFigure \\(\\PageIndex{6}\\): Six Types of Trees\n\nExample \\(\\PageIndex{2}\\): Identifying Types of Trees\n\nEach graph in Figure \\(\\PageIndex{7}\\) is one of the special types of trees we have been discussing. Identify the type of tree.\n\n[Figure: Two graphs. Graph U has 17 vertices. The edges are o q, o p, o l, l n, l k, l m, l i, I j, I f, f g, f h, f d, d e, f b, b c, and b a. Graph V hs 6 vertices. The edges are r s, s t, t u, u v, and v w. The edges, s t and u v intersect.]\n\nFigure  \\(\\PageIndex{7}\\) Graphs U and V\n\nAnswer\n\nGraph U has a central path a → b → d → f → i → l → o → q. Each vertex that is not on the path has degree 1 and is adjacent to a vertex that is on the path. So, U is a caterpillar tree.\n\nGraph V is a path graph because it is a single path connecting exactly two vertices of degree one, r → s → u → v → w.\n\nYour Turn \\(\\PageIndex{2}\\)\n\nOf the network configurations from Figure \\(\\PageIndex{7}\\), which, if any, has the characteristics of a\n\n1. Star tree?\n\n2. Caterpillar tree?\n\n3. Path graph?\n\nCharacteristics of Trees\n\nAs we study trees, it is helpful to be familiar with some of their characteristics. For example, if you add an edge to a tree graph between any two existing vertices, you will create a cycle, and the resulting graph is no longer a tree. Some examples are shown in Figure \\(\\PageIndex{8}\\). Adding edge bj to Graph T creates cycle (b, c, i, j). Adding edge rt to Graph P creates cycle (r, s, t). Adding edge tv to Graph S creates cycle (t, u, v).\n\n[Figure: Three graphs. Graph T has 15 vertices. The edges are as follows: a b, b c, c d, c i, i j, j k, k o, d e, d l, e n, e m, b f, f g, and g h. The edges, c i, and i j are in blue. A dashed edge connects b and j. Graph P has 6 vertices. The edges are as follows: t s, s r, r q, q p, and p o. The edges, t s, and s r are in blue. A dashed edge connects t and r. Graph S has 7 vertices. The edges are as follows: u t, u v, u w, u x, u y, and u z. The edges, u t, and u v are in blue. A dashed edge connects t and v.]\n\nFigure \\(\\PageIndex{8}\\): Adding Edges to Trees\n\nIt is also true that removing an edge from a tree graph will increase the number of components and the graph will no longer be connected. In fact, you can see in Figure \\(\\PageIndex{8}\\ that removing one or more edges can create a forest. Removing edge qr from Graph P creates a graph with two components, one with vertices o, p and q, and the other with vertices r, s, and t. Removing edge uw from Graph S creates two components, one with just vertex w and the other with the rest of the vertices. When two edges were removed from Graph T, edge bf and edge cd, creates a graph with three components as shown in Figure \\(\\PageIndex{9}\\).\n\n[Figure: Three graphs. Graph T has 15 vertices. The edges are as follows: a b, b c, c d, c i, i j, j k, k o, d e, d l, e n, e m, b f, f g, and g h. The edges, d c, and b f are in dashed lines. The graph is separated into three blocks. Graph P has 6 vertices. The edges are as follows: t s, s r, r q, q p, and p o. The edge, q r is in dashed lines. The graph is separated into two blocks. Graph S has 7 vertices. The edges are as follows: u t, u v, u w, u x, u y, and u z. The edge, u w is in dashed lines. The graph is separated into two blocks.]\n\nFigure \\(\\PageIndex{9}\\): Removing Edges from Trees\n\nA very useful characteristic of tree graphs is that the number of edges is always one less than the number of vertices. In fact, any connected graph in which the number of edges is one less than the number of vertices is guaranteed to be a tree. Some examples are given in Figure \\(\\PageIndex{10}\\).\n\n[Figure: Six graphs. Graph T has 15 vertices. The edges are as follows: a b, b c, c d, c i, i j, j k, k o, d e, d l, e n, e m, b f, f g, and g h. Graph P has 6 vertices. The edges are as follows: t s, s r, r q, q p, and p o. Graph S has 7 vertices. The edges are as follows: u t, u v, u w, u x, u y, and u z. Graph Z has 12 vertices. The edges are a b, a c, a d, a e, a f, a g, a h, h i, c j, e k, and k l. Graph C has 14 vertices. The edges are m n, n z, n o, o r, o p, o x, o y, p y, p x, p s, p t, p u, p q, p v, and p w. Graph L has 26 vertices. The edges are f q, f t, f s, f e, e o, e p, p z, e d, d m, m v, d n, n y, d c, c k, k u, c l, l k, c b, b i, i t, b j, j w, b a, b g, and b h.]\n\nFigure \\(\\PageIndex{10}\\): Number of Vertices and Edges in Trees vs. Other Graphs\n\nFORMULA\n\nThe number of edges in a tree graph with \\(n\\) vertices is \\(n−1\\).\n\nA connected graph with n vertices and \\(n−1\\) edges is a tree graph.\n\nExample \\(\\PageIndex{3}\\): Exploring Characteristics of Trees\n\nUse Graphs I and J in Figure \\(\\PageIndex{11}\\) to answer each question.\n\n[Figure: Two graphs. Graph I has six vertices: a, b, c, d, e, and f. Edges connect a b, b c, b e, d e, and e f. Graph J has seven vertices: g h, i, j, k, l, and m. Edges connect g h, h i, j h, j l, k l, and l m.]\n\nFigure \\(\\PageIndex{11}\\) Graphs I and J\n\n1. Which vertices are in each of the components that remain when edge be is removed from Graph I?\n\n2. Determine the number of edges and the number of vertices in Graph J. Explain how this confirms that Graph J is a tree.\n\n3. What kind of cycle is created if edge im is added to Graph J?\n\nAnswer\n\n1. When edge be is removed, there are two components that remain. One component includes vertices a, b, and c. The other component includes vertices d, e, and f.\n\n2. There are seven vertices and six edges in Graph J. This confirms that Graph J is a tree because the number of edges is one less than the number of vertices.\n\n3. The pentagon (i, h, j, l, m) is created when edge im is added to Graph J.\n\nYour Turn \\(\\PageIndex{3}\\)\n\nUse Graphs I and J in Figure \\(\\PageIndex{11}\\) to answer each question.\n\nWhich vertices are in each of the components that remain when edge jl is removed from Graph J?\n\nDetermine the number of edges and the number of vertices in Graph I. Explain how this confirms that Graph I is a tree.\n\nWhat kind of cycle is created if edge cf is added to Graph I?\n\nWho Knew?: Graph Theory in the Movies\n\nIn the 1997 film Good Will Hunting, the main character, Will, played by Matt Damon, solves what is supposed to be an exceptionally difficult graph theory problem, “Draw all the homeomorphically irreducible trees of size \\(n=\\)10.” That sounds terrifying! But don’t panic. Watch this great Numberphile video to see why this is actually a problem you can do at home!\n\nVideo\n\nThe Problem in Good Will Hunting by Numberphile\n\nSpanning Trees\n\nSuppose that you planned to set up your own computer network with four devices. One option is to use a “mesh topology” like the one in Figure \\(\\PageIndex{12}\\), in which each device is connected directly to every other device in the network.\n\n[Figure: Four illustrations represent the common network configurations. The first illustration represents mesh topology. Six computers are interconnected. The second illustration represents a ring topology. Five computers are connected in a ring. The third illustration represents star topology. A computer at the center is connected to five computers surrounding it. The fourth illustration represents tree topology. Two branches arise from a horizontal bus. Each branch has a computer at the center connected to five computers surrounding it.]\n\nFigure \\(\\PageIndex{12}\\): Common Network Configurations\n\nThe mesh topology for four devices could be represented by the complete Graph A_(1) in Figure \\(\\PageIndex{13}\\) where the vertices represent the devices, and the edges represent network connections. However, the devices could be networked using fewer connections. Graphs A_(2), A_(3,) and A_(4) of Figure \\(\\PageIndex{13}\\) show configurations in which three of the six edges have been removed. Each of the Graphs A_(2), A_(3) and A_(4) in Figure 12.242 is a tree because it is connected and contains no cycles. Since Graphs A_(2), A_(3) and A_(4) are also subgraphs of Graph A_(1) that include every vertex of the original graph, they are also known as spanning trees.\n\n[Figure: Four graphs. Graph A 1 has four vertices: a, b, c, and d. The edges are a b, b d, d c, c a, a d, and b c. Graph A 2 has four vertices: a, b, c, and d. The edges are a b, b c, and c d. Graph A 3 has four vertices: a, b, c, and d. The edges are a b, a c, and c d. Graph A 4 has four vertices: a, b, c, and d. The edges are a b, a c, and a d.]\n\nFigure \\(\\PageIndex{13}\\): Network Configurations for Four Devices\n\nBy definition, spanning trees must span the whole graph by visiting all the vertices. Since spanning trees are subgraphs, they may only have edges between vertices that were adjacent in the original graph. Since spanning trees are trees, they are connected and they are acyclic. So, when deciding whether a graph is a spanning tree, check the following characteristics:\n\nAll vertices are included.\n\nNo vertices are adjacent that were not adjacent in the original graph.\n\nThe graph is connected.\n\nThere are no cycles.\n\nExample \\(\\PageIndex{4}\\)9: Identifying Spanning Trees\n\nUse Figure \\(\\PageIndex{14}\\) to determine which of graphs M_(1), M_(2), M_(3), and M_(4), are spanning trees of Q.\n\n[Figure: Five graphs. Graph Q has six vertices: a, b, c, d, e, and f. The edges are a b, a c, a d, b d, d f, c d, c e, c f, and e f. Graph M 1 has six vertices: a, b, c, d, e, and f. The edges are a b, b d, d c, c e, f, and f d. Graph M 2 has six vertices: a, b, c, d, e, and f. The edges are a b, a d, d f, f e, and e c. Graph M 3 has six vertices; a, b, c, d, e, and f. The edges are b d, d f, a f, f e, and e c. Graph M 4 has six vertices: a, b, c, d, e, and f. The edges are a b, c e, e f, and f d.]\n\nFigure \\(\\PageIndex{14}\\) Graphs Q, M_(1), M_(2), M_(3,) and M_(4)\n\nAnswer\n\n1. Graph M_(1) is not a spanning tree of Graph Q because it has a cycle (c, d, f, e).\n\n2. Graph M_(2) is a spanning tree of Graph Q because it has all the original vertices, no vertices are adjacent in M_(2) that weren’t adjacent in Graph Q, Graph M_(2) is connected and it contains no cycles.\n\n3. Graph M_(3) is not a spanning tree of Graph Q because vertices a and f are adjacent in Graph M_(3) but not in Graph Q.\n\n4. Graph M_(4) is not a spanning tree of Graph Q because it is not connected.\n\nSo, only graph M_(2) is a spanning tree of Graph Q.\n\nYour Turn \\(\\PageIndex{4}\\)\n\nUse the given figure for the following exercises.\n\n[Figure: Five graphs. Graph H has five vertices: n, q, r, s, and t. The edges are p q, p r, q r, q t, r t, r s, and s t. Graph N 1 has four vertices: p, q, s, and t. The edges are p t, q s, and s t. Graph N 2 has five vertices: p, q, r, s, and t. The edges are p r, q r, r s, r t, and s t. Graph N 3 has five vertices: p, q, r, s, and t. The edges are p q, q r, r s, and qt. Graph N 4 has five vertices: p, q, r, s, and t. The edges are p q, r s, and s t.]\n\nFigure \\(\\PageIndex{15}\\)\n\n1. Since sq is not an edge in Graph H, Graph N_(1) cannot be a spanning tree of H.\n\n1. \n\nTrue\n\n2. \n\nFalse\n\n2. Graph N_(2) is a spanning tree of Graph H.\n\n1. \n\nTrue\n\n2. \n\nFalse\n\n3. Graph N_(3) is a spanning tree of Graph H.\n\n1. \n\nTrue\n\n2. \n\nFalse\n\n4. Since there is no path between p and t in Graph N_(4), it cannot be a spanning tree of any graph.\n\n1. \n\nTrue\n\n2. \n\nFalse\n\nConstructing a Spanning Tree Using Paths\n\nSuppose that you wanted to find a spanning tree within a graph. One approach is to find paths within the graph. You can start at any vertex, go any direction, and create a path through the graph stopping only when you can’t continue without backtracking as shown in Figure \\(\\PageIndex{16}\\).\n\n[Figure: A graph with 23 vertices and 35 edges. Ten edges are highlighted in green. Two vertices are labeled started here and stopped here.]\n\nFigure \\(\\PageIndex{16}\\): First Phase to Construct a Spanning Tree\n\nOnce you have stopped, pick a vertex along the path you drew as a starting point for another path. Make sure to visit only vertices you have not visited before as shown in Figure \\(\\PageIndex{17}\\).\n\n[Figure: A graph with 23 vertices and 35 edges. Ten edges are highlighted in blue. Ten edges are highlighted in green. Two vertices are labeled started here and stopped here.]\n\nFigure \\(\\PageIndex{17}\\): Intermediate Phase to Construct a Spanning Tree\n\nRepeat this process until all vertices have been visited as shown in Figure \\(\\PageIndex{18}\\).\n\n[Figure: A graph with 23 vertices and 35 edges. Ten edges are highlighted in blue. Ten edges are highlighted in green. Two vertices are labeled started here and stopped here. Two edges are highlighted in purple.]\n\nFigure \\(\\PageIndex{18}\\): Final Phase to Construct a Spanning Tree\n\nThe end result is a tree that spans the entire graph as shown in Figure \\(\\PageIndex{19}\\).\n\n[Figure: A graph with 23 vertices and 22 edges.]\n\nFigure \\(\\PageIndex{19}\\): The Resulting Spanning Tree\n\nNotice that this subgraph is a tree because it is connected and acyclic. It also visits every vertex of the original graph, so it is a spanning tree. However, it is not the only spanning tree for this graph. By making different turns, we could create any number of distinct spanning trees.\n\nExample \\(\\PageIndex{5}\\): Constructing Spanning Trees\n\nConstruct two distinct spanning trees for the graph in Figure \\(\\PageIndex{20}\\).\n\n[Figure: Graph L has 11 vertices and 19 edges. The graph resembles a square resting below a triangle on either side. The triangles are connected via a trapezoid. The squares have diagonal lines.]\n\nFigure \\(\\PageIndex{20}\\) Graph L\n\nAnswer\n\nTwo possible solutions are given in Figure \\(\\PageIndex{21}\\) and Figure \\(\\PageIndex{22}\\).\n\n[Figure: Two graphs depict removing edges from graph L. The first graph has 11 vertices and 19 edges. It resembles a square resting below a triangle on either side. The triangles are connected via a trapezoid. The squares have diagonal lines. 6 edges are in green, 2 edges are in purple, and 2 edges are in blue. Green represents phase 1, blue represents phase 2, and purple represents phase 3. The second graph is the final tree. The black edges from the first graph are removed.]\n\nFigure \\(\\PageIndex{21}\\) First Spanning Tree for Graph L\n\n[Figure: Two graphs depict removing edges from graph L. The first graph has 11 vertices and 19 edges. It resembles a square resting below a triangle on either side. The triangles are connected via a trapezoid. The squares have diagonal lines. 6 edges are in green, 2 edges are in purple, and 2 edges are in blue. Green represents phase 1, blue represents phase 2, and purple represents phase 3. The second graph is the final tree. The black edges from the first graph are removed.]\n\nFigure \\(\\PageIndex{22}\\): Second Spanning Tree for Graph L\n\nYour Turn \\(\\PageIndex{5}\\)\n\nConstruct three distinct spanning trees for Graph J.\n\n[Figure: Graph J has 6 vertices and 8 edges.]\n\nFigure \\(\\PageIndex{23}\\): Graph J\n\nRevealing Spanning Trees\n\nAnother approach to finding a spanning tree in a connected graph involves removing unwanted edges to reveal a spanning tree. Consider Graph D in Figure \\(\\PageIndex{24}\\).\n\n[Figure: Graph D has 10 vertices. The vertices are labeled from a to j. The edges are c d, c a, d a, a g, a h, g h, a b, b e, b f, e f, b i, b j, and I j.]\n\nFigure \\(\\PageIndex{24}\\): Graph D\n\nGraph D has 10 vertices. A spanning tree of Graph D must have 9 edges, because the number of edges is one less than the number of vertices in any tree. Graph D has 13 edges so 4 need to be removed. To determine which 4 edges to remove, remember that trees do not have cycles. There are four triangles in Graph D that we need to break up. We can accomplish this by removing 1 edge from each of the triangles. There are many ways this can be done. Two of these ways are shown in Figure \\(\\PageIndex{25}\\).\n\n[Figure: Four graphs depict removing edges from graph D. In the first graph, the vertices are labeled from a to j. The edges are c d, c a, d a, a g, a h, g h, a b, b e, b f, e f, b i, b j, and i j. The edges, a c, e f, g h, and b j are shown in dashed lines. The second graph is the same as that of the first with edges, a c, e f, g h, and b j removed. In the third graph, the vertices are labeled from a to j. The edges are c d, c a, d a, a g, a h, g h, a b, b e, b f, e f, b i, b j, and i j. The edges, a c, a g, b f, and b i are shown in dashed lines. The fourth graph is the same as that of the first with edges, a c, a g, b f, and b i removed.]\n\n[Figure: Four graphs depict removing edges from graph D. In the first graph, the vertices are labeled from a to j. The edges are c d, c a, d a, a g, a h, g h, a b, b e, b f, e f, b i, b j, and i j. The edges, a c, e f, g h, and b j are shown in dashed lines. The second graph is the same as that of the first with edges, a c, e f, g h, and b j removed. In the third graph, the vertices are labeled from a to j. The edges are c d, c a, d a, a g, a h, g h, a b, b e, b f, e f, b i, b j, and i j. The edges, a c, a g, b f, and b i are shown in dashed lines. The fourth graph is the same as that of the first with edges, a c, a g, b f, and b i removed.]\n\nFigure \\(\\PageIndex{25}\\): Removing Four Edges from Graph D\n\nVideo\n\nSpanning Trees in Graph Theory\n\nExample \\(\\PageIndex{6}\\): Removing Edges to Find Spanning Trees\n\nUse the graph in Figure 12.255 to answer each question.\n\n[Figure: Graph V has 9 vertices. The vertices are labeled from a to i. The edges are f c, f a, c a, c d, d a, a b, b e, e h, h i, I g, and g b.]\n\nFigure \\(\\PageIndex{26}\\) Graph V\n\n1. Determine the number of edges that must be removed to reveal a spanning tree.\n\n2. Name all the undirected cycles in Graph V.\n\n3. Find two distinct spanning trees of Graph V.\n\nAnswer\n\n1. Graph V has nine vertices so a spanning tree for the graph must have 8 edges. Since Graph V has 11 edges, 3 edges must be removed to reveal a spanning tree.\n\n2. (a, c, d), (a, c, f), (a, d, c, f), and (b, e, h, i, g)\n\n3. To find the first spanning tree, remove edge ac, which will break up both of the triangles, remove edge cf , which will break up the quadrilateral, and remove be, which will break up the pentagon, to give us the spanning tree shown in Figure \\(\\PageIndex{27}\\).\n\n[Figure: A graph has 9 vertices. The vertices are labeled from a to i. The edges are f a, c d, d a, a b, b g, g i, I h, and h e.]\n\nFigure \\(\\PageIndex{27}\\) Spanning Tree Formed Removing ac, cf, and be\n\nTo find another spanning tree, remove ad, which will break up (a, c, d) and (a, d, c, f), remove af to break up (a, c, f), and remove hi to break up (b, e, h, i, g). This will give us the spanning tree in Figure \\(\\PageIndex{28}\\).\n\n[Figure: A graph has 9 vertices. The vertices are labeled from a to i. The edges are f c, c d, c a, a b, b e, e h, b g, and g i.]\n\nFigure \\(\\PageIndex{28}\\): Spanning Tree Formed Removing ad, af, and hi\n\nYour Turn \\(\\PageIndex{6}\\)\n\nName three edges that you could remove from Graph V in Figure 12.316 to form a third spanning tree, different from those in the solution to Example 12.50 Exercise 3.\n\nWho Knew?: Chains of Affection\n\nHere is a strange question to ask in a math class: Have you ever dated your ex’s new partner’s ex? Research suggests that your answer is probably no. When researchers Peter S. Bearman, James Moody, and Katherine Stovel attempted to compare the structure of heterosexual romantic networks at a typical midwestern high school to simulated networks, they found something surprising. The actual social networks were more like spanning trees than other possible models because there were very few short cycles. In particular, there were almost no four-cycles.\n\n[Figure: A graph with four vertices. The vertices are Bob, Alice, Carol, and Ted. A double-headed arrow labeled time 1 is between Bob and Carol. A double-headed arrow labeled time 1 is between Alice and Tex. A double-headed arrow labeled time 2 is between Carol and Ted. A double-headed arrow labeled with a question mark is between Bob and Alice.]\n\nFigure \\(\\PageIndex{29}\\): Chains of Affection\n\n“…the prohibition against dating (from a female perspective) one’s old boyfriend’s current girlfriend’s old boyfriend – accounts for the structure of the romantic network at [the highschool].”\n\nIn their article “Chains of Affection: The Structure of Adolescent Romantic and Sexual Networks,” the researchers went on to explain the implications for the transmission of sexually transmitted diseases. In particular, social structures based on tree graphs are less dense and more likely to fragment. This information can impact social policies on disease prevention. (Peter S. Bearman, James Moody, and Katherine Stovel, “Chains of Affection: The Structure of Adolescent Romantic and Sexual Networks,” American Journal of Sociology Volume 110, Number 1, pp. 44-91, 2004)\n\nKruskal’s Algorithm\n\nIn many applications of spanning trees, the graphs are weighted and we want to find the spanning tree of least possible weight. For example, the graph might represent a computer network, and the weights might represent the cost involved in connecting two devices. So, finding a spanning tree with the lowest possible total weight, or minimum spanning tree, means saving money! The method that we will use to find a minimum spanning tree of a weighted graph is called Kruskal’s algorithm. The steps for Kruskal’s algorithm are:\n\nStep 1: Choose any edge with the minimum weight of all edges.\n\nStep 2: Choose another edge of minimum weight from the remaining edges. The second edge does not have to be connected to the first edge.\n\nStep 3: Choose another edge of minimum weight from the remaining edges, but do not select any edge that creates a cycle in the subgraph you are creating.\n\nStep 4: Repeat step 3 until all the vertices of the original graph are included and you have a spanning tree.\n\nVideo\n\nUse Kruskal's Algorithm to Find Minimum Spanning Trees in Graph Theory\n\nExample \\(\\PageIndex{7}\\): Using Kruskal’s Algorithm\n\nA computer network will be set up with six devices. The vertices in the graph in Figure \\(\\PageIndex{30}\\) represent the devices, and the edges represent the cost of a connection. Find the network configuration that will cost the least. What is the total cost?\n\n[Figure: A graph represents the airfares between six different cities. The graph has 6 vertices. The vertices are A, B, C, D, E, and F. Edges from A leading to B, C, D, E, and F are labeled 250 dollars, 210 dollars, 300 dollars, 200 dollars, and 100 dollars. Edges from B leading to C, D, E, and F are labeled 220 dollars, 120 dollars, 160 dollars, and 170 dollars. Edges from C to D, E, and F are labeled 310 dollars, 180 dollars, and 330 dollars. Edges from D to E and F 270 dollars and 150 dollars. An edge from E to F is labeled 350 dollars.]\n\nFigure \\(\\PageIndex{30}\\) Graph of Network Connection Costs\n\nAnswer\n\nA minimum spanning tree will correspond to the network configuration of least cost. We will use Kruskal’s algorithm to find one. Since the graph has six vertices, the spanning tree will have six vertices and five edges.\n\nStep 1: Choose an edge of least weight. We have sorted the weights into numerical order. The least is $100. The only edge of this weight is edge AF as shown in Figure \\(\\PageIndex{31}\\)\n\n[Figure: A graph represents the airfares between six different cities. The graph has 6 vertices. The vertices are A, B, C, D, E, and F. Edges from A leading to B, C, D, E, and F are labeled 250 dollars, 210 dollars, 300 dollars, 200 dollars, and 100 dollars. Edges from B leading to C, D, E, and F are labeled 220 dollars, 120 dollars, 160 dollars, and 170 dollars. Edges from C to D, E, and F are labeled 310 dollars, 180 dollars, and 330 dollars. Edges from D to E and F 270 dollars and 150 dollars. An edge from E to F is labeled 350 dollars. Edge, A F is in dashed lines. Cost in dollars are as follows: 100, 120, 150, 160, 170, 170, 200, 210, 220, 250, 270, 300, 310, 330, and 350. 100 is struck through.]\n\nFigure \\(\\PageIndex{31}\\) Step 1 Select Edge AF\n\nStep 2: Choose the edge of least weight of the remaining edges, which is BD with $120. Notice that the two selected edges do not need to be adjacent to each other as shown in Figure \\(\\PageIndex{32}\\).\n\n[Figure: A graph represents the airfares between six different cities. The graph has 6 vertices. The vertices are A, B, C, D, E, and F. Edges from A leading to B, C, D, E, and F are labeled 250 dollars, 210 dollars, 300 dollars, 200 dollars, and 100 dollars. Edges from B leading to C, D, E, and F are labeled 220 dollars, 120 dollars, 160 dollars, and 170 dollars. Edges from C to D, E, and F are labeled 310 dollars, 180 dollars, and 330 dollars. Edges from D to E and F 270 dollars and 150 dollars. An edge from E to F is labeled 350 dollars. Edges, A F, and B D are in dashed lines. Cost in dollars are as follows: 100, 120, 150, 160, 170, 170, 200, 210, 220, 250, 270, 300, 310, 330, and 350. 100 and 120 are struck through.]\n\nFigure \\(\\PageIndex{32}\\): Step 2 Select Edge BD\n\nStep 3: Select the lowest weight edge of the remaining edges, as long as it does not result in a cycle. We select DF with $150 since it does not form a cycle as shown in Figure \\(\\PageIndex{33}\\).\n\n[Figure: A graph represents the airfares between six different cities. The graph has 6 vertices. The vertices are A, B, C, D, E, and F. Edges from A leading to B, C, D, E, and F are labeled 250 dollars, 210 dollars, 300 dollars, 200 dollars, and 100 dollars. Edges from B leading to C, D, E, and F are labeled 220 dollars, 120 dollars, 160 dollars, and 170 dollars. Edges from C to D, E, and F are labeled 310 dollars, 180 dollars, and 330 dollars. Edges from D to E and F 270 dollars and 150 dollars. An edge from E to F is labeled 350 dollars. Edges, A F, B D, and D F are in dashed lines. Cost in dollars are as follows: 100, 120, 150, 160, 170, 170, 200, 210, 220, 250, 270, 300, 310, 330, and 350. 100, 120, and 150 are struck through.]\n\nFigure \\(\\PageIndex{33}\\): Step 3 Select Edge DF\n\nRepeat Step 3: Select the lowest weight edge of the remaining edges, which is BE with $160 and it does not form a cycle as shown in Figure \\(\\PageIndex{34}\\). This gives us four edges so we only need to repeat step 3 once more to get the fifth edge.\n\n[Figure: A graph represents the airfares between six different cities. The graph has 6 vertices. The vertices are A, B, C, D, E, and F. Edges from A leading to B, C, D, E, and F are labeled 250 dollars, 210 dollars, 300 dollars, 200 dollars, and 100 dollars. Edges from B leading to C, D, E, and F are labeled 220 dollars, 120 dollars, 160 dollars, and 170 dollars. Edges from C to D, E, and F are labeled 310 dollars, 180 dollars, and 330 dollars. Edges from D to E and F 270 dollars and 150 dollars. An edge from E to F is labeled 350 dollars. Edges, A F, B D, B E, and D F are in dashed lines. Cost in dollars are as follows: 100, 120, 150, 160, 170, 170, 200, 210, 220, 250, 270, 300, 310, 330, and 350. 100, 120, 150, and 160 are struck through.]\n\nFigure \\(\\PageIndex{34}\\): Repeat Step 3 Select Edge DF\n\nRepeat Step 3: The lowest weight of the remaining edges is $170. Both BF and CE have a weight of $170, but BF would create cycle (b, d, f) and there cannot be a cycle in a spanning tree as shown in Figure \\(\\PageIndex{35}\\).\n\n[Figure: A graph represents the airfares between six different cities. The graph has 6 vertices. The vertices are A, B, C, D, E, and F. Edges from A leading to B, C, D, E, and F are labeled 250 dollars, 210 dollars, 300 dollars, 200 dollars, and 100 dollars. Edges from B leading to C, D, E, and F are labeled 220 dollars, 120 dollars, 160 dollars, and 170 dollars. Edges from C to D, E, and F are labeled 310 dollars, 180 dollars, and 330 dollars. Edges from D to E and F 270 dollars and 150 dollars. An edge from E to F is labeled 350 dollars. Edges, A F, B D, B E, and DF are in dashed lines. Edge, B F is in red. Cost in dollars are as follows: 100, 120, 150, 160, 170, 170, 200, 210, 220, 250, 270, 300, 310, 330, and 350. 100, 120, 150, and 160 are struck through. 170 is crossed out.]\n\nFigure \\(\\PageIndex{35}\\): Repeat Step 3 Do Not Select Edge BF\n\nSo, we will select CE, which will complete the spanning tree as shown in Figure \\(\\PageIndex{36}\\).\n\n[Figure: A graph represents the airfares between six different cities. The graph has 6 vertices. The vertices are A, B, C, D, E, and F. Edges from A leading to B, C, D, E, and F are labeled 250 dollars, 210 dollars, 300 dollars, 200 dollars, and 100 dollars. Edges from B leading to C, D, E, and F are labeled 220 dollars, 120 dollars, 160 dollars, and 170 dollars. Edges from C to D, E, and F are labeled 310 dollars, 180 dollars, and 330 dollars. Edges from D to E and F 270 dollars and 150 dollars. An edge from E to F is labeled 350 dollars. Edges, A F, B D, B E, C E, and D F are in dashed lines. Cost in dollars are as follows: 100, 120, 150, 160, 170, 170, 200, 210, 220, 250, 270, 300, 310, 330, and 350. 100, 120, 150, 160, and 170 are struck through. 170 is crossed out.]\n\nFigure \\(\\PageIndex{36}\\): Repeat Step 3 Select Edge CE\n\nThe minimum spanning tree is shown in Figure \\(\\PageIndex{37}\\). This is the configuration of the network of least cost. The spanning tree has a total weight of \\($100+$120+$150+$160+$170=$700\\), which is the total cost of this network configuration.\n\n[Figure: A graph has six vertices labeled A to F. The edges are as follows. A F, curved edge, 100 dollars. B E, 160 dollars. B D, 120 dollars. C E, 170 dollars. D F, 150 dollars.]\n\nFigure \\(\\PageIndex{37}\\): Final Minimum Spanning Tree\n\nYour Turn \\(\\PageIndex{7}\\)\n\nFind a minimum spanning tree for the weighted graph. Give its total weight.\n\n[Figure: A weighted graph with five vertices. The vertices are as follows: U, V, W, X, and Z. The edges are labeled as follows. U V, 89. V Y, 24. Y X, 68. X W, 45. W U, 37. U X, 49. W V, 68.]\n\nFigure \\(\\PageIndex{38}\\): Weighted Graph\n\nCheck Your Understanding\n\nWhich of the following statements are true and which are false\n\n1. The number of cycles in a spanning tree is one less than the number of vertices.\n\n2. A spanning tree contains no triangles.\n\n3. A spanning tree includes every vertex of the original graph.There is a unique path between each pair of vertices in a spanning tree.A spanning tree must be connected.Kruskal’s algorithm is a method for finding all the different spanning trees in a given graph.\n\n4. Only graphs that are trees have spanning trees.A minimum spanning tree of a given graph can be found using Kruskal’s algorithm.\n\n5. A minimum spanning tree of a given graph is the subgraph, which is a tree, includes every vertex of the original graph, and which has the least weight of all spanning trees.\n\n6. If a graph contains any cut edges, they must be included in any spanning tree.\n\nThis page titled 12.10: Trees was last modified on Thu, 02 Jan 2025 11:07:44 GMT and is shared under a CC BY  4.0  license and was authored, remixed, and/or curated by OpenStax via source content that was edited to the style and standards of the LibreTexts platform.",
+  "figures": [
+    {
+      "url": "https://math.libretexts.org/@api/deki/files/127291/6b6c5940ef1eacb6c82f4a6e42f5efc44ad3a939?revision=1",
+      "alt": "A row of trees with no leaves.",
+      "credit": ""
+    },
+    {
+      "url": "https://math.libretexts.org/@api/deki/files/127292/711ac5c1868183ac4f990e2fe80ef559ee66d866?revision=1&size=bestfit&height=400",
+      "alt": "Three graphs. Graph T has 15 vertices. The edges are as follows: a b, b c, c d, c i, i j, j k, k o, d e, d l, e n, e m, b f, f g, and g h. Graph P has 6 vertices. The edges are as follows: t s, s r, r q, q p, and p o. Graph S has 7 vertices. The edges are as follows: u t, u v, u w, u x, u y, and u z.",
+      "credit": ""
+    },
+    {
+      "url": "https://math.libretexts.org/@api/deki/files/127289/c407c3e940d1a72f79e6192dd68612bed2dfb5d8?revision=1",
+      "alt": "Three graphs. Graph M has 7 vertices. The edges are a b, b f, f g, f c, b c, b d, and d e. Graph N has 6 vertices. The edges are I j, I h, l k, and l m. The edges, I j, and l k intersect each other. Graph P has 6 vertices. The edges are s t, s r, r q, q p, and p o.",
+      "credit": ""
+    },
+    {
+      "url": "https://math.libretexts.org/@api/deki/files/109961/CS_Figure_12_10_246.png?revision=1",
+      "alt": "Four illustrations represent the common network configurations. The first illustration represents mesh topology. Six computers are interconnected. The second illustration represents a ring topology. Five computers are connected in a ring. The third illustration represents star topology. A computer at the center is connected to five computers surrounding it. The fourth illustration represents tree topology. Two branches arise from a horizontal bus. Each branch has a computer at the center connected to five computers surrounding it",
+      "credit": ""
+    },
+    {
+      "url": "https://math.libretexts.org/@api/deki/files/127286/0987d95e691a84a4f3dde1e8ee6e1fbf077cdc0c?revision=1&size=bestfit&width=400",
+      "alt": "Graph F has 8 vertices. The vertices are labeled a to h. Edges connect b a, b d, b c, f e, f h, and f g.",
+      "credit": ""
+    },
+    {
+      "url": "https://math.libretexts.org/@api/deki/files/127288/8b9a30b6d79eb001097c7c47d337f2dc5f680155?revision=1",
+      "alt": "Six graphs. Graph S has 7 vertices. The edges are a b, b f, f g, f c, b c, b d, and d e. Graph N has 6 vertices. The edges are I j, I h, l k, and l m. The edges, I j, and l k intersect each other. Graph P has 6 vertices. The edges are s t, s r, r q, q p, and p o. Graph Z has 12 vertices. The edges are a b, a c, a d, a e, a f, a g, a h, h i, c j, e k, and k l. Graph C has 14 vertices. The edges are m n, n z, n o, o r, o p, o x, o y, p y, p x, p s, p t, p u, p q, p v, and p w. Graph L has 26 vertices. The edges are f q, f t, f s, f e, e o, e p, p z, e d, d m, m v, d n, n y, d c, c k, k u, c l, l k, c b, b i, i t, b j, j w, b a, b g, and b h.",
+      "credit": ""
+    },
+    {
+      "url": "https://math.libretexts.org/@api/deki/files/127296/defc5f8b891a20b0bb76221a415a582b49f47b95?revision=1&size=bestfit&height=350",
+      "alt": "Six graphs. Graph S has 7 vertices. The edges are a b, b f, f g, f c, b c, b d, and d e. Graph N has 6 vertices. The edges are I j, I h, l k, and l m. The edges, I j, and l k intersect each other. Graph P has 6 vertices. The edges are s t, s r, r q, q p, and p o. Graph Z has 12 vertices. The edges are a b, a c, a d, a e, a f, a g, a h, h i, c j, e k, and k l. Graph C has 14 vertices. The edges are m n, n z, n o, o r, o p, o x, o y, p y, p x, p s, p t, p u, p q, p v, and p w. Graph L has 26 vertices. The edges are f q, f t, f s, f e, e o, e p, p z, e d, d m, m v, d n, n y, d c, c k, k u, c l, l k, c b, b i, i t, b j, j w, b a, b g, and b h.",
+      "credit": ""
+    },
+    {
+      "url": "https://math.libretexts.org/@api/deki/files/127299/f59f470bed3ea3639efc4e29b148119d40013a5a?revision=1&size=bestfit&height=200",
+      "alt": "Two graphs. Graph U has 17 vertices. The edges are o q, o p, o l, l n, l k, l m, l i, I j, I f, f g, f h, f d, d e, f b, b c, and b a. Graph V hs 6 vertices. The edges are r s, s t, t u, u v, and v w. The edges, s t and u v intersect.",
+      "credit": ""
+    },
+    {
+      "url": "https://math.libretexts.org/@api/deki/files/127300/a1552234b1163b5ba1c8c13f70957ecca3d8d1a1?revision=1&size=bestfit&height=350",
+      "alt": "Three graphs. Graph T has 15 vertices. The edges are as follows: a b, b c, c d, c i, i j, j k, k o, d e, d l, e n, e m, b f, f g, and g h. The edges, c i, and i j are in blue. A dashed edge connects b and j. Graph P has 6 vertices. The edges are as follows: t s, s r, r q, q p, and p o. The edges, t s, and s r are in blue. A dashed edge connects t and r. Graph S has 7 vertices. The edges are as follows: u t, u v, u w, u x, u y, and u z. The edges, u t, and u v are in blue. A dashed edge connects t and v.",
+      "credit": ""
+    },
+    {
+      "url": "https://math.libretexts.org/@api/deki/files/127302/c5dac55cc783aeca977c296d5f4130029627040d?revision=1&size=bestfit&height=350",
+      "alt": "Three graphs. Graph T has 15 vertices. The edges are as follows: a b, b c, c d, c i, i j, j k, k o, d e, d l, e n, e m, b f, f g, and g h. The edges, d c, and b f are in dashed lines. The graph is separated into three blocks. Graph P has 6 vertices. The edges are as follows: t s, s r, r q, q p, and p o. The edge, q r is in dashed lines. The graph is separated into two blocks. Graph S has 7 vertices. The edges are as follows: u t, u v, u w, u x, u y, and u z. The edge, u w is in dashed lines. The graph is separated into two blocks.",
+      "credit": ""
+    },
+    {
+      "url": "https://math.libretexts.org/@api/deki/files/127306/55792d16a33bcf48a9c82fda993f824089e9bb18?revision=1&size=bestfit&height=400",
+      "alt": "Six graphs. Graph T has 15 vertices. The edges are as follows: a b, b c, c d, c i, i j, j k, k o, d e, d l, e n, e m, b f, f g, and g h. Graph P has 6 vertices. The edges are as follows: t s, s r, r q, q p, and p o. Graph S has 7 vertices. The edges are as follows: u t, u v, u w, u x, u y, and u z. Graph Z has 12 vertices. The edges are a b, a c, a d, a e, a f, a g, a h, h i, c j, e k, and k l. Graph C has 14 vertices. The edges are m n, n z, n o, o r, o p, o x, o y, p y, p x, p s, p t, p u, p q, p v, and p w. Graph L has 26 vertices. The edges are f q, f t, f s, f e, e o, e p, p z, e d, d m, m v, d n, n y, d c, c k, k u, c l, l k, c b, b i, i t, b j, j w, b a, b g, and b h.",
+      "credit": ""
+    },
+    {
+      "url": "https://math.libretexts.org/@api/deki/files/127305/97b7bdaa0084581ac613a1195bbed9b6f1c09428?revision=1&size=bestfit&height=200",
+      "alt": "Two graphs. Graph I has six vertices: a, b, c, d, e, and f. Edges connect a b, b c, b e, d e, and e f. Graph J has seven vertices: g h, i, j, k, l, and m. Edges connect g h, h i, j h, j l, k l, and l m.",
+      "credit": ""
+    },
+    {
+      "url": "https://math.libretexts.org/@api/deki/files/127308/ec13207ec7f93cef6f1ed4d631faaaa235f9d7e3?revision=1&size=bestfit&height=700",
+      "alt": "Four illustrations represent the common network configurations. The first illustration represents mesh topology. Six computers are interconnected. The second illustration represents a ring topology. Five computers are connected in a ring. The third illustration represents star topology. A computer at the center is connected to five computers surrounding it. The fourth illustration represents tree topology. Two branches arise from a horizontal bus. Each branch has a computer at the center connected to five computers surrounding it.",
+      "credit": ""
+    },
+    {
+      "url": "https://math.libretexts.org/@api/deki/files/127307/0b69b946f6a46a873710211b82c62d4f5d6f123c?revision=1&size=bestfit&height=200",
+      "alt": "Four graphs. Graph A 1 has four vertices: a, b, c, and d. The edges are a b, b d, d c, c a, a d, and b c. Graph A 2 has four vertices: a, b, c, and d. The edges are a b, b c, and c d. Graph A 3 has four vertices: a, b, c, and d. The edges are a b, a c, and c d. Graph A 4 has four vertices: a, b, c, and d. The edges are a b, a c, and a d.",
+      "credit": ""
+    },
+    {
+      "url": "https://math.libretexts.org/@api/deki/files/127309/f3fbb7719e89eeea73dd473cb838dcfc46c429cb?revision=1",
+      "alt": "Five graphs. Graph Q has six vertices: a, b, c, d, e, and f. The edges are a b, a c, a d, b d, d f, c d, c e, c f, and e f. Graph M 1 has six vertices: a, b, c, d, e, and f. The edges are a b, b d, d c, c e, f, and f d. Graph M 2 has six vertices: a, b, c, d, e, and f. The edges are a b, a d, d f, f e, and e c. Graph M 3 has six vertices; a, b, c, d, e, and f. The edges are b d, d f, a f, f e, and e c. Graph M 4 has six vertices: a, b, c, d, e, and f. The edges are a b, c e, e f, and f d.",
+      "credit": ""
+    },
+    {
+      "url": "https://math.libretexts.org/@api/deki/files/109960/CS_Figure_12_10_256.png?revision=1&size=bestfit&height=200",
+      "alt": "Five graphs. Graph H has five vertices: n, q, r, s, and t. The edges are p q, p r, q r, q t, r t, r s, and s t. Graph N 1 has four vertices: p, q, s, and t. The edges are p t, q s, and s t. Graph N 2 has five vertices: p, q, r, s, and t. The edges are p r, q r, r s, r t, and s t. Graph N 3 has five vertices: p, q, r, s, and t. The edges are p q, q r, r s, and qt. Graph N 4 has five vertices: p, q, r, s, and t. The edges are p q, r s, and s t.",
+      "credit": ""
+    },
+    {
+      "url": "https://math.libretexts.org/@api/deki/files/127310/ef99964a8d3fad0aa134bb1ef8a10b8c47e44cfe?revision=1&size=bestfit&height=300",
+      "alt": "A graph with 23 vertices and 35 edges. Ten edges are highlighted in green. Two vertices are labeled started here and stopped here.",
+      "credit": ""
+    },
+    {
+      "url": "https://math.libretexts.org/@api/deki/files/127312/169d12260ad17c13d6c54be0872cea4f76e88f53?revision=1&size=bestfit&height=300",
+      "alt": "A graph with 23 vertices and 35 edges. Ten edges are highlighted in blue. Ten edges are highlighted in green. Two vertices are labeled started here and stopped here.",
+      "credit": ""
+    },
+    {
+      "url": "https://math.libretexts.org/@api/deki/files/127311/2731159c1c78073c6a13f4492aed443eaa5626e3?revision=1&size=bestfit&height=300",
+      "alt": "A graph with 23 vertices and 35 edges. Ten edges are highlighted in blue. Ten edges are highlighted in green. Two vertices are labeled started here and stopped here. Two edges are highlighted in purple.",
+      "credit": ""
+    },
+    {
+      "url": "https://math.libretexts.org/@api/deki/files/127313/c5c86e6d14cecf3c41ec1bb89b0ef5e0412f0e22?revision=1&size=bestfit&height=300",
+      "alt": "A graph with 23 vertices and 22 edges.",
+      "credit": ""
+    },
+    {
+      "url": "https://math.libretexts.org/@api/deki/files/127314/1250bb8bfb5fa16e143711f487243e892e0e795c?revision=1",
+      "alt": "Graph L has 11 vertices and 19 edges. The graph resembles a square resting below a triangle on either side. The triangles are connected via a trapezoid. The squares have diagonal lines.",
+      "credit": ""
+    },
+    {
+      "url": "https://math.libretexts.org/@api/deki/files/127316/696f85086a08cedf86c1835e6693c127af7cd31f?revision=1&size=bestfit&height=375",
+      "alt": "Two graphs depict removing edges from graph L. The first graph has 11 vertices and 19 edges. It resembles a square resting below a triangle on either side. The triangles are connected via a trapezoid. The squares have diagonal lines. 6 edges are in green, 2 edges are in purple, and 2 edges are in blue. Green represents phase 1, blue represents phase 2, and purple represents phase 3. The second graph is the final tree. The black edges from the first graph are removed.",
+      "credit": ""
+    },
+    {
+      "url": "https://math.libretexts.org/@api/deki/files/127315/0eec94521a56b1c2572d21f38c4b7299e1a72adc?revision=1&size=bestfit&height=375",
+      "alt": "Two graphs depict removing edges from graph L. The first graph has 11 vertices and 19 edges. It resembles a square resting below a triangle on either side. The triangles are connected via a trapezoid. The squares have diagonal lines. 6 edges are in green, 2 edges are in purple, and 2 edges are in blue. Green represents phase 1, blue represents phase 2, and purple represents phase 3. The second graph is the final tree. The black edges from the first graph are removed.",
+      "credit": ""
+    },
+    {
+      "url": "https://math.libretexts.org/@api/deki/files/109958/CS_Figure_12_10_264.png?revision=1",
+      "alt": "Graph J has 6 vertices and 8 edges.",
+      "credit": ""
+    },
+    {
+      "url": "https://math.libretexts.org/@api/deki/files/127317/a573029c6acfaa9fd6bb2b2acc8abe2cc77eaa48?revision=1",
+      "alt": "Graph D has 10 vertices. The vertices are labeled from a to j. The edges are c d, c a, d a, a g, a h, g h, a b, b e, b f, e f, b i, b j, and I j.",
+      "credit": ""
+    },
+    {
+      "url": "https://math.libretexts.org/@api/deki/files/127318/cb23870f5ab25517512377d58455e09f73c5a075?revision=1&size=bestfit&height=400",
+      "alt": "Four graphs depict removing edges from graph D. In the first graph, the vertices are labeled from a to j. The edges are c d, c a, d a, a g, a h, g h, a b, b e, b f, e f, b i, b j, and i j. The edges, a c, e f, g h, and b j are shown in dashed lines. The second graph is the same as that of the first with edges, a c, e f, g h, and b j removed. In the third graph, the vertices are labeled from a to j. The edges are c d, c a, d a, a g, a h, g h, a b, b e, b f, e f, b i, b j, and i j. The edges, a c, a g, b f, and b i are shown in dashed lines. The fourth graph is the same as that of the first with edges, a c, a g, b f, and b i removed.",
+      "credit": ""
+    },
+    {
+      "url": "https://math.libretexts.org/@api/deki/files/127319/5eac10b042e1fb1b18358772199dd7b124292019?revision=1&size=bestfit&height=400",
+      "alt": "Four graphs depict removing edges from graph D. In the first graph, the vertices are labeled from a to j. The edges are c d, c a, d a, a g, a h, g h, a b, b e, b f, e f, b i, b j, and i j. The edges, a c, e f, g h, and b j are shown in dashed lines. The second graph is the same as that of the first with edges, a c, e f, g h, and b j removed. In the third graph, the vertices are labeled from a to j. The edges are c d, c a, d a, a g, a h, g h, a b, b e, b f, e f, b i, b j, and i j. The edges, a c, a g, b f, and b i are shown in dashed lines. The fourth graph is the same as that of the first with edges, a c, a g, b f, and b i removed.",
+      "credit": ""
+    },
+    {
+      "url": "https://math.libretexts.org/@api/deki/files/127320/689493c5aee83b67617010d359d571f3ef2a35cf?revision=1&size=bestfit&height=200",
+      "alt": "Graph V has 9 vertices. The vertices are labeled from a to i. The edges are f c, f a, c a, c d, d a, a b, b e, e h, h i, I g, and g b.",
+      "credit": ""
+    },
+    {
+      "url": "https://math.libretexts.org/@api/deki/files/127321/26a5aa55fa463bc4a425eefd02d28275ff2bccf4?revision=1&size=bestfit&height=150",
+      "alt": "A graph has 9 vertices. The vertices are labeled from a to i. The edges are f a, c d, d a, a b, b g, g i, I h, and h e.",
+      "credit": ""
+    },
+    {
+      "url": "https://math.libretexts.org/@api/deki/files/127322/cde5e2cacbe04d3d75ec6a59296a6a20bed67cc3?revision=1&size=bestfit&height=150",
+      "alt": "A graph has 9 vertices. The vertices are labeled from a to i. The edges are f c, c d, c a, a b, b e, e h, b g, and g i.",
+      "credit": ""
+    },
+    {
+      "url": "https://math.libretexts.org/@api/deki/files/127323/cb294f962e760deb78f15c02c3cbb4504c1d3517?revision=1",
+      "alt": "A graph with four vertices. The vertices are Bob, Alice, Carol, and Ted. A double-headed arrow labeled time 1 is between Bob and Carol. A double-headed arrow labeled time 1 is between Alice and Tex. A double-headed arrow labeled time 2 is between Carol and Ted. A double-headed arrow labeled with a question mark is between Bob and Alice.",
+      "credit": ""
+    },
+    {
+      "url": "https://math.libretexts.org/@api/deki/files/127324/f386a6cc69f02b2935c722fcf48f12a049515af3?revision=1&size=bestfit&height=400",
+      "alt": "A graph represents the airfares between six different cities. The graph has 6 vertices. The vertices are A, B, C, D, E, and F. Edges from A leading to B, C, D, E, and F are labeled 250 dollars, 210 dollars, 300 dollars, 200 dollars, and 100 dollars. Edges from B leading to C, D, E, and F are labeled 220 dollars, 120 dollars, 160 dollars, and 170 dollars. Edges from C to D, E, and F are labeled 310 dollars, 180 dollars, and 330 dollars. Edges from D to E and F 270 dollars and 150 dollars. An edge from E to F is labeled 350 dollars.",
+      "credit": ""
+    },
+    {
+      "url": "https://math.libretexts.org/@api/deki/files/127326/5df8c4236964f13ab46951e14245e30cc5fe2bca?revision=1&size=bestfit&width=600&height=392",
+      "alt": "A graph represents the airfares between six different cities. The graph has 6 vertices. The vertices are A, B, C, D, E, and F. Edges from A leading to B, C, D, E, and F are labeled 250 dollars, 210 dollars, 300 dollars, 200 dollars, and 100 dollars. Edges from B leading to C, D, E, and F are labeled 220 dollars, 120 dollars, 160 dollars, and 170 dollars. Edges from C to D, E, and F are labeled 310 dollars, 180 dollars, and 330 dollars. Edges from D to E and F 270 dollars and 150 dollars. An edge from E to F is labeled 350 dollars. Edge, A F is in dashed lines. Cost in dollars are as follows: 100, 120, 150, 160, 170, 170, 200, 210, 220, 250, 270, 300, 310, 330, and 350. 100 is struck through.",
+      "credit": ""
+    },
+    {
+      "url": "https://math.libretexts.org/@api/deki/files/127325/277f3a9e034faca851dfa638851b8e71e88527e6?revision=1&size=bestfit&width=600&height=392",
+      "alt": "A graph represents the airfares between six different cities. The graph has 6 vertices. The vertices are A, B, C, D, E, and F. Edges from A leading to B, C, D, E, and F are labeled 250 dollars, 210 dollars, 300 dollars, 200 dollars, and 100 dollars. Edges from B leading to C, D, E, and F are labeled 220 dollars, 120 dollars, 160 dollars, and 170 dollars. Edges from C to D, E, and F are labeled 310 dollars, 180 dollars, and 330 dollars. Edges from D to E and F 270 dollars and 150 dollars. An edge from E to F is labeled 350 dollars. Edges, A F, and B D are in dashed lines. Cost in dollars are as follows: 100, 120, 150, 160, 170, 170, 200, 210, 220, 250, 270, 300, 310, 330, and 350. 100 and 120 are struck through.",
+      "credit": ""
+    },
+    {
+      "url": "https://math.libretexts.org/@api/deki/files/127327/997487d7b11c8e1131a25f869ff0060fc277705c?revision=1&size=bestfit&width=600&height=393",
+      "alt": "A graph represents the airfares between six different cities. The graph has 6 vertices. The vertices are A, B, C, D, E, and F. Edges from A leading to B, C, D, E, and F are labeled 250 dollars, 210 dollars, 300 dollars, 200 dollars, and 100 dollars. Edges from B leading to C, D, E, and F are labeled 220 dollars, 120 dollars, 160 dollars, and 170 dollars. Edges from C to D, E, and F are labeled 310 dollars, 180 dollars, and 330 dollars. Edges from D to E and F 270 dollars and 150 dollars. An edge from E to F is labeled 350 dollars. Edges, A F, B D, and D F are in dashed lines. Cost in dollars are as follows: 100, 120, 150, 160, 170, 170, 200, 210, 220, 250, 270, 300, 310, 330, and 350. 100, 120, and 150 are struck through.",
+      "credit": ""
+    },
+    {
+      "url": "https://math.libretexts.org/@api/deki/files/127329/247b0fdd4698611d149e6b517afbb1fedadf1d23?revision=1&size=bestfit&width=600&height=392",
+      "alt": "A graph represents the airfares between six different cities. The graph has 6 vertices. The vertices are A, B, C, D, E, and F. Edges from A leading to B, C, D, E, and F are labeled 250 dollars, 210 dollars, 300 dollars, 200 dollars, and 100 dollars. Edges from B leading to C, D, E, and F are labeled 220 dollars, 120 dollars, 160 dollars, and 170 dollars. Edges from C to D, E, and F are labeled 310 dollars, 180 dollars, and 330 dollars. Edges from D to E and F 270 dollars and 150 dollars. An edge from E to F is labeled 350 dollars. Edges, A F, B D, B E, and D F are in dashed lines. Cost in dollars are as follows: 100, 120, 150, 160, 170, 170, 200, 210, 220, 250, 270, 300, 310, 330, and 350. 100, 120, 150, and 160 are struck through.",
+      "credit": ""
+    },
+    {
+      "url": "https://math.libretexts.org/@api/deki/files/127328/8d4752a443c637aaf673116d9991ee582e7eb6bc?revision=1&size=bestfit&width=600&height=392",
+      "alt": "A graph represents the airfares between six different cities. The graph has 6 vertices. The vertices are A, B, C, D, E, and F. Edges from A leading to B, C, D, E, and F are labeled 250 dollars, 210 dollars, 300 dollars, 200 dollars, and 100 dollars. Edges from B leading to C, D, E, and F are labeled 220 dollars, 120 dollars, 160 dollars, and 170 dollars. Edges from C to D, E, and F are labeled 310 dollars, 180 dollars, and 330 dollars. Edges from D to E and F 270 dollars and 150 dollars. An edge from E to F is labeled 350 dollars. Edges, A F, B D, B E, and DF are in dashed lines. Edge, B F is in red. Cost in dollars are as follows: 100, 120, 150, 160, 170, 170, 200, 210, 220, 250, 270, 300, 310, 330, and 350. 100, 120, 150, and 160 are struck through. 170 is crossed out.",
+      "credit": ""
+    },
+    {
+      "url": "https://math.libretexts.org/@api/deki/files/127330/1eda95b6e31177f300fb0ae4e936726cded5a741?revision=1&size=bestfit&width=600&height=393",
+      "alt": "A graph represents the airfares between six different cities. The graph has 6 vertices. The vertices are A, B, C, D, E, and F. Edges from A leading to B, C, D, E, and F are labeled 250 dollars, 210 dollars, 300 dollars, 200 dollars, and 100 dollars. Edges from B leading to C, D, E, and F are labeled 220 dollars, 120 dollars, 160 dollars, and 170 dollars. Edges from C to D, E, and F are labeled 310 dollars, 180 dollars, and 330 dollars. Edges from D to E and F 270 dollars and 150 dollars. An edge from E to F is labeled 350 dollars. Edges, A F, B D, B E, C E, and D F are in dashed lines. Cost in dollars are as follows: 100, 120, 150, 160, 170, 170, 200, 210, 220, 250, 270, 300, 310, 330, and 350. 100, 120, 150, 160, and 170 are struck through. 170 is crossed out.",
+      "credit": ""
+    },
+    {
+      "url": "https://math.libretexts.org/@api/deki/files/127331/5326318c53343ab1d4b18adc8d63d1cda1672d17?revision=1",
+      "alt": "A graph has six vertices labeled A to F. The edges are as follows. A F, curved edge, 100 dollars. B E, 160 dollars. B D, 120 dollars. C E, 170 dollars. D F, 150 dollars.",
+      "credit": ""
+    },
+    {
+      "url": "https://math.libretexts.org/@api/deki/files/109959/CS_Figure_12_10_279.png?revision=1",
+      "alt": "A weighted graph with five vertices. The vertices are as follows: U, V, W, X, and Z. The edges are labeled as follows. U V, 89. V Y, 24. Y X, 68. X W, 45. W U, 37. U X, 49. W V, 68.",
+      "credit": ""
+    }
+  ],
+  "references": [
+    {
+      "text": "12.10: Trees",
+      "url": "https://math.libretexts.org/Bookshelves/Applied_Mathematics/Contemporary_Mathematics_(OpenStax)/12%3A_Graph_Theory/12.10%3A_Trees"
+    },
+    {
+      "text": "CC BY  4.0",
+      "url": "https://creativecommons.org/licenses/by/4.0"
+    },
+    {
+      "text": "OpenStax",
+      "url": "https://openstax.org/"
+    },
+    {
+      "text": "source content",
+      "url": "https://openstax.org/details/books/contemporary-mathematics"
+    }
+  ],
+  "exercises": [
+    {
+      "ordinal": 1,
+      "sourceNumber": "1",
+      "sourceAnchor": "",
+      "kind": "exercise-candidate",
+      "context": "",
+      "original": "1. Describe and identify trees.",
+      "prompt": "1. Describe and identify trees.",
+      "sourceAnswers": [],
+      "hasFigure": false,
+      "status": "draft",
+      "answerVerified": false,
+      "translationStatus": "pending",
+      "mappingStatus": "pending"
+    },
+    {
+      "ordinal": 2,
+      "sourceNumber": "2",
+      "sourceAnchor": "",
+      "kind": "exercise-candidate",
+      "context": "",
+      "original": "2. Determine a spanning tree for a connected graph.",
+      "prompt": "2. Determine a spanning tree for a connected graph.",
+      "sourceAnswers": [],
+      "hasFigure": false,
+      "status": "draft",
+      "answerVerified": false,
+      "translationStatus": "pending",
+      "mappingStatus": "pending"
+    },
+    {
+      "ordinal": 3,
+      "sourceNumber": "3",
+      "sourceAnchor": "",
+      "kind": "exercise-candidate",
+      "context": "",
+      "original": "3. Find the minimum spanning tree for a weighted graph.",
+      "prompt": "3. Find the minimum spanning tree for a weighted graph.",
+      "sourceAnswers": [],
+      "hasFigure": false,
+      "status": "draft",
+      "answerVerified": false,
+      "translationStatus": "pending",
+      "mappingStatus": "pending"
+    },
+    {
+      "ordinal": 4,
+      "sourceNumber": "4",
+      "sourceAnchor": "",
+      "kind": "exercise-candidate",
+      "context": "",
+      "original": "4. Solve application problems involving trees.",
+      "prompt": "4. Solve application problems involving trees.",
+      "sourceAnswers": [],
+      "hasFigure": false,
+      "status": "draft",
+      "answerVerified": false,
+      "translationStatus": "pending",
+      "mappingStatus": "pending"
+    },
+    {
+      "ordinal": 5,
+      "sourceNumber": "",
+      "sourceAnchor": "",
+      "kind": "example-or-exercise",
+      "context": "What Is A Tree?\n\nWhether we are talking about a family tree or a tree in a forest, none of the branches ever loops back around and rejoins the trunk. This means that a tree has no cyclic subgraphs, or is acyclic. A tree also has only one component. So, a tree is a connected acyclic graph. Here are some graphs that have the same characteristic. Each of the graphs in Figure \\(\\PageIndex{2}\\) is a tree.\n\nLet’s practice determining whether a graph is a tree. To do this, check if a graph is connected and has no cycles.",
+      "original": "Example \\(\\PageIndex{1}\\): Identifying Trees\n\nIdentify any trees in Figure \\(\\PageIndex{3}\\). If a graph is not a tree, explain how you know.\n\n[Figure: Three graphs. Graph M has 7 vertices. The edges are a b, b f, f g, f c, b c, b d, and d e. Graph N has 6 vertices. The edges are I j, I h, l k, and l m. The edges, I j, and l k intersect each other. Graph P has 6 vertices. The edges are s t, s r, r q, q p, and p o.]\n\nFigure \\(\\PageIndex{3}\\): Graphs M, N, and P\n\nAnswer\n\nGraph M is not a tree because it contains the cycle (b, c, f).\n\nGraph N is not a tree because it is not connected. It has two components, one with vertices h, i, j, and another with vertices k, l, m.\n\nGraph P is a tree. It has no cycles and it is connected.",
+      "prompt": "Example \\(\\PageIndex{1}\\): Identifying Trees\n\nIdentify any trees in Figure \\(\\PageIndex{3}\\). If a graph is not a tree, explain how you know.\n\n[Figure: Three graphs. Graph M has 7 vertices. The edges are a b, b f, f g, f c, b c, b d, and d e. Graph N has 6 vertices. The edges are I j, I h, l k, and l m. The edges, I j, and l k intersect each other. Graph P has 6 vertices. The edges are s t, s r, r q, q p, and p o.]\n\nFigure \\(\\PageIndex{3}\\): Graphs M, N, and P",
+      "sourceAnswers": [
+        "Graph M is not a tree because it contains the cycle (b, c, f).\n\nGraph N is not a tree because it is not connected. It has two components, one with vertices h, i, j, and another with vertices k, l, m.\n\nGraph P is a tree. It has no cycles and it is connected."
+      ],
+      "hasFigure": true,
+      "status": "draft",
+      "answerVerified": false,
+      "translationStatus": "pending",
+      "mappingStatus": "pending"
+    },
+    {
+      "ordinal": 6,
+      "sourceNumber": "",
+      "sourceAnchor": "",
+      "kind": "example-or-exercise",
+      "context": "Types of Trees\n\nMathematicians have had a lot of fun naming graphs that are trees or that contain trees. For example, the graph in Figure \\(\\PageIndex{5}\\) is not a tree, but it contains two components, one containing vertices a through d, and the other containing vertices e through g, each of which would be a tree on its own. This type of structure is called a forest. There are also interesting names for trees with certain characteristics.\n\nExamples of each of these types of structures are given in Figure \\(\\PageIndex{6}\\).",
+      "original": "Example \\(\\PageIndex{2}\\): Identifying Types of Trees\n\nEach graph in Figure \\(\\PageIndex{7}\\) is one of the special types of trees we have been discussing. Identify the type of tree.\n\n[Figure: Two graphs. Graph U has 17 vertices. The edges are o q, o p, o l, l n, l k, l m, l i, I j, I f, f g, f h, f d, d e, f b, b c, and b a. Graph V hs 6 vertices. The edges are r s, s t, t u, u v, and v w. The edges, s t and u v intersect.]\n\nFigure  \\(\\PageIndex{7}\\) Graphs U and V\n\nAnswer\n\nGraph U has a central path a → b → d → f → i → l → o → q. Each vertex that is not on the path has degree 1 and is adjacent to a vertex that is on the path. So, U is a caterpillar tree.\n\nGraph V is a path graph because it is a single path connecting exactly two vertices of degree one, r → s → u → v → w.",
+      "prompt": "Example \\(\\PageIndex{2}\\): Identifying Types of Trees\n\nEach graph in Figure \\(\\PageIndex{7}\\) is one of the special types of trees we have been discussing. Identify the type of tree.\n\n[Figure: Two graphs. Graph U has 17 vertices. The edges are o q, o p, o l, l n, l k, l m, l i, I j, I f, f g, f h, f d, d e, f b, b c, and b a. Graph V hs 6 vertices. The edges are r s, s t, t u, u v, and v w. The edges, s t and u v intersect.]\n\nFigure  \\(\\PageIndex{7}\\) Graphs U and V",
+      "sourceAnswers": [
+        "Graph U has a central path a → b → d → f → i → l → o → q. Each vertex that is not on the path has degree 1 and is adjacent to a vertex that is on the path. So, U is a caterpillar tree.\n\nGraph V is a path graph because it is a single path connecting exactly two vertices of degree one, r → s → u → v → w."
+      ],
+      "hasFigure": true,
+      "status": "draft",
+      "answerVerified": false,
+      "translationStatus": "pending",
+      "mappingStatus": "pending"
+    },
+    {
+      "ordinal": 7,
+      "sourceNumber": "1",
+      "sourceAnchor": "",
+      "kind": "exercise-candidate",
+      "context": "Mathematicians have had a lot of fun naming graphs that are trees or that contain trees. For example, the graph in Figure \\(\\PageIndex{5}\\) is not a tree, but it contains two components, one containing vertices a through d, and the other containing vertices e through g, each of which would be a tree on its own. This type of structure is called a forest. There are also interesting names for trees with certain characteristics.\n\nExamples of each of these types of structures are given in Figure \\(\\PageIndex{6}\\).\n\nOf the network configurations from Figure \\(\\PageIndex{7}\\), which, if any, has the characteristics of a",
+      "original": "1. Star tree?",
+      "prompt": "1. Star tree?",
+      "sourceAnswers": [],
+      "hasFigure": false,
+      "status": "draft",
+      "answerVerified": false,
+      "translationStatus": "pending",
+      "mappingStatus": "pending"
+    },
+    {
+      "ordinal": 8,
+      "sourceNumber": "2",
+      "sourceAnchor": "",
+      "kind": "exercise-candidate",
+      "context": "Mathematicians have had a lot of fun naming graphs that are trees or that contain trees. For example, the graph in Figure \\(\\PageIndex{5}\\) is not a tree, but it contains two components, one containing vertices a through d, and the other containing vertices e through g, each of which would be a tree on its own. This type of structure is called a forest. There are also interesting names for trees with certain characteristics.\n\nExamples of each of these types of structures are given in Figure \\(\\PageIndex{6}\\).\n\nOf the network configurations from Figure \\(\\PageIndex{7}\\), which, if any, has the characteristics of a",
+      "original": "2. Caterpillar tree?",
+      "prompt": "2. Caterpillar tree?",
+      "sourceAnswers": [],
+      "hasFigure": false,
+      "status": "draft",
+      "answerVerified": false,
+      "translationStatus": "pending",
+      "mappingStatus": "pending"
+    },
+    {
+      "ordinal": 9,
+      "sourceNumber": "3",
+      "sourceAnchor": "",
+      "kind": "exercise-candidate",
+      "context": "Mathematicians have had a lot of fun naming graphs that are trees or that contain trees. For example, the graph in Figure \\(\\PageIndex{5}\\) is not a tree, but it contains two components, one containing vertices a through d, and the other containing vertices e through g, each of which would be a tree on its own. This type of structure is called a forest. There are also interesting names for trees with certain characteristics.\n\nExamples of each of these types of structures are given in Figure \\(\\PageIndex{6}\\).\n\nOf the network configurations from Figure \\(\\PageIndex{7}\\), which, if any, has the characteristics of a",
+      "original": "3. Path graph?",
+      "prompt": "3. Path graph?",
+      "sourceAnswers": [],
+      "hasFigure": false,
+      "status": "draft",
+      "answerVerified": false,
+      "translationStatus": "pending",
+      "mappingStatus": "pending"
+    },
+    {
+      "ordinal": 10,
+      "sourceNumber": "",
+      "sourceAnchor": "",
+      "kind": "example-or-exercise",
+      "context": "A very useful characteristic of tree graphs is that the number of edges is always one less than the number of vertices. In fact, any connected graph in which the number of edges is one less than the number of vertices is guaranteed to be a tree. Some examples are given in Figure \\(\\PageIndex{10}\\).\n\nThe number of edges in a tree graph with \\(n\\) vertices is \\(n−1\\).\n\nA connected graph with n vertices and \\(n−1\\) edges is a tree graph.",
+      "original": "Example \\(\\PageIndex{3}\\): Exploring Characteristics of Trees\n\nUse Graphs I and J in Figure \\(\\PageIndex{11}\\) to answer each question.\n\n[Figure: Two graphs. Graph I has six vertices: a, b, c, d, e, and f. Edges connect a b, b c, b e, d e, and e f. Graph J has seven vertices: g h, i, j, k, l, and m. Edges connect g h, h i, j h, j l, k l, and l m.]\n\nFigure \\(\\PageIndex{11}\\) Graphs I and J\n\n1. Which vertices are in each of the components that remain when edge be is removed from Graph I?\n\n2. Determine the number of edges and the number of vertices in Graph J. Explain how this confirms that Graph J is a tree.\n\n3. What kind of cycle is created if edge im is added to Graph J?\n\nAnswer\n\n1. When edge be is removed, there are two components that remain. One component includes vertices a, b, and c. The other component includes vertices d, e, and f.\n\n2. There are seven vertices and six edges in Graph J. This confirms that Graph J is a tree because the number of edges is one less than the number of vertices.\n\n3. The pentagon (i, h, j, l, m) is created when edge im is added to Graph J.",
+      "prompt": "Example \\(\\PageIndex{3}\\): Exploring Characteristics of Trees\n\nUse Graphs I and J in Figure \\(\\PageIndex{11}\\) to answer each question.\n\n[Figure: Two graphs. Graph I has six vertices: a, b, c, d, e, and f. Edges connect a b, b c, b e, d e, and e f. Graph J has seven vertices: g h, i, j, k, l, and m. Edges connect g h, h i, j h, j l, k l, and l m.]\n\nFigure \\(\\PageIndex{11}\\) Graphs I and J\n\n1. Which vertices are in each of the components that remain when edge be is removed from Graph I?\n\n2. Determine the number of edges and the number of vertices in Graph J. Explain how this confirms that Graph J is a tree.\n\n3. What kind of cycle is created if edge im is added to Graph J?",
+      "sourceAnswers": [
+        "1. When edge be is removed, there are two components that remain. One component includes vertices a, b, and c. The other component includes vertices d, e, and f.\n\n2. There are seven vertices and six edges in Graph J. This confirms that Graph J is a tree because the number of edges is one less than the number of vertices.\n\n3. The pentagon (i, h, j, l, m) is created when edge im is added to Graph J."
+      ],
+      "hasFigure": true,
+      "status": "draft",
+      "answerVerified": false,
+      "translationStatus": "pending",
+      "mappingStatus": "pending"
+    },
+    {
+      "ordinal": 11,
+      "sourceNumber": "",
+      "sourceAnchor": "",
+      "kind": "example-or-exercise",
+      "context": "Suppose that you planned to set up your own computer network with four devices. One option is to use a “mesh topology” like the one in Figure \\(\\PageIndex{12}\\), in which each device is connected directly to every other device in the network.\n\nThe mesh topology for four devices could be represented by the complete Graph A_(1) in Figure \\(\\PageIndex{13}\\) where the vertices represent the devices, and the edges represent network connections. However, the devices could be networked using fewer connections. Graphs A_(2), A_(3,) and A_(4) of Figure \\(\\PageIndex{13}\\) show configurations in which three of the six edges have been removed. Each of the Graphs A_(2), A_(3) and A_(4) in Figure 12.242 is a tree because it is connected and contains no cycles. Since Graphs A_(2), A_(3) and A_(4) are also subgraphs of Graph A_(1) that include every vertex of the original graph, they are also known as spanning trees.\n\nBy definition, spanning trees must span the whole graph by visiting all the vertices. Since spanning trees are subgraphs, they may only have edges between vertices that were adjacent in the original graph. Since spanning trees are trees, they are connected and they are acyclic. So, when deciding whether a graph is a spanning tree, check the following characteristics:",
+      "original": "Example \\(\\PageIndex{4}\\)9: Identifying Spanning Trees\n\nUse Figure \\(\\PageIndex{14}\\) to determine which of graphs M_(1), M_(2), M_(3), and M_(4), are spanning trees of Q.\n\n[Figure: Five graphs. Graph Q has six vertices: a, b, c, d, e, and f. The edges are a b, a c, a d, b d, d f, c d, c e, c f, and e f. Graph M 1 has six vertices: a, b, c, d, e, and f. The edges are a b, b d, d c, c e, f, and f d. Graph M 2 has six vertices: a, b, c, d, e, and f. The edges are a b, a d, d f, f e, and e c. Graph M 3 has six vertices; a, b, c, d, e, and f. The edges are b d, d f, a f, f e, and e c. Graph M 4 has six vertices: a, b, c, d, e, and f. The edges are a b, c e, e f, and f d.]\n\nFigure \\(\\PageIndex{14}\\) Graphs Q, M_(1), M_(2), M_(3,) and M_(4)\n\nAnswer\n\n1. Graph M_(1) is not a spanning tree of Graph Q because it has a cycle (c, d, f, e).\n\n2. Graph M_(2) is a spanning tree of Graph Q because it has all the original vertices, no vertices are adjacent in M_(2) that weren’t adjacent in Graph Q, Graph M_(2) is connected and it contains no cycles.\n\n3. Graph M_(3) is not a spanning tree of Graph Q because vertices a and f are adjacent in Graph M_(3) but not in Graph Q.\n\n4. Graph M_(4) is not a spanning tree of Graph Q because it is not connected.\n\nSo, only graph M_(2) is a spanning tree of Graph Q.",
+      "prompt": "Example \\(\\PageIndex{4}\\)9: Identifying Spanning Trees\n\nUse Figure \\(\\PageIndex{14}\\) to determine which of graphs M_(1), M_(2), M_(3), and M_(4), are spanning trees of Q.\n\n[Figure: Five graphs. Graph Q has six vertices: a, b, c, d, e, and f. The edges are a b, a c, a d, b d, d f, c d, c e, c f, and e f. Graph M 1 has six vertices: a, b, c, d, e, and f. The edges are a b, b d, d c, c e, f, and f d. Graph M 2 has six vertices: a, b, c, d, e, and f. The edges are a b, a d, d f, f e, and e c. Graph M 3 has six vertices; a, b, c, d, e, and f. The edges are b d, d f, a f, f e, and e c. Graph M 4 has six vertices: a, b, c, d, e, and f. The edges are a b, c e, e f, and f d.]\n\nFigure \\(\\PageIndex{14}\\) Graphs Q, M_(1), M_(2), M_(3,) and M_(4)",
+      "sourceAnswers": [
+        "1. Graph M_(1) is not a spanning tree of Graph Q because it has a cycle (c, d, f, e).\n\n2. Graph M_(2) is a spanning tree of Graph Q because it has all the original vertices, no vertices are adjacent in M_(2) that weren’t adjacent in Graph Q, Graph M_(2) is connected and it contains no cycles.\n\n3. Graph M_(3) is not a spanning tree of Graph Q because vertices a and f are adjacent in Graph M_(3) but not in Graph Q.\n\n4. Graph M_(4) is not a spanning tree of Graph Q because it is not connected.\n\nSo, only graph M_(2) is a spanning tree of Graph Q."
+      ],
+      "hasFigure": true,
+      "status": "draft",
+      "answerVerified": false,
+      "translationStatus": "pending",
+      "mappingStatus": "pending"
+    },
+    {
+      "ordinal": 12,
+      "sourceNumber": "1",
+      "sourceAnchor": "",
+      "kind": "exercise-candidate",
+      "context": "The mesh topology for four devices could be represented by the complete Graph A_(1) in Figure \\(\\PageIndex{13}\\) where the vertices represent the devices, and the edges represent network connections. However, the devices could be networked using fewer connections. Graphs A_(2), A_(3,) and A_(4) of Figure \\(\\PageIndex{13}\\) show configurations in which three of the six edges have been removed. Each of the Graphs A_(2), A_(3) and A_(4) in Figure 12.242 is a tree because it is connected and contains no cycles. Since Graphs A_(2), A_(3) and A_(4) are also subgraphs of Graph A_(1) that include every vertex of the original graph, they are also known as spanning trees.\n\nBy definition, spanning trees must span the whole graph by visiting all the vertices. Since spanning trees are subgraphs, they may only have edges between vertices that were adjacent in the original graph. Since spanning trees are trees, they are connected and they are acyclic. So, when deciding whether a graph is a spanning tree, check the following characteristics:\n\nUse the given figure for the following exercises.",
+      "original": "1. \n\nTrue",
+      "prompt": "1. \n\nTrue",
+      "sourceAnswers": [],
+      "hasFigure": false,
+      "status": "draft",
+      "answerVerified": false,
+      "translationStatus": "pending",
+      "mappingStatus": "pending"
+    },
+    {
+      "ordinal": 13,
+      "sourceNumber": "2",
+      "sourceAnchor": "",
+      "kind": "exercise-candidate",
+      "context": "The mesh topology for four devices could be represented by the complete Graph A_(1) in Figure \\(\\PageIndex{13}\\) where the vertices represent the devices, and the edges represent network connections. However, the devices could be networked using fewer connections. Graphs A_(2), A_(3,) and A_(4) of Figure \\(\\PageIndex{13}\\) show configurations in which three of the six edges have been removed. Each of the Graphs A_(2), A_(3) and A_(4) in Figure 12.242 is a tree because it is connected and contains no cycles. Since Graphs A_(2), A_(3) and A_(4) are also subgraphs of Graph A_(1) that include every vertex of the original graph, they are also known as spanning trees.\n\nBy definition, spanning trees must span the whole graph by visiting all the vertices. Since spanning trees are subgraphs, they may only have edges between vertices that were adjacent in the original graph. Since spanning trees are trees, they are connected and they are acyclic. So, when deciding whether a graph is a spanning tree, check the following characteristics:\n\nUse the given figure for the following exercises.",
+      "original": "2. \n\nFalse",
+      "prompt": "2. \n\nFalse",
+      "sourceAnswers": [],
+      "hasFigure": false,
+      "status": "draft",
+      "answerVerified": false,
+      "translationStatus": "pending",
+      "mappingStatus": "pending"
+    },
+    {
+      "ordinal": 14,
+      "sourceNumber": "1",
+      "sourceAnchor": "",
+      "kind": "exercise-candidate",
+      "context": "The mesh topology for four devices could be represented by the complete Graph A_(1) in Figure \\(\\PageIndex{13}\\) where the vertices represent the devices, and the edges represent network connections. However, the devices could be networked using fewer connections. Graphs A_(2), A_(3,) and A_(4) of Figure \\(\\PageIndex{13}\\) show configurations in which three of the six edges have been removed. Each of the Graphs A_(2), A_(3) and A_(4) in Figure 12.242 is a tree because it is connected and contains no cycles. Since Graphs A_(2), A_(3) and A_(4) are also subgraphs of Graph A_(1) that include every vertex of the original graph, they are also known as spanning trees.\n\nBy definition, spanning trees must span the whole graph by visiting all the vertices. Since spanning trees are subgraphs, they may only have edges between vertices that were adjacent in the original graph. Since spanning trees are trees, they are connected and they are acyclic. So, when deciding whether a graph is a spanning tree, check the following characteristics:\n\nUse the given figure for the following exercises.",
+      "original": "1. \n\nTrue",
+      "prompt": "1. \n\nTrue",
+      "sourceAnswers": [],
+      "hasFigure": false,
+      "status": "draft",
+      "answerVerified": false,
+      "translationStatus": "pending",
+      "mappingStatus": "pending"
+    },
+    {
+      "ordinal": 15,
+      "sourceNumber": "2",
+      "sourceAnchor": "",
+      "kind": "exercise-candidate",
+      "context": "The mesh topology for four devices could be represented by the complete Graph A_(1) in Figure \\(\\PageIndex{13}\\) where the vertices represent the devices, and the edges represent network connections. However, the devices could be networked using fewer connections. Graphs A_(2), A_(3,) and A_(4) of Figure \\(\\PageIndex{13}\\) show configurations in which three of the six edges have been removed. Each of the Graphs A_(2), A_(3) and A_(4) in Figure 12.242 is a tree because it is connected and contains no cycles. Since Graphs A_(2), A_(3) and A_(4) are also subgraphs of Graph A_(1) that include every vertex of the original graph, they are also known as spanning trees.\n\nBy definition, spanning trees must span the whole graph by visiting all the vertices. Since spanning trees are subgraphs, they may only have edges between vertices that were adjacent in the original graph. Since spanning trees are trees, they are connected and they are acyclic. So, when deciding whether a graph is a spanning tree, check the following characteristics:\n\nUse the given figure for the following exercises.",
+      "original": "2. \n\nFalse",
+      "prompt": "2. \n\nFalse",
+      "sourceAnswers": [],
+      "hasFigure": false,
+      "status": "draft",
+      "answerVerified": false,
+      "translationStatus": "pending",
+      "mappingStatus": "pending"
+    },
+    {
+      "ordinal": 16,
+      "sourceNumber": "1",
+      "sourceAnchor": "",
+      "kind": "exercise-candidate",
+      "context": "The mesh topology for four devices could be represented by the complete Graph A_(1) in Figure \\(\\PageIndex{13}\\) where the vertices represent the devices, and the edges represent network connections. However, the devices could be networked using fewer connections. Graphs A_(2), A_(3,) and A_(4) of Figure \\(\\PageIndex{13}\\) show configurations in which three of the six edges have been removed. Each of the Graphs A_(2), A_(3) and A_(4) in Figure 12.242 is a tree because it is connected and contains no cycles. Since Graphs A_(2), A_(3) and A_(4) are also subgraphs of Graph A_(1) that include every vertex of the original graph, they are also known as spanning trees.\n\nBy definition, spanning trees must span the whole graph by visiting all the vertices. Since spanning trees are subgraphs, they may only have edges between vertices that were adjacent in the original graph. Since spanning trees are trees, they are connected and they are acyclic. So, when deciding whether a graph is a spanning tree, check the following characteristics:\n\nUse the given figure for the following exercises.",
+      "original": "1. \n\nTrue",
+      "prompt": "1. \n\nTrue",
+      "sourceAnswers": [],
+      "hasFigure": false,
+      "status": "draft",
+      "answerVerified": false,
+      "translationStatus": "pending",
+      "mappingStatus": "pending"
+    },
+    {
+      "ordinal": 17,
+      "sourceNumber": "2",
+      "sourceAnchor": "",
+      "kind": "exercise-candidate",
+      "context": "The mesh topology for four devices could be represented by the complete Graph A_(1) in Figure \\(\\PageIndex{13}\\) where the vertices represent the devices, and the edges represent network connections. However, the devices could be networked using fewer connections. Graphs A_(2), A_(3,) and A_(4) of Figure \\(\\PageIndex{13}\\) show configurations in which three of the six edges have been removed. Each of the Graphs A_(2), A_(3) and A_(4) in Figure 12.242 is a tree because it is connected and contains no cycles. Since Graphs A_(2), A_(3) and A_(4) are also subgraphs of Graph A_(1) that include every vertex of the original graph, they are also known as spanning trees.\n\nBy definition, spanning trees must span the whole graph by visiting all the vertices. Since spanning trees are subgraphs, they may only have edges between vertices that were adjacent in the original graph. Since spanning trees are trees, they are connected and they are acyclic. So, when deciding whether a graph is a spanning tree, check the following characteristics:\n\nUse the given figure for the following exercises.",
+      "original": "2. \n\nFalse",
+      "prompt": "2. \n\nFalse",
+      "sourceAnswers": [],
+      "hasFigure": false,
+      "status": "draft",
+      "answerVerified": false,
+      "translationStatus": "pending",
+      "mappingStatus": "pending"
+    },
+    {
+      "ordinal": 18,
+      "sourceNumber": "1",
+      "sourceAnchor": "",
+      "kind": "exercise-candidate",
+      "context": "The mesh topology for four devices could be represented by the complete Graph A_(1) in Figure \\(\\PageIndex{13}\\) where the vertices represent the devices, and the edges represent network connections. However, the devices could be networked using fewer connections. Graphs A_(2), A_(3,) and A_(4) of Figure \\(\\PageIndex{13}\\) show configurations in which three of the six edges have been removed. Each of the Graphs A_(2), A_(3) and A_(4) in Figure 12.242 is a tree because it is connected and contains no cycles. Since Graphs A_(2), A_(3) and A_(4) are also subgraphs of Graph A_(1) that include every vertex of the original graph, they are also known as spanning trees.\n\nBy definition, spanning trees must span the whole graph by visiting all the vertices. Since spanning trees are subgraphs, they may only have edges between vertices that were adjacent in the original graph. Since spanning trees are trees, they are connected and they are acyclic. So, when deciding whether a graph is a spanning tree, check the following characteristics:\n\nUse the given figure for the following exercises.",
+      "original": "1. \n\nTrue",
+      "prompt": "1. \n\nTrue",
+      "sourceAnswers": [],
+      "hasFigure": false,
+      "status": "draft",
+      "answerVerified": false,
+      "translationStatus": "pending",
+      "mappingStatus": "pending"
+    },
+    {
+      "ordinal": 19,
+      "sourceNumber": "2",
+      "sourceAnchor": "",
+      "kind": "exercise-candidate",
+      "context": "The mesh topology for four devices could be represented by the complete Graph A_(1) in Figure \\(\\PageIndex{13}\\) where the vertices represent the devices, and the edges represent network connections. However, the devices could be networked using fewer connections. Graphs A_(2), A_(3,) and A_(4) of Figure \\(\\PageIndex{13}\\) show configurations in which three of the six edges have been removed. Each of the Graphs A_(2), A_(3) and A_(4) in Figure 12.242 is a tree because it is connected and contains no cycles. Since Graphs A_(2), A_(3) and A_(4) are also subgraphs of Graph A_(1) that include every vertex of the original graph, they are also known as spanning trees.\n\nBy definition, spanning trees must span the whole graph by visiting all the vertices. Since spanning trees are subgraphs, they may only have edges between vertices that were adjacent in the original graph. Since spanning trees are trees, they are connected and they are acyclic. So, when deciding whether a graph is a spanning tree, check the following characteristics:\n\nUse the given figure for the following exercises.",
+      "original": "2. \n\nFalse",
+      "prompt": "2. \n\nFalse",
+      "sourceAnswers": [],
+      "hasFigure": false,
+      "status": "draft",
+      "answerVerified": false,
+      "translationStatus": "pending",
+      "mappingStatus": "pending"
+    },
+    {
+      "ordinal": 20,
+      "sourceNumber": "",
+      "sourceAnchor": "",
+      "kind": "example-or-exercise",
+      "context": "Repeat this process until all vertices have been visited as shown in Figure \\(\\PageIndex{18}\\).\n\nThe end result is a tree that spans the entire graph as shown in Figure \\(\\PageIndex{19}\\).\n\nNotice that this subgraph is a tree because it is connected and acyclic. It also visits every vertex of the original graph, so it is a spanning tree. However, it is not the only spanning tree for this graph. By making different turns, we could create any number of distinct spanning trees.",
+      "original": "Example \\(\\PageIndex{5}\\): Constructing Spanning Trees\n\nConstruct two distinct spanning trees for the graph in Figure \\(\\PageIndex{20}\\).\n\n[Figure: Graph L has 11 vertices and 19 edges. The graph resembles a square resting below a triangle on either side. The triangles are connected via a trapezoid. The squares have diagonal lines.]\n\nFigure \\(\\PageIndex{20}\\) Graph L\n\nAnswer\n\nTwo possible solutions are given in Figure \\(\\PageIndex{21}\\) and Figure \\(\\PageIndex{22}\\).\n\n[Figure: Two graphs depict removing edges from graph L. The first graph has 11 vertices and 19 edges. It resembles a square resting below a triangle on either side. The triangles are connected via a trapezoid. The squares have diagonal lines. 6 edges are in green, 2 edges are in purple, and 2 edges are in blue. Green represents phase 1, blue represents phase 2, and purple represents phase 3. The second graph is the final tree. The black edges from the first graph are removed.]\n\nFigure \\(\\PageIndex{21}\\) First Spanning Tree for Graph L\n\n[Figure: Two graphs depict removing edges from graph L. The first graph has 11 vertices and 19 edges. It resembles a square resting below a triangle on either side. The triangles are connected via a trapezoid. The squares have diagonal lines. 6 edges are in green, 2 edges are in purple, and 2 edges are in blue. Green represents phase 1, blue represents phase 2, and purple represents phase 3. The second graph is the final tree. The black edges from the first graph are removed.]\n\nFigure \\(\\PageIndex{22}\\): Second Spanning Tree for Graph L",
+      "prompt": "Example \\(\\PageIndex{5}\\): Constructing Spanning Trees\n\nConstruct two distinct spanning trees for the graph in Figure \\(\\PageIndex{20}\\).\n\n[Figure: Graph L has 11 vertices and 19 edges. The graph resembles a square resting below a triangle on either side. The triangles are connected via a trapezoid. The squares have diagonal lines.]\n\nFigure \\(\\PageIndex{20}\\) Graph L",
+      "sourceAnswers": [
+        "Two possible solutions are given in Figure \\(\\PageIndex{21}\\) and Figure \\(\\PageIndex{22}\\).\n\n[Figure: Two graphs depict removing edges from graph L. The first graph has 11 vertices and 19 edges. It resembles a square resting below a triangle on either side. The triangles are connected via a trapezoid. The squares have diagonal lines. 6 edges are in green, 2 edges are in purple, and 2 edges are in blue. Green represents phase 1, blue represents phase 2, and purple represents phase 3. The second graph is the final tree. The black edges from the first graph are removed.]\n\nFigure \\(\\PageIndex{21}\\) First Spanning Tree for Graph L\n\n[Figure: Two graphs depict removing edges from graph L. The first graph has 11 vertices and 19 edges. It resembles a square resting below a triangle on either side. The triangles are connected via a trapezoid. The squares have diagonal lines. 6 edges are in green, 2 edges are in purple, and 2 edges are in blue. Green represents phase 1, blue represents phase 2, and purple represents phase 3. The second graph is the final tree. The black edges from the first graph are removed.]\n\nFigure \\(\\PageIndex{22}\\): Second Spanning Tree for Graph L"
+      ],
+      "hasFigure": true,
+      "status": "draft",
+      "answerVerified": false,
+      "translationStatus": "pending",
+      "mappingStatus": "pending"
+    },
+    {
+      "ordinal": 21,
+      "sourceNumber": "",
+      "sourceAnchor": "",
+      "kind": "example-or-exercise",
+      "context": "Another approach to finding a spanning tree in a connected graph involves removing unwanted edges to reveal a spanning tree. Consider Graph D in Figure \\(\\PageIndex{24}\\).\n\nGraph D has 10 vertices. A spanning tree of Graph D must have 9 edges, because the number of edges is one less than the number of vertices in any tree. Graph D has 13 edges so 4 need to be removed. To determine which 4 edges to remove, remember that trees do not have cycles. There are four triangles in Graph D that we need to break up. We can accomplish this by removing 1 edge from each of the triangles. There are many ways this can be done. Two of these ways are shown in Figure \\(\\PageIndex{25}\\).\n\nSpanning Trees in Graph Theory",
+      "original": "Example \\(\\PageIndex{6}\\): Removing Edges to Find Spanning Trees\n\nUse the graph in Figure 12.255 to answer each question.\n\n[Figure: Graph V has 9 vertices. The vertices are labeled from a to i. The edges are f c, f a, c a, c d, d a, a b, b e, e h, h i, I g, and g b.]\n\nFigure \\(\\PageIndex{26}\\) Graph V\n\n1. Determine the number of edges that must be removed to reveal a spanning tree.\n\n2. Name all the undirected cycles in Graph V.\n\n3. Find two distinct spanning trees of Graph V.\n\nAnswer\n\n1. Graph V has nine vertices so a spanning tree for the graph must have 8 edges. Since Graph V has 11 edges, 3 edges must be removed to reveal a spanning tree.\n\n2. (a, c, d), (a, c, f), (a, d, c, f), and (b, e, h, i, g)\n\n3. To find the first spanning tree, remove edge ac, which will break up both of the triangles, remove edge cf , which will break up the quadrilateral, and remove be, which will break up the pentagon, to give us the spanning tree shown in Figure \\(\\PageIndex{27}\\).\n\n[Figure: A graph has 9 vertices. The vertices are labeled from a to i. The edges are f a, c d, d a, a b, b g, g i, I h, and h e.]\n\nFigure \\(\\PageIndex{27}\\) Spanning Tree Formed Removing ac, cf, and be\n\nTo find another spanning tree, remove ad, which will break up (a, c, d) and (a, d, c, f), remove af to break up (a, c, f), and remove hi to break up (b, e, h, i, g). This will give us the spanning tree in Figure \\(\\PageIndex{28}\\).\n\n[Figure: A graph has 9 vertices. The vertices are labeled from a to i. The edges are f c, c d, c a, a b, b e, e h, b g, and g i.]\n\nFigure \\(\\PageIndex{28}\\): Spanning Tree Formed Removing ad, af, and hi",
+      "prompt": "Example \\(\\PageIndex{6}\\): Removing Edges to Find Spanning Trees\n\nUse the graph in Figure 12.255 to answer each question.\n\n[Figure: Graph V has 9 vertices. The vertices are labeled from a to i. The edges are f c, f a, c a, c d, d a, a b, b e, e h, h i, I g, and g b.]\n\nFigure \\(\\PageIndex{26}\\) Graph V\n\n1. Determine the number of edges that must be removed to reveal a spanning tree.\n\n2. Name all the undirected cycles in Graph V.\n\n3. Find two distinct spanning trees of Graph V.",
+      "sourceAnswers": [
+        "1. Graph V has nine vertices so a spanning tree for the graph must have 8 edges. Since Graph V has 11 edges, 3 edges must be removed to reveal a spanning tree.\n\n2. (a, c, d), (a, c, f), (a, d, c, f), and (b, e, h, i, g)\n\n3. To find the first spanning tree, remove edge ac, which will break up both of the triangles, remove edge cf , which will break up the quadrilateral, and remove be, which will break up the pentagon, to give us the spanning tree shown in Figure \\(\\PageIndex{27}\\).\n\n[Figure: A graph has 9 vertices. The vertices are labeled from a to i. The edges are f a, c d, d a, a b, b g, g i, I h, and h e.]\n\nFigure \\(\\PageIndex{27}\\) Spanning Tree Formed Removing ac, cf, and be\n\nTo find another spanning tree, remove ad, which will break up (a, c, d) and (a, d, c, f), remove af to break up (a, c, f), and remove hi to break up (b, e, h, i, g). This will give us the spanning tree in Figure \\(\\PageIndex{28}\\).\n\n[Figure: A graph has 9 vertices. The vertices are labeled from a to i. The edges are f c, c d, c a, a b, b e, e h, b g, and g i.]\n\nFigure \\(\\PageIndex{28}\\): Spanning Tree Formed Removing ad, af, and hi"
+      ],
+      "hasFigure": true,
+      "status": "draft",
+      "answerVerified": false,
+      "translationStatus": "pending",
+      "mappingStatus": "pending"
+    },
+    {
+      "ordinal": 22,
+      "sourceNumber": "",
+      "sourceAnchor": "",
+      "kind": "example-or-exercise",
+      "context": "Step 3: Choose another edge of minimum weight from the remaining edges, but do not select any edge that creates a cycle in the subgraph you are creating.\n\nStep 4: Repeat step 3 until all the vertices of the original graph are included and you have a spanning tree.\n\nUse Kruskal's Algorithm to Find Minimum Spanning Trees in Graph Theory",
+      "original": "Example \\(\\PageIndex{7}\\): Using Kruskal’s Algorithm\n\nA computer network will be set up with six devices. The vertices in the graph in Figure \\(\\PageIndex{30}\\) represent the devices, and the edges represent the cost of a connection. Find the network configuration that will cost the least. What is the total cost?\n\n[Figure: A graph represents the airfares between six different cities. The graph has 6 vertices. The vertices are A, B, C, D, E, and F. Edges from A leading to B, C, D, E, and F are labeled 250 dollars, 210 dollars, 300 dollars, 200 dollars, and 100 dollars. Edges from B leading to C, D, E, and F are labeled 220 dollars, 120 dollars, 160 dollars, and 170 dollars. Edges from C to D, E, and F are labeled 310 dollars, 180 dollars, and 330 dollars. Edges from D to E and F 270 dollars and 150 dollars. An edge from E to F is labeled 350 dollars.]\n\nFigure \\(\\PageIndex{30}\\) Graph of Network Connection Costs\n\nAnswer\n\nA minimum spanning tree will correspond to the network configuration of least cost. We will use Kruskal’s algorithm to find one. Since the graph has six vertices, the spanning tree will have six vertices and five edges.\n\nStep 1: Choose an edge of least weight. We have sorted the weights into numerical order. The least is $100. The only edge of this weight is edge AF as shown in Figure \\(\\PageIndex{31}\\)\n\n[Figure: A graph represents the airfares between six different cities. The graph has 6 vertices. The vertices are A, B, C, D, E, and F. Edges from A leading to B, C, D, E, and F are labeled 250 dollars, 210 dollars, 300 dollars, 200 dollars, and 100 dollars. Edges from B leading to C, D, E, and F are labeled 220 dollars, 120 dollars, 160 dollars, and 170 dollars. Edges from C to D, E, and F are labeled 310 dollars, 180 dollars, and 330 dollars. Edges from D to E and F 270 dollars and 150 dollars. An edge from E to F is labeled 350 dollars. Edge, A F is in dashed lines. Cost in dollars are as follows: 100, 120, 150, 160, 170, 170, 200, 210, 220, 250, 270, 300, 310, 330, and 350. 100 is struck through.]\n\nFigure \\(\\PageIndex{31}\\) Step 1 Select Edge AF\n\nStep 2: Choose the edge of least weight of the remaining edges, which is BD with $120. Notice that the two selected edges do not need to be adjacent to each other as shown in Figure \\(\\PageIndex{32}\\).\n\n[Figure: A graph represents the airfares between six different cities. The graph has 6 vertices. The vertices are A, B, C, D, E, and F. Edges from A leading to B, C, D, E, and F are labeled 250 dollars, 210 dollars, 300 dollars, 200 dollars, and 100 dollars. Edges from B leading to C, D, E, and F are labeled 220 dollars, 120 dollars, 160 dollars, and 170 dollars. Edges from C to D, E, and F are labeled 310 dollars, 180 dollars, and 330 dollars. Edges from D to E and F 270 dollars and 150 dollars. An edge from E to F is labeled 350 dollars. Edges, A F, and B D are in dashed lines. Cost in dollars are as follows: 100, 120, 150, 160, 170, 170, 200, 210, 220, 250, 270, 300, 310, 330, and 350. 100 and 120 are struck through.]\n\nFigure \\(\\PageIndex{32}\\): Step 2 Select Edge BD\n\nStep 3: Select the lowest weight edge of the remaining edges, as long as it does not result in a cycle. We select DF with $150 since it does not form a cycle as shown in Figure \\(\\PageIndex{33}\\).\n\n[Figure: A graph represents the airfares between six different cities. The graph has 6 vertices. The vertices are A, B, C, D, E, and F. Edges from A leading to B, C, D, E, and F are labeled 250 dollars, 210 dollars, 300 dollars, 200 dollars, and 100 dollars. Edges from B leading to C, D, E, and F are labeled 220 dollars, 120 dollars, 160 dollars, and 170 dollars. Edges from C to D, E, and F are labeled 310 dollars, 180 dollars, and 330 dollars. Edges from D to E and F 270 dollars and 150 dollars. An edge from E to F is labeled 350 dollars. Edges, A F, B D, and D F are in dashed lines. Cost in dollars are as follows: 100, 120, 150, 160, 170, 170, 200, 210, 220, 250, 270, 300, 310, 330, and 350. 100, 120, and 150 are struck through.]\n\nFigure \\(\\PageIndex{33}\\): Step 3 Select Edge DF\n\nRepeat Step 3: Select the lowest weight edge of the remaining edges, which is BE with $160 and it does not form a cycle as shown in Figure \\(\\PageIndex{34}\\). This gives us four edges so we only need to repeat step 3 once more to get the fifth edge.\n\n[Figure: A graph represents the airfares between six different cities. The graph has 6 vertices. The vertices are A, B, C, D, E, and F. Edges from A leading to B, C, D, E, and F are labeled 250 dollars, 210 dollars, 300 dollars, 200 dollars, and 100 dollars. Edges from B leading to C, D, E, and F are labeled 220 dollars, 120 dollars, 160 dollars, and 170 dollars. Edges from C to D, E, and F are labeled 310 dollars, 180 dollars, and 330 dollars. Edges from D to E and F 270 dollars and 150 dollars. An edge from E to F is labeled 350 dollars. Edges, A F, B D, B E, and D F are in dashed lines. Cost in dollars are as follows: 100, 120, 150, 160, 170, 170, 200, 210, 220, 250, 270, 300, 310, 330, and 350. 100, 120, 150, and 160 are struck through.]\n\nFigure \\(\\PageIndex{34}\\): Repeat Step 3 Select Edge DF\n\nRepeat Step 3: The lowest weight of the remaining edges is $170. Both BF and CE have a weight of $170, but BF would create cycle (b, d, f) and there cannot be a cycle in a spanning tree as shown in Figure \\(\\PageIndex{35}\\).\n\n[Figure: A graph represents the airfares between six different cities. The graph has 6 vertices. The vertices are A, B, C, D, E, and F. Edges from A leading to B, C, D, E, and F are labeled 250 dollars, 210 dollars, 300 dollars, 200 dollars, and 100 dollars. Edges from B leading to C, D, E, and F are labeled 220 dollars, 120 dollars, 160 dollars, and 170 dollars. Edges from C to D, E, and F are labeled 310 dollars, 180 dollars, and 330 dollars. Edges from D to E and F 270 dollars and 150 dollars. An edge from E to F is labeled 350 dollars. Edges, A F, B D, B E, and DF are in dashed lines. Edge, B F is in red. Cost in dollars are as follows: 100, 120, 150, 160, 170, 170, 200, 210, 220, 250, 270, 300, 310, 330, and 350. 100, 120, 150, and 160 are struck through. 170 is crossed out.]\n\nFigure \\(\\PageIndex{35}\\): Repeat Step 3 Do Not Select Edge BF\n\nSo, we will select CE, which will complete the spanning tree as shown in Figure \\(\\PageIndex{36}\\).\n\n[Figure: A graph represents the airfares between six different cities. The graph has 6 vertices. The vertices are A, B, C, D, E, and F. Edges from A leading to B, C, D, E, and F are labeled 250 dollars, 210 dollars, 300 dollars, 200 dollars, and 100 dollars. Edges from B leading to C, D, E, and F are labeled 220 dollars, 120 dollars, 160 dollars, and 170 dollars. Edges from C to D, E, and F are labeled 310 dollars, 180 dollars, and 330 dollars. Edges from D to E and F 270 dollars and 150 dollars. An edge from E to F is labeled 350 dollars. Edges, A F, B D, B E, C E, and D F are in dashed lines. Cost in dollars are as follows: 100, 120, 150, 160, 170, 170, 200, 210, 220, 250, 270, 300, 310, 330, and 350. 100, 120, 150, 160, and 170 are struck through. 170 is crossed out.]\n\nFigure \\(\\PageIndex{36}\\): Repeat Step 3 Select Edge CE\n\nThe minimum spanning tree is shown in Figure \\(\\PageIndex{37}\\). This is the configuration of the network of least cost. The spanning tree has a total weight of \\($100+$120+$150+$160+$170=$700\\), which is the total cost of this network configuration.\n\n[Figure: A graph has six vertices labeled A to F. The edges are as follows. A F, curved edge, 100 dollars. B E, 160 dollars. B D, 120 dollars. C E, 170 dollars. D F, 150 dollars.]\n\nFigure \\(\\PageIndex{37}\\): Final Minimum Spanning Tree",
+      "prompt": "Example \\(\\PageIndex{7}\\): Using Kruskal’s Algorithm\n\nA computer network will be set up with six devices. The vertices in the graph in Figure \\(\\PageIndex{30}\\) represent the devices, and the edges represent the cost of a connection. Find the network configuration that will cost the least. What is the total cost?\n\n[Figure: A graph represents the airfares between six different cities. The graph has 6 vertices. The vertices are A, B, C, D, E, and F. Edges from A leading to B, C, D, E, and F are labeled 250 dollars, 210 dollars, 300 dollars, 200 dollars, and 100 dollars. Edges from B leading to C, D, E, and F are labeled 220 dollars, 120 dollars, 160 dollars, and 170 dollars. Edges from C to D, E, and F are labeled 310 dollars, 180 dollars, and 330 dollars. Edges from D to E and F 270 dollars and 150 dollars. An edge from E to F is labeled 350 dollars.]\n\nFigure \\(\\PageIndex{30}\\) Graph of Network Connection Costs",
+      "sourceAnswers": [
+        "A minimum spanning tree will correspond to the network configuration of least cost. We will use Kruskal’s algorithm to find one. Since the graph has six vertices, the spanning tree will have six vertices and five edges.\n\nStep 1: Choose an edge of least weight. We have sorted the weights into numerical order. The least is $100. The only edge of this weight is edge AF as shown in Figure \\(\\PageIndex{31}\\)\n\n[Figure: A graph represents the airfares between six different cities. The graph has 6 vertices. The vertices are A, B, C, D, E, and F. Edges from A leading to B, C, D, E, and F are labeled 250 dollars, 210 dollars, 300 dollars, 200 dollars, and 100 dollars. Edges from B leading to C, D, E, and F are labeled 220 dollars, 120 dollars, 160 dollars, and 170 dollars. Edges from C to D, E, and F are labeled 310 dollars, 180 dollars, and 330 dollars. Edges from D to E and F 270 dollars and 150 dollars. An edge from E to F is labeled 350 dollars. Edge, A F is in dashed lines. Cost in dollars are as follows: 100, 120, 150, 160, 170, 170, 200, 210, 220, 250, 270, 300, 310, 330, and 350. 100 is struck through.]\n\nFigure \\(\\PageIndex{31}\\) Step 1 Select Edge AF\n\nStep 2: Choose the edge of least weight of the remaining edges, which is BD with $120. Notice that the two selected edges do not need to be adjacent to each other as shown in Figure \\(\\PageIndex{32}\\).\n\n[Figure: A graph represents the airfares between six different cities. The graph has 6 vertices. The vertices are A, B, C, D, E, and F. Edges from A leading to B, C, D, E, and F are labeled 250 dollars, 210 dollars, 300 dollars, 200 dollars, and 100 dollars. Edges from B leading to C, D, E, and F are labeled 220 dollars, 120 dollars, 160 dollars, and 170 dollars. Edges from C to D, E, and F are labeled 310 dollars, 180 dollars, and 330 dollars. Edges from D to E and F 270 dollars and 150 dollars. An edge from E to F is labeled 350 dollars. Edges, A F, and B D are in dashed lines. Cost in dollars are as follows: 100, 120, 150, 160, 170, 170, 200, 210, 220, 250, 270, 300, 310, 330, and 350. 100 and 120 are struck through.]\n\nFigure \\(\\PageIndex{32}\\): Step 2 Select Edge BD\n\nStep 3: Select the lowest weight edge of the remaining edges, as long as it does not result in a cycle. We select DF with $150 since it does not form a cycle as shown in Figure \\(\\PageIndex{33}\\).\n\n[Figure: A graph represents the airfares between six different cities. The graph has 6 vertices. The vertices are A, B, C, D, E, and F. Edges from A leading to B, C, D, E, and F are labeled 250 dollars, 210 dollars, 300 dollars, 200 dollars, and 100 dollars. Edges from B leading to C, D, E, and F are labeled 220 dollars, 120 dollars, 160 dollars, and 170 dollars. Edges from C to D, E, and F are labeled 310 dollars, 180 dollars, and 330 dollars. Edges from D to E and F 270 dollars and 150 dollars. An edge from E to F is labeled 350 dollars. Edges, A F, B D, and D F are in dashed lines. Cost in dollars are as follows: 100, 120, 150, 160, 170, 170, 200, 210, 220, 250, 270, 300, 310, 330, and 350. 100, 120, and 150 are struck through.]\n\nFigure \\(\\PageIndex{33}\\): Step 3 Select Edge DF\n\nRepeat Step 3: Select the lowest weight edge of the remaining edges, which is BE with $160 and it does not form a cycle as shown in Figure \\(\\PageIndex{34}\\). This gives us four edges so we only need to repeat step 3 once more to get the fifth edge.\n\n[Figure: A graph represents the airfares between six different cities. The graph has 6 vertices. The vertices are A, B, C, D, E, and F. Edges from A leading to B, C, D, E, and F are labeled 250 dollars, 210 dollars, 300 dollars, 200 dollars, and 100 dollars. Edges from B leading to C, D, E, and F are labeled 220 dollars, 120 dollars, 160 dollars, and 170 dollars. Edges from C to D, E, and F are labeled 310 dollars, 180 dollars, and 330 dollars. Edges from D to E and F 270 dollars and 150 dollars. An edge from E to F is labeled 350 dollars. Edges, A F, B D, B E, and D F are in dashed lines. Cost in dollars are as follows: 100, 120, 150, 160, 170, 170, 200, 210, 220, 250, 270, 300, 310, 330, and 350. 100, 120, 150, and 160 are struck through.]\n\nFigure \\(\\PageIndex{34}\\): Repeat Step 3 Select Edge DF\n\nRepeat Step 3: The lowest weight of the remaining edges is $170. Both BF and CE have a weight of $170, but BF would create cycle (b, d, f) and there cannot be a cycle in a spanning tree as shown in Figure \\(\\PageIndex{35}\\).\n\n[Figure: A graph represents the airfares between six different cities. The graph has 6 vertices. The vertices are A, B, C, D, E, and F. Edges from A leading to B, C, D, E, and F are labeled 250 dollars, 210 dollars, 300 dollars, 200 dollars, and 100 dollars. Edges from B leading to C, D, E, and F are labeled 220 dollars, 120 dollars, 160 dollars, and 170 dollars. Edges from C to D, E, and F are labeled 310 dollars, 180 dollars, and 330 dollars. Edges from D to E and F 270 dollars and 150 dollars. An edge from E to F is labeled 350 dollars. Edges, A F, B D, B E, and DF are in dashed lines. Edge, B F is in red. Cost in dollars are as follows: 100, 120, 150, 160, 170, 170, 200, 210, 220, 250, 270, 300, 310, 330, and 350. 100, 120, 150, and 160 are struck through. 170 is crossed out.]\n\nFigure \\(\\PageIndex{35}\\): Repeat Step 3 Do Not Select Edge BF\n\nSo, we will select CE, which will complete the spanning tree as shown in Figure \\(\\PageIndex{36}\\).\n\n[Figure: A graph represents the airfares between six different cities. The graph has 6 vertices. The vertices are A, B, C, D, E, and F. Edges from A leading to B, C, D, E, and F are labeled 250 dollars, 210 dollars, 300 dollars, 200 dollars, and 100 dollars. Edges from B leading to C, D, E, and F are labeled 220 dollars, 120 dollars, 160 dollars, and 170 dollars. Edges from C to D, E, and F are labeled 310 dollars, 180 dollars, and 330 dollars. Edges from D to E and F 270 dollars and 150 dollars. An edge from E to F is labeled 350 dollars. Edges, A F, B D, B E, C E, and D F are in dashed lines. Cost in dollars are as follows: 100, 120, 150, 160, 170, 170, 200, 210, 220, 250, 270, 300, 310, 330, and 350. 100, 120, 150, 160, and 170 are struck through. 170 is crossed out.]\n\nFigure \\(\\PageIndex{36}\\): Repeat Step 3 Select Edge CE\n\nThe minimum spanning tree is shown in Figure \\(\\PageIndex{37}\\). This is the configuration of the network of least cost. The spanning tree has a total weight of \\($100+$120+$150+$160+$170=$700\\), which is the total cost of this network configuration.\n\n[Figure: A graph has six vertices labeled A to F. The edges are as follows. A F, curved edge, 100 dollars. B E, 160 dollars. B D, 120 dollars. C E, 170 dollars. D F, 150 dollars.]\n\nFigure \\(\\PageIndex{37}\\): Final Minimum Spanning Tree"
+      ],
+      "hasFigure": true,
+      "status": "draft",
+      "answerVerified": false,
+      "translationStatus": "pending",
+      "mappingStatus": "pending"
+    },
+    {
+      "ordinal": 23,
+      "sourceNumber": "1",
+      "sourceAnchor": "",
+      "kind": "exercise-candidate",
+      "context": "Check Your Understanding\n\nWhich of the following statements are true and which are false",
+      "original": "1. The number of cycles in a spanning tree is one less than the number of vertices.",
+      "prompt": "1. The number of cycles in a spanning tree is one less than the number of vertices.",
+      "sourceAnswers": [],
+      "hasFigure": false,
+      "status": "draft",
+      "answerVerified": false,
+      "translationStatus": "pending",
+      "mappingStatus": "pending"
+    },
+    {
+      "ordinal": 24,
+      "sourceNumber": "2",
+      "sourceAnchor": "",
+      "kind": "exercise-candidate",
+      "context": "Check Your Understanding\n\nWhich of the following statements are true and which are false",
+      "original": "2. A spanning tree contains no triangles.",
+      "prompt": "2. A spanning tree contains no triangles.",
+      "sourceAnswers": [],
+      "hasFigure": false,
+      "status": "draft",
+      "answerVerified": false,
+      "translationStatus": "pending",
+      "mappingStatus": "pending"
+    },
+    {
+      "ordinal": 25,
+      "sourceNumber": "3",
+      "sourceAnchor": "",
+      "kind": "exercise-candidate",
+      "context": "Check Your Understanding\n\nWhich of the following statements are true and which are false",
+      "original": "3. A spanning tree includes every vertex of the original graph.There is a unique path between each pair of vertices in a spanning tree.A spanning tree must be connected.Kruskal’s algorithm is a method for finding all the different spanning trees in a given graph.",
+      "prompt": "3. A spanning tree includes every vertex of the original graph.There is a unique path between each pair of vertices in a spanning tree.A spanning tree must be connected.Kruskal’s algorithm is a method for finding all the different spanning trees in a given graph.",
+      "sourceAnswers": [],
+      "hasFigure": false,
+      "status": "draft",
+      "answerVerified": false,
+      "translationStatus": "pending",
+      "mappingStatus": "pending"
+    },
+    {
+      "ordinal": 26,
+      "sourceNumber": "4",
+      "sourceAnchor": "",
+      "kind": "exercise-candidate",
+      "context": "Check Your Understanding\n\nWhich of the following statements are true and which are false",
+      "original": "4. Only graphs that are trees have spanning trees.A minimum spanning tree of a given graph can be found using Kruskal’s algorithm.",
+      "prompt": "4. Only graphs that are trees have spanning trees.A minimum spanning tree of a given graph can be found using Kruskal’s algorithm.",
+      "sourceAnswers": [],
+      "hasFigure": false,
+      "status": "draft",
+      "answerVerified": false,
+      "translationStatus": "pending",
+      "mappingStatus": "pending"
+    },
+    {
+      "ordinal": 27,
+      "sourceNumber": "5",
+      "sourceAnchor": "",
+      "kind": "exercise-candidate",
+      "context": "Check Your Understanding\n\nWhich of the following statements are true and which are false",
+      "original": "5. A minimum spanning tree of a given graph is the subgraph, which is a tree, includes every vertex of the original graph, and which has the least weight of all spanning trees.",
+      "prompt": "5. A minimum spanning tree of a given graph is the subgraph, which is a tree, includes every vertex of the original graph, and which has the least weight of all spanning trees.",
+      "sourceAnswers": [],
+      "hasFigure": false,
+      "status": "draft",
+      "answerVerified": false,
+      "translationStatus": "pending",
+      "mappingStatus": "pending"
+    },
+    {
+      "ordinal": 28,
+      "sourceNumber": "6",
+      "sourceAnchor": "",
+      "kind": "exercise-candidate",
+      "context": "Check Your Understanding\n\nWhich of the following statements are true and which are false",
+      "original": "6. If a graph contains any cut edges, they must be included in any spanning tree.",
+      "prompt": "6. If a graph contains any cut edges, they must be included in any spanning tree.",
+      "sourceAnswers": [],
+      "hasFigure": false,
+      "status": "draft",
+      "answerVerified": false,
+      "translationStatus": "pending",
+      "mappingStatus": "pending"
+    }
+  ],
+  "license": "CC BY 4.0",
+  "licenseEvidence": "This page titled 12.10: Trees was last modified on Thu, 02 Jan 2025 11:07:44 GMT and is shared under a CC BY  4.0  license and was authored, remixed, and/or curated by OpenStax via source content that was edited to the style and standards of the LibreTexts platform.",
+  "url": "https://math.libretexts.org/Bookshelves/Applied_Mathematics/Contemporary_Mathematics_(OpenStax)/12:_Graph_Theory/12.10:_Trees",
+  "sha256": "d41eaa96eb46d95b101f5059a8fb21caffda09bfffcff9e06a93d12c3e2b091b",
+  "checkedAt": "2026-10-07",
+  "id": "fd889415e42e4d517869",
+  "bookId": "contemporary",
+  "licenseInherited": false,
+  "licenseSource": "https://math.libretexts.org/Bookshelves/Applied_Mathematics/Contemporary_Mathematics_(OpenStax)/12:_Graph_Theory/12.10:_Trees",
+  "licenseUrl": "https://creativecommons.org/licenses/by/4.0/",
+  "authors": "OpenStax / Donna Kirk et al.",
+  "book": "Contemporary Mathematics",
+  "reviewStatus": "unreviewed",
+  "sourceLanguage": "en",
+  "translationStatus": "pending"
+}

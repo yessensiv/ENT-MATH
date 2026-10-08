@@ -1,0 +1,620 @@
+{
+  "title": "3.1:  Prime and Composite Numbers",
+  "originalText": "Learning Objectives\n\nAfter completing this section, you should be able to:\n\nApply divisibility rules.\n\nDefine and identify numbers that are prime or composite.\n\nFind the prime factorization of composite numbers.\n\nFind the greatest common divisor.\n\nUse the greatest common divisor to solve application problems.\n\nFind the least common multiple.\n\nUse the least common multiple to solve application problems.\n\nEncryption, which is needed for the secure exchange of information (i.e., online banking or shopping) is based on prime numbers. Encryption uses a composite number that is the product of two very large prime numbers. To break the encryption, the two primes that were used to form the composite number need to be determined. If the two prime numbers used are sufficiently large, even the fastest computer cannot determine those two prime numbers in a reasonable amount of time. It would take a computer 300 trillion years to crack the current encryption standard.\n\n[Figure: A laptop screen shows a lock symbol.]\n\nFigure \\(\\PageIndex{1}\\): Computers are protected using encryption based on prime numbers. (credit: “Data Security” by Blogtrepreneur/Flickr, CC BY 2.0)\n\nApplying Divisibility Rules\n\nBefore we begin our investigation of divisibility, we need to know some facts about important sets of numbers:\n\nThe counting numbers are referred to as the natural numbers. This set of numbers, \\(\\{1,2,3,4, \\ldots\\}\\), is denoted with the symbol \\(\\mathbb{N}\\).\n\nAnother important set of numbers is the integers. The integers are the natural numbers, along with 0 , and the negatives of the natural numbers. This set is often written as \\(\\{\\ldots,-3,-2,-1,0,1,2,3, \\ldots\\}\\). We denote the integers with the symbol \\(\\mathbb{Z}\\).\n\nNotice that \\(\\mathbb{N}\\) is a proper subset of \\(\\mathbb{Z}\\), or, \\(\\mathbb{N} \\subset \\mathbb{Z}\\). All the ideas of this section apply to the natural numbers, while only some apply to all the integers.\n\nDivisibility is when the integer \\(n\\) is divisible by \\(m\\), if \\(n\\) can be written as \\(m\\) times another integer. Equivalently, there is no remainder when \\(n\\) is divided by \\(m\\). There are many occasions when separating items into equal groups comes into play to ensure an equal distribution of whole items. For example, Francis, a preschool art teacher, has 15 students in one class. Francis has 225 sheets of construction paper and wants to provide each student with an equal number of pieces. To know if he will use all the construction paper, Francis is really asking if 225 can be evenly divided into 15 groups.\n\nExample \\(\\PageIndex{1}\\): Determining if a Number Divides Another Number\n\nDetermine if 36 is divisible by 4.\n\nAnswer\n\nWe could divide 36 by 4 and see if there is a remainder, or we could see if we can write 36 as 4 times another integer. If we divide 36 by 4, we see \\(36÷4=9\\) with no remainder. We see that 36 is divisible by 4. We can write 36 as 4 times another integer, \\(36=4×9\\). By the definition of divisibility, 36 is divisible by 4.\n\nYour Turn \\(\\PageIndex{1}\\)\n\nDetermine if 54 is divisible by 9.\n\nYou can quickly check if a number is divisible by 2, 3, 4, 5, 6, 9, 10, and 12. Each has an easy-to-identify feature, or rule, that indicates the divisibility by those numbers, as shown in the following table.\n\n            Divisor\t\n            Rule\t\n\n            2\t\n            Last digit is even\t\n\n            3\t\n            Add the digits of the number together. If that sum is divisible by 3, then so is the original number\t\n\n            4\t\n            Look at only the last two digits. If this number is divisible by 4, so is the original number\t\n\n            5\t\n            Look at only the last digit. If it is a 5 or a 0, then the original number is divisible by 5\t\n\n            6\t\n            If the number passes the rule for divisibility by 2 and for 3, then the number is divisible by 6\t\n\n            9\t\n            Add the digits of the number together. If that number is divisible by 9, then so is the original number\t\n\n            10\t\n            Look at only the last digit. If it is a 0, then the original number is divisible by 10\t\n\n            12\t\n            If the number passes the rule for 3 and 4, the number is divisible by 12\t\n\nExample \\(\\PageIndex{2}\\): Using Divisibility Rules\n\nUsing divisibility rules, determine if 245 is divisible by 5.\n\nAnswer\n\nSince the last digit is a 5, the number 245 is divisible by 5 because the rule states if the last digit of the number is a 5 or a 0, then the original number is divisible by 5.\n\nYour Turn \\(\\PageIndex{12}\\)\n\n1. Using divisibility rules, determine if 45,730 is divisible by 5.\n\nExample \\(\\PageIndex{3}\\): Using Divisibility Rules\n\nUsing divisibility rules, determine if 25,983 is divisible by 9.\n\nAnswer\n\nThe divisibility rule for 9 is when the digits of the number are added, the sum is divisible by 9. So, we calculate the sum of the digits.\n\n\\(2+5+9+8+3=27\\). Since 27 is divisible by 9, so is the original number 25,983.\n\nYour Turn \\(\\PageIndex{3}\\)\n\nUsing divisibility rules, determine if 342,887 is divisible by 9.\n\nExample \\(\\PageIndex{4}\\): Using Divisibility Rules\n\nCan 298 coins be stacked into 6 stacks with an equal number of coins in each stack?\n\nAnswer\n\nIn order for the coins to be in equal-sized stacks, 298 would need to be divisible by 6. The divisibility rule for 6 is that the number passes the divisibility rules for both 2 and 3. Since the last digit is even, 298 is divisible by 2. To determine if 298 is divisible by 3, we first add the digits of the number: \\(2+9+8=19\\). Since 19 is not divisible by 3, neither is 298. Because 298 is not divisible by 3, it is also not divisible by 6, which means they cannot be put into 6 equal stacks of coins.\n\nYour Turn \\(\\PageIndex{4}\\)\n\n1.Can 43,568 pieces of mail be separated into 6 bins with the same number of pieces of mail per bin?\n\nExample \\(\\PageIndex{5}\\): Using Divisibility Rules\n\nUsing divisibility rules, determine if 4,259 is divisible by 10.\n\nAnswer\n\nThe divisibility rule for 10 is that the last digit of the number is 0. Since the last digit of 4,259 is not 0, then 4,259 is not divisible by 10.\n\nYour Turn \\(\\PageIndex{5}\\)\n\nUsing divisibility rules, determine if 87,762 is divisible by 10.\n\nExample \\(\\PageIndex{6}\\): Using Divisibility Rules\n\nUsing divisibility rules, determine if 936,276 is divisible by 4.\n\nAnswer\n\nThe divisibility rule for 4 is to check the last two digits of the number. If the number formed by the last two digits of the original number is divisible by 4, then so is the original number. The last two digits make the number 76 and 76 is divisible by 4, since \\(76=4×19\\). Since 76 is divisible by 4, so is 936,276.\n\nYour Turn \\(\\PageIndex{6}\\)\n\nUsing divisibility rules, determine if 43,568 is divisible by 4.\n\nVideo\n\nDivisibility Rules\n\nPrime and Composite Numbers\n\nSometimes, a natural number has only two unique divisors, 1 and itself. For instance, 7 and 19 are prime. In other words, there is no way to divide a prime number into groups with an equal number of things, unless there is only one group, or those groups have one item per group. Other natural numbers have more than two unique divisors, such as 4, or 26. These numbers are called composite. The number 1 is special; it is neither prime nor composite.\n\nTo determine if a number is prime or composite, you have to determine if the number has any divisors other than 1 and itself. The divisibility rules are useful here, and can quickly show you if a number has a divisor on that list.\n\nHowever, if none of those divide the number, you still have to check all other possible prime divisors. What are the prime numbers that are possibly divisors of the number you are checking? You need only check the prime numbers up to the square root of the number in question. For instance, if you want to know if 2,117 is prime, you need to determine if any primes up to the square root of 2,117 (which is 46.0 when rounded to one decimal place) divide 2,117. If any of those primes are divisors of the number in question, then the number is composite. If none of those primes work, then the number is itself prime.\n\nWe can check divisibility with whatever tool we wish. Divisibility rules are quick for some prime divisors (2 and 5 come to mind) but aren't quick for other values (like 11). In place of divisibility rules, we could just use a calculator. If the prime number divides the number evenly (that is, there is no decimal or fractional part), then the number is divisible by that prime. Table 3.1 is a quick list of the prime numbers up to 50. There are 15 prime numbers less than 50.\n\n            2\t\n            3\t\n            5\t\n            7\t\n            11\t\n\n            13\t\n            17\t\n            19\t\n            23\t\n            29\t\n\n            31\t\n            37\t\n            41\t\n            43\t\n            47\t\n\n    Table 3.1 Prime Numbers Less than 50\n\nExample \\(\\PageIndex{7}\\): Determining If a Number Is Prime or Composite\n\nDetermine if 2,117 is prime or composite.\n\nAnswer\n\nThe square root of 2,117 is 46.0 (rounded to one decimal place). So, we need to check if 2,117 is divisible by any prime up to 46.\n\nStep 1: First we’ll use the rules of divisibility we learned earlier:\n\nWe can tell 2,117 is not divisible by 2, as the last digit isn't even.\n\n2,117 is not divisible by 5 (the last digit isn't 0 or 5).\n\nAdd the digits of 2,117 to get 11, which is not divisible by 3. So, 2,117 is also not divisible by 3.\n\nStep 2: Now we repeat the process for all the primes up to 46.\n\nUsing a calculator, we find that 2,117 divided by the prime numbers 7, 11, 13, 17, 19, and 23 results in a remainder, a decimal part. So, we know that 2,117 is not divisible by these prime numbers. (You should check these results yourself.)\n\nMoving on, we check the next prime: 29. Using the calculator to divide 2,117 by 29 results in 73. Since there is no decimal part, 2,117 is divisible by 29.\n\nThis means that 2,117 is not a prime number, but rather, a composite number. Writing 2,117 as the product of 29 and another natural number, \\(2,117=29×73\\).\n\nYour Turn \\(\\PageIndex{7}\\)\n\nDetermine if 1,429 is prime or composite.\n\nExample \\(\\PageIndex{8}\\): Determining if a Number Is Prime or Composite\n\nDetermine if 423 is prime or composite.\n\nAnswer\n\nThe square root of 423 is 20.57 (rounded to two decimal places). So, we need to check if 423 is divisible by any prime up to 20.\n\nStep 1: Check 2. We can tell 423 is not divisible by 2, as the last digit isn't even.\n\nStep 2: Check 5. It is not divisible by 5 (the last digit isn't 0 or 5).\n\nStep 3: Check 3. To check if 423 is divisible by 3, we use the divisibility rule for 3. When we take the sum of the digits of 423, the result is 9. Since 9 is divisible by 3, so is 423.\n\nSince 423 is divisible by 3, then 423 is a composite number. Writing 423 as the product of 3 and another natural number, \\(423=3×141\\).\n\nYour Turn \\(\\PageIndex{8}\\)\n\nDetermine if 859 is prime or composite.\n\nExample \\(\\PageIndex{9}\\): Determining if a Number Is Prime or Composite\n\nDetermine if 1,034 is prime or composite\n\nAnswer\n\nA quick inspection of 1,034 shows it is divisible by 2 since the last digit is even, and so 1,034 is a composite number.\n\nYour Turn \\(\\PageIndex{9}\\)\n\nDetermine if 5,067,322 is prime or composite.\n\nExample \\(\\PageIndex{10}\\): Determining if a Number Is Prime or Composite\n\nDetermine if 2,917 is prime or composite.\n\nAnswer\n\nThe square root of 2,917 is 50.01 (rounded to two decimal places). So, we need to check if 2,917 is divisible by any prime up to 50.\n\nStep 1: Check 2. We can tell 2,917 is not divisible by 2, as the last digit isn't even.\n\nStep 2: Check 5. It is it divisible by 5 (the last digit isn't 0 or 5).\n\nStep 3: Check 3. Using the divisibility rule for 3, we take the sum of the digits of 2,917, which is 19. Since 19 is not divisible by 3, neither is 2,917.\n\nStep 4: Check the rest of the primes up to 50 using a calculator. When 2,917 is divided by every prime number up to 50, the result has a decimal part.\n\nSince no prime up to 50 divides 2,917, it is a prime number.\n\nYour Turn \\(\\PageIndex{10}\\)\n\nDetermine if 1,477 is prime.\n\nWho Knew?: ILLEGAL PRIMES\n\nLarge primes are a hot commodity. Using two very large primes (some have more than 22 million digits!) is necessary for secure encryption. Anyone who has a new prime that is large enough can use that prime to create a new encryption. Of course, whoever discovers a large prime could sell it to a security company. These primes are so useful for encryption, it is necessary to protect that intellectual property. In fact, at least one prime number was declared illegal.\n\nVideo\n\nIllegal Prime Number\n\nPeople in Mathematics: Sophie Germain\n\n[Figure: A portrait of Sophie Germain.]\n\nFigure \\(\\PageIndex{2}\\): Sophie Germain (credit: “Sophie Germain at 14 years,” Illustration from histoire du socialisme, approx. 1880, Wikimedia Commons, public domain)\n\nBorn into a wealthy French family in 1776, Sophie Germain discovered and fell in love with mathematics by browsing her father’s books. Clandestine study, hard and tenacious work, and a mathematical mindset did not lead to college, however, as she was not allowed to attend. She did manage, through friends, to obtain problem sets and submit brilliant solutions under the name Monsieur LaBlanc. One of her great interests was number theory, which is the study of properties of integers. One of her theorems, titled “Sophie Germain’s Theorem,” partially solved one of the great mathematical mysteries, Fermat’s Last Theorem. From this she discovered what are now known as Sophie Germain Primes. A Sophie Germain Prime is a prime number that can be written in the form \\(2p+\\)1, where \\(p\\) is a prime number. For instance, 23 is prime: \\(2(23)+1=47\\), which is prime, so 47 is a Sophie Germain Prime. It should be noted that \\(2p+\\)1, where \\(p\\) is a prime number, may or may not be prime (check for \\(p=7\\)!).\n\nFinding the Prime Factorization of Composite Numbers\n\nBefore we can start with prime factorization, let’s remind ourselves what it means to factor a number. We factor a number by identifying two (or more) numbers that, when multiplied, result in the original number. For instance, 3 and 24, when multiplied, give 72. So, 72 can be factored into \\(3×24\\). Notice that we could have factored the 72 differently, say as \\(72=6×12\\), or \\(72=2×36\\), or even as \\(72=3×4×6\\).\n\nFinding the prime factorization of a composite number means writing the number as the product of all of its prime factors. For example, \\(80=2×2×2×2×5\\). Notice that all the numbers being multiplied on the right-hand side are prime numbers. Sometimes prime numbers repeat themselves in the factorization. When prime factors do repeat, we may write the prime factorization using exponents, as in \\(80={2}^{4}×5\\). In that equation, the 2 is raised to the 4th power. The 4 is the exponent, and the 2 is the base. More generally, in the exponent notation \\(\\)ab, the number represented by \\(a\\) is the base, and the number represented by \\(b\\) is the exponent.\n\nOne has to wonder if finding the prime factorization could result in different factorizations. The Fundamental Theorem of Arithmetic tells us that there is only one prime factorization for a given natural number.\n\nFundamental Theorem of Arithmetic\n\nEvery natural number, other than 1, can be expressed in exactly one way, apart from the arrangement, as a product of primes.\n\nThe process of finding the prime factorization of a number is iterative, which means we do a step, then repeat it until we cannot do the step any longer. The step we use is to identify one prime factor of the number, then write the number as the prime factor times another factor. We repeat this step on the other, newly found, factor. This step is repeated until no more primes can be factored from the remaining factor. This is easier to see and explain with an example.\n\nExample \\(\\PageIndex{11}\\): Finding the Prime Factorization\n\nFind the prime factorization of 140.\n\nAnswer\n\nStep 1: Identify a prime number that divides 140. Since 140 is even (the last digit is even), 2 divides 140. We then factor the 2 out of the 140, giving us \\(140=2×70\\).\n\nStep 2: With the other factor, 70, find a prime factor of 70. Since 70 is also even, 2 divides 70. We factor the 2 out of the 70 and the factorization is now \\(140=2×2×35={2}^{2}×35\\).\n\nNotice that we expressed the two factors of 2 as \\({2}^{2}\\).\n\nStep 3: Look to the remaining factor, 35. The last digit of 35 is 5, so 5 is a factor of 35. We factor the 5 out of the 35. The factorization is now \\(140={2}^{2}×5×7\\).\n\nStep 4: Look to the remaining factor, 7. Since 7 is prime, the process is complete.\n\nThe prime factorization of 140 is \\({2}^{2}×5×7\\).\n\nYour Turn \\(\\PageIndex{11}\\)\n\nFind the prime factorization of 90.\n\nFactor Trees\n\nA useful tool for helping with prime factorization is a factor tree. To create a factor tree for the natural number \\(n\\) (where \\(n\\) is not 1), perform the following steps:\n\nStep 1: If \\(n\\) is prime, you're done. If \\(n\\) is composite, continue to the next step.\n\nStep 2: Identify two divisors of \\(n\\), call them \\(a\\) and \\(b\\).\n\nStep 3: Write the number \\(n\\) down, and draw two branches extending down (or to the right) of the number \\(n\\).\n\nStep 4: Label the end of one branch \\(\\)aFigure 3.4.\n\n[Figure: A tree diagram shows two branches extending down from a node labeled 66 to 2 and 33.]\n\nFigure \\(\\PageIndex{3}\\)\n\nStep 5: If \\(a\\) and \\(b\\) are prime, the tree is complete. When a number at this step is a prime number, we refer to it as a leaf of the tree diagram.\n\nStep 6: If either \\(a\\) or \\(b\\) are composite, repeat Steps 2 through 4 for \\(a\\) and \\(b\\).\n\nStep 7: The process stops when the leaves are all prime.\n\nStep 8: The prime factorization is then the product of all the leaves.\n\nThis is best seen in an example.\n\nExample \\(\\PageIndex{12}\\): Finding the Prime Factorization\n\nFind the prime factorization of 66.\n\nAnswer\n\nSince 66 is even, 2 is a factor.\n\nStep 1: Factor out the 2. The factorization is \\(66=\\)2×33Figure 3.5.\n\n[Figure: A tree diagram shows two branches extending down from a node labeled 66 to 2 and 33. Two other branches are extending down from 33 to 3 and 11.]\n\nFigure \\(\\PageIndex{4}\\)\n\nSince 2 is a factor, that branch is done, and 2 is a leaf.\n\nStep 2: The 33, though, is divisible by 3, and is the product of 3 and 11. We attach that to the factor tree (Figure 3.6).\n\n[Figure: A tree diagram shows two branches extending down from a node labeled 135 to 3 and 45.]\n\nFigure \\(\\PageIndex{5}\\)\n\nSince the 2, 3 and 11 are all prime, the factor tree is done.\n\nThe prime factorization of 66 is the product of the leaves, so \\(66=2×3×11\\). The factorization is complete.\n\nYour Turn \\(\\PageIndex{12}\\)\n\nFind the prime factorization of 85.\n\nVideo\n\nUsing a Factor Tree to Find the Prime Factorization\n\nExample \\(\\PageIndex{13}\\): Finding the Prime Factorization\n\nFind the prime factorization of 135.\n\nAnswer\n\nThe number 135 is divisible by 3, and so 3 is a factor of 135.\n\nStep 1: Factor out the 3. The factorization is \\(135=\\)3×45Figure \\(\\PageIndex{6}\\)),\n\n[Figure: A tree diagram shows two branches extending down from a node labeled 135 to 3 and 45.]\n\nFigure \\(\\PageIndex{6}\\)\n\n45 is also divisible by 3.\n\nStep 2: Factor out a 3 from 45. The other factor is 15. The factor tree is shown in Figure \\(\\PageIndex{7}\\).\n\n[Figure: A tree diagram shows two branches extending down from a node labeled 135 to 3 and 45. Two other branches are extending down from 45 to 3 and 15.]\n\nFigure \\(\\PageIndex{7}\\\n\n15 is also divisible by 3.\n\nStep 3: The factors of 15 are 3 and 5. The factor tree is shown in Figure \\(\\PageIndex{8}\\).\n\n[Figure: A tree diagram shows two branches extending down from a node labeled 135 to 3 and 45. Two other branches are extending down from 45 to 3 and 15. Two other branches are extending down from 15 to 3 and 5.]\n\nFigure \\(\\PageIndex{8}\\)\n\nAll the leaves are prime, so the process is complete. The prime factorization of 135 is \\({3}^{3}×5\\).\n\nYour Turn \\(\\PageIndex{13}\\)\n\nFind the prime factorization of 280.\n\nExample \\(\\PageIndex{14}\\): Identifying Prime Factors\n\nHow many different prime factors does 10,241 have?\n\nAnswer\n\nTo know how many different prime factors 10,241 has, we need the prime factorization of 10,241.\n\nStep 1: Use divisibility rules, to see that the number 10,241 is not divisible by 2 or by 3 (the sum of the digits is 8), or by 5. However, it is divisible by 7.\n\nStep 2: After factoring the 7, the factorization is \\(10,241=7×1463\\); 1,463 is also divisible by 7.\n\nStep 3: After factoring the 7, the factorization is \\(10,241=7×7×209={7}^{2}×209\\). The number 209 is not divisible by 7.\n\nStep 4: Check the next prime number: 11; 11 does divide 1,463.\n\nStep 5: After factoring the 11, the factorization is \\(10,241={7}^{2}×11×19\\).\n\nSince 19 is prime, the prime factorization of 10,241 is complete. We see that 10,241 has three different prime factors: 7, 11, and 19.\n\nYour Turn \\(\\PageIndex{14}\\)\n\nFind the number of different prime factors of 180.\n\nVideo\n\nFinding the Prime Factorization of 168\n\nTech Check: Using Wolfram Alpha to Find Prime Factorizations\n\nThe Wolfram Alpha website is a powerful resource available for free to use. It is designed using AI so that it understands natural language requests. For instance, typing the question “What is the prime factorization of 543,390?” gets a rather quick answer of \\(2×3×5×59×307\\). So, if you want to find the prime factorization of a number, you can simply ask Wolfram Alpha to find the prime factorization of the number.\n\nFinding the Greatest Common Divisor\n\nTwo numbers often have more than one divisor in common (all pairs of natural numbers have the common divisor 1). When listing the common divisors, it’s often the case that the largest is of interest. This divisor is called the greatest common divisor and is denoted GCD. It is also sometimes referred to as the greatest common factor (GCF).\n\nFor instance, 6 is the greatest common divisor of 12 and 18. We can see this by listing all the divisors of each number and, by inspection, select the largest value that shows up in each list.\n\n            The divisors of 12\t\n            1, 2, 3, 4, 6, 12\t\n\n            The divisors of 18\t\n            1, 2, 3, 6, 9\t\n\nIt is easy to see that 6 is the largest value that appears in both lists.\n\nExample \\(\\PageIndex{15}\\): Finding the Greatest Common Divisor Using Lists\n\nFind the greatest common divisor of 1,400 and 250 by listing all divisors of each number.\n\nAnswer\n\nWe create a list of all the divisors of 1,400 and of 250, and choose the largest one.\n\nThe divisors of 1,400 are\n\n1, 2, 4, 5, 7, 8, 10, 14, 20, 25, 28, 35, 40, 50, 56, 70, 100, 140, 175, 200, 280, 350, 700, 1,400.\n\nThe divisors of 250 are\n\n1, 2, 5, 10, 25, 50, 125, 250.\n\nThe largest value that appears on both lists is 50, so the greatest common divisor of 1,400 and 250 is 50.\n\nYour Turn \\(\\PageIndex{15}\\)\n\nFind the greatest common divisor of 270 and 99 by listing all divisors of each number.\n\nListing all the divisors of the numbers in the set will always work, but for some relatively small numbers, the set of all divisors can become pretty big, and finding them all can be a chore. Another approach to finding the greatest common divisor is to use the prime factorization of the numbers. To do so, use the following steps:\n\nStep 1: Find the prime factorization of the numbers.\n\nStep 2: Identify the prime factors that appear in every number’s prime factorization. These are called the common prime factors.\n\nStep 3: Identify the smallest exponent of each prime factor identified in Step 2 in the prime factorizations.\n\nStep 4: Multiply the prime factors identified in Step 2 raised to the powers identified in Step 3. The result is the greatest common divisor.\n\nExample \\(\\PageIndex{16}\\): Finding the Greatest Common Divisor Using Prime Factorization\n\nFind the greatest common divisor of 1,400 and 250 by using their prime factorizations.\n\nAnswer\n\nStep 1: Find the prime factorizations of the numbers.\n\nThe prime factorization of 1,400 is \\({2}^{3}×{5}^{2}×7\\).\n\nThe prime factorization of 250 is \\(250=2×{5}^{3}\\).\n\nStep 2: Identify the prime factors that appear in every number’s prime factorization.\n\nThe common prime factors are 2 and 5.\n\nStep 3: Identify the smallest exponent of each prime identified in Step 2 in the prime factorizations.\n\nThe exponent of common prime factor 2 in the prime factorization of 1,400 is 3, and in the prime factorization of 250 is 1. The smallest of those exponents is 1.\n\nThe exponent of the common prime factor 5 in the prime factorization of 1,400 is 2 and is in the prime factorization of 250 is 3. The smallest of these exponents is 2.\n\nStep 4: Multiply the prime factors identified in Step 2 raised to the powers identified in Step 3.\n\nThis gives \\({2}^{1}×{5}^{2}=50\\). The greatest common divisor of 1,400 and 250 is \\(2×{5}^{2}=50\\).\n\nNotice that the answer matches the one we found in Example 3.15.\n\nYour Turn \\(\\PageIndex{16}\\)\n\nUsing prime factorization, determine the greatest common divisor of 36 and 128.\n\nExample \\(\\PageIndex{17}\\): Finding the Greatest Common Divisor Using Prime Factorization\n\nFind the greatest common divisor of 600 and 784 by using their prime factorizations.\n\nAnswer\n\nStep 1: Find the prime factorizations of the numbers.\n\nThe prime factorization of 600 is \\({2}^{3}×3×{5}^{2}\\).\n\nThe prime factorization of 784 is \\({2}^{4}×{7}^{2}\\).\n\nStep 2: Identify the prime factors that appear in every number’s prime factorization.\n\nThere is only one common prime factor, 2.\n\nStep 3: Identify the smallest exponent of each prime from identified in Step 2 in the prime factorizations.\n\nThe exponent of 2 in the prime factorization of 600 is 3. The exponent of 2 in the prime factorization of 784 is 4. So, the smallest exponent of 2 is 3.\n\nStep 4: Multiply the prime factors identified in Step 2 raised to the powers identified in Step 3.\n\nThis gives \\({2}^{3}=8\\). The greatest common divisor of 600 and 784 is 8.\n\nYour Turn \\(\\PageIndex{17}\\)\n\nUsing prime factorization, determine the greatest common divisor of 120 and 200.\n\nPeople in Mathematics: Srinivasa Ramanujan\n\n[Figure: A photo of Srinivasa Ramanujan.]\n\nFigure \\(\\PageIndex{9}\\): Srinivasa Ramanujan (credit: Srinivasa Ramanujan, photo by Konrad Jacobs/Oberwolfach Photo Collection/public domain)\n\nRamanujan was born in southern India in 1887, during British rule. He was a self-taught mathematician, who, while in high school, began working through a two-volume text of mathematical theorems and results. His work included examination of the distribution of primes. He eventually came to the attention of British mathematician, G.H. Hardy. During one visit, Hardy mentioned to Ramanujan that his taxicab number was 1,729, remarking that 1,729 appeared to be a rather dull number. To which Ramanujan responded, “It is a very interesting number; it is the smallest number expressible as the sum of two cubes in two different ways.”\n\nTech Check: Using Desmos to Find the GCD\n\nTo find the GCD of a set of numbers in Desmos, type gcd(first_number,second_number…) and Desmos will display the GCD of the numbers, as the numbers are typed!\n\nVideo\n\nUsing Desmos to Find the GCD\n\nApplications of the Greatest Common Divisor\n\nThe greatest common divisor has uses that are related to other mathematics (reducing fractions) but also in everyday applications. We’ll look at two such applications, which have very similar underlying structures. In each case, something must divide the groups or measurements equally.\n\nExample \\(\\PageIndex{18}\\): Calculating Floor Tile Size\n\nSuppose you have a rectangular room that is 570 cm wide and 450 cm long. You wish to cover the floor of the room with square tiles. What’s the largest size square tile that can be used to cover this floor?\n\nAnswer\n\nUsing squares means that the length and width of the tiles are equal. To ensure we are using full tiles, the side length of the square tiles must divide the length of the room and the width of the room. Since we want the largest square tiles, we need the GCD of the width and length of the room or the GCD of 570 and 450.\n\nStep 1: Find the prime factorizations of the numbers.\n\nThe prime factorization of 570 is \\(2×3×5×19\\).\n\nThe prime factorization of 450 is \\(2×{3}^{2}×{5}^{2}\\).\n\nStep 2: Identify the prime factors that appear in every number’s prime factorization.\n\nThe common prime factors are 2, 3, and 5.\n\nStep 3: Identify the smallest exponent of each prime identified in Step 2 in the prime factorizations.\n\nThe exponents of 2 in the prime factorizations of 570 and 450 are 1 and 1. So the smallest exponent for 2 is 1.\n\nThe exponents of 3 in the prime factorizations of 570 and 450 are 1 and 2, so the smallest exponent for 3 is 1.\n\nThe exponents of 5 in the prime factorizations of 570 and 450 are 1 and 2, so the smallest exponent for 5 is 1.\n\nStep 4: Multiply the prime factors identified in Step 2 raised to the powers identified in Step 3.\n\nThis gives \\({2}^{1}×{3}^{1}×{5}^{1}=30\\). The GCD of 450 and 570 is 30, so the largest size square tile that can be used to cover the floor is 30 cm by 30 cm.\n\nYour Turn \\(\\PageIndex{18}\\)\n\nYou are designing a brick patio made of square bricks 5 cm thick, but you need to determine the width and length of those bricks. The patio will be 400 cm by 540 cm. What are the largest size square bricks that can be used so that you do not need to cut any bricks?\n\nExample \\(\\PageIndex{19}\\): Organizing Books Per Shelf\n\nSuppose you want to organize books onto shelves, and you want the shelves to hold the same number of books. Each shelf will only contain one genre of book. You have 24 sci-fi, 42 fantasy, and 30 horror books. How many books can go on each shelf?\n\nAnswer\n\nSince we want shelves that hold an equal number of books, and a shelf can only hold one genre of book, we need a number that will equally divide 24, 42, and 30. So, we need the GCD of the number of books of each genre or the GCD of 24, 42, and 30.\n\nStep 1: Find the prime factorizations of the numbers.\n\nThe prime factorization of 24 is \\({2}^{3}×3\\).\n\nThe prime factorization of 42 is \\(2×3×7\\).\n\nThe prime factorization of 30 is \\(2×3×5\\).\n\nStep 2: Identify the prime factors that appear in every number’s prime factorization.\n\nThe common prime factors are 2 and 3.\n\nStep 3: Identify the smallest exponent of each prime identified in Step 2 in the prime factorizations.\n\nThe smallest exponent of 2 and 3 in the factorizations is 1.\n\nStep 4: Multiply the prime factors identified in Step 2 raised to the powers identified in Step 3.\n\nThis gives \\({2}^{1}×{3}^{1}=6\\). The GCD of 24, 42, and 30 is 6, so the largest number of books that can go on a shelf is 6.\n\nYour Turn \\(\\PageIndex{19}\\)\n\nThere are three gym classes. The number of students in the classes is 21, 35, and 28. What is the largest team size that can be formed if teams from every class must have the same number of students?\n\nVideo\n\nApplying the GCD\n\nFinding the Least Common Multiple\n\nThe flip side to a divisor of a number is a multiple of a number. For example, 5 is a divisor of 45 and so 45 is a multiple of 5. More generally, if the number \\(a\\) divides the number \\(b\\), then \\(b\\) is a multiple of \\(a\\).\n\nThis drives the idea of the least common multiple of a set of numbers. A common multiple of a set of numbers is a multiple of each of those numbers. For instance, 45 is a common multiple of 9 and 5, because 45 is a multiple of 9 (9 divides 45) and 45 is also a multiple of 5 (5 divides 45). The least common multiple (LCM) of a set of number is the smallest positive common multiple of that set of numbers.\n\nThere are (at least) three ways to find the LCM of a set of numbers, and we will explore two of them. One way is to create a list of multiples of each number in the set, and then identify the smallest multiple that appears in those lists.\n\nExample \\(\\PageIndex{20}\\): Finding the Least Common Multiple Using Lists\n\nFind the LCM of 24 and 90 by listing multiples and choosing the smallest common multiple.\n\nAnswer\n\nCreate a list of the multiples of each number.\n\nStep 1: The first 15 multiples for 24:\n\n24, 48, 72, 96, 120, 144, 168, 192, 216, 240, 264, 288, 312, 336, 360.\n\nStep 2: The first 15 multiples for 90:\n\n90, 180, 270, 360, 450, 540, 630, 720, 810, 900, 990, 1,080, 1,170, 1,260, 1,350.\n\nThere is one multiple common to these lists, which is 360. So, 360 is the LCM of 24 and 90.\n\nYour Turn \\(\\PageIndex{20}\\)\n\nUse lists to find the LCM of 12 and 15.\n\nThe second method we can use is to find the prime factorizations of the number in the set to build the LCM of the numbers based on the prime divisors of the numbers. The LCM can be built from the prime factorization of the numbers in the set in a similar way as when finding the greatest common divisor. Here are the steps for using the prime factorization process for finding the LCM.\n\nStep 1: Find the prime factorization of each number.\n\nStep 2: Identify each prime that is present in any of the prime factorizations.\n\nStep 3: Identify the largest exponent of each prime identified in Step 2 in the prime factorizations.\n\nStep 4:. Multiply the prime factors identified in Step 2 raised to the powers identified in Step 3.\n\nExample \\(\\PageIndex{21}\\): Finding the Least Common Multiple Using Prime Factorization\n\nUse the prime factorizations of 24 and 90 to identify their LCM.\n\nAnswer\n\nStep 1: Find the prime factorization of each number.\n\n\\(24={2}^{3}×3\\)\n\n\\(90=2×{3}^{2}×5\\)\n\nStep 2: Identify each prime that is present in any of the prime factorizations.\n\nThe prime numbers present in the prime factorizations are 2, 3, and 5.\n\nStep 3: Identify the largest exponent of each prime identified in Step 2 in the prime factorizations.\n\n                Prime\t\n                2\t\n                3\t\n                5\t\n\n                Largest exponent\t\n                3\t\n                2\t\n                1\t\n\nStep 4: Compute the LCM by multiplying the prime factors identified in Step 2 raised to the powers identified in Step 3.\n\nThe LCM for 24 and 90 is \\(2×2×2×3×3×5={2}^{3}×{3}^{2}×{5}^{1}=360\\).\n\nYour Turn \\(\\PageIndex{21}\\)\n\nUse prime factorization to find the LCM of 20 and 28.\n\nExample \\(\\PageIndex{22}\\): Finding the Least Common Multiple Using Prime Factorization\n\nUse the prime factorizations of 36, 66, and 250 to identify the LCM.\n\nAnswer\n\nStep 1: Find the prime factorization of each number.\n\n\\(36={2}^{2}×{3}^{2}\\)\n\n\\(66=2×3×11\\)\n\n\\(250=2×{5}^{3}\\)\n\nStep 2: Identify each prime that is present in any of the prime factorizations.\n\nThe prime numbers present in the prime factorizations are 2, 3, 5, and 11.\n\nStep 3: Identify the largest exponent of each prime identified in Step 2 in the prime factorizations.\n\n                Prime\t\n                2\t\n                3\t\n                5\t\n                11\t\n\n                Largest exponent\t\n                2\t\n                2\t\n                3\t\n                1\t\n\nStep 4: Compute the LCM by multiplying the prime factors identified in Step 2 raised to the powers identified in Step 3.\n\nThe LCM for 36, 66, and 250 is \\(2×2×3×3×5×5×5×11={2}^{2}×{3}^{2}×{5}^{3}×{11}^{1}=49,500\\).\n\nYour Turn \\(\\PageIndex{22}\\)\n\nUse the prime factorization method to find the LCM of 150, 240, and 462.\n\nUsing lists for three or more numbers, particularly larger numbers, could take quite a bit of time. Frequently, as in this example, the prime factorization process is much quicker. In practice, you can use either listing or prime factorization to find the LCM.\n\nExample \\(\\PageIndex{23}\\): Finding the Least Common Multiple Using Both Methods\n\nFind the LCM of 20, 36, and 45 using lists and prime factorization.\n\nAnswer\n\nStep 1: Use listing. List the multiples:\n\n                20\t\n                20, 40, 60, 80, 100, 120, 140, 160, 180, 200, 220\t\n\n                36\t\n                36, 72, 108, 144, 180, 216, 252, 288, 324, 360\t\n\n                45\t\n                45, 90, 135, 180, 225, 270, 315, 360, 405, 450, 495, 540\t\n\nThe smallest value that appears on all the lists is 180, so 180 is the LCM of 20, 36, and 45.\n\nStep 2: Find the prime factorization of each number.\n\n\\(20={2}^{2}×5\\)\n\n\\(36={2}^{2}×{3}^{2}\\)\n\n\\(45={3}^{2}×5\\)\n\nStep 3: Identify each prime that is present in any of the prime factorizations.\n\nThe prime numbers present in the prime factorizations are 2, 3, 5.\n\nStep 4: Identify the largest exponent of each prime identified in Step 3 in the prime factorizations.\n\n                Prime\t\n                2\t\n                3\t\n                5\t\n\n                Largest exponent\t\n                2\t\n                2\t\n                1\t\n\nStep 5: Compute the LCM by multiplying the prime factors identified in Step 3 raised to the powers identified in Step 4.\n\nThe LCM for 20, 36, and 45 is \\({2}^{2}×{3}^{2}×{5}^{1}=180\\).\n\nBoth listing and prime factorization produced the same result: the LCM is 180.\n\nYour Turn \\(\\PageIndex{23}\\)\n\nFind the LCM of 18, 24, and 40 using lists and prime factorization.\n\nVideo\n\nFinding the LCM\n\nTech Check: Using Desmos to Find the LCM\n\nTo find the LCM of a set of numbers in Desmos, type lcm(first_number,second_number…) and Desmos will display the LCM of the numbers, as the numbers are typed!\n\nVideo\n\nUsing Desmos to find the LCM\n\nApplications of the Least Common Multiple\n\nSome applications of LCM involve events that repeat at fixed intervals, such as visits to a location. Other applications involve getting things to be of equal magnitude when using parts that are different sizes (see Example 3.25, for instance). In each case, we may be looking to determine when two processes “line up.”\n\nExample \\(\\PageIndex{24}\\): Determining Scheduling Overlap Using the Least Common Multiple\n\nTwo students, João, and Amelia, meet one day at an assisted living facility where they volunteer. João volunteers every 6 days. Amelia volunteers every 10 days. How many days will it be until they are both volunteering on the same day again?\n\nAnswer\n\nIf we list the days that each student will volunteer, it becomes clear that we could solve this problem using the LCM of 6 and 10.\n\nJoão will be at the assisted living facility 6, 12, 18, 24, 30, 36, 42, and 48 days later.\n\nAmelia will be at the assisted living facility 10, 20, 30, 40, 50, and 60 days later.\n\nThe smallest number appearing on both lists is 30. João and Amelia will once more be volunteering together 30 days later.\n\nYour Turn \\(\\PageIndex{24}\\)\n\nThe sun, Venus, and Jupiter all line up on a given day. Venus orbits the sun once every 255 days. Jupiter orbits the sun every 4,330 days (we’ll ignore the decimal values of days for each orbit). How many days will it be until they line up again?\n\nExample \\(\\PageIndex{25}\\): Determining the Minimum Height Using the LCM\n\nA team-building exercise has teams build a house of cards as high as possible. However, the cards for different teams are of different sizes. Team 1 uses 10 cm × 10 cm cards, while Team 2 uses 8 cm × 8 cm cards. What is the minimum height when the two teams will be tied? Ignore the width of the cards.\n\nAnswer\n\nThis is an example where we want to put together objects with different sizes. We want to know the minimum height when they are tied, or when the houses of cards line up the first time. The heights of the towers built using the 10 cm × 10 cm cards will be 10, 20, 30, 40, 50, and 60 cm tall. When the 8 cm × 8 cm cards are used, the tower will be 8, 16, 24, 32, 40, 48, and 56 cm tall. The smallest number appearing on both lists is 40. The first time they are tied is when the two towers are 40 cm tall.\n\nYour Turn \\(\\PageIndex{25}\\)\n\nIn an Internet giveaway, every 130th person who submits a survey receives $250, and every 900th person receives a free cell phone. How many submissions must be received for the first person to receive both prizes?\n\nVideo\n\nApplication of LCM\n\nWORK IT OUT: Prime Number Life Cycles—Cicadas\n\nCicadas are known to have life cycles of 13 or 17 years, which are prime numbers. Why would a prime number life cycle be an evolutionary advantage? To figure this out, we have to explore how common multiples work with prime numbers.\n\nMake a conjecture regarding the LCM of a prime number and another number. Test this conjecture with a few examples of your own making.\n\nCheck Your Understanding\n\n1. Identify which of the following numbers are prime and which are composite.\n\n\\[31,56,213,48,701 \\nonumber \\]\n\n2. Find the prime factorization of 4,570 .\n\n3. Find the greatest common divisor of 410 and 144.\n\n4. Find the least common multiple of 45 and 70 .\n\n5. You want to fill gift bags for children in the after-school program where you volunteer. You have 30 crayons, 20 sticker sheets, and 70 bite-sized candies. If each gift bag must contain the same number of crayons, sticker sheets, and bite-sized candies, what is the maximum number of bags that can be filled?\n\nThis page titled 3.1:  Prime and Composite Numbers was last modified on Thu, 02 Jan 2025 11:07:44 GMT and is shared under a CC BY  4.0  license and was authored, remixed, and/or curated by OpenStax via source content that was edited to the style and standards of the LibreTexts platform.",
+  "figures": [
+    {
+      "url": "https://math.libretexts.org/@api/deki/files/110482/c66c722d2069c1721cf9b009b6e1133cf5f714c1?revision=1&size=bestfit&width=668&height=501",
+      "alt": "A laptop screen shows a lock symbol.",
+      "credit": ""
+    },
+    {
+      "url": "https://math.libretexts.org/@api/deki/files/110485/a979b11162fa6147a5031c625c8432cbfc3d4f9e?revision=1",
+      "alt": "A portrait of Sophie Germain.",
+      "credit": ""
+    },
+    {
+      "url": "https://math.libretexts.org/@api/deki/files/110479/97a016ee19f1407bfe56681595b949ea2b5474f9?revision=1",
+      "alt": "A tree diagram shows two branches extending down from a node labeled 66 to 2 and 33.",
+      "credit": ""
+    },
+    {
+      "url": "https://math.libretexts.org/@api/deki/files/110478/54ca3782af87a214af7b4d5c7d5ffb4cbefec636?revision=1",
+      "alt": "A tree diagram shows two branches extending down from a node labeled 66 to 2 and 33. Two other branches are extending down from 33 to 3 and 11.",
+      "credit": ""
+    },
+    {
+      "url": "https://math.libretexts.org/@api/deki/files/110480/edcf5b2e6106c850be54a02ceaa3ae192a6e0dad?revision=1",
+      "alt": "A tree diagram shows two branches extending down from a node labeled 135 to 3 and 45.",
+      "credit": ""
+    },
+    {
+      "url": "https://math.libretexts.org/@api/deki/files/110483/0967d4e2eb9b154cdba2e180c5d46e741381481b?revision=1",
+      "alt": "A tree diagram shows two branches extending down from a node labeled 135 to 3 and 45.",
+      "credit": ""
+    },
+    {
+      "url": "https://math.libretexts.org/@api/deki/files/110484/8f1c7206d3027922e188533128bdef20e31c6020?revision=1",
+      "alt": "A tree diagram shows two branches extending down from a node labeled 135 to 3 and 45. Two other branches are extending down from 45 to 3 and 15.",
+      "credit": ""
+    },
+    {
+      "url": "https://math.libretexts.org/@api/deki/files/110486/34aad2a89682e0064873d523f23ae7c431f9dacb?revision=1",
+      "alt": "A tree diagram shows two branches extending down from a node labeled 135 to 3 and 45. Two other branches are extending down from 45 to 3 and 15. Two other branches are extending down from 15 to 3 and 5.",
+      "credit": ""
+    },
+    {
+      "url": "https://math.libretexts.org/@api/deki/files/110487/ece021ebceabb4af2ccb9c375073bd9e6440d529?revision=1",
+      "alt": "A photo of Srinivasa Ramanujan.",
+      "credit": ""
+    }
+  ],
+  "references": [
+    {
+      "text": "Wolfram Alpha website",
+      "url": "https://openstax.org/r/wolframalpha"
+    },
+    {
+      "text": "3.1:  Prime and Composite Numbers",
+      "url": "https://math.libretexts.org/Bookshelves/Applied_Mathematics/Contemporary_Mathematics_(OpenStax)/03%3A_Real_Number_Systems_and_Number_Theory/3.01%3A__Prime_and_Composite_Numbers"
+    },
+    {
+      "text": "CC BY  4.0",
+      "url": "https://creativecommons.org/licenses/by/4.0"
+    },
+    {
+      "text": "OpenStax",
+      "url": "https://openstax.org/"
+    },
+    {
+      "text": "source content",
+      "url": "https://openstax.org/details/books/contemporary-mathematics"
+    }
+  ],
+  "exercises": [
+    {
+      "ordinal": 1,
+      "sourceNumber": "",
+      "sourceAnchor": "",
+      "kind": "example-or-exercise",
+      "context": "Applying Divisibility Rules\n\nBefore we begin our investigation of divisibility, we need to know some facts about important sets of numbers:\n\nDivisibility is when the integer \\(n\\) is divisible by \\(m\\), if \\(n\\) can be written as \\(m\\) times another integer. Equivalently, there is no remainder when \\(n\\) is divided by \\(m\\). There are many occasions when separating items into equal groups comes into play to ensure an equal distribution of whole items. For example, Francis, a preschool art teacher, has 15 students in one class. Francis has 225 sheets of construction paper and wants to provide each student with an equal number of pieces. To know if he will use all the construction paper, Francis is really asking if 225 can be evenly divided into 15 groups.",
+      "original": "Example \\(\\PageIndex{1}\\): Determining if a Number Divides Another Number\n\nDetermine if 36 is divisible by 4.\n\nAnswer\n\nWe could divide 36 by 4 and see if there is a remainder, or we could see if we can write 36 as 4 times another integer. If we divide 36 by 4, we see \\(36÷4=9\\) with no remainder. We see that 36 is divisible by 4. We can write 36 as 4 times another integer, \\(36=4×9\\). By the definition of divisibility, 36 is divisible by 4.",
+      "prompt": "Example \\(\\PageIndex{1}\\): Determining if a Number Divides Another Number\n\nDetermine if 36 is divisible by 4.",
+      "sourceAnswers": [
+        "We could divide 36 by 4 and see if there is a remainder, or we could see if we can write 36 as 4 times another integer. If we divide 36 by 4, we see \\(36÷4=9\\) with no remainder. We see that 36 is divisible by 4. We can write 36 as 4 times another integer, \\(36=4×9\\). By the definition of divisibility, 36 is divisible by 4."
+      ],
+      "hasFigure": false,
+      "status": "draft",
+      "answerVerified": false,
+      "translationStatus": "pending",
+      "mappingStatus": "pending"
+    },
+    {
+      "ordinal": 2,
+      "sourceNumber": "",
+      "sourceAnchor": "",
+      "kind": "example-or-exercise",
+      "context": "Divisibility is when the integer \\(n\\) is divisible by \\(m\\), if \\(n\\) can be written as \\(m\\) times another integer. Equivalently, there is no remainder when \\(n\\) is divided by \\(m\\). There are many occasions when separating items into equal groups comes into play to ensure an equal distribution of whole items. For example, Francis, a preschool art teacher, has 15 students in one class. Francis has 225 sheets of construction paper and wants to provide each student with an equal number of pieces. To know if he will use all the construction paper, Francis is really asking if 225 can be evenly divided into 15 groups.\n\nDetermine if 54 is divisible by 9.\n\nYou can quickly check if a number is divisible by 2, 3, 4, 5, 6, 9, 10, and 12. Each has an easy-to-identify feature, or rule, that indicates the divisibility by those numbers, as shown in the following table.",
+      "original": "Example \\(\\PageIndex{2}\\): Using Divisibility Rules\n\nUsing divisibility rules, determine if 245 is divisible by 5.\n\nAnswer\n\nSince the last digit is a 5, the number 245 is divisible by 5 because the rule states if the last digit of the number is a 5 or a 0, then the original number is divisible by 5.",
+      "prompt": "Example \\(\\PageIndex{2}\\): Using Divisibility Rules\n\nUsing divisibility rules, determine if 245 is divisible by 5.",
+      "sourceAnswers": [
+        "Since the last digit is a 5, the number 245 is divisible by 5 because the rule states if the last digit of the number is a 5 or a 0, then the original number is divisible by 5."
+      ],
+      "hasFigure": false,
+      "status": "draft",
+      "answerVerified": false,
+      "translationStatus": "pending",
+      "mappingStatus": "pending"
+    },
+    {
+      "ordinal": 3,
+      "sourceNumber": "1",
+      "sourceAnchor": "",
+      "kind": "exercise-candidate",
+      "context": "Divisibility is when the integer \\(n\\) is divisible by \\(m\\), if \\(n\\) can be written as \\(m\\) times another integer. Equivalently, there is no remainder when \\(n\\) is divided by \\(m\\). There are many occasions when separating items into equal groups comes into play to ensure an equal distribution of whole items. For example, Francis, a preschool art teacher, has 15 students in one class. Francis has 225 sheets of construction paper and wants to provide each student with an equal number of pieces. To know if he will use all the construction paper, Francis is really asking if 225 can be evenly divided into 15 groups.\n\nDetermine if 54 is divisible by 9.\n\nYou can quickly check if a number is divisible by 2, 3, 4, 5, 6, 9, 10, and 12. Each has an easy-to-identify feature, or rule, that indicates the divisibility by those numbers, as shown in the following table.",
+      "original": "1. Using divisibility rules, determine if 45,730 is divisible by 5.",
+      "prompt": "1. Using divisibility rules, determine if 45,730 is divisible by 5.",
+      "sourceAnswers": [],
+      "hasFigure": false,
+      "status": "draft",
+      "answerVerified": false,
+      "translationStatus": "pending",
+      "mappingStatus": "pending"
+    },
+    {
+      "ordinal": 4,
+      "sourceNumber": "",
+      "sourceAnchor": "",
+      "kind": "example-or-exercise",
+      "context": "Divisibility is when the integer \\(n\\) is divisible by \\(m\\), if \\(n\\) can be written as \\(m\\) times another integer. Equivalently, there is no remainder when \\(n\\) is divided by \\(m\\). There are many occasions when separating items into equal groups comes into play to ensure an equal distribution of whole items. For example, Francis, a preschool art teacher, has 15 students in one class. Francis has 225 sheets of construction paper and wants to provide each student with an equal number of pieces. To know if he will use all the construction paper, Francis is really asking if 225 can be evenly divided into 15 groups.\n\nDetermine if 54 is divisible by 9.\n\nYou can quickly check if a number is divisible by 2, 3, 4, 5, 6, 9, 10, and 12. Each has an easy-to-identify feature, or rule, that indicates the divisibility by those numbers, as shown in the following table.",
+      "original": "Example \\(\\PageIndex{3}\\): Using Divisibility Rules\n\nUsing divisibility rules, determine if 25,983 is divisible by 9.\n\nAnswer\n\nThe divisibility rule for 9 is when the digits of the number are added, the sum is divisible by 9. So, we calculate the sum of the digits.\n\n\\(2+5+9+8+3=27\\). Since 27 is divisible by 9, so is the original number 25,983.",
+      "prompt": "Example \\(\\PageIndex{3}\\): Using Divisibility Rules\n\nUsing divisibility rules, determine if 25,983 is divisible by 9.",
+      "sourceAnswers": [
+        "The divisibility rule for 9 is when the digits of the number are added, the sum is divisible by 9. So, we calculate the sum of the digits.\n\n\\(2+5+9+8+3=27\\). Since 27 is divisible by 9, so is the original number 25,983."
+      ],
+      "hasFigure": false,
+      "status": "draft",
+      "answerVerified": false,
+      "translationStatus": "pending",
+      "mappingStatus": "pending"
+    },
+    {
+      "ordinal": 5,
+      "sourceNumber": "",
+      "sourceAnchor": "",
+      "kind": "example-or-exercise",
+      "context": "Determine if 54 is divisible by 9.\n\nYou can quickly check if a number is divisible by 2, 3, 4, 5, 6, 9, 10, and 12. Each has an easy-to-identify feature, or rule, that indicates the divisibility by those numbers, as shown in the following table.\n\nUsing divisibility rules, determine if 342,887 is divisible by 9.",
+      "original": "Example \\(\\PageIndex{4}\\): Using Divisibility Rules\n\nCan 298 coins be stacked into 6 stacks with an equal number of coins in each stack?\n\nAnswer\n\nIn order for the coins to be in equal-sized stacks, 298 would need to be divisible by 6. The divisibility rule for 6 is that the number passes the divisibility rules for both 2 and 3. Since the last digit is even, 298 is divisible by 2. To determine if 298 is divisible by 3, we first add the digits of the number: \\(2+9+8=19\\). Since 19 is not divisible by 3, neither is 298. Because 298 is not divisible by 3, it is also not divisible by 6, which means they cannot be put into 6 equal stacks of coins.",
+      "prompt": "Example \\(\\PageIndex{4}\\): Using Divisibility Rules\n\nCan 298 coins be stacked into 6 stacks with an equal number of coins in each stack?",
+      "sourceAnswers": [
+        "In order for the coins to be in equal-sized stacks, 298 would need to be divisible by 6. The divisibility rule for 6 is that the number passes the divisibility rules for both 2 and 3. Since the last digit is even, 298 is divisible by 2. To determine if 298 is divisible by 3, we first add the digits of the number: \\(2+9+8=19\\). Since 19 is not divisible by 3, neither is 298. Because 298 is not divisible by 3, it is also not divisible by 6, which means they cannot be put into 6 equal stacks of coins."
+      ],
+      "hasFigure": false,
+      "status": "draft",
+      "answerVerified": false,
+      "translationStatus": "pending",
+      "mappingStatus": "pending"
+    },
+    {
+      "ordinal": 6,
+      "sourceNumber": "",
+      "sourceAnchor": "",
+      "kind": "example-or-exercise",
+      "context": "You can quickly check if a number is divisible by 2, 3, 4, 5, 6, 9, 10, and 12. Each has an easy-to-identify feature, or rule, that indicates the divisibility by those numbers, as shown in the following table.\n\nUsing divisibility rules, determine if 342,887 is divisible by 9.\n\n1.Can 43,568 pieces of mail be separated into 6 bins with the same number of pieces of mail per bin?",
+      "original": "Example \\(\\PageIndex{5}\\): Using Divisibility Rules\n\nUsing divisibility rules, determine if 4,259 is divisible by 10.\n\nAnswer\n\nThe divisibility rule for 10 is that the last digit of the number is 0. Since the last digit of 4,259 is not 0, then 4,259 is not divisible by 10.",
+      "prompt": "Example \\(\\PageIndex{5}\\): Using Divisibility Rules\n\nUsing divisibility rules, determine if 4,259 is divisible by 10.",
+      "sourceAnswers": [
+        "The divisibility rule for 10 is that the last digit of the number is 0. Since the last digit of 4,259 is not 0, then 4,259 is not divisible by 10."
+      ],
+      "hasFigure": false,
+      "status": "draft",
+      "answerVerified": false,
+      "translationStatus": "pending",
+      "mappingStatus": "pending"
+    },
+    {
+      "ordinal": 7,
+      "sourceNumber": "",
+      "sourceAnchor": "",
+      "kind": "example-or-exercise",
+      "context": "Using divisibility rules, determine if 342,887 is divisible by 9.\n\n1.Can 43,568 pieces of mail be separated into 6 bins with the same number of pieces of mail per bin?\n\nUsing divisibility rules, determine if 87,762 is divisible by 10.",
+      "original": "Example \\(\\PageIndex{6}\\): Using Divisibility Rules\n\nUsing divisibility rules, determine if 936,276 is divisible by 4.\n\nAnswer\n\nThe divisibility rule for 4 is to check the last two digits of the number. If the number formed by the last two digits of the original number is divisible by 4, then so is the original number. The last two digits make the number 76 and 76 is divisible by 4, since \\(76=4×19\\). Since 76 is divisible by 4, so is 936,276.",
+      "prompt": "Example \\(\\PageIndex{6}\\): Using Divisibility Rules\n\nUsing divisibility rules, determine if 936,276 is divisible by 4.",
+      "sourceAnswers": [
+        "The divisibility rule for 4 is to check the last two digits of the number. If the number formed by the last two digits of the original number is divisible by 4, then so is the original number. The last two digits make the number 76 and 76 is divisible by 4, since \\(76=4×19\\). Since 76 is divisible by 4, so is 936,276."
+      ],
+      "hasFigure": false,
+      "status": "draft",
+      "answerVerified": false,
+      "translationStatus": "pending",
+      "mappingStatus": "pending"
+    },
+    {
+      "ordinal": 8,
+      "sourceNumber": "",
+      "sourceAnchor": "",
+      "kind": "example-or-exercise",
+      "context": "To determine if a number is prime or composite, you have to determine if the number has any divisors other than 1 and itself. The divisibility rules are useful here, and can quickly show you if a number has a divisor on that list.\n\nHowever, if none of those divide the number, you still have to check all other possible prime divisors. What are the prime numbers that are possibly divisors of the number you are checking? You need only check the prime numbers up to the square root of the number in question. For instance, if you want to know if 2,117 is prime, you need to determine if any primes up to the square root of 2,117 (which is 46.0 when rounded to one decimal place) divide 2,117. If any of those primes are divisors of the number in question, then the number is composite. If none of those primes work, then the number is itself prime.\n\nWe can check divisibility with whatever tool we wish. Divisibility rules are quick for some prime divisors (2 and 5 come to mind) but aren't quick for other values (like 11). In place of divisibility rules, we could just use a calculator. If the prime number divides the number evenly (that is, there is no decimal or fractional part), then the number is divisible by that prime. Table 3.1 is a quick list of the prime numbers up to 50. There are 15 prime numbers less than 50.",
+      "original": "Example \\(\\PageIndex{7}\\): Determining If a Number Is Prime or Composite\n\nDetermine if 2,117 is prime or composite.\n\nAnswer\n\nThe square root of 2,117 is 46.0 (rounded to one decimal place). So, we need to check if 2,117 is divisible by any prime up to 46.\n\nStep 1: First we’ll use the rules of divisibility we learned earlier:\n\nWe can tell 2,117 is not divisible by 2, as the last digit isn't even.\n\n2,117 is not divisible by 5 (the last digit isn't 0 or 5).\n\nAdd the digits of 2,117 to get 11, which is not divisible by 3. So, 2,117 is also not divisible by 3.\n\nStep 2: Now we repeat the process for all the primes up to 46.\n\nUsing a calculator, we find that 2,117 divided by the prime numbers 7, 11, 13, 17, 19, and 23 results in a remainder, a decimal part. So, we know that 2,117 is not divisible by these prime numbers. (You should check these results yourself.)\n\nMoving on, we check the next prime: 29. Using the calculator to divide 2,117 by 29 results in 73. Since there is no decimal part, 2,117 is divisible by 29.\n\nThis means that 2,117 is not a prime number, but rather, a composite number. Writing 2,117 as the product of 29 and another natural number, \\(2,117=29×73\\).",
+      "prompt": "Example \\(\\PageIndex{7}\\): Determining If a Number Is Prime or Composite\n\nDetermine if 2,117 is prime or composite.",
+      "sourceAnswers": [
+        "The square root of 2,117 is 46.0 (rounded to one decimal place). So, we need to check if 2,117 is divisible by any prime up to 46.\n\nStep 1: First we’ll use the rules of divisibility we learned earlier:\n\nWe can tell 2,117 is not divisible by 2, as the last digit isn't even.\n\n2,117 is not divisible by 5 (the last digit isn't 0 or 5).\n\nAdd the digits of 2,117 to get 11, which is not divisible by 3. So, 2,117 is also not divisible by 3.\n\nStep 2: Now we repeat the process for all the primes up to 46.\n\nUsing a calculator, we find that 2,117 divided by the prime numbers 7, 11, 13, 17, 19, and 23 results in a remainder, a decimal part. So, we know that 2,117 is not divisible by these prime numbers. (You should check these results yourself.)\n\nMoving on, we check the next prime: 29. Using the calculator to divide 2,117 by 29 results in 73. Since there is no decimal part, 2,117 is divisible by 29.\n\nThis means that 2,117 is not a prime number, but rather, a composite number. Writing 2,117 as the product of 29 and another natural number, \\(2,117=29×73\\)."
+      ],
+      "hasFigure": false,
+      "status": "draft",
+      "answerVerified": false,
+      "translationStatus": "pending",
+      "mappingStatus": "pending"
+    },
+    {
+      "ordinal": 9,
+      "sourceNumber": "",
+      "sourceAnchor": "",
+      "kind": "example-or-exercise",
+      "context": "However, if none of those divide the number, you still have to check all other possible prime divisors. What are the prime numbers that are possibly divisors of the number you are checking? You need only check the prime numbers up to the square root of the number in question. For instance, if you want to know if 2,117 is prime, you need to determine if any primes up to the square root of 2,117 (which is 46.0 when rounded to one decimal place) divide 2,117. If any of those primes are divisors of the number in question, then the number is composite. If none of those primes work, then the number is itself prime.\n\nWe can check divisibility with whatever tool we wish. Divisibility rules are quick for some prime divisors (2 and 5 come to mind) but aren't quick for other values (like 11). In place of divisibility rules, we could just use a calculator. If the prime number divides the number evenly (that is, there is no decimal or fractional part), then the number is divisible by that prime. Table 3.1 is a quick list of the prime numbers up to 50. There are 15 prime numbers less than 50.\n\nDetermine if 1,429 is prime or composite.",
+      "original": "Example \\(\\PageIndex{8}\\): Determining if a Number Is Prime or Composite\n\nDetermine if 423 is prime or composite.\n\nAnswer\n\nThe square root of 423 is 20.57 (rounded to two decimal places). So, we need to check if 423 is divisible by any prime up to 20.\n\nStep 1: Check 2. We can tell 423 is not divisible by 2, as the last digit isn't even.\n\nStep 2: Check 5. It is not divisible by 5 (the last digit isn't 0 or 5).\n\nStep 3: Check 3. To check if 423 is divisible by 3, we use the divisibility rule for 3. When we take the sum of the digits of 423, the result is 9. Since 9 is divisible by 3, so is 423.\n\nSince 423 is divisible by 3, then 423 is a composite number. Writing 423 as the product of 3 and another natural number, \\(423=3×141\\).",
+      "prompt": "Example \\(\\PageIndex{8}\\): Determining if a Number Is Prime or Composite\n\nDetermine if 423 is prime or composite.",
+      "sourceAnswers": [
+        "The square root of 423 is 20.57 (rounded to two decimal places). So, we need to check if 423 is divisible by any prime up to 20.\n\nStep 1: Check 2. We can tell 423 is not divisible by 2, as the last digit isn't even.\n\nStep 2: Check 5. It is not divisible by 5 (the last digit isn't 0 or 5).\n\nStep 3: Check 3. To check if 423 is divisible by 3, we use the divisibility rule for 3. When we take the sum of the digits of 423, the result is 9. Since 9 is divisible by 3, so is 423.\n\nSince 423 is divisible by 3, then 423 is a composite number. Writing 423 as the product of 3 and another natural number, \\(423=3×141\\)."
+      ],
+      "hasFigure": false,
+      "status": "draft",
+      "answerVerified": false,
+      "translationStatus": "pending",
+      "mappingStatus": "pending"
+    },
+    {
+      "ordinal": 10,
+      "sourceNumber": "",
+      "sourceAnchor": "",
+      "kind": "example-or-exercise",
+      "context": "We can check divisibility with whatever tool we wish. Divisibility rules are quick for some prime divisors (2 and 5 come to mind) but aren't quick for other values (like 11). In place of divisibility rules, we could just use a calculator. If the prime number divides the number evenly (that is, there is no decimal or fractional part), then the number is divisible by that prime. Table 3.1 is a quick list of the prime numbers up to 50. There are 15 prime numbers less than 50.\n\nDetermine if 1,429 is prime or composite.\n\nDetermine if 859 is prime or composite.",
+      "original": "Example \\(\\PageIndex{9}\\): Determining if a Number Is Prime or Composite\n\nDetermine if 1,034 is prime or composite\n\nAnswer\n\nA quick inspection of 1,034 shows it is divisible by 2 since the last digit is even, and so 1,034 is a composite number.",
+      "prompt": "Example \\(\\PageIndex{9}\\): Determining if a Number Is Prime or Composite\n\nDetermine if 1,034 is prime or composite",
+      "sourceAnswers": [
+        "A quick inspection of 1,034 shows it is divisible by 2 since the last digit is even, and so 1,034 is a composite number."
+      ],
+      "hasFigure": false,
+      "status": "draft",
+      "answerVerified": false,
+      "translationStatus": "pending",
+      "mappingStatus": "pending"
+    },
+    {
+      "ordinal": 11,
+      "sourceNumber": "",
+      "sourceAnchor": "",
+      "kind": "example-or-exercise",
+      "context": "Determine if 1,429 is prime or composite.\n\nDetermine if 859 is prime or composite.\n\nDetermine if 5,067,322 is prime or composite.",
+      "original": "Example \\(\\PageIndex{10}\\): Determining if a Number Is Prime or Composite\n\nDetermine if 2,917 is prime or composite.\n\nAnswer\n\nThe square root of 2,917 is 50.01 (rounded to two decimal places). So, we need to check if 2,917 is divisible by any prime up to 50.\n\nStep 1: Check 2. We can tell 2,917 is not divisible by 2, as the last digit isn't even.\n\nStep 2: Check 5. It is it divisible by 5 (the last digit isn't 0 or 5).\n\nStep 3: Check 3. Using the divisibility rule for 3, we take the sum of the digits of 2,917, which is 19. Since 19 is not divisible by 3, neither is 2,917.\n\nStep 4: Check the rest of the primes up to 50 using a calculator. When 2,917 is divided by every prime number up to 50, the result has a decimal part.\n\nSince no prime up to 50 divides 2,917, it is a prime number.",
+      "prompt": "Example \\(\\PageIndex{10}\\): Determining if a Number Is Prime or Composite\n\nDetermine if 2,917 is prime or composite.",
+      "sourceAnswers": [
+        "The square root of 2,917 is 50.01 (rounded to two decimal places). So, we need to check if 2,917 is divisible by any prime up to 50.\n\nStep 1: Check 2. We can tell 2,917 is not divisible by 2, as the last digit isn't even.\n\nStep 2: Check 5. It is it divisible by 5 (the last digit isn't 0 or 5).\n\nStep 3: Check 3. Using the divisibility rule for 3, we take the sum of the digits of 2,917, which is 19. Since 19 is not divisible by 3, neither is 2,917.\n\nStep 4: Check the rest of the primes up to 50 using a calculator. When 2,917 is divided by every prime number up to 50, the result has a decimal part.\n\nSince no prime up to 50 divides 2,917, it is a prime number."
+      ],
+      "hasFigure": false,
+      "status": "draft",
+      "answerVerified": false,
+      "translationStatus": "pending",
+      "mappingStatus": "pending"
+    },
+    {
+      "ordinal": 12,
+      "sourceNumber": "",
+      "sourceAnchor": "",
+      "kind": "example-or-exercise",
+      "context": "Fundamental Theorem of Arithmetic\n\nEvery natural number, other than 1, can be expressed in exactly one way, apart from the arrangement, as a product of primes.\n\nThe process of finding the prime factorization of a number is iterative, which means we do a step, then repeat it until we cannot do the step any longer. The step we use is to identify one prime factor of the number, then write the number as the prime factor times another factor. We repeat this step on the other, newly found, factor. This step is repeated until no more primes can be factored from the remaining factor. This is easier to see and explain with an example.",
+      "original": "Example \\(\\PageIndex{11}\\): Finding the Prime Factorization\n\nFind the prime factorization of 140.\n\nAnswer\n\nStep 1: Identify a prime number that divides 140. Since 140 is even (the last digit is even), 2 divides 140. We then factor the 2 out of the 140, giving us \\(140=2×70\\).\n\nStep 2: With the other factor, 70, find a prime factor of 70. Since 70 is also even, 2 divides 70. We factor the 2 out of the 70 and the factorization is now \\(140=2×2×35={2}^{2}×35\\).\n\nNotice that we expressed the two factors of 2 as \\({2}^{2}\\).\n\nStep 3: Look to the remaining factor, 35. The last digit of 35 is 5, so 5 is a factor of 35. We factor the 5 out of the 35. The factorization is now \\(140={2}^{2}×5×7\\).\n\nStep 4: Look to the remaining factor, 7. Since 7 is prime, the process is complete.\n\nThe prime factorization of 140 is \\({2}^{2}×5×7\\).",
+      "prompt": "Example \\(\\PageIndex{11}\\): Finding the Prime Factorization\n\nFind the prime factorization of 140.",
+      "sourceAnswers": [
+        "Step 1: Identify a prime number that divides 140. Since 140 is even (the last digit is even), 2 divides 140. We then factor the 2 out of the 140, giving us \\(140=2×70\\).\n\nStep 2: With the other factor, 70, find a prime factor of 70. Since 70 is also even, 2 divides 70. We factor the 2 out of the 70 and the factorization is now \\(140=2×2×35={2}^{2}×35\\).\n\nNotice that we expressed the two factors of 2 as \\({2}^{2}\\).\n\nStep 3: Look to the remaining factor, 35. The last digit of 35 is 5, so 5 is a factor of 35. We factor the 5 out of the 35. The factorization is now \\(140={2}^{2}×5×7\\).\n\nStep 4: Look to the remaining factor, 7. Since 7 is prime, the process is complete.\n\nThe prime factorization of 140 is \\({2}^{2}×5×7\\)."
+      ],
+      "hasFigure": false,
+      "status": "draft",
+      "answerVerified": false,
+      "translationStatus": "pending",
+      "mappingStatus": "pending"
+    },
+    {
+      "ordinal": 13,
+      "sourceNumber": "",
+      "sourceAnchor": "",
+      "kind": "example-or-exercise",
+      "context": "Step 7: The process stops when the leaves are all prime.\n\nStep 8: The prime factorization is then the product of all the leaves.\n\nThis is best seen in an example.",
+      "original": "Example \\(\\PageIndex{12}\\): Finding the Prime Factorization\n\nFind the prime factorization of 66.\n\nAnswer\n\nSince 66 is even, 2 is a factor.\n\nStep 1: Factor out the 2. The factorization is \\(66=\\)2×33Figure 3.5.\n\n[Figure: A tree diagram shows two branches extending down from a node labeled 66 to 2 and 33. Two other branches are extending down from 33 to 3 and 11.]\n\nFigure \\(\\PageIndex{4}\\)\n\nSince 2 is a factor, that branch is done, and 2 is a leaf.\n\nStep 2: The 33, though, is divisible by 3, and is the product of 3 and 11. We attach that to the factor tree (Figure 3.6).\n\n[Figure: A tree diagram shows two branches extending down from a node labeled 135 to 3 and 45.]\n\nFigure \\(\\PageIndex{5}\\)\n\nSince the 2, 3 and 11 are all prime, the factor tree is done.\n\nThe prime factorization of 66 is the product of the leaves, so \\(66=2×3×11\\). The factorization is complete.",
+      "prompt": "Example \\(\\PageIndex{12}\\): Finding the Prime Factorization\n\nFind the prime factorization of 66.",
+      "sourceAnswers": [
+        "Since 66 is even, 2 is a factor.\n\nStep 1: Factor out the 2. The factorization is \\(66=\\)2×33Figure 3.5.\n\n[Figure: A tree diagram shows two branches extending down from a node labeled 66 to 2 and 33. Two other branches are extending down from 33 to 3 and 11.]\n\nFigure \\(\\PageIndex{4}\\)\n\nSince 2 is a factor, that branch is done, and 2 is a leaf.\n\nStep 2: The 33, though, is divisible by 3, and is the product of 3 and 11. We attach that to the factor tree (Figure 3.6).\n\n[Figure: A tree diagram shows two branches extending down from a node labeled 135 to 3 and 45.]\n\nFigure \\(\\PageIndex{5}\\)\n\nSince the 2, 3 and 11 are all prime, the factor tree is done.\n\nThe prime factorization of 66 is the product of the leaves, so \\(66=2×3×11\\). The factorization is complete."
+      ],
+      "hasFigure": true,
+      "status": "draft",
+      "answerVerified": false,
+      "translationStatus": "pending",
+      "mappingStatus": "pending"
+    },
+    {
+      "ordinal": 14,
+      "sourceNumber": "",
+      "sourceAnchor": "",
+      "kind": "example-or-exercise",
+      "context": "This is best seen in an example.\n\nFind the prime factorization of 85.\n\nUsing a Factor Tree to Find the Prime Factorization",
+      "original": "Example \\(\\PageIndex{13}\\): Finding the Prime Factorization\n\nFind the prime factorization of 135.\n\nAnswer\n\nThe number 135 is divisible by 3, and so 3 is a factor of 135.\n\nStep 1: Factor out the 3. The factorization is \\(135=\\)3×45Figure \\(\\PageIndex{6}\\)),\n\n[Figure: A tree diagram shows two branches extending down from a node labeled 135 to 3 and 45.]\n\nFigure \\(\\PageIndex{6}\\)\n\n45 is also divisible by 3.\n\nStep 2: Factor out a 3 from 45. The other factor is 15. The factor tree is shown in Figure \\(\\PageIndex{7}\\).\n\n[Figure: A tree diagram shows two branches extending down from a node labeled 135 to 3 and 45. Two other branches are extending down from 45 to 3 and 15.]\n\nFigure \\(\\PageIndex{7}\\\n\n15 is also divisible by 3.\n\nStep 3: The factors of 15 are 3 and 5. The factor tree is shown in Figure \\(\\PageIndex{8}\\).\n\n[Figure: A tree diagram shows two branches extending down from a node labeled 135 to 3 and 45. Two other branches are extending down from 45 to 3 and 15. Two other branches are extending down from 15 to 3 and 5.]\n\nFigure \\(\\PageIndex{8}\\)\n\nAll the leaves are prime, so the process is complete. The prime factorization of 135 is \\({3}^{3}×5\\).",
+      "prompt": "Example \\(\\PageIndex{13}\\): Finding the Prime Factorization\n\nFind the prime factorization of 135.",
+      "sourceAnswers": [
+        "The number 135 is divisible by 3, and so 3 is a factor of 135.\n\nStep 1: Factor out the 3. The factorization is \\(135=\\)3×45Figure \\(\\PageIndex{6}\\)),\n\n[Figure: A tree diagram shows two branches extending down from a node labeled 135 to 3 and 45.]\n\nFigure \\(\\PageIndex{6}\\)\n\n45 is also divisible by 3.\n\nStep 2: Factor out a 3 from 45. The other factor is 15. The factor tree is shown in Figure \\(\\PageIndex{7}\\).\n\n[Figure: A tree diagram shows two branches extending down from a node labeled 135 to 3 and 45. Two other branches are extending down from 45 to 3 and 15.]\n\nFigure \\(\\PageIndex{7}\\\n\n15 is also divisible by 3.\n\nStep 3: The factors of 15 are 3 and 5. The factor tree is shown in Figure \\(\\PageIndex{8}\\).\n\n[Figure: A tree diagram shows two branches extending down from a node labeled 135 to 3 and 45. Two other branches are extending down from 45 to 3 and 15. Two other branches are extending down from 15 to 3 and 5.]\n\nFigure \\(\\PageIndex{8}\\)\n\nAll the leaves are prime, so the process is complete. The prime factorization of 135 is \\({3}^{3}×5\\)."
+      ],
+      "hasFigure": true,
+      "status": "draft",
+      "answerVerified": false,
+      "translationStatus": "pending",
+      "mappingStatus": "pending"
+    },
+    {
+      "ordinal": 15,
+      "sourceNumber": "",
+      "sourceAnchor": "",
+      "kind": "example-or-exercise",
+      "context": "Find the prime factorization of 85.\n\nUsing a Factor Tree to Find the Prime Factorization\n\nFind the prime factorization of 280.",
+      "original": "Example \\(\\PageIndex{14}\\): Identifying Prime Factors\n\nHow many different prime factors does 10,241 have?\n\nAnswer\n\nTo know how many different prime factors 10,241 has, we need the prime factorization of 10,241.\n\nStep 1: Use divisibility rules, to see that the number 10,241 is not divisible by 2 or by 3 (the sum of the digits is 8), or by 5. However, it is divisible by 7.\n\nStep 2: After factoring the 7, the factorization is \\(10,241=7×1463\\); 1,463 is also divisible by 7.\n\nStep 3: After factoring the 7, the factorization is \\(10,241=7×7×209={7}^{2}×209\\). The number 209 is not divisible by 7.\n\nStep 4: Check the next prime number: 11; 11 does divide 1,463.\n\nStep 5: After factoring the 11, the factorization is \\(10,241={7}^{2}×11×19\\).\n\nSince 19 is prime, the prime factorization of 10,241 is complete. We see that 10,241 has three different prime factors: 7, 11, and 19.",
+      "prompt": "Example \\(\\PageIndex{14}\\): Identifying Prime Factors\n\nHow many different prime factors does 10,241 have?",
+      "sourceAnswers": [
+        "To know how many different prime factors 10,241 has, we need the prime factorization of 10,241.\n\nStep 1: Use divisibility rules, to see that the number 10,241 is not divisible by 2 or by 3 (the sum of the digits is 8), or by 5. However, it is divisible by 7.\n\nStep 2: After factoring the 7, the factorization is \\(10,241=7×1463\\); 1,463 is also divisible by 7.\n\nStep 3: After factoring the 7, the factorization is \\(10,241=7×7×209={7}^{2}×209\\). The number 209 is not divisible by 7.\n\nStep 4: Check the next prime number: 11; 11 does divide 1,463.\n\nStep 5: After factoring the 11, the factorization is \\(10,241={7}^{2}×11×19\\).\n\nSince 19 is prime, the prime factorization of 10,241 is complete. We see that 10,241 has three different prime factors: 7, 11, and 19."
+      ],
+      "hasFigure": false,
+      "status": "draft",
+      "answerVerified": false,
+      "translationStatus": "pending",
+      "mappingStatus": "pending"
+    },
+    {
+      "ordinal": 16,
+      "sourceNumber": "",
+      "sourceAnchor": "",
+      "kind": "example-or-exercise",
+      "context": "Two numbers often have more than one divisor in common (all pairs of natural numbers have the common divisor 1). When listing the common divisors, it’s often the case that the largest is of interest. This divisor is called the greatest common divisor and is denoted GCD. It is also sometimes referred to as the greatest common factor (GCF).\n\nFor instance, 6 is the greatest common divisor of 12 and 18. We can see this by listing all the divisors of each number and, by inspection, select the largest value that shows up in each list.\n\nIt is easy to see that 6 is the largest value that appears in both lists.",
+      "original": "Example \\(\\PageIndex{15}\\): Finding the Greatest Common Divisor Using Lists\n\nFind the greatest common divisor of 1,400 and 250 by listing all divisors of each number.\n\nAnswer\n\nWe create a list of all the divisors of 1,400 and of 250, and choose the largest one.\n\nThe divisors of 1,400 are\n\n1, 2, 4, 5, 7, 8, 10, 14, 20, 25, 28, 35, 40, 50, 56, 70, 100, 140, 175, 200, 280, 350, 700, 1,400.\n\nThe divisors of 250 are\n\n1, 2, 5, 10, 25, 50, 125, 250.\n\nThe largest value that appears on both lists is 50, so the greatest common divisor of 1,400 and 250 is 50.",
+      "prompt": "Example \\(\\PageIndex{15}\\): Finding the Greatest Common Divisor Using Lists\n\nFind the greatest common divisor of 1,400 and 250 by listing all divisors of each number.",
+      "sourceAnswers": [
+        "We create a list of all the divisors of 1,400 and of 250, and choose the largest one.\n\nThe divisors of 1,400 are\n\n1, 2, 4, 5, 7, 8, 10, 14, 20, 25, 28, 35, 40, 50, 56, 70, 100, 140, 175, 200, 280, 350, 700, 1,400.\n\nThe divisors of 250 are\n\n1, 2, 5, 10, 25, 50, 125, 250.\n\nThe largest value that appears on both lists is 50, so the greatest common divisor of 1,400 and 250 is 50."
+      ],
+      "hasFigure": false,
+      "status": "draft",
+      "answerVerified": false,
+      "translationStatus": "pending",
+      "mappingStatus": "pending"
+    },
+    {
+      "ordinal": 17,
+      "sourceNumber": "",
+      "sourceAnchor": "",
+      "kind": "example-or-exercise",
+      "context": "Step 2: Identify the prime factors that appear in every number’s prime factorization. These are called the common prime factors.\n\nStep 3: Identify the smallest exponent of each prime factor identified in Step 2 in the prime factorizations.\n\nStep 4: Multiply the prime factors identified in Step 2 raised to the powers identified in Step 3. The result is the greatest common divisor.",
+      "original": "Example \\(\\PageIndex{16}\\): Finding the Greatest Common Divisor Using Prime Factorization\n\nFind the greatest common divisor of 1,400 and 250 by using their prime factorizations.\n\nAnswer\n\nStep 1: Find the prime factorizations of the numbers.\n\nThe prime factorization of 1,400 is \\({2}^{3}×{5}^{2}×7\\).\n\nThe prime factorization of 250 is \\(250=2×{5}^{3}\\).\n\nStep 2: Identify the prime factors that appear in every number’s prime factorization.\n\nThe common prime factors are 2 and 5.\n\nStep 3: Identify the smallest exponent of each prime identified in Step 2 in the prime factorizations.\n\nThe exponent of common prime factor 2 in the prime factorization of 1,400 is 3, and in the prime factorization of 250 is 1. The smallest of those exponents is 1.\n\nThe exponent of the common prime factor 5 in the prime factorization of 1,400 is 2 and is in the prime factorization of 250 is 3. The smallest of these exponents is 2.\n\nStep 4: Multiply the prime factors identified in Step 2 raised to the powers identified in Step 3.\n\nThis gives \\({2}^{1}×{5}^{2}=50\\). The greatest common divisor of 1,400 and 250 is \\(2×{5}^{2}=50\\).\n\nNotice that the answer matches the one we found in Example 3.15.",
+      "prompt": "Example \\(\\PageIndex{16}\\): Finding the Greatest Common Divisor Using Prime Factorization\n\nFind the greatest common divisor of 1,400 and 250 by using their prime factorizations.",
+      "sourceAnswers": [
+        "Step 1: Find the prime factorizations of the numbers.\n\nThe prime factorization of 1,400 is \\({2}^{3}×{5}^{2}×7\\).\n\nThe prime factorization of 250 is \\(250=2×{5}^{3}\\).\n\nStep 2: Identify the prime factors that appear in every number’s prime factorization.\n\nThe common prime factors are 2 and 5.\n\nStep 3: Identify the smallest exponent of each prime identified in Step 2 in the prime factorizations.\n\nThe exponent of common prime factor 2 in the prime factorization of 1,400 is 3, and in the prime factorization of 250 is 1. The smallest of those exponents is 1.\n\nThe exponent of the common prime factor 5 in the prime factorization of 1,400 is 2 and is in the prime factorization of 250 is 3. The smallest of these exponents is 2.\n\nStep 4: Multiply the prime factors identified in Step 2 raised to the powers identified in Step 3.\n\nThis gives \\({2}^{1}×{5}^{2}=50\\). The greatest common divisor of 1,400 and 250 is \\(2×{5}^{2}=50\\).\n\nNotice that the answer matches the one we found in Example 3.15."
+      ],
+      "hasFigure": false,
+      "status": "draft",
+      "answerVerified": false,
+      "translationStatus": "pending",
+      "mappingStatus": "pending"
+    },
+    {
+      "ordinal": 18,
+      "sourceNumber": "",
+      "sourceAnchor": "",
+      "kind": "example-or-exercise",
+      "context": "Step 3: Identify the smallest exponent of each prime factor identified in Step 2 in the prime factorizations.\n\nStep 4: Multiply the prime factors identified in Step 2 raised to the powers identified in Step 3. The result is the greatest common divisor.\n\nUsing prime factorization, determine the greatest common divisor of 36 and 128.",
+      "original": "Example \\(\\PageIndex{17}\\): Finding the Greatest Common Divisor Using Prime Factorization\n\nFind the greatest common divisor of 600 and 784 by using their prime factorizations.\n\nAnswer\n\nStep 1: Find the prime factorizations of the numbers.\n\nThe prime factorization of 600 is \\({2}^{3}×3×{5}^{2}\\).\n\nThe prime factorization of 784 is \\({2}^{4}×{7}^{2}\\).\n\nStep 2: Identify the prime factors that appear in every number’s prime factorization.\n\nThere is only one common prime factor, 2.\n\nStep 3: Identify the smallest exponent of each prime from identified in Step 2 in the prime factorizations.\n\nThe exponent of 2 in the prime factorization of 600 is 3. The exponent of 2 in the prime factorization of 784 is 4. So, the smallest exponent of 2 is 3.\n\nStep 4: Multiply the prime factors identified in Step 2 raised to the powers identified in Step 3.\n\nThis gives \\({2}^{3}=8\\). The greatest common divisor of 600 and 784 is 8.",
+      "prompt": "Example \\(\\PageIndex{17}\\): Finding the Greatest Common Divisor Using Prime Factorization\n\nFind the greatest common divisor of 600 and 784 by using their prime factorizations.",
+      "sourceAnswers": [
+        "Step 1: Find the prime factorizations of the numbers.\n\nThe prime factorization of 600 is \\({2}^{3}×3×{5}^{2}\\).\n\nThe prime factorization of 784 is \\({2}^{4}×{7}^{2}\\).\n\nStep 2: Identify the prime factors that appear in every number’s prime factorization.\n\nThere is only one common prime factor, 2.\n\nStep 3: Identify the smallest exponent of each prime from identified in Step 2 in the prime factorizations.\n\nThe exponent of 2 in the prime factorization of 600 is 3. The exponent of 2 in the prime factorization of 784 is 4. So, the smallest exponent of 2 is 3.\n\nStep 4: Multiply the prime factors identified in Step 2 raised to the powers identified in Step 3.\n\nThis gives \\({2}^{3}=8\\). The greatest common divisor of 600 and 784 is 8."
+      ],
+      "hasFigure": false,
+      "status": "draft",
+      "answerVerified": false,
+      "translationStatus": "pending",
+      "mappingStatus": "pending"
+    },
+    {
+      "ordinal": 19,
+      "sourceNumber": "",
+      "sourceAnchor": "",
+      "kind": "example-or-exercise",
+      "context": "Applications of the Greatest Common Divisor\n\nThe greatest common divisor has uses that are related to other mathematics (reducing fractions) but also in everyday applications. We’ll look at two such applications, which have very similar underlying structures. In each case, something must divide the groups or measurements equally.",
+      "original": "Example \\(\\PageIndex{18}\\): Calculating Floor Tile Size\n\nSuppose you have a rectangular room that is 570 cm wide and 450 cm long. You wish to cover the floor of the room with square tiles. What’s the largest size square tile that can be used to cover this floor?\n\nAnswer\n\nUsing squares means that the length and width of the tiles are equal. To ensure we are using full tiles, the side length of the square tiles must divide the length of the room and the width of the room. Since we want the largest square tiles, we need the GCD of the width and length of the room or the GCD of 570 and 450.\n\nStep 1: Find the prime factorizations of the numbers.\n\nThe prime factorization of 570 is \\(2×3×5×19\\).\n\nThe prime factorization of 450 is \\(2×{3}^{2}×{5}^{2}\\).\n\nStep 2: Identify the prime factors that appear in every number’s prime factorization.\n\nThe common prime factors are 2, 3, and 5.\n\nStep 3: Identify the smallest exponent of each prime identified in Step 2 in the prime factorizations.\n\nThe exponents of 2 in the prime factorizations of 570 and 450 are 1 and 1. So the smallest exponent for 2 is 1.\n\nThe exponents of 3 in the prime factorizations of 570 and 450 are 1 and 2, so the smallest exponent for 3 is 1.\n\nThe exponents of 5 in the prime factorizations of 570 and 450 are 1 and 2, so the smallest exponent for 5 is 1.\n\nStep 4: Multiply the prime factors identified in Step 2 raised to the powers identified in Step 3.\n\nThis gives \\({2}^{1}×{3}^{1}×{5}^{1}=30\\). The GCD of 450 and 570 is 30, so the largest size square tile that can be used to cover the floor is 30 cm by 30 cm.",
+      "prompt": "Example \\(\\PageIndex{18}\\): Calculating Floor Tile Size\n\nSuppose you have a rectangular room that is 570 cm wide and 450 cm long. You wish to cover the floor of the room with square tiles. What’s the largest size square tile that can be used to cover this floor?",
+      "sourceAnswers": [
+        "Using squares means that the length and width of the tiles are equal. To ensure we are using full tiles, the side length of the square tiles must divide the length of the room and the width of the room. Since we want the largest square tiles, we need the GCD of the width and length of the room or the GCD of 570 and 450.\n\nStep 1: Find the prime factorizations of the numbers.\n\nThe prime factorization of 570 is \\(2×3×5×19\\).\n\nThe prime factorization of 450 is \\(2×{3}^{2}×{5}^{2}\\).\n\nStep 2: Identify the prime factors that appear in every number’s prime factorization.\n\nThe common prime factors are 2, 3, and 5.\n\nStep 3: Identify the smallest exponent of each prime identified in Step 2 in the prime factorizations.\n\nThe exponents of 2 in the prime factorizations of 570 and 450 are 1 and 1. So the smallest exponent for 2 is 1.\n\nThe exponents of 3 in the prime factorizations of 570 and 450 are 1 and 2, so the smallest exponent for 3 is 1.\n\nThe exponents of 5 in the prime factorizations of 570 and 450 are 1 and 2, so the smallest exponent for 5 is 1.\n\nStep 4: Multiply the prime factors identified in Step 2 raised to the powers identified in Step 3.\n\nThis gives \\({2}^{1}×{3}^{1}×{5}^{1}=30\\). The GCD of 450 and 570 is 30, so the largest size square tile that can be used to cover the floor is 30 cm by 30 cm."
+      ],
+      "hasFigure": false,
+      "status": "draft",
+      "answerVerified": false,
+      "translationStatus": "pending",
+      "mappingStatus": "pending"
+    },
+    {
+      "ordinal": 20,
+      "sourceNumber": "",
+      "sourceAnchor": "",
+      "kind": "example-or-exercise",
+      "context": "Applications of the Greatest Common Divisor\n\nThe greatest common divisor has uses that are related to other mathematics (reducing fractions) but also in everyday applications. We’ll look at two such applications, which have very similar underlying structures. In each case, something must divide the groups or measurements equally.\n\nYou are designing a brick patio made of square bricks 5 cm thick, but you need to determine the width and length of those bricks. The patio will be 400 cm by 540 cm. What are the largest size square bricks that can be used so that you do not need to cut any bricks?",
+      "original": "Example \\(\\PageIndex{19}\\): Organizing Books Per Shelf\n\nSuppose you want to organize books onto shelves, and you want the shelves to hold the same number of books. Each shelf will only contain one genre of book. You have 24 sci-fi, 42 fantasy, and 30 horror books. How many books can go on each shelf?\n\nAnswer\n\nSince we want shelves that hold an equal number of books, and a shelf can only hold one genre of book, we need a number that will equally divide 24, 42, and 30. So, we need the GCD of the number of books of each genre or the GCD of 24, 42, and 30.\n\nStep 1: Find the prime factorizations of the numbers.\n\nThe prime factorization of 24 is \\({2}^{3}×3\\).\n\nThe prime factorization of 42 is \\(2×3×7\\).\n\nThe prime factorization of 30 is \\(2×3×5\\).\n\nStep 2: Identify the prime factors that appear in every number’s prime factorization.\n\nThe common prime factors are 2 and 3.\n\nStep 3: Identify the smallest exponent of each prime identified in Step 2 in the prime factorizations.\n\nThe smallest exponent of 2 and 3 in the factorizations is 1.\n\nStep 4: Multiply the prime factors identified in Step 2 raised to the powers identified in Step 3.\n\nThis gives \\({2}^{1}×{3}^{1}=6\\). The GCD of 24, 42, and 30 is 6, so the largest number of books that can go on a shelf is 6.",
+      "prompt": "Example \\(\\PageIndex{19}\\): Organizing Books Per Shelf\n\nSuppose you want to organize books onto shelves, and you want the shelves to hold the same number of books. Each shelf will only contain one genre of book. You have 24 sci-fi, 42 fantasy, and 30 horror books. How many books can go on each shelf?",
+      "sourceAnswers": [
+        "Since we want shelves that hold an equal number of books, and a shelf can only hold one genre of book, we need a number that will equally divide 24, 42, and 30. So, we need the GCD of the number of books of each genre or the GCD of 24, 42, and 30.\n\nStep 1: Find the prime factorizations of the numbers.\n\nThe prime factorization of 24 is \\({2}^{3}×3\\).\n\nThe prime factorization of 42 is \\(2×3×7\\).\n\nThe prime factorization of 30 is \\(2×3×5\\).\n\nStep 2: Identify the prime factors that appear in every number’s prime factorization.\n\nThe common prime factors are 2 and 3.\n\nStep 3: Identify the smallest exponent of each prime identified in Step 2 in the prime factorizations.\n\nThe smallest exponent of 2 and 3 in the factorizations is 1.\n\nStep 4: Multiply the prime factors identified in Step 2 raised to the powers identified in Step 3.\n\nThis gives \\({2}^{1}×{3}^{1}=6\\). The GCD of 24, 42, and 30 is 6, so the largest number of books that can go on a shelf is 6."
+      ],
+      "hasFigure": false,
+      "status": "draft",
+      "answerVerified": false,
+      "translationStatus": "pending",
+      "mappingStatus": "pending"
+    },
+    {
+      "ordinal": 21,
+      "sourceNumber": "",
+      "sourceAnchor": "",
+      "kind": "example-or-exercise",
+      "context": "The flip side to a divisor of a number is a multiple of a number. For example, 5 is a divisor of 45 and so 45 is a multiple of 5. More generally, if the number \\(a\\) divides the number \\(b\\), then \\(b\\) is a multiple of \\(a\\).\n\nThis drives the idea of the least common multiple of a set of numbers. A common multiple of a set of numbers is a multiple of each of those numbers. For instance, 45 is a common multiple of 9 and 5, because 45 is a multiple of 9 (9 divides 45) and 45 is also a multiple of 5 (5 divides 45). The least common multiple (LCM) of a set of number is the smallest positive common multiple of that set of numbers.\n\nThere are (at least) three ways to find the LCM of a set of numbers, and we will explore two of them. One way is to create a list of multiples of each number in the set, and then identify the smallest multiple that appears in those lists.",
+      "original": "Example \\(\\PageIndex{20}\\): Finding the Least Common Multiple Using Lists\n\nFind the LCM of 24 and 90 by listing multiples and choosing the smallest common multiple.\n\nAnswer\n\nCreate a list of the multiples of each number.\n\nStep 1: The first 15 multiples for 24:\n\n24, 48, 72, 96, 120, 144, 168, 192, 216, 240, 264, 288, 312, 336, 360.\n\nStep 2: The first 15 multiples for 90:\n\n90, 180, 270, 360, 450, 540, 630, 720, 810, 900, 990, 1,080, 1,170, 1,260, 1,350.\n\nThere is one multiple common to these lists, which is 360. So, 360 is the LCM of 24 and 90.",
+      "prompt": "Example \\(\\PageIndex{20}\\): Finding the Least Common Multiple Using Lists\n\nFind the LCM of 24 and 90 by listing multiples and choosing the smallest common multiple.",
+      "sourceAnswers": [
+        "Create a list of the multiples of each number.\n\nStep 1: The first 15 multiples for 24:\n\n24, 48, 72, 96, 120, 144, 168, 192, 216, 240, 264, 288, 312, 336, 360.\n\nStep 2: The first 15 multiples for 90:\n\n90, 180, 270, 360, 450, 540, 630, 720, 810, 900, 990, 1,080, 1,170, 1,260, 1,350.\n\nThere is one multiple common to these lists, which is 360. So, 360 is the LCM of 24 and 90."
+      ],
+      "hasFigure": false,
+      "status": "draft",
+      "answerVerified": false,
+      "translationStatus": "pending",
+      "mappingStatus": "pending"
+    },
+    {
+      "ordinal": 22,
+      "sourceNumber": "",
+      "sourceAnchor": "",
+      "kind": "example-or-exercise",
+      "context": "Step 2: Identify each prime that is present in any of the prime factorizations.\n\nStep 3: Identify the largest exponent of each prime identified in Step 2 in the prime factorizations.\n\nStep 4:. Multiply the prime factors identified in Step 2 raised to the powers identified in Step 3.",
+      "original": "Example \\(\\PageIndex{21}\\): Finding the Least Common Multiple Using Prime Factorization\n\nUse the prime factorizations of 24 and 90 to identify their LCM.\n\nAnswer\n\nStep 1: Find the prime factorization of each number.\n\n\\(24={2}^{3}×3\\)\n\n\\(90=2×{3}^{2}×5\\)\n\nStep 2: Identify each prime that is present in any of the prime factorizations.\n\nThe prime numbers present in the prime factorizations are 2, 3, and 5.\n\nStep 3: Identify the largest exponent of each prime identified in Step 2 in the prime factorizations.\n\n                Prime\t\n                2\t\n                3\t\n                5\t\n\n                Largest exponent\t\n                3\t\n                2\t\n                1\t\n\nStep 4: Compute the LCM by multiplying the prime factors identified in Step 2 raised to the powers identified in Step 3.\n\nThe LCM for 24 and 90 is \\(2×2×2×3×3×5={2}^{3}×{3}^{2}×{5}^{1}=360\\).",
+      "prompt": "Example \\(\\PageIndex{21}\\): Finding the Least Common Multiple Using Prime Factorization\n\nUse the prime factorizations of 24 and 90 to identify their LCM.",
+      "sourceAnswers": [
+        "Step 1: Find the prime factorization of each number.\n\n\\(24={2}^{3}×3\\)\n\n\\(90=2×{3}^{2}×5\\)\n\nStep 2: Identify each prime that is present in any of the prime factorizations.\n\nThe prime numbers present in the prime factorizations are 2, 3, and 5.\n\nStep 3: Identify the largest exponent of each prime identified in Step 2 in the prime factorizations.\n\n                Prime\t\n                2\t\n                3\t\n                5\t\n\n                Largest exponent\t\n                3\t\n                2\t\n                1\t\n\nStep 4: Compute the LCM by multiplying the prime factors identified in Step 2 raised to the powers identified in Step 3.\n\nThe LCM for 24 and 90 is \\(2×2×2×3×3×5={2}^{3}×{3}^{2}×{5}^{1}=360\\)."
+      ],
+      "hasFigure": false,
+      "status": "draft",
+      "answerVerified": false,
+      "translationStatus": "pending",
+      "mappingStatus": "pending"
+    },
+    {
+      "ordinal": 23,
+      "sourceNumber": "",
+      "sourceAnchor": "",
+      "kind": "example-or-exercise",
+      "context": "Step 3: Identify the largest exponent of each prime identified in Step 2 in the prime factorizations.\n\nStep 4:. Multiply the prime factors identified in Step 2 raised to the powers identified in Step 3.\n\nUse prime factorization to find the LCM of 20 and 28.",
+      "original": "Example \\(\\PageIndex{22}\\): Finding the Least Common Multiple Using Prime Factorization\n\nUse the prime factorizations of 36, 66, and 250 to identify the LCM.\n\nAnswer\n\nStep 1: Find the prime factorization of each number.\n\n\\(36={2}^{2}×{3}^{2}\\)\n\n\\(66=2×3×11\\)\n\n\\(250=2×{5}^{3}\\)\n\nStep 2: Identify each prime that is present in any of the prime factorizations.\n\nThe prime numbers present in the prime factorizations are 2, 3, 5, and 11.\n\nStep 3: Identify the largest exponent of each prime identified in Step 2 in the prime factorizations.\n\n                Prime\t\n                2\t\n                3\t\n                5\t\n                11\t\n\n                Largest exponent\t\n                2\t\n                2\t\n                3\t\n                1\t\n\nStep 4: Compute the LCM by multiplying the prime factors identified in Step 2 raised to the powers identified in Step 3.\n\nThe LCM for 36, 66, and 250 is \\(2×2×3×3×5×5×5×11={2}^{2}×{3}^{2}×{5}^{3}×{11}^{1}=49,500\\).",
+      "prompt": "Example \\(\\PageIndex{22}\\): Finding the Least Common Multiple Using Prime Factorization\n\nUse the prime factorizations of 36, 66, and 250 to identify the LCM.",
+      "sourceAnswers": [
+        "Step 1: Find the prime factorization of each number.\n\n\\(36={2}^{2}×{3}^{2}\\)\n\n\\(66=2×3×11\\)\n\n\\(250=2×{5}^{3}\\)\n\nStep 2: Identify each prime that is present in any of the prime factorizations.\n\nThe prime numbers present in the prime factorizations are 2, 3, 5, and 11.\n\nStep 3: Identify the largest exponent of each prime identified in Step 2 in the prime factorizations.\n\n                Prime\t\n                2\t\n                3\t\n                5\t\n                11\t\n\n                Largest exponent\t\n                2\t\n                2\t\n                3\t\n                1\t\n\nStep 4: Compute the LCM by multiplying the prime factors identified in Step 2 raised to the powers identified in Step 3.\n\nThe LCM for 36, 66, and 250 is \\(2×2×3×3×5×5×5×11={2}^{2}×{3}^{2}×{5}^{3}×{11}^{1}=49,500\\)."
+      ],
+      "hasFigure": false,
+      "status": "draft",
+      "answerVerified": false,
+      "translationStatus": "pending",
+      "mappingStatus": "pending"
+    },
+    {
+      "ordinal": 24,
+      "sourceNumber": "",
+      "sourceAnchor": "",
+      "kind": "example-or-exercise",
+      "context": "Use prime factorization to find the LCM of 20 and 28.\n\nUse the prime factorization method to find the LCM of 150, 240, and 462.\n\nUsing lists for three or more numbers, particularly larger numbers, could take quite a bit of time. Frequently, as in this example, the prime factorization process is much quicker. In practice, you can use either listing or prime factorization to find the LCM.",
+      "original": "Example \\(\\PageIndex{23}\\): Finding the Least Common Multiple Using Both Methods\n\nFind the LCM of 20, 36, and 45 using lists and prime factorization.\n\nAnswer\n\nStep 1: Use listing. List the multiples:\n\n                20\t\n                20, 40, 60, 80, 100, 120, 140, 160, 180, 200, 220\t\n\n                36\t\n                36, 72, 108, 144, 180, 216, 252, 288, 324, 360\t\n\n                45\t\n                45, 90, 135, 180, 225, 270, 315, 360, 405, 450, 495, 540\t\n\nThe smallest value that appears on all the lists is 180, so 180 is the LCM of 20, 36, and 45.\n\nStep 2: Find the prime factorization of each number.\n\n\\(20={2}^{2}×5\\)\n\n\\(36={2}^{2}×{3}^{2}\\)\n\n\\(45={3}^{2}×5\\)\n\nStep 3: Identify each prime that is present in any of the prime factorizations.\n\nThe prime numbers present in the prime factorizations are 2, 3, 5.\n\nStep 4: Identify the largest exponent of each prime identified in Step 3 in the prime factorizations.\n\n                Prime\t\n                2\t\n                3\t\n                5\t\n\n                Largest exponent\t\n                2\t\n                2\t\n                1",
+      "prompt": "Example \\(\\PageIndex{23}\\): Finding the Least Common Multiple Using Both Methods\n\nFind the LCM of 20, 36, and 45 using lists and prime factorization.",
+      "sourceAnswers": [
+        "Step 1: Use listing. List the multiples:\n\n                20\t\n                20, 40, 60, 80, 100, 120, 140, 160, 180, 200, 220\t\n\n                36\t\n                36, 72, 108, 144, 180, 216, 252, 288, 324, 360\t\n\n                45\t\n                45, 90, 135, 180, 225, 270, 315, 360, 405, 450, 495, 540\t\n\nThe smallest value that appears on all the lists is 180, so 180 is the LCM of 20, 36, and 45.\n\nStep 2: Find the prime factorization of each number.\n\n\\(20={2}^{2}×5\\)\n\n\\(36={2}^{2}×{3}^{2}\\)\n\n\\(45={3}^{2}×5\\)\n\nStep 3: Identify each prime that is present in any of the prime factorizations.\n\nThe prime numbers present in the prime factorizations are 2, 3, 5.\n\nStep 4: Identify the largest exponent of each prime identified in Step 3 in the prime factorizations.\n\n                Prime\t\n                2\t\n                3\t\n                5\t\n\n                Largest exponent\t\n                2\t\n                2\t\n                1"
+      ],
+      "hasFigure": false,
+      "status": "draft",
+      "answerVerified": false,
+      "translationStatus": "pending",
+      "mappingStatus": "pending"
+    },
+    {
+      "ordinal": 25,
+      "sourceNumber": "",
+      "sourceAnchor": "",
+      "kind": "example-or-exercise",
+      "context": "Applications of the Least Common Multiple\n\nSome applications of LCM involve events that repeat at fixed intervals, such as visits to a location. Other applications involve getting things to be of equal magnitude when using parts that are different sizes (see Example 3.25, for instance). In each case, we may be looking to determine when two processes “line up.”",
+      "original": "Example \\(\\PageIndex{24}\\): Determining Scheduling Overlap Using the Least Common Multiple\n\nTwo students, João, and Amelia, meet one day at an assisted living facility where they volunteer. João volunteers every 6 days. Amelia volunteers every 10 days. How many days will it be until they are both volunteering on the same day again?\n\nAnswer\n\nIf we list the days that each student will volunteer, it becomes clear that we could solve this problem using the LCM of 6 and 10.\n\nJoão will be at the assisted living facility 6, 12, 18, 24, 30, 36, 42, and 48 days later.\n\nAmelia will be at the assisted living facility 10, 20, 30, 40, 50, and 60 days later.\n\nThe smallest number appearing on both lists is 30. João and Amelia will once more be volunteering together 30 days later.",
+      "prompt": "Example \\(\\PageIndex{24}\\): Determining Scheduling Overlap Using the Least Common Multiple\n\nTwo students, João, and Amelia, meet one day at an assisted living facility where they volunteer. João volunteers every 6 days. Amelia volunteers every 10 days. How many days will it be until they are both volunteering on the same day again?",
+      "sourceAnswers": [
+        "If we list the days that each student will volunteer, it becomes clear that we could solve this problem using the LCM of 6 and 10.\n\nJoão will be at the assisted living facility 6, 12, 18, 24, 30, 36, 42, and 48 days later.\n\nAmelia will be at the assisted living facility 10, 20, 30, 40, 50, and 60 days later.\n\nThe smallest number appearing on both lists is 30. João and Amelia will once more be volunteering together 30 days later."
+      ],
+      "hasFigure": false,
+      "status": "draft",
+      "answerVerified": false,
+      "translationStatus": "pending",
+      "mappingStatus": "pending"
+    },
+    {
+      "ordinal": 26,
+      "sourceNumber": "",
+      "sourceAnchor": "",
+      "kind": "example-or-exercise",
+      "context": "Applications of the Least Common Multiple\n\nSome applications of LCM involve events that repeat at fixed intervals, such as visits to a location. Other applications involve getting things to be of equal magnitude when using parts that are different sizes (see Example 3.25, for instance). In each case, we may be looking to determine when two processes “line up.”\n\nThe sun, Venus, and Jupiter all line up on a given day. Venus orbits the sun once every 255 days. Jupiter orbits the sun every 4,330 days (we’ll ignore the decimal values of days for each orbit). How many days will it be until they line up again?",
+      "original": "Example \\(\\PageIndex{25}\\): Determining the Minimum Height Using the LCM\n\nA team-building exercise has teams build a house of cards as high as possible. However, the cards for different teams are of different sizes. Team 1 uses 10 cm × 10 cm cards, while Team 2 uses 8 cm × 8 cm cards. What is the minimum height when the two teams will be tied? Ignore the width of the cards.\n\nAnswer\n\nThis is an example where we want to put together objects with different sizes. We want to know the minimum height when they are tied, or when the houses of cards line up the first time. The heights of the towers built using the 10 cm × 10 cm cards will be 10, 20, 30, 40, 50, and 60 cm tall. When the 8 cm × 8 cm cards are used, the tower will be 8, 16, 24, 32, 40, 48, and 56 cm tall. The smallest number appearing on both lists is 40. The first time they are tied is when the two towers are 40 cm tall.",
+      "prompt": "Example \\(\\PageIndex{25}\\): Determining the Minimum Height Using the LCM\n\nA team-building exercise has teams build a house of cards as high as possible. However, the cards for different teams are of different sizes. Team 1 uses 10 cm × 10 cm cards, while Team 2 uses 8 cm × 8 cm cards. What is the minimum height when the two teams will be tied? Ignore the width of the cards.",
+      "sourceAnswers": [
+        "This is an example where we want to put together objects with different sizes. We want to know the minimum height when they are tied, or when the houses of cards line up the first time. The heights of the towers built using the 10 cm × 10 cm cards will be 10, 20, 30, 40, 50, and 60 cm tall. When the 8 cm × 8 cm cards are used, the tower will be 8, 16, 24, 32, 40, 48, and 56 cm tall. The smallest number appearing on both lists is 40. The first time they are tied is when the two towers are 40 cm tall."
+      ],
+      "hasFigure": false,
+      "status": "draft",
+      "answerVerified": false,
+      "translationStatus": "pending",
+      "mappingStatus": "pending"
+    },
+    {
+      "ordinal": 27,
+      "sourceNumber": "",
+      "sourceAnchor": "",
+      "kind": "exercise-candidate",
+      "context": "The sun, Venus, and Jupiter all line up on a given day. Venus orbits the sun once every 255 days. Jupiter orbits the sun every 4,330 days (we’ll ignore the decimal values of days for each orbit). How many days will it be until they line up again?\n\nIn an Internet giveaway, every 130th person who submits a survey receives $250, and every 900th person receives a free cell phone. How many submissions must be received for the first person to receive both prizes?\n\nApplication of LCM",
+      "original": "Cicadas are known to have life cycles of 13 or 17 years, which are prime numbers. Why would a prime number life cycle be an evolutionary advantage? To figure this out, we have to explore how common multiples work with prime numbers.\n\nMake a conjecture regarding the LCM of a prime number and another number. Test this conjecture with a few examples of your own making.",
+      "prompt": "Cicadas are known to have life cycles of 13 or 17 years, which are prime numbers. Why would a prime number life cycle be an evolutionary advantage? To figure this out, we have to explore how common multiples work with prime numbers.\n\nMake a conjecture regarding the LCM of a prime number and another number. Test this conjecture with a few examples of your own making.",
+      "sourceAnswers": [],
+      "hasFigure": false,
+      "status": "draft",
+      "answerVerified": false,
+      "translationStatus": "pending",
+      "mappingStatus": "pending"
+    },
+    {
+      "ordinal": 28,
+      "sourceNumber": "1",
+      "sourceAnchor": "",
+      "kind": "exercise-candidate",
+      "context": "Check Your Understanding",
+      "original": "1. Identify which of the following numbers are prime and which are composite.",
+      "prompt": "1. Identify which of the following numbers are prime and which are composite.",
+      "sourceAnswers": [],
+      "hasFigure": false,
+      "status": "draft",
+      "answerVerified": false,
+      "translationStatus": "pending",
+      "mappingStatus": "pending"
+    },
+    {
+      "ordinal": 29,
+      "sourceNumber": "2",
+      "sourceAnchor": "",
+      "kind": "exercise-candidate",
+      "context": "Check Your Understanding\n\n\\[31,56,213,48,701 \\nonumber \\]",
+      "original": "2. Find the prime factorization of 4,570 .",
+      "prompt": "2. Find the prime factorization of 4,570 .",
+      "sourceAnswers": [],
+      "hasFigure": false,
+      "status": "draft",
+      "answerVerified": false,
+      "translationStatus": "pending",
+      "mappingStatus": "pending"
+    },
+    {
+      "ordinal": 30,
+      "sourceNumber": "3",
+      "sourceAnchor": "",
+      "kind": "exercise-candidate",
+      "context": "Check Your Understanding\n\n\\[31,56,213,48,701 \\nonumber \\]",
+      "original": "3. Find the greatest common divisor of 410 and 144.",
+      "prompt": "3. Find the greatest common divisor of 410 and 144.",
+      "sourceAnswers": [],
+      "hasFigure": false,
+      "status": "draft",
+      "answerVerified": false,
+      "translationStatus": "pending",
+      "mappingStatus": "pending"
+    },
+    {
+      "ordinal": 31,
+      "sourceNumber": "4",
+      "sourceAnchor": "",
+      "kind": "exercise-candidate",
+      "context": "Check Your Understanding\n\n\\[31,56,213,48,701 \\nonumber \\]",
+      "original": "4. Find the least common multiple of 45 and 70 .",
+      "prompt": "4. Find the least common multiple of 45 and 70 .",
+      "sourceAnswers": [],
+      "hasFigure": false,
+      "status": "draft",
+      "answerVerified": false,
+      "translationStatus": "pending",
+      "mappingStatus": "pending"
+    },
+    {
+      "ordinal": 32,
+      "sourceNumber": "5",
+      "sourceAnchor": "",
+      "kind": "exercise-candidate",
+      "context": "Check Your Understanding\n\n\\[31,56,213,48,701 \\nonumber \\]",
+      "original": "5. You want to fill gift bags for children in the after-school program where you volunteer. You have 30 crayons, 20 sticker sheets, and 70 bite-sized candies. If each gift bag must contain the same number of crayons, sticker sheets, and bite-sized candies, what is the maximum number of bags that can be filled?",
+      "prompt": "5. You want to fill gift bags for children in the after-school program where you volunteer. You have 30 crayons, 20 sticker sheets, and 70 bite-sized candies. If each gift bag must contain the same number of crayons, sticker sheets, and bite-sized candies, what is the maximum number of bags that can be filled?",
+      "sourceAnswers": [],
+      "hasFigure": false,
+      "status": "draft",
+      "answerVerified": false,
+      "translationStatus": "pending",
+      "mappingStatus": "pending"
+    }
+  ],
+  "license": "CC BY 4.0",
+  "licenseEvidence": "This page titled 3.1:  Prime and Composite Numbers was last modified on Thu, 02 Jan 2025 11:07:44 GMT and is shared under a CC BY  4.0  license and was authored, remixed, and/or curated by OpenStax via source content that was edited to the style and standards of the LibreTexts platform.",
+  "url": "https://math.libretexts.org/Bookshelves/Applied_Mathematics/Contemporary_Mathematics_(OpenStax)/03:_Real_Number_Systems_and_Number_Theory/3.01:__Prime_and_Composite_Numbers",
+  "sha256": "7452169239edcb95becdec364d30572261c9db27995e4952ef73032d7df4b206",
+  "checkedAt": "2026-10-07",
+  "id": "55ea6264ffbe2b79e86b",
+  "bookId": "contemporary",
+  "licenseInherited": false,
+  "licenseSource": "https://math.libretexts.org/Bookshelves/Applied_Mathematics/Contemporary_Mathematics_(OpenStax)/03:_Real_Number_Systems_and_Number_Theory/3.01:__Prime_and_Composite_Numbers",
+  "licenseUrl": "https://creativecommons.org/licenses/by/4.0/",
+  "authors": "OpenStax / Donna Kirk et al.",
+  "book": "Contemporary Mathematics",
+  "reviewStatus": "unreviewed",
+  "sourceLanguage": "en",
+  "translationStatus": "pending"
+}

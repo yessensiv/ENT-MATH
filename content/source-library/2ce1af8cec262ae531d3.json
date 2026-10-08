@@ -1,0 +1,594 @@
+{
+  "title": "5.2: Power Functions and Polynomial Functions",
+  "originalText": "Learning Objectives\n\nIdentify power functions.\n\nIdentify end behavior of power functions.\n\nIdentify polynomial functions.\n\nIdentify the degree and leading coefficient of polynomial functions.\n\nSuppose a certain species of bird thrives on a small island. Its population over the last few years is shown in Table \\(\\PageIndex{1}\\).\n\n    Table \\(\\PageIndex{1}\\)\n\n            Year\t\n            2009\t\n            2010\t\n            2011\t\n            2012\t\n            2013\t\n\n            Bird Population\t\n            800\t\n            897\t\n            992\t\n            1,083\t\n            1,169\t\n\nThe population can be estimated using the function \\(P(t)=−0.3t^3+97t+800\\), where \\(P(t)\\) represents the bird population on the island \\(t\\) years after 2009. We can use this model to estimate the maximum bird population and when it will occur. We can also use this model to predict when the bird population will disappear from the island. In this section, we will examine functions that we can use to estimate and predict these types of changes.\n\n[Figure: Three birds on a cliff with the sun rising in the background.]\n\nFigure \\(\\PageIndex{1}\\): (credit: Jason Bay, Flickr)\n\nIdentifying Power Functions\n\nIn order to better understand the bird problem, we need to understand a specific type of function. A power function is a function with a single term that is the product of a real number, a coefficient, and a variable raised to a fixed real number. (A number that multiplies a variable raised to an exponent is known as a coefficient.)\n\nAs an example, consider functions for area or volume. The function for the area of a circle with radius \\(r\\) is\n\n\\[A(r)={\\pi}r^2 \\nonumber\\]\n\nand the function for the volume of a sphere with radius \\(r\\) is\n\n\\[V(r)=\\dfrac{4}{3}{\\pi}r^3 \\nonumber\\]\n\nBoth of these are examples of power functions because they consist of a coefficient, \\({\\pi}\\) or \\(\\dfrac{4}{3}{\\pi}\\), multiplied by a variable \\(r\\) raised to a power.\n\nDefinition: Power Function\n\nA power function is a function that can be represented in the form\n\n\\[f(x)=kx^p \\label{power}\\]\n\nwhere \\(k\\) and \\(p\\) are real numbers, and \\(k\\) is known as the coefficient.\n\nQ&A: Is \\(f(x)=2^x\\) a power function?\n\nNo. A power function contains a variable base raised to a fixed power (Equation \\ref{power}). This function has a constant base raised to a variable power. This is called an exponential function, not a power function. This function will be discussed later.\n\nExample \\(\\PageIndex{1}\\): Identifying Power Functions\n\nWhich of the following functions are power functions?\n\n\\[\\begin{align*} f(x)&=1 &\\text{Constant function} \\\\f(x)&=x &\\text{Identify function} \\\\f(x)&=x^2 &\\text{Quadratic function} \\\\ f(x)&=x^3 &\\text{Cubic function} \\\\ f(x)&=\\dfrac{1}{x} &\\text{Reciprocal function} \\\\f(x)&=\\dfrac{1}{x^2} &\\text{Reciprocal squared function} \\\\ f(x)&=\\sqrt{x} &\\text{Square root function} \\\\ f(x)&=\\sqrt[3]{x} &\\text{Cube root function} \\end{align*}\\]\n\nSolution\n\nAll of the listed functions are power functions.\n\nThe constant and identity functions are power functions because they can be written as \\(f(x)=x^0\\) and \\(f(x)=x^1\\) respectively.\n\nThe quadratic and cubic functions are power functions with whole number powers \\(f(x)=x^2\\) and \\(f(x)=x^3\\).\n\nThe reciprocal and reciprocal squared functions are power functions with negative whole number powers because they can be written as \\(f(x)=x^{−1}\\) and \\(f(x)=x^{−2}\\).\n\nThe square and cube root functions are power functions with fractional powers because they can be written as \\(f(x)=x^{1/2}\\) or \\(f(x)=x^{1/3}\\).\n\nExercise \\(\\PageIndex{1}\\)\n\nWhich functions are power functions?\n\n\\(f(x)=2x^2⋅4x^3\\)\n\n\\(g(x)=−x^5+5x^3−4x\\)\n\n\\(h(x)=\\frac{2x^5−1}{3x^2+4}\\)\n\nAnswer\n\n\\(f(x)\\) is a power function because it can be written as \\(f(x)=8x^5\\). The other functions are not power functions.\n\nIdentifying End Behavior of Power Functions\n\nFigure \\(\\PageIndex{2}\\) shows the graphs of \\(f(x)=x^2\\), \\(g(x)=x^4\\) and and \\(h(x)=x^6\\), which are all power functions with even, whole-number powers. Notice that these graphs have similar shapes, very much like that of the quadratic function in the toolkit. However, as the power increases, the graphs flatten somewhat near the origin and become steeper away from the origin.\n\n[Figure: Graph of three functions, h(x)=x^2 in green, g(x)=x^4 in orange, and f(x)=x^6 in blue.]\n\nFigure \\(\\PageIndex{2}\\): Even-power functions\n\nTo describe the behavior as numbers become larger and larger, we use the idea of infinity. We use the symbol \\(\\infty\\) for positive infinity and \\(−\\infty\\) for negative infinity. When we say that “x approaches infinity,” which can be symbolically written as \\(x{\\rightarrow}\\infty\\), we are describing a behavior; we are saying that \\(x\\) is increasing without bound.\n\nWith the even-power function, as the input increases or decreases without bound, the output values become very large, positive numbers. Equivalently, we could describe this behavior by saying that as \\(x\\) approaches positive or negative infinity, the \\(f(x)\\) values increase without bound. In symbolic form, we could write\n\n\\[\\text{as } x{\\rightarrow}{\\pm}{\\infty}, \\;f(x){\\rightarrow}{\\infty} \\nonumber\\]\n\nFigure \\(\\PageIndex{3}\\) shows the graphs of \\(f(x)=x^3\\), \\(g(x)=x^5\\), and \\(h(x)=x^7\\), which are all power functions with odd, whole-number powers. Notice that these graphs look similar to the cubic function in the toolkit. Again, as the power increases, the graphs flatten near the origin and become steeper away from the origin.\n\n[Figure: Graph of three functions, f(x)=x^3 in green, g(x)=x^5 in orange, and h(x)=x^7 in blue.]\n\nFigure \\(\\PageIndex{3}\\): Odd-power function\n\nThese examples illustrate that functions of the form \\(f(x)=x^n\\) reveal symmetry of one kind or another. First, in Figure \\(\\PageIndex{2}\\) we see that even functions of the form \\(f(x)=x^n\\), \\(n\\) even, are symmetric about the \\(y\\)-axis. In Figure \\(\\PageIndex{3}\\) we see that odd functions of the form \\(f(x)=x^n\\), \\(n\\) odd, are symmetric about the origin.\n\nFor these odd power functions, as \\(x\\) approaches negative infinity, \\(f(x)\\) decreases without bound. As \\(x\\) approaches positive infinity, \\(f(x)\\) increases without bound. In symbolic form we write\n\n\\[\\begin{align*} &\\text{as }x{\\rightarrow}-{\\infty},\\;f(x){\\rightarrow}-{\\infty} \\\\ &\\text{as }x{\\rightarrow}{\\infty},\\;f(x){\\rightarrow}{\\infty} \\end{align*}\\]\n\nThe behavior of the graph of a function as the input values get very small \\((x{\\rightarrow}−{\\infty})\\) and get very large \\(x{\\rightarrow}{\\infty}\\) is referred to as the end behavior of the function. We can use words or symbols to describe end behavior.\n\nFigure \\(\\PageIndex{4}\\) shows the end behavior of power functions in the form \\(f(x)=kx^n\\) where \\(n\\) is a non-negative integer depending on the power and the constant.\n\n[Figure: alt]\n\nFigure \\(\\PageIndex{4}\\)\n\nHow To: Given a power function \\(f(x)=kx^n\\) where \\(n\\) is a non-negative integer, identify the end behavior.\n\n1. Determine whether the power is even or odd.\n\n2. Determine whether the constant is positive or negative.\n\n3. Use Figure \\(\\PageIndex{4}\\) to identify the end behavior.\n\nExample \\(\\PageIndex{2}\\): Identifying the End Behavior of a Power Function\n\nDescribe the end behavior of the graph of \\(f(x)=x^8\\).\n\nSolution\n\nThe coefficient is 1 (positive) and the exponent of the power function is 8 (an even number). As \\(x\\) approaches infinity, the output (value of \\(f(x)\\) ) increases without bound. We write as \\(x→∞,\\) \\(f(x)→∞.\\) As \\(x\\) approaches negative infinity, the output increases without bound. In symbolic form, as \\(x→−∞,\\) \\(f(x)→∞.\\) We can graphically represent the function as shown in Figure \\(\\PageIndex{5}\\).\n\n[Figure: Graph of f(x)=x^8]\n\nFigure \\(\\PageIndex{5}\\): Graph of \\(f(x)=x^8\\).\n\nExample \\(\\PageIndex{3}\\): Identifying the End Behavior of a Power Function.\n\nDescribe the end behavior of the graph of \\(f(x)=−x^9\\).\n\nSolution\n\nThe exponent of the power function is 9 (an odd number). Because the coefficient is –1 (negative), the graph is the reflection about the \\(x\\)-axis of the graph of \\(f(x)=x^9\\). Figure \\(\\PageIndex{6}\\) shows that as \\(x\\) approaches infinity, the output decreases without bound. As \\(x\\) approaches negative infinity, the output increases without bound. In symbolic form, we would write\n\n\\[\\begin{align*} \\text{as }x{\\rightarrow}-{\\infty},\\;f(x){\\rightarrow}{\\infty} \\\\ \\text{as }x{\\rightarrow}{\\infty},\\;f(x){\\rightarrow}-{\\infty} \\end{align*}\\]\n\n[Figure: Graph of f(x)=-x^9]\n\nFigure \\(\\PageIndex{6}\\): Graph of \\(f(x)=-x^9\\).\n\nAnalysis\n\nWe can check our work by using the table feature on a graphing utility.\n\n    Table \\(\\PageIndex{2}\\)\n\n            \\(x\\)\t\n            \\(f(x)\\)\t\n\n            -10\t\n            1,000,000,000\t\n\n            -5\t\n            1,953,125\t\n\n            0\t\n            0\t\n\n            5\t\n            -1,953,125\t\n\n            10\t\n            -1,000,000,000\t\n\nWe can see from Table \\(\\PageIndex{2}\\) that, when we substitute very small values for \\(x\\), the output is very large, and when we substitute very large values for \\(x\\), the output is very small (meaning that it is a very large negative value).\n\nExercise \\(\\PageIndex{2}\\)\n\nDescribe in words and symbols the end behavior of \\(f(x)=−5x^4\\).\n\nAnswer\n\nAs \\(x\\) approaches positive or negative infinity, \\(f(x)\\) decreases without bound: as \\(x{\\rightarrow}{\\pm}{\\infty}\\), \\(f(x){\\rightarrow}−{\\infty}\\) because of the negative coefficient.\n\nIdentifying Polynomial Functions\n\nAn oil pipeline bursts in the Gulf of Mexico, causing an oil slick in a roughly circular shape. The slick is currently 24 miles in radius, but that radius is increasing by 8 miles each week. We want to write a formula for the area covered by the oil slick by combining two functions. The radius \\(r\\) of the spill depends on the number of weeks \\(w\\) that have passed. This relationship is linear.\n\n\\[r(w)=24+8w \\nonumber\\]\n\nWe can combine this with the formula for the area A of a circle.\n\n\\[A(r)={\\pi}r^2 \\nonumber\\]\n\nComposing these functions gives a formula for the area in terms of weeks.\n\n\\[ \\begin{align*} A(w)&=A(r(w)) \\\\ &=A(24+8w) \\\\ & ={\\pi}(24+8w)^2 \\end{align*}\\]\n\nMultiplying gives the formula.\n\n\\[A(w)=576{\\pi}+384{\\pi}w+64{\\pi}w^2 \\nonumber\\]\n\nThis formula is an example of a polynomial function. A polynomial function consists of either zero or the sum of a finite number of non-zero terms, each of which is a product of a number, called the coefficient of the term, and a variable raised to a non-negative integer power.\n\nDefinition: Polynomial Functions\n\nLet \\(n\\) be a non-negative integer. A polynomial function is a function that can be written in the form\n\n\\[f(x)=a_nx^n+...+a_2x^2+a_1x+a_0 \\label{poly}\\]\n\nThis is called the general form of a polynomial function. Each \\(a_i\\) is a coefficient and can be any real number. Each product \\(a_ix^i\\) is a term of a polynomial function.\n\nExample \\(\\PageIndex{4}\\): Identifying Polynomial Functions\n\nWhich of the following are polynomial functions?\n\n\\(f(x)=2x^3⋅3x+4\\)\n\n\\(g(x)=−x(x^2−4)\\)\n\n\\(h(x)=5\\sqrt{x}+2\\)\n\nSolution\n\nThe first two functions are examples of polynomial functions because they can be written in the form of Equation \\ref{poly}, where the powers are non-negative integers and the coefficients are real numbers.\n\n\\(f(x)\\) can be written as \\(f(x)=6x^4+4\\).\n\n\\(g(x)\\) can be written as \\(g(x)=−x^3+4x\\).\n\n\\(h(x)\\) cannot be written in this form and is therefore not a polynomial function.\n\nIdentifying the Degree and Leading Coefficient of a Polynomial Function\n\nBecause of the form of a polynomial function, we can see an infinite variety in the number of terms and the power of the variable. Although the order of the terms in the polynomial function is not important for performing operations, we typically arrange the terms in descending order of power, or in general form. The degree of the polynomial is the highest power of the variable that occurs in the polynomial; it is the power of the first variable if the function is in general form. The leading term is the term containing the highest power of the variable, or the term with the highest degree. The leading coefficient is the coefficient of the leading term.\n\nTerminology of Polynomial Functions\n\nWe often rearrange polynomials so that the powers are descending.\n\n[Figure: imageedit_2_8656799785.png]\n\nFigure \\(\\PageIndex{7}\\)\n\nWhen a polynomial is written in this way, we say that it is in general form.\n\nHow To: Given a polynomial function, identify the degree and leading coefficient\n\n1. Find the highest power of \\(x\\) to determine the degree function.\n\n2. Identify the term containing the highest power of \\(x\\) to find the leading term.\n\n3. Identify the coefficient of the leading term.\n\nExample \\(\\PageIndex{5}\\): Identifying the Degree and Leading Coefficient of a Polynomial Function\n\nIdentify the degree, leading term, and leading coefficient of the following polynomial functions.\n\n\\(f(x)=3+2x^2−4x^3\\)\n\n\\(g(t)=5t^5−2t^3+7t\\)\n\n\\(h(p)=6p−p^3−2\\)\n\nSolution\n\nFor the function \\(f(x)\\), the highest power of \\(x\\) is 3, so the degree is 3. The leading term is the term containing that degree, \\(−4x^3\\). The leading coefficient is the coefficient of that term, −4.\n\nFor the function \\(g(t)\\), the highest power of \\(t\\) is 5, so the degree is 5. The leading term is the term containing that degree, \\(5t^5\\). The leading coefficient is the coefficient of that term, 5.\n\nFor the function \\(h(p)\\), the highest power of \\(p\\) is 3, so the degree is 3. The leading term is the term containing that degree, \\(−p^3\\); the leading coefficient is the coefficient of that term, −1.\n\nExercise \\(\\PageIndex{3}\\)\n\nIdentify the degree, leading term, and leading coefficient of the polynomial \\(f(x)=4x^2−x^6+2x−6\\).\n\nAnswer\n\nThe degree is \\(6.\\) The leading term is \\(−x^6\\). The leading coefficient is \\(−1.\\)\n\nIdentifying End Behavior of Polynomial Functions\n\nKnowing the degree of a polynomial function is useful in helping us predict its end behavior. To determine its end behavior, look at the leading term of the polynomial function. Because the power of the leading term is the highest, that term will grow significantly faster than the other terms as \\(x\\) gets very large or very small, so its behavior will dominate the graph. For any polynomial, the end behavior of the polynomial will match the end behavior of the term of highest degree (Table \\(\\PageIndex{3}\\)).\n\n    Table \\(\\PageIndex{3}\\)\n\n            Polynomial Function\t\n            Leading Term\t\n            Graph of Polynomial Function\t\n\n            \\(f(x)=5x^4+2x^3−x−4\\)\t\n            \\(5x^4\\)\t\n\n[Figure: Graph of f(x)=5x^4+2x^3-x-4.]\n\n            \\(f(x)=−2x^6−x^5+3x^4+x^3\\)\t\n            \\(−2x^6\\)\t\n\n[Figure: Graph of f(x)=-2x^6-x^5+3x^4+x^3]\n\n            \\(f(x)=3x^5−4x^4+2x^2+1\\)\t\n            \\(3x^5\\)\t\n\n[Figure: Graph of f(x)=3x^5-4x^4+2x^2+1]\n\n            \\(f(x)=−6x^3+7x^2+3x+1\\)\t\n            \\(−6x^3\\)\t\n\n[Figure: Graph of f(x)=-6x^3+7x^2+3x+1]\n\nExample \\(\\PageIndex{6}\\): Identifying End Behavior and Degree of a Polynomial Function\n\nDescribe the end behavior and determine a possible degree of the polynomial function in Figure \\(\\PageIndex{8}\\).\n\n[Figure: Graph of an odd-degree polynomial.]\n\nFigure \\(\\PageIndex{8}\\).\n\nSolution\n\nAs the input values \\(x\\) get very large, the output values \\(f(x)\\) increase without bound. As the input values \\(x\\) get very small, the output values \\(f(x)\\) decrease without bound. We can describe the end behavior symbolically by writing\n\n\\[\\text{as } x{\\rightarrow}{\\infty}, \\; f(x){\\rightarrow}{\\infty} \\nonumber\\]\n\n\\[\\text{as } x{\\rightarrow}-{\\infty}, \\; f(x){\\rightarrow}-{\\infty} \\nonumber\\]\n\nIn words, we could say that as \\(x\\) values approach infinity, the function values approach infinity, and as \\(x\\) values approach negative infinity, the function values approach negative infinity.\n\nWe can tell this graph has the shape of an odd degree power function that has not been reflected, so the degree of the polynomial creating this graph must be odd and the leading coefficient must be positive.\n\nExercise \\(\\PageIndex{1}\\)\n\nDescribe the end behavior, and determine a possible degree of the polynomial function in Figure \\(\\PageIndex{9}\\).\n\n[Figure: alt]\n\nFigure \\(\\PageIndex{9}\\)\n\nAnswer\n\nAs \\(x{\\rightarrow}{\\infty}\\), \\(f(x){\\rightarrow}−{\\infty}\\); as \\(x{\\rightarrow}−{\\infty}\\), \\(f(x){\\rightarrow}−{\\infty}\\). It has the shape of an even degree power function with a negative coefficient.\n\nExample \\(\\PageIndex{7}\\): Identifying End Behavior and Degree of a Polynomial Function\n\nGiven the function \\(f(x)=−3x^2(x−1)(x+4)\\), express the function as a polynomial in general form, and determine the leading term, degree, and end behavior of the function.\n\nSolution\n\nObtain the general form by expanding the given expression for \\(f(x)\\).\n\n\\[\\begin{align*} f(x)&=−3x^2(x−1)(x+4) \\\\ &=−3x^2(x^2+3x−4) \\\\ &=−3x^4−9x^3+12x^2 \\end{align*}\\]\n\nThe general form is \\(f(x)=−3x^4−9x^3+12x^2\\). The leading term is \\(−3x^4\\); therefore, the degree of the polynomial is 4. The degree is even (4) and the leading coefficient is negative (–3), so the end behavior is\n\n\\[\\text{as }x{\\rightarrow}−{\\infty}, \\; f(x){\\rightarrow}−{\\infty} \\nonumber\\]\n\n\\[\\text{as } x{\\rightarrow}{\\infty}, \\; f(x){\\rightarrow}−{\\infty} \\nonumber\\]\n\nExercise \\(\\PageIndex{7}\\)\n\nGiven the function \\(f(x)=0.2(x−2)(x+1)(x−5)\\), express the function as a polynomial in general form and determine the leading term, degree, and end behavior of the function.\n\nAnswer\n\nThe leading term is \\(0.2x^3\\), so it is a degree 3 polynomial. As \\(x\\) approaches positive infinity, \\(f(x)\\) increases without bound; as \\(x\\) approaches negative infinity, \\(f(x)\\) decreases without bound.\n\nIdentifying Local Behavior of Polynomial Functions\n\nIn addition to the end behavior of polynomial functions, we are also interested in what happens in the “middle” of the function. In particular, we are interested in locations where graph behavior changes. A turning point is a point at which the function values change from increasing to decreasing or decreasing to increasing.\n\nWe are also interested in the intercepts. As with all functions, the \\(y\\)-intercept is the point at which the graph intersects the vertical axis. The point corresponds to the coordinate pair in which the input value is zero. Because a polynomial is a function, only one output value corresponds to each input value so there can be only one \\(y\\)-intercept \\((0,a_0)\\). The \\(x\\)-intercepts occur at the input values that correspond to an output value of zero. It is possible to have more than one \\(x\\)-intercept. See Figure \\(\\PageIndex{10}\\).\n\n[Figure: alt]\n\nFigure \\(\\PageIndex{10}\\)\n\nDefintion: Intercepts and Turning Points of Polynomial Functions\n\nA turning point of a graph is a point at which the graph changes direction from increasing to decreasing or decreasing to increasing. The \\(y\\)-intercept is the point at which the function has an input value of zero. The \\(x\\)-intercepts are the points at which the output value is zero.\n\n[Figure: alt]\nGiven a polynomial function, determine the intercepts.\n\n1. Determine the \\(y\\)-intercept by setting \\(x=0\\) and finding the corresponding output value.\n\n2. Determine the \\(x\\)-intercepts by solving for the input values that yield an output value of zero.\n\nExample \\(\\PageIndex{8}\\): Determining the Intercepts of a Polynomial Function\n\nGiven the polynomial function \\(f(x)=(x−2)(x+1)(x−4)\\), written in factored form for your convenience, determine the \\(y\\)- and \\(x\\)-intercepts.\n\nSolution\n\nThe \\(y\\)-intercept occurs when the input is zero, so substitute 0 for \\(x\\).\n\n\\[ \\begin{align*}f(0)&=(0−2)(0+1)(0−4) \\\\ &=(−2)(1)(−4) \\\\ &=8 \\end{align*}\\]\n\nThe \\(y\\)-intercept is \\((0,8)\\).\n\nThe \\(x\\)-intercepts occur when the output is zero.\n\n\\[ 0=(x−2)(x+1)(x−4) \\nonumber \\]\n\n\\[\\begin{align*} x−2&=0 & &\\text{or} & x+1&=0 & &\\text{or} & x−4&=0 \\\\ x&=2 & &\\text{or} & x&=−1 & &\\text{or} & x&=4 \\end{align*}\\]\n\nThe \\(x\\)-intercepts are \\((2,0)\\),\\((–1,0)\\), and \\((4,0)\\).\n\nWe can see these intercepts on the graph of the function shown in Figure \\(\\PageIndex{11}\\).\n\n[Figure: Graph of f(x)=(x-2)(x+1)(x-4), which labels all the intercepts.]\n\nFigure \\(\\PageIndex{11}\\): Graph of \\(f(x)=(x-2)(x+1)(x-4)\\).\n\nExample \\(\\PageIndex{9}\\): Determining the Intercepts of a Polynomial Function with Factoring\n\nGiven the polynomial function \\(f(x)=x^4−4x^2−45\\), determine the \\(y\\)- and \\(x\\)-intercepts.\n\nSolution\n\nThe \\(y\\)-intercept occurs when the input is zero.\n\n\\[ \\begin{align*} f(0) &=(0)^4−4(0)^2−45 \\\\[4pt] &=−45 \\end{align*}\\]\n\nThe \\(y\\)-intercept is \\((0,−45)\\).\n\nThe \\(x\\)-intercepts occur when the output is zero. To determine when the output is zero, we will need to factor the polynomial.\n\n\\[\\begin{align*} f(x)&=x^4−4x^2−45 \\\\ &=(x^2−9)(x^2+5) \\\\ &=(x−3)(x+3)(x^2+5)\n\n\\end{align*}\\]\n\n\\[0=(x−3)(x+3)(x^2+5) \\nonumber\\]\n\n\\[\\begin{align*} x−3&=0 & &\\text{or} & x+3&=0 & &\\text{or} & x^2+5&=0 \\\\ x&=3 & &\\text{or} & x&=−3 & &\\text{or} &\\text{(no real solution)} \\end{align*}\\]\n\nThe \\(x\\)-intercepts are \\((3,0)\\) and \\((–3,0)\\).\n\nWe can see these intercepts on the graph of the function shown in Figure \\(\\PageIndex{12}\\). We can see that the function is even because \\(f(x)=f(−x)\\).\n\n[Figure: Graph of f(x)=x^4-4x^2-45, which labels all the intercepts at (-3, 0), (3, 0), and (0, -45).]\n\nFigure \\(\\PageIndex{12}\\): Graph of \\(f(x)=x^4-4x^2-45\\).\n\nExercise \\(\\PageIndex{5}\\) \n\n\\(\\PageIndex{5}\\): Given the polynomial function \\(f(x)=2x^3−6x^2−20x\\), determine the \\(y\\)- and \\(x\\)-intercepts.\n\nSolution\n\n\\(y\\)-intercept \\((0,0)\\); \\(x\\)-intercepts \\((0,0)\\),\\((–2,0)\\), and \\((5,0)\\)\n\nComparing Smooth and Continuous Graphs\n\nThe degree of a polynomial function helps us to determine the number of \\(x\\)-intercepts and the number of turning points. A polynomial function of \\(n^\\text{th}\\) degree is the product of \\(n\\) factors, so it will have at most \\(n\\) roots or zeros, or \\(x\\)-intercepts. The graph of the polynomial function of degree \\(n\\) must have at most \\(n–1\\) turning points. This means the graph has at most one fewer turning point than the degree of the polynomial or one fewer than the number of factors.\n\nA continuous function has no breaks in its graph: the graph can be drawn without lifting the pen from the paper. A smooth curve is a graph that has no sharp corners. The turning points of a smooth graph must always occur at rounded curves. The graphs of polynomial functions are both continuous and smooth.\n\nIntercepts and Turning Points of Polynomials\n\nA polynomial of degree \\(n\\) will have, at most, \\(n\\) \\(x\\)-intercepts and \\(n−1\\) turning points.\n\nExample \\(\\PageIndex{10}\\): Determining the Number of Intercepts and Turning Points of a Polynomial\n\nWithout graphing the function, determine the local behavior of the function by finding the maximum number of \\(x\\)-intercepts and turning points for \\(f(x)=−3x^{10}+4x^7−x^4+2x^3\\).\n\nSolution\n\nThe polynomial has a degree of 10, so there are at most \\(n\\) \\(x\\)-intercepts and at most \\(n−1\\) turning points.\n\nExercise \\(\\PageIndex{6}\\)\n\nWithout graphing the function, determine the maximum number of \\(x\\)-intercepts and turning points for \\(f(x)=108−13x^9−8x^4+14x^{12}+2x^3\\)\n\nAnswer\n\nThere are at most 12 \\(x\\)-intercepts and at most 11 turning points.\n\nExample \\(\\PageIndex{11}\\): Drawing Conclusions about a Polynomial Function from the Graph\n\nWhat can we conclude about the polynomial represented by the graph shown in Figure \\(\\PageIndex{12}\\) based on its intercepts and turning points?\n\n[Figure:  Graph of an even-degree polynomial.]\n\nFigure \\(\\PageIndex{13}\\).\n\nSolution\n\nThe end behavior of the graph tells us this is the graph of an even-degree polynomial. See Figure \\(\\PageIndex{14}\\).\n\n[Figure: Graph of an even-degree polynomial that denotes the turning points and intercepts.]\n\nFigure \\(\\PageIndex{14}\\): Graph of an even-degree polynomial.\n\nThe graph has 2 \\(x\\)-intercepts, suggesting a degree of 2 or greater, and 3 turning points, suggesting a degree of 4 or greater. Based on this, it would be reasonable to conclude that the degree is even and at least 4.\n\nExercise \\(\\PageIndex{7}\\)\n\nWhat can we conclude about the polynomial represented by the graph shown in Figure \\(\\PageIndex{15}\\) based on its intercepts and turning points?\n\n[Figure: CNX_Precalc_Figure_03_03_222.jpg]\n\nFigure \\(\\PageIndex{15}\\).\n\nAnswer\n\nAdd texts here. Do not delete this text first.\n\nSolution\n\nThe end behavior indicates an odd-degree polynomial function; there are 3 \\(x\\)-intercepts and 2 turning points, so the degree is odd and at least 3. Because of the end behavior, we know that the lead coefficient must be negative.\n\nExample \\(\\PageIndex{12}\\): Drawing Conclusions about a Polynomial Function from the Factors\n\nGiven the function \\(f(x)=−4x(x+3)(x−4)\\), determine the local behavior.\n\nSolution\n\nThe \\(y\\)-intercept is found by evaluating \\(f(0)\\).\n\n\\[\\begin{align*} f(0)&=−4(0)(0+3)(0−4) \\\\ &=0 \\end{align*}\\]\n\nThe \\(y\\)-intercept is \\((0,0)\\).\n\nThe \\(x\\)-intercepts are found by determining the zeros of the function.\n\n\\[\\begin{align*} 0&=-4x(x+3)(x-4) \\\\ x&=0 & &\\text{or} & x+3&=0 & &\\text{or} & x-4&=0 \\\\ x&=0 & &\\text{or} & x&=−3 & &\\text{or} & x&=4 \\end{align*}\\]\n\nThe \\(x\\)-intercepts are \\((0,0)\\),\\((–3,0)\\), and \\((4,0)\\).\n\nThe degree is 3 so the graph has at most 2 turning points.\n\nExercise \\(\\PageIndex{8}\\)\n\nGiven the function \\(f(x)=0.2(x−2)(x+1)(x−5)\\), determine the local behavior.\n\nAnswer\n\nThe \\(x\\)-intercepts are \\((2,0)\\), \\((−1,0)\\), and \\((5,0)\\), the \\(y\\)-intercept is \\((0,2)\\), and the graph has at most 2 turning points.\n\nKey Equations\n\ngeneral form of a polynomial function: \\(f(x)=a_nx^n+a_{n-1}x^{n-1}...+a_2x^2+a_1x+a_0\\)\n\nKey Concepts\n\nA power function is a variable base raised to a number power.\n\nThe behavior of a graph as the input decreases without bound and increases without bound is called the end behavior.\n\nThe end behavior depends on whether the power is even or odd.\n\nA polynomial function is the sum of terms, each of which consists of a transformed power function with positive whole number power.\n\nThe degree of a polynomial function is the highest power of the variable that occurs in a polynomial. The term containing the highest power of the variable is called the leading term. The coefficient of the leading term is called the leading coefficient.\n\nThe end behavior of a polynomial function is the same as the end behavior of the power function represented by the leading term of the function.\n\nA polynomial of degree \\(n\\) will have at most \\(n\\) \\(x\\)-intercepts and at most \\(n−1\\) turning points.\n\nGlossary\n\ncoefficient\n\na nonzero real number that is multiplied by a variable raised to an exponent (only the number factor is the coefficient)\n\ncontinuous function\n\na function whose graph can be drawn without lifting the pen from the paper because there are no breaks in the graph\n\ndegree\n\nthe highest power of the variable that occurs in a polynomial\n\nend behavior\n\nthe behavior of the graph of a function as the input decreases without bound and increases without bound\n\nleading coefficient\n\nthe coefficient of the leading term\n\nleading term\n\nthe term containing the highest power of the variable\n\npolynomial function\n\na function that consists of either zero or the sum of a finite number of non-zero terms, each of which is a product of a number, called the coefficient of the term, and a variable raised to a non-negative integer power.\n\npower function\n\na function that can be represented in the form \\(f(x)=kx^p\\) where \\(k\\) is a constant, the base is a variable, and the exponent, \\(p\\), is a constant\n\nsmooth curve\n\na graph with no sharp corners\n\nterm of a polynomial function\n\nany \\(a_ix^i\\) of a polynomial function in the form \\(f(x)=a_nx^n+a_{n-1}x^{n-1}...+a_2x^2+a_1x+a_0\\)\n\nturning point\n\nthe location at which the graph of a function changes direction\n\nThis page titled 5.2: Power Functions and Polynomial Functions was last modified on Thu, 26 Dec 2024 22:30:43 GMT and is shared under a CC BY  4.0  license and was authored, remixed, and/or curated by OpenStax via source content that was edited to the style and standards of the LibreTexts platform.",
+  "figures": [
+    {
+      "url": "https://math.libretexts.org/@api/deki/files/1214/CNX_Precalc_Figure_03_03_001.jpg?revision=1",
+      "alt": "Three birds on a cliff with the sun rising in the background.",
+      "credit": ""
+    },
+    {
+      "url": "https://math.libretexts.org/@api/deki/files/1215/CNX_Precalc_Figure_03_03_002.jpg?revision=1",
+      "alt": "Graph of three functions, h(x)=x^2 in green, g(x)=x^4 in orange, and f(x)=x^6 in blue.",
+      "credit": ""
+    },
+    {
+      "url": "https://math.libretexts.org/@api/deki/files/1216/CNX_Precalc_Figure_03_03_003.jpg?revision=1",
+      "alt": "Graph of three functions, f(x)=x^3 in green, g(x)=x^5 in orange, and h(x)=x^7 in blue.",
+      "credit": ""
+    },
+    {
+      "url": "https://math.libretexts.org/@api/deki/files/50695/openstaxprecal5-3-4.jpg?revision=1",
+      "alt": "alt",
+      "credit": ""
+    },
+    {
+      "url": "https://math.libretexts.org/@api/deki/files/1218/CNX_Precalc_Figure_03_03_008.jpg?revision=1",
+      "alt": "Graph of f(x)=x^8",
+      "credit": ""
+    },
+    {
+      "url": "https://math.libretexts.org/@api/deki/files/1219/CNX_Precalc_Figure_03_03_009.jpg?revision=1",
+      "alt": "Graph of f(x)=-x^9",
+      "credit": ""
+    },
+    {
+      "url": "https://math.libretexts.org/@api/deki/files/9597/imageedit_2_8656799785.png?revision=1",
+      "alt": "imageedit_2_8656799785.png",
+      "credit": ""
+    },
+    {
+      "url": "https://math.libretexts.org/@api/deki/files/1225/CNX_Precalc_Figure_03_03_011.jpg?revision=1&size=bestfit&width=350&height=372",
+      "alt": "Graph of f(x)=5x^4+2x^3-x-4.",
+      "credit": ""
+    },
+    {
+      "url": "https://math.libretexts.org/@api/deki/files/1226/CNX_Precalc_Figure_03_03_012.jpg?revision=1&size=bestfit&width=350&height=372",
+      "alt": "Graph of f(x)=-2x^6-x^5+3x^4+x^3",
+      "credit": ""
+    },
+    {
+      "url": "https://math.libretexts.org/@api/deki/files/1227/CNX_Precalc_Figure_03_03_013.jpg?revision=1&size=bestfit&width=348&height=369",
+      "alt": "Graph of f(x)=3x^5-4x^4+2x^2+1",
+      "credit": ""
+    },
+    {
+      "url": "https://math.libretexts.org/@api/deki/files/1228/CNX_Precalc_Figure_03_03_014.jpg?revision=1&size=bestfit&width=349&height=370",
+      "alt": "Graph of f(x)=-6x^3+7x^2+3x+1",
+      "credit": ""
+    },
+    {
+      "url": "https://math.libretexts.org/@api/deki/files/1229/CNX_Precalc_Figure_03_03_015.jpg?revision=1",
+      "alt": "Graph of an odd-degree polynomial.",
+      "credit": ""
+    },
+    {
+      "url": "https://math.libretexts.org/@api/deki/files/1232/CNX_Precalc_Figure_03_03_016n.jpg?revision=1",
+      "alt": "alt",
+      "credit": ""
+    },
+    {
+      "url": "https://math.libretexts.org/@api/deki/files/1231/CNX_Precalc_Figure_03_03_017.jpg?revision=1",
+      "alt": "alt",
+      "credit": ""
+    },
+    {
+      "url": "https://math.libretexts.org/@api/deki/files/871/how-to.png?revision=1",
+      "alt": "alt",
+      "credit": ""
+    },
+    {
+      "url": "https://math.libretexts.org/@api/deki/files/1233/CNX_Precalc_Figure_03_03_018.jpg?revision=1",
+      "alt": "Graph of f(x)=(x-2)(x+1)(x-4), which labels all the intercepts.",
+      "credit": ""
+    },
+    {
+      "url": "https://math.libretexts.org/@api/deki/files/1246/CNX_Precalc_Figure_03_03_019.jpg?revision=1",
+      "alt": "Graph of f(x)=x^4-4x^2-45, which labels all the intercepts at (-3, 0), (3, 0), and (0, -45).",
+      "credit": ""
+    },
+    {
+      "url": "https://math.libretexts.org/@api/deki/files/1247/CNX_Precalc_Figure_03_03_020.jpg?revision=1",
+      "alt": " Graph of an even-degree polynomial.",
+      "credit": ""
+    },
+    {
+      "url": "https://math.libretexts.org/@api/deki/files/1248/CNX_Precalc_Figure_03_03_021.jpg?revision=1",
+      "alt": "Graph of an even-degree polynomial that denotes the turning points and intercepts.",
+      "credit": ""
+    },
+    {
+      "url": "https://math.libretexts.org/@api/deki/files/1249/CNX_Precalc_Figure_03_03_022.jpg?revision=1",
+      "alt": "CNX_Precalc_Figure_03_03_222.jpg",
+      "credit": ""
+    }
+  ],
+  "references": [
+    {
+      "text": "5.2: Power Functions and Polynomial Functions",
+      "url": "https://math.libretexts.org/Bookshelves/Algebra/Algebra_and_Trigonometry_1e_(OpenStax)/05%3A_Polynomial_and_Rational_Functions/5.02%3A_Power_Functions_and_Polynomial_Functions"
+    },
+    {
+      "text": "CC BY  4.0",
+      "url": "https://creativecommons.org/licenses/by/4.0"
+    },
+    {
+      "text": "OpenStax",
+      "url": "https://openstax.org/"
+    },
+    {
+      "text": "source content",
+      "url": "https://openstax.org/details/books/precalculus"
+    }
+  ],
+  "exercises": [
+    {
+      "ordinal": 1,
+      "sourceNumber": "",
+      "sourceAnchor": "",
+      "kind": "example-or-exercise",
+      "context": "where \\(k\\) and \\(p\\) are real numbers, and \\(k\\) is known as the coefficient.\n\nQ&A: Is \\(f(x)=2^x\\) a power function?\n\nNo. A power function contains a variable base raised to a fixed power (Equation \\ref{power}). This function has a constant base raised to a variable power. This is called an exponential function, not a power function. This function will be discussed later.",
+      "original": "Example \\(\\PageIndex{1}\\): Identifying Power Functions\n\nWhich of the following functions are power functions?\n\n\\[\\begin{align*} f(x)&=1 &\\text{Constant function} \\\\f(x)&=x &\\text{Identify function} \\\\f(x)&=x^2 &\\text{Quadratic function} \\\\ f(x)&=x^3 &\\text{Cubic function} \\\\ f(x)&=\\dfrac{1}{x} &\\text{Reciprocal function} \\\\f(x)&=\\dfrac{1}{x^2} &\\text{Reciprocal squared function} \\\\ f(x)&=\\sqrt{x} &\\text{Square root function} \\\\ f(x)&=\\sqrt[3]{x} &\\text{Cube root function} \\end{align*}\\]\n\nSolution\n\nAll of the listed functions are power functions.\n\nThe constant and identity functions are power functions because they can be written as \\(f(x)=x^0\\) and \\(f(x)=x^1\\) respectively.\n\nThe quadratic and cubic functions are power functions with whole number powers \\(f(x)=x^2\\) and \\(f(x)=x^3\\).\n\nThe reciprocal and reciprocal squared functions are power functions with negative whole number powers because they can be written as \\(f(x)=x^{−1}\\) and \\(f(x)=x^{−2}\\).\n\nThe square and cube root functions are power functions with fractional powers because they can be written as \\(f(x)=x^{1/2}\\) or \\(f(x)=x^{1/3}\\).",
+      "prompt": "Example \\(\\PageIndex{1}\\): Identifying Power Functions\n\nWhich of the following functions are power functions?\n\n\\[\\begin{align*} f(x)&=1 &\\text{Constant function} \\\\f(x)&=x &\\text{Identify function} \\\\f(x)&=x^2 &\\text{Quadratic function} \\\\ f(x)&=x^3 &\\text{Cubic function} \\\\ f(x)&=\\dfrac{1}{x} &\\text{Reciprocal function} \\\\f(x)&=\\dfrac{1}{x^2} &\\text{Reciprocal squared function} \\\\ f(x)&=\\sqrt{x} &\\text{Square root function} \\\\ f(x)&=\\sqrt[3]{x} &\\text{Cube root function} \\end{align*}\\]\n\nSolution\n\nAll of the listed functions are power functions.\n\nThe constant and identity functions are power functions because they can be written as \\(f(x)=x^0\\) and \\(f(x)=x^1\\) respectively.\n\nThe quadratic and cubic functions are power functions with whole number powers \\(f(x)=x^2\\) and \\(f(x)=x^3\\).\n\nThe reciprocal and reciprocal squared functions are power functions with negative whole number powers because they can be written as \\(f(x)=x^{−1}\\) and \\(f(x)=x^{−2}\\).\n\nThe square and cube root functions are power functions with fractional powers because they can be written as \\(f(x)=x^{1/2}\\) or \\(f(x)=x^{1/3}\\).",
+      "sourceAnswers": [],
+      "hasFigure": false,
+      "status": "draft",
+      "answerVerified": false,
+      "translationStatus": "pending",
+      "mappingStatus": "pending"
+    },
+    {
+      "ordinal": 2,
+      "sourceNumber": "",
+      "sourceAnchor": "",
+      "kind": "exercise-candidate",
+      "context": "where \\(k\\) and \\(p\\) are real numbers, and \\(k\\) is known as the coefficient.\n\nQ&A: Is \\(f(x)=2^x\\) a power function?\n\nNo. A power function contains a variable base raised to a fixed power (Equation \\ref{power}). This function has a constant base raised to a variable power. This is called an exponential function, not a power function. This function will be discussed later.",
+      "original": "Exercise \\(\\PageIndex{1}\\)\n\nWhich functions are power functions?\n\n\\(f(x)=2x^2⋅4x^3\\)\n\n\\(g(x)=−x^5+5x^3−4x\\)\n\n\\(h(x)=\\frac{2x^5−1}{3x^2+4}\\)\n\nAnswer\n\n\\(f(x)\\) is a power function because it can be written as \\(f(x)=8x^5\\). The other functions are not power functions.",
+      "prompt": "Exercise \\(\\PageIndex{1}\\)\n\nWhich functions are power functions?\n\n\\(f(x)=2x^2⋅4x^3\\)\n\n\\(g(x)=−x^5+5x^3−4x\\)\n\n\\(h(x)=\\frac{2x^5−1}{3x^2+4}\\)",
+      "sourceAnswers": [
+        "\\(f(x)\\) is a power function because it can be written as \\(f(x)=8x^5\\). The other functions are not power functions."
+      ],
+      "hasFigure": false,
+      "status": "draft",
+      "answerVerified": false,
+      "translationStatus": "pending",
+      "mappingStatus": "pending"
+    },
+    {
+      "ordinal": 3,
+      "sourceNumber": "1",
+      "sourceAnchor": "",
+      "kind": "exercise-candidate",
+      "context": "The behavior of the graph of a function as the input values get very small \\((x{\\rightarrow}−{\\infty})\\) and get very large \\(x{\\rightarrow}{\\infty}\\) is referred to as the end behavior of the function. We can use words or symbols to describe end behavior.\n\nFigure \\(\\PageIndex{4}\\) shows the end behavior of power functions in the form \\(f(x)=kx^n\\) where \\(n\\) is a non-negative integer depending on the power and the constant.\n\nHow To: Given a power function \\(f(x)=kx^n\\) where \\(n\\) is a non-negative integer, identify the end behavior.",
+      "original": "1. Determine whether the power is even or odd.",
+      "prompt": "1. Determine whether the power is even or odd.",
+      "sourceAnswers": [],
+      "hasFigure": false,
+      "status": "draft",
+      "answerVerified": false,
+      "translationStatus": "pending",
+      "mappingStatus": "pending"
+    },
+    {
+      "ordinal": 4,
+      "sourceNumber": "2",
+      "sourceAnchor": "",
+      "kind": "exercise-candidate",
+      "context": "The behavior of the graph of a function as the input values get very small \\((x{\\rightarrow}−{\\infty})\\) and get very large \\(x{\\rightarrow}{\\infty}\\) is referred to as the end behavior of the function. We can use words or symbols to describe end behavior.\n\nFigure \\(\\PageIndex{4}\\) shows the end behavior of power functions in the form \\(f(x)=kx^n\\) where \\(n\\) is a non-negative integer depending on the power and the constant.\n\nHow To: Given a power function \\(f(x)=kx^n\\) where \\(n\\) is a non-negative integer, identify the end behavior.",
+      "original": "2. Determine whether the constant is positive or negative.",
+      "prompt": "2. Determine whether the constant is positive or negative.",
+      "sourceAnswers": [],
+      "hasFigure": false,
+      "status": "draft",
+      "answerVerified": false,
+      "translationStatus": "pending",
+      "mappingStatus": "pending"
+    },
+    {
+      "ordinal": 5,
+      "sourceNumber": "3",
+      "sourceAnchor": "",
+      "kind": "exercise-candidate",
+      "context": "The behavior of the graph of a function as the input values get very small \\((x{\\rightarrow}−{\\infty})\\) and get very large \\(x{\\rightarrow}{\\infty}\\) is referred to as the end behavior of the function. We can use words or symbols to describe end behavior.\n\nFigure \\(\\PageIndex{4}\\) shows the end behavior of power functions in the form \\(f(x)=kx^n\\) where \\(n\\) is a non-negative integer depending on the power and the constant.\n\nHow To: Given a power function \\(f(x)=kx^n\\) where \\(n\\) is a non-negative integer, identify the end behavior.",
+      "original": "3. Use Figure \\(\\PageIndex{4}\\) to identify the end behavior.",
+      "prompt": "3. Use Figure \\(\\PageIndex{4}\\) to identify the end behavior.",
+      "sourceAnswers": [],
+      "hasFigure": false,
+      "status": "draft",
+      "answerVerified": false,
+      "translationStatus": "pending",
+      "mappingStatus": "pending"
+    },
+    {
+      "ordinal": 6,
+      "sourceNumber": "",
+      "sourceAnchor": "",
+      "kind": "example-or-exercise",
+      "context": "The behavior of the graph of a function as the input values get very small \\((x{\\rightarrow}−{\\infty})\\) and get very large \\(x{\\rightarrow}{\\infty}\\) is referred to as the end behavior of the function. We can use words or symbols to describe end behavior.\n\nFigure \\(\\PageIndex{4}\\) shows the end behavior of power functions in the form \\(f(x)=kx^n\\) where \\(n\\) is a non-negative integer depending on the power and the constant.\n\nHow To: Given a power function \\(f(x)=kx^n\\) where \\(n\\) is a non-negative integer, identify the end behavior.",
+      "original": "Example \\(\\PageIndex{2}\\): Identifying the End Behavior of a Power Function\n\nDescribe the end behavior of the graph of \\(f(x)=x^8\\).\n\nSolution\n\nThe coefficient is 1 (positive) and the exponent of the power function is 8 (an even number). As \\(x\\) approaches infinity, the output (value of \\(f(x)\\) ) increases without bound. We write as \\(x→∞,\\) \\(f(x)→∞.\\) As \\(x\\) approaches negative infinity, the output increases without bound. In symbolic form, as \\(x→−∞,\\) \\(f(x)→∞.\\) We can graphically represent the function as shown in Figure \\(\\PageIndex{5}\\).\n\n[Figure: Graph of f(x)=x^8]\n\nFigure \\(\\PageIndex{5}\\): Graph of \\(f(x)=x^8\\).",
+      "prompt": "Example \\(\\PageIndex{2}\\): Identifying the End Behavior of a Power Function\n\nDescribe the end behavior of the graph of \\(f(x)=x^8\\).\n\nSolution\n\nThe coefficient is 1 (positive) and the exponent of the power function is 8 (an even number). As \\(x\\) approaches infinity, the output (value of \\(f(x)\\) ) increases without bound. We write as \\(x→∞,\\) \\(f(x)→∞.\\) As \\(x\\) approaches negative infinity, the output increases without bound. In symbolic form, as \\(x→−∞,\\) \\(f(x)→∞.\\) We can graphically represent the function as shown in Figure \\(\\PageIndex{5}\\).\n\n[Figure: Graph of f(x)=x^8]\n\nFigure \\(\\PageIndex{5}\\): Graph of \\(f(x)=x^8\\).",
+      "sourceAnswers": [],
+      "hasFigure": true,
+      "status": "draft",
+      "answerVerified": false,
+      "translationStatus": "pending",
+      "mappingStatus": "pending"
+    },
+    {
+      "ordinal": 7,
+      "sourceNumber": "",
+      "sourceAnchor": "",
+      "kind": "example-or-exercise",
+      "context": "The behavior of the graph of a function as the input values get very small \\((x{\\rightarrow}−{\\infty})\\) and get very large \\(x{\\rightarrow}{\\infty}\\) is referred to as the end behavior of the function. We can use words or symbols to describe end behavior.\n\nFigure \\(\\PageIndex{4}\\) shows the end behavior of power functions in the form \\(f(x)=kx^n\\) where \\(n\\) is a non-negative integer depending on the power and the constant.\n\nHow To: Given a power function \\(f(x)=kx^n\\) where \\(n\\) is a non-negative integer, identify the end behavior.",
+      "original": "Example \\(\\PageIndex{3}\\): Identifying the End Behavior of a Power Function.\n\nDescribe the end behavior of the graph of \\(f(x)=−x^9\\).\n\nSolution\n\nThe exponent of the power function is 9 (an odd number). Because the coefficient is –1 (negative), the graph is the reflection about the \\(x\\)-axis of the graph of \\(f(x)=x^9\\). Figure \\(\\PageIndex{6}\\) shows that as \\(x\\) approaches infinity, the output decreases without bound. As \\(x\\) approaches negative infinity, the output increases without bound. In symbolic form, we would write\n\n\\[\\begin{align*} \\text{as }x{\\rightarrow}-{\\infty},\\;f(x){\\rightarrow}{\\infty} \\\\ \\text{as }x{\\rightarrow}{\\infty},\\;f(x){\\rightarrow}-{\\infty} \\end{align*}\\]\n\n[Figure: Graph of f(x)=-x^9]\n\nFigure \\(\\PageIndex{6}\\): Graph of \\(f(x)=-x^9\\).\n\nAnalysis\n\nWe can check our work by using the table feature on a graphing utility.\n\n    Table \\(\\PageIndex{2}\\)\n\n            \\(x\\)\t\n            \\(f(x)\\)\t\n\n            -10\t\n            1,000,000,000\t\n\n            -5\t\n            1,953,125\t\n\n            0\t\n            0\t\n\n            5\t\n            -1,953,125\t\n\n            10\t\n            -1,000,000,000\t\n\nWe can see from Table \\(\\PageIndex{2}\\) that, when we substitute very small values for \\(x\\), the output is very large, and when we substitute very large values for \\(x\\), the output is very small (meaning that it is a very large negative value).",
+      "prompt": "Example \\(\\PageIndex{3}\\): Identifying the End Behavior of a Power Function.\n\nDescribe the end behavior of the graph of \\(f(x)=−x^9\\).\n\nSolution\n\nThe exponent of the power function is 9 (an odd number). Because the coefficient is –1 (negative), the graph is the reflection about the \\(x\\)-axis of the graph of \\(f(x)=x^9\\). Figure \\(\\PageIndex{6}\\) shows that as \\(x\\) approaches infinity, the output decreases without bound. As \\(x\\) approaches negative infinity, the output increases without bound. In symbolic form, we would write\n\n\\[\\begin{align*} \\text{as }x{\\rightarrow}-{\\infty},\\;f(x){\\rightarrow}{\\infty} \\\\ \\text{as }x{\\rightarrow}{\\infty},\\;f(x){\\rightarrow}-{\\infty} \\end{align*}\\]\n\n[Figure: Graph of f(x)=-x^9]\n\nFigure \\(\\PageIndex{6}\\): Graph of \\(f(x)=-x^9\\).\n\nAnalysis\n\nWe can check our work by using the table feature on a graphing utility.\n\n    Table \\(\\PageIndex{2}\\)\n\n            \\(x\\)\t\n            \\(f(x)\\)\t\n\n            -10\t\n            1,000,000,000\t\n\n            -5\t\n            1,953,125\t\n\n            0\t\n            0\t\n\n            5\t\n            -1,953,125\t\n\n            10\t\n            -1,000,000,000\t\n\nWe can see from Table \\(\\PageIndex{2}\\) that, when we substitute very small values for \\(x\\), the output is very large, and when we substitute very large values for \\(x\\), the output is very small (meaning that it is a very large negative value).",
+      "sourceAnswers": [],
+      "hasFigure": true,
+      "status": "draft",
+      "answerVerified": false,
+      "translationStatus": "pending",
+      "mappingStatus": "pending"
+    },
+    {
+      "ordinal": 8,
+      "sourceNumber": "",
+      "sourceAnchor": "",
+      "kind": "exercise-candidate",
+      "context": "The behavior of the graph of a function as the input values get very small \\((x{\\rightarrow}−{\\infty})\\) and get very large \\(x{\\rightarrow}{\\infty}\\) is referred to as the end behavior of the function. We can use words or symbols to describe end behavior.\n\nFigure \\(\\PageIndex{4}\\) shows the end behavior of power functions in the form \\(f(x)=kx^n\\) where \\(n\\) is a non-negative integer depending on the power and the constant.\n\nHow To: Given a power function \\(f(x)=kx^n\\) where \\(n\\) is a non-negative integer, identify the end behavior.",
+      "original": "Exercise \\(\\PageIndex{2}\\)\n\nDescribe in words and symbols the end behavior of \\(f(x)=−5x^4\\).\n\nAnswer\n\nAs \\(x\\) approaches positive or negative infinity, \\(f(x)\\) decreases without bound: as \\(x{\\rightarrow}{\\pm}{\\infty}\\), \\(f(x){\\rightarrow}−{\\infty}\\) because of the negative coefficient.",
+      "prompt": "Exercise \\(\\PageIndex{2}\\)\n\nDescribe in words and symbols the end behavior of \\(f(x)=−5x^4\\).",
+      "sourceAnswers": [
+        "As \\(x\\) approaches positive or negative infinity, \\(f(x)\\) decreases without bound: as \\(x{\\rightarrow}{\\pm}{\\infty}\\), \\(f(x){\\rightarrow}−{\\infty}\\) because of the negative coefficient."
+      ],
+      "hasFigure": false,
+      "status": "draft",
+      "answerVerified": false,
+      "translationStatus": "pending",
+      "mappingStatus": "pending"
+    },
+    {
+      "ordinal": 9,
+      "sourceNumber": "",
+      "sourceAnchor": "",
+      "kind": "example-or-exercise",
+      "context": "Let \\(n\\) be a non-negative integer. A polynomial function is a function that can be written in the form\n\n\\[f(x)=a_nx^n+...+a_2x^2+a_1x+a_0 \\label{poly}\\]\n\nThis is called the general form of a polynomial function. Each \\(a_i\\) is a coefficient and can be any real number. Each product \\(a_ix^i\\) is a term of a polynomial function.",
+      "original": "Example \\(\\PageIndex{4}\\): Identifying Polynomial Functions\n\nWhich of the following are polynomial functions?\n\n\\(f(x)=2x^3⋅3x+4\\)\n\n\\(g(x)=−x(x^2−4)\\)\n\n\\(h(x)=5\\sqrt{x}+2\\)\n\nSolution\n\nThe first two functions are examples of polynomial functions because they can be written in the form of Equation \\ref{poly}, where the powers are non-negative integers and the coefficients are real numbers.\n\n\\(f(x)\\) can be written as \\(f(x)=6x^4+4\\).\n\n\\(g(x)\\) can be written as \\(g(x)=−x^3+4x\\).\n\n\\(h(x)\\) cannot be written in this form and is therefore not a polynomial function.",
+      "prompt": "Example \\(\\PageIndex{4}\\): Identifying Polynomial Functions\n\nWhich of the following are polynomial functions?\n\n\\(f(x)=2x^3⋅3x+4\\)\n\n\\(g(x)=−x(x^2−4)\\)\n\n\\(h(x)=5\\sqrt{x}+2\\)\n\nSolution\n\nThe first two functions are examples of polynomial functions because they can be written in the form of Equation \\ref{poly}, where the powers are non-negative integers and the coefficients are real numbers.\n\n\\(f(x)\\) can be written as \\(f(x)=6x^4+4\\).\n\n\\(g(x)\\) can be written as \\(g(x)=−x^3+4x\\).\n\n\\(h(x)\\) cannot be written in this form and is therefore not a polynomial function.",
+      "sourceAnswers": [],
+      "hasFigure": false,
+      "status": "draft",
+      "answerVerified": false,
+      "translationStatus": "pending",
+      "mappingStatus": "pending"
+    },
+    {
+      "ordinal": 10,
+      "sourceNumber": "1",
+      "sourceAnchor": "",
+      "kind": "exercise-candidate",
+      "context": "We often rearrange polynomials so that the powers are descending.\n\nWhen a polynomial is written in this way, we say that it is in general form.\n\nHow To: Given a polynomial function, identify the degree and leading coefficient",
+      "original": "1. Find the highest power of \\(x\\) to determine the degree function.",
+      "prompt": "1. Find the highest power of \\(x\\) to determine the degree function.",
+      "sourceAnswers": [],
+      "hasFigure": false,
+      "status": "draft",
+      "answerVerified": false,
+      "translationStatus": "pending",
+      "mappingStatus": "pending"
+    },
+    {
+      "ordinal": 11,
+      "sourceNumber": "2",
+      "sourceAnchor": "",
+      "kind": "exercise-candidate",
+      "context": "We often rearrange polynomials so that the powers are descending.\n\nWhen a polynomial is written in this way, we say that it is in general form.\n\nHow To: Given a polynomial function, identify the degree and leading coefficient",
+      "original": "2. Identify the term containing the highest power of \\(x\\) to find the leading term.",
+      "prompt": "2. Identify the term containing the highest power of \\(x\\) to find the leading term.",
+      "sourceAnswers": [],
+      "hasFigure": false,
+      "status": "draft",
+      "answerVerified": false,
+      "translationStatus": "pending",
+      "mappingStatus": "pending"
+    },
+    {
+      "ordinal": 12,
+      "sourceNumber": "3",
+      "sourceAnchor": "",
+      "kind": "exercise-candidate",
+      "context": "We often rearrange polynomials so that the powers are descending.\n\nWhen a polynomial is written in this way, we say that it is in general form.\n\nHow To: Given a polynomial function, identify the degree and leading coefficient",
+      "original": "3. Identify the coefficient of the leading term.",
+      "prompt": "3. Identify the coefficient of the leading term.",
+      "sourceAnswers": [],
+      "hasFigure": false,
+      "status": "draft",
+      "answerVerified": false,
+      "translationStatus": "pending",
+      "mappingStatus": "pending"
+    },
+    {
+      "ordinal": 13,
+      "sourceNumber": "",
+      "sourceAnchor": "",
+      "kind": "example-or-exercise",
+      "context": "We often rearrange polynomials so that the powers are descending.\n\nWhen a polynomial is written in this way, we say that it is in general form.\n\nHow To: Given a polynomial function, identify the degree and leading coefficient",
+      "original": "Example \\(\\PageIndex{5}\\): Identifying the Degree and Leading Coefficient of a Polynomial Function\n\nIdentify the degree, leading term, and leading coefficient of the following polynomial functions.\n\n\\(f(x)=3+2x^2−4x^3\\)\n\n\\(g(t)=5t^5−2t^3+7t\\)\n\n\\(h(p)=6p−p^3−2\\)\n\nSolution\n\nFor the function \\(f(x)\\), the highest power of \\(x\\) is 3, so the degree is 3. The leading term is the term containing that degree, \\(−4x^3\\). The leading coefficient is the coefficient of that term, −4.\n\nFor the function \\(g(t)\\), the highest power of \\(t\\) is 5, so the degree is 5. The leading term is the term containing that degree, \\(5t^5\\). The leading coefficient is the coefficient of that term, 5.\n\nFor the function \\(h(p)\\), the highest power of \\(p\\) is 3, so the degree is 3. The leading term is the term containing that degree, \\(−p^3\\); the leading coefficient is the coefficient of that term, −1.",
+      "prompt": "Example \\(\\PageIndex{5}\\): Identifying the Degree and Leading Coefficient of a Polynomial Function\n\nIdentify the degree, leading term, and leading coefficient of the following polynomial functions.\n\n\\(f(x)=3+2x^2−4x^3\\)\n\n\\(g(t)=5t^5−2t^3+7t\\)\n\n\\(h(p)=6p−p^3−2\\)\n\nSolution\n\nFor the function \\(f(x)\\), the highest power of \\(x\\) is 3, so the degree is 3. The leading term is the term containing that degree, \\(−4x^3\\). The leading coefficient is the coefficient of that term, −4.\n\nFor the function \\(g(t)\\), the highest power of \\(t\\) is 5, so the degree is 5. The leading term is the term containing that degree, \\(5t^5\\). The leading coefficient is the coefficient of that term, 5.\n\nFor the function \\(h(p)\\), the highest power of \\(p\\) is 3, so the degree is 3. The leading term is the term containing that degree, \\(−p^3\\); the leading coefficient is the coefficient of that term, −1.",
+      "sourceAnswers": [],
+      "hasFigure": false,
+      "status": "draft",
+      "answerVerified": false,
+      "translationStatus": "pending",
+      "mappingStatus": "pending"
+    },
+    {
+      "ordinal": 14,
+      "sourceNumber": "",
+      "sourceAnchor": "",
+      "kind": "exercise-candidate",
+      "context": "We often rearrange polynomials so that the powers are descending.\n\nWhen a polynomial is written in this way, we say that it is in general form.\n\nHow To: Given a polynomial function, identify the degree and leading coefficient",
+      "original": "Exercise \\(\\PageIndex{3}\\)\n\nIdentify the degree, leading term, and leading coefficient of the polynomial \\(f(x)=4x^2−x^6+2x−6\\).\n\nAnswer\n\nThe degree is \\(6.\\) The leading term is \\(−x^6\\). The leading coefficient is \\(−1.\\)",
+      "prompt": "Exercise \\(\\PageIndex{3}\\)\n\nIdentify the degree, leading term, and leading coefficient of the polynomial \\(f(x)=4x^2−x^6+2x−6\\).",
+      "sourceAnswers": [
+        "The degree is \\(6.\\) The leading term is \\(−x^6\\). The leading coefficient is \\(−1.\\)"
+      ],
+      "hasFigure": false,
+      "status": "draft",
+      "answerVerified": false,
+      "translationStatus": "pending",
+      "mappingStatus": "pending"
+    },
+    {
+      "ordinal": 15,
+      "sourceNumber": "",
+      "sourceAnchor": "",
+      "kind": "example-or-exercise",
+      "context": "Identifying End Behavior of Polynomial Functions\n\nKnowing the degree of a polynomial function is useful in helping us predict its end behavior. To determine its end behavior, look at the leading term of the polynomial function. Because the power of the leading term is the highest, that term will grow significantly faster than the other terms as \\(x\\) gets very large or very small, so its behavior will dominate the graph. For any polynomial, the end behavior of the polynomial will match the end behavior of the term of highest degree (Table \\(\\PageIndex{3}\\)).",
+      "original": "Example \\(\\PageIndex{6}\\): Identifying End Behavior and Degree of a Polynomial Function\n\nDescribe the end behavior and determine a possible degree of the polynomial function in Figure \\(\\PageIndex{8}\\).\n\n[Figure: Graph of an odd-degree polynomial.]\n\nFigure \\(\\PageIndex{8}\\).\n\nSolution\n\nAs the input values \\(x\\) get very large, the output values \\(f(x)\\) increase without bound. As the input values \\(x\\) get very small, the output values \\(f(x)\\) decrease without bound. We can describe the end behavior symbolically by writing\n\n\\[\\text{as } x{\\rightarrow}{\\infty}, \\; f(x){\\rightarrow}{\\infty} \\nonumber\\]\n\n\\[\\text{as } x{\\rightarrow}-{\\infty}, \\; f(x){\\rightarrow}-{\\infty} \\nonumber\\]\n\nIn words, we could say that as \\(x\\) values approach infinity, the function values approach infinity, and as \\(x\\) values approach negative infinity, the function values approach negative infinity.\n\nWe can tell this graph has the shape of an odd degree power function that has not been reflected, so the degree of the polynomial creating this graph must be odd and the leading coefficient must be positive.",
+      "prompt": "Example \\(\\PageIndex{6}\\): Identifying End Behavior and Degree of a Polynomial Function\n\nDescribe the end behavior and determine a possible degree of the polynomial function in Figure \\(\\PageIndex{8}\\).\n\n[Figure: Graph of an odd-degree polynomial.]\n\nFigure \\(\\PageIndex{8}\\).\n\nSolution\n\nAs the input values \\(x\\) get very large, the output values \\(f(x)\\) increase without bound. As the input values \\(x\\) get very small, the output values \\(f(x)\\) decrease without bound. We can describe the end behavior symbolically by writing\n\n\\[\\text{as } x{\\rightarrow}{\\infty}, \\; f(x){\\rightarrow}{\\infty} \\nonumber\\]\n\n\\[\\text{as } x{\\rightarrow}-{\\infty}, \\; f(x){\\rightarrow}-{\\infty} \\nonumber\\]\n\nIn words, we could say that as \\(x\\) values approach infinity, the function values approach infinity, and as \\(x\\) values approach negative infinity, the function values approach negative infinity.\n\nWe can tell this graph has the shape of an odd degree power function that has not been reflected, so the degree of the polynomial creating this graph must be odd and the leading coefficient must be positive.",
+      "sourceAnswers": [],
+      "hasFigure": true,
+      "status": "draft",
+      "answerVerified": false,
+      "translationStatus": "pending",
+      "mappingStatus": "pending"
+    },
+    {
+      "ordinal": 16,
+      "sourceNumber": "",
+      "sourceAnchor": "",
+      "kind": "exercise-candidate",
+      "context": "Identifying End Behavior of Polynomial Functions\n\nKnowing the degree of a polynomial function is useful in helping us predict its end behavior. To determine its end behavior, look at the leading term of the polynomial function. Because the power of the leading term is the highest, that term will grow significantly faster than the other terms as \\(x\\) gets very large or very small, so its behavior will dominate the graph. For any polynomial, the end behavior of the polynomial will match the end behavior of the term of highest degree (Table \\(\\PageIndex{3}\\)).",
+      "original": "Exercise \\(\\PageIndex{1}\\)\n\nDescribe the end behavior, and determine a possible degree of the polynomial function in Figure \\(\\PageIndex{9}\\).\n\n[Figure: alt]\n\nFigure \\(\\PageIndex{9}\\)\n\nAnswer\n\nAs \\(x{\\rightarrow}{\\infty}\\), \\(f(x){\\rightarrow}−{\\infty}\\); as \\(x{\\rightarrow}−{\\infty}\\), \\(f(x){\\rightarrow}−{\\infty}\\). It has the shape of an even degree power function with a negative coefficient.",
+      "prompt": "Exercise \\(\\PageIndex{1}\\)\n\nDescribe the end behavior, and determine a possible degree of the polynomial function in Figure \\(\\PageIndex{9}\\).\n\n[Figure: alt]\n\nFigure \\(\\PageIndex{9}\\)",
+      "sourceAnswers": [
+        "As \\(x{\\rightarrow}{\\infty}\\), \\(f(x){\\rightarrow}−{\\infty}\\); as \\(x{\\rightarrow}−{\\infty}\\), \\(f(x){\\rightarrow}−{\\infty}\\). It has the shape of an even degree power function with a negative coefficient."
+      ],
+      "hasFigure": true,
+      "status": "draft",
+      "answerVerified": false,
+      "translationStatus": "pending",
+      "mappingStatus": "pending"
+    },
+    {
+      "ordinal": 17,
+      "sourceNumber": "",
+      "sourceAnchor": "",
+      "kind": "example-or-exercise",
+      "context": "Identifying End Behavior of Polynomial Functions\n\nKnowing the degree of a polynomial function is useful in helping us predict its end behavior. To determine its end behavior, look at the leading term of the polynomial function. Because the power of the leading term is the highest, that term will grow significantly faster than the other terms as \\(x\\) gets very large or very small, so its behavior will dominate the graph. For any polynomial, the end behavior of the polynomial will match the end behavior of the term of highest degree (Table \\(\\PageIndex{3}\\)).",
+      "original": "Example \\(\\PageIndex{7}\\): Identifying End Behavior and Degree of a Polynomial Function\n\nGiven the function \\(f(x)=−3x^2(x−1)(x+4)\\), express the function as a polynomial in general form, and determine the leading term, degree, and end behavior of the function.\n\nSolution\n\nObtain the general form by expanding the given expression for \\(f(x)\\).\n\n\\[\\begin{align*} f(x)&=−3x^2(x−1)(x+4) \\\\ &=−3x^2(x^2+3x−4) \\\\ &=−3x^4−9x^3+12x^2 \\end{align*}\\]\n\nThe general form is \\(f(x)=−3x^4−9x^3+12x^2\\). The leading term is \\(−3x^4\\); therefore, the degree of the polynomial is 4. The degree is even (4) and the leading coefficient is negative (–3), so the end behavior is\n\n\\[\\text{as }x{\\rightarrow}−{\\infty}, \\; f(x){\\rightarrow}−{\\infty} \\nonumber\\]\n\n\\[\\text{as } x{\\rightarrow}{\\infty}, \\; f(x){\\rightarrow}−{\\infty} \\nonumber\\]",
+      "prompt": "Example \\(\\PageIndex{7}\\): Identifying End Behavior and Degree of a Polynomial Function\n\nGiven the function \\(f(x)=−3x^2(x−1)(x+4)\\), express the function as a polynomial in general form, and determine the leading term, degree, and end behavior of the function.\n\nSolution\n\nObtain the general form by expanding the given expression for \\(f(x)\\).\n\n\\[\\begin{align*} f(x)&=−3x^2(x−1)(x+4) \\\\ &=−3x^2(x^2+3x−4) \\\\ &=−3x^4−9x^3+12x^2 \\end{align*}\\]\n\nThe general form is \\(f(x)=−3x^4−9x^3+12x^2\\). The leading term is \\(−3x^4\\); therefore, the degree of the polynomial is 4. The degree is even (4) and the leading coefficient is negative (–3), so the end behavior is\n\n\\[\\text{as }x{\\rightarrow}−{\\infty}, \\; f(x){\\rightarrow}−{\\infty} \\nonumber\\]\n\n\\[\\text{as } x{\\rightarrow}{\\infty}, \\; f(x){\\rightarrow}−{\\infty} \\nonumber\\]",
+      "sourceAnswers": [],
+      "hasFigure": false,
+      "status": "draft",
+      "answerVerified": false,
+      "translationStatus": "pending",
+      "mappingStatus": "pending"
+    },
+    {
+      "ordinal": 18,
+      "sourceNumber": "",
+      "sourceAnchor": "",
+      "kind": "exercise-candidate",
+      "context": "Identifying End Behavior of Polynomial Functions\n\nKnowing the degree of a polynomial function is useful in helping us predict its end behavior. To determine its end behavior, look at the leading term of the polynomial function. Because the power of the leading term is the highest, that term will grow significantly faster than the other terms as \\(x\\) gets very large or very small, so its behavior will dominate the graph. For any polynomial, the end behavior of the polynomial will match the end behavior of the term of highest degree (Table \\(\\PageIndex{3}\\)).",
+      "original": "Exercise \\(\\PageIndex{7}\\)\n\nGiven the function \\(f(x)=0.2(x−2)(x+1)(x−5)\\), express the function as a polynomial in general form and determine the leading term, degree, and end behavior of the function.\n\nAnswer\n\nThe leading term is \\(0.2x^3\\), so it is a degree 3 polynomial. As \\(x\\) approaches positive infinity, \\(f(x)\\) increases without bound; as \\(x\\) approaches negative infinity, \\(f(x)\\) decreases without bound.",
+      "prompt": "Exercise \\(\\PageIndex{7}\\)\n\nGiven the function \\(f(x)=0.2(x−2)(x+1)(x−5)\\), express the function as a polynomial in general form and determine the leading term, degree, and end behavior of the function.",
+      "sourceAnswers": [
+        "The leading term is \\(0.2x^3\\), so it is a degree 3 polynomial. As \\(x\\) approaches positive infinity, \\(f(x)\\) increases without bound; as \\(x\\) approaches negative infinity, \\(f(x)\\) decreases without bound."
+      ],
+      "hasFigure": false,
+      "status": "draft",
+      "answerVerified": false,
+      "translationStatus": "pending",
+      "mappingStatus": "pending"
+    },
+    {
+      "ordinal": 19,
+      "sourceNumber": "1",
+      "sourceAnchor": "",
+      "kind": "exercise-candidate",
+      "context": "Defintion: Intercepts and Turning Points of Polynomial Functions\n\nA turning point of a graph is a point at which the graph changes direction from increasing to decreasing or decreasing to increasing. The \\(y\\)-intercept is the point at which the function has an input value of zero. The \\(x\\)-intercepts are the points at which the output value is zero.\n\n[Figure: alt]\nGiven a polynomial function, determine the intercepts.",
+      "original": "1. Determine the \\(y\\)-intercept by setting \\(x=0\\) and finding the corresponding output value.",
+      "prompt": "1. Determine the \\(y\\)-intercept by setting \\(x=0\\) and finding the corresponding output value.",
+      "sourceAnswers": [],
+      "hasFigure": false,
+      "status": "draft",
+      "answerVerified": false,
+      "translationStatus": "pending",
+      "mappingStatus": "pending"
+    },
+    {
+      "ordinal": 20,
+      "sourceNumber": "2",
+      "sourceAnchor": "",
+      "kind": "exercise-candidate",
+      "context": "Defintion: Intercepts and Turning Points of Polynomial Functions\n\nA turning point of a graph is a point at which the graph changes direction from increasing to decreasing or decreasing to increasing. The \\(y\\)-intercept is the point at which the function has an input value of zero. The \\(x\\)-intercepts are the points at which the output value is zero.\n\n[Figure: alt]\nGiven a polynomial function, determine the intercepts.",
+      "original": "2. Determine the \\(x\\)-intercepts by solving for the input values that yield an output value of zero.",
+      "prompt": "2. Determine the \\(x\\)-intercepts by solving for the input values that yield an output value of zero.",
+      "sourceAnswers": [],
+      "hasFigure": false,
+      "status": "draft",
+      "answerVerified": false,
+      "translationStatus": "pending",
+      "mappingStatus": "pending"
+    },
+    {
+      "ordinal": 21,
+      "sourceNumber": "",
+      "sourceAnchor": "",
+      "kind": "example-or-exercise",
+      "context": "Defintion: Intercepts and Turning Points of Polynomial Functions\n\nA turning point of a graph is a point at which the graph changes direction from increasing to decreasing or decreasing to increasing. The \\(y\\)-intercept is the point at which the function has an input value of zero. The \\(x\\)-intercepts are the points at which the output value is zero.\n\n[Figure: alt]\nGiven a polynomial function, determine the intercepts.",
+      "original": "Example \\(\\PageIndex{8}\\): Determining the Intercepts of a Polynomial Function\n\nGiven the polynomial function \\(f(x)=(x−2)(x+1)(x−4)\\), written in factored form for your convenience, determine the \\(y\\)- and \\(x\\)-intercepts.\n\nSolution\n\nThe \\(y\\)-intercept occurs when the input is zero, so substitute 0 for \\(x\\).\n\n\\[ \\begin{align*}f(0)&=(0−2)(0+1)(0−4) \\\\ &=(−2)(1)(−4) \\\\ &=8 \\end{align*}\\]\n\nThe \\(y\\)-intercept is \\((0,8)\\).\n\nThe \\(x\\)-intercepts occur when the output is zero.\n\n\\[ 0=(x−2)(x+1)(x−4) \\nonumber \\]\n\n\\[\\begin{align*} x−2&=0 & &\\text{or} & x+1&=0 & &\\text{or} & x−4&=0 \\\\ x&=2 & &\\text{or} & x&=−1 & &\\text{or} & x&=4 \\end{align*}\\]\n\nThe \\(x\\)-intercepts are \\((2,0)\\),\\((–1,0)\\), and \\((4,0)\\).\n\nWe can see these intercepts on the graph of the function shown in Figure \\(\\PageIndex{11}\\).\n\n[Figure: Graph of f(x)=(x-2)(x+1)(x-4), which labels all the intercepts.]\n\nFigure \\(\\PageIndex{11}\\): Graph of \\(f(x)=(x-2)(x+1)(x-4)\\).",
+      "prompt": "Example \\(\\PageIndex{8}\\): Determining the Intercepts of a Polynomial Function\n\nGiven the polynomial function \\(f(x)=(x−2)(x+1)(x−4)\\), written in factored form for your convenience, determine the \\(y\\)- and \\(x\\)-intercepts.\n\nSolution\n\nThe \\(y\\)-intercept occurs when the input is zero, so substitute 0 for \\(x\\).\n\n\\[ \\begin{align*}f(0)&=(0−2)(0+1)(0−4) \\\\ &=(−2)(1)(−4) \\\\ &=8 \\end{align*}\\]\n\nThe \\(y\\)-intercept is \\((0,8)\\).\n\nThe \\(x\\)-intercepts occur when the output is zero.\n\n\\[ 0=(x−2)(x+1)(x−4) \\nonumber \\]\n\n\\[\\begin{align*} x−2&=0 & &\\text{or} & x+1&=0 & &\\text{or} & x−4&=0 \\\\ x&=2 & &\\text{or} & x&=−1 & &\\text{or} & x&=4 \\end{align*}\\]\n\nThe \\(x\\)-intercepts are \\((2,0)\\),\\((–1,0)\\), and \\((4,0)\\).\n\nWe can see these intercepts on the graph of the function shown in Figure \\(\\PageIndex{11}\\).\n\n[Figure: Graph of f(x)=(x-2)(x+1)(x-4), which labels all the intercepts.]\n\nFigure \\(\\PageIndex{11}\\): Graph of \\(f(x)=(x-2)(x+1)(x-4)\\).",
+      "sourceAnswers": [],
+      "hasFigure": true,
+      "status": "draft",
+      "answerVerified": false,
+      "translationStatus": "pending",
+      "mappingStatus": "pending"
+    },
+    {
+      "ordinal": 22,
+      "sourceNumber": "",
+      "sourceAnchor": "",
+      "kind": "example-or-exercise",
+      "context": "Defintion: Intercepts and Turning Points of Polynomial Functions\n\nA turning point of a graph is a point at which the graph changes direction from increasing to decreasing or decreasing to increasing. The \\(y\\)-intercept is the point at which the function has an input value of zero. The \\(x\\)-intercepts are the points at which the output value is zero.\n\n[Figure: alt]\nGiven a polynomial function, determine the intercepts.",
+      "original": "Example \\(\\PageIndex{9}\\): Determining the Intercepts of a Polynomial Function with Factoring\n\nGiven the polynomial function \\(f(x)=x^4−4x^2−45\\), determine the \\(y\\)- and \\(x\\)-intercepts.\n\nSolution\n\nThe \\(y\\)-intercept occurs when the input is zero.\n\n\\[ \\begin{align*} f(0) &=(0)^4−4(0)^2−45 \\\\[4pt] &=−45 \\end{align*}\\]\n\nThe \\(y\\)-intercept is \\((0,−45)\\).\n\nThe \\(x\\)-intercepts occur when the output is zero. To determine when the output is zero, we will need to factor the polynomial.\n\n\\[\\begin{align*} f(x)&=x^4−4x^2−45 \\\\ &=(x^2−9)(x^2+5) \\\\ &=(x−3)(x+3)(x^2+5)\n\n\\end{align*}\\]\n\n\\[0=(x−3)(x+3)(x^2+5) \\nonumber\\]\n\n\\[\\begin{align*} x−3&=0 & &\\text{or} & x+3&=0 & &\\text{or} & x^2+5&=0 \\\\ x&=3 & &\\text{or} & x&=−3 & &\\text{or} &\\text{(no real solution)} \\end{align*}\\]\n\nThe \\(x\\)-intercepts are \\((3,0)\\) and \\((–3,0)\\).\n\nWe can see these intercepts on the graph of the function shown in Figure \\(\\PageIndex{12}\\). We can see that the function is even because \\(f(x)=f(−x)\\).\n\n[Figure: Graph of f(x)=x^4-4x^2-45, which labels all the intercepts at (-3, 0), (3, 0), and (0, -45).]\n\nFigure \\(\\PageIndex{12}\\): Graph of \\(f(x)=x^4-4x^2-45\\).",
+      "prompt": "Example \\(\\PageIndex{9}\\): Determining the Intercepts of a Polynomial Function with Factoring\n\nGiven the polynomial function \\(f(x)=x^4−4x^2−45\\), determine the \\(y\\)- and \\(x\\)-intercepts.\n\nSolution\n\nThe \\(y\\)-intercept occurs when the input is zero.\n\n\\[ \\begin{align*} f(0) &=(0)^4−4(0)^2−45 \\\\[4pt] &=−45 \\end{align*}\\]\n\nThe \\(y\\)-intercept is \\((0,−45)\\).\n\nThe \\(x\\)-intercepts occur when the output is zero. To determine when the output is zero, we will need to factor the polynomial.\n\n\\[\\begin{align*} f(x)&=x^4−4x^2−45 \\\\ &=(x^2−9)(x^2+5) \\\\ &=(x−3)(x+3)(x^2+5)\n\n\\end{align*}\\]\n\n\\[0=(x−3)(x+3)(x^2+5) \\nonumber\\]\n\n\\[\\begin{align*} x−3&=0 & &\\text{or} & x+3&=0 & &\\text{or} & x^2+5&=0 \\\\ x&=3 & &\\text{or} & x&=−3 & &\\text{or} &\\text{(no real solution)} \\end{align*}\\]\n\nThe \\(x\\)-intercepts are \\((3,0)\\) and \\((–3,0)\\).\n\nWe can see these intercepts on the graph of the function shown in Figure \\(\\PageIndex{12}\\). We can see that the function is even because \\(f(x)=f(−x)\\).\n\n[Figure: Graph of f(x)=x^4-4x^2-45, which labels all the intercepts at (-3, 0), (3, 0), and (0, -45).]\n\nFigure \\(\\PageIndex{12}\\): Graph of \\(f(x)=x^4-4x^2-45\\).",
+      "sourceAnswers": [],
+      "hasFigure": true,
+      "status": "draft",
+      "answerVerified": false,
+      "translationStatus": "pending",
+      "mappingStatus": "pending"
+    },
+    {
+      "ordinal": 23,
+      "sourceNumber": "",
+      "sourceAnchor": "",
+      "kind": "exercise-candidate",
+      "context": "Defintion: Intercepts and Turning Points of Polynomial Functions\n\nA turning point of a graph is a point at which the graph changes direction from increasing to decreasing or decreasing to increasing. The \\(y\\)-intercept is the point at which the function has an input value of zero. The \\(x\\)-intercepts are the points at which the output value is zero.\n\n[Figure: alt]\nGiven a polynomial function, determine the intercepts.",
+      "original": "Exercise \\(\\PageIndex{5}\\) \n\n\\(\\PageIndex{5}\\): Given the polynomial function \\(f(x)=2x^3−6x^2−20x\\), determine the \\(y\\)- and \\(x\\)-intercepts.\n\nSolution\n\n\\(y\\)-intercept \\((0,0)\\); \\(x\\)-intercepts \\((0,0)\\),\\((–2,0)\\), and \\((5,0)\\)",
+      "prompt": "Exercise \\(\\PageIndex{5}\\) \n\n\\(\\PageIndex{5}\\): Given the polynomial function \\(f(x)=2x^3−6x^2−20x\\), determine the \\(y\\)- and \\(x\\)-intercepts.",
+      "sourceAnswers": [
+        "\\(y\\)-intercept \\((0,0)\\); \\(x\\)-intercepts \\((0,0)\\),\\((–2,0)\\), and \\((5,0)\\)"
+      ],
+      "hasFigure": false,
+      "status": "draft",
+      "answerVerified": false,
+      "translationStatus": "pending",
+      "mappingStatus": "pending"
+    },
+    {
+      "ordinal": 24,
+      "sourceNumber": "",
+      "sourceAnchor": "",
+      "kind": "example-or-exercise",
+      "context": "A continuous function has no breaks in its graph: the graph can be drawn without lifting the pen from the paper. A smooth curve is a graph that has no sharp corners. The turning points of a smooth graph must always occur at rounded curves. The graphs of polynomial functions are both continuous and smooth.\n\nIntercepts and Turning Points of Polynomials\n\nA polynomial of degree \\(n\\) will have, at most, \\(n\\) \\(x\\)-intercepts and \\(n−1\\) turning points.",
+      "original": "Example \\(\\PageIndex{10}\\): Determining the Number of Intercepts and Turning Points of a Polynomial\n\nWithout graphing the function, determine the local behavior of the function by finding the maximum number of \\(x\\)-intercepts and turning points for \\(f(x)=−3x^{10}+4x^7−x^4+2x^3\\).\n\nSolution\n\nThe polynomial has a degree of 10, so there are at most \\(n\\) \\(x\\)-intercepts and at most \\(n−1\\) turning points.",
+      "prompt": "Example \\(\\PageIndex{10}\\): Determining the Number of Intercepts and Turning Points of a Polynomial\n\nWithout graphing the function, determine the local behavior of the function by finding the maximum number of \\(x\\)-intercepts and turning points for \\(f(x)=−3x^{10}+4x^7−x^4+2x^3\\).\n\nSolution\n\nThe polynomial has a degree of 10, so there are at most \\(n\\) \\(x\\)-intercepts and at most \\(n−1\\) turning points.",
+      "sourceAnswers": [],
+      "hasFigure": false,
+      "status": "draft",
+      "answerVerified": false,
+      "translationStatus": "pending",
+      "mappingStatus": "pending"
+    },
+    {
+      "ordinal": 25,
+      "sourceNumber": "",
+      "sourceAnchor": "",
+      "kind": "exercise-candidate",
+      "context": "A continuous function has no breaks in its graph: the graph can be drawn without lifting the pen from the paper. A smooth curve is a graph that has no sharp corners. The turning points of a smooth graph must always occur at rounded curves. The graphs of polynomial functions are both continuous and smooth.\n\nIntercepts and Turning Points of Polynomials\n\nA polynomial of degree \\(n\\) will have, at most, \\(n\\) \\(x\\)-intercepts and \\(n−1\\) turning points.",
+      "original": "Exercise \\(\\PageIndex{6}\\)\n\nWithout graphing the function, determine the maximum number of \\(x\\)-intercepts and turning points for \\(f(x)=108−13x^9−8x^4+14x^{12}+2x^3\\)\n\nAnswer\n\nThere are at most 12 \\(x\\)-intercepts and at most 11 turning points.",
+      "prompt": "Exercise \\(\\PageIndex{6}\\)\n\nWithout graphing the function, determine the maximum number of \\(x\\)-intercepts and turning points for \\(f(x)=108−13x^9−8x^4+14x^{12}+2x^3\\)",
+      "sourceAnswers": [
+        "There are at most 12 \\(x\\)-intercepts and at most 11 turning points."
+      ],
+      "hasFigure": false,
+      "status": "draft",
+      "answerVerified": false,
+      "translationStatus": "pending",
+      "mappingStatus": "pending"
+    },
+    {
+      "ordinal": 26,
+      "sourceNumber": "",
+      "sourceAnchor": "",
+      "kind": "example-or-exercise",
+      "context": "A continuous function has no breaks in its graph: the graph can be drawn without lifting the pen from the paper. A smooth curve is a graph that has no sharp corners. The turning points of a smooth graph must always occur at rounded curves. The graphs of polynomial functions are both continuous and smooth.\n\nIntercepts and Turning Points of Polynomials\n\nA polynomial of degree \\(n\\) will have, at most, \\(n\\) \\(x\\)-intercepts and \\(n−1\\) turning points.",
+      "original": "Example \\(\\PageIndex{11}\\): Drawing Conclusions about a Polynomial Function from the Graph\n\nWhat can we conclude about the polynomial represented by the graph shown in Figure \\(\\PageIndex{12}\\) based on its intercepts and turning points?\n\n[Figure:  Graph of an even-degree polynomial.]\n\nFigure \\(\\PageIndex{13}\\).\n\nSolution\n\nThe end behavior of the graph tells us this is the graph of an even-degree polynomial. See Figure \\(\\PageIndex{14}\\).\n\n[Figure: Graph of an even-degree polynomial that denotes the turning points and intercepts.]\n\nFigure \\(\\PageIndex{14}\\): Graph of an even-degree polynomial.\n\nThe graph has 2 \\(x\\)-intercepts, suggesting a degree of 2 or greater, and 3 turning points, suggesting a degree of 4 or greater. Based on this, it would be reasonable to conclude that the degree is even and at least 4.",
+      "prompt": "Example \\(\\PageIndex{11}\\): Drawing Conclusions about a Polynomial Function from the Graph\n\nWhat can we conclude about the polynomial represented by the graph shown in Figure \\(\\PageIndex{12}\\) based on its intercepts and turning points?\n\n[Figure:  Graph of an even-degree polynomial.]\n\nFigure \\(\\PageIndex{13}\\).\n\nSolution\n\nThe end behavior of the graph tells us this is the graph of an even-degree polynomial. See Figure \\(\\PageIndex{14}\\).\n\n[Figure: Graph of an even-degree polynomial that denotes the turning points and intercepts.]\n\nFigure \\(\\PageIndex{14}\\): Graph of an even-degree polynomial.\n\nThe graph has 2 \\(x\\)-intercepts, suggesting a degree of 2 or greater, and 3 turning points, suggesting a degree of 4 or greater. Based on this, it would be reasonable to conclude that the degree is even and at least 4.",
+      "sourceAnswers": [],
+      "hasFigure": true,
+      "status": "draft",
+      "answerVerified": false,
+      "translationStatus": "pending",
+      "mappingStatus": "pending"
+    },
+    {
+      "ordinal": 27,
+      "sourceNumber": "",
+      "sourceAnchor": "",
+      "kind": "exercise-candidate",
+      "context": "A continuous function has no breaks in its graph: the graph can be drawn without lifting the pen from the paper. A smooth curve is a graph that has no sharp corners. The turning points of a smooth graph must always occur at rounded curves. The graphs of polynomial functions are both continuous and smooth.\n\nIntercepts and Turning Points of Polynomials\n\nA polynomial of degree \\(n\\) will have, at most, \\(n\\) \\(x\\)-intercepts and \\(n−1\\) turning points.",
+      "original": "Exercise \\(\\PageIndex{7}\\)\n\nWhat can we conclude about the polynomial represented by the graph shown in Figure \\(\\PageIndex{15}\\) based on its intercepts and turning points?\n\n[Figure: CNX_Precalc_Figure_03_03_222.jpg]\n\nFigure \\(\\PageIndex{15}\\).\n\nAnswer\n\nAdd texts here. Do not delete this text first.",
+      "prompt": "Exercise \\(\\PageIndex{7}\\)\n\nWhat can we conclude about the polynomial represented by the graph shown in Figure \\(\\PageIndex{15}\\) based on its intercepts and turning points?\n\n[Figure: CNX_Precalc_Figure_03_03_222.jpg]\n\nFigure \\(\\PageIndex{15}\\).",
+      "sourceAnswers": [
+        "Add texts here. Do not delete this text first."
+      ],
+      "hasFigure": true,
+      "status": "draft",
+      "answerVerified": false,
+      "translationStatus": "pending",
+      "mappingStatus": "pending"
+    },
+    {
+      "ordinal": 28,
+      "sourceNumber": "",
+      "sourceAnchor": "",
+      "kind": "example-or-exercise",
+      "context": "Solution\n\nThe end behavior indicates an odd-degree polynomial function; there are 3 \\(x\\)-intercepts and 2 turning points, so the degree is odd and at least 3. Because of the end behavior, we know that the lead coefficient must be negative.",
+      "original": "Example \\(\\PageIndex{12}\\): Drawing Conclusions about a Polynomial Function from the Factors\n\nGiven the function \\(f(x)=−4x(x+3)(x−4)\\), determine the local behavior.\n\nSolution\n\nThe \\(y\\)-intercept is found by evaluating \\(f(0)\\).\n\n\\[\\begin{align*} f(0)&=−4(0)(0+3)(0−4) \\\\ &=0 \\end{align*}\\]\n\nThe \\(y\\)-intercept is \\((0,0)\\).\n\nThe \\(x\\)-intercepts are found by determining the zeros of the function.\n\n\\[\\begin{align*} 0&=-4x(x+3)(x-4) \\\\ x&=0 & &\\text{or} & x+3&=0 & &\\text{or} & x-4&=0 \\\\ x&=0 & &\\text{or} & x&=−3 & &\\text{or} & x&=4 \\end{align*}\\]\n\nThe \\(x\\)-intercepts are \\((0,0)\\),\\((–3,0)\\), and \\((4,0)\\).\n\nThe degree is 3 so the graph has at most 2 turning points.",
+      "prompt": "Example \\(\\PageIndex{12}\\): Drawing Conclusions about a Polynomial Function from the Factors\n\nGiven the function \\(f(x)=−4x(x+3)(x−4)\\), determine the local behavior.\n\nSolution\n\nThe \\(y\\)-intercept is found by evaluating \\(f(0)\\).\n\n\\[\\begin{align*} f(0)&=−4(0)(0+3)(0−4) \\\\ &=0 \\end{align*}\\]\n\nThe \\(y\\)-intercept is \\((0,0)\\).\n\nThe \\(x\\)-intercepts are found by determining the zeros of the function.\n\n\\[\\begin{align*} 0&=-4x(x+3)(x-4) \\\\ x&=0 & &\\text{or} & x+3&=0 & &\\text{or} & x-4&=0 \\\\ x&=0 & &\\text{or} & x&=−3 & &\\text{or} & x&=4 \\end{align*}\\]\n\nThe \\(x\\)-intercepts are \\((0,0)\\),\\((–3,0)\\), and \\((4,0)\\).\n\nThe degree is 3 so the graph has at most 2 turning points.",
+      "sourceAnswers": [],
+      "hasFigure": false,
+      "status": "draft",
+      "answerVerified": false,
+      "translationStatus": "pending",
+      "mappingStatus": "pending"
+    },
+    {
+      "ordinal": 29,
+      "sourceNumber": "",
+      "sourceAnchor": "",
+      "kind": "exercise-candidate",
+      "context": "Solution\n\nThe end behavior indicates an odd-degree polynomial function; there are 3 \\(x\\)-intercepts and 2 turning points, so the degree is odd and at least 3. Because of the end behavior, we know that the lead coefficient must be negative.",
+      "original": "Exercise \\(\\PageIndex{8}\\)\n\nGiven the function \\(f(x)=0.2(x−2)(x+1)(x−5)\\), determine the local behavior.\n\nAnswer\n\nThe \\(x\\)-intercepts are \\((2,0)\\), \\((−1,0)\\), and \\((5,0)\\), the \\(y\\)-intercept is \\((0,2)\\), and the graph has at most 2 turning points.",
+      "prompt": "Exercise \\(\\PageIndex{8}\\)\n\nGiven the function \\(f(x)=0.2(x−2)(x+1)(x−5)\\), determine the local behavior.",
+      "sourceAnswers": [
+        "The \\(x\\)-intercepts are \\((2,0)\\), \\((−1,0)\\), and \\((5,0)\\), the \\(y\\)-intercept is \\((0,2)\\), and the graph has at most 2 turning points."
+      ],
+      "hasFigure": false,
+      "status": "draft",
+      "answerVerified": false,
+      "translationStatus": "pending",
+      "mappingStatus": "pending"
+    }
+  ],
+  "license": "CC BY 4.0",
+  "licenseEvidence": "This page titled 5.2: Power Functions and Polynomial Functions was last modified on Thu, 26 Dec 2024 22:30:43 GMT and is shared under a CC BY  4.0  license and was authored, remixed, and/or curated by OpenStax via source content that was edited to the style and standards of the LibreTexts platform.",
+  "url": "https://math.libretexts.org/Bookshelves/Algebra/Algebra_and_Trigonometry_1e_(OpenStax)/05:_Polynomial_and_Rational_Functions/5.02:_Power_Functions_and_Polynomial_Functions",
+  "sha256": "a76a27be1ec56fc0fdc9b2fe24b73a886a94c79eac1cd4d378fd6167cfd13d0b",
+  "checkedAt": "2026-10-07",
+  "id": "2ce1af8cec262ae531d3",
+  "bookId": "algebra-trigonometry",
+  "licenseInherited": false,
+  "licenseSource": "https://math.libretexts.org/Bookshelves/Algebra/Algebra_and_Trigonometry_1e_(OpenStax)/05:_Polynomial_and_Rational_Functions/5.02:_Power_Functions_and_Polynomial_Functions",
+  "licenseUrl": "https://creativecommons.org/licenses/by/4.0/",
+  "authors": "OpenStax / Jay Abramson et al.",
+  "book": "Algebra and Trigonometry 1e",
+  "reviewStatus": "unreviewed",
+  "sourceLanguage": "en",
+  "translationStatus": "pending"
+}

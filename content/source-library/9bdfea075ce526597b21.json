@@ -1,0 +1,475 @@
+{
+  "title": "3.6: Absolute Value Functions",
+  "originalText": "Learning Objectives\n\nGraph an absolute value function.\n\nSolve an absolute value equation.\n\nUntil the 1920s, the so-called spiral nebulae were believed to be clouds of dust and gas in our own galaxy, some tens of thousands of light years away. Then, astronomer Edwin Hubble proved that these objects are galaxies in their own right, at distances of millions of light years. Today, astronomers can detect galaxies that are billions of light years away. Distances in the universe can be measured in all directions. As such, it is useful to consider distance as an absolute value function. In this section, we will investigate absolute value functions.\n\n[Figure: The Milky Way]\n\nFigure \\(\\PageIndex{1}\\): Distances in deep space can be measured in all directions. As such, it is useful to consider distance in terms of absolute values. (credit: \"s58y\"/Flickr)\n\nUnderstanding Absolute Value\n\nRecall that in its basic form \\(f(x)=|x|\\), the absolute value function, is one of our toolkit functions. The absolute value function is commonly thought of as providing the distance the number is from zero on a number line. Algebraically, for whatever the input value is, the output is the value without regard to sign.\n\nAbsolute Value Function\n\nThe absolute value function can be defined as a piecewise function\n\n\\[f(x)=|x|= \\begin{cases} x & \\text{ if }x{\\geq}0 \\\\ -x & \\text{ if } x<0 \\end{cases}\\]\n\nExample \\(\\PageIndex{1}\\): Determine a Number within a Prescribed Distance\n\nDescribe all values \\(x\\) within or including a distance of 4 from the number 5.\n\nSolution\n\nWe want the distance between \\(x\\) and 5 to be less than or equal to 4. We can draw a number line, such as the one in , to represent the condition to be satisfied.\n\n[Figure: Number line describing the difference of the distance of 4 away from 5]\n\nFigure \\(\\PageIndex{2}\\): Number line describing the difference of the distance of 4 away from 5.\n\nThe distance from \\(x\\) to 5 can be represented using the absolute value as \\(|x−5|\\). We want the values of \\(x\\) that satisfy the condition \\(| x−5 |\\leq4\\).\n\nAnalysis\n\nNote that\n\n\\[\\begin{align*} -4&{\\leq}x-5 & x-5&\\leq4 \\\\[4pt] 1&{\\leq}x & x&{\\leq}9 \\end{align*}\\]\n\nSo \\(|x−5|\\leq4\\) is equivalent to \\(1{\\leq}x\\leq9\\).\n\nHowever, mathematicians generally prefer absolute value notation.\n\nExercise \\(\\PageIndex{1}\\)\n\nDescribe all values \\(x\\) within a distance of 3 from the number 2.\n\nAnswer\n\n\\(|x−2|\\leq3\\)\n\nExample \\(\\PageIndex{2}\\): Resistance of a Resistor\n\nElectrical parts, such as resistors and capacitors, come with specified values of their operating parameters: resistance, capacitance, etc. However, due to imprecision in manufacturing, the actual values of these parameters vary somewhat from piece to piece, even when they are supposed to be the same. The best that manufacturers can do is to try to guarantee that the variations will stay within a specified range, often ±1%, ±5%, or ±10%.\n\nSuppose we have a resistor rated at 680 ohms, ±5%. Use the absolute value function to express the range of possible values of the actual resistance.\n\nSolution\n\n5% of 680 ohms is 34 ohms. The absolute value of the difference between the actual and nominal resistance should not exceed the stated variability, so, with the resistance \\(R\\) in ohms,\n\n\\[|R−680|\\leq34 \\nonumber\\]\n\nExercise \\(\\PageIndex{2}\\)\n\nStudents who score within 20 points of 80 will pass a test. Write this as a distance from 80 using absolute value notation.\n\nAnswer\n\nUsing the variable \\(p\\) for passing, \\(| p−80 |\\leq20\\)\n\nGraphing an Absolute Value Function\n\nThe most significant feature of the absolute value graph is the corner point at which the graph changes direction. This point is shown at the origin in Figure \\(\\PageIndex{3}\\).\n\n[Figure: Graph of an absolute function.]\n\nFigure \\(\\PageIndex{3}\\): Graph of an absolute function.\n\nFigure \\(\\PageIndex{3}\\) shows the graph of \\(y=2|x–3|+4\\). The graph of \\(y=|x|\\) has been shifted right 3 units, vertically stretched by a factor of 2, and shifted up 4 units. This means that the corner point is located at \\((3,4)\\) for this transformed function.\n\n[Figure: Graph of the different types of transformations for an absolute function.]\n\nFigure \\(\\PageIndex{4}\\): Graph of the different types of transformations for an absolute function.\n\nExample \\(\\PageIndex{3}\\): Writing an Equation for an Absolute Value Function\n\nWrite an equation for the function graphed in Figure \\(\\PageIndex{5}\\).\n\n[Figure: Graph of an absolute function.]\n\nFigure \\(\\PageIndex{5}\\): Graph of an absolute function.\n\nSolution\n\nThe basic absolute value function changes direction at the origin, so this graph has been shifted to the right 3 units and down 2 units from the basic toolkit function. See Figure \\(\\PageIndex{6}\\).\n\n[Figure: Graph of two transformations for an absolute function at (3, -2)]\n\nFigure \\(\\PageIndex{6}\\): Graph of two transformations for an absolute function at \\((3, -2)\\).\n\nWe also notice that the graph appears vertically stretched, because the width of the final graph on a horizontal line is not equal to 2 times the vertical distance from the corner to this line, as it would be for an unstretched absolute value function. Instead, the width is equal to 1 times the vertical distance as shown in Figure \\(\\PageIndex{7}\\).\n\n[Figure: alt]\n\nFigure \\(\\PageIndex{7}\\): Graph of two transformations for an absolute function at \\((3, -2)\\) and the ratios between the two different transformations.\n\nFrom this information we can write the equation\n\n\\[\\begin{align*} f(x)&=2|x-3|-2, \\;\\;\\;\\;\\;\\; \\text{treating the stretch as a vertial stretch, or} \\\\ f(x)&=|2(x-3)|-2, \\;\\;\\; \\text{treating the stretch as a horizontal compression.} \\end{align*}\\]\n\nAnalysis\n\nNote that these equations are algebraically equivalent—the stretch for an absolute value function can be written interchangeably as a vertical or horizontal stretch or compression.\n\nQ & A\n\nIf we couldn’t observe the stretch of the function from the graphs, could we algebraically determine it?\n\nAnswer\n\nYes. If we are unable to determine the stretch based on the width of the graph, we can solve for the stretch factor by putting in a known pair of values for \\(x\\) and \\(f(x)\\).\n\n\\[f(x)=a|x−3|−2 \\nonumber\\]\n\nNow substituting in the point \\((1, 2)\\)\n\n\\[\\begin{align*} 2&=a|1-3|-2 \\\\ 4&=2a \\\\ a&=2 \\end{align*}\\]\n\nExercise \\(\\PageIndex{3}\\)\n\nWrite the equation for the absolute value function that is horizontally shifted left 2 units, is vertically flipped, and vertically shifted up 3 units.\n\nAnswer\n\n\\(f(x)=−| x+2 |+3\\)\n\nQ & A\n\nDo the graphs of absolute value functions always intersect the vertical axis? The horizontal axis?\n\nAnswer\n\nYes, they always intersect the vertical axis. The graph of an absolute value function will intersect the vertical axis when the input is zero.\n\nNo, they do not always intersect the horizontal axis. The graph may or may not intersect the horizontal axis, depending on how the graph has been shifted and reflected. It is possible for the absolute value function to intersect the horizontal axis at zero, one, or two points (Figure \\(\\PageIndex{8}\\)).\n\n[Figure: Graph of the different types of transformations for an absolute function.]\n\nFigure \\(\\PageIndex{8}\\): (a) The absolute value function does not intersect the horizontal axis. (b) The absolute value function intersects the horizontal axis at one point. (c) The absolute value function intersects the horizontal axis at two points.\n\nSolving an Absolute Value Equation\n\nNow that we can graph an absolute value function, we will learn how to solve an absolute value equation. To solve an equation such as \\(8=|2x−6|\\), we notice that the absolute value will be equal to 8 if the quantity inside the absolute value is 8 or -8. This leads to two different equations we can solve independently.\n\n\\[2x-6=8 \\quad \\text{ or } \\quad 2x-6=-8 \\nonumber\\]\n\n\\[\\begin{align*} 2x &= 14 & 2x &= -2 \\\\ x&=7 & x&=-1 \\end{align*}\\]\n\nKnowing how to solve problems involving absolute value functions is useful. For example, we may need to identify numbers or points on a line that are at a specified distance from a given reference point.\n\nAn absolute value equation is an equation in which the unknown variable appears in absolute value bars. For example,\n\n\\[\\begin{align*}|x|&=4, \\nonumber \\\\[4pt] |2x−1| &=3, \\\\[4pt] |5x+2|−4 &=9. \\end{align*}\\]\n\nSolutions to Absolute Value Equations\n\nFor real numbers \\(A\\) and \\(B\\), an equation of the form \\(|A|=B\\), with \\(B\\geq0\\), will have solutions when \\(A=B\\) or \\(A=−B\\). If \\(B<0\\), the equation \\(|A|=B\\) has no solution.\n\nHow To ...\n\nGiven the formula for an absolute value function, find the horizontal intercepts of its graph.\n\n1. Isolate the absolute value term.\n\n2. Use \\(|A|=B\\) to write \\(A=B\\) or \\(−A=B\\), assuming \\(B>0\\).\n\n3. Solve for \\(x\\).\n\nExample \\(\\PageIndex{4}\\): Finding the Zeros of an Absolute Value Function\n\nFor the function \\(f(x)=|4x+1|−7\\), find the values of \\(x\\) such that \\(f(x)=0\\).\n\nSolution\n\n\\[\\begin{align*} 0&=|4x+1|-7 & & &\\text{Substitute 0 for f(x).} \\\\ 7&=|4x+1| & & &\\text{Isolate the absolute value on one side of the equation.} \\\\ 7&=4x+1 &\\text{or} -7&=4x+1 &\\text{Break into two separate equations and solve.} \\\\ 6&=4x & -8&=4x & \\\\ x&=\\frac{6}{4}=1.5 & x&=\\frac{-8}{4}=-2 \\end{align*}\\]\n\nThe function outputs 0 when \\(x=1.5\\) or \\(x=−2\\) (Figure \\(\\PageIndex{9}\\)).\n\n[Figure: Graph of an absolute function with x-intercepts at -2 and 1.5.]\n\nFigure \\(\\PageIndex{9}\\): Graph of an absolute function with x-intercepts at -2 and 1.5.\n\nExercise \\(\\PageIndex{4}\\)\n\nFor the function \\(f(x)=|2x−1|−3\\), find the values of \\(x\\) such that \\(f(x)=0\\).\n\nSolution\n\n\\(x=−1\\) or \\(x=2\\)\n\nQ & A\n\nShould we always expect two answers when solving \\(|A|=B\\)?\n\nAnswer\n\nNo. We may find one, two, or even no answers. For example, there is no solution to \\(2+|3x−5|=1\\).\n\nHow To ...\n\nGiven an absolute value equation, solve it.\n\n1. Isolate the absolute value term.\n\n2. Use \\(|A|=B\\) to write \\(A=B\\) or \\(A=−B\\).\n\n3. Solve for \\(x\\).\n\nExample \\(\\PageIndex{5}\\): Solving an Absolute Value Equation\n\nSolve \\(1=4|x−2|+2\\).\n\nSolution\n\nIsolating the absolute value on one side of the equation gives the following.\n\n\\[\\begin{align*} 1&=4|x-2|+2 \\\\ -1&=4|x-2| \\\\ -\\frac{1}{4}&=|x-2| \\end{align*}\\]\n\nThe absolute value always returns a positive value, so it is impossible for the absolute value to equal a negative value. At this point, we notice that this equation has no solutions.\n\nQ & A\n\nIn Example \\(\\PageIndex{5}\\), if \\(f(x)=1\\) and \\(g(x)=4|x−2|+2\\) were graphed on the same set of axes, would the graphs intersect?\n\nAnswer\n\nNo. The graphs of \\(f\\) and \\(g\\) would not intersect, as shown in Figure \\(\\PageIndex{10}\\). This confirms, graphically, that the equation \\(1=4|x−2|+2\\) has no solution.\n\n[Figure: Graph of \\(g(x)=4|x-2|+2\\) and \\(f(x)=1\\).]\n\nFigure \\(\\PageIndex{10}\\): Graph of \\(g(x)=4|x-2|+2\\) and \\(f(x)=1\\).\n\nFind where the graph of the function \\(f(x)=−| x+2 |+3\\) intersects the horizontal and vertical axes.\n\n\\(f(0)=1\\), so the graph intersects the vertical axis at \\((0,1)\\). \\(f(x)=0\\) when \\(x=−5\\) and \\(x=1\\) so the graph intersects the horizontal axis at \\((−5,0)\\) and \\((1,0)\\).\n\nSolving an Absolute Value Inequality\n\nAbsolute value equations may not always involve equalities. Instead, we may need to solve an equation within a range of values. We would use an absolute value inequality to solve such an equation. An absolute value inequality is an equation of the form\n\n\\[|A|<B,\\;|A|{\\leq}B,|A|>B, \\nonumber\\]\n\nor\n\n\\[ |A|{\\geq}B, \\nonumber\\]\n\nwhere an expression \\(A\\) (and possibly but not usually \\(B\\)) depends on a variable \\(x\\). Solving the inequality means finding the set of all \\(x\\) that satisfy the inequality. Usually this set will be an interval or the union of two intervals.\n\nThere are two basic approaches to solving absolute value inequalities: graphical and algebraic. The advantage of the graphical approach is we can read the solution by interpreting the graphs of two functions. The advantage of the algebraic approach is it yields solutions that may be difficult to read from the graph.\n\nFor example, we know that all numbers within 200 units of 0 may be expressed as\n\n\\[|x|<200 \\nonumber\\]\n\nor\n\n\\[ −200<x<200 \\nonumber\\]\n\nSuppose we want to know all possible returns on an investment if we could earn some amount of money within $200 of $600. We can solve algebraically for the set of values \\(x\\) such that the distance between \\(x\\) and 600 is less than 200. We represent the distance between \\(x\\) and 600 as \\(|x−600|\\).\n\n\\[|x−600|<200\\]\n\nor\n\n\\[−200<x−600<200\\]\n\n\\[\\begin{align*} −200+600< &x−600+600<200+600 \\\\[4pt] 400< &x<800 \\end{align*}\\]\n\nThis means our returns would be between $400 and $800.\n\nSometimes an absolute value inequality problem will be presented to us in terms of a shifted and/or stretched or compressed absolute value function, where we must determine for which values of the input the function’s output will be negative or positive.\n\nHow To ...\n\nGiven an absolute value inequality of the form \\(|x−A|{\\leq}B\\) for real numbers \\(a\\) and \\(b\\) where \\(b\\) is positive, solve the absolute value inequality algebraically.\n\n1. Find boundary points by solving \\(|x−A|=B\\).\n\n2. Test intervals created by the boundary points to determine where \\(|x−A|{\\leq}B\\).\n\n3. Write the interval or union of intervals satisfying the inequality in interval, inequality, or set-builder notation.\n\nExample \\(\\PageIndex{6}\\): Solving an Absolute Value Inequality\n\nSolve \\(|x −5|{\\leq}4\\).\n\nSolution\n\nWith both approaches, we will need to know first where the corresponding equality is true. In this case we first will find where \\(|x−5|=4\\). We do this because the absolute value is a function with no breaks, so the only way the function values can switch from being less than 4 to being greater than 4 is by passing through where the values equal 4. Solve \\(|x−5|=4\\).\n\n\\[\\begin{align*} x−5&=4 &\\text{ or }\\;\\;\\;\\;\\;\\;\\;\\; x&=9 \\\\ x−5&=−4 & x&=1\\end{align*}\\]\n\nAfter determining that the absolute value is equal to 4 at \\(x=1\\) and \\(x=9\\), we know the graph can change only from being less than 4 to greater than 4 at these values. This divides the number line up into three intervals:\n\n\\[x<1,\\; 1<x<9, \\text{ and } x>9. \\nonumber\\]\n\nTo determine when the function is less than 4, we could choose a value in each interval and see if the output is less than or greater than 4, as shown in Table \\(\\PageIndex{1}\\).\n\n    Table \\(\\PageIndex{1}\\)\n\n            Interval test \\(x\\)\t\n            \\(f(x)\\)\t\n            \\(<4\\) or \\(>4\\)\t\n\n            \\(x<1\\)\t\n            0\t\n            \\(|0-5|=5\\)\t\n            Greater than\t\n\n            \\(1<x<9\\)\t\n            6\t\n            \\(|6-5|=1\\)\t\n            Less than\t\n\n            \\(x>9\\)\t\n            11\t\n            \\(|11-5|=6\\)\t\n            Greater than\t\n\nBecause \\(1{\\leq}x{\\leq}9\\) is the only interval in which the output at the test value is less than 4, we can conclude that the solution to \\(|x−5|{\\leq}4\\) is \\(1{\\leq}x{\\leq}9\\), or \\([1,9]\\).\n\nTo use a graph, we can sketch the function \\(f(x)=|x−5|\\). To help us see where the outputs are 4, the line \\(g(x)=4\\) could also be sketched as in Figure \\(\\PageIndex{11}\\).\n\n[Figure: Graph of an absolute function and a vertical line, demonstrating how to see what outputs are less than the vertical line.]\n\nFigure \\(\\PageIndex{11}\\): Graph to find the points satisfying an absolute value inequality.\n\nWe can see the following:\n\nThe output values of the absolute value are equal to 4 at \\(x=1\\) and \\(x=9\\).\n\nThe graph of \\(f\\) is below the graph of \\(g\\) on \\(1<x<9\\). This means the output values of \\(f(x)\\) are less than the output values of \\(g(x)\\).\n\nThe absolute value is less than or equal to 4 between these two points, when \\(1{\\leq}x\\leq9\\). In interval notation, this would be the interval \\([1,9]\\).\n\nAnalysis\n\nFor absolute value inequalities,\n\n\\[|x−A|<C,\\;\\;\\;\\;\\;\\;\\;\\;\\;\\;\\;\\;\\;\\;\\; |x−A|>C, \\\\−C<x−A<C,\\;\\;\\;\\; x−A<−C \\text{ or } x−A>C. \\nonumber\\]\n\nThe \\(<\\) or \\(>\\) symbol may be replaced by \\(\\leq\\) or \\(\\geq\\).\n\nSo, for this example, we could use this alternative approach.\n\n\\[\\begin{align*} |x−5|&{\\leq}4 \\\\ −4&{\\leq}x−5{\\leq}4 &\\text{Rewrite by removing the absolute value bars.} \\\\ −4+5&{\\leq}x−5+5{\\leq}4+5 &\\text{Isolate the x.} \\\\ 1&{\\leq}x\\leq9 \\end{align*}\\]\n\nExercise \\(\\PageIndex{5}\\)\n\nSolve \\(|x+2| \\leq 6\\).\n\nAnswer\n\n\\(-8 \\leq x \\leq 4\\)\n\nHow To ...\n\nGiven an absolute value function, solve for the set of inputs where the output is positive (or negative).\n\n1. Set the function equal to zero, and solve for the boundary points of the solution set.\n\n2. Use test points or a graph to determine where the function’s output is positive or negative.\n\nExample \\(\\PageIndex{7}\\): Using a Graphical Approach to Solve Absolute Value Inequalities\n\nGiven the function \\(f(x)=−\\frac{1}{2}|4x−5|+3\\), determine the \\(x\\)-values for which the function values are negative.\n\nSolution\n\nWe are trying to determine where \\(f(x)<0\\), which is when \\(−\\frac{1}{2}|4x−5|+3<0\\). We begin by isolating the absolute value.\n\n\\[ \\begin{align*} -\\frac{1}{2}|4x−5|&<−3 \\;\\;\\; \\text{Multiply both sides by –2, and reverse the inequality.} \\\\ |4x−5|&>6\\end{align*}\\]\n\nNext we solve for the equality \\(|4x−5|=6\\).\n\n\\[\\begin{align*} 4x-5&=6 & 4x-5&=-6 \\\\ 4x-6&=6 \\end{align*}\\]\n\nor\n\n\\[\\begin{align*} 4x&=-1 \\\\ x&=\\frac{11}{4} & x&=-\\frac{1}{4} \\end{align*}\\]\n\nNow, we can examine the graph of \\(f\\) to observe where the output is negative. We will observe where the branches are below the \\(x\\)-axis. Notice that it is not even important exactly what the graph looks like, as long as we know that it crosses the horizontal axis at \\(x=−\\frac{1}{4}\\) and \\(x=\\frac{11}{4}\\) and that the graph has been reflected vertically. See Figure \\(\\PageIndex{12}\\).\n\n[Figure: alt]\n\nFigure \\(\\PageIndex{12}\\): Graph of an absolute function with x-intercepts at -0.25 and 2.75.]\n\nWe observe that the graph of the function is below the \\(x\\)-axis left of \\(x=−\\frac{1}{4}\\) and right of \\(x=\\frac{11}{4}\\). This means the function values are negative to the left of the first horizontal intercept at \\(x=−\\frac{1}{4}\\), and negative to the right of the second intercept at \\(x=\\frac{11}{4} \\). This gives us the solution to the inequality.\n\n\\[x<−\\frac{1}{4} \\text{ or } x>1\\frac{1}{4} \\nonumber\\]\n\nIn interval notation, this would be \\(( −\\infty,−0.25 )\\cup( 2.75,\\infty)\\).\n\nExercise \\(\\PageIndex{6}\\)\n\nSolve \\(−2|k−4|\\leq−6\\).\n\nAnswer\n\n\\(k\\leq1\\) or \\(k\\geq7\\); in interval notation, this would be \\(\\left(−\\infty,1\\right]\\cup\\left[7,\\infty\\right)\\)\n\nKey Concepts\n\nThe absolute value function is commonly used to measure distances between points.\n\nApplied problems, such as ranges of possible values, can also be solved using the absolute value function.\n\nThe graph of the absolute value function resembles a letter V. It has a corner point at which the graph changes direction.\n\nIn an absolute value equation, an unknown variable is the input of an absolute value function.\n\nIf the absolute value of an expression is set equal to a positive number, expect two solutions for the unknown variable.\n\nAn absolute value equation may have one solution, two solutions, or no solutions.\n\nAn absolute value inequality is similar to an absolute value equation but takes the form | A |<B, | A |≤B, | A |>B, or | A |≥B.It can be solved by determining the boundaries of the solution set and then testing which segments are in the set.\n\nAbsolute value inequalities can also be solved graphically.\n\nGlossary\n\nabsolute value equation\n\nan equation of the form \\(|A|=B\\), with \\(B\\geq0\\); it will have solutions when \\(A=B\\) or \\(A=−B\\)\n\nabsolute value inequality\n\na relationship in the form \\(|A|<B\\), \\(|A|{\\leq}B\\), \\(|A|>B\\), or \\(|A|{\\geq}B\\)\n\nThis page titled 3.6: Absolute Value Functions was last modified on Thu, 26 Dec 2024 22:30:43 GMT and is shared under a CC BY  4.0  license and was authored, remixed, and/or curated by OpenStax via source content that was edited to the style and standards of the LibreTexts platform.",
+  "figures": [
+    {
+      "url": "https://math.libretexts.org/@api/deki/files/974/CNX_Precalc_Figure_01_06_001n.jpg?revision=1",
+      "alt": "The Milky Way",
+      "credit": ""
+    },
+    {
+      "url": "https://math.libretexts.org/@api/deki/files/975/159089846183564730.png?revision=2",
+      "alt": "Number line describing the difference of the distance of 4 away from 5",
+      "credit": ""
+    },
+    {
+      "url": "https://math.libretexts.org/@api/deki/files/1002/CNX_Precalc_Figure_01_06_003.jpg?revision=1",
+      "alt": "Graph of an absolute function.",
+      "credit": ""
+    },
+    {
+      "url": "https://math.libretexts.org/@api/deki/files/1003/CNX_Precalc_Figure_01_06_004.jpg?revision=1",
+      "alt": "Graph of the different types of transformations for an absolute function.",
+      "credit": ""
+    },
+    {
+      "url": "https://math.libretexts.org/@api/deki/files/1004/159089846183564730.png?revision=2",
+      "alt": "Graph of an absolute function.",
+      "credit": ""
+    },
+    {
+      "url": "https://math.libretexts.org/@api/deki/files/1005/imageedit_8_8477295277.png?revision=2",
+      "alt": "Graph of two transformations for an absolute function at (3, -2)",
+      "credit": ""
+    },
+    {
+      "url": "https://math.libretexts.org/@api/deki/files/1006/imageedit_7_3405374175.png?revision=2",
+      "alt": "alt",
+      "credit": ""
+    },
+    {
+      "url": "https://math.libretexts.org/@api/deki/files/1007/imageedit_22_7566189044.png?revision=2",
+      "alt": "Graph of the different types of transformations for an absolute function.",
+      "credit": ""
+    },
+    {
+      "url": "https://math.libretexts.org/@api/deki/files/1008/imageedit_18_3790878258.png?revision=2",
+      "alt": "Graph of an absolute function with x-intercepts at -2 and 1.5.",
+      "credit": ""
+    },
+    {
+      "url": "https://math.libretexts.org/@api/deki/files/1009/imageedit_12_9794052236.png?revision=2",
+      "alt": "Graph of \\(g(x)=4|x-2|+2\\) and \\(f(x)=1\\).",
+      "credit": ""
+    },
+    {
+      "url": "https://math.libretexts.org/@api/deki/files/1010/imageedit_14_4523077702.png?revision=2",
+      "alt": "Graph of an absolute function and a vertical line, demonstrating how to see what outputs are less than the vertical line.",
+      "credit": ""
+    },
+    {
+      "url": "https://math.libretexts.org/@api/deki/files/1011/imageedit_16_5957854212.png?revision=2",
+      "alt": "alt",
+      "credit": ""
+    }
+  ],
+  "references": [
+    {
+      "text": "spiral nebulae",
+      "url": "https://phys.libretexts.org/Bookshelves/Astronomy_and_Cosmology_TextMaps/Map%3A_Astronomy_(OpenStax)/26%3A_Galaxies/26.01%3A_The_Discovery_of_Galaxies"
+    },
+    {
+      "text": "3.6: Absolute Value Functions",
+      "url": "https://math.libretexts.org/Bookshelves/Algebra/Algebra_and_Trigonometry_1e_(OpenStax)/03%3A_Functions/3.06%3A_Absolute_Value_Functions"
+    },
+    {
+      "text": "CC BY  4.0",
+      "url": "https://creativecommons.org/licenses/by/4.0"
+    },
+    {
+      "text": "OpenStax",
+      "url": "https://openstax.org/"
+    },
+    {
+      "text": "source content",
+      "url": "https://openstax.org/details/books/precalculus"
+    }
+  ],
+  "exercises": [
+    {
+      "ordinal": 1,
+      "sourceNumber": "",
+      "sourceAnchor": "",
+      "kind": "example-or-exercise",
+      "context": "Absolute Value Function\n\nThe absolute value function can be defined as a piecewise function\n\n\\[f(x)=|x|= \\begin{cases} x & \\text{ if }x{\\geq}0 \\\\ -x & \\text{ if } x<0 \\end{cases}\\]",
+      "original": "Example \\(\\PageIndex{1}\\): Determine a Number within a Prescribed Distance\n\nDescribe all values \\(x\\) within or including a distance of 4 from the number 5.\n\nSolution\n\nWe want the distance between \\(x\\) and 5 to be less than or equal to 4. We can draw a number line, such as the one in , to represent the condition to be satisfied.\n\n[Figure: Number line describing the difference of the distance of 4 away from 5]\n\nFigure \\(\\PageIndex{2}\\): Number line describing the difference of the distance of 4 away from 5.\n\nThe distance from \\(x\\) to 5 can be represented using the absolute value as \\(|x−5|\\). We want the values of \\(x\\) that satisfy the condition \\(| x−5 |\\leq4\\).\n\nAnalysis\n\nNote that\n\n\\[\\begin{align*} -4&{\\leq}x-5 & x-5&\\leq4 \\\\[4pt] 1&{\\leq}x & x&{\\leq}9 \\end{align*}\\]\n\nSo \\(|x−5|\\leq4\\) is equivalent to \\(1{\\leq}x\\leq9\\).\n\nHowever, mathematicians generally prefer absolute value notation.",
+      "prompt": "Example \\(\\PageIndex{1}\\): Determine a Number within a Prescribed Distance\n\nDescribe all values \\(x\\) within or including a distance of 4 from the number 5.\n\nSolution\n\nWe want the distance between \\(x\\) and 5 to be less than or equal to 4. We can draw a number line, such as the one in , to represent the condition to be satisfied.\n\n[Figure: Number line describing the difference of the distance of 4 away from 5]\n\nFigure \\(\\PageIndex{2}\\): Number line describing the difference of the distance of 4 away from 5.\n\nThe distance from \\(x\\) to 5 can be represented using the absolute value as \\(|x−5|\\). We want the values of \\(x\\) that satisfy the condition \\(| x−5 |\\leq4\\).\n\nAnalysis\n\nNote that\n\n\\[\\begin{align*} -4&{\\leq}x-5 & x-5&\\leq4 \\\\[4pt] 1&{\\leq}x & x&{\\leq}9 \\end{align*}\\]\n\nSo \\(|x−5|\\leq4\\) is equivalent to \\(1{\\leq}x\\leq9\\).\n\nHowever, mathematicians generally prefer absolute value notation.",
+      "sourceAnswers": [],
+      "hasFigure": true,
+      "status": "draft",
+      "answerVerified": false,
+      "translationStatus": "pending",
+      "mappingStatus": "pending"
+    },
+    {
+      "ordinal": 2,
+      "sourceNumber": "",
+      "sourceAnchor": "",
+      "kind": "exercise-candidate",
+      "context": "Absolute Value Function\n\nThe absolute value function can be defined as a piecewise function\n\n\\[f(x)=|x|= \\begin{cases} x & \\text{ if }x{\\geq}0 \\\\ -x & \\text{ if } x<0 \\end{cases}\\]",
+      "original": "Exercise \\(\\PageIndex{1}\\)\n\nDescribe all values \\(x\\) within a distance of 3 from the number 2.\n\nAnswer\n\n\\(|x−2|\\leq3\\)",
+      "prompt": "Exercise \\(\\PageIndex{1}\\)\n\nDescribe all values \\(x\\) within a distance of 3 from the number 2.",
+      "sourceAnswers": [
+        "\\(|x−2|\\leq3\\)"
+      ],
+      "hasFigure": false,
+      "status": "draft",
+      "answerVerified": false,
+      "translationStatus": "pending",
+      "mappingStatus": "pending"
+    },
+    {
+      "ordinal": 3,
+      "sourceNumber": "",
+      "sourceAnchor": "",
+      "kind": "example-or-exercise",
+      "context": "Absolute Value Function\n\nThe absolute value function can be defined as a piecewise function\n\n\\[f(x)=|x|= \\begin{cases} x & \\text{ if }x{\\geq}0 \\\\ -x & \\text{ if } x<0 \\end{cases}\\]",
+      "original": "Example \\(\\PageIndex{2}\\): Resistance of a Resistor\n\nElectrical parts, such as resistors and capacitors, come with specified values of their operating parameters: resistance, capacitance, etc. However, due to imprecision in manufacturing, the actual values of these parameters vary somewhat from piece to piece, even when they are supposed to be the same. The best that manufacturers can do is to try to guarantee that the variations will stay within a specified range, often ±1%, ±5%, or ±10%.\n\nSuppose we have a resistor rated at 680 ohms, ±5%. Use the absolute value function to express the range of possible values of the actual resistance.\n\nSolution\n\n5% of 680 ohms is 34 ohms. The absolute value of the difference between the actual and nominal resistance should not exceed the stated variability, so, with the resistance \\(R\\) in ohms,\n\n\\[|R−680|\\leq34 \\nonumber\\]",
+      "prompt": "Example \\(\\PageIndex{2}\\): Resistance of a Resistor\n\nElectrical parts, such as resistors and capacitors, come with specified values of their operating parameters: resistance, capacitance, etc. However, due to imprecision in manufacturing, the actual values of these parameters vary somewhat from piece to piece, even when they are supposed to be the same. The best that manufacturers can do is to try to guarantee that the variations will stay within a specified range, often ±1%, ±5%, or ±10%.\n\nSuppose we have a resistor rated at 680 ohms, ±5%. Use the absolute value function to express the range of possible values of the actual resistance.\n\nSolution\n\n5% of 680 ohms is 34 ohms. The absolute value of the difference between the actual and nominal resistance should not exceed the stated variability, so, with the resistance \\(R\\) in ohms,\n\n\\[|R−680|\\leq34 \\nonumber\\]",
+      "sourceAnswers": [],
+      "hasFigure": false,
+      "status": "draft",
+      "answerVerified": false,
+      "translationStatus": "pending",
+      "mappingStatus": "pending"
+    },
+    {
+      "ordinal": 4,
+      "sourceNumber": "",
+      "sourceAnchor": "",
+      "kind": "exercise-candidate",
+      "context": "Absolute Value Function\n\nThe absolute value function can be defined as a piecewise function\n\n\\[f(x)=|x|= \\begin{cases} x & \\text{ if }x{\\geq}0 \\\\ -x & \\text{ if } x<0 \\end{cases}\\]",
+      "original": "Exercise \\(\\PageIndex{2}\\)\n\nStudents who score within 20 points of 80 will pass a test. Write this as a distance from 80 using absolute value notation.\n\nAnswer\n\nUsing the variable \\(p\\) for passing, \\(| p−80 |\\leq20\\)",
+      "prompt": "Exercise \\(\\PageIndex{2}\\)\n\nStudents who score within 20 points of 80 will pass a test. Write this as a distance from 80 using absolute value notation.",
+      "sourceAnswers": [
+        "Using the variable \\(p\\) for passing, \\(| p−80 |\\leq20\\)"
+      ],
+      "hasFigure": false,
+      "status": "draft",
+      "answerVerified": false,
+      "translationStatus": "pending",
+      "mappingStatus": "pending"
+    },
+    {
+      "ordinal": 5,
+      "sourceNumber": "",
+      "sourceAnchor": "",
+      "kind": "example-or-exercise",
+      "context": "Graphing an Absolute Value Function\n\nThe most significant feature of the absolute value graph is the corner point at which the graph changes direction. This point is shown at the origin in Figure \\(\\PageIndex{3}\\).\n\nFigure \\(\\PageIndex{3}\\) shows the graph of \\(y=2|x–3|+4\\). The graph of \\(y=|x|\\) has been shifted right 3 units, vertically stretched by a factor of 2, and shifted up 4 units. This means that the corner point is located at \\((3,4)\\) for this transformed function.",
+      "original": "Example \\(\\PageIndex{3}\\): Writing an Equation for an Absolute Value Function\n\nWrite an equation for the function graphed in Figure \\(\\PageIndex{5}\\).\n\n[Figure: Graph of an absolute function.]\n\nFigure \\(\\PageIndex{5}\\): Graph of an absolute function.\n\nSolution\n\nThe basic absolute value function changes direction at the origin, so this graph has been shifted to the right 3 units and down 2 units from the basic toolkit function. See Figure \\(\\PageIndex{6}\\).\n\n[Figure: Graph of two transformations for an absolute function at (3, -2)]\n\nFigure \\(\\PageIndex{6}\\): Graph of two transformations for an absolute function at \\((3, -2)\\).\n\nWe also notice that the graph appears vertically stretched, because the width of the final graph on a horizontal line is not equal to 2 times the vertical distance from the corner to this line, as it would be for an unstretched absolute value function. Instead, the width is equal to 1 times the vertical distance as shown in Figure \\(\\PageIndex{7}\\).\n\n[Figure: alt]\n\nFigure \\(\\PageIndex{7}\\): Graph of two transformations for an absolute function at \\((3, -2)\\) and the ratios between the two different transformations.\n\nFrom this information we can write the equation\n\n\\[\\begin{align*} f(x)&=2|x-3|-2, \\;\\;\\;\\;\\;\\; \\text{treating the stretch as a vertial stretch, or} \\\\ f(x)&=|2(x-3)|-2, \\;\\;\\; \\text{treating the stretch as a horizontal compression.} \\end{align*}\\]\n\nAnalysis\n\nNote that these equations are algebraically equivalent—the stretch for an absolute value function can be written interchangeably as a vertical or horizontal stretch or compression.",
+      "prompt": "Example \\(\\PageIndex{3}\\): Writing an Equation for an Absolute Value Function\n\nWrite an equation for the function graphed in Figure \\(\\PageIndex{5}\\).\n\n[Figure: Graph of an absolute function.]\n\nFigure \\(\\PageIndex{5}\\): Graph of an absolute function.\n\nSolution\n\nThe basic absolute value function changes direction at the origin, so this graph has been shifted to the right 3 units and down 2 units from the basic toolkit function. See Figure \\(\\PageIndex{6}\\).\n\n[Figure: Graph of two transformations for an absolute function at (3, -2)]\n\nFigure \\(\\PageIndex{6}\\): Graph of two transformations for an absolute function at \\((3, -2)\\).\n\nWe also notice that the graph appears vertically stretched, because the width of the final graph on a horizontal line is not equal to 2 times the vertical distance from the corner to this line, as it would be for an unstretched absolute value function. Instead, the width is equal to 1 times the vertical distance as shown in Figure \\(\\PageIndex{7}\\).\n\n[Figure: alt]\n\nFigure \\(\\PageIndex{7}\\): Graph of two transformations for an absolute function at \\((3, -2)\\) and the ratios between the two different transformations.\n\nFrom this information we can write the equation\n\n\\[\\begin{align*} f(x)&=2|x-3|-2, \\;\\;\\;\\;\\;\\; \\text{treating the stretch as a vertial stretch, or} \\\\ f(x)&=|2(x-3)|-2, \\;\\;\\; \\text{treating the stretch as a horizontal compression.} \\end{align*}\\]\n\nAnalysis\n\nNote that these equations are algebraically equivalent—the stretch for an absolute value function can be written interchangeably as a vertical or horizontal stretch or compression.",
+      "sourceAnswers": [],
+      "hasFigure": true,
+      "status": "draft",
+      "answerVerified": false,
+      "translationStatus": "pending",
+      "mappingStatus": "pending"
+    },
+    {
+      "ordinal": 6,
+      "sourceNumber": "",
+      "sourceAnchor": "",
+      "kind": "exercise-candidate",
+      "context": "Figure \\(\\PageIndex{3}\\) shows the graph of \\(y=2|x–3|+4\\). The graph of \\(y=|x|\\) has been shifted right 3 units, vertically stretched by a factor of 2, and shifted up 4 units. This means that the corner point is located at \\((3,4)\\) for this transformed function.\n\nQ & A\n\nIf we couldn’t observe the stretch of the function from the graphs, could we algebraically determine it?",
+      "original": "Exercise \\(\\PageIndex{3}\\)\n\nWrite the equation for the absolute value function that is horizontally shifted left 2 units, is vertically flipped, and vertically shifted up 3 units.\n\nAnswer\n\n\\(f(x)=−| x+2 |+3\\)",
+      "prompt": "Exercise \\(\\PageIndex{3}\\)\n\nWrite the equation for the absolute value function that is horizontally shifted left 2 units, is vertically flipped, and vertically shifted up 3 units.",
+      "sourceAnswers": [
+        "\\(f(x)=−| x+2 |+3\\)"
+      ],
+      "hasFigure": false,
+      "status": "draft",
+      "answerVerified": false,
+      "translationStatus": "pending",
+      "mappingStatus": "pending"
+    },
+    {
+      "ordinal": 7,
+      "sourceNumber": "1",
+      "sourceAnchor": "",
+      "kind": "exercise-candidate",
+      "context": "For real numbers \\(A\\) and \\(B\\), an equation of the form \\(|A|=B\\), with \\(B\\geq0\\), will have solutions when \\(A=B\\) or \\(A=−B\\). If \\(B<0\\), the equation \\(|A|=B\\) has no solution.\n\nHow To ...\n\nGiven the formula for an absolute value function, find the horizontal intercepts of its graph.",
+      "original": "1. Isolate the absolute value term.",
+      "prompt": "1. Isolate the absolute value term.",
+      "sourceAnswers": [],
+      "hasFigure": false,
+      "status": "draft",
+      "answerVerified": false,
+      "translationStatus": "pending",
+      "mappingStatus": "pending"
+    },
+    {
+      "ordinal": 8,
+      "sourceNumber": "2",
+      "sourceAnchor": "",
+      "kind": "exercise-candidate",
+      "context": "For real numbers \\(A\\) and \\(B\\), an equation of the form \\(|A|=B\\), with \\(B\\geq0\\), will have solutions when \\(A=B\\) or \\(A=−B\\). If \\(B<0\\), the equation \\(|A|=B\\) has no solution.\n\nHow To ...\n\nGiven the formula for an absolute value function, find the horizontal intercepts of its graph.",
+      "original": "2. Use \\(|A|=B\\) to write \\(A=B\\) or \\(−A=B\\), assuming \\(B>0\\).",
+      "prompt": "2. Use \\(|A|=B\\) to write \\(A=B\\) or \\(−A=B\\), assuming \\(B>0\\).",
+      "sourceAnswers": [],
+      "hasFigure": false,
+      "status": "draft",
+      "answerVerified": false,
+      "translationStatus": "pending",
+      "mappingStatus": "pending"
+    },
+    {
+      "ordinal": 9,
+      "sourceNumber": "3",
+      "sourceAnchor": "",
+      "kind": "exercise-candidate",
+      "context": "For real numbers \\(A\\) and \\(B\\), an equation of the form \\(|A|=B\\), with \\(B\\geq0\\), will have solutions when \\(A=B\\) or \\(A=−B\\). If \\(B<0\\), the equation \\(|A|=B\\) has no solution.\n\nHow To ...\n\nGiven the formula for an absolute value function, find the horizontal intercepts of its graph.",
+      "original": "3. Solve for \\(x\\).",
+      "prompt": "3. Solve for \\(x\\).",
+      "sourceAnswers": [],
+      "hasFigure": false,
+      "status": "draft",
+      "answerVerified": false,
+      "translationStatus": "pending",
+      "mappingStatus": "pending"
+    },
+    {
+      "ordinal": 10,
+      "sourceNumber": "",
+      "sourceAnchor": "",
+      "kind": "example-or-exercise",
+      "context": "For real numbers \\(A\\) and \\(B\\), an equation of the form \\(|A|=B\\), with \\(B\\geq0\\), will have solutions when \\(A=B\\) or \\(A=−B\\). If \\(B<0\\), the equation \\(|A|=B\\) has no solution.\n\nHow To ...\n\nGiven the formula for an absolute value function, find the horizontal intercepts of its graph.",
+      "original": "Example \\(\\PageIndex{4}\\): Finding the Zeros of an Absolute Value Function\n\nFor the function \\(f(x)=|4x+1|−7\\), find the values of \\(x\\) such that \\(f(x)=0\\).\n\nSolution\n\n\\[\\begin{align*} 0&=|4x+1|-7 & & &\\text{Substitute 0 for f(x).} \\\\ 7&=|4x+1| & & &\\text{Isolate the absolute value on one side of the equation.} \\\\ 7&=4x+1 &\\text{or} -7&=4x+1 &\\text{Break into two separate equations and solve.} \\\\ 6&=4x & -8&=4x & \\\\ x&=\\frac{6}{4}=1.5 & x&=\\frac{-8}{4}=-2 \\end{align*}\\]\n\nThe function outputs 0 when \\(x=1.5\\) or \\(x=−2\\) (Figure \\(\\PageIndex{9}\\)).\n\n[Figure: Graph of an absolute function with x-intercepts at -2 and 1.5.]\n\nFigure \\(\\PageIndex{9}\\): Graph of an absolute function with x-intercepts at -2 and 1.5.",
+      "prompt": "Example \\(\\PageIndex{4}\\): Finding the Zeros of an Absolute Value Function\n\nFor the function \\(f(x)=|4x+1|−7\\), find the values of \\(x\\) such that \\(f(x)=0\\).\n\nSolution\n\n\\[\\begin{align*} 0&=|4x+1|-7 & & &\\text{Substitute 0 for f(x).} \\\\ 7&=|4x+1| & & &\\text{Isolate the absolute value on one side of the equation.} \\\\ 7&=4x+1 &\\text{or} -7&=4x+1 &\\text{Break into two separate equations and solve.} \\\\ 6&=4x & -8&=4x & \\\\ x&=\\frac{6}{4}=1.5 & x&=\\frac{-8}{4}=-2 \\end{align*}\\]\n\nThe function outputs 0 when \\(x=1.5\\) or \\(x=−2\\) (Figure \\(\\PageIndex{9}\\)).\n\n[Figure: Graph of an absolute function with x-intercepts at -2 and 1.5.]\n\nFigure \\(\\PageIndex{9}\\): Graph of an absolute function with x-intercepts at -2 and 1.5.",
+      "sourceAnswers": [],
+      "hasFigure": true,
+      "status": "draft",
+      "answerVerified": false,
+      "translationStatus": "pending",
+      "mappingStatus": "pending"
+    },
+    {
+      "ordinal": 11,
+      "sourceNumber": "",
+      "sourceAnchor": "",
+      "kind": "exercise-candidate",
+      "context": "For real numbers \\(A\\) and \\(B\\), an equation of the form \\(|A|=B\\), with \\(B\\geq0\\), will have solutions when \\(A=B\\) or \\(A=−B\\). If \\(B<0\\), the equation \\(|A|=B\\) has no solution.\n\nHow To ...\n\nGiven the formula for an absolute value function, find the horizontal intercepts of its graph.",
+      "original": "Exercise \\(\\PageIndex{4}\\)\n\nFor the function \\(f(x)=|2x−1|−3\\), find the values of \\(x\\) such that \\(f(x)=0\\).\n\nSolution\n\n\\(x=−1\\) or \\(x=2\\)",
+      "prompt": "Exercise \\(\\PageIndex{4}\\)\n\nFor the function \\(f(x)=|2x−1|−3\\), find the values of \\(x\\) such that \\(f(x)=0\\).\n\nSolution\n\n\\(x=−1\\) or \\(x=2\\)",
+      "sourceAnswers": [],
+      "hasFigure": false,
+      "status": "draft",
+      "answerVerified": false,
+      "translationStatus": "pending",
+      "mappingStatus": "pending"
+    },
+    {
+      "ordinal": 12,
+      "sourceNumber": "1",
+      "sourceAnchor": "",
+      "kind": "exercise-candidate",
+      "context": "No. We may find one, two, or even no answers. For example, there is no solution to \\(2+|3x−5|=1\\).\n\nHow To ...\n\nGiven an absolute value equation, solve it.",
+      "original": "1. Isolate the absolute value term.",
+      "prompt": "1. Isolate the absolute value term.",
+      "sourceAnswers": [],
+      "hasFigure": false,
+      "status": "draft",
+      "answerVerified": false,
+      "translationStatus": "pending",
+      "mappingStatus": "pending"
+    },
+    {
+      "ordinal": 13,
+      "sourceNumber": "2",
+      "sourceAnchor": "",
+      "kind": "exercise-candidate",
+      "context": "No. We may find one, two, or even no answers. For example, there is no solution to \\(2+|3x−5|=1\\).\n\nHow To ...\n\nGiven an absolute value equation, solve it.",
+      "original": "2. Use \\(|A|=B\\) to write \\(A=B\\) or \\(A=−B\\).",
+      "prompt": "2. Use \\(|A|=B\\) to write \\(A=B\\) or \\(A=−B\\).",
+      "sourceAnswers": [],
+      "hasFigure": false,
+      "status": "draft",
+      "answerVerified": false,
+      "translationStatus": "pending",
+      "mappingStatus": "pending"
+    },
+    {
+      "ordinal": 14,
+      "sourceNumber": "3",
+      "sourceAnchor": "",
+      "kind": "exercise-candidate",
+      "context": "No. We may find one, two, or even no answers. For example, there is no solution to \\(2+|3x−5|=1\\).\n\nHow To ...\n\nGiven an absolute value equation, solve it.",
+      "original": "3. Solve for \\(x\\).",
+      "prompt": "3. Solve for \\(x\\).",
+      "sourceAnswers": [],
+      "hasFigure": false,
+      "status": "draft",
+      "answerVerified": false,
+      "translationStatus": "pending",
+      "mappingStatus": "pending"
+    },
+    {
+      "ordinal": 15,
+      "sourceNumber": "",
+      "sourceAnchor": "",
+      "kind": "example-or-exercise",
+      "context": "No. We may find one, two, or even no answers. For example, there is no solution to \\(2+|3x−5|=1\\).\n\nHow To ...\n\nGiven an absolute value equation, solve it.",
+      "original": "Example \\(\\PageIndex{5}\\): Solving an Absolute Value Equation\n\nSolve \\(1=4|x−2|+2\\).\n\nSolution\n\nIsolating the absolute value on one side of the equation gives the following.\n\n\\[\\begin{align*} 1&=4|x-2|+2 \\\\ -1&=4|x-2| \\\\ -\\frac{1}{4}&=|x-2| \\end{align*}\\]\n\nThe absolute value always returns a positive value, so it is impossible for the absolute value to equal a negative value. At this point, we notice that this equation has no solutions.",
+      "prompt": "Example \\(\\PageIndex{5}\\): Solving an Absolute Value Equation\n\nSolve \\(1=4|x−2|+2\\).\n\nSolution\n\nIsolating the absolute value on one side of the equation gives the following.\n\n\\[\\begin{align*} 1&=4|x-2|+2 \\\\ -1&=4|x-2| \\\\ -\\frac{1}{4}&=|x-2| \\end{align*}\\]\n\nThe absolute value always returns a positive value, so it is impossible for the absolute value to equal a negative value. At this point, we notice that this equation has no solutions.",
+      "sourceAnswers": [],
+      "hasFigure": false,
+      "status": "draft",
+      "answerVerified": false,
+      "translationStatus": "pending",
+      "mappingStatus": "pending"
+    },
+    {
+      "ordinal": 16,
+      "sourceNumber": "1",
+      "sourceAnchor": "",
+      "kind": "exercise-candidate",
+      "context": "Sometimes an absolute value inequality problem will be presented to us in terms of a shifted and/or stretched or compressed absolute value function, where we must determine for which values of the input the function’s output will be negative or positive.\n\nHow To ...\n\nGiven an absolute value inequality of the form \\(|x−A|{\\leq}B\\) for real numbers \\(a\\) and \\(b\\) where \\(b\\) is positive, solve the absolute value inequality algebraically.",
+      "original": "1. Find boundary points by solving \\(|x−A|=B\\).",
+      "prompt": "1. Find boundary points by solving \\(|x−A|=B\\).",
+      "sourceAnswers": [],
+      "hasFigure": false,
+      "status": "draft",
+      "answerVerified": false,
+      "translationStatus": "pending",
+      "mappingStatus": "pending"
+    },
+    {
+      "ordinal": 17,
+      "sourceNumber": "2",
+      "sourceAnchor": "",
+      "kind": "exercise-candidate",
+      "context": "Sometimes an absolute value inequality problem will be presented to us in terms of a shifted and/or stretched or compressed absolute value function, where we must determine for which values of the input the function’s output will be negative or positive.\n\nHow To ...\n\nGiven an absolute value inequality of the form \\(|x−A|{\\leq}B\\) for real numbers \\(a\\) and \\(b\\) where \\(b\\) is positive, solve the absolute value inequality algebraically.",
+      "original": "2. Test intervals created by the boundary points to determine where \\(|x−A|{\\leq}B\\).",
+      "prompt": "2. Test intervals created by the boundary points to determine where \\(|x−A|{\\leq}B\\).",
+      "sourceAnswers": [],
+      "hasFigure": false,
+      "status": "draft",
+      "answerVerified": false,
+      "translationStatus": "pending",
+      "mappingStatus": "pending"
+    },
+    {
+      "ordinal": 18,
+      "sourceNumber": "3",
+      "sourceAnchor": "",
+      "kind": "exercise-candidate",
+      "context": "Sometimes an absolute value inequality problem will be presented to us in terms of a shifted and/or stretched or compressed absolute value function, where we must determine for which values of the input the function’s output will be negative or positive.\n\nHow To ...\n\nGiven an absolute value inequality of the form \\(|x−A|{\\leq}B\\) for real numbers \\(a\\) and \\(b\\) where \\(b\\) is positive, solve the absolute value inequality algebraically.",
+      "original": "3. Write the interval or union of intervals satisfying the inequality in interval, inequality, or set-builder notation.",
+      "prompt": "3. Write the interval or union of intervals satisfying the inequality in interval, inequality, or set-builder notation.",
+      "sourceAnswers": [],
+      "hasFigure": false,
+      "status": "draft",
+      "answerVerified": false,
+      "translationStatus": "pending",
+      "mappingStatus": "pending"
+    },
+    {
+      "ordinal": 19,
+      "sourceNumber": "",
+      "sourceAnchor": "",
+      "kind": "example-or-exercise",
+      "context": "Sometimes an absolute value inequality problem will be presented to us in terms of a shifted and/or stretched or compressed absolute value function, where we must determine for which values of the input the function’s output will be negative or positive.\n\nHow To ...\n\nGiven an absolute value inequality of the form \\(|x−A|{\\leq}B\\) for real numbers \\(a\\) and \\(b\\) where \\(b\\) is positive, solve the absolute value inequality algebraically.",
+      "original": "Example \\(\\PageIndex{6}\\): Solving an Absolute Value Inequality\n\nSolve \\(|x −5|{\\leq}4\\).\n\nSolution\n\nWith both approaches, we will need to know first where the corresponding equality is true. In this case we first will find where \\(|x−5|=4\\). We do this because the absolute value is a function with no breaks, so the only way the function values can switch from being less than 4 to being greater than 4 is by passing through where the values equal 4. Solve \\(|x−5|=4\\).\n\n\\[\\begin{align*} x−5&=4 &\\text{ or }\\;\\;\\;\\;\\;\\;\\;\\; x&=9 \\\\ x−5&=−4 & x&=1\\end{align*}\\]\n\nAfter determining that the absolute value is equal to 4 at \\(x=1\\) and \\(x=9\\), we know the graph can change only from being less than 4 to greater than 4 at these values. This divides the number line up into three intervals:\n\n\\[x<1,\\; 1<x<9, \\text{ and } x>9. \\nonumber\\]\n\nTo determine when the function is less than 4, we could choose a value in each interval and see if the output is less than or greater than 4, as shown in Table \\(\\PageIndex{1}\\).\n\n    Table \\(\\PageIndex{1}\\)\n\n            Interval test \\(x\\)\t\n            \\(f(x)\\)\t\n            \\(<4\\) or \\(>4\\)\t\n\n            \\(x<1\\)\t\n            0\t\n            \\(|0-5|=5\\)\t\n            Greater than\t\n\n            \\(1<x<9\\)\t\n            6\t\n            \\(|6-5|=1\\)\t\n            Less than\t\n\n            \\(x>9\\)\t\n            11\t\n            \\(|11-5|=6\\)\t\n            Greater than\t\n\nBecause \\(1{\\leq}x{\\leq}9\\) is the only interval in which the output at the test value is less than 4, we can conclude that the solution to \\(|x−5|{\\leq}4\\) is \\(1{\\leq}x{\\leq}9\\), or \\([1,9]\\).\n\nTo use a graph, we can sketch the function \\(f(x)=|x−5|\\). To help us see where the outputs are 4, the line \\(g(x)=4\\) could also be sketched as in Figure \\(\\PageIndex{11}\\).\n\n[Figure: Graph of an absolute function and a vertical line, demonstrating how to see what outputs are less than the vertical line.]\n\nFigure \\(\\PageIndex{11}\\): Graph to find the points satisfying an absolute value inequality.\n\nWe can see the following:\n\nThe output values of the absolute value are equal to 4 at \\(x=1\\) and \\(x=9\\).\n\nThe graph of \\(f\\) is below the graph of \\(g\\) on \\(1<x<9\\). This means the output values of \\(f(x)\\) are less than the output values of \\(g(x)\\).\n\nThe absolute value is less than or equal to 4 between these two points, when \\(1{\\leq}x\\leq9\\). In interval notation, this would be the interval \\([1,9]\\).\n\nAnalysis\n\nFor absolute value inequalities,\n\n\\[|x−A|<C,\\;\\;\\;\\;\\;\\;\\;\\;\\;\\;\\;\\;\\;\\;\\; |x−A|>C, \\\\−C<x−A<C,\\;\\;\\;\\; x−A<−C \\text{ or } x−A>C. \\nonumber\\]\n\nThe \\(<\\) or \\(>\\) symbol may be replaced by \\(\\leq\\) or \\(\\geq\\).\n\nSo, for this example, we could use this alternative approach.\n\n\\[\\begin{align*} |x−5|&{\\leq}4 \\\\ −4&{\\leq}x−5{\\leq}4 &\\text{Rewrite by removing the absolute value bars.} \\\\ −4+5&{\\leq}x−5+5{\\leq}4+5 &\\text{Isolate the x.} \\\\ 1&{\\leq}x\\leq9 \\end{align*}\\]",
+      "prompt": "Example \\(\\PageIndex{6}\\): Solving an Absolute Value Inequality\n\nSolve \\(|x −5|{\\leq}4\\).\n\nSolution\n\nWith both approaches, we will need to know first where the corresponding equality is true. In this case we first will find where \\(|x−5|=4\\). We do this because the absolute value is a function with no breaks, so the only way the function values can switch from being less than 4 to being greater than 4 is by passing through where the values equal 4. Solve \\(|x−5|=4\\).\n\n\\[\\begin{align*} x−5&=4 &\\text{ or }\\;\\;\\;\\;\\;\\;\\;\\; x&=9 \\\\ x−5&=−4 & x&=1\\end{align*}\\]\n\nAfter determining that the absolute value is equal to 4 at \\(x=1\\) and \\(x=9\\), we know the graph can change only from being less than 4 to greater than 4 at these values. This divides the number line up into three intervals:\n\n\\[x<1,\\; 1<x<9, \\text{ and } x>9. \\nonumber\\]\n\nTo determine when the function is less than 4, we could choose a value in each interval and see if the output is less than or greater than 4, as shown in Table \\(\\PageIndex{1}\\).\n\n    Table \\(\\PageIndex{1}\\)\n\n            Interval test \\(x\\)\t\n            \\(f(x)\\)\t\n            \\(<4\\) or \\(>4\\)\t\n\n            \\(x<1\\)\t\n            0\t\n            \\(|0-5|=5\\)\t\n            Greater than\t\n\n            \\(1<x<9\\)\t\n            6\t\n            \\(|6-5|=1\\)\t\n            Less than\t\n\n            \\(x>9\\)\t\n            11\t\n            \\(|11-5|=6\\)\t\n            Greater than\t\n\nBecause \\(1{\\leq}x{\\leq}9\\) is the only interval in which the output at the test value is less than 4, we can conclude that the solution to \\(|x−5|{\\leq}4\\) is \\(1{\\leq}x{\\leq}9\\), or \\([1,9]\\).\n\nTo use a graph, we can sketch the function \\(f(x)=|x−5|\\). To help us see where the outputs are 4, the line \\(g(x)=4\\) could also be sketched as in Figure \\(\\PageIndex{11}\\).\n\n[Figure: Graph of an absolute function and a vertical line, demonstrating how to see what outputs are less than the vertical line.]\n\nFigure \\(\\PageIndex{11}\\): Graph to find the points satisfying an absolute value inequality.\n\nWe can see the following:\n\nThe output values of the absolute value are equal to 4 at \\(x=1\\) and \\(x=9\\).\n\nThe graph of \\(f\\) is below the graph of \\(g\\) on \\(1<x<9\\). This means the output values of \\(f(x)\\) are less than the output values of \\(g(x)\\).\n\nThe absolute value is less than or equal to 4 between these two points, when \\(1{\\leq}x\\leq9\\). In interval notation, this would be the interval \\([1,9]\\).\n\nAnalysis\n\nFor absolute value inequalities,\n\n\\[|x−A|<C,\\;\\;\\;\\;\\;\\;\\;\\;\\;\\;\\;\\;\\;\\;\\; |x−A|>C, \\\\−C<x−A<C,\\;\\;\\;\\; x−A<−C \\text{ or } x−A>C. \\nonumber\\]\n\nThe \\(<\\) or \\(>\\) symbol may be replaced by \\(\\leq\\) or \\(\\geq\\).\n\nSo, for this example, we could use this alternative approach.\n\n\\[\\begin{align*} |x−5|&{\\leq}4 \\\\ −4&{\\leq}x−5{\\leq}4 &\\text{Rewrite by removing the absolute value bars.} \\\\ −4+5&{\\leq}x−5+5{\\leq}4+5 &\\text{Isolate the x.} \\\\ 1&{\\leq}x\\leq9 \\end{align*}\\]",
+      "sourceAnswers": [],
+      "hasFigure": true,
+      "status": "draft",
+      "answerVerified": false,
+      "translationStatus": "pending",
+      "mappingStatus": "pending"
+    },
+    {
+      "ordinal": 20,
+      "sourceNumber": "",
+      "sourceAnchor": "",
+      "kind": "exercise-candidate",
+      "context": "Sometimes an absolute value inequality problem will be presented to us in terms of a shifted and/or stretched or compressed absolute value function, where we must determine for which values of the input the function’s output will be negative or positive.\n\nHow To ...\n\nGiven an absolute value inequality of the form \\(|x−A|{\\leq}B\\) for real numbers \\(a\\) and \\(b\\) where \\(b\\) is positive, solve the absolute value inequality algebraically.",
+      "original": "Exercise \\(\\PageIndex{5}\\)\n\nSolve \\(|x+2| \\leq 6\\).\n\nAnswer\n\n\\(-8 \\leq x \\leq 4\\)",
+      "prompt": "Exercise \\(\\PageIndex{5}\\)\n\nSolve \\(|x+2| \\leq 6\\).",
+      "sourceAnswers": [
+        "\\(-8 \\leq x \\leq 4\\)"
+      ],
+      "hasFigure": false,
+      "status": "draft",
+      "answerVerified": false,
+      "translationStatus": "pending",
+      "mappingStatus": "pending"
+    },
+    {
+      "ordinal": 21,
+      "sourceNumber": "1",
+      "sourceAnchor": "",
+      "kind": "exercise-candidate",
+      "context": "Given an absolute value inequality of the form \\(|x−A|{\\leq}B\\) for real numbers \\(a\\) and \\(b\\) where \\(b\\) is positive, solve the absolute value inequality algebraically.\n\nHow To ...\n\nGiven an absolute value function, solve for the set of inputs where the output is positive (or negative).",
+      "original": "1. Set the function equal to zero, and solve for the boundary points of the solution set.",
+      "prompt": "1. Set the function equal to zero, and solve for the boundary points of the solution set.",
+      "sourceAnswers": [],
+      "hasFigure": false,
+      "status": "draft",
+      "answerVerified": false,
+      "translationStatus": "pending",
+      "mappingStatus": "pending"
+    },
+    {
+      "ordinal": 22,
+      "sourceNumber": "2",
+      "sourceAnchor": "",
+      "kind": "exercise-candidate",
+      "context": "Given an absolute value inequality of the form \\(|x−A|{\\leq}B\\) for real numbers \\(a\\) and \\(b\\) where \\(b\\) is positive, solve the absolute value inequality algebraically.\n\nHow To ...\n\nGiven an absolute value function, solve for the set of inputs where the output is positive (or negative).",
+      "original": "2. Use test points or a graph to determine where the function’s output is positive or negative.",
+      "prompt": "2. Use test points or a graph to determine where the function’s output is positive or negative.",
+      "sourceAnswers": [],
+      "hasFigure": false,
+      "status": "draft",
+      "answerVerified": false,
+      "translationStatus": "pending",
+      "mappingStatus": "pending"
+    },
+    {
+      "ordinal": 23,
+      "sourceNumber": "",
+      "sourceAnchor": "",
+      "kind": "example-or-exercise",
+      "context": "Given an absolute value inequality of the form \\(|x−A|{\\leq}B\\) for real numbers \\(a\\) and \\(b\\) where \\(b\\) is positive, solve the absolute value inequality algebraically.\n\nHow To ...\n\nGiven an absolute value function, solve for the set of inputs where the output is positive (or negative).",
+      "original": "Example \\(\\PageIndex{7}\\): Using a Graphical Approach to Solve Absolute Value Inequalities\n\nGiven the function \\(f(x)=−\\frac{1}{2}|4x−5|+3\\), determine the \\(x\\)-values for which the function values are negative.\n\nSolution\n\nWe are trying to determine where \\(f(x)<0\\), which is when \\(−\\frac{1}{2}|4x−5|+3<0\\). We begin by isolating the absolute value.\n\n\\[ \\begin{align*} -\\frac{1}{2}|4x−5|&<−3 \\;\\;\\; \\text{Multiply both sides by –2, and reverse the inequality.} \\\\ |4x−5|&>6\\end{align*}\\]\n\nNext we solve for the equality \\(|4x−5|=6\\).\n\n\\[\\begin{align*} 4x-5&=6 & 4x-5&=-6 \\\\ 4x-6&=6 \\end{align*}\\]\n\nor\n\n\\[\\begin{align*} 4x&=-1 \\\\ x&=\\frac{11}{4} & x&=-\\frac{1}{4} \\end{align*}\\]\n\nNow, we can examine the graph of \\(f\\) to observe where the output is negative. We will observe where the branches are below the \\(x\\)-axis. Notice that it is not even important exactly what the graph looks like, as long as we know that it crosses the horizontal axis at \\(x=−\\frac{1}{4}\\) and \\(x=\\frac{11}{4}\\) and that the graph has been reflected vertically. See Figure \\(\\PageIndex{12}\\).\n\n[Figure: alt]\n\nFigure \\(\\PageIndex{12}\\): Graph of an absolute function with x-intercepts at -0.25 and 2.75.]\n\nWe observe that the graph of the function is below the \\(x\\)-axis left of \\(x=−\\frac{1}{4}\\) and right of \\(x=\\frac{11}{4}\\). This means the function values are negative to the left of the first horizontal intercept at \\(x=−\\frac{1}{4}\\), and negative to the right of the second intercept at \\(x=\\frac{11}{4} \\). This gives us the solution to the inequality.\n\n\\[x<−\\frac{1}{4} \\text{ or } x>1\\frac{1}{4} \\nonumber\\]\n\nIn interval notation, this would be \\(( −\\infty,−0.25 )\\cup( 2.75,\\infty)\\).",
+      "prompt": "Example \\(\\PageIndex{7}\\): Using a Graphical Approach to Solve Absolute Value Inequalities\n\nGiven the function \\(f(x)=−\\frac{1}{2}|4x−5|+3\\), determine the \\(x\\)-values for which the function values are negative.\n\nSolution\n\nWe are trying to determine where \\(f(x)<0\\), which is when \\(−\\frac{1}{2}|4x−5|+3<0\\). We begin by isolating the absolute value.\n\n\\[ \\begin{align*} -\\frac{1}{2}|4x−5|&<−3 \\;\\;\\; \\text{Multiply both sides by –2, and reverse the inequality.} \\\\ |4x−5|&>6\\end{align*}\\]\n\nNext we solve for the equality \\(|4x−5|=6\\).\n\n\\[\\begin{align*} 4x-5&=6 & 4x-5&=-6 \\\\ 4x-6&=6 \\end{align*}\\]\n\nor\n\n\\[\\begin{align*} 4x&=-1 \\\\ x&=\\frac{11}{4} & x&=-\\frac{1}{4} \\end{align*}\\]\n\nNow, we can examine the graph of \\(f\\) to observe where the output is negative. We will observe where the branches are below the \\(x\\)-axis. Notice that it is not even important exactly what the graph looks like, as long as we know that it crosses the horizontal axis at \\(x=−\\frac{1}{4}\\) and \\(x=\\frac{11}{4}\\) and that the graph has been reflected vertically. See Figure \\(\\PageIndex{12}\\).\n\n[Figure: alt]\n\nFigure \\(\\PageIndex{12}\\): Graph of an absolute function with x-intercepts at -0.25 and 2.75.]\n\nWe observe that the graph of the function is below the \\(x\\)-axis left of \\(x=−\\frac{1}{4}\\) and right of \\(x=\\frac{11}{4}\\). This means the function values are negative to the left of the first horizontal intercept at \\(x=−\\frac{1}{4}\\), and negative to the right of the second intercept at \\(x=\\frac{11}{4} \\). This gives us the solution to the inequality.\n\n\\[x<−\\frac{1}{4} \\text{ or } x>1\\frac{1}{4} \\nonumber\\]\n\nIn interval notation, this would be \\(( −\\infty,−0.25 )\\cup( 2.75,\\infty)\\).",
+      "sourceAnswers": [],
+      "hasFigure": true,
+      "status": "draft",
+      "answerVerified": false,
+      "translationStatus": "pending",
+      "mappingStatus": "pending"
+    },
+    {
+      "ordinal": 24,
+      "sourceNumber": "",
+      "sourceAnchor": "",
+      "kind": "exercise-candidate",
+      "context": "Given an absolute value inequality of the form \\(|x−A|{\\leq}B\\) for real numbers \\(a\\) and \\(b\\) where \\(b\\) is positive, solve the absolute value inequality algebraically.\n\nHow To ...\n\nGiven an absolute value function, solve for the set of inputs where the output is positive (or negative).",
+      "original": "Exercise \\(\\PageIndex{6}\\)\n\nSolve \\(−2|k−4|\\leq−6\\).\n\nAnswer\n\n\\(k\\leq1\\) or \\(k\\geq7\\); in interval notation, this would be \\(\\left(−\\infty,1\\right]\\cup\\left[7,\\infty\\right)\\)",
+      "prompt": "Exercise \\(\\PageIndex{6}\\)\n\nSolve \\(−2|k−4|\\leq−6\\).",
+      "sourceAnswers": [
+        "\\(k\\leq1\\) or \\(k\\geq7\\); in interval notation, this would be \\(\\left(−\\infty,1\\right]\\cup\\left[7,\\infty\\right)\\)"
+      ],
+      "hasFigure": false,
+      "status": "draft",
+      "answerVerified": false,
+      "translationStatus": "pending",
+      "mappingStatus": "pending"
+    }
+  ],
+  "license": "CC BY 4.0",
+  "licenseEvidence": "This page titled 3.6: Absolute Value Functions was last modified on Thu, 26 Dec 2024 22:30:43 GMT and is shared under a CC BY  4.0  license and was authored, remixed, and/or curated by OpenStax via source content that was edited to the style and standards of the LibreTexts platform.",
+  "url": "https://math.libretexts.org/Bookshelves/Algebra/Algebra_and_Trigonometry_1e_(OpenStax)/03:_Functions/3.06:_Absolute_Value_Functions",
+  "sha256": "1630aad255536a74abafb6a4a77ddfaad1aaf97085f45bb412a2696b202c6528",
+  "checkedAt": "2026-10-07",
+  "id": "9bdfea075ce526597b21",
+  "bookId": "algebra-trigonometry",
+  "licenseInherited": false,
+  "licenseSource": "https://math.libretexts.org/Bookshelves/Algebra/Algebra_and_Trigonometry_1e_(OpenStax)/03:_Functions/3.06:_Absolute_Value_Functions",
+  "licenseUrl": "https://creativecommons.org/licenses/by/4.0/",
+  "authors": "OpenStax / Jay Abramson et al.",
+  "book": "Algebra and Trigonometry 1e",
+  "reviewStatus": "unreviewed",
+  "sourceLanguage": "en",
+  "translationStatus": "pending"
+}

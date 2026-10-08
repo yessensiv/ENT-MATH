@@ -10,10 +10,26 @@ export type PracticeSession = {id:string; version:number; topicId:string; starte
 export class PracticeError extends Error {constructor(message:string,public status=400){super(message);}}
 export function sessions(state:LearnerState):PracticeSession[]{return (state.practiceSessions ||= []) as PracticeSession[];}
 export function practiceItem(s:PracticeSession,id=s.cursor){const item=[...s.main,...s.extra].find(i=>i.task.id===id);if(!item)throw new PracticeError('Задание этой практики не найдено.',404);return item;}
+// Legacy numbers variants assess modelling, budgets and inequalities rather than operation order.
+export function fitsPracticeTopic(task:Task){return !(task.topicId==='numbers'&&task.variant);}
+export function repairTopicSelection(s:PracticeSession,state:LearnerState,bank:Task[]){
+ if(s.finishedAt||s.topicId!=='numbers')return false;
+ const used=new Set([...s.main,...s.extra].map(i=>taskFingerprint(i.task))),seen=seenTaskIds(state);
+ const pool=bank.filter(t=>t.topicId===s.topicId&&fitsPracticeTopic(t)&&!t.modelExample&&!t.reviewReserved&&!(state.diagnosticSession as {taskIds?:string[]})?.taskIds?.includes(t.id)).sort((a,b)=>Number(seen.has(a.id))-Number(seen.has(b.id)));
+ let changed=false;
+ for(const item of s.main){
+  if(fitsPracticeTopic(item.task)||item.feedback||item.steps.trim()||(Array.isArray(item.answer)?item.answer.length:item.answer.trim()))continue;
+  const candidates=pool.filter(t=>!used.has(taskFingerprint(t))),replacement=candidates.find(t=>t.difficulty===item.task.difficulty)??candidates[0];
+  if(!replacement)continue;
+  const oldId=item.task.id;item.task=structuredClone(replacement);used.add(taskFingerprint(replacement));if(s.cursor===oldId)s.cursor=replacement.id;changed=true;
+ }
+ if(changed)s.version++;
+ return changed;
+}
 export function createPractice(state:LearnerState,topicId:string,bank:Task[],size=15,id=crypto.randomUUID()):PracticeSession{
  const seen=seenTaskIds(state),fingerprints=new Set<string>();
- const available=bank.filter(t=>t.topicId===topicId&&!t.reviewReserved&&!t.modelExample&&!(state.diagnosticSession as {taskIds?:string[]})?.taskIds?.includes(t.id));
- const sorted=available.sort((a,b)=>Number(seen.has(a.id))-Number(seen.has(b.id)));
+ const available=bank.filter(t=>t.topicId===topicId&&fitsPracticeTopic(t)&&!t.reviewReserved&&!t.modelExample&&!(state.diagnosticSession as {taskIds?:string[]})?.taskIds?.includes(t.id));
+ const sorted=available.sort((a,b)=>Number(seen.has(a.id))-Number(seen.has(b.id))||Number(!!b.source)-Number(!!a.source));
  const pool=sorted.filter(t=>{const f=taskFingerprint(t);if(fingerprints.has(f))return false;fingerprints.add(f);return true;});
  const progress=state.progress[topicId],beginner=!progress||progress.needsRecovery||(progress.confirmationTaskIds?.length??progress.independent)<4;
  const pattern=beginner?[1,1,2,1,2,1,1,2,1,3]:[1,2,1,3,1,2,1,3,1,2];

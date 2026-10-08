@@ -1,0 +1,340 @@
+{
+  "title": "3.5: Contingency Tables and Probability Trees",
+  "originalText": "A contingency table provides a way of portraying data that can facilitate calculating probabilities. The table helps in determining conditional probabilities quite easily. The table displays sample values in relation to two different variables that may be dependent or contingent on one another. Later on, we will use contingency tables again, but in another manner.\n\nExercise \\(\\PageIndex{1}\\)\n\nSuppose a study of speeding violations and drivers who use cell phones produced the following fictional data:\n\n            Speeding violation in the last year\t\n            No speeding violation in the last year\t\n            Total\t\n\n            Uses cell phone while driving\t\n            25\t\n            280\t\n            305\t\n\n            Does not use cell phone while driving\t\n            45\t\n            405\t\n            450\t\n\n            Total\t\n            70\t\n            685\t\n            755\t\n\nTable  \\(\\PageIndex{1}\\)    \n\nThe total number of people in the sample is 755. The row totals are 305 and 450. The column totals are 70 and 685. Notice that 305 + 450 = 755 and 70 + 685 = 755.\n\nCalculate the following probabilities using the table.\n\na. Find P(Driver is a cell phone user).\n\nb. Find P(driver had no violation in the last year).\n\nc. Find P(Driver had no violation in the last year AND was a cell phone user).\n\nd. Find P(Driver is a cell phone user OR driver had no violation in the last year).\n\ne. Find P(Driver is a cell phone user GIVEN driver had a violation in the last year).\n\nf. Find P(Driver had no violation last year GIVEN driver was not a cell phone user)\n\nAnswer\n\na. \\(\\dfrac{\\text { number of cell phone users }}{\\text { total number in study }}=\\dfrac{305}{755}\\)\n\nb. \\(\\dfrac{\\text { number that had no violation }}{\\text { total number in study }}=\\dfrac{685}{755}\\)\n\nc. \\(\\dfrac{280}{755}\\)\n\nd. \\(\\left(\\dfrac{305}{755}+\\dfrac{685}{755}\\right)-\\dfrac{280}{755}=\\dfrac{710}{755}\\)\n\ne. \\(\\dfrac{25}{70}\\) (The sample space is reduced to the number of drivers who had a violation.)\n\nf. \\(\\dfrac{405}{450}\\) (The sample space is reduced to the number of drivers who were not cell phone users.)\n\nSolution\n\na. 0.0294, b. 0.1551, c. 0.7165, d. 0.2365, e. 0.2575\n\nTry It \\(\\PageIndex{1}\\)\n\nTable \\(\\PageIndex{2}\\) shows the number of athletes who stretch before exercising and how many had injuries within the past year.\n\n            Injury in last year\t\n            No injury in last year\t\n            Total\t\n\n            Stretches\t\n            55\t\n            295\t\n            350\t\n\n            Does not stretch\t\n            231\t\n            219\t\n            450\t\n\n            Total\t\n            286\t\n            514\t\n            800\t\n\nTable \\(\\PageIndex{2}\\)\n\n1. What is P(athlete stretches before exercising)?\n\n2. What is P(athlete stretches before exercising||no injury in the last year)?\n\nSolution\n\na. 0.0294, b. 0.1551, c. 0.7165, d. 0.2365, e. 0.2575\n\nExercise \\(\\PageIndex{2}\\)\n\nTable (\\PageIndex{3}\\) shows a random sample of 100 hikers and the areas of hiking they prefer.\n\n            Sex\t\n            The Coastline\t\n            Near Lakes and Streams\t\n            On Mountain Peaks\t\n            Total\t\n\n            Women\t\n            18\t\n            16\t\n\n            45\t\n\n            Men\t\n\n            14\t\n            55\t\n\n            Total\t\n\n            41\t\n\nTable \\(\\PageIndex{3}\\)   Hiking Area Preference  \n\na. Complete the table.\n\nb. Are the events \"being a woman\" and \"preferring the coastline\" independent events?\n\nLet \\(F=\\) being a woman and let \\(C=\\) preferring the coastline.\n\n1. Find \\(P(F \\cap C)\\).\n\n2. Find \\(P(F) P(C)\\)\n\nAre these two numbers the same? If they are, then \\(F\\) and \\(C\\) are independent. If they are not, then \\(F\\) and \\(C\\) are not independent.\n\nc. Find the probability that a person is a man given that the person prefers hiking near lakes and streams. Let \\(M=\\) being a man, and let \\(L=\\) prefers hiking near lakes and streams.\n\n1. What word tells you this is a conditional?\n\n2. Fill in the blanks and calculate the probability: \\(P\\) ( \\(\\qquad\\) | \\(\\qquad\\) ) = \\(\\qquad\\).\n\n3. Is the sample space for this problem all 100 hikers? If not, what is it?\n\nd. Find the probability that a person is a woman or prefers hiking on mountain peaks. Let \\(F=\\) being a woman, and let \\(P=\\) prefers mountain peaks.\n\n1. Find \\(P(F)\\).\n\n2. Find \\(P(P)\\).\n\n3. Find \\(P(F \\cap P)\\).\n\n4. Find \\(P(F \\cup P)\\).\n\nAnswer\n\na.\n\n                Sex\t\n                The coastline\t\n                Near lakes and streams\t\n                On mountain peaks\t\n                Total\t\n\n                Women\t\n                18\t\n                16\t\n                11\t\n                45\t\n\n                Men\t\n                16\t\n                25\t\n                14\t\n                55\t\n\n                Total\t\n                34\t\n                41\t\n                25\t\n                100\t\n\nTable \\(\\PageIndex{4}\\) Hiking Area Preference\n\nb.\n\n1. \\(P(F \\cap C)=\\dfrac{18}{100}=0.18\\)\n\n    2. \\(P(F) P(C)=\\left(\\dfrac{45}{100}\\right)\\left(\\dfrac{34}{100}\\right)=(0.45)(0.34)=0.153\\)\n\n    \\(P(F \\cap C) \\neq P(F) P(C)\\), so the events \\(F\\) and \\(C\\) are not independent.\n\nc.\n\n1. The word 'given' tells you that this is a conditional.\n\n    2. \\(P(M \\mid L)=\\dfrac{25}{41}\\)\n\n    3. No, the sample space for this problem is the 41 hikers who prefer lakes and streams.\n\nd.\n\n1. \\(P(F)=\\dfrac{45}{100}\\)\n\n    2. \\(P(P)=\\dfrac{25}{100}\\)\n\n    3. \\(P(F \\cap P)=\\dfrac{11}{100}\\)\n\n    4. \\(P(F \\cup P)=\\dfrac{45}{100}+\\dfrac{25}{100}-\\dfrac{11}{100}=\\dfrac{59}{100}\\)\n\nTry It \\(\\PageIndex{2}\\)\n\nTable \\(\\PageIndex{5}\\) shows a random sample of 200 cyclists and the routes they prefer. Let O = older and H = hilly path.\n\n            Age Group\t\n            Lake Path\t\n            Hilly Path\t\n            Wooded Path\t\n            Total\t\n\n            Younger\t\n            45\t\n            38\t\n            27\t\n            110\t\n\n            Older\t\n            26\t\n            52\t\n            12\t\n            90\t\n\n            Total\t\n            71\t\n            90\t\n            39\t\n            200\t\n\nTable  \\(\\PageIndex{5}\\)    \n\n1. Out of the older group, what is the probability that the cyclist prefers a hilly path?\n\n2. Are the events “being older” and “preferring the hilly path” independent events?\n\nExercise \\(\\PageIndex{3}\\)\n\nMuddy Mouse lives in a cage with three doors. If Muddy goes out the first door, the probability that he gets caught by Alissa the cat is \\(\\dfrac{1}{5}\\) and the probability he is not caught is \\(\\dfrac{4}{5}\\). If he goes out the second door, the probability he gets caught by Alissa is \\(\\dfrac{1}{4}\\) and the probability he is not caught is \\(\\dfrac{3}{4}\\). The probability that Alissa catches Muddy coming out of the third door is \\(\\dfrac{1}{2}\\) and the probability she does not catch Muddy is \\(\\dfrac{1}{2}\\). It is equally likely that Muddy will choose any of the three doors so the probability of choosing each door is \\(\\dfrac{1}{3}\\).\n\n            Caught or Not\t\n            Door One\t\n            Door Two\t\n            Door Three\t\n            Total\t\n\n            Caught\t\n            \\(\\dfrac{1}{15}\\)\\(\\)\t\n            \\(\\dfrac{1}{12}\\)\t\n            1\\(\\dfrac{1}{6}\\)\\(\\unsupported{mfrac}{}\\)\t\n            -\t\n\n            Not Caught\t\n            \\(\\dfrac{4}{15}\\)\t\n            \\(\\dfrac{3}{12}\\)\t\n            \\(\\dfrac{1}{6}\\)\t\n            -\t\n\n            Total\t\n            -\t\n            -\t\n            -\t\n            1\t\n\nTable  \\(\\PageIndex{6}\\)   Door Choice  \n\nThe first entry \\(\\dfrac{1}{15}=\\left(\\dfrac{1}{5}\\right)\\left(\\dfrac{1}{3}\\right)\\) is \\(P(\\) Door One \\(\\cap\\) Caught)\n\nThe entry \\(\\dfrac{4}{15}=\\left(\\dfrac{4}{5}\\right)\\left(\\dfrac{1}{3}\\right)\\) is \\(P\\) (Door One \\(\\cap\\) Not Caught)\n\nVerify the remaining entries.\n\nProblem\n\na. Complete the probability contingency table. Calculate the entries for the totals. Verify that the lower-right corner entry is 1 .\n\nb. What is the probability that Alissa does not catch Muddy?\n\nc. What is the probability that Muddy chooses Door One OR Door Two given that Muddy is caught by Alissa?\n\nAnswer\n\na.\n\n                Caught or Not\t\n                Door One\t\n                Door Two\t\n                Door Three\t\n                Total\t\n\n                Caught\t\n                \\(\\dfrac{1}{15}\\)\\(\\)\t\n                \\(\\dfrac{1}{12}\\)\t\n                1\\(\\dfrac{1}{6}\\)\\(\\unsupported{mfrac}{}\\)\t\n                \\(\\dfrac{19}{60}\\)\t\n\n                Not Caught\t\n                \\(\\dfrac{4}{15}\\)\t\n                \\(\\dfrac{3}{12}\\)\t\n                \\(\\dfrac{1}{6}\\)\t\n                \\(\\dfrac{41}{60}\\)\t\n\n                Total\t\n                \\(\\dfrac{5}{15}\\)\t\n                \\(\\dfrac{4}{12}\\)\t\n                \\(\\dfrac{2}{6}\\)\t\n                1\t\n\nTable  \\(\\PageIndex{7}\\)   Door Choice\n\nb. \\(\\dfrac{41}{60}\\)\n\nc. \\(\\dfrac{9}{19}\\)\n\nSolution\n\na.\n\n            Caught or Not\t\n            Door One\t\n            Door Two\t\n            Door Three\t\n            Total\t\n\n            Caught\t\n            115\" role=\"presentation\" style=\"position: relative;\">115\\(\\frac{1}{15}\\)\t\n            112\" role=\"presentation\" style=\"position: relative;\">112\\(\\frac{1}{12}\\)\t\n            16\" role=\"presentation\" style=\"position: relative;\">16\\(\\frac{1}{6}\\)\t\n            1960\" role=\"presentation\" style=\"position: relative;\">1960\\(\\frac{19}{60}\\)\t\n\n            Not Caught\t\n            415\" role=\"presentation\" style=\"position: relative;\">415\\(\\frac{4}{15}\\)\t\n            312\" role=\"presentation\" style=\"position: relative;\">312\\(\\frac{3}{12}\\)\t\n            16\" role=\"presentation\" style=\"position: relative;\">16\\(\\frac{1}{6}\\)\t\n            4160\" role=\"presentation\" style=\"position: relative;\">4160\\(\\frac{41}{60}\\)\t\n\n            Total\t\n            515\" role=\"presentation\" style=\"position: relative;\">515\\(\\frac{5}{15}\\)\t\n            412\" role=\"presentation\" style=\"position: relative;\">412\\(\\frac{4}{12}\\)\t\n            26\" role=\"presentation\" style=\"position: relative;\">26\\(\\frac{2}{6}\\)\t\n            1\t\n\nTable  3.9   Door Choice  \n\nb. 4160\" role=\"presentation\" style=\"position: relative;\">4160\\(\\frac{41}{60}\\)\n\nc. 919\" role=\"presentation\" style=\"position: relative;\">919\\(\\frac{9}{19}\\)\n\nSolution\n\na. 0.0294, b. 0.1551, c. 0.7165, d. 0.2365, e. 0.2575\n\nTry It \\(\\PageIndex{3}\\)\n\nAnna has to buy a new car. She has two choices, car A and car B. Anna can afford only one car. The probability that Anna will buy car A is \\(\\overline{\\mathrm{B}}(\\mathrm{A})\\). \\(=\\mathrm{O}, 25\\), and the probability that Anna will buy car B is \\(\\bar{E}(B)==-0\\) 65. Find:\n\nF(ALAMD)\n\nE(AOR-B)dfrac{3}{4}\\right)\\left(\\dfrac{1}{3}\\right)=\\dfrac{1}{4}\\).\n\nExercise \\(\\PageIndex{4}\\)\n\nTable \\(\\PageIndex{9}\\) contains the number of crimes per 100,000 inhabitants in the United States over the span of several years.\n\n            Year\t\n            Robbery\t\n            Burglary\t\n            Vandalism\t\n            Vehicle\t\n            Total\t\n\n            1\t\n            145.7\t\n            732.1\t\n            29.7\t\n            314.7\t\n\n            2\t\n            133.1\t\n            717.7\t\n            29.1\t\n            259.2\t\n\n            3\t\n            119.3\t\n            701\t\n            27.7\t\n            239.1\t\n\n            4\t\n            113.7\t\n            702.2\t\n            26.8\t\n            229.6\t\n\n            Total\t\n\nTable  \\(\\PageIndex{9}\\)   United States Crime Index Rates Per 100,000 Inhabitants  \n\nTOTAL each column and each row. Total data = 4,520.7\n\n1. Find P (Year 2 AND Robbery).\n\n2. Find P (Year 3 AND Burglary).\n\n3. Find P (Year 3 OR Burglary).\n\n4. Find P (Year 4 | Vandalism).\n\n5. Find P (Vehicle | Year 1).\n\nAnswer\n\na. 0.0294, b. 0.1551, c. 0.7165, d. 0.2365, e. 0.2575\n\nSolution\n\na. 0.0294, b. 0.1551, c. 0.7165, d. 0.2365, e. 0.2575\n\nTry It \\(\\PageIndex{4}\\)\n\nTable \\(\\PageIndex{10}\\) relates the weights and heights of a group of individuals participating in an observational study.\n\n            Weight/height\t\n            Tall\t\n            Medium\t\n            Short\t\n            Totals\t\n\n            Overweight\t\n            18\t\n            28\t\n            14\t\n\n            Typical Weight Range\t\n            20\t\n            51\t\n            28\t\n\n            Underweight\t\n            12\t\n            25\t\n            9\t\n\n            Totals\t\n\nTable \\(\\PageIndex{10}\\)\n\n1. Find the total for each row and column\n\n2. Find the probability that a randomly chosen individual from this group is Tall.\n\n3. Find the probability that a randomly chosen individual from this group is Overweight and Tall.\n\n4. Find the probability that a randomly chosen individual from this group is Tall given that the individual is Overweight.\n\n5. Find the probability that a randomly chosen individual from this group is Overweight given that the individual is Tall.\n\n6. Find the probability a randomly chosen individual from this group is Tall and Underweight.\n\n7. Are the events Overweight and Tall independent?\n\nThis page titled 3.5: Contingency Tables and Probability Trees was last modified on Thu, 07 May 2026 20:05:08 GMT and is shared under a CC BY  4.0  license and was authored, remixed, and/or curated by OpenStax via source content that was edited to the style and standards of the LibreTexts platform.",
+  "figures": [],
+  "references": [
+    {
+      "text": "",
+      "url": "https://openstax.org/books/introductory-business-statistics-2e/pages/3-4-contingency-tables-and-probability-trees#M05_ch03-tbl002"
+    },
+    {
+      "text": "",
+      "url": "https://openstax.org/books/introductory-business-statistics-2e/pages/3-4-contingency-tables-and-probability-trees#M05_ch03-tbl002"
+    },
+    {
+      "text": "",
+      "url": "https://openstax.org/books/introductory-business-statistics-2e/pages/3-4-contingency-tables-and-probability-trees#M05_ch03-tbl002"
+    },
+    {
+      "text": "3.5: Contingency Tables and Probability Trees",
+      "url": "https://stats.libretexts.org/Bookshelves/Introductory_Statistics/Introductory_Statistics_2e_(OpenStax)/03%3A_Probability_Topics/3.05%3A_Contingency_Tables_and_Probability_Trees"
+    },
+    {
+      "text": "CC BY  4.0",
+      "url": "https://creativecommons.org/licenses/by/4.0"
+    },
+    {
+      "text": "OpenStax",
+      "url": "https://openstax.org/"
+    },
+    {
+      "text": "source content",
+      "url": "https://openstax.org/details/books/introductory-statistics"
+    }
+  ],
+  "exercises": [
+    {
+      "ordinal": 1,
+      "sourceNumber": "",
+      "sourceAnchor": "",
+      "kind": "exercise-candidate",
+      "context": "A contingency table provides a way of portraying data that can facilitate calculating probabilities. The table helps in determining conditional probabilities quite easily. The table displays sample values in relation to two different variables that may be dependent or contingent on one another. Later on, we will use contingency tables again, but in another manner.",
+      "original": "Exercise \\(\\PageIndex{1}\\)\n\nSuppose a study of speeding violations and drivers who use cell phones produced the following fictional data:\n\n            Speeding violation in the last year\t\n            No speeding violation in the last year\t\n            Total\t\n\n            Uses cell phone while driving\t\n            25\t\n            280\t\n            305\t\n\n            Does not use cell phone while driving\t\n            45\t\n            405\t\n            450\t\n\n            Total\t\n            70\t\n            685\t\n            755\t\n\nTable  \\(\\PageIndex{1}\\)    \n\nThe total number of people in the sample is 755. The row totals are 305 and 450. The column totals are 70 and 685. Notice that 305 + 450 = 755 and 70 + 685 = 755.\n\nCalculate the following probabilities using the table.\n\na. Find P(Driver is a cell phone user).\n\nb. Find P(driver had no violation in the last year).\n\nc. Find P(Driver had no violation in the last year AND was a cell phone user).\n\nd. Find P(Driver is a cell phone user OR driver had no violation in the last year).\n\ne. Find P(Driver is a cell phone user GIVEN driver had a violation in the last year).\n\nf. Find P(Driver had no violation last year GIVEN driver was not a cell phone user)\n\nAnswer\n\na. \\(\\dfrac{\\text { number of cell phone users }}{\\text { total number in study }}=\\dfrac{305}{755}\\)\n\nb. \\(\\dfrac{\\text { number that had no violation }}{\\text { total number in study }}=\\dfrac{685}{755}\\)\n\nc. \\(\\dfrac{280}{755}\\)\n\nd. \\(\\left(\\dfrac{305}{755}+\\dfrac{685}{755}\\right)-\\dfrac{280}{755}=\\dfrac{710}{755}\\)\n\ne. \\(\\dfrac{25}{70}\\) (The sample space is reduced to the number of drivers who had a violation.)\n\nf. \\(\\dfrac{405}{450}\\) (The sample space is reduced to the number of drivers who were not cell phone users.)",
+      "prompt": "Exercise \\(\\PageIndex{1}\\)\n\nSuppose a study of speeding violations and drivers who use cell phones produced the following fictional data:\n\n            Speeding violation in the last year\t\n            No speeding violation in the last year\t\n            Total\t\n\n            Uses cell phone while driving\t\n            25\t\n            280\t\n            305\t\n\n            Does not use cell phone while driving\t\n            45\t\n            405\t\n            450\t\n\n            Total\t\n            70\t\n            685\t\n            755\t\n\nTable  \\(\\PageIndex{1}\\)    \n\nThe total number of people in the sample is 755. The row totals are 305 and 450. The column totals are 70 and 685. Notice that 305 + 450 = 755 and 70 + 685 = 755.\n\nCalculate the following probabilities using the table.\n\na. Find P(Driver is a cell phone user).\n\nb. Find P(driver had no violation in the last year).\n\nc. Find P(Driver had no violation in the last year AND was a cell phone user).\n\nd. Find P(Driver is a cell phone user OR driver had no violation in the last year).\n\ne. Find P(Driver is a cell phone user GIVEN driver had a violation in the last year).\n\nf. Find P(Driver had no violation last year GIVEN driver was not a cell phone user)",
+      "sourceAnswers": [
+        "a. \\(\\dfrac{\\text { number of cell phone users }}{\\text { total number in study }}=\\dfrac{305}{755}\\)\n\nb. \\(\\dfrac{\\text { number that had no violation }}{\\text { total number in study }}=\\dfrac{685}{755}\\)\n\nc. \\(\\dfrac{280}{755}\\)\n\nd. \\(\\left(\\dfrac{305}{755}+\\dfrac{685}{755}\\right)-\\dfrac{280}{755}=\\dfrac{710}{755}\\)\n\ne. \\(\\dfrac{25}{70}\\) (The sample space is reduced to the number of drivers who had a violation.)\n\nf. \\(\\dfrac{405}{450}\\) (The sample space is reduced to the number of drivers who were not cell phone users.)"
+      ],
+      "hasFigure": false,
+      "status": "draft",
+      "answerVerified": false,
+      "translationStatus": "pending",
+      "mappingStatus": "pending"
+    },
+    {
+      "ordinal": 2,
+      "sourceNumber": "",
+      "sourceAnchor": "add1",
+      "kind": "exercise-candidate",
+      "context": "A contingency table provides a way of portraying data that can facilitate calculating probabilities. The table helps in determining conditional probabilities quite easily. The table displays sample values in relation to two different variables that may be dependent or contingent on one another. Later on, we will use contingency tables again, but in another manner.",
+      "original": "Solution\n\na. 0.0294, b. 0.1551, c. 0.7165, d. 0.2365, e. 0.2575\n\nTry It \\(\\PageIndex{1}\\)\n\nTable \\(\\PageIndex{2}\\) shows the number of athletes who stretch before exercising and how many had injuries within the past year.\n\n            Injury in last year\t\n            No injury in last year\t\n            Total\t\n\n            Stretches\t\n            55\t\n            295\t\n            350\t\n\n            Does not stretch\t\n            231\t\n            219\t\n            450\t\n\n            Total\t\n            286\t\n            514\t\n            800\t\n\nTable \\(\\PageIndex{2}\\)\n\n1. What is P(athlete stretches before exercising)?\n\n2. What is P(athlete stretches before exercising||no injury in the last year)?",
+      "prompt": "Try It \\(\\PageIndex{1}\\)\n\nTable \\(\\PageIndex{2}\\) shows the number of athletes who stretch before exercising and how many had injuries within the past year.\n\n            Injury in last year\t\n            No injury in last year\t\n            Total\t\n\n            Stretches\t\n            55\t\n            295\t\n            350\t\n\n            Does not stretch\t\n            231\t\n            219\t\n            450\t\n\n            Total\t\n            286\t\n            514\t\n            800\t\n\nTable \\(\\PageIndex{2}\\)\n\n1. What is P(athlete stretches before exercising)?\n\n2. What is P(athlete stretches before exercising||no injury in the last year)?",
+      "sourceAnswers": [
+        "Solution\n\na. 0.0294, b. 0.1551, c. 0.7165, d. 0.2365, e. 0.2575"
+      ],
+      "hasFigure": false,
+      "status": "draft",
+      "answerVerified": false,
+      "translationStatus": "pending",
+      "mappingStatus": "pending"
+    },
+    {
+      "ordinal": 3,
+      "sourceNumber": "",
+      "sourceAnchor": "fs-idm29224880",
+      "kind": "exercise-candidate",
+      "context": "A contingency table provides a way of portraying data that can facilitate calculating probabilities. The table helps in determining conditional probabilities quite easily. The table displays sample values in relation to two different variables that may be dependent or contingent on one another. Later on, we will use contingency tables again, but in another manner.",
+      "original": "Solution\n\na. 0.0294, b. 0.1551, c. 0.7165, d. 0.2365, e. 0.2575",
+      "prompt": "",
+      "sourceAnswers": [
+        "Solution\n\na. 0.0294, b. 0.1551, c. 0.7165, d. 0.2365, e. 0.2575"
+      ],
+      "hasFigure": false,
+      "status": "draft",
+      "answerVerified": false,
+      "translationStatus": "pending",
+      "mappingStatus": "pending"
+    },
+    {
+      "ordinal": 4,
+      "sourceNumber": "",
+      "sourceAnchor": "",
+      "kind": "exercise-candidate",
+      "context": "A contingency table provides a way of portraying data that can facilitate calculating probabilities. The table helps in determining conditional probabilities quite easily. The table displays sample values in relation to two different variables that may be dependent or contingent on one another. Later on, we will use contingency tables again, but in another manner.",
+      "original": "Exercise \\(\\PageIndex{2}\\)\n\nTable (\\PageIndex{3}\\) shows a random sample of 100 hikers and the areas of hiking they prefer.\n\n            Sex\t\n            The Coastline\t\n            Near Lakes and Streams\t\n            On Mountain Peaks\t\n            Total\t\n\n            Women\t\n            18\t\n            16\t\n\n            45\t\n\n            Men\t\n\n            14\t\n            55\t\n\n            Total\t\n\n            41\t\n\nTable \\(\\PageIndex{3}\\)   Hiking Area Preference  \n\na. Complete the table.\n\nb. Are the events \"being a woman\" and \"preferring the coastline\" independent events?\n\nLet \\(F=\\) being a woman and let \\(C=\\) preferring the coastline.\n\n1. Find \\(P(F \\cap C)\\).\n\n2. Find \\(P(F) P(C)\\)\n\nAre these two numbers the same? If they are, then \\(F\\) and \\(C\\) are independent. If they are not, then \\(F\\) and \\(C\\) are not independent.\n\nc. Find the probability that a person is a man given that the person prefers hiking near lakes and streams. Let \\(M=\\) being a man, and let \\(L=\\) prefers hiking near lakes and streams.\n\n1. What word tells you this is a conditional?\n\n2. Fill in the blanks and calculate the probability: \\(P\\) ( \\(\\qquad\\) | \\(\\qquad\\) ) = \\(\\qquad\\).\n\n3. Is the sample space for this problem all 100 hikers? If not, what is it?\n\nd. Find the probability that a person is a woman or prefers hiking on mountain peaks. Let \\(F=\\) being a woman, and let \\(P=\\) prefers mountain peaks.\n\n1. Find \\(P(F)\\).\n\n2. Find \\(P(P)\\).\n\n3. Find \\(P(F \\cap P)\\).\n\n4. Find \\(P(F \\cup P)\\).\n\nAnswer\n\na.\n\n                Sex\t\n                The coastline\t\n                Near lakes and streams\t\n                On mountain peaks\t\n                Total\t\n\n                Women\t\n                18\t\n                16\t\n                11\t\n                45\t\n\n                Men\t\n                16\t\n                25\t\n                14\t\n                55\t\n\n                Total\t\n                34\t\n                41\t\n                25\t\n                100\t\n\nTable \\(\\PageIndex{4}\\) Hiking Area Preference\n\nb.\n\n1. \\(P(F \\cap C)=\\dfrac{18}{100}=0.18\\)\n\n    2. \\(P(F) P(C)=\\left(\\dfrac{45}{100}\\right)\\left(\\dfrac{34}{100}\\right)=(0.45)(0.34)=0.153\\)\n\n    \\(P(F \\cap C) \\neq P(F) P(C)\\), so the events \\(F\\) and \\(C\\) are not independent.\n\nc.\n\n1. The word 'given' tells you that this is a conditional.\n\n    2. \\(P(M \\mid L)=\\dfrac{25}{41}\\)\n\n    3. No, the sample space for this problem is the 41 hikers who prefer lakes and streams.\n\nd.\n\n1. \\(P(F)=\\dfrac{45}{100}\\)\n\n    2. \\(P(P)=\\dfrac{25}{100}\\)\n\n    3. \\(P(F \\cap P)=\\dfrac{11}{100}\\)\n\n    4. \\(P(F \\cup P)=\\dfrac{45}{100}+\\dfrac{25}{100}-\\dfrac{11}{100}=\\dfrac{59}{100}\\)",
+      "prompt": "Exercise \\(\\PageIndex{2}\\)\n\nTable (\\PageIndex{3}\\) shows a random sample of 100 hikers and the areas of hiking they prefer.\n\n            Sex\t\n            The Coastline\t\n            Near Lakes and Streams\t\n            On Mountain Peaks\t\n            Total\t\n\n            Women\t\n            18\t\n            16\t\n\n            45\t\n\n            Men\t\n\n            14\t\n            55\t\n\n            Total\t\n\n            41\t\n\nTable \\(\\PageIndex{3}\\)   Hiking Area Preference  \n\na. Complete the table.\n\nb. Are the events \"being a woman\" and \"preferring the coastline\" independent events?\n\nLet \\(F=\\) being a woman and let \\(C=\\) preferring the coastline.\n\n1. Find \\(P(F \\cap C)\\).\n\n2. Find \\(P(F) P(C)\\)\n\nAre these two numbers the same? If they are, then \\(F\\) and \\(C\\) are independent. If they are not, then \\(F\\) and \\(C\\) are not independent.\n\nc. Find the probability that a person is a man given that the person prefers hiking near lakes and streams. Let \\(M=\\) being a man, and let \\(L=\\) prefers hiking near lakes and streams.\n\n1. What word tells you this is a conditional?\n\n2. Fill in the blanks and calculate the probability: \\(P\\) ( \\(\\qquad\\) | \\(\\qquad\\) ) = \\(\\qquad\\).\n\n3. Is the sample space for this problem all 100 hikers? If not, what is it?\n\nd. Find the probability that a person is a woman or prefers hiking on mountain peaks. Let \\(F=\\) being a woman, and let \\(P=\\) prefers mountain peaks.\n\n1. Find \\(P(F)\\).\n\n2. Find \\(P(P)\\).\n\n3. Find \\(P(F \\cap P)\\).\n\n4. Find \\(P(F \\cup P)\\).",
+      "sourceAnswers": [
+        "a.\n\n                Sex\t\n                The coastline\t\n                Near lakes and streams\t\n                On mountain peaks\t\n                Total\t\n\n                Women\t\n                18\t\n                16\t\n                11\t\n                45\t\n\n                Men\t\n                16\t\n                25\t\n                14\t\n                55\t\n\n                Total\t\n                34\t\n                41\t\n                25\t\n                100\t\n\nTable \\(\\PageIndex{4}\\) Hiking Area Preference\n\nb.\n\n1. \\(P(F \\cap C)=\\dfrac{18}{100}=0.18\\)\n\n    2. \\(P(F) P(C)=\\left(\\dfrac{45}{100}\\right)\\left(\\dfrac{34}{100}\\right)=(0.45)(0.34)=0.153\\)\n\n    \\(P(F \\cap C) \\neq P(F) P(C)\\), so the events \\(F\\) and \\(C\\) are not independent.\n\nc.\n\n1. The word 'given' tells you that this is a conditional.\n\n    2. \\(P(M \\mid L)=\\dfrac{25}{41}\\)\n\n    3. No, the sample space for this problem is the 41 hikers who prefer lakes and streams.\n\nd.\n\n1. \\(P(F)=\\dfrac{45}{100}\\)\n\n    2. \\(P(P)=\\dfrac{25}{100}\\)\n\n    3. \\(P(F \\cap P)=\\dfrac{11}{100}\\)\n\n    4. \\(P(F \\cup P)=\\dfrac{45}{100}+\\dfrac{25}{100}-\\dfrac{11}{100}=\\dfrac{59}{100}\\)"
+      ],
+      "hasFigure": false,
+      "status": "draft",
+      "answerVerified": false,
+      "translationStatus": "pending",
+      "mappingStatus": "pending"
+    },
+    {
+      "ordinal": 5,
+      "sourceNumber": "1",
+      "sourceAnchor": "",
+      "kind": "exercise-candidate",
+      "context": "A contingency table provides a way of portraying data that can facilitate calculating probabilities. The table helps in determining conditional probabilities quite easily. The table displays sample values in relation to two different variables that may be dependent or contingent on one another. Later on, we will use contingency tables again, but in another manner.\n\nTable \\(\\PageIndex{5}\\) shows a random sample of 200 cyclists and the routes they prefer. Let O = older and H = hilly path.",
+      "original": "1. Out of the older group, what is the probability that the cyclist prefers a hilly path?",
+      "prompt": "1. Out of the older group, what is the probability that the cyclist prefers a hilly path?",
+      "sourceAnswers": [],
+      "hasFigure": false,
+      "status": "draft",
+      "answerVerified": false,
+      "translationStatus": "pending",
+      "mappingStatus": "pending"
+    },
+    {
+      "ordinal": 6,
+      "sourceNumber": "2",
+      "sourceAnchor": "",
+      "kind": "exercise-candidate",
+      "context": "A contingency table provides a way of portraying data that can facilitate calculating probabilities. The table helps in determining conditional probabilities quite easily. The table displays sample values in relation to two different variables that may be dependent or contingent on one another. Later on, we will use contingency tables again, but in another manner.\n\nTable \\(\\PageIndex{5}\\) shows a random sample of 200 cyclists and the routes they prefer. Let O = older and H = hilly path.",
+      "original": "2. Are the events “being older” and “preferring the hilly path” independent events?",
+      "prompt": "2. Are the events “being older” and “preferring the hilly path” independent events?",
+      "sourceAnswers": [],
+      "hasFigure": false,
+      "status": "draft",
+      "answerVerified": false,
+      "translationStatus": "pending",
+      "mappingStatus": "pending"
+    },
+    {
+      "ordinal": 7,
+      "sourceNumber": "",
+      "sourceAnchor": "fs-idp7366752",
+      "kind": "exercise-candidate",
+      "context": "A contingency table provides a way of portraying data that can facilitate calculating probabilities. The table helps in determining conditional probabilities quite easily. The table displays sample values in relation to two different variables that may be dependent or contingent on one another. Later on, we will use contingency tables again, but in another manner.\n\nTable \\(\\PageIndex{5}\\) shows a random sample of 200 cyclists and the routes they prefer. Let O = older and H = hilly path.",
+      "original": "Exercise \\(\\PageIndex{3}\\)\n\nMuddy Mouse lives in a cage with three doors. If Muddy goes out the first door, the probability that he gets caught by Alissa the cat is \\(\\dfrac{1}{5}\\) and the probability he is not caught is \\(\\dfrac{4}{5}\\). If he goes out the second door, the probability he gets caught by Alissa is \\(\\dfrac{1}{4}\\) and the probability he is not caught is \\(\\dfrac{3}{4}\\). The probability that Alissa catches Muddy coming out of the third door is \\(\\dfrac{1}{2}\\) and the probability she does not catch Muddy is \\(\\dfrac{1}{2}\\). It is equally likely that Muddy will choose any of the three doors so the probability of choosing each door is \\(\\dfrac{1}{3}\\).\n\n            Caught or Not\t\n            Door One\t\n            Door Two\t\n            Door Three\t\n            Total\t\n\n            Caught\t\n            \\(\\dfrac{1}{15}\\)\\(\\)\t\n            \\(\\dfrac{1}{12}\\)\t\n            1\\(\\dfrac{1}{6}\\)\\(\\unsupported{mfrac}{}\\)\t\n            -\t\n\n            Not Caught\t\n            \\(\\dfrac{4}{15}\\)\t\n            \\(\\dfrac{3}{12}\\)\t\n            \\(\\dfrac{1}{6}\\)\t\n            -\t\n\n            Total\t\n            -\t\n            -\t\n            -\t\n            1\t\n\nTable  \\(\\PageIndex{6}\\)   Door Choice  \n\nThe first entry \\(\\dfrac{1}{15}=\\left(\\dfrac{1}{5}\\right)\\left(\\dfrac{1}{3}\\right)\\) is \\(P(\\) Door One \\(\\cap\\) Caught)\n\nThe entry \\(\\dfrac{4}{15}=\\left(\\dfrac{4}{5}\\right)\\left(\\dfrac{1}{3}\\right)\\) is \\(P\\) (Door One \\(\\cap\\) Not Caught)\n\nVerify the remaining entries.\n\nProblem\n\na. Complete the probability contingency table. Calculate the entries for the totals. Verify that the lower-right corner entry is 1 .\n\nb. What is the probability that Alissa does not catch Muddy?\n\nc. What is the probability that Muddy chooses Door One OR Door Two given that Muddy is caught by Alissa?\n\nAnswer\n\na.\n\n                Caught or Not\t\n                Door One\t\n                Door Two\t\n                Door Three\t\n                Total\t\n\n                Caught\t\n                \\(\\dfrac{1}{15}\\)\\(\\)\t\n                \\(\\dfrac{1}{12}\\)\t\n                1\\(\\dfrac{1}{6}\\)\\(\\unsupported{mfrac}{}\\)\t\n                \\(\\dfrac{19}{60}\\)\t\n\n                Not Caught\t\n                \\(\\dfrac{4}{15}\\)\t\n                \\(\\dfrac{3}{12}\\)\t\n                \\(\\dfrac{1}{6}\\)\t\n                \\(\\dfrac{41}{60}\\)\t\n\n                Total\t\n                \\(\\dfrac{5}{15}\\)\t\n                \\(\\dfrac{4}{12}\\)\t\n                \\(\\dfrac{2}{6}\\)\t\n                1\t\n\nTable  \\(\\PageIndex{7}\\)   Door Choice\n\nb. \\(\\dfrac{41}{60}\\)\n\nc. \\(\\dfrac{9}{19}\\)",
+      "prompt": "Exercise \\(\\PageIndex{3}\\)\n\nMuddy Mouse lives in a cage with three doors. If Muddy goes out the first door, the probability that he gets caught by Alissa the cat is \\(\\dfrac{1}{5}\\) and the probability he is not caught is \\(\\dfrac{4}{5}\\). If he goes out the second door, the probability he gets caught by Alissa is \\(\\dfrac{1}{4}\\) and the probability he is not caught is \\(\\dfrac{3}{4}\\). The probability that Alissa catches Muddy coming out of the third door is \\(\\dfrac{1}{2}\\) and the probability she does not catch Muddy is \\(\\dfrac{1}{2}\\). It is equally likely that Muddy will choose any of the three doors so the probability of choosing each door is \\(\\dfrac{1}{3}\\).\n\n            Caught or Not\t\n            Door One\t\n            Door Two\t\n            Door Three\t\n            Total\t\n\n            Caught\t\n            \\(\\dfrac{1}{15}\\)\\(\\)\t\n            \\(\\dfrac{1}{12}\\)\t\n            1\\(\\dfrac{1}{6}\\)\\(\\unsupported{mfrac}{}\\)\t\n            -\t\n\n            Not Caught\t\n            \\(\\dfrac{4}{15}\\)\t\n            \\(\\dfrac{3}{12}\\)\t\n            \\(\\dfrac{1}{6}\\)\t\n            -\t\n\n            Total\t\n            -\t\n            -\t\n            -\t\n            1\t\n\nTable  \\(\\PageIndex{6}\\)   Door Choice  \n\nThe first entry \\(\\dfrac{1}{15}=\\left(\\dfrac{1}{5}\\right)\\left(\\dfrac{1}{3}\\right)\\) is \\(P(\\) Door One \\(\\cap\\) Caught)\n\nThe entry \\(\\dfrac{4}{15}=\\left(\\dfrac{4}{5}\\right)\\left(\\dfrac{1}{3}\\right)\\) is \\(P\\) (Door One \\(\\cap\\) Not Caught)\n\nVerify the remaining entries.\n\nProblem\n\na. Complete the probability contingency table. Calculate the entries for the totals. Verify that the lower-right corner entry is 1 .\n\nb. What is the probability that Alissa does not catch Muddy?\n\nc. What is the probability that Muddy chooses Door One OR Door Two given that Muddy is caught by Alissa?",
+      "sourceAnswers": [
+        "a.\n\n                Caught or Not\t\n                Door One\t\n                Door Two\t\n                Door Three\t\n                Total\t\n\n                Caught\t\n                \\(\\dfrac{1}{15}\\)\\(\\)\t\n                \\(\\dfrac{1}{12}\\)\t\n                1\\(\\dfrac{1}{6}\\)\\(\\unsupported{mfrac}{}\\)\t\n                \\(\\dfrac{19}{60}\\)\t\n\n                Not Caught\t\n                \\(\\dfrac{4}{15}\\)\t\n                \\(\\dfrac{3}{12}\\)\t\n                \\(\\dfrac{1}{6}\\)\t\n                \\(\\dfrac{41}{60}\\)\t\n\n                Total\t\n                \\(\\dfrac{5}{15}\\)\t\n                \\(\\dfrac{4}{12}\\)\t\n                \\(\\dfrac{2}{6}\\)\t\n                1\t\n\nTable  \\(\\PageIndex{7}\\)   Door Choice\n\nb. \\(\\dfrac{41}{60}\\)\n\nc. \\(\\dfrac{9}{19}\\)"
+      ],
+      "hasFigure": false,
+      "status": "draft",
+      "answerVerified": false,
+      "translationStatus": "pending",
+      "mappingStatus": "pending"
+    },
+    {
+      "ordinal": 8,
+      "sourceNumber": "",
+      "sourceAnchor": "element-919",
+      "kind": "exercise-candidate",
+      "context": "A contingency table provides a way of portraying data that can facilitate calculating probabilities. The table helps in determining conditional probabilities quite easily. The table displays sample values in relation to two different variables that may be dependent or contingent on one another. Later on, we will use contingency tables again, but in another manner.\n\nTable \\(\\PageIndex{5}\\) shows a random sample of 200 cyclists and the routes they prefer. Let O = older and H = hilly path.",
+      "original": "Solution\n\na.\n\n            Caught or Not\t\n            Door One\t\n            Door Two\t\n            Door Three\t\n            Total\t\n\n            Caught\t\n            115\" role=\"presentation\" style=\"position: relative;\">115\\(\\frac{1}{15}\\)\t\n            112\" role=\"presentation\" style=\"position: relative;\">112\\(\\frac{1}{12}\\)\t\n            16\" role=\"presentation\" style=\"position: relative;\">16\\(\\frac{1}{6}\\)\t\n            1960\" role=\"presentation\" style=\"position: relative;\">1960\\(\\frac{19}{60}\\)\t\n\n            Not Caught\t\n            415\" role=\"presentation\" style=\"position: relative;\">415\\(\\frac{4}{15}\\)\t\n            312\" role=\"presentation\" style=\"position: relative;\">312\\(\\frac{3}{12}\\)\t\n            16\" role=\"presentation\" style=\"position: relative;\">16\\(\\frac{1}{6}\\)\t\n            4160\" role=\"presentation\" style=\"position: relative;\">4160\\(\\frac{41}{60}\\)\t\n\n            Total\t\n            515\" role=\"presentation\" style=\"position: relative;\">515\\(\\frac{5}{15}\\)\t\n            412\" role=\"presentation\" style=\"position: relative;\">412\\(\\frac{4}{12}\\)\t\n            26\" role=\"presentation\" style=\"position: relative;\">26\\(\\frac{2}{6}\\)\t\n            1\t\n\nTable  3.9   Door Choice  \n\nb. 4160\" role=\"presentation\" style=\"position: relative;\">4160\\(\\frac{41}{60}\\)\n\nc. 919\" role=\"presentation\" style=\"position: relative;\">919\\(\\frac{9}{19}\\)",
+      "prompt": "",
+      "sourceAnswers": [
+        "Solution\n\na.\n\n            Caught or Not\t\n            Door One\t\n            Door Two\t\n            Door Three\t\n            Total\t\n\n            Caught\t\n            115\" role=\"presentation\" style=\"position: relative;\">115\\(\\frac{1}{15}\\)\t\n            112\" role=\"presentation\" style=\"position: relative;\">112\\(\\frac{1}{12}\\)\t\n            16\" role=\"presentation\" style=\"position: relative;\">16\\(\\frac{1}{6}\\)\t\n            1960\" role=\"presentation\" style=\"position: relative;\">1960\\(\\frac{19}{60}\\)\t\n\n            Not Caught\t\n            415\" role=\"presentation\" style=\"position: relative;\">415\\(\\frac{4}{15}\\)\t\n            312\" role=\"presentation\" style=\"position: relative;\">312\\(\\frac{3}{12}\\)\t\n            16\" role=\"presentation\" style=\"position: relative;\">16\\(\\frac{1}{6}\\)\t\n            4160\" role=\"presentation\" style=\"position: relative;\">4160\\(\\frac{41}{60}\\)\t\n\n            Total\t\n            515\" role=\"presentation\" style=\"position: relative;\">515\\(\\frac{5}{15}\\)\t\n            412\" role=\"presentation\" style=\"position: relative;\">412\\(\\frac{4}{12}\\)\t\n            26\" role=\"presentation\" style=\"position: relative;\">26\\(\\frac{2}{6}\\)\t\n            1\t\n\nTable  3.9   Door Choice  \n\nb. 4160\" role=\"presentation\" style=\"position: relative;\">4160\\(\\frac{41}{60}\\)\n\nc. 919\" role=\"presentation\" style=\"position: relative;\">919\\(\\frac{9}{19}\\)"
+      ],
+      "hasFigure": false,
+      "status": "draft",
+      "answerVerified": false,
+      "translationStatus": "pending",
+      "mappingStatus": "pending"
+    },
+    {
+      "ordinal": 9,
+      "sourceNumber": "",
+      "sourceAnchor": "fs-idm29224880",
+      "kind": "exercise-candidate",
+      "context": "A contingency table provides a way of portraying data that can facilitate calculating probabilities. The table helps in determining conditional probabilities quite easily. The table displays sample values in relation to two different variables that may be dependent or contingent on one another. Later on, we will use contingency tables again, but in another manner.\n\nTable \\(\\PageIndex{5}\\) shows a random sample of 200 cyclists and the routes they prefer. Let O = older and H = hilly path.",
+      "original": "Solution\n\na. 0.0294, b. 0.1551, c. 0.7165, d. 0.2365, e. 0.2575",
+      "prompt": "",
+      "sourceAnswers": [
+        "Solution\n\na. 0.0294, b. 0.1551, c. 0.7165, d. 0.2365, e. 0.2575"
+      ],
+      "hasFigure": false,
+      "status": "draft",
+      "answerVerified": false,
+      "translationStatus": "pending",
+      "mappingStatus": "pending"
+    },
+    {
+      "ordinal": 10,
+      "sourceNumber": "",
+      "sourceAnchor": "",
+      "kind": "exercise-candidate",
+      "context": "A contingency table provides a way of portraying data that can facilitate calculating probabilities. The table helps in determining conditional probabilities quite easily. The table displays sample values in relation to two different variables that may be dependent or contingent on one another. Later on, we will use contingency tables again, but in another manner.\n\nTable \\(\\PageIndex{5}\\) shows a random sample of 200 cyclists and the routes they prefer. Let O = older and H = hilly path.\n\nAnna has to buy a new car. She has two choices, car A and car B. Anna can afford only one car. The probability that Anna will buy car A is \\(\\overline{\\mathrm{B}}(\\mathrm{A})\\). \\(=\\mathrm{O}, 25\\), and the probability that Anna will buy car B is \\(\\bar{E}(B)==-0\\) 65. Find:",
+      "original": "Exercise \\(\\PageIndex{4}\\)\n\nTable \\(\\PageIndex{9}\\) contains the number of crimes per 100,000 inhabitants in the United States over the span of several years.\n\n            Year\t\n            Robbery\t\n            Burglary\t\n            Vandalism\t\n            Vehicle\t\n            Total\t\n\n            1\t\n            145.7\t\n            732.1\t\n            29.7\t\n            314.7\t\n\n            2\t\n            133.1\t\n            717.7\t\n            29.1\t\n            259.2\t\n\n            3\t\n            119.3\t\n            701\t\n            27.7\t\n            239.1\t\n\n            4\t\n            113.7\t\n            702.2\t\n            26.8\t\n            229.6\t\n\n            Total\t\n\nTable  \\(\\PageIndex{9}\\)   United States Crime Index Rates Per 100,000 Inhabitants  \n\nTOTAL each column and each row. Total data = 4,520.7\n\n1. Find P (Year 2 AND Robbery).\n\n2. Find P (Year 3 AND Burglary).\n\n3. Find P (Year 3 OR Burglary).\n\n4. Find P (Year 4 | Vandalism).\n\n5. Find P (Vehicle | Year 1).\n\nAnswer\n\na. 0.0294, b. 0.1551, c. 0.7165, d. 0.2365, e. 0.2575",
+      "prompt": "Exercise \\(\\PageIndex{4}\\)\n\nTable \\(\\PageIndex{9}\\) contains the number of crimes per 100,000 inhabitants in the United States over the span of several years.\n\n            Year\t\n            Robbery\t\n            Burglary\t\n            Vandalism\t\n            Vehicle\t\n            Total\t\n\n            1\t\n            145.7\t\n            732.1\t\n            29.7\t\n            314.7\t\n\n            2\t\n            133.1\t\n            717.7\t\n            29.1\t\n            259.2\t\n\n            3\t\n            119.3\t\n            701\t\n            27.7\t\n            239.1\t\n\n            4\t\n            113.7\t\n            702.2\t\n            26.8\t\n            229.6\t\n\n            Total\t\n\nTable  \\(\\PageIndex{9}\\)   United States Crime Index Rates Per 100,000 Inhabitants  \n\nTOTAL each column and each row. Total data = 4,520.7\n\n1. Find P (Year 2 AND Robbery).\n\n2. Find P (Year 3 AND Burglary).\n\n3. Find P (Year 3 OR Burglary).\n\n4. Find P (Year 4 | Vandalism).\n\n5. Find P (Vehicle | Year 1).",
+      "sourceAnswers": [
+        "a. 0.0294, b. 0.1551, c. 0.7165, d. 0.2365, e. 0.2575"
+      ],
+      "hasFigure": false,
+      "status": "draft",
+      "answerVerified": false,
+      "translationStatus": "pending",
+      "mappingStatus": "pending"
+    },
+    {
+      "ordinal": 11,
+      "sourceNumber": "",
+      "sourceAnchor": "fs-idm29224880",
+      "kind": "exercise-candidate",
+      "context": "A contingency table provides a way of portraying data that can facilitate calculating probabilities. The table helps in determining conditional probabilities quite easily. The table displays sample values in relation to two different variables that may be dependent or contingent on one another. Later on, we will use contingency tables again, but in another manner.\n\nTable \\(\\PageIndex{5}\\) shows a random sample of 200 cyclists and the routes they prefer. Let O = older and H = hilly path.\n\nAnna has to buy a new car. She has two choices, car A and car B. Anna can afford only one car. The probability that Anna will buy car A is \\(\\overline{\\mathrm{B}}(\\mathrm{A})\\). \\(=\\mathrm{O}, 25\\), and the probability that Anna will buy car B is \\(\\bar{E}(B)==-0\\) 65. Find:",
+      "original": "Solution\n\na. 0.0294, b. 0.1551, c. 0.7165, d. 0.2365, e. 0.2575",
+      "prompt": "",
+      "sourceAnswers": [
+        "Solution\n\na. 0.0294, b. 0.1551, c. 0.7165, d. 0.2365, e. 0.2575"
+      ],
+      "hasFigure": false,
+      "status": "draft",
+      "answerVerified": false,
+      "translationStatus": "pending",
+      "mappingStatus": "pending"
+    },
+    {
+      "ordinal": 12,
+      "sourceNumber": "1",
+      "sourceAnchor": "",
+      "kind": "exercise-candidate",
+      "context": "Anna has to buy a new car. She has two choices, car A and car B. Anna can afford only one car. The probability that Anna will buy car A is \\(\\overline{\\mathrm{B}}(\\mathrm{A})\\). \\(=\\mathrm{O}, 25\\), and the probability that Anna will buy car B is \\(\\bar{E}(B)==-0\\) 65. Find:\n\nTable \\(\\PageIndex{10}\\) relates the weights and heights of a group of individuals participating in an observational study.\n\nTable \\(\\PageIndex{10}\\)",
+      "original": "1. Find the total for each row and column",
+      "prompt": "1. Find the total for each row and column",
+      "sourceAnswers": [],
+      "hasFigure": false,
+      "status": "draft",
+      "answerVerified": false,
+      "translationStatus": "pending",
+      "mappingStatus": "pending"
+    },
+    {
+      "ordinal": 13,
+      "sourceNumber": "2",
+      "sourceAnchor": "",
+      "kind": "exercise-candidate",
+      "context": "Anna has to buy a new car. She has two choices, car A and car B. Anna can afford only one car. The probability that Anna will buy car A is \\(\\overline{\\mathrm{B}}(\\mathrm{A})\\). \\(=\\mathrm{O}, 25\\), and the probability that Anna will buy car B is \\(\\bar{E}(B)==-0\\) 65. Find:\n\nTable \\(\\PageIndex{10}\\) relates the weights and heights of a group of individuals participating in an observational study.\n\nTable \\(\\PageIndex{10}\\)",
+      "original": "2. Find the probability that a randomly chosen individual from this group is Tall.",
+      "prompt": "2. Find the probability that a randomly chosen individual from this group is Tall.",
+      "sourceAnswers": [],
+      "hasFigure": false,
+      "status": "draft",
+      "answerVerified": false,
+      "translationStatus": "pending",
+      "mappingStatus": "pending"
+    },
+    {
+      "ordinal": 14,
+      "sourceNumber": "3",
+      "sourceAnchor": "",
+      "kind": "exercise-candidate",
+      "context": "Anna has to buy a new car. She has two choices, car A and car B. Anna can afford only one car. The probability that Anna will buy car A is \\(\\overline{\\mathrm{B}}(\\mathrm{A})\\). \\(=\\mathrm{O}, 25\\), and the probability that Anna will buy car B is \\(\\bar{E}(B)==-0\\) 65. Find:\n\nTable \\(\\PageIndex{10}\\) relates the weights and heights of a group of individuals participating in an observational study.\n\nTable \\(\\PageIndex{10}\\)",
+      "original": "3. Find the probability that a randomly chosen individual from this group is Overweight and Tall.",
+      "prompt": "3. Find the probability that a randomly chosen individual from this group is Overweight and Tall.",
+      "sourceAnswers": [],
+      "hasFigure": false,
+      "status": "draft",
+      "answerVerified": false,
+      "translationStatus": "pending",
+      "mappingStatus": "pending"
+    },
+    {
+      "ordinal": 15,
+      "sourceNumber": "4",
+      "sourceAnchor": "",
+      "kind": "exercise-candidate",
+      "context": "Anna has to buy a new car. She has two choices, car A and car B. Anna can afford only one car. The probability that Anna will buy car A is \\(\\overline{\\mathrm{B}}(\\mathrm{A})\\). \\(=\\mathrm{O}, 25\\), and the probability that Anna will buy car B is \\(\\bar{E}(B)==-0\\) 65. Find:\n\nTable \\(\\PageIndex{10}\\) relates the weights and heights of a group of individuals participating in an observational study.\n\nTable \\(\\PageIndex{10}\\)",
+      "original": "4. Find the probability that a randomly chosen individual from this group is Tall given that the individual is Overweight.",
+      "prompt": "4. Find the probability that a randomly chosen individual from this group is Tall given that the individual is Overweight.",
+      "sourceAnswers": [],
+      "hasFigure": false,
+      "status": "draft",
+      "answerVerified": false,
+      "translationStatus": "pending",
+      "mappingStatus": "pending"
+    },
+    {
+      "ordinal": 16,
+      "sourceNumber": "5",
+      "sourceAnchor": "",
+      "kind": "exercise-candidate",
+      "context": "Anna has to buy a new car. She has two choices, car A and car B. Anna can afford only one car. The probability that Anna will buy car A is \\(\\overline{\\mathrm{B}}(\\mathrm{A})\\). \\(=\\mathrm{O}, 25\\), and the probability that Anna will buy car B is \\(\\bar{E}(B)==-0\\) 65. Find:\n\nTable \\(\\PageIndex{10}\\) relates the weights and heights of a group of individuals participating in an observational study.\n\nTable \\(\\PageIndex{10}\\)",
+      "original": "5. Find the probability that a randomly chosen individual from this group is Overweight given that the individual is Tall.",
+      "prompt": "5. Find the probability that a randomly chosen individual from this group is Overweight given that the individual is Tall.",
+      "sourceAnswers": [],
+      "hasFigure": false,
+      "status": "draft",
+      "answerVerified": false,
+      "translationStatus": "pending",
+      "mappingStatus": "pending"
+    },
+    {
+      "ordinal": 17,
+      "sourceNumber": "6",
+      "sourceAnchor": "",
+      "kind": "exercise-candidate",
+      "context": "Anna has to buy a new car. She has two choices, car A and car B. Anna can afford only one car. The probability that Anna will buy car A is \\(\\overline{\\mathrm{B}}(\\mathrm{A})\\). \\(=\\mathrm{O}, 25\\), and the probability that Anna will buy car B is \\(\\bar{E}(B)==-0\\) 65. Find:\n\nTable \\(\\PageIndex{10}\\) relates the weights and heights of a group of individuals participating in an observational study.\n\nTable \\(\\PageIndex{10}\\)",
+      "original": "6. Find the probability a randomly chosen individual from this group is Tall and Underweight.",
+      "prompt": "6. Find the probability a randomly chosen individual from this group is Tall and Underweight.",
+      "sourceAnswers": [],
+      "hasFigure": false,
+      "status": "draft",
+      "answerVerified": false,
+      "translationStatus": "pending",
+      "mappingStatus": "pending"
+    },
+    {
+      "ordinal": 18,
+      "sourceNumber": "7",
+      "sourceAnchor": "",
+      "kind": "exercise-candidate",
+      "context": "Anna has to buy a new car. She has two choices, car A and car B. Anna can afford only one car. The probability that Anna will buy car A is \\(\\overline{\\mathrm{B}}(\\mathrm{A})\\). \\(=\\mathrm{O}, 25\\), and the probability that Anna will buy car B is \\(\\bar{E}(B)==-0\\) 65. Find:\n\nTable \\(\\PageIndex{10}\\) relates the weights and heights of a group of individuals participating in an observational study.\n\nTable \\(\\PageIndex{10}\\)",
+      "original": "7. Are the events Overweight and Tall independent?",
+      "prompt": "7. Are the events Overweight and Tall independent?",
+      "sourceAnswers": [],
+      "hasFigure": false,
+      "status": "draft",
+      "answerVerified": false,
+      "translationStatus": "pending",
+      "mappingStatus": "pending"
+    }
+  ],
+  "license": "CC BY 4.0",
+  "licenseEvidence": "This page titled 3.5: Contingency Tables and Probability Trees was last modified on Thu, 07 May 2026 20:05:08 GMT and is shared under a CC BY  4.0  license and was authored, remixed, and/or curated by OpenStax via source content that was edited to the style and standards of the LibreTexts platform.",
+  "url": "https://stats.libretexts.org/Bookshelves/Introductory_Statistics/Introductory_Statistics_2e_(OpenStax)/03:_Probability_Topics/3.05:_Contingency_Tables_and_Probability_Trees",
+  "sha256": "f66ac2d6462606d8fa20fda3a93b19ef5eb411c38fc86385858d7f796fb2e383",
+  "checkedAt": "2026-10-07",
+  "id": "ee5a3fbc466f3582c9c9",
+  "bookId": "statistics",
+  "licenseInherited": false,
+  "licenseSource": "https://stats.libretexts.org/Bookshelves/Introductory_Statistics/Introductory_Statistics_2e_(OpenStax)/03:_Probability_Topics/3.05:_Contingency_Tables_and_Probability_Trees",
+  "licenseUrl": "https://creativecommons.org/licenses/by/4.0/",
+  "authors": "OpenStax / Barbara Illowsky, Susan Dean",
+  "book": "Introductory Statistics 2e",
+  "reviewStatus": "unreviewed",
+  "sourceLanguage": "en",
+  "translationStatus": "pending"
+}

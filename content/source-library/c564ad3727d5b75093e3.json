@@ -1,0 +1,221 @@
+{
+  "title": "8.7: Parametric Equations",
+  "originalText": "Learning Objectives\n\nIn this section, you will:\n\nParameterize a curve.\n\nEliminate the parameter.\n\nFind a rectangular equation for a curve defined\nparametrically.\n\nFind parametric equations for curves defined by rectangular\nequations.\n\nConsider the path a moon follows as it orbits a planet, which\nsimultaneously rotates around the sun, as seen in Figure\n1. At any moment, the moon is located at a particular spot\nrelative to the planet. But how do we write and solve the equation\nfor the position of the moon when the distance from the planet, the\nspeed of the moon’s orbit around the planet, and the speed of\nrotation around the sun are all unknowns? We can solve only for one\nvariable at a time.\n\n[Figure: Illustration of a planet's circular orbit around the sun.]\n\nFigure 1\n\nIn this section, we will consider sets of equations given\nby x(t)x(t) and y(t)y(t) where tt is\nthe independent variable of time. We can use these parametric\nequations in a number of applications when we are looking for not\nonly a particular position but also the direction of the movement.\nAs we trace out successive values of t,t, the orientation\nof the curve becomes clear. This is one of the primary advantages\nof using parametric equations: we are able to trace the\nmovement of an object along a path according to time. We begin this\nsection with a look at the basic components of parametric equations\nand what it means to parameterize a curve. Then we will learn how\nto eliminate the parameter, translate the equations of a curve\ndefined parametrically into rectangular equations, and find the\nparametric equations for curves defined by rectangular\nequations.\n\nParameterizing a Curve\n\nWhen an object moves along a curve—or curvilinear path—in a\ngiven direction and in a given amount of time, the position of the\nobject in the plane is given by the x-coordinate and the y-coordinate. However,\nboth xx and yy vary over time and so are\nfunctions of time. For this reason, we add another variable,\nthe parameter, upon which\nboth xx and yy are dependent functions. In the\nexample in the section opener, the parameter is\ntime, t.t. The xx position of the moon at\ntime, t,t, is represented as the\nfunction x(t),x(t), and the yy position of the\nmoon at time, t,t, is represented as the\nfunction y(t).y(t). Together, x(t)x(t) and y(t)y(t) are\ncalled parametric equations, and generate an ordered\npair (x(t),y(t)).(x(t),y(t)). Parametric equations\nprimarily describe motion and direction.\n\nWhen we parameterize a curve, we are translating a single\nequation in two variables, such\nas xx and y ,y , into an equivalent pair of\nequations in three\nvariables, x,y,x,y, and t.t. One of the reasons\nwe parameterize a curve is because the parametric equations yield\nmore information: specifically, the direction of the object’s\nmotion over time.\n\nWhen we graph parametric equations, we can observe the\nindividual behaviors of xx and of y.y. There\nare a number of shapes that cannot be represented in the\nform y=f(x),y=f(x), meaning that they are not functions.\nFor example, consider the graph of a circle, given\nas r2=x2+y2.r2=x2+y2. Solving\nfor yy gives y=±r2−x2−−−−−−√,y=±r2−x2, or two\nequations: y1=r2−x2−−−−−−√y1=r2−x2 and y2=−r2−x2−−−−−−√.y2=−r2−x2. If\nwe graph y1y1 and y2y2 together, the graph will\nnot pass the vertical line test, as shown in Figure\n2. Thus, the equation for the graph of a circle is not a\nfunction.\n\n[Figure: Graph of a circle in the rectangular coordinate system - the vertical line test shows that the circle r^2 = x^2 + y^2 is not a function. The dotted red vertical line intersects the function in two places - it should only intersect in one place to be a function.]\n\nFigure 2\n\nHowever, if we were to graph each equation on its own, each one\nwould pass the vertical line test and therefore would represent a\nfunction. In some instances, the concept of breaking up the\nequation for a circle into two functions is similar to the concept\nof creating parametric equations, as we use two functions to\nproduce a non-function. This will become clearer as we move\nforward.\n\nPARAMETRIC EQUATIONS\n\nSuppose tt is a number on an\ninterval, I.I. The set of ordered\npairs, (x(t),(x(t), y(t)),y(t)), where x=f(t)x=f(t) and y=g(t),y=g(t), forms\na plane curve based on the parameter t.t. The\nequations x=f(t)x=f(t) and y=g(t)y=g(t) are the\nparametric equations.\n\nEXAMPLE 1\n\nParameterizing a Curve\n\nParameterize the\ncurve y=x2−1y=x2−1 letting x(t)=t.x(t)=t. Graph\nboth equations.\n\nAnswer\n\n[Figure: Graph of a parabola in two forms: a parametric equation and rectangular coordinates. It is the same function, just different ways of writing it.]\n\nAnalysis\n\nThe arrows indicate the direction in which the curve is\ngenerated. Notice the curve is identical to the curve\nof y=x2−1.y=x2−1.\n\nTRY\nIT #1\n\nConstruct a table of values and plot the parametric\nequations: x(t)=t−3,x(t)=t−3, y(t)=2t+4;−1≤t≤2.y(t)=2t+4;−1≤t≤2.\n\nEXAMPLE 2\n\nFinding a Pair of Parametric\nEquations\n\nFind a pair of parametric equations that models the graph\nof y=1−x2,y=1−x2, using the\nparameter x(t)=t.x(t)=t. Plot some points and sketch the\ngraph.\n\nAnswer\n\n[Figure: Graph of given downward facing parabola.]\n\nTRY\nIT #2\n\nParameterize the curve given by x=y3−2y.x=y3−2y.\n\nEXAMPLE 3\n\nFinding Parametric Equations That\nModel Given Criteria\n\nAn object travels at a steady rate along a straight\npath (−5,3)(−5,3) to (3,−1)(3,−1) in the same\nplane in four seconds. The coordinates are measured in meters. Find\nparametric equations for the position of the object.\n\nAnswer\n\n[Figure: Three graphs side by side. (A) has the horizontal position over time, (B) has the vertical position over time, and (C) has the position of the object in the plane at time t. See caption for more information.]\n\nAnalysis\n\nAgain, we see that, in Figure\n5(c), when the parameter represents time, we can indicate\nthe movement of the object along the path with arrows.\n\nEliminating the\nParameter\n\nIn many cases, we may have a pair of parametric equations but\nfind that it is simpler to draw a curve if the equation involves\nonly two variables, such\nas xx and y.y. Eliminating the parameter is a\nmethod that may make graphing some curves easier. However, if we\nare concerned with the mapping of the equation according to time,\nthen it will be necessary to indicate the orientation of the curve\nas well. There are various methods for eliminating the\nparameter tt from a set of parametric equations; not\nevery method works for every type of equation. Here we will review\nthe methods for the most common types of equations.\n\nEliminating the Parameter from\nPolynomial, Exponential, and Logarithmic Equations\n\nFor polynomial, exponential, or logarithmic equations expressed\nas two parametric equations, we choose the equation that is most\neasily manipulated and solve for t.t. We substitute the\nresulting expression for tt into the second equation.\nThis gives one equation in xx and y.y.\n\nEXAMPLE 4\n\nEliminating the Parameter in\nPolynomials\n\nGiven x(t)=t2+1x(t)=t2+1 and y(t)=2+t,y(t)=2+t, eliminate\nthe parameter, and write the parametric equations as a Cartesian\nequation.\n\nAnswer\n\nAnalysis\n\nThis is an equation for a parabola in which, in rectangular\nterms, xx is dependent on y.y. From the curve’s\nvertex at (1,2),(1,2), the graph sweeps out to the right.\nSee Figure\n6. In this section, we consider sets of equations given by\nthe\nfunctions x(t)x(t) and y(t),y(t), where tt is\nthe independent variable of time. Notice,\nboth xx and yy are functions of time; so in\ngeneral yy is not a function of x.x.\n\n[Figure: Graph of given sideways (extending to the right) parabola.]\n\nFigure 6\n\nTRY\nIT #3\n\nGiven the equations below, eliminate the parameter and write as\na rectangular equation for yy as a function\nof x.x.\n\nx(t)=2t2+6y(t)=5−tx(t)=2t2+6y(t)=5−t\n\nEXAMPLE 5\n\nEliminating the Parameter in\nExponential Equations\n\nEliminate the parameter and write as a Cartesian\nequation: x(t)=e−tx(t)=e−t and y(t)=3et,y(t)=3et, t>0.t>0.\n\nAnswer\n\nAnalysis\n\nThe graph of the parametric equation is shown\nin Figure\n7(a). The domain is restricted\nto t>0.t>0. The Cartesian\nequation, y=3xy=3x is shown in Figure\n7(b) and has only one restriction on\nthe domain, x≠0.x≠0.\n\n[Figure: Graph of the parametric equation with domain restricted to t>0, and a graph of that parametric equation in polar coordinates with domain only restricted to x not equal to 0. The Cartesian coordinate version has an extra reflection of the function across the origin in Q 3 (original was just in Q 1). ]\n\nFigure 7\n\nEXAMPLE 6\n\nEliminating the Parameter in\nLogarithmic Equations\n\nEliminate the parameter and write as a Cartesian\nequation: x(t)=t√+2x(t)=t+2 and y(t)=log(t).y(t)=log(t).\n\nAnswer\n\nAnalysis\n\nTo be sure that the parametric equations are equivalent to the\nCartesian equation, check the domains. The parametric equations\nrestrict the domain\non x=t√+2x=t+2 to t>0;t>0; we restrict\nthe domain on xx to x>2.x>2. The domain\nfor the parametric equation y=log(t)y=log(t) is\nrestricted to t>0;t>0; we limit the domain\non y=log(x−2)2y=log(x−2)2 to x>2.x>2.\n\nTRY\nIT #4\n\nEliminate the parameter and write as a rectangular\nequation.\n\nx(t)=t2y(t)=lntt>0x(t)=t2y(t)=lntt>0\n\nEliminating the Parameter from\nTrigonometric Equations\n\nEliminating the parameter from trigonometric equations is a\nstraightforward substitution. We can use a few of the familiar\ntrigonometric identities and the Pythagorean Theorem.\n\nFirst, we use the identities:\n\nx(t)=acosty(t)=bsintx(t)=acosty(t)=bsint\n\nSolving for costcost and sint,sint, we\nhave\n\nxa=costyb=sintxa=costyb=sint\n\nThen, use the Pythagorean Theorem:\n\ncos2t+sin2t=1cos2t+sin2t=1\n\nSubstituting gives\n\ncos2t+sin2t=(xa)2+(yb)2=1cos2t+sin2t=(xa)2+(yb)2=1\n\nEXAMPLE 7\n\nEliminating the Parameter from a Pair\nof Trigonometric Parametric Equations\n\nEliminate the parameter from the given pair\nof trigonometric\nequations where 0≤t≤2π0≤t≤2π and sketch the\ngraph.\n\nx(t)=4costy(t)=3sintx(t)=4costy(t)=3sint\n\nAnswer\n\n[Figure: Graph of given ellipse centered at (0,0).]\n\nAnalysis\n\nApplying the general equations for conic\nsections (introduced in Analytic\nGeometry, we can identify x216+y29=1x216+y29=1 as\nan ellipse centered at (0,0).(0,0). Notice that\nwhen t=0t=0 the coordinates\nare (4,0),(4,0), and when t=π2t=π2 the\ncoordinates are (0,3).(0,3). This shows the orientation\nof the curve with increasing values of t.t.\n\nTRY\nIT #5\n\nEliminate the parameter from the given pair of parametric\nequations and write as a Cartesian\nequation: x(t)=2costx(t)=2cost and y(t)=3sint.y(t)=3sint.\n\nFinding Cartesian Equations from\nCurves Defined Parametrically\n\nWhen we are given a set of parametric equations and need to find\nan equivalent Cartesian equation, we are essentially “eliminating\nthe parameter.” However, there are various methods we can use to\nrewrite a set of parametric equations as a Cartesian equation. The\nsimplest method is to set one equation equal to the parameter, such\nas x(t)=t.x(t)=t. In this case, y(t)y(t) can be\nany expression. For example, consider the following pair of\nequations.\n\nx(t)=ty(t)=t2−3x(t)=ty(t)=t2−3\n\nRewriting this set of parametric equations is a matter of\nsubstituting xx for t.t. Thus, the Cartesian\nequation is y=x2−3.y=x2−3.\n\nEXAMPLE 8\n\nFinding a Cartesian Equation Using\nAlternate Methods\n\nUse two different methods to find the Cartesian equation\nequivalent to the given set of parametric equations.\n\nx(t)=3t−2y(t)=t+1x(t)=3t−2y(t)=t+1\n\nAnswer\n\nTRY\nIT #6\n\nWrite the given parametric equations as a Cartesian\nequation: x(t)=t3x(t)=t3 and y(t)=t6.y(t)=t6.\n\nFinding Parametric Equations for\nCurves Defined by Rectangular Equations\n\nAlthough we have just shown that there is only one way to\ninterpret a set of parametric equations as a rectangular equation,\nthere are multiple ways to interpret a rectangular equation as a\nset of parametric equations. Any strategy we may use to find the\nparametric equations is valid if it produces equivalency. In other\nwords, if we choose an expression to represent x,x, and\nthen substitute it into the yy equation, and it produces\nthe same graph over the same domain as the rectangular equation,\nthen the set of parametric equations is valid. If the domain\nbecomes restricted in the set of parametric equations, and the\nfunction does not allow the same values for xx as the\ndomain of the rectangular equation, then the graphs will be\ndifferent.\n\nEXAMPLE 9\n\nFinding a Set of Parametric Equations\nfor Curves Defined by Rectangular Equations\n\nFind a set of equivalent parametric equations\nfor y=(x+3)2+1.y=(x+3)2+1.\n\nAnswer\n\n[Figure: Graph of parametric and rectangular coordinate versions of the same parabola - they are the same!]\n\nMEDIA\n\nAccess these online resources for additional instruction and\npractice with parametric equations.\n\nIntroduction to Parametric\nEquations\n\nConverting Parametric Equations\nto Rectangular Form\n\n8.6 Section\nExercises\n\nVerbal\n\n1. \n\nWhat is a system of parametric equations?\n\n2. \n\nSome examples of a third parameter are time, length, speed, and\nscale. Explain when time is used as a parameter.\n\n3. \n\nExplain how to eliminate a parameter given a set of parametric\nequations.\n\n4. \n\nWhat is a benefit of writing a system of parametric equations as\na Cartesian equation?\n\n5. \n\nWhat is a benefit of using parametric equations?\n\n6. \n\nWhy are there many sets of parametric equations to represent on\nCartesian function?\n\nAlgebraic\n\nFor the following exercises, eliminate the\nparameter tt to rewrite the parametric equation as a\nCartesian equation.\n\n7. \n\n{x(t)=5−ty(t)=8−2t{ x(t)=5−ty(t)=8−2t\n\n8. \n\n{x(t)=6−3ty(t)=10−t{ x(t)=6−3ty(t)=10−t\n\n9. \n\n{x(t)=2t+1y(t)=3t√{ x(t)=2t+1y(t)=3t\n\n10. \n\n{x(t)=3t−1y(t)=2t2{ x(t)=3t−1y(t)=2t2\n\n11. \n\n{x(t)=2ety(t)=1−5t{ x(t)=2ety(t)=1−5t\n\n12. \n\n{x(t)=e−2ty(t)=2e−t{ x(t)=e−2ty(t)=2e−t\n\n13. \n\n{x(t)=4log(t)y(t)=3+2t{x(t)=4log(t)y(t)=3+2t\n\n14. \n\n{x(t)=log(2t)y(t)=t−1−−−−√{x(t)=log(2t)y(t)=t−1\n\n15. \n\n{x(t)=t3−ty(t)=2t{ x(t)=t3−ty(t)=2t\n\n16. \n\n{x(t)=t−t4y(t)=t+2{ x(t)=t−t4y(t)=t+2\n\n17. \n\n{x(t)=e2ty(t)=e6t{ x(t)=e2ty(t)=e6t\n\n18. \n\n{x(t)=t5y(t)=t10{ x(t)=t5y(t)=t10\n\n19. \n\n{x(t)=4costy(t)=5sint{x(t)=4costy(t)=5sint\n\n20. \n\n{x(t)=3sinty(t)=6cost{ x(t)=3sinty(t)=6cost\n\n21. \n\n{x(t)=2cos2ty(t)=−sint{x(t)=2cos2ty(t)=−sint\n\n22. \n\n{x(t)=cost+4y(t)=2sin2t{ x(t)=cost+4y(t)=2sin2t\n\n23. \n\n{x(t)=t−1y(t)=t2{ x(t)=t−1y(t)=t2\n\n24. \n\n{x(t)=−ty(t)=t3+1{ x(t)=−ty(t)=t3+1\n\n25. \n\n{x(t)=2t−1y(t)=t3−2{ x(t)=2t−1y(t)=t3−2\n\nFor the following exercises, rewrite the parametric equation as\na Cartesian equation by building an x-yx-y table.\n\n26. \n\n{x(t)=2t−1y(t)=t+4{ x(t)=2t−1y(t)=t+4\n\n27. \n\n{x(t)=4−ty(t)=3t+2{ x(t)=4−ty(t)=3t+2\n\n28. \n\n{x(t)=2t−1y(t)=5t{ x(t)=2t−1y(t)=5t\n\n29. \n\n{x(t)=4t−1y(t)=4t+2{ x(t)=4t−1y(t)=4t+2\n\nFor the following exercises, parameterize (write parametric\nequations for) each Cartesian equation by\nsetting x(t)=tx(t)=t or by\nsetting y(t)=t.y(t)=t.\n\n30. \n\ny(x)=3x2+3y(x)=3x2+3\n\n31. \n\ny(x)=2sinx+1y(x)=2sinx+1\n\n32. \n\nx(y)=3log(y)+yx(y)=3log(y)+y\n\n33. \n\nx(y)=y√+2yx(y)=y+2y\n\nFor the following exercises, parameterize (write parametric\nequations for) each Cartesian equation by\nusing x(t)=acostx(t)=acost and y(t)=bsint.y(t)=bsint. Identify\nthe curve.\n\n34. \n\nx24+y29=1x24+y29=1\n\n35. \n\nx216+y236=1x216+y236=1\n\n36. \n\nx2+y2=16x2+y2=16\n\n37. \n\nx2+y2=10x2+y2=10\n\n38. \n\nParameterize the line\nfrom (3,0)(3,0) to (−2,−5)(−2,−5) so that the\nline is at (3,0)(3,0) at t=0,t=0, and\nat (−2,−5)(−2,−5) at t=1.t=1.\n\n39. \n\nParameterize the line\nfrom (−1,0)(−1,0) to (3,−2)(3,−2) so that the\nline is at (−1,0)(−1,0) at t=0,t=0, and\nat (3,−2)(3,−2) at t=1.t=1.\n\n40. \n\nParameterize the line\nfrom (−1,5)(−1,5) to (2,3)(2,3) so that the\nline is at (−1,5)(−1,5) at t=0,t=0, and\nat (2,3)(2,3) at t=1.t=1.\n\n41. \n\nParameterize the line\nfrom (4,1)(4,1) to (6,−2)(6,−2) so that the\nline is at (4,1)(4,1) at t=0,t=0, and\nat (6,−2)(6,−2) at t=1.t=1.\n\nTechnology\n\nFor the following exercises, use the table feature in the\ngraphing calculator to determine whether the graphs intersect.\n\n42. \n\n{x1(t)=3ty1(t)=2t−1 and {x2(t)=t+3y2(t)=4t−4{ x1(t)=3ty1(t)=2t−1  and { x2(t)=t+3y2(t)=4t−4\n\n43. \n\n{x1(t)=t2y1(t)=2t−1 and {x2(t)=−t+6y2(t)=t+1{ x1(t)=t2y1(t)=2t−1  and { x2(t)=−t+6y2(t)=t+1\n\nFor the following exercises, use a graphing calculator to\ncomplete the table of values for each set of parametric\nequations.\n\n44. \n\n{x1(t)=3t2−3t+7y1(t)=2t+3{ x1(t)=3t2−3t+7y1(t)=2t+3\n\ntt\t\nxx\t\nyy\t\n\n–1\t\n\n0\t\n\n1\t\n\n45. \n\n{x1(t)=t2−4y1(t)=2t2−1{ x1(t)=t2−4y1(t)=2t2−1\n\ntt\t\nxx\t\nyy\t\n\n1\t\n\n2\t\n\n3\t\n\n46. \n\n{x1(t)=t4y1(t)=t3+4{ x1(t)=t4y1(t)=t3+4\n\ntt\t\nxx\t\nyy\t\n\n-1\t\n\n0\t\n\n1\t\n\n2\t\n\nExtensions\n\n47. \n\nFind two different sets of parametric equations\nfor y=(x+1)2.y=(x+1)2.\n\n48. \n\nFind two different sets of parametric equations\nfor y=3x−2.y=3x−2.\n\n49. \n\nFind two different sets of parametric equations\nfor y=x2−4x+4.\n\nThis page titled 8.7: Parametric Equations was last modified on Sun, 28 May 2023 07:35:10 GMT and is shared under a CC BY  4.0  license and was authored, remixed, and/or curated by OpenStax via source content that was edited to the style and standards of the LibreTexts platform.",
+  "figures": [
+    {
+      "url": "https://math.libretexts.org/@api/deki/files/106350/a6fd5221ef1519b8cf1030425c39d070e3aeaad1?revision=1",
+      "alt": "Illustration of a planet's circular orbit around the sun.",
+      "credit": ""
+    },
+    {
+      "url": "https://math.libretexts.org/@api/deki/files/106349/6c32e053e438ff3d4b557f1fb2353d1311e4d9c8?revision=1",
+      "alt": "Graph of a circle in the rectangular coordinate system - the vertical line test shows that the circle r^2 = x^2 + y^2 is not a function. The dotted red vertical line intersects the function in two places - it should only intersect in one place to be a function.",
+      "credit": ""
+    },
+    {
+      "url": "https://math.libretexts.org/@api/deki/files/106348/ceb2277daa6d87de8fcc8ed469423bc67ba6bc04?revision=1",
+      "alt": "Graph of a parabola in two forms: a parametric equation and rectangular coordinates. It is the same function, just different ways of writing it.",
+      "credit": ""
+    },
+    {
+      "url": "https://math.libretexts.org/@api/deki/files/106352/e27770f704ad99e2f4219a6e145474a010e62076?revision=1",
+      "alt": "Graph of given downward facing parabola.",
+      "credit": ""
+    },
+    {
+      "url": "https://math.libretexts.org/@api/deki/files/106351/8edcd88fc4c7c6b6e7f7e8d16f0e6684b1dff8f9?revision=1",
+      "alt": "Three graphs side by side. (A) has the horizontal position over time, (B) has the vertical position over time, and (C) has the position of the object in the plane at time t. See caption for more information.",
+      "credit": ""
+    },
+    {
+      "url": "https://math.libretexts.org/@api/deki/files/106358/02b1a65785a43695e873a2f253f31105fb4d5c9c?revision=1",
+      "alt": "Graph of given sideways (extending to the right) parabola.",
+      "credit": ""
+    },
+    {
+      "url": "https://math.libretexts.org/@api/deki/files/106359/cdc6f801d4627555a019c98013fd7c8ad14256af?revision=1",
+      "alt": "Graph of the parametric equation with domain restricted to t>0, and a graph of that parametric equation in polar coordinates with domain only restricted to x not equal to 0. The Cartesian coordinate version has an extra reflection of the function across the origin in Q 3 (original was just in Q 1). ",
+      "credit": ""
+    },
+    {
+      "url": "https://math.libretexts.org/@api/deki/files/106361/1380225d3cf94673dc3abc8e80ef973c70283643?revision=1",
+      "alt": "Graph of given ellipse centered at (0,0).",
+      "credit": ""
+    },
+    {
+      "url": "https://math.libretexts.org/@api/deki/files/106360/a398a783f628f11bf4f6c0541d05a6e94fe5d03c?revision=1",
+      "alt": "Graph of parametric and rectangular coordinate versions of the same parabola - they are the same!",
+      "credit": ""
+    }
+  ],
+  "references": [
+    {
+      "text": "Figure\n1",
+      "url": "https://openstax.org/books/precalculus/pages/8-6-parametric-equations#Figure_08_06_001"
+    },
+    {
+      "text": "Figure\n2",
+      "url": "https://openstax.org/books/precalculus/pages/8-6-parametric-equations#Figure_08_06_002"
+    },
+    {
+      "text": "Figure\n5",
+      "url": "https://openstax.org/books/precalculus/pages/8-6-parametric-equations#Figure_08_06_003"
+    },
+    {
+      "text": "Figure\n6",
+      "url": "https://openstax.org/books/precalculus/pages/8-6-parametric-equations#Figure_08_06_008"
+    },
+    {
+      "text": "Figure\n7",
+      "url": "https://openstax.org/books/precalculus/pages/8-6-parametric-equations#Figure_08_06_009"
+    },
+    {
+      "text": "Figure\n7",
+      "url": "https://openstax.org/books/precalculus/pages/8-6-parametric-equations#Figure_08_06_009"
+    },
+    {
+      "text": "Analytic\nGeometry",
+      "url": "https://openstax.org/books/precalculus/pages/10-introduction-to-analytic-geometry"
+    },
+    {
+      "text": "Introduction to Parametric\nEquations",
+      "url": "http://openstax.org/l/introparametric"
+    },
+    {
+      "text": "Converting Parametric Equations\nto Rectangular Form",
+      "url": "http://openstax.org/l/convertpara"
+    },
+    {
+      "text": "1",
+      "url": "https://openstax.org/books/precalculus/pages/chapter-8#fs-id1165137452582-solution"
+    },
+    {
+      "text": "3",
+      "url": "https://openstax.org/books/precalculus/pages/chapter-8#fs-id1165137723142-solution"
+    },
+    {
+      "text": "5",
+      "url": "https://openstax.org/books/precalculus/pages/chapter-8#fs-id1165137655519-solution"
+    },
+    {
+      "text": "7",
+      "url": "https://openstax.org/books/precalculus/pages/chapter-8#fs-id1165137585396-solution"
+    },
+    {
+      "text": "9",
+      "url": "https://openstax.org/books/precalculus/pages/chapter-8#fs-id1165137475359-solution"
+    },
+    {
+      "text": "11",
+      "url": "https://openstax.org/books/precalculus/pages/chapter-8#fs-id1165135581966-solution"
+    },
+    {
+      "text": "13",
+      "url": "https://openstax.org/books/precalculus/pages/chapter-8#fs-id1165135571890-solution"
+    },
+    {
+      "text": "15",
+      "url": "https://openstax.org/books/precalculus/pages/chapter-8#fs-id1165137767323-solution"
+    },
+    {
+      "text": "17",
+      "url": "https://openstax.org/books/precalculus/pages/chapter-8#fs-id1165137827977-solution"
+    },
+    {
+      "text": "19",
+      "url": "https://openstax.org/books/precalculus/pages/chapter-8#fs-id1165137668139-solution"
+    },
+    {
+      "text": "21",
+      "url": "https://openstax.org/books/precalculus/pages/chapter-8#fs-id1165135384981-solution"
+    },
+    {
+      "text": "23",
+      "url": "https://openstax.org/books/precalculus/pages/chapter-8#fs-id1165135193646-solution"
+    },
+    {
+      "text": "25",
+      "url": "https://openstax.org/books/precalculus/pages/chapter-8#fs-id1165134319713-solution"
+    },
+    {
+      "text": "27",
+      "url": "https://openstax.org/books/precalculus/pages/chapter-8#fs-id1165134239737-solution"
+    },
+    {
+      "text": "29",
+      "url": "https://openstax.org/books/precalculus/pages/chapter-8#fs-id1165134116716-solution"
+    },
+    {
+      "text": "31",
+      "url": "https://openstax.org/books/precalculus/pages/chapter-8#fs-id1165134148489-solution"
+    },
+    {
+      "text": "33",
+      "url": "https://openstax.org/books/precalculus/pages/chapter-8#fs-id1165135582390-solution"
+    },
+    {
+      "text": "35",
+      "url": "https://openstax.org/books/precalculus/pages/chapter-8#fs-id1165134149924-solution"
+    },
+    {
+      "text": "37",
+      "url": "https://openstax.org/books/precalculus/pages/chapter-8#fs-id1165135160120-solution"
+    },
+    {
+      "text": "39",
+      "url": "https://openstax.org/books/precalculus/pages/chapter-8#fs-id1165137651086-solution"
+    },
+    {
+      "text": "41",
+      "url": "https://openstax.org/books/precalculus/pages/chapter-8#fs-id1165135452295-solution"
+    },
+    {
+      "text": "43",
+      "url": "https://openstax.org/books/precalculus/pages/chapter-8#fs-id1165137470483-solution"
+    },
+    {
+      "text": "45",
+      "url": "https://openstax.org/books/precalculus/pages/chapter-8#fs-id1165137667655-solution"
+    },
+    {
+      "text": "47",
+      "url": "https://openstax.org/books/precalculus/pages/chapter-8#fs-id1165137588584-solution"
+    },
+    {
+      "text": "49",
+      "url": "https://openstax.org/books/precalculus/pages/chapter-8#fs-id1165134042368-solution"
+    },
+    {
+      "text": "8.7: Parametric Equations",
+      "url": "https://math.libretexts.org/Bookshelves/Precalculus/Precalculus_2e_(OpenStax)/08%3A_Further_Applications_of_Trigonometry/8.07%3A_Parametric_Equations"
+    },
+    {
+      "text": "CC BY  4.0",
+      "url": "https://creativecommons.org/licenses/by/4.0"
+    },
+    {
+      "text": "OpenStax",
+      "url": "https://openstax.org/"
+    },
+    {
+      "text": "source content",
+      "url": "https://openstax.org/details/books/precalculus"
+    }
+  ],
+  "exercises": [],
+  "license": "CC BY 4.0",
+  "licenseEvidence": "This page titled 8.7: Parametric Equations was last modified on Sun, 28 May 2023 07:35:10 GMT and is shared under a CC BY  4.0  license and was authored, remixed, and/or curated by OpenStax via source content that was edited to the style and standards of the LibreTexts platform.",
+  "url": "https://math.libretexts.org/Bookshelves/Precalculus/Precalculus_2e_(OpenStax)/08:_Further_Applications_of_Trigonometry/8.07:_Parametric_Equations",
+  "sha256": "c25cb36d97d04b68e3ceeaa70f5591645c442de1ae5f5404e97a61e620445187",
+  "checkedAt": "2026-10-07",
+  "id": "c564ad3727d5b75093e3",
+  "bookId": "precalculus",
+  "licenseInherited": false,
+  "licenseSource": "https://math.libretexts.org/Bookshelves/Precalculus/Precalculus_2e_(OpenStax)/08:_Further_Applications_of_Trigonometry/8.07:_Parametric_Equations",
+  "licenseUrl": "https://creativecommons.org/licenses/by/4.0/",
+  "authors": "OpenStax / Jay Abramson et al.",
+  "book": "Precalculus 2e",
+  "reviewStatus": "unreviewed",
+  "sourceLanguage": "en",
+  "translationStatus": "pending"
+}

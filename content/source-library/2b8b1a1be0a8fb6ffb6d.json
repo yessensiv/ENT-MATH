@@ -1,0 +1,332 @@
+{
+  "title": "2.7:  Logical Arguments",
+  "originalText": "[Figure: A caricature shows four women riding a steam roller labeled “progress” as it crushes stones that spell out “opposition.”]\n\nFigure \\(\\PageIndex{1}\\): Not all logical arguments are valid, and the ongoing fight for equal rights proves that much progress has yet to be made. (credit: \"The Steam Roller\" by Library of Congress Prints and Photographs Division, public domain)\n;\n\nLearning Objectives\n\nAfter completing this section, you should be able to:\n\n1. Apply the law of detachment to determine the conclusion of a pair of statements.\n\n2. Apply the law of denying the consequent to determine the conclusion for pairs of statements.\n\n3. Apply the chain rule to determine valid conclusions for pairs of true statements.\n\nThe previous sections of this chapter provide the foundational skills for constructing and analyzing logical arguments. All logical arguments include a set of premises that support a claim or conclusion; but not all logical arguments are valid and sound. A logical argument is valid if its conclusion follows from the premises, and it is sound if it is valid and all of its premises are true. A false or deceptive argument is called a fallacy. Many types of fallacies are so common that they have been named.\n\nWho Knew?\n\nIn 1936, Dale Carnegie published his first book, titled How to Win Friends and Influence People. It was marketed as training materials for the improvement of public speaking and negotiation skills, and the methods it presented are still used today. Carnegie famously said, “When dealing with people, remember you are not dealing with creatures of logic, but creatures of emotion.”\n\nPeople who put forth fallacious logical arguments often take advantage of our susceptibility to emotional appeals, to try to convince us that what they are saying is true. The study of logic helps us combat this weakness through recognition and learning to focus on the facts and structure of the argument.\n\nThis section focuses on the two main forms that logical arguments can take. While inductive arguments attempt to draw a more general conclusion from a pattern of specific premises, deductive arguments attempt to draw specific conclusions from at least one or more general premises. Deductive arguments can be proven to be valid using Venn diagrams or truth tables.\n\nInductive arguments generally cannot be proven to be true. They are judged as being strong or weak, but, like any opinion, whether you believe an argument is strong or weak often depends on your knowledge of the topic being discussed along with the evidence being provided in the premises. Hasty generalization is the name given to any fallacy that presents a weak inductive argument.\n\nCheckpoint\n\nBe careful! Premises may be true or false. If a premise is false, the claims made by the argument should be questioned.\n\nLaw of Detachment\n\nThe law of detachment is a valid form of a conditional argument that asserts that if both the conditional, \\(p→q\\), and the hypothesis, \\(p\\), are true, then the conclusion \\(q\\) must also be true. The law of detachment is also called affirming the hypothesis (or antecedent) and modus ponens. Symbolically, it has the form \\(((p→q)∧p)→q\\).\n\n            Law of Detachment\t\n\n            Premise:\t\n            \\(p→q\\)\t\n\n            Premise:\t\n            \\(p\\)\t\n\n            Conclusion:\t\n            \\(∴q\\)\t\n\nCheckpoint\n\nThe \\(∴\\) is read as the word, “therefore.”\n\nLooking at the truth table for the conditional statement, the only time the conditional is true is when the hypothesis \\(p\\) is also true. The only place this happens is in the first row, where \\(q\\) is also true, confirming that the law of detachment is a valid argument.\n\n            \\(p\\)\t\n            \\(q\\)\t\n            \\(p→q\\)\t\n\n            T\t\n            T\t\n            T\t\n\n            T\t\n            F\t\n            F\t\n\n            F\t\n            T\t\n            T\t\n\n            F\t\n            F\t\n            T\t\n\nAnother way to verify that the law of detachment is a valid argument is to construct a truth table for the argument \\(((p→q)∧p)→q\\) and verify that it is a tautology.\n\n            \\(p\\)\t\n            \\(q\\)\t\n            \\(p→q\\)\t\n            \\((p→q)∧p\\)\t\n            \\(((p→q)∧p)→q\\)\t\n\n            T\t\n            T\t\n            T\t\n            T\t\n            T\t\n\n            T\t\n            F\t\n            F\t\n            F\t\n            T\t\n\n            F\t\n            T\t\n            T\t\n            F\t\n            T\t\n\n            F\t\n            F\t\n            T\t\n            F\t\n            T\t\n\nVenn diagrams may also be used to verify deductive arguments, which include conditional premises. Consider the statement \\(p→q:\\)Then verify if the conclusion is also represented by the Venn diagram of the premises. If it is, the argument is valid. If it is not, the argument is not valid. The set of guitarists is drawn as a subset of the set of musicians to represent the premise.\n\n[Figure: A chart shows a large and a small circle. The chart is titled U is equal to people. A small circle labeled p is equal to guitarists is labeled inside a large circle labeled q is equal to musicians. An 'x' mark is indicated in the center of the small circle.]\n\nFigure \\(\\PageIndex{2}\\)\n\nNow, examine the Venn diagram to verify if the conclusion is included in the picture. The conclusion is \\(q\\). Because the \\(×\\) is in the set \\(p\\), and \\(p\\) is a subset of \\(q\\), \\(×\\) is also in \\(q\\); therefore, the law of detachment is a valid argument.\n\nCheckpoint\n\nRemember that an argument can be valid without being true. For the argument to be proven true, it must be both valid and sound. An argument is sound if all its premises are true.\n\nVideo\n\nLogic Part 14: Common Argument Forms like Modus Ponens and Tollens\n\nExercise \\(\\PageIndex{1}\\): Applying the Law of Detachment to Determine a Valid Conclusion\n\nEach pair of statements represents the premises in a logical argument. Based on these premises, apply the law of detachment to determine a valid conclusion.\n\n1. If Leonardo da Vinci was an artist, then he painted the Mona Lisa. Leonardo da Vinci was an artist.\n\n2. If Michael Jordan played for the Chicago Bulls, then Michael Jordan was not a soccer player. Michael Jordan played for the Chicago Bulls.\n\n3. If all fish have gills, then clown fish have gills. All fish have gills.\n\nAnswer\n\n1. The premises are \\(p \\rightarrow q\\) : If Leonardo da Vinci was an artist, then he painted the Mona Lisa, and \\(p\\) : Leonardo da Vinci was an artist. This argument has the form of the law of detachment, so, the conclusion is \\(q\\) : Leonardo da Vinci painted the Mona Lisa.\n\n2. The premises follow the form of the law of detachment, so a valid conclusion would be \\(q\\). The premises are \\(p \\rightarrow q\\) : If Michael Jordan played for the Chicago Bulls, then Michael Jordan was not a soccer player, and \\(p\\) : Michael Jordan played for the Chicago Bulls. The conclusion that follows from the premises is \\(q\\) : Michael Jordan was not a soccer player.\n\n3. The premises are \\(p \\rightarrow q\\) : If all fish have gills, then clown fish have gills, and \\(p\\) : All fish have gills. This argument has the form of the law of detachment, so the conclusion is \\(q\\) : clown fish have gills.\n\nYour Turn \\(\\PageIndex{1}\\)\n\nEach pair of statements represents the premises in a logical argument. Based on these premises, apply the law of detachment to determine a valid conclusion.\n\n1. If my classmate likes history, then some people like history. My classmate likes history.\n\n2. If you do not like to read, then some people do not like reading. You do not like to read.\n\n3. If the polygon has five sides, then it is not an octagon. The polygon has five sides.\n\nAnother form of a valid conditional argument is called the law of denying the consequent, or modus tollens. Recall, that the conditional statement, \\(p→q\\), is logically equivalent to the contrapositive, \\(~q→~p.\\) So, if the conditional statement is true, then the contrapositive statement is also true. By the law of detachment, if \\(~q\\) is also true, then it follows that \\(~p\\) must also be true. Symbolically, it has the form \\(((p→q)∧~q)→~p\\).\n\n            Law of Denying the Consequent\t\n\n            Premise:\t\n            \\(p→q\\)\t\n\n            Premise:\t\n            \\(~q\\)\t\n\n            Conclusion:\t\n            \\(∴~p\\)\t\n\nCheckpoint\n\nThe conditional statement can also be described as, “If antecedent, then consequent.”This is where the law of denying the consequent gets its name.\n\nTo verify if the law of denying the consequent is a valid argument, construct a truth table for the argument, \\(((p→q)∧~q)→~p\\), and verify that it is a tautology.\n\n            \\(p\\)\t\n            \\(q\\)\t\n            \\(~p\\)\t\n            \\(~q\\)\t\n            \\(p→q\\)\t\n            \\((p→q)∧~q\\)\t\n            \\(((p→q)∧~q)→~p\\)\t\n\n            T\t\n            T\t\n            F\t\n            F\t\n            T\t\n            F\t\n            T\t\n\n            T\t\n            F\t\n            F\t\n            T\t\n            F\t\n            F\t\n            T\t\n\n            F\t\n            T\t\n            T\t\n            F\t\n            T\t\n            F\t\n            T\t\n\n            F\t\n            F\t\n            T\t\n            T\t\n            T\t\n            T\t\n            T\t\n\nTo verify an argument of this form using a Venn diagram, again consider the premise: \\(p→q\\)\n\n[Figure: A chart shows a large and a small circle. The chart is titled U is equal to people. A small circle labeled p is equal to guitarists is labeled inside a large circle labeled q is equal to musicians. An 'x' mark is indicated on the chart outside the circles.]\n\nFigure \\(\\PageIndex{3}\\)\n\nBecause the \\(×\\) is also outside the set of guitarists, the statement \\(~p\\) follows from the premises and the argument is valid.\n\nExercise \\(\\PageIndex{2}\\): Applying the Law of Denying the Consequent to Determine a Valid Conclusion\n\nEach pair of statements represents the premises in a logical argument. Based on these premises, apply the law of denying the consequent to determine a valid conclusion.\n\n1. If Leonardo da Vinci was an artist, then he painted the Mona Lisa. Leonardo da Vinci did not paint the Mona Lisa.\n\n2. If Michael Jordan played for the Chicago Bulls, then Michael Jordan was not a soccer player. Michael Jordan was a soccer player.\n\n3. If all fish have gills, then clown fish have gills. Clown fish do not have gills.\n\nAnswer\n\n1. The premises are \\(p \\rightarrow q\\) : If Leonardo da Vinci was an artist, then he painted the Mona Lisa, and \\(\\sim q\\) : Leonardo da Vinci did not paint the Mona Lisa. This argument has the form of the law of denying the consequent, so the conclusion is \\(\\sim p\\) : Leonardo da Vinci was not an artist.\n\n    2. The premises follow the form of the law of denying the consequent, so a valid conclusion would be \\(\\sim p\\). The premises are: \\(p \\rightarrow q\\) : If Michael Jordan played for the Chicago Bulls, then Michael Jordan was not a soccer player, and \\(\\sim q\\) : Michael Jordan was a soccer player. The conclusion that follows from the premises is \\(\\sim p\\) : Michael Jordan did not play for the Chicago Bulls.\n\n    3. The premises are \\(p \\rightarrow q\\) : If all fish have gills, then clown fish have gills, and \\(\\sim q\\) : Clown fish do not have gills. This argument has the form of the law denying the consequent, so the conclusion is \\(\\sim p\\) : Some fish do not have gills.\n\nYour Turn \\(\\PageIndex{2}\\)\n\nEach pair of statements represents the premises in a logical argument. Based on these premises, apply the law of denying the consequent to determine a valid conclusion.\n\n1. If my classmate likes history, then some people like history. Nobody likes history.\n\n2. If Homer does not like to read, then some people do not like reading. All people like reading.\n\n3. If the polygon has five sides, then it is not an octagon. The polygon is an octagon.\n\nChain Rule for Conditional Arguments\n\nThe chain rule for conditional arguments is another form of a valid conditional argument. It is also called hypothetical syllogism or the transitivity of implication. Recall that the conditional statement \\(p→q\\) can also be read as \\(p\\) implies \\(q\\). This is where the name transitivity of implication comes from. The transitive property for numbers states that, if \\(3<4\\) and \\(4<5,\\) then it follows that \\(3<5.\\) The chain rule extends this property to conditional statements. If the premises of the argument consist of two conditional statements, with the form “\\(p→q\\)” and “\\(q→r,\\)” then it follows that \\(p→r.\\) Symbolically, it has the form \\(((p→q)∧(q→r))→(p→r)\\).\n\n            Chain Rule for Conditional Arguments\t\n\n            Premise:\t\n            \\(p→q\\)\t\n\n            Premise:\t\n            \\(q→r\\)\t\n\n            Conclusion:\t\n            \\(∴p→r\\)\t\n\nTo verify the chain rule for conditional arguments, construct a truth table for the argument, \\(((p→q)∧(q→r))→(p→r)\\), and verify that it is a tautology.\n\n            \\(p\\)\t\n            \\(q\\)\t\n            \\(r\\)\t\n            \\(p→q\\)\t\n            \\(q→r\\)\t\n            \\((p→q)∧(p→r)\\)\t\n            \\(p→r\\)\t\n            \\(((p→q)∧(q→r))→(p→r)\\)\t\n\n            T\t\n            T\t\n            T\t\n            T\t\n            T\t\n            T\t\n            T\t\n            T\t\n\n            T\t\n            T\t\n            F\t\n            T\t\n            F\t\n            F\t\n            F\t\n            T\t\n\n            T\t\n            F\t\n            T\t\n            F\t\n            T\t\n            F\t\n            T\t\n            T\t\n\n            T\t\n            F\t\n            F\t\n            F\t\n            T\t\n            F\t\n            F\t\n            T\t\n\n            F\t\n            T\t\n            T\t\n            T\t\n            T\t\n            T\t\n            T\t\n            T\t\n\n            F\t\n            T\t\n            F\t\n            T\t\n            F\t\n            F\t\n            T\t\n            T\t\n\n            F\t\n            F\t\n            T\t\n            T\t\n            T\t\n            T\t\n            T\t\n            T\t\n\n            F\t\n            F\t\n            F\t\n            T\t\n            T\t\n            T\t\n            T\t\n            T\t\n\nTo verify an argument of this form using a Venn diagram, again consider the premise \\(p→q:\\)\n\n[Figure: A chart shows a large circle, a circle, and a small circle. The chart is titled U is equal to people. A yellow-colored small circle labeled p is equal to guitarists is labeled inside a pink-colored circle labeled q is equal to musicians. The circle q is equal to musicians is labeled inside a large orange-colored circle labeled r is equal to artists.]\n\nFigure \\(\\PageIndex{4}\\)\n\nExercise \\(\\PageIndex{3}\\): Applying the Chain Rule for Conditional Arguments to Determine a Valid and Sound Conclusion\n\nEach pair of statements represents true premises in a logical argument. Based on these premises, apply the chain rule for conditional arguments to determine a valid and sound conclusion.\n\n1. If my roommate goes to work, then my roommate will get paid. If my roommate gets paid, then my roommate will pay their bills.\n\n2. If robins can fly, then some birds can fly. If some birds can fly, then we will watch birds fly.\n\n3. If Irma is a teacher, then Irma has a college degree. If Irma has a college degree, then Irma graduated from college.\n\nAnswer\n\n1. The premises are \\(p \\rightarrow q\\) : \"If my roommate goes to work, then they will get paid,\" and \\(q \\rightarrow r\\) : \"If my roommate gets paid, then my roommate will pay their bills.\" This argument has the form of the chain rule for conditional arguments, so the valid conclusion will have the form \" \\(p \\rightarrow r\\).\" Because all the premises are true, the valid and sound conclusion of this argument is: \"If my roommate goes to work, then my roommate will pay their bills.\"\n\n2. The premises are \\(p \\rightarrow q\\) : \"If robins can fly, then some birds can fly,\" and \\(q \\rightarrow r\\) : \"If some birds can fly, then we will watch them fly.\" This argument has the form of the chain rule for conditional arguments, so, the valid conclusion will have the form \" \\(p \\rightarrow r\\).\" Because all the premises are true, the valid and sound conclusion of this argument is: \"If robins can fly, then we will watch birds fly.\"\n\n3. The premises are \\(p \\rightarrow q\\) : (see line 1 of solution 1 and 2 above) \"If Irma is a teacher, then Irma has a college degree,\" and \\(q \\rightarrow r\\) : \"If Irma has a college degree, then Irma graduated from college.\" This argument has the form of the chain rule for conditional arguments, so the valid conclusion will have the form \" \\(p \\rightarrow r\\).\" Because all the premises are true, the valid and sound conclusion of this argument is: \"If Irma is a teacher, then Irma graduated from college.\"\n\nYour Turn \\(\\PageIndex{3}\\)\n\nEach pair of statements represent true premises in a logical argument. Based on these premises, apply the chain rule for conditional arguments to determine a valid and sound conclusion.\n\n1. If my roommate does not go to work, then my roommate will not get paid. If my roommate does not get paid, then they will not be able to pay their bills.\n\n2. If penguins cannot fly, then some birds cannot fly. If some birds cannot fly, then we will watch the news.\n\n3. If Marcy goes to the movies, then Marcy will buy popcorn. If Marcy buys popcorn, then she will buy water.\n\nCheck Your Understanding\n\n1. A __________________ is a logical statement used as a fact to support the conclusion of an argument.\n\n2. A logical argument is _______________ if its conclusion follows from the premises.\n\n3. A logical argument that attempts to draw a more general conclusion from a pattern of specific premises is called an _______________________ argument.\n\n4. A _______________________ argument draws specific conclusions from more general premises.\n\n5. Not all arguments are true. A false or deceptive argument is called a ___________________.\n\n6. If an argument is valid and all of its premises are true, then it is considered ________________.\n\nThis page titled 2.7:  Logical Arguments was last modified on Thu, 02 Jan 2025 10:12:44 GMT and is shared under a CC BY  4.0  license and was authored, remixed, and/or curated by OpenStax via source content that was edited to the style and standards of the LibreTexts platform.",
+  "figures": [
+    {
+      "url": "https://math.libretexts.org/@api/deki/files/109382/2586a3d2695cffc0fe910c29307a29023ddbdb73?revision=1",
+      "alt": "A caricature shows four women riding a steam roller labeled “progress” as it crushes stones that spell out “opposition.”",
+      "credit": ""
+    },
+    {
+      "url": "https://math.libretexts.org/@api/deki/files/109380/44d26af3c34f671484e67c818910ac288762da3f?revision=1",
+      "alt": "A chart shows a large and a small circle. The chart is titled U is equal to people. A small circle labeled p is equal to guitarists is labeled inside a large circle labeled q is equal to musicians. An 'x' mark is indicated in the center of the small circle.",
+      "credit": ""
+    },
+    {
+      "url": "https://math.libretexts.org/@api/deki/files/109379/b35a65fd037f695c4944870add9d676cfd6fa037?revision=1",
+      "alt": "A chart shows a large and a small circle. The chart is titled U is equal to people. A small circle labeled p is equal to guitarists is labeled inside a large circle labeled q is equal to musicians. An 'x' mark is indicated on the chart outside the circles.",
+      "credit": ""
+    },
+    {
+      "url": "https://math.libretexts.org/@api/deki/files/109381/6679e3f3fcdabcd54dd080995f944ada84d02113?revision=1",
+      "alt": "A chart shows a large circle, a circle, and a small circle. The chart is titled U is equal to people. A yellow-colored small circle labeled p is equal to guitarists is labeled inside a pink-colored circle labeled q is equal to musicians. The circle q is equal to musicians is labeled inside a large orange-colored circle labeled r is equal to artists.",
+      "credit": ""
+    }
+  ],
+  "references": [
+    {
+      "text": "Logic Part 14: Common Argument Forms like Modus Ponens and Tollens",
+      "url": "https://openstax.org/r/Modus_Ponens_and_Tollens"
+    },
+    {
+      "text": "1",
+      "url": "https://openstax.org/books/contemporary-mathematics/pages/chapter-2#261589-solution"
+    },
+    {
+      "text": "2",
+      "url": "https://openstax.org/books/contemporary-mathematics/pages/chapter-2#261590-solution"
+    },
+    {
+      "text": "3",
+      "url": "https://openstax.org/books/contemporary-mathematics/pages/chapter-2#261591-solution"
+    },
+    {
+      "text": "1",
+      "url": "https://openstax.org/books/contemporary-mathematics/pages/chapter-2#261595-solution"
+    },
+    {
+      "text": "2",
+      "url": "https://openstax.org/books/contemporary-mathematics/pages/chapter-2#261596-solution"
+    },
+    {
+      "text": "3",
+      "url": "https://openstax.org/books/contemporary-mathematics/pages/chapter-2#261597-solution"
+    },
+    {
+      "text": "1",
+      "url": "https://openstax.org/books/contemporary-mathematics/pages/chapter-2#261601-solution"
+    },
+    {
+      "text": "2",
+      "url": "https://openstax.org/books/contemporary-mathematics/pages/chapter-2#261602-solution"
+    },
+    {
+      "text": "3",
+      "url": "https://openstax.org/books/contemporary-mathematics/pages/chapter-2#261603-solution"
+    },
+    {
+      "text": "2.7:  Logical Arguments",
+      "url": "https://math.libretexts.org/Bookshelves/Applied_Mathematics/Contemporary_Mathematics_(OpenStax)/02%3A_Logic/2.07%3A__Logical_Arguments"
+    },
+    {
+      "text": "CC BY  4.0",
+      "url": "https://creativecommons.org/licenses/by/4.0"
+    },
+    {
+      "text": "OpenStax",
+      "url": "https://openstax.org/"
+    },
+    {
+      "text": "source content",
+      "url": "https://openstax.org/details/books/contemporary-mathematics"
+    }
+  ],
+  "exercises": [
+    {
+      "ordinal": 1,
+      "sourceNumber": "1",
+      "sourceAnchor": "",
+      "kind": "exercise-candidate",
+      "context": "After completing this section, you should be able to:",
+      "original": "1. Apply the law of detachment to determine the conclusion of a pair of statements.",
+      "prompt": "1. Apply the law of detachment to determine the conclusion of a pair of statements.",
+      "sourceAnswers": [],
+      "hasFigure": false,
+      "status": "draft",
+      "answerVerified": false,
+      "translationStatus": "pending",
+      "mappingStatus": "pending"
+    },
+    {
+      "ordinal": 2,
+      "sourceNumber": "2",
+      "sourceAnchor": "",
+      "kind": "exercise-candidate",
+      "context": "After completing this section, you should be able to:",
+      "original": "2. Apply the law of denying the consequent to determine the conclusion for pairs of statements.",
+      "prompt": "2. Apply the law of denying the consequent to determine the conclusion for pairs of statements.",
+      "sourceAnswers": [],
+      "hasFigure": false,
+      "status": "draft",
+      "answerVerified": false,
+      "translationStatus": "pending",
+      "mappingStatus": "pending"
+    },
+    {
+      "ordinal": 3,
+      "sourceNumber": "3",
+      "sourceAnchor": "",
+      "kind": "exercise-candidate",
+      "context": "After completing this section, you should be able to:",
+      "original": "3. Apply the chain rule to determine valid conclusions for pairs of true statements.",
+      "prompt": "3. Apply the chain rule to determine valid conclusions for pairs of true statements.",
+      "sourceAnswers": [],
+      "hasFigure": false,
+      "status": "draft",
+      "answerVerified": false,
+      "translationStatus": "pending",
+      "mappingStatus": "pending"
+    },
+    {
+      "ordinal": 4,
+      "sourceNumber": "",
+      "sourceAnchor": "",
+      "kind": "exercise-candidate",
+      "context": "Now, examine the Venn diagram to verify if the conclusion is included in the picture. The conclusion is \\(q\\). Because the \\(×\\) is in the set \\(p\\), and \\(p\\) is a subset of \\(q\\), \\(×\\) is also in \\(q\\); therefore, the law of detachment is a valid argument.\n\nRemember that an argument can be valid without being true. For the argument to be proven true, it must be both valid and sound. An argument is sound if all its premises are true.\n\nLogic Part 14: Common Argument Forms like Modus Ponens and Tollens",
+      "original": "Exercise \\(\\PageIndex{1}\\): Applying the Law of Detachment to Determine a Valid Conclusion\n\nEach pair of statements represents the premises in a logical argument. Based on these premises, apply the law of detachment to determine a valid conclusion.\n\n1. If Leonardo da Vinci was an artist, then he painted the Mona Lisa. Leonardo da Vinci was an artist.\n\n2. If Michael Jordan played for the Chicago Bulls, then Michael Jordan was not a soccer player. Michael Jordan played for the Chicago Bulls.\n\n3. If all fish have gills, then clown fish have gills. All fish have gills.\n\nAnswer\n\n1. The premises are \\(p \\rightarrow q\\) : If Leonardo da Vinci was an artist, then he painted the Mona Lisa, and \\(p\\) : Leonardo da Vinci was an artist. This argument has the form of the law of detachment, so, the conclusion is \\(q\\) : Leonardo da Vinci painted the Mona Lisa.\n\n2. The premises follow the form of the law of detachment, so a valid conclusion would be \\(q\\). The premises are \\(p \\rightarrow q\\) : If Michael Jordan played for the Chicago Bulls, then Michael Jordan was not a soccer player, and \\(p\\) : Michael Jordan played for the Chicago Bulls. The conclusion that follows from the premises is \\(q\\) : Michael Jordan was not a soccer player.\n\n3. The premises are \\(p \\rightarrow q\\) : If all fish have gills, then clown fish have gills, and \\(p\\) : All fish have gills. This argument has the form of the law of detachment, so the conclusion is \\(q\\) : clown fish have gills.",
+      "prompt": "Exercise \\(\\PageIndex{1}\\): Applying the Law of Detachment to Determine a Valid Conclusion\n\nEach pair of statements represents the premises in a logical argument. Based on these premises, apply the law of detachment to determine a valid conclusion.\n\n1. If Leonardo da Vinci was an artist, then he painted the Mona Lisa. Leonardo da Vinci was an artist.\n\n2. If Michael Jordan played for the Chicago Bulls, then Michael Jordan was not a soccer player. Michael Jordan played for the Chicago Bulls.\n\n3. If all fish have gills, then clown fish have gills. All fish have gills.",
+      "sourceAnswers": [
+        "1. The premises are \\(p \\rightarrow q\\) : If Leonardo da Vinci was an artist, then he painted the Mona Lisa, and \\(p\\) : Leonardo da Vinci was an artist. This argument has the form of the law of detachment, so, the conclusion is \\(q\\) : Leonardo da Vinci painted the Mona Lisa.\n\n2. The premises follow the form of the law of detachment, so a valid conclusion would be \\(q\\). The premises are \\(p \\rightarrow q\\) : If Michael Jordan played for the Chicago Bulls, then Michael Jordan was not a soccer player, and \\(p\\) : Michael Jordan played for the Chicago Bulls. The conclusion that follows from the premises is \\(q\\) : Michael Jordan was not a soccer player.\n\n3. The premises are \\(p \\rightarrow q\\) : If all fish have gills, then clown fish have gills, and \\(p\\) : All fish have gills. This argument has the form of the law of detachment, so the conclusion is \\(q\\) : clown fish have gills."
+      ],
+      "hasFigure": false,
+      "status": "draft",
+      "answerVerified": false,
+      "translationStatus": "pending",
+      "mappingStatus": "pending"
+    },
+    {
+      "ordinal": 5,
+      "sourceNumber": "",
+      "sourceAnchor": "",
+      "kind": "example-or-exercise",
+      "context": "Now, examine the Venn diagram to verify if the conclusion is included in the picture. The conclusion is \\(q\\). Because the \\(×\\) is in the set \\(p\\), and \\(p\\) is a subset of \\(q\\), \\(×\\) is also in \\(q\\); therefore, the law of detachment is a valid argument.\n\nRemember that an argument can be valid without being true. For the argument to be proven true, it must be both valid and sound. An argument is sound if all its premises are true.\n\nLogic Part 14: Common Argument Forms like Modus Ponens and Tollens",
+      "original": "Your Turn \\(\\PageIndex{1}\\)\n\nEach pair of statements represents the premises in a logical argument. Based on these premises, apply the law of detachment to determine a valid conclusion.\n\n1. If my classmate likes history, then some people like history. My classmate likes history.\n\n2. If you do not like to read, then some people do not like reading. You do not like to read.\n\n3. If the polygon has five sides, then it is not an octagon. The polygon has five sides.",
+      "prompt": "Your Turn \\(\\PageIndex{1}\\)\n\nEach pair of statements represents the premises in a logical argument. Based on these premises, apply the law of detachment to determine a valid conclusion.\n\n1. If my classmate likes history, then some people like history. My classmate likes history.\n\n2. If you do not like to read, then some people do not like reading. You do not like to read.\n\n3. If the polygon has five sides, then it is not an octagon. The polygon has five sides.",
+      "sourceAnswers": [],
+      "hasFigure": false,
+      "status": "draft",
+      "answerVerified": false,
+      "translationStatus": "pending",
+      "mappingStatus": "pending"
+    },
+    {
+      "ordinal": 6,
+      "sourceNumber": "",
+      "sourceAnchor": "",
+      "kind": "exercise-candidate",
+      "context": "[Figure: A chart shows a large and a small circle. The chart is titled U is equal to people. A small circle labeled p is equal to guitarists is labeled inside a large circle labeled q is equal to musicians. An 'x' mark is indicated on the chart outside the circles.]\n\nFigure \\(\\PageIndex{3}\\)\n\nBecause the \\(×\\) is also outside the set of guitarists, the statement \\(~p\\) follows from the premises and the argument is valid.",
+      "original": "Exercise \\(\\PageIndex{2}\\): Applying the Law of Denying the Consequent to Determine a Valid Conclusion\n\nEach pair of statements represents the premises in a logical argument. Based on these premises, apply the law of denying the consequent to determine a valid conclusion.\n\n1. If Leonardo da Vinci was an artist, then he painted the Mona Lisa. Leonardo da Vinci did not paint the Mona Lisa.\n\n2. If Michael Jordan played for the Chicago Bulls, then Michael Jordan was not a soccer player. Michael Jordan was a soccer player.\n\n3. If all fish have gills, then clown fish have gills. Clown fish do not have gills.\n\nAnswer\n\n1. The premises are \\(p \\rightarrow q\\) : If Leonardo da Vinci was an artist, then he painted the Mona Lisa, and \\(\\sim q\\) : Leonardo da Vinci did not paint the Mona Lisa. This argument has the form of the law of denying the consequent, so the conclusion is \\(\\sim p\\) : Leonardo da Vinci was not an artist.\n\n    2. The premises follow the form of the law of denying the consequent, so a valid conclusion would be \\(\\sim p\\). The premises are: \\(p \\rightarrow q\\) : If Michael Jordan played for the Chicago Bulls, then Michael Jordan was not a soccer player, and \\(\\sim q\\) : Michael Jordan was a soccer player. The conclusion that follows from the premises is \\(\\sim p\\) : Michael Jordan did not play for the Chicago Bulls.\n\n    3. The premises are \\(p \\rightarrow q\\) : If all fish have gills, then clown fish have gills, and \\(\\sim q\\) : Clown fish do not have gills. This argument has the form of the law denying the consequent, so the conclusion is \\(\\sim p\\) : Some fish do not have gills.",
+      "prompt": "Exercise \\(\\PageIndex{2}\\): Applying the Law of Denying the Consequent to Determine a Valid Conclusion\n\nEach pair of statements represents the premises in a logical argument. Based on these premises, apply the law of denying the consequent to determine a valid conclusion.\n\n1. If Leonardo da Vinci was an artist, then he painted the Mona Lisa. Leonardo da Vinci did not paint the Mona Lisa.\n\n2. If Michael Jordan played for the Chicago Bulls, then Michael Jordan was not a soccer player. Michael Jordan was a soccer player.\n\n3. If all fish have gills, then clown fish have gills. Clown fish do not have gills.",
+      "sourceAnswers": [
+        "1. The premises are \\(p \\rightarrow q\\) : If Leonardo da Vinci was an artist, then he painted the Mona Lisa, and \\(\\sim q\\) : Leonardo da Vinci did not paint the Mona Lisa. This argument has the form of the law of denying the consequent, so the conclusion is \\(\\sim p\\) : Leonardo da Vinci was not an artist.\n\n    2. The premises follow the form of the law of denying the consequent, so a valid conclusion would be \\(\\sim p\\). The premises are: \\(p \\rightarrow q\\) : If Michael Jordan played for the Chicago Bulls, then Michael Jordan was not a soccer player, and \\(\\sim q\\) : Michael Jordan was a soccer player. The conclusion that follows from the premises is \\(\\sim p\\) : Michael Jordan did not play for the Chicago Bulls.\n\n    3. The premises are \\(p \\rightarrow q\\) : If all fish have gills, then clown fish have gills, and \\(\\sim q\\) : Clown fish do not have gills. This argument has the form of the law denying the consequent, so the conclusion is \\(\\sim p\\) : Some fish do not have gills."
+      ],
+      "hasFigure": false,
+      "status": "draft",
+      "answerVerified": false,
+      "translationStatus": "pending",
+      "mappingStatus": "pending"
+    },
+    {
+      "ordinal": 7,
+      "sourceNumber": "",
+      "sourceAnchor": "",
+      "kind": "example-or-exercise",
+      "context": "[Figure: A chart shows a large and a small circle. The chart is titled U is equal to people. A small circle labeled p is equal to guitarists is labeled inside a large circle labeled q is equal to musicians. An 'x' mark is indicated on the chart outside the circles.]\n\nFigure \\(\\PageIndex{3}\\)\n\nBecause the \\(×\\) is also outside the set of guitarists, the statement \\(~p\\) follows from the premises and the argument is valid.",
+      "original": "Your Turn \\(\\PageIndex{2}\\)\n\nEach pair of statements represents the premises in a logical argument. Based on these premises, apply the law of denying the consequent to determine a valid conclusion.\n\n1. If my classmate likes history, then some people like history. Nobody likes history.\n\n2. If Homer does not like to read, then some people do not like reading. All people like reading.\n\n3. If the polygon has five sides, then it is not an octagon. The polygon is an octagon.",
+      "prompt": "Your Turn \\(\\PageIndex{2}\\)\n\nEach pair of statements represents the premises in a logical argument. Based on these premises, apply the law of denying the consequent to determine a valid conclusion.\n\n1. If my classmate likes history, then some people like history. Nobody likes history.\n\n2. If Homer does not like to read, then some people do not like reading. All people like reading.\n\n3. If the polygon has five sides, then it is not an octagon. The polygon is an octagon.",
+      "sourceAnswers": [],
+      "hasFigure": false,
+      "status": "draft",
+      "answerVerified": false,
+      "translationStatus": "pending",
+      "mappingStatus": "pending"
+    },
+    {
+      "ordinal": 8,
+      "sourceNumber": "",
+      "sourceAnchor": "",
+      "kind": "exercise-candidate",
+      "context": "To verify an argument of this form using a Venn diagram, again consider the premise \\(p→q:\\)\n\n[Figure: A chart shows a large circle, a circle, and a small circle. The chart is titled U is equal to people. A yellow-colored small circle labeled p is equal to guitarists is labeled inside a pink-colored circle labeled q is equal to musicians. The circle q is equal to musicians is labeled inside a large orange-colored circle labeled r is equal to artists.]\n\nFigure \\(\\PageIndex{4}\\)",
+      "original": "Exercise \\(\\PageIndex{3}\\): Applying the Chain Rule for Conditional Arguments to Determine a Valid and Sound Conclusion\n\nEach pair of statements represents true premises in a logical argument. Based on these premises, apply the chain rule for conditional arguments to determine a valid and sound conclusion.\n\n1. If my roommate goes to work, then my roommate will get paid. If my roommate gets paid, then my roommate will pay their bills.\n\n2. If robins can fly, then some birds can fly. If some birds can fly, then we will watch birds fly.\n\n3. If Irma is a teacher, then Irma has a college degree. If Irma has a college degree, then Irma graduated from college.\n\nAnswer\n\n1. The premises are \\(p \\rightarrow q\\) : \"If my roommate goes to work, then they will get paid,\" and \\(q \\rightarrow r\\) : \"If my roommate gets paid, then my roommate will pay their bills.\" This argument has the form of the chain rule for conditional arguments, so the valid conclusion will have the form \" \\(p \\rightarrow r\\).\" Because all the premises are true, the valid and sound conclusion of this argument is: \"If my roommate goes to work, then my roommate will pay their bills.\"\n\n2. The premises are \\(p \\rightarrow q\\) : \"If robins can fly, then some birds can fly,\" and \\(q \\rightarrow r\\) : \"If some birds can fly, then we will watch them fly.\" This argument has the form of the chain rule for conditional arguments, so, the valid conclusion will have the form \" \\(p \\rightarrow r\\).\" Because all the premises are true, the valid and sound conclusion of this argument is: \"If robins can fly, then we will watch birds fly.\"\n\n3. The premises are \\(p \\rightarrow q\\) : (see line 1 of solution 1 and 2 above) \"If Irma is a teacher, then Irma has a college degree,\" and \\(q \\rightarrow r\\) : \"If Irma has a college degree, then Irma graduated from college.\" This argument has the form of the chain rule for conditional arguments, so the valid conclusion will have the form \" \\(p \\rightarrow r\\).\" Because all the premises are true, the valid and sound conclusion of this argument is: \"If Irma is a teacher, then Irma graduated from college.\"",
+      "prompt": "Exercise \\(\\PageIndex{3}\\): Applying the Chain Rule for Conditional Arguments to Determine a Valid and Sound Conclusion\n\nEach pair of statements represents true premises in a logical argument. Based on these premises, apply the chain rule for conditional arguments to determine a valid and sound conclusion.\n\n1. If my roommate goes to work, then my roommate will get paid. If my roommate gets paid, then my roommate will pay their bills.\n\n2. If robins can fly, then some birds can fly. If some birds can fly, then we will watch birds fly.\n\n3. If Irma is a teacher, then Irma has a college degree. If Irma has a college degree, then Irma graduated from college.",
+      "sourceAnswers": [
+        "1. The premises are \\(p \\rightarrow q\\) : \"If my roommate goes to work, then they will get paid,\" and \\(q \\rightarrow r\\) : \"If my roommate gets paid, then my roommate will pay their bills.\" This argument has the form of the chain rule for conditional arguments, so the valid conclusion will have the form \" \\(p \\rightarrow r\\).\" Because all the premises are true, the valid and sound conclusion of this argument is: \"If my roommate goes to work, then my roommate will pay their bills.\"\n\n2. The premises are \\(p \\rightarrow q\\) : \"If robins can fly, then some birds can fly,\" and \\(q \\rightarrow r\\) : \"If some birds can fly, then we will watch them fly.\" This argument has the form of the chain rule for conditional arguments, so, the valid conclusion will have the form \" \\(p \\rightarrow r\\).\" Because all the premises are true, the valid and sound conclusion of this argument is: \"If robins can fly, then we will watch birds fly.\"\n\n3. The premises are \\(p \\rightarrow q\\) : (see line 1 of solution 1 and 2 above) \"If Irma is a teacher, then Irma has a college degree,\" and \\(q \\rightarrow r\\) : \"If Irma has a college degree, then Irma graduated from college.\" This argument has the form of the chain rule for conditional arguments, so the valid conclusion will have the form \" \\(p \\rightarrow r\\).\" Because all the premises are true, the valid and sound conclusion of this argument is: \"If Irma is a teacher, then Irma graduated from college.\""
+      ],
+      "hasFigure": false,
+      "status": "draft",
+      "answerVerified": false,
+      "translationStatus": "pending",
+      "mappingStatus": "pending"
+    },
+    {
+      "ordinal": 9,
+      "sourceNumber": "",
+      "sourceAnchor": "",
+      "kind": "example-or-exercise",
+      "context": "To verify an argument of this form using a Venn diagram, again consider the premise \\(p→q:\\)\n\n[Figure: A chart shows a large circle, a circle, and a small circle. The chart is titled U is equal to people. A yellow-colored small circle labeled p is equal to guitarists is labeled inside a pink-colored circle labeled q is equal to musicians. The circle q is equal to musicians is labeled inside a large orange-colored circle labeled r is equal to artists.]\n\nFigure \\(\\PageIndex{4}\\)",
+      "original": "Your Turn \\(\\PageIndex{3}\\)\n\nEach pair of statements represent true premises in a logical argument. Based on these premises, apply the chain rule for conditional arguments to determine a valid and sound conclusion.\n\n1. If my roommate does not go to work, then my roommate will not get paid. If my roommate does not get paid, then they will not be able to pay their bills.\n\n2. If penguins cannot fly, then some birds cannot fly. If some birds cannot fly, then we will watch the news.\n\n3. If Marcy goes to the movies, then Marcy will buy popcorn. If Marcy buys popcorn, then she will buy water.",
+      "prompt": "Your Turn \\(\\PageIndex{3}\\)\n\nEach pair of statements represent true premises in a logical argument. Based on these premises, apply the chain rule for conditional arguments to determine a valid and sound conclusion.\n\n1. If my roommate does not go to work, then my roommate will not get paid. If my roommate does not get paid, then they will not be able to pay their bills.\n\n2. If penguins cannot fly, then some birds cannot fly. If some birds cannot fly, then we will watch the news.\n\n3. If Marcy goes to the movies, then Marcy will buy popcorn. If Marcy buys popcorn, then she will buy water.",
+      "sourceAnswers": [],
+      "hasFigure": false,
+      "status": "draft",
+      "answerVerified": false,
+      "translationStatus": "pending",
+      "mappingStatus": "pending"
+    },
+    {
+      "ordinal": 10,
+      "sourceNumber": "1",
+      "sourceAnchor": "",
+      "kind": "exercise-candidate",
+      "context": "Check Your Understanding",
+      "original": "1. A __________________ is a logical statement used as a fact to support the conclusion of an argument.",
+      "prompt": "1. A __________________ is a logical statement used as a fact to support the conclusion of an argument.",
+      "sourceAnswers": [],
+      "hasFigure": false,
+      "status": "draft",
+      "answerVerified": false,
+      "translationStatus": "pending",
+      "mappingStatus": "pending"
+    },
+    {
+      "ordinal": 11,
+      "sourceNumber": "2",
+      "sourceAnchor": "",
+      "kind": "exercise-candidate",
+      "context": "Check Your Understanding",
+      "original": "2. A logical argument is _______________ if its conclusion follows from the premises.",
+      "prompt": "2. A logical argument is _______________ if its conclusion follows from the premises.",
+      "sourceAnswers": [],
+      "hasFigure": false,
+      "status": "draft",
+      "answerVerified": false,
+      "translationStatus": "pending",
+      "mappingStatus": "pending"
+    },
+    {
+      "ordinal": 12,
+      "sourceNumber": "3",
+      "sourceAnchor": "",
+      "kind": "exercise-candidate",
+      "context": "Check Your Understanding",
+      "original": "3. A logical argument that attempts to draw a more general conclusion from a pattern of specific premises is called an _______________________ argument.",
+      "prompt": "3. A logical argument that attempts to draw a more general conclusion from a pattern of specific premises is called an _______________________ argument.",
+      "sourceAnswers": [],
+      "hasFigure": false,
+      "status": "draft",
+      "answerVerified": false,
+      "translationStatus": "pending",
+      "mappingStatus": "pending"
+    },
+    {
+      "ordinal": 13,
+      "sourceNumber": "4",
+      "sourceAnchor": "",
+      "kind": "exercise-candidate",
+      "context": "Check Your Understanding",
+      "original": "4. A _______________________ argument draws specific conclusions from more general premises.",
+      "prompt": "4. A _______________________ argument draws specific conclusions from more general premises.",
+      "sourceAnswers": [],
+      "hasFigure": false,
+      "status": "draft",
+      "answerVerified": false,
+      "translationStatus": "pending",
+      "mappingStatus": "pending"
+    },
+    {
+      "ordinal": 14,
+      "sourceNumber": "5",
+      "sourceAnchor": "",
+      "kind": "exercise-candidate",
+      "context": "Check Your Understanding",
+      "original": "5. Not all arguments are true. A false or deceptive argument is called a ___________________.",
+      "prompt": "5. Not all arguments are true. A false or deceptive argument is called a ___________________.",
+      "sourceAnswers": [],
+      "hasFigure": false,
+      "status": "draft",
+      "answerVerified": false,
+      "translationStatus": "pending",
+      "mappingStatus": "pending"
+    },
+    {
+      "ordinal": 15,
+      "sourceNumber": "6",
+      "sourceAnchor": "",
+      "kind": "exercise-candidate",
+      "context": "Check Your Understanding",
+      "original": "6. If an argument is valid and all of its premises are true, then it is considered ________________.",
+      "prompt": "6. If an argument is valid and all of its premises are true, then it is considered ________________.",
+      "sourceAnswers": [],
+      "hasFigure": false,
+      "status": "draft",
+      "answerVerified": false,
+      "translationStatus": "pending",
+      "mappingStatus": "pending"
+    }
+  ],
+  "license": "CC BY 4.0",
+  "licenseEvidence": "This page titled 2.7:  Logical Arguments was last modified on Thu, 02 Jan 2025 10:12:44 GMT and is shared under a CC BY  4.0  license and was authored, remixed, and/or curated by OpenStax via source content that was edited to the style and standards of the LibreTexts platform.",
+  "url": "https://math.libretexts.org/Bookshelves/Applied_Mathematics/Contemporary_Mathematics_(OpenStax)/02:_Logic/2.07:__Logical_Arguments",
+  "sha256": "1e624ee16666fac4eba8f6c4f6808594b6ca06cc2891a97aaec30e18a0bda0dd",
+  "checkedAt": "2026-10-07",
+  "id": "2b8b1a1be0a8fb6ffb6d",
+  "bookId": "contemporary",
+  "licenseInherited": false,
+  "licenseSource": "https://math.libretexts.org/Bookshelves/Applied_Mathematics/Contemporary_Mathematics_(OpenStax)/02:_Logic/2.07:__Logical_Arguments",
+  "licenseUrl": "https://creativecommons.org/licenses/by/4.0/",
+  "authors": "OpenStax / Donna Kirk et al.",
+  "book": "Contemporary Mathematics",
+  "reviewStatus": "unreviewed",
+  "sourceLanguage": "en",
+  "translationStatus": "pending"
+}

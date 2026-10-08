@@ -1,0 +1,318 @@
+{
+  "title": "3.10:  Arithmetic Sequences",
+  "originalText": "Learning Objectives\n\n1. Identify arithmetic sequences.\n\n2. Find a given term in an arithmetic sequence.\n\n3. Find the \\(n\\)th term of an arithmetic sequence.\n\n4. Find the sum of a finite arithmetic sequence.\n\n5. Use arithmetic sequences to solve real- world applications\n\nAs we saw in the previous section, we are adding about 2.5 quintillion bytes of data per day to the Internet. If there are 550 quintillion bytes of data today, then there will be 552.5 quintillion bytes tomorrow, and 555 quintillion bytes in 2 days. This is an example of an arithmetic sequence. There are many situations where this concept of fixed increases comes into play, such as raises or table arrangements.\n\nIdentifying Arithmetic Sequences\n\nA sequence of numbers is just that, a list of numbers in order. It can be a short list, such as the number of points earned on each assignment in a class, such as {10, 10, 8, 9, 10, 6, 10}. Or it can be a longer list, even infinitely long, such as the list of prime numbers. For example, here’s a sequence of numbers, specifically, the squares of the first 12 natural numbers.\n\n{1, 4, 9, 16, 25, 36, 49, 64, 81, 100, 121, 144}\n\nEach value in the sequence is called a term. Terms in the list are often referred to by their location in the sequence, as in the \\(n\\)\n\n[Figure: A sequence of numbers. The numbers are as follows: 10, 10, 8, 9, 10, 6, and 10. A callout to the first 10 reads, First term, a sub 1. A callout to the second 10 reads, Second term, a sub 2. A callout to the third 10 reads, Fifth term, a sub 5.]\n\nFigure \\(\\PageIndex{1}\\): Sequence showing first, second, and fifth terms\n\nThe notation we use with sequences is a letter, which represents a term in the sequence, and a subscript, which indicates what place the term is in the sequence. For the sequence {1, 4, 9, 16, 25, 36, 49, 64, 81, 100, 121, 144}, we will use the letter \\(a\\) as a value in the sequence, and so \\(\\)a5 would be the term in the sequence at the fifth position. That number is 25, so we can write \\({a}_{5}=\\)25.\n\nIn this section, we focus on a special kind of sequence, one referred to as an arithmetic sequence. Arithmetic sequences have terms that increase by a fixed number or decrease by a fixed number, called the  constant difference (denoted by \\(d\\)), provided that value is not 0. This means the next term is always the previous term plus or minus a specified, constant value. Another way to say this is that the difference between any consecutive terms of the sequence is always the same value.\n\nTo see a constant difference, look at the following sequence: {7, 15, 23, 31, 39, 47, 55, 63, 71, 79, 87}. Figure 3.49 illustrates that each term of the sequence is the previous term plus 8. Eight is the constant difference here.\n\n[Figure: A sequence of numbers. The numbers are as follows: 7, 15, 23, 31, 39, 47, 55, 63, 71, 79, and 87. Hops labeled plus 8 from each number points to the next number from left to right.]\n\nFigure \\(\\PageIndex{2}\\): Sequence of numbers with 8 added to each term\n\nExample  \\(\\PageIndex{1}\\) : Identifying Arithmetic Sequences\n\nDetermine if the following sequences are arithmetic sequences. Explain your reasoning.\n\n1. \\({4,7,10,13,16,19,22,25,...}\\)\n\n2. \\({20,40,80,160,320,640}\\)\n\n3. \\({7,1,−5,−11,−17,−23,−29,−34,−40}\\)\n\nAnswer\n\n1. In the sequence \\({4,7,10,13,16,19,22,25,...}\\), every term is the previous term plus 3. The ellipsis indicates that the pattern continues, which means keep adding 3 to the previous term to get the new term. Therefore, this is an infinite arithmetic sequence.\n\n2. In the sequence \\({20,40,80,160,320,640}\\), terms increase by various amounts, for instance from term 1 to term 2, the sequence increases by 20, but from term 2 to term 3 the sequence increases by 40. So, this is not an arithmetic sequence.\n\n3. In the sequence \\({7,1,−5,−11,−17,−23,−29,−34,−40}\\), every term is the previous term minus 6, so this is an arithmetic sequence.\n\nYour Turn  \\(\\PageIndex{2}\\)\n\nDetermine if the following sequences are arithmetic sequences. Explain your reasoning.\n\n\\(\\left\\{ {7.6,5.4,3.2,1.0, - 1.2, - 3.4, - 5.6, - 7.8, - 10.0} \\right\\}\\)\n\n\\(\\left\\{ {14,16,18,22,28,40,32,0} \\right\\}\\)\n\n\\(\\left\\{ {14,20,26,32,38,44,50,56,62,68,74,80,...} \\right\\}\\)\n\nArithmetic sequences can be expressed with a formula. When we know the first term of an arithmetic sequence, which we label \\(\\)a1, and we know the constant difference, which is denoted \\(d\\), we can find any other term of the arithmetic sequence. The formula for the \\(\\)ith term of an arithmetic sequence is \\({a}_{i}={a}_{1}+d×(i−1)\\).\n\nFORMULA\n\nIf we have an arithmetic sequence with first term \\(\\)a1 and constant difference \\(d\\), then the \\(\\)ith term of the arithmetic sequence is \\({a}_{i}={a}_{1}+d×(i−1)\\).\n\nLet’s examine the formula with this arithmetic sequence: \\({4,7,10,13,16,19,22,25,...}\\). In this sequence \\({a}_{1}=\\)4 and \\(d=3\\). The table below shows the values calculated.\n\n            \\(i\\), Place in Sequence\t\n            \\(\\)ai, \\(\\)ith Term\t\n            Value of Term\t\n            Term Written as \\({a}_{1}+3×(i−1)\\)\t\n\n            1\t\n            \\(\\)a1\t\n            4\t\n            \\(4+3×0\\)\t\n\n            2\t\n            \\(\\)a2\t\n            7\t\n            \\(4+3×1\\)\t\n\n            3\t\n            \\(\\)a3\t\n            10\t\n            \\(4+3×2\\)\t\n\n            4\t\n            \\(\\)a4\t\n            13\t\n            \\(4+3×3\\)\t\n\n            5\t\n            \\(\\)a5\t\n            16\t\n            \\(4+3×4\\)\t\n\n            \\(i\\)\t\n            \\(\\)ai\t\n\n            \\(4+3×(i−1)\\)\t\n\nWe can see how the \\(\\)ith term can be directly calculated. In this sequence, the formula is \\({a}_{1}+3×(i−1)\\) where the first term, \\(\\)a1, is 4 and the constant difference \\(d\\) is 3. We can then determine the \\(\\)47th term of this sequence: \\(\\unsupported{msub}{}\\)a47=4+3×(47−1)=4+3×46=4+138=142.\n\nExample  \\(\\PageIndex{3}\\): Calculating a Term in an Arithmetic Sequence\n\nIdentify \\(\\)a1 and \\(d\\) for the following arithmetic sequence. Use this information to determine the \\(\\)60th term.\n\n\\({18,31,44,57,70,83,...}\\)\n\nAnswer\n\nInspecting the sequence shows that \\({a}_{1}=\\)18 and \\(d=\\)13. We use those values in the formula, with \\(i=\\)60.\n\n    \\(\\unsupported{msub}{}\\)a60=a1+d×(i−1)=18+13×(60−1)=18+13×59=18+767=785\n\nYour Turn  \\(\\PageIndex{3}\\)\n\nIdentify \\({a_1}\\) and \\(d\\) for the following arithmetic sequence. Use this information to determine the \\(86\\text{th}\\) term.\n\n\\(\\left\\{ {4.5,8.1,11.7,15.3,18.9,22.5,26.1,...} \\right\\}\\)\n\nVideo\n\nArithmetic Sequences\n\nIf we know two terms of the sequence, it is possible to determine the general form of an arithmetic sequence, \\({a}_{i}={a}_{1}+d×(i−1)\\).\n\nFORMULA\n\nIf we have the \\(i\\)th term of an arithmetic sequence, \\(\\)ai, and the \\(j\\)th term of the sequence, \\(\\)aj, then the constant difference is \\(d=\\unsupported{mfrac}{{a}_{j}−}\\)aij−i and the first term of the sequence is \\({a}_{1}={a}_{i}−d(i−1)\\).\n\nExample  \\(\\PageIndex{4}\\): Determining First Term and Constant Difference Using Two Terms\n\nA sequence is known to be arithmetic. Two of its terms are \\({a}_{7}=\\)56 and \\(\\unsupported{msub}{}\\)a19=104. Use that information to find the constant difference, the first term, and then the \\(\\)50th term of the sequence.\n\nAnswer\n\nTo find the constant difference, use \\(d=\\unsupported{mfrac}{{a}_{j}−}\\)aij−i. The location of the terms is given by the subscript of the two \\(a\\) terms, \\(i=7\\) and \\(j=\\)19. So, the constant difference can be calculated as such:\n\n\\(d=\\frac{104−56}{19−7}=\\frac{48}{12}=4\\)\n\nThe constant difference of 4 is then used to find \\(\\)a1.\n\n    \\({a}_{1}={a}_{i}−d(i−1)={a}_{7}−4(7−1)=56−4×6=\\)32.\n\nSo \\(d=4\\) and \\({a}_{1}=\\)32.\n\nWith this information, the \\(\\)50th term can be found.\n\n    \\(\\unsupported{msub}{}\\)a50=a1+d×(i−1)=32+4×(50−1)=32+4×49=32+196=228.\n\nThe \\(\\)50th term is \\(\\unsupported{msub}{}\\)a50=228.\n\nYour Turn  \\(\\PageIndex{4}\\)\n\nA sequence is known to be arithmetic. Two of the terms are \\({a_{14}} = 41\\) and \\({a_{38}} = 161\\). Use that information to find the constant difference and the first term. Then determine the \\({151\\text{st}}\\) term of the sequence.\n\nVideo\n\nFinding the First Term and Constant Difference for an Arithmetic Sequence\n\nFinding the Sum of a Finite Arithmetic Sequence\n\nSometimes we want to determine the sum of the numbers of a finite arithmetic sequence. The formula for this is fairly straightforward.\n\nFORMULA\n\nThe sum of the first \\(n\\) terms of a finite arithmetic sequence, written \\(\\)sn, with first and last term \\(\\)a1 and \\(\\)an, respectively, is \\({s}_{n}=n(\\unsupported{mfrac}{{a}_{1}+}\\)an2).\n\nExample  \\(\\PageIndex{5}\\) : Finding the Sum of a Finite Arithmetic Sequence\n\nWhat is the sum of the first 60 terms of an arithmetic sequence with \\({a}_{1}=4.5\\) and \\(d=2.5\\)?\n\nAnswer\n\nThe formula requires the first and last terms of the sequence. The first term is given, \\({a}_{1}=4.5\\). The \\(\\)60th term is needed. Using the formula \\({a}_{1}={a}_{i}+d(i−1)\\) provides the value for the \\(\\)60th term.\n\n    \\(\\unsupported{msub}{}\\)a60=4.5+2.5(60−1)=4.5+2.5×59=4.5+147.5=152.\n\nApplying the formula \\({s}_{n}=n(\\unsupported{mfrac}{{a}_{1}+}\\)an2) provides the sum of the first 60 terms.\n\n    \\(\\unsupported{msub}{}\\)s60=60(4.5+1522)=60×156.52=4,695.\n\nThe sum of the first 60 terms is 4,695.\n\nYour Turn  \\(\\PageIndex{5}\\)\n\nWhat is the sum of the first 101 terms of an arithmetic sequence with \\({a_1} = 13\\) and \\(d = 2.25\\)?\n\nVideo\n\nFinding the Sum of a Finite Arithmetic Sequence\n\nUsing Arithmetic Sequences to Solve Real-World Applications\n\nApplications of arithmetic sequences occur any time some quantity increases by a fixed amount at each step. For instance, suppose someone practices chess each week and increases the amount of time they study each week. The first week the person practices for 3 hours, and vows to practice 30 more minutes each week. Since the amount of time practicing increases by a fixed number each week, this would qualify as an arithmetic sequence.\n\nExample  \\(\\PageIndex{6}\\): Applying an Arithmetic Sequence\n\nJordan has just watched The Queen’s Gambit and decided to hone their skills in chess. To really improve at the game, Jordan decides to practice for 3 hours the first week, and increase their time spent practicing by 30 minutes each week. How many hours will Jordan practice chess in week 20?\n\nAnswer\n\nJordan’s practice scheme is an arithmetic sequence, as it increases by a fixed amount each week. The first week there are 3 hours of practice. This means \\({a}_{1}=\\)3. Jordan increases the time spent practicing by 30 minutes, or half an hour, each week. This means \\(d=0.5\\). Using those values, and that we want to know the amount of time Jordan will study in week 20, we determine the time in week 20 using \\({a}_{i}={a}_{1}+d×(i−1)\\).\n\n    \\({a}_{20}=3+0.5×(20−1)=3+0.5×19=3+9.5=12.5\\)\n\nSo, Jordan will practice 12.5 hours in week 20.\n\nYour Turn  \\(\\PageIndex{6}\\)\n\nChristina decides to save money for after graduation. Christina starts by setting aside $10. Each week, Christina increases the amount she saves by $5. How much money will Christina save in week 52?\n\nExample  \\(\\PageIndex{7}\\): Finding the Sum of a Finite Arithmetic Sequence\n\nLet’s check back in on Jordan. Recall, Jordan had just watched The Queen’s Gambit and decided to hone their skills, practicing for 3 hours the first week, and increasing the time spent practicing by 30 minutes each week. How many hours total will Jordan have practiced chess after 30 weeks of practice?\n\nAnswer\n\nTo calculate the total amount of time that Jordan practiced, we need to use \\({s}_{n}=n(\\unsupported{mfrac}{{a}_{1}+}\\)an2). The formula requires the first and last terms of the sequence. Since Jordan practiced 3 hours in the first week, the first term is \\({a}_{1}=\\)3. Because we want the total practice time after 30 weeks, we need the \\(\\)30th term. Because the constant difference is \\(d=0.5\\), the \\(\\)30th term is \\(\\unsupported{msub}{}\\)a30=3+0.5(30−1)=3+0.5×29=3+14.5=17.5.\n\nApplying the formula \\({s}_{n}=n(\\unsupported{mfrac}{{a}_{1}+}\\)an2) provides the sum of the first 30 terms.\n\n    \\(\\unsupported{msub}{}\\)s30=30(3+17.52)=60×20.52=615.\n\nThis means that Jordan practiced a total of 615 hours after 30 weeks.\n\nYour Turn  \\(\\PageIndex{7}\\)\n\nIn a theater, the first row has 24 seats. Each row after that has 2 more seats. How many total seats are there if there are 40 rows of seat in the theater?\n\nWho Knew?: The Fibonacci Sequence\n\nNot all sequences are arithmetic. One special sequence is the Fibonacci sequence, which is the sequence that has as its first two terms 1 and 1. Every term thereafter is the sum of the previous two terms. The first nine terms of the Fibonacci sequence are 1, 1, 2, 3, 5, 8, 13, 21, and 34.\n\nThis sequence is found in nature, architecture, and even music! In nature, the Fibonacci sequence describes the spirals of sunflower seeds, certain galaxy spirals, and flower petals. In music, the band Tool used the Fibonacci sequence in the song “Lateralus.” The Fibonacci sequence even relates to architecture, as it is closely related to the golden ratio.\n\nVideo\n\nFibonacci Sequence and “Lateralus”\n\nCheck Your Understanding\n\n1. Is the following an arithmetic sequence? Explain.\n\n{3, 6, 9, 15, 25, 39, 90}\n\n2. What is the 7th term of the following sequence?\n\n{1, 5, 7, 100, 4, -17, 8, 100, 19, 7.6, 345}\n\n3. In an arithmetic sequence, the first term is 10 and the constant difference is 4.5. What is the 135th term?\n\n4. If the eighth term of an arithmetic sequence is 35 and the 40th term is 131, what is the constant difference and the first term of the sequence?\n\n5. What is the sum of the first 100 terms of the arithmetic sequence with first term 4 and constant difference 7?\n\n6. A new marketing firm began with 30 people in its survey group. The firm adds 4 people per day. How many people will be in their survey group after 100 days?\n\nThis page titled 3.10:  Arithmetic Sequences was last modified on Thu, 02 Jan 2025 11:07:44 GMT and is shared under a CC BY  4.0  license and was authored, remixed, and/or curated by OpenStax via source content that was edited to the style and standards of the LibreTexts platform.",
+  "figures": [
+    {
+      "url": "https://math.libretexts.org/@api/deki/files/110526/765b44519511e15ce90913c4ae812ebc5d8ee643?revision=1",
+      "alt": "A sequence of numbers. The numbers are as follows: 10, 10, 8, 9, 10, 6, and 10. A callout to the first 10 reads, First term, a sub 1. A callout to the second 10 reads, Second term, a sub 2. A callout to the third 10 reads, Fifth term, a sub 5.",
+      "credit": ""
+    },
+    {
+      "url": "https://math.libretexts.org/@api/deki/files/110527/f85d4db1820b8bffac0e1a8d423065db52be355b?revision=1",
+      "alt": "A sequence of numbers. The numbers are as follows: 7, 15, 23, 31, 39, 47, 55, 63, 71, 79, and 87. Hops labeled plus 8 from each number points to the next number from left to right.",
+      "credit": ""
+    }
+  ],
+  "references": [
+    {
+      "text": "3.10:  Arithmetic Sequences",
+      "url": "https://math.libretexts.org/Bookshelves/Applied_Mathematics/Contemporary_Mathematics_(OpenStax)/03%3A_Real_Number_Systems_and_Number_Theory/3.10%3A__Arithmetic_Sequences"
+    },
+    {
+      "text": "CC BY  4.0",
+      "url": "https://creativecommons.org/licenses/by/4.0"
+    },
+    {
+      "text": "OpenStax",
+      "url": "https://openstax.org/"
+    },
+    {
+      "text": "source content",
+      "url": "https://openstax.org/details/books/contemporary-mathematics"
+    }
+  ],
+  "exercises": [
+    {
+      "ordinal": 1,
+      "sourceNumber": "1",
+      "sourceAnchor": "",
+      "kind": "exercise-candidate",
+      "context": "",
+      "original": "1. Identify arithmetic sequences.",
+      "prompt": "1. Identify arithmetic sequences.",
+      "sourceAnswers": [],
+      "hasFigure": false,
+      "status": "draft",
+      "answerVerified": false,
+      "translationStatus": "pending",
+      "mappingStatus": "pending"
+    },
+    {
+      "ordinal": 2,
+      "sourceNumber": "2",
+      "sourceAnchor": "",
+      "kind": "exercise-candidate",
+      "context": "",
+      "original": "2. Find a given term in an arithmetic sequence.",
+      "prompt": "2. Find a given term in an arithmetic sequence.",
+      "sourceAnswers": [],
+      "hasFigure": false,
+      "status": "draft",
+      "answerVerified": false,
+      "translationStatus": "pending",
+      "mappingStatus": "pending"
+    },
+    {
+      "ordinal": 3,
+      "sourceNumber": "3",
+      "sourceAnchor": "",
+      "kind": "exercise-candidate",
+      "context": "",
+      "original": "3. Find the \\(n\\)th term of an arithmetic sequence.",
+      "prompt": "3. Find the \\(n\\)th term of an arithmetic sequence.",
+      "sourceAnswers": [],
+      "hasFigure": false,
+      "status": "draft",
+      "answerVerified": false,
+      "translationStatus": "pending",
+      "mappingStatus": "pending"
+    },
+    {
+      "ordinal": 4,
+      "sourceNumber": "4",
+      "sourceAnchor": "",
+      "kind": "exercise-candidate",
+      "context": "",
+      "original": "4. Find the sum of a finite arithmetic sequence.",
+      "prompt": "4. Find the sum of a finite arithmetic sequence.",
+      "sourceAnswers": [],
+      "hasFigure": false,
+      "status": "draft",
+      "answerVerified": false,
+      "translationStatus": "pending",
+      "mappingStatus": "pending"
+    },
+    {
+      "ordinal": 5,
+      "sourceNumber": "5",
+      "sourceAnchor": "",
+      "kind": "exercise-candidate",
+      "context": "",
+      "original": "5. Use arithmetic sequences to solve real- world applications",
+      "prompt": "5. Use arithmetic sequences to solve real- world applications",
+      "sourceAnswers": [],
+      "hasFigure": false,
+      "status": "draft",
+      "answerVerified": false,
+      "translationStatus": "pending",
+      "mappingStatus": "pending"
+    },
+    {
+      "ordinal": 6,
+      "sourceNumber": "",
+      "sourceAnchor": "",
+      "kind": "example-or-exercise",
+      "context": "The notation we use with sequences is a letter, which represents a term in the sequence, and a subscript, which indicates what place the term is in the sequence. For the sequence {1, 4, 9, 16, 25, 36, 49, 64, 81, 100, 121, 144}, we will use the letter \\(a\\) as a value in the sequence, and so \\(\\)a5 would be the term in the sequence at the fifth position. That number is 25, so we can write \\({a}_{5}=\\)25.\n\nIn this section, we focus on a special kind of sequence, one referred to as an arithmetic sequence. Arithmetic sequences have terms that increase by a fixed number or decrease by a fixed number, called the  constant difference (denoted by \\(d\\)), provided that value is not 0. This means the next term is always the previous term plus or minus a specified, constant value. Another way to say this is that the difference between any consecutive terms of the sequence is always the same value.\n\nTo see a constant difference, look at the following sequence: {7, 15, 23, 31, 39, 47, 55, 63, 71, 79, 87}. Figure 3.49 illustrates that each term of the sequence is the previous term plus 8. Eight is the constant difference here.",
+      "original": "Example  \\(\\PageIndex{1}\\) : Identifying Arithmetic Sequences\n\nDetermine if the following sequences are arithmetic sequences. Explain your reasoning.\n\n1. \\({4,7,10,13,16,19,22,25,...}\\)\n\n2. \\({20,40,80,160,320,640}\\)\n\n3. \\({7,1,−5,−11,−17,−23,−29,−34,−40}\\)\n\nAnswer\n\n1. In the sequence \\({4,7,10,13,16,19,22,25,...}\\), every term is the previous term plus 3. The ellipsis indicates that the pattern continues, which means keep adding 3 to the previous term to get the new term. Therefore, this is an infinite arithmetic sequence.\n\n2. In the sequence \\({20,40,80,160,320,640}\\), terms increase by various amounts, for instance from term 1 to term 2, the sequence increases by 20, but from term 2 to term 3 the sequence increases by 40. So, this is not an arithmetic sequence.\n\n3. In the sequence \\({7,1,−5,−11,−17,−23,−29,−34,−40}\\), every term is the previous term minus 6, so this is an arithmetic sequence.",
+      "prompt": "Example  \\(\\PageIndex{1}\\) : Identifying Arithmetic Sequences\n\nDetermine if the following sequences are arithmetic sequences. Explain your reasoning.\n\n1. \\({4,7,10,13,16,19,22,25,...}\\)\n\n2. \\({20,40,80,160,320,640}\\)\n\n3. \\({7,1,−5,−11,−17,−23,−29,−34,−40}\\)",
+      "sourceAnswers": [
+        "1. In the sequence \\({4,7,10,13,16,19,22,25,...}\\), every term is the previous term plus 3. The ellipsis indicates that the pattern continues, which means keep adding 3 to the previous term to get the new term. Therefore, this is an infinite arithmetic sequence.\n\n2. In the sequence \\({20,40,80,160,320,640}\\), terms increase by various amounts, for instance from term 1 to term 2, the sequence increases by 20, but from term 2 to term 3 the sequence increases by 40. So, this is not an arithmetic sequence.\n\n3. In the sequence \\({7,1,−5,−11,−17,−23,−29,−34,−40}\\), every term is the previous term minus 6, so this is an arithmetic sequence."
+      ],
+      "hasFigure": false,
+      "status": "draft",
+      "answerVerified": false,
+      "translationStatus": "pending",
+      "mappingStatus": "pending"
+    },
+    {
+      "ordinal": 7,
+      "sourceNumber": "",
+      "sourceAnchor": "",
+      "kind": "example-or-exercise",
+      "context": "If we have an arithmetic sequence with first term \\(\\)a1 and constant difference \\(d\\), then the \\(\\)ith term of the arithmetic sequence is \\({a}_{i}={a}_{1}+d×(i−1)\\).\n\nLet’s examine the formula with this arithmetic sequence: \\({4,7,10,13,16,19,22,25,...}\\). In this sequence \\({a}_{1}=\\)4 and \\(d=3\\). The table below shows the values calculated.\n\nWe can see how the \\(\\)ith term can be directly calculated. In this sequence, the formula is \\({a}_{1}+3×(i−1)\\) where the first term, \\(\\)a1, is 4 and the constant difference \\(d\\) is 3. We can then determine the \\(\\)47th term of this sequence: \\(\\unsupported{msub}{}\\)a47=4+3×(47−1)=4+3×46=4+138=142.",
+      "original": "Example  \\(\\PageIndex{3}\\): Calculating a Term in an Arithmetic Sequence\n\nIdentify \\(\\)a1 and \\(d\\) for the following arithmetic sequence. Use this information to determine the \\(\\)60th term.\n\n\\({18,31,44,57,70,83,...}\\)\n\nAnswer\n\nInspecting the sequence shows that \\({a}_{1}=\\)18 and \\(d=\\)13. We use those values in the formula, with \\(i=\\)60.\n\n    \\(\\unsupported{msub}{}\\)a60=a1+d×(i−1)=18+13×(60−1)=18+13×59=18+767=785",
+      "prompt": "Example  \\(\\PageIndex{3}\\): Calculating a Term in an Arithmetic Sequence\n\nIdentify \\(\\)a1 and \\(d\\) for the following arithmetic sequence. Use this information to determine the \\(\\)60th term.\n\n\\({18,31,44,57,70,83,...}\\)",
+      "sourceAnswers": [
+        "Inspecting the sequence shows that \\({a}_{1}=\\)18 and \\(d=\\)13. We use those values in the formula, with \\(i=\\)60.\n\n    \\(\\unsupported{msub}{}\\)a60=a1+d×(i−1)=18+13×(60−1)=18+13×59=18+767=785"
+      ],
+      "hasFigure": false,
+      "status": "draft",
+      "answerVerified": false,
+      "translationStatus": "pending",
+      "mappingStatus": "pending"
+    },
+    {
+      "ordinal": 8,
+      "sourceNumber": "",
+      "sourceAnchor": "",
+      "kind": "example-or-exercise",
+      "context": "Arithmetic Sequences\n\nIf we know two terms of the sequence, it is possible to determine the general form of an arithmetic sequence, \\({a}_{i}={a}_{1}+d×(i−1)\\).\n\nIf we have the \\(i\\)th term of an arithmetic sequence, \\(\\)ai, and the \\(j\\)th term of the sequence, \\(\\)aj, then the constant difference is \\(d=\\unsupported{mfrac}{{a}_{j}−}\\)aij−i and the first term of the sequence is \\({a}_{1}={a}_{i}−d(i−1)\\).",
+      "original": "Example  \\(\\PageIndex{4}\\): Determining First Term and Constant Difference Using Two Terms\n\nA sequence is known to be arithmetic. Two of its terms are \\({a}_{7}=\\)56 and \\(\\unsupported{msub}{}\\)a19=104. Use that information to find the constant difference, the first term, and then the \\(\\)50th term of the sequence.\n\nAnswer\n\nTo find the constant difference, use \\(d=\\unsupported{mfrac}{{a}_{j}−}\\)aij−i. The location of the terms is given by the subscript of the two \\(a\\) terms, \\(i=7\\) and \\(j=\\)19. So, the constant difference can be calculated as such:\n\n\\(d=\\frac{104−56}{19−7}=\\frac{48}{12}=4\\)\n\nThe constant difference of 4 is then used to find \\(\\)a1.\n\n    \\({a}_{1}={a}_{i}−d(i−1)={a}_{7}−4(7−1)=56−4×6=\\)32.\n\nSo \\(d=4\\) and \\({a}_{1}=\\)32.\n\nWith this information, the \\(\\)50th term can be found.\n\n    \\(\\unsupported{msub}{}\\)a50=a1+d×(i−1)=32+4×(50−1)=32+4×49=32+196=228.\n\nThe \\(\\)50th term is \\(\\unsupported{msub}{}\\)a50=228.",
+      "prompt": "Example  \\(\\PageIndex{4}\\): Determining First Term and Constant Difference Using Two Terms\n\nA sequence is known to be arithmetic. Two of its terms are \\({a}_{7}=\\)56 and \\(\\unsupported{msub}{}\\)a19=104. Use that information to find the constant difference, the first term, and then the \\(\\)50th term of the sequence.",
+      "sourceAnswers": [
+        "To find the constant difference, use \\(d=\\unsupported{mfrac}{{a}_{j}−}\\)aij−i. The location of the terms is given by the subscript of the two \\(a\\) terms, \\(i=7\\) and \\(j=\\)19. So, the constant difference can be calculated as such:\n\n\\(d=\\frac{104−56}{19−7}=\\frac{48}{12}=4\\)\n\nThe constant difference of 4 is then used to find \\(\\)a1.\n\n    \\({a}_{1}={a}_{i}−d(i−1)={a}_{7}−4(7−1)=56−4×6=\\)32.\n\nSo \\(d=4\\) and \\({a}_{1}=\\)32.\n\nWith this information, the \\(\\)50th term can be found.\n\n    \\(\\unsupported{msub}{}\\)a50=a1+d×(i−1)=32+4×(50−1)=32+4×49=32+196=228.\n\nThe \\(\\)50th term is \\(\\unsupported{msub}{}\\)a50=228."
+      ],
+      "hasFigure": false,
+      "status": "draft",
+      "answerVerified": false,
+      "translationStatus": "pending",
+      "mappingStatus": "pending"
+    },
+    {
+      "ordinal": 9,
+      "sourceNumber": "",
+      "sourceAnchor": "",
+      "kind": "example-or-exercise",
+      "context": "Finding the Sum of a Finite Arithmetic Sequence\n\nSometimes we want to determine the sum of the numbers of a finite arithmetic sequence. The formula for this is fairly straightforward.\n\nThe sum of the first \\(n\\) terms of a finite arithmetic sequence, written \\(\\)sn, with first and last term \\(\\)a1 and \\(\\)an, respectively, is \\({s}_{n}=n(\\unsupported{mfrac}{{a}_{1}+}\\)an2).",
+      "original": "Example  \\(\\PageIndex{5}\\) : Finding the Sum of a Finite Arithmetic Sequence\n\nWhat is the sum of the first 60 terms of an arithmetic sequence with \\({a}_{1}=4.5\\) and \\(d=2.5\\)?\n\nAnswer\n\nThe formula requires the first and last terms of the sequence. The first term is given, \\({a}_{1}=4.5\\). The \\(\\)60th term is needed. Using the formula \\({a}_{1}={a}_{i}+d(i−1)\\) provides the value for the \\(\\)60th term.\n\n    \\(\\unsupported{msub}{}\\)a60=4.5+2.5(60−1)=4.5+2.5×59=4.5+147.5=152.\n\nApplying the formula \\({s}_{n}=n(\\unsupported{mfrac}{{a}_{1}+}\\)an2) provides the sum of the first 60 terms.\n\n    \\(\\unsupported{msub}{}\\)s60=60(4.5+1522)=60×156.52=4,695.\n\nThe sum of the first 60 terms is 4,695.",
+      "prompt": "Example  \\(\\PageIndex{5}\\) : Finding the Sum of a Finite Arithmetic Sequence\n\nWhat is the sum of the first 60 terms of an arithmetic sequence with \\({a}_{1}=4.5\\) and \\(d=2.5\\)?",
+      "sourceAnswers": [
+        "The formula requires the first and last terms of the sequence. The first term is given, \\({a}_{1}=4.5\\). The \\(\\)60th term is needed. Using the formula \\({a}_{1}={a}_{i}+d(i−1)\\) provides the value for the \\(\\)60th term.\n\n    \\(\\unsupported{msub}{}\\)a60=4.5+2.5(60−1)=4.5+2.5×59=4.5+147.5=152.\n\nApplying the formula \\({s}_{n}=n(\\unsupported{mfrac}{{a}_{1}+}\\)an2) provides the sum of the first 60 terms.\n\n    \\(\\unsupported{msub}{}\\)s60=60(4.5+1522)=60×156.52=4,695.\n\nThe sum of the first 60 terms is 4,695."
+      ],
+      "hasFigure": false,
+      "status": "draft",
+      "answerVerified": false,
+      "translationStatus": "pending",
+      "mappingStatus": "pending"
+    },
+    {
+      "ordinal": 10,
+      "sourceNumber": "",
+      "sourceAnchor": "",
+      "kind": "example-or-exercise",
+      "context": "Using Arithmetic Sequences to Solve Real-World Applications\n\nApplications of arithmetic sequences occur any time some quantity increases by a fixed amount at each step. For instance, suppose someone practices chess each week and increases the amount of time they study each week. The first week the person practices for 3 hours, and vows to practice 30 more minutes each week. Since the amount of time practicing increases by a fixed number each week, this would qualify as an arithmetic sequence.",
+      "original": "Example  \\(\\PageIndex{6}\\): Applying an Arithmetic Sequence\n\nJordan has just watched The Queen’s Gambit and decided to hone their skills in chess. To really improve at the game, Jordan decides to practice for 3 hours the first week, and increase their time spent practicing by 30 minutes each week. How many hours will Jordan practice chess in week 20?\n\nAnswer\n\nJordan’s practice scheme is an arithmetic sequence, as it increases by a fixed amount each week. The first week there are 3 hours of practice. This means \\({a}_{1}=\\)3. Jordan increases the time spent practicing by 30 minutes, or half an hour, each week. This means \\(d=0.5\\). Using those values, and that we want to know the amount of time Jordan will study in week 20, we determine the time in week 20 using \\({a}_{i}={a}_{1}+d×(i−1)\\).\n\n    \\({a}_{20}=3+0.5×(20−1)=3+0.5×19=3+9.5=12.5\\)\n\nSo, Jordan will practice 12.5 hours in week 20.\n\nYour Turn  \\(\\PageIndex{6}\\)\n\nChristina decides to save money for after graduation. Christina starts by setting aside $10. Each week, Christina increases the amount she saves by $5. How much money will Christina save in week 52?",
+      "prompt": "Example  \\(\\PageIndex{6}\\): Applying an Arithmetic Sequence\n\nJordan has just watched The Queen’s Gambit and decided to hone their skills in chess. To really improve at the game, Jordan decides to practice for 3 hours the first week, and increase their time spent practicing by 30 minutes each week. How many hours will Jordan practice chess in week 20?\n\nYour Turn  \\(\\PageIndex{6}\\)\n\nChristina decides to save money for after graduation. Christina starts by setting aside $10. Each week, Christina increases the amount she saves by $5. How much money will Christina save in week 52?",
+      "sourceAnswers": [
+        "Jordan’s practice scheme is an arithmetic sequence, as it increases by a fixed amount each week. The first week there are 3 hours of practice. This means \\({a}_{1}=\\)3. Jordan increases the time spent practicing by 30 minutes, or half an hour, each week. This means \\(d=0.5\\). Using those values, and that we want to know the amount of time Jordan will study in week 20, we determine the time in week 20 using \\({a}_{i}={a}_{1}+d×(i−1)\\).\n\n    \\({a}_{20}=3+0.5×(20−1)=3+0.5×19=3+9.5=12.5\\)\n\nSo, Jordan will practice 12.5 hours in week 20."
+      ],
+      "hasFigure": false,
+      "status": "draft",
+      "answerVerified": false,
+      "translationStatus": "pending",
+      "mappingStatus": "pending"
+    },
+    {
+      "ordinal": 11,
+      "sourceNumber": "",
+      "sourceAnchor": "",
+      "kind": "example-or-exercise",
+      "context": "Using Arithmetic Sequences to Solve Real-World Applications\n\nApplications of arithmetic sequences occur any time some quantity increases by a fixed amount at each step. For instance, suppose someone practices chess each week and increases the amount of time they study each week. The first week the person practices for 3 hours, and vows to practice 30 more minutes each week. Since the amount of time practicing increases by a fixed number each week, this would qualify as an arithmetic sequence.",
+      "original": "Example  \\(\\PageIndex{7}\\): Finding the Sum of a Finite Arithmetic Sequence\n\nLet’s check back in on Jordan. Recall, Jordan had just watched The Queen’s Gambit and decided to hone their skills, practicing for 3 hours the first week, and increasing the time spent practicing by 30 minutes each week. How many hours total will Jordan have practiced chess after 30 weeks of practice?\n\nAnswer\n\nTo calculate the total amount of time that Jordan practiced, we need to use \\({s}_{n}=n(\\unsupported{mfrac}{{a}_{1}+}\\)an2). The formula requires the first and last terms of the sequence. Since Jordan practiced 3 hours in the first week, the first term is \\({a}_{1}=\\)3. Because we want the total practice time after 30 weeks, we need the \\(\\)30th term. Because the constant difference is \\(d=0.5\\), the \\(\\)30th term is \\(\\unsupported{msub}{}\\)a30=3+0.5(30−1)=3+0.5×29=3+14.5=17.5.\n\nApplying the formula \\({s}_{n}=n(\\unsupported{mfrac}{{a}_{1}+}\\)an2) provides the sum of the first 30 terms.\n\n    \\(\\unsupported{msub}{}\\)s30=30(3+17.52)=60×20.52=615.\n\nThis means that Jordan practiced a total of 615 hours after 30 weeks.",
+      "prompt": "Example  \\(\\PageIndex{7}\\): Finding the Sum of a Finite Arithmetic Sequence\n\nLet’s check back in on Jordan. Recall, Jordan had just watched The Queen’s Gambit and decided to hone their skills, practicing for 3 hours the first week, and increasing the time spent practicing by 30 minutes each week. How many hours total will Jordan have practiced chess after 30 weeks of practice?",
+      "sourceAnswers": [
+        "To calculate the total amount of time that Jordan practiced, we need to use \\({s}_{n}=n(\\unsupported{mfrac}{{a}_{1}+}\\)an2). The formula requires the first and last terms of the sequence. Since Jordan practiced 3 hours in the first week, the first term is \\({a}_{1}=\\)3. Because we want the total practice time after 30 weeks, we need the \\(\\)30th term. Because the constant difference is \\(d=0.5\\), the \\(\\)30th term is \\(\\unsupported{msub}{}\\)a30=3+0.5(30−1)=3+0.5×29=3+14.5=17.5.\n\nApplying the formula \\({s}_{n}=n(\\unsupported{mfrac}{{a}_{1}+}\\)an2) provides the sum of the first 30 terms.\n\n    \\(\\unsupported{msub}{}\\)s30=30(3+17.52)=60×20.52=615.\n\nThis means that Jordan practiced a total of 615 hours after 30 weeks."
+      ],
+      "hasFigure": false,
+      "status": "draft",
+      "answerVerified": false,
+      "translationStatus": "pending",
+      "mappingStatus": "pending"
+    },
+    {
+      "ordinal": 12,
+      "sourceNumber": "1",
+      "sourceAnchor": "",
+      "kind": "exercise-candidate",
+      "context": "Check Your Understanding",
+      "original": "1. Is the following an arithmetic sequence? Explain.",
+      "prompt": "1. Is the following an arithmetic sequence? Explain.",
+      "sourceAnswers": [],
+      "hasFigure": false,
+      "status": "draft",
+      "answerVerified": false,
+      "translationStatus": "pending",
+      "mappingStatus": "pending"
+    },
+    {
+      "ordinal": 13,
+      "sourceNumber": "2",
+      "sourceAnchor": "",
+      "kind": "exercise-candidate",
+      "context": "Check Your Understanding\n\n{3, 6, 9, 15, 25, 39, 90}",
+      "original": "2. What is the 7th term of the following sequence?",
+      "prompt": "2. What is the 7th term of the following sequence?",
+      "sourceAnswers": [],
+      "hasFigure": false,
+      "status": "draft",
+      "answerVerified": false,
+      "translationStatus": "pending",
+      "mappingStatus": "pending"
+    },
+    {
+      "ordinal": 14,
+      "sourceNumber": "3",
+      "sourceAnchor": "",
+      "kind": "exercise-candidate",
+      "context": "Check Your Understanding\n\n{3, 6, 9, 15, 25, 39, 90}\n\n{1, 5, 7, 100, 4, -17, 8, 100, 19, 7.6, 345}",
+      "original": "3. In an arithmetic sequence, the first term is 10 and the constant difference is 4.5. What is the 135th term?",
+      "prompt": "3. In an arithmetic sequence, the first term is 10 and the constant difference is 4.5. What is the 135th term?",
+      "sourceAnswers": [],
+      "hasFigure": false,
+      "status": "draft",
+      "answerVerified": false,
+      "translationStatus": "pending",
+      "mappingStatus": "pending"
+    },
+    {
+      "ordinal": 15,
+      "sourceNumber": "4",
+      "sourceAnchor": "",
+      "kind": "exercise-candidate",
+      "context": "Check Your Understanding\n\n{3, 6, 9, 15, 25, 39, 90}\n\n{1, 5, 7, 100, 4, -17, 8, 100, 19, 7.6, 345}",
+      "original": "4. If the eighth term of an arithmetic sequence is 35 and the 40th term is 131, what is the constant difference and the first term of the sequence?",
+      "prompt": "4. If the eighth term of an arithmetic sequence is 35 and the 40th term is 131, what is the constant difference and the first term of the sequence?",
+      "sourceAnswers": [],
+      "hasFigure": false,
+      "status": "draft",
+      "answerVerified": false,
+      "translationStatus": "pending",
+      "mappingStatus": "pending"
+    },
+    {
+      "ordinal": 16,
+      "sourceNumber": "5",
+      "sourceAnchor": "",
+      "kind": "exercise-candidate",
+      "context": "Check Your Understanding\n\n{3, 6, 9, 15, 25, 39, 90}\n\n{1, 5, 7, 100, 4, -17, 8, 100, 19, 7.6, 345}",
+      "original": "5. What is the sum of the first 100 terms of the arithmetic sequence with first term 4 and constant difference 7?",
+      "prompt": "5. What is the sum of the first 100 terms of the arithmetic sequence with first term 4 and constant difference 7?",
+      "sourceAnswers": [],
+      "hasFigure": false,
+      "status": "draft",
+      "answerVerified": false,
+      "translationStatus": "pending",
+      "mappingStatus": "pending"
+    },
+    {
+      "ordinal": 17,
+      "sourceNumber": "6",
+      "sourceAnchor": "",
+      "kind": "exercise-candidate",
+      "context": "Check Your Understanding\n\n{3, 6, 9, 15, 25, 39, 90}\n\n{1, 5, 7, 100, 4, -17, 8, 100, 19, 7.6, 345}",
+      "original": "6. A new marketing firm began with 30 people in its survey group. The firm adds 4 people per day. How many people will be in their survey group after 100 days?",
+      "prompt": "6. A new marketing firm began with 30 people in its survey group. The firm adds 4 people per day. How many people will be in their survey group after 100 days?",
+      "sourceAnswers": [],
+      "hasFigure": false,
+      "status": "draft",
+      "answerVerified": false,
+      "translationStatus": "pending",
+      "mappingStatus": "pending"
+    }
+  ],
+  "license": "CC BY 4.0",
+  "licenseEvidence": "This page titled 3.10:  Arithmetic Sequences was last modified on Thu, 02 Jan 2025 11:07:44 GMT and is shared under a CC BY  4.0  license and was authored, remixed, and/or curated by OpenStax via source content that was edited to the style and standards of the LibreTexts platform.",
+  "url": "https://math.libretexts.org/Bookshelves/Applied_Mathematics/Contemporary_Mathematics_(OpenStax)/03:_Real_Number_Systems_and_Number_Theory/3.10:__Arithmetic_Sequences",
+  "sha256": "1dd93ddb191d6361ba0bbce637dc83e2b7289382e236e19d48ec1ae56e21f652",
+  "checkedAt": "2026-10-07",
+  "id": "40811038b87158675da7",
+  "bookId": "contemporary",
+  "licenseInherited": false,
+  "licenseSource": "https://math.libretexts.org/Bookshelves/Applied_Mathematics/Contemporary_Mathematics_(OpenStax)/03:_Real_Number_Systems_and_Number_Theory/3.10:__Arithmetic_Sequences",
+  "licenseUrl": "https://creativecommons.org/licenses/by/4.0/",
+  "authors": "OpenStax / Donna Kirk et al.",
+  "book": "Contemporary Mathematics",
+  "reviewStatus": "unreviewed",
+  "sourceLanguage": "en",
+  "translationStatus": "pending"
+}

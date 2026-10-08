@@ -1,0 +1,491 @@
+{
+  "title": "3.4: Composition of Functions",
+  "originalText": "Learning Objectives\n\nCombine functions using algebraic operations.\n\nCreate a new function by composition of functions.\n\nEvaluate composite functions.\n\nFind the domain of a composite function.\n\nDecompose a composite function into its component functions.\n\nSuppose we want to calculate how much it costs to heat a house on a particular day of the year. The cost to heat a house will depend on the average daily temperature, and in turn, the average daily temperature depends on the particular day of the year. Notice how we have just defined two relationships: The cost depends on the temperature, and the temperature depends on the day.\n\nUsing descriptive variables, we can notate these two functions. The function \\(C(T)\\) gives the cost \\(C\\) of heating a house for a given average daily temperature in \\(T\\) degrees Celsius. The function \\(T(d)\\) gives the average daily temperature on day d of the year. For any given day, \\(Cost=C(T(d))\\) means that the cost depends on the temperature, which in turns depends on the day of the year. Thus, we can evaluate the cost function at the temperature \\(T(d)\\). For example, we could evaluate \\(T(5)\\) to determine the average daily temperature on the 5th day of the year. Then, we could evaluate the cost function at that temperature. We would write \\(C(T(5))\\).\n\n[Figure: Explanation of C(T(5)), which is the cost for the temperature and T(5) is the temperature on day 5.]\n\nFigure \\(\\PageIndex{1}\\): Explanation of \\(C(T(5))\\), which is the cost for the temperature and \\(T(5)\\) is the temperature on day 5.\n\nBy combining these two relationships into one function, we have performed function composition, which is the focus of this section.\n\nCombining Functions Using Algebraic Operations\n\nFunction composition is only one way to combine existing functions. Another way is to carry out the usual algebraic operations on functions, such as addition, subtraction, multiplication and division. We do this by performing the operations with the function outputs, defining the result as the output of our new function.\n\nSuppose we need to add two columns of numbers that represent a husband and wife’s separate annual incomes over a period of years, with the result being their total household income. We want to do this for every year, adding only that year’s incomes and then collecting all the data in a new column. If \\(w(y)\\) is the wife’s income and \\(h(y)\\) is the husband’s income in year \\(y\\), and we want \\(T\\) to represent the total income, then we can define a new function.\n\n\\[T(y)=h(y)+w(y) \\nonumber\\]\n\nIf this holds true for every year, then we can focus on the relation between the functions without reference to a year and write\n\n\\[T=h+w \\nonumber\\]\n\nJust as for this sum of two functions, we can define difference, product, and ratio functions for any pair of functions that have the same kinds of inputs (not necessarily numbers) and also the same kinds of outputs (which do have to be numbers so that the usual operations of algebra can apply to them, and which also must have the same units or no units when we add and subtract). In this way, we can think of adding, subtracting, multiplying, and dividing functions.\n\nFor two functions \\(f(x)\\) and \\(g(x)\\) with real number outputs, we define new functions \\(f+g\\), \\(f−g\\), \\(fg\\), and \\(\\frac{f}{g}\\) by the relations.\n\n\\[ \\begin{align*} (f+g)(x) &=f(x)+g(x) \\\\[4pt] (f−g)(x) &=f(x)−g(x) \\\\[4pt] (fg)(x)&=f(x)g(x) \\\\[4pt] \\left(\\dfrac{f}{g}\\right)(x) &=\\dfrac{f(x)}{g(x)} \\end{align*}\\]\n\nExample \\(\\PageIndex{1}\\): Performing Algebraic Operations on Functions\n\nFind and simplify the functions \\((g−f)(x)\\) and \\(\\left(\\dfrac{g}{f}\\right)(x)\\), given \\(f(x)=x−1\\) and \\(g(x)=x^2−1\\). Are they the same function?\n\nSolution\n\nBegin by writing the general form, and then substitute the given functions.\n\n\\[\\begin{align*} (g−f)(x) &= g(x)−f(x) \\\\[4pt] (g−f)(x) &=x^2−1−(x−1) \\\\[4pt] &=x^2−x \\\\[4pt] &=x(x−1) \\end{align*}\\]\n\n\\[\\begin{align*} \\left(\\dfrac{g}{f}\\right)(x)&=g(x)f(x) \\\\[4pt] \\left(\\dfrac{g}{f}\\right)(x)&=\\dfrac{x^2−1}{x−1} \\\\[4pt] &=\\dfrac{(x+1)(x−1)}{x−1} \\\\[4pt]&=x+1 \\end{align*}\\]\n\nNo, the functions are not the same.\n\nNote: For \\(\\left(\\dfrac{g}{f}\\right)(x)\\), the condition \\(x\\neq1\\) is necessary because when \\(x=1\\), the denominator is equal to 0, which makes the function undefined.\n\nExercise \\(\\PageIndex{1}\\)\n\nFind and simplify the functions \\((fg)(x)\\) and \\((f−g)(x)\\).\n\n\\[f(x)=x−1 \\nonumber\\]\n\nand\n\n\\[g(x)=x^2−1 \\nonumber\\]\n\nAre they the same function?\n\nAnswer\n\n\\((fg)(x)=f(x)g(x)=(x−1)(x2−1)=x^3−x^2−x+1 \\\\[4pt] (f−g)(x)=f(x)−g(x)=(x−1)−(x^2−1)=x−x^2\\)\n\nNo, the functions are not the same.\n\nCreate a Function by Composition of Functions\n\nPerforming algebraic operations on functions combines them into a new function, but we can also create functions by composing functions. When we wanted to compute a heating cost from a day of the year, we created a new function that takes a day as input and yields a cost as output. The process of combining functions so that the output of one function becomes the input of another is known as a composition of functions. The resulting function is known as a composite function. We represent this combination by the following notation:\n\n\\[f{\\circ}g(x)=f(g(x))\\]\n\nWe read the left-hand side as“\\(f\\) composed with \\(g\\) at \\(x\\),” and the right-hand side as“\\(f\\) of \\(g\\) of \\(x\\).”The two sides of the equation have the same mathematical meaning and are equal. The open circle symbol \\(\\circ\\) is called the composition operator. We use this operator mainly when we wish to emphasize the relationship between the functions themselves without referring to any particular input value. Composition is a binary operation that takes two functions and forms a new function, much as addition or multiplication takes two numbers and gives a new number. However, it is important not to confuse function composition with multiplication because, as we learned above, in most cases \\(f(g(x)){\\neq}f(x)g(x)\\).\n\nIt is also important to understand the order of operations in evaluating a composite function. We follow the usual convention with parentheses by starting with the innermost parentheses first, and then working to the outside. In the equation above, the function \\(g\\) takes the input \\(x\\) first and yields an output \\(g(x)\\). Then the function \\(f\\) takes \\(g(x)\\) as an input and yields an output \\(f(g(x))\\).\n\n[Figure: Explanation of the composite function.]\n\nFigure \\(\\PageIndex{2}\\): Explanation of the composite function.\n\nIn general, \\(f{\\circ}g\\) and \\(g{\\circ}f\\) are different functions. In other words, in many cases \\(f(g(x)){\\neq}g(f(x))\\) for all \\(x\\). We will also see that sometimes two functions can be composed only in one specific order.\n\nFor example, if \\(f(x)=x^2\\) and \\(g(x)=x+2\\), then\n\n\\[\\begin{align*} f(g(x))&= f(x+2) \\\\[4pt]&=(x+2)^2 \\\\[4pt] &=x^2+4x+4 \\end{align*}\\]\n\nbut\n\n\\[\\begin{align*} g(f(x))&= g(x^2) \\\\[4pt]&=x^2+2 \\end{align*}\\]\n\nThese expressions are not equal for all values of x, so the two functions are not equal. It is irrelevant that the expressions happen to be equal for the single input value \\(x=−\\frac{1}{2}\\).\n\nNote that the range of the inside function (the first function to be evaluated) needs to be within the domain of the outside function. Less formally, the composition has to make sense in terms of inputs and outputs.\n\nComposition of Functions\n\nWhen the output of one function is used as the input of another, we call the entire operation a composition of functions. For any input \\(x\\) and functions \\(f\\) and \\(g\\), this action defines a composite function, which we write as \\(f{\\circ}g\\) such that\n\n\\[(f{\\circ}g)(x)=f(g(x))\\]\n\nThe domain of the composite function \\(f{\\circ}g\\) is all \\(x\\) such that \\(x\\) is in the domain of \\(g\\) and \\(g(x)\\) is in the domain of \\(f\\).\n\nIt is important to realize that the product of functions \\(fg\\) is not the same as the function composition \\(f(g(x))\\), because, in general, \\(f(x)g(x){\\neq}f(g(x))\\).\n\nExample \\(\\PageIndex{2}\\): Determining whether Composition of Functions is Commutative\n\nUsing the functions provided, find \\(f(g(x))\\) and \\(g(f(x))\\). Determine whether the composition of the functions is commutative.\n\n\\[f(x)=2x+1 \\;\\;\\;\\; g(x)=3−x \\nonumber\\]\n\nSolution\n\nLet’s begin by substituting \\(g(x)\\) into \\(f(x)\\).\n\n\\[\\begin{align*} f(g(x))&= 2(3−x)+1 \\\\[4pt] &=6−2x+1 \\\\[4pt] &=7−2x \\end{align*}\\]\n\nNow we can substitute \\(f(x)\\) into \\(g(x)\\).\n\n\\[\\begin{align*} g(f(x))&= 3−(2x+1) \\\\[4pt]&=3−2x−1 \\\\[4pt] &=2-2x \\end{align*}\\]\n\nWe find that \\(g(f(x)){\\neq}f(g(x))\\), so the operation of function composition is not commutative.\n\nExample \\(\\PageIndex{3}\\): Interpreting Composite Functions\n\nThe function \\(c(s)\\) gives the number of calories burned completing \\(s\\) sit-ups, and \\(s(t)\\) gives the number of sit-ups a person can complete in \\(t\\) minutes. Interpret \\(c(s(3))\\).\n\nSolution\n\nThe inside expression in the composition is \\(s(3)\\). Because the input to the \\(s\\)-function is time, \\(t=3\\) represents 3 minutes, and \\(s(3)\\) is the number of sit-ups completed in 3 minutes.\n\nUsing \\(s(3)\\) as the input to the function \\(c(s)\\) gives us the number of calories burned during the number of sit-ups that can be completed in 3 minutes, or simply the number of calories burned in 3 minutes (by doing sit-ups).\n\nExample \\(\\PageIndex{4}\\): Investigating the Order of Function Composition\n\nSuppose \\(f(x)\\) gives miles that can be driven in \\(x\\) hours and \\(g(y)\\) gives the gallons of gas used in driving \\(y\\) miles. Which of these expressions is meaningful: \\(f(g(y))\\) or \\(g(f(x))\\)?\n\nSolution\n\nThe function \\(y=f(x)\\) is a function whose output is the number of miles driven corresponding to the number of hours driven.\n\n\\[\\text{number of miles } =f (\\text{number of hours}) \\nonumber\\]\n\nThe function \\(g(y)\\) is a function whose output is the number of gallons used corresponding to the number of miles driven. This means:\n\n\\[\\text{number of gallons } =g(\\text{number of miles}) \\nonumber\\]\n\nThe expression \\(g(y)\\) takes miles as the input and a number of gallons as the output. The function \\(f(x)\\) requires a number of hours as the input. Trying to input a number of gallons does not make sense. The expression \\(f(g(y))\\) is meaningless.\n\nThe expression \\(f(x)\\) takes hours as input and a number of miles driven as the output. The function \\(g(y)\\) requires a number of miles as the input. Using \\(f(x)\\) (miles driven) as an input value for \\(g(y)\\), where gallons of gas depends on miles driven, does make sense. The expression \\(g(f(x))\\) makes sense, and will yield the number of gallons of gas used, \\(g\\), driving a certain number of miles, \\(f(x)\\), in \\(x\\) hours.\n\nQuestion/Answer\n\nAre there any situations where \\(f(g(y))\\) and \\(g(f(x))\\) would both be meaningful or useful expressions?\n\nYes. For many pure mathematical functions, both compositions make sense, even though they usually produce different new functions. In real-world problems, functions whose inputs and outputs have the same units also may give compositions that are meaningful in either order\n\nExercise \\(\\PageIndex{2}\\)\n\nThe gravitational force on a planet a distance \\(r\\) from the sun is given by the function \\(G(r)\\). The acceleration of a planet subjected to any force \\(F\\) is given by the function \\(a(F)\\). Form a meaningful composition of these two functions, and explain what it means.\n\nAnswer\n\nA gravitational force is still a force, so \\(a(G(r))\\) makes sense as the acceleration of a planet at a distance \\(r\\) from the Sun (due to gravity), but \\(G(a(F))\\) does not make sense.\n\nEvaluating Composite Functions\n\nOnce we compose a new function from two existing functions, we need to be able to evaluate it for any input in its domain. We will do this with specific numerical inputs for functions expressed as tables, graphs, and formulas and with variables as inputs to functions expressed as formulas. In each case, we evaluate the inner function using the starting input and then use the inner function’s output as the input for the outer function.\n\nEvaluating Composite Functions Using Tables\n\nWhen working with functions given as tables, we read input and output values from the table entries and always work from the inside to the outside. We evaluate the inside function first and then use the output of the inside function as the input to the outside function.\n\nExample \\(\\PageIndex{5}\\): Using a Table to Evaluate a Composite Function\n\nUsing Table \\(\\PageIndex{1}\\), evaluate \\(f(g(3))\\) and \\(g(f(3))\\).\n\n    Table \\(\\PageIndex{1}\\)\n\n            \\(x\\)\t\n            \\(f(x)\\)\t\n            \\(g(x)\\)\t\n\n            1\t\n            6\t\n            3\t\n\n            2\t\n            8\t\n            5\t\n\n            3\t\n            3\t\n            2\t\n\n            4\t\n            1\t\n            7\t\n\nSolution\n\nTo evaluate \\(f(g(3))\\), we start from the inside with the input value 3. We then evaluate the inside expression \\(g(3)\\) using the table that defines the function \\(g: g(3)=2\\). We can then use that result as the input to the function \\(f\\), so \\(g(3)\\) is replaced by 2 and we get \\(f(2)\\). Then, using the table that defines the function \\(f\\), we find that \\(f(2)=8\\).\n\n\\[g(3)=2 \\nonumber\\]\n\n\\[f(g(3))=f(2)=8 \\nonumber\\]\n\nTo evaluate \\(g(f(3))\\), we first evaluate the inside expression \\(f(3)\\) using the first table: \\(f(3)=3\\). Then, using the table for \\(g\\), we can evaluate\n\n\\[g(f(3))=g(3)=2 \\nonumber\\]\n\nTable \\(\\PageIndex{2}\\) shows the composite functions \\(f{\\circ}g\\) and \\(g{\\circ}f\\) as tables.\n\n    Table \\(\\PageIndex{2}\\)\n\n            \\(x\\)\t\n            \\(g(x)\\)\t\n            \\(f(g(x))\\)\t\n            \\(f(x)\\)\t\n            \\(g(f(x))\\)\t\n\n            3\t\n            2\t\n            8\t\n            3\t\n            2\t\n\nExercise \\(\\PageIndex{3}\\)\n\nUsing Table \\(\\PageIndex{1}\\), evaluate \\(f(g(1))\\) and \\(g(f(4))\\).\n\nAnswer\n\n\\(f(g(1))=f(3)=3\\) and \\(g(f(4))=g(1)=3\\)\n\nEvaluating Composite Functions Using Graphs\n\nWhen we are given individual functions as graphs, the procedure for evaluating composite functions is similar to the process we use for evaluating tables. We read the input and output values, but this time, from the x- and y-axes of the graphs.\n\nHow To ...\n\nGiven a composite function and graphs of its individual functions, evaluate it using the information provided by the graphs.\n\n1. Locate the given input to the inner function on the x-axis of its graph.\n\n2. Read off the output of the inner function from the y-axis of its graph.\n\n3. Locate the inner function output on the x-axis of the graph of the outer function.\n\n4. Read the output of the outer function from the y-axis of its graph. This is the output of the composite function.\n\nExample \\(\\PageIndex{6}\\): Using a Graph to Evaluate a Composite Function\n\nUsing Figure \\(\\PageIndex{3}\\), evaluate \\(f(g(1))\\).\n\n[Figure: Two graphs of a positive and negative parabola.]\n\nFigure \\(\\PageIndex{3}\\): Two graphs of a positive and negative parabola.\n\nSolution\n\nTo evaluate \\(f(g(1))\\), we start with the inside evaluation. See Figure \\(\\PageIndex{4}\\).\n\n[Figure: alt]\n\nFigure \\(\\PageIndex{4}\\): Two graphs of a positive parabola \\(g(x)\\) and a negative parabola \\(f(x)\\). The following points are plotted: \\(g(1)=3\\) and \\(f(3)=6\\).\n\nWe evaluate \\(g(1)\\) using the graph of \\(g(x)\\), finding the input of 1 on the x-axis and finding the output value of the graph at that input. Here, \\(g(1)=3\\). We use this value as the input to the function \\(f\\).\n\n\\[f(g(1))=f(3) \\nonumber\\]\n\nWe can then evaluate the composite function by looking to the graph of \\(f(x)\\), finding the input of 3 on the x-axis and reading the output value of the graph at this input. Here, \\(f(3)=6\\), so \\(f(g(1))=6\\).\n\nAnalysis\n\nFigure \\(\\PageIndex{5}\\) shows how we can mark the graphs with arrows to trace the path from the input value to the output value.\n\n[Figure: alt]\n\nFigure \\(\\PageIndex{5}\\): Two graphs of a positive and negative parabola.\n\nExercise \\(\\PageIndex{4}\\)\n\nUsing Figure \\(\\PageIndex{3}\\), evaluate \\(g(f(2))\\).\n\nAnswer\n\n\\(g(f(2))=g(5)=3\\)\n\nEvaluating Composite Functions Using Formulas\n\nWhen evaluating a composite function where we have either created or been given formulas, the rule of working from the inside out remains the same. The input value to the outer function will be the output of the inner function, which may be a numerical value, a variable name, or a more complicated expression.\n\nWhile we can compose the functions for each individual input value, it is sometimes helpful to find a single formula that will calculate the result of a composition \\(f(g(x))\\). To do this, we will extend our idea of function evaluation. Recall that, when we evaluate a function like \\(f(t)=t^2−t\\), we substitute the value inside the parentheses into the formula wherever we see the input variable.\n\nHow To... \n\nGiven a formula for a composite function, evaluate the function.\n\n1. Evaluate the inside function using the input value or variable provided.\n\n2. Use the resulting output as the input to the outside function.\n\nExample \\(\\PageIndex{7}\\): Evaluating a Composition of Functions Expressed as Formulas with a Numerical Input\n\nGiven \\(f(t)=t^2−t\\) and \\(h(x)=3x+2\\), evaluate \\(f(h(1))\\).\n\nSolution\n\nBecause the inside expression is \\(h(1)\\), we start by evaluating \\(h(x)\\) at 1.\n\n\\[ \\begin{align*} h(1)=3(1)+2 \\\\[4pt] h(1)&=5 \\end{align*} \\]\n\nThen \\(f(h(1))=f(5)\\), so we evaluate \\(f(t)\\) at an input of 5.\n\n\\[ \\begin{align*} f(h(1)) &=f(5) \\\\[5pt] f(h(1))&=5^2−5 \\\\[5pt] f(h(1))&=20 \\end{align*} \\]\n\nAnalysis\n\nIt makes no difference what the input variables \\(t\\) and \\(x\\) were called in this problem because we evaluated for specific numerical values.\n\nExercise \\(\\PageIndex{5}\\)\n\nGiven \\(f(t)=t^2−t\\) and \\(h(x)=3x+2\\), evaluate\n\na. \\(h(f(2))\\)\n\nb. \\(h(f(−2))\\)\n\nAnswer a\n\n8\n\nAnswer b\n\n20\n\nFinding the Domain of a Composite Function\n\nAs we discussed previously, the domain of a composite function such as \\(f{\\circ}g\\) is dependent on the domain of \\(g\\) and the domain of \\(f\\). It is important to know when we can apply a composite function and when we cannot, that is, to know the domain of a function such as \\(f{\\circ}g\\). Let us assume we know the domains of the functions \\(f\\) and \\(g\\) separately. If we write the composite function for an input \\(x\\) as \\(f(g(x))\\), we can see right away that \\(x\\) must be a member of the domain of g in order for the expression to be meaningful, because otherwise we cannot complete the inner function evaluation. However, we also see that \\(g(x)\\) must be a member of the domain of \\(f\\), otherwise the second function evaluation in \\(f(g(x))\\) cannot be completed, and the expression is still undefined. Thus the domain of \\(f{\\circ}g\\) consists of only those inputs in the domain of \\(g\\) that produce outputs from \\(g\\) belonging to the domain of \\(f\\). Note that the domain of \\(f\\) composed with \\(g\\) is the set of all \\(x\\) such that \\(x\\) is in the domain of \\(g\\) and g(x)\\) is in the domain of \\(f\\).\n\nDefinition: Domain of a Composite Function\n\nThe domain of a composite function \\(f(g(x))\\) is the set of those inputs \\(x\\) in the domain of \\(g\\) for which \\(g(x)\\) is in the domain of \\(f\\).\n\nHow To... \n\nGiven a function composition \\(f(g(x))\\), determine its domain.\n\n1. Find the domain of \\(g\\).\n\n2. Find the domain of \\(f\\).\n\n3. Find those inputs \\(x\\) in the domain of \\(g\\) for which \\(g(x)\\) is in the domain of \\(f\\). That is, exclude those inputs \\(x\\) from the domain of \\(g\\) for which \\(g(x)\\) is not in the domain of \\(f\\). The resulting set is the domain of \\(f{\\circ}g\\).\n\nExample \\(\\PageIndex{8A}\\): Finding the Domain of a Composite Function\n\nFind the domain of\n\n\\[(f∘g)(x) \\text{ where } f(x)=\\dfrac{5}{x−1} \\text{ and } g(x)=\\dfrac{4}{3x−2} \\nonumber\\]\n\nSolution\n\nThe domain of \\(g(x)\\) consists of all real numbers except \\(x=\\frac{2}{3}\\), since that input value would cause us to divide by 0. Likewise, the domain of \\(f\\) consists of all real numbers except 1. So we need to exclude from the domain of \\(g(x)\\) that value of \\(x\\) for which \\(g(x)=1\\).\n\n\\[\\begin{align*} \\dfrac{4}{3x-2}&= 1 \\\\[4pt] 4 &=3x-2 \\\\[4pt] 6&=3x \\\\[4pt] x&= 2 \\end{align*}\\]\n\nSo the domain of \\(f{\\circ}g\\) is the set of all real numbers except \\(\\frac{2}{3}\\) and \\(2\\). This means that\n\n\\[x{\\neq} \\dfrac{2}{3} \\text{ or } x\\neq2 \\nonumber\\]\n\nWe can write this in interval notation as\n\n\\[\\left(−\\infty,\\dfrac{2}{3}\\right)\\cup \\left(\\dfrac{2}{3},2 \\right)\\cup \\left(2,\\infty \\right) \\nonumber\\]\n\nExample \\(\\PageIndex{8B}\\): Finding the Domain of a Composite Function Involving Radicals\n\nFind the domain of\n\n\\[(f{\\circ}g)(x) \\text{ where } f(x)=\\sqrt{x+2} \\text{ and } g(x)=\\sqrt{3−x} \\nonumber\\]\n\nSolution\n\nBecause we cannot take the square root of a negative number, the domain of \\(g\\) is \\(\\left(−\\infty,3\\right]\\). Now we check the domain of the composite function\n\n\\[(f{\\circ}g)(x)=\\sqrt{\\sqrt{3−x}+2} \\nonumber\\]\n\nFor \\((f∘g)(x)=\\sqrt{ \\sqrt{3−x}+2},\\sqrt{3−x}+2≥0,\\) since the radicand of a square root must be positive. Since square roots are positive, \\(\\sqrt{3−x}≥0\\),or, \\(3−x≥0,\\) which gives a domain of \\((-∞,3]\\).\n\nAnalysis\n\nThis example shows that knowledge of the range of functions (specifically the inner function) can also be helpful in finding the domain of a composite function. It also shows that the domain of \\(f{\\circ}g\\) can contain values that are not in the domain of \\(f\\), though they must be in the domain of \\(g\\).\n\nExercise \\(\\PageIndex{6}\\)\n\nFind the domain of\n\n\\[(f{\\circ}g)(x) \\text{ where } f(x)=\\dfrac{1}{x−2} \\text{ and } g(x)=\\sqrt{x+4} \\nonumber\\]\n\nAnswer\n\n\\([−4,0)∪(0,∞)\\)\n\nDecomposing a Composite Function into its Component Functions\n\nIn some cases, it is necessary to decompose a complicated function. In other words, we can write it as a composition of two simpler functions. There may be more than one way to decompose a composite function, so we may choose the decomposition that appears to be most expedient.\n\nExample \\(\\PageIndex{9}\\): Decomposing a Function\n\nWrite \\(f(x)=\\sqrt{5−x^2}\\) as the composition of two functions.\n\nSolution\n\nWe are looking for two functions, \\(g\\) and \\(h\\), so \\(f(x)=g(h(x))\\). To do this, we look for a function inside a function in the formula for \\(f(x)\\). As one possibility, we might notice that the expression \\(5−x^2\\) is the inside of the square root. We could then decompose the function as\n\n\\[h(x)=5−x^2 \\text{ and } g(x)=\\sqrt{x} \\nonumber\\]\n\nWe can check our answer by recomposing the functions.\n\n\\[g(h(x))=g(5−x^2)=\\sqrt{5−x^2} \\nonumber\\]\n\nExercise \\(\\PageIndex{7}\\)\n\nWrite \\(f(x)=\\dfrac{4}{3−\\sqrt{4+x^2}}\\) as the composition of two functions.\n\nAnswer\n\nPossible answers:\n\n\\(g(x)=\\sqrt{4+x^2}\\)\n\n\\(h(x)=\\dfrac{4}{3−x}\\)\n\n\\(f=h{\\circ}g\\)\n\nAccess these online resources for additional instruction and practice with composite functions.\n\nComposite Functions (http://openstaxcollege.org/l/compfunction)\n\nComposite Function Notation Application (http://openstaxcollege.org/l/compfuncnot)\n\nComposite Functions Using Graphs (http://openstaxcollege.org/l/compfuncgraph)\n\nDecompose Functions (http://openstaxcollege.org/l/decompfunction)\n\nComposite Function Values (http://openstaxcollege.org/l/compfuncvalue)\n\nKey Equation\n\nComposite function \\((f{\\circ}g)(x)=f(g(x))\\)\n\nKey Concepts\n\nWe can perform algebraic operations on functions. See Example.\n\nWhen functions are combined, the output of the first (inner) function becomes the input of the second (outer) function.\n\nThe function produced by combining two functions is a composite function. See Example and Example.\n\nThe order of function composition must be considered when interpreting the meaning of composite functions. See Example.\n\nA composite function can be evaluated by evaluating the inner function using the given input value and then evaluating the outer function taking as its input the output of the inner function.\n\nA composite function can be evaluated from a table. See Example.\n\nA composite function can be evaluated from a graph. See Example.\n\nA composite function can be evaluated from a formula. See Example.\n\nThe domain of a composite function consists of those inputs in the domain of the inner function that correspond to outputs of the inner function that are in the domain of the outer function. See Example and Example.\n\nJust as functions can be combined to form a composite function, composite functions can be decomposed into simpler functions.\n\nFunctions can often be decomposed in more than one way. See Example.\n\nGlossary\n\ncomposite function\n\nthe new function formed by function composition, when the output of one function is used as the input of another\n\nThis page titled 3.4: Composition of Functions was last modified on Thu, 26 Dec 2024 22:30:43 GMT and is shared under a CC BY  4.0  license and was authored, remixed, and/or curated by OpenStax via source content that was edited to the style and standards of the LibreTexts platform.",
+  "figures": [
+    {
+      "url": "https://math.libretexts.org/@api/deki/files/960/CNX_Precalc_Figure_01_04_006.jpg?revision=1",
+      "alt": "Explanation of C(T(5)), which is the cost for the temperature and T(5) is the temperature on day 5.",
+      "credit": ""
+    },
+    {
+      "url": "https://math.libretexts.org/@api/deki/files/961/CNX_Precalc_Figure_01_04_001.jpg?revision=1",
+      "alt": "Explanation of the composite function.",
+      "credit": ""
+    },
+    {
+      "url": "https://math.libretexts.org/@api/deki/files/962/CNX_Precalc_Figure_01_04_002ab.jpg?revision=1",
+      "alt": "Two graphs of a positive and negative parabola.",
+      "credit": ""
+    },
+    {
+      "url": "https://math.libretexts.org/@api/deki/files/964/CNX_Precalc_Figure_01_04_004.jpg?revision=1",
+      "alt": "alt",
+      "credit": ""
+    },
+    {
+      "url": "https://math.libretexts.org/@api/deki/files/963/CNX_Precalc_Figure_01_04_005.jpg?revision=1",
+      "alt": "alt",
+      "credit": ""
+    }
+  ],
+  "references": [
+    {
+      "text": "http://openstaxcollege.org/l/compfunction",
+      "url": "http://openstaxcollege.org/l/compfunction"
+    },
+    {
+      "text": "http://openstaxcollege.org/l/compfuncnot",
+      "url": "http://openstaxcollege.org/l/compfuncnot"
+    },
+    {
+      "text": "http://openstaxcollege.org/l/compfuncgraph",
+      "url": "http://openstaxcollege.org/l/compfuncgraph"
+    },
+    {
+      "text": "http://openstaxcollege.org/l/decompfunction",
+      "url": "http://openstaxcollege.org/l/decompfunction"
+    },
+    {
+      "text": "http://openstaxcollege.org/l/compfuncvalue",
+      "url": "http://openstaxcollege.org/l/compfuncvalue"
+    },
+    {
+      "text": "3.4: Composition of Functions",
+      "url": "https://math.libretexts.org/Bookshelves/Algebra/Algebra_and_Trigonometry_1e_(OpenStax)/03%3A_Functions/3.04%3A_Composition_of_Functions"
+    },
+    {
+      "text": "CC BY  4.0",
+      "url": "https://creativecommons.org/licenses/by/4.0"
+    },
+    {
+      "text": "OpenStax",
+      "url": "https://openstax.org/"
+    },
+    {
+      "text": "source content",
+      "url": "https://openstax.org/details/books/precalculus"
+    }
+  ],
+  "exercises": [
+    {
+      "ordinal": 1,
+      "sourceNumber": "",
+      "sourceAnchor": "",
+      "kind": "example-or-exercise",
+      "context": "Just as for this sum of two functions, we can define difference, product, and ratio functions for any pair of functions that have the same kinds of inputs (not necessarily numbers) and also the same kinds of outputs (which do have to be numbers so that the usual operations of algebra can apply to them, and which also must have the same units or no units when we add and subtract). In this way, we can think of adding, subtracting, multiplying, and dividing functions.\n\nFor two functions \\(f(x)\\) and \\(g(x)\\) with real number outputs, we define new functions \\(f+g\\), \\(f−g\\), \\(fg\\), and \\(\\frac{f}{g}\\) by the relations.\n\n\\[ \\begin{align*} (f+g)(x) &=f(x)+g(x) \\\\[4pt] (f−g)(x) &=f(x)−g(x) \\\\[4pt] (fg)(x)&=f(x)g(x) \\\\[4pt] \\left(\\dfrac{f}{g}\\right)(x) &=\\dfrac{f(x)}{g(x)} \\end{align*}\\]",
+      "original": "Example \\(\\PageIndex{1}\\): Performing Algebraic Operations on Functions\n\nFind and simplify the functions \\((g−f)(x)\\) and \\(\\left(\\dfrac{g}{f}\\right)(x)\\), given \\(f(x)=x−1\\) and \\(g(x)=x^2−1\\). Are they the same function?\n\nSolution\n\nBegin by writing the general form, and then substitute the given functions.\n\n\\[\\begin{align*} (g−f)(x) &= g(x)−f(x) \\\\[4pt] (g−f)(x) &=x^2−1−(x−1) \\\\[4pt] &=x^2−x \\\\[4pt] &=x(x−1) \\end{align*}\\]\n\n\\[\\begin{align*} \\left(\\dfrac{g}{f}\\right)(x)&=g(x)f(x) \\\\[4pt] \\left(\\dfrac{g}{f}\\right)(x)&=\\dfrac{x^2−1}{x−1} \\\\[4pt] &=\\dfrac{(x+1)(x−1)}{x−1} \\\\[4pt]&=x+1 \\end{align*}\\]\n\nNo, the functions are not the same.\n\nNote: For \\(\\left(\\dfrac{g}{f}\\right)(x)\\), the condition \\(x\\neq1\\) is necessary because when \\(x=1\\), the denominator is equal to 0, which makes the function undefined.",
+      "prompt": "Example \\(\\PageIndex{1}\\): Performing Algebraic Operations on Functions\n\nFind and simplify the functions \\((g−f)(x)\\) and \\(\\left(\\dfrac{g}{f}\\right)(x)\\), given \\(f(x)=x−1\\) and \\(g(x)=x^2−1\\). Are they the same function?\n\nSolution\n\nBegin by writing the general form, and then substitute the given functions.\n\n\\[\\begin{align*} (g−f)(x) &= g(x)−f(x) \\\\[4pt] (g−f)(x) &=x^2−1−(x−1) \\\\[4pt] &=x^2−x \\\\[4pt] &=x(x−1) \\end{align*}\\]\n\n\\[\\begin{align*} \\left(\\dfrac{g}{f}\\right)(x)&=g(x)f(x) \\\\[4pt] \\left(\\dfrac{g}{f}\\right)(x)&=\\dfrac{x^2−1}{x−1} \\\\[4pt] &=\\dfrac{(x+1)(x−1)}{x−1} \\\\[4pt]&=x+1 \\end{align*}\\]\n\nNo, the functions are not the same.\n\nNote: For \\(\\left(\\dfrac{g}{f}\\right)(x)\\), the condition \\(x\\neq1\\) is necessary because when \\(x=1\\), the denominator is equal to 0, which makes the function undefined.",
+      "sourceAnswers": [],
+      "hasFigure": false,
+      "status": "draft",
+      "answerVerified": false,
+      "translationStatus": "pending",
+      "mappingStatus": "pending"
+    },
+    {
+      "ordinal": 2,
+      "sourceNumber": "",
+      "sourceAnchor": "",
+      "kind": "exercise-candidate",
+      "context": "Just as for this sum of two functions, we can define difference, product, and ratio functions for any pair of functions that have the same kinds of inputs (not necessarily numbers) and also the same kinds of outputs (which do have to be numbers so that the usual operations of algebra can apply to them, and which also must have the same units or no units when we add and subtract). In this way, we can think of adding, subtracting, multiplying, and dividing functions.\n\nFor two functions \\(f(x)\\) and \\(g(x)\\) with real number outputs, we define new functions \\(f+g\\), \\(f−g\\), \\(fg\\), and \\(\\frac{f}{g}\\) by the relations.\n\n\\[ \\begin{align*} (f+g)(x) &=f(x)+g(x) \\\\[4pt] (f−g)(x) &=f(x)−g(x) \\\\[4pt] (fg)(x)&=f(x)g(x) \\\\[4pt] \\left(\\dfrac{f}{g}\\right)(x) &=\\dfrac{f(x)}{g(x)} \\end{align*}\\]",
+      "original": "Exercise \\(\\PageIndex{1}\\)\n\nFind and simplify the functions \\((fg)(x)\\) and \\((f−g)(x)\\).\n\n\\[f(x)=x−1 \\nonumber\\]\n\nand\n\n\\[g(x)=x^2−1 \\nonumber\\]\n\nAre they the same function?\n\nAnswer\n\n\\((fg)(x)=f(x)g(x)=(x−1)(x2−1)=x^3−x^2−x+1 \\\\[4pt] (f−g)(x)=f(x)−g(x)=(x−1)−(x^2−1)=x−x^2\\)\n\nNo, the functions are not the same.",
+      "prompt": "Exercise \\(\\PageIndex{1}\\)\n\nFind and simplify the functions \\((fg)(x)\\) and \\((f−g)(x)\\).\n\n\\[f(x)=x−1 \\nonumber\\]\n\nand\n\n\\[g(x)=x^2−1 \\nonumber\\]\n\nAre they the same function?",
+      "sourceAnswers": [
+        "\\((fg)(x)=f(x)g(x)=(x−1)(x2−1)=x^3−x^2−x+1 \\\\[4pt] (f−g)(x)=f(x)−g(x)=(x−1)−(x^2−1)=x−x^2\\)\n\nNo, the functions are not the same."
+      ],
+      "hasFigure": false,
+      "status": "draft",
+      "answerVerified": false,
+      "translationStatus": "pending",
+      "mappingStatus": "pending"
+    },
+    {
+      "ordinal": 3,
+      "sourceNumber": "",
+      "sourceAnchor": "",
+      "kind": "example-or-exercise",
+      "context": "\\[(f{\\circ}g)(x)=f(g(x))\\]\n\nThe domain of the composite function \\(f{\\circ}g\\) is all \\(x\\) such that \\(x\\) is in the domain of \\(g\\) and \\(g(x)\\) is in the domain of \\(f\\).\n\nIt is important to realize that the product of functions \\(fg\\) is not the same as the function composition \\(f(g(x))\\), because, in general, \\(f(x)g(x){\\neq}f(g(x))\\).",
+      "original": "Example \\(\\PageIndex{2}\\): Determining whether Composition of Functions is Commutative\n\nUsing the functions provided, find \\(f(g(x))\\) and \\(g(f(x))\\). Determine whether the composition of the functions is commutative.\n\n\\[f(x)=2x+1 \\;\\;\\;\\; g(x)=3−x \\nonumber\\]\n\nSolution\n\nLet’s begin by substituting \\(g(x)\\) into \\(f(x)\\).\n\n\\[\\begin{align*} f(g(x))&= 2(3−x)+1 \\\\[4pt] &=6−2x+1 \\\\[4pt] &=7−2x \\end{align*}\\]\n\nNow we can substitute \\(f(x)\\) into \\(g(x)\\).\n\n\\[\\begin{align*} g(f(x))&= 3−(2x+1) \\\\[4pt]&=3−2x−1 \\\\[4pt] &=2-2x \\end{align*}\\]\n\nWe find that \\(g(f(x)){\\neq}f(g(x))\\), so the operation of function composition is not commutative.",
+      "prompt": "Example \\(\\PageIndex{2}\\): Determining whether Composition of Functions is Commutative\n\nUsing the functions provided, find \\(f(g(x))\\) and \\(g(f(x))\\). Determine whether the composition of the functions is commutative.\n\n\\[f(x)=2x+1 \\;\\;\\;\\; g(x)=3−x \\nonumber\\]\n\nSolution\n\nLet’s begin by substituting \\(g(x)\\) into \\(f(x)\\).\n\n\\[\\begin{align*} f(g(x))&= 2(3−x)+1 \\\\[4pt] &=6−2x+1 \\\\[4pt] &=7−2x \\end{align*}\\]\n\nNow we can substitute \\(f(x)\\) into \\(g(x)\\).\n\n\\[\\begin{align*} g(f(x))&= 3−(2x+1) \\\\[4pt]&=3−2x−1 \\\\[4pt] &=2-2x \\end{align*}\\]\n\nWe find that \\(g(f(x)){\\neq}f(g(x))\\), so the operation of function composition is not commutative.",
+      "sourceAnswers": [],
+      "hasFigure": false,
+      "status": "draft",
+      "answerVerified": false,
+      "translationStatus": "pending",
+      "mappingStatus": "pending"
+    },
+    {
+      "ordinal": 4,
+      "sourceNumber": "",
+      "sourceAnchor": "",
+      "kind": "example-or-exercise",
+      "context": "\\[(f{\\circ}g)(x)=f(g(x))\\]\n\nThe domain of the composite function \\(f{\\circ}g\\) is all \\(x\\) such that \\(x\\) is in the domain of \\(g\\) and \\(g(x)\\) is in the domain of \\(f\\).\n\nIt is important to realize that the product of functions \\(fg\\) is not the same as the function composition \\(f(g(x))\\), because, in general, \\(f(x)g(x){\\neq}f(g(x))\\).",
+      "original": "Example \\(\\PageIndex{3}\\): Interpreting Composite Functions\n\nThe function \\(c(s)\\) gives the number of calories burned completing \\(s\\) sit-ups, and \\(s(t)\\) gives the number of sit-ups a person can complete in \\(t\\) minutes. Interpret \\(c(s(3))\\).\n\nSolution\n\nThe inside expression in the composition is \\(s(3)\\). Because the input to the \\(s\\)-function is time, \\(t=3\\) represents 3 minutes, and \\(s(3)\\) is the number of sit-ups completed in 3 minutes.\n\nUsing \\(s(3)\\) as the input to the function \\(c(s)\\) gives us the number of calories burned during the number of sit-ups that can be completed in 3 minutes, or simply the number of calories burned in 3 minutes (by doing sit-ups).",
+      "prompt": "Example \\(\\PageIndex{3}\\): Interpreting Composite Functions\n\nThe function \\(c(s)\\) gives the number of calories burned completing \\(s\\) sit-ups, and \\(s(t)\\) gives the number of sit-ups a person can complete in \\(t\\) minutes. Interpret \\(c(s(3))\\).\n\nSolution\n\nThe inside expression in the composition is \\(s(3)\\). Because the input to the \\(s\\)-function is time, \\(t=3\\) represents 3 minutes, and \\(s(3)\\) is the number of sit-ups completed in 3 minutes.\n\nUsing \\(s(3)\\) as the input to the function \\(c(s)\\) gives us the number of calories burned during the number of sit-ups that can be completed in 3 minutes, or simply the number of calories burned in 3 minutes (by doing sit-ups).",
+      "sourceAnswers": [],
+      "hasFigure": false,
+      "status": "draft",
+      "answerVerified": false,
+      "translationStatus": "pending",
+      "mappingStatus": "pending"
+    },
+    {
+      "ordinal": 5,
+      "sourceNumber": "",
+      "sourceAnchor": "",
+      "kind": "example-or-exercise",
+      "context": "\\[(f{\\circ}g)(x)=f(g(x))\\]\n\nThe domain of the composite function \\(f{\\circ}g\\) is all \\(x\\) such that \\(x\\) is in the domain of \\(g\\) and \\(g(x)\\) is in the domain of \\(f\\).\n\nIt is important to realize that the product of functions \\(fg\\) is not the same as the function composition \\(f(g(x))\\), because, in general, \\(f(x)g(x){\\neq}f(g(x))\\).",
+      "original": "Example \\(\\PageIndex{4}\\): Investigating the Order of Function Composition\n\nSuppose \\(f(x)\\) gives miles that can be driven in \\(x\\) hours and \\(g(y)\\) gives the gallons of gas used in driving \\(y\\) miles. Which of these expressions is meaningful: \\(f(g(y))\\) or \\(g(f(x))\\)?\n\nSolution\n\nThe function \\(y=f(x)\\) is a function whose output is the number of miles driven corresponding to the number of hours driven.\n\n\\[\\text{number of miles } =f (\\text{number of hours}) \\nonumber\\]\n\nThe function \\(g(y)\\) is a function whose output is the number of gallons used corresponding to the number of miles driven. This means:\n\n\\[\\text{number of gallons } =g(\\text{number of miles}) \\nonumber\\]\n\nThe expression \\(g(y)\\) takes miles as the input and a number of gallons as the output. The function \\(f(x)\\) requires a number of hours as the input. Trying to input a number of gallons does not make sense. The expression \\(f(g(y))\\) is meaningless.\n\nThe expression \\(f(x)\\) takes hours as input and a number of miles driven as the output. The function \\(g(y)\\) requires a number of miles as the input. Using \\(f(x)\\) (miles driven) as an input value for \\(g(y)\\), where gallons of gas depends on miles driven, does make sense. The expression \\(g(f(x))\\) makes sense, and will yield the number of gallons of gas used, \\(g\\), driving a certain number of miles, \\(f(x)\\), in \\(x\\) hours.",
+      "prompt": "Example \\(\\PageIndex{4}\\): Investigating the Order of Function Composition\n\nSuppose \\(f(x)\\) gives miles that can be driven in \\(x\\) hours and \\(g(y)\\) gives the gallons of gas used in driving \\(y\\) miles. Which of these expressions is meaningful: \\(f(g(y))\\) or \\(g(f(x))\\)?\n\nSolution\n\nThe function \\(y=f(x)\\) is a function whose output is the number of miles driven corresponding to the number of hours driven.\n\n\\[\\text{number of miles } =f (\\text{number of hours}) \\nonumber\\]\n\nThe function \\(g(y)\\) is a function whose output is the number of gallons used corresponding to the number of miles driven. This means:\n\n\\[\\text{number of gallons } =g(\\text{number of miles}) \\nonumber\\]\n\nThe expression \\(g(y)\\) takes miles as the input and a number of gallons as the output. The function \\(f(x)\\) requires a number of hours as the input. Trying to input a number of gallons does not make sense. The expression \\(f(g(y))\\) is meaningless.\n\nThe expression \\(f(x)\\) takes hours as input and a number of miles driven as the output. The function \\(g(y)\\) requires a number of miles as the input. Using \\(f(x)\\) (miles driven) as an input value for \\(g(y)\\), where gallons of gas depends on miles driven, does make sense. The expression \\(g(f(x))\\) makes sense, and will yield the number of gallons of gas used, \\(g\\), driving a certain number of miles, \\(f(x)\\), in \\(x\\) hours.",
+      "sourceAnswers": [],
+      "hasFigure": false,
+      "status": "draft",
+      "answerVerified": false,
+      "translationStatus": "pending",
+      "mappingStatus": "pending"
+    },
+    {
+      "ordinal": 6,
+      "sourceNumber": "",
+      "sourceAnchor": "",
+      "kind": "exercise-candidate",
+      "context": "Question/Answer\n\nAre there any situations where \\(f(g(y))\\) and \\(g(f(x))\\) would both be meaningful or useful expressions?\n\nYes. For many pure mathematical functions, both compositions make sense, even though they usually produce different new functions. In real-world problems, functions whose inputs and outputs have the same units also may give compositions that are meaningful in either order",
+      "original": "Exercise \\(\\PageIndex{2}\\)\n\nThe gravitational force on a planet a distance \\(r\\) from the sun is given by the function \\(G(r)\\). The acceleration of a planet subjected to any force \\(F\\) is given by the function \\(a(F)\\). Form a meaningful composition of these two functions, and explain what it means.\n\nAnswer\n\nA gravitational force is still a force, so \\(a(G(r))\\) makes sense as the acceleration of a planet at a distance \\(r\\) from the Sun (due to gravity), but \\(G(a(F))\\) does not make sense.",
+      "prompt": "Exercise \\(\\PageIndex{2}\\)\n\nThe gravitational force on a planet a distance \\(r\\) from the sun is given by the function \\(G(r)\\). The acceleration of a planet subjected to any force \\(F\\) is given by the function \\(a(F)\\). Form a meaningful composition of these two functions, and explain what it means.",
+      "sourceAnswers": [
+        "A gravitational force is still a force, so \\(a(G(r))\\) makes sense as the acceleration of a planet at a distance \\(r\\) from the Sun (due to gravity), but \\(G(a(F))\\) does not make sense."
+      ],
+      "hasFigure": false,
+      "status": "draft",
+      "answerVerified": false,
+      "translationStatus": "pending",
+      "mappingStatus": "pending"
+    },
+    {
+      "ordinal": 7,
+      "sourceNumber": "",
+      "sourceAnchor": "",
+      "kind": "example-or-exercise",
+      "context": "Evaluating Composite Functions Using Tables\n\nWhen working with functions given as tables, we read input and output values from the table entries and always work from the inside to the outside. We evaluate the inside function first and then use the output of the inside function as the input to the outside function.",
+      "original": "Example \\(\\PageIndex{5}\\): Using a Table to Evaluate a Composite Function\n\nUsing Table \\(\\PageIndex{1}\\), evaluate \\(f(g(3))\\) and \\(g(f(3))\\).\n\n    Table \\(\\PageIndex{1}\\)\n\n            \\(x\\)\t\n            \\(f(x)\\)\t\n            \\(g(x)\\)\t\n\n            1\t\n            6\t\n            3\t\n\n            2\t\n            8\t\n            5\t\n\n            3\t\n            3\t\n            2\t\n\n            4\t\n            1\t\n            7\t\n\nSolution\n\nTo evaluate \\(f(g(3))\\), we start from the inside with the input value 3. We then evaluate the inside expression \\(g(3)\\) using the table that defines the function \\(g: g(3)=2\\). We can then use that result as the input to the function \\(f\\), so \\(g(3)\\) is replaced by 2 and we get \\(f(2)\\). Then, using the table that defines the function \\(f\\), we find that \\(f(2)=8\\).\n\n\\[g(3)=2 \\nonumber\\]\n\n\\[f(g(3))=f(2)=8 \\nonumber\\]\n\nTo evaluate \\(g(f(3))\\), we first evaluate the inside expression \\(f(3)\\) using the first table: \\(f(3)=3\\). Then, using the table for \\(g\\), we can evaluate\n\n\\[g(f(3))=g(3)=2 \\nonumber\\]\n\nTable \\(\\PageIndex{2}\\) shows the composite functions \\(f{\\circ}g\\) and \\(g{\\circ}f\\) as tables.\n\n    Table \\(\\PageIndex{2}\\)\n\n            \\(x\\)\t\n            \\(g(x)\\)\t\n            \\(f(g(x))\\)\t\n            \\(f(x)\\)\t\n            \\(g(f(x))\\)\t\n\n            3\t\n            2\t\n            8\t\n            3\t\n            2",
+      "prompt": "Example \\(\\PageIndex{5}\\): Using a Table to Evaluate a Composite Function\n\nUsing Table \\(\\PageIndex{1}\\), evaluate \\(f(g(3))\\) and \\(g(f(3))\\).\n\n    Table \\(\\PageIndex{1}\\)\n\n            \\(x\\)\t\n            \\(f(x)\\)\t\n            \\(g(x)\\)\t\n\n            1\t\n            6\t\n            3\t\n\n            2\t\n            8\t\n            5\t\n\n            3\t\n            3\t\n            2\t\n\n            4\t\n            1\t\n            7\t\n\nSolution\n\nTo evaluate \\(f(g(3))\\), we start from the inside with the input value 3. We then evaluate the inside expression \\(g(3)\\) using the table that defines the function \\(g: g(3)=2\\). We can then use that result as the input to the function \\(f\\), so \\(g(3)\\) is replaced by 2 and we get \\(f(2)\\). Then, using the table that defines the function \\(f\\), we find that \\(f(2)=8\\).\n\n\\[g(3)=2 \\nonumber\\]\n\n\\[f(g(3))=f(2)=8 \\nonumber\\]\n\nTo evaluate \\(g(f(3))\\), we first evaluate the inside expression \\(f(3)\\) using the first table: \\(f(3)=3\\). Then, using the table for \\(g\\), we can evaluate\n\n\\[g(f(3))=g(3)=2 \\nonumber\\]\n\nTable \\(\\PageIndex{2}\\) shows the composite functions \\(f{\\circ}g\\) and \\(g{\\circ}f\\) as tables.\n\n    Table \\(\\PageIndex{2}\\)\n\n            \\(x\\)\t\n            \\(g(x)\\)\t\n            \\(f(g(x))\\)\t\n            \\(f(x)\\)\t\n            \\(g(f(x))\\)\t\n\n            3\t\n            2\t\n            8\t\n            3\t\n            2",
+      "sourceAnswers": [],
+      "hasFigure": false,
+      "status": "draft",
+      "answerVerified": false,
+      "translationStatus": "pending",
+      "mappingStatus": "pending"
+    },
+    {
+      "ordinal": 8,
+      "sourceNumber": "",
+      "sourceAnchor": "",
+      "kind": "exercise-candidate",
+      "context": "Evaluating Composite Functions Using Tables\n\nWhen working with functions given as tables, we read input and output values from the table entries and always work from the inside to the outside. We evaluate the inside function first and then use the output of the inside function as the input to the outside function.",
+      "original": "Exercise \\(\\PageIndex{3}\\)\n\nUsing Table \\(\\PageIndex{1}\\), evaluate \\(f(g(1))\\) and \\(g(f(4))\\).\n\nAnswer\n\n\\(f(g(1))=f(3)=3\\) and \\(g(f(4))=g(1)=3\\)",
+      "prompt": "Exercise \\(\\PageIndex{3}\\)\n\nUsing Table \\(\\PageIndex{1}\\), evaluate \\(f(g(1))\\) and \\(g(f(4))\\).",
+      "sourceAnswers": [
+        "\\(f(g(1))=f(3)=3\\) and \\(g(f(4))=g(1)=3\\)"
+      ],
+      "hasFigure": false,
+      "status": "draft",
+      "answerVerified": false,
+      "translationStatus": "pending",
+      "mappingStatus": "pending"
+    },
+    {
+      "ordinal": 9,
+      "sourceNumber": "1",
+      "sourceAnchor": "",
+      "kind": "exercise-candidate",
+      "context": "When we are given individual functions as graphs, the procedure for evaluating composite functions is similar to the process we use for evaluating tables. We read the input and output values, but this time, from the x- and y-axes of the graphs.\n\nHow To ...\n\nGiven a composite function and graphs of its individual functions, evaluate it using the information provided by the graphs.",
+      "original": "1. Locate the given input to the inner function on the x-axis of its graph.",
+      "prompt": "1. Locate the given input to the inner function on the x-axis of its graph.",
+      "sourceAnswers": [],
+      "hasFigure": false,
+      "status": "draft",
+      "answerVerified": false,
+      "translationStatus": "pending",
+      "mappingStatus": "pending"
+    },
+    {
+      "ordinal": 10,
+      "sourceNumber": "2",
+      "sourceAnchor": "",
+      "kind": "exercise-candidate",
+      "context": "When we are given individual functions as graphs, the procedure for evaluating composite functions is similar to the process we use for evaluating tables. We read the input and output values, but this time, from the x- and y-axes of the graphs.\n\nHow To ...\n\nGiven a composite function and graphs of its individual functions, evaluate it using the information provided by the graphs.",
+      "original": "2. Read off the output of the inner function from the y-axis of its graph.",
+      "prompt": "2. Read off the output of the inner function from the y-axis of its graph.",
+      "sourceAnswers": [],
+      "hasFigure": false,
+      "status": "draft",
+      "answerVerified": false,
+      "translationStatus": "pending",
+      "mappingStatus": "pending"
+    },
+    {
+      "ordinal": 11,
+      "sourceNumber": "3",
+      "sourceAnchor": "",
+      "kind": "exercise-candidate",
+      "context": "When we are given individual functions as graphs, the procedure for evaluating composite functions is similar to the process we use for evaluating tables. We read the input and output values, but this time, from the x- and y-axes of the graphs.\n\nHow To ...\n\nGiven a composite function and graphs of its individual functions, evaluate it using the information provided by the graphs.",
+      "original": "3. Locate the inner function output on the x-axis of the graph of the outer function.",
+      "prompt": "3. Locate the inner function output on the x-axis of the graph of the outer function.",
+      "sourceAnswers": [],
+      "hasFigure": false,
+      "status": "draft",
+      "answerVerified": false,
+      "translationStatus": "pending",
+      "mappingStatus": "pending"
+    },
+    {
+      "ordinal": 12,
+      "sourceNumber": "4",
+      "sourceAnchor": "",
+      "kind": "exercise-candidate",
+      "context": "When we are given individual functions as graphs, the procedure for evaluating composite functions is similar to the process we use for evaluating tables. We read the input and output values, but this time, from the x- and y-axes of the graphs.\n\nHow To ...\n\nGiven a composite function and graphs of its individual functions, evaluate it using the information provided by the graphs.",
+      "original": "4. Read the output of the outer function from the y-axis of its graph. This is the output of the composite function.",
+      "prompt": "4. Read the output of the outer function from the y-axis of its graph. This is the output of the composite function.",
+      "sourceAnswers": [],
+      "hasFigure": false,
+      "status": "draft",
+      "answerVerified": false,
+      "translationStatus": "pending",
+      "mappingStatus": "pending"
+    },
+    {
+      "ordinal": 13,
+      "sourceNumber": "",
+      "sourceAnchor": "",
+      "kind": "example-or-exercise",
+      "context": "When we are given individual functions as graphs, the procedure for evaluating composite functions is similar to the process we use for evaluating tables. We read the input and output values, but this time, from the x- and y-axes of the graphs.\n\nHow To ...\n\nGiven a composite function and graphs of its individual functions, evaluate it using the information provided by the graphs.",
+      "original": "Example \\(\\PageIndex{6}\\): Using a Graph to Evaluate a Composite Function\n\nUsing Figure \\(\\PageIndex{3}\\), evaluate \\(f(g(1))\\).\n\n[Figure: Two graphs of a positive and negative parabola.]\n\nFigure \\(\\PageIndex{3}\\): Two graphs of a positive and negative parabola.\n\nSolution\n\nTo evaluate \\(f(g(1))\\), we start with the inside evaluation. See Figure \\(\\PageIndex{4}\\).\n\n[Figure: alt]\n\nFigure \\(\\PageIndex{4}\\): Two graphs of a positive parabola \\(g(x)\\) and a negative parabola \\(f(x)\\). The following points are plotted: \\(g(1)=3\\) and \\(f(3)=6\\).\n\nWe evaluate \\(g(1)\\) using the graph of \\(g(x)\\), finding the input of 1 on the x-axis and finding the output value of the graph at that input. Here, \\(g(1)=3\\). We use this value as the input to the function \\(f\\).\n\n\\[f(g(1))=f(3) \\nonumber\\]\n\nWe can then evaluate the composite function by looking to the graph of \\(f(x)\\), finding the input of 3 on the x-axis and reading the output value of the graph at this input. Here, \\(f(3)=6\\), so \\(f(g(1))=6\\).\n\nAnalysis\n\nFigure \\(\\PageIndex{5}\\) shows how we can mark the graphs with arrows to trace the path from the input value to the output value.\n\n[Figure: alt]\n\nFigure \\(\\PageIndex{5}\\): Two graphs of a positive and negative parabola.",
+      "prompt": "Example \\(\\PageIndex{6}\\): Using a Graph to Evaluate a Composite Function\n\nUsing Figure \\(\\PageIndex{3}\\), evaluate \\(f(g(1))\\).\n\n[Figure: Two graphs of a positive and negative parabola.]\n\nFigure \\(\\PageIndex{3}\\): Two graphs of a positive and negative parabola.\n\nSolution\n\nTo evaluate \\(f(g(1))\\), we start with the inside evaluation. See Figure \\(\\PageIndex{4}\\).\n\n[Figure: alt]\n\nFigure \\(\\PageIndex{4}\\): Two graphs of a positive parabola \\(g(x)\\) and a negative parabola \\(f(x)\\). The following points are plotted: \\(g(1)=3\\) and \\(f(3)=6\\).\n\nWe evaluate \\(g(1)\\) using the graph of \\(g(x)\\), finding the input of 1 on the x-axis and finding the output value of the graph at that input. Here, \\(g(1)=3\\). We use this value as the input to the function \\(f\\).\n\n\\[f(g(1))=f(3) \\nonumber\\]\n\nWe can then evaluate the composite function by looking to the graph of \\(f(x)\\), finding the input of 3 on the x-axis and reading the output value of the graph at this input. Here, \\(f(3)=6\\), so \\(f(g(1))=6\\).\n\nAnalysis\n\nFigure \\(\\PageIndex{5}\\) shows how we can mark the graphs with arrows to trace the path from the input value to the output value.\n\n[Figure: alt]\n\nFigure \\(\\PageIndex{5}\\): Two graphs of a positive and negative parabola.",
+      "sourceAnswers": [],
+      "hasFigure": true,
+      "status": "draft",
+      "answerVerified": false,
+      "translationStatus": "pending",
+      "mappingStatus": "pending"
+    },
+    {
+      "ordinal": 14,
+      "sourceNumber": "",
+      "sourceAnchor": "",
+      "kind": "exercise-candidate",
+      "context": "When we are given individual functions as graphs, the procedure for evaluating composite functions is similar to the process we use for evaluating tables. We read the input and output values, but this time, from the x- and y-axes of the graphs.\n\nHow To ...\n\nGiven a composite function and graphs of its individual functions, evaluate it using the information provided by the graphs.",
+      "original": "Exercise \\(\\PageIndex{4}\\)\n\nUsing Figure \\(\\PageIndex{3}\\), evaluate \\(g(f(2))\\).\n\nAnswer\n\n\\(g(f(2))=g(5)=3\\)",
+      "prompt": "Exercise \\(\\PageIndex{4}\\)\n\nUsing Figure \\(\\PageIndex{3}\\), evaluate \\(g(f(2))\\).",
+      "sourceAnswers": [
+        "\\(g(f(2))=g(5)=3\\)"
+      ],
+      "hasFigure": false,
+      "status": "draft",
+      "answerVerified": false,
+      "translationStatus": "pending",
+      "mappingStatus": "pending"
+    },
+    {
+      "ordinal": 15,
+      "sourceNumber": "1",
+      "sourceAnchor": "",
+      "kind": "exercise-candidate",
+      "context": "While we can compose the functions for each individual input value, it is sometimes helpful to find a single formula that will calculate the result of a composition \\(f(g(x))\\). To do this, we will extend our idea of function evaluation. Recall that, when we evaluate a function like \\(f(t)=t^2−t\\), we substitute the value inside the parentheses into the formula wherever we see the input variable.\n\nHow To...\n\nGiven a formula for a composite function, evaluate the function.",
+      "original": "1. Evaluate the inside function using the input value or variable provided.",
+      "prompt": "1. Evaluate the inside function using the input value or variable provided.",
+      "sourceAnswers": [],
+      "hasFigure": false,
+      "status": "draft",
+      "answerVerified": false,
+      "translationStatus": "pending",
+      "mappingStatus": "pending"
+    },
+    {
+      "ordinal": 16,
+      "sourceNumber": "2",
+      "sourceAnchor": "",
+      "kind": "exercise-candidate",
+      "context": "While we can compose the functions for each individual input value, it is sometimes helpful to find a single formula that will calculate the result of a composition \\(f(g(x))\\). To do this, we will extend our idea of function evaluation. Recall that, when we evaluate a function like \\(f(t)=t^2−t\\), we substitute the value inside the parentheses into the formula wherever we see the input variable.\n\nHow To...\n\nGiven a formula for a composite function, evaluate the function.",
+      "original": "2. Use the resulting output as the input to the outside function.",
+      "prompt": "2. Use the resulting output as the input to the outside function.",
+      "sourceAnswers": [],
+      "hasFigure": false,
+      "status": "draft",
+      "answerVerified": false,
+      "translationStatus": "pending",
+      "mappingStatus": "pending"
+    },
+    {
+      "ordinal": 17,
+      "sourceNumber": "",
+      "sourceAnchor": "",
+      "kind": "example-or-exercise",
+      "context": "While we can compose the functions for each individual input value, it is sometimes helpful to find a single formula that will calculate the result of a composition \\(f(g(x))\\). To do this, we will extend our idea of function evaluation. Recall that, when we evaluate a function like \\(f(t)=t^2−t\\), we substitute the value inside the parentheses into the formula wherever we see the input variable.\n\nHow To...\n\nGiven a formula for a composite function, evaluate the function.",
+      "original": "Example \\(\\PageIndex{7}\\): Evaluating a Composition of Functions Expressed as Formulas with a Numerical Input\n\nGiven \\(f(t)=t^2−t\\) and \\(h(x)=3x+2\\), evaluate \\(f(h(1))\\).\n\nSolution\n\nBecause the inside expression is \\(h(1)\\), we start by evaluating \\(h(x)\\) at 1.\n\n\\[ \\begin{align*} h(1)=3(1)+2 \\\\[4pt] h(1)&=5 \\end{align*} \\]\n\nThen \\(f(h(1))=f(5)\\), so we evaluate \\(f(t)\\) at an input of 5.\n\n\\[ \\begin{align*} f(h(1)) &=f(5) \\\\[5pt] f(h(1))&=5^2−5 \\\\[5pt] f(h(1))&=20 \\end{align*} \\]\n\nAnalysis\n\nIt makes no difference what the input variables \\(t\\) and \\(x\\) were called in this problem because we evaluated for specific numerical values.",
+      "prompt": "Example \\(\\PageIndex{7}\\): Evaluating a Composition of Functions Expressed as Formulas with a Numerical Input\n\nGiven \\(f(t)=t^2−t\\) and \\(h(x)=3x+2\\), evaluate \\(f(h(1))\\).\n\nSolution\n\nBecause the inside expression is \\(h(1)\\), we start by evaluating \\(h(x)\\) at 1.\n\n\\[ \\begin{align*} h(1)=3(1)+2 \\\\[4pt] h(1)&=5 \\end{align*} \\]\n\nThen \\(f(h(1))=f(5)\\), so we evaluate \\(f(t)\\) at an input of 5.\n\n\\[ \\begin{align*} f(h(1)) &=f(5) \\\\[5pt] f(h(1))&=5^2−5 \\\\[5pt] f(h(1))&=20 \\end{align*} \\]\n\nAnalysis\n\nIt makes no difference what the input variables \\(t\\) and \\(x\\) were called in this problem because we evaluated for specific numerical values.",
+      "sourceAnswers": [],
+      "hasFigure": false,
+      "status": "draft",
+      "answerVerified": false,
+      "translationStatus": "pending",
+      "mappingStatus": "pending"
+    },
+    {
+      "ordinal": 18,
+      "sourceNumber": "",
+      "sourceAnchor": "",
+      "kind": "exercise-candidate",
+      "context": "While we can compose the functions for each individual input value, it is sometimes helpful to find a single formula that will calculate the result of a composition \\(f(g(x))\\). To do this, we will extend our idea of function evaluation. Recall that, when we evaluate a function like \\(f(t)=t^2−t\\), we substitute the value inside the parentheses into the formula wherever we see the input variable.\n\nHow To...\n\nGiven a formula for a composite function, evaluate the function.",
+      "original": "Exercise \\(\\PageIndex{5}\\)\n\nGiven \\(f(t)=t^2−t\\) and \\(h(x)=3x+2\\), evaluate\n\na. \\(h(f(2))\\)\n\nb. \\(h(f(−2))\\)\n\nAnswer a\n\n8\n\nAnswer b\n\n20",
+      "prompt": "Exercise \\(\\PageIndex{5}\\)\n\nGiven \\(f(t)=t^2−t\\) and \\(h(x)=3x+2\\), evaluate\n\na. \\(h(f(2))\\)\n\nb. \\(h(f(−2))\\)",
+      "sourceAnswers": [
+        "8",
+        "20"
+      ],
+      "hasFigure": false,
+      "status": "draft",
+      "answerVerified": false,
+      "translationStatus": "pending",
+      "mappingStatus": "pending"
+    },
+    {
+      "ordinal": 19,
+      "sourceNumber": "1",
+      "sourceAnchor": "",
+      "kind": "exercise-candidate",
+      "context": "The domain of a composite function \\(f(g(x))\\) is the set of those inputs \\(x\\) in the domain of \\(g\\) for which \\(g(x)\\) is in the domain of \\(f\\).\n\nHow To...\n\nGiven a function composition \\(f(g(x))\\), determine its domain.",
+      "original": "1. Find the domain of \\(g\\).",
+      "prompt": "1. Find the domain of \\(g\\).",
+      "sourceAnswers": [],
+      "hasFigure": false,
+      "status": "draft",
+      "answerVerified": false,
+      "translationStatus": "pending",
+      "mappingStatus": "pending"
+    },
+    {
+      "ordinal": 20,
+      "sourceNumber": "2",
+      "sourceAnchor": "",
+      "kind": "exercise-candidate",
+      "context": "The domain of a composite function \\(f(g(x))\\) is the set of those inputs \\(x\\) in the domain of \\(g\\) for which \\(g(x)\\) is in the domain of \\(f\\).\n\nHow To...\n\nGiven a function composition \\(f(g(x))\\), determine its domain.",
+      "original": "2. Find the domain of \\(f\\).",
+      "prompt": "2. Find the domain of \\(f\\).",
+      "sourceAnswers": [],
+      "hasFigure": false,
+      "status": "draft",
+      "answerVerified": false,
+      "translationStatus": "pending",
+      "mappingStatus": "pending"
+    },
+    {
+      "ordinal": 21,
+      "sourceNumber": "3",
+      "sourceAnchor": "",
+      "kind": "exercise-candidate",
+      "context": "The domain of a composite function \\(f(g(x))\\) is the set of those inputs \\(x\\) in the domain of \\(g\\) for which \\(g(x)\\) is in the domain of \\(f\\).\n\nHow To...\n\nGiven a function composition \\(f(g(x))\\), determine its domain.",
+      "original": "3. Find those inputs \\(x\\) in the domain of \\(g\\) for which \\(g(x)\\) is in the domain of \\(f\\). That is, exclude those inputs \\(x\\) from the domain of \\(g\\) for which \\(g(x)\\) is not in the domain of \\(f\\). The resulting set is the domain of \\(f{\\circ}g\\).",
+      "prompt": "3. Find those inputs \\(x\\) in the domain of \\(g\\) for which \\(g(x)\\) is in the domain of \\(f\\). That is, exclude those inputs \\(x\\) from the domain of \\(g\\) for which \\(g(x)\\) is not in the domain of \\(f\\). The resulting set is the domain of \\(f{\\circ}g\\).",
+      "sourceAnswers": [],
+      "hasFigure": false,
+      "status": "draft",
+      "answerVerified": false,
+      "translationStatus": "pending",
+      "mappingStatus": "pending"
+    },
+    {
+      "ordinal": 22,
+      "sourceNumber": "",
+      "sourceAnchor": "",
+      "kind": "example-or-exercise",
+      "context": "The domain of a composite function \\(f(g(x))\\) is the set of those inputs \\(x\\) in the domain of \\(g\\) for which \\(g(x)\\) is in the domain of \\(f\\).\n\nHow To...\n\nGiven a function composition \\(f(g(x))\\), determine its domain.",
+      "original": "Example \\(\\PageIndex{8A}\\): Finding the Domain of a Composite Function\n\nFind the domain of\n\n\\[(f∘g)(x) \\text{ where } f(x)=\\dfrac{5}{x−1} \\text{ and } g(x)=\\dfrac{4}{3x−2} \\nonumber\\]\n\nSolution\n\nThe domain of \\(g(x)\\) consists of all real numbers except \\(x=\\frac{2}{3}\\), since that input value would cause us to divide by 0. Likewise, the domain of \\(f\\) consists of all real numbers except 1. So we need to exclude from the domain of \\(g(x)\\) that value of \\(x\\) for which \\(g(x)=1\\).\n\n\\[\\begin{align*} \\dfrac{4}{3x-2}&= 1 \\\\[4pt] 4 &=3x-2 \\\\[4pt] 6&=3x \\\\[4pt] x&= 2 \\end{align*}\\]\n\nSo the domain of \\(f{\\circ}g\\) is the set of all real numbers except \\(\\frac{2}{3}\\) and \\(2\\). This means that\n\n\\[x{\\neq} \\dfrac{2}{3} \\text{ or } x\\neq2 \\nonumber\\]\n\nWe can write this in interval notation as\n\n\\[\\left(−\\infty,\\dfrac{2}{3}\\right)\\cup \\left(\\dfrac{2}{3},2 \\right)\\cup \\left(2,\\infty \\right) \\nonumber\\]",
+      "prompt": "Example \\(\\PageIndex{8A}\\): Finding the Domain of a Composite Function\n\nFind the domain of\n\n\\[(f∘g)(x) \\text{ where } f(x)=\\dfrac{5}{x−1} \\text{ and } g(x)=\\dfrac{4}{3x−2} \\nonumber\\]\n\nSolution\n\nThe domain of \\(g(x)\\) consists of all real numbers except \\(x=\\frac{2}{3}\\), since that input value would cause us to divide by 0. Likewise, the domain of \\(f\\) consists of all real numbers except 1. So we need to exclude from the domain of \\(g(x)\\) that value of \\(x\\) for which \\(g(x)=1\\).\n\n\\[\\begin{align*} \\dfrac{4}{3x-2}&= 1 \\\\[4pt] 4 &=3x-2 \\\\[4pt] 6&=3x \\\\[4pt] x&= 2 \\end{align*}\\]\n\nSo the domain of \\(f{\\circ}g\\) is the set of all real numbers except \\(\\frac{2}{3}\\) and \\(2\\). This means that\n\n\\[x{\\neq} \\dfrac{2}{3} \\text{ or } x\\neq2 \\nonumber\\]\n\nWe can write this in interval notation as\n\n\\[\\left(−\\infty,\\dfrac{2}{3}\\right)\\cup \\left(\\dfrac{2}{3},2 \\right)\\cup \\left(2,\\infty \\right) \\nonumber\\]",
+      "sourceAnswers": [],
+      "hasFigure": false,
+      "status": "draft",
+      "answerVerified": false,
+      "translationStatus": "pending",
+      "mappingStatus": "pending"
+    },
+    {
+      "ordinal": 23,
+      "sourceNumber": "",
+      "sourceAnchor": "",
+      "kind": "example-or-exercise",
+      "context": "The domain of a composite function \\(f(g(x))\\) is the set of those inputs \\(x\\) in the domain of \\(g\\) for which \\(g(x)\\) is in the domain of \\(f\\).\n\nHow To...\n\nGiven a function composition \\(f(g(x))\\), determine its domain.",
+      "original": "Example \\(\\PageIndex{8B}\\): Finding the Domain of a Composite Function Involving Radicals\n\nFind the domain of\n\n\\[(f{\\circ}g)(x) \\text{ where } f(x)=\\sqrt{x+2} \\text{ and } g(x)=\\sqrt{3−x} \\nonumber\\]\n\nSolution\n\nBecause we cannot take the square root of a negative number, the domain of \\(g\\) is \\(\\left(−\\infty,3\\right]\\). Now we check the domain of the composite function\n\n\\[(f{\\circ}g)(x)=\\sqrt{\\sqrt{3−x}+2} \\nonumber\\]\n\nFor \\((f∘g)(x)=\\sqrt{ \\sqrt{3−x}+2},\\sqrt{3−x}+2≥0,\\) since the radicand of a square root must be positive. Since square roots are positive, \\(\\sqrt{3−x}≥0\\),or, \\(3−x≥0,\\) which gives a domain of \\((-∞,3]\\).\n\nAnalysis\n\nThis example shows that knowledge of the range of functions (specifically the inner function) can also be helpful in finding the domain of a composite function. It also shows that the domain of \\(f{\\circ}g\\) can contain values that are not in the domain of \\(f\\), though they must be in the domain of \\(g\\).",
+      "prompt": "Example \\(\\PageIndex{8B}\\): Finding the Domain of a Composite Function Involving Radicals\n\nFind the domain of\n\n\\[(f{\\circ}g)(x) \\text{ where } f(x)=\\sqrt{x+2} \\text{ and } g(x)=\\sqrt{3−x} \\nonumber\\]\n\nSolution\n\nBecause we cannot take the square root of a negative number, the domain of \\(g\\) is \\(\\left(−\\infty,3\\right]\\). Now we check the domain of the composite function\n\n\\[(f{\\circ}g)(x)=\\sqrt{\\sqrt{3−x}+2} \\nonumber\\]\n\nFor \\((f∘g)(x)=\\sqrt{ \\sqrt{3−x}+2},\\sqrt{3−x}+2≥0,\\) since the radicand of a square root must be positive. Since square roots are positive, \\(\\sqrt{3−x}≥0\\),or, \\(3−x≥0,\\) which gives a domain of \\((-∞,3]\\).\n\nAnalysis\n\nThis example shows that knowledge of the range of functions (specifically the inner function) can also be helpful in finding the domain of a composite function. It also shows that the domain of \\(f{\\circ}g\\) can contain values that are not in the domain of \\(f\\), though they must be in the domain of \\(g\\).",
+      "sourceAnswers": [],
+      "hasFigure": false,
+      "status": "draft",
+      "answerVerified": false,
+      "translationStatus": "pending",
+      "mappingStatus": "pending"
+    },
+    {
+      "ordinal": 24,
+      "sourceNumber": "",
+      "sourceAnchor": "",
+      "kind": "exercise-candidate",
+      "context": "The domain of a composite function \\(f(g(x))\\) is the set of those inputs \\(x\\) in the domain of \\(g\\) for which \\(g(x)\\) is in the domain of \\(f\\).\n\nHow To...\n\nGiven a function composition \\(f(g(x))\\), determine its domain.",
+      "original": "Exercise \\(\\PageIndex{6}\\)\n\nFind the domain of\n\n\\[(f{\\circ}g)(x) \\text{ where } f(x)=\\dfrac{1}{x−2} \\text{ and } g(x)=\\sqrt{x+4} \\nonumber\\]\n\nAnswer\n\n\\([−4,0)∪(0,∞)\\)",
+      "prompt": "Exercise \\(\\PageIndex{6}\\)\n\nFind the domain of\n\n\\[(f{\\circ}g)(x) \\text{ where } f(x)=\\dfrac{1}{x−2} \\text{ and } g(x)=\\sqrt{x+4} \\nonumber\\]",
+      "sourceAnswers": [
+        "\\([−4,0)∪(0,∞)\\)"
+      ],
+      "hasFigure": false,
+      "status": "draft",
+      "answerVerified": false,
+      "translationStatus": "pending",
+      "mappingStatus": "pending"
+    },
+    {
+      "ordinal": 25,
+      "sourceNumber": "",
+      "sourceAnchor": "",
+      "kind": "example-or-exercise",
+      "context": "Decomposing a Composite Function into its Component Functions\n\nIn some cases, it is necessary to decompose a complicated function. In other words, we can write it as a composition of two simpler functions. There may be more than one way to decompose a composite function, so we may choose the decomposition that appears to be most expedient.",
+      "original": "Example \\(\\PageIndex{9}\\): Decomposing a Function\n\nWrite \\(f(x)=\\sqrt{5−x^2}\\) as the composition of two functions.\n\nSolution\n\nWe are looking for two functions, \\(g\\) and \\(h\\), so \\(f(x)=g(h(x))\\). To do this, we look for a function inside a function in the formula for \\(f(x)\\). As one possibility, we might notice that the expression \\(5−x^2\\) is the inside of the square root. We could then decompose the function as\n\n\\[h(x)=5−x^2 \\text{ and } g(x)=\\sqrt{x} \\nonumber\\]\n\nWe can check our answer by recomposing the functions.\n\n\\[g(h(x))=g(5−x^2)=\\sqrt{5−x^2} \\nonumber\\]",
+      "prompt": "Example \\(\\PageIndex{9}\\): Decomposing a Function\n\nWrite \\(f(x)=\\sqrt{5−x^2}\\) as the composition of two functions.\n\nSolution\n\nWe are looking for two functions, \\(g\\) and \\(h\\), so \\(f(x)=g(h(x))\\). To do this, we look for a function inside a function in the formula for \\(f(x)\\). As one possibility, we might notice that the expression \\(5−x^2\\) is the inside of the square root. We could then decompose the function as\n\n\\[h(x)=5−x^2 \\text{ and } g(x)=\\sqrt{x} \\nonumber\\]\n\nWe can check our answer by recomposing the functions.\n\n\\[g(h(x))=g(5−x^2)=\\sqrt{5−x^2} \\nonumber\\]",
+      "sourceAnswers": [],
+      "hasFigure": false,
+      "status": "draft",
+      "answerVerified": false,
+      "translationStatus": "pending",
+      "mappingStatus": "pending"
+    },
+    {
+      "ordinal": 26,
+      "sourceNumber": "",
+      "sourceAnchor": "",
+      "kind": "exercise-candidate",
+      "context": "Decomposing a Composite Function into its Component Functions\n\nIn some cases, it is necessary to decompose a complicated function. In other words, we can write it as a composition of two simpler functions. There may be more than one way to decompose a composite function, so we may choose the decomposition that appears to be most expedient.",
+      "original": "Exercise \\(\\PageIndex{7}\\)\n\nWrite \\(f(x)=\\dfrac{4}{3−\\sqrt{4+x^2}}\\) as the composition of two functions.\n\nAnswer\n\nPossible answers:\n\n\\(g(x)=\\sqrt{4+x^2}\\)\n\n\\(h(x)=\\dfrac{4}{3−x}\\)\n\n\\(f=h{\\circ}g\\)",
+      "prompt": "Exercise \\(\\PageIndex{7}\\)\n\nWrite \\(f(x)=\\dfrac{4}{3−\\sqrt{4+x^2}}\\) as the composition of two functions.",
+      "sourceAnswers": [
+        "Possible answers:\n\n\\(g(x)=\\sqrt{4+x^2}\\)\n\n\\(h(x)=\\dfrac{4}{3−x}\\)\n\n\\(f=h{\\circ}g\\)"
+      ],
+      "hasFigure": false,
+      "status": "draft",
+      "answerVerified": false,
+      "translationStatus": "pending",
+      "mappingStatus": "pending"
+    }
+  ],
+  "license": "CC BY 4.0",
+  "licenseEvidence": "This page titled 3.4: Composition of Functions was last modified on Thu, 26 Dec 2024 22:30:43 GMT and is shared under a CC BY  4.0  license and was authored, remixed, and/or curated by OpenStax via source content that was edited to the style and standards of the LibreTexts platform.",
+  "url": "https://math.libretexts.org/Bookshelves/Algebra/Algebra_and_Trigonometry_1e_(OpenStax)/03:_Functions/3.04:_Composition_of_Functions",
+  "sha256": "485ff6a179f61302c777acbf7ccc63ee6fc90ef631edde901c7af336dcb486a4",
+  "checkedAt": "2026-10-07",
+  "id": "e413f5134d2320616713",
+  "bookId": "algebra-trigonometry",
+  "licenseInherited": false,
+  "licenseSource": "https://math.libretexts.org/Bookshelves/Algebra/Algebra_and_Trigonometry_1e_(OpenStax)/03:_Functions/3.04:_Composition_of_Functions",
+  "licenseUrl": "https://creativecommons.org/licenses/by/4.0/",
+  "authors": "OpenStax / Jay Abramson et al.",
+  "book": "Algebra and Trigonometry 1e",
+  "reviewStatus": "unreviewed",
+  "sourceLanguage": "en",
+  "translationStatus": "pending"
+}

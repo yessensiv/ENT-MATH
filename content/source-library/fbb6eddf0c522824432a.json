@@ -1,0 +1,338 @@
+{
+  "title": "8.4: Range and Standard Deviation",
+  "originalText": "[Figure: A standardized test form with bubbles for options A, B, C, and D is shown. The answer choices for the first three questions are filled in.]\n\nFigure \\(\\PageIndex{1}\\): Measures of spread help us get a better understanding of test scores. (credit: \"Standardized test exams form with answers bubbled\" by Marco Verch Professional Photographer/Flickr, CC BY 2.0)\n\nLearning Objectives\n\n1. Calculate the range of a dataset\n\n2. Calculate the standard deviation of a dataset\n\nMeasures of centrality like the mean can give us only part of the picture that a dataset paints. For example, let’s say you’ve just gotten the results of a standardized test back, and your score was 138. The mean score on the test is 120. So, your score is above average! But how good is it really? If all the scores were between 100 and 140, then you know your score must be among the best. But if the scores ranged from 0 to 200, then maybe 140 is good, but not great (though still above average). Knowing information about how the data are spread out can help us put a particular data value in better context. In this section, we’ll look at two numbers that help us describe the spread in the data: the range and the standard deviation. These numbers are called measures of dispersion.\n\nThe Range\n\nOur first measure of dispersion is the range, or the difference between the maximum and minimum values in the set. It’s the measure we used in the standardized test example above.\n\nLet’s look at a couple of examples.\n\nExample \\(\\PageIndex{1}\\): Finding the Range\n\nYou survey some of your friends to find out how many hours they work each week. Their responses are: 5, 20, 8, 10, 35, 12. What is the range?\n\nAnswer\n\nThe maximum value in the set is 35 and the minimum is 5, so the range is \\(35-5=30\\).\n\nYour Turn \\(\\PageIndex{1}\\)\n\nOn your morning commute, you decide to record how long you have to wait each time you get caught at a red light. Here are the times in seconds: 12, 58, 35, 79, 21. What is the range?\n\nFor large datasets, finding the maximum and minimum values can be daunting. There are two ways to do it in a spreadsheet. First, you can ask the spreadsheet program to sort the data from smallest to largest, then find the first and last numbers on the sorted list. The second method uses built-in functions to find the minimum and maximum.\n\nVideo\n\nFind the Minimum and Maximum Using Google Sheets\n\nIn either method, once you’ve found the maximum and minimum, all you have to do is subtract to find the range.\n\nExample \\(\\PageIndex{2}\\): Finding the Range with Google Sheets\n\nThe data in “AvgSAT” contains the average SAT score for students attending every institution of higher learning in the US for which data is available. What is the range of these average SAT scores?\n\nAnswer\n\nStep 1: To find the maximum, click on an empty cell in the spreadsheet, type “=MAX(”, and then click on the letter that marks the top of the column containing the AvgSAT data. That inserts a reference to the column into our function. Then we close the parentheses and hit the enter key. The formula is replaced with the maximum value in our data: 1566.\n\n    Step 2: Using the same process (but with “MIN” instead of “MAX”), we find the minimum value is 785.\n\n    Step 3: So, the range is \\(1566-785=781\\).\n\nYour Turn \\(\\PageIndex{2}\\)\n\nThe file “InState” contains in-state tuition costs (in dollars) for every institution of higher learning in the US for which data is available. What is the range of these costs?\n\nThe range is very easy to compute, but it depends only on two of the data values in the entire set. If there happens to be just one unusually high or low data value, then the range might give a distorted measure of dispersion. Our next measure takes every single data value into account, making it more reliable.\n\nThe Standard Deviation\n\nThe standard deviation is a measure of dispersion that can be interpreted as approximately the average distance of every data value from the mean. (This distance from the mean is the “deviation” in “standard deviation.”)\n\nFORMULA\n\nThe standard deviation is computed as follows:\n\n\\[s=\\sqrt{\\frac{\\sum(x-x)^2}{n-1}} \\nonumber \\]\n\nHere, \\(x\\) represents each data value, \\(\\mover{x}{¯}\\) is the mean of the data values, \\(n\\) is the number of data values, and the capital sigma (\\(Σ\\)) indicates that we take a sum.\n\nTo compute the standard deviation using the formula, we follow the steps below:\n\n1. Compute the mean of all the data values.\n\n2. Subtract the mean from each data value.\n\n3. Square those differences.\n\n4. Add up the results in step 3.\n\n5. Divide the result in step 4 by \\(n-1\\)\n\n6. Take the square root of the result in step 5.\n\nLet’s see that process in action.\n\nExample \\(\\PageIndex{3}\\): Computing the Standard Deviation\n\nYou surveyed some of your friends to find out how many hours they work each week. Their responses were: 5, 20, 8, 10, 35, 12. What is the standard deviation?\n\nAnswer\n\nLet’s follow the six steps mentioned previously to compute the standard deviation.\n\nStep 1: Find the mean: \\(\\bar{x}=\\frac{5+20+8+10+35+12}{6}=15\\).\n\nStep 2: Subtract the mean from each data value. To help keep track, let's do this in a table. In the first row, we'll list each of our data values (and we'll label the row \\(x\\) ); in the second, we'll subtract \\(\\bar{x}=15\\) from each data value.\n\n                \\(x\\)\t\n                5\t\n                20\t\n                8\t\n                10\t\n                35\t\n                12\t\n\n                \\(x−\\mover{x}{¯}\\)\t\n                −10\t\n                5\t\n                –7\t\n                –5\t\n                20\t\n                –3\t\n\nStep 3: Square the differences. Let’s add a row to our table for those values:\n\n                \\(x\\)\t\n                5\t\n                20\t\n                8\t\n                10\t\n                35\t\n                12\t\n\n                \\(x−\\mover{x}{¯}\\)\t\n                −10\t\n                5\t\n                –7\t\n                –5\t\n                20\t\n                –3\t\n\n                \\({(x−\\mover{x}{¯})}^{2}\\)\t\n                100\t\n                25\t\n                49\t\n                25\t\n                400\t\n                9\t\n\nStep 4: Add up those squares: \\(100+25+49+25+400+9 =608 \\)\n\nStep 5: Divide the sum by \\(n-1\\). Since we have 6 data values, that gives us \\(\\frac{608}{6-1}=121.6\\).\n\nStep 6: Take the square root of the result: \\(\\sqrt{121.6} \\approx 11.027\\).\n\nThus, the standard deviation is \\(s \\approx 11.027\\).\n\nYour Turn \\(\\PageIndex{3}\\)\n\nOn your morning commute, you decide to record how long you have to wait each time you get caught at a red light. Here are the times in seconds: 12, 58, 35, 79, 21.\n\nWhat is the standard deviation?\n\nThe computation for the standard deviation is complicated, even for just a small dataset. We’d never want to compute it without technology for a large dataset! Luckily, technology makes this calculation easy.\n\nVideo\n\nFind the Standard Deviation Using Google Sheets\n\nExample \\(\\PageIndex{4}\\): Finding the Standard Deviation with Google Sheets\n\nThe data in “AvgSAT” contains the average SAT score for students attending every institution of higher learning in the US for which data is available. What is the standard deviation of these average SAT scores?\n\nAnswer\n\nTo find the standard deviation, we click in an empty cell in our spreadsheet and then type “=STDEV(”. Next, click on the letter at the top of the column containing our data; this will put a reference to that column into our formula. Then close the parentheses with and hit the enter key. The formula is replaced with the result: 125.517.\n\nYour Turn \\(\\PageIndex{4}\\)\n\nThe file “InState” contains in-state tuition costs (in dollars) for every institution of higher learning in the US for which data is available. What is the standard deviation of these costs?\n\nCheck Your Understanding\n\n1. Given the data 1, 4, 5, 5, and 10, find the range.\n\n2. Given the data 1, 4, 5, 5, and 10, find the standard deviation using the process outlined in the definition.\n\n3. Employees at a college help desk track the number of people who request assistance each week, as listed below:\n\n            142\t\n            153\t\n            158\t\n            156\t\n            141\t\n            143\t\n\n            139\t\n            158\t\n            156\t\n            146\t\n            137\t\n            153\t\n\n            136\t\n            127\t\n            157\t\n            148\t\n            132\t\n            143\t\n            168\t\n            133\t\n            157\t\n\n            138\t\n            156\t\n            164\t\n            130\t\n            148\t\n            136\t\n\nCompute the range.\n\nCompute the standard deviation.\n\n4. The following are data on the admission rates of the different branch campuses in the University of California system, along with the out-of-state tuition and fee cost.\n\n            Campus\t\n            Admission Rate\t\n            Cost ($)\t\n\n            Berkeley\t\n            0.1484\t\n            43,176\t\n\n            Davis\t\n            0.4107\t\n            43,394\t\n\n            Irvine\t\n            0.2876\t\n            42,692\t\n\n            Los Angeles\t\n            0.1404\t\n            42,218\t\n\n            Merced\t\n            0.6617\t\n            42,530\t\n\n            Riverside\t\n            0.5057\t\n            42,819\t\n\n            San Diego\t\n            0.3006\t\n            43,159\t\n\n            Santa Barbara\t\n            0.322\t\n            43,383\t\n\n            Santa Cruz\t\n            0.4737\t\n            42,952\t\n\n(source: https://data.ed.gov)\n\nCompute the range of the admission rate.\n\nCompute the standard deviation of the admission rate.\n\n5. Using the data above, find the:\n\nRange of the cost.\n\nStandard deviation of the cost.\n\nThis page titled 8.4: Range and Standard Deviation was last modified on Thu, 02 Jan 2025 11:07:44 GMT and is shared under a CC BY  4.0  license and was authored, remixed, and/or curated by OpenStax via source content that was edited to the style and standards of the LibreTexts platform.",
+  "figures": [
+    {
+      "url": "https://math.libretexts.org/@api/deki/files/109414/a6b1cf45d3fd5a079aa39eb19df86b61773fa982?revision=1",
+      "alt": "A standardized test form with bubbles for options A, B, C, and D is shown. The answer choices for the first three questions are filled in.",
+      "credit": ""
+    }
+  ],
+  "references": [
+    {
+      "text": "“AvgSAT”",
+      "url": "https://docs.google.com/spreadsheets/d/1Esl2TEj_gsyteTp-XHq_aJsFC96zUgd1qxv68XuaYDQ/edit?gid=0#gid=0"
+    },
+    {
+      "text": "AvgSAT",
+      "url": "https://docs.google.com/spreadsheets/d/1Esl2TEj_gsyteTp-XHq_aJsFC96zUgd1qxv68XuaYDQ/edit?gid=0#gid=0"
+    },
+    {
+      "text": "“InState”",
+      "url": "https://docs.google.com/spreadsheets/d/1Esl2TEj_gsyteTp-XHq_aJsFC96zUgd1qxv68XuaYDQ/edit?gid=1657259552#gid=1657259552"
+    },
+    {
+      "text": "“AvgSAT”",
+      "url": "https://docs.google.com/spreadsheets/d/1Esl2TEj_gsyteTp-XHq_aJsFC96zUgd1qxv68XuaYDQ/edit?gid=0#gid=0"
+    },
+    {
+      "text": "“InState”",
+      "url": "https://docs.google.com/spreadsheets/d/1Esl2TEj_gsyteTp-XHq_aJsFC96zUgd1qxv68XuaYDQ/edit?gid=1657259552#gid=1657259552"
+    },
+    {
+      "text": "https://data.ed.gov",
+      "url": "https://data.ed.gov"
+    },
+    {
+      "text": "8.4: Range and Standard Deviation",
+      "url": "https://math.libretexts.org/Bookshelves/Applied_Mathematics/Contemporary_Mathematics_(OpenStax)/08%3A_Statistics/8.04%3A_Range_and_Standard_Deviation"
+    },
+    {
+      "text": "CC BY  4.0",
+      "url": "https://creativecommons.org/licenses/by/4.0"
+    },
+    {
+      "text": "OpenStax",
+      "url": "https://openstax.org/"
+    },
+    {
+      "text": "source content",
+      "url": "https://openstax.org/details/books/contemporary-mathematics"
+    }
+  ],
+  "exercises": [
+    {
+      "ordinal": 1,
+      "sourceNumber": "1",
+      "sourceAnchor": "",
+      "kind": "exercise-candidate",
+      "context": "",
+      "original": "1. Calculate the range of a dataset",
+      "prompt": "1. Calculate the range of a dataset",
+      "sourceAnswers": [],
+      "hasFigure": false,
+      "status": "draft",
+      "answerVerified": false,
+      "translationStatus": "pending",
+      "mappingStatus": "pending"
+    },
+    {
+      "ordinal": 2,
+      "sourceNumber": "2",
+      "sourceAnchor": "",
+      "kind": "exercise-candidate",
+      "context": "",
+      "original": "2. Calculate the standard deviation of a dataset",
+      "prompt": "2. Calculate the standard deviation of a dataset",
+      "sourceAnswers": [],
+      "hasFigure": false,
+      "status": "draft",
+      "answerVerified": false,
+      "translationStatus": "pending",
+      "mappingStatus": "pending"
+    },
+    {
+      "ordinal": 3,
+      "sourceNumber": "",
+      "sourceAnchor": "",
+      "kind": "example-or-exercise",
+      "context": "The Range\n\nOur first measure of dispersion is the range, or the difference between the maximum and minimum values in the set. It’s the measure we used in the standardized test example above.\n\nLet’s look at a couple of examples.",
+      "original": "Example \\(\\PageIndex{1}\\): Finding the Range\n\nYou survey some of your friends to find out how many hours they work each week. Their responses are: 5, 20, 8, 10, 35, 12. What is the range?\n\nAnswer\n\nThe maximum value in the set is 35 and the minimum is 5, so the range is \\(35-5=30\\).",
+      "prompt": "Example \\(\\PageIndex{1}\\): Finding the Range\n\nYou survey some of your friends to find out how many hours they work each week. Their responses are: 5, 20, 8, 10, 35, 12. What is the range?",
+      "sourceAnswers": [
+        "The maximum value in the set is 35 and the minimum is 5, so the range is \\(35-5=30\\)."
+      ],
+      "hasFigure": false,
+      "status": "draft",
+      "answerVerified": false,
+      "translationStatus": "pending",
+      "mappingStatus": "pending"
+    },
+    {
+      "ordinal": 4,
+      "sourceNumber": "",
+      "sourceAnchor": "",
+      "kind": "example-or-exercise",
+      "context": "For large datasets, finding the maximum and minimum values can be daunting. There are two ways to do it in a spreadsheet. First, you can ask the spreadsheet program to sort the data from smallest to largest, then find the first and last numbers on the sorted list. The second method uses built-in functions to find the minimum and maximum.\n\nFind the Minimum and Maximum Using Google Sheets\n\nIn either method, once you’ve found the maximum and minimum, all you have to do is subtract to find the range.",
+      "original": "Example \\(\\PageIndex{2}\\): Finding the Range with Google Sheets\n\nThe data in “AvgSAT” contains the average SAT score for students attending every institution of higher learning in the US for which data is available. What is the range of these average SAT scores?\n\nAnswer\n\nStep 1: To find the maximum, click on an empty cell in the spreadsheet, type “=MAX(”, and then click on the letter that marks the top of the column containing the AvgSAT data. That inserts a reference to the column into our function. Then we close the parentheses and hit the enter key. The formula is replaced with the maximum value in our data: 1566.\n\n    Step 2: Using the same process (but with “MIN” instead of “MAX”), we find the minimum value is 785.\n\n    Step 3: So, the range is \\(1566-785=781\\).",
+      "prompt": "Example \\(\\PageIndex{2}\\): Finding the Range with Google Sheets\n\nThe data in “AvgSAT” contains the average SAT score for students attending every institution of higher learning in the US for which data is available. What is the range of these average SAT scores?",
+      "sourceAnswers": [
+        "Step 1: To find the maximum, click on an empty cell in the spreadsheet, type “=MAX(”, and then click on the letter that marks the top of the column containing the AvgSAT data. That inserts a reference to the column into our function. Then we close the parentheses and hit the enter key. The formula is replaced with the maximum value in our data: 1566.\n\n    Step 2: Using the same process (but with “MIN” instead of “MAX”), we find the minimum value is 785.\n\n    Step 3: So, the range is \\(1566-785=781\\)."
+      ],
+      "hasFigure": false,
+      "status": "draft",
+      "answerVerified": false,
+      "translationStatus": "pending",
+      "mappingStatus": "pending"
+    },
+    {
+      "ordinal": 5,
+      "sourceNumber": "1",
+      "sourceAnchor": "",
+      "kind": "exercise-candidate",
+      "context": "\\[s=\\sqrt{\\frac{\\sum(x-x)^2}{n-1}} \\nonumber \\]\n\nHere, \\(x\\) represents each data value, \\(\\mover{x}{¯}\\) is the mean of the data values, \\(n\\) is the number of data values, and the capital sigma (\\(Σ\\)) indicates that we take a sum.\n\nTo compute the standard deviation using the formula, we follow the steps below:",
+      "original": "1. Compute the mean of all the data values.",
+      "prompt": "1. Compute the mean of all the data values.",
+      "sourceAnswers": [],
+      "hasFigure": false,
+      "status": "draft",
+      "answerVerified": false,
+      "translationStatus": "pending",
+      "mappingStatus": "pending"
+    },
+    {
+      "ordinal": 6,
+      "sourceNumber": "2",
+      "sourceAnchor": "",
+      "kind": "exercise-candidate",
+      "context": "\\[s=\\sqrt{\\frac{\\sum(x-x)^2}{n-1}} \\nonumber \\]\n\nHere, \\(x\\) represents each data value, \\(\\mover{x}{¯}\\) is the mean of the data values, \\(n\\) is the number of data values, and the capital sigma (\\(Σ\\)) indicates that we take a sum.\n\nTo compute the standard deviation using the formula, we follow the steps below:",
+      "original": "2. Subtract the mean from each data value.",
+      "prompt": "2. Subtract the mean from each data value.",
+      "sourceAnswers": [],
+      "hasFigure": false,
+      "status": "draft",
+      "answerVerified": false,
+      "translationStatus": "pending",
+      "mappingStatus": "pending"
+    },
+    {
+      "ordinal": 7,
+      "sourceNumber": "3",
+      "sourceAnchor": "",
+      "kind": "exercise-candidate",
+      "context": "\\[s=\\sqrt{\\frac{\\sum(x-x)^2}{n-1}} \\nonumber \\]\n\nHere, \\(x\\) represents each data value, \\(\\mover{x}{¯}\\) is the mean of the data values, \\(n\\) is the number of data values, and the capital sigma (\\(Σ\\)) indicates that we take a sum.\n\nTo compute the standard deviation using the formula, we follow the steps below:",
+      "original": "3. Square those differences.",
+      "prompt": "3. Square those differences.",
+      "sourceAnswers": [],
+      "hasFigure": false,
+      "status": "draft",
+      "answerVerified": false,
+      "translationStatus": "pending",
+      "mappingStatus": "pending"
+    },
+    {
+      "ordinal": 8,
+      "sourceNumber": "4",
+      "sourceAnchor": "",
+      "kind": "exercise-candidate",
+      "context": "\\[s=\\sqrt{\\frac{\\sum(x-x)^2}{n-1}} \\nonumber \\]\n\nHere, \\(x\\) represents each data value, \\(\\mover{x}{¯}\\) is the mean of the data values, \\(n\\) is the number of data values, and the capital sigma (\\(Σ\\)) indicates that we take a sum.\n\nTo compute the standard deviation using the formula, we follow the steps below:",
+      "original": "4. Add up the results in step 3.",
+      "prompt": "4. Add up the results in step 3.",
+      "sourceAnswers": [],
+      "hasFigure": false,
+      "status": "draft",
+      "answerVerified": false,
+      "translationStatus": "pending",
+      "mappingStatus": "pending"
+    },
+    {
+      "ordinal": 9,
+      "sourceNumber": "5",
+      "sourceAnchor": "",
+      "kind": "exercise-candidate",
+      "context": "\\[s=\\sqrt{\\frac{\\sum(x-x)^2}{n-1}} \\nonumber \\]\n\nHere, \\(x\\) represents each data value, \\(\\mover{x}{¯}\\) is the mean of the data values, \\(n\\) is the number of data values, and the capital sigma (\\(Σ\\)) indicates that we take a sum.\n\nTo compute the standard deviation using the formula, we follow the steps below:",
+      "original": "5. Divide the result in step 4 by \\(n-1\\)",
+      "prompt": "5. Divide the result in step 4 by \\(n-1\\)",
+      "sourceAnswers": [],
+      "hasFigure": false,
+      "status": "draft",
+      "answerVerified": false,
+      "translationStatus": "pending",
+      "mappingStatus": "pending"
+    },
+    {
+      "ordinal": 10,
+      "sourceNumber": "6",
+      "sourceAnchor": "",
+      "kind": "exercise-candidate",
+      "context": "\\[s=\\sqrt{\\frac{\\sum(x-x)^2}{n-1}} \\nonumber \\]\n\nHere, \\(x\\) represents each data value, \\(\\mover{x}{¯}\\) is the mean of the data values, \\(n\\) is the number of data values, and the capital sigma (\\(Σ\\)) indicates that we take a sum.\n\nTo compute the standard deviation using the formula, we follow the steps below:",
+      "original": "6. Take the square root of the result in step 5.",
+      "prompt": "6. Take the square root of the result in step 5.",
+      "sourceAnswers": [],
+      "hasFigure": false,
+      "status": "draft",
+      "answerVerified": false,
+      "translationStatus": "pending",
+      "mappingStatus": "pending"
+    },
+    {
+      "ordinal": 11,
+      "sourceNumber": "",
+      "sourceAnchor": "",
+      "kind": "example-or-exercise",
+      "context": "Here, \\(x\\) represents each data value, \\(\\mover{x}{¯}\\) is the mean of the data values, \\(n\\) is the number of data values, and the capital sigma (\\(Σ\\)) indicates that we take a sum.\n\nTo compute the standard deviation using the formula, we follow the steps below:\n\nLet’s see that process in action.",
+      "original": "Example \\(\\PageIndex{3}\\): Computing the Standard Deviation\n\nYou surveyed some of your friends to find out how many hours they work each week. Their responses were: 5, 20, 8, 10, 35, 12. What is the standard deviation?\n\nAnswer\n\nLet’s follow the six steps mentioned previously to compute the standard deviation.\n\nStep 1: Find the mean: \\(\\bar{x}=\\frac{5+20+8+10+35+12}{6}=15\\).\n\nStep 2: Subtract the mean from each data value. To help keep track, let's do this in a table. In the first row, we'll list each of our data values (and we'll label the row \\(x\\) ); in the second, we'll subtract \\(\\bar{x}=15\\) from each data value.\n\n                \\(x\\)\t\n                5\t\n                20\t\n                8\t\n                10\t\n                35\t\n                12\t\n\n                \\(x−\\mover{x}{¯}\\)\t\n                −10\t\n                5\t\n                –7\t\n                –5\t\n                20\t\n                –3\t\n\nStep 3: Square the differences. Let’s add a row to our table for those values:\n\n                \\(x\\)\t\n                5\t\n                20\t\n                8\t\n                10\t\n                35\t\n                12\t\n\n                \\(x−\\mover{x}{¯}\\)\t\n                −10\t\n                5\t\n                –7\t\n                –5\t\n                20\t\n                –3\t\n\n                \\({(x−\\mover{x}{¯})}^{2}\\)\t\n                100\t\n                25\t\n                49\t\n                25\t\n                400\t\n                9\t\n\nStep 4: Add up those squares: \\(100+25+49+25+400+9 =608 \\)\n\nStep 5: Divide the sum by \\(n-1\\). Since we have 6 data values, that gives us \\(\\frac{608}{6-1}=121.6\\).\n\nStep 6: Take the square root of the result: \\(\\sqrt{121.6} \\approx 11.027\\).\n\nThus, the standard deviation is \\(s \\approx 11.027\\).",
+      "prompt": "Example \\(\\PageIndex{3}\\): Computing the Standard Deviation\n\nYou surveyed some of your friends to find out how many hours they work each week. Their responses were: 5, 20, 8, 10, 35, 12. What is the standard deviation?",
+      "sourceAnswers": [
+        "Let’s follow the six steps mentioned previously to compute the standard deviation.\n\nStep 1: Find the mean: \\(\\bar{x}=\\frac{5+20+8+10+35+12}{6}=15\\).\n\nStep 2: Subtract the mean from each data value. To help keep track, let's do this in a table. In the first row, we'll list each of our data values (and we'll label the row \\(x\\) ); in the second, we'll subtract \\(\\bar{x}=15\\) from each data value.\n\n                \\(x\\)\t\n                5\t\n                20\t\n                8\t\n                10\t\n                35\t\n                12\t\n\n                \\(x−\\mover{x}{¯}\\)\t\n                −10\t\n                5\t\n                –7\t\n                –5\t\n                20\t\n                –3\t\n\nStep 3: Square the differences. Let’s add a row to our table for those values:\n\n                \\(x\\)\t\n                5\t\n                20\t\n                8\t\n                10\t\n                35\t\n                12\t\n\n                \\(x−\\mover{x}{¯}\\)\t\n                −10\t\n                5\t\n                –7\t\n                –5\t\n                20\t\n                –3\t\n\n                \\({(x−\\mover{x}{¯})}^{2}\\)\t\n                100\t\n                25\t\n                49\t\n                25\t\n                400\t\n                9",
+        "Step 4: Add up those squares: \\(100+25+49+25+400+9 =608 \\)",
+        "Step 5: Divide the sum by \\(n-1\\). Since we have 6 data values, that gives us \\(\\frac{608}{6-1}=121.6\\).",
+        "Step 6: Take the square root of the result: \\(\\sqrt{121.6} \\approx 11.027\\).",
+        "Thus, the standard deviation is \\(s \\approx 11.027\\).",
+        ""
+      ],
+      "hasFigure": false,
+      "status": "draft",
+      "answerVerified": false,
+      "translationStatus": "pending",
+      "mappingStatus": "pending"
+    },
+    {
+      "ordinal": 12,
+      "sourceNumber": "",
+      "sourceAnchor": "",
+      "kind": "example-or-exercise",
+      "context": "What is the standard deviation?\n\nThe computation for the standard deviation is complicated, even for just a small dataset. We’d never want to compute it without technology for a large dataset! Luckily, technology makes this calculation easy.\n\nFind the Standard Deviation Using Google Sheets",
+      "original": "Example \\(\\PageIndex{4}\\): Finding the Standard Deviation with Google Sheets\n\nThe data in “AvgSAT” contains the average SAT score for students attending every institution of higher learning in the US for which data is available. What is the standard deviation of these average SAT scores?\n\nAnswer\n\nTo find the standard deviation, we click in an empty cell in our spreadsheet and then type “=STDEV(”. Next, click on the letter at the top of the column containing our data; this will put a reference to that column into our formula. Then close the parentheses with and hit the enter key. The formula is replaced with the result: 125.517.",
+      "prompt": "Example \\(\\PageIndex{4}\\): Finding the Standard Deviation with Google Sheets\n\nThe data in “AvgSAT” contains the average SAT score for students attending every institution of higher learning in the US for which data is available. What is the standard deviation of these average SAT scores?",
+      "sourceAnswers": [
+        "To find the standard deviation, we click in an empty cell in our spreadsheet and then type “=STDEV(”. Next, click on the letter at the top of the column containing our data; this will put a reference to that column into our formula. Then close the parentheses with and hit the enter key. The formula is replaced with the result: 125.517."
+      ],
+      "hasFigure": false,
+      "status": "draft",
+      "answerVerified": false,
+      "translationStatus": "pending",
+      "mappingStatus": "pending"
+    },
+    {
+      "ordinal": 13,
+      "sourceNumber": "1",
+      "sourceAnchor": "",
+      "kind": "exercise-candidate",
+      "context": "Check Your Understanding",
+      "original": "1. Given the data 1, 4, 5, 5, and 10, find the range.",
+      "prompt": "1. Given the data 1, 4, 5, 5, and 10, find the range.",
+      "sourceAnswers": [],
+      "hasFigure": false,
+      "status": "draft",
+      "answerVerified": false,
+      "translationStatus": "pending",
+      "mappingStatus": "pending"
+    },
+    {
+      "ordinal": 14,
+      "sourceNumber": "2",
+      "sourceAnchor": "",
+      "kind": "exercise-candidate",
+      "context": "Check Your Understanding",
+      "original": "2. Given the data 1, 4, 5, 5, and 10, find the standard deviation using the process outlined in the definition.",
+      "prompt": "2. Given the data 1, 4, 5, 5, and 10, find the standard deviation using the process outlined in the definition.",
+      "sourceAnswers": [],
+      "hasFigure": false,
+      "status": "draft",
+      "answerVerified": false,
+      "translationStatus": "pending",
+      "mappingStatus": "pending"
+    },
+    {
+      "ordinal": 15,
+      "sourceNumber": "3",
+      "sourceAnchor": "",
+      "kind": "exercise-candidate",
+      "context": "Check Your Understanding",
+      "original": "3. Employees at a college help desk track the number of people who request assistance each week, as listed below:",
+      "prompt": "3. Employees at a college help desk track the number of people who request assistance each week, as listed below:",
+      "sourceAnswers": [],
+      "hasFigure": false,
+      "status": "draft",
+      "answerVerified": false,
+      "translationStatus": "pending",
+      "mappingStatus": "pending"
+    },
+    {
+      "ordinal": 16,
+      "sourceNumber": "4",
+      "sourceAnchor": "",
+      "kind": "exercise-candidate",
+      "context": "Check Your Understanding\n\nCompute the range.\n\nCompute the standard deviation.",
+      "original": "4. The following are data on the admission rates of the different branch campuses in the University of California system, along with the out-of-state tuition and fee cost.",
+      "prompt": "4. The following are data on the admission rates of the different branch campuses in the University of California system, along with the out-of-state tuition and fee cost.",
+      "sourceAnswers": [],
+      "hasFigure": false,
+      "status": "draft",
+      "answerVerified": false,
+      "translationStatus": "pending",
+      "mappingStatus": "pending"
+    },
+    {
+      "ordinal": 17,
+      "sourceNumber": "5",
+      "sourceAnchor": "",
+      "kind": "exercise-candidate",
+      "context": "Compute the standard deviation.\n\nCompute the range of the admission rate.\n\nCompute the standard deviation of the admission rate.",
+      "original": "5. Using the data above, find the:",
+      "prompt": "5. Using the data above, find the:",
+      "sourceAnswers": [],
+      "hasFigure": false,
+      "status": "draft",
+      "answerVerified": false,
+      "translationStatus": "pending",
+      "mappingStatus": "pending"
+    }
+  ],
+  "license": "CC BY 4.0",
+  "licenseEvidence": "This page titled 8.4: Range and Standard Deviation was last modified on Thu, 02 Jan 2025 11:07:44 GMT and is shared under a CC BY  4.0  license and was authored, remixed, and/or curated by OpenStax via source content that was edited to the style and standards of the LibreTexts platform.",
+  "url": "https://math.libretexts.org/Bookshelves/Applied_Mathematics/Contemporary_Mathematics_(OpenStax)/08:_Statistics/8.04:_Range_and_Standard_Deviation",
+  "sha256": "9394cb3cb5535a50c5ca30ea8cfe3a681477b74eb497d118e7938380df1f303e",
+  "checkedAt": "2026-10-07",
+  "id": "fbb6eddf0c522824432a",
+  "bookId": "contemporary",
+  "licenseInherited": false,
+  "licenseSource": "https://math.libretexts.org/Bookshelves/Applied_Mathematics/Contemporary_Mathematics_(OpenStax)/08:_Statistics/8.04:_Range_and_Standard_Deviation",
+  "licenseUrl": "https://creativecommons.org/licenses/by/4.0/",
+  "authors": "OpenStax / Donna Kirk et al.",
+  "book": "Contemporary Mathematics",
+  "reviewStatus": "unreviewed",
+  "sourceLanguage": "en",
+  "translationStatus": "pending"
+}

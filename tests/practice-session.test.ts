@@ -1,7 +1,7 @@
 import {test} from 'node:test';
 import assert from 'node:assert/strict';
 // @ts-expect-error Native tests.
-import {createPractice,savePracticeDraft,submitPractice,practiceSummary,publicPractice} from '../lib/practice-session.ts';
+import {createPractice,savePracticeDraft,submitPractice,practiceSummary,publicPractice,repairTopicSelection} from '../lib/practice-session.ts';
 // @ts-expect-error Native tests.
 import {makePracticeVariant,validatePracticeVariant,variantTopics} from '../lib/practice-variants.ts';
 // @ts-expect-error Native tests.
@@ -11,6 +11,16 @@ import {practiceOptions} from '../lib/practice-options.ts';
 const generator={reviewCapacity:()=>0,generateReviewTask:()=>null,validateGeneratedTask:()=>({valid:false,errors:[]})};
 const topic={id:'linear',title:{ru:'Уравнения',kk:'Теңдеулер'},track:'profile' as const};
 const bank=Array.from({length:30},(_,i)=>makePracticeVariant('linear',i+1,(i%3+1) as 1|2|3)!);
+
+test('operation order excludes reverse-price and budget variants; unfinished migration preserves entered work and checked history',()=>{
+ const state=emptyState(),wrong=makePracticeVariant('numbers',138,1)!;
+ const correct:Task={...wrong,id:'order-direct',variant:undefined,prompt:{ru:'Вычисли 2+3·4.',kk:'2+3·4 мәнін есепте.'},answer:'14',units:undefined,methodFamily:'order',solution:{ru:['3·4=12; 2+12=14.'],kk:['3·4=12; 2+12=14.']}};
+ const s=createPractice(state,'numbers',[wrong,correct],10);assert.equal(s.main.length,1);assert.equal(s.main[0].task.id,correct.id);
+ s.main=[{task:wrong,answer:'',steps:'',assisted:false}];s.cursor=wrong.id;const before=s.version;
+ assert.equal(repairTopicSelection(s,state,[correct]),true);assert.equal(s.cursor,correct.id);assert.equal(s.version,before+1);assert.equal(repairTopicSelection(s,state,[correct]),false);
+ s.main=[{task:wrong,answer:'130',steps:'',assisted:false}];s.cursor=wrong.id;assert.equal(repairTopicSelection(s,state,[correct]),false);assert.equal(s.main[0].answer,'130');
+ s.main[0].answer='';s.finishedAt=new Date().toISOString();assert.equal(repairTopicSelection(s,state,[correct]),false);assert.equal(s.main[0].task.id,wrong.id);
+});
 test('fixed session, drafts, first mistake, separate repair, replay, report, delayed review',()=>{
  const state=emptyState();state.generatedTasks=structuredClone(bank);const session=createPractice(state,'linear',bank,15),item=session.main[0];assert.equal(session.main.length,15);
  savePracticeDraft(session,item.task.id,'999','Пробую модель');session.cursor=session.main[2].task.id;session.cursor=item.task.id;assert.equal(publicPractice(session,state).current.steps,'Пробую модель');

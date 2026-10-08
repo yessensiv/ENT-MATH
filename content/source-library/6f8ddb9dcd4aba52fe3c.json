@@ -1,0 +1,830 @@
+{
+  "title": "5.6: Rational Functions",
+  "originalText": "Learning Objectives\n\nUse arrow notation.\n\nSolve applied problems involving rational functions.\n\nFind the domains of rational functions.\n\nIdentify vertical asymptotes.\n\nIdentify horizontal asymptotes.\n\nGraph rational functions.\n\nSuppose we know that the cost of making a product is dependent on the number of items, \\(x\\), produced. This is given by the equation \\(C (x)=15,000x−0.1x^2+1000.\\) If we want to know the average cost for producing \\(x\\) items, we would divide the cost function by the number of items, \\(x\\). The average cost function, which yields the average cost per item for \\(x\\) items produced, is\n\n\\[f(x)=\\dfrac{15,000x−0.1x^2+1000}{x} \\nonumber\\]\n\nMany other application problems require finding an average value in a similar way, giving us variables in the denominator. Written without a variable in the denominator, this function will contain a negative integer power.\n\nIn the last few sections, we have worked with polynomial functions, which are functions with non-negative integers for exponents. In this section, we explore rational functions, which have variables in the denominator.\n\nUsing Arrow Notation\n\nWe have seen the graphs of the basic reciprocal function and the squared reciprocal function from our study of toolkit functions. Examine these graphs, as shown in Figure \\(\\PageIndex{1}\\), and notice some of their features.\n\n[Figure: Graphs of f(x)=1/x and f(x)=1/x^2]\n\nFigure \\(\\PageIndex{1}\\)\n\nSeveral things are apparent if we examine the graph of \\(f(x)=\\frac{1}{x}\\).\n\nOn the left branch of the graph, the curve approaches the \\(x\\)-axis \\((y=0)\\) as \\(x\\rightarrow -\\infty\\).\n\nAs the graph approaches \\(x = 0\\) from the left, the curve drops, but as we approach zero from the right, the curve rises.\n\nFinally, on the right branch of the graph, the curves approaches the \\(x\\)-axis \\((y=0) \\) as \\(x\\rightarrow \\infty\\).\n\nTo summarize, we use arrow notation to show that \\(x\\) or \\(f (x)\\) is approaching a particular value (Table \\(\\PageIndex{1}\\)).\n\n    Table \\(\\PageIndex{1}\\)\n\n            Symbol\t\n            Meaning\t\n\n            \\(x\\rightarrow a^-\\)\t\n            \\(x\\) approaches a from the left (\\(x<a\\) but close to \\(a\\) )\t\n\n            \\(x\\rightarrow a^+\\)\t\n            \\(x\\) approaches a from the right (\\(x>a\\) but close to \\(a\\) )\t\n\n            \\(x\\rightarrow \\infty\\)\t\n            \\(x\\) approaches infinity (\\(x\\) increases without bound)\t\n\n            \\(x\\rightarrow −\\infty\\)\t\n            \\(x\\) approaches negative infinity (\\(x\\) decreases without bound)\t\n\n            \\(f(x)\\rightarrow \\infty\\)\t\n            the output approaches infinity (the output increases without bound)\t\n\n            \\(f(x)\\rightarrow −\\infty\\)\t\n            the output approaches negative infinity (the output decreases without bound)\t\n\n            \\(f(x)\\rightarrow a\\)\t\n            the output approaches \\(a\\)\t\n\nLocal Behavior of \\(f(x)=\\frac{1}{x}\\)\n\nLet’s begin by looking at the reciprocal function, \\(f(x)=\\frac{1}{x}\\). We cannot divide by zero, which means the function is undefined at \\(x=0\\); so zero is not in the domain. As the input values approach zero from the left side (becoming very small, negative values), the function values decrease without bound (in other words, they approach negative infinity). We can see this behavior in Table \\(\\PageIndex{2}\\).\n\n    Table \\(\\PageIndex{2}\\)\n\n            \\(x\\)\t\n            –0.1\t\n            –0.01\t\n            –0.001\t\n            –0.0001\t\n\n            \\(f(x)=\\frac{1}{x}\\)\t\n            –10\t\n            –100\t\n            –1000\t\n            –10,000\t\n\nWe write in arrow notation\n\nas \\(x\\rightarrow 0^−,f(x)\\rightarrow −\\infty\\)\n\nAs the input values approach zero from the right side (becoming very small, positive values), the function values increase without bound (approaching infinity). We can see this behavior in Table \\(\\PageIndex{3}\\).\n\n    Table \\(\\PageIndex{3}\\)\n\n            \\(x\\)\t\n            0.1\t\n            0.01\t\n            0.001\t\n            0.0001\t\n\n            \\(f(x)=\\frac{1}{x}\\)\t\n            10\t\n            100\t\n            1000\t\n            10,000\t\n\nWe write in arrow notation\n\nAs \\(x\\rightarrow 0^+, f(x)\\rightarrow \\infty\\).\n\nSee Figure \\(\\PageIndex{2}\\).\n\n[Figure: Graph of f(x)=1/x which denotes the end behavior. As x goes to negative infinity, f(x) goes to 0, and as x goes to 0^-, f(x) goes to negative infinity. As x goes to positive infinity, f(x) goes to 0, and as x goes to 0^+, f(x) goes to positive infinity.]\n\nFigure \\(\\PageIndex{2}\\).\n\nThis behavior creates a vertical asymptote, which is a vertical line that the graph approaches but never crosses. In this case, the graph is approaching the vertical line \\(x=0\\) as the input becomes close to zero (Figure \\(\\PageIndex{3}\\)).\n\n[Figure: Graph of f(x)=1/x with its vertical asymptote at x=0.]\n\nFigure \\(\\PageIndex{3}\\).\n\nDefinition: VERTICAL ASYMPTOTE\n\nA vertical asymptote of a graph is a vertical line \\(x=a\\) where the graph tends toward positive or negative infinity as the inputs approach \\(a\\). We write\n\nAs \\(x\\rightarrow a\\), \\(f(x)\\rightarrow \\infty\\), or as \\(x\\rightarrow a\\), \\(f(x)\\rightarrow −\\infty\\).\n\nEnd Behavior of \\(f(x)=\\frac{1}{x}\\)\n\nAs the values of \\(x\\) approach infinity, the function values approach \\(0\\). As the values of \\(x\\) approach negative infinity, the function values approach \\(0\\) (Figure \\(\\PageIndex{4}\\)). Symbolically, using arrow notation\n\nAs \\(x\\rightarrow \\infty\\), \\(f(x)\\rightarrow 0\\),and as \\(x\\rightarrow −\\infty\\), \\(f(x)\\rightarrow 0\\).\n\n[Figure: Graph of f(x)=1/x which highlights the segments of the turning points to denote their end behavior.]\n\nFigure \\(\\PageIndex{4}\\).\n\nBased on this overall behavior and the graph, we can see that the function approaches 0 but never actually reaches 0; it seems to level off as the inputs become large. This behavior creates a horizontal asymptote, a horizontal line that the graph approaches as the input increases or decreases without bound. In this case, the graph is approaching the horizontal line \\(y=0\\). See Figure \\(\\PageIndex{5}\\).\n\n[Figure: Graph of f(x)=1/x with its vertical asymptote at x=0 and its horizontal asymptote at y=0.]\n\nFigure \\(\\PageIndex{5}\\).\n\nDefinition: HORIZONTAL ASYMPTOTE\n\nA horizontal asymptote of a graph is a horizontal line \\(y=b\\) where the graph approaches the line as the inputs increase or decrease without bound. We write\n\nAs \\(x\\rightarrow \\infty \\text{ or } x\\rightarrow −\\infty\\), \\(f(x)\\rightarrow b\\).\n\nExample \\(\\PageIndex{1}\\): Using Arrow Notation.\n\nUse arrow notation to describe the end behavior and local behavior of the function graphed in Figure \\(\\PageIndex{6}\\).\n\n[Figure: Graph of f(x)=1/(x-2)+4 with its vertical asymptote at x=2 and its horizontal asymptote at y=4.]\n\nFigure \\(\\PageIndex{6}\\).\n\nSolution\n\nNotice that the graph is showing a vertical asymptote at \\(x=2\\), which tells us that the function is undefined at \\(x=2\\).\n\nAs \\(x\\rightarrow 2^−\\), \\(f(x)\\rightarrow −\\infty,\\) and as \\(x\\rightarrow 2^+\\), \\(f(x)\\rightarrow \\infty\\).\n\nAnd as the inputs decrease without bound, the graph appears to be leveling off at output values of \\(4\\), indicating a horizontal asymptote at \\(y=4\\). As the inputs increase without bound, the graph levels off at \\(4\\).\n\nAs \\(x\\rightarrow \\infty\\), \\(f(x)\\rightarrow 4\\) and as \\(x\\rightarrow −\\infty\\), \\(f(x)\\rightarrow 4\\).\n\nExercises \\(\\PageIndex{1}\\)\n\nUse arrow notation to describe the end behavior and local behavior for the reciprocal squared function.\n\nAnswer\n\nEnd behavior: as \\(x\\rightarrow \\pm \\infty\\), \\(f(x)\\rightarrow 0\\);\n\nLocal behavior: as \\(x\\rightarrow 0\\), \\(f(x)\\rightarrow \\infty\\) (there are no x- or y-intercepts)\n\nExample \\(\\PageIndex{2}\\): Using Transformations to Graph a Rational Function.\n\nSketch a graph of the reciprocal function shifted two units to the left and up three units. Identify the horizontal and vertical asymptotes of the graph, if any.\n\nSolution\n\nShifting the graph left 2 and up 3 would result in the function\n\n\\[f(x)=\\dfrac{1}{x+2}+3\\]\n\nor equivalently, by giving the terms a common denominator,\n\n\\[f(x)=\\dfrac{3x+7}{x+2}\\]\n\nThe graph of the shifted function is displayed in Figure \\(\\PageIndex{7}\\).\n\n[Figure: Graph of f(x)=1/(x+2)+3 with its vertical asymptote at x=-2 and its horizontal asymptote at y=3.]\n\nFigure \\(\\PageIndex{7}\\).\n\nNotice that this function is undefined at \\(x=−2\\), and the graph also is showing a vertical asymptote at \\(x=−2\\).\n\nAs \\(x\\rightarrow −2^−\\), \\(f(x)\\rightarrow −\\infty\\), and as \\(x\\rightarrow −2^+\\), \\(f(x)\\rightarrow \\infty\\).\n\nAs the inputs increase and decrease without bound, the graph appears to be leveling off at output values of 3, indicating a horizontal asymptote at \\(y=3\\).\n\nAs \\(x\\rightarrow \\pm \\infty\\), \\(f(x)\\rightarrow 3\\).\n\nAnalysis\n\nNotice that horizontal and vertical asymptotes are shifted left 2 and up 3 along with the function.\n\nExercise \\(\\PageIndex{2}\\)\n\nSketch the graph, and find the horizontal and vertical asymptotes of the reciprocal squared function that has been shifted right 3 units and down 4 units.\n\nSolution\n\n[Figure: Graph of f(x)=1/(x-3)^2-4 with its vertical asymptote at x=3 and its horizontal asymptote at y=-4.]\n\nFigure \\(\\PageIndex{8}\\).\n\nThe function and the asymptotes are shifted 3 units right and 4 units down. As \\(x\\rightarrow 3\\), \\(f(x)\\rightarrow \\infty\\), and as \\(x\\rightarrow \\pm \\infty\\), \\(f(x)\\rightarrow −4\\).\n\nThe function is \\(f(x)=\\frac{1}{{(x−3)}^2}−4\\).\n\nSolving Applied Problems Involving Rational Functions\n\nIn Example \\(\\PageIndex{2}\\), we shifted a toolkit function in a way that resulted in the function \\(f(x)=\\frac{3x+7}{x+2}\\). This is an example of a rational function. A rational function is a function that can be written as the quotient of two polynomial functions. Many real-world problems require us to find the ratio of two polynomial functions. Problems involving rates and concentrations often involve rational functions.\n\nDefinition: RATIONAL FUNCTION\n\nA rational function is a function that can be written as the quotient of two polynomial functions \\(P(x)\\) and \\(Q(x)\\).\n\n\\[f(x)=\\dfrac{P(x)}{Q(x)}=\\dfrac{a_px^p+a_{p−1}x^{p−1}+...+a_1x+a_0}{b_qx^q+b_{q−1}x^{q−1}+...+b_1x+b_0},\\space Q(x)≠0\\]\n\nExample \\(\\PageIndex{3}\\): Solving an Applied Problem Involving a Rational Function\n\nA large mixing tank currently contains 100 gallons of water into which 5 pounds of sugar have been mixed. A tap will open pouring 10 gallons per minute of water into the tank at the same time sugar is poured into the tank at a rate of 1 pound per minute. Find the concentration (pounds per gallon) of sugar in the tank after 12 minutes. Is that a greater concentration than at the beginning?\n\nSolution\n\nLet t be the number of minutes since the tap opened. Since the water increases at 10 gallons per minute, and the sugar increases at 1 pound per minute, these are constant rates of change. This tells us the amount of water in the tank is changing linearly, as is the amount of sugar in the tank. We can write an equation independently for each:\n\nwater: \\(W(t)=100+10t\\) in gallons\n\nsugar: \\(S(t)=5+1t\\) in pounds\n\nThe concentration, \\(C\\), will be the ratio of pounds of sugar to gallons of water\n\n\\[C(t)=\\dfrac{5+t}{100+10t}\\]\n\nThe concentration after 12 minutes is given by evaluating \\(C(t)\\) at \\(t= 12\\).\n\n\\[\\begin{align} C(12) & =\\dfrac{5+12}{100+10(12)} \\\\ &= \\dfrac{17}{220} \\end{align} \\]\n\nThis means the concentration is 17 pounds of sugar to 220 gallons of water.\n\nAt the beginning, the concentration is\n\n\\[\\begin{align} C(0) & =\\dfrac{5+0}{100+10(0)} \\\\ & =\\dfrac{1}{20} \\end{align} \\]\n\nSince \\(\\frac{17}{220}≈0.08>\\frac{1}{20}=0.05\\), the concentration is greater after 12 minutes than at the beginning.\n\nAnalysis\n\nTo find the horizontal asymptote, divide the leading coefficient in the numerator by the leading coefficient in the denominator:\n\n\\[\\dfrac{1}{10}=0.1\\]\n\nNotice the horizontal asymptote is \\(y= 0.1.\\) This means the concentration, \\(C,\\) the ratio of pounds of sugar to gallons of water, will approach 0.1 in the long term.\n\nExercise \\(\\PageIndex{3}\\)\n\nThere are 1,200 freshmen and 1,500 sophomores at a prep rally at noon. After 12 p.m., 20 freshmen arrive at the rally every five minutes while 15 sophomores leave the rally. Find the ratio of freshmen to sophomores at 1 p.m.\n\nAnswer\n\n\\(\\frac{12}{11}\\)\n\nFinding the Domains of Rational Functions\n\nA vertical asymptote represents a value at which a rational function is undefined, so that value is not in the domain of the function. A reciprocal function cannot have values in its domain that cause the denominator to equal zero. In general, to find the domain of a rational function, we need to determine which inputs would cause division by zero.\n\nDefinition: DOMAIN OF A RATIONAL FUNCTION\n\nThe domain of a rational function includes all real numbers except those that cause the denominator to equal zero.\n\nHow To: Given a rational function, find the domain.\n\n1. Set the denominator equal to zero.\n\n2. Solve to find the x-values that cause the denominator to equal zero.\n\n3. The domain is all real numbers except those found in Step 2.\n\nExample \\(\\PageIndex{4}\\): Finding the Domain of a Rational Function\n\nFind the domain of \\(f(x)=\\dfrac{x+3}{x^2−9}\\).\n\nSolution\n\nBegin by setting the denominator equal to zero and solving.\n\n\\[x^2-9=0 \\nonumber \\]\n\n\\[x^2=9 \\nonumber \\] \\[x=\\pm 3 \\nonumber \\]\n\nThe denominator is equal to zero when \\(x=\\pm 3\\). The domain of the function is all real numbers except \\(x=\\pm 3\\).\n\nAnalysis\n\nA graph of this function, as shown in Figure \\(\\PageIndex{9}\\), confirms that the function is not defined when \\(x=\\pm 3\\).\n\n[Figure: Graph of f(x)=1/(x-3) with its vertical asymptote at x=3 and its horizontal asymptote at y=0.]\n\nFigure \\(\\PageIndex{9}\\).\n\nThere is a vertical asymptote at \\(x=3\\) and a hole in the graph at \\(x=−3\\). We will discuss these types of holes in greater detail later in this section.\n\nExercise \\(\\PageIndex{4}\\)\n\nFind the domain of \\(f(x)=\\dfrac{4x}{5(x−1)(x−5)}\\).\n\nAnswer\n\nThe domain is all real numbers except \\(x=1\\) and \\(x=5\\).\n\nIdentifying Vertical Asymptotes of Rational Functions\n\nBy looking at the graph of a rational function, we can investigate its local behavior and easily see whether there are asymptotes. We may even be able to approximate their location. Even without the graph, however, we can still determine whether a given rational function has any asymptotes, and calculate their location.\n\nVertical Asymptotes\n\nThe vertical asymptotes of a rational function may be found by examining the factors of the denominator that are not common to the factors in the numerator. Vertical asymptotes occur at the zeros of such factors.\n\nHow To: Given a rational function, identify any vertical asymptotes of its graph\n\n1. Factor the numerator and denominator.\n\n2. Note any restrictions in the domain of the function.\n\n3. Reduce the expression by canceling common factors in the numerator and the denominator.\n\n4. Note any values that cause the denominator to be zero in this simplified version. These are where the vertical asymptotes occur.\n\n5. Note any restrictions in the domain where asymptotes do not occur. These are removable discontinuities, or “holes.”\n\nExample \\(\\PageIndex{5}\\): Identifying Vertical Asymptotes\n\nFind the vertical asymptotes of the graph of \\(k(x)=\\dfrac{5+2x^2}{2−x−x^2}\\).\n\nSolution\n\nFirst, factor the numerator and denominator.\n\n\\[k(x)=\\dfrac{5+2x^2}{2−x−x^2}  \\nonumber \\]\n\n\\[=\\dfrac{5+2x^2}{(2+x)(1-x)} \\nonumber \\]\n\nTo find the vertical asymptotes, we determine where this function will be undefined by setting the denominator equal to zero:\n\n\\[(2+x)(1−x)=0 \\nonumber \\]\n\n\\[x=−2, \\; x=1 \\nonumber \\]\n\nNeither \\(x=–2\\) nor \\(x=1\\) are zeros of the numerator, so the two values indicate two vertical asymptotes. The graph in Figure \\(\\PageIndex{10}\\) confirms the location of the two vertical asymptotes.\n\n[Figure: Graph of k(x)=(5+2x)^2/(2-x-x^2) with its vertical asymptotes at x=-2 and x=1 and its horizontal asymptote at y=-2.]\n\nFigure \\(\\PageIndex{10}\\).\n\nRemovable Discontinuities\n\nOccasionally, a graph will contain a hole: a single point where the graph is not defined, indicated by an open circle. We call such a hole a removable discontinuity. For example, the function \\(f(x)=\\dfrac{x^2−1}{x^2−2x−3}\\) may be re-written by factoring the numerator and the denominator.\n\n\\[f(x)=\\dfrac{(x+1)(x−1)}{(x+1)(x−3)} \\nonumber \\]\n\nNotice that \\(x+1\\) is a common factor to the numerator and the denominator. The zero of this factor, \\(x=−1\\), is the location of the removable discontinuity. Notice also that \\( (x–3) \\) is not a factor in both the numerator and denominator. The zero of this factor, \\(x=3\\), is the vertical asymptote. See Figure \\(\\PageIndex{11}\\). [Note that removable discontinuities may not be visible when we use a graphing calculator, depending upon the window selected.]\n\n[Figure: Graph of f(x)=(x^2-1)/(x^2-2x-3) with its vertical asymptote at x=3 and a removable discontinuity at x=-1.]\n\nFigure \\(\\PageIndex{11}\\).\n\nREMOVABLE DISCONTINUITIES OF RATIONAL FUNCTIONS\n\nA removable discontinuity occurs in the graph of a rational function at \\(x=a\\) if \\(a\\) is a zero for a factor in the denominator that is common with a factor in the numerator. We factor the numerator and denominator and check for common factors. If we find any, we set the common factor equal to 0 and solve. This is the location of the removable discontinuity. This is true if the multiplicity of this factor is greater than or equal to that in the denominator. If the multiplicity of this factor is greater in the denominator, then there is still an asymptote at that value.\n\nExample \\(\\PageIndex{6}\\): Identifying Vertical Asymptotes and Removable Discontinuities for a Graph\n\nFind the vertical asymptotes and removable discontinuities of the graph of \\(k(x)=\\dfrac{x−2}{x^2−4}\\).\n\nSolution\n\nFactor the numerator and the denominator.\n\n\\[k(x)=\\dfrac{x−2}{(x−2)(x+2)} \\nonumber \\]\n\nNotice that there is a common factor in the numerator and the denominator, \\(x–2\\). The zero for this factor is \\(x=2\\). This is the location of the removable discontinuity.\n\nNotice that there is a factor in the denominator that is not in the numerator, \\(x+2\\). The zero for this factor is \\(x=−2\\). The vertical asymptote is \\(x=−2\\). See Figure \\(\\PageIndex{12}\\).\n\n[Figure: Graph of k(x)=(x-2)/(x-2)(x+2) with its vertical asymptote at x=-2 and a removable discontinuity at x=2.]\n\nFigure \\(\\PageIndex{12}\\).\n\nThe graph of this function will have the vertical asymptote at \\(x=−2\\), but at \\(x=2\\) the graph will have a hole.\n\nExercise \\(\\PageIndex{5}\\)\n\nFind the vertical asymptotes and removable discontinuities of the graph of \\(f(x)=\\dfrac{x^2−25}{x^3−6x^2+5x}\\).\n\nAnswer\n\nRemovable discontinuity at \\(x=5\\).\n\nVertical asymptotes: \\(x=0\\), \\(x=1\\).\n\nIdentifying Horizontal Asymptotes of Rational Functions\n\nWhile vertical asymptotes describe the behavior of a graph as the output gets very large or very small, horizontal asymptotes help describe the behavior of a graph as the input gets very large or very small. Recall that a polynomial’s end behavior will mirror that of the leading term. Likewise, a rational function’s end behavior will mirror that of the ratio of the function that is the ratio of the leading terms.\n\nThere are three distinct outcomes when checking for horizontal asymptotes:\n\nCase 1: If the degree of the denominator > degree of the numerator, there is a horizontal asymptote at \\(y=0\\).\n\nExample: \\(f(x)=\\dfrac{4x+2}{x^2+4x−5}\\)\n\nIn this case, the end behavior is \\(f(x)≈\\dfrac{4x}{x^2}=\\dfrac{4}{x}\\). This tells us that, as the inputs increase or decrease without bound, this function will behave similarly to the function \\(g(x)=\\dfrac{4}{x}\\), and the outputs will approach zero, resulting in a horizontal asymptote at \\(y=0\\). See Figure \\(\\PageIndex{13}\\). Note that this graph crosses the horizontal asymptote.\n\n[Figure: Graph of f(x)=(4x+2)/(x^2+4x-5) with its vertical asymptotes at x=-5 and x=1 and its horizontal asymptote at y=0.]\n\nFigure \\(\\PageIndex{13}\\): Horizontal asymptote \\(y=0\\) when \\(f(x)=\\dfrac{p(x)}{q(x)}\\), \\(q(x)≠0\\) where degree of \\(p\\) < degree of \\(q\\).\n\nCase 2: If the degree of the denominator < degree of the numerator by one, we get a slant asymptote.\n\nExample: \\(f(x)=\\dfrac{3x^2−2x+1}{x−1}\\)\n\nIn this case, the end behavior is \\(f(x)≈\\dfrac{3x^2}{x}=3x\\). This tells us that as the inputs increase or decrease without bound, this function will behave similarly to the function \\(g(x)=3x\\). As the inputs grow large, the outputs will grow and not level off, so this graph has no horizontal asymptote. However, the graph of \\(g(x)=3x\\) looks like a diagonal line, and since \\(f\\) will behave similarly to \\(g\\), it will approach a line close to \\(y=3x\\). This line is a slant asymptote.\n\nTo find the equation of the slant asymptote, divide \\(\\dfrac{3x^2−2x+1}{x−1}\\). The quotient is \\(3x+1\\), and the remainder is 2. The slant asymptote is the graph of the line \\(g(x)=3x+1\\). See Figure \\(\\PageIndex{14}\\).\n\n[Figure: Graph of f(x)=(3x^2-2x+1)/(x-1) with its vertical asymptote at x=1 and a slant asymptote aty=3x+1.]\n\nFigure \\(\\PageIndex{14}\\): Slant asymptote when \\(f(x)=\\dfrac{p(x)}{q(x)}\\), \\(q(x)≠0\\) where degree of \\(p\\) >degree of \\(q\\) by 1.\n\nCase 3: If the degree of the denominator = degree of the numerator, there is a horizontal asymptote at \\(y=\\dfrac{a_n}{b_n}\\), where \\(a_n\\) and \\(b_n\\) are respectively the leading coefficients of \\(p(x)\\) and \\(q(x)\\) for \\(f(x)=\\dfrac{p(x)}{q(x)}\\), \\(q(x)≠0\\).\n\nExample: \\(f(x)=\\dfrac{3x^2+2}{x^2+4x−5}\\)\n\nIn this case, the end behavior is \\(f(x)≈\\dfrac{3x^2}{x^2}=3\\). This tells us that as the inputs grow large, this function will behave like the function \\(g(x)=3\\), which is a horizontal line. As \\(x\\rightarrow \\pm \\infty\\), \\(f(x)\\rightarrow 3\\), resulting in a horizontal asymptote at \\(y=3\\). See Figure \\(\\PageIndex{15}\\). Note that this graph crosses the horizontal asymptote.\n\n[Figure: Graph of f(x)=(3x^2+2)/(x^2+4x-5) with its vertical asymptotes at x=-5 and x=1 and its horizontal asymptote at y=3.]\n\nFigure \\(\\PageIndex{15}\\): Horizontal asymptote when \\(f(x)=\\dfrac{p(x)}{q(x)}\\), \\(q(x)≠0\\) where degree of \\(p\\) = degree of \\(q\\).\n\nNotice that, while the graph of a rational function will never cross a vertical asymptote, the graph may or may not cross a horizontal or slant asymptote. Also, although the graph of a rational function may have many vertical asymptotes, the graph will have at most one horizontal (or slant) asymptote.\n\nIt should be noted that, if the degree of the numerator is larger than the degree of the denominator by more than one, the end behavior of the graph will mimic the behavior of the reduced end behavior fraction. For instance, if we had the function\n\n\\[f(x)=\\dfrac{3x^5−x^2}{x+3} \\nonumber \\]\n\nwith end behavior\n\n\\[f(x)≈\\dfrac{3x^5}{x}=3x^4 \\nonumber \\]\n\nthe end behavior of the graph would look similar to that of an even polynomial with a positive leading coefficient.\n\n\\(x\\rightarrow \\pm \\infty, f(x)\\rightarrow \\infty\\)\n\nHORIZONTAL ASYMPTOTES OF RATIONAL FUNCTIONS\n\nThe horizontal asymptote of a rational function can be determined by looking at the degrees of the numerator and denominator.\n\nDegree of numerator is less than degree of denominator: horizontal asymptote at \\(y=0\\).\n\nDegree of numerator is greater than degree of denominator by one: no horizontal asymptote; slant asymptote.\n\nDegree of numerator is equal to degree of denominator: horizontal asymptote at ratio of leading coefficients.\n\nExample \\(\\PageIndex{7}\\): Identifying Horizontal and Slant Asymptotes\n\nFor the functions listed, identify the horizontal or slant asymptote.\n\n1. \\(g(x)=\\dfrac{6x^3−10x}{2x^3+5x^2}\\)\n\n2. \\(h(x)=\\dfrac{x^2−4x+1}{x+2}\\)\n\n3. \\(k(x)=\\dfrac{x^2+4x}{x^3−8}\\)\n\nSolution\n\nFor these solutions, we will use \\(f(x)=\\dfrac{p(x)}{q(x)},\\space q(x)≠0\\).\n\n1. \\(g(x)=\\dfrac{6x^3−10x}{2x^3+5x^2}\\): The degree of \\(p = \\) degree of \\(q=3\\), so we can find the horizontal asymptote by taking the ratio of the leading terms. There is a horizontal asymptote at \\(y =\\frac{6}{2}\\) or \\(y=3\\).\n\n2. \\(h(x)=\\dfrac{x^2−4x+1}{x+2}\\): The degree of \\(p=2\\) and degree of \\(q=1\\). Since \\(p>q\\) by 1, there is a slant asymptote found at \\(\\dfrac{x^2−4x+1}{x+2}\\).\n\n[Figure: clipboard_e5ff4f00a1466e92caa3ddac0dac32f5b.png]\n\n3. \\(k(x)=\\dfrac{x^2+4x}{x^3−8}\\) : The degree of \\(p=2\\) < degree of \\(q=3\\), so there is a horizontal asymptote \\(y=0\\).\n\nExample \\(\\PageIndex{8}\\) Identifying Horizontal Asymptotes\n\nIn the sugar concentration problem earlier, we created the equation \\(C(t)=\\dfrac{5+t}{100+10t}\\).\n\nFind the horizontal asymptote and interpret it in context of the problem.\n\nSolution\n\nBoth the numerator and denominator are linear (degree 1). Because the degrees are equal, there will be a horizontal asymptote at the ratio of the leading coefficients. In the numerator, the leading term is \\(t\\), with coefficient 1. In the denominator, the leading term is 10t, with coefficient 10. The horizontal asymptote will be at the ratio of these values:\n\n\\(t\\rightarrow \\infty,\\space C(t)\\rightarrow \\frac{1}{10}\\)\n\nThis function will have a horizontal asymptote at \\(y=\\frac{1}{10}\\).\n\nThis tells us that as the values of \\(t\\) increase, the values of \\(C\\) will approach \\(\\frac{1}{10}\\). In context, this means that, as more time goes by, the concentration of sugar in the tank will approach one-tenth of a pound of sugar per gallon of water or \\(\\frac{1}{10}\\) pounds per gallon.\n\nExample \\(\\PageIndex{9}\\): Identifying Horizontal and Vertical Asymptotes\n\nFind the horizontal and vertical asymptotes of the function \\(f(x)=\\dfrac{(x−2)(x+3)}{(x−1)(x+2)(x−5)}\\)\n\nSolution\n\nFirst, note that this function has no common factors, so there are no potential removable discontinuities.\n\nThe function will have vertical asymptotes when the denominator is zero, causing the function to be undefined. The denominator will be zero at \\(x=1,–2,\\)and \\(5\\), indicating vertical asymptotes at these values.\n\nThe numerator has degree \\(2\\), while the denominator has degree 3. Since the degree of the denominator is greater than the degree of the numerator, the denominator will grow faster than the numerator, causing the outputs to tend towards zero as the inputs get large, and so as \\(x\\rightarrow \\pm \\infty\\), \\(f(x)\\rightarrow 0\\). This function will have a horizontal asymptote at \\(y =0.\\) See Figure \\(\\PageIndex{16}\\).\n\n[Figure: Graph of f(x)=(x-2)(x+3)/(x-1)(x+2)(x-5) with its vertical asymptotes at x=-2, x=1, and x=5 and its horizontal asymptote at y=0.]\n\nFigure \\(\\PageIndex{16}\\).\n\nExercise \\(\\PageIndex{6}\\)\n\nFind the vertical and horizontal asymptotes of the function:\n\n\\(f(x)=\\dfrac{(2x−1)(2x+1)}{(x−2)(x+3)}\\)\n\nAnswer\n\nVertical asymptotes at \\(x=2\\) and \\(x=–3\\)\n\nhorizontal asymptote at \\(y =4\\).\n\nINTERCEPTS OF RATIONAL FUNCTIONS\n\nA rational function will have a \\(y\\)-intercept at \\(f(0),\\) if the function is defined at zero. A rational function will not have a \\(y\\)-intercept if the function is not defined at zero.\n\nLikewise, a rational function will have \\(x\\)-intercepts at the inputs that cause the output to be zero. Since a fraction is only equal to zero when the numerator is zero, x-intercepts can only occur when the numerator of the rational function is equal to zero.\n\nExample \\(\\PageIndex{10}\\): Finding the Intercepts of a Rational Function\n\nFind the intercepts of \\(f(x)=\\dfrac{(x−2)(x+3)}{(x−1)(x+2)(x−5)}\\).\n\nSolution\n\nWe can find the y-intercept by evaluating the function at zero\n\n\\(f(0)=\\dfrac{(0−2)(0+3)}{(0−1)(0+2)(0−5)}\\)\n\n\\(=−\\dfrac{6}{10}\\)\n\n\\(=−\\dfrac{3}{5}\\)\n\n\\(=−0.6\\)\n\nThe x-intercepts will occur when the function is equal to zero:\n\n\\[ 0=\\dfrac{(x−2)(x+3)}{(x−1)(x+2)(x−5)}  \\text{   This is zero when the numerator is zero.} \\nonumber \\]   \n\n\\[  0=(x−2)(x+3) \\qquad \\qquad \\qquad \\qquad \\qquad \\nonumber \\]   \n\n\\[  x=2, x=−3  \\qquad \\qquad \\qquad \\qquad \\qquad \\nonumber \\]  \n\nThe y-intercept is \\((0,–0.6)\\), the x-intercepts are \\((2,0)\\) and \\((–3,0)\\). See Figure \\(\\PageIndex{17}\\).\n\n[Figure: Graph of f(x)=(x-2)(x+3)/(x-1)(x+2)(x-5) with its vertical asymptotes at x=-2, x=1, and x=5, its horizontal asymptote at y=0, and its intercepts at (-3, 0), (0, -0.6), and (2, 0).]\n\nFigure \\(\\PageIndex{17}\\).\n\nExercise \\(\\PageIndex{7}\\)\n\nGiven the reciprocal squared function that is shifted right 3 units and down 4 units, write this as a rational function. Then, find the x- and y-intercepts and the horizontal and vertical asymptotes.\n\nAnswer\n\nFor the transformed reciprocal squared function, we find the rational form.\n\n\\(f(x)=\\dfrac{1}{{(x−3)}^2}−4=\\dfrac{1−4{(x−3)}^2}{{(x−3)}^2}=\\dfrac{1−4(x^2−6x+9)}{(x−3)(x−3)}=\\dfrac{−4x^2+24x−35}{x^2−6x+9}\\)\n\nBecause the numerator is the same degree as the denominator we know that as \\(x\\rightarrow \\pm \\infty\\), \\(f(x)\\rightarrow −4\\); so \\(y=–4\\) is the horizontal asymptote. Next, we set the denominator equal to zero, and find that the vertical asymptote is \\(x=3\\), because as \\(x\\rightarrow 3\\), \\(f(x)\\rightarrow \\infty\\). We then set the numerator equal to \\(0\\) and find the x-intercepts are at \\((2.5,0)\\) and \\((3.5,0)\\). Finally, we evaluate the function at 0 and find the y-intercept to be at \\((0,−\\frac{35}{9})\\).\n\nGraphing Rational Functions\n\nIn Example \\(\\PageIndex{10}\\), we see that the numerator of a rational function reveals the x-intercepts of the graph, whereas the denominator reveals the vertical asymptotes of the graph. As with polynomials, factors of the numerator may have integer powers greater than one. Fortunately, the effect on the shape of the graph at those intercepts is the same as we saw with polynomials.\n\nThe vertical asymptotes associated with the factors of the denominator will mirror one of the two toolkit reciprocal functions. When the degree of the factor in the denominator is odd, the distinguishing characteristic is that on one side of the vertical asymptote the graph heads towards positive infinity, and on the other side the graph heads towards negative infinity. See Figure \\(\\PageIndex{18}\\).\n\n[Figure: Graph of y=1/x with its vertical asymptote at x=0.]\n\nFigure \\(\\PageIndex{18}\\).\n\nWhen the degree of the factor in the denominator is even, the distinguishing characteristic is that the graph either heads toward positive infinity on both sides of the vertical asymptote or heads toward negative infinity on both sides. See Figure \\(\\PageIndex{19}\\).\n\n[Figure: Graph of y=1/x^2 with its vertical asymptote at x=0.]\n\nFigure \\(\\PageIndex{19}\\).\n\nFor example, the graph of \\(f(x)=\\dfrac{{(x+1)}^2(x−3)}{{(x+3)}^2(x−2)}\\) is shown in Figure \\(\\PageIndex{20}\\).\n\n[Figure: Graph of f(x)=(x+1)^2(x-3)/(x+3)^2(x-2) with its vertical asymptotes at x=-3 and x=2, its horizontal asymptote at y=1, and its intercepts at (-1, 0), (0, 1/6), and (3, 0).]\n\nFigure \\(\\PageIndex{20}\\).\n\nAt the x-intercept \\(x=−1\\) corresponding to the \\({(x+1)}^2\\) factor of the numerator, the graph \"bounces\", consistent with the quadratic nature of the factor.\n\nAt the x-intercept \\(x=3\\) corresponding to the \\((x−3)\\) factor of the numerator, the graph passes through the axis as we would expect from a linear factor.\n\nAt the vertical asymptote \\(x=−3\\) corresponding to the \\({(x+3)}^2\\) factor of the denominator, the graph heads towards positive infinity on both sides of the asymptote, consistent with the behavior of the function \\(f(x)=\\dfrac{1}{x^2}\\).\n\nAt the vertical asymptote \\(x=2\\), corresponding to the \\((x−2)\\) factor of the denominator, the graph heads towards positive infinity on the left side of the asymptote and towards negative infinity on the right side, consistent with the behavior of the function \\(f(x)=\\dfrac{1}{x}\\).\n\nHowto: Given a rational function, sketch a graph.\n\n1. Evaluate the function at 0 to find the y-intercept.\n\n2. Factor the numerator and denominator.\n\n3. For factors in the numerator not common to the denominator, determine where each factor of the numerator is zero to find the x-intercepts.\n\n4. Find the multiplicities of the x-intercepts to determine the behavior of the graph at those points.\n\n5. For factors in the denominator, note the multiplicities of the zeros to determine the local behavior. For those factors not common to the numerator, find the vertical asymptotes by setting those factors equal to zero and then solve.\n\n6. For factors in the denominator common to factors in the numerator, find the removable discontinuities by setting those factors equal to 0 and then solve.\n\n7. Compare the degrees of the numerator and the denominator to determine the horizontal or slant asymptotes.\n\n8. Sketch the graph.\n\nExample \\(\\PageIndex{11}\\): Graphing a Rational Function\n\nSketch a graph of \\(f(x)=\\frac{(x+2)(x−3)}{{(x+1)}^2(x−2)}\\).\n\nSolution\n\nWe can start by noting that the function is already factored, saving us a step.\n\nNext, we will find the intercepts. Evaluating the function at zero gives the y-intercept:\n\n\\(f(0)=\\dfrac{(0+2)(0−3)}{{(0+1)}^2(0−2)}=3\\)\n\nTo find the x-intercepts, we determine when the numerator of the function is zero. Setting each factor equal to zero, we find x-intercepts at \\(x=–2\\) and \\(x=3\\). At each, the behavior will be linear (multiplicity 1), with the graph passing through the intercept.\n\nWe have a y-intercept at \\((0,3)\\) and x-intercepts at \\((–2,0)\\) and \\((3,0)\\).\n\nTo find the vertical asymptotes, we determine when the denominator is equal to zero. This occurs when \\(x+1=0\\) and when \\(x–2=0\\), giving us vertical asymptotes at \\(x=–1\\) and \\(x=2\\).\n\nThere are no common factors in the numerator and denominator. This means there are no removable discontinuities.\n\nFinally, the degree of denominator is larger than the degree of the numerator, telling us this graph has a horizontal asymptote at \\(y =0\\).\n\nTo sketch the graph, we might start by plotting the three intercepts. Since the graph has no x-intercepts between the vertical asymptotes, and the y-intercept is positive, we know the function must remain positive between the asymptotes, letting us fill in the middle portion of the graph as shown in Figure \\(\\PageIndex{21}\\).\n\n[Figure: Graph of only the middle portion of f(x)=(x+2)(x-3)/(x+1)^2(x-2) with its intercepts at (-2, 0), (0, 3), and (3, 0).]\n\nFigure \\(\\PageIndex{21}\\).\n\nThe factor associated with the vertical asymptote at \\(x=−1\\) was squared, so we know the behavior will be the same on both sides of the asymptote. The graph heads toward positive infinity as the inputs approach the asymptote on the right, so the graph will head toward positive infinity on the left as well.\n\nFor the vertical asymptote at \\(x=2\\), the factor was not squared, so the graph will have opposite behavior on either side of the asymptote. See Figure \\(\\PageIndex{22}\\). After passing through the x-intercepts, the graph will then level off toward an output of zero, as indicated by the horizontal asymptote.\n\n[Figure: Graph of f(x)=(x+2)(x-3)/(x+1)^2(x-2) with its vertical asymptotes at x=-1 and x=2, its horizontal asymptote at y=0, and its intercepts at (-2, 0), (0, 3), and (3, 0).]\n\nFigure \\(\\PageIndex{22}\\).\n\nExercise \\(\\PageIndex{8}\\)\n\nGiven the function \\(f(x)=\\frac{{(x+2)}^2(x−2)}{2{(x−1)}^2(x−3)}\\), use the characteristics of polynomials and rational functions to describe its behavior and sketch the function.\n\nAnswer\n\nHorizontal asymptote at \\(y=\\frac{1}{2}\\). Vertical asymptotes at \\(x=1\\) and \\(x=3\\). y-intercept at \\((0,\\frac{4}{3})\\).\n\nx-intercepts at \\((2,0)\\) and \\((–2,0)\\). \\((–2,0)\\) is a zero with multiplicity \\(2\\), and the graph bounces off the x-axis at this point. \\((2,0)\\) is a single zero and the graph crosses the axis at this point.\n\n[Figure: Graph of f(x)=(x+2)^2(x-2)/2(x-1)^2(x-3) with its vertical and horizontal asymptotes.]\n\nFigure \\(\\PageIndex{23}\\).\n\nWriting Rational Functions\n\nNow that we have analyzed the equations for rational functions and how they relate to a graph of the function, we can use information given by a graph to write the function. A rational function written in factored form will have an x-intercept where each factor of the numerator is equal to zero. (An exception occurs in the case of a removable discontinuity.) As a result, we can form a numerator of a function whose graph will pass through a set of x-intercepts by introducing a corresponding set of factors. Likewise, because the function will have a vertical asymptote where each factor of the denominator is equal to zero, we can form a denominator that will produce the vertical asymptotes by introducing a corresponding set of factors.\n\nWRITING RATIONAL FUNCTIONS FROM INTERCEPTS AND ASYMPTOTES\n\nIf a rational function has x-intercepts at \\(x=x_1,x_2,...,x_n\\), vertical asymptotes at \\(x=v_1,v_2,…,v_m\\), and no \\(x_i=\\) any \\(v_j\\), then the function can be written in the form:\n\n\\(f(x)=a\\dfrac{ {(x−x_1)}^{p_1} {(x−x_2)}^{p_2}⋯{(x−x_n)}^{p_n} }{ {(x−v_1)}^{q_1} {(x−v_2)}^{q_2}⋯{(x−v_m)}^{q_n}}\\)\n\nwhere the powers \\(p_i\\) or \\(q_i\\) on each factor can be determined by the behavior of the graph at the corresponding intercept or asymptote, and the stretch factor \\(a\\) can be determined given a value of the function other than the x-intercept or by the horizontal asymptote if it is nonzero.\n\nGiven a graph of a rational function, write the function.\n\n1. Determine the factors of the numerator. Examine the behavior of the graph at the x-intercepts to determine the zeroes and their multiplicities. (This is easy to do when finding the “simplest” function with small multiplicities—such as 1 or 3—but may be difficult for larger multiplicities—such as 5 or 7, for example.)\n\n2. Determine the factors of the denominator. Examine the behavior on both sides of each vertical asymptote to determine the factors and their powers.\n\n3. Use any clear point on the graph to find the stretch factor.\n\nExample \\(\\PageIndex{12}\\): Writing a Rational Function from Intercepts and Asymptotes\n\nWrite an equation for the rational function shown in Figure \\(\\PageIndex{24}\\).\n\n[Figure: Graph of a rational function.]\n\nFigure \\(\\PageIndex{24}\\).\n\nSolution\n\nThe graph appears to have x-intercepts at \\(x=–2\\) and \\(x=3\\). At both, the graph passes through the intercept, suggesting linear factors. The graph has two vertical asymptotes. The one at \\(x=–1\\) seems to exhibit the basic behavior similar to \\(\\dfrac{1}{x}\\), with the graph heading toward positive infinity on one side and heading toward negative infinity on the other. The asymptote at \\(x=2\\) is exhibiting a behavior similar to \\(\\dfrac{1}{x^2}\\), with the graph heading toward negative infinity on both sides of the asymptote. See Figure \\(\\PageIndex{25}\\).\n\n[Figure: Graph of a rational function denoting its vertical asymptotes and x-intercepts.]\n\nFigure \\(\\PageIndex{25}\\).\n\nWe can use this information to write a function of the form\n\n\\(f(x)=a\\dfrac{(x+2)(x−3)}{(x+1){(x−2)}^2}\\)\n\nTo find the stretch factor, we can use another clear point on the graph, such as the y-intercept \\((0,–2)\\).\n\n\\(−2=a\\dfrac{(0+2)(0−3)}{(0+1){(0−2)}^2}\\)\n\n\\(-2=a\\dfrac{−6}{4}\\)\n\n\\(a=\\dfrac{−8}{−6}=\\dfrac{4}{3}\\)\n\nThis gives us a final function of \\(f(x)=\\dfrac{4(x+2)(x−3)}{3(x+1){(x−2)}^2}\\).\n\nMedia\n\nAccess these online resources for additional instruction and practice with rational functions.\n\nGraphing Rational Functions\n\nFind the Equation of a Rational Function\n\nDetermining Vertical and Horizontal Asymptotes\n\nFind the Intercepts, Asymptotes, and Hole of a Rational Function\n\nKey Equations\n\n Rational Function \\( \\qquad \\) \\(f(x)=\\dfrac{P(x)}{Q(x)}=\\dfrac{a_px^p+a_{p−1}x^{p−1}+...+a_1x+a_0}{b_qx^q+b_{q−1}x^{q−1}+...+b_1x+b_0},\\space Q(x)≠0\\)\n\nKey Concepts\n\nWe can use arrow notation to describe local behavior and end behavior of the toolkit functions \\(f(x)=\\frac{1}{x}\\) and \\(f(x)=\\frac{1}{x^2}\\). See Example \\(\\PageIndex{1}\\).\n\nA function that levels off at a horizontal value has a horizontal asymptote. A function can have more than one vertical asymptote. See Example.\n\nApplication problems involving rates and concentrations often involve rational functions. See Example.\n\nThe domain of a rational function includes all real numbers except those that cause the denominator to equal zero. See Example.\n\nThe vertical asymptotes of a rational function will occur where the denominator of the function is equal to zero and the numerator is not zero. See Example.\n\nA removable discontinuity might occur in the graph of a rational function if an input causes both numerator and denominator to be zero. See Example.\n\nA rational function’s end behavior will mirror that of the ratio of the leading terms of the numerator and denominator functions. See Example, Example, Example, and Example.\n\nGraph rational functions by finding the intercepts, behavior at the intercepts and asymptotes, and end behavior. See Example.\n\nIf a rational function has x-intercepts at \\(x=x_1,x_2,…,x_n\\), vertical asymptotes at \\(x=v_1,v_2,…,v_m\\), and no \\(x_i=\\) any \\(v_j\\), then the function can be written in the form\n\nThis page titled 5.6: Rational Functions was last modified on Thu, 26 Dec 2024 22:30:43 GMT and is shared under a CC BY  4.0  license and was authored, remixed, and/or curated by OpenStax via source content that was edited to the style and standards of the LibreTexts platform.",
+  "figures": [
+    {
+      "url": "https://math.libretexts.org/@api/deki/files/6755/CNX_Precalc_Figure_03_07_001.jpg?revision=1",
+      "alt": "Graphs of f(x)=1/x and f(x)=1/x^2",
+      "credit": ""
+    },
+    {
+      "url": "https://math.libretexts.org/@api/deki/files/6757/CNX_Precalc_Figure_03_07_002.jpg?revision=1",
+      "alt": "Graph of f(x)=1/x which denotes the end behavior. As x goes to negative infinity, f(x) goes to 0, and as x goes to 0^-, f(x) goes to negative infinity. As x goes to positive infinity, f(x) goes to 0, and as x goes to 0^+, f(x) goes to positive infinity.",
+      "credit": ""
+    },
+    {
+      "url": "https://math.libretexts.org/@api/deki/files/6758/CNX_Precalc_Figure_03_07_003.jpg?revision=1",
+      "alt": "Graph of f(x)=1/x with its vertical asymptote at x=0.",
+      "credit": ""
+    },
+    {
+      "url": "https://math.libretexts.org/@api/deki/files/6759/CNX_Precalc_Figure_03_07_004.jpg?revision=1",
+      "alt": "Graph of f(x)=1/x which highlights the segments of the turning points to denote their end behavior.",
+      "credit": ""
+    },
+    {
+      "url": "https://math.libretexts.org/@api/deki/files/6760/CNX_Precalc_Figure_03_07_005.jpg?revision=1",
+      "alt": "Graph of f(x)=1/x with its vertical asymptote at x=0 and its horizontal asymptote at y=0.",
+      "credit": ""
+    },
+    {
+      "url": "https://math.libretexts.org/@api/deki/files/6761/CNX_Precalc_Figure_03_07_006.jpg?revision=1",
+      "alt": "Graph of f(x)=1/(x-2)+4 with its vertical asymptote at x=2 and its horizontal asymptote at y=4.",
+      "credit": ""
+    },
+    {
+      "url": "https://math.libretexts.org/@api/deki/files/6762/CNX_Precalc_Figure_03_07_007.jpg?revision=1",
+      "alt": "Graph of f(x)=1/(x+2)+3 with its vertical asymptote at x=-2 and its horizontal asymptote at y=3.",
+      "credit": ""
+    },
+    {
+      "url": "https://math.libretexts.org/@api/deki/files/6763/CNX_Precalc_Figure_03_07_008.jpg?revision=1",
+      "alt": "Graph of f(x)=1/(x-3)^2-4 with its vertical asymptote at x=3 and its horizontal asymptote at y=-4.",
+      "credit": ""
+    },
+    {
+      "url": "https://math.libretexts.org/@api/deki/files/6821/CNX_Precalc_Figure_03_07_009.jpg?revision=1",
+      "alt": "Graph of f(x)=1/(x-3) with its vertical asymptote at x=3 and its horizontal asymptote at y=0.",
+      "credit": ""
+    },
+    {
+      "url": "https://math.libretexts.org/@api/deki/files/6822/CNX_Precalc_Figure_03_07_010.jpg?revision=1",
+      "alt": "Graph of k(x)=(5+2x)^2/(2-x-x^2) with its vertical asymptotes at x=-2 and x=1 and its horizontal asymptote at y=-2.",
+      "credit": ""
+    },
+    {
+      "url": "https://math.libretexts.org/@api/deki/files/6823/CNX_Precalc_Figure_03_07_011.jpg?revision=1",
+      "alt": "Graph of f(x)=(x^2-1)/(x^2-2x-3) with its vertical asymptote at x=3 and a removable discontinuity at x=-1.",
+      "credit": ""
+    },
+    {
+      "url": "https://math.libretexts.org/@api/deki/files/6824/CNX_Precalc_Figure_03_07_012.jpg?revision=1",
+      "alt": "Graph of k(x)=(x-2)/(x-2)(x+2) with its vertical asymptote at x=-2 and a removable discontinuity at x=2.",
+      "credit": ""
+    },
+    {
+      "url": "https://math.libretexts.org/@api/deki/files/6825/CNX_Precalc_Figure_03_07_013.jpg?revision=1",
+      "alt": "Graph of f(x)=(4x+2)/(x^2+4x-5) with its vertical asymptotes at x=-5 and x=1 and its horizontal asymptote at y=0.",
+      "credit": ""
+    },
+    {
+      "url": "https://math.libretexts.org/@api/deki/files/6826/CNX_Precalc_Figure_03_07_014.jpg?revision=1",
+      "alt": "Graph of f(x)=(3x^2-2x+1)/(x-1) with its vertical asymptote at x=1 and a slant asymptote aty=3x+1.",
+      "credit": ""
+    },
+    {
+      "url": "https://math.libretexts.org/@api/deki/files/6827/CNX_Precalc_Figure_03_07_015.jpg?revision=1",
+      "alt": "Graph of f(x)=(3x^2+2)/(x^2+4x-5) with its vertical asymptotes at x=-5 and x=1 and its horizontal asymptote at y=3.",
+      "credit": ""
+    },
+    {
+      "url": "https://math.libretexts.org/@api/deki/files/13944/clipboard_e5ff4f00a1466e92caa3ddac0dac32f5b.png?revision=1&size=bestfit&width=123&height=66",
+      "alt": "clipboard_e5ff4f00a1466e92caa3ddac0dac32f5b.png",
+      "credit": ""
+    },
+    {
+      "url": "https://math.libretexts.org/@api/deki/files/6828/CNX_Precalc_Figure_03_07_016.jpg?revision=1",
+      "alt": "Graph of f(x)=(x-2)(x+3)/(x-1)(x+2)(x-5) with its vertical asymptotes at x=-2, x=1, and x=5 and its horizontal asymptote at y=0.",
+      "credit": ""
+    },
+    {
+      "url": "https://math.libretexts.org/@api/deki/files/6829/CNX_Precalc_Figure_03_07_017.jpg?revision=1",
+      "alt": "Graph of f(x)=(x-2)(x+3)/(x-1)(x+2)(x-5) with its vertical asymptotes at x=-2, x=1, and x=5, its horizontal asymptote at y=0, and its intercepts at (-3, 0), (0, -0.6), and (2, 0).",
+      "credit": ""
+    },
+    {
+      "url": "https://math.libretexts.org/@api/deki/files/6830/CNX_Precalc_Figure_03_07_019.jpg?revision=1",
+      "alt": "Graph of y=1/x with its vertical asymptote at x=0.",
+      "credit": ""
+    },
+    {
+      "url": "https://math.libretexts.org/@api/deki/files/6831/CNX_Precalc_Figure_03_07_018.jpg?revision=1",
+      "alt": "Graph of y=1/x^2 with its vertical asymptote at x=0.",
+      "credit": ""
+    },
+    {
+      "url": "https://math.libretexts.org/@api/deki/files/6832/CNX_Precalc_Figure_03_07_020.jpg?revision=1",
+      "alt": "Graph of f(x)=(x+1)^2(x-3)/(x+3)^2(x-2) with its vertical asymptotes at x=-3 and x=2, its horizontal asymptote at y=1, and its intercepts at (-1, 0), (0, 1/6), and (3, 0).",
+      "credit": ""
+    },
+    {
+      "url": "https://math.libretexts.org/@api/deki/files/6833/CNX_Precalc_Figure_03_07_021.jpg?revision=1",
+      "alt": "Graph of only the middle portion of f(x)=(x+2)(x-3)/(x+1)^2(x-2) with its intercepts at (-2, 0), (0, 3), and (3, 0).",
+      "credit": ""
+    },
+    {
+      "url": "https://math.libretexts.org/@api/deki/files/6834/CNX_Precalc_Figure_03_07_022.jpg?revision=1",
+      "alt": "Graph of f(x)=(x+2)(x-3)/(x+1)^2(x-2) with its vertical asymptotes at x=-1 and x=2, its horizontal asymptote at y=0, and its intercepts at (-2, 0), (0, 3), and (3, 0).",
+      "credit": ""
+    },
+    {
+      "url": "https://math.libretexts.org/@api/deki/files/6835/CNX_Precalc_Figure_03_07_023.jpg?revision=1",
+      "alt": "Graph of f(x)=(x+2)^2(x-2)/2(x-1)^2(x-3) with its vertical and horizontal asymptotes.",
+      "credit": ""
+    },
+    {
+      "url": "https://math.libretexts.org/@api/deki/files/6836/CNX_Precalc_Figure_03_07_024.jpg?revision=1",
+      "alt": "Graph of a rational function.",
+      "credit": ""
+    },
+    {
+      "url": "https://math.libretexts.org/@api/deki/files/6837/CNX_Precalc_Figure_03_07_025.jpg?revision=1",
+      "alt": "Graph of a rational function denoting its vertical asymptotes and x-intercepts.",
+      "credit": ""
+    }
+  ],
+  "references": [
+    {
+      "text": "Graphing Rational Functions",
+      "url": "http://openstaxcollege.org/l/graphrational"
+    },
+    {
+      "text": "Find the Equation of a Rational Function",
+      "url": "http://openstaxcollege.org/l/equatrational"
+    },
+    {
+      "text": "Determining Vertical and Horizontal Asymptotes",
+      "url": "http://openstaxcollege.org/l/asymptote"
+    },
+    {
+      "text": "Find the Intercepts, Asymptotes, and Hole of a Rational Function",
+      "url": "http://openstaxcollege.org/l/interasymptote"
+    },
+    {
+      "text": "Example \\(\\PageIndex{1}\\)",
+      "url": "http://cnx.org/contents/E6wQevFf@5.200:KNTP2r7D@8/Rational-Functions#Example_03_07_01"
+    },
+    {
+      "text": "Example",
+      "url": "http://cnx.org/contents/E6wQevFf@5.200:KNTP2r7D@8/Rational-Functions#Example_03_07_02"
+    },
+    {
+      "text": "Example",
+      "url": "http://cnx.org/contents/E6wQevFf@5.200:KNTP2r7D@8/Rational-Functions#Example_03_07_03"
+    },
+    {
+      "text": "Example",
+      "url": "http://cnx.org/contents/E6wQevFf@5.200:KNTP2r7D@8/Rational-Functions#Example_03_07_04"
+    },
+    {
+      "text": "Example",
+      "url": "http://cnx.org/contents/E6wQevFf@5.200:KNTP2r7D@8/Rational-Functions#Example_03_07_05"
+    },
+    {
+      "text": "Example",
+      "url": "http://cnx.org/contents/E6wQevFf@5.200:KNTP2r7D@8/Rational-Functions#Example_03_07_06"
+    },
+    {
+      "text": "Example",
+      "url": "http://cnx.org/contents/E6wQevFf@5.200:KNTP2r7D@8/Rational-Functions#Example_03_07_07"
+    },
+    {
+      "text": "Example",
+      "url": "http://cnx.org/contents/E6wQevFf@5.200:KNTP2r7D@8/Rational-Functions#Example_03_07_08"
+    },
+    {
+      "text": "Example",
+      "url": "http://cnx.org/contents/E6wQevFf@5.200:KNTP2r7D@8/Rational-Functions#Example_03_07_09"
+    },
+    {
+      "text": "Example",
+      "url": "http://cnx.org/contents/E6wQevFf@5.200:KNTP2r7D@8/Rational-Functions#Example_03_07_10"
+    },
+    {
+      "text": "Example",
+      "url": "http://cnx.org/contents/E6wQevFf@5.200:KNTP2r7D@8/Rational-Functions#Example_03_07_11"
+    },
+    {
+      "text": "5.6: Rational Functions",
+      "url": "https://math.libretexts.org/Bookshelves/Algebra/Algebra_and_Trigonometry_1e_(OpenStax)/05%3A_Polynomial_and_Rational_Functions/5.06%3A_Rational_Functions"
+    },
+    {
+      "text": "CC BY  4.0",
+      "url": "https://creativecommons.org/licenses/by/4.0"
+    },
+    {
+      "text": "OpenStax",
+      "url": "https://openstax.org/"
+    },
+    {
+      "text": "source content",
+      "url": "https://openstax.org/details/books/precalculus"
+    }
+  ],
+  "exercises": [
+    {
+      "ordinal": 1,
+      "sourceNumber": "",
+      "sourceAnchor": "",
+      "kind": "example-or-exercise",
+      "context": "Based on this overall behavior and the graph, we can see that the function approaches 0 but never actually reaches 0; it seems to level off as the inputs become large. This behavior creates a horizontal asymptote, a horizontal line that the graph approaches as the input increases or decreases without bound. In this case, the graph is approaching the horizontal line \\(y=0\\). See Figure \\(\\PageIndex{5}\\).\n\nDefinition: HORIZONTAL ASYMPTOTE\n\nA horizontal asymptote of a graph is a horizontal line \\(y=b\\) where the graph approaches the line as the inputs increase or decrease without bound. We write",
+      "original": "Example \\(\\PageIndex{1}\\): Using Arrow Notation.\n\nUse arrow notation to describe the end behavior and local behavior of the function graphed in Figure \\(\\PageIndex{6}\\).\n\n[Figure: Graph of f(x)=1/(x-2)+4 with its vertical asymptote at x=2 and its horizontal asymptote at y=4.]\n\nFigure \\(\\PageIndex{6}\\).\n\nSolution\n\nNotice that the graph is showing a vertical asymptote at \\(x=2\\), which tells us that the function is undefined at \\(x=2\\).\n\nAs \\(x\\rightarrow 2^−\\), \\(f(x)\\rightarrow −\\infty,\\) and as \\(x\\rightarrow 2^+\\), \\(f(x)\\rightarrow \\infty\\).\n\nAnd as the inputs decrease without bound, the graph appears to be leveling off at output values of \\(4\\), indicating a horizontal asymptote at \\(y=4\\). As the inputs increase without bound, the graph levels off at \\(4\\).\n\nAs \\(x\\rightarrow \\infty\\), \\(f(x)\\rightarrow 4\\) and as \\(x\\rightarrow −\\infty\\), \\(f(x)\\rightarrow 4\\).",
+      "prompt": "Example \\(\\PageIndex{1}\\): Using Arrow Notation.\n\nUse arrow notation to describe the end behavior and local behavior of the function graphed in Figure \\(\\PageIndex{6}\\).\n\n[Figure: Graph of f(x)=1/(x-2)+4 with its vertical asymptote at x=2 and its horizontal asymptote at y=4.]\n\nFigure \\(\\PageIndex{6}\\).\n\nSolution\n\nNotice that the graph is showing a vertical asymptote at \\(x=2\\), which tells us that the function is undefined at \\(x=2\\).\n\nAs \\(x\\rightarrow 2^−\\), \\(f(x)\\rightarrow −\\infty,\\) and as \\(x\\rightarrow 2^+\\), \\(f(x)\\rightarrow \\infty\\).\n\nAnd as the inputs decrease without bound, the graph appears to be leveling off at output values of \\(4\\), indicating a horizontal asymptote at \\(y=4\\). As the inputs increase without bound, the graph levels off at \\(4\\).\n\nAs \\(x\\rightarrow \\infty\\), \\(f(x)\\rightarrow 4\\) and as \\(x\\rightarrow −\\infty\\), \\(f(x)\\rightarrow 4\\).",
+      "sourceAnswers": [],
+      "hasFigure": true,
+      "status": "draft",
+      "answerVerified": false,
+      "translationStatus": "pending",
+      "mappingStatus": "pending"
+    },
+    {
+      "ordinal": 2,
+      "sourceNumber": "",
+      "sourceAnchor": "",
+      "kind": "exercise-candidate",
+      "context": "Based on this overall behavior and the graph, we can see that the function approaches 0 but never actually reaches 0; it seems to level off as the inputs become large. This behavior creates a horizontal asymptote, a horizontal line that the graph approaches as the input increases or decreases without bound. In this case, the graph is approaching the horizontal line \\(y=0\\). See Figure \\(\\PageIndex{5}\\).\n\nDefinition: HORIZONTAL ASYMPTOTE\n\nA horizontal asymptote of a graph is a horizontal line \\(y=b\\) where the graph approaches the line as the inputs increase or decrease without bound. We write",
+      "original": "Exercises \\(\\PageIndex{1}\\)\n\nUse arrow notation to describe the end behavior and local behavior for the reciprocal squared function.\n\nAnswer\n\nEnd behavior: as \\(x\\rightarrow \\pm \\infty\\), \\(f(x)\\rightarrow 0\\);\n\nLocal behavior: as \\(x\\rightarrow 0\\), \\(f(x)\\rightarrow \\infty\\) (there are no x- or y-intercepts)",
+      "prompt": "Exercises \\(\\PageIndex{1}\\)\n\nUse arrow notation to describe the end behavior and local behavior for the reciprocal squared function.",
+      "sourceAnswers": [
+        "End behavior: as \\(x\\rightarrow \\pm \\infty\\), \\(f(x)\\rightarrow 0\\);\n\nLocal behavior: as \\(x\\rightarrow 0\\), \\(f(x)\\rightarrow \\infty\\) (there are no x- or y-intercepts)"
+      ],
+      "hasFigure": false,
+      "status": "draft",
+      "answerVerified": false,
+      "translationStatus": "pending",
+      "mappingStatus": "pending"
+    },
+    {
+      "ordinal": 3,
+      "sourceNumber": "",
+      "sourceAnchor": "",
+      "kind": "example-or-exercise",
+      "context": "Based on this overall behavior and the graph, we can see that the function approaches 0 but never actually reaches 0; it seems to level off as the inputs become large. This behavior creates a horizontal asymptote, a horizontal line that the graph approaches as the input increases or decreases without bound. In this case, the graph is approaching the horizontal line \\(y=0\\). See Figure \\(\\PageIndex{5}\\).\n\nDefinition: HORIZONTAL ASYMPTOTE\n\nA horizontal asymptote of a graph is a horizontal line \\(y=b\\) where the graph approaches the line as the inputs increase or decrease without bound. We write",
+      "original": "Example \\(\\PageIndex{2}\\): Using Transformations to Graph a Rational Function.\n\nSketch a graph of the reciprocal function shifted two units to the left and up three units. Identify the horizontal and vertical asymptotes of the graph, if any.\n\nSolution\n\nShifting the graph left 2 and up 3 would result in the function\n\n\\[f(x)=\\dfrac{1}{x+2}+3\\]\n\nor equivalently, by giving the terms a common denominator,\n\n\\[f(x)=\\dfrac{3x+7}{x+2}\\]\n\nThe graph of the shifted function is displayed in Figure \\(\\PageIndex{7}\\).\n\n[Figure: Graph of f(x)=1/(x+2)+3 with its vertical asymptote at x=-2 and its horizontal asymptote at y=3.]\n\nFigure \\(\\PageIndex{7}\\).\n\nNotice that this function is undefined at \\(x=−2\\), and the graph also is showing a vertical asymptote at \\(x=−2\\).\n\nAs \\(x\\rightarrow −2^−\\), \\(f(x)\\rightarrow −\\infty\\), and as \\(x\\rightarrow −2^+\\), \\(f(x)\\rightarrow \\infty\\).\n\nAs the inputs increase and decrease without bound, the graph appears to be leveling off at output values of 3, indicating a horizontal asymptote at \\(y=3\\).\n\nAs \\(x\\rightarrow \\pm \\infty\\), \\(f(x)\\rightarrow 3\\).\n\nAnalysis\n\nNotice that horizontal and vertical asymptotes are shifted left 2 and up 3 along with the function.",
+      "prompt": "Example \\(\\PageIndex{2}\\): Using Transformations to Graph a Rational Function.\n\nSketch a graph of the reciprocal function shifted two units to the left and up three units. Identify the horizontal and vertical asymptotes of the graph, if any.\n\nSolution\n\nShifting the graph left 2 and up 3 would result in the function\n\n\\[f(x)=\\dfrac{1}{x+2}+3\\]\n\nor equivalently, by giving the terms a common denominator,\n\n\\[f(x)=\\dfrac{3x+7}{x+2}\\]\n\nThe graph of the shifted function is displayed in Figure \\(\\PageIndex{7}\\).\n\n[Figure: Graph of f(x)=1/(x+2)+3 with its vertical asymptote at x=-2 and its horizontal asymptote at y=3.]\n\nFigure \\(\\PageIndex{7}\\).\n\nNotice that this function is undefined at \\(x=−2\\), and the graph also is showing a vertical asymptote at \\(x=−2\\).\n\nAs \\(x\\rightarrow −2^−\\), \\(f(x)\\rightarrow −\\infty\\), and as \\(x\\rightarrow −2^+\\), \\(f(x)\\rightarrow \\infty\\).\n\nAs the inputs increase and decrease without bound, the graph appears to be leveling off at output values of 3, indicating a horizontal asymptote at \\(y=3\\).\n\nAs \\(x\\rightarrow \\pm \\infty\\), \\(f(x)\\rightarrow 3\\).\n\nAnalysis\n\nNotice that horizontal and vertical asymptotes are shifted left 2 and up 3 along with the function.",
+      "sourceAnswers": [],
+      "hasFigure": true,
+      "status": "draft",
+      "answerVerified": false,
+      "translationStatus": "pending",
+      "mappingStatus": "pending"
+    },
+    {
+      "ordinal": 4,
+      "sourceNumber": "",
+      "sourceAnchor": "",
+      "kind": "exercise-candidate",
+      "context": "Based on this overall behavior and the graph, we can see that the function approaches 0 but never actually reaches 0; it seems to level off as the inputs become large. This behavior creates a horizontal asymptote, a horizontal line that the graph approaches as the input increases or decreases without bound. In this case, the graph is approaching the horizontal line \\(y=0\\). See Figure \\(\\PageIndex{5}\\).\n\nDefinition: HORIZONTAL ASYMPTOTE\n\nA horizontal asymptote of a graph is a horizontal line \\(y=b\\) where the graph approaches the line as the inputs increase or decrease without bound. We write",
+      "original": "Exercise \\(\\PageIndex{2}\\)\n\nSketch the graph, and find the horizontal and vertical asymptotes of the reciprocal squared function that has been shifted right 3 units and down 4 units.\n\nSolution\n\n[Figure: Graph of f(x)=1/(x-3)^2-4 with its vertical asymptote at x=3 and its horizontal asymptote at y=-4.]\n\nFigure \\(\\PageIndex{8}\\).\n\nThe function and the asymptotes are shifted 3 units right and 4 units down. As \\(x\\rightarrow 3\\), \\(f(x)\\rightarrow \\infty\\), and as \\(x\\rightarrow \\pm \\infty\\), \\(f(x)\\rightarrow −4\\).\n\nThe function is \\(f(x)=\\frac{1}{{(x−3)}^2}−4\\).",
+      "prompt": "Exercise \\(\\PageIndex{2}\\)\n\nSketch the graph, and find the horizontal and vertical asymptotes of the reciprocal squared function that has been shifted right 3 units and down 4 units.\n\nSolution\n\n[Figure: Graph of f(x)=1/(x-3)^2-4 with its vertical asymptote at x=3 and its horizontal asymptote at y=-4.]\n\nFigure \\(\\PageIndex{8}\\).\n\nThe function and the asymptotes are shifted 3 units right and 4 units down. As \\(x\\rightarrow 3\\), \\(f(x)\\rightarrow \\infty\\), and as \\(x\\rightarrow \\pm \\infty\\), \\(f(x)\\rightarrow −4\\).\n\nThe function is \\(f(x)=\\frac{1}{{(x−3)}^2}−4\\).",
+      "sourceAnswers": [],
+      "hasFigure": true,
+      "status": "draft",
+      "answerVerified": false,
+      "translationStatus": "pending",
+      "mappingStatus": "pending"
+    },
+    {
+      "ordinal": 5,
+      "sourceNumber": "",
+      "sourceAnchor": "",
+      "kind": "example-or-exercise",
+      "context": "In Example \\(\\PageIndex{2}\\), we shifted a toolkit function in a way that resulted in the function \\(f(x)=\\frac{3x+7}{x+2}\\). This is an example of a rational function. A rational function is a function that can be written as the quotient of two polynomial functions. Many real-world problems require us to find the ratio of two polynomial functions. Problems involving rates and concentrations often involve rational functions.\n\nDefinition: RATIONAL FUNCTION\n\nA rational function is a function that can be written as the quotient of two polynomial functions \\(P(x)\\) and \\(Q(x)\\).",
+      "original": "Example \\(\\PageIndex{3}\\): Solving an Applied Problem Involving a Rational Function\n\nA large mixing tank currently contains 100 gallons of water into which 5 pounds of sugar have been mixed. A tap will open pouring 10 gallons per minute of water into the tank at the same time sugar is poured into the tank at a rate of 1 pound per minute. Find the concentration (pounds per gallon) of sugar in the tank after 12 minutes. Is that a greater concentration than at the beginning?\n\nSolution\n\nLet t be the number of minutes since the tap opened. Since the water increases at 10 gallons per minute, and the sugar increases at 1 pound per minute, these are constant rates of change. This tells us the amount of water in the tank is changing linearly, as is the amount of sugar in the tank. We can write an equation independently for each:\n\nwater: \\(W(t)=100+10t\\) in gallons\n\nsugar: \\(S(t)=5+1t\\) in pounds\n\nThe concentration, \\(C\\), will be the ratio of pounds of sugar to gallons of water\n\n\\[C(t)=\\dfrac{5+t}{100+10t}\\]\n\nThe concentration after 12 minutes is given by evaluating \\(C(t)\\) at \\(t= 12\\).\n\n\\[\\begin{align} C(12) & =\\dfrac{5+12}{100+10(12)} \\\\ &= \\dfrac{17}{220} \\end{align} \\]\n\nThis means the concentration is 17 pounds of sugar to 220 gallons of water.\n\nAt the beginning, the concentration is\n\n\\[\\begin{align} C(0) & =\\dfrac{5+0}{100+10(0)} \\\\ & =\\dfrac{1}{20} \\end{align} \\]\n\nSince \\(\\frac{17}{220}≈0.08>\\frac{1}{20}=0.05\\), the concentration is greater after 12 minutes than at the beginning.\n\nAnalysis\n\nTo find the horizontal asymptote, divide the leading coefficient in the numerator by the leading coefficient in the denominator:\n\n\\[\\dfrac{1}{10}=0.1\\]\n\nNotice the horizontal asymptote is \\(y= 0.1.\\) This means the concentration, \\(C,\\) the ratio of pounds of sugar to gallons of water, will approach 0.1 in the long term.",
+      "prompt": "Example \\(\\PageIndex{3}\\): Solving an Applied Problem Involving a Rational Function\n\nA large mixing tank currently contains 100 gallons of water into which 5 pounds of sugar have been mixed. A tap will open pouring 10 gallons per minute of water into the tank at the same time sugar is poured into the tank at a rate of 1 pound per minute. Find the concentration (pounds per gallon) of sugar in the tank after 12 minutes. Is that a greater concentration than at the beginning?\n\nSolution\n\nLet t be the number of minutes since the tap opened. Since the water increases at 10 gallons per minute, and the sugar increases at 1 pound per minute, these are constant rates of change. This tells us the amount of water in the tank is changing linearly, as is the amount of sugar in the tank. We can write an equation independently for each:\n\nwater: \\(W(t)=100+10t\\) in gallons\n\nsugar: \\(S(t)=5+1t\\) in pounds\n\nThe concentration, \\(C\\), will be the ratio of pounds of sugar to gallons of water\n\n\\[C(t)=\\dfrac{5+t}{100+10t}\\]\n\nThe concentration after 12 minutes is given by evaluating \\(C(t)\\) at \\(t= 12\\).\n\n\\[\\begin{align} C(12) & =\\dfrac{5+12}{100+10(12)} \\\\ &= \\dfrac{17}{220} \\end{align} \\]\n\nThis means the concentration is 17 pounds of sugar to 220 gallons of water.\n\nAt the beginning, the concentration is\n\n\\[\\begin{align} C(0) & =\\dfrac{5+0}{100+10(0)} \\\\ & =\\dfrac{1}{20} \\end{align} \\]\n\nSince \\(\\frac{17}{220}≈0.08>\\frac{1}{20}=0.05\\), the concentration is greater after 12 minutes than at the beginning.\n\nAnalysis\n\nTo find the horizontal asymptote, divide the leading coefficient in the numerator by the leading coefficient in the denominator:\n\n\\[\\dfrac{1}{10}=0.1\\]\n\nNotice the horizontal asymptote is \\(y= 0.1.\\) This means the concentration, \\(C,\\) the ratio of pounds of sugar to gallons of water, will approach 0.1 in the long term.",
+      "sourceAnswers": [],
+      "hasFigure": false,
+      "status": "draft",
+      "answerVerified": false,
+      "translationStatus": "pending",
+      "mappingStatus": "pending"
+    },
+    {
+      "ordinal": 6,
+      "sourceNumber": "",
+      "sourceAnchor": "",
+      "kind": "exercise-candidate",
+      "context": "In Example \\(\\PageIndex{2}\\), we shifted a toolkit function in a way that resulted in the function \\(f(x)=\\frac{3x+7}{x+2}\\). This is an example of a rational function. A rational function is a function that can be written as the quotient of two polynomial functions. Many real-world problems require us to find the ratio of two polynomial functions. Problems involving rates and concentrations often involve rational functions.\n\nDefinition: RATIONAL FUNCTION\n\nA rational function is a function that can be written as the quotient of two polynomial functions \\(P(x)\\) and \\(Q(x)\\).",
+      "original": "Exercise \\(\\PageIndex{3}\\)\n\nThere are 1,200 freshmen and 1,500 sophomores at a prep rally at noon. After 12 p.m., 20 freshmen arrive at the rally every five minutes while 15 sophomores leave the rally. Find the ratio of freshmen to sophomores at 1 p.m.\n\nAnswer\n\n\\(\\frac{12}{11}\\)",
+      "prompt": "Exercise \\(\\PageIndex{3}\\)\n\nThere are 1,200 freshmen and 1,500 sophomores at a prep rally at noon. After 12 p.m., 20 freshmen arrive at the rally every five minutes while 15 sophomores leave the rally. Find the ratio of freshmen to sophomores at 1 p.m.",
+      "sourceAnswers": [
+        "\\(\\frac{12}{11}\\)"
+      ],
+      "hasFigure": false,
+      "status": "draft",
+      "answerVerified": false,
+      "translationStatus": "pending",
+      "mappingStatus": "pending"
+    },
+    {
+      "ordinal": 7,
+      "sourceNumber": "1",
+      "sourceAnchor": "",
+      "kind": "exercise-candidate",
+      "context": "Definition: DOMAIN OF A RATIONAL FUNCTION\n\nThe domain of a rational function includes all real numbers except those that cause the denominator to equal zero.\n\nHow To: Given a rational function, find the domain.",
+      "original": "1. Set the denominator equal to zero.",
+      "prompt": "1. Set the denominator equal to zero.",
+      "sourceAnswers": [],
+      "hasFigure": false,
+      "status": "draft",
+      "answerVerified": false,
+      "translationStatus": "pending",
+      "mappingStatus": "pending"
+    },
+    {
+      "ordinal": 8,
+      "sourceNumber": "2",
+      "sourceAnchor": "",
+      "kind": "exercise-candidate",
+      "context": "Definition: DOMAIN OF A RATIONAL FUNCTION\n\nThe domain of a rational function includes all real numbers except those that cause the denominator to equal zero.\n\nHow To: Given a rational function, find the domain.",
+      "original": "2. Solve to find the x-values that cause the denominator to equal zero.",
+      "prompt": "2. Solve to find the x-values that cause the denominator to equal zero.",
+      "sourceAnswers": [],
+      "hasFigure": false,
+      "status": "draft",
+      "answerVerified": false,
+      "translationStatus": "pending",
+      "mappingStatus": "pending"
+    },
+    {
+      "ordinal": 9,
+      "sourceNumber": "3",
+      "sourceAnchor": "",
+      "kind": "exercise-candidate",
+      "context": "Definition: DOMAIN OF A RATIONAL FUNCTION\n\nThe domain of a rational function includes all real numbers except those that cause the denominator to equal zero.\n\nHow To: Given a rational function, find the domain.",
+      "original": "3. The domain is all real numbers except those found in Step 2.",
+      "prompt": "3. The domain is all real numbers except those found in Step 2.",
+      "sourceAnswers": [],
+      "hasFigure": false,
+      "status": "draft",
+      "answerVerified": false,
+      "translationStatus": "pending",
+      "mappingStatus": "pending"
+    },
+    {
+      "ordinal": 10,
+      "sourceNumber": "",
+      "sourceAnchor": "",
+      "kind": "example-or-exercise",
+      "context": "Definition: DOMAIN OF A RATIONAL FUNCTION\n\nThe domain of a rational function includes all real numbers except those that cause the denominator to equal zero.\n\nHow To: Given a rational function, find the domain.",
+      "original": "Example \\(\\PageIndex{4}\\): Finding the Domain of a Rational Function\n\nFind the domain of \\(f(x)=\\dfrac{x+3}{x^2−9}\\).\n\nSolution\n\nBegin by setting the denominator equal to zero and solving.\n\n\\[x^2-9=0 \\nonumber \\]\n\n\\[x^2=9 \\nonumber \\] \\[x=\\pm 3 \\nonumber \\]\n\nThe denominator is equal to zero when \\(x=\\pm 3\\). The domain of the function is all real numbers except \\(x=\\pm 3\\).\n\nAnalysis\n\nA graph of this function, as shown in Figure \\(\\PageIndex{9}\\), confirms that the function is not defined when \\(x=\\pm 3\\).\n\n[Figure: Graph of f(x)=1/(x-3) with its vertical asymptote at x=3 and its horizontal asymptote at y=0.]\n\nFigure \\(\\PageIndex{9}\\).\n\nThere is a vertical asymptote at \\(x=3\\) and a hole in the graph at \\(x=−3\\). We will discuss these types of holes in greater detail later in this section.",
+      "prompt": "Example \\(\\PageIndex{4}\\): Finding the Domain of a Rational Function\n\nFind the domain of \\(f(x)=\\dfrac{x+3}{x^2−9}\\).\n\nSolution\n\nBegin by setting the denominator equal to zero and solving.\n\n\\[x^2-9=0 \\nonumber \\]\n\n\\[x^2=9 \\nonumber \\] \\[x=\\pm 3 \\nonumber \\]\n\nThe denominator is equal to zero when \\(x=\\pm 3\\). The domain of the function is all real numbers except \\(x=\\pm 3\\).\n\nAnalysis\n\nA graph of this function, as shown in Figure \\(\\PageIndex{9}\\), confirms that the function is not defined when \\(x=\\pm 3\\).\n\n[Figure: Graph of f(x)=1/(x-3) with its vertical asymptote at x=3 and its horizontal asymptote at y=0.]\n\nFigure \\(\\PageIndex{9}\\).\n\nThere is a vertical asymptote at \\(x=3\\) and a hole in the graph at \\(x=−3\\). We will discuss these types of holes in greater detail later in this section.",
+      "sourceAnswers": [],
+      "hasFigure": true,
+      "status": "draft",
+      "answerVerified": false,
+      "translationStatus": "pending",
+      "mappingStatus": "pending"
+    },
+    {
+      "ordinal": 11,
+      "sourceNumber": "",
+      "sourceAnchor": "",
+      "kind": "exercise-candidate",
+      "context": "Definition: DOMAIN OF A RATIONAL FUNCTION\n\nThe domain of a rational function includes all real numbers except those that cause the denominator to equal zero.\n\nHow To: Given a rational function, find the domain.",
+      "original": "Exercise \\(\\PageIndex{4}\\)\n\nFind the domain of \\(f(x)=\\dfrac{4x}{5(x−1)(x−5)}\\).\n\nAnswer\n\nThe domain is all real numbers except \\(x=1\\) and \\(x=5\\).",
+      "prompt": "Exercise \\(\\PageIndex{4}\\)\n\nFind the domain of \\(f(x)=\\dfrac{4x}{5(x−1)(x−5)}\\).",
+      "sourceAnswers": [
+        "The domain is all real numbers except \\(x=1\\) and \\(x=5\\)."
+      ],
+      "hasFigure": false,
+      "status": "draft",
+      "answerVerified": false,
+      "translationStatus": "pending",
+      "mappingStatus": "pending"
+    },
+    {
+      "ordinal": 12,
+      "sourceNumber": "1",
+      "sourceAnchor": "",
+      "kind": "exercise-candidate",
+      "context": "Vertical Asymptotes\n\nThe vertical asymptotes of a rational function may be found by examining the factors of the denominator that are not common to the factors in the numerator. Vertical asymptotes occur at the zeros of such factors.\n\nHow To: Given a rational function, identify any vertical asymptotes of its graph",
+      "original": "1. Factor the numerator and denominator.",
+      "prompt": "1. Factor the numerator and denominator.",
+      "sourceAnswers": [],
+      "hasFigure": false,
+      "status": "draft",
+      "answerVerified": false,
+      "translationStatus": "pending",
+      "mappingStatus": "pending"
+    },
+    {
+      "ordinal": 13,
+      "sourceNumber": "2",
+      "sourceAnchor": "",
+      "kind": "exercise-candidate",
+      "context": "Vertical Asymptotes\n\nThe vertical asymptotes of a rational function may be found by examining the factors of the denominator that are not common to the factors in the numerator. Vertical asymptotes occur at the zeros of such factors.\n\nHow To: Given a rational function, identify any vertical asymptotes of its graph",
+      "original": "2. Note any restrictions in the domain of the function.",
+      "prompt": "2. Note any restrictions in the domain of the function.",
+      "sourceAnswers": [],
+      "hasFigure": false,
+      "status": "draft",
+      "answerVerified": false,
+      "translationStatus": "pending",
+      "mappingStatus": "pending"
+    },
+    {
+      "ordinal": 14,
+      "sourceNumber": "3",
+      "sourceAnchor": "",
+      "kind": "exercise-candidate",
+      "context": "Vertical Asymptotes\n\nThe vertical asymptotes of a rational function may be found by examining the factors of the denominator that are not common to the factors in the numerator. Vertical asymptotes occur at the zeros of such factors.\n\nHow To: Given a rational function, identify any vertical asymptotes of its graph",
+      "original": "3. Reduce the expression by canceling common factors in the numerator and the denominator.",
+      "prompt": "3. Reduce the expression by canceling common factors in the numerator and the denominator.",
+      "sourceAnswers": [],
+      "hasFigure": false,
+      "status": "draft",
+      "answerVerified": false,
+      "translationStatus": "pending",
+      "mappingStatus": "pending"
+    },
+    {
+      "ordinal": 15,
+      "sourceNumber": "4",
+      "sourceAnchor": "",
+      "kind": "exercise-candidate",
+      "context": "Vertical Asymptotes\n\nThe vertical asymptotes of a rational function may be found by examining the factors of the denominator that are not common to the factors in the numerator. Vertical asymptotes occur at the zeros of such factors.\n\nHow To: Given a rational function, identify any vertical asymptotes of its graph",
+      "original": "4. Note any values that cause the denominator to be zero in this simplified version. These are where the vertical asymptotes occur.",
+      "prompt": "4. Note any values that cause the denominator to be zero in this simplified version. These are where the vertical asymptotes occur.",
+      "sourceAnswers": [],
+      "hasFigure": false,
+      "status": "draft",
+      "answerVerified": false,
+      "translationStatus": "pending",
+      "mappingStatus": "pending"
+    },
+    {
+      "ordinal": 16,
+      "sourceNumber": "5",
+      "sourceAnchor": "",
+      "kind": "exercise-candidate",
+      "context": "Vertical Asymptotes\n\nThe vertical asymptotes of a rational function may be found by examining the factors of the denominator that are not common to the factors in the numerator. Vertical asymptotes occur at the zeros of such factors.\n\nHow To: Given a rational function, identify any vertical asymptotes of its graph",
+      "original": "5. Note any restrictions in the domain where asymptotes do not occur. These are removable discontinuities, or “holes.”",
+      "prompt": "5. Note any restrictions in the domain where asymptotes do not occur. These are removable discontinuities, or “holes.”",
+      "sourceAnswers": [],
+      "hasFigure": false,
+      "status": "draft",
+      "answerVerified": false,
+      "translationStatus": "pending",
+      "mappingStatus": "pending"
+    },
+    {
+      "ordinal": 17,
+      "sourceNumber": "",
+      "sourceAnchor": "",
+      "kind": "example-or-exercise",
+      "context": "Vertical Asymptotes\n\nThe vertical asymptotes of a rational function may be found by examining the factors of the denominator that are not common to the factors in the numerator. Vertical asymptotes occur at the zeros of such factors.\n\nHow To: Given a rational function, identify any vertical asymptotes of its graph",
+      "original": "Example \\(\\PageIndex{5}\\): Identifying Vertical Asymptotes\n\nFind the vertical asymptotes of the graph of \\(k(x)=\\dfrac{5+2x^2}{2−x−x^2}\\).\n\nSolution\n\nFirst, factor the numerator and denominator.\n\n\\[k(x)=\\dfrac{5+2x^2}{2−x−x^2}  \\nonumber \\]\n\n\\[=\\dfrac{5+2x^2}{(2+x)(1-x)} \\nonumber \\]\n\nTo find the vertical asymptotes, we determine where this function will be undefined by setting the denominator equal to zero:\n\n\\[(2+x)(1−x)=0 \\nonumber \\]\n\n\\[x=−2, \\; x=1 \\nonumber \\]\n\nNeither \\(x=–2\\) nor \\(x=1\\) are zeros of the numerator, so the two values indicate two vertical asymptotes. The graph in Figure \\(\\PageIndex{10}\\) confirms the location of the two vertical asymptotes.\n\n[Figure: Graph of k(x)=(5+2x)^2/(2-x-x^2) with its vertical asymptotes at x=-2 and x=1 and its horizontal asymptote at y=-2.]\n\nFigure \\(\\PageIndex{10}\\).",
+      "prompt": "Example \\(\\PageIndex{5}\\): Identifying Vertical Asymptotes\n\nFind the vertical asymptotes of the graph of \\(k(x)=\\dfrac{5+2x^2}{2−x−x^2}\\).\n\nSolution\n\nFirst, factor the numerator and denominator.\n\n\\[k(x)=\\dfrac{5+2x^2}{2−x−x^2}  \\nonumber \\]\n\n\\[=\\dfrac{5+2x^2}{(2+x)(1-x)} \\nonumber \\]\n\nTo find the vertical asymptotes, we determine where this function will be undefined by setting the denominator equal to zero:\n\n\\[(2+x)(1−x)=0 \\nonumber \\]\n\n\\[x=−2, \\; x=1 \\nonumber \\]\n\nNeither \\(x=–2\\) nor \\(x=1\\) are zeros of the numerator, so the two values indicate two vertical asymptotes. The graph in Figure \\(\\PageIndex{10}\\) confirms the location of the two vertical asymptotes.\n\n[Figure: Graph of k(x)=(5+2x)^2/(2-x-x^2) with its vertical asymptotes at x=-2 and x=1 and its horizontal asymptote at y=-2.]\n\nFigure \\(\\PageIndex{10}\\).",
+      "sourceAnswers": [],
+      "hasFigure": true,
+      "status": "draft",
+      "answerVerified": false,
+      "translationStatus": "pending",
+      "mappingStatus": "pending"
+    },
+    {
+      "ordinal": 18,
+      "sourceNumber": "",
+      "sourceAnchor": "",
+      "kind": "example-or-exercise",
+      "context": "Notice that \\(x+1\\) is a common factor to the numerator and the denominator. The zero of this factor, \\(x=−1\\), is the location of the removable discontinuity. Notice also that \\( (x–3) \\) is not a factor in both the numerator and denominator. The zero of this factor, \\(x=3\\), is the vertical asymptote. See Figure \\(\\PageIndex{11}\\). [Note that removable discontinuities may not be visible when we use a graphing calculator, depending upon the window selected.]\n\nREMOVABLE DISCONTINUITIES OF RATIONAL FUNCTIONS\n\nA removable discontinuity occurs in the graph of a rational function at \\(x=a\\) if \\(a\\) is a zero for a factor in the denominator that is common with a factor in the numerator. We factor the numerator and denominator and check for common factors. If we find any, we set the common factor equal to 0 and solve. This is the location of the removable discontinuity. This is true if the multiplicity of this factor is greater than or equal to that in the denominator. If the multiplicity of this factor is greater in the denominator, then there is still an asymptote at that value.",
+      "original": "Example \\(\\PageIndex{6}\\): Identifying Vertical Asymptotes and Removable Discontinuities for a Graph\n\nFind the vertical asymptotes and removable discontinuities of the graph of \\(k(x)=\\dfrac{x−2}{x^2−4}\\).\n\nSolution\n\nFactor the numerator and the denominator.\n\n\\[k(x)=\\dfrac{x−2}{(x−2)(x+2)} \\nonumber \\]\n\nNotice that there is a common factor in the numerator and the denominator, \\(x–2\\). The zero for this factor is \\(x=2\\). This is the location of the removable discontinuity.\n\nNotice that there is a factor in the denominator that is not in the numerator, \\(x+2\\). The zero for this factor is \\(x=−2\\). The vertical asymptote is \\(x=−2\\). See Figure \\(\\PageIndex{12}\\).\n\n[Figure: Graph of k(x)=(x-2)/(x-2)(x+2) with its vertical asymptote at x=-2 and a removable discontinuity at x=2.]\n\nFigure \\(\\PageIndex{12}\\).\n\nThe graph of this function will have the vertical asymptote at \\(x=−2\\), but at \\(x=2\\) the graph will have a hole.",
+      "prompt": "Example \\(\\PageIndex{6}\\): Identifying Vertical Asymptotes and Removable Discontinuities for a Graph\n\nFind the vertical asymptotes and removable discontinuities of the graph of \\(k(x)=\\dfrac{x−2}{x^2−4}\\).\n\nSolution\n\nFactor the numerator and the denominator.\n\n\\[k(x)=\\dfrac{x−2}{(x−2)(x+2)} \\nonumber \\]\n\nNotice that there is a common factor in the numerator and the denominator, \\(x–2\\). The zero for this factor is \\(x=2\\). This is the location of the removable discontinuity.\n\nNotice that there is a factor in the denominator that is not in the numerator, \\(x+2\\). The zero for this factor is \\(x=−2\\). The vertical asymptote is \\(x=−2\\). See Figure \\(\\PageIndex{12}\\).\n\n[Figure: Graph of k(x)=(x-2)/(x-2)(x+2) with its vertical asymptote at x=-2 and a removable discontinuity at x=2.]\n\nFigure \\(\\PageIndex{12}\\).\n\nThe graph of this function will have the vertical asymptote at \\(x=−2\\), but at \\(x=2\\) the graph will have a hole.",
+      "sourceAnswers": [],
+      "hasFigure": true,
+      "status": "draft",
+      "answerVerified": false,
+      "translationStatus": "pending",
+      "mappingStatus": "pending"
+    },
+    {
+      "ordinal": 19,
+      "sourceNumber": "",
+      "sourceAnchor": "",
+      "kind": "exercise-candidate",
+      "context": "Notice that \\(x+1\\) is a common factor to the numerator and the denominator. The zero of this factor, \\(x=−1\\), is the location of the removable discontinuity. Notice also that \\( (x–3) \\) is not a factor in both the numerator and denominator. The zero of this factor, \\(x=3\\), is the vertical asymptote. See Figure \\(\\PageIndex{11}\\). [Note that removable discontinuities may not be visible when we use a graphing calculator, depending upon the window selected.]\n\nREMOVABLE DISCONTINUITIES OF RATIONAL FUNCTIONS\n\nA removable discontinuity occurs in the graph of a rational function at \\(x=a\\) if \\(a\\) is a zero for a factor in the denominator that is common with a factor in the numerator. We factor the numerator and denominator and check for common factors. If we find any, we set the common factor equal to 0 and solve. This is the location of the removable discontinuity. This is true if the multiplicity of this factor is greater than or equal to that in the denominator. If the multiplicity of this factor is greater in the denominator, then there is still an asymptote at that value.",
+      "original": "Exercise \\(\\PageIndex{5}\\)\n\nFind the vertical asymptotes and removable discontinuities of the graph of \\(f(x)=\\dfrac{x^2−25}{x^3−6x^2+5x}\\).\n\nAnswer\n\nRemovable discontinuity at \\(x=5\\).\n\nVertical asymptotes: \\(x=0\\), \\(x=1\\).",
+      "prompt": "Exercise \\(\\PageIndex{5}\\)\n\nFind the vertical asymptotes and removable discontinuities of the graph of \\(f(x)=\\dfrac{x^2−25}{x^3−6x^2+5x}\\).",
+      "sourceAnswers": [
+        "Removable discontinuity at \\(x=5\\).\n\nVertical asymptotes: \\(x=0\\), \\(x=1\\)."
+      ],
+      "hasFigure": false,
+      "status": "draft",
+      "answerVerified": false,
+      "translationStatus": "pending",
+      "mappingStatus": "pending"
+    },
+    {
+      "ordinal": 20,
+      "sourceNumber": "",
+      "sourceAnchor": "",
+      "kind": "example-or-exercise",
+      "context": "the end behavior of the graph would look similar to that of an even polynomial with a positive leading coefficient.\n\nHORIZONTAL ASYMPTOTES OF RATIONAL FUNCTIONS\n\nThe horizontal asymptote of a rational function can be determined by looking at the degrees of the numerator and denominator.",
+      "original": "Example \\(\\PageIndex{7}\\): Identifying Horizontal and Slant Asymptotes\n\nFor the functions listed, identify the horizontal or slant asymptote.\n\n1. \\(g(x)=\\dfrac{6x^3−10x}{2x^3+5x^2}\\)\n\n2. \\(h(x)=\\dfrac{x^2−4x+1}{x+2}\\)\n\n3. \\(k(x)=\\dfrac{x^2+4x}{x^3−8}\\)\n\nSolution\n\nFor these solutions, we will use \\(f(x)=\\dfrac{p(x)}{q(x)},\\space q(x)≠0\\).\n\n1. \\(g(x)=\\dfrac{6x^3−10x}{2x^3+5x^2}\\): The degree of \\(p = \\) degree of \\(q=3\\), so we can find the horizontal asymptote by taking the ratio of the leading terms. There is a horizontal asymptote at \\(y =\\frac{6}{2}\\) or \\(y=3\\).\n\n2. \\(h(x)=\\dfrac{x^2−4x+1}{x+2}\\): The degree of \\(p=2\\) and degree of \\(q=1\\). Since \\(p>q\\) by 1, there is a slant asymptote found at \\(\\dfrac{x^2−4x+1}{x+2}\\).\n\n[Figure: clipboard_e5ff4f00a1466e92caa3ddac0dac32f5b.png]\n\n3. \\(k(x)=\\dfrac{x^2+4x}{x^3−8}\\) : The degree of \\(p=2\\) < degree of \\(q=3\\), so there is a horizontal asymptote \\(y=0\\).",
+      "prompt": "Example \\(\\PageIndex{7}\\): Identifying Horizontal and Slant Asymptotes\n\nFor the functions listed, identify the horizontal or slant asymptote.\n\n1. \\(g(x)=\\dfrac{6x^3−10x}{2x^3+5x^2}\\)\n\n2. \\(h(x)=\\dfrac{x^2−4x+1}{x+2}\\)\n\n3. \\(k(x)=\\dfrac{x^2+4x}{x^3−8}\\)\n\nSolution\n\nFor these solutions, we will use \\(f(x)=\\dfrac{p(x)}{q(x)},\\space q(x)≠0\\).\n\n1. \\(g(x)=\\dfrac{6x^3−10x}{2x^3+5x^2}\\): The degree of \\(p = \\) degree of \\(q=3\\), so we can find the horizontal asymptote by taking the ratio of the leading terms. There is a horizontal asymptote at \\(y =\\frac{6}{2}\\) or \\(y=3\\).\n\n2. \\(h(x)=\\dfrac{x^2−4x+1}{x+2}\\): The degree of \\(p=2\\) and degree of \\(q=1\\). Since \\(p>q\\) by 1, there is a slant asymptote found at \\(\\dfrac{x^2−4x+1}{x+2}\\).\n\n[Figure: clipboard_e5ff4f00a1466e92caa3ddac0dac32f5b.png]\n\n3. \\(k(x)=\\dfrac{x^2+4x}{x^3−8}\\) : The degree of \\(p=2\\) < degree of \\(q=3\\), so there is a horizontal asymptote \\(y=0\\).",
+      "sourceAnswers": [],
+      "hasFigure": true,
+      "status": "draft",
+      "answerVerified": false,
+      "translationStatus": "pending",
+      "mappingStatus": "pending"
+    },
+    {
+      "ordinal": 21,
+      "sourceNumber": "",
+      "sourceAnchor": "",
+      "kind": "example-or-exercise",
+      "context": "the end behavior of the graph would look similar to that of an even polynomial with a positive leading coefficient.\n\nHORIZONTAL ASYMPTOTES OF RATIONAL FUNCTIONS\n\nThe horizontal asymptote of a rational function can be determined by looking at the degrees of the numerator and denominator.",
+      "original": "Example \\(\\PageIndex{8}\\) Identifying Horizontal Asymptotes\n\nIn the sugar concentration problem earlier, we created the equation \\(C(t)=\\dfrac{5+t}{100+10t}\\).\n\nFind the horizontal asymptote and interpret it in context of the problem.\n\nSolution\n\nBoth the numerator and denominator are linear (degree 1). Because the degrees are equal, there will be a horizontal asymptote at the ratio of the leading coefficients. In the numerator, the leading term is \\(t\\), with coefficient 1. In the denominator, the leading term is 10t, with coefficient 10. The horizontal asymptote will be at the ratio of these values:\n\n\\(t\\rightarrow \\infty,\\space C(t)\\rightarrow \\frac{1}{10}\\)\n\nThis function will have a horizontal asymptote at \\(y=\\frac{1}{10}\\).\n\nThis tells us that as the values of \\(t\\) increase, the values of \\(C\\) will approach \\(\\frac{1}{10}\\). In context, this means that, as more time goes by, the concentration of sugar in the tank will approach one-tenth of a pound of sugar per gallon of water or \\(\\frac{1}{10}\\) pounds per gallon.",
+      "prompt": "Example \\(\\PageIndex{8}\\) Identifying Horizontal Asymptotes\n\nIn the sugar concentration problem earlier, we created the equation \\(C(t)=\\dfrac{5+t}{100+10t}\\).\n\nFind the horizontal asymptote and interpret it in context of the problem.\n\nSolution\n\nBoth the numerator and denominator are linear (degree 1). Because the degrees are equal, there will be a horizontal asymptote at the ratio of the leading coefficients. In the numerator, the leading term is \\(t\\), with coefficient 1. In the denominator, the leading term is 10t, with coefficient 10. The horizontal asymptote will be at the ratio of these values:\n\n\\(t\\rightarrow \\infty,\\space C(t)\\rightarrow \\frac{1}{10}\\)\n\nThis function will have a horizontal asymptote at \\(y=\\frac{1}{10}\\).\n\nThis tells us that as the values of \\(t\\) increase, the values of \\(C\\) will approach \\(\\frac{1}{10}\\). In context, this means that, as more time goes by, the concentration of sugar in the tank will approach one-tenth of a pound of sugar per gallon of water or \\(\\frac{1}{10}\\) pounds per gallon.",
+      "sourceAnswers": [],
+      "hasFigure": false,
+      "status": "draft",
+      "answerVerified": false,
+      "translationStatus": "pending",
+      "mappingStatus": "pending"
+    },
+    {
+      "ordinal": 22,
+      "sourceNumber": "",
+      "sourceAnchor": "",
+      "kind": "example-or-exercise",
+      "context": "the end behavior of the graph would look similar to that of an even polynomial with a positive leading coefficient.\n\nHORIZONTAL ASYMPTOTES OF RATIONAL FUNCTIONS\n\nThe horizontal asymptote of a rational function can be determined by looking at the degrees of the numerator and denominator.",
+      "original": "Example \\(\\PageIndex{9}\\): Identifying Horizontal and Vertical Asymptotes\n\nFind the horizontal and vertical asymptotes of the function \\(f(x)=\\dfrac{(x−2)(x+3)}{(x−1)(x+2)(x−5)}\\)\n\nSolution\n\nFirst, note that this function has no common factors, so there are no potential removable discontinuities.\n\nThe function will have vertical asymptotes when the denominator is zero, causing the function to be undefined. The denominator will be zero at \\(x=1,–2,\\)and \\(5\\), indicating vertical asymptotes at these values.\n\nThe numerator has degree \\(2\\), while the denominator has degree 3. Since the degree of the denominator is greater than the degree of the numerator, the denominator will grow faster than the numerator, causing the outputs to tend towards zero as the inputs get large, and so as \\(x\\rightarrow \\pm \\infty\\), \\(f(x)\\rightarrow 0\\). This function will have a horizontal asymptote at \\(y =0.\\) See Figure \\(\\PageIndex{16}\\).\n\n[Figure: Graph of f(x)=(x-2)(x+3)/(x-1)(x+2)(x-5) with its vertical asymptotes at x=-2, x=1, and x=5 and its horizontal asymptote at y=0.]\n\nFigure \\(\\PageIndex{16}\\).",
+      "prompt": "Example \\(\\PageIndex{9}\\): Identifying Horizontal and Vertical Asymptotes\n\nFind the horizontal and vertical asymptotes of the function \\(f(x)=\\dfrac{(x−2)(x+3)}{(x−1)(x+2)(x−5)}\\)\n\nSolution\n\nFirst, note that this function has no common factors, so there are no potential removable discontinuities.\n\nThe function will have vertical asymptotes when the denominator is zero, causing the function to be undefined. The denominator will be zero at \\(x=1,–2,\\)and \\(5\\), indicating vertical asymptotes at these values.\n\nThe numerator has degree \\(2\\), while the denominator has degree 3. Since the degree of the denominator is greater than the degree of the numerator, the denominator will grow faster than the numerator, causing the outputs to tend towards zero as the inputs get large, and so as \\(x\\rightarrow \\pm \\infty\\), \\(f(x)\\rightarrow 0\\). This function will have a horizontal asymptote at \\(y =0.\\) See Figure \\(\\PageIndex{16}\\).\n\n[Figure: Graph of f(x)=(x-2)(x+3)/(x-1)(x+2)(x-5) with its vertical asymptotes at x=-2, x=1, and x=5 and its horizontal asymptote at y=0.]\n\nFigure \\(\\PageIndex{16}\\).",
+      "sourceAnswers": [],
+      "hasFigure": true,
+      "status": "draft",
+      "answerVerified": false,
+      "translationStatus": "pending",
+      "mappingStatus": "pending"
+    },
+    {
+      "ordinal": 23,
+      "sourceNumber": "",
+      "sourceAnchor": "",
+      "kind": "exercise-candidate",
+      "context": "the end behavior of the graph would look similar to that of an even polynomial with a positive leading coefficient.\n\nHORIZONTAL ASYMPTOTES OF RATIONAL FUNCTIONS\n\nThe horizontal asymptote of a rational function can be determined by looking at the degrees of the numerator and denominator.",
+      "original": "Exercise \\(\\PageIndex{6}\\)\n\nFind the vertical and horizontal asymptotes of the function:\n\n\\(f(x)=\\dfrac{(2x−1)(2x+1)}{(x−2)(x+3)}\\)\n\nAnswer\n\nVertical asymptotes at \\(x=2\\) and \\(x=–3\\)\n\nhorizontal asymptote at \\(y =4\\).",
+      "prompt": "Exercise \\(\\PageIndex{6}\\)\n\nFind the vertical and horizontal asymptotes of the function:\n\n\\(f(x)=\\dfrac{(2x−1)(2x+1)}{(x−2)(x+3)}\\)",
+      "sourceAnswers": [
+        "Vertical asymptotes at \\(x=2\\) and \\(x=–3\\)\n\nhorizontal asymptote at \\(y =4\\)."
+      ],
+      "hasFigure": false,
+      "status": "draft",
+      "answerVerified": false,
+      "translationStatus": "pending",
+      "mappingStatus": "pending"
+    },
+    {
+      "ordinal": 24,
+      "sourceNumber": "",
+      "sourceAnchor": "",
+      "kind": "example-or-exercise",
+      "context": "INTERCEPTS OF RATIONAL FUNCTIONS\n\nA rational function will have a \\(y\\)-intercept at \\(f(0),\\) if the function is defined at zero. A rational function will not have a \\(y\\)-intercept if the function is not defined at zero.\n\nLikewise, a rational function will have \\(x\\)-intercepts at the inputs that cause the output to be zero. Since a fraction is only equal to zero when the numerator is zero, x-intercepts can only occur when the numerator of the rational function is equal to zero.",
+      "original": "Example \\(\\PageIndex{10}\\): Finding the Intercepts of a Rational Function\n\nFind the intercepts of \\(f(x)=\\dfrac{(x−2)(x+3)}{(x−1)(x+2)(x−5)}\\).\n\nSolution\n\nWe can find the y-intercept by evaluating the function at zero\n\n\\(f(0)=\\dfrac{(0−2)(0+3)}{(0−1)(0+2)(0−5)}\\)\n\n\\(=−\\dfrac{6}{10}\\)\n\n\\(=−\\dfrac{3}{5}\\)\n\n\\(=−0.6\\)\n\nThe x-intercepts will occur when the function is equal to zero:\n\n\\[ 0=\\dfrac{(x−2)(x+3)}{(x−1)(x+2)(x−5)}  \\text{   This is zero when the numerator is zero.} \\nonumber \\]   \n\n\\[  0=(x−2)(x+3) \\qquad \\qquad \\qquad \\qquad \\qquad \\nonumber \\]   \n\n\\[  x=2, x=−3  \\qquad \\qquad \\qquad \\qquad \\qquad \\nonumber \\]  \n\nThe y-intercept is \\((0,–0.6)\\), the x-intercepts are \\((2,0)\\) and \\((–3,0)\\). See Figure \\(\\PageIndex{17}\\).\n\n[Figure: Graph of f(x)=(x-2)(x+3)/(x-1)(x+2)(x-5) with its vertical asymptotes at x=-2, x=1, and x=5, its horizontal asymptote at y=0, and its intercepts at (-3, 0), (0, -0.6), and (2, 0).]\n\nFigure \\(\\PageIndex{17}\\).",
+      "prompt": "Example \\(\\PageIndex{10}\\): Finding the Intercepts of a Rational Function\n\nFind the intercepts of \\(f(x)=\\dfrac{(x−2)(x+3)}{(x−1)(x+2)(x−5)}\\).\n\nSolution\n\nWe can find the y-intercept by evaluating the function at zero\n\n\\(f(0)=\\dfrac{(0−2)(0+3)}{(0−1)(0+2)(0−5)}\\)\n\n\\(=−\\dfrac{6}{10}\\)\n\n\\(=−\\dfrac{3}{5}\\)\n\n\\(=−0.6\\)\n\nThe x-intercepts will occur when the function is equal to zero:\n\n\\[ 0=\\dfrac{(x−2)(x+3)}{(x−1)(x+2)(x−5)}  \\text{   This is zero when the numerator is zero.} \\nonumber \\]   \n\n\\[  0=(x−2)(x+3) \\qquad \\qquad \\qquad \\qquad \\qquad \\nonumber \\]   \n\n\\[  x=2, x=−3  \\qquad \\qquad \\qquad \\qquad \\qquad \\nonumber \\]  \n\nThe y-intercept is \\((0,–0.6)\\), the x-intercepts are \\((2,0)\\) and \\((–3,0)\\). See Figure \\(\\PageIndex{17}\\).\n\n[Figure: Graph of f(x)=(x-2)(x+3)/(x-1)(x+2)(x-5) with its vertical asymptotes at x=-2, x=1, and x=5, its horizontal asymptote at y=0, and its intercepts at (-3, 0), (0, -0.6), and (2, 0).]\n\nFigure \\(\\PageIndex{17}\\).",
+      "sourceAnswers": [],
+      "hasFigure": true,
+      "status": "draft",
+      "answerVerified": false,
+      "translationStatus": "pending",
+      "mappingStatus": "pending"
+    },
+    {
+      "ordinal": 25,
+      "sourceNumber": "",
+      "sourceAnchor": "",
+      "kind": "exercise-candidate",
+      "context": "INTERCEPTS OF RATIONAL FUNCTIONS\n\nA rational function will have a \\(y\\)-intercept at \\(f(0),\\) if the function is defined at zero. A rational function will not have a \\(y\\)-intercept if the function is not defined at zero.\n\nLikewise, a rational function will have \\(x\\)-intercepts at the inputs that cause the output to be zero. Since a fraction is only equal to zero when the numerator is zero, x-intercepts can only occur when the numerator of the rational function is equal to zero.",
+      "original": "Exercise \\(\\PageIndex{7}\\)\n\nGiven the reciprocal squared function that is shifted right 3 units and down 4 units, write this as a rational function. Then, find the x- and y-intercepts and the horizontal and vertical asymptotes.\n\nAnswer\n\nFor the transformed reciprocal squared function, we find the rational form.\n\n\\(f(x)=\\dfrac{1}{{(x−3)}^2}−4=\\dfrac{1−4{(x−3)}^2}{{(x−3)}^2}=\\dfrac{1−4(x^2−6x+9)}{(x−3)(x−3)}=\\dfrac{−4x^2+24x−35}{x^2−6x+9}\\)\n\nBecause the numerator is the same degree as the denominator we know that as \\(x\\rightarrow \\pm \\infty\\), \\(f(x)\\rightarrow −4\\); so \\(y=–4\\) is the horizontal asymptote. Next, we set the denominator equal to zero, and find that the vertical asymptote is \\(x=3\\), because as \\(x\\rightarrow 3\\), \\(f(x)\\rightarrow \\infty\\). We then set the numerator equal to \\(0\\) and find the x-intercepts are at \\((2.5,0)\\) and \\((3.5,0)\\). Finally, we evaluate the function at 0 and find the y-intercept to be at \\((0,−\\frac{35}{9})\\).",
+      "prompt": "Exercise \\(\\PageIndex{7}\\)\n\nGiven the reciprocal squared function that is shifted right 3 units and down 4 units, write this as a rational function. Then, find the x- and y-intercepts and the horizontal and vertical asymptotes.",
+      "sourceAnswers": [
+        "For the transformed reciprocal squared function, we find the rational form.\n\n\\(f(x)=\\dfrac{1}{{(x−3)}^2}−4=\\dfrac{1−4{(x−3)}^2}{{(x−3)}^2}=\\dfrac{1−4(x^2−6x+9)}{(x−3)(x−3)}=\\dfrac{−4x^2+24x−35}{x^2−6x+9}\\)\n\nBecause the numerator is the same degree as the denominator we know that as \\(x\\rightarrow \\pm \\infty\\), \\(f(x)\\rightarrow −4\\); so \\(y=–4\\) is the horizontal asymptote. Next, we set the denominator equal to zero, and find that the vertical asymptote is \\(x=3\\), because as \\(x\\rightarrow 3\\), \\(f(x)\\rightarrow \\infty\\). We then set the numerator equal to \\(0\\) and find the x-intercepts are at \\((2.5,0)\\) and \\((3.5,0)\\). Finally, we evaluate the function at 0 and find the y-intercept to be at \\((0,−\\frac{35}{9})\\)."
+      ],
+      "hasFigure": false,
+      "status": "draft",
+      "answerVerified": false,
+      "translationStatus": "pending",
+      "mappingStatus": "pending"
+    },
+    {
+      "ordinal": 26,
+      "sourceNumber": "1",
+      "sourceAnchor": "",
+      "kind": "exercise-candidate",
+      "context": "When the degree of the factor in the denominator is even, the distinguishing characteristic is that the graph either heads toward positive infinity on both sides of the vertical asymptote or heads toward negative infinity on both sides. See Figure \\(\\PageIndex{19}\\).\n\nFor example, the graph of \\(f(x)=\\dfrac{{(x+1)}^2(x−3)}{{(x+3)}^2(x−2)}\\) is shown in Figure \\(\\PageIndex{20}\\).\n\nHowto: Given a rational function, sketch a graph.",
+      "original": "1. Evaluate the function at 0 to find the y-intercept.",
+      "prompt": "1. Evaluate the function at 0 to find the y-intercept.",
+      "sourceAnswers": [],
+      "hasFigure": false,
+      "status": "draft",
+      "answerVerified": false,
+      "translationStatus": "pending",
+      "mappingStatus": "pending"
+    },
+    {
+      "ordinal": 27,
+      "sourceNumber": "2",
+      "sourceAnchor": "",
+      "kind": "exercise-candidate",
+      "context": "When the degree of the factor in the denominator is even, the distinguishing characteristic is that the graph either heads toward positive infinity on both sides of the vertical asymptote or heads toward negative infinity on both sides. See Figure \\(\\PageIndex{19}\\).\n\nFor example, the graph of \\(f(x)=\\dfrac{{(x+1)}^2(x−3)}{{(x+3)}^2(x−2)}\\) is shown in Figure \\(\\PageIndex{20}\\).\n\nHowto: Given a rational function, sketch a graph.",
+      "original": "2. Factor the numerator and denominator.",
+      "prompt": "2. Factor the numerator and denominator.",
+      "sourceAnswers": [],
+      "hasFigure": false,
+      "status": "draft",
+      "answerVerified": false,
+      "translationStatus": "pending",
+      "mappingStatus": "pending"
+    },
+    {
+      "ordinal": 28,
+      "sourceNumber": "3",
+      "sourceAnchor": "",
+      "kind": "exercise-candidate",
+      "context": "When the degree of the factor in the denominator is even, the distinguishing characteristic is that the graph either heads toward positive infinity on both sides of the vertical asymptote or heads toward negative infinity on both sides. See Figure \\(\\PageIndex{19}\\).\n\nFor example, the graph of \\(f(x)=\\dfrac{{(x+1)}^2(x−3)}{{(x+3)}^2(x−2)}\\) is shown in Figure \\(\\PageIndex{20}\\).\n\nHowto: Given a rational function, sketch a graph.",
+      "original": "3. For factors in the numerator not common to the denominator, determine where each factor of the numerator is zero to find the x-intercepts.",
+      "prompt": "3. For factors in the numerator not common to the denominator, determine where each factor of the numerator is zero to find the x-intercepts.",
+      "sourceAnswers": [],
+      "hasFigure": false,
+      "status": "draft",
+      "answerVerified": false,
+      "translationStatus": "pending",
+      "mappingStatus": "pending"
+    },
+    {
+      "ordinal": 29,
+      "sourceNumber": "4",
+      "sourceAnchor": "",
+      "kind": "exercise-candidate",
+      "context": "When the degree of the factor in the denominator is even, the distinguishing characteristic is that the graph either heads toward positive infinity on both sides of the vertical asymptote or heads toward negative infinity on both sides. See Figure \\(\\PageIndex{19}\\).\n\nFor example, the graph of \\(f(x)=\\dfrac{{(x+1)}^2(x−3)}{{(x+3)}^2(x−2)}\\) is shown in Figure \\(\\PageIndex{20}\\).\n\nHowto: Given a rational function, sketch a graph.",
+      "original": "4. Find the multiplicities of the x-intercepts to determine the behavior of the graph at those points.",
+      "prompt": "4. Find the multiplicities of the x-intercepts to determine the behavior of the graph at those points.",
+      "sourceAnswers": [],
+      "hasFigure": false,
+      "status": "draft",
+      "answerVerified": false,
+      "translationStatus": "pending",
+      "mappingStatus": "pending"
+    },
+    {
+      "ordinal": 30,
+      "sourceNumber": "5",
+      "sourceAnchor": "",
+      "kind": "exercise-candidate",
+      "context": "When the degree of the factor in the denominator is even, the distinguishing characteristic is that the graph either heads toward positive infinity on both sides of the vertical asymptote or heads toward negative infinity on both sides. See Figure \\(\\PageIndex{19}\\).\n\nFor example, the graph of \\(f(x)=\\dfrac{{(x+1)}^2(x−3)}{{(x+3)}^2(x−2)}\\) is shown in Figure \\(\\PageIndex{20}\\).\n\nHowto: Given a rational function, sketch a graph.",
+      "original": "5. For factors in the denominator, note the multiplicities of the zeros to determine the local behavior. For those factors not common to the numerator, find the vertical asymptotes by setting those factors equal to zero and then solve.",
+      "prompt": "5. For factors in the denominator, note the multiplicities of the zeros to determine the local behavior. For those factors not common to the numerator, find the vertical asymptotes by setting those factors equal to zero and then solve.",
+      "sourceAnswers": [],
+      "hasFigure": false,
+      "status": "draft",
+      "answerVerified": false,
+      "translationStatus": "pending",
+      "mappingStatus": "pending"
+    },
+    {
+      "ordinal": 31,
+      "sourceNumber": "6",
+      "sourceAnchor": "",
+      "kind": "exercise-candidate",
+      "context": "When the degree of the factor in the denominator is even, the distinguishing characteristic is that the graph either heads toward positive infinity on both sides of the vertical asymptote or heads toward negative infinity on both sides. See Figure \\(\\PageIndex{19}\\).\n\nFor example, the graph of \\(f(x)=\\dfrac{{(x+1)}^2(x−3)}{{(x+3)}^2(x−2)}\\) is shown in Figure \\(\\PageIndex{20}\\).\n\nHowto: Given a rational function, sketch a graph.",
+      "original": "6. For factors in the denominator common to factors in the numerator, find the removable discontinuities by setting those factors equal to 0 and then solve.",
+      "prompt": "6. For factors in the denominator common to factors in the numerator, find the removable discontinuities by setting those factors equal to 0 and then solve.",
+      "sourceAnswers": [],
+      "hasFigure": false,
+      "status": "draft",
+      "answerVerified": false,
+      "translationStatus": "pending",
+      "mappingStatus": "pending"
+    },
+    {
+      "ordinal": 32,
+      "sourceNumber": "7",
+      "sourceAnchor": "",
+      "kind": "exercise-candidate",
+      "context": "When the degree of the factor in the denominator is even, the distinguishing characteristic is that the graph either heads toward positive infinity on both sides of the vertical asymptote or heads toward negative infinity on both sides. See Figure \\(\\PageIndex{19}\\).\n\nFor example, the graph of \\(f(x)=\\dfrac{{(x+1)}^2(x−3)}{{(x+3)}^2(x−2)}\\) is shown in Figure \\(\\PageIndex{20}\\).\n\nHowto: Given a rational function, sketch a graph.",
+      "original": "7. Compare the degrees of the numerator and the denominator to determine the horizontal or slant asymptotes.",
+      "prompt": "7. Compare the degrees of the numerator and the denominator to determine the horizontal or slant asymptotes.",
+      "sourceAnswers": [],
+      "hasFigure": false,
+      "status": "draft",
+      "answerVerified": false,
+      "translationStatus": "pending",
+      "mappingStatus": "pending"
+    },
+    {
+      "ordinal": 33,
+      "sourceNumber": "8",
+      "sourceAnchor": "",
+      "kind": "exercise-candidate",
+      "context": "When the degree of the factor in the denominator is even, the distinguishing characteristic is that the graph either heads toward positive infinity on both sides of the vertical asymptote or heads toward negative infinity on both sides. See Figure \\(\\PageIndex{19}\\).\n\nFor example, the graph of \\(f(x)=\\dfrac{{(x+1)}^2(x−3)}{{(x+3)}^2(x−2)}\\) is shown in Figure \\(\\PageIndex{20}\\).\n\nHowto: Given a rational function, sketch a graph.",
+      "original": "8. Sketch the graph.",
+      "prompt": "8. Sketch the graph.",
+      "sourceAnswers": [],
+      "hasFigure": false,
+      "status": "draft",
+      "answerVerified": false,
+      "translationStatus": "pending",
+      "mappingStatus": "pending"
+    },
+    {
+      "ordinal": 34,
+      "sourceNumber": "",
+      "sourceAnchor": "",
+      "kind": "example-or-exercise",
+      "context": "When the degree of the factor in the denominator is even, the distinguishing characteristic is that the graph either heads toward positive infinity on both sides of the vertical asymptote or heads toward negative infinity on both sides. See Figure \\(\\PageIndex{19}\\).\n\nFor example, the graph of \\(f(x)=\\dfrac{{(x+1)}^2(x−3)}{{(x+3)}^2(x−2)}\\) is shown in Figure \\(\\PageIndex{20}\\).\n\nHowto: Given a rational function, sketch a graph.",
+      "original": "Example \\(\\PageIndex{11}\\): Graphing a Rational Function\n\nSketch a graph of \\(f(x)=\\frac{(x+2)(x−3)}{{(x+1)}^2(x−2)}\\).\n\nSolution\n\nWe can start by noting that the function is already factored, saving us a step.\n\nNext, we will find the intercepts. Evaluating the function at zero gives the y-intercept:\n\n\\(f(0)=\\dfrac{(0+2)(0−3)}{{(0+1)}^2(0−2)}=3\\)\n\nTo find the x-intercepts, we determine when the numerator of the function is zero. Setting each factor equal to zero, we find x-intercepts at \\(x=–2\\) and \\(x=3\\). At each, the behavior will be linear (multiplicity 1), with the graph passing through the intercept.\n\nWe have a y-intercept at \\((0,3)\\) and x-intercepts at \\((–2,0)\\) and \\((3,0)\\).\n\nTo find the vertical asymptotes, we determine when the denominator is equal to zero. This occurs when \\(x+1=0\\) and when \\(x–2=0\\), giving us vertical asymptotes at \\(x=–1\\) and \\(x=2\\).\n\nThere are no common factors in the numerator and denominator. This means there are no removable discontinuities.\n\nFinally, the degree of denominator is larger than the degree of the numerator, telling us this graph has a horizontal asymptote at \\(y =0\\).\n\nTo sketch the graph, we might start by plotting the three intercepts. Since the graph has no x-intercepts between the vertical asymptotes, and the y-intercept is positive, we know the function must remain positive between the asymptotes, letting us fill in the middle portion of the graph as shown in Figure \\(\\PageIndex{21}\\).\n\n[Figure: Graph of only the middle portion of f(x)=(x+2)(x-3)/(x+1)^2(x-2) with its intercepts at (-2, 0), (0, 3), and (3, 0).]\n\nFigure \\(\\PageIndex{21}\\).\n\nThe factor associated with the vertical asymptote at \\(x=−1\\) was squared, so we know the behavior will be the same on both sides of the asymptote. The graph heads toward positive infinity as the inputs approach the asymptote on the right, so the graph will head toward positive infinity on the left as well.\n\nFor the vertical asymptote at \\(x=2\\), the factor was not squared, so the graph will have opposite behavior on either side of the asymptote. See Figure \\(\\PageIndex{22}\\). After passing through the x-intercepts, the graph will then level off toward an output of zero, as indicated by the horizontal asymptote.\n\n[Figure: Graph of f(x)=(x+2)(x-3)/(x+1)^2(x-2) with its vertical asymptotes at x=-1 and x=2, its horizontal asymptote at y=0, and its intercepts at (-2, 0), (0, 3), and (3, 0).]\n\nFigure \\(\\PageIndex{22}\\).",
+      "prompt": "Example \\(\\PageIndex{11}\\): Graphing a Rational Function\n\nSketch a graph of \\(f(x)=\\frac{(x+2)(x−3)}{{(x+1)}^2(x−2)}\\).\n\nSolution\n\nWe can start by noting that the function is already factored, saving us a step.\n\nNext, we will find the intercepts. Evaluating the function at zero gives the y-intercept:\n\n\\(f(0)=\\dfrac{(0+2)(0−3)}{{(0+1)}^2(0−2)}=3\\)\n\nTo find the x-intercepts, we determine when the numerator of the function is zero. Setting each factor equal to zero, we find x-intercepts at \\(x=–2\\) and \\(x=3\\). At each, the behavior will be linear (multiplicity 1), with the graph passing through the intercept.\n\nWe have a y-intercept at \\((0,3)\\) and x-intercepts at \\((–2,0)\\) and \\((3,0)\\).\n\nTo find the vertical asymptotes, we determine when the denominator is equal to zero. This occurs when \\(x+1=0\\) and when \\(x–2=0\\), giving us vertical asymptotes at \\(x=–1\\) and \\(x=2\\).\n\nThere are no common factors in the numerator and denominator. This means there are no removable discontinuities.\n\nFinally, the degree of denominator is larger than the degree of the numerator, telling us this graph has a horizontal asymptote at \\(y =0\\).\n\nTo sketch the graph, we might start by plotting the three intercepts. Since the graph has no x-intercepts between the vertical asymptotes, and the y-intercept is positive, we know the function must remain positive between the asymptotes, letting us fill in the middle portion of the graph as shown in Figure \\(\\PageIndex{21}\\).\n\n[Figure: Graph of only the middle portion of f(x)=(x+2)(x-3)/(x+1)^2(x-2) with its intercepts at (-2, 0), (0, 3), and (3, 0).]\n\nFigure \\(\\PageIndex{21}\\).\n\nThe factor associated with the vertical asymptote at \\(x=−1\\) was squared, so we know the behavior will be the same on both sides of the asymptote. The graph heads toward positive infinity as the inputs approach the asymptote on the right, so the graph will head toward positive infinity on the left as well.\n\nFor the vertical asymptote at \\(x=2\\), the factor was not squared, so the graph will have opposite behavior on either side of the asymptote. See Figure \\(\\PageIndex{22}\\). After passing through the x-intercepts, the graph will then level off toward an output of zero, as indicated by the horizontal asymptote.\n\n[Figure: Graph of f(x)=(x+2)(x-3)/(x+1)^2(x-2) with its vertical asymptotes at x=-1 and x=2, its horizontal asymptote at y=0, and its intercepts at (-2, 0), (0, 3), and (3, 0).]\n\nFigure \\(\\PageIndex{22}\\).",
+      "sourceAnswers": [],
+      "hasFigure": true,
+      "status": "draft",
+      "answerVerified": false,
+      "translationStatus": "pending",
+      "mappingStatus": "pending"
+    },
+    {
+      "ordinal": 35,
+      "sourceNumber": "",
+      "sourceAnchor": "",
+      "kind": "exercise-candidate",
+      "context": "When the degree of the factor in the denominator is even, the distinguishing characteristic is that the graph either heads toward positive infinity on both sides of the vertical asymptote or heads toward negative infinity on both sides. See Figure \\(\\PageIndex{19}\\).\n\nFor example, the graph of \\(f(x)=\\dfrac{{(x+1)}^2(x−3)}{{(x+3)}^2(x−2)}\\) is shown in Figure \\(\\PageIndex{20}\\).\n\nHowto: Given a rational function, sketch a graph.",
+      "original": "Exercise \\(\\PageIndex{8}\\)\n\nGiven the function \\(f(x)=\\frac{{(x+2)}^2(x−2)}{2{(x−1)}^2(x−3)}\\), use the characteristics of polynomials and rational functions to describe its behavior and sketch the function.\n\nAnswer\n\nHorizontal asymptote at \\(y=\\frac{1}{2}\\). Vertical asymptotes at \\(x=1\\) and \\(x=3\\). y-intercept at \\((0,\\frac{4}{3})\\).\n\nx-intercepts at \\((2,0)\\) and \\((–2,0)\\). \\((–2,0)\\) is a zero with multiplicity \\(2\\), and the graph bounces off the x-axis at this point. \\((2,0)\\) is a single zero and the graph crosses the axis at this point.\n\n[Figure: Graph of f(x)=(x+2)^2(x-2)/2(x-1)^2(x-3) with its vertical and horizontal asymptotes.]\n\nFigure \\(\\PageIndex{23}\\).",
+      "prompt": "Exercise \\(\\PageIndex{8}\\)\n\nGiven the function \\(f(x)=\\frac{{(x+2)}^2(x−2)}{2{(x−1)}^2(x−3)}\\), use the characteristics of polynomials and rational functions to describe its behavior and sketch the function.",
+      "sourceAnswers": [
+        "Horizontal asymptote at \\(y=\\frac{1}{2}\\). Vertical asymptotes at \\(x=1\\) and \\(x=3\\). y-intercept at \\((0,\\frac{4}{3})\\).\n\nx-intercepts at \\((2,0)\\) and \\((–2,0)\\). \\((–2,0)\\) is a zero with multiplicity \\(2\\), and the graph bounces off the x-axis at this point. \\((2,0)\\) is a single zero and the graph crosses the axis at this point.\n\n[Figure: Graph of f(x)=(x+2)^2(x-2)/2(x-1)^2(x-3) with its vertical and horizontal asymptotes.]\n\nFigure \\(\\PageIndex{23}\\)."
+      ],
+      "hasFigure": true,
+      "status": "draft",
+      "answerVerified": false,
+      "translationStatus": "pending",
+      "mappingStatus": "pending"
+    },
+    {
+      "ordinal": 36,
+      "sourceNumber": "1",
+      "sourceAnchor": "",
+      "kind": "exercise-candidate",
+      "context": "If a rational function has x-intercepts at \\(x=x_1,x_2,...,x_n\\), vertical asymptotes at \\(x=v_1,v_2,…,v_m\\), and no \\(x_i=\\) any \\(v_j\\), then the function can be written in the form:\n\nwhere the powers \\(p_i\\) or \\(q_i\\) on each factor can be determined by the behavior of the graph at the corresponding intercept or asymptote, and the stretch factor \\(a\\) can be determined given a value of the function other than the x-intercept or by the horizontal asymptote if it is nonzero.\n\nGiven a graph of a rational function, write the function.",
+      "original": "1. Determine the factors of the numerator. Examine the behavior of the graph at the x-intercepts to determine the zeroes and their multiplicities. (This is easy to do when finding the “simplest” function with small multiplicities—such as 1 or 3—but may be difficult for larger multiplicities—such as 5 or 7, for example.)",
+      "prompt": "1. Determine the factors of the numerator. Examine the behavior of the graph at the x-intercepts to determine the zeroes and their multiplicities. (This is easy to do when finding the “simplest” function with small multiplicities—such as 1 or 3—but may be difficult for larger multiplicities—such as 5 or 7, for example.)",
+      "sourceAnswers": [],
+      "hasFigure": false,
+      "status": "draft",
+      "answerVerified": false,
+      "translationStatus": "pending",
+      "mappingStatus": "pending"
+    },
+    {
+      "ordinal": 37,
+      "sourceNumber": "2",
+      "sourceAnchor": "",
+      "kind": "exercise-candidate",
+      "context": "If a rational function has x-intercepts at \\(x=x_1,x_2,...,x_n\\), vertical asymptotes at \\(x=v_1,v_2,…,v_m\\), and no \\(x_i=\\) any \\(v_j\\), then the function can be written in the form:\n\nwhere the powers \\(p_i\\) or \\(q_i\\) on each factor can be determined by the behavior of the graph at the corresponding intercept or asymptote, and the stretch factor \\(a\\) can be determined given a value of the function other than the x-intercept or by the horizontal asymptote if it is nonzero.\n\nGiven a graph of a rational function, write the function.",
+      "original": "2. Determine the factors of the denominator. Examine the behavior on both sides of each vertical asymptote to determine the factors and their powers.",
+      "prompt": "2. Determine the factors of the denominator. Examine the behavior on both sides of each vertical asymptote to determine the factors and their powers.",
+      "sourceAnswers": [],
+      "hasFigure": false,
+      "status": "draft",
+      "answerVerified": false,
+      "translationStatus": "pending",
+      "mappingStatus": "pending"
+    },
+    {
+      "ordinal": 38,
+      "sourceNumber": "3",
+      "sourceAnchor": "",
+      "kind": "exercise-candidate",
+      "context": "If a rational function has x-intercepts at \\(x=x_1,x_2,...,x_n\\), vertical asymptotes at \\(x=v_1,v_2,…,v_m\\), and no \\(x_i=\\) any \\(v_j\\), then the function can be written in the form:\n\nwhere the powers \\(p_i\\) or \\(q_i\\) on each factor can be determined by the behavior of the graph at the corresponding intercept or asymptote, and the stretch factor \\(a\\) can be determined given a value of the function other than the x-intercept or by the horizontal asymptote if it is nonzero.\n\nGiven a graph of a rational function, write the function.",
+      "original": "3. Use any clear point on the graph to find the stretch factor.",
+      "prompt": "3. Use any clear point on the graph to find the stretch factor.",
+      "sourceAnswers": [],
+      "hasFigure": false,
+      "status": "draft",
+      "answerVerified": false,
+      "translationStatus": "pending",
+      "mappingStatus": "pending"
+    },
+    {
+      "ordinal": 39,
+      "sourceNumber": "",
+      "sourceAnchor": "",
+      "kind": "example-or-exercise",
+      "context": "If a rational function has x-intercepts at \\(x=x_1,x_2,...,x_n\\), vertical asymptotes at \\(x=v_1,v_2,…,v_m\\), and no \\(x_i=\\) any \\(v_j\\), then the function can be written in the form:\n\nwhere the powers \\(p_i\\) or \\(q_i\\) on each factor can be determined by the behavior of the graph at the corresponding intercept or asymptote, and the stretch factor \\(a\\) can be determined given a value of the function other than the x-intercept or by the horizontal asymptote if it is nonzero.\n\nGiven a graph of a rational function, write the function.",
+      "original": "Example \\(\\PageIndex{12}\\): Writing a Rational Function from Intercepts and Asymptotes\n\nWrite an equation for the rational function shown in Figure \\(\\PageIndex{24}\\).\n\n[Figure: Graph of a rational function.]\n\nFigure \\(\\PageIndex{24}\\).\n\nSolution\n\nThe graph appears to have x-intercepts at \\(x=–2\\) and \\(x=3\\). At both, the graph passes through the intercept, suggesting linear factors. The graph has two vertical asymptotes. The one at \\(x=–1\\) seems to exhibit the basic behavior similar to \\(\\dfrac{1}{x}\\), with the graph heading toward positive infinity on one side and heading toward negative infinity on the other. The asymptote at \\(x=2\\) is exhibiting a behavior similar to \\(\\dfrac{1}{x^2}\\), with the graph heading toward negative infinity on both sides of the asymptote. See Figure \\(\\PageIndex{25}\\).\n\n[Figure: Graph of a rational function denoting its vertical asymptotes and x-intercepts.]\n\nFigure \\(\\PageIndex{25}\\).\n\nWe can use this information to write a function of the form\n\n\\(f(x)=a\\dfrac{(x+2)(x−3)}{(x+1){(x−2)}^2}\\)\n\nTo find the stretch factor, we can use another clear point on the graph, such as the y-intercept \\((0,–2)\\).\n\n\\(−2=a\\dfrac{(0+2)(0−3)}{(0+1){(0−2)}^2}\\)\n\n\\(-2=a\\dfrac{−6}{4}\\)\n\n\\(a=\\dfrac{−8}{−6}=\\dfrac{4}{3}\\)\n\nThis gives us a final function of \\(f(x)=\\dfrac{4(x+2)(x−3)}{3(x+1){(x−2)}^2}\\).",
+      "prompt": "Example \\(\\PageIndex{12}\\): Writing a Rational Function from Intercepts and Asymptotes\n\nWrite an equation for the rational function shown in Figure \\(\\PageIndex{24}\\).\n\n[Figure: Graph of a rational function.]\n\nFigure \\(\\PageIndex{24}\\).\n\nSolution\n\nThe graph appears to have x-intercepts at \\(x=–2\\) and \\(x=3\\). At both, the graph passes through the intercept, suggesting linear factors. The graph has two vertical asymptotes. The one at \\(x=–1\\) seems to exhibit the basic behavior similar to \\(\\dfrac{1}{x}\\), with the graph heading toward positive infinity on one side and heading toward negative infinity on the other. The asymptote at \\(x=2\\) is exhibiting a behavior similar to \\(\\dfrac{1}{x^2}\\), with the graph heading toward negative infinity on both sides of the asymptote. See Figure \\(\\PageIndex{25}\\).\n\n[Figure: Graph of a rational function denoting its vertical asymptotes and x-intercepts.]\n\nFigure \\(\\PageIndex{25}\\).\n\nWe can use this information to write a function of the form\n\n\\(f(x)=a\\dfrac{(x+2)(x−3)}{(x+1){(x−2)}^2}\\)\n\nTo find the stretch factor, we can use another clear point on the graph, such as the y-intercept \\((0,–2)\\).\n\n\\(−2=a\\dfrac{(0+2)(0−3)}{(0+1){(0−2)}^2}\\)\n\n\\(-2=a\\dfrac{−6}{4}\\)\n\n\\(a=\\dfrac{−8}{−6}=\\dfrac{4}{3}\\)\n\nThis gives us a final function of \\(f(x)=\\dfrac{4(x+2)(x−3)}{3(x+1){(x−2)}^2}\\).",
+      "sourceAnswers": [],
+      "hasFigure": true,
+      "status": "draft",
+      "answerVerified": false,
+      "translationStatus": "pending",
+      "mappingStatus": "pending"
+    }
+  ],
+  "license": "CC BY 4.0",
+  "licenseEvidence": "This page titled 5.6: Rational Functions was last modified on Thu, 26 Dec 2024 22:30:43 GMT and is shared under a CC BY  4.0  license and was authored, remixed, and/or curated by OpenStax via source content that was edited to the style and standards of the LibreTexts platform.",
+  "url": "https://math.libretexts.org/Bookshelves/Algebra/Algebra_and_Trigonometry_1e_(OpenStax)/05:_Polynomial_and_Rational_Functions/5.06:_Rational_Functions",
+  "sha256": "6c20a4eadb1a59a7252f6a3c310ab5c4d9bdf7ec5129ab0facb439b86c5e3057",
+  "checkedAt": "2026-10-07",
+  "id": "6f8ddb9dcd4aba52fe3c",
+  "bookId": "algebra-trigonometry",
+  "licenseInherited": false,
+  "licenseSource": "https://math.libretexts.org/Bookshelves/Algebra/Algebra_and_Trigonometry_1e_(OpenStax)/05:_Polynomial_and_Rational_Functions/5.06:_Rational_Functions",
+  "licenseUrl": "https://creativecommons.org/licenses/by/4.0/",
+  "authors": "OpenStax / Jay Abramson et al.",
+  "book": "Algebra and Trigonometry 1e",
+  "reviewStatus": "unreviewed",
+  "sourceLanguage": "en",
+  "translationStatus": "pending"
+}

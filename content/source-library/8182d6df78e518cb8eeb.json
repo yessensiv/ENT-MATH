@@ -1,0 +1,311 @@
+{
+  "title": "2.5:  Equivalent Statements",
+  "originalText": "[Figure: Two people are standing outside. One speaks with his hands open, while the other listens.]\n\nFigure \\(\\PageIndex{1}\\): How your logical argument is stated affects the response, just like how you speak when holding a conversation can affect how your words are received. (credit: modification of work by Goelshivi/Flickr, Public Domain Mark 1.0)\n\nLearning Objectives\n\nAfter completing this section, you should be able to:\n\n1. Determine whether two statements are logically equivalent using a truth table.\n\n2. Compose the converse, inverse, and contrapositive of a conditional statement\n\nHave you ever had a conversation with or sent a note to someone, only to have them misunderstand what you intended to convey? The way you choose to express your ideas can be as, or even more, important than what you are saying. If your goal is to convince someone that what you are saying is correct, you will not want to alienate them by choosing your words poorly.\n\nLogical arguments can be stated in many different ways that still ultimately result in the same valid conclusion. Part of the art of constructing a persuasive argument is knowing how to arrange the facts and conclusion to elicit the desired response from the intended audience.\n\nIn this section, you will learn how to determine whether two statements are logically equivalent using truth tables, and then you will apply this knowledge to compose logically equivalent forms of the conditional statement. Developing this skill will provide the additional skills and knowledge needed to construct well-reasoned, persuasive arguments that can be customized to address specific audiences.\n\nCheckpoint\n\nAn alternate way to think about logical equivalence is that the truth values have to match. That is, whenever \\(p\\) is true, \\(q\\) is also true, and whenever \\(p\\) is false, \\(q\\) is also false.\n\nDetermine Logical Equivalence\n\nTwo statements, \\(p\\) and \\(q\\), are logically equivalent when \\(p↔q\\) is a valid argument, or when the last column of the truth table consists of only true values. When a logical statement is always true, it is known as a tautology. To determine whether two statements \\(p\\) and \\(q\\) are logically equivalent, construct a truth table for \\(p↔q\\) and determine whether it valid. If the last column is all true, the argument is a tautology, it is valid, and \\(p\\) is logically equivalent to \\(q\\); otherwise, \\(p\\) is not logically equivalent to \\(q\\).\n\nExercise \\(\\PageIndex{1}\\): Determining Logical Equivalence with a Truth Table\n\nCreate a truth table to determine whether the following compound statements are logically equivalent.\n\n1. \\(p→q;\\) \\(~p→~q\\)\n\n2. \\(p→q;\\) \\(~p∨q\\)\n\nAnswer\n\n1. Construct a truth table for the biconditional formed by using the first statement as the hypothesis and the second statement as the conclusion, ( p → q ) ↔ ( ~ p → ~ q ).\n\n                \\(p\\)\t\n                \\(q\\)\t\n                \\(p→q\\)\t\n                \\(~p\\)\t\n                \\(~q\\)\t\n                \\(~p→~q\\)\t\n                \\((p→q)↔(~p→~q)\\)\t\n\n                T\t\n                T\t\n                T\t\n                F\t\n                F\t\n                T\t\n                T\t\n\n                T\t\n                F\t\n                F\t\n                F\t\n                T\t\n                T\t\n                F\t\n\n                F\t\n                T\t\n                T\t\n                T\t\n                F\t\n                F\t\n                F\t\n\n                F\t\n                F\t\n                T\t\n                T\t\n                T\t\n                T\t\n                T\t\n\nBecause the last column it not all true, the biconditional is not valid and the statement \\(p→q\\) is not logically equivalent to the statement \\(~p→~q\\).\n\n2. Construct a truth table for the biconditional formed by using the first statement as the hypothesis and the second statement as the conclusion,\n\n    ( p → q) ↔ ( ~ p ∨ q ) .\n\n                \\(p\\)\t\n                \\(q\\)\t\n                \\(p→q\\)\t\n                \\(~p\\)\t\n                \\(~p∨q\\)\t\n                \\((p→q)↔(~p∨q)\\)\t\n\n                T\t\n                T\t\n                T\t\n                F\t\n                T\t\n                T\t\n\n                T\t\n                F\t\n                F\t\n                F\t\n                F\t\n                T\t\n\n                F\t\n                T\t\n                T\t\n                T\t\n                T\t\n                T\t\n\n                F\t\n                F\t\n                T\t\n                T\t\n                T\t\n                T\t\n\nBecause the last column is true for every entry, the biconditional is valid and the statement \\(p→q\\) is logically equivalent to the statement \\(~p∨q\\). Symbolically, \\(p→q≡~p∨q.\\)\n\nYour Turn \\(\\PageIndex{1}\\)\n\nCreate a truth table to determine whether the following compound statements are logically equivalent.\n\n1. \\(p \\rightarrow q ; q \\rightarrow \\sim p\\)\n\n2. \\(p \\rightarrow q ; p \\vee \\sim q\\)\n\nCompose the Converse, Inverse, and Contrapositive of a Conditional Statement\n\nThe converse, inverse, and contrapositive are variations of the conditional statement, \\(p→q.\\)\n\nThe converse is if \\(q\\) then \\(p\\), and it is formed by interchanging the hypothesis and the conclusion. The converse is logically equivalent to the inverse.\n\nThe inverse is if \\(~p\\) then \\(~q\\), and it is formed by negating both the hypothesis and the conclusion. The inverse is logically equivalent to the converse.\n\nThe contrapositive is if \\(~q\\) then \\(~p\\), and it is formed by interchanging and negating both the hypothesis and the conclusion. The contrapositive is logically equivalent to the conditional.\n\nThe table below shows how these variations are presented symbolically.\n\n            Conditional\t\n            Contrapositive\t\n            Converse\t\n            Inverse\t\n\n            \\(p\\)\t\n            \\(q\\)\t\n            \\(~p\\)\t\n            \\(~q\\)\t\n            \\(p→q\\)\t\n            \\(~q→~p\\)\t\n            \\(q→p\\)\t\n            \\(~p→~q\\)\t\n\n            T\t\n            T\t\n            F\t\n            F\t\n            T\t\n            T\t\n            T\t\n            T\t\n\n            T\t\n            F\t\n            F\t\n            T\t\n            F\t\n            F\t\n            T\t\n            T\t\n\n            F\t\n            T\t\n            T\t\n            F\t\n            T\t\n            T\t\n            F\t\n            F\t\n\n            F\t\n            F\t\n            T\t\n            T\t\n            T\t\n            T\t\n            T\t\n            T\t\n\nExercise \\(\\PageIndex{2}\\): Writing the Converse, Inverse, and Contrapositive of a Conditional Statement\n\nUse the statements, \\(p\\): Harry is a wizard and \\(q\\): Hermione is a witch, to write the following statements:\n\n1. Write the conditional statement, \\(p→q\\), in words.\n\n2. Write the converse statement, \\(q→p\\), in words.\n\n3. Write the inverse statement, \\(~p→~q\\), in words.\n\n4. Write the contrapositive statement, \\(~q→~p\\), in words.\n\nAnswer\n\n1. The conditional statement takes the form, “if p p , then q q ,” so the conditional statement is: “If Harry is a wizard, then Hermione is a witch.” Remember the if … then … words are the connectives that form the conditional statement.\n\n2. The converse swaps or interchanges the hypothesis, p p , with the conclusion, q q . It has the form, “if q q , then p p .” So, the converse is: \"If Hermione is a witch, then Harry is a wizard.\"\n\n3. To construct the inverse of a statement, negate both the hypothesis and the conclusion. The inverse has the form, “if ~ p ~ p , then ~ q ~ q ,” so the inverse is: \"If Harry is not a wizard, then Hermione is not a witch.\"\n\n4. The contrapositive is formed by negating and interchanging both the hypothesis and conclusion. It has the form, “if ~ q ~ q , then ~ p ~ p ,\" so the contrapositive statement is: \"If Hermione is not a witch, then Harry is not a wizard.\"\n\nYour Turn \\(\\PageIndex{2}\\)\n\nUse the statements, \\(p\\) : Elvis Presley wore capes and \\(q\\) : Some superheroes wear capes, to write the following statements:\n\n1. Write the conditional statement, \\(p \\rightarrow q\\), in words.\n\n2. Write the converse statement, \\(q \\rightarrow p\\), in words.\n\n3. Write the inverse statement, \\(\\sim p \\rightarrow \\sim q\\), in words.\n\n4. Write the contrapositive statement, \\(\\sim q \\rightarrow \\sim p\\), in words.\n\nExercise \\(\\PageIndex{3}\\)\n\nUse the conditional statement, “If all dogs bark, then Lassie likes to bark,” to identify the following.\n\n1. Write the hypothesis of the conditional statement and label it with a \\(p\\).\n\n2. Write the conclusion of the conditional statement and label it with a \\(q\\).\n\n3. Identify the following statement as the converse, inverse, or contrapositive: “If Lassie likes to bark, then all dogs bark.”\n\n4. Identify the following statement as the converse, inverse, or contrapositive: “If Lassie does not like to bark, then some dogs do not bark.”\n\n5. Which statement is logically equivalent to the conditional statement?\n\nAnswer\n\n1. The hypothesis is the phrase following the if. The answer is p: All dogs bark. Notice, the word if is not included as part of the hypothesis.\n\n2. The conclusion of a conditional statement is the phrase following the then. The word then is not included when stating the conclusion. The answer is: q: Lassie likes to bark.\n\n3. “Lassie likes to bark” is q and “All dogs bark” is p. So, “If Lassie likes to bark, then all dogs bark,” has the form “if q, then p,” which is the form of the converse. “Lassie does not like to bark” is ~ q and “Some dogs do not bark” is ~ p. The statement, “If Lassie does not like to bark, then some dogs do not bark,” has the form “if ~ q, then ~ p,” which is the form of the contrapositive.\n\n4. The contrapositive ~ q → ~ p is logically equivalent to the conditional statement p → q .\n\nYour Turn \\(\\PageIndex{3}\\)\n\nUse the conditional statement, “If Dora is an explorer, then Boots is a monkey,” to identify the following:\n\n1. Write the hypothesis of the conditional statement and label it with a p�.\n\n2. Write the conclusion of the conditional statement and label it with a q�.\n\n3. Identify the following statement as the converse, inverse, or contrapositive: “If Dora is not an explorer, then Boots is not a monkey.”\n\n4. Identify the following statement as the converse, inverse, or contrapositive: “If Boots is a monkey, then Dora is an explorer.”\n\n5. Which statement is logically equivalent to the inverse?\n\nExercise \\(\\PageIndex{4}\\)\n\nAssume the conditional statement, p→q: “If Chadwick Boseman was an actor, then Chadwick Boseman did not star in the movie Black Panther” is false, and use it to answer the following questions.\n\n1. Write the converse of the statement in words and determine its truth value.\n\n2. Write the inverse of the statement in words and determine its truth value.\n\n3. Write the contrapositive of the statement in words and determine its truth value.\n\nAnswer\n\nThe only way the conditional statement can be false is if the hypothesis, p: Chadwick Boseman was an actor, is true and the conclusion, q: Chadwick Boseman did not star in the movie Black Panther, is false. The converse is q → p, and it is written in words as: “If Chadwick Boseman did not star in the movie Black Panther, then Chadwick Boseman was an actor.” This statement is true, because false → true is true.\n\nThe inverse has the form “ ~ p → ~ q.” The written form is: “If Chadwick Boseman was not an actor, then Chadwick Boseman starred in the movie Black Panther.” Because p is true, and q is false, ~ p is false, and ~ q is true. This means the inverse is false → true, which is true. Alternatively, from Question 1, the converse is true, and because the inverse is logically equivalent to the converse it must also be true.\n\nThe contrapositive is logically equivalent to the conditional. Because the conditional is false, the contrapositive is also false. This can be confirmed by looking at the truth values of the contrapositive statement. The contrapositive has the form “ ~ q → ~ p.” Because q is false and p is true, ~ q is true and ~ p is false. Therefore, ~ q → ~ p is true → false, which is false. The written form of the contrapositive is “If Chadwick Boseman starred in the movie Black Panther, then Chadwick Boseman was not an actor.”\n\nYour Turn \\(\\PageIndex{4}\\)\n\nAssume the conditional statement p→q: “If my friend lives in San Francisco, then my friend does not live in California” is false, and use it to answer the following questions.\n\n1. Write the converse of the statement in words and determine its truth value.\n\n2. Write the inverse of the statement in words and determine its truth value.\n\n3. Write the contrapositive of the statement in words and determine its truth value.\n\nCheck Your Understanding\n\n1. Two statements \\(p\\) and \\(q\\) are logically equivalent to each other if the biconditional statement, \\(p \\leftrightarrow q\\) is ________________.\n\n2. The _____ statement has the form, “\\(p\\) then \\(q\\).”\n\n3. The contrapositive is _____________ ___________ to the conditional statement, and has the form, \"if \\(\\text~q\\), then \\(\\text~p\\).\"\n\n4. The _________________ of the conditional statement has the form, \"if \\(\\text~p\\), then \\(\\text~q\\).\"\n\n5. The _________________ of the conditional statement is logically equivalent to the _______________ and has the form, \"if \\(q\\) then \\(p\\).\"\n\nThis page titled 2.5:  Equivalent Statements was last modified on Thu, 02 Jan 2025 09:27:05 GMT and is shared under a CC BY  4.0  license and was authored, remixed, and/or curated by OpenStax via source content that was edited to the style and standards of the LibreTexts platform.",
+  "figures": [
+    {
+      "url": "https://math.libretexts.org/@api/deki/files/109376/6e465fb35269215ebcb946f1d8fd78469852bcb7?revision=1",
+      "alt": "Two people are standing outside. One speaks with his hands open, while the other listens.",
+      "credit": ""
+    }
+  ],
+  "references": [
+    {
+      "text": "1",
+      "url": "https://openstax.org/books/contemporary-mathematics/pages/chapter-2#276133-solution"
+    },
+    {
+      "text": "2",
+      "url": "https://openstax.org/books/contemporary-mathematics/pages/chapter-2#276134-solution"
+    },
+    {
+      "text": "3",
+      "url": "https://openstax.org/books/contemporary-mathematics/pages/chapter-2#276135-solution"
+    },
+    {
+      "text": "4",
+      "url": "https://openstax.org/books/contemporary-mathematics/pages/chapter-2#276136-solution"
+    },
+    {
+      "text": "5",
+      "url": "https://openstax.org/books/contemporary-mathematics/pages/chapter-2#276137-solution"
+    },
+    {
+      "text": "1",
+      "url": "https://openstax.org/books/contemporary-mathematics/pages/chapter-2#261393-solution"
+    },
+    {
+      "text": "2",
+      "url": "https://openstax.org/books/contemporary-mathematics/pages/chapter-2#261394-solution"
+    },
+    {
+      "text": "3",
+      "url": "https://openstax.org/books/contemporary-mathematics/pages/chapter-2#261395-solution"
+    },
+    {
+      "text": "2.5:  Equivalent Statements",
+      "url": "https://math.libretexts.org/Bookshelves/Applied_Mathematics/Contemporary_Mathematics_(OpenStax)/02%3A_Logic/2.05%3A__Equivalent_Statements"
+    },
+    {
+      "text": "CC BY  4.0",
+      "url": "https://creativecommons.org/licenses/by/4.0"
+    },
+    {
+      "text": "OpenStax",
+      "url": "https://openstax.org/"
+    },
+    {
+      "text": "source content",
+      "url": "https://openstax.org/details/books/contemporary-mathematics"
+    }
+  ],
+  "exercises": [
+    {
+      "ordinal": 1,
+      "sourceNumber": "1",
+      "sourceAnchor": "",
+      "kind": "exercise-candidate",
+      "context": "After completing this section, you should be able to:",
+      "original": "1. Determine whether two statements are logically equivalent using a truth table.",
+      "prompt": "1. Determine whether two statements are logically equivalent using a truth table.",
+      "sourceAnswers": [],
+      "hasFigure": false,
+      "status": "draft",
+      "answerVerified": false,
+      "translationStatus": "pending",
+      "mappingStatus": "pending"
+    },
+    {
+      "ordinal": 2,
+      "sourceNumber": "2",
+      "sourceAnchor": "",
+      "kind": "exercise-candidate",
+      "context": "After completing this section, you should be able to:",
+      "original": "2. Compose the converse, inverse, and contrapositive of a conditional statement",
+      "prompt": "2. Compose the converse, inverse, and contrapositive of a conditional statement",
+      "sourceAnswers": [],
+      "hasFigure": false,
+      "status": "draft",
+      "answerVerified": false,
+      "translationStatus": "pending",
+      "mappingStatus": "pending"
+    },
+    {
+      "ordinal": 3,
+      "sourceNumber": "",
+      "sourceAnchor": "",
+      "kind": "exercise-candidate",
+      "context": "Determine Logical Equivalence\n\nTwo statements, \\(p\\) and \\(q\\), are logically equivalent when \\(p↔q\\) is a valid argument, or when the last column of the truth table consists of only true values. When a logical statement is always true, it is known as a tautology. To determine whether two statements \\(p\\) and \\(q\\) are logically equivalent, construct a truth table for \\(p↔q\\) and determine whether it valid. If the last column is all true, the argument is a tautology, it is valid, and \\(p\\) is logically equivalent to \\(q\\); otherwise, \\(p\\) is not logically equivalent to \\(q\\).",
+      "original": "Exercise \\(\\PageIndex{1}\\): Determining Logical Equivalence with a Truth Table\n\nCreate a truth table to determine whether the following compound statements are logically equivalent.\n\n1. \\(p→q;\\) \\(~p→~q\\)\n\n2. \\(p→q;\\) \\(~p∨q\\)\n\nAnswer\n\n1. Construct a truth table for the biconditional formed by using the first statement as the hypothesis and the second statement as the conclusion, ( p → q ) ↔ ( ~ p → ~ q ).\n\n                \\(p\\)\t\n                \\(q\\)\t\n                \\(p→q\\)\t\n                \\(~p\\)\t\n                \\(~q\\)\t\n                \\(~p→~q\\)\t\n                \\((p→q)↔(~p→~q)\\)\t\n\n                T\t\n                T\t\n                T\t\n                F\t\n                F\t\n                T\t\n                T\t\n\n                T\t\n                F\t\n                F\t\n                F\t\n                T\t\n                T\t\n                F\t\n\n                F\t\n                T\t\n                T\t\n                T\t\n                F\t\n                F\t\n                F\t\n\n                F\t\n                F\t\n                T\t\n                T\t\n                T\t\n                T\t\n                T\t\n\nBecause the last column it not all true, the biconditional is not valid and the statement \\(p→q\\) is not logically equivalent to the statement \\(~p→~q\\).\n\n2. Construct a truth table for the biconditional formed by using the first statement as the hypothesis and the second statement as the conclusion,\n\n    ( p → q) ↔ ( ~ p ∨ q ) .\n\n                \\(p\\)\t\n                \\(q\\)\t\n                \\(p→q\\)\t\n                \\(~p\\)\t\n                \\(~p∨q\\)\t\n                \\((p→q)↔(~p∨q)\\)\t\n\n                T\t\n                T\t\n                T\t\n                F\t\n                T\t\n                T\t\n\n                T\t\n                F\t\n                F\t\n                F\t\n                F\t\n                T\t\n\n                F\t\n                T\t\n                T\t\n                T\t\n                T\t\n                T\t\n\n                F\t\n                F\t\n                T\t\n                T\t\n                T\t\n                T\t\n\nBecause the last column is true for every entry, the biconditional is valid and the statement \\(p→q\\) is logically equivalent to the statement \\(~p∨q\\). Symbolically, \\(p→q≡~p∨q.\\)",
+      "prompt": "Exercise \\(\\PageIndex{1}\\): Determining Logical Equivalence with a Truth Table\n\nCreate a truth table to determine whether the following compound statements are logically equivalent.\n\n1. \\(p→q;\\) \\(~p→~q\\)\n\n2. \\(p→q;\\) \\(~p∨q\\)",
+      "sourceAnswers": [
+        "1. Construct a truth table for the biconditional formed by using the first statement as the hypothesis and the second statement as the conclusion, ( p → q ) ↔ ( ~ p → ~ q ).\n\n                \\(p\\)\t\n                \\(q\\)\t\n                \\(p→q\\)\t\n                \\(~p\\)\t\n                \\(~q\\)\t\n                \\(~p→~q\\)\t\n                \\((p→q)↔(~p→~q)\\)\t\n\n                T\t\n                T\t\n                T\t\n                F\t\n                F\t\n                T\t\n                T\t\n\n                T\t\n                F\t\n                F\t\n                F\t\n                T\t\n                T\t\n                F\t\n\n                F\t\n                T\t\n                T\t\n                T\t\n                F\t\n                F\t\n                F\t\n\n                F\t\n                F\t\n                T\t\n                T\t\n                T\t\n                T\t\n                T\t\n\nBecause the last column it not all true, the biconditional is not valid and the statement \\(p→q\\) is not logically equivalent to the statement \\(~p→~q\\).\n\n2. Construct a truth table for the biconditional formed by using the first statement as the hypothesis and the second statement as the conclusion,\n\n    ( p → q) ↔ ( ~ p ∨ q ) .\n\n                \\(p\\)\t\n                \\(q\\)\t\n                \\(p→q\\)\t\n                \\(~p\\)\t\n                \\(~p∨q\\)\t\n                \\((p→q)↔(~p∨q)\\)\t\n\n                T\t\n                T\t\n                T\t\n                F\t\n                T\t\n                T\t\n\n                T\t\n                F\t\n                F\t\n                F\t\n                F\t\n                T\t\n\n                F\t\n                T\t\n                T\t\n                T\t\n                T\t\n                T\t\n\n                F\t\n                F\t\n                T\t\n                T\t\n                T\t\n                T\t\n\nBecause the last column is true for every entry, the biconditional is valid and the statement \\(p→q\\) is logically equivalent to the statement \\(~p∨q\\). Symbolically, \\(p→q≡~p∨q.\\)"
+      ],
+      "hasFigure": false,
+      "status": "draft",
+      "answerVerified": false,
+      "translationStatus": "pending",
+      "mappingStatus": "pending"
+    },
+    {
+      "ordinal": 4,
+      "sourceNumber": "",
+      "sourceAnchor": "",
+      "kind": "example-or-exercise",
+      "context": "Determine Logical Equivalence\n\nTwo statements, \\(p\\) and \\(q\\), are logically equivalent when \\(p↔q\\) is a valid argument, or when the last column of the truth table consists of only true values. When a logical statement is always true, it is known as a tautology. To determine whether two statements \\(p\\) and \\(q\\) are logically equivalent, construct a truth table for \\(p↔q\\) and determine whether it valid. If the last column is all true, the argument is a tautology, it is valid, and \\(p\\) is logically equivalent to \\(q\\); otherwise, \\(p\\) is not logically equivalent to \\(q\\).",
+      "original": "Your Turn \\(\\PageIndex{1}\\)\n\nCreate a truth table to determine whether the following compound statements are logically equivalent.\n\n1. \\(p \\rightarrow q ; q \\rightarrow \\sim p\\)\n\n2. \\(p \\rightarrow q ; p \\vee \\sim q\\)",
+      "prompt": "Your Turn \\(\\PageIndex{1}\\)\n\nCreate a truth table to determine whether the following compound statements are logically equivalent.\n\n1. \\(p \\rightarrow q ; q \\rightarrow \\sim p\\)\n\n2. \\(p \\rightarrow q ; p \\vee \\sim q\\)",
+      "sourceAnswers": [],
+      "hasFigure": false,
+      "status": "draft",
+      "answerVerified": false,
+      "translationStatus": "pending",
+      "mappingStatus": "pending"
+    },
+    {
+      "ordinal": 5,
+      "sourceNumber": "",
+      "sourceAnchor": "",
+      "kind": "exercise-candidate",
+      "context": "Compose the Converse, Inverse, and Contrapositive of a Conditional Statement\n\nThe converse, inverse, and contrapositive are variations of the conditional statement, \\(p→q.\\)\n\nThe table below shows how these variations are presented symbolically.",
+      "original": "Exercise \\(\\PageIndex{2}\\): Writing the Converse, Inverse, and Contrapositive of a Conditional Statement\n\nUse the statements, \\(p\\): Harry is a wizard and \\(q\\): Hermione is a witch, to write the following statements:\n\n1. Write the conditional statement, \\(p→q\\), in words.\n\n2. Write the converse statement, \\(q→p\\), in words.\n\n3. Write the inverse statement, \\(~p→~q\\), in words.\n\n4. Write the contrapositive statement, \\(~q→~p\\), in words.\n\nAnswer\n\n1. The conditional statement takes the form, “if p p , then q q ,” so the conditional statement is: “If Harry is a wizard, then Hermione is a witch.” Remember the if … then … words are the connectives that form the conditional statement.\n\n2. The converse swaps or interchanges the hypothesis, p p , with the conclusion, q q . It has the form, “if q q , then p p .” So, the converse is: \"If Hermione is a witch, then Harry is a wizard.\"\n\n3. To construct the inverse of a statement, negate both the hypothesis and the conclusion. The inverse has the form, “if ~ p ~ p , then ~ q ~ q ,” so the inverse is: \"If Harry is not a wizard, then Hermione is not a witch.\"\n\n4. The contrapositive is formed by negating and interchanging both the hypothesis and conclusion. It has the form, “if ~ q ~ q , then ~ p ~ p ,\" so the contrapositive statement is: \"If Hermione is not a witch, then Harry is not a wizard.\"",
+      "prompt": "Exercise \\(\\PageIndex{2}\\): Writing the Converse, Inverse, and Contrapositive of a Conditional Statement\n\nUse the statements, \\(p\\): Harry is a wizard and \\(q\\): Hermione is a witch, to write the following statements:\n\n1. Write the conditional statement, \\(p→q\\), in words.\n\n2. Write the converse statement, \\(q→p\\), in words.\n\n3. Write the inverse statement, \\(~p→~q\\), in words.\n\n4. Write the contrapositive statement, \\(~q→~p\\), in words.",
+      "sourceAnswers": [
+        "1. The conditional statement takes the form, “if p p , then q q ,” so the conditional statement is: “If Harry is a wizard, then Hermione is a witch.” Remember the if … then … words are the connectives that form the conditional statement.\n\n2. The converse swaps or interchanges the hypothesis, p p , with the conclusion, q q . It has the form, “if q q , then p p .” So, the converse is: \"If Hermione is a witch, then Harry is a wizard.\"\n\n3. To construct the inverse of a statement, negate both the hypothesis and the conclusion. The inverse has the form, “if ~ p ~ p , then ~ q ~ q ,” so the inverse is: \"If Harry is not a wizard, then Hermione is not a witch.\"\n\n4. The contrapositive is formed by negating and interchanging both the hypothesis and conclusion. It has the form, “if ~ q ~ q , then ~ p ~ p ,\" so the contrapositive statement is: \"If Hermione is not a witch, then Harry is not a wizard.\""
+      ],
+      "hasFigure": false,
+      "status": "draft",
+      "answerVerified": false,
+      "translationStatus": "pending",
+      "mappingStatus": "pending"
+    },
+    {
+      "ordinal": 6,
+      "sourceNumber": "",
+      "sourceAnchor": "",
+      "kind": "example-or-exercise",
+      "context": "Compose the Converse, Inverse, and Contrapositive of a Conditional Statement\n\nThe converse, inverse, and contrapositive are variations of the conditional statement, \\(p→q.\\)\n\nThe table below shows how these variations are presented symbolically.",
+      "original": "Your Turn \\(\\PageIndex{2}\\)\n\nUse the statements, \\(p\\) : Elvis Presley wore capes and \\(q\\) : Some superheroes wear capes, to write the following statements:\n\n1. Write the conditional statement, \\(p \\rightarrow q\\), in words.\n\n2. Write the converse statement, \\(q \\rightarrow p\\), in words.\n\n3. Write the inverse statement, \\(\\sim p \\rightarrow \\sim q\\), in words.\n\n4. Write the contrapositive statement, \\(\\sim q \\rightarrow \\sim p\\), in words.",
+      "prompt": "Your Turn \\(\\PageIndex{2}\\)\n\nUse the statements, \\(p\\) : Elvis Presley wore capes and \\(q\\) : Some superheroes wear capes, to write the following statements:\n\n1. Write the conditional statement, \\(p \\rightarrow q\\), in words.\n\n2. Write the converse statement, \\(q \\rightarrow p\\), in words.\n\n3. Write the inverse statement, \\(\\sim p \\rightarrow \\sim q\\), in words.\n\n4. Write the contrapositive statement, \\(\\sim q \\rightarrow \\sim p\\), in words.",
+      "sourceAnswers": [],
+      "hasFigure": false,
+      "status": "draft",
+      "answerVerified": false,
+      "translationStatus": "pending",
+      "mappingStatus": "pending"
+    },
+    {
+      "ordinal": 7,
+      "sourceNumber": "",
+      "sourceAnchor": "",
+      "kind": "exercise-candidate",
+      "context": "Compose the Converse, Inverse, and Contrapositive of a Conditional Statement\n\nThe converse, inverse, and contrapositive are variations of the conditional statement, \\(p→q.\\)\n\nThe table below shows how these variations are presented symbolically.",
+      "original": "Exercise \\(\\PageIndex{3}\\)\n\nUse the conditional statement, “If all dogs bark, then Lassie likes to bark,” to identify the following.\n\n1. Write the hypothesis of the conditional statement and label it with a \\(p\\).\n\n2. Write the conclusion of the conditional statement and label it with a \\(q\\).\n\n3. Identify the following statement as the converse, inverse, or contrapositive: “If Lassie likes to bark, then all dogs bark.”\n\n4. Identify the following statement as the converse, inverse, or contrapositive: “If Lassie does not like to bark, then some dogs do not bark.”\n\n5. Which statement is logically equivalent to the conditional statement?\n\nAnswer\n\n1. The hypothesis is the phrase following the if. The answer is p: All dogs bark. Notice, the word if is not included as part of the hypothesis.\n\n2. The conclusion of a conditional statement is the phrase following the then. The word then is not included when stating the conclusion. The answer is: q: Lassie likes to bark.\n\n3. “Lassie likes to bark” is q and “All dogs bark” is p. So, “If Lassie likes to bark, then all dogs bark,” has the form “if q, then p,” which is the form of the converse. “Lassie does not like to bark” is ~ q and “Some dogs do not bark” is ~ p. The statement, “If Lassie does not like to bark, then some dogs do not bark,” has the form “if ~ q, then ~ p,” which is the form of the contrapositive.\n\n4. The contrapositive ~ q → ~ p is logically equivalent to the conditional statement p → q .",
+      "prompt": "Exercise \\(\\PageIndex{3}\\)\n\nUse the conditional statement, “If all dogs bark, then Lassie likes to bark,” to identify the following.\n\n1. Write the hypothesis of the conditional statement and label it with a \\(p\\).\n\n2. Write the conclusion of the conditional statement and label it with a \\(q\\).\n\n3. Identify the following statement as the converse, inverse, or contrapositive: “If Lassie likes to bark, then all dogs bark.”\n\n4. Identify the following statement as the converse, inverse, or contrapositive: “If Lassie does not like to bark, then some dogs do not bark.”\n\n5. Which statement is logically equivalent to the conditional statement?",
+      "sourceAnswers": [
+        "1. The hypothesis is the phrase following the if. The answer is p: All dogs bark. Notice, the word if is not included as part of the hypothesis.\n\n2. The conclusion of a conditional statement is the phrase following the then. The word then is not included when stating the conclusion. The answer is: q: Lassie likes to bark.\n\n3. “Lassie likes to bark” is q and “All dogs bark” is p. So, “If Lassie likes to bark, then all dogs bark,” has the form “if q, then p,” which is the form of the converse. “Lassie does not like to bark” is ~ q and “Some dogs do not bark” is ~ p. The statement, “If Lassie does not like to bark, then some dogs do not bark,” has the form “if ~ q, then ~ p,” which is the form of the contrapositive.\n\n4. The contrapositive ~ q → ~ p is logically equivalent to the conditional statement p → q ."
+      ],
+      "hasFigure": false,
+      "status": "draft",
+      "answerVerified": false,
+      "translationStatus": "pending",
+      "mappingStatus": "pending"
+    },
+    {
+      "ordinal": 8,
+      "sourceNumber": "",
+      "sourceAnchor": "",
+      "kind": "example-or-exercise",
+      "context": "Compose the Converse, Inverse, and Contrapositive of a Conditional Statement\n\nThe converse, inverse, and contrapositive are variations of the conditional statement, \\(p→q.\\)\n\nThe table below shows how these variations are presented symbolically.",
+      "original": "Your Turn \\(\\PageIndex{3}\\)\n\nUse the conditional statement, “If Dora is an explorer, then Boots is a monkey,” to identify the following:\n\n1. Write the hypothesis of the conditional statement and label it with a p�.\n\n2. Write the conclusion of the conditional statement and label it with a q�.\n\n3. Identify the following statement as the converse, inverse, or contrapositive: “If Dora is not an explorer, then Boots is not a monkey.”\n\n4. Identify the following statement as the converse, inverse, or contrapositive: “If Boots is a monkey, then Dora is an explorer.”\n\n5. Which statement is logically equivalent to the inverse?",
+      "prompt": "Your Turn \\(\\PageIndex{3}\\)\n\nUse the conditional statement, “If Dora is an explorer, then Boots is a monkey,” to identify the following:\n\n1. Write the hypothesis of the conditional statement and label it with a p�.\n\n2. Write the conclusion of the conditional statement and label it with a q�.\n\n3. Identify the following statement as the converse, inverse, or contrapositive: “If Dora is not an explorer, then Boots is not a monkey.”\n\n4. Identify the following statement as the converse, inverse, or contrapositive: “If Boots is a monkey, then Dora is an explorer.”\n\n5. Which statement is logically equivalent to the inverse?",
+      "sourceAnswers": [],
+      "hasFigure": false,
+      "status": "draft",
+      "answerVerified": false,
+      "translationStatus": "pending",
+      "mappingStatus": "pending"
+    },
+    {
+      "ordinal": 9,
+      "sourceNumber": "",
+      "sourceAnchor": "",
+      "kind": "exercise-candidate",
+      "context": "Compose the Converse, Inverse, and Contrapositive of a Conditional Statement\n\nThe converse, inverse, and contrapositive are variations of the conditional statement, \\(p→q.\\)\n\nThe table below shows how these variations are presented symbolically.",
+      "original": "Exercise \\(\\PageIndex{4}\\)\n\nAssume the conditional statement, p→q: “If Chadwick Boseman was an actor, then Chadwick Boseman did not star in the movie Black Panther” is false, and use it to answer the following questions.\n\n1. Write the converse of the statement in words and determine its truth value.\n\n2. Write the inverse of the statement in words and determine its truth value.\n\n3. Write the contrapositive of the statement in words and determine its truth value.\n\nAnswer\n\nThe only way the conditional statement can be false is if the hypothesis, p: Chadwick Boseman was an actor, is true and the conclusion, q: Chadwick Boseman did not star in the movie Black Panther, is false. The converse is q → p, and it is written in words as: “If Chadwick Boseman did not star in the movie Black Panther, then Chadwick Boseman was an actor.” This statement is true, because false → true is true.\n\nThe inverse has the form “ ~ p → ~ q.” The written form is: “If Chadwick Boseman was not an actor, then Chadwick Boseman starred in the movie Black Panther.” Because p is true, and q is false, ~ p is false, and ~ q is true. This means the inverse is false → true, which is true. Alternatively, from Question 1, the converse is true, and because the inverse is logically equivalent to the converse it must also be true.\n\nThe contrapositive is logically equivalent to the conditional. Because the conditional is false, the contrapositive is also false. This can be confirmed by looking at the truth values of the contrapositive statement. The contrapositive has the form “ ~ q → ~ p.” Because q is false and p is true, ~ q is true and ~ p is false. Therefore, ~ q → ~ p is true → false, which is false. The written form of the contrapositive is “If Chadwick Boseman starred in the movie Black Panther, then Chadwick Boseman was not an actor.”",
+      "prompt": "Exercise \\(\\PageIndex{4}\\)\n\nAssume the conditional statement, p→q: “If Chadwick Boseman was an actor, then Chadwick Boseman did not star in the movie Black Panther” is false, and use it to answer the following questions.\n\n1. Write the converse of the statement in words and determine its truth value.\n\n2. Write the inverse of the statement in words and determine its truth value.\n\n3. Write the contrapositive of the statement in words and determine its truth value.",
+      "sourceAnswers": [
+        "The only way the conditional statement can be false is if the hypothesis, p: Chadwick Boseman was an actor, is true and the conclusion, q: Chadwick Boseman did not star in the movie Black Panther, is false. The converse is q → p, and it is written in words as: “If Chadwick Boseman did not star in the movie Black Panther, then Chadwick Boseman was an actor.” This statement is true, because false → true is true.\n\nThe inverse has the form “ ~ p → ~ q.” The written form is: “If Chadwick Boseman was not an actor, then Chadwick Boseman starred in the movie Black Panther.” Because p is true, and q is false, ~ p is false, and ~ q is true. This means the inverse is false → true, which is true. Alternatively, from Question 1, the converse is true, and because the inverse is logically equivalent to the converse it must also be true.\n\nThe contrapositive is logically equivalent to the conditional. Because the conditional is false, the contrapositive is also false. This can be confirmed by looking at the truth values of the contrapositive statement. The contrapositive has the form “ ~ q → ~ p.” Because q is false and p is true, ~ q is true and ~ p is false. Therefore, ~ q → ~ p is true → false, which is false. The written form of the contrapositive is “If Chadwick Boseman starred in the movie Black Panther, then Chadwick Boseman was not an actor.”"
+      ],
+      "hasFigure": false,
+      "status": "draft",
+      "answerVerified": false,
+      "translationStatus": "pending",
+      "mappingStatus": "pending"
+    },
+    {
+      "ordinal": 10,
+      "sourceNumber": "",
+      "sourceAnchor": "",
+      "kind": "example-or-exercise",
+      "context": "Compose the Converse, Inverse, and Contrapositive of a Conditional Statement\n\nThe converse, inverse, and contrapositive are variations of the conditional statement, \\(p→q.\\)\n\nThe table below shows how these variations are presented symbolically.",
+      "original": "Your Turn \\(\\PageIndex{4}\\)\n\nAssume the conditional statement p→q: “If my friend lives in San Francisco, then my friend does not live in California” is false, and use it to answer the following questions.\n\n1. Write the converse of the statement in words and determine its truth value.\n\n2. Write the inverse of the statement in words and determine its truth value.\n\n3. Write the contrapositive of the statement in words and determine its truth value.",
+      "prompt": "Your Turn \\(\\PageIndex{4}\\)\n\nAssume the conditional statement p→q: “If my friend lives in San Francisco, then my friend does not live in California” is false, and use it to answer the following questions.\n\n1. Write the converse of the statement in words and determine its truth value.\n\n2. Write the inverse of the statement in words and determine its truth value.\n\n3. Write the contrapositive of the statement in words and determine its truth value.",
+      "sourceAnswers": [],
+      "hasFigure": false,
+      "status": "draft",
+      "answerVerified": false,
+      "translationStatus": "pending",
+      "mappingStatus": "pending"
+    },
+    {
+      "ordinal": 11,
+      "sourceNumber": "1",
+      "sourceAnchor": "",
+      "kind": "exercise-candidate",
+      "context": "Check Your Understanding",
+      "original": "1. Two statements \\(p\\) and \\(q\\) are logically equivalent to each other if the biconditional statement, \\(p \\leftrightarrow q\\) is ________________.",
+      "prompt": "1. Two statements \\(p\\) and \\(q\\) are logically equivalent to each other if the biconditional statement, \\(p \\leftrightarrow q\\) is ________________.",
+      "sourceAnswers": [],
+      "hasFigure": false,
+      "status": "draft",
+      "answerVerified": false,
+      "translationStatus": "pending",
+      "mappingStatus": "pending"
+    },
+    {
+      "ordinal": 12,
+      "sourceNumber": "2",
+      "sourceAnchor": "",
+      "kind": "exercise-candidate",
+      "context": "Check Your Understanding",
+      "original": "2. The _____ statement has the form, “\\(p\\) then \\(q\\).”",
+      "prompt": "2. The _____ statement has the form, “\\(p\\) then \\(q\\).”",
+      "sourceAnswers": [],
+      "hasFigure": false,
+      "status": "draft",
+      "answerVerified": false,
+      "translationStatus": "pending",
+      "mappingStatus": "pending"
+    },
+    {
+      "ordinal": 13,
+      "sourceNumber": "3",
+      "sourceAnchor": "",
+      "kind": "exercise-candidate",
+      "context": "Check Your Understanding",
+      "original": "3. The contrapositive is _____________ ___________ to the conditional statement, and has the form, \"if \\(\\text~q\\), then \\(\\text~p\\).\"",
+      "prompt": "3. The contrapositive is _____________ ___________ to the conditional statement, and has the form, \"if \\(\\text~q\\), then \\(\\text~p\\).\"",
+      "sourceAnswers": [],
+      "hasFigure": false,
+      "status": "draft",
+      "answerVerified": false,
+      "translationStatus": "pending",
+      "mappingStatus": "pending"
+    },
+    {
+      "ordinal": 14,
+      "sourceNumber": "4",
+      "sourceAnchor": "",
+      "kind": "exercise-candidate",
+      "context": "Check Your Understanding",
+      "original": "4. The _________________ of the conditional statement has the form, \"if \\(\\text~p\\), then \\(\\text~q\\).\"",
+      "prompt": "4. The _________________ of the conditional statement has the form, \"if \\(\\text~p\\), then \\(\\text~q\\).\"",
+      "sourceAnswers": [],
+      "hasFigure": false,
+      "status": "draft",
+      "answerVerified": false,
+      "translationStatus": "pending",
+      "mappingStatus": "pending"
+    },
+    {
+      "ordinal": 15,
+      "sourceNumber": "5",
+      "sourceAnchor": "",
+      "kind": "exercise-candidate",
+      "context": "Check Your Understanding",
+      "original": "5. The _________________ of the conditional statement is logically equivalent to the _______________ and has the form, \"if \\(q\\) then \\(p\\).\"",
+      "prompt": "5. The _________________ of the conditional statement is logically equivalent to the _______________ and has the form, \"if \\(q\\) then \\(p\\).\"",
+      "sourceAnswers": [],
+      "hasFigure": false,
+      "status": "draft",
+      "answerVerified": false,
+      "translationStatus": "pending",
+      "mappingStatus": "pending"
+    }
+  ],
+  "license": "CC BY 4.0",
+  "licenseEvidence": "This page titled 2.5:  Equivalent Statements was last modified on Thu, 02 Jan 2025 09:27:05 GMT and is shared under a CC BY  4.0  license and was authored, remixed, and/or curated by OpenStax via source content that was edited to the style and standards of the LibreTexts platform.",
+  "url": "https://math.libretexts.org/Bookshelves/Applied_Mathematics/Contemporary_Mathematics_(OpenStax)/02:_Logic/2.05:__Equivalent_Statements",
+  "sha256": "1cbe068362141f2a602f9c502cd7fee16b855cfe4407e0340f5d760fc2cde1d4",
+  "checkedAt": "2026-10-07",
+  "id": "8182d6df78e518cb8eeb",
+  "bookId": "contemporary",
+  "licenseInherited": false,
+  "licenseSource": "https://math.libretexts.org/Bookshelves/Applied_Mathematics/Contemporary_Mathematics_(OpenStax)/02:_Logic/2.05:__Equivalent_Statements",
+  "licenseUrl": "https://creativecommons.org/licenses/by/4.0/",
+  "authors": "OpenStax / Donna Kirk et al.",
+  "book": "Contemporary Mathematics",
+  "reviewStatus": "unreviewed",
+  "sourceLanguage": "en",
+  "translationStatus": "pending"
+}

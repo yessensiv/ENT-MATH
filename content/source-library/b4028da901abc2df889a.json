@@ -1,0 +1,298 @@
+{
+  "title": "9.4: Sum-to-Product and Product-to-Sum Formulas",
+  "originalText": "Learning Objectives\n\nExpress products as sums.\n\nExpress sums as products.\n\nA band marches down the field creating an amazing sound that bolsters the crowd. That sound travels as a wave that can be interpreted using trigonometric functions.\n\n[Figure: Photo of the UCLA marching band.]\n\nFigure \\(\\PageIndex{1}\\): The UCLA marching band (credit: Eric Chan, Flickr).\n\nFor example, Figure \\(\\PageIndex{2}\\) represents a sound wave for the musical note A. In this section, we will investigate trigonometric identities that are the foundation of everyday phenomena such as sound waves.\n\n[Figure: Graph of a sound wave for the musical note A - it is a periodic function much like sin and cos - from 0 to .01]\n\nFigure \\(\\PageIndex{2}\\)\n\nExpressing Products as Sums\n\nWe have already learned a number of formulas useful for expanding or simplifying trigonometric expressions, but sometimes we may need to express the product of cosine and sine as a sum. We can use the product-to-sum formulas, which express products of trigonometric functions as sums. Let’s investigate the cosine identity first and then the sine identity.\n\nExpressing Products as Sums for Cosine\n\nWe can derive the product-to-sum formula from the sum and difference identities for cosine. If we add the two equations, we get:\n\n\\[\\begin{align*} \\cos \\alpha \\cos \\beta+\\sin \\alpha \\sin \\beta&= \\cos(\\alpha-\\beta)\\\\[4pt] \\underline{+ \\cos \\alpha \\cos \\beta-\\sin \\alpha \\sin \\beta}&= \\underline{ \\cos(\\alpha+\\beta) }\\\\[4pt] 2 \\cos \\alpha \\cos \\beta&= \\cos(\\alpha-\\beta)+\\cos(\\alpha+\\beta)\\end{align*}\\]\n\nThen, we divide by 2 to isolate the product of cosines:\n\n\\[ \\cos \\alpha \\cos \\beta= \\dfrac{1}{2}[\\cos(\\alpha-\\beta)+\\cos(\\alpha+\\beta)] \\label{eq1}\\]\n\nHow to: Given a product of cosines, express as a sum\n\n1. Write the formula for the product of cosines.\n\n2. Substitute the given angles into the formula.\n\n3. Simplify.\n\nExample \\(\\PageIndex{1}\\): Writing the Product as a Sum Using the Product-to-Sum Formula for Cosine\n\nWrite the following product of cosines as a sum: \\(2\\cos\\left(\\dfrac{7x}{2}\\right) \\cos\\left(\\dfrac{3x}{2}\\right)\\).\n\nSolution\n\nWe begin by writing the formula for the product of cosines (Equation \\ref{eq1}):\n\n\\[ \\cos \\alpha \\cos \\beta = \\dfrac{1}{2}[ \\cos(\\alpha-\\beta)+\\cos(\\alpha+\\beta) ] \\nonumber \\]\n\nWe can then substitute the given angles into the formula and simplify.\n\n\\[\\begin{align*} 2 \\cos\\left(\\dfrac{7x}{2}\\right)\\cos\\left(\\dfrac{3x}{2}\\right)&= 2\\left(\\dfrac{1}{2}\\right)[ \\cos\\left(\\dfrac{7x}{2}-\\dfrac{3x}{2}\\right)+\\cos\\left(\\dfrac{7x}{2}+\\dfrac{3x}{2}\\right) ]\\\\[4pt] &= \\cos\\left(\\dfrac{4x}{2}\\right)+\\cos\\left(\\dfrac{10x}{2}\\right) \\\\[4pt] &= \\cos 2x+\\cos 5x \\end{align*}\\]\n\nExercise \\(\\PageIndex{1}\\)\n\nUse the product-to-sum formula (Equation \\ref{eq1}) to write the product as a sum or difference: \\(\\cos(2\\theta)\\cos(4\\theta)\\).\n\nAnswer\n\n\\(\\dfrac{1}{2}(\\cos 6\\theta+\\cos 2\\theta)\\)\n\nExpressing the Product of Sine and Cosine as a Sum\n\nNext, we will derive the product-to-sum formula for sine and cosine from the sum and difference formulas for sine. If we add the sum and difference identities, we get:\n\n\\[\\begin{align*} \\cos \\alpha \\cos \\beta+\\sin \\alpha \\sin \\beta&= \\cos(\\alpha-\\beta)\\\\[4pt] \\underline{+ \\cos \\alpha \\cos \\beta-\\sin \\alpha \\sin \\beta}&= \\cos(\\alpha+\\beta)\\\\[4pt] 2 \\cos \\alpha \\cos \\beta&= \\cos(\\alpha-\\beta)+\\cos(\\alpha+\\beta)\\\\[4pt] \\text{Then, we divide by 2 to isolate the product of cosines:}\\\\[4pt] \\cos \\alpha \\cos \\beta&= \\dfrac{1}{2}\\left[\\cos(\\alpha-\\beta)+\\cos(\\alpha+\\beta)\\right] \\end{align*}\\]\n\nExample \\(\\PageIndex{2}\\): Writing the Product as a Sum Containing only Sine or Cosine\n\nExpress the following product as a sum containing only sine or cosine and no products: \\(\\sin(4\\theta)\\cos(2\\theta)\\).\n\nSolution\n\nWrite the formula for the product of sine and cosine. Then substitute the given values into the formula and simplify.\n\n\\[\\begin{align*} \\sin \\alpha \\cos \\beta&= \\dfrac{1}{2}[ \\sin(\\alpha+\\beta)+\\sin(\\alpha-\\beta) ]\\\\[4pt] \\sin(4\\theta)\\cos(2\\theta)&= \\dfrac{1}{2}[\\sin(4\\theta+2\\theta)+\\sin(4\\theta-2\\theta)]\\\\[4pt] &= \\dfrac{1}{2}[\\sin(6\\theta)+\\sin(2\\theta)] \\end{align*}\\]\n\nExercise \\(\\PageIndex{2}\\)\n\nUse the product-to-sum formula to write the product as a sum: \\(\\sin(x+y)\\cos(x−y)\\).\n\nAnswer\n\n\\(\\dfrac{1}{2}(\\sin 2x+\\sin 2y)\\)\n\nExpressing Products of Sines in Terms of Cosine\n\nExpressing the product of sines in terms of cosine is also derived from the sum and difference identities for cosine. In this case, we will first subtract the two cosine formulas:\n\n\\[\\begin{align*} \\cos(\\alpha-\\beta)&= \\cos \\alpha \\cos \\beta+\\sin \\alpha \\sin \\beta\\\\[4pt] \\underline{-\\cos(\\alpha+\\beta)}&= -(\\cos \\alpha \\cos \\beta-\\sin \\alpha \\sin \\beta)\\\\[4pt] \\cos(\\alpha-\\beta)-\\cos(\\alpha+\\beta)&= 2 \\sin \\alpha \\sin \\beta\\\\[4pt] \\text{Then, we divide by 2 to isolate the product of sines:}\\\\[4pt] \\sin \\alpha \\sin \\beta&= \\dfrac{1}{2}[ \\cos(\\alpha-\\beta)-\\cos(\\alpha+\\beta) ] \\end{align*}\\]\n\nSimilarly we could express the product of cosines in terms of sine or derive other product-to-sum formulas.\n\nTHE PRODUCT-TO-SUM FORMULAS\n\nThe product-to-sum formulas are as follows:\n\n\\[\\cos \\alpha \\cos \\beta=\\dfrac{1}{2}[\\cos(\\alpha−\\beta)+\\cos(\\alpha+\\beta)]\\]\n\n\\[\\sin \\alpha \\cos \\beta=\\dfrac{1}{2}[\\sin(\\alpha+\\beta)+\\sin(\\alpha−\\beta)]\\]\n\n\\[\\sin \\alpha \\sin \\beta=\\dfrac{1}{2}[\\cos(\\alpha−\\beta)−\\cos(\\alpha+\\beta)]\\]\n\n\\[\\cos \\alpha \\sin \\beta=\\dfrac{1}{2}[\\sin(\\alpha+\\beta)−\\sin(\\alpha−\\beta)]\\]\n\nExample \\(\\PageIndex{3}\\): Express the Product as a Sum or Difference\n\nWrite \\(\\cos(3\\theta) \\cos(5\\theta)\\) as a sum or difference.\n\nSolution\n\nWe have the product of cosines, so we begin by writing the related formula. Then we substitute the given angles and simplify.\n\n\\[\\begin{align*} \\cos \\alpha \\cos \\beta&= \\dfrac{1}{2}[\\cos(\\alpha-\\beta)+\\cos(\\alpha+\\beta)]\\\\[4pt] \\cos(3\\theta)\\cos(5\\theta)&= \\dfrac{1}{2}[\\cos(3\\theta-5\\theta)+\\cos(3\\theta+5\\theta)]\\\\[4pt] &= \\dfrac{1}{2}[\\cos(2\\theta)+\\cos(8\\theta)]\\qquad \\text{Use even-odd identity} \\end{align*}\\]\n\nExercise \\(\\PageIndex{3}\\)\n\nUse the product-to-sum formula to evaluate \\(\\cos \\dfrac{11\\pi}{12} \\cos \\dfrac{\\pi}{12}\\).\n\nAnswer\n\n\\(\\dfrac{−2−\\sqrt{3}}{4}\\)\n\nExpressing Sums as Products\n\nSome problems require the reverse of the process we just used. The sum-to-product formulas allow us to express sums of sine or cosine as products. These formulas can be derived from the product-to-sum identities. For example, with a few substitutions, we can derive the sum-to-product identity for sine. Let \\(\\dfrac{u+v}{2}=\\alpha\\) and \\(\\dfrac{u−v}{2}=\\beta\\).\n\nThen,\n\n\\[\\begin{align*} \\alpha+\\beta&= \\dfrac{u+v}{2}+\\dfrac{u-v}{2}\\\\[4pt] &= \\dfrac{2u}{2}\\\\[4pt] &= u \\end{align*}\\]\n\n\\[\\begin{align*} \\alpha-\\beta&= \\dfrac{u+v}{2}-\\dfrac{u-v}{2}\\\\[4pt] &= \\dfrac{2v}{2}\\\\[4pt] &= v \\end{align*}\\]\n\nThus, replacing \\(\\alpha\\) and \\(\\beta\\) in the product-to-sum formula with the substitute expressions, we have\n\n\\[\\begin{align*} \\sin \\alpha \\cos \\beta&= \\dfrac{1}{2}[\\sin(\\alpha+\\beta)+\\sin(\\alpha-\\beta)]\\\\[4pt] \\sin \\left ( \\frac{u+v}{2} \\right ) \\cos \\left ( \\frac{u-v}{2} \\right )&= \\frac{1}{2}[\\sin u + \\sin v]\\qquad \\text{Substitute for } (\\alpha+\\beta) \\text{ and } (\\alpha\\beta)\\\\[4pt] 2\\sin\\left(\\dfrac{u+v}{2}\\right) \\cos\\left(\\dfrac{u-v}{2}\\right)&= \\sin u+\\sin v \\end{align*}\\]\n\nThe other sum-to-product identities are derived similarly.\n\nSUM-TO-PRODUCT FORMULAS\n\nThe sum-to-product formulas are as follows:\n\n\\[\\sin \\alpha+\\sin \\beta=2\\sin\\left(\\dfrac{\\alpha+\\beta}{2}\\right)\\cos\\left(\\dfrac{\\alpha−\\beta}{2}\\right)\\]\n\n\\[\\sin \\alpha-\\sin \\beta=2\\sin\\left(\\dfrac{\\alpha-\\beta}{2}\\right)\\cos\\left(\\dfrac{\\alpha+\\beta}{2}\\right)\\]\n\n\\[\\cos \\alpha−\\cos \\beta=−2\\sin\\left(\\dfrac{\\alpha+\\beta}{2}\\right)\\sin\\left(\\dfrac{\\alpha−\\beta}{2}\\right)\\]\n\n\\[\\cos \\alpha+\\cos \\beta=2\\cos\\left(\\dfrac{\\alpha+\\beta}{2}\\right)\\cos\\left(\\dfrac{\\alpha−\\beta}{2}\\right)\\]\n\nExample \\(\\PageIndex{4}\\): Writing the Difference of Sines as a Product\n\nWrite the following difference of sines expression as a product: \\(\\sin(4\\theta)−\\sin(2\\theta)\\).\n\nSolution\n\nWe begin by writing the formula for the difference of sines.\n\n\\[\\begin{align*} \\sin \\alpha-\\sin \\beta&= 2\\sin\\left(\\dfrac{\\alpha-\\beta}{2}\\right)\\cos\\left(\\dfrac{\\alpha+\\beta}{2}\\right)\\\\[4pt] \\text {Substitute the values into the formula, and simplify.}\\\\[4pt] \\sin(4\\theta)-\\sin(2\\theta)&= 2\\sin\\left(\\dfrac{4\\theta-2\\theta}{2}\\right) \\cos\\left(\\dfrac{4\\theta+2\\theta}{2}\\right)\\\\[4pt] &= 2\\sin\\left(\\dfrac{2\\theta}{2}\\right) \\cos\\left(\\dfrac{6\\theta}{2}\\right)\\\\[4pt] &= 2 \\sin \\theta \\cos(3\\theta) \\end{align*}\\]\n\nExercise \\(\\PageIndex{4}\\)\n\nUse the sum-to-product formula to write the sum as a product: \\(\\sin(3\\theta)+\\sin(\\theta)\\).\n\nAnswer\n\n\\(2\\sin(2\\theta)\\cos(\\theta)\\)\n\nExample \\(\\PageIndex{5}\\): Evaluating Using the Sum-to-Product Formula\n\nEvaluate \\(\\cos(15°)−\\cos(75°)\\). Check the answer with a graphing calculator.\n\nSolution\n\nWe begin by writing the formula for the difference of cosines.\n\n\\[\\begin{align*}\n\n\\cos \\alpha-\\cos \\beta&= -2 \\sin\\left(\\dfrac{\\alpha+\\beta}{2}\\right) \\sin\\left(\\dfrac{\\alpha-\\beta}{2}\\right)\\\\[4pt]\n\n\\text {Then we substitute the given angles and simplify.}\\\\[4pt]\n\n\\cos(15^{\\circ})-\\cos(75^{\\circ})&= -2\\sin\\left(\\dfrac{15^{\\circ}+75^{\\circ}}{2}\\right) \\sin\\left(\\dfrac{15^{\\circ}-75^{\\circ}}{2}\\right)\\\\[4pt]\n\n&= -2\\sin(45^{\\circ}) \\sin(-30^{\\circ})\\\\[4pt]\n\n&= -2\\left(\\dfrac{\\sqrt{2}}{2}\\right)\\left(-\\dfrac{1}{2}\\right)\\\\[4pt]\n\n&= \\dfrac{\\sqrt{2}}{2}\n\n\\end{align*}\\]\n\nExample \\(\\PageIndex{6}\\): Proving an Identity\n\nProve the identity:\n\n\\[\\dfrac{\\cos(4t)−\\cos(2t)}{\\sin(4t)+\\sin(2t)}=−\\tan t\\]\n\nSolution\n\nWe will start with the left side, the more complicated side of the equation, and rewrite the expression until it matches the right side.\n\n\\[\\begin{align*} \\dfrac{\\cos(4t)-\\cos(2t)}{\\sin(4t)+\\sin(2t)}&= \\dfrac{-2 \\sin\\left(\\dfrac{4t+2t}{2}\\right) \\sin\\left(\\dfrac{4t-2t}{2}\\right)}{2 \\sin\\left(\\dfrac{4t+2t}{2}\\right) \\cos\\left(\\dfrac{4t-2t}{2}\\right)}\\\\[4pt] &= \\dfrac{-2 \\sin(3t)\\sin t}{2 \\sin(3t)\\cos t}\\\\[4pt] &= -\\dfrac{\\sin t}{\\cos t}\\\\[4pt] &= -\\tan t \\end{align*}\\]\n\nAnalysis\n\nRecall that verifying trigonometric identities has its own set of rules. The procedures for solving an equation are not the same as the procedures for verifying an identity. When we prove an identity, we pick one side to work on and make substitutions until that side is transformed into the other side.\n\nExample \\(\\PageIndex{7}\\): Verifying the Identity Using Double-Angle Formulas and Reciprocal Identities\n\nVerify the identity \\({\\csc}^2 \\theta−2=\\cos(2\\theta)\\sin2\\theta\\).\n\nSolution\n\nFor verifying this equation, we are bringing together several of the identities. We will use the double-angle formula and the reciprocal identities. We will work with the right side of the equation and rewrite it until it matches the left side.\n\n\\[\\begin{align*} \\cos(2\\theta)\\sin2\\theta&= \\dfrac{1-2 {\\sin}^2 \\theta}{{\\sin}^2 \\theta}\\\\[4pt] &= \\dfrac{1}{{\\sin}^2 \\theta}-\\dfrac{2 {\\sin}^2 \\theta}{{\\sin}^2 \\theta}\\\\[4pt] &= {\\csc}^2 \\theta - 2 \\end{align*}\\]\n\nExercise \\(\\PageIndex{5}\\)\n\nVerify the identity \\(\\tan \\theta \\cot \\theta−{\\cos}^2 \\theta={\\sin}^2 \\theta\\).\n\nAnswer\n\n\\[\\begin{align*} \\tan \\theta \\cot \\theta-{\\cos}^2 \\theta&= \\left(\\dfrac{\\sin \\theta}{\\cos \\theta}\\right)\\left(\\dfrac{\\cos \\theta}{\\sin \\theta}\\right)-{\\cos}^2 \\theta\\\\[4pt] &= 1-{\\cos}^2 \\theta\\\\[4pt] &= {\\sin}^2 \\theta \\end{align*}\\]\n\nMedia\n\nAccess these online resources for additional instruction and practice with the product-to-sum and sum-to-product identities.\n\nSum to Product Identities\n\nSum to Product and Product to Sum Identities\n\nKey Equations\n\nProduct-to-sum Formulas\n\n\\[\\cos \\alpha \\cos \\beta=\\dfrac{1}{2}[\\cos(\\alpha−\\beta)+\\cos(\\alpha+\\beta)] \\nonumber \\]\n\n\\[\\sin \\alpha \\cos \\beta=\\dfrac{1}{2}[\\sin(\\alpha+\\beta)+\\sin(\\alpha−\\beta)] \\nonumber \\]\n\n\\[\\sin \\alpha \\sin \\beta=\\dfrac{1}{2}[\\cos(\\alpha−\\beta)−\\cos(\\alpha+\\beta)] \\nonumber \\]\n\n\\[\\cos \\alpha \\sin \\beta=\\dfrac{1}{2}[\\sin(\\alpha+\\beta)−\\sin(\\alpha−\\beta)] \\nonumber \\]\n\nSum-to-product Formulas\n\n\\[\\sin \\alpha+\\sin \\beta=2\\sin(\\dfrac{\\alpha+\\beta}{2})\\cos(\\dfrac{\\alpha−\\beta}{2}) \\nonumber \\]\n\n\\[\\sin \\alpha-\\sin \\beta=2\\sin(\\dfrac{\\alpha-\\beta}{2})\\cos(\\dfrac{\\alpha+\\beta}{2}) \\nonumber \\]\n\n\\[\\cos \\alpha−\\cos \\beta=−2\\sin(\\dfrac{\\alpha+\\beta}{2})\\sin(\\dfrac{\\alpha−\\beta}{2}) \\nonumber \\]\n\n\\[\\cos \\alpha+\\cos \\beta=2\\sin(\\dfrac{\\alpha+\\beta}{2})\\sin(\\dfrac{\\alpha−\\beta}{2}) \\nonumber \\]\n\nKey Concepts\n\nFrom the sum and difference identities, we can derive the product-to-sum formulas and the sum-to-product formulas for sine and cosine.\n\nWe can use the product-to-sum formulas to rewrite products of sines, products of cosines, and products of sine and cosine as sums or differences of sines and cosines. See Example \\(\\PageIndex{1}\\), Example \\(\\PageIndex{2}\\), and Example \\(\\PageIndex{3}\\).\n\nWe can also derive the sum-to-product identities from the product-to-sum identities using substitution.\n\nWe can use the sum-to-product formulas to rewrite sum or difference of sines, cosines, or products sine and cosine as products of sines and cosines. See Example \\(\\PageIndex{4}\\).\n\nTrigonometric expressions are often simpler to evaluate using the formulas. See Example \\(\\PageIndex{5}\\).\n\nThe identities can be verified using other formulas or by converting the expressions to sines and cosines. To verify an identity, we choose the more complicated side of the equals sign and rewrite it until it is transformed into the other side. See Example \\(\\PageIndex{6}\\) and Example \\(\\PageIndex{7}\\).\n\nThis page titled 9.4: Sum-to-Product and Product-to-Sum Formulas was last modified on Mon, 13 Oct 2025 00:43:15 GMT and is shared under a CC BY  4.0  license and was authored, remixed, and/or curated by OpenStax via source content that was edited to the style and standards of the LibreTexts platform.",
+  "figures": [
+    {
+      "url": "https://math.libretexts.org/@api/deki/files/7113/CNX_Precalc_Figure_07_04_002.jpg?revision=1&size=bestfit&width=627&height=420",
+      "alt": "Photo of the UCLA marching band.",
+      "credit": ""
+    },
+    {
+      "url": "https://math.libretexts.org/@api/deki/files/7115/CNX_Precalc_Figure_07_04_001_(1).jpg?revision=1",
+      "alt": "Graph of a sound wave for the musical note A - it is a periodic function much like sin and cos - from 0 to .01",
+      "credit": ""
+    }
+  ],
+  "references": [
+    {
+      "text": "sound wave",
+      "url": "https://phys.libretexts.org/Bookshelves/University_Physics/Book%3A_University_Physics_(OpenStax)/Map%3A_University_Physics_I_-_Mechanics%2C_Sound%2C_Oscillations%2C_and_Waves_(OpenStax)/17%3A_Sound/17.1%3A_Sound_Waves"
+    },
+    {
+      "text": "Sum to Product Identities",
+      "url": "http://openstaxcollege.org/l/sumtoprod"
+    },
+    {
+      "text": "Sum to Product and Product to Sum Identities",
+      "url": "http://openstaxcollege.org/l/sumtpptsum"
+    },
+    {
+      "text": "9.4: Sum-to-Product and Product-to-Sum Formulas",
+      "url": "https://math.libretexts.org/Bookshelves/Algebra/Algebra_and_Trigonometry_1e_(OpenStax)/09%3A_Trigonometric_Identities_and_Equations/9.04%3A_Sum-to-Product_and_Product-to-Sum_Formulas"
+    },
+    {
+      "text": "CC BY  4.0",
+      "url": "https://creativecommons.org/licenses/by/4.0"
+    },
+    {
+      "text": "OpenStax",
+      "url": "https://openstax.org/"
+    },
+    {
+      "text": "source content",
+      "url": "https://openstax.org/details/books/precalculus"
+    }
+  ],
+  "exercises": [
+    {
+      "ordinal": 1,
+      "sourceNumber": "1",
+      "sourceAnchor": "",
+      "kind": "exercise-candidate",
+      "context": "\\[\\begin{align*} \\cos \\alpha \\cos \\beta+\\sin \\alpha \\sin \\beta&= \\cos(\\alpha-\\beta)\\\\[4pt] \\underline{+ \\cos \\alpha \\cos \\beta-\\sin \\alpha \\sin \\beta}&= \\underline{ \\cos(\\alpha+\\beta) }\\\\[4pt] 2 \\cos \\alpha \\cos \\beta&= \\cos(\\alpha-\\beta)+\\cos(\\alpha+\\beta)\\end{align*}\\]\n\nThen, we divide by 2 to isolate the product of cosines:\n\n\\[ \\cos \\alpha \\cos \\beta= \\dfrac{1}{2}[\\cos(\\alpha-\\beta)+\\cos(\\alpha+\\beta)] \\label{eq1}\\]",
+      "original": "1. Write the formula for the product of cosines.",
+      "prompt": "1. Write the formula for the product of cosines.",
+      "sourceAnswers": [],
+      "hasFigure": false,
+      "status": "draft",
+      "answerVerified": false,
+      "translationStatus": "pending",
+      "mappingStatus": "pending"
+    },
+    {
+      "ordinal": 2,
+      "sourceNumber": "2",
+      "sourceAnchor": "",
+      "kind": "exercise-candidate",
+      "context": "\\[\\begin{align*} \\cos \\alpha \\cos \\beta+\\sin \\alpha \\sin \\beta&= \\cos(\\alpha-\\beta)\\\\[4pt] \\underline{+ \\cos \\alpha \\cos \\beta-\\sin \\alpha \\sin \\beta}&= \\underline{ \\cos(\\alpha+\\beta) }\\\\[4pt] 2 \\cos \\alpha \\cos \\beta&= \\cos(\\alpha-\\beta)+\\cos(\\alpha+\\beta)\\end{align*}\\]\n\nThen, we divide by 2 to isolate the product of cosines:\n\n\\[ \\cos \\alpha \\cos \\beta= \\dfrac{1}{2}[\\cos(\\alpha-\\beta)+\\cos(\\alpha+\\beta)] \\label{eq1}\\]",
+      "original": "2. Substitute the given angles into the formula.",
+      "prompt": "2. Substitute the given angles into the formula.",
+      "sourceAnswers": [],
+      "hasFigure": false,
+      "status": "draft",
+      "answerVerified": false,
+      "translationStatus": "pending",
+      "mappingStatus": "pending"
+    },
+    {
+      "ordinal": 3,
+      "sourceNumber": "3",
+      "sourceAnchor": "",
+      "kind": "exercise-candidate",
+      "context": "\\[\\begin{align*} \\cos \\alpha \\cos \\beta+\\sin \\alpha \\sin \\beta&= \\cos(\\alpha-\\beta)\\\\[4pt] \\underline{+ \\cos \\alpha \\cos \\beta-\\sin \\alpha \\sin \\beta}&= \\underline{ \\cos(\\alpha+\\beta) }\\\\[4pt] 2 \\cos \\alpha \\cos \\beta&= \\cos(\\alpha-\\beta)+\\cos(\\alpha+\\beta)\\end{align*}\\]\n\nThen, we divide by 2 to isolate the product of cosines:\n\n\\[ \\cos \\alpha \\cos \\beta= \\dfrac{1}{2}[\\cos(\\alpha-\\beta)+\\cos(\\alpha+\\beta)] \\label{eq1}\\]",
+      "original": "3. Simplify.",
+      "prompt": "3. Simplify.",
+      "sourceAnswers": [],
+      "hasFigure": false,
+      "status": "draft",
+      "answerVerified": false,
+      "translationStatus": "pending",
+      "mappingStatus": "pending"
+    },
+    {
+      "ordinal": 4,
+      "sourceNumber": "",
+      "sourceAnchor": "",
+      "kind": "example-or-exercise",
+      "context": "\\[\\begin{align*} \\cos \\alpha \\cos \\beta+\\sin \\alpha \\sin \\beta&= \\cos(\\alpha-\\beta)\\\\[4pt] \\underline{+ \\cos \\alpha \\cos \\beta-\\sin \\alpha \\sin \\beta}&= \\underline{ \\cos(\\alpha+\\beta) }\\\\[4pt] 2 \\cos \\alpha \\cos \\beta&= \\cos(\\alpha-\\beta)+\\cos(\\alpha+\\beta)\\end{align*}\\]\n\nThen, we divide by 2 to isolate the product of cosines:\n\n\\[ \\cos \\alpha \\cos \\beta= \\dfrac{1}{2}[\\cos(\\alpha-\\beta)+\\cos(\\alpha+\\beta)] \\label{eq1}\\]",
+      "original": "Example \\(\\PageIndex{1}\\): Writing the Product as a Sum Using the Product-to-Sum Formula for Cosine\n\nWrite the following product of cosines as a sum: \\(2\\cos\\left(\\dfrac{7x}{2}\\right) \\cos\\left(\\dfrac{3x}{2}\\right)\\).\n\nSolution\n\nWe begin by writing the formula for the product of cosines (Equation \\ref{eq1}):\n\n\\[ \\cos \\alpha \\cos \\beta = \\dfrac{1}{2}[ \\cos(\\alpha-\\beta)+\\cos(\\alpha+\\beta) ] \\nonumber \\]\n\nWe can then substitute the given angles into the formula and simplify.\n\n\\[\\begin{align*} 2 \\cos\\left(\\dfrac{7x}{2}\\right)\\cos\\left(\\dfrac{3x}{2}\\right)&= 2\\left(\\dfrac{1}{2}\\right)[ \\cos\\left(\\dfrac{7x}{2}-\\dfrac{3x}{2}\\right)+\\cos\\left(\\dfrac{7x}{2}+\\dfrac{3x}{2}\\right) ]\\\\[4pt] &= \\cos\\left(\\dfrac{4x}{2}\\right)+\\cos\\left(\\dfrac{10x}{2}\\right) \\\\[4pt] &= \\cos 2x+\\cos 5x \\end{align*}\\]",
+      "prompt": "Example \\(\\PageIndex{1}\\): Writing the Product as a Sum Using the Product-to-Sum Formula for Cosine\n\nWrite the following product of cosines as a sum: \\(2\\cos\\left(\\dfrac{7x}{2}\\right) \\cos\\left(\\dfrac{3x}{2}\\right)\\).\n\nSolution\n\nWe begin by writing the formula for the product of cosines (Equation \\ref{eq1}):\n\n\\[ \\cos \\alpha \\cos \\beta = \\dfrac{1}{2}[ \\cos(\\alpha-\\beta)+\\cos(\\alpha+\\beta) ] \\nonumber \\]\n\nWe can then substitute the given angles into the formula and simplify.\n\n\\[\\begin{align*} 2 \\cos\\left(\\dfrac{7x}{2}\\right)\\cos\\left(\\dfrac{3x}{2}\\right)&= 2\\left(\\dfrac{1}{2}\\right)[ \\cos\\left(\\dfrac{7x}{2}-\\dfrac{3x}{2}\\right)+\\cos\\left(\\dfrac{7x}{2}+\\dfrac{3x}{2}\\right) ]\\\\[4pt] &= \\cos\\left(\\dfrac{4x}{2}\\right)+\\cos\\left(\\dfrac{10x}{2}\\right) \\\\[4pt] &= \\cos 2x+\\cos 5x \\end{align*}\\]",
+      "sourceAnswers": [],
+      "hasFigure": false,
+      "status": "draft",
+      "answerVerified": false,
+      "translationStatus": "pending",
+      "mappingStatus": "pending"
+    },
+    {
+      "ordinal": 5,
+      "sourceNumber": "",
+      "sourceAnchor": "",
+      "kind": "exercise-candidate",
+      "context": "\\[\\begin{align*} \\cos \\alpha \\cos \\beta+\\sin \\alpha \\sin \\beta&= \\cos(\\alpha-\\beta)\\\\[4pt] \\underline{+ \\cos \\alpha \\cos \\beta-\\sin \\alpha \\sin \\beta}&= \\underline{ \\cos(\\alpha+\\beta) }\\\\[4pt] 2 \\cos \\alpha \\cos \\beta&= \\cos(\\alpha-\\beta)+\\cos(\\alpha+\\beta)\\end{align*}\\]\n\nThen, we divide by 2 to isolate the product of cosines:\n\n\\[ \\cos \\alpha \\cos \\beta= \\dfrac{1}{2}[\\cos(\\alpha-\\beta)+\\cos(\\alpha+\\beta)] \\label{eq1}\\]",
+      "original": "Exercise \\(\\PageIndex{1}\\)\n\nUse the product-to-sum formula (Equation \\ref{eq1}) to write the product as a sum or difference: \\(\\cos(2\\theta)\\cos(4\\theta)\\).\n\nAnswer\n\n\\(\\dfrac{1}{2}(\\cos 6\\theta+\\cos 2\\theta)\\)",
+      "prompt": "Exercise \\(\\PageIndex{1}\\)\n\nUse the product-to-sum formula (Equation \\ref{eq1}) to write the product as a sum or difference: \\(\\cos(2\\theta)\\cos(4\\theta)\\).",
+      "sourceAnswers": [
+        "\\(\\dfrac{1}{2}(\\cos 6\\theta+\\cos 2\\theta)\\)"
+      ],
+      "hasFigure": false,
+      "status": "draft",
+      "answerVerified": false,
+      "translationStatus": "pending",
+      "mappingStatus": "pending"
+    },
+    {
+      "ordinal": 6,
+      "sourceNumber": "",
+      "sourceAnchor": "",
+      "kind": "example-or-exercise",
+      "context": "Expressing the Product of Sine and Cosine as a Sum\n\nNext, we will derive the product-to-sum formula for sine and cosine from the sum and difference formulas for sine. If we add the sum and difference identities, we get:\n\n\\[\\begin{align*} \\cos \\alpha \\cos \\beta+\\sin \\alpha \\sin \\beta&= \\cos(\\alpha-\\beta)\\\\[4pt] \\underline{+ \\cos \\alpha \\cos \\beta-\\sin \\alpha \\sin \\beta}&= \\cos(\\alpha+\\beta)\\\\[4pt] 2 \\cos \\alpha \\cos \\beta&= \\cos(\\alpha-\\beta)+\\cos(\\alpha+\\beta)\\\\[4pt] \\text{Then, we divide by 2 to isolate the product of cosines:}\\\\[4pt] \\cos \\alpha \\cos \\beta&= \\dfrac{1}{2}\\left[\\cos(\\alpha-\\beta)+\\cos(\\alpha+\\beta)\\right] \\end{align*}\\]",
+      "original": "Example \\(\\PageIndex{2}\\): Writing the Product as a Sum Containing only Sine or Cosine\n\nExpress the following product as a sum containing only sine or cosine and no products: \\(\\sin(4\\theta)\\cos(2\\theta)\\).\n\nSolution\n\nWrite the formula for the product of sine and cosine. Then substitute the given values into the formula and simplify.\n\n\\[\\begin{align*} \\sin \\alpha \\cos \\beta&= \\dfrac{1}{2}[ \\sin(\\alpha+\\beta)+\\sin(\\alpha-\\beta) ]\\\\[4pt] \\sin(4\\theta)\\cos(2\\theta)&= \\dfrac{1}{2}[\\sin(4\\theta+2\\theta)+\\sin(4\\theta-2\\theta)]\\\\[4pt] &= \\dfrac{1}{2}[\\sin(6\\theta)+\\sin(2\\theta)] \\end{align*}\\]",
+      "prompt": "Example \\(\\PageIndex{2}\\): Writing the Product as a Sum Containing only Sine or Cosine\n\nExpress the following product as a sum containing only sine or cosine and no products: \\(\\sin(4\\theta)\\cos(2\\theta)\\).\n\nSolution\n\nWrite the formula for the product of sine and cosine. Then substitute the given values into the formula and simplify.\n\n\\[\\begin{align*} \\sin \\alpha \\cos \\beta&= \\dfrac{1}{2}[ \\sin(\\alpha+\\beta)+\\sin(\\alpha-\\beta) ]\\\\[4pt] \\sin(4\\theta)\\cos(2\\theta)&= \\dfrac{1}{2}[\\sin(4\\theta+2\\theta)+\\sin(4\\theta-2\\theta)]\\\\[4pt] &= \\dfrac{1}{2}[\\sin(6\\theta)+\\sin(2\\theta)] \\end{align*}\\]",
+      "sourceAnswers": [],
+      "hasFigure": false,
+      "status": "draft",
+      "answerVerified": false,
+      "translationStatus": "pending",
+      "mappingStatus": "pending"
+    },
+    {
+      "ordinal": 7,
+      "sourceNumber": "",
+      "sourceAnchor": "",
+      "kind": "exercise-candidate",
+      "context": "Expressing the Product of Sine and Cosine as a Sum\n\nNext, we will derive the product-to-sum formula for sine and cosine from the sum and difference formulas for sine. If we add the sum and difference identities, we get:\n\n\\[\\begin{align*} \\cos \\alpha \\cos \\beta+\\sin \\alpha \\sin \\beta&= \\cos(\\alpha-\\beta)\\\\[4pt] \\underline{+ \\cos \\alpha \\cos \\beta-\\sin \\alpha \\sin \\beta}&= \\cos(\\alpha+\\beta)\\\\[4pt] 2 \\cos \\alpha \\cos \\beta&= \\cos(\\alpha-\\beta)+\\cos(\\alpha+\\beta)\\\\[4pt] \\text{Then, we divide by 2 to isolate the product of cosines:}\\\\[4pt] \\cos \\alpha \\cos \\beta&= \\dfrac{1}{2}\\left[\\cos(\\alpha-\\beta)+\\cos(\\alpha+\\beta)\\right] \\end{align*}\\]",
+      "original": "Exercise \\(\\PageIndex{2}\\)\n\nUse the product-to-sum formula to write the product as a sum: \\(\\sin(x+y)\\cos(x−y)\\).\n\nAnswer\n\n\\(\\dfrac{1}{2}(\\sin 2x+\\sin 2y)\\)",
+      "prompt": "Exercise \\(\\PageIndex{2}\\)\n\nUse the product-to-sum formula to write the product as a sum: \\(\\sin(x+y)\\cos(x−y)\\).",
+      "sourceAnswers": [
+        "\\(\\dfrac{1}{2}(\\sin 2x+\\sin 2y)\\)"
+      ],
+      "hasFigure": false,
+      "status": "draft",
+      "answerVerified": false,
+      "translationStatus": "pending",
+      "mappingStatus": "pending"
+    },
+    {
+      "ordinal": 8,
+      "sourceNumber": "",
+      "sourceAnchor": "",
+      "kind": "example-or-exercise",
+      "context": "\\[\\sin \\alpha \\cos \\beta=\\dfrac{1}{2}[\\sin(\\alpha+\\beta)+\\sin(\\alpha−\\beta)]\\]\n\n\\[\\sin \\alpha \\sin \\beta=\\dfrac{1}{2}[\\cos(\\alpha−\\beta)−\\cos(\\alpha+\\beta)]\\]\n\n\\[\\cos \\alpha \\sin \\beta=\\dfrac{1}{2}[\\sin(\\alpha+\\beta)−\\sin(\\alpha−\\beta)]\\]",
+      "original": "Example \\(\\PageIndex{3}\\): Express the Product as a Sum or Difference\n\nWrite \\(\\cos(3\\theta) \\cos(5\\theta)\\) as a sum or difference.\n\nSolution\n\nWe have the product of cosines, so we begin by writing the related formula. Then we substitute the given angles and simplify.\n\n\\[\\begin{align*} \\cos \\alpha \\cos \\beta&= \\dfrac{1}{2}[\\cos(\\alpha-\\beta)+\\cos(\\alpha+\\beta)]\\\\[4pt] \\cos(3\\theta)\\cos(5\\theta)&= \\dfrac{1}{2}[\\cos(3\\theta-5\\theta)+\\cos(3\\theta+5\\theta)]\\\\[4pt] &= \\dfrac{1}{2}[\\cos(2\\theta)+\\cos(8\\theta)]\\qquad \\text{Use even-odd identity} \\end{align*}\\]",
+      "prompt": "Example \\(\\PageIndex{3}\\): Express the Product as a Sum or Difference\n\nWrite \\(\\cos(3\\theta) \\cos(5\\theta)\\) as a sum or difference.\n\nSolution\n\nWe have the product of cosines, so we begin by writing the related formula. Then we substitute the given angles and simplify.\n\n\\[\\begin{align*} \\cos \\alpha \\cos \\beta&= \\dfrac{1}{2}[\\cos(\\alpha-\\beta)+\\cos(\\alpha+\\beta)]\\\\[4pt] \\cos(3\\theta)\\cos(5\\theta)&= \\dfrac{1}{2}[\\cos(3\\theta-5\\theta)+\\cos(3\\theta+5\\theta)]\\\\[4pt] &= \\dfrac{1}{2}[\\cos(2\\theta)+\\cos(8\\theta)]\\qquad \\text{Use even-odd identity} \\end{align*}\\]",
+      "sourceAnswers": [],
+      "hasFigure": false,
+      "status": "draft",
+      "answerVerified": false,
+      "translationStatus": "pending",
+      "mappingStatus": "pending"
+    },
+    {
+      "ordinal": 9,
+      "sourceNumber": "",
+      "sourceAnchor": "",
+      "kind": "exercise-candidate",
+      "context": "\\[\\sin \\alpha \\cos \\beta=\\dfrac{1}{2}[\\sin(\\alpha+\\beta)+\\sin(\\alpha−\\beta)]\\]\n\n\\[\\sin \\alpha \\sin \\beta=\\dfrac{1}{2}[\\cos(\\alpha−\\beta)−\\cos(\\alpha+\\beta)]\\]\n\n\\[\\cos \\alpha \\sin \\beta=\\dfrac{1}{2}[\\sin(\\alpha+\\beta)−\\sin(\\alpha−\\beta)]\\]",
+      "original": "Exercise \\(\\PageIndex{3}\\)\n\nUse the product-to-sum formula to evaluate \\(\\cos \\dfrac{11\\pi}{12} \\cos \\dfrac{\\pi}{12}\\).\n\nAnswer\n\n\\(\\dfrac{−2−\\sqrt{3}}{4}\\)",
+      "prompt": "Exercise \\(\\PageIndex{3}\\)\n\nUse the product-to-sum formula to evaluate \\(\\cos \\dfrac{11\\pi}{12} \\cos \\dfrac{\\pi}{12}\\).",
+      "sourceAnswers": [
+        "\\(\\dfrac{−2−\\sqrt{3}}{4}\\)"
+      ],
+      "hasFigure": false,
+      "status": "draft",
+      "answerVerified": false,
+      "translationStatus": "pending",
+      "mappingStatus": "pending"
+    },
+    {
+      "ordinal": 10,
+      "sourceNumber": "",
+      "sourceAnchor": "",
+      "kind": "example-or-exercise",
+      "context": "\\[\\sin \\alpha-\\sin \\beta=2\\sin\\left(\\dfrac{\\alpha-\\beta}{2}\\right)\\cos\\left(\\dfrac{\\alpha+\\beta}{2}\\right)\\]\n\n\\[\\cos \\alpha−\\cos \\beta=−2\\sin\\left(\\dfrac{\\alpha+\\beta}{2}\\right)\\sin\\left(\\dfrac{\\alpha−\\beta}{2}\\right)\\]\n\n\\[\\cos \\alpha+\\cos \\beta=2\\cos\\left(\\dfrac{\\alpha+\\beta}{2}\\right)\\cos\\left(\\dfrac{\\alpha−\\beta}{2}\\right)\\]",
+      "original": "Example \\(\\PageIndex{4}\\): Writing the Difference of Sines as a Product\n\nWrite the following difference of sines expression as a product: \\(\\sin(4\\theta)−\\sin(2\\theta)\\).\n\nSolution\n\nWe begin by writing the formula for the difference of sines.\n\n\\[\\begin{align*} \\sin \\alpha-\\sin \\beta&= 2\\sin\\left(\\dfrac{\\alpha-\\beta}{2}\\right)\\cos\\left(\\dfrac{\\alpha+\\beta}{2}\\right)\\\\[4pt] \\text {Substitute the values into the formula, and simplify.}\\\\[4pt] \\sin(4\\theta)-\\sin(2\\theta)&= 2\\sin\\left(\\dfrac{4\\theta-2\\theta}{2}\\right) \\cos\\left(\\dfrac{4\\theta+2\\theta}{2}\\right)\\\\[4pt] &= 2\\sin\\left(\\dfrac{2\\theta}{2}\\right) \\cos\\left(\\dfrac{6\\theta}{2}\\right)\\\\[4pt] &= 2 \\sin \\theta \\cos(3\\theta) \\end{align*}\\]",
+      "prompt": "Example \\(\\PageIndex{4}\\): Writing the Difference of Sines as a Product\n\nWrite the following difference of sines expression as a product: \\(\\sin(4\\theta)−\\sin(2\\theta)\\).\n\nSolution\n\nWe begin by writing the formula for the difference of sines.\n\n\\[\\begin{align*} \\sin \\alpha-\\sin \\beta&= 2\\sin\\left(\\dfrac{\\alpha-\\beta}{2}\\right)\\cos\\left(\\dfrac{\\alpha+\\beta}{2}\\right)\\\\[4pt] \\text {Substitute the values into the formula, and simplify.}\\\\[4pt] \\sin(4\\theta)-\\sin(2\\theta)&= 2\\sin\\left(\\dfrac{4\\theta-2\\theta}{2}\\right) \\cos\\left(\\dfrac{4\\theta+2\\theta}{2}\\right)\\\\[4pt] &= 2\\sin\\left(\\dfrac{2\\theta}{2}\\right) \\cos\\left(\\dfrac{6\\theta}{2}\\right)\\\\[4pt] &= 2 \\sin \\theta \\cos(3\\theta) \\end{align*}\\]",
+      "sourceAnswers": [],
+      "hasFigure": false,
+      "status": "draft",
+      "answerVerified": false,
+      "translationStatus": "pending",
+      "mappingStatus": "pending"
+    },
+    {
+      "ordinal": 11,
+      "sourceNumber": "",
+      "sourceAnchor": "",
+      "kind": "exercise-candidate",
+      "context": "\\[\\sin \\alpha-\\sin \\beta=2\\sin\\left(\\dfrac{\\alpha-\\beta}{2}\\right)\\cos\\left(\\dfrac{\\alpha+\\beta}{2}\\right)\\]\n\n\\[\\cos \\alpha−\\cos \\beta=−2\\sin\\left(\\dfrac{\\alpha+\\beta}{2}\\right)\\sin\\left(\\dfrac{\\alpha−\\beta}{2}\\right)\\]\n\n\\[\\cos \\alpha+\\cos \\beta=2\\cos\\left(\\dfrac{\\alpha+\\beta}{2}\\right)\\cos\\left(\\dfrac{\\alpha−\\beta}{2}\\right)\\]",
+      "original": "Exercise \\(\\PageIndex{4}\\)\n\nUse the sum-to-product formula to write the sum as a product: \\(\\sin(3\\theta)+\\sin(\\theta)\\).\n\nAnswer\n\n\\(2\\sin(2\\theta)\\cos(\\theta)\\)",
+      "prompt": "Exercise \\(\\PageIndex{4}\\)\n\nUse the sum-to-product formula to write the sum as a product: \\(\\sin(3\\theta)+\\sin(\\theta)\\).",
+      "sourceAnswers": [
+        "\\(2\\sin(2\\theta)\\cos(\\theta)\\)"
+      ],
+      "hasFigure": false,
+      "status": "draft",
+      "answerVerified": false,
+      "translationStatus": "pending",
+      "mappingStatus": "pending"
+    },
+    {
+      "ordinal": 12,
+      "sourceNumber": "",
+      "sourceAnchor": "",
+      "kind": "example-or-exercise",
+      "context": "\\[\\sin \\alpha-\\sin \\beta=2\\sin\\left(\\dfrac{\\alpha-\\beta}{2}\\right)\\cos\\left(\\dfrac{\\alpha+\\beta}{2}\\right)\\]\n\n\\[\\cos \\alpha−\\cos \\beta=−2\\sin\\left(\\dfrac{\\alpha+\\beta}{2}\\right)\\sin\\left(\\dfrac{\\alpha−\\beta}{2}\\right)\\]\n\n\\[\\cos \\alpha+\\cos \\beta=2\\cos\\left(\\dfrac{\\alpha+\\beta}{2}\\right)\\cos\\left(\\dfrac{\\alpha−\\beta}{2}\\right)\\]",
+      "original": "Example \\(\\PageIndex{5}\\): Evaluating Using the Sum-to-Product Formula\n\nEvaluate \\(\\cos(15°)−\\cos(75°)\\). Check the answer with a graphing calculator.\n\nSolution\n\nWe begin by writing the formula for the difference of cosines.\n\n\\[\\begin{align*}\n\n\\cos \\alpha-\\cos \\beta&= -2 \\sin\\left(\\dfrac{\\alpha+\\beta}{2}\\right) \\sin\\left(\\dfrac{\\alpha-\\beta}{2}\\right)\\\\[4pt]\n\n\\text {Then we substitute the given angles and simplify.}\\\\[4pt]\n\n\\cos(15^{\\circ})-\\cos(75^{\\circ})&= -2\\sin\\left(\\dfrac{15^{\\circ}+75^{\\circ}}{2}\\right) \\sin\\left(\\dfrac{15^{\\circ}-75^{\\circ}}{2}\\right)\\\\[4pt]\n\n&= -2\\sin(45^{\\circ}) \\sin(-30^{\\circ})\\\\[4pt]\n\n&= -2\\left(\\dfrac{\\sqrt{2}}{2}\\right)\\left(-\\dfrac{1}{2}\\right)\\\\[4pt]\n\n&= \\dfrac{\\sqrt{2}}{2}\n\n\\end{align*}\\]",
+      "prompt": "Example \\(\\PageIndex{5}\\): Evaluating Using the Sum-to-Product Formula\n\nEvaluate \\(\\cos(15°)−\\cos(75°)\\). Check the answer with a graphing calculator.\n\nSolution\n\nWe begin by writing the formula for the difference of cosines.\n\n\\[\\begin{align*}\n\n\\cos \\alpha-\\cos \\beta&= -2 \\sin\\left(\\dfrac{\\alpha+\\beta}{2}\\right) \\sin\\left(\\dfrac{\\alpha-\\beta}{2}\\right)\\\\[4pt]\n\n\\text {Then we substitute the given angles and simplify.}\\\\[4pt]\n\n\\cos(15^{\\circ})-\\cos(75^{\\circ})&= -2\\sin\\left(\\dfrac{15^{\\circ}+75^{\\circ}}{2}\\right) \\sin\\left(\\dfrac{15^{\\circ}-75^{\\circ}}{2}\\right)\\\\[4pt]\n\n&= -2\\sin(45^{\\circ}) \\sin(-30^{\\circ})\\\\[4pt]\n\n&= -2\\left(\\dfrac{\\sqrt{2}}{2}\\right)\\left(-\\dfrac{1}{2}\\right)\\\\[4pt]\n\n&= \\dfrac{\\sqrt{2}}{2}\n\n\\end{align*}\\]",
+      "sourceAnswers": [],
+      "hasFigure": false,
+      "status": "draft",
+      "answerVerified": false,
+      "translationStatus": "pending",
+      "mappingStatus": "pending"
+    },
+    {
+      "ordinal": 13,
+      "sourceNumber": "",
+      "sourceAnchor": "",
+      "kind": "example-or-exercise",
+      "context": "\\[\\sin \\alpha-\\sin \\beta=2\\sin\\left(\\dfrac{\\alpha-\\beta}{2}\\right)\\cos\\left(\\dfrac{\\alpha+\\beta}{2}\\right)\\]\n\n\\[\\cos \\alpha−\\cos \\beta=−2\\sin\\left(\\dfrac{\\alpha+\\beta}{2}\\right)\\sin\\left(\\dfrac{\\alpha−\\beta}{2}\\right)\\]\n\n\\[\\cos \\alpha+\\cos \\beta=2\\cos\\left(\\dfrac{\\alpha+\\beta}{2}\\right)\\cos\\left(\\dfrac{\\alpha−\\beta}{2}\\right)\\]",
+      "original": "Example \\(\\PageIndex{6}\\): Proving an Identity\n\nProve the identity:\n\n\\[\\dfrac{\\cos(4t)−\\cos(2t)}{\\sin(4t)+\\sin(2t)}=−\\tan t\\]\n\nSolution\n\nWe will start with the left side, the more complicated side of the equation, and rewrite the expression until it matches the right side.\n\n\\[\\begin{align*} \\dfrac{\\cos(4t)-\\cos(2t)}{\\sin(4t)+\\sin(2t)}&= \\dfrac{-2 \\sin\\left(\\dfrac{4t+2t}{2}\\right) \\sin\\left(\\dfrac{4t-2t}{2}\\right)}{2 \\sin\\left(\\dfrac{4t+2t}{2}\\right) \\cos\\left(\\dfrac{4t-2t}{2}\\right)}\\\\[4pt] &= \\dfrac{-2 \\sin(3t)\\sin t}{2 \\sin(3t)\\cos t}\\\\[4pt] &= -\\dfrac{\\sin t}{\\cos t}\\\\[4pt] &= -\\tan t \\end{align*}\\]\n\nAnalysis\n\nRecall that verifying trigonometric identities has its own set of rules. The procedures for solving an equation are not the same as the procedures for verifying an identity. When we prove an identity, we pick one side to work on and make substitutions until that side is transformed into the other side.",
+      "prompt": "Example \\(\\PageIndex{6}\\): Proving an Identity\n\nProve the identity:\n\n\\[\\dfrac{\\cos(4t)−\\cos(2t)}{\\sin(4t)+\\sin(2t)}=−\\tan t\\]\n\nSolution\n\nWe will start with the left side, the more complicated side of the equation, and rewrite the expression until it matches the right side.\n\n\\[\\begin{align*} \\dfrac{\\cos(4t)-\\cos(2t)}{\\sin(4t)+\\sin(2t)}&= \\dfrac{-2 \\sin\\left(\\dfrac{4t+2t}{2}\\right) \\sin\\left(\\dfrac{4t-2t}{2}\\right)}{2 \\sin\\left(\\dfrac{4t+2t}{2}\\right) \\cos\\left(\\dfrac{4t-2t}{2}\\right)}\\\\[4pt] &= \\dfrac{-2 \\sin(3t)\\sin t}{2 \\sin(3t)\\cos t}\\\\[4pt] &= -\\dfrac{\\sin t}{\\cos t}\\\\[4pt] &= -\\tan t \\end{align*}\\]\n\nAnalysis\n\nRecall that verifying trigonometric identities has its own set of rules. The procedures for solving an equation are not the same as the procedures for verifying an identity. When we prove an identity, we pick one side to work on and make substitutions until that side is transformed into the other side.",
+      "sourceAnswers": [],
+      "hasFigure": false,
+      "status": "draft",
+      "answerVerified": false,
+      "translationStatus": "pending",
+      "mappingStatus": "pending"
+    },
+    {
+      "ordinal": 14,
+      "sourceNumber": "",
+      "sourceAnchor": "",
+      "kind": "example-or-exercise",
+      "context": "\\[\\sin \\alpha-\\sin \\beta=2\\sin\\left(\\dfrac{\\alpha-\\beta}{2}\\right)\\cos\\left(\\dfrac{\\alpha+\\beta}{2}\\right)\\]\n\n\\[\\cos \\alpha−\\cos \\beta=−2\\sin\\left(\\dfrac{\\alpha+\\beta}{2}\\right)\\sin\\left(\\dfrac{\\alpha−\\beta}{2}\\right)\\]\n\n\\[\\cos \\alpha+\\cos \\beta=2\\cos\\left(\\dfrac{\\alpha+\\beta}{2}\\right)\\cos\\left(\\dfrac{\\alpha−\\beta}{2}\\right)\\]",
+      "original": "Example \\(\\PageIndex{7}\\): Verifying the Identity Using Double-Angle Formulas and Reciprocal Identities\n\nVerify the identity \\({\\csc}^2 \\theta−2=\\cos(2\\theta)\\sin2\\theta\\).\n\nSolution\n\nFor verifying this equation, we are bringing together several of the identities. We will use the double-angle formula and the reciprocal identities. We will work with the right side of the equation and rewrite it until it matches the left side.\n\n\\[\\begin{align*} \\cos(2\\theta)\\sin2\\theta&= \\dfrac{1-2 {\\sin}^2 \\theta}{{\\sin}^2 \\theta}\\\\[4pt] &= \\dfrac{1}{{\\sin}^2 \\theta}-\\dfrac{2 {\\sin}^2 \\theta}{{\\sin}^2 \\theta}\\\\[4pt] &= {\\csc}^2 \\theta - 2 \\end{align*}\\]",
+      "prompt": "Example \\(\\PageIndex{7}\\): Verifying the Identity Using Double-Angle Formulas and Reciprocal Identities\n\nVerify the identity \\({\\csc}^2 \\theta−2=\\cos(2\\theta)\\sin2\\theta\\).\n\nSolution\n\nFor verifying this equation, we are bringing together several of the identities. We will use the double-angle formula and the reciprocal identities. We will work with the right side of the equation and rewrite it until it matches the left side.\n\n\\[\\begin{align*} \\cos(2\\theta)\\sin2\\theta&= \\dfrac{1-2 {\\sin}^2 \\theta}{{\\sin}^2 \\theta}\\\\[4pt] &= \\dfrac{1}{{\\sin}^2 \\theta}-\\dfrac{2 {\\sin}^2 \\theta}{{\\sin}^2 \\theta}\\\\[4pt] &= {\\csc}^2 \\theta - 2 \\end{align*}\\]",
+      "sourceAnswers": [],
+      "hasFigure": false,
+      "status": "draft",
+      "answerVerified": false,
+      "translationStatus": "pending",
+      "mappingStatus": "pending"
+    },
+    {
+      "ordinal": 15,
+      "sourceNumber": "",
+      "sourceAnchor": "",
+      "kind": "exercise-candidate",
+      "context": "\\[\\sin \\alpha-\\sin \\beta=2\\sin\\left(\\dfrac{\\alpha-\\beta}{2}\\right)\\cos\\left(\\dfrac{\\alpha+\\beta}{2}\\right)\\]\n\n\\[\\cos \\alpha−\\cos \\beta=−2\\sin\\left(\\dfrac{\\alpha+\\beta}{2}\\right)\\sin\\left(\\dfrac{\\alpha−\\beta}{2}\\right)\\]\n\n\\[\\cos \\alpha+\\cos \\beta=2\\cos\\left(\\dfrac{\\alpha+\\beta}{2}\\right)\\cos\\left(\\dfrac{\\alpha−\\beta}{2}\\right)\\]",
+      "original": "Exercise \\(\\PageIndex{5}\\)\n\nVerify the identity \\(\\tan \\theta \\cot \\theta−{\\cos}^2 \\theta={\\sin}^2 \\theta\\).\n\nAnswer\n\n\\[\\begin{align*} \\tan \\theta \\cot \\theta-{\\cos}^2 \\theta&= \\left(\\dfrac{\\sin \\theta}{\\cos \\theta}\\right)\\left(\\dfrac{\\cos \\theta}{\\sin \\theta}\\right)-{\\cos}^2 \\theta\\\\[4pt] &= 1-{\\cos}^2 \\theta\\\\[4pt] &= {\\sin}^2 \\theta \\end{align*}\\]",
+      "prompt": "Exercise \\(\\PageIndex{5}\\)\n\nVerify the identity \\(\\tan \\theta \\cot \\theta−{\\cos}^2 \\theta={\\sin}^2 \\theta\\).",
+      "sourceAnswers": [
+        "\\[\\begin{align*} \\tan \\theta \\cot \\theta-{\\cos}^2 \\theta&= \\left(\\dfrac{\\sin \\theta}{\\cos \\theta}\\right)\\left(\\dfrac{\\cos \\theta}{\\sin \\theta}\\right)-{\\cos}^2 \\theta\\\\[4pt] &= 1-{\\cos}^2 \\theta\\\\[4pt] &= {\\sin}^2 \\theta \\end{align*}\\]"
+      ],
+      "hasFigure": false,
+      "status": "draft",
+      "answerVerified": false,
+      "translationStatus": "pending",
+      "mappingStatus": "pending"
+    }
+  ],
+  "license": "CC BY 4.0",
+  "licenseEvidence": "This page titled 9.4: Sum-to-Product and Product-to-Sum Formulas was last modified on Mon, 13 Oct 2025 00:43:15 GMT and is shared under a CC BY  4.0  license and was authored, remixed, and/or curated by OpenStax via source content that was edited to the style and standards of the LibreTexts platform.",
+  "url": "https://math.libretexts.org/Bookshelves/Algebra/Algebra_and_Trigonometry_1e_(OpenStax)/09:_Trigonometric_Identities_and_Equations/9.04:_Sum-to-Product_and_Product-to-Sum_Formulas",
+  "sha256": "572210c5fd0f088384a771b5c9ae6d6d7c5704aa1890a8c5a047b39650e9275e",
+  "checkedAt": "2026-10-07",
+  "id": "b4028da901abc2df889a",
+  "bookId": "algebra-trigonometry",
+  "licenseInherited": false,
+  "licenseSource": "https://math.libretexts.org/Bookshelves/Algebra/Algebra_and_Trigonometry_1e_(OpenStax)/09:_Trigonometric_Identities_and_Equations/9.04:_Sum-to-Product_and_Product-to-Sum_Formulas",
+  "licenseUrl": "https://creativecommons.org/licenses/by/4.0/",
+  "authors": "OpenStax / Jay Abramson et al.",
+  "book": "Algebra and Trigonometry 1e",
+  "reviewStatus": "unreviewed",
+  "sourceLanguage": "en",
+  "translationStatus": "pending"
+}

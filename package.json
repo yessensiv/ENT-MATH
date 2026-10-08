@@ -12,7 +12,12 @@
     "start": "node --import ./scripts/sites-env.mjs ./node_modules/wrangler/bin/wrangler.js dev --config dist/server/wrangler.json --local --persist-to .wrangler/state --ip 127.0.0.1 --inspector-port 0",
     "lint": "eslint . --ignore-pattern dist --ignore-pattern .next",
     "db:generate": "drizzle-kit generate",
-    "db:migrate": "node --import ./scripts/sites-env.mjs ./node_modules/wrangler/bin/wrangler.js d1 migrations apply DB --local --config wrangler.local.json --persist-to .wrangler/state"
+    "db:migrate": "node --import ./scripts/sites-env.mjs ./node_modules/wrangler/bin/wrangler.js d1 migrations apply DB --local --config wrangler.local.json --persist-to .wrangler/state",
+    "sources:fetch": "python scripts/import-source-library.py",
+    "sources:index": "node --experimental-transform-types scripts/build-source-library.mjs",
+    "sources:promote": "node --experimental-transform-types scripts/promote-source-exercises.mjs",
+    "sources:verify-practice": "python tests/source-promotion.test.py && node --experimental-transform-types --test tests/promoted-exercises.test.mjs",
+    "sources:test": "python tests/source-library-parser.test.py && node --experimental-transform-types --test tests/source-library.test.mjs"
   },
   "dependencies": {
     "@base-ui/react": "^1.7.0",

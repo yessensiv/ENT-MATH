@@ -1,0 +1,445 @@
+{
+  "title": "7.5: Basic Concepts of Probability",
+  "originalText": "[Figure: A close-up of a hand holding two dice.]\n\nFigure \\(\\PageIndex{1}\\): When you roll two dice, some outcomes (like rolling a sum of seven) are more likely than others (rolling a sum of twelve). (credit: “Dice Isn’t Just A Game; It's A Way of Life” by Leah Love/Flickr, CC BY 2.0)\n\nLearning Objectives\n\n1. Define probability including impossible and certain events.\n\n2. Calculate basic theoretical probabilities.\n\n3. Calculate basic empirical probabilities.\n\n4. Distinguish among theoretical, empirical, and subjective probability.\n\n5. Calculate the probability of the complement of an event.\n\nIt all comes down to this. The game of Monopoly that started hours ago is in the home stretch. Your sister has the dice, and if she rolls a 4, 5, or 7 she’ll land on one of your best spaces and the game will be over. How likely is it that the game will end on the next turn? Is it more likely than not? How can we measure that likelihood? This section addresses this question by introducing a way to measure uncertainty.\n\nIntroducing Probability\n\nUncertainty is, almost by definition, a nebulous concept. In order to put enough constraints on it that we can mathematically study it, we will focus on uncertainty strictly in the context of experiments. Recall that experiments are processes whose outcomes are unknown; the sample space for the experiment is the collection of all those possible outcomes. When we want to talk about the likelihood of particular outcomes, we sometimes group outcomes together; for example, in the Monopoly example at the beginning of this section, we were interested in the roll of 2 dice that might fall as a 4, 5, or 7. A grouping of outcomes that we’re interested in is called an event. In other words, an event is a subset of the sample space of an experiment; it often consists of the outcomes of interest to the experimenter.\n\nOnce we have defined the event that interests us, we can try to assess the likelihood of that event. We do that by assigning a number to each event (\\(E\\)) called the probability of that event (\\(P(E)\\)). The probability of an event is a number between 0 and 1 (inclusive). If the probability of an event is 0, then the event is impossible. On the other hand, an event with probability 1 is certain to occur. In general, the higher the probability of an event, the more likely it is that the event will occur.\n\nExample  \\(\\PageIndex{1}\\): Determining Certain and Impossible Events\n\nConsider an experiment that consists of rolling a single standard 6-sided die (with faces numbered 1-6). Decide if these probabilities are equal to zero, equal to one, or somewhere in between.\n\n1. \\(P(roll a 4)\\)\n\n2. \\(P(roll a 7)\\)\n\n3. \\(P(roll a positive number)\\)\n\n4. \\(P(rolla \\frac{1}{3})\\)\n\n5. \\(P(roll an even number)\\)\n\n6. \\(P(roll a single-digit number)\\)\n\nAnswer\n\nLet's start by identifying the sample space. For one roll of this die, the possible outcomes are {1, 2, 3, 4, 5,6}. We can use that to assess these probabilities:\n\n1. We see that 4 is in the sample space, so it’s possible that it will be the outcome. It’s not certain to be the outcome, though. So, \\(0<P(roll a 4)<1\\).\n\n2. Notice that 7 is not in the sample space. So, \\(P(roll a 7)=0\\).\n\n3. Every outcome in the sample space is a positive number, so this event is certain. Thus, \\(P(roll a positive number)=1\\).\n\n4. Since \\(\\frac{1}{3}\\) is not in the sample space, \\(P(rolla \\frac{1}{3})=0\\).\n\n5. Some outcomes in the sample space are even numbers (2, 4, and 6), but the others aren’t. So, \\(0<P(roll an even number)<1\\).\n\n6. Every outcome in the sample space is a single-digit number, so \\(P(roll a single-digit number)=1\\).\n\nYour Turn \\(\\PageIndex{1}\\)\n\nJorge is about to conduct an experiment that consists of flipping a coin 4 times and recording the number of heads \\(\\text{(H)}\\). Decide if these probabilities are equal to zero, equal to one, or somewhere in between.\n\n\\(P(\\text{H} < 5)\\)\n\n\\(P(\\text{H} < 4)\\)\n\n\\(P(\\text{H} ≥ 5)\\)\n\nThree Ways to Assign Probabilities\n\nThe probabilities of events that are certain or impossible are easy to assign; they’re just 1 or 0, respectively. What do we do about those in-between cases, for events that might or might not occur? There are three methods to assign probabilities that we can choose from. We’ll discuss them here, in order of reliability.\n\nMethod 1: Theoretical Probability\n\nThe theoretical method gives the most reliable results, but it cannot always be used. If the sample space of an experiment consists of equally likely outcomes, then the theoretical probability of an event is defined to be the ratio of the number of outcomes in the event to the number of outcomes in the sample space.\n\nFORMULA\n\nFor an experiment whose sample space \\(S\\) consists of equally likely outcomes, the theoretical probability of the event \\(E\\) is the ratio\n\n\\(P(E)=\\frac{n(E)}{n(S)},\\)\n\nwhere \\(n(E)\\) and \\(n(S)\\) denote the number of outcomes in the event and in the sample space, respectively.\n\nExample \\(\\PageIndex{2}\\): Computing Theoretical Probabilities\n\nRecall that a standard deck of cards consists of 52 unique cards which are labeled with a rank (the whole numbers from 2 to 10, plus J, Q, K, and A) and a suit (\\(♣\\), \\(♢\\), \\(♡\\), or \\(♠\\)). A standard deck is thoroughly shuffled, and you draw one card at random (so every card has an equal chance of being drawn). Find the theoretical probability of each of these events:\n\n1. The card is \\(10♠\\).\n\n2. The card is a \\(♡\\).\n\n3. The card is a king (K).\n\nAnswer\n\nThere are 52 cards in the deck, so the sample space for each of these experiments has 52 elements. That will be the denominator for each of our probabilities.\n\n1. There is only one \\(10♠\\) in the deck, so this event only has one outcome in it. Thus, \\(P(10♠)=\\frac{1}{52}\\).\n\n2. There are 13 \\(♡s\\) in the deck, so \\(P(♡)=\\frac{13}{52}=\\frac{1}{4}\\).\n\n3. There are 4 cards of each rank in the deck, so \\(P(K)=\\frac{4}{52}=\\frac{1}{13}\\).\n\nYour Turn \\(\\PageIndex{2}\\)\n\nYou are about to roll a fair (meaning that each face has an equal chance of landing up) 6-sided die, whose faces are labeled with the numbers 1 through 6. Find the theoretical probabilities of each outcome.\n\nYou roll a 4.\n\nYou roll a number greater than 2.\n\nYou roll an odd number.\n\nCheckpoint\n\nIt is critical that you make sure that every outcome in a sample space is equally likely before you compute theoretical probabilities!\n\nExample \\(\\PageIndex{3}\\): Using Tables to Find Theoretical Probabilities\n\nIn the Basic Concepts of Probability, we were considering a Monopoly game where, if your sister rolled a sum of 4, 5, or 7 with 2 standard dice, you would win the game. What is the probability of this event? Use tables to determine your answer.\n\n Now, each of the 36 ordered pairs in the table represent an equally likely outcome.\n\nAnswer\n\nWe should think of this experiment as occurring in two stages: (1) one die roll, then (2) another die roll. Even though these two stages will usually occur simultaneously in practice, since they’re independent, it’s okay to treat them separately.\n\nStep 1: Since we have two independent stages, let’s create a table (Figure \\(\\PageIndex{2}\\) ), which is probably the most efficient method for determining the sample space.\n\n[Figure: A table with 6 rows and 6 columns. The columns represent the first die and are titled, 1, 2, 3, 4, 5, and 6. The rows represent the second die and are titled, 1, 2, 3, 4, 5, and 6. The data is as follows: Row 1: (1, 1), (2, 1), (3, 1), (4, 1), (5, 1), (6, 1). Row 2: (1, 2), (2, 2), (3, 2), (4, 2), (5, 2), (6, 2). Row 3: (1, 3), (2, 3), (3, 3), (4, 3), (5, 3), (6, 3). Row 4: (1, 4), (2, 4), (3, 4), (4, 4), (5, 4), (6, 4). Row 5: (1, 5), (2, 5), (3, 5), (4, 5), (5, 5), (6, 5). Row 6: (1, 6), (2, 6), (3, 6), (4, 6), (5, 6), (6, 6).]\n\nFigure \\(\\PageIndex{2}\\)\n\nStep 2: To make our analysis easier, let’s replace each ordered pair with the sum (Figure \\(\\PageIndex{3}\\) ).\n\n[Figure: A table with 6 rows and 6 columns. The columns represent the first die and are titled, 1, 2, 3, 4, 5, and 6. The rows represent the second die and are titled, 1, 2, 3, 4, 5, and 6. The data is as follows: Row 1: 2, 3, 4, 5, 6, 7. Row 2: 3, 4, 5, 6, 7, 8. Row 3: 4, 5, 6, 7, 8, 9. Row 4: 5, 6, 7, 8, 9, 10. Row 5: 6, 7, 8, 9, 10, 11. Row 6: 7, 8, 9, 10, 11, 12.]\n\nFigure \\(\\PageIndex{3}\\)\n\nStep 3: Since the event we’re interested in is the one consisting of rolls of 4, 5, or 7. Let’s shade those in (Figure \\(\\PageIndex{4}\\) ).\n\n[Figure: A table with 6 rows and 6 columns. The columns represent the first die and are titled, 1, 2, 3, 4, 5, and 6. The rows represent the second die and are titled, 1, 2, 3, 4, 5, and 6. The data is as follows: Row 1: 2, 3, 4, 5, 6, 7. The 4, 5, and 7 are shaded darker. Row 2: 3, 4, 5, 6, 7, 8. The 4, 5, and 7 are shaded darker. Row 3: 4, 5, 6, 7, 8, 9. The 4, 5, and 7 are shaded darker. Row 4: 5, 6, 7, 8, 9, 10. The 5 and 7 are shaded darker. Row 5: 6, 7, 8, 9, 10, 11. The 7 is shaded darker. Row 6: 7, 8, 9, 10, 11, 12. The 7 is shaded darker.]\n\nFigure 7. \\(\\PageIndex{4}\\)\n\nOur event contains 13 outcomes, so the probability that your sister rolls a losing number is \\(\\frac{13}{36}\\).\n\nYour Turn \\(\\PageIndex{3}\\)\n\nIf you roll a pair of 4-sided dice with faces labeled with the numbers 1 through 4, what is the probability of rolling a sum of 6 or 7?\n\nExample \\(\\PageIndex{4}\\): Using Tree Diagrams to Compute Theoretical Probability\n\nIf you flip a fair coin 3 times, what is the probability of each event? Use a tree diagram to determine your answer\n\n1. You flip exactly 2 heads.\n\n2. You flip 2 consecutive heads at some point in the 3 flips.\n\n3. All 3 flips show the same result.\n\nAnswer\n\nLet’s build a tree to identify the sample space (Figure \\(\\PageIndex{5}\\) ).\n\n[Figure: A tree diagram with four stages. The diagram shows a node branching into two nodes labeled H and T. Node, H branches into two nodes labeled H and T. The node, T branches into two nodes labeled H and T. In the fourth stage, each H from the third stage branches into two nodes labeled H and T, and each T from the third stage branches into two nodes labeled H and T. The possible outcomes are as follows: H H H, H H T, H T H, H T T, T H H, T H T, T T H, and T T T.]\n\nFigure \\(\\PageIndex{5}\\)\n\nThe sample space is {HHH, HHT, HTH, HTT, THH, THT, TTH, TTT}, which has 8 elements.\n\n1. Flipping exactly 2 heads occurs three times (HHT, HTH, THH), so the probability is \\(\\frac{3}{8}\\).\n\n2. Flipping 2 consecutive heads at some point in the experiment happens 3 times: HHH, HHT, THH. So, the probability is \\(\\frac{3}{8}\\).\n\n3. There are 2 outcomes that all show the same result: HHH and TTT. So, the probability is \\(\\frac{2}{8}=\\frac{1}{4}\\).\n\nYour Turn \\(\\PageIndex{4}\\)\n\nYou have a modified deck of cards containing only 3\\(\\heartsuit\\), 4\\(\\heartsuit\\), and 5\\(\\heartsuit\\). You draw 2 two cards without replacing them (where order matters). What is the probability of each event?\n\nThe first card drawn is 3\\(\\heartsuit\\).\n\nThe first card drawn has a lower number than the second card.\n\nOne of the cards drawn is 4\\(\\heartsuit\\).\n\nThe first card drawn has a lower number than the second card.\n\nOne of the cards drawn is 4\\(\\heartsuit\\).\n\nPeople in Mathematics: Gerolamo Cardano\n\nThe first known text that provided a systematic approach to probabilities was written in 1564 by Gerolamo Cardano (1501–1576). Cardano was a physician whose illegitimate birth closed many doors that would have otherwise been open to someone with a medical degree in 16th-century Italy. As a result, Cardano often turned to gambling to help ends meet. He was a remarkable mathematician, and he used his knowledge to gain an edge when playing at cards or dice. His 1564 work, titled Liber de ludo aleae (which translates as Book on Games of Chance), summarized everything he knew about probability. Of course, if that book fell into the hands of those he played against, his advantage would disappear. That’s why he never allowed it to be published in his lifetime (it was eventually published in 1663). Cardano made other contributions to mathematics; he was the first person to publish the third degree analogue of the Quadratic Formula (though he didn’t discover it himself), and he popularized the use of negative numbers.\n\nMethod 2: Empirical Probability\n\nTheoretical probabilities are precise, but they can’t be found in every situation. If the outcomes in the sample space are not equally likely, then we’re out of luck. Suppose you’re watching a baseball game, and your favorite player is about to step up to the plate. What is the probability that he will get a hit?\n\nIn this case, the sample space is {hit, not a hit}. That doesn’t mean that the probability of a hit is \\(\\frac{1}{2}\\), since those outcomes aren’t equally likely. The theoretical method simply can’t be used in this situation. Instead, we might look at the player’s statistics up to this point in the season, and see that he has 122 hits in 531 opportunities. So, we might think that the probability of a hit in the next plate appearance would be about \\(\\frac{122}{531}≈0.23\\). When we use the outcomes of previous replications of an experiment to assign a probability to the next replication, we’re defining an empirical probability. Empirical probability is assigned using the outcomes of previous replications of an experiment by finding the ratio of the number of times in the previous replications the event occurred to the total number of previous replications.\n\nEmpirical probabilities aren’t exact, but when the number of previous replications is large, we expect them to be close. Also, if the previous runs of the experiment are not conducted under the exact set of circumstances as the one we’re interested in, the empirical probability is less reliable. For instance, in the case of our favorite baseball player, we might try to get a better estimate of the probability of a hit by looking only at his history against left- or right-handed pitchers (depending on the handedness of the pitcher he’s about to face).\n\nWho Knew?: Probability and Statistics\n\nOne of the broad uses of statistics is called statistical inference, where statisticians use collected data to make a guess (or inference) about the population the data were collected from. Nearly every tool that statisticians use for inference is based on probability. Not only is the method we just described for finding empirical probabilities one type of statistical inference, but some more advanced techniques in the field will give us an idea of how close that empirical probability might be to the actual probability!\n\nExample \\(\\PageIndex{5}\\): Finding Empirical Probabilities\n\nAssign an empirical probability to the following events:\n\n1. Jose is on the basketball court practicing his shots from the free throw line. He made 47 out of his last 80 attempts. What is the probability he makes his next shot?\n\n2. Amy is about to begin her morning commute. Over her last 60 commutes, she arrived at work 12 times in under half an hour. What is the probability that she arrives at work in 30 minutes or less?\n\n3. Felix is playing Yahtzee with his sister. Felix won 14 of the last 20 games he played against her. How likely is he to win this game?\n\nAnswer\n\n1. Since Jose made 47 out of his last 80 attempts, assign this event an empirical probability of \\(\\frac{47}{80}≈59%\\).\n\n2. Amy completed the commute in under 30 minutes in 12 of the last 60 commutes, so we can estimate her probability of making it in under 30 minutes this time at \\(\\frac{12}{60}=20%\\).\n\n3. Since Felix has won 14 of the last 20 games, assign a probability for a win this time of \\(\\frac{14}{20}=70%\\).\n\nYour Turn \\(\\PageIndex{5}\\)\n\nJessie is in charge of quality control at a factory manufacturing SUVs. Today, she’s checking the placement of the taillight housing. Of the last thousand units off the line, 13 had faulty placement. What empirical probability might Jesse assign to the next vehicle coming off the line having bad placement?\n\nWORK IT OUT: Buffon’s Needle\n\nA famous early question about probability (posed by Georges-Louis Leclerc, Comte de Buffon in the 18th century) had to do with the probability that a needle dropped on a floor finished with wooden slats would lay across one of the seams. If the distance between the slats is exactly the same length as the needle, then it can be shown using calculus that the probability that the needle crosses a seam is \\(\\frac{2}{π}\\). Using toothpicks or matchsticks (or other uniformly long and narrow objects), assign an empirical probability to this experiment by drawing parallel lines on a large sheet of paper where the distance between the lines is equal to the length of your dropping object, then repeatedly dropping the objects and noting whether the object touches one of the lines. Once you have your empirical probability, take its reciprocal and multiply by 2. Is the result close to \\(π\\)?\n\nMethod 3: Subjective Probability\n\nIn cases where theoretical probability can’t be used and we don’t have prior experience to inform an empirical probability, we’re left with one option: using our instincts to guess at a subjective probability. A subjective probability is an assignment of a probability to an event using only one’s instincts.\n\nSubjective probabilities are used in cases where an experiment can only be run once, or it hasn’t been run before. Because subjective probabilities may vary widely from person to person and they’re not based on any mathematical theory, we won’t give any examples. However, it’s important that we be able to identify a subjective probability when we see it; they will in general be far less accurate than empirical or theoretical probabilities.\n\nExample \\(\\PageIndex{6}\\): Distinguishing among Theoretical, Empirical, and Subjective Probabilities\n\nClassify each of the following probabilities as theoretical, empirical, or subjective.\n\n1. An eccentric billionaire is testing a brand new rocket system. He says there is a 15% chance of failure.\n\n2. With 4 seconds to go in a close basketball playoff game, the home team need 3 points to tie up the game and send it to overtime. A TV commentator says that team captain should take the final 3-point shot, because he has a 38% chance of making it (greater than every other player on the team).\n\n3. Felix is losing his Yahtzee game against his sister. He has one more chance to roll 2 dice; he’ll win the game if they both come up 4. The probability of this is about 2.8%.\n\nAnswer\n\n1. This experiment has never been run before, so the given probability is subjective.\n\n2. Presumably, the commentator has access to each player’s performance statistics over the entire season. So, the given probability is likely empirical.\n\n3. Rolling 2 dice results in a sample space with equally likely outcomes. This probability is theoretical. (We’ll learn how to calculate that probability later in this chapter.)\n\nYour Turn \\(\\PageIndex{7}\\)\n\nClassify each of the following probabilities as theoretical, empirical, or subjective.\n\nYou have entered a raffle with 500 entrants. Your probability of winning is 0.2%.\n\nYour little brother takes the bus to school each morning. On the first day of school, you believe that the probability that the bus arrives between 7:15 AM and 7:30 AM is about 80%.\n\nYour little brother takes the bus to school each morning. On the last day of school, you believe that the probability that the bus arrives between 7:15 AM and 7:30 AM is about 73%.\n\nWho Knew?: Benford’s Law\n\nIn 1938, Frank Benford published a paper (“The law of anomalous numbers,” in Proceedings of the American Philosophical Society) with a surprising result about probabilities. If you have a list of numbers that spans at least a couple of orders of magnitude (meaning that if you divide the largest by the smallest, the result is at least 100), then the digits 1–9 are not equally likely to appear as the first digit of those numbers, as you might expect. Benford arrived at this conclusion using empirical probabilities; he found that 1 was about 6 times as likely to be the initial digit as 9 was!\n\nNew Probabilities from Old: Complements\n\nOne of the goals of the rest of this chapter is learning how to break down complicated probability calculations into easier probability calculations. We’ll look at the first of the tools we can use to accomplish this goal in this section; the rest will come later.\n\nGiven an event \\(E\\), the complement of \\(E\\) (denoted \\(E′\\)) is the collection of all of the outcomes that are not in \\(E\\). (This is language that is taken from set theory, which you can learn more about elsewhere in this text.) Since every outcome in the sample space either is or is not in \\(E\\), it follows that \\(n(E)+n(E′)=n(S)\\). So, if the outcomes in \\(S\\) are equally likely, we can compute theoretical probabilities \\(P(E)=\\frac{n(E)}{n(S)}\\) and \\(P(E′)=\\frac{n(E′)}{n(S)}\\). Then, adding these last two equations, we get \\(\\)\n\n\\(\\begin{matrix}P(E)+P(E′)&=&\\frac{n(E)}{n(S)}+\\frac{n(E′)}{n(S)}\\\\&=&\\frac{n(E)+n(E′)}{n(S)}\\\\&=&\\frac{n(S)}{n(S)}\\\\&=&1\\end{matrix}\\)\n\nThus, if we subtract \\(P(E′)\\) from both sides, we can conclude that \\(P(E)=1−P(E′)\\). Though we performed this calculation under the assumption that the outcomes in \\(S\\) are all equally likely, the last equation is true in every situation.\n\nFORMULA\n\n\\(P(E)=1−P(E′)\\)\n\nHow is this helpful? Sometimes it is easier to compute the probability that an event won’t happen than it is to compute the probability that it will. To apply this principle, it’s helpful to review some tricks for dealing with inequalities. If an event is defined in terms of an inequality, the complement will be defined in terms of the opposite inequality: Both the direction and the inclusivity will be reversed, as shown in the table below.\n\n            If \\(E\\) is defined with:\t\n            then \\(E′\\) is defined with:\t\n\n            \\(<\\)\t\n            \\(≥\\)\t\n\n            \\(≤\\)\t\n            \\(>\\)\t\n\n            \\(>\\)\t\n            \\(≤\\)\t\n\n            \\(≥\\)\t\n            \\(<\\)\t\n\nExample \\(\\PageIndex{8}\\): Using the Formula for Complements to Compute Probabilities\n\n1. If you roll a standard 6-sided die, what is the probability that the result will be a number greater than one?\n\n2. If you roll two standard 6-sided dice, what is the probability that the sum will be 10 or less?\n\n3. If you flip a fair coin 3 times, what is the probability that at least one flip will come up tails?\n\nAnswer\n\n1. Here, the sample space is {1, 2, 3, 4, 5, 6}. It’s easy enough to see that the probability in question is \\(\\frac{5}{6}\\), because there are 5 outcomes that fall into the event “roll a number greater than 1.” Let’s also apply our new formula to find that probability. Since \\(E\\) is defined using the inequality \\(roll>1\\), then \\(E′\\) is defined using \\(roll≤1\\). Since there’s only one outcome (1) in \\(E′\\), we have \\(P(E′)=\\frac{1}{6}\\). Thus, \\(P(E)=1−P(E′)=\\frac{5}{6}\\).\n\n2. In Example 7.18, we found the following table of equally likely outcomes for rolling 2 dice (Figure \\(\\PageIndex{6}\\) ):\n\n[Figure: A table with 6 rows and 6 columns. The columns represent the first die and are titled, 1, 2, 3, 4, 5, and 6. The rows represent the second die and are titled, 1, 2, 3, 4, 5, and 6. The data is as follows: Row 1: 2, 3, 4, 5, 6, 7. Row 2: 3, 4, 5, 6, 7, 8. Row 3: 4, 5, 6, 7, 8, 9. Row 4: 5, 6, 7, 8, 9, 10. Row 5: 6, 7, 8, 9, 10, 11. Row 6: 7, 8, 9, 10, 11, 12.]\n\nFigure \\(\\PageIndex{6}\\)\n\nHere, the event \\(E\\) is defined by the inequality \\(sum≤10\\). Thus, \\(E′\\) is defined by \\(sum>10\\). There are three outcomes in \\(E′\\): two 11s and one 12. Thus, \\(P(E)=1−P(E′)=1−\\frac{3}{36}=\\frac{11}{12}\\).\n\nIn Example 7.15, we found the sample space for this experiment consisted of these equally likely outcomes: {HHH, HHT, HTH, HTT, THH, THT, TTH, TTT}. Our event \\(E\\) is defined by \\(T≥1\\), so \\(E′\\) is defined by \\(T<1\\). The only outcome in \\(E′\\) is the first one on the list, where zero tails are flipped. So, \\(P(E)=1−P(E′)=1−\\frac{1}{8}=\\frac{7}{8}\\).\n\nYour Turn \\(\\PageIndex{8}\\)\n\nIf you roll a pair of 4-sided dice with faces labeled 1 through 4, what is the probability that the sum of the resulting numbers will be greater than 3? Hint: You found this sample space in an earlier Your Turn.\n\nCheck Your Understanding\n\n1. You have two coins: a nickel and a quarter. You flip them both. Find the probabilities of these events:\n\n2. Both come up heads.\n\n3. The quarter comes up heads.\n\n4. You get one heads and one tails.\n\n5. You get three tails.\n\n6. Decide whether the given probabilities were most likely derived theoretically, empirically, or subjectively.\n\n7. A poker player has a 16% chance of making a hand called a flush on the next card.\n\n8. Your friend Jacob tells you that there’s a 20% chance he’ll get married in the next 5 years.\n\n9. Ashley has a coin that they think might not be fair, so they flip it 100 times and note that the result was heads 58 times. So, Ashley says the probability of flipping heads on that coin is about 58%.\n\n10. If you flip a fair coin 50 times, the probability of getting 20 or fewer heads is about 10.1% (a fact we’ll learn how to verify later).\n\n11. If \\(E\\) is the event “number of heads is 20 or fewer”, describe the event \\(E^{\\prime}\\) using an inequality.\n\n12. Find \\(P(E^{\\prime} )\\).\n\nThis page titled 7.5: Basic Concepts of Probability was last modified on Thu, 02 Jan 2025 11:07:44 GMT and is shared under a CC BY  4.0  license and was authored, remixed, and/or curated by OpenStax via source content that was edited to the style and standards of the LibreTexts platform.",
+  "figures": [
+    {
+      "url": "https://math.libretexts.org/@api/deki/files/110457/9c779915457e7fbe5958f36f13ab2df579cf0778?revision=1",
+      "alt": "A close-up of a hand holding two dice.",
+      "credit": ""
+    },
+    {
+      "url": "https://math.libretexts.org/@api/deki/files/110456/783bf7bcc204495b96114c5b8cb0d2f353f326b3?revision=1&size=bestfit&width=550&height=550",
+      "alt": "A table with 6 rows and 6 columns. The columns represent the first die and are titled, 1, 2, 3, 4, 5, and 6. The rows represent the second die and are titled, 1, 2, 3, 4, 5, and 6. The data is as follows: Row 1: (1, 1), (2, 1), (3, 1), (4, 1), (5, 1), (6, 1). Row 2: (1, 2), (2, 2), (3, 2), (4, 2), (5, 2), (6, 2). Row 3: (1, 3), (2, 3), (3, 3), (4, 3), (5, 3), (6, 3). Row 4: (1, 4), (2, 4), (3, 4), (4, 4), (5, 4), (6, 4). Row 5: (1, 5), (2, 5), (3, 5), (4, 5), (5, 5), (6, 5). Row 6: (1, 6), (2, 6), (3, 6), (4, 6), (5, 6), (6, 6).",
+      "credit": ""
+    },
+    {
+      "url": "https://math.libretexts.org/@api/deki/files/110452/4fca65b62609a77c03999a95d13fd73ea482137a?revision=1",
+      "alt": "A table with 6 rows and 6 columns. The columns represent the first die and are titled, 1, 2, 3, 4, 5, and 6. The rows represent the second die and are titled, 1, 2, 3, 4, 5, and 6. The data is as follows: Row 1: 2, 3, 4, 5, 6, 7. Row 2: 3, 4, 5, 6, 7, 8. Row 3: 4, 5, 6, 7, 8, 9. Row 4: 5, 6, 7, 8, 9, 10. Row 5: 6, 7, 8, 9, 10, 11. Row 6: 7, 8, 9, 10, 11, 12.",
+      "credit": ""
+    },
+    {
+      "url": "https://math.libretexts.org/@api/deki/files/110454/27cfb5694133d507e1ba331c6cd061bb6a9afcb0?revision=1",
+      "alt": "A table with 6 rows and 6 columns. The columns represent the first die and are titled, 1, 2, 3, 4, 5, and 6. The rows represent the second die and are titled, 1, 2, 3, 4, 5, and 6. The data is as follows: Row 1: 2, 3, 4, 5, 6, 7. The 4, 5, and 7 are shaded darker. Row 2: 3, 4, 5, 6, 7, 8. The 4, 5, and 7 are shaded darker. Row 3: 4, 5, 6, 7, 8, 9. The 4, 5, and 7 are shaded darker. Row 4: 5, 6, 7, 8, 9, 10. The 5 and 7 are shaded darker. Row 5: 6, 7, 8, 9, 10, 11. The 7 is shaded darker. Row 6: 7, 8, 9, 10, 11, 12. The 7 is shaded darker.",
+      "credit": ""
+    },
+    {
+      "url": "https://math.libretexts.org/@api/deki/files/110453/abdf954baf2334d0796c5eca61a599b08786ee2c?revision=1&size=bestfit&width=202&height=350",
+      "alt": "A tree diagram with four stages. The diagram shows a node branching into two nodes labeled H and T. Node, H branches into two nodes labeled H and T. The node, T branches into two nodes labeled H and T. In the fourth stage, each H from the third stage branches into two nodes labeled H and T, and each T from the third stage branches into two nodes labeled H and T. The possible outcomes are as follows: H H H, H H T, H T H, H T T, T H H, T H T, T T H, and T T T.",
+      "credit": ""
+    },
+    {
+      "url": "https://math.libretexts.org/@api/deki/files/110458/4fca65b62609a77c03999a95d13fd73ea482137a_5lqr?revision=1",
+      "alt": "A table with 6 rows and 6 columns. The columns represent the first die and are titled, 1, 2, 3, 4, 5, and 6. The rows represent the second die and are titled, 1, 2, 3, 4, 5, and 6. The data is as follows: Row 1: 2, 3, 4, 5, 6, 7. Row 2: 3, 4, 5, 6, 7, 8. Row 3: 4, 5, 6, 7, 8, 9. Row 4: 5, 6, 7, 8, 9, 10. Row 5: 6, 7, 8, 9, 10, 11. Row 6: 7, 8, 9, 10, 11, 12.",
+      "credit": ""
+    }
+  ],
+  "references": [
+    {
+      "text": "7.5: Basic Concepts of Probability",
+      "url": "https://math.libretexts.org/Bookshelves/Applied_Mathematics/Contemporary_Mathematics_(OpenStax)/07%3A_Probability/7.05%3A_Basic_Concepts_of_Probability"
+    },
+    {
+      "text": "CC BY  4.0",
+      "url": "https://creativecommons.org/licenses/by/4.0"
+    },
+    {
+      "text": "OpenStax",
+      "url": "https://openstax.org/"
+    },
+    {
+      "text": "source content",
+      "url": "https://openstax.org/details/books/contemporary-mathematics"
+    }
+  ],
+  "exercises": [
+    {
+      "ordinal": 1,
+      "sourceNumber": "1",
+      "sourceAnchor": "",
+      "kind": "exercise-candidate",
+      "context": "",
+      "original": "1. Define probability including impossible and certain events.",
+      "prompt": "1. Define probability including impossible and certain events.",
+      "sourceAnswers": [],
+      "hasFigure": false,
+      "status": "draft",
+      "answerVerified": false,
+      "translationStatus": "pending",
+      "mappingStatus": "pending"
+    },
+    {
+      "ordinal": 2,
+      "sourceNumber": "2",
+      "sourceAnchor": "",
+      "kind": "exercise-candidate",
+      "context": "",
+      "original": "2. Calculate basic theoretical probabilities.",
+      "prompt": "2. Calculate basic theoretical probabilities.",
+      "sourceAnswers": [],
+      "hasFigure": false,
+      "status": "draft",
+      "answerVerified": false,
+      "translationStatus": "pending",
+      "mappingStatus": "pending"
+    },
+    {
+      "ordinal": 3,
+      "sourceNumber": "3",
+      "sourceAnchor": "",
+      "kind": "exercise-candidate",
+      "context": "",
+      "original": "3. Calculate basic empirical probabilities.",
+      "prompt": "3. Calculate basic empirical probabilities.",
+      "sourceAnswers": [],
+      "hasFigure": false,
+      "status": "draft",
+      "answerVerified": false,
+      "translationStatus": "pending",
+      "mappingStatus": "pending"
+    },
+    {
+      "ordinal": 4,
+      "sourceNumber": "4",
+      "sourceAnchor": "",
+      "kind": "exercise-candidate",
+      "context": "",
+      "original": "4. Distinguish among theoretical, empirical, and subjective probability.",
+      "prompt": "4. Distinguish among theoretical, empirical, and subjective probability.",
+      "sourceAnswers": [],
+      "hasFigure": false,
+      "status": "draft",
+      "answerVerified": false,
+      "translationStatus": "pending",
+      "mappingStatus": "pending"
+    },
+    {
+      "ordinal": 5,
+      "sourceNumber": "5",
+      "sourceAnchor": "",
+      "kind": "exercise-candidate",
+      "context": "",
+      "original": "5. Calculate the probability of the complement of an event.",
+      "prompt": "5. Calculate the probability of the complement of an event.",
+      "sourceAnswers": [],
+      "hasFigure": false,
+      "status": "draft",
+      "answerVerified": false,
+      "translationStatus": "pending",
+      "mappingStatus": "pending"
+    },
+    {
+      "ordinal": 6,
+      "sourceNumber": "",
+      "sourceAnchor": "",
+      "kind": "example-or-exercise",
+      "context": "Introducing Probability\n\nUncertainty is, almost by definition, a nebulous concept. In order to put enough constraints on it that we can mathematically study it, we will focus on uncertainty strictly in the context of experiments. Recall that experiments are processes whose outcomes are unknown; the sample space for the experiment is the collection of all those possible outcomes. When we want to talk about the likelihood of particular outcomes, we sometimes group outcomes together; for example, in the Monopoly example at the beginning of this section, we were interested in the roll of 2 dice that might fall as a 4, 5, or 7. A grouping of outcomes that we’re interested in is called an event. In other words, an event is a subset of the sample space of an experiment; it often consists of the outcomes of interest to the experimenter.\n\nOnce we have defined the event that interests us, we can try to assess the likelihood of that event. We do that by assigning a number to each event (\\(E\\)) called the probability of that event (\\(P(E)\\)). The probability of an event is a number between 0 and 1 (inclusive). If the probability of an event is 0, then the event is impossible. On the other hand, an event with probability 1 is certain to occur. In general, the higher the probability of an event, the more likely it is that the event will occur.",
+      "original": "Example  \\(\\PageIndex{1}\\): Determining Certain and Impossible Events\n\nConsider an experiment that consists of rolling a single standard 6-sided die (with faces numbered 1-6). Decide if these probabilities are equal to zero, equal to one, or somewhere in between.\n\n1. \\(P(roll a 4)\\)\n\n2. \\(P(roll a 7)\\)\n\n3. \\(P(roll a positive number)\\)\n\n4. \\(P(rolla \\frac{1}{3})\\)\n\n5. \\(P(roll an even number)\\)\n\n6. \\(P(roll a single-digit number)\\)\n\nAnswer\n\nLet's start by identifying the sample space. For one roll of this die, the possible outcomes are {1, 2, 3, 4, 5,6}. We can use that to assess these probabilities:\n\n1. We see that 4 is in the sample space, so it’s possible that it will be the outcome. It’s not certain to be the outcome, though. So, \\(0<P(roll a 4)<1\\).\n\n2. Notice that 7 is not in the sample space. So, \\(P(roll a 7)=0\\).\n\n3. Every outcome in the sample space is a positive number, so this event is certain. Thus, \\(P(roll a positive number)=1\\).\n\n4. Since \\(\\frac{1}{3}\\) is not in the sample space, \\(P(rolla \\frac{1}{3})=0\\).\n\n5. Some outcomes in the sample space are even numbers (2, 4, and 6), but the others aren’t. So, \\(0<P(roll an even number)<1\\).\n\n6. Every outcome in the sample space is a single-digit number, so \\(P(roll a single-digit number)=1\\).",
+      "prompt": "Example  \\(\\PageIndex{1}\\): Determining Certain and Impossible Events\n\nConsider an experiment that consists of rolling a single standard 6-sided die (with faces numbered 1-6). Decide if these probabilities are equal to zero, equal to one, or somewhere in between.\n\n1. \\(P(roll a 4)\\)\n\n2. \\(P(roll a 7)\\)\n\n3. \\(P(roll a positive number)\\)\n\n4. \\(P(rolla \\frac{1}{3})\\)\n\n5. \\(P(roll an even number)\\)\n\n6. \\(P(roll a single-digit number)\\)",
+      "sourceAnswers": [
+        "Let's start by identifying the sample space. For one roll of this die, the possible outcomes are {1, 2, 3, 4, 5,6}. We can use that to assess these probabilities:\n\n1. We see that 4 is in the sample space, so it’s possible that it will be the outcome. It’s not certain to be the outcome, though. So, \\(0<P(roll a 4)<1\\).\n\n2. Notice that 7 is not in the sample space. So, \\(P(roll a 7)=0\\).\n\n3. Every outcome in the sample space is a positive number, so this event is certain. Thus, \\(P(roll a positive number)=1\\).\n\n4. Since \\(\\frac{1}{3}\\) is not in the sample space, \\(P(rolla \\frac{1}{3})=0\\).\n\n5. Some outcomes in the sample space are even numbers (2, 4, and 6), but the others aren’t. So, \\(0<P(roll an even number)<1\\).\n\n6. Every outcome in the sample space is a single-digit number, so \\(P(roll a single-digit number)=1\\)."
+      ],
+      "hasFigure": false,
+      "status": "draft",
+      "answerVerified": false,
+      "translationStatus": "pending",
+      "mappingStatus": "pending"
+    },
+    {
+      "ordinal": 7,
+      "sourceNumber": "",
+      "sourceAnchor": "",
+      "kind": "example-or-exercise",
+      "context": "For an experiment whose sample space \\(S\\) consists of equally likely outcomes, the theoretical probability of the event \\(E\\) is the ratio\n\n\\(P(E)=\\frac{n(E)}{n(S)},\\)\n\nwhere \\(n(E)\\) and \\(n(S)\\) denote the number of outcomes in the event and in the sample space, respectively.",
+      "original": "Example \\(\\PageIndex{2}\\): Computing Theoretical Probabilities\n\nRecall that a standard deck of cards consists of 52 unique cards which are labeled with a rank (the whole numbers from 2 to 10, plus J, Q, K, and A) and a suit (\\(♣\\), \\(♢\\), \\(♡\\), or \\(♠\\)). A standard deck is thoroughly shuffled, and you draw one card at random (so every card has an equal chance of being drawn). Find the theoretical probability of each of these events:\n\n1. The card is \\(10♠\\).\n\n2. The card is a \\(♡\\).\n\n3. The card is a king (K).\n\nAnswer\n\nThere are 52 cards in the deck, so the sample space for each of these experiments has 52 elements. That will be the denominator for each of our probabilities.\n\n1. There is only one \\(10♠\\) in the deck, so this event only has one outcome in it. Thus, \\(P(10♠)=\\frac{1}{52}\\).\n\n2. There are 13 \\(♡s\\) in the deck, so \\(P(♡)=\\frac{13}{52}=\\frac{1}{4}\\).\n\n3. There are 4 cards of each rank in the deck, so \\(P(K)=\\frac{4}{52}=\\frac{1}{13}\\).",
+      "prompt": "Example \\(\\PageIndex{2}\\): Computing Theoretical Probabilities\n\nRecall that a standard deck of cards consists of 52 unique cards which are labeled with a rank (the whole numbers from 2 to 10, plus J, Q, K, and A) and a suit (\\(♣\\), \\(♢\\), \\(♡\\), or \\(♠\\)). A standard deck is thoroughly shuffled, and you draw one card at random (so every card has an equal chance of being drawn). Find the theoretical probability of each of these events:\n\n1. The card is \\(10♠\\).\n\n2. The card is a \\(♡\\).\n\n3. The card is a king (K).",
+      "sourceAnswers": [
+        "There are 52 cards in the deck, so the sample space for each of these experiments has 52 elements. That will be the denominator for each of our probabilities.\n\n1. There is only one \\(10♠\\) in the deck, so this event only has one outcome in it. Thus, \\(P(10♠)=\\frac{1}{52}\\).\n\n2. There are 13 \\(♡s\\) in the deck, so \\(P(♡)=\\frac{13}{52}=\\frac{1}{4}\\).\n\n3. There are 4 cards of each rank in the deck, so \\(P(K)=\\frac{4}{52}=\\frac{1}{13}\\)."
+      ],
+      "hasFigure": false,
+      "status": "draft",
+      "answerVerified": false,
+      "translationStatus": "pending",
+      "mappingStatus": "pending"
+    },
+    {
+      "ordinal": 8,
+      "sourceNumber": "",
+      "sourceAnchor": "",
+      "kind": "example-or-exercise",
+      "context": "You roll a number greater than 2.\n\nYou roll an odd number.\n\nIt is critical that you make sure that every outcome in a sample space is equally likely before you compute theoretical probabilities!",
+      "original": "Example \\(\\PageIndex{3}\\): Using Tables to Find Theoretical Probabilities\n\nIn the Basic Concepts of Probability, we were considering a Monopoly game where, if your sister rolled a sum of 4, 5, or 7 with 2 standard dice, you would win the game. What is the probability of this event? Use tables to determine your answer.\n\n Now, each of the 36 ordered pairs in the table represent an equally likely outcome.\n\nAnswer\n\nWe should think of this experiment as occurring in two stages: (1) one die roll, then (2) another die roll. Even though these two stages will usually occur simultaneously in practice, since they’re independent, it’s okay to treat them separately.\n\nStep 1: Since we have two independent stages, let’s create a table (Figure \\(\\PageIndex{2}\\) ), which is probably the most efficient method for determining the sample space.\n\n[Figure: A table with 6 rows and 6 columns. The columns represent the first die and are titled, 1, 2, 3, 4, 5, and 6. The rows represent the second die and are titled, 1, 2, 3, 4, 5, and 6. The data is as follows: Row 1: (1, 1), (2, 1), (3, 1), (4, 1), (5, 1), (6, 1). Row 2: (1, 2), (2, 2), (3, 2), (4, 2), (5, 2), (6, 2). Row 3: (1, 3), (2, 3), (3, 3), (4, 3), (5, 3), (6, 3). Row 4: (1, 4), (2, 4), (3, 4), (4, 4), (5, 4), (6, 4). Row 5: (1, 5), (2, 5), (3, 5), (4, 5), (5, 5), (6, 5). Row 6: (1, 6), (2, 6), (3, 6), (4, 6), (5, 6), (6, 6).]\n\nFigure \\(\\PageIndex{2}\\)\n\nStep 2: To make our analysis easier, let’s replace each ordered pair with the sum (Figure \\(\\PageIndex{3}\\) ).\n\n[Figure: A table with 6 rows and 6 columns. The columns represent the first die and are titled, 1, 2, 3, 4, 5, and 6. The rows represent the second die and are titled, 1, 2, 3, 4, 5, and 6. The data is as follows: Row 1: 2, 3, 4, 5, 6, 7. Row 2: 3, 4, 5, 6, 7, 8. Row 3: 4, 5, 6, 7, 8, 9. Row 4: 5, 6, 7, 8, 9, 10. Row 5: 6, 7, 8, 9, 10, 11. Row 6: 7, 8, 9, 10, 11, 12.]\n\nFigure \\(\\PageIndex{3}\\)\n\nStep 3: Since the event we’re interested in is the one consisting of rolls of 4, 5, or 7. Let’s shade those in (Figure \\(\\PageIndex{4}\\) ).\n\n[Figure: A table with 6 rows and 6 columns. The columns represent the first die and are titled, 1, 2, 3, 4, 5, and 6. The rows represent the second die and are titled, 1, 2, 3, 4, 5, and 6. The data is as follows: Row 1: 2, 3, 4, 5, 6, 7. The 4, 5, and 7 are shaded darker. Row 2: 3, 4, 5, 6, 7, 8. The 4, 5, and 7 are shaded darker. Row 3: 4, 5, 6, 7, 8, 9. The 4, 5, and 7 are shaded darker. Row 4: 5, 6, 7, 8, 9, 10. The 5 and 7 are shaded darker. Row 5: 6, 7, 8, 9, 10, 11. The 7 is shaded darker. Row 6: 7, 8, 9, 10, 11, 12. The 7 is shaded darker.]\n\nFigure 7. \\(\\PageIndex{4}\\)\n\nOur event contains 13 outcomes, so the probability that your sister rolls a losing number is \\(\\frac{13}{36}\\).",
+      "prompt": "Example \\(\\PageIndex{3}\\): Using Tables to Find Theoretical Probabilities\n\nIn the Basic Concepts of Probability, we were considering a Monopoly game where, if your sister rolled a sum of 4, 5, or 7 with 2 standard dice, you would win the game. What is the probability of this event? Use tables to determine your answer.\n\n Now, each of the 36 ordered pairs in the table represent an equally likely outcome.\n\nStep 2: To make our analysis easier, let’s replace each ordered pair with the sum (Figure \\(\\PageIndex{3}\\) ).\n\n[Figure: A table with 6 rows and 6 columns. The columns represent the first die and are titled, 1, 2, 3, 4, 5, and 6. The rows represent the second die and are titled, 1, 2, 3, 4, 5, and 6. The data is as follows: Row 1: 2, 3, 4, 5, 6, 7. Row 2: 3, 4, 5, 6, 7, 8. Row 3: 4, 5, 6, 7, 8, 9. Row 4: 5, 6, 7, 8, 9, 10. Row 5: 6, 7, 8, 9, 10, 11. Row 6: 7, 8, 9, 10, 11, 12.]\n\nFigure \\(\\PageIndex{3}\\)\n\nStep 3: Since the event we’re interested in is the one consisting of rolls of 4, 5, or 7. Let’s shade those in (Figure \\(\\PageIndex{4}\\) ).\n\n[Figure: A table with 6 rows and 6 columns. The columns represent the first die and are titled, 1, 2, 3, 4, 5, and 6. The rows represent the second die and are titled, 1, 2, 3, 4, 5, and 6. The data is as follows: Row 1: 2, 3, 4, 5, 6, 7. The 4, 5, and 7 are shaded darker. Row 2: 3, 4, 5, 6, 7, 8. The 4, 5, and 7 are shaded darker. Row 3: 4, 5, 6, 7, 8, 9. The 4, 5, and 7 are shaded darker. Row 4: 5, 6, 7, 8, 9, 10. The 5 and 7 are shaded darker. Row 5: 6, 7, 8, 9, 10, 11. The 7 is shaded darker. Row 6: 7, 8, 9, 10, 11, 12. The 7 is shaded darker.]\n\nFigure 7. \\(\\PageIndex{4}\\)\n\nOur event contains 13 outcomes, so the probability that your sister rolls a losing number is \\(\\frac{13}{36}\\).",
+      "sourceAnswers": [
+        "We should think of this experiment as occurring in two stages: (1) one die roll, then (2) another die roll. Even though these two stages will usually occur simultaneously in practice, since they’re independent, it’s okay to treat them separately.\n\nStep 1: Since we have two independent stages, let’s create a table (Figure \\(\\PageIndex{2}\\) ), which is probably the most efficient method for determining the sample space.\n\n[Figure: A table with 6 rows and 6 columns. The columns represent the first die and are titled, 1, 2, 3, 4, 5, and 6. The rows represent the second die and are titled, 1, 2, 3, 4, 5, and 6. The data is as follows: Row 1: (1, 1), (2, 1), (3, 1), (4, 1), (5, 1), (6, 1). Row 2: (1, 2), (2, 2), (3, 2), (4, 2), (5, 2), (6, 2). Row 3: (1, 3), (2, 3), (3, 3), (4, 3), (5, 3), (6, 3). Row 4: (1, 4), (2, 4), (3, 4), (4, 4), (5, 4), (6, 4). Row 5: (1, 5), (2, 5), (3, 5), (4, 5), (5, 5), (6, 5). Row 6: (1, 6), (2, 6), (3, 6), (4, 6), (5, 6), (6, 6).]\n\nFigure \\(\\PageIndex{2}\\)"
+      ],
+      "hasFigure": true,
+      "status": "draft",
+      "answerVerified": false,
+      "translationStatus": "pending",
+      "mappingStatus": "pending"
+    },
+    {
+      "ordinal": 9,
+      "sourceNumber": "",
+      "sourceAnchor": "",
+      "kind": "example-or-exercise",
+      "context": "You roll an odd number.\n\nIt is critical that you make sure that every outcome in a sample space is equally likely before you compute theoretical probabilities!\n\nIf you roll a pair of 4-sided dice with faces labeled with the numbers 1 through 4, what is the probability of rolling a sum of 6 or 7?",
+      "original": "Example \\(\\PageIndex{4}\\): Using Tree Diagrams to Compute Theoretical Probability\n\nIf you flip a fair coin 3 times, what is the probability of each event? Use a tree diagram to determine your answer\n\n1. You flip exactly 2 heads.\n\n2. You flip 2 consecutive heads at some point in the 3 flips.\n\n3. All 3 flips show the same result.\n\nAnswer\n\nLet’s build a tree to identify the sample space (Figure \\(\\PageIndex{5}\\) ).\n\n[Figure: A tree diagram with four stages. The diagram shows a node branching into two nodes labeled H and T. Node, H branches into two nodes labeled H and T. The node, T branches into two nodes labeled H and T. In the fourth stage, each H from the third stage branches into two nodes labeled H and T, and each T from the third stage branches into two nodes labeled H and T. The possible outcomes are as follows: H H H, H H T, H T H, H T T, T H H, T H T, T T H, and T T T.]\n\nFigure \\(\\PageIndex{5}\\)\n\nThe sample space is {HHH, HHT, HTH, HTT, THH, THT, TTH, TTT}, which has 8 elements.\n\n1. Flipping exactly 2 heads occurs three times (HHT, HTH, THH), so the probability is \\(\\frac{3}{8}\\).\n\n2. Flipping 2 consecutive heads at some point in the experiment happens 3 times: HHH, HHT, THH. So, the probability is \\(\\frac{3}{8}\\).\n\n3. There are 2 outcomes that all show the same result: HHH and TTT. So, the probability is \\(\\frac{2}{8}=\\frac{1}{4}\\).",
+      "prompt": "Example \\(\\PageIndex{4}\\): Using Tree Diagrams to Compute Theoretical Probability\n\nIf you flip a fair coin 3 times, what is the probability of each event? Use a tree diagram to determine your answer\n\n1. You flip exactly 2 heads.\n\n2. You flip 2 consecutive heads at some point in the 3 flips.\n\n3. All 3 flips show the same result.\n\nThe sample space is {HHH, HHT, HTH, HTT, THH, THT, TTH, TTT}, which has 8 elements.\n\n1. Flipping exactly 2 heads occurs three times (HHT, HTH, THH), so the probability is \\(\\frac{3}{8}\\).\n\n2. Flipping 2 consecutive heads at some point in the experiment happens 3 times: HHH, HHT, THH. So, the probability is \\(\\frac{3}{8}\\).\n\n3. There are 2 outcomes that all show the same result: HHH and TTT. So, the probability is \\(\\frac{2}{8}=\\frac{1}{4}\\).",
+      "sourceAnswers": [
+        "Let’s build a tree to identify the sample space (Figure \\(\\PageIndex{5}\\) ).\n\n[Figure: A tree diagram with four stages. The diagram shows a node branching into two nodes labeled H and T. Node, H branches into two nodes labeled H and T. The node, T branches into two nodes labeled H and T. In the fourth stage, each H from the third stage branches into two nodes labeled H and T, and each T from the third stage branches into two nodes labeled H and T. The possible outcomes are as follows: H H H, H H T, H T H, H T T, T H H, T H T, T T H, and T T T.]\n\nFigure \\(\\PageIndex{5}\\)"
+      ],
+      "hasFigure": true,
+      "status": "draft",
+      "answerVerified": false,
+      "translationStatus": "pending",
+      "mappingStatus": "pending"
+    },
+    {
+      "ordinal": 10,
+      "sourceNumber": "",
+      "sourceAnchor": "",
+      "kind": "example-or-exercise",
+      "context": "In this case, the sample space is {hit, not a hit}. That doesn’t mean that the probability of a hit is \\(\\frac{1}{2}\\), since those outcomes aren’t equally likely. The theoretical method simply can’t be used in this situation. Instead, we might look at the player’s statistics up to this point in the season, and see that he has 122 hits in 531 opportunities. So, we might think that the probability of a hit in the next plate appearance would be about \\(\\frac{122}{531}≈0.23\\). When we use the outcomes of previous replications of an experiment to assign a probability to the next replication, we’re defining an empirical probability. Empirical probability is assigned using the outcomes of previous replications of an experiment by finding the ratio of the number of times in the previous replications the event occurred to the total number of previous replications.\n\nEmpirical probabilities aren’t exact, but when the number of previous replications is large, we expect them to be close. Also, if the previous runs of the experiment are not conducted under the exact set of circumstances as the one we’re interested in, the empirical probability is less reliable. For instance, in the case of our favorite baseball player, we might try to get a better estimate of the probability of a hit by looking only at his history against left- or right-handed pitchers (depending on the handedness of the pitcher he’s about to face).\n\nOne of the broad uses of statistics is called statistical inference, where statisticians use collected data to make a guess (or inference) about the population the data were collected from. Nearly every tool that statisticians use for inference is based on probability. Not only is the method we just described for finding empirical probabilities one type of statistical inference, but some more advanced techniques in the field will give us an idea of how close that empirical probability might be to the actual probability!",
+      "original": "Example \\(\\PageIndex{5}\\): Finding Empirical Probabilities\n\nAssign an empirical probability to the following events:\n\n1. Jose is on the basketball court practicing his shots from the free throw line. He made 47 out of his last 80 attempts. What is the probability he makes his next shot?\n\n2. Amy is about to begin her morning commute. Over her last 60 commutes, she arrived at work 12 times in under half an hour. What is the probability that she arrives at work in 30 minutes or less?\n\n3. Felix is playing Yahtzee with his sister. Felix won 14 of the last 20 games he played against her. How likely is he to win this game?\n\nAnswer\n\n1. Since Jose made 47 out of his last 80 attempts, assign this event an empirical probability of \\(\\frac{47}{80}≈59%\\).\n\n2. Amy completed the commute in under 30 minutes in 12 of the last 60 commutes, so we can estimate her probability of making it in under 30 minutes this time at \\(\\frac{12}{60}=20%\\).\n\n3. Since Felix has won 14 of the last 20 games, assign a probability for a win this time of \\(\\frac{14}{20}=70%\\).",
+      "prompt": "Example \\(\\PageIndex{5}\\): Finding Empirical Probabilities\n\nAssign an empirical probability to the following events:\n\n1. Jose is on the basketball court practicing his shots from the free throw line. He made 47 out of his last 80 attempts. What is the probability he makes his next shot?\n\n2. Amy is about to begin her morning commute. Over her last 60 commutes, she arrived at work 12 times in under half an hour. What is the probability that she arrives at work in 30 minutes or less?\n\n3. Felix is playing Yahtzee with his sister. Felix won 14 of the last 20 games he played against her. How likely is he to win this game?",
+      "sourceAnswers": [
+        "1. Since Jose made 47 out of his last 80 attempts, assign this event an empirical probability of \\(\\frac{47}{80}≈59%\\).\n\n2. Amy completed the commute in under 30 minutes in 12 of the last 60 commutes, so we can estimate her probability of making it in under 30 minutes this time at \\(\\frac{12}{60}=20%\\).\n\n3. Since Felix has won 14 of the last 20 games, assign a probability for a win this time of \\(\\frac{14}{20}=70%\\)."
+      ],
+      "hasFigure": false,
+      "status": "draft",
+      "answerVerified": false,
+      "translationStatus": "pending",
+      "mappingStatus": "pending"
+    },
+    {
+      "ordinal": 11,
+      "sourceNumber": "",
+      "sourceAnchor": "",
+      "kind": "example-or-exercise",
+      "context": "Method 3: Subjective Probability\n\nIn cases where theoretical probability can’t be used and we don’t have prior experience to inform an empirical probability, we’re left with one option: using our instincts to guess at a subjective probability. A subjective probability is an assignment of a probability to an event using only one’s instincts.\n\nSubjective probabilities are used in cases where an experiment can only be run once, or it hasn’t been run before. Because subjective probabilities may vary widely from person to person and they’re not based on any mathematical theory, we won’t give any examples. However, it’s important that we be able to identify a subjective probability when we see it; they will in general be far less accurate than empirical or theoretical probabilities.",
+      "original": "Example \\(\\PageIndex{6}\\): Distinguishing among Theoretical, Empirical, and Subjective Probabilities\n\nClassify each of the following probabilities as theoretical, empirical, or subjective.\n\n1. An eccentric billionaire is testing a brand new rocket system. He says there is a 15% chance of failure.\n\n2. With 4 seconds to go in a close basketball playoff game, the home team need 3 points to tie up the game and send it to overtime. A TV commentator says that team captain should take the final 3-point shot, because he has a 38% chance of making it (greater than every other player on the team).\n\n3. Felix is losing his Yahtzee game against his sister. He has one more chance to roll 2 dice; he’ll win the game if they both come up 4. The probability of this is about 2.8%.\n\nAnswer\n\n1. This experiment has never been run before, so the given probability is subjective.\n\n2. Presumably, the commentator has access to each player’s performance statistics over the entire season. So, the given probability is likely empirical.\n\n3. Rolling 2 dice results in a sample space with equally likely outcomes. This probability is theoretical. (We’ll learn how to calculate that probability later in this chapter.)",
+      "prompt": "Example \\(\\PageIndex{6}\\): Distinguishing among Theoretical, Empirical, and Subjective Probabilities\n\nClassify each of the following probabilities as theoretical, empirical, or subjective.\n\n1. An eccentric billionaire is testing a brand new rocket system. He says there is a 15% chance of failure.\n\n2. With 4 seconds to go in a close basketball playoff game, the home team need 3 points to tie up the game and send it to overtime. A TV commentator says that team captain should take the final 3-point shot, because he has a 38% chance of making it (greater than every other player on the team).\n\n3. Felix is losing his Yahtzee game against his sister. He has one more chance to roll 2 dice; he’ll win the game if they both come up 4. The probability of this is about 2.8%.",
+      "sourceAnswers": [
+        "1. This experiment has never been run before, so the given probability is subjective.\n\n2. Presumably, the commentator has access to each player’s performance statistics over the entire season. So, the given probability is likely empirical.\n\n3. Rolling 2 dice results in a sample space with equally likely outcomes. This probability is theoretical. (We’ll learn how to calculate that probability later in this chapter.)"
+      ],
+      "hasFigure": false,
+      "status": "draft",
+      "answerVerified": false,
+      "translationStatus": "pending",
+      "mappingStatus": "pending"
+    },
+    {
+      "ordinal": 12,
+      "sourceNumber": "",
+      "sourceAnchor": "",
+      "kind": "example-or-exercise",
+      "context": "Thus, if we subtract \\(P(E′)\\) from both sides, we can conclude that \\(P(E)=1−P(E′)\\). Though we performed this calculation under the assumption that the outcomes in \\(S\\) are all equally likely, the last equation is true in every situation.\n\n\\(P(E)=1−P(E′)\\)\n\nHow is this helpful? Sometimes it is easier to compute the probability that an event won’t happen than it is to compute the probability that it will. To apply this principle, it’s helpful to review some tricks for dealing with inequalities. If an event is defined in terms of an inequality, the complement will be defined in terms of the opposite inequality: Both the direction and the inclusivity will be reversed, as shown in the table below.",
+      "original": "Example \\(\\PageIndex{8}\\): Using the Formula for Complements to Compute Probabilities\n\n1. If you roll a standard 6-sided die, what is the probability that the result will be a number greater than one?\n\n2. If you roll two standard 6-sided dice, what is the probability that the sum will be 10 or less?\n\n3. If you flip a fair coin 3 times, what is the probability that at least one flip will come up tails?\n\nAnswer\n\n1. Here, the sample space is {1, 2, 3, 4, 5, 6}. It’s easy enough to see that the probability in question is \\(\\frac{5}{6}\\), because there are 5 outcomes that fall into the event “roll a number greater than 1.” Let’s also apply our new formula to find that probability. Since \\(E\\) is defined using the inequality \\(roll>1\\), then \\(E′\\) is defined using \\(roll≤1\\). Since there’s only one outcome (1) in \\(E′\\), we have \\(P(E′)=\\frac{1}{6}\\). Thus, \\(P(E)=1−P(E′)=\\frac{5}{6}\\).\n\n2. In Example 7.18, we found the following table of equally likely outcomes for rolling 2 dice (Figure \\(\\PageIndex{6}\\) ):\n\n[Figure: A table with 6 rows and 6 columns. The columns represent the first die and are titled, 1, 2, 3, 4, 5, and 6. The rows represent the second die and are titled, 1, 2, 3, 4, 5, and 6. The data is as follows: Row 1: 2, 3, 4, 5, 6, 7. Row 2: 3, 4, 5, 6, 7, 8. Row 3: 4, 5, 6, 7, 8, 9. Row 4: 5, 6, 7, 8, 9, 10. Row 5: 6, 7, 8, 9, 10, 11. Row 6: 7, 8, 9, 10, 11, 12.]\n\nFigure \\(\\PageIndex{6}\\)",
+      "prompt": "Example \\(\\PageIndex{8}\\): Using the Formula for Complements to Compute Probabilities\n\n1. If you roll a standard 6-sided die, what is the probability that the result will be a number greater than one?\n\n2. If you roll two standard 6-sided dice, what is the probability that the sum will be 10 or less?\n\n3. If you flip a fair coin 3 times, what is the probability that at least one flip will come up tails?",
+      "sourceAnswers": [
+        "1. Here, the sample space is {1, 2, 3, 4, 5, 6}. It’s easy enough to see that the probability in question is \\(\\frac{5}{6}\\), because there are 5 outcomes that fall into the event “roll a number greater than 1.” Let’s also apply our new formula to find that probability. Since \\(E\\) is defined using the inequality \\(roll>1\\), then \\(E′\\) is defined using \\(roll≤1\\). Since there’s only one outcome (1) in \\(E′\\), we have \\(P(E′)=\\frac{1}{6}\\). Thus, \\(P(E)=1−P(E′)=\\frac{5}{6}\\).\n\n2. In Example 7.18, we found the following table of equally likely outcomes for rolling 2 dice (Figure \\(\\PageIndex{6}\\) ):\n\n[Figure: A table with 6 rows and 6 columns. The columns represent the first die and are titled, 1, 2, 3, 4, 5, and 6. The rows represent the second die and are titled, 1, 2, 3, 4, 5, and 6. The data is as follows: Row 1: 2, 3, 4, 5, 6, 7. Row 2: 3, 4, 5, 6, 7, 8. Row 3: 4, 5, 6, 7, 8, 9. Row 4: 5, 6, 7, 8, 9, 10. Row 5: 6, 7, 8, 9, 10, 11. Row 6: 7, 8, 9, 10, 11, 12.]\n\nFigure \\(\\PageIndex{6}\\)"
+      ],
+      "hasFigure": true,
+      "status": "draft",
+      "answerVerified": false,
+      "translationStatus": "pending",
+      "mappingStatus": "pending"
+    },
+    {
+      "ordinal": 13,
+      "sourceNumber": "1",
+      "sourceAnchor": "",
+      "kind": "exercise-candidate",
+      "context": "Check Your Understanding",
+      "original": "1. You have two coins: a nickel and a quarter. You flip them both. Find the probabilities of these events:",
+      "prompt": "1. You have two coins: a nickel and a quarter. You flip them both. Find the probabilities of these events:",
+      "sourceAnswers": [],
+      "hasFigure": false,
+      "status": "draft",
+      "answerVerified": false,
+      "translationStatus": "pending",
+      "mappingStatus": "pending"
+    },
+    {
+      "ordinal": 14,
+      "sourceNumber": "2",
+      "sourceAnchor": "",
+      "kind": "exercise-candidate",
+      "context": "Check Your Understanding",
+      "original": "2. Both come up heads.",
+      "prompt": "2. Both come up heads.",
+      "sourceAnswers": [],
+      "hasFigure": false,
+      "status": "draft",
+      "answerVerified": false,
+      "translationStatus": "pending",
+      "mappingStatus": "pending"
+    },
+    {
+      "ordinal": 15,
+      "sourceNumber": "3",
+      "sourceAnchor": "",
+      "kind": "exercise-candidate",
+      "context": "Check Your Understanding",
+      "original": "3. The quarter comes up heads.",
+      "prompt": "3. The quarter comes up heads.",
+      "sourceAnswers": [],
+      "hasFigure": false,
+      "status": "draft",
+      "answerVerified": false,
+      "translationStatus": "pending",
+      "mappingStatus": "pending"
+    },
+    {
+      "ordinal": 16,
+      "sourceNumber": "4",
+      "sourceAnchor": "",
+      "kind": "exercise-candidate",
+      "context": "Check Your Understanding",
+      "original": "4. You get one heads and one tails.",
+      "prompt": "4. You get one heads and one tails.",
+      "sourceAnswers": [],
+      "hasFigure": false,
+      "status": "draft",
+      "answerVerified": false,
+      "translationStatus": "pending",
+      "mappingStatus": "pending"
+    },
+    {
+      "ordinal": 17,
+      "sourceNumber": "5",
+      "sourceAnchor": "",
+      "kind": "exercise-candidate",
+      "context": "Check Your Understanding",
+      "original": "5. You get three tails.",
+      "prompt": "5. You get three tails.",
+      "sourceAnswers": [],
+      "hasFigure": false,
+      "status": "draft",
+      "answerVerified": false,
+      "translationStatus": "pending",
+      "mappingStatus": "pending"
+    },
+    {
+      "ordinal": 18,
+      "sourceNumber": "6",
+      "sourceAnchor": "",
+      "kind": "exercise-candidate",
+      "context": "Check Your Understanding",
+      "original": "6. Decide whether the given probabilities were most likely derived theoretically, empirically, or subjectively.",
+      "prompt": "6. Decide whether the given probabilities were most likely derived theoretically, empirically, or subjectively.",
+      "sourceAnswers": [],
+      "hasFigure": false,
+      "status": "draft",
+      "answerVerified": false,
+      "translationStatus": "pending",
+      "mappingStatus": "pending"
+    },
+    {
+      "ordinal": 19,
+      "sourceNumber": "7",
+      "sourceAnchor": "",
+      "kind": "exercise-candidate",
+      "context": "Check Your Understanding",
+      "original": "7. A poker player has a 16% chance of making a hand called a flush on the next card.",
+      "prompt": "7. A poker player has a 16% chance of making a hand called a flush on the next card.",
+      "sourceAnswers": [],
+      "hasFigure": false,
+      "status": "draft",
+      "answerVerified": false,
+      "translationStatus": "pending",
+      "mappingStatus": "pending"
+    },
+    {
+      "ordinal": 20,
+      "sourceNumber": "8",
+      "sourceAnchor": "",
+      "kind": "exercise-candidate",
+      "context": "Check Your Understanding",
+      "original": "8. Your friend Jacob tells you that there’s a 20% chance he’ll get married in the next 5 years.",
+      "prompt": "8. Your friend Jacob tells you that there’s a 20% chance he’ll get married in the next 5 years.",
+      "sourceAnswers": [],
+      "hasFigure": false,
+      "status": "draft",
+      "answerVerified": false,
+      "translationStatus": "pending",
+      "mappingStatus": "pending"
+    },
+    {
+      "ordinal": 21,
+      "sourceNumber": "9",
+      "sourceAnchor": "",
+      "kind": "exercise-candidate",
+      "context": "Check Your Understanding",
+      "original": "9. Ashley has a coin that they think might not be fair, so they flip it 100 times and note that the result was heads 58 times. So, Ashley says the probability of flipping heads on that coin is about 58%.",
+      "prompt": "9. Ashley has a coin that they think might not be fair, so they flip it 100 times and note that the result was heads 58 times. So, Ashley says the probability of flipping heads on that coin is about 58%.",
+      "sourceAnswers": [],
+      "hasFigure": false,
+      "status": "draft",
+      "answerVerified": false,
+      "translationStatus": "pending",
+      "mappingStatus": "pending"
+    },
+    {
+      "ordinal": 22,
+      "sourceNumber": "10",
+      "sourceAnchor": "",
+      "kind": "exercise-candidate",
+      "context": "Check Your Understanding",
+      "original": "10. If you flip a fair coin 50 times, the probability of getting 20 or fewer heads is about 10.1% (a fact we’ll learn how to verify later).",
+      "prompt": "10. If you flip a fair coin 50 times, the probability of getting 20 or fewer heads is about 10.1% (a fact we’ll learn how to verify later).",
+      "sourceAnswers": [],
+      "hasFigure": false,
+      "status": "draft",
+      "answerVerified": false,
+      "translationStatus": "pending",
+      "mappingStatus": "pending"
+    },
+    {
+      "ordinal": 23,
+      "sourceNumber": "11",
+      "sourceAnchor": "",
+      "kind": "exercise-candidate",
+      "context": "Check Your Understanding",
+      "original": "11. If \\(E\\) is the event “number of heads is 20 or fewer”, describe the event \\(E^{\\prime}\\) using an inequality.",
+      "prompt": "11. If \\(E\\) is the event “number of heads is 20 or fewer”, describe the event \\(E^{\\prime}\\) using an inequality.",
+      "sourceAnswers": [],
+      "hasFigure": false,
+      "status": "draft",
+      "answerVerified": false,
+      "translationStatus": "pending",
+      "mappingStatus": "pending"
+    },
+    {
+      "ordinal": 24,
+      "sourceNumber": "12",
+      "sourceAnchor": "",
+      "kind": "exercise-candidate",
+      "context": "Check Your Understanding",
+      "original": "12. Find \\(P(E^{\\prime} )\\).",
+      "prompt": "12. Find \\(P(E^{\\prime} )\\).",
+      "sourceAnswers": [],
+      "hasFigure": false,
+      "status": "draft",
+      "answerVerified": false,
+      "translationStatus": "pending",
+      "mappingStatus": "pending"
+    }
+  ],
+  "license": "CC BY 4.0",
+  "licenseEvidence": "This page titled 7.5: Basic Concepts of Probability was last modified on Thu, 02 Jan 2025 11:07:44 GMT and is shared under a CC BY  4.0  license and was authored, remixed, and/or curated by OpenStax via source content that was edited to the style and standards of the LibreTexts platform.",
+  "url": "https://math.libretexts.org/Bookshelves/Applied_Mathematics/Contemporary_Mathematics_(OpenStax)/07:_Probability/7.05:_Basic_Concepts_of_Probability",
+  "sha256": "ddedc01da747603d5597c798b857c078e6a48b546c2b428ffecc5cdeb3f5b22e",
+  "checkedAt": "2026-10-07",
+  "id": "2dc77c97633e06a1ef71",
+  "bookId": "contemporary",
+  "licenseInherited": false,
+  "licenseSource": "https://math.libretexts.org/Bookshelves/Applied_Mathematics/Contemporary_Mathematics_(OpenStax)/07:_Probability/7.05:_Basic_Concepts_of_Probability",
+  "licenseUrl": "https://creativecommons.org/licenses/by/4.0/",
+  "authors": "OpenStax / Donna Kirk et al.",
+  "book": "Contemporary Mathematics",
+  "reviewStatus": "unreviewed",
+  "sourceLanguage": "en",
+  "translationStatus": "pending"
+}

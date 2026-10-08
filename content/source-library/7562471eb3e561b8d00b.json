@@ -1,0 +1,1501 @@
+{
+  "title": "9.3: Solve Quadratic Equations by Completing the Square",
+  "originalText": "Learning Objectives\n\nBy the end of this section, you will be able to:\n\nComplete the square of a binomial expression\n\nSolve quadratic equations of the form \\(x^{2}+bx+c=0\\) by completing the square\n\nSolve quadratic equations of the form \\(ax^{2}+bx+c=0\\) by completing the square\n\nBefore you get started, take this readiness quiz.\n\n1. Expand: \\((x+9)^{2}\\).\n\n    If you missed this problem, review Example 5.32.\n\n2. Factor \\(y^{2}-14 y+49\\).\n\n    If you missed this problem, review Example 6.9.\n\n3. Factor \\(5 n^{2}+40 n+80\\).\n\n    If you missed this problem, review Example 6.14.\n\nSo far we have solved quadratic equations by factoring and using the Square Root Property. In this section, we will solve quadratic equations by a process called completing the square, which is important for our work on conics later.\n\nComplete the Square of a Binomial Expression\n\nIn the last section, we were able to use the Square Root Property to solve the equation \\((y-7)^{2}=12\\) because the left side was a perfect square.\n\n\\(\\begin{aligned}(y-7)^{2} &=12 \\\\ y-7 &=\\pm \\sqrt{12} \\\\ y-7 &=\\pm 2 \\sqrt{3} \\\\ y &=7 \\pm 2 \\sqrt{3} \\end{aligned}\\)\n\nWe also solved an equation in which the left side was a perfect square trinomial, but we had to rewrite it the form \\((x−k)^{2}\\) in order to use the Square Root Property.\n\n\\(\\begin{aligned} x^{2}-10 x+25 &=18 \\\\(x-5)^{2} &=18 \\end{aligned}\\)\n\nWhat happens if the variable is not part of a perfect square? Can we use algebra to make a perfect square?\n\nLet’s look at two examples to help us recognize the patterns.\n\n\\(\\begin{array}{cc}{(x+9)^{2}} & {(y-7)^{2}} \\\\ {(x+9 )(x+9)} & {(y-7)(y-7)} \\\\ {x^{2}+9 x+9 x+81} & {y^{2}-7 y-7 y+49} \\\\ {x^{2}+18 x+81} & {y^{2}-14 y+49}\\end{array}\\)\n\nWe restate the patterns here for reference.\n\nDefinition \\(\\PageIndex{1}\\): Binomial Squares Pattern\n\nIf \\(a\\) and \\(b\\) are real numbers,\n\n[Figure: Quantity a plus b squared equals a squared plus 2 a b plus b2 where the binomial squared equals the first term squared plus 2 times the product of terms plus the second term squared. Quantity a minus b squared equals a squared minus 2 a b plus b2 where the binomial squared equals the first term squared minus 2 times the product of terms plus the second term squared.]\n\nWe can use this pattern to “make” a perfect square.\n\nWe will start with the expression \\(x^{2}+6 x\\). Since there is a plus sign between the two terms, we will use the \\((a+b)^{2}\\) pattern, \\(a^{2}+2 a b+b^{2}=(a+b)^{2}\\).\n\n[Figure: The perfect square expression a squared plus 2 a b plus b squared is shown above the expression x squared plus 6x plus an unknown to allow a comparison of the corresponding terms of the expressions.]\n\nWe ultimately need to find the last term of this trinomial that will make it a perfect square trinomial. To do that we will need to find \\(b\\). But first we start with determining \\(a\\). Notice that the first term of \\(x^{2}+6x\\) is a square, \\(x^{2}\\). This tells us that \\(a=x\\).\n\n[Figure: The perfect square expression a squared plus 2 a b plus b squared is shown above the expression x squared plus 2 x b + b squared. Note that x has been substituted for a in the second equation and compare corresponding terms.]\n\nWhat number, \\(b\\), when multiplied with \\(2x\\) gives \\(6x\\)? It would have to be \\(3\\), which is \\(\\frac{1}{2}(6)\\). So \\(b=3\\).\n\n[Figure: The perfect square expression a squared plus 2 a b plus b squared is shown above the expression x squared plus 2 times 3 times x plus an unknown value to help compare terms.]\n\nNow to complete the perfect square trinomial, we will find the last term by squaring \\(b\\), which is \\(3^{2}=9\\).\n\n[Figure: The perfect square expression a squared plus 2 a b plus b squared is shown above the expression x squared plus 6 x plus 9.]\n\nWe can now factor.\n\n[Figure: The factored expression, the square of a plus b, is shown over the square of the expression x + 3.]\n\nSo we found that adding \\(9\\) to \\(x^{2}+6 x\\) ‘completes the square’, and we write it as \\((x+3)^{2}\\).\n\nHowto: Complete a Square of \\(x^{2}+bx\\)\n\n1. Identify \\(b\\), the coefficient of \\(x\\).\n\n2. Find \\(\\left(\\frac{1}{2} b\\right)^{2}\\), the number to complete the square.\n\n3. Add the\\(\\left(\\frac{1}{2} b\\right)^{2}\\) to \\(x^{2}+bx\\).\n\n4. Factor the perfect square trinomial, writing it as a binomial squared.\n\nExample \\(\\PageIndex{1}\\)\n\nComplete the square to make a perfect square trinomial. Then write the result as a binomial squared.\n\n1. \\(x^{2}-26 x\\)\n\n2. \\(y^{2}-9 y\\)\n\n3. \\(n^{2}+\\frac{1}{2} n\\)\n\nSolution:\n\na.\n\n[Figure: .]\n\n            The coefficient of \\(x\\) is -26.\t\n\nFind \\(\\left(\\frac{1}{2} b\\right)^{2}\\).\n\n\\(\\left(\\frac{1}{2} \\cdot(-26)\\right)^{2}\\)\n\n            \\((13)^{2}\\)\n\n            169\n\n            Add \\(169\\) to the binomial to complete the square.\t\n\n\\(x^{2}-26 x+169\\)\n\n            Factor the perfect square trinomial, writing it as a binomial squared.\t\n\n\\((x-13)^{2}\\)\n\nb.\n\n[Figure: .]\n\n            The coefficient of \\(y\\) is \\(-9\\).\t\n\nFind \\(\\left(\\frac{1}{2} b\\right)^{2}\\).\n\n\\(\\left(\\frac{1}{2} \\cdot(-9)\\right)^{2}\\)\n\n            \\(\\left(-\\frac{9}{2}\\right)^{2}\\)\n\n            \\(\\frac{81}{4}\\)\n\n            Add \\(\\frac{81}{4}\\) to the binomial to complete the square.\t\n\n\\(y^{2}-9 y+\\frac{81}{4}\\)\n\n            Factor the perfect square trinomial, writing it as a binomial squared.\t\n\n\\(\\left(y-\\frac{9}{2}\\right)^{2}\\)\n\nc.\n\n[Figure: .]\n\n            The coefficient of \\(n\\) is \\(\\frac{1}{2}\\).\t\n\nFind \\(\\left(\\frac{1}{2} b\\right)^{2}\\).\n\n\\(\\left(\\frac{1}{2} \\cdot \\frac{1}{2}\\right)^{2}\\)\n\n            \\(\\left(\\frac{1}{4}\\right)^{2}\\)\n\n            \\(\\frac{1}{16}\\)\n\n            Add \\(\\frac{1}{16}\\) to the binomial to complete the square.\t\n            \\(n^{2}+\\frac{1}{2} n+\\frac{1}{16}\\)\t\n\n            Rewrite as a binomial square.\t\n            \\(\\left(n+\\frac{1}{4}\\right)^{2}\\)\t\n\nExercise \\(\\PageIndex{1}\\)\n\nComplete the square to make a perfect square trinomial. Then write the result as a binomial squared.\n\n1. \\(a^{2}-20 a\\)\n\n2. \\(m^{2}-5 m\\)\n\n3. \\(p^{2}+\\frac{1}{4} p\\)\n\nAnswer\n\n1. \\((a-10)^{2}\\)\n\n2. \\(\\left(b-\\frac{5}{2}\\right)^{2}\\)\n\n3. \\(\\left(p+\\frac{1}{8}\\right)^{2}\\)\n\nExercise \\(\\PageIndex{2}\\)\n\nComplete the square to make a perfect square trinomial. Then write the result as a binomial squared.\n\n1. \\(b^{2}-4 b\\)\n\n2. \\(n^{2}+13 n\\)\n\n3. \\(q^{2}-\\frac{2}{3} q\\)\n\nAnswer\n\n1. \\((b-2)^{2}\\)\n\n2. \\(\\left(n+\\frac{13}{2}\\right)^{2}\\)\n\n3. \\(\\left(q-\\frac{1}{3}\\right)^{2}\\)\n\nSolve Quadratic Equations of the Form \\(x^{2}+bx+c=0\\) by Completing the Square\n\nIn solving equations, we must always do the same thing to both sides of the equation. This is true, of course, when we solve a quadratic equation by completing the square too. When we add a term to one side of the equation to make a perfect square trinomial, we must also add the same term to the other side of the equation.\n\nFor example, if we start with the equation \\(x^{2}+6x=40\\), and we want to complete the square on the left, we will add 9 to both sides of the equation.\n\n[Figure: .]\n\n[Figure: .]\n\n[Figure: .]\n\n            Add \\(9\\) to both sides to complete the square.\t\n\n[Figure: .]\n\nNow the equation is in the form to solve using the Square Root Property! Completing the square is a way to transform an equation into the form we need to be able to use the Square Root Property.\n\nExample \\(\\PageIndex{2}\\) How to Solve a Quadratic Equation of the Form \\(x^{2}+bx+x=0\\) by Completing the Square\n\nSolve by completing the square: \\(x^{2}+8x=48\\).\n\nSolution:\n\n            Step 1: Isolate the variable terms on one side and the constant terms on the other.\t\n            This equation has all the variables on the left.\t\n            \\(\\begin{array}{l}{\\color{red}{x^{2}+b x\\quad\\:\\:\\: c }} \\\\ {x^{2}+8 x=48}\\end{array}\\)\t\n\n            Step 2: Find \\(\\left(\\frac{1}{2} \\cdot b\\right)^{2}\\), the number to complete the square. Add it to both sides of the equation.\t\n\nTake half of \\(8\\) and square it.\n\n\\(4^{2}=16\\)\n\nAdd \\(16\\) to BOTH sides of the equation.\n\n\\(x^{2}+8 x+\\frac{}{\\color{red}{\\left(\\frac{1}{2} \\cdot 8\\right)^{2}}}\\color{black}{=}48 \\)\n\n\\(x^{2}+8 x\\color{red}{+16}\\color{black}{=}48\\color{red}{+16}\\)\n\n            Step 3: Factor the perfect square trinomial as a binomial square.\t\n\n\\(x^{2}+8 x+16=(x+4)^{2}\\)\n\nAdd the terms on the right.\n\n            \\((x+4)^{2}=64\\)\t\n\n            Step 4: Use the Square Root Property.\t\n\n            \\(x+4=\\pm \\sqrt{64}\\)\t\n\n            Step 5: Simplify the radical and then solve the two resulting equations.\t\n\n\\(x+4=\\pm 8\\)\n\n\\(\\begin{aligned} x+4 &=8 \\quad x+4=-8 \\\\ x &=4 \\quad\\quad\\:\\:\\: x=-12 \\end{aligned}\\)\n\n            Step 6: Check the solutions.\t\n            Put each answer in the original equation to check. Substitute \\(x=4\\) and \\(x=-12\\).\t\n\n\\(\\begin{array}{r}{x^{2}+8 x=48} \\\\ {(\\color{red}{4}\\color{black}{)}^{2}+8(\\color{red}{4}\\color{black}{)} \\stackrel{?}{=} 48} \\\\ {16+32\\stackrel{?}{=}48} \\\\ {48=48}\\end{array}\\)\n\n\\(\\begin{array}{r}{x^{2}+8 x=48} \\\\ {(\\color{red}{-12}\\color{black}{)}^{2}+8(\\color{red}{-12}\\color{black}{)}\\stackrel{?}{=} 48} \\\\ {144-96 \\stackrel{?}{=} 48} \\\\ {48=48}\\end{array}\\)\n\nExercise \\(\\PageIndex{3}\\)\n\nSolve by completing the square: \\(x^{2}+4 x=5\\).\n\nAnswer\n\n\\(x=-5, x=-1\\)\n\nExercise \\(\\PageIndex{4}\\)\n\nSolve by completing the square: \\(y^{2}−10y=−9\\).\n\nAnswer\n\n\\(y=1, y=9\\)\n\nThe steps to solve a quadratic equation by completing the square are listed here.\n\nSolve a Quadratic Equation of the Form \\(x^{2}+bx+c=0\\) by Completing the Square\n\n1. Isolate the variable terms on one side and the constant terms on the other.\n\n2. Find \\(\\left(\\frac{1}{2} \\cdot b\\right)^{2}\\), the number needed to complete the square. Add it to both sides of the equation.\n\n3. Factor the perfect square trinomial, writing it as a binomial squared on the left and simplify by adding the terms on the right\n\n4. Use the Square Root Property.\n\n5. Simplify the radical and then solve the two resulting equations.\n\n6. Check the solutions.\n\nWhen we solve an equation by completing the square, the answers will not always be integers.\n\nExample \\(\\PageIndex{3}\\)\n\nSolve by completing the square: \\(x^{2}+4 x=-21\\).\n\nSolution:\n\n[Figure: .]\n\nThe variable terms are on the left side.\n\nTake half of \\(4\\) and square it.\n\n[Figure: .]\n\n            \\(\\left(\\frac{1}{2}(4)\\right)^{2}=4\\)\t\n\n            Add \\(4\\) to both sides.\t\n\n[Figure: .]\n\n            Factor the perfect square trinomial, writing it as a binomial squared.\t\n\n[Figure: .]\n\n            Use the Square Root Property.\t\n\n[Figure: .]\n\n            Simplifying using complex numbers.\t\n\n[Figure: .]\n\n            Subtract \\(2\\) from each side.\t\n\n[Figure: .]\n\n            Rewrite to show two solutions.\t\n\n[Figure: .]\n\n            We leave the check to you.\t\n\nExercise \\(\\PageIndex{5}\\)\n\nSolve by completing the square: \\(y^{2}-10 y=-35\\).\n\nAnswer\n\n\\(y=5+\\sqrt{15} i, y=5-\\sqrt{15 i}\\)\n\nExercise \\(\\PageIndex{6}\\)\n\nSolve by completing the square: \\(z^{2}+8 z=-19\\).\n\nAnswer\n\n\\(z=-4+\\sqrt{3} i, z=-4-\\sqrt{3} i\\)\n\nIn the previous example, our solutions were complex numbers. In the next example, the solutions will be irrational numbers.\n\nExample \\(\\PageIndex{4}\\)\n\nSolve by completing the square: \\(y^{2}-18 y=-6\\).\n\nSolution:\n\n[Figure: .]\n\n            The variable terms are on the left side. Take half of \\(-18\\) and square it.\t\n\n            \\(\\left(\\frac{1}{2}(-18)\\right)^{2}=81\\)\t\n\n[Figure: .]\n\n            Add \\(81\\) to both sides.\t\n\n[Figure: .]\n\n            Factor the perfect square trinomial, writing it as a binomial squared.\t\n\n[Figure: .]\n\n            Use the Square Root Property.\t\n\n[Figure: .]\n\n            Simplify the radical.\t\n\n[Figure: .]\n\n            Solve for \\(y\\).\t\n\n[Figure: .]\n\nCheck.\n\n[Figure: .]\n\nFigure 9.2.35\n\n[Figure: .]\n\nAnother way to check this would be to use a calculator. Evaluate \\(y^{2}−18y\\) for both of the solutions. The answer should be \\(−6\\).\n\nExercise \\(\\PageIndex{7}\\)\n\nSolve by completing the square: \\(x^{2}-16 x=-16\\).\n\nAnswer\n\n\\(x=8+4 \\sqrt{3}, x=8-4 \\sqrt{3}\\)\n\nExercise \\(\\PageIndex{8}\\)\n\nSolve by completing the square: \\(y^{2}+8 y=11\\).\n\nAnswer\n\n\\(y=-4+3 \\sqrt{3}, y=-4-3 \\sqrt{3}\\)\n\nWe will start the next example by isolating the variable terms on the left side of the equation.\n\nExample \\(\\PageIndex{5}\\)\n\nSolve by completing the square: \\(x^{2}+10 x+4=15\\).\n\nSolution:\n\n[Figure: .]\n\n            Isolate the variable terms on the left side. Subtract \\(4\\) to get the constant terms on the right side.\t\n\n[Figure: .]\n\n            Take half of \\(10\\) and square it.\t\n\n            \\(\\left(\\frac{1}{2}(10)\\right)^{2}=25\\)\t\n\n[Figure: .]\n\n            Add \\(25\\) to both sides.\t\n\n[Figure: .]\n\n            Factor the perfect square trinomial, writing it as a binomial squared.\t\n\n[Figure: .]\n\n            Use the Square Root Property.\t\n\n[Figure: .]\n\n            Simplify the radical.\t\n\n[Figure: .]\n\n            Solve for \\(x\\).\t\n\n[Figure: .]\n\n            Rewrite to show two solutions.\t\n\n[Figure: .]\n\n            Solve the equations.\t\n\n[Figure: .]\n\nCheck:\n\n[Figure: .]\n\nFigure 9.2.47\n\nExercise \\(\\PageIndex{9}\\)\n\nSolve by completing the square: \\(a^{2}+4 a+9=30\\).\n\nAnswer\n\n\\(a=-7, a=3\\)\n\nExercise \\(\\PageIndex{10}\\)\n\nSolve by completing the square: \\(b^{2}+8 b-4=16\\).\n\nAnswer\n\n\\(b=-10, b=2\\)\n\nTo solve the next equation, we must first collect all the variable terms on the left side of the equation. Then we proceed as we did in the previous examples.\n\nExample \\(\\PageIndex{6}\\)\n\nSolve by completing the square: \\(n^{2}=3 n+11\\).\n\nSolution:\n\n[Figure: .]\n\n            Subtract \\(3n\\) to get the variable terms on the left side.\t\n\n[Figure: .]\n\n            Take half of \\(-3\\) and square it.\t\n\n            \\(\\left(\\frac{1}{2}(-3)\\right)^{2}=\\frac{9}{4}\\)\t\n\n[Figure: .]\n\n            Add \\(\\frac{9}{4}\\) to both sides.\t\n\n[Figure: .]\n\n            Factor the perfect square trinomial, writing it as a binomial squared.\t\n\n[Figure: .]\n\n            Add the fractions on the right side.\t\n\n[Figure: .]\n\n            Use the Square Root Property.\t\n\n[Figure: .]\n\n            Simplify the radical.\t\n\n[Figure: .]\n\n            Solve for \\(n\\).\t\n\n[Figure: .]\n\n            Rewrite to show two solutions.\t\n\n[Figure: .]\n\nCheck:\n\nWe leave the check for you!\n\nExercise \\(\\PageIndex{11}\\)\n\nSolve by completing the square: \\(p^{2}=5 p+9\\).\n\nAnswer\n\n\\(p=\\frac{5}{2}+\\frac{\\sqrt{61}}{2}, p=\\frac{5}{2}-\\frac{\\sqrt{61}}{2}\\)\n\nExercise \\(\\PageIndex{12}\\)\n\nSolve by completing the square: \\(q^{2}=7 q-3\\).\n\nAnswer\n\n\\(q=\\frac{7}{2}+\\frac{\\sqrt{37}}{2}, q=\\frac{7}{2}-\\frac{\\sqrt{37}}{2}\\)\n\nNotice that the left side of the next equation is in factored form. But the right side is not zero. So, we cannot use the Zero Product Property since it says “If \\(a⋅b=0\\), then \\(a=0\\) or \\(b=0\\).” Instead, we multiply the factors and then put the equation into standard form to solve by completing the square.\n\nExample \\(\\PageIndex{7}\\)\n\nSolve by completing the square: \\((x-3)(x+5)=9\\).\n\nSolution:\n\n[Figure: .]\n\n            We multiple the binomials on the left.\t\n\n[Figure: .]\n\n            Add \\(15\\) to isolate the constant terms on the right.\t\n\n[Figure: .]\n\n            Take half of \\(2\\) and square it.\t\n\n            \\(\\left(\\frac{1}{2} \\cdot(2)\\right)^{2}=1\\)\t\n\n[Figure: .]\n\n            Add \\(1\\) to both sides.\t\n\n[Figure: .]\n\n            Factor the perfect square trinomial, writing it as a binomial squared.\t\n\n[Figure: .]\n\n            Use the Square Root Property.\t\n\n[Figure: .]\n\n            Solve for \\(x\\).\t\n\n[Figure: .]\n\n            Rewrite to show two solutions.\t\n\n[Figure: .]\n\n            Simplify.\t\n\n[Figure: .]\n\nCheck:\n\nWe leave the check for you!\n\nExercise \\(\\PageIndex{13}\\)\n\nSolve by completing the square: \\((c-2)(c+8)=11\\).\n\nAnswer\n\n\\(c=-9, c=3\\)\n\nExercise \\(\\PageIndex{14}\\)\n\nSolve by completing the square: \\((d-7)(d+3)=56\\).\n\nAnswer\n\n\\(d=11, d=-7\\)\n\nSolve Quadratic Equations of the Form \\(ax^{2}+bx+c=0\\) by Completing the Square\n\nThe process of completing the square works best when the coefficient of \\(x^{2}\\) is \\(1\\), so the left side of the equation is of the form \\(x^{2}+bx+c\\). If the \\(x^{2}\\) term has a coefficient other than \\(1\\), we take some preliminary steps to make the coefficient equal to \\(1\\).\n\nSometimes the coefficient can be factored from all three terms of the trinomial. This will be our strategy in the next example.\n\nExample \\(\\PageIndex{8}\\)\n\nSolve by completing the square: \\(3 x^{2}-12 x-15=0\\).\n\nSolution:\n\nTo complete the square, we need the coefficient of \\(x^{2}\\) to be one. If we factor out the coefficient of \\(x^{2}\\) as a common factor, we can continue with solving the equation by completing the square.\n\n[Figure: .]\n\n            Factor out the greatest common factor.\t\n\n[Figure: .]\n\n            Divide both sides by \\(3\\) to isolate the trinomial with coefficient \\(1\\).\t\n\n[Figure: .]\n\n            Simplify.\t\n\n[Figure: .]\n\n            Add \\(5\\) to get the constant terms on the right side.\t\n\n[Figure: .]\n\n            Take half of \\(4\\) and square it.\t\n\n            \\(\\left(\\frac{1}{2}(-4)\\right)^{2}=4\\)\t\n\n[Figure: .]\n\n            Add \\(4\\) to both sides.\t\n\n[Figure: .]\n\n            Factor the perfect square trinomial, writing it as a binomial squared.\t\n\n[Figure: .]\n\n            Use the Square Root Property.\t\n\n[Figure: .]\n\n            Solve for \\(x\\).\t\n\n[Figure: .]\n\n            Rewrite to show two solutions.\t\n\n[Figure: .]\n\n            Simplify.\t\n\n[Figure: .]\n\nCheck:\n\n[Figure: .]\n\nFigure 9.2.80\n\nExercise \\(\\PageIndex{15}\\)\n\nSolve by completing the square: \\(2 m^{2}+16 m+14=0\\).\n\nAnswer\n\n\\(m=-7, m=-1\\)\n\nExercise \\(\\PageIndex{16}\\)\n\nSolve by completing the square: \\(4 n^{2}-24 n-56=8\\).\n\nAnswer\n\n\\(n=-2, n=8\\)\n\nTo complete the square, the coefficient of the \\(x^{2}\\) must be \\(1\\). When the leading coefficient is not a factor of all the terms, we will divide both sides of the equation by the leading coefficient! This will give us a fraction for the second coefficient. We have already seen how to complete the square with fractions in this section.\n\nExample \\(\\PageIndex{9}\\)\n\nSolve by completing the square: \\(2 x^{2}-3 x=20\\).\n\nSolution:\n\nTo complete the square we need the coefficient of \\(x^{2}\\) to be one. We will divide both sides of the equation by the coefficient of \\(x^{2}\\). Then we can continue with solving the equation by completing the square.\n\n[Figure: .]\n\n            Divide both sides by \\(2\\) to get the coefficient of \\(x^{2}\\) to be \\(1\\).\t\n\n[Figure: .]\n\n            Simplify.\t\n\n[Figure: .]\n\n            Take half of \\(-\\frac{3}{2}\\) and square it.\t\n\n            \\(\\left(\\frac{1}{2}\\left(-\\frac{3}{2}\\right)\\right)^{2}=\\frac{9}{16}\\)\t\n\n[Figure: .]\n\n            Add \\(\\frac{9}{16}\\) to both sides.\t\n\n[Figure: .]\n\n            Factor the perfect square trinomial, writing it as a binomial squared.\t\n\n[Figure: .]\n\n            Add the fractions on the right side.\t\n\n[Figure: .]\n\n            Use the Square Root Property.\t\n\n[Figure: .]\n\n            Simplify the radical.\t\n\n[Figure: .]\n\n            Solve for \\(x\\).\t\n\n[Figure: .]\n\n            Rewrite to show two solutions.\t\n\n[Figure: .]\n\n            Simplify.\t\n\n[Figure: .]\n\nCheck:\n\nWe leave the check for you!\n\nExercise \\(\\PageIndex{17}\\)\n\nSolve by completing the square: \\(3 r^{2}-2 r=21\\).\n\nAnswer\n\n\\(r=-\\frac{7}{3}, r=3\\)\n\nExercise \\(\\PageIndex{18}\\)\n\nSolve by completing the square: \\(4 t^{2}+2 t=20\\).\n\nAnswer\n\n\\(t=-\\frac{5}{2}, t=2\\)\n\nNow that we have seen that the coefficient of \\(x^{2}\\) must be \\(1\\) for us to complete the square, we update our procedure for solving a quadratic equation by completing the square to include equations of the form \\(a x^{2}+b x+c=0\\).\n\nHowto: Solve a Quadratic Equation of the Form \\(a x^{2}+b x+c=0\\) by Completing the Square\n\n1. Divide by aa to make the coefficient of \\(x^{2}\\) term \\(1\\).\n\n2. Isolate the variable terms on one side and the constant terms on the other.\n\n3. Find \\(\\left(\\frac{1}{2} \\cdot b\\right)^{2}\\), the number needed to complete the square. Add it to both sides of the equation.\n\n4. Factor the perfect square trinomial, writing it as a binomial squared on the left and simplify by adding the terms on the right\n\n5. Use the Square Root Property.\n\n6. Simplify the radical and then solve the two resulting equations.\n\n7. Check the solutions.\n\nExample \\(\\PageIndex{10}\\)\n\nSolve by completing the square: \\(3 x^{2}+2 x=4\\).\n\nSolution:\n\nAgain, our first step will be to make the coefficient of \\(x^{2}\\) one. By dividing both sides of the equation by the coefficient of \\(x^{2}\\), we can then continue with solving the equation by completing the square.\n\n[Figure: .]\n\n            Divide both sides by \\(3\\) to make the coefficient of \\(x^{2}\\) equal \\(1\\).\t\n\n[Figure: .]\n\n            Simplify.\t\n\n[Figure: .]\n\n            Take half of \\(\\frac{2}{3}\\) and square it.\t\n\n            \\(\\left(\\frac{1}{2} \\cdot \\frac{2}{3}\\right)^{2}=\\frac{1}{9}\\)\t\n\n[Figure: .]\n\n            Add \\(\\frac{1}{9}\\) to both sides.\t\n\n[Figure: .]\n\n            Factor the perfect square trinomial, writing it as a binomial squared.\t\n\n[Figure: .]\n\n            Use the Square Root Property.\t\n\n[Figure: .]\n\n            Simplify the radical.\t\n\n[Figure: .]\n\n            Solve for \\(x\\).\t\n\n[Figure: .]\n\n            Rewrite to show two solutions.\t\n\n[Figure: .]\n\nCheck:\n\nWe leave the check for you!\n\nExercise \\(\\PageIndex{19}\\)\n\nSolve by completing the square: \\(4 x^{2}+3 x=2\\).\n\nAnswer\n\n\\(x=-\\frac{3}{8}+\\frac{\\sqrt{41}}{8}, x=-\\frac{3}{8}-\\frac{\\sqrt{41}}{8}\\)\n\nExercise \\(\\PageIndex{20}\\)\n\nSolve by completing the square: \\(3 y^{2}-10 y=-5\\).\n\nAnswer\n\n\\(y=\\frac{5}{3}+\\frac{\\sqrt{10}}{3}, y=\\frac{5}{3}-\\frac{\\sqrt{10}}{3}\\)\n\nAccess these online resources for additional instruction and practice with completing the square.\n\nCompleting Perfect Square Trinomials\n\nCompleting the Square 1\n\nCompleting the Square to Solve Quadratic Equations\n\nCompleting the Square to Solve Quadratic Equations: More Examples\n\nCompleting the Square 4\n\nKey Concepts\n\nBinomial Squares Pattern\n\n    If \\(a\\) and \\(b\\) are real numbers,\n\n[Figure: Quantity a plus b squared equals a squared plus 2 a b plus b2 where the binomial squared equals the first term squared plus 2 times the product of terms plus the second term squared. Quantity a minus b squared equals a squared minus 2 a b plus b2 where the binomial squared equals the first term squared minus 2 times the product of terms plus the second term squared.]\n\nHow to Complete a Square\n\n1. Identify \\(b\\), the coefficient of \\(x\\).\n\n2. Find \\(\\left(\\frac{1}{2} b\\right)^{2}\\), the number to complete the square.\n\n3. Add the \\(\\left(\\frac{1}{2} b\\right)^{2}\\) to \\(x^{2}+bx\\)\n\n4. Rewrite the trinomial as a binomial square\n\nHow to solve a quadratic equation of the form \\(a x^{2}+b x+c=0\\) by completing the square.\n\n1. Divide by \\(a\\) to make the coefficient of \\(x^{2}\\) term \\(1\\).\n\n2. Isolate the variable terms on one side and the constant terms on the other.\n\n3. Find \\(\\left(\\frac{1}{2} \\cdot b\\right)^{2}\\), the number needed to complete the square. Add it to both sides of the equation.\n\n4. Factor the perfect square trinomial, writing it as a binomial squared on the left and simplify by adding the terms on the right.\n\n5. Use the Square Root Property.\n\n6. Simplify the radical and then solve the two resulting equations.\n\n7. Check the solutions.\n\nThis page titled 9.3: Solve Quadratic Equations by Completing the Square was last modified on Mon, 14 Feb 2022 01:07:13 GMT and is shared under a CC BY  4.0  license and was authored, remixed, and/or curated by OpenStax via source content that was edited to the style and standards of the LibreTexts platform.",
+  "figures": [
+    {
+      "url": "https://math.libretexts.org/@api/deki/files/21565/4b9a7429e4c5d5a13a7866641130c14b190518d8?revision=1",
+      "alt": "Quantity a plus b squared equals a squared plus 2 a b plus b2 where the binomial squared equals the first term squared plus 2 times the product of terms plus the second term squared. Quantity a minus b squared equals a squared minus 2 a b plus b2 where the binomial squared equals the first term squared minus 2 times the product of terms plus the second term squared.",
+      "credit": ""
+    },
+    {
+      "url": "https://math.libretexts.org/@api/deki/files/21680/595860f81b1209cbca11859f61f0197c231562a2?revision=1",
+      "alt": "The perfect square expression a squared plus 2 a b plus b squared is shown above the expression x squared plus 6x plus an unknown to allow a comparison of the corresponding terms of the expressions.",
+      "credit": ""
+    },
+    {
+      "url": "https://math.libretexts.org/@api/deki/files/21689/11f094f7739dc530e09e4ae36e06d651f8a62eb3?revision=1",
+      "alt": "The perfect square expression a squared plus 2 a b plus b squared is shown above the expression x squared plus 2 x b + b squared. Note that x has been substituted for a in the second equation and compare corresponding terms.",
+      "credit": ""
+    },
+    {
+      "url": "https://math.libretexts.org/@api/deki/files/21653/b8361927d604e2b978e7617db3cd550e4c333cb7?revision=1",
+      "alt": "The perfect square expression a squared plus 2 a b plus b squared is shown above the expression x squared plus 2 times 3 times x plus an unknown value to help compare terms.",
+      "credit": ""
+    },
+    {
+      "url": "https://math.libretexts.org/@api/deki/files/21634/b1bce011b587f1e28331b484ccf389b1f9beea9c?revision=1",
+      "alt": "The perfect square expression a squared plus 2 a b plus b squared is shown above the expression x squared plus 6 x plus 9.",
+      "credit": ""
+    },
+    {
+      "url": "https://math.libretexts.org/@api/deki/files/21559/dafddd60fa6633765743a17291c5801d21d3392b?revision=1",
+      "alt": "The factored expression, the square of a plus b, is shown over the square of the expression x + 3.",
+      "credit": ""
+    },
+    {
+      "url": "https://math.libretexts.org/@api/deki/files/21554/CNX_IntAlg_Figure_09_02_005b_img.jpg?revision=1",
+      "alt": ".",
+      "credit": ""
+    },
+    {
+      "url": "https://math.libretexts.org/@api/deki/files/21583/CNX_IntAlg_Figure_09_02_006b_img.jpg?revision=1",
+      "alt": ".",
+      "credit": ""
+    },
+    {
+      "url": "https://math.libretexts.org/@api/deki/files/21687/CNX_IntAlg_Figure_09_02_007b_img.jpg?revision=1",
+      "alt": ".",
+      "credit": ""
+    },
+    {
+      "url": "https://math.libretexts.org/@api/deki/files/21783/CNX_IntAlg_Figure_09_02_008a_img.jpg?revision=1",
+      "alt": ".",
+      "credit": ""
+    },
+    {
+      "url": "https://math.libretexts.org/@api/deki/files/21953/CNX_IntAlg_Figure_09_02_008b_img.jpg?revision=1",
+      "alt": ".",
+      "credit": ""
+    },
+    {
+      "url": "https://math.libretexts.org/@api/deki/files/35922/CNX_IntAlg_Figure_09_02_008c_img.jpg?revision=1",
+      "alt": ".",
+      "credit": ""
+    },
+    {
+      "url": "https://math.libretexts.org/@api/deki/files/21947/CNX_IntAlg_Figure_09_02_008d_img.jpg?revision=1",
+      "alt": ".",
+      "credit": ""
+    },
+    {
+      "url": "https://math.libretexts.org/@api/deki/files/35921/CNX_IntAlg_Figure_09_02_010b_img.jpg?revision=1",
+      "alt": ".",
+      "credit": ""
+    },
+    {
+      "url": "https://math.libretexts.org/@api/deki/files/21858/CNX_IntAlg_Figure_09_02_010c_img.jpg?revision=1",
+      "alt": ".",
+      "credit": ""
+    },
+    {
+      "url": "https://math.libretexts.org/@api/deki/files/21814/CNX_IntAlg_Figure_09_02_010d_img.jpg?revision=1",
+      "alt": ".",
+      "credit": ""
+    },
+    {
+      "url": "https://math.libretexts.org/@api/deki/files/21837/CNX_IntAlg_Figure_09_02_010e_img.jpg?revision=1",
+      "alt": ".",
+      "credit": ""
+    },
+    {
+      "url": "https://math.libretexts.org/@api/deki/files/21839/CNX_IntAlg_Figure_09_02_010f_img.jpg?revision=1",
+      "alt": ".",
+      "credit": ""
+    },
+    {
+      "url": "https://math.libretexts.org/@api/deki/files/21993/CNX_IntAlg_Figure_09_02_010g_img.jpg?revision=1",
+      "alt": ".",
+      "credit": ""
+    },
+    {
+      "url": "https://math.libretexts.org/@api/deki/files/22049/CNX_IntAlg_Figure_09_02_010h_img.jpg?revision=1",
+      "alt": ".",
+      "credit": ""
+    },
+    {
+      "url": "https://math.libretexts.org/@api/deki/files/35919/CNX_IntAlg_Figure_09_02_010i_img.jpg?revision=1",
+      "alt": ".",
+      "credit": ""
+    },
+    {
+      "url": "https://math.libretexts.org/@api/deki/files/35923/CNX_IntAlg_Figure_09_02_011c_img.jpg?revision=1",
+      "alt": ".",
+      "credit": ""
+    },
+    {
+      "url": "https://math.libretexts.org/@api/deki/files/22008/CNX_IntAlg_Figure_09_02_011d_img.jpg?revision=1",
+      "alt": ".",
+      "credit": ""
+    },
+    {
+      "url": "https://math.libretexts.org/@api/deki/files/22020/CNX_IntAlg_Figure_09_02_011e_img.jpg?revision=1",
+      "alt": ".",
+      "credit": ""
+    },
+    {
+      "url": "https://math.libretexts.org/@api/deki/files/22077/CNX_IntAlg_Figure_09_02_011f_img.jpg?revision=1",
+      "alt": ".",
+      "credit": ""
+    },
+    {
+      "url": "https://math.libretexts.org/@api/deki/files/22002/CNX_IntAlg_Figure_09_02_011g_img.jpg?revision=1",
+      "alt": ".",
+      "credit": ""
+    },
+    {
+      "url": "https://math.libretexts.org/@api/deki/files/22068/CNX_IntAlg_Figure_09_02_011h_img.jpg?revision=1",
+      "alt": ".",
+      "credit": ""
+    },
+    {
+      "url": "https://math.libretexts.org/@api/deki/files/22032/CNX_IntAlg_Figure_09_02_011i_img.jpg?revision=1",
+      "alt": ".",
+      "credit": ""
+    },
+    {
+      "url": "https://math.libretexts.org/@api/deki/files/22081/CNX_IntAlg_Figure_09_02_011b_img.jpg?revision=1",
+      "alt": ".",
+      "credit": ""
+    },
+    {
+      "url": "https://math.libretexts.org/@api/deki/files/22081/CNX_IntAlg_Figure_09_02_011b_img.jpg?revision=1",
+      "alt": ".",
+      "credit": ""
+    },
+    {
+      "url": "https://math.libretexts.org/@api/deki/files/22103/CNX_IntAlg_Figure_09_02_012c_img.jpg?revision=1",
+      "alt": ".",
+      "credit": ""
+    },
+    {
+      "url": "https://math.libretexts.org/@api/deki/files/22189/CNX_IntAlg_Figure_09_02_012d_img.jpg?revision=1",
+      "alt": ".",
+      "credit": ""
+    },
+    {
+      "url": "https://math.libretexts.org/@api/deki/files/22200/CNX_IntAlg_Figure_09_02_012e_img.jpg?revision=1",
+      "alt": ".",
+      "credit": ""
+    },
+    {
+      "url": "https://math.libretexts.org/@api/deki/files/22150/CNX_IntAlg_Figure_09_02_012f_img.jpg?revision=1",
+      "alt": ".",
+      "credit": ""
+    },
+    {
+      "url": "https://math.libretexts.org/@api/deki/files/22168/CNX_IntAlg_Figure_09_02_012g_img.jpg?revision=1",
+      "alt": ".",
+      "credit": ""
+    },
+    {
+      "url": "https://math.libretexts.org/@api/deki/files/22147/CNX_IntAlg_Figure_09_02_012h_img.jpg?revision=1",
+      "alt": ".",
+      "credit": ""
+    },
+    {
+      "url": "https://math.libretexts.org/@api/deki/files/22217/CNX_IntAlg_Figure_09_02_012i_img.jpg?revision=1",
+      "alt": ".",
+      "credit": ""
+    },
+    {
+      "url": "https://math.libretexts.org/@api/deki/files/22129/CNX_IntAlg_Figure_09_02_012j_img.jpg?revision=1",
+      "alt": ".",
+      "credit": ""
+    },
+    {
+      "url": "https://math.libretexts.org/@api/deki/files/22136/CNX_IntAlg_Figure_09_02_012k_img.jpg?revision=1",
+      "alt": ".",
+      "credit": ""
+    },
+    {
+      "url": "https://math.libretexts.org/@api/deki/files/22156/CNX_IntAlg_Figure_09_02_012l_img.jpg?revision=1",
+      "alt": ".",
+      "credit": ""
+    },
+    {
+      "url": "https://math.libretexts.org/@api/deki/files/22276/CNX_IntAlg_Figure_09_02_012b_img.jpg?revision=1",
+      "alt": ".",
+      "credit": ""
+    },
+    {
+      "url": "https://math.libretexts.org/@api/deki/files/22266/CNX_IntAlg_Figure_09_02_013b_img.jpg?revision=1",
+      "alt": ".",
+      "credit": ""
+    },
+    {
+      "url": "https://math.libretexts.org/@api/deki/files/22335/CNX_IntAlg_Figure_09_02_013c_img.jpg?revision=1",
+      "alt": ".",
+      "credit": ""
+    },
+    {
+      "url": "https://math.libretexts.org/@api/deki/files/22360/CNX_IntAlg_Figure_09_02_013d_img.jpg?revision=1",
+      "alt": ".",
+      "credit": ""
+    },
+    {
+      "url": "https://math.libretexts.org/@api/deki/files/22205/CNX_IntAlg_Figure_09_02_013e_img.jpg?revision=1",
+      "alt": ".",
+      "credit": ""
+    },
+    {
+      "url": "https://math.libretexts.org/@api/deki/files/22343/CNX_IntAlg_Figure_09_02_013f_img.jpg?revision=1",
+      "alt": ".",
+      "credit": ""
+    },
+    {
+      "url": "https://math.libretexts.org/@api/deki/files/22259/CNX_IntAlg_Figure_09_02_013g_img.jpg?revision=1",
+      "alt": ".",
+      "credit": ""
+    },
+    {
+      "url": "https://math.libretexts.org/@api/deki/files/22358/CNX_IntAlg_Figure_09_02_013h_img.jpg?revision=1",
+      "alt": ".",
+      "credit": ""
+    },
+    {
+      "url": "https://math.libretexts.org/@api/deki/files/22347/CNX_IntAlg_Figure_09_02_013i_img.jpg?revision=1",
+      "alt": ".",
+      "credit": ""
+    },
+    {
+      "url": "https://math.libretexts.org/@api/deki/files/22281/CNX_IntAlg_Figure_09_02_013j_img.jpg?revision=1",
+      "alt": ".",
+      "credit": ""
+    },
+    {
+      "url": "https://math.libretexts.org/@api/deki/files/22298/CNX_IntAlg_Figure_09_02_013k_img.jpg?revision=1",
+      "alt": ".",
+      "credit": ""
+    },
+    {
+      "url": "https://math.libretexts.org/@api/deki/files/22328/CNX_IntAlg_Figure_09_02_014b_img.jpg?revision=1",
+      "alt": ".",
+      "credit": ""
+    },
+    {
+      "url": "https://math.libretexts.org/@api/deki/files/22363/CNX_IntAlg_Figure_09_02_014c_img.jpg?revision=1",
+      "alt": ".",
+      "credit": ""
+    },
+    {
+      "url": "https://math.libretexts.org/@api/deki/files/22371/CNX_IntAlg_Figure_09_02_014d_img.jpg?revision=1",
+      "alt": ".",
+      "credit": ""
+    },
+    {
+      "url": "https://math.libretexts.org/@api/deki/files/22397/CNX_IntAlg_Figure_09_02_014e_img.jpg?revision=1",
+      "alt": ".",
+      "credit": ""
+    },
+    {
+      "url": "https://math.libretexts.org/@api/deki/files/35931/CNX_IntAlg_Figure_09_02_014f_img.jpg?revision=1",
+      "alt": ".",
+      "credit": ""
+    },
+    {
+      "url": "https://math.libretexts.org/@api/deki/files/35927/CNX_IntAlg_Figure_09_02_014g_img.jpg?revision=1",
+      "alt": ".",
+      "credit": ""
+    },
+    {
+      "url": "https://math.libretexts.org/@api/deki/files/22470/CNX_IntAlg_Figure_09_02_014h_img.jpg?revision=1",
+      "alt": ".",
+      "credit": ""
+    },
+    {
+      "url": "https://math.libretexts.org/@api/deki/files/22409/CNX_IntAlg_Figure_09_02_014i_img.jpg?revision=1",
+      "alt": ".",
+      "credit": ""
+    },
+    {
+      "url": "https://math.libretexts.org/@api/deki/files/22511/CNX_IntAlg_Figure_09_02_014j_img.jpg?revision=1",
+      "alt": ".",
+      "credit": ""
+    },
+    {
+      "url": "https://math.libretexts.org/@api/deki/files/35928/CNX_IntAlg_Figure_09_02_014k_img.jpg?revision=1",
+      "alt": ".",
+      "credit": ""
+    },
+    {
+      "url": "https://math.libretexts.org/@api/deki/files/22464/CNX_IntAlg_Figure_09_02_015c_img.jpg?revision=1",
+      "alt": ".",
+      "credit": ""
+    },
+    {
+      "url": "https://math.libretexts.org/@api/deki/files/22447/CNX_IntAlg_Figure_09_02_015d_img.jpg?revision=1",
+      "alt": ".",
+      "credit": ""
+    },
+    {
+      "url": "https://math.libretexts.org/@api/deki/files/22437/CNX_IntAlg_Figure_09_02_015e_img.jpg?revision=1",
+      "alt": ".",
+      "credit": ""
+    },
+    {
+      "url": "https://math.libretexts.org/@api/deki/files/22561/CNX_IntAlg_Figure_09_02_015f_img.jpg?revision=1",
+      "alt": ".",
+      "credit": ""
+    },
+    {
+      "url": "https://math.libretexts.org/@api/deki/files/35932/CNX_IntAlg_Figure_09_02_015g_img.jpg?revision=1",
+      "alt": ".",
+      "credit": ""
+    },
+    {
+      "url": "https://math.libretexts.org/@api/deki/files/22606/CNX_IntAlg_Figure_09_02_015h_img.jpg?revision=1",
+      "alt": ".",
+      "credit": ""
+    },
+    {
+      "url": "https://math.libretexts.org/@api/deki/files/35930/CNX_IntAlg_Figure_09_02_015i_img.jpg?revision=1",
+      "alt": ".",
+      "credit": ""
+    },
+    {
+      "url": "https://math.libretexts.org/@api/deki/files/35936/CNX_IntAlg_Figure_09_02_015j_img.jpg?revision=1",
+      "alt": ".",
+      "credit": ""
+    },
+    {
+      "url": "https://math.libretexts.org/@api/deki/files/22540/CNX_IntAlg_Figure_09_02_015k_img.jpg?revision=1",
+      "alt": ".",
+      "credit": ""
+    },
+    {
+      "url": "https://math.libretexts.org/@api/deki/files/22553/CNX_IntAlg_Figure_09_02_015l_img.jpg?revision=1",
+      "alt": ".",
+      "credit": ""
+    },
+    {
+      "url": "https://math.libretexts.org/@api/deki/files/22539/CNX_IntAlg_Figure_09_02_015m_img.jpg?revision=1",
+      "alt": ".",
+      "credit": ""
+    },
+    {
+      "url": "https://math.libretexts.org/@api/deki/files/22580/CNX_IntAlg_Figure_09_02_015n_img.jpg?revision=1",
+      "alt": ".",
+      "credit": ""
+    },
+    {
+      "url": "https://math.libretexts.org/@api/deki/files/22559/CNX_IntAlg_Figure_09_02_015b_img.jpg?revision=1",
+      "alt": ".",
+      "credit": ""
+    },
+    {
+      "url": "https://math.libretexts.org/@api/deki/files/22576/CNX_IntAlg_Figure_09_02_016b_img.jpg?revision=1",
+      "alt": ".",
+      "credit": ""
+    },
+    {
+      "url": "https://math.libretexts.org/@api/deki/files/22601/CNX_IntAlg_Figure_09_02_016c_img.jpg?revision=1",
+      "alt": ".",
+      "credit": ""
+    },
+    {
+      "url": "https://math.libretexts.org/@api/deki/files/22599/CNX_IntAlg_Figure_09_02_016d_img.jpg?revision=1",
+      "alt": ".",
+      "credit": ""
+    },
+    {
+      "url": "https://math.libretexts.org/@api/deki/files/22623/CNX_IntAlg_Figure_09_02_016e_img.jpg?revision=1",
+      "alt": ".",
+      "credit": ""
+    },
+    {
+      "url": "https://math.libretexts.org/@api/deki/files/22656/CNX_IntAlg_Figure_09_02_016f_img.jpg?revision=1",
+      "alt": ".",
+      "credit": ""
+    },
+    {
+      "url": "https://math.libretexts.org/@api/deki/files/22775/CNX_IntAlg_Figure_09_02_016g_img.jpg?revision=1",
+      "alt": ".",
+      "credit": ""
+    },
+    {
+      "url": "https://math.libretexts.org/@api/deki/files/22968/CNX_IntAlg_Figure_09_02_016h_img.jpg?revision=1",
+      "alt": ".",
+      "credit": ""
+    },
+    {
+      "url": "https://math.libretexts.org/@api/deki/files/22765/CNX_IntAlg_Figure_09_02_016i_img.jpg?revision=1",
+      "alt": ".",
+      "credit": ""
+    },
+    {
+      "url": "https://math.libretexts.org/@api/deki/files/22790/CNX_IntAlg_Figure_09_02_016j_img.jpg?revision=1",
+      "alt": ".",
+      "credit": ""
+    },
+    {
+      "url": "https://math.libretexts.org/@api/deki/files/22777/CNX_IntAlg_Figure_09_02_016k_img.jpg?revision=1",
+      "alt": ".",
+      "credit": ""
+    },
+    {
+      "url": "https://math.libretexts.org/@api/deki/files/22779/CNX_IntAlg_Figure_09_02_016l_img.jpg?revision=1",
+      "alt": ".",
+      "credit": ""
+    },
+    {
+      "url": "https://math.libretexts.org/@api/deki/files/22683/CNX_IntAlg_Figure_09_02_016m_img.jpg?revision=1",
+      "alt": ".",
+      "credit": ""
+    },
+    {
+      "url": "https://math.libretexts.org/@api/deki/files/22833/CNX_IntAlg_Figure_09_02_017b_img.jpg?revision=1",
+      "alt": ".",
+      "credit": ""
+    },
+    {
+      "url": "https://math.libretexts.org/@api/deki/files/22950/CNX_IntAlg_Figure_09_02_017c_img.jpg?revision=1",
+      "alt": ".",
+      "credit": ""
+    },
+    {
+      "url": "https://math.libretexts.org/@api/deki/files/22793/CNX_IntAlg_Figure_09_02_017d_img.jpg?revision=1",
+      "alt": ".",
+      "credit": ""
+    },
+    {
+      "url": "https://math.libretexts.org/@api/deki/files/35939/CNX_IntAlg_Figure_09_02_017e_img.jpg?revision=1",
+      "alt": ".",
+      "credit": ""
+    },
+    {
+      "url": "https://math.libretexts.org/@api/deki/files/35940/CNX_IntAlg_Figure_09_02_017f_img.jpg?revision=1",
+      "alt": ".",
+      "credit": ""
+    },
+    {
+      "url": "https://math.libretexts.org/@api/deki/files/35941/CNX_IntAlg_Figure_09_02_017g_img.jpg?revision=1",
+      "alt": ".",
+      "credit": ""
+    },
+    {
+      "url": "https://math.libretexts.org/@api/deki/files/23017/CNX_IntAlg_Figure_09_02_017h_img.jpg?revision=1",
+      "alt": ".",
+      "credit": ""
+    },
+    {
+      "url": "https://math.libretexts.org/@api/deki/files/22972/CNX_IntAlg_Figure_09_02_017i_img.jpg?revision=1",
+      "alt": ".",
+      "credit": ""
+    },
+    {
+      "url": "https://math.libretexts.org/@api/deki/files/23107/CNX_IntAlg_Figure_09_02_017j_img.jpg?revision=1",
+      "alt": ".",
+      "credit": ""
+    },
+    {
+      "url": "https://math.libretexts.org/@api/deki/files/23079/CNX_IntAlg_Figure_09_02_017k_img.jpg?revision=1",
+      "alt": ".",
+      "credit": ""
+    },
+    {
+      "url": "https://math.libretexts.org/@api/deki/files/23094/CNX_IntAlg_Figure_09_02_018_img_new.jpg?revision=1",
+      "alt": "Quantity a plus b squared equals a squared plus 2 a b plus b2 where the binomial squared equals the first term squared plus 2 times the product of terms plus the second term squared. Quantity a minus b squared equals a squared minus 2 a b plus b2 where the binomial squared equals the first term squared minus 2 times the product of terms plus the second term squared.",
+      "credit": ""
+    }
+  ],
+  "references": [
+    {
+      "text": "Completing Perfect Square Trinomials",
+      "url": "https://openstax.org/l/37CompTheSq1"
+    },
+    {
+      "text": "Completing the Square 1",
+      "url": "https://openstax.org/l/37CompTheSq2"
+    },
+    {
+      "text": "Completing the Square to Solve Quadratic Equations",
+      "url": "https://openstax.org/l/37CompTheSq3"
+    },
+    {
+      "text": "Completing the Square to Solve Quadratic Equations: More Examples",
+      "url": "https://openstax.org/l/37CompTheSq4"
+    },
+    {
+      "text": "Completing the Square 4",
+      "url": "https://openstax.org/l/37CompTheSq5"
+    },
+    {
+      "text": "9.3: Solve Quadratic Equations by Completing the Square",
+      "url": "https://math.libretexts.org/Bookshelves/Algebra/Intermediate_Algebra_1e_(OpenStax)/09%3A_Quadratic_Equations_and_Functions/903%3A_Solve_Quadratic_Equations_by_Completing_the_Square"
+    },
+    {
+      "text": "CC BY  4.0",
+      "url": "https://creativecommons.org/licenses/by/4.0"
+    },
+    {
+      "text": "OpenStax",
+      "url": "https://openstax.org/"
+    },
+    {
+      "text": "source content",
+      "url": "https://openstax.org/details/books/intermediate-algebra-2e"
+    }
+  ],
+  "exercises": [
+    {
+      "ordinal": 1,
+      "sourceNumber": "1",
+      "sourceAnchor": "",
+      "kind": "exercise-candidate",
+      "context": "By the end of this section, you will be able to:\n\nBefore you get started, take this readiness quiz.",
+      "original": "1. Expand: \\((x+9)^{2}\\).\n\n    If you missed this problem, review Example 5.32.",
+      "prompt": "1. Expand: \\((x+9)^{2}\\).\n\n    If you missed this problem, review Example 5.32.",
+      "sourceAnswers": [],
+      "hasFigure": false,
+      "status": "draft",
+      "answerVerified": false,
+      "translationStatus": "pending",
+      "mappingStatus": "pending"
+    },
+    {
+      "ordinal": 2,
+      "sourceNumber": "2",
+      "sourceAnchor": "",
+      "kind": "exercise-candidate",
+      "context": "By the end of this section, you will be able to:\n\nBefore you get started, take this readiness quiz.",
+      "original": "2. Factor \\(y^{2}-14 y+49\\).\n\n    If you missed this problem, review Example 6.9.",
+      "prompt": "2. Factor \\(y^{2}-14 y+49\\).\n\n    If you missed this problem, review Example 6.9.",
+      "sourceAnswers": [],
+      "hasFigure": false,
+      "status": "draft",
+      "answerVerified": false,
+      "translationStatus": "pending",
+      "mappingStatus": "pending"
+    },
+    {
+      "ordinal": 3,
+      "sourceNumber": "3",
+      "sourceAnchor": "",
+      "kind": "exercise-candidate",
+      "context": "By the end of this section, you will be able to:\n\nBefore you get started, take this readiness quiz.",
+      "original": "3. Factor \\(5 n^{2}+40 n+80\\).\n\n    If you missed this problem, review Example 6.14.",
+      "prompt": "3. Factor \\(5 n^{2}+40 n+80\\).\n\n    If you missed this problem, review Example 6.14.",
+      "sourceAnswers": [],
+      "hasFigure": false,
+      "status": "draft",
+      "answerVerified": false,
+      "translationStatus": "pending",
+      "mappingStatus": "pending"
+    },
+    {
+      "ordinal": 4,
+      "sourceNumber": "1",
+      "sourceAnchor": "",
+      "kind": "exercise-candidate",
+      "context": "Now to complete the perfect square trinomial, we will find the last term by squaring \\(b\\), which is \\(3^{2}=9\\).\n\nWe can now factor.\n\nSo we found that adding \\(9\\) to \\(x^{2}+6 x\\) ‘completes the square’, and we write it as \\((x+3)^{2}\\).",
+      "original": "1. Identify \\(b\\), the coefficient of \\(x\\).",
+      "prompt": "1. Identify \\(b\\), the coefficient of \\(x\\).",
+      "sourceAnswers": [],
+      "hasFigure": false,
+      "status": "draft",
+      "answerVerified": false,
+      "translationStatus": "pending",
+      "mappingStatus": "pending"
+    },
+    {
+      "ordinal": 5,
+      "sourceNumber": "2",
+      "sourceAnchor": "",
+      "kind": "exercise-candidate",
+      "context": "Now to complete the perfect square trinomial, we will find the last term by squaring \\(b\\), which is \\(3^{2}=9\\).\n\nWe can now factor.\n\nSo we found that adding \\(9\\) to \\(x^{2}+6 x\\) ‘completes the square’, and we write it as \\((x+3)^{2}\\).",
+      "original": "2. Find \\(\\left(\\frac{1}{2} b\\right)^{2}\\), the number to complete the square.",
+      "prompt": "2. Find \\(\\left(\\frac{1}{2} b\\right)^{2}\\), the number to complete the square.",
+      "sourceAnswers": [],
+      "hasFigure": false,
+      "status": "draft",
+      "answerVerified": false,
+      "translationStatus": "pending",
+      "mappingStatus": "pending"
+    },
+    {
+      "ordinal": 6,
+      "sourceNumber": "3",
+      "sourceAnchor": "",
+      "kind": "exercise-candidate",
+      "context": "Now to complete the perfect square trinomial, we will find the last term by squaring \\(b\\), which is \\(3^{2}=9\\).\n\nWe can now factor.\n\nSo we found that adding \\(9\\) to \\(x^{2}+6 x\\) ‘completes the square’, and we write it as \\((x+3)^{2}\\).",
+      "original": "3. Add the\\(\\left(\\frac{1}{2} b\\right)^{2}\\) to \\(x^{2}+bx\\).",
+      "prompt": "3. Add the\\(\\left(\\frac{1}{2} b\\right)^{2}\\) to \\(x^{2}+bx\\).",
+      "sourceAnswers": [],
+      "hasFigure": false,
+      "status": "draft",
+      "answerVerified": false,
+      "translationStatus": "pending",
+      "mappingStatus": "pending"
+    },
+    {
+      "ordinal": 7,
+      "sourceNumber": "4",
+      "sourceAnchor": "",
+      "kind": "exercise-candidate",
+      "context": "Now to complete the perfect square trinomial, we will find the last term by squaring \\(b\\), which is \\(3^{2}=9\\).\n\nWe can now factor.\n\nSo we found that adding \\(9\\) to \\(x^{2}+6 x\\) ‘completes the square’, and we write it as \\((x+3)^{2}\\).",
+      "original": "4. Factor the perfect square trinomial, writing it as a binomial squared.",
+      "prompt": "4. Factor the perfect square trinomial, writing it as a binomial squared.",
+      "sourceAnswers": [],
+      "hasFigure": false,
+      "status": "draft",
+      "answerVerified": false,
+      "translationStatus": "pending",
+      "mappingStatus": "pending"
+    },
+    {
+      "ordinal": 8,
+      "sourceNumber": "",
+      "sourceAnchor": "",
+      "kind": "example-or-exercise",
+      "context": "Now to complete the perfect square trinomial, we will find the last term by squaring \\(b\\), which is \\(3^{2}=9\\).\n\nWe can now factor.\n\nSo we found that adding \\(9\\) to \\(x^{2}+6 x\\) ‘completes the square’, and we write it as \\((x+3)^{2}\\).",
+      "original": "Example \\(\\PageIndex{1}\\)\n\nComplete the square to make a perfect square trinomial. Then write the result as a binomial squared.\n\n1. \\(x^{2}-26 x\\)\n\n2. \\(y^{2}-9 y\\)\n\n3. \\(n^{2}+\\frac{1}{2} n\\)\n\nSolution:\n\na.\n\n[Figure: .]\n\n            The coefficient of \\(x\\) is -26.\t\n\nFind \\(\\left(\\frac{1}{2} b\\right)^{2}\\).\n\n\\(\\left(\\frac{1}{2} \\cdot(-26)\\right)^{2}\\)\n\n            \\((13)^{2}\\)\n\n            169\n\n            Add \\(169\\) to the binomial to complete the square.\t\n\n\\(x^{2}-26 x+169\\)\n\n            Factor the perfect square trinomial, writing it as a binomial squared.\t\n\n\\((x-13)^{2}\\)\n\nb.\n\n[Figure: .]\n\n            The coefficient of \\(y\\) is \\(-9\\).\t\n\nFind \\(\\left(\\frac{1}{2} b\\right)^{2}\\).\n\n\\(\\left(\\frac{1}{2} \\cdot(-9)\\right)^{2}\\)\n\n            \\(\\left(-\\frac{9}{2}\\right)^{2}\\)\n\n            \\(\\frac{81}{4}\\)\n\n            Add \\(\\frac{81}{4}\\) to the binomial to complete the square.\t\n\n\\(y^{2}-9 y+\\frac{81}{4}\\)\n\n            Factor the perfect square trinomial, writing it as a binomial squared.\t\n\n\\(\\left(y-\\frac{9}{2}\\right)^{2}\\)\n\nc.\n\n[Figure: .]\n\n            The coefficient of \\(n\\) is \\(\\frac{1}{2}\\).\t\n\nFind \\(\\left(\\frac{1}{2} b\\right)^{2}\\).\n\n\\(\\left(\\frac{1}{2} \\cdot \\frac{1}{2}\\right)^{2}\\)\n\n            \\(\\left(\\frac{1}{4}\\right)^{2}\\)\n\n            \\(\\frac{1}{16}\\)\n\n            Add \\(\\frac{1}{16}\\) to the binomial to complete the square.\t\n            \\(n^{2}+\\frac{1}{2} n+\\frac{1}{16}\\)\t\n\n            Rewrite as a binomial square.\t\n            \\(\\left(n+\\frac{1}{4}\\right)^{2}\\)",
+      "prompt": "Example \\(\\PageIndex{1}\\)\n\nComplete the square to make a perfect square trinomial. Then write the result as a binomial squared.\n\n1. \\(x^{2}-26 x\\)\n\n2. \\(y^{2}-9 y\\)\n\n3. \\(n^{2}+\\frac{1}{2} n\\)\n\nSolution:\n\na.\n\n[Figure: .]\n\n            The coefficient of \\(x\\) is -26.\t\n\nFind \\(\\left(\\frac{1}{2} b\\right)^{2}\\).\n\n\\(\\left(\\frac{1}{2} \\cdot(-26)\\right)^{2}\\)\n\n            \\((13)^{2}\\)\n\n            169\n\n            Add \\(169\\) to the binomial to complete the square.\t\n\n\\(x^{2}-26 x+169\\)\n\n            Factor the perfect square trinomial, writing it as a binomial squared.\t\n\n\\((x-13)^{2}\\)\n\nb.\n\n[Figure: .]\n\n            The coefficient of \\(y\\) is \\(-9\\).\t\n\nFind \\(\\left(\\frac{1}{2} b\\right)^{2}\\).\n\n\\(\\left(\\frac{1}{2} \\cdot(-9)\\right)^{2}\\)\n\n            \\(\\left(-\\frac{9}{2}\\right)^{2}\\)\n\n            \\(\\frac{81}{4}\\)\n\n            Add \\(\\frac{81}{4}\\) to the binomial to complete the square.\t\n\n\\(y^{2}-9 y+\\frac{81}{4}\\)\n\n            Factor the perfect square trinomial, writing it as a binomial squared.\t\n\n\\(\\left(y-\\frac{9}{2}\\right)^{2}\\)\n\nc.\n\n[Figure: .]\n\n            The coefficient of \\(n\\) is \\(\\frac{1}{2}\\).\t\n\nFind \\(\\left(\\frac{1}{2} b\\right)^{2}\\).\n\n\\(\\left(\\frac{1}{2} \\cdot \\frac{1}{2}\\right)^{2}\\)\n\n            \\(\\left(\\frac{1}{4}\\right)^{2}\\)\n\n            \\(\\frac{1}{16}\\)\n\n            Add \\(\\frac{1}{16}\\) to the binomial to complete the square.\t\n            \\(n^{2}+\\frac{1}{2} n+\\frac{1}{16}\\)\t\n\n            Rewrite as a binomial square.\t\n            \\(\\left(n+\\frac{1}{4}\\right)^{2}\\)",
+      "sourceAnswers": [],
+      "hasFigure": true,
+      "status": "draft",
+      "answerVerified": false,
+      "translationStatus": "pending",
+      "mappingStatus": "pending"
+    },
+    {
+      "ordinal": 9,
+      "sourceNumber": "",
+      "sourceAnchor": "",
+      "kind": "exercise-candidate",
+      "context": "Now to complete the perfect square trinomial, we will find the last term by squaring \\(b\\), which is \\(3^{2}=9\\).\n\nWe can now factor.\n\nSo we found that adding \\(9\\) to \\(x^{2}+6 x\\) ‘completes the square’, and we write it as \\((x+3)^{2}\\).",
+      "original": "Exercise \\(\\PageIndex{1}\\)\n\nComplete the square to make a perfect square trinomial. Then write the result as a binomial squared.\n\n1. \\(a^{2}-20 a\\)\n\n2. \\(m^{2}-5 m\\)\n\n3. \\(p^{2}+\\frac{1}{4} p\\)\n\nAnswer\n\n1. \\((a-10)^{2}\\)\n\n2. \\(\\left(b-\\frac{5}{2}\\right)^{2}\\)\n\n3. \\(\\left(p+\\frac{1}{8}\\right)^{2}\\)",
+      "prompt": "Exercise \\(\\PageIndex{1}\\)\n\nComplete the square to make a perfect square trinomial. Then write the result as a binomial squared.\n\n1. \\(a^{2}-20 a\\)\n\n2. \\(m^{2}-5 m\\)\n\n3. \\(p^{2}+\\frac{1}{4} p\\)",
+      "sourceAnswers": [
+        "1. \\((a-10)^{2}\\)\n\n2. \\(\\left(b-\\frac{5}{2}\\right)^{2}\\)\n\n3. \\(\\left(p+\\frac{1}{8}\\right)^{2}\\)"
+      ],
+      "hasFigure": false,
+      "status": "draft",
+      "answerVerified": false,
+      "translationStatus": "pending",
+      "mappingStatus": "pending"
+    },
+    {
+      "ordinal": 10,
+      "sourceNumber": "",
+      "sourceAnchor": "",
+      "kind": "exercise-candidate",
+      "context": "Now to complete the perfect square trinomial, we will find the last term by squaring \\(b\\), which is \\(3^{2}=9\\).\n\nWe can now factor.\n\nSo we found that adding \\(9\\) to \\(x^{2}+6 x\\) ‘completes the square’, and we write it as \\((x+3)^{2}\\).",
+      "original": "Exercise \\(\\PageIndex{2}\\)\n\nComplete the square to make a perfect square trinomial. Then write the result as a binomial squared.\n\n1. \\(b^{2}-4 b\\)\n\n2. \\(n^{2}+13 n\\)\n\n3. \\(q^{2}-\\frac{2}{3} q\\)\n\nAnswer\n\n1. \\((b-2)^{2}\\)\n\n2. \\(\\left(n+\\frac{13}{2}\\right)^{2}\\)\n\n3. \\(\\left(q-\\frac{1}{3}\\right)^{2}\\)",
+      "prompt": "Exercise \\(\\PageIndex{2}\\)\n\nComplete the square to make a perfect square trinomial. Then write the result as a binomial squared.\n\n1. \\(b^{2}-4 b\\)\n\n2. \\(n^{2}+13 n\\)\n\n3. \\(q^{2}-\\frac{2}{3} q\\)",
+      "sourceAnswers": [
+        "1. \\((b-2)^{2}\\)\n\n2. \\(\\left(n+\\frac{13}{2}\\right)^{2}\\)\n\n3. \\(\\left(q-\\frac{1}{3}\\right)^{2}\\)"
+      ],
+      "hasFigure": false,
+      "status": "draft",
+      "answerVerified": false,
+      "translationStatus": "pending",
+      "mappingStatus": "pending"
+    },
+    {
+      "ordinal": 11,
+      "sourceNumber": "",
+      "sourceAnchor": "",
+      "kind": "example-or-exercise",
+      "context": "In solving equations, we must always do the same thing to both sides of the equation. This is true, of course, when we solve a quadratic equation by completing the square too. When we add a term to one side of the equation to make a perfect square trinomial, we must also add the same term to the other side of the equation.\n\nFor example, if we start with the equation \\(x^{2}+6x=40\\), and we want to complete the square on the left, we will add 9 to both sides of the equation.\n\nNow the equation is in the form to solve using the Square Root Property! Completing the square is a way to transform an equation into the form we need to be able to use the Square Root Property.",
+      "original": "Example \\(\\PageIndex{2}\\) How to Solve a Quadratic Equation of the Form \\(x^{2}+bx+x=0\\) by Completing the Square\n\nSolve by completing the square: \\(x^{2}+8x=48\\).\n\nSolution:\n\n            Step 1: Isolate the variable terms on one side and the constant terms on the other.\t\n            This equation has all the variables on the left.\t\n            \\(\\begin{array}{l}{\\color{red}{x^{2}+b x\\quad\\:\\:\\: c }} \\\\ {x^{2}+8 x=48}\\end{array}\\)\t\n\n            Step 2: Find \\(\\left(\\frac{1}{2} \\cdot b\\right)^{2}\\), the number to complete the square. Add it to both sides of the equation.\t\n\nTake half of \\(8\\) and square it.\n\n\\(4^{2}=16\\)\n\nAdd \\(16\\) to BOTH sides of the equation.\n\n\\(x^{2}+8 x+\\frac{}{\\color{red}{\\left(\\frac{1}{2} \\cdot 8\\right)^{2}}}\\color{black}{=}48 \\)\n\n\\(x^{2}+8 x\\color{red}{+16}\\color{black}{=}48\\color{red}{+16}\\)\n\n            Step 3: Factor the perfect square trinomial as a binomial square.\t\n\n\\(x^{2}+8 x+16=(x+4)^{2}\\)\n\nAdd the terms on the right.\n\n            \\((x+4)^{2}=64\\)\t\n\n            Step 4: Use the Square Root Property.\t\n\n            \\(x+4=\\pm \\sqrt{64}\\)\t\n\n            Step 5: Simplify the radical and then solve the two resulting equations.\t\n\n\\(x+4=\\pm 8\\)\n\n\\(\\begin{aligned} x+4 &=8 \\quad x+4=-8 \\\\ x &=4 \\quad\\quad\\:\\:\\: x=-12 \\end{aligned}\\)\n\n            Step 6: Check the solutions.\t\n            Put each answer in the original equation to check. Substitute \\(x=4\\) and \\(x=-12\\).\t\n\n\\(\\begin{array}{r}{x^{2}+8 x=48} \\\\ {(\\color{red}{4}\\color{black}{)}^{2}+8(\\color{red}{4}\\color{black}{)} \\stackrel{?}{=} 48} \\\\ {16+32\\stackrel{?}{=}48} \\\\ {48=48}\\end{array}\\)\n\n\\(\\begin{array}{r}{x^{2}+8 x=48} \\\\ {(\\color{red}{-12}\\color{black}{)}^{2}+8(\\color{red}{-12}\\color{black}{)}\\stackrel{?}{=} 48} \\\\ {144-96 \\stackrel{?}{=} 48} \\\\ {48=48}\\end{array}\\)",
+      "prompt": "Example \\(\\PageIndex{2}\\) How to Solve a Quadratic Equation of the Form \\(x^{2}+bx+x=0\\) by Completing the Square\n\nSolve by completing the square: \\(x^{2}+8x=48\\).\n\nSolution:\n\n            Step 1: Isolate the variable terms on one side and the constant terms on the other.\t\n            This equation has all the variables on the left.\t\n            \\(\\begin{array}{l}{\\color{red}{x^{2}+b x\\quad\\:\\:\\: c }} \\\\ {x^{2}+8 x=48}\\end{array}\\)\t\n\n            Step 2: Find \\(\\left(\\frac{1}{2} \\cdot b\\right)^{2}\\), the number to complete the square. Add it to both sides of the equation.\t\n\nTake half of \\(8\\) and square it.\n\n\\(4^{2}=16\\)\n\nAdd \\(16\\) to BOTH sides of the equation.\n\n\\(x^{2}+8 x+\\frac{}{\\color{red}{\\left(\\frac{1}{2} \\cdot 8\\right)^{2}}}\\color{black}{=}48 \\)\n\n\\(x^{2}+8 x\\color{red}{+16}\\color{black}{=}48\\color{red}{+16}\\)\n\n            Step 3: Factor the perfect square trinomial as a binomial square.\t\n\n\\(x^{2}+8 x+16=(x+4)^{2}\\)\n\nAdd the terms on the right.\n\n            \\((x+4)^{2}=64\\)\t\n\n            Step 4: Use the Square Root Property.\t\n\n            \\(x+4=\\pm \\sqrt{64}\\)\t\n\n            Step 5: Simplify the radical and then solve the two resulting equations.\t\n\n\\(x+4=\\pm 8\\)\n\n\\(\\begin{aligned} x+4 &=8 \\quad x+4=-8 \\\\ x &=4 \\quad\\quad\\:\\:\\: x=-12 \\end{aligned}\\)\n\n            Step 6: Check the solutions.\t\n            Put each answer in the original equation to check. Substitute \\(x=4\\) and \\(x=-12\\).\t\n\n\\(\\begin{array}{r}{x^{2}+8 x=48} \\\\ {(\\color{red}{4}\\color{black}{)}^{2}+8(\\color{red}{4}\\color{black}{)} \\stackrel{?}{=} 48} \\\\ {16+32\\stackrel{?}{=}48} \\\\ {48=48}\\end{array}\\)\n\n\\(\\begin{array}{r}{x^{2}+8 x=48} \\\\ {(\\color{red}{-12}\\color{black}{)}^{2}+8(\\color{red}{-12}\\color{black}{)}\\stackrel{?}{=} 48} \\\\ {144-96 \\stackrel{?}{=} 48} \\\\ {48=48}\\end{array}\\)",
+      "sourceAnswers": [],
+      "hasFigure": false,
+      "status": "draft",
+      "answerVerified": false,
+      "translationStatus": "pending",
+      "mappingStatus": "pending"
+    },
+    {
+      "ordinal": 12,
+      "sourceNumber": "",
+      "sourceAnchor": "",
+      "kind": "exercise-candidate",
+      "context": "In solving equations, we must always do the same thing to both sides of the equation. This is true, of course, when we solve a quadratic equation by completing the square too. When we add a term to one side of the equation to make a perfect square trinomial, we must also add the same term to the other side of the equation.\n\nFor example, if we start with the equation \\(x^{2}+6x=40\\), and we want to complete the square on the left, we will add 9 to both sides of the equation.\n\nNow the equation is in the form to solve using the Square Root Property! Completing the square is a way to transform an equation into the form we need to be able to use the Square Root Property.",
+      "original": "Exercise \\(\\PageIndex{3}\\)\n\nSolve by completing the square: \\(x^{2}+4 x=5\\).\n\nAnswer\n\n\\(x=-5, x=-1\\)",
+      "prompt": "Exercise \\(\\PageIndex{3}\\)\n\nSolve by completing the square: \\(x^{2}+4 x=5\\).",
+      "sourceAnswers": [
+        "\\(x=-5, x=-1\\)"
+      ],
+      "hasFigure": false,
+      "status": "draft",
+      "answerVerified": false,
+      "translationStatus": "pending",
+      "mappingStatus": "pending"
+    },
+    {
+      "ordinal": 13,
+      "sourceNumber": "",
+      "sourceAnchor": "",
+      "kind": "exercise-candidate",
+      "context": "In solving equations, we must always do the same thing to both sides of the equation. This is true, of course, when we solve a quadratic equation by completing the square too. When we add a term to one side of the equation to make a perfect square trinomial, we must also add the same term to the other side of the equation.\n\nFor example, if we start with the equation \\(x^{2}+6x=40\\), and we want to complete the square on the left, we will add 9 to both sides of the equation.\n\nNow the equation is in the form to solve using the Square Root Property! Completing the square is a way to transform an equation into the form we need to be able to use the Square Root Property.",
+      "original": "Exercise \\(\\PageIndex{4}\\)\n\nSolve by completing the square: \\(y^{2}−10y=−9\\).\n\nAnswer\n\n\\(y=1, y=9\\)",
+      "prompt": "Exercise \\(\\PageIndex{4}\\)\n\nSolve by completing the square: \\(y^{2}−10y=−9\\).",
+      "sourceAnswers": [
+        "\\(y=1, y=9\\)"
+      ],
+      "hasFigure": false,
+      "status": "draft",
+      "answerVerified": false,
+      "translationStatus": "pending",
+      "mappingStatus": "pending"
+    },
+    {
+      "ordinal": 14,
+      "sourceNumber": "1",
+      "sourceAnchor": "",
+      "kind": "exercise-candidate",
+      "context": "Solve a Quadratic Equation of the Form \\(x^{2}+bx+c=0\\) by Completing the Square",
+      "original": "1. Isolate the variable terms on one side and the constant terms on the other.",
+      "prompt": "1. Isolate the variable terms on one side and the constant terms on the other.",
+      "sourceAnswers": [],
+      "hasFigure": false,
+      "status": "draft",
+      "answerVerified": false,
+      "translationStatus": "pending",
+      "mappingStatus": "pending"
+    },
+    {
+      "ordinal": 15,
+      "sourceNumber": "2",
+      "sourceAnchor": "",
+      "kind": "exercise-candidate",
+      "context": "Solve a Quadratic Equation of the Form \\(x^{2}+bx+c=0\\) by Completing the Square",
+      "original": "2. Find \\(\\left(\\frac{1}{2} \\cdot b\\right)^{2}\\), the number needed to complete the square. Add it to both sides of the equation.",
+      "prompt": "2. Find \\(\\left(\\frac{1}{2} \\cdot b\\right)^{2}\\), the number needed to complete the square. Add it to both sides of the equation.",
+      "sourceAnswers": [],
+      "hasFigure": false,
+      "status": "draft",
+      "answerVerified": false,
+      "translationStatus": "pending",
+      "mappingStatus": "pending"
+    },
+    {
+      "ordinal": 16,
+      "sourceNumber": "3",
+      "sourceAnchor": "",
+      "kind": "exercise-candidate",
+      "context": "Solve a Quadratic Equation of the Form \\(x^{2}+bx+c=0\\) by Completing the Square",
+      "original": "3. Factor the perfect square trinomial, writing it as a binomial squared on the left and simplify by adding the terms on the right",
+      "prompt": "3. Factor the perfect square trinomial, writing it as a binomial squared on the left and simplify by adding the terms on the right",
+      "sourceAnswers": [],
+      "hasFigure": false,
+      "status": "draft",
+      "answerVerified": false,
+      "translationStatus": "pending",
+      "mappingStatus": "pending"
+    },
+    {
+      "ordinal": 17,
+      "sourceNumber": "4",
+      "sourceAnchor": "",
+      "kind": "exercise-candidate",
+      "context": "Solve a Quadratic Equation of the Form \\(x^{2}+bx+c=0\\) by Completing the Square",
+      "original": "4. Use the Square Root Property.",
+      "prompt": "4. Use the Square Root Property.",
+      "sourceAnswers": [],
+      "hasFigure": false,
+      "status": "draft",
+      "answerVerified": false,
+      "translationStatus": "pending",
+      "mappingStatus": "pending"
+    },
+    {
+      "ordinal": 18,
+      "sourceNumber": "5",
+      "sourceAnchor": "",
+      "kind": "exercise-candidate",
+      "context": "Solve a Quadratic Equation of the Form \\(x^{2}+bx+c=0\\) by Completing the Square",
+      "original": "5. Simplify the radical and then solve the two resulting equations.",
+      "prompt": "5. Simplify the radical and then solve the two resulting equations.",
+      "sourceAnswers": [],
+      "hasFigure": false,
+      "status": "draft",
+      "answerVerified": false,
+      "translationStatus": "pending",
+      "mappingStatus": "pending"
+    },
+    {
+      "ordinal": 19,
+      "sourceNumber": "6",
+      "sourceAnchor": "",
+      "kind": "exercise-candidate",
+      "context": "Solve a Quadratic Equation of the Form \\(x^{2}+bx+c=0\\) by Completing the Square",
+      "original": "6. Check the solutions.",
+      "prompt": "6. Check the solutions.",
+      "sourceAnswers": [],
+      "hasFigure": false,
+      "status": "draft",
+      "answerVerified": false,
+      "translationStatus": "pending",
+      "mappingStatus": "pending"
+    },
+    {
+      "ordinal": 20,
+      "sourceNumber": "",
+      "sourceAnchor": "",
+      "kind": "example-or-exercise",
+      "context": "Solve a Quadratic Equation of the Form \\(x^{2}+bx+c=0\\) by Completing the Square\n\nWhen we solve an equation by completing the square, the answers will not always be integers.",
+      "original": "Example \\(\\PageIndex{3}\\)\n\nSolve by completing the square: \\(x^{2}+4 x=-21\\).\n\nSolution:\n\n[Figure: .]\n\nThe variable terms are on the left side.\n\nTake half of \\(4\\) and square it.\n\n[Figure: .]\n\n            \\(\\left(\\frac{1}{2}(4)\\right)^{2}=4\\)\t\n\n            Add \\(4\\) to both sides.\t\n\n[Figure: .]\n\n            Factor the perfect square trinomial, writing it as a binomial squared.\t\n\n[Figure: .]\n\n            Use the Square Root Property.\t\n\n[Figure: .]\n\n            Simplifying using complex numbers.\t\n\n[Figure: .]\n\n            Subtract \\(2\\) from each side.\t\n\n[Figure: .]\n\n            Rewrite to show two solutions.\t\n\n[Figure: .]\n\n            We leave the check to you.",
+      "prompt": "Example \\(\\PageIndex{3}\\)\n\nSolve by completing the square: \\(x^{2}+4 x=-21\\).\n\nSolution:\n\n[Figure: .]\n\nThe variable terms are on the left side.\n\nTake half of \\(4\\) and square it.\n\n[Figure: .]\n\n            \\(\\left(\\frac{1}{2}(4)\\right)^{2}=4\\)\t\n\n            Add \\(4\\) to both sides.\t\n\n[Figure: .]\n\n            Factor the perfect square trinomial, writing it as a binomial squared.\t\n\n[Figure: .]\n\n            Use the Square Root Property.\t\n\n[Figure: .]\n\n            Simplifying using complex numbers.\t\n\n[Figure: .]\n\n            Subtract \\(2\\) from each side.\t\n\n[Figure: .]\n\n            Rewrite to show two solutions.\t\n\n[Figure: .]\n\n            We leave the check to you.",
+      "sourceAnswers": [],
+      "hasFigure": true,
+      "status": "draft",
+      "answerVerified": false,
+      "translationStatus": "pending",
+      "mappingStatus": "pending"
+    },
+    {
+      "ordinal": 21,
+      "sourceNumber": "",
+      "sourceAnchor": "",
+      "kind": "exercise-candidate",
+      "context": "Solve a Quadratic Equation of the Form \\(x^{2}+bx+c=0\\) by Completing the Square\n\nWhen we solve an equation by completing the square, the answers will not always be integers.",
+      "original": "Exercise \\(\\PageIndex{5}\\)\n\nSolve by completing the square: \\(y^{2}-10 y=-35\\).\n\nAnswer\n\n\\(y=5+\\sqrt{15} i, y=5-\\sqrt{15 i}\\)",
+      "prompt": "Exercise \\(\\PageIndex{5}\\)\n\nSolve by completing the square: \\(y^{2}-10 y=-35\\).",
+      "sourceAnswers": [
+        "\\(y=5+\\sqrt{15} i, y=5-\\sqrt{15 i}\\)"
+      ],
+      "hasFigure": false,
+      "status": "draft",
+      "answerVerified": false,
+      "translationStatus": "pending",
+      "mappingStatus": "pending"
+    },
+    {
+      "ordinal": 22,
+      "sourceNumber": "",
+      "sourceAnchor": "",
+      "kind": "exercise-candidate",
+      "context": "Solve a Quadratic Equation of the Form \\(x^{2}+bx+c=0\\) by Completing the Square\n\nWhen we solve an equation by completing the square, the answers will not always be integers.",
+      "original": "Exercise \\(\\PageIndex{6}\\)\n\nSolve by completing the square: \\(z^{2}+8 z=-19\\).\n\nAnswer\n\n\\(z=-4+\\sqrt{3} i, z=-4-\\sqrt{3} i\\)",
+      "prompt": "Exercise \\(\\PageIndex{6}\\)\n\nSolve by completing the square: \\(z^{2}+8 z=-19\\).",
+      "sourceAnswers": [
+        "\\(z=-4+\\sqrt{3} i, z=-4-\\sqrt{3} i\\)"
+      ],
+      "hasFigure": false,
+      "status": "draft",
+      "answerVerified": false,
+      "translationStatus": "pending",
+      "mappingStatus": "pending"
+    },
+    {
+      "ordinal": 23,
+      "sourceNumber": "",
+      "sourceAnchor": "",
+      "kind": "example-or-exercise",
+      "context": "Solve a Quadratic Equation of the Form \\(x^{2}+bx+c=0\\) by Completing the Square\n\nWhen we solve an equation by completing the square, the answers will not always be integers.\n\nIn the previous example, our solutions were complex numbers. In the next example, the solutions will be irrational numbers.",
+      "original": "Example \\(\\PageIndex{4}\\)\n\nSolve by completing the square: \\(y^{2}-18 y=-6\\).\n\nSolution:\n\n[Figure: .]\n\n            The variable terms are on the left side. Take half of \\(-18\\) and square it.\t\n\n            \\(\\left(\\frac{1}{2}(-18)\\right)^{2}=81\\)\t\n\n[Figure: .]\n\n            Add \\(81\\) to both sides.\t\n\n[Figure: .]\n\n            Factor the perfect square trinomial, writing it as a binomial squared.\t\n\n[Figure: .]\n\n            Use the Square Root Property.\t\n\n[Figure: .]\n\n            Simplify the radical.\t\n\n[Figure: .]\n\n            Solve for \\(y\\).\t\n\n[Figure: .]\n\nCheck.\n\n[Figure: .]\n\nFigure 9.2.35\n\n[Figure: .]\n\nAnother way to check this would be to use a calculator. Evaluate \\(y^{2}−18y\\) for both of the solutions. The answer should be \\(−6\\).",
+      "prompt": "Example \\(\\PageIndex{4}\\)\n\nSolve by completing the square: \\(y^{2}-18 y=-6\\).\n\nSolution:\n\n[Figure: .]\n\n            The variable terms are on the left side. Take half of \\(-18\\) and square it.\t\n\n            \\(\\left(\\frac{1}{2}(-18)\\right)^{2}=81\\)\t\n\n[Figure: .]\n\n            Add \\(81\\) to both sides.\t\n\n[Figure: .]\n\n            Factor the perfect square trinomial, writing it as a binomial squared.\t\n\n[Figure: .]\n\n            Use the Square Root Property.\t\n\n[Figure: .]\n\n            Simplify the radical.\t\n\n[Figure: .]\n\n            Solve for \\(y\\).\t\n\n[Figure: .]\n\nCheck.\n\n[Figure: .]\n\nFigure 9.2.35\n\n[Figure: .]\n\nAnother way to check this would be to use a calculator. Evaluate \\(y^{2}−18y\\) for both of the solutions. The answer should be \\(−6\\).",
+      "sourceAnswers": [],
+      "hasFigure": true,
+      "status": "draft",
+      "answerVerified": false,
+      "translationStatus": "pending",
+      "mappingStatus": "pending"
+    },
+    {
+      "ordinal": 24,
+      "sourceNumber": "",
+      "sourceAnchor": "",
+      "kind": "exercise-candidate",
+      "context": "Solve a Quadratic Equation of the Form \\(x^{2}+bx+c=0\\) by Completing the Square\n\nWhen we solve an equation by completing the square, the answers will not always be integers.\n\nIn the previous example, our solutions were complex numbers. In the next example, the solutions will be irrational numbers.",
+      "original": "Exercise \\(\\PageIndex{7}\\)\n\nSolve by completing the square: \\(x^{2}-16 x=-16\\).\n\nAnswer\n\n\\(x=8+4 \\sqrt{3}, x=8-4 \\sqrt{3}\\)",
+      "prompt": "Exercise \\(\\PageIndex{7}\\)\n\nSolve by completing the square: \\(x^{2}-16 x=-16\\).",
+      "sourceAnswers": [
+        "\\(x=8+4 \\sqrt{3}, x=8-4 \\sqrt{3}\\)"
+      ],
+      "hasFigure": false,
+      "status": "draft",
+      "answerVerified": false,
+      "translationStatus": "pending",
+      "mappingStatus": "pending"
+    },
+    {
+      "ordinal": 25,
+      "sourceNumber": "",
+      "sourceAnchor": "",
+      "kind": "exercise-candidate",
+      "context": "Solve a Quadratic Equation of the Form \\(x^{2}+bx+c=0\\) by Completing the Square\n\nWhen we solve an equation by completing the square, the answers will not always be integers.\n\nIn the previous example, our solutions were complex numbers. In the next example, the solutions will be irrational numbers.",
+      "original": "Exercise \\(\\PageIndex{8}\\)\n\nSolve by completing the square: \\(y^{2}+8 y=11\\).\n\nAnswer\n\n\\(y=-4+3 \\sqrt{3}, y=-4-3 \\sqrt{3}\\)",
+      "prompt": "Exercise \\(\\PageIndex{8}\\)\n\nSolve by completing the square: \\(y^{2}+8 y=11\\).",
+      "sourceAnswers": [
+        "\\(y=-4+3 \\sqrt{3}, y=-4-3 \\sqrt{3}\\)"
+      ],
+      "hasFigure": false,
+      "status": "draft",
+      "answerVerified": false,
+      "translationStatus": "pending",
+      "mappingStatus": "pending"
+    },
+    {
+      "ordinal": 26,
+      "sourceNumber": "",
+      "sourceAnchor": "",
+      "kind": "example-or-exercise",
+      "context": "When we solve an equation by completing the square, the answers will not always be integers.\n\nIn the previous example, our solutions were complex numbers. In the next example, the solutions will be irrational numbers.\n\nWe will start the next example by isolating the variable terms on the left side of the equation.",
+      "original": "Example \\(\\PageIndex{5}\\)\n\nSolve by completing the square: \\(x^{2}+10 x+4=15\\).\n\nSolution:\n\n[Figure: .]\n\n            Isolate the variable terms on the left side. Subtract \\(4\\) to get the constant terms on the right side.\t\n\n[Figure: .]\n\n            Take half of \\(10\\) and square it.\t\n\n            \\(\\left(\\frac{1}{2}(10)\\right)^{2}=25\\)\t\n\n[Figure: .]\n\n            Add \\(25\\) to both sides.\t\n\n[Figure: .]\n\n            Factor the perfect square trinomial, writing it as a binomial squared.\t\n\n[Figure: .]\n\n            Use the Square Root Property.\t\n\n[Figure: .]\n\n            Simplify the radical.\t\n\n[Figure: .]\n\n            Solve for \\(x\\).\t\n\n[Figure: .]\n\n            Rewrite to show two solutions.\t\n\n[Figure: .]\n\n            Solve the equations.\t\n\n[Figure: .]\n\nCheck:\n\n[Figure: .]\n\nFigure 9.2.47",
+      "prompt": "Example \\(\\PageIndex{5}\\)\n\nSolve by completing the square: \\(x^{2}+10 x+4=15\\).\n\nSolution:\n\n[Figure: .]\n\n            Isolate the variable terms on the left side. Subtract \\(4\\) to get the constant terms on the right side.\t\n\n[Figure: .]\n\n            Take half of \\(10\\) and square it.\t\n\n            \\(\\left(\\frac{1}{2}(10)\\right)^{2}=25\\)\t\n\n[Figure: .]\n\n            Add \\(25\\) to both sides.\t\n\n[Figure: .]\n\n            Factor the perfect square trinomial, writing it as a binomial squared.\t\n\n[Figure: .]\n\n            Use the Square Root Property.\t\n\n[Figure: .]\n\n            Simplify the radical.\t\n\n[Figure: .]\n\n            Solve for \\(x\\).\t\n\n[Figure: .]\n\n            Rewrite to show two solutions.\t\n\n[Figure: .]\n\n            Solve the equations.\t\n\n[Figure: .]\n\nCheck:\n\n[Figure: .]\n\nFigure 9.2.47",
+      "sourceAnswers": [],
+      "hasFigure": true,
+      "status": "draft",
+      "answerVerified": false,
+      "translationStatus": "pending",
+      "mappingStatus": "pending"
+    },
+    {
+      "ordinal": 27,
+      "sourceNumber": "",
+      "sourceAnchor": "",
+      "kind": "exercise-candidate",
+      "context": "When we solve an equation by completing the square, the answers will not always be integers.\n\nIn the previous example, our solutions were complex numbers. In the next example, the solutions will be irrational numbers.\n\nWe will start the next example by isolating the variable terms on the left side of the equation.",
+      "original": "Exercise \\(\\PageIndex{9}\\)\n\nSolve by completing the square: \\(a^{2}+4 a+9=30\\).\n\nAnswer\n\n\\(a=-7, a=3\\)",
+      "prompt": "Exercise \\(\\PageIndex{9}\\)\n\nSolve by completing the square: \\(a^{2}+4 a+9=30\\).",
+      "sourceAnswers": [
+        "\\(a=-7, a=3\\)"
+      ],
+      "hasFigure": false,
+      "status": "draft",
+      "answerVerified": false,
+      "translationStatus": "pending",
+      "mappingStatus": "pending"
+    },
+    {
+      "ordinal": 28,
+      "sourceNumber": "",
+      "sourceAnchor": "",
+      "kind": "exercise-candidate",
+      "context": "When we solve an equation by completing the square, the answers will not always be integers.\n\nIn the previous example, our solutions were complex numbers. In the next example, the solutions will be irrational numbers.\n\nWe will start the next example by isolating the variable terms on the left side of the equation.",
+      "original": "Exercise \\(\\PageIndex{10}\\)\n\nSolve by completing the square: \\(b^{2}+8 b-4=16\\).\n\nAnswer\n\n\\(b=-10, b=2\\)",
+      "prompt": "Exercise \\(\\PageIndex{10}\\)\n\nSolve by completing the square: \\(b^{2}+8 b-4=16\\).",
+      "sourceAnswers": [
+        "\\(b=-10, b=2\\)"
+      ],
+      "hasFigure": false,
+      "status": "draft",
+      "answerVerified": false,
+      "translationStatus": "pending",
+      "mappingStatus": "pending"
+    },
+    {
+      "ordinal": 29,
+      "sourceNumber": "",
+      "sourceAnchor": "",
+      "kind": "example-or-exercise",
+      "context": "In the previous example, our solutions were complex numbers. In the next example, the solutions will be irrational numbers.\n\nWe will start the next example by isolating the variable terms on the left side of the equation.\n\nTo solve the next equation, we must first collect all the variable terms on the left side of the equation. Then we proceed as we did in the previous examples.",
+      "original": "Example \\(\\PageIndex{6}\\)\n\nSolve by completing the square: \\(n^{2}=3 n+11\\).\n\nSolution:\n\n[Figure: .]\n\n            Subtract \\(3n\\) to get the variable terms on the left side.\t\n\n[Figure: .]\n\n            Take half of \\(-3\\) and square it.\t\n\n            \\(\\left(\\frac{1}{2}(-3)\\right)^{2}=\\frac{9}{4}\\)\t\n\n[Figure: .]\n\n            Add \\(\\frac{9}{4}\\) to both sides.\t\n\n[Figure: .]\n\n            Factor the perfect square trinomial, writing it as a binomial squared.\t\n\n[Figure: .]\n\n            Add the fractions on the right side.\t\n\n[Figure: .]\n\n            Use the Square Root Property.\t\n\n[Figure: .]\n\n            Simplify the radical.\t\n\n[Figure: .]\n\n            Solve for \\(n\\).\t\n\n[Figure: .]\n\n            Rewrite to show two solutions.\t\n\n[Figure: .]\n\nCheck:\n\nWe leave the check for you!",
+      "prompt": "Example \\(\\PageIndex{6}\\)\n\nSolve by completing the square: \\(n^{2}=3 n+11\\).\n\nSolution:\n\n[Figure: .]\n\n            Subtract \\(3n\\) to get the variable terms on the left side.\t\n\n[Figure: .]\n\n            Take half of \\(-3\\) and square it.\t\n\n            \\(\\left(\\frac{1}{2}(-3)\\right)^{2}=\\frac{9}{4}\\)\t\n\n[Figure: .]\n\n            Add \\(\\frac{9}{4}\\) to both sides.\t\n\n[Figure: .]\n\n            Factor the perfect square trinomial, writing it as a binomial squared.\t\n\n[Figure: .]\n\n            Add the fractions on the right side.\t\n\n[Figure: .]\n\n            Use the Square Root Property.\t\n\n[Figure: .]\n\n            Simplify the radical.\t\n\n[Figure: .]\n\n            Solve for \\(n\\).\t\n\n[Figure: .]\n\n            Rewrite to show two solutions.\t\n\n[Figure: .]\n\nCheck:\n\nWe leave the check for you!",
+      "sourceAnswers": [],
+      "hasFigure": true,
+      "status": "draft",
+      "answerVerified": false,
+      "translationStatus": "pending",
+      "mappingStatus": "pending"
+    },
+    {
+      "ordinal": 30,
+      "sourceNumber": "",
+      "sourceAnchor": "",
+      "kind": "exercise-candidate",
+      "context": "In the previous example, our solutions were complex numbers. In the next example, the solutions will be irrational numbers.\n\nWe will start the next example by isolating the variable terms on the left side of the equation.\n\nTo solve the next equation, we must first collect all the variable terms on the left side of the equation. Then we proceed as we did in the previous examples.",
+      "original": "Exercise \\(\\PageIndex{11}\\)\n\nSolve by completing the square: \\(p^{2}=5 p+9\\).\n\nAnswer\n\n\\(p=\\frac{5}{2}+\\frac{\\sqrt{61}}{2}, p=\\frac{5}{2}-\\frac{\\sqrt{61}}{2}\\)",
+      "prompt": "Exercise \\(\\PageIndex{11}\\)\n\nSolve by completing the square: \\(p^{2}=5 p+9\\).",
+      "sourceAnswers": [
+        "\\(p=\\frac{5}{2}+\\frac{\\sqrt{61}}{2}, p=\\frac{5}{2}-\\frac{\\sqrt{61}}{2}\\)"
+      ],
+      "hasFigure": false,
+      "status": "draft",
+      "answerVerified": false,
+      "translationStatus": "pending",
+      "mappingStatus": "pending"
+    },
+    {
+      "ordinal": 31,
+      "sourceNumber": "",
+      "sourceAnchor": "",
+      "kind": "exercise-candidate",
+      "context": "In the previous example, our solutions were complex numbers. In the next example, the solutions will be irrational numbers.\n\nWe will start the next example by isolating the variable terms on the left side of the equation.\n\nTo solve the next equation, we must first collect all the variable terms on the left side of the equation. Then we proceed as we did in the previous examples.",
+      "original": "Exercise \\(\\PageIndex{12}\\)\n\nSolve by completing the square: \\(q^{2}=7 q-3\\).\n\nAnswer\n\n\\(q=\\frac{7}{2}+\\frac{\\sqrt{37}}{2}, q=\\frac{7}{2}-\\frac{\\sqrt{37}}{2}\\)",
+      "prompt": "Exercise \\(\\PageIndex{12}\\)\n\nSolve by completing the square: \\(q^{2}=7 q-3\\).",
+      "sourceAnswers": [
+        "\\(q=\\frac{7}{2}+\\frac{\\sqrt{37}}{2}, q=\\frac{7}{2}-\\frac{\\sqrt{37}}{2}\\)"
+      ],
+      "hasFigure": false,
+      "status": "draft",
+      "answerVerified": false,
+      "translationStatus": "pending",
+      "mappingStatus": "pending"
+    },
+    {
+      "ordinal": 32,
+      "sourceNumber": "",
+      "sourceAnchor": "",
+      "kind": "example-or-exercise",
+      "context": "We will start the next example by isolating the variable terms on the left side of the equation.\n\nTo solve the next equation, we must first collect all the variable terms on the left side of the equation. Then we proceed as we did in the previous examples.\n\nNotice that the left side of the next equation is in factored form. But the right side is not zero. So, we cannot use the Zero Product Property since it says “If \\(a⋅b=0\\), then \\(a=0\\) or \\(b=0\\).” Instead, we multiply the factors and then put the equation into standard form to solve by completing the square.",
+      "original": "Example \\(\\PageIndex{7}\\)\n\nSolve by completing the square: \\((x-3)(x+5)=9\\).\n\nSolution:\n\n[Figure: .]\n\n            We multiple the binomials on the left.\t\n\n[Figure: .]\n\n            Add \\(15\\) to isolate the constant terms on the right.\t\n\n[Figure: .]\n\n            Take half of \\(2\\) and square it.\t\n\n            \\(\\left(\\frac{1}{2} \\cdot(2)\\right)^{2}=1\\)\t\n\n[Figure: .]\n\n            Add \\(1\\) to both sides.\t\n\n[Figure: .]\n\n            Factor the perfect square trinomial, writing it as a binomial squared.\t\n\n[Figure: .]\n\n            Use the Square Root Property.\t\n\n[Figure: .]\n\n            Solve for \\(x\\).\t\n\n[Figure: .]\n\n            Rewrite to show two solutions.\t\n\n[Figure: .]\n\n            Simplify.\t\n\n[Figure: .]\n\nCheck:\n\nWe leave the check for you!",
+      "prompt": "Example \\(\\PageIndex{7}\\)\n\nSolve by completing the square: \\((x-3)(x+5)=9\\).\n\nSolution:\n\n[Figure: .]\n\n            We multiple the binomials on the left.\t\n\n[Figure: .]\n\n            Add \\(15\\) to isolate the constant terms on the right.\t\n\n[Figure: .]\n\n            Take half of \\(2\\) and square it.\t\n\n            \\(\\left(\\frac{1}{2} \\cdot(2)\\right)^{2}=1\\)\t\n\n[Figure: .]\n\n            Add \\(1\\) to both sides.\t\n\n[Figure: .]\n\n            Factor the perfect square trinomial, writing it as a binomial squared.\t\n\n[Figure: .]\n\n            Use the Square Root Property.\t\n\n[Figure: .]\n\n            Solve for \\(x\\).\t\n\n[Figure: .]\n\n            Rewrite to show two solutions.\t\n\n[Figure: .]\n\n            Simplify.\t\n\n[Figure: .]\n\nCheck:\n\nWe leave the check for you!",
+      "sourceAnswers": [],
+      "hasFigure": true,
+      "status": "draft",
+      "answerVerified": false,
+      "translationStatus": "pending",
+      "mappingStatus": "pending"
+    },
+    {
+      "ordinal": 33,
+      "sourceNumber": "",
+      "sourceAnchor": "",
+      "kind": "exercise-candidate",
+      "context": "We will start the next example by isolating the variable terms on the left side of the equation.\n\nTo solve the next equation, we must first collect all the variable terms on the left side of the equation. Then we proceed as we did in the previous examples.\n\nNotice that the left side of the next equation is in factored form. But the right side is not zero. So, we cannot use the Zero Product Property since it says “If \\(a⋅b=0\\), then \\(a=0\\) or \\(b=0\\).” Instead, we multiply the factors and then put the equation into standard form to solve by completing the square.",
+      "original": "Exercise \\(\\PageIndex{13}\\)\n\nSolve by completing the square: \\((c-2)(c+8)=11\\).\n\nAnswer\n\n\\(c=-9, c=3\\)",
+      "prompt": "Exercise \\(\\PageIndex{13}\\)\n\nSolve by completing the square: \\((c-2)(c+8)=11\\).",
+      "sourceAnswers": [
+        "\\(c=-9, c=3\\)"
+      ],
+      "hasFigure": false,
+      "status": "draft",
+      "answerVerified": false,
+      "translationStatus": "pending",
+      "mappingStatus": "pending"
+    },
+    {
+      "ordinal": 34,
+      "sourceNumber": "",
+      "sourceAnchor": "",
+      "kind": "exercise-candidate",
+      "context": "We will start the next example by isolating the variable terms on the left side of the equation.\n\nTo solve the next equation, we must first collect all the variable terms on the left side of the equation. Then we proceed as we did in the previous examples.\n\nNotice that the left side of the next equation is in factored form. But the right side is not zero. So, we cannot use the Zero Product Property since it says “If \\(a⋅b=0\\), then \\(a=0\\) or \\(b=0\\).” Instead, we multiply the factors and then put the equation into standard form to solve by completing the square.",
+      "original": "Exercise \\(\\PageIndex{14}\\)\n\nSolve by completing the square: \\((d-7)(d+3)=56\\).\n\nAnswer\n\n\\(d=11, d=-7\\)",
+      "prompt": "Exercise \\(\\PageIndex{14}\\)\n\nSolve by completing the square: \\((d-7)(d+3)=56\\).",
+      "sourceAnswers": [
+        "\\(d=11, d=-7\\)"
+      ],
+      "hasFigure": false,
+      "status": "draft",
+      "answerVerified": false,
+      "translationStatus": "pending",
+      "mappingStatus": "pending"
+    },
+    {
+      "ordinal": 35,
+      "sourceNumber": "",
+      "sourceAnchor": "",
+      "kind": "example-or-exercise",
+      "context": "Solve Quadratic Equations of the Form \\(ax^{2}+bx+c=0\\) by Completing the Square\n\nThe process of completing the square works best when the coefficient of \\(x^{2}\\) is \\(1\\), so the left side of the equation is of the form \\(x^{2}+bx+c\\). If the \\(x^{2}\\) term has a coefficient other than \\(1\\), we take some preliminary steps to make the coefficient equal to \\(1\\).\n\nSometimes the coefficient can be factored from all three terms of the trinomial. This will be our strategy in the next example.",
+      "original": "Example \\(\\PageIndex{8}\\)\n\nSolve by completing the square: \\(3 x^{2}-12 x-15=0\\).\n\nSolution:\n\nTo complete the square, we need the coefficient of \\(x^{2}\\) to be one. If we factor out the coefficient of \\(x^{2}\\) as a common factor, we can continue with solving the equation by completing the square.\n\n[Figure: .]\n\n            Factor out the greatest common factor.\t\n\n[Figure: .]\n\n            Divide both sides by \\(3\\) to isolate the trinomial with coefficient \\(1\\).\t\n\n[Figure: .]\n\n            Simplify.\t\n\n[Figure: .]\n\n            Add \\(5\\) to get the constant terms on the right side.\t\n\n[Figure: .]\n\n            Take half of \\(4\\) and square it.\t\n\n            \\(\\left(\\frac{1}{2}(-4)\\right)^{2}=4\\)\t\n\n[Figure: .]\n\n            Add \\(4\\) to both sides.\t\n\n[Figure: .]\n\n            Factor the perfect square trinomial, writing it as a binomial squared.\t\n\n[Figure: .]\n\n            Use the Square Root Property.\t\n\n[Figure: .]\n\n            Solve for \\(x\\).\t\n\n[Figure: .]\n\n            Rewrite to show two solutions.\t\n\n[Figure: .]\n\n            Simplify.\t\n\n[Figure: .]\n\nCheck:\n\n[Figure: .]\n\nFigure 9.2.80",
+      "prompt": "Example \\(\\PageIndex{8}\\)\n\nSolve by completing the square: \\(3 x^{2}-12 x-15=0\\).\n\nSolution:\n\nTo complete the square, we need the coefficient of \\(x^{2}\\) to be one. If we factor out the coefficient of \\(x^{2}\\) as a common factor, we can continue with solving the equation by completing the square.\n\n[Figure: .]\n\n            Factor out the greatest common factor.\t\n\n[Figure: .]\n\n            Divide both sides by \\(3\\) to isolate the trinomial with coefficient \\(1\\).\t\n\n[Figure: .]\n\n            Simplify.\t\n\n[Figure: .]\n\n            Add \\(5\\) to get the constant terms on the right side.\t\n\n[Figure: .]\n\n            Take half of \\(4\\) and square it.\t\n\n            \\(\\left(\\frac{1}{2}(-4)\\right)^{2}=4\\)\t\n\n[Figure: .]\n\n            Add \\(4\\) to both sides.\t\n\n[Figure: .]\n\n            Factor the perfect square trinomial, writing it as a binomial squared.\t\n\n[Figure: .]\n\n            Use the Square Root Property.\t\n\n[Figure: .]\n\n            Solve for \\(x\\).\t\n\n[Figure: .]\n\n            Rewrite to show two solutions.\t\n\n[Figure: .]\n\n            Simplify.\t\n\n[Figure: .]\n\nCheck:\n\n[Figure: .]\n\nFigure 9.2.80",
+      "sourceAnswers": [],
+      "hasFigure": true,
+      "status": "draft",
+      "answerVerified": false,
+      "translationStatus": "pending",
+      "mappingStatus": "pending"
+    },
+    {
+      "ordinal": 36,
+      "sourceNumber": "",
+      "sourceAnchor": "",
+      "kind": "exercise-candidate",
+      "context": "Solve Quadratic Equations of the Form \\(ax^{2}+bx+c=0\\) by Completing the Square\n\nThe process of completing the square works best when the coefficient of \\(x^{2}\\) is \\(1\\), so the left side of the equation is of the form \\(x^{2}+bx+c\\). If the \\(x^{2}\\) term has a coefficient other than \\(1\\), we take some preliminary steps to make the coefficient equal to \\(1\\).\n\nSometimes the coefficient can be factored from all three terms of the trinomial. This will be our strategy in the next example.",
+      "original": "Exercise \\(\\PageIndex{15}\\)\n\nSolve by completing the square: \\(2 m^{2}+16 m+14=0\\).\n\nAnswer\n\n\\(m=-7, m=-1\\)",
+      "prompt": "Exercise \\(\\PageIndex{15}\\)\n\nSolve by completing the square: \\(2 m^{2}+16 m+14=0\\).",
+      "sourceAnswers": [
+        "\\(m=-7, m=-1\\)"
+      ],
+      "hasFigure": false,
+      "status": "draft",
+      "answerVerified": false,
+      "translationStatus": "pending",
+      "mappingStatus": "pending"
+    },
+    {
+      "ordinal": 37,
+      "sourceNumber": "",
+      "sourceAnchor": "",
+      "kind": "exercise-candidate",
+      "context": "Solve Quadratic Equations of the Form \\(ax^{2}+bx+c=0\\) by Completing the Square\n\nThe process of completing the square works best when the coefficient of \\(x^{2}\\) is \\(1\\), so the left side of the equation is of the form \\(x^{2}+bx+c\\). If the \\(x^{2}\\) term has a coefficient other than \\(1\\), we take some preliminary steps to make the coefficient equal to \\(1\\).\n\nSometimes the coefficient can be factored from all three terms of the trinomial. This will be our strategy in the next example.",
+      "original": "Exercise \\(\\PageIndex{16}\\)\n\nSolve by completing the square: \\(4 n^{2}-24 n-56=8\\).\n\nAnswer\n\n\\(n=-2, n=8\\)",
+      "prompt": "Exercise \\(\\PageIndex{16}\\)\n\nSolve by completing the square: \\(4 n^{2}-24 n-56=8\\).",
+      "sourceAnswers": [
+        "\\(n=-2, n=8\\)"
+      ],
+      "hasFigure": false,
+      "status": "draft",
+      "answerVerified": false,
+      "translationStatus": "pending",
+      "mappingStatus": "pending"
+    },
+    {
+      "ordinal": 38,
+      "sourceNumber": "",
+      "sourceAnchor": "",
+      "kind": "example-or-exercise",
+      "context": "The process of completing the square works best when the coefficient of \\(x^{2}\\) is \\(1\\), so the left side of the equation is of the form \\(x^{2}+bx+c\\). If the \\(x^{2}\\) term has a coefficient other than \\(1\\), we take some preliminary steps to make the coefficient equal to \\(1\\).\n\nSometimes the coefficient can be factored from all three terms of the trinomial. This will be our strategy in the next example.\n\nTo complete the square, the coefficient of the \\(x^{2}\\) must be \\(1\\). When the leading coefficient is not a factor of all the terms, we will divide both sides of the equation by the leading coefficient! This will give us a fraction for the second coefficient. We have already seen how to complete the square with fractions in this section.",
+      "original": "Example \\(\\PageIndex{9}\\)\n\nSolve by completing the square: \\(2 x^{2}-3 x=20\\).\n\nSolution:\n\nTo complete the square we need the coefficient of \\(x^{2}\\) to be one. We will divide both sides of the equation by the coefficient of \\(x^{2}\\). Then we can continue with solving the equation by completing the square.\n\n[Figure: .]\n\n            Divide both sides by \\(2\\) to get the coefficient of \\(x^{2}\\) to be \\(1\\).\t\n\n[Figure: .]\n\n            Simplify.\t\n\n[Figure: .]\n\n            Take half of \\(-\\frac{3}{2}\\) and square it.\t\n\n            \\(\\left(\\frac{1}{2}\\left(-\\frac{3}{2}\\right)\\right)^{2}=\\frac{9}{16}\\)\t\n\n[Figure: .]\n\n            Add \\(\\frac{9}{16}\\) to both sides.\t\n\n[Figure: .]\n\n            Factor the perfect square trinomial, writing it as a binomial squared.\t\n\n[Figure: .]\n\n            Add the fractions on the right side.\t\n\n[Figure: .]\n\n            Use the Square Root Property.\t\n\n[Figure: .]\n\n            Simplify the radical.\t\n\n[Figure: .]\n\n            Solve for \\(x\\).\t\n\n[Figure: .]\n\n            Rewrite to show two solutions.\t\n\n[Figure: .]\n\n            Simplify.\t\n\n[Figure: .]\n\nCheck:\n\nWe leave the check for you!",
+      "prompt": "Example \\(\\PageIndex{9}\\)\n\nSolve by completing the square: \\(2 x^{2}-3 x=20\\).\n\nSolution:\n\nTo complete the square we need the coefficient of \\(x^{2}\\) to be one. We will divide both sides of the equation by the coefficient of \\(x^{2}\\). Then we can continue with solving the equation by completing the square.\n\n[Figure: .]\n\n            Divide both sides by \\(2\\) to get the coefficient of \\(x^{2}\\) to be \\(1\\).\t\n\n[Figure: .]\n\n            Simplify.\t\n\n[Figure: .]\n\n            Take half of \\(-\\frac{3}{2}\\) and square it.\t\n\n            \\(\\left(\\frac{1}{2}\\left(-\\frac{3}{2}\\right)\\right)^{2}=\\frac{9}{16}\\)\t\n\n[Figure: .]\n\n            Add \\(\\frac{9}{16}\\) to both sides.\t\n\n[Figure: .]\n\n            Factor the perfect square trinomial, writing it as a binomial squared.\t\n\n[Figure: .]\n\n            Add the fractions on the right side.\t\n\n[Figure: .]\n\n            Use the Square Root Property.\t\n\n[Figure: .]\n\n            Simplify the radical.\t\n\n[Figure: .]\n\n            Solve for \\(x\\).\t\n\n[Figure: .]\n\n            Rewrite to show two solutions.\t\n\n[Figure: .]\n\n            Simplify.\t\n\n[Figure: .]\n\nCheck:\n\nWe leave the check for you!",
+      "sourceAnswers": [],
+      "hasFigure": true,
+      "status": "draft",
+      "answerVerified": false,
+      "translationStatus": "pending",
+      "mappingStatus": "pending"
+    },
+    {
+      "ordinal": 39,
+      "sourceNumber": "",
+      "sourceAnchor": "",
+      "kind": "exercise-candidate",
+      "context": "The process of completing the square works best when the coefficient of \\(x^{2}\\) is \\(1\\), so the left side of the equation is of the form \\(x^{2}+bx+c\\). If the \\(x^{2}\\) term has a coefficient other than \\(1\\), we take some preliminary steps to make the coefficient equal to \\(1\\).\n\nSometimes the coefficient can be factored from all three terms of the trinomial. This will be our strategy in the next example.\n\nTo complete the square, the coefficient of the \\(x^{2}\\) must be \\(1\\). When the leading coefficient is not a factor of all the terms, we will divide both sides of the equation by the leading coefficient! This will give us a fraction for the second coefficient. We have already seen how to complete the square with fractions in this section.",
+      "original": "Exercise \\(\\PageIndex{17}\\)\n\nSolve by completing the square: \\(3 r^{2}-2 r=21\\).\n\nAnswer\n\n\\(r=-\\frac{7}{3}, r=3\\)",
+      "prompt": "Exercise \\(\\PageIndex{17}\\)\n\nSolve by completing the square: \\(3 r^{2}-2 r=21\\).",
+      "sourceAnswers": [
+        "\\(r=-\\frac{7}{3}, r=3\\)"
+      ],
+      "hasFigure": false,
+      "status": "draft",
+      "answerVerified": false,
+      "translationStatus": "pending",
+      "mappingStatus": "pending"
+    },
+    {
+      "ordinal": 40,
+      "sourceNumber": "",
+      "sourceAnchor": "",
+      "kind": "exercise-candidate",
+      "context": "The process of completing the square works best when the coefficient of \\(x^{2}\\) is \\(1\\), so the left side of the equation is of the form \\(x^{2}+bx+c\\). If the \\(x^{2}\\) term has a coefficient other than \\(1\\), we take some preliminary steps to make the coefficient equal to \\(1\\).\n\nSometimes the coefficient can be factored from all three terms of the trinomial. This will be our strategy in the next example.\n\nTo complete the square, the coefficient of the \\(x^{2}\\) must be \\(1\\). When the leading coefficient is not a factor of all the terms, we will divide both sides of the equation by the leading coefficient! This will give us a fraction for the second coefficient. We have already seen how to complete the square with fractions in this section.",
+      "original": "Exercise \\(\\PageIndex{18}\\)\n\nSolve by completing the square: \\(4 t^{2}+2 t=20\\).\n\nAnswer\n\n\\(t=-\\frac{5}{2}, t=2\\)",
+      "prompt": "Exercise \\(\\PageIndex{18}\\)\n\nSolve by completing the square: \\(4 t^{2}+2 t=20\\).",
+      "sourceAnswers": [
+        "\\(t=-\\frac{5}{2}, t=2\\)"
+      ],
+      "hasFigure": false,
+      "status": "draft",
+      "answerVerified": false,
+      "translationStatus": "pending",
+      "mappingStatus": "pending"
+    },
+    {
+      "ordinal": 41,
+      "sourceNumber": "1",
+      "sourceAnchor": "",
+      "kind": "exercise-candidate",
+      "context": "Sometimes the coefficient can be factored from all three terms of the trinomial. This will be our strategy in the next example.\n\nTo complete the square, the coefficient of the \\(x^{2}\\) must be \\(1\\). When the leading coefficient is not a factor of all the terms, we will divide both sides of the equation by the leading coefficient! This will give us a fraction for the second coefficient. We have already seen how to complete the square with fractions in this section.\n\nNow that we have seen that the coefficient of \\(x^{2}\\) must be \\(1\\) for us to complete the square, we update our procedure for solving a quadratic equation by completing the square to include equations of the form \\(a x^{2}+b x+c=0\\).",
+      "original": "1. Divide by aa to make the coefficient of \\(x^{2}\\) term \\(1\\).",
+      "prompt": "1. Divide by aa to make the coefficient of \\(x^{2}\\) term \\(1\\).",
+      "sourceAnswers": [],
+      "hasFigure": false,
+      "status": "draft",
+      "answerVerified": false,
+      "translationStatus": "pending",
+      "mappingStatus": "pending"
+    },
+    {
+      "ordinal": 42,
+      "sourceNumber": "2",
+      "sourceAnchor": "",
+      "kind": "exercise-candidate",
+      "context": "Sometimes the coefficient can be factored from all three terms of the trinomial. This will be our strategy in the next example.\n\nTo complete the square, the coefficient of the \\(x^{2}\\) must be \\(1\\). When the leading coefficient is not a factor of all the terms, we will divide both sides of the equation by the leading coefficient! This will give us a fraction for the second coefficient. We have already seen how to complete the square with fractions in this section.\n\nNow that we have seen that the coefficient of \\(x^{2}\\) must be \\(1\\) for us to complete the square, we update our procedure for solving a quadratic equation by completing the square to include equations of the form \\(a x^{2}+b x+c=0\\).",
+      "original": "2. Isolate the variable terms on one side and the constant terms on the other.",
+      "prompt": "2. Isolate the variable terms on one side and the constant terms on the other.",
+      "sourceAnswers": [],
+      "hasFigure": false,
+      "status": "draft",
+      "answerVerified": false,
+      "translationStatus": "pending",
+      "mappingStatus": "pending"
+    },
+    {
+      "ordinal": 43,
+      "sourceNumber": "3",
+      "sourceAnchor": "",
+      "kind": "exercise-candidate",
+      "context": "Sometimes the coefficient can be factored from all three terms of the trinomial. This will be our strategy in the next example.\n\nTo complete the square, the coefficient of the \\(x^{2}\\) must be \\(1\\). When the leading coefficient is not a factor of all the terms, we will divide both sides of the equation by the leading coefficient! This will give us a fraction for the second coefficient. We have already seen how to complete the square with fractions in this section.\n\nNow that we have seen that the coefficient of \\(x^{2}\\) must be \\(1\\) for us to complete the square, we update our procedure for solving a quadratic equation by completing the square to include equations of the form \\(a x^{2}+b x+c=0\\).",
+      "original": "3. Find \\(\\left(\\frac{1}{2} \\cdot b\\right)^{2}\\), the number needed to complete the square. Add it to both sides of the equation.",
+      "prompt": "3. Find \\(\\left(\\frac{1}{2} \\cdot b\\right)^{2}\\), the number needed to complete the square. Add it to both sides of the equation.",
+      "sourceAnswers": [],
+      "hasFigure": false,
+      "status": "draft",
+      "answerVerified": false,
+      "translationStatus": "pending",
+      "mappingStatus": "pending"
+    },
+    {
+      "ordinal": 44,
+      "sourceNumber": "4",
+      "sourceAnchor": "",
+      "kind": "exercise-candidate",
+      "context": "Sometimes the coefficient can be factored from all three terms of the trinomial. This will be our strategy in the next example.\n\nTo complete the square, the coefficient of the \\(x^{2}\\) must be \\(1\\). When the leading coefficient is not a factor of all the terms, we will divide both sides of the equation by the leading coefficient! This will give us a fraction for the second coefficient. We have already seen how to complete the square with fractions in this section.\n\nNow that we have seen that the coefficient of \\(x^{2}\\) must be \\(1\\) for us to complete the square, we update our procedure for solving a quadratic equation by completing the square to include equations of the form \\(a x^{2}+b x+c=0\\).",
+      "original": "4. Factor the perfect square trinomial, writing it as a binomial squared on the left and simplify by adding the terms on the right",
+      "prompt": "4. Factor the perfect square trinomial, writing it as a binomial squared on the left and simplify by adding the terms on the right",
+      "sourceAnswers": [],
+      "hasFigure": false,
+      "status": "draft",
+      "answerVerified": false,
+      "translationStatus": "pending",
+      "mappingStatus": "pending"
+    },
+    {
+      "ordinal": 45,
+      "sourceNumber": "5",
+      "sourceAnchor": "",
+      "kind": "exercise-candidate",
+      "context": "Sometimes the coefficient can be factored from all three terms of the trinomial. This will be our strategy in the next example.\n\nTo complete the square, the coefficient of the \\(x^{2}\\) must be \\(1\\). When the leading coefficient is not a factor of all the terms, we will divide both sides of the equation by the leading coefficient! This will give us a fraction for the second coefficient. We have already seen how to complete the square with fractions in this section.\n\nNow that we have seen that the coefficient of \\(x^{2}\\) must be \\(1\\) for us to complete the square, we update our procedure for solving a quadratic equation by completing the square to include equations of the form \\(a x^{2}+b x+c=0\\).",
+      "original": "5. Use the Square Root Property.",
+      "prompt": "5. Use the Square Root Property.",
+      "sourceAnswers": [],
+      "hasFigure": false,
+      "status": "draft",
+      "answerVerified": false,
+      "translationStatus": "pending",
+      "mappingStatus": "pending"
+    },
+    {
+      "ordinal": 46,
+      "sourceNumber": "6",
+      "sourceAnchor": "",
+      "kind": "exercise-candidate",
+      "context": "Sometimes the coefficient can be factored from all three terms of the trinomial. This will be our strategy in the next example.\n\nTo complete the square, the coefficient of the \\(x^{2}\\) must be \\(1\\). When the leading coefficient is not a factor of all the terms, we will divide both sides of the equation by the leading coefficient! This will give us a fraction for the second coefficient. We have already seen how to complete the square with fractions in this section.\n\nNow that we have seen that the coefficient of \\(x^{2}\\) must be \\(1\\) for us to complete the square, we update our procedure for solving a quadratic equation by completing the square to include equations of the form \\(a x^{2}+b x+c=0\\).",
+      "original": "6. Simplify the radical and then solve the two resulting equations.",
+      "prompt": "6. Simplify the radical and then solve the two resulting equations.",
+      "sourceAnswers": [],
+      "hasFigure": false,
+      "status": "draft",
+      "answerVerified": false,
+      "translationStatus": "pending",
+      "mappingStatus": "pending"
+    },
+    {
+      "ordinal": 47,
+      "sourceNumber": "7",
+      "sourceAnchor": "",
+      "kind": "exercise-candidate",
+      "context": "Sometimes the coefficient can be factored from all three terms of the trinomial. This will be our strategy in the next example.\n\nTo complete the square, the coefficient of the \\(x^{2}\\) must be \\(1\\). When the leading coefficient is not a factor of all the terms, we will divide both sides of the equation by the leading coefficient! This will give us a fraction for the second coefficient. We have already seen how to complete the square with fractions in this section.\n\nNow that we have seen that the coefficient of \\(x^{2}\\) must be \\(1\\) for us to complete the square, we update our procedure for solving a quadratic equation by completing the square to include equations of the form \\(a x^{2}+b x+c=0\\).",
+      "original": "7. Check the solutions.",
+      "prompt": "7. Check the solutions.",
+      "sourceAnswers": [],
+      "hasFigure": false,
+      "status": "draft",
+      "answerVerified": false,
+      "translationStatus": "pending",
+      "mappingStatus": "pending"
+    },
+    {
+      "ordinal": 48,
+      "sourceNumber": "",
+      "sourceAnchor": "",
+      "kind": "example-or-exercise",
+      "context": "Sometimes the coefficient can be factored from all three terms of the trinomial. This will be our strategy in the next example.\n\nTo complete the square, the coefficient of the \\(x^{2}\\) must be \\(1\\). When the leading coefficient is not a factor of all the terms, we will divide both sides of the equation by the leading coefficient! This will give us a fraction for the second coefficient. We have already seen how to complete the square with fractions in this section.\n\nNow that we have seen that the coefficient of \\(x^{2}\\) must be \\(1\\) for us to complete the square, we update our procedure for solving a quadratic equation by completing the square to include equations of the form \\(a x^{2}+b x+c=0\\).",
+      "original": "Example \\(\\PageIndex{10}\\)\n\nSolve by completing the square: \\(3 x^{2}+2 x=4\\).\n\nSolution:\n\nAgain, our first step will be to make the coefficient of \\(x^{2}\\) one. By dividing both sides of the equation by the coefficient of \\(x^{2}\\), we can then continue with solving the equation by completing the square.\n\n[Figure: .]\n\n            Divide both sides by \\(3\\) to make the coefficient of \\(x^{2}\\) equal \\(1\\).\t\n\n[Figure: .]\n\n            Simplify.\t\n\n[Figure: .]\n\n            Take half of \\(\\frac{2}{3}\\) and square it.\t\n\n            \\(\\left(\\frac{1}{2} \\cdot \\frac{2}{3}\\right)^{2}=\\frac{1}{9}\\)\t\n\n[Figure: .]\n\n            Add \\(\\frac{1}{9}\\) to both sides.\t\n\n[Figure: .]\n\n            Factor the perfect square trinomial, writing it as a binomial squared.\t\n\n[Figure: .]\n\n            Use the Square Root Property.\t\n\n[Figure: .]\n\n            Simplify the radical.\t\n\n[Figure: .]\n\n            Solve for \\(x\\).\t\n\n[Figure: .]\n\n            Rewrite to show two solutions.\t\n\n[Figure: .]\n\nCheck:\n\nWe leave the check for you!",
+      "prompt": "Example \\(\\PageIndex{10}\\)\n\nSolve by completing the square: \\(3 x^{2}+2 x=4\\).\n\nSolution:\n\nAgain, our first step will be to make the coefficient of \\(x^{2}\\) one. By dividing both sides of the equation by the coefficient of \\(x^{2}\\), we can then continue with solving the equation by completing the square.\n\n[Figure: .]\n\n            Divide both sides by \\(3\\) to make the coefficient of \\(x^{2}\\) equal \\(1\\).\t\n\n[Figure: .]\n\n            Simplify.\t\n\n[Figure: .]\n\n            Take half of \\(\\frac{2}{3}\\) and square it.\t\n\n            \\(\\left(\\frac{1}{2} \\cdot \\frac{2}{3}\\right)^{2}=\\frac{1}{9}\\)\t\n\n[Figure: .]\n\n            Add \\(\\frac{1}{9}\\) to both sides.\t\n\n[Figure: .]\n\n            Factor the perfect square trinomial, writing it as a binomial squared.\t\n\n[Figure: .]\n\n            Use the Square Root Property.\t\n\n[Figure: .]\n\n            Simplify the radical.\t\n\n[Figure: .]\n\n            Solve for \\(x\\).\t\n\n[Figure: .]\n\n            Rewrite to show two solutions.\t\n\n[Figure: .]\n\nCheck:\n\nWe leave the check for you!",
+      "sourceAnswers": [],
+      "hasFigure": true,
+      "status": "draft",
+      "answerVerified": false,
+      "translationStatus": "pending",
+      "mappingStatus": "pending"
+    },
+    {
+      "ordinal": 49,
+      "sourceNumber": "",
+      "sourceAnchor": "",
+      "kind": "exercise-candidate",
+      "context": "Sometimes the coefficient can be factored from all three terms of the trinomial. This will be our strategy in the next example.\n\nTo complete the square, the coefficient of the \\(x^{2}\\) must be \\(1\\). When the leading coefficient is not a factor of all the terms, we will divide both sides of the equation by the leading coefficient! This will give us a fraction for the second coefficient. We have already seen how to complete the square with fractions in this section.\n\nNow that we have seen that the coefficient of \\(x^{2}\\) must be \\(1\\) for us to complete the square, we update our procedure for solving a quadratic equation by completing the square to include equations of the form \\(a x^{2}+b x+c=0\\).",
+      "original": "Exercise \\(\\PageIndex{19}\\)\n\nSolve by completing the square: \\(4 x^{2}+3 x=2\\).\n\nAnswer\n\n\\(x=-\\frac{3}{8}+\\frac{\\sqrt{41}}{8}, x=-\\frac{3}{8}-\\frac{\\sqrt{41}}{8}\\)",
+      "prompt": "Exercise \\(\\PageIndex{19}\\)\n\nSolve by completing the square: \\(4 x^{2}+3 x=2\\).",
+      "sourceAnswers": [
+        "\\(x=-\\frac{3}{8}+\\frac{\\sqrt{41}}{8}, x=-\\frac{3}{8}-\\frac{\\sqrt{41}}{8}\\)"
+      ],
+      "hasFigure": false,
+      "status": "draft",
+      "answerVerified": false,
+      "translationStatus": "pending",
+      "mappingStatus": "pending"
+    },
+    {
+      "ordinal": 50,
+      "sourceNumber": "",
+      "sourceAnchor": "",
+      "kind": "exercise-candidate",
+      "context": "Sometimes the coefficient can be factored from all three terms of the trinomial. This will be our strategy in the next example.\n\nTo complete the square, the coefficient of the \\(x^{2}\\) must be \\(1\\). When the leading coefficient is not a factor of all the terms, we will divide both sides of the equation by the leading coefficient! This will give us a fraction for the second coefficient. We have already seen how to complete the square with fractions in this section.\n\nNow that we have seen that the coefficient of \\(x^{2}\\) must be \\(1\\) for us to complete the square, we update our procedure for solving a quadratic equation by completing the square to include equations of the form \\(a x^{2}+b x+c=0\\).",
+      "original": "Exercise \\(\\PageIndex{20}\\)\n\nSolve by completing the square: \\(3 y^{2}-10 y=-5\\).\n\nAnswer\n\n\\(y=\\frac{5}{3}+\\frac{\\sqrt{10}}{3}, y=\\frac{5}{3}-\\frac{\\sqrt{10}}{3}\\)",
+      "prompt": "Exercise \\(\\PageIndex{20}\\)\n\nSolve by completing the square: \\(3 y^{2}-10 y=-5\\).",
+      "sourceAnswers": [
+        "\\(y=\\frac{5}{3}+\\frac{\\sqrt{10}}{3}, y=\\frac{5}{3}-\\frac{\\sqrt{10}}{3}\\)"
+      ],
+      "hasFigure": false,
+      "status": "draft",
+      "answerVerified": false,
+      "translationStatus": "pending",
+      "mappingStatus": "pending"
+    },
+    {
+      "ordinal": 51,
+      "sourceNumber": "1",
+      "sourceAnchor": "",
+      "kind": "exercise-candidate",
+      "context": "Key Concepts",
+      "original": "1. Identify \\(b\\), the coefficient of \\(x\\).",
+      "prompt": "1. Identify \\(b\\), the coefficient of \\(x\\).",
+      "sourceAnswers": [],
+      "hasFigure": false,
+      "status": "draft",
+      "answerVerified": false,
+      "translationStatus": "pending",
+      "mappingStatus": "pending"
+    },
+    {
+      "ordinal": 52,
+      "sourceNumber": "2",
+      "sourceAnchor": "",
+      "kind": "exercise-candidate",
+      "context": "Key Concepts",
+      "original": "2. Find \\(\\left(\\frac{1}{2} b\\right)^{2}\\), the number to complete the square.",
+      "prompt": "2. Find \\(\\left(\\frac{1}{2} b\\right)^{2}\\), the number to complete the square.",
+      "sourceAnswers": [],
+      "hasFigure": false,
+      "status": "draft",
+      "answerVerified": false,
+      "translationStatus": "pending",
+      "mappingStatus": "pending"
+    },
+    {
+      "ordinal": 53,
+      "sourceNumber": "3",
+      "sourceAnchor": "",
+      "kind": "exercise-candidate",
+      "context": "Key Concepts",
+      "original": "3. Add the \\(\\left(\\frac{1}{2} b\\right)^{2}\\) to \\(x^{2}+bx\\)",
+      "prompt": "3. Add the \\(\\left(\\frac{1}{2} b\\right)^{2}\\) to \\(x^{2}+bx\\)",
+      "sourceAnswers": [],
+      "hasFigure": false,
+      "status": "draft",
+      "answerVerified": false,
+      "translationStatus": "pending",
+      "mappingStatus": "pending"
+    },
+    {
+      "ordinal": 54,
+      "sourceNumber": "4",
+      "sourceAnchor": "",
+      "kind": "exercise-candidate",
+      "context": "Key Concepts",
+      "original": "4. Rewrite the trinomial as a binomial square",
+      "prompt": "4. Rewrite the trinomial as a binomial square",
+      "sourceAnswers": [],
+      "hasFigure": false,
+      "status": "draft",
+      "answerVerified": false,
+      "translationStatus": "pending",
+      "mappingStatus": "pending"
+    },
+    {
+      "ordinal": 55,
+      "sourceNumber": "1",
+      "sourceAnchor": "",
+      "kind": "exercise-candidate",
+      "context": "Key Concepts",
+      "original": "1. Divide by \\(a\\) to make the coefficient of \\(x^{2}\\) term \\(1\\).",
+      "prompt": "1. Divide by \\(a\\) to make the coefficient of \\(x^{2}\\) term \\(1\\).",
+      "sourceAnswers": [],
+      "hasFigure": false,
+      "status": "draft",
+      "answerVerified": false,
+      "translationStatus": "pending",
+      "mappingStatus": "pending"
+    },
+    {
+      "ordinal": 56,
+      "sourceNumber": "2",
+      "sourceAnchor": "",
+      "kind": "exercise-candidate",
+      "context": "Key Concepts",
+      "original": "2. Isolate the variable terms on one side and the constant terms on the other.",
+      "prompt": "2. Isolate the variable terms on one side and the constant terms on the other.",
+      "sourceAnswers": [],
+      "hasFigure": false,
+      "status": "draft",
+      "answerVerified": false,
+      "translationStatus": "pending",
+      "mappingStatus": "pending"
+    },
+    {
+      "ordinal": 57,
+      "sourceNumber": "3",
+      "sourceAnchor": "",
+      "kind": "exercise-candidate",
+      "context": "Key Concepts",
+      "original": "3. Find \\(\\left(\\frac{1}{2} \\cdot b\\right)^{2}\\), the number needed to complete the square. Add it to both sides of the equation.",
+      "prompt": "3. Find \\(\\left(\\frac{1}{2} \\cdot b\\right)^{2}\\), the number needed to complete the square. Add it to both sides of the equation.",
+      "sourceAnswers": [],
+      "hasFigure": false,
+      "status": "draft",
+      "answerVerified": false,
+      "translationStatus": "pending",
+      "mappingStatus": "pending"
+    },
+    {
+      "ordinal": 58,
+      "sourceNumber": "4",
+      "sourceAnchor": "",
+      "kind": "exercise-candidate",
+      "context": "Key Concepts",
+      "original": "4. Factor the perfect square trinomial, writing it as a binomial squared on the left and simplify by adding the terms on the right.",
+      "prompt": "4. Factor the perfect square trinomial, writing it as a binomial squared on the left and simplify by adding the terms on the right.",
+      "sourceAnswers": [],
+      "hasFigure": false,
+      "status": "draft",
+      "answerVerified": false,
+      "translationStatus": "pending",
+      "mappingStatus": "pending"
+    },
+    {
+      "ordinal": 59,
+      "sourceNumber": "5",
+      "sourceAnchor": "",
+      "kind": "exercise-candidate",
+      "context": "Key Concepts",
+      "original": "5. Use the Square Root Property.",
+      "prompt": "5. Use the Square Root Property.",
+      "sourceAnswers": [],
+      "hasFigure": false,
+      "status": "draft",
+      "answerVerified": false,
+      "translationStatus": "pending",
+      "mappingStatus": "pending"
+    },
+    {
+      "ordinal": 60,
+      "sourceNumber": "6",
+      "sourceAnchor": "",
+      "kind": "exercise-candidate",
+      "context": "Key Concepts",
+      "original": "6. Simplify the radical and then solve the two resulting equations.",
+      "prompt": "6. Simplify the radical and then solve the two resulting equations.",
+      "sourceAnswers": [],
+      "hasFigure": false,
+      "status": "draft",
+      "answerVerified": false,
+      "translationStatus": "pending",
+      "mappingStatus": "pending"
+    },
+    {
+      "ordinal": 61,
+      "sourceNumber": "7",
+      "sourceAnchor": "",
+      "kind": "exercise-candidate",
+      "context": "Key Concepts",
+      "original": "7. Check the solutions.",
+      "prompt": "7. Check the solutions.",
+      "sourceAnswers": [],
+      "hasFigure": false,
+      "status": "draft",
+      "answerVerified": false,
+      "translationStatus": "pending",
+      "mappingStatus": "pending"
+    }
+  ],
+  "license": "CC BY 4.0",
+  "licenseEvidence": "This page titled 9.3: Solve Quadratic Equations by Completing the Square was last modified on Mon, 14 Feb 2022 01:07:13 GMT and is shared under a CC BY  4.0  license and was authored, remixed, and/or curated by OpenStax via source content that was edited to the style and standards of the LibreTexts platform.",
+  "url": "https://math.libretexts.org/Bookshelves/Algebra/Intermediate_Algebra_1e_(OpenStax)/09:_Quadratic_Equations_and_Functions/903:_Solve_Quadratic_Equations_by_Completing_the_Square",
+  "sha256": "70d916b7f74b270ee5c3ebd0da5476c6e677f8794dfb1f8e30a2c4ba10c4f1d9",
+  "checkedAt": "2026-10-07",
+  "id": "7562471eb3e561b8d00b",
+  "bookId": "intermediate-algebra",
+  "licenseInherited": false,
+  "licenseSource": "https://math.libretexts.org/Bookshelves/Algebra/Intermediate_Algebra_1e_(OpenStax)/09:_Quadratic_Equations_and_Functions/903:_Solve_Quadratic_Equations_by_Completing_the_Square",
+  "licenseUrl": "https://creativecommons.org/licenses/by/4.0/",
+  "authors": "OpenStax / Lynn Marecek, Andrea Honeycutt Mathis",
+  "book": "Intermediate Algebra 1e",
+  "reviewStatus": "unreviewed",
+  "sourceLanguage": "en",
+  "translationStatus": "pending"
+}

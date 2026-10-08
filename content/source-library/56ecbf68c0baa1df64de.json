@@ -1,0 +1,1084 @@
+{
+  "title": "9.4: Solve Quadratic Equations Using the Quadratic Formula",
+  "originalText": "Learning Objectives\n\nBy the end of this section, you will be able to:\n\nSolve quadratic equations using the Quadratic Formula\n\nUse the discriminant to predict the number and type of solutions of a quadratic equation\n\nIdentify the most appropriate method to use to solve a quadratic equation\n\nBefore you get started, take this readiness quiz.\n\n1. Evaluate \\(b^{2}-4 a b\\) when \\(a=3\\) and \\(b=−2\\).\n\n2. Simplify \\(\\sqrt{108}\\).\n\n3. Simplify \\(\\sqrt{50}\\).\n\nSolve Quadratic Equations Using the Quadratic Formula\n\nWhen we solved quadratic equations in the last section by completing the square, we took the same steps every time. By the end of the exercise set, you may have been wondering ‘isn’t there an easier way to do this?’ The answer is ‘yes’. Mathematicians look for patterns when they do things over and over in order to make their work easier. In this section we will derive and use a formula to find the solution of a quadratic equation.\n\nWe have already seen how to solve a formula for a specific variable ‘in general’, so that we would do the algebraic steps only once, and then use the new formula to find the value of the specific variable. Now we will go through the steps of completing the square using the general form of a quadratic equation to solve a quadratic equation for \\(x\\).\n\nWe start with the standard form of a quadratic equation and solve it for \\(x\\) by completing the square.\n\n            \\(ax^2 + bx + c = 0, \\quad a \\ne 0\\)\t\n\n            Isolate the variable terms on one side.\t\n            \\(ax^2 + bx \\quad = -c\\)\t\n\n            Make the coefficient of \\(x^{2}\\) equal to \\(1\\), by dividing by \\(a\\).\t\n            \\(\\dfrac{ax^2}{a} + \\dfrac{b}{a}x \\quad = -\\dfrac{c}{a}\\)\t\n\n            Simplify.\t\n            \\(x^2+ \\dfrac{b}{a}x \\quad = -\\dfrac{c}{a}\\)\t\n\n            To complete the square, find \\(\\left(\\dfrac{1}{2} \\cdot \\dfrac{b}{a}\\right)^{2}\\) and add it to both sides of the equation.\t\n\n            \\(\\left(\\dfrac{1}{2} \\dfrac{b}{a}\\right)^{2}=\\dfrac{b^{2}}{4 a^{2}}\\)\t\n            \\(x^2 + \\dfrac{b}{a}x +{\\color{red}{\\dfrac{b^2}{4a^2}}}{\\color{black}{ = -\\dfrac{c}{a}\\,+\\,}}{\\color{red}{\\dfrac{b^2}{4a^2}}}\\)\t\n\n            The left side is a perfect square, factor it.\t\n            \\(\\left( x + \\dfrac{b}{2a}\\right)^2 = -\\dfrac{c}{a}+\\dfrac{b^2}{4a^2}\\)\t\n\n            Find the common denominator of the right side and write equivalent fractions with the common denominator.\t\n            \\(\\left( x + \\dfrac{b}{2a}\\right)^2 =\\dfrac{b^2}{4a^2}-\\dfrac{c\\cdot\\color{red}{4a}}{a\\cdot\\color{red}{4a}}\\)\t\n\n            Simplify.\t\n            \\(\\left( x + \\dfrac{b}{2a}\\right)^2 =\\dfrac{b^2}{4a^2}-\\dfrac{4ac}{4a^2}\\)\t\n\n            Combine to one fraction.\t\n            \\(\\left( x + \\dfrac{b}{2a}\\right)^2 =\\dfrac{b^2-4ac}{4a^2}\\)\t\n\n            Use the square root property.\t\n            \\(x + \\dfrac{b}{2a}= \\pm\\sqrt{\\dfrac{b^2-4ac}{4a^2}}\\)\t\n\n            Simplify the radical.\t\n            \\(x + \\dfrac{b}{2a}= \\pm\\dfrac{\\sqrt{b^2-4ac}}{2a}\\)\t\n\n            Add \\(-\\dfrac{b}{2a}\\) to both sides of the equation.\t\n            \\(x = -\\dfrac{b}{2a} \\pm\\dfrac{\\sqrt{b^2-4ac}}{2a}\\)\t\n\n            Combine the terms on the right side.\t\n            \\(x = \\dfrac{-b\\pm\\sqrt{b^2-4ac}}{2a}\\)\t\n\nThe final equation is called the \"Quadratic Formula.\"\n\nDefinition \\(\\PageIndex{1}\\): Quadratic Formula\n\nThe solutions to a quadratic equation of the form \\(a x^{2}+b x+c=0\\), where \\(a≠0\\) are given by the formula:\n\n\\[x=\\dfrac{-b \\pm \\sqrt{b^{2}-4 a c}}{2 a} \\label{quad}\\]\n\nTo use the Quadratic Formula, we substitute the values of \\(a,b\\), and \\(c\\) from the standard form into the expression on the right side of the formula. Then we simplify the expression. The result is the pair of solutions to the quadratic equation.\n\nNotice the Quadratic Formula (Equation \\ref{quad}) is an equation. Make sure you use both sides of the equation.\n\nExample \\(\\PageIndex{1}\\) How to Solve a Quadratic Equation Using the Quadratic Formula\n\nSolve by using the Quadratic Formula: \\(2 x^{2}+9 x-5=0\\).\n\nSolution:\n\n            Step 1: Write the quadratic equation in standard form. Identify the \\(a,b,c\\) values.\t\n            This equation is in standard form.\t\n            \\(\\begin{aligned} \\color{red}{a x^{2}+b x+c =0} \\\\ 2 x^{2}+9 x-5 =0 \\\\ a=2, b =9, c=-5 \\end{aligned}\\)\t\n\n            Step 2: Write the quadratic formula. Then substitute in the values of \\(a,b,c\\).\t\n            Substitute in \\(a=2, b=9, c=-5\\)\t\n            \\(x=\\dfrac{-b \\pm \\sqrt{b^{2}-4 a c}}{2 a}\\)\n\n            \\(x=\\dfrac{-9 \\pm \\sqrt{9^{2}-4 \\cdot 2 \\cdot(-5)}}{2 \\cdot 2}\\)\t\n\n            Step 3: Simplify the fraction, and solve for \\(x\\).\t\n\n            \\(\\begin{array}{l}{x=\\dfrac{-9 \\pm \\sqrt{81-(-40)}}{4}} \\\\ {x=\\dfrac{-9 \\pm \\sqrt{121}}{4}} \\\\ {x=\\dfrac{-9 \\pm 11}{4}} \\\\ {x=\\dfrac{-9+11}{4}}\\quad x=\\dfrac{-9-11}{4} \\\\ {x=\\dfrac{2}{4} \\quad \\quad\\:\\:\\: x=\\dfrac{-20}{4}}\\\\ {x=\\dfrac{1}{2} \\quad\\quad\\:\\:\\: x=-5}\\end{array}\\)\t\n\n            Step 4: Check the solutions.\t\n            Put each answer in the original equation to check. Substitute \\(x=\\color{red}{\\dfrac{1}{2}}\\) and \\(x=\\color{red}{-5}\\).\t\n\n\\(\\begin{aligned}2 x^{2}+9 x-5&=0 \\\\ 2\\color{black}{\\left(\\color{red}{\\dfrac{1}{2}}\\right)}^{2}+9 \\cdot \\color{red}{\\dfrac{1}{2}}\\color{black}{-}5 &\\stackrel{?}{=} 0 \\\\ 2\\cdot\\dfrac{1}{4}+0\\cdot\\dfrac{1}{2}-5&\\stackrel{?}{=}0 \\\\ 2\\cdot\\dfrac{1}{4}+9\\cdot\\dfrac{1}{2}-5&\\stackrel{?}{=}0 \\\\ \\dfrac{1}{2}+\\dfrac{9}{2}-5&\\stackrel{?}{=}0 \\\\ \\dfrac{10}{2}-5&\\stackrel{?}{=}0 \\\\5-5&\\stackrel{?}{=}0\\\\0&=0\\end{aligned}\\)\n\n\\(\\begin{array}{r}{2 x^{2}+9 x-5=0} \\\\ {2(\\color{red}{-5}\\color{black}{)}^{2}+9(\\color{red}{-5}\\color{black}{)}-5\\stackrel{?}{=}0} \\\\ {2 \\cdot 25-45-5\\stackrel{?}{=}0} \\\\ {50-45-5\\stackrel{?}{=}0} \\\\ {0=0}\\end{array}\\)\n\nExercise \\(\\PageIndex{1}\\)\n\nSolve by using the Quadratic Formula: \\(3 y^{2}-5 y+2=0\\).\n\nAnswer\n\n\\(y=1, y=\\dfrac{2}{3}\\)\n\nExercise \\(\\PageIndex{2}\\)\n\nSolve by using the Quadratic Formula: \\(4 z^{2}+2 z-6=0\\).\n\nAnswer\n\n\\(z=1, z=-\\dfrac{3}{2}\\)\n\nHowTo: Solve a Quadratic Equation Using the Quadratic Formula\n\n1. Write the quadratic equation in standard form, \\(a x^{2}+b x+c=0\\). Identify the values of \\(a,b\\), and \\(c\\).\n\n2. Write the Quadratic Formula. Then substitute in the values of \\(a,b\\), and \\(c\\).\n\n3. Simplify.\n\n4. Check the solutions.\n\nIf you say the formula as you write it in each problem, you’ll have it memorized in no time! And remember, the Quadratic Formula is an EQUATION. Be sure you start with “\\(x=\\)”.\n\nExample \\(\\PageIndex{2}\\)\n\nSolve by using the Quadratic Formula: \\(x^{2}-6 x=-5\\).\n\nSolution:\n\n\\(x^{2}-6 x=-5\\)\n\n            Write the equation in standard form by adding \\(5\\) to each side.\t\n\n\\(x^{2}-6 x+5=0\\)\n\n            This equation is now in standard form.\t\n\n\\({\\color{red}{\\small{ax^2+bx + c} = \\small{0}}}\\)\n\n            \\(x^2 - 6x + 5 = 0\\)\n\n            Identify the values of \\(\\color{cyan}a\\), \\(\\color{red}b\\), \\(\\color{limegreen}c\\).\t\n            \\({\\color{cyan}a=1}\\), \\({\\color{red}b=-6}\\), \\({\\color{limegreen}c=5}\\)\t\n\n            Write the Quadratic Formula.\t\n\n\\(x=\\dfrac{-b \\pm \\sqrt{b^{2}-4 a c}}{2 a}\\)\n\n            Then substitute in the values of \\(a, b, c\\).\t\n\n\\(x=\\dfrac{-\\color{red} (-6 ) \\color{black} \\pm \\sqrt{\\color{red}(-6) \\color{black}^{2}-4 \\cdot \\color{cyan}1 \\color{black} \\cdot ( \\color{limegreen}5 \\color{black})}}{2 \\cdot \\color{cyan} 1} \\)\n\n            Simplify.\t\n\n\\(x=\\dfrac{6 \\pm \\sqrt{36-20}}{2}\\)\n\n\\(x=\\dfrac{6 \\pm \\sqrt{16}}{2}\\)\n\n\\(x=\\dfrac{6 \\pm 4}{2}\\)\n\n            Rewrite to show two solutions.\t\n\n\\(x=\\frac{6+4}{2}, \\quad x=\\frac{6-4}{2}\\)\n\n            Simplify.\t\n\n\\(x=\\frac{10}{2}, \\quad x=\\frac{2}{2}\\)\n\n            \\(x=5, \\quad x=1\\)\t\n\nCheck:\n\n[Figure: .]\n\nExercise \\(\\PageIndex{3}\\)\n\nSolve by using the Quadratic Formula: \\(a^{2}-2 a=15\\).\n\nAnswer\n\n\\(a=-3, a=5\\)\n\nExercise \\(\\PageIndex{4}\\)\n\nSolve by using the Quadratic Formula: \\(b^{2}+24=-10 b\\).\n\nAnswer\n\n\\(b=-6, b=-4\\)\n\nWhen we solved quadratic equations by using the Square Root Property, we sometimes got answers that had radicals. That can happen, too, when using the Quadratic Formula. If we get a radical as a solution, the final answer must have the radical in its simplified form.\n\nExample \\(\\PageIndex{3}\\)\n\nSolve by using the Quadratic Formula: \\(2 x^{2}+10 x+11=0\\).\n\nSolution:\n\n[Figure: .]\n\n            This equation is in standard form.\t\n\n[Figure: .]\n\n            Identify the values of \\(a,b\\) and \\(c\\).\t\n\n[Figure: .]\n\n            Write the Quadratic Formula.\t\n\n\\(x=\\dfrac{-b \\pm \\sqrt{b^{2}-4 a c}}{2 a}\\)\n\n            Then substitute in the values of \\(a, b\\), and \\(c\\).\t\n\n[Figure: .]\n\n            Simplify.\t\n\n\\(x=\\dfrac{-10 \\pm \\sqrt{100-88}}{4}\\)\n\n\\(x=\\dfrac{-10 \\pm \\sqrt{12}}{4}\\)\n\n            Simplify the radical.\t\n\n\\(x=\\dfrac{-10 \\pm 2 \\sqrt{3}}{4}\\)\n\n            Factor out the common factor in the numerator.\t\n\n[Figure: .]\n\n\\(x=\\dfrac{\\color{red}{2}(-5 \\pm \\sqrt{3})}{4}\\)\n\n            Remove the common factors.\t\n\n\\(x=\\dfrac{-5 \\pm \\sqrt{3}}{2}\\)\n\n            Rewrite to show two solutions.\t\n\n\\(x=\\dfrac{-5+\\sqrt{3}}{2}, \\quad x=\\dfrac{-5-\\sqrt{3}}{2}\\)\n\nCheck:\n\nWe leave the check for you!\n\nExercise \\(\\PageIndex{5}\\)\n\nSolve by using the Quadratic Formula: \\(3 m^{2}+12 m+7=0\\).\n\nAnswer\n\n\\(m=\\dfrac{-6+\\sqrt{15}}{3}, m=\\dfrac{-6-\\sqrt{15}}{3}\\)\n\nExercise \\(\\PageIndex{6}\\)\n\nSolve by using the Quadratic Formula: \\(5 n^{2}+4 n-4=0\\).\n\nAnswer\n\n\\(n=\\dfrac{-2+2 \\sqrt{6}}{5}, n=\\dfrac{-2-2 \\sqrt{6}}{5}\\)\n\nWhen we substitute \\(a, b\\), and \\(c\\) into the Quadratic Formula and the radicand is negative, the quadratic equation will have imaginary or complex solutions. We will see this in the next example.\n\nExample \\(\\PageIndex{4}\\)\n\nSolve by using the Quadratic Formula: \\(3 p^{2}+2 p+9=0\\).\n\nSolution:\n\n[Figure: .]\n\n            This equation is in standard form.\t\n\n[Figure: .]\n\n            Identify the values of \\(a,b,c\\).\t\n\n[Figure: .]\n\n            Write the Quadratic Formula.\t\n\n[Figure: .]\n\n            Then substitute in the values of \\(a,b,c\\).\t\n\n[Figure: .]\n\n            Simplify.\t\n\n[Figure: .]\n\n[Figure: .]\n\n            Simplify the radical using complex numbers.\t\n\n[Figure: .]\n\n            Simplify the radical.\t\n\n[Figure: .]\n\n            Factor the common factor in the numerator.\t\n\n[Figure: .]\n\n            Remove the common factors.\t\n\n[Figure: .]\n\n            Rewrite in standard \\(a+bi\\) form.\t\n\n[Figure: .]\n\n            Write as two solutions.\t\n\n[Figure: .]\n\nTable 9.3.5\n\nExercise \\(\\PageIndex{7}\\)\n\nSolve by using the Quadratic Formula: \\(4 a^{2}-2 a+8=0\\).\n\nAnswer\n\n\\(a=\\dfrac{1}{4}+\\dfrac{\\sqrt{31}}{4} i, \\quad a=\\dfrac{1}{4}-\\dfrac{\\sqrt{31}}{4} i\\)\n\nExercise \\(\\PageIndex{8}\\)\n\nSolve by using the Quadratic Formula: \\(5 b^{2}+2 b+4=0\\).\n\nAnswer\n\n\\(b=-\\dfrac{1}{5}+\\dfrac{\\sqrt{19}}{5} i, \\quad b=-\\dfrac{1}{5}-\\dfrac{\\sqrt{19}}{5} i\\)\n\nRemember, to use the Quadratic Formula, the equation must be written in standard form, \\(a x^{2}+b x+c=0\\). Sometimes, we will need to do some algebra to get the equation into standard form before we can use the Quadratic Formula.\n\nExample \\(\\PageIndex{5}\\)\n\nSolve by using the Quadratic Formula: \\(x(x+6)+4=0\\).\n\nSolution:\n\nOur first step is to get the equation in standard form.\n\n[Figure: .]\n\n            Distribute to get the equation in standard form.\t\n\n[Figure: .]\n\n            This equation is now in standard form.\t\n\n[Figure: .]\n\n            Identify the values of \\(a,b,c\\).\t\n\n[Figure: .]\n\n            Write the Quadratic Formula.\t\n\n[Figure: .]\n\n            Then substitute in the values of \\(a,b,c\\).\t\n\n[Figure: .]\n\n            Simplify.\t\n\n[Figure: .]\n\n[Figure: .]\n\n            Simplify the radical.\t\n\n[Figure: .]\n\n            Factor the common factor in the numerator.\t\n\n[Figure: .]\n\n            Remove the common factors.\t\n\n[Figure: .]\n\n            Write as two solutions.\t\n\n[Figure: .]\n\nCheck:\n\nWe leave the check for you!\n\nTable 9.3.6\n\nExercise \\(\\PageIndex{9}\\)\n\nSolve by using the Quadratic Formula: \\(x(x+2)−5=0\\).\n\nAnswer\n\n\\(x=-1+\\sqrt{6}, x=-1-\\sqrt{6}\\)\n\nExercise \\(\\PageIndex{10}\\)\n\nSolve by using the Quadratic Formula: \\(3y(y−2)−3=0\\).\n\nAnswer\n\n\\(y=1+\\sqrt{2}, y=1-\\sqrt{2}\\)\n\nWhen we solved linear equations, if an equation had too many fractions we cleared the fractions by multiplying both sides of the equation by the LCD. This gave us an equivalent equation—without fractions— to solve. We can use the same strategy with quadratic equations.\n\nExample \\(\\PageIndex{6}\\)\n\nSolve by using the Quadratic Formula: \\(\\dfrac{1}{2} u^{2}+\\dfrac{2}{3} u=\\dfrac{1}{3}\\).\n\nSolution:\n\nOur first step is to clear the fractions.\n\n[Figure: .]\n\n            Multiply both sides by the LCD, \\(6\\), to clear the fractions.\t\n\n[Figure: .]\n\n            Multiply.\t\n\n[Figure: .]\n\n            Subtract \\(2\\) to get the equation in standard form.\t\n\n[Figure: .]\n\n            Identify the values of \\(a, b\\), and \\(c\\).\t\n\n[Figure: .]\n\n            Write the Quadratic Formula.\t\n\n[Figure: .]\n\n            Then substitute in the values of \\(a, b,\\) and \\(c\\).\t\n\n[Figure: .]\n\n            Simplify.\t\n\n[Figure: .]\n\n[Figure: .]\n\n            Simplify the radical.\t\n\n[Figure: .]\n\n            Factor the common factor in the numerator.\t\n\n[Figure: .]\n\n            Remove the common factors.\t\n\n[Figure: .]\n\n            Rewrite to show two solutions.\t\n\n[Figure: .]\n\nCheck:\n\nWe leave the check for you!\n\nTable 9.3.7\n\nExercise \\(\\PageIndex{11}\\)\n\nSolve by using the Quadratic Formula: \\(\\dfrac{1}{4} c^{2}-\\dfrac{1}{3} c=\\dfrac{1}{12}\\).\n\nAnswer\n\n\\(c=\\dfrac{2+\\sqrt{7}}{3}, \\quad c=\\dfrac{2-\\sqrt{7}}{3}\\)\n\nExercise \\(\\PageIndex{12}\\)\n\nSolve by using the Quadratic Formula: \\(\\dfrac{1}{9} d^{2}-\\dfrac{1}{2} d=-\\dfrac{1}{3}\\).\n\nAnswer\n\n\\(d=\\dfrac{9+\\sqrt{33}}{4}, d=\\dfrac{9-\\sqrt{33}}{4}\\)\n\nThink about the equation \\((x-3)^{2}=0\\). We know from the Zero Product Property that this equation has only one solution, \\(x=3\\).\n\nWe will see in the next example how using the Quadratic Formula to solve an equation whose standard form is a perfect square trinomial equal to \\(0\\) gives just one solution. Notice that once the radicand is simplified it becomes \\(0\\), which leads to only one solution.\n\nExample \\(\\PageIndex{7}\\)\n\nSolve by using the Quadratic Formula: \\(4 x^{2}-20 x=-25\\).\n\nSolution:\n\n[Figure: .]\n\n            Add \\(25\\) to get the equation in standard form.\t\n\n[Figure: .]\n\n            Identify the values of \\(a, b\\), and \\(c\\).\t\n\n[Figure: .]\n\n            Write the quadratic formula.\t\n\n[Figure: .]\n\n            Then substitute in the values of \\(a, b\\), and \\(c\\).\t\n\n[Figure: .]\n\n            Simplify.\t\n\n[Figure: .]\n\n[Figure: .]\n\n            Simplify the radical.\t\n\n[Figure: .]\n\n            Simplify the fraction.\t\n\n[Figure: .]\n\nCheck:\n\nWe leave the check for you!\n\nTable 9.3.8\n\nDid you recognize that \\(4 x^{2}-20 x+25\\) is a perfect square trinomial. It is equivalent to \\((2 x-5)^{2}\\)? If you solve \\(4 x^{2}-20 x+25=0\\) by factoring and then using the Square Root Property, do you get the same result?\n\nExercise \\(\\PageIndex{13}\\)\n\nSolve by using the Quadratic Formula: \\(r^{2}+10 r+25=0\\).\n\nAnswer\n\n\\(r=-5\\)\n\nExercise \\(\\PageIndex{14}\\)\n\nSolve by using the Quadratic Formula: \\(25 t^{2}-40 t=-16\\).\n\nAnswer\n\n\\(t=\\dfrac{4}{5}\\)\n\nUse the Discriminant to Predict the Number and Type of Solutions of a Quadratic Equation\n\nWhen we solved the quadratic equations in the previous examples, sometimes we got two real solutions, one real solution, and sometimes two complex solutions. Is there a way to predict the number and type of solutions to a quadratic equation without actually solving the equation?\n\nYes, the expression under the radical of the Quadratic Formula makes it easy for us to determine the number and type of solutions. This expression is called the discriminant.\n\nDefinition \\(\\PageIndex{2}\\)\n\nDiscriminant\n\n[Figure: In the Quadratic Formula, x equals the quotient of negative b plus or minus the square root of b squared minus 4 times a times c and 2 a, the value under the radical, b squared minus 4 times a times c, is called the discriminant.]\n\nFigure 9.3.85\n\nLet’s look at the discriminant of the equations in some of the examples and the number and type of solutions to those quadratic equations.\n\n            Quadratic Equation (in standard form)\t\n            Discriminat \\(b^{2}-4ac\\)\t\n            Value of the Discriminant\t\n            Number and Type of Solutions\t\n\n            \\(2 x^{2}+9 x-5=0\\)\t\n            \\(\\begin{aligned} 9^{2}-& 4 \\cdot 2(-5) \\\\ & 121 \\end{aligned}\\)\t\n            \\(+\\)\t\n            \\(2\\) real\t\n\n            \\(4 x^{2}-20 x+25=0\\)\t\n            \\((-20)^{2}-4 \\cdot 4 \\cdot 25\\)\n\n            \\(0\\)\t\n            \\(0\\)\t\n            \\(1\\) real\t\n\n            \\(3 p^{2}+2 p+9=0\\)\t\n            \\(2^{2}-4 \\cdot 3 \\cdot 9\\)\n\n            \\(-104\\)\t\n            \\(-\\)\t\n            \\(2\\) complex\t\n\nTable 9.3.9\n\n[Figure: When the value under the radical in the Quadratic Formula, the discriminant, is positive, the equation has two real solutions. When the value under the radical in the Quadratic Formula, the discriminant, is zero, the equation has one real solution. When the value under the radical in the Quadratic Formula, the discriminant, is negative, the equation has two complex solutions.]\n\nFigure 9.3.86\n\nUsing the Discriminant \\(b^{2}-4ac\\), to Determine the Number and Type of Solutions of a Quadratic Equation\n\nFor a quadratic equation of the form \\(ax^{2}+bx+c=0\\), \\(a \\neq 0\\),\n\nIf \\(b^{2}-4 a c>0\\), the equation has \\(2\\) real solutions.\n\nif \\(b^{2}-4 a c=0\\), the equation has \\(1\\) real solution.\n\nif \\(b^{2}-4 a c<0\\), the equation has \\(2\\) complex solutions.\n\nExample \\(\\PageIndex{8}\\)\n\nDetermine the number of solutions to each quadratic equation.\n\n1. \\(3 x^{2}+7 x-9=0\\)\n\n2. \\(5 n^{2}+n+4=0\\)\n\n3. \\(9 y^{2}-6 y+1=0\\)\n\nSolution:\n\nTo determine the number of solutions of each quadratic equation, we will look at its discriminant.\n\na.\n\n\\(3 x^{2}+7 x-9=0\\)\n\nThe equation is in standard form, identify \\(a, b\\), and \\(c\\).\n\n\\(a=3, \\quad b=7, \\quad c=-9\\)\n\nWrite the discriminant.\n\n\\(b^{2}-4 a c\\)\n\nSubstitute in the values of \\(a, b\\), and \\(c\\).\n\n\\((7)^{2}-4 \\cdot 3 \\cdot(-9)\\)\n\nSimplify.\n\n\\(49+108\\)\n\n\\(157\\)\n\nSince the discriminant is positive, there are \\(2\\) real solutions to the equation.\n\nb.\n\n\\(5 n^{2}+n+4=0\\)\n\nThe equation is in standard form, identify \\(a, b\\), and \\(c\\).\n\n\\(a=5, \\quad b=1, \\quad c=4\\)\n\nWrite the discriminant.\n\n\\(b^{2}-4 a c\\)\n\nSubstitute in the values of \\(a, b\\), and \\(c\\).\n\n\\((1)^{2}-4 \\cdot 5 \\cdot 4\\)\n\nSimplify.\n\n\\(1-80\\)\n\n\\(-79\\)\n\nSince the discriminant is negative, there are \\(2\\) complex solutions to the equation.\n\nc.\n\n\\(9 y^{2}-6 y+1=0\\)\n\nThe equation is in standard form, identify \\(a, b\\), and \\(c\\).\n\n\\(a=9, \\quad b=-6, \\quad c=1\\)\n\nWrite the discriminant.\n\n\\(b^{2}-4 a c\\)\n\nSubstitute in the values of \\(a, b\\), and \\(c\\).\n\n\\((-6)^{2}-4 \\cdot 9 \\cdot 1\\)\n\nSimplify.\n\n\\(36-36\\)\n\n\\(0\\)\n\nSince the discriminant is \\(0\\), there is \\(1\\) real solution to the equation.\n\nExercise \\(\\PageIndex{15}\\)\n\nDetermine the number and type of solutions to each quadratic equation.\n\n1. \\(8 m^{2}-3 m+6=0\\)\n\n2. \\(5 z^{2}+6 z-2=0\\)\n\n3. \\(9 w^{2}+24 w+16=0\\)\n\nAnswer\n\n1. \\(2\\) complex solutions\n\n2. \\(2\\) real solutions\n\n3. \\(1\\) real solution\n\nExercise \\(\\PageIndex{16}\\)\n\nDetermine the number and type of solutions to each quadratic equation.\n\n1. \\(b^{2}+7 b-13=0\\)\n\n2. \\(5 a^{2}-6 a+10=0\\)\n\n3. \\(4 r^{2}-20 r+25=0\\)\n\nAnswer\n\n1. \\(2\\) real solutions\n\n2. \\(2\\) complex solutions\n\n3. \\(1\\) real solution\n\nIdentify the Most Appropriate Method to Use to Solve a Quadratic Equation\n\nWe summarize the four methods that we have used to solve quadratic equations below.\n\nMethods for Solving Quadratic Equations\n\n1. Factoring\n\n2. Square Root Property\n\n3. Completing the Square\n\n4. Quadratic Formula\n\nGiven that we have four methods to use to solve a quadratic equation, how do you decide which one to use? Factoring is often the quickest method and so we try it first. If the equation is \\(ax^{2}=k\\) or \\(a(x−h)^{2}=k\\) we use the Square Root Property. For any other equation, it is probably best to use the Quadratic Formula. Remember, you can solve any quadratic equation by using the Quadratic Formula, but that is not always the easiest method.\n\nWhat about the method of Completing the Square? Most people find that method cumbersome and prefer not to use it. We needed to include it in the list of methods because we completed the square in general to derive the Quadratic Formula. You will also use the process of Completing the Square in other areas of algebra.\n\nIdentify the Most Appropriate Method to Solve a Quadratic Equation\n\n1. Try Factoring first. If the quadratic factors easily, this method is very quick.\n\n2. Try the Square Root Property next. If the equation fits the form \\(ax^{2}=k\\) or \\(a(x−h)^{2}=k\\), it can easily be solved by using the Square Root Property.\n\n3. Use the Quadratic Formula. Any other quadratic equation is best solved by using the Quadratic Formula.\n\nThe next example uses this strategy to decide how to solve each quadratic equation.\n\nExample \\(\\PageIndex{9}\\)\n\nIdentify the most appropriate method to use to solve each quadratic equation.\n\n1. \\(5 z^{2}=17\\)\n\n2. \\(4 x^{2}-12 x+9=0\\)\n\n3. \\(8 u^{2}+6 u=11\\)\n\nSolution:\n\na.\n\n\\(5z^{2}=17\\)\n\nSince the equation is in the \\(ax^{2}=k\\), the most appropriate method is to use the Square Root Property.\n\nb.\n\n\\(4 x^{2}-12 x+9=0\\)\n\nWe recognize that the left side of the equation is a perfect square trinomial, and so factoring will be the most appropriate method.\n\nc.\n\n\\(8 u^{2}+6 u=11\\)\n\nPut the equation in standard form.\n\n\\(8 u^{2}+6 u-11=0\\)\n\nWhile our first thought may be to try factoring, thinking about all the possibilities for trial and error method leads us to choose the Quadratic Formula as the most appropriate method.\n\nExercise \\(\\PageIndex{17}\\)\n\nIdentify the most appropriate method to use to solve each quadratic equation.\n\n1. \\(x^{2}+6 x+8=0\\)\n\n2. \\((n-3)^{2}=16\\)\n\n3. \\(5 p^{2}-6 p=9\\)\n\nAnswer\n\n1. Factoring\n\n2. Square Root Property\n\n3. Quadratic Formula\n\nExercise \\(\\PageIndex{18}\\)\n\nIdentify the most appropriate method to use to solve each quadratic equation.\n\n1. \\(8 a^{2}+3 a-9=0\\)\n\n2. \\(4 b^{2}+4 b+1=0\\)\n\n3. \\(5 c^{2}=125\\)\n\nAnswer\n\n1. Quadratic Formula\n\n2. Factoring or Square Root Property\n\n3. Square Root Property\n\nAccess these online resources for additional instruction and practice with using the Quadratic Formula.\n\nUsing the Quadratic Formula\n\nSolve a Quadratic Equation Using the Quadratic Formula with Complex Solutions\n\nDiscriminant in Quadratic Formula\n\nKey Concepts\n\nQuadratic Formula\n\nThe solutions to a quadratic equation of the form \\(a x^{2}+b x+c=0, a \\neq 0\\) are given by the formula:\n\n\\(x=\\dfrac{-b \\pm \\sqrt{b^{2}-4 a c}}{2 a}\\)\n\nHow to solve a quadratic equation using the Quadratic Formula.\n\n1. Write the quadratic equation in standard form, \\(a x^{2}+b x+c=0\\). Identify the values of \\(a, b, c\\).\n\n2. Write the Quadratic Formula. Then substitute in the values of \\(a, b, c\\).\n\n3. Simplify.\n\n4. Check the solutions.\n\nUsing the Discriminant, \\(b^{2}-4 a c\\), to Determine the Number and Type of Solutions of a Quadratic Equation\n\nFor a quadratic equation of the form \\(a x^{2}+b x+c=0, a \\neq 0\\),\n\nIf \\(b^{2}-4 a c>0\\), the equation has \\(2\\) real solutions.\n\nIf \\(b^{2}-4 a c=0\\), the equation has \\(1\\) real solution.\n\nIf \\(b^{2}-4 a c<0\\), the equation has \\(2\\) complex solutions.\n\nMethods to Solve Quadratic Equations:\n\nFactoring\n\nSquare Root Property\n\nCompleting the Square\n\nQuadratic Formula\n\nHow to identify the most appropriate method to solve a quadratic equation.\n\n1. Try Factoring first. If the quadratic factors easily, this method is very quick.\n\n2. Try the Square Root Property next. If the equation fits the form \\(a x^{2}=k\\) or \\(a(x-h)^{2}=k\\), it can easily be solved by using the Square Root Property.\n\n3. Use the Quadratic Formula. Any other quadratic equation is best solved by using the Quadratic Formula.\n\nGlossary\n\ndiscriminant\n\nIn the Quadratic Formula, \\(x=\\dfrac{-b \\pm \\sqrt{b^{2}-4 a c}}{2 a}\\), the quantity \\(b^{2}-4 a c\\) is called the discriminant.\n\nThis page titled 9.4: Solve Quadratic Equations Using the Quadratic Formula was last modified on Mon, 14 Feb 2022 01:07:17 GMT and is shared under a CC BY  4.0  license and was authored, remixed, and/or curated by OpenStax via source content that was edited to the style and standards of the LibreTexts platform.",
+  "figures": [
+    {
+      "url": "https://math.libretexts.org/@api/deki/files/22007/CNX_IntAlg_Figure_09_03_003a_img.jpg?revision=1",
+      "alt": ".",
+      "credit": ""
+    },
+    {
+      "url": "https://math.libretexts.org/@api/deki/files/22014/CNX_IntAlg_Figure_09_03_004a_img.jpg?revision=1",
+      "alt": ".",
+      "credit": ""
+    },
+    {
+      "url": "https://math.libretexts.org/@api/deki/files/22092/CNX_IntAlg_Figure_09_03_004b_img.jpg?revision=1",
+      "alt": ".",
+      "credit": ""
+    },
+    {
+      "url": "https://math.libretexts.org/@api/deki/files/22037/CNX_IntAlg_Figure_09_03_004c_img.jpg?revision=1",
+      "alt": ".",
+      "credit": ""
+    },
+    {
+      "url": "https://math.libretexts.org/@api/deki/files/22086/CNX_IntAlg_Figure_09_03_004e_img.jpg?revision=1",
+      "alt": ".",
+      "credit": ""
+    },
+    {
+      "url": "https://math.libretexts.org/@api/deki/files/22167/CNX_IntAlg_Figure_09_03_004i_img.jpg?revision=1",
+      "alt": ".",
+      "credit": ""
+    },
+    {
+      "url": "https://math.libretexts.org/@api/deki/files/22215/CNX_IntAlg_Figure_09_03_005a_img.jpg?revision=1",
+      "alt": ".",
+      "credit": ""
+    },
+    {
+      "url": "https://math.libretexts.org/@api/deki/files/22253/CNX_IntAlg_Figure_09_03_005b_img.jpg?revision=1",
+      "alt": ".",
+      "credit": ""
+    },
+    {
+      "url": "https://math.libretexts.org/@api/deki/files/22144/CNX_IntAlg_Figure_09_03_005c_img.jpg?revision=1",
+      "alt": ".",
+      "credit": ""
+    },
+    {
+      "url": "https://math.libretexts.org/@api/deki/files/22258/CNX_IntAlg_Figure_09_03_005d_img.jpg?revision=1",
+      "alt": ".",
+      "credit": ""
+    },
+    {
+      "url": "https://math.libretexts.org/@api/deki/files/22216/CNX_IntAlg_Figure_09_03_005e_img.jpg?revision=1",
+      "alt": ".",
+      "credit": ""
+    },
+    {
+      "url": "https://math.libretexts.org/@api/deki/files/22256/CNX_IntAlg_Figure_09_03_005f_img.jpg?revision=1",
+      "alt": ".",
+      "credit": ""
+    },
+    {
+      "url": "https://math.libretexts.org/@api/deki/files/22181/CNX_IntAlg_Figure_09_03_005g_img.jpg?revision=1",
+      "alt": ".",
+      "credit": ""
+    },
+    {
+      "url": "https://math.libretexts.org/@api/deki/files/22293/CNX_IntAlg_Figure_09_03_005h_img.jpg?revision=1",
+      "alt": ".",
+      "credit": ""
+    },
+    {
+      "url": "https://math.libretexts.org/@api/deki/files/22225/CNX_IntAlg_Figure_09_03_005i_img.jpg?revision=1",
+      "alt": ".",
+      "credit": ""
+    },
+    {
+      "url": "https://math.libretexts.org/@api/deki/files/22229/CNX_IntAlg_Figure_09_03_005j_img.jpg?revision=1",
+      "alt": ".",
+      "credit": ""
+    },
+    {
+      "url": "https://math.libretexts.org/@api/deki/files/22230/CNX_IntAlg_Figure_09_03_005k_img.jpg?revision=1",
+      "alt": ".",
+      "credit": ""
+    },
+    {
+      "url": "https://math.libretexts.org/@api/deki/files/22238/CNX_IntAlg_Figure_09_03_005l_img.jpg?revision=1",
+      "alt": ".",
+      "credit": ""
+    },
+    {
+      "url": "https://math.libretexts.org/@api/deki/files/22321/CNX_IntAlg_Figure_09_03_005m_img.jpg?revision=1",
+      "alt": ".",
+      "credit": ""
+    },
+    {
+      "url": "https://math.libretexts.org/@api/deki/files/22290/CNX_IntAlg_Figure_09_03_006a_img.jpg?revision=1",
+      "alt": ".",
+      "credit": ""
+    },
+    {
+      "url": "https://math.libretexts.org/@api/deki/files/22242/CNX_IntAlg_Figure_09_03_006b_img.jpg?revision=1",
+      "alt": ".",
+      "credit": ""
+    },
+    {
+      "url": "https://math.libretexts.org/@api/deki/files/22325/CNX_IntAlg_Figure_09_03_006c_img.jpg?revision=1",
+      "alt": ".",
+      "credit": ""
+    },
+    {
+      "url": "https://math.libretexts.org/@api/deki/files/22389/CNX_IntAlg_Figure_09_03_006d_img.jpg?revision=1",
+      "alt": ".",
+      "credit": ""
+    },
+    {
+      "url": "https://math.libretexts.org/@api/deki/files/22283/CNX_IntAlg_Figure_09_03_006e_img.jpg?revision=1",
+      "alt": ".",
+      "credit": ""
+    },
+    {
+      "url": "https://math.libretexts.org/@api/deki/files/22322/CNX_IntAlg_Figure_09_03_006f_img.jpg?revision=1",
+      "alt": ".",
+      "credit": ""
+    },
+    {
+      "url": "https://math.libretexts.org/@api/deki/files/22346/CNX_IntAlg_Figure_09_03_006g_img.jpg?revision=1",
+      "alt": ".",
+      "credit": ""
+    },
+    {
+      "url": "https://math.libretexts.org/@api/deki/files/22341/CNX_IntAlg_Figure_09_03_006h_img.jpg?revision=1",
+      "alt": ".",
+      "credit": ""
+    },
+    {
+      "url": "https://math.libretexts.org/@api/deki/files/22330/CNX_IntAlg_Figure_09_03_006i_img.jpg?revision=1",
+      "alt": ".",
+      "credit": ""
+    },
+    {
+      "url": "https://math.libretexts.org/@api/deki/files/22369/CNX_IntAlg_Figure_09_03_006j_img.jpg?revision=1",
+      "alt": ".",
+      "credit": ""
+    },
+    {
+      "url": "https://math.libretexts.org/@api/deki/files/22332/CNX_IntAlg_Figure_09_03_006k_img.jpg?revision=1",
+      "alt": ".",
+      "credit": ""
+    },
+    {
+      "url": "https://math.libretexts.org/@api/deki/files/22381/CNX_IntAlg_Figure_09_03_006l_img.jpg?revision=1",
+      "alt": ".",
+      "credit": ""
+    },
+    {
+      "url": "https://math.libretexts.org/@api/deki/files/22455/CNX_IntAlg_Figure_09_03_007a_img.jpg?revision=1",
+      "alt": ".",
+      "credit": ""
+    },
+    {
+      "url": "https://math.libretexts.org/@api/deki/files/22384/CNX_IntAlg_Figure_09_03_007b_img.jpg?revision=1",
+      "alt": ".",
+      "credit": ""
+    },
+    {
+      "url": "https://math.libretexts.org/@api/deki/files/22502/CNX_IntAlg_Figure_09_03_007c_img.jpg?revision=1",
+      "alt": ".",
+      "credit": ""
+    },
+    {
+      "url": "https://math.libretexts.org/@api/deki/files/35959/CNX_IntAlg_Figure_09_03_007d_img.jpg?revision=1",
+      "alt": ".",
+      "credit": ""
+    },
+    {
+      "url": "https://math.libretexts.org/@api/deki/files/35960/CNX_IntAlg_Figure_09_03_007e_img.jpg?revision=1",
+      "alt": ".",
+      "credit": ""
+    },
+    {
+      "url": "https://math.libretexts.org/@api/deki/files/22499/CNX_IntAlg_Figure_09_03_007f_img.jpg?revision=1",
+      "alt": ".",
+      "credit": ""
+    },
+    {
+      "url": "https://math.libretexts.org/@api/deki/files/22544/CNX_IntAlg_Figure_09_03_007g_img.jpg?revision=1",
+      "alt": ".",
+      "credit": ""
+    },
+    {
+      "url": "https://math.libretexts.org/@api/deki/files/22590/CNX_IntAlg_Figure_09_03_007h_img.jpg?revision=1",
+      "alt": ".",
+      "credit": ""
+    },
+    {
+      "url": "https://math.libretexts.org/@api/deki/files/35962/CNX_IntAlg_Figure_09_03_007i_img.jpg?revision=1",
+      "alt": ".",
+      "credit": ""
+    },
+    {
+      "url": "https://math.libretexts.org/@api/deki/files/22622/CNX_IntAlg_Figure_09_03_007j_img.jpg?revision=1",
+      "alt": ".",
+      "credit": ""
+    },
+    {
+      "url": "https://math.libretexts.org/@api/deki/files/22638/CNX_IntAlg_Figure_09_03_007k_img.jpg?revision=1",
+      "alt": ".",
+      "credit": ""
+    },
+    {
+      "url": "https://math.libretexts.org/@api/deki/files/22694/CNX_IntAlg_Figure_09_03_007l_img.jpg?revision=1",
+      "alt": ".",
+      "credit": ""
+    },
+    {
+      "url": "https://math.libretexts.org/@api/deki/files/22554/CNX_IntAlg_Figure_09_03_007m_img.jpg?revision=1",
+      "alt": ".",
+      "credit": ""
+    },
+    {
+      "url": "https://math.libretexts.org/@api/deki/files/22588/CNX_IntAlg_Figure_09_03_008a_img.jpg?revision=1",
+      "alt": ".",
+      "credit": ""
+    },
+    {
+      "url": "https://math.libretexts.org/@api/deki/files/22634/CNX_IntAlg_Figure_09_03_008b_img.jpg?revision=1",
+      "alt": ".",
+      "credit": ""
+    },
+    {
+      "url": "https://math.libretexts.org/@api/deki/files/22911/CNX_IntAlg_Figure_09_03_008c_img.jpg?revision=1",
+      "alt": ".",
+      "credit": ""
+    },
+    {
+      "url": "https://math.libretexts.org/@api/deki/files/22641/CNX_IntAlg_Figure_09_03_008d_img.jpg?revision=1",
+      "alt": ".",
+      "credit": ""
+    },
+    {
+      "url": "https://math.libretexts.org/@api/deki/files/22699/CNX_IntAlg_Figure_09_03_008e_img.jpg?revision=1",
+      "alt": ".",
+      "credit": ""
+    },
+    {
+      "url": "https://math.libretexts.org/@api/deki/files/22698/CNX_IntAlg_Figure_09_03_008f_img.jpg?revision=1",
+      "alt": ".",
+      "credit": ""
+    },
+    {
+      "url": "https://math.libretexts.org/@api/deki/files/22828/CNX_IntAlg_Figure_09_03_008g_img.jpg?revision=1",
+      "alt": ".",
+      "credit": ""
+    },
+    {
+      "url": "https://math.libretexts.org/@api/deki/files/22727/CNX_IntAlg_Figure_09_03_008h_img.jpg?revision=1",
+      "alt": ".",
+      "credit": ""
+    },
+    {
+      "url": "https://math.libretexts.org/@api/deki/files/22752/CNX_IntAlg_Figure_09_03_008i_img.jpg?revision=1",
+      "alt": ".",
+      "credit": ""
+    },
+    {
+      "url": "https://math.libretexts.org/@api/deki/files/22858/CNX_IntAlg_Figure_09_03_009_img_new.jpg?revision=1",
+      "alt": "In the Quadratic Formula, x equals the quotient of negative b plus or minus the square root of b squared minus 4 times a times c and 2 a, the value under the radical, b squared minus 4 times a times c, is called the discriminant.",
+      "credit": ""
+    },
+    {
+      "url": "https://math.libretexts.org/@api/deki/files/22860/CNX_IntAlg_Figure_09_03_010_img_new.jpg?revision=1",
+      "alt": "When the value under the radical in the Quadratic Formula, the discriminant, is positive, the equation has two real solutions. When the value under the radical in the Quadratic Formula, the discriminant, is zero, the equation has one real solution. When the value under the radical in the Quadratic Formula, the discriminant, is negative, the equation has two complex solutions.",
+      "credit": ""
+    }
+  ],
+  "references": [
+    {
+      "text": "Using the Quadratic Formula",
+      "url": "https://openstax.org/l/37QuadForm1"
+    },
+    {
+      "text": "Solve a Quadratic Equation Using the Quadratic Formula with Complex Solutions",
+      "url": "https://openstax.org/l/37QuadForm2"
+    },
+    {
+      "text": "Discriminant in Quadratic Formula",
+      "url": "https://openstax.org/l/37QuadForm3"
+    },
+    {
+      "text": "9.4: Solve Quadratic Equations Using the Quadratic Formula",
+      "url": "https://math.libretexts.org/Bookshelves/Algebra/Intermediate_Algebra_1e_(OpenStax)/09%3A_Quadratic_Equations_and_Functions/904%3A_Solve_Quadratic_Equations_Using_the_Quadratic_Formula"
+    },
+    {
+      "text": "CC BY  4.0",
+      "url": "https://creativecommons.org/licenses/by/4.0"
+    },
+    {
+      "text": "OpenStax",
+      "url": "https://openstax.org/"
+    },
+    {
+      "text": "source content",
+      "url": "https://openstax.org/details/books/intermediate-algebra-2e"
+    }
+  ],
+  "exercises": [
+    {
+      "ordinal": 1,
+      "sourceNumber": "1",
+      "sourceAnchor": "",
+      "kind": "exercise-candidate",
+      "context": "By the end of this section, you will be able to:\n\nBefore you get started, take this readiness quiz.",
+      "original": "1. Evaluate \\(b^{2}-4 a b\\) when \\(a=3\\) and \\(b=−2\\).",
+      "prompt": "1. Evaluate \\(b^{2}-4 a b\\) when \\(a=3\\) and \\(b=−2\\).",
+      "sourceAnswers": [],
+      "hasFigure": false,
+      "status": "draft",
+      "answerVerified": false,
+      "translationStatus": "pending",
+      "mappingStatus": "pending"
+    },
+    {
+      "ordinal": 2,
+      "sourceNumber": "2",
+      "sourceAnchor": "",
+      "kind": "exercise-candidate",
+      "context": "By the end of this section, you will be able to:\n\nBefore you get started, take this readiness quiz.",
+      "original": "2. Simplify \\(\\sqrt{108}\\).",
+      "prompt": "2. Simplify \\(\\sqrt{108}\\).",
+      "sourceAnswers": [],
+      "hasFigure": false,
+      "status": "draft",
+      "answerVerified": false,
+      "translationStatus": "pending",
+      "mappingStatus": "pending"
+    },
+    {
+      "ordinal": 3,
+      "sourceNumber": "3",
+      "sourceAnchor": "",
+      "kind": "exercise-candidate",
+      "context": "By the end of this section, you will be able to:\n\nBefore you get started, take this readiness quiz.",
+      "original": "3. Simplify \\(\\sqrt{50}\\).",
+      "prompt": "3. Simplify \\(\\sqrt{50}\\).",
+      "sourceAnswers": [],
+      "hasFigure": false,
+      "status": "draft",
+      "answerVerified": false,
+      "translationStatus": "pending",
+      "mappingStatus": "pending"
+    },
+    {
+      "ordinal": 4,
+      "sourceNumber": "",
+      "sourceAnchor": "",
+      "kind": "example-or-exercise",
+      "context": "\\[x=\\dfrac{-b \\pm \\sqrt{b^{2}-4 a c}}{2 a} \\label{quad}\\]\n\nTo use the Quadratic Formula, we substitute the values of \\(a,b\\), and \\(c\\) from the standard form into the expression on the right side of the formula. Then we simplify the expression. The result is the pair of solutions to the quadratic equation.\n\nNotice the Quadratic Formula (Equation \\ref{quad}) is an equation. Make sure you use both sides of the equation.",
+      "original": "Example \\(\\PageIndex{1}\\) How to Solve a Quadratic Equation Using the Quadratic Formula\n\nSolve by using the Quadratic Formula: \\(2 x^{2}+9 x-5=0\\).\n\nSolution:\n\n            Step 1: Write the quadratic equation in standard form. Identify the \\(a,b,c\\) values.\t\n            This equation is in standard form.\t\n            \\(\\begin{aligned} \\color{red}{a x^{2}+b x+c =0} \\\\ 2 x^{2}+9 x-5 =0 \\\\ a=2, b =9, c=-5 \\end{aligned}\\)\t\n\n            Step 2: Write the quadratic formula. Then substitute in the values of \\(a,b,c\\).\t\n            Substitute in \\(a=2, b=9, c=-5\\)\t\n            \\(x=\\dfrac{-b \\pm \\sqrt{b^{2}-4 a c}}{2 a}\\)\n\n            \\(x=\\dfrac{-9 \\pm \\sqrt{9^{2}-4 \\cdot 2 \\cdot(-5)}}{2 \\cdot 2}\\)\t\n\n            Step 3: Simplify the fraction, and solve for \\(x\\).\t\n\n            \\(\\begin{array}{l}{x=\\dfrac{-9 \\pm \\sqrt{81-(-40)}}{4}} \\\\ {x=\\dfrac{-9 \\pm \\sqrt{121}}{4}} \\\\ {x=\\dfrac{-9 \\pm 11}{4}} \\\\ {x=\\dfrac{-9+11}{4}}\\quad x=\\dfrac{-9-11}{4} \\\\ {x=\\dfrac{2}{4} \\quad \\quad\\:\\:\\: x=\\dfrac{-20}{4}}\\\\ {x=\\dfrac{1}{2} \\quad\\quad\\:\\:\\: x=-5}\\end{array}\\)\t\n\n            Step 4: Check the solutions.\t\n            Put each answer in the original equation to check. Substitute \\(x=\\color{red}{\\dfrac{1}{2}}\\) and \\(x=\\color{red}{-5}\\).\t\n\n\\(\\begin{aligned}2 x^{2}+9 x-5&=0 \\\\ 2\\color{black}{\\left(\\color{red}{\\dfrac{1}{2}}\\right)}^{2}+9 \\cdot \\color{red}{\\dfrac{1}{2}}\\color{black}{-}5 &\\stackrel{?}{=} 0 \\\\ 2\\cdot\\dfrac{1}{4}+0\\cdot\\dfrac{1}{2}-5&\\stackrel{?}{=}0 \\\\ 2\\cdot\\dfrac{1}{4}+9\\cdot\\dfrac{1}{2}-5&\\stackrel{?}{=}0 \\\\ \\dfrac{1}{2}+\\dfrac{9}{2}-5&\\stackrel{?}{=}0 \\\\ \\dfrac{10}{2}-5&\\stackrel{?}{=}0 \\\\5-5&\\stackrel{?}{=}0\\\\0&=0\\end{aligned}\\)\n\n\\(\\begin{array}{r}{2 x^{2}+9 x-5=0} \\\\ {2(\\color{red}{-5}\\color{black}{)}^{2}+9(\\color{red}{-5}\\color{black}{)}-5\\stackrel{?}{=}0} \\\\ {2 \\cdot 25-45-5\\stackrel{?}{=}0} \\\\ {50-45-5\\stackrel{?}{=}0} \\\\ {0=0}\\end{array}\\)",
+      "prompt": "Example \\(\\PageIndex{1}\\) How to Solve a Quadratic Equation Using the Quadratic Formula\n\nSolve by using the Quadratic Formula: \\(2 x^{2}+9 x-5=0\\).\n\nSolution:\n\n            Step 1: Write the quadratic equation in standard form. Identify the \\(a,b,c\\) values.\t\n            This equation is in standard form.\t\n            \\(\\begin{aligned} \\color{red}{a x^{2}+b x+c =0} \\\\ 2 x^{2}+9 x-5 =0 \\\\ a=2, b =9, c=-5 \\end{aligned}\\)\t\n\n            Step 2: Write the quadratic formula. Then substitute in the values of \\(a,b,c\\).\t\n            Substitute in \\(a=2, b=9, c=-5\\)\t\n            \\(x=\\dfrac{-b \\pm \\sqrt{b^{2}-4 a c}}{2 a}\\)\n\n            \\(x=\\dfrac{-9 \\pm \\sqrt{9^{2}-4 \\cdot 2 \\cdot(-5)}}{2 \\cdot 2}\\)\t\n\n            Step 3: Simplify the fraction, and solve for \\(x\\).\t\n\n            \\(\\begin{array}{l}{x=\\dfrac{-9 \\pm \\sqrt{81-(-40)}}{4}} \\\\ {x=\\dfrac{-9 \\pm \\sqrt{121}}{4}} \\\\ {x=\\dfrac{-9 \\pm 11}{4}} \\\\ {x=\\dfrac{-9+11}{4}}\\quad x=\\dfrac{-9-11}{4} \\\\ {x=\\dfrac{2}{4} \\quad \\quad\\:\\:\\: x=\\dfrac{-20}{4}}\\\\ {x=\\dfrac{1}{2} \\quad\\quad\\:\\:\\: x=-5}\\end{array}\\)\t\n\n            Step 4: Check the solutions.\t\n            Put each answer in the original equation to check. Substitute \\(x=\\color{red}{\\dfrac{1}{2}}\\) and \\(x=\\color{red}{-5}\\).\t\n\n\\(\\begin{aligned}2 x^{2}+9 x-5&=0 \\\\ 2\\color{black}{\\left(\\color{red}{\\dfrac{1}{2}}\\right)}^{2}+9 \\cdot \\color{red}{\\dfrac{1}{2}}\\color{black}{-}5 &\\stackrel{?}{=} 0 \\\\ 2\\cdot\\dfrac{1}{4}+0\\cdot\\dfrac{1}{2}-5&\\stackrel{?}{=}0 \\\\ 2\\cdot\\dfrac{1}{4}+9\\cdot\\dfrac{1}{2}-5&\\stackrel{?}{=}0 \\\\ \\dfrac{1}{2}+\\dfrac{9}{2}-5&\\stackrel{?}{=}0 \\\\ \\dfrac{10}{2}-5&\\stackrel{?}{=}0 \\\\5-5&\\stackrel{?}{=}0\\\\0&=0\\end{aligned}\\)\n\n\\(\\begin{array}{r}{2 x^{2}+9 x-5=0} \\\\ {2(\\color{red}{-5}\\color{black}{)}^{2}+9(\\color{red}{-5}\\color{black}{)}-5\\stackrel{?}{=}0} \\\\ {2 \\cdot 25-45-5\\stackrel{?}{=}0} \\\\ {50-45-5\\stackrel{?}{=}0} \\\\ {0=0}\\end{array}\\)",
+      "sourceAnswers": [],
+      "hasFigure": false,
+      "status": "draft",
+      "answerVerified": false,
+      "translationStatus": "pending",
+      "mappingStatus": "pending"
+    },
+    {
+      "ordinal": 5,
+      "sourceNumber": "",
+      "sourceAnchor": "",
+      "kind": "exercise-candidate",
+      "context": "\\[x=\\dfrac{-b \\pm \\sqrt{b^{2}-4 a c}}{2 a} \\label{quad}\\]\n\nTo use the Quadratic Formula, we substitute the values of \\(a,b\\), and \\(c\\) from the standard form into the expression on the right side of the formula. Then we simplify the expression. The result is the pair of solutions to the quadratic equation.\n\nNotice the Quadratic Formula (Equation \\ref{quad}) is an equation. Make sure you use both sides of the equation.",
+      "original": "Exercise \\(\\PageIndex{1}\\)\n\nSolve by using the Quadratic Formula: \\(3 y^{2}-5 y+2=0\\).\n\nAnswer\n\n\\(y=1, y=\\dfrac{2}{3}\\)",
+      "prompt": "Exercise \\(\\PageIndex{1}\\)\n\nSolve by using the Quadratic Formula: \\(3 y^{2}-5 y+2=0\\).",
+      "sourceAnswers": [
+        "\\(y=1, y=\\dfrac{2}{3}\\)"
+      ],
+      "hasFigure": false,
+      "status": "draft",
+      "answerVerified": false,
+      "translationStatus": "pending",
+      "mappingStatus": "pending"
+    },
+    {
+      "ordinal": 6,
+      "sourceNumber": "",
+      "sourceAnchor": "",
+      "kind": "exercise-candidate",
+      "context": "\\[x=\\dfrac{-b \\pm \\sqrt{b^{2}-4 a c}}{2 a} \\label{quad}\\]\n\nTo use the Quadratic Formula, we substitute the values of \\(a,b\\), and \\(c\\) from the standard form into the expression on the right side of the formula. Then we simplify the expression. The result is the pair of solutions to the quadratic equation.\n\nNotice the Quadratic Formula (Equation \\ref{quad}) is an equation. Make sure you use both sides of the equation.",
+      "original": "Exercise \\(\\PageIndex{2}\\)\n\nSolve by using the Quadratic Formula: \\(4 z^{2}+2 z-6=0\\).\n\nAnswer\n\n\\(z=1, z=-\\dfrac{3}{2}\\)",
+      "prompt": "Exercise \\(\\PageIndex{2}\\)\n\nSolve by using the Quadratic Formula: \\(4 z^{2}+2 z-6=0\\).",
+      "sourceAnswers": [
+        "\\(z=1, z=-\\dfrac{3}{2}\\)"
+      ],
+      "hasFigure": false,
+      "status": "draft",
+      "answerVerified": false,
+      "translationStatus": "pending",
+      "mappingStatus": "pending"
+    },
+    {
+      "ordinal": 7,
+      "sourceNumber": "1",
+      "sourceAnchor": "",
+      "kind": "exercise-candidate",
+      "context": "\\[x=\\dfrac{-b \\pm \\sqrt{b^{2}-4 a c}}{2 a} \\label{quad}\\]\n\nTo use the Quadratic Formula, we substitute the values of \\(a,b\\), and \\(c\\) from the standard form into the expression on the right side of the formula. Then we simplify the expression. The result is the pair of solutions to the quadratic equation.\n\nNotice the Quadratic Formula (Equation \\ref{quad}) is an equation. Make sure you use both sides of the equation.",
+      "original": "1. Write the quadratic equation in standard form, \\(a x^{2}+b x+c=0\\). Identify the values of \\(a,b\\), and \\(c\\).",
+      "prompt": "1. Write the quadratic equation in standard form, \\(a x^{2}+b x+c=0\\). Identify the values of \\(a,b\\), and \\(c\\).",
+      "sourceAnswers": [],
+      "hasFigure": false,
+      "status": "draft",
+      "answerVerified": false,
+      "translationStatus": "pending",
+      "mappingStatus": "pending"
+    },
+    {
+      "ordinal": 8,
+      "sourceNumber": "2",
+      "sourceAnchor": "",
+      "kind": "exercise-candidate",
+      "context": "\\[x=\\dfrac{-b \\pm \\sqrt{b^{2}-4 a c}}{2 a} \\label{quad}\\]\n\nTo use the Quadratic Formula, we substitute the values of \\(a,b\\), and \\(c\\) from the standard form into the expression on the right side of the formula. Then we simplify the expression. The result is the pair of solutions to the quadratic equation.\n\nNotice the Quadratic Formula (Equation \\ref{quad}) is an equation. Make sure you use both sides of the equation.",
+      "original": "2. Write the Quadratic Formula. Then substitute in the values of \\(a,b\\), and \\(c\\).",
+      "prompt": "2. Write the Quadratic Formula. Then substitute in the values of \\(a,b\\), and \\(c\\).",
+      "sourceAnswers": [],
+      "hasFigure": false,
+      "status": "draft",
+      "answerVerified": false,
+      "translationStatus": "pending",
+      "mappingStatus": "pending"
+    },
+    {
+      "ordinal": 9,
+      "sourceNumber": "3",
+      "sourceAnchor": "",
+      "kind": "exercise-candidate",
+      "context": "\\[x=\\dfrac{-b \\pm \\sqrt{b^{2}-4 a c}}{2 a} \\label{quad}\\]\n\nTo use the Quadratic Formula, we substitute the values of \\(a,b\\), and \\(c\\) from the standard form into the expression on the right side of the formula. Then we simplify the expression. The result is the pair of solutions to the quadratic equation.\n\nNotice the Quadratic Formula (Equation \\ref{quad}) is an equation. Make sure you use both sides of the equation.",
+      "original": "3. Simplify.",
+      "prompt": "3. Simplify.",
+      "sourceAnswers": [],
+      "hasFigure": false,
+      "status": "draft",
+      "answerVerified": false,
+      "translationStatus": "pending",
+      "mappingStatus": "pending"
+    },
+    {
+      "ordinal": 10,
+      "sourceNumber": "4",
+      "sourceAnchor": "",
+      "kind": "exercise-candidate",
+      "context": "\\[x=\\dfrac{-b \\pm \\sqrt{b^{2}-4 a c}}{2 a} \\label{quad}\\]\n\nTo use the Quadratic Formula, we substitute the values of \\(a,b\\), and \\(c\\) from the standard form into the expression on the right side of the formula. Then we simplify the expression. The result is the pair of solutions to the quadratic equation.\n\nNotice the Quadratic Formula (Equation \\ref{quad}) is an equation. Make sure you use both sides of the equation.",
+      "original": "4. Check the solutions.",
+      "prompt": "4. Check the solutions.",
+      "sourceAnswers": [],
+      "hasFigure": false,
+      "status": "draft",
+      "answerVerified": false,
+      "translationStatus": "pending",
+      "mappingStatus": "pending"
+    },
+    {
+      "ordinal": 11,
+      "sourceNumber": "",
+      "sourceAnchor": "",
+      "kind": "example-or-exercise",
+      "context": "To use the Quadratic Formula, we substitute the values of \\(a,b\\), and \\(c\\) from the standard form into the expression on the right side of the formula. Then we simplify the expression. The result is the pair of solutions to the quadratic equation.\n\nNotice the Quadratic Formula (Equation \\ref{quad}) is an equation. Make sure you use both sides of the equation.\n\nIf you say the formula as you write it in each problem, you’ll have it memorized in no time! And remember, the Quadratic Formula is an EQUATION. Be sure you start with “\\(x=\\)”.",
+      "original": "Example \\(\\PageIndex{2}\\)\n\nSolve by using the Quadratic Formula: \\(x^{2}-6 x=-5\\).\n\nSolution:\n\n\\(x^{2}-6 x=-5\\)\n\n            Write the equation in standard form by adding \\(5\\) to each side.\t\n\n\\(x^{2}-6 x+5=0\\)\n\n            This equation is now in standard form.\t\n\n\\({\\color{red}{\\small{ax^2+bx + c} = \\small{0}}}\\)\n\n            \\(x^2 - 6x + 5 = 0\\)\n\n            Identify the values of \\(\\color{cyan}a\\), \\(\\color{red}b\\), \\(\\color{limegreen}c\\).\t\n            \\({\\color{cyan}a=1}\\), \\({\\color{red}b=-6}\\), \\({\\color{limegreen}c=5}\\)\t\n\n            Write the Quadratic Formula.\t\n\n\\(x=\\dfrac{-b \\pm \\sqrt{b^{2}-4 a c}}{2 a}\\)\n\n            Then substitute in the values of \\(a, b, c\\).\t\n\n\\(x=\\dfrac{-\\color{red} (-6 ) \\color{black} \\pm \\sqrt{\\color{red}(-6) \\color{black}^{2}-4 \\cdot \\color{cyan}1 \\color{black} \\cdot ( \\color{limegreen}5 \\color{black})}}{2 \\cdot \\color{cyan} 1} \\)\n\n            Simplify.\t\n\n\\(x=\\dfrac{6 \\pm \\sqrt{36-20}}{2}\\)\n\n\\(x=\\dfrac{6 \\pm \\sqrt{16}}{2}\\)\n\n\\(x=\\dfrac{6 \\pm 4}{2}\\)\n\n            Rewrite to show two solutions.\t\n\n\\(x=\\frac{6+4}{2}, \\quad x=\\frac{6-4}{2}\\)\n\n            Simplify.\t\n\n\\(x=\\frac{10}{2}, \\quad x=\\frac{2}{2}\\)\n\n            \\(x=5, \\quad x=1\\)\t\n\nCheck:\n\n[Figure: .]",
+      "prompt": "Example \\(\\PageIndex{2}\\)\n\nSolve by using the Quadratic Formula: \\(x^{2}-6 x=-5\\).\n\nSolution:\n\n\\(x^{2}-6 x=-5\\)\n\n            Write the equation in standard form by adding \\(5\\) to each side.\t\n\n\\(x^{2}-6 x+5=0\\)\n\n            This equation is now in standard form.\t\n\n\\({\\color{red}{\\small{ax^2+bx + c} = \\small{0}}}\\)\n\n            \\(x^2 - 6x + 5 = 0\\)\n\n            Identify the values of \\(\\color{cyan}a\\), \\(\\color{red}b\\), \\(\\color{limegreen}c\\).\t\n            \\({\\color{cyan}a=1}\\), \\({\\color{red}b=-6}\\), \\({\\color{limegreen}c=5}\\)\t\n\n            Write the Quadratic Formula.\t\n\n\\(x=\\dfrac{-b \\pm \\sqrt{b^{2}-4 a c}}{2 a}\\)\n\n            Then substitute in the values of \\(a, b, c\\).\t\n\n\\(x=\\dfrac{-\\color{red} (-6 ) \\color{black} \\pm \\sqrt{\\color{red}(-6) \\color{black}^{2}-4 \\cdot \\color{cyan}1 \\color{black} \\cdot ( \\color{limegreen}5 \\color{black})}}{2 \\cdot \\color{cyan} 1} \\)\n\n            Simplify.\t\n\n\\(x=\\dfrac{6 \\pm \\sqrt{36-20}}{2}\\)\n\n\\(x=\\dfrac{6 \\pm \\sqrt{16}}{2}\\)\n\n\\(x=\\dfrac{6 \\pm 4}{2}\\)\n\n            Rewrite to show two solutions.\t\n\n\\(x=\\frac{6+4}{2}, \\quad x=\\frac{6-4}{2}\\)\n\n            Simplify.\t\n\n\\(x=\\frac{10}{2}, \\quad x=\\frac{2}{2}\\)\n\n            \\(x=5, \\quad x=1\\)\t\n\nCheck:\n\n[Figure: .]",
+      "sourceAnswers": [],
+      "hasFigure": true,
+      "status": "draft",
+      "answerVerified": false,
+      "translationStatus": "pending",
+      "mappingStatus": "pending"
+    },
+    {
+      "ordinal": 12,
+      "sourceNumber": "",
+      "sourceAnchor": "",
+      "kind": "exercise-candidate",
+      "context": "To use the Quadratic Formula, we substitute the values of \\(a,b\\), and \\(c\\) from the standard form into the expression on the right side of the formula. Then we simplify the expression. The result is the pair of solutions to the quadratic equation.\n\nNotice the Quadratic Formula (Equation \\ref{quad}) is an equation. Make sure you use both sides of the equation.\n\nIf you say the formula as you write it in each problem, you’ll have it memorized in no time! And remember, the Quadratic Formula is an EQUATION. Be sure you start with “\\(x=\\)”.",
+      "original": "Exercise \\(\\PageIndex{3}\\)\n\nSolve by using the Quadratic Formula: \\(a^{2}-2 a=15\\).\n\nAnswer\n\n\\(a=-3, a=5\\)",
+      "prompt": "Exercise \\(\\PageIndex{3}\\)\n\nSolve by using the Quadratic Formula: \\(a^{2}-2 a=15\\).",
+      "sourceAnswers": [
+        "\\(a=-3, a=5\\)"
+      ],
+      "hasFigure": false,
+      "status": "draft",
+      "answerVerified": false,
+      "translationStatus": "pending",
+      "mappingStatus": "pending"
+    },
+    {
+      "ordinal": 13,
+      "sourceNumber": "",
+      "sourceAnchor": "",
+      "kind": "exercise-candidate",
+      "context": "To use the Quadratic Formula, we substitute the values of \\(a,b\\), and \\(c\\) from the standard form into the expression on the right side of the formula. Then we simplify the expression. The result is the pair of solutions to the quadratic equation.\n\nNotice the Quadratic Formula (Equation \\ref{quad}) is an equation. Make sure you use both sides of the equation.\n\nIf you say the formula as you write it in each problem, you’ll have it memorized in no time! And remember, the Quadratic Formula is an EQUATION. Be sure you start with “\\(x=\\)”.",
+      "original": "Exercise \\(\\PageIndex{4}\\)\n\nSolve by using the Quadratic Formula: \\(b^{2}+24=-10 b\\).\n\nAnswer\n\n\\(b=-6, b=-4\\)",
+      "prompt": "Exercise \\(\\PageIndex{4}\\)\n\nSolve by using the Quadratic Formula: \\(b^{2}+24=-10 b\\).",
+      "sourceAnswers": [
+        "\\(b=-6, b=-4\\)"
+      ],
+      "hasFigure": false,
+      "status": "draft",
+      "answerVerified": false,
+      "translationStatus": "pending",
+      "mappingStatus": "pending"
+    },
+    {
+      "ordinal": 14,
+      "sourceNumber": "",
+      "sourceAnchor": "",
+      "kind": "example-or-exercise",
+      "context": "Notice the Quadratic Formula (Equation \\ref{quad}) is an equation. Make sure you use both sides of the equation.\n\nIf you say the formula as you write it in each problem, you’ll have it memorized in no time! And remember, the Quadratic Formula is an EQUATION. Be sure you start with “\\(x=\\)”.\n\nWhen we solved quadratic equations by using the Square Root Property, we sometimes got answers that had radicals. That can happen, too, when using the Quadratic Formula. If we get a radical as a solution, the final answer must have the radical in its simplified form.",
+      "original": "Example \\(\\PageIndex{3}\\)\n\nSolve by using the Quadratic Formula: \\(2 x^{2}+10 x+11=0\\).\n\nSolution:\n\n[Figure: .]\n\n            This equation is in standard form.\t\n\n[Figure: .]\n\n            Identify the values of \\(a,b\\) and \\(c\\).\t\n\n[Figure: .]\n\n            Write the Quadratic Formula.\t\n\n\\(x=\\dfrac{-b \\pm \\sqrt{b^{2}-4 a c}}{2 a}\\)\n\n            Then substitute in the values of \\(a, b\\), and \\(c\\).\t\n\n[Figure: .]\n\n            Simplify.\t\n\n\\(x=\\dfrac{-10 \\pm \\sqrt{100-88}}{4}\\)\n\n\\(x=\\dfrac{-10 \\pm \\sqrt{12}}{4}\\)\n\n            Simplify the radical.\t\n\n\\(x=\\dfrac{-10 \\pm 2 \\sqrt{3}}{4}\\)\n\n            Factor out the common factor in the numerator.\t\n\n[Figure: .]\n\n\\(x=\\dfrac{\\color{red}{2}(-5 \\pm \\sqrt{3})}{4}\\)\n\n            Remove the common factors.\t\n\n\\(x=\\dfrac{-5 \\pm \\sqrt{3}}{2}\\)\n\n            Rewrite to show two solutions.\t\n\n\\(x=\\dfrac{-5+\\sqrt{3}}{2}, \\quad x=\\dfrac{-5-\\sqrt{3}}{2}\\)\n\nCheck:\n\nWe leave the check for you!",
+      "prompt": "Example \\(\\PageIndex{3}\\)\n\nSolve by using the Quadratic Formula: \\(2 x^{2}+10 x+11=0\\).\n\nSolution:\n\n[Figure: .]\n\n            This equation is in standard form.\t\n\n[Figure: .]\n\n            Identify the values of \\(a,b\\) and \\(c\\).\t\n\n[Figure: .]\n\n            Write the Quadratic Formula.\t\n\n\\(x=\\dfrac{-b \\pm \\sqrt{b^{2}-4 a c}}{2 a}\\)\n\n            Then substitute in the values of \\(a, b\\), and \\(c\\).\t\n\n[Figure: .]\n\n            Simplify.\t\n\n\\(x=\\dfrac{-10 \\pm \\sqrt{100-88}}{4}\\)\n\n\\(x=\\dfrac{-10 \\pm \\sqrt{12}}{4}\\)\n\n            Simplify the radical.\t\n\n\\(x=\\dfrac{-10 \\pm 2 \\sqrt{3}}{4}\\)\n\n            Factor out the common factor in the numerator.\t\n\n[Figure: .]\n\n\\(x=\\dfrac{\\color{red}{2}(-5 \\pm \\sqrt{3})}{4}\\)\n\n            Remove the common factors.\t\n\n\\(x=\\dfrac{-5 \\pm \\sqrt{3}}{2}\\)\n\n            Rewrite to show two solutions.\t\n\n\\(x=\\dfrac{-5+\\sqrt{3}}{2}, \\quad x=\\dfrac{-5-\\sqrt{3}}{2}\\)\n\nCheck:\n\nWe leave the check for you!",
+      "sourceAnswers": [],
+      "hasFigure": true,
+      "status": "draft",
+      "answerVerified": false,
+      "translationStatus": "pending",
+      "mappingStatus": "pending"
+    },
+    {
+      "ordinal": 15,
+      "sourceNumber": "",
+      "sourceAnchor": "",
+      "kind": "exercise-candidate",
+      "context": "Notice the Quadratic Formula (Equation \\ref{quad}) is an equation. Make sure you use both sides of the equation.\n\nIf you say the formula as you write it in each problem, you’ll have it memorized in no time! And remember, the Quadratic Formula is an EQUATION. Be sure you start with “\\(x=\\)”.\n\nWhen we solved quadratic equations by using the Square Root Property, we sometimes got answers that had radicals. That can happen, too, when using the Quadratic Formula. If we get a radical as a solution, the final answer must have the radical in its simplified form.",
+      "original": "Exercise \\(\\PageIndex{5}\\)\n\nSolve by using the Quadratic Formula: \\(3 m^{2}+12 m+7=0\\).\n\nAnswer\n\n\\(m=\\dfrac{-6+\\sqrt{15}}{3}, m=\\dfrac{-6-\\sqrt{15}}{3}\\)",
+      "prompt": "Exercise \\(\\PageIndex{5}\\)\n\nSolve by using the Quadratic Formula: \\(3 m^{2}+12 m+7=0\\).",
+      "sourceAnswers": [
+        "\\(m=\\dfrac{-6+\\sqrt{15}}{3}, m=\\dfrac{-6-\\sqrt{15}}{3}\\)"
+      ],
+      "hasFigure": false,
+      "status": "draft",
+      "answerVerified": false,
+      "translationStatus": "pending",
+      "mappingStatus": "pending"
+    },
+    {
+      "ordinal": 16,
+      "sourceNumber": "",
+      "sourceAnchor": "",
+      "kind": "exercise-candidate",
+      "context": "Notice the Quadratic Formula (Equation \\ref{quad}) is an equation. Make sure you use both sides of the equation.\n\nIf you say the formula as you write it in each problem, you’ll have it memorized in no time! And remember, the Quadratic Formula is an EQUATION. Be sure you start with “\\(x=\\)”.\n\nWhen we solved quadratic equations by using the Square Root Property, we sometimes got answers that had radicals. That can happen, too, when using the Quadratic Formula. If we get a radical as a solution, the final answer must have the radical in its simplified form.",
+      "original": "Exercise \\(\\PageIndex{6}\\)\n\nSolve by using the Quadratic Formula: \\(5 n^{2}+4 n-4=0\\).\n\nAnswer\n\n\\(n=\\dfrac{-2+2 \\sqrt{6}}{5}, n=\\dfrac{-2-2 \\sqrt{6}}{5}\\)",
+      "prompt": "Exercise \\(\\PageIndex{6}\\)\n\nSolve by using the Quadratic Formula: \\(5 n^{2}+4 n-4=0\\).",
+      "sourceAnswers": [
+        "\\(n=\\dfrac{-2+2 \\sqrt{6}}{5}, n=\\dfrac{-2-2 \\sqrt{6}}{5}\\)"
+      ],
+      "hasFigure": false,
+      "status": "draft",
+      "answerVerified": false,
+      "translationStatus": "pending",
+      "mappingStatus": "pending"
+    },
+    {
+      "ordinal": 17,
+      "sourceNumber": "",
+      "sourceAnchor": "",
+      "kind": "example-or-exercise",
+      "context": "If you say the formula as you write it in each problem, you’ll have it memorized in no time! And remember, the Quadratic Formula is an EQUATION. Be sure you start with “\\(x=\\)”.\n\nWhen we solved quadratic equations by using the Square Root Property, we sometimes got answers that had radicals. That can happen, too, when using the Quadratic Formula. If we get a radical as a solution, the final answer must have the radical in its simplified form.\n\nWhen we substitute \\(a, b\\), and \\(c\\) into the Quadratic Formula and the radicand is negative, the quadratic equation will have imaginary or complex solutions. We will see this in the next example.",
+      "original": "Example \\(\\PageIndex{4}\\)\n\nSolve by using the Quadratic Formula: \\(3 p^{2}+2 p+9=0\\).\n\nSolution:\n\n[Figure: .]\n\n            This equation is in standard form.\t\n\n[Figure: .]\n\n            Identify the values of \\(a,b,c\\).\t\n\n[Figure: .]\n\n            Write the Quadratic Formula.\t\n\n[Figure: .]\n\n            Then substitute in the values of \\(a,b,c\\).\t\n\n[Figure: .]\n\n            Simplify.\t\n\n[Figure: .]\n\n[Figure: .]\n\n            Simplify the radical using complex numbers.\t\n\n[Figure: .]\n\n            Simplify the radical.\t\n\n[Figure: .]\n\n            Factor the common factor in the numerator.\t\n\n[Figure: .]\n\n            Remove the common factors.\t\n\n[Figure: .]\n\n            Rewrite in standard \\(a+bi\\) form.\t\n\n[Figure: .]\n\n            Write as two solutions.\t\n\n[Figure: .]\n\nTable 9.3.5",
+      "prompt": "Example \\(\\PageIndex{4}\\)\n\nSolve by using the Quadratic Formula: \\(3 p^{2}+2 p+9=0\\).\n\nSolution:\n\n[Figure: .]\n\n            This equation is in standard form.\t\n\n[Figure: .]\n\n            Identify the values of \\(a,b,c\\).\t\n\n[Figure: .]\n\n            Write the Quadratic Formula.\t\n\n[Figure: .]\n\n            Then substitute in the values of \\(a,b,c\\).\t\n\n[Figure: .]\n\n            Simplify.\t\n\n[Figure: .]\n\n[Figure: .]\n\n            Simplify the radical using complex numbers.\t\n\n[Figure: .]\n\n            Simplify the radical.\t\n\n[Figure: .]\n\n            Factor the common factor in the numerator.\t\n\n[Figure: .]\n\n            Remove the common factors.\t\n\n[Figure: .]\n\n            Rewrite in standard \\(a+bi\\) form.\t\n\n[Figure: .]\n\n            Write as two solutions.\t\n\n[Figure: .]\n\nTable 9.3.5",
+      "sourceAnswers": [],
+      "hasFigure": true,
+      "status": "draft",
+      "answerVerified": false,
+      "translationStatus": "pending",
+      "mappingStatus": "pending"
+    },
+    {
+      "ordinal": 18,
+      "sourceNumber": "",
+      "sourceAnchor": "",
+      "kind": "exercise-candidate",
+      "context": "If you say the formula as you write it in each problem, you’ll have it memorized in no time! And remember, the Quadratic Formula is an EQUATION. Be sure you start with “\\(x=\\)”.\n\nWhen we solved quadratic equations by using the Square Root Property, we sometimes got answers that had radicals. That can happen, too, when using the Quadratic Formula. If we get a radical as a solution, the final answer must have the radical in its simplified form.\n\nWhen we substitute \\(a, b\\), and \\(c\\) into the Quadratic Formula and the radicand is negative, the quadratic equation will have imaginary or complex solutions. We will see this in the next example.",
+      "original": "Exercise \\(\\PageIndex{7}\\)\n\nSolve by using the Quadratic Formula: \\(4 a^{2}-2 a+8=0\\).\n\nAnswer\n\n\\(a=\\dfrac{1}{4}+\\dfrac{\\sqrt{31}}{4} i, \\quad a=\\dfrac{1}{4}-\\dfrac{\\sqrt{31}}{4} i\\)",
+      "prompt": "Exercise \\(\\PageIndex{7}\\)\n\nSolve by using the Quadratic Formula: \\(4 a^{2}-2 a+8=0\\).",
+      "sourceAnswers": [
+        "\\(a=\\dfrac{1}{4}+\\dfrac{\\sqrt{31}}{4} i, \\quad a=\\dfrac{1}{4}-\\dfrac{\\sqrt{31}}{4} i\\)"
+      ],
+      "hasFigure": false,
+      "status": "draft",
+      "answerVerified": false,
+      "translationStatus": "pending",
+      "mappingStatus": "pending"
+    },
+    {
+      "ordinal": 19,
+      "sourceNumber": "",
+      "sourceAnchor": "",
+      "kind": "exercise-candidate",
+      "context": "If you say the formula as you write it in each problem, you’ll have it memorized in no time! And remember, the Quadratic Formula is an EQUATION. Be sure you start with “\\(x=\\)”.\n\nWhen we solved quadratic equations by using the Square Root Property, we sometimes got answers that had radicals. That can happen, too, when using the Quadratic Formula. If we get a radical as a solution, the final answer must have the radical in its simplified form.\n\nWhen we substitute \\(a, b\\), and \\(c\\) into the Quadratic Formula and the radicand is negative, the quadratic equation will have imaginary or complex solutions. We will see this in the next example.",
+      "original": "Exercise \\(\\PageIndex{8}\\)\n\nSolve by using the Quadratic Formula: \\(5 b^{2}+2 b+4=0\\).\n\nAnswer\n\n\\(b=-\\dfrac{1}{5}+\\dfrac{\\sqrt{19}}{5} i, \\quad b=-\\dfrac{1}{5}-\\dfrac{\\sqrt{19}}{5} i\\)",
+      "prompt": "Exercise \\(\\PageIndex{8}\\)\n\nSolve by using the Quadratic Formula: \\(5 b^{2}+2 b+4=0\\).",
+      "sourceAnswers": [
+        "\\(b=-\\dfrac{1}{5}+\\dfrac{\\sqrt{19}}{5} i, \\quad b=-\\dfrac{1}{5}-\\dfrac{\\sqrt{19}}{5} i\\)"
+      ],
+      "hasFigure": false,
+      "status": "draft",
+      "answerVerified": false,
+      "translationStatus": "pending",
+      "mappingStatus": "pending"
+    },
+    {
+      "ordinal": 20,
+      "sourceNumber": "",
+      "sourceAnchor": "",
+      "kind": "example-or-exercise",
+      "context": "When we solved quadratic equations by using the Square Root Property, we sometimes got answers that had radicals. That can happen, too, when using the Quadratic Formula. If we get a radical as a solution, the final answer must have the radical in its simplified form.\n\nWhen we substitute \\(a, b\\), and \\(c\\) into the Quadratic Formula and the radicand is negative, the quadratic equation will have imaginary or complex solutions. We will see this in the next example.\n\nRemember, to use the Quadratic Formula, the equation must be written in standard form, \\(a x^{2}+b x+c=0\\). Sometimes, we will need to do some algebra to get the equation into standard form before we can use the Quadratic Formula.",
+      "original": "Example \\(\\PageIndex{5}\\)\n\nSolve by using the Quadratic Formula: \\(x(x+6)+4=0\\).\n\nSolution:\n\nOur first step is to get the equation in standard form.\n\n[Figure: .]\n\n            Distribute to get the equation in standard form.\t\n\n[Figure: .]\n\n            This equation is now in standard form.\t\n\n[Figure: .]\n\n            Identify the values of \\(a,b,c\\).\t\n\n[Figure: .]\n\n            Write the Quadratic Formula.\t\n\n[Figure: .]\n\n            Then substitute in the values of \\(a,b,c\\).\t\n\n[Figure: .]\n\n            Simplify.\t\n\n[Figure: .]\n\n[Figure: .]\n\n            Simplify the radical.\t\n\n[Figure: .]\n\n            Factor the common factor in the numerator.\t\n\n[Figure: .]\n\n            Remove the common factors.\t\n\n[Figure: .]\n\n            Write as two solutions.\t\n\n[Figure: .]\n\nCheck:\n\nWe leave the check for you!\n\nTable 9.3.6",
+      "prompt": "Example \\(\\PageIndex{5}\\)\n\nSolve by using the Quadratic Formula: \\(x(x+6)+4=0\\).\n\nSolution:\n\nOur first step is to get the equation in standard form.\n\n[Figure: .]\n\n            Distribute to get the equation in standard form.\t\n\n[Figure: .]\n\n            This equation is now in standard form.\t\n\n[Figure: .]\n\n            Identify the values of \\(a,b,c\\).\t\n\n[Figure: .]\n\n            Write the Quadratic Formula.\t\n\n[Figure: .]\n\n            Then substitute in the values of \\(a,b,c\\).\t\n\n[Figure: .]\n\n            Simplify.\t\n\n[Figure: .]\n\n[Figure: .]\n\n            Simplify the radical.\t\n\n[Figure: .]\n\n            Factor the common factor in the numerator.\t\n\n[Figure: .]\n\n            Remove the common factors.\t\n\n[Figure: .]\n\n            Write as two solutions.\t\n\n[Figure: .]\n\nCheck:\n\nWe leave the check for you!\n\nTable 9.3.6",
+      "sourceAnswers": [],
+      "hasFigure": true,
+      "status": "draft",
+      "answerVerified": false,
+      "translationStatus": "pending",
+      "mappingStatus": "pending"
+    },
+    {
+      "ordinal": 21,
+      "sourceNumber": "",
+      "sourceAnchor": "",
+      "kind": "exercise-candidate",
+      "context": "When we solved quadratic equations by using the Square Root Property, we sometimes got answers that had radicals. That can happen, too, when using the Quadratic Formula. If we get a radical as a solution, the final answer must have the radical in its simplified form.\n\nWhen we substitute \\(a, b\\), and \\(c\\) into the Quadratic Formula and the radicand is negative, the quadratic equation will have imaginary or complex solutions. We will see this in the next example.\n\nRemember, to use the Quadratic Formula, the equation must be written in standard form, \\(a x^{2}+b x+c=0\\). Sometimes, we will need to do some algebra to get the equation into standard form before we can use the Quadratic Formula.",
+      "original": "Exercise \\(\\PageIndex{9}\\)\n\nSolve by using the Quadratic Formula: \\(x(x+2)−5=0\\).\n\nAnswer\n\n\\(x=-1+\\sqrt{6}, x=-1-\\sqrt{6}\\)",
+      "prompt": "Exercise \\(\\PageIndex{9}\\)\n\nSolve by using the Quadratic Formula: \\(x(x+2)−5=0\\).",
+      "sourceAnswers": [
+        "\\(x=-1+\\sqrt{6}, x=-1-\\sqrt{6}\\)"
+      ],
+      "hasFigure": false,
+      "status": "draft",
+      "answerVerified": false,
+      "translationStatus": "pending",
+      "mappingStatus": "pending"
+    },
+    {
+      "ordinal": 22,
+      "sourceNumber": "",
+      "sourceAnchor": "",
+      "kind": "exercise-candidate",
+      "context": "When we solved quadratic equations by using the Square Root Property, we sometimes got answers that had radicals. That can happen, too, when using the Quadratic Formula. If we get a radical as a solution, the final answer must have the radical in its simplified form.\n\nWhen we substitute \\(a, b\\), and \\(c\\) into the Quadratic Formula and the radicand is negative, the quadratic equation will have imaginary or complex solutions. We will see this in the next example.\n\nRemember, to use the Quadratic Formula, the equation must be written in standard form, \\(a x^{2}+b x+c=0\\). Sometimes, we will need to do some algebra to get the equation into standard form before we can use the Quadratic Formula.",
+      "original": "Exercise \\(\\PageIndex{10}\\)\n\nSolve by using the Quadratic Formula: \\(3y(y−2)−3=0\\).\n\nAnswer\n\n\\(y=1+\\sqrt{2}, y=1-\\sqrt{2}\\)",
+      "prompt": "Exercise \\(\\PageIndex{10}\\)\n\nSolve by using the Quadratic Formula: \\(3y(y−2)−3=0\\).",
+      "sourceAnswers": [
+        "\\(y=1+\\sqrt{2}, y=1-\\sqrt{2}\\)"
+      ],
+      "hasFigure": false,
+      "status": "draft",
+      "answerVerified": false,
+      "translationStatus": "pending",
+      "mappingStatus": "pending"
+    },
+    {
+      "ordinal": 23,
+      "sourceNumber": "",
+      "sourceAnchor": "",
+      "kind": "example-or-exercise",
+      "context": "When we substitute \\(a, b\\), and \\(c\\) into the Quadratic Formula and the radicand is negative, the quadratic equation will have imaginary or complex solutions. We will see this in the next example.\n\nRemember, to use the Quadratic Formula, the equation must be written in standard form, \\(a x^{2}+b x+c=0\\). Sometimes, we will need to do some algebra to get the equation into standard form before we can use the Quadratic Formula.\n\nWhen we solved linear equations, if an equation had too many fractions we cleared the fractions by multiplying both sides of the equation by the LCD. This gave us an equivalent equation—without fractions— to solve. We can use the same strategy with quadratic equations.",
+      "original": "Example \\(\\PageIndex{6}\\)\n\nSolve by using the Quadratic Formula: \\(\\dfrac{1}{2} u^{2}+\\dfrac{2}{3} u=\\dfrac{1}{3}\\).\n\nSolution:\n\nOur first step is to clear the fractions.\n\n[Figure: .]\n\n            Multiply both sides by the LCD, \\(6\\), to clear the fractions.\t\n\n[Figure: .]\n\n            Multiply.\t\n\n[Figure: .]\n\n            Subtract \\(2\\) to get the equation in standard form.\t\n\n[Figure: .]\n\n            Identify the values of \\(a, b\\), and \\(c\\).\t\n\n[Figure: .]\n\n            Write the Quadratic Formula.\t\n\n[Figure: .]\n\n            Then substitute in the values of \\(a, b,\\) and \\(c\\).\t\n\n[Figure: .]\n\n            Simplify.\t\n\n[Figure: .]\n\n[Figure: .]\n\n            Simplify the radical.\t\n\n[Figure: .]\n\n            Factor the common factor in the numerator.\t\n\n[Figure: .]\n\n            Remove the common factors.\t\n\n[Figure: .]\n\n            Rewrite to show two solutions.\t\n\n[Figure: .]\n\nCheck:\n\nWe leave the check for you!\n\nTable 9.3.7",
+      "prompt": "Example \\(\\PageIndex{6}\\)\n\nSolve by using the Quadratic Formula: \\(\\dfrac{1}{2} u^{2}+\\dfrac{2}{3} u=\\dfrac{1}{3}\\).\n\nSolution:\n\nOur first step is to clear the fractions.\n\n[Figure: .]\n\n            Multiply both sides by the LCD, \\(6\\), to clear the fractions.\t\n\n[Figure: .]\n\n            Multiply.\t\n\n[Figure: .]\n\n            Subtract \\(2\\) to get the equation in standard form.\t\n\n[Figure: .]\n\n            Identify the values of \\(a, b\\), and \\(c\\).\t\n\n[Figure: .]\n\n            Write the Quadratic Formula.\t\n\n[Figure: .]\n\n            Then substitute in the values of \\(a, b,\\) and \\(c\\).\t\n\n[Figure: .]\n\n            Simplify.\t\n\n[Figure: .]\n\n[Figure: .]\n\n            Simplify the radical.\t\n\n[Figure: .]\n\n            Factor the common factor in the numerator.\t\n\n[Figure: .]\n\n            Remove the common factors.\t\n\n[Figure: .]\n\n            Rewrite to show two solutions.\t\n\n[Figure: .]\n\nCheck:\n\nWe leave the check for you!\n\nTable 9.3.7",
+      "sourceAnswers": [],
+      "hasFigure": true,
+      "status": "draft",
+      "answerVerified": false,
+      "translationStatus": "pending",
+      "mappingStatus": "pending"
+    },
+    {
+      "ordinal": 24,
+      "sourceNumber": "",
+      "sourceAnchor": "",
+      "kind": "exercise-candidate",
+      "context": "When we substitute \\(a, b\\), and \\(c\\) into the Quadratic Formula and the radicand is negative, the quadratic equation will have imaginary or complex solutions. We will see this in the next example.\n\nRemember, to use the Quadratic Formula, the equation must be written in standard form, \\(a x^{2}+b x+c=0\\). Sometimes, we will need to do some algebra to get the equation into standard form before we can use the Quadratic Formula.\n\nWhen we solved linear equations, if an equation had too many fractions we cleared the fractions by multiplying both sides of the equation by the LCD. This gave us an equivalent equation—without fractions— to solve. We can use the same strategy with quadratic equations.",
+      "original": "Exercise \\(\\PageIndex{11}\\)\n\nSolve by using the Quadratic Formula: \\(\\dfrac{1}{4} c^{2}-\\dfrac{1}{3} c=\\dfrac{1}{12}\\).\n\nAnswer\n\n\\(c=\\dfrac{2+\\sqrt{7}}{3}, \\quad c=\\dfrac{2-\\sqrt{7}}{3}\\)",
+      "prompt": "Exercise \\(\\PageIndex{11}\\)\n\nSolve by using the Quadratic Formula: \\(\\dfrac{1}{4} c^{2}-\\dfrac{1}{3} c=\\dfrac{1}{12}\\).",
+      "sourceAnswers": [
+        "\\(c=\\dfrac{2+\\sqrt{7}}{3}, \\quad c=\\dfrac{2-\\sqrt{7}}{3}\\)"
+      ],
+      "hasFigure": false,
+      "status": "draft",
+      "answerVerified": false,
+      "translationStatus": "pending",
+      "mappingStatus": "pending"
+    },
+    {
+      "ordinal": 25,
+      "sourceNumber": "",
+      "sourceAnchor": "",
+      "kind": "exercise-candidate",
+      "context": "When we substitute \\(a, b\\), and \\(c\\) into the Quadratic Formula and the radicand is negative, the quadratic equation will have imaginary or complex solutions. We will see this in the next example.\n\nRemember, to use the Quadratic Formula, the equation must be written in standard form, \\(a x^{2}+b x+c=0\\). Sometimes, we will need to do some algebra to get the equation into standard form before we can use the Quadratic Formula.\n\nWhen we solved linear equations, if an equation had too many fractions we cleared the fractions by multiplying both sides of the equation by the LCD. This gave us an equivalent equation—without fractions— to solve. We can use the same strategy with quadratic equations.",
+      "original": "Exercise \\(\\PageIndex{12}\\)\n\nSolve by using the Quadratic Formula: \\(\\dfrac{1}{9} d^{2}-\\dfrac{1}{2} d=-\\dfrac{1}{3}\\).\n\nAnswer\n\n\\(d=\\dfrac{9+\\sqrt{33}}{4}, d=\\dfrac{9-\\sqrt{33}}{4}\\)",
+      "prompt": "Exercise \\(\\PageIndex{12}\\)\n\nSolve by using the Quadratic Formula: \\(\\dfrac{1}{9} d^{2}-\\dfrac{1}{2} d=-\\dfrac{1}{3}\\).",
+      "sourceAnswers": [
+        "\\(d=\\dfrac{9+\\sqrt{33}}{4}, d=\\dfrac{9-\\sqrt{33}}{4}\\)"
+      ],
+      "hasFigure": false,
+      "status": "draft",
+      "answerVerified": false,
+      "translationStatus": "pending",
+      "mappingStatus": "pending"
+    },
+    {
+      "ordinal": 26,
+      "sourceNumber": "",
+      "sourceAnchor": "",
+      "kind": "example-or-exercise",
+      "context": "When we solved linear equations, if an equation had too many fractions we cleared the fractions by multiplying both sides of the equation by the LCD. This gave us an equivalent equation—without fractions— to solve. We can use the same strategy with quadratic equations.\n\nThink about the equation \\((x-3)^{2}=0\\). We know from the Zero Product Property that this equation has only one solution, \\(x=3\\).\n\nWe will see in the next example how using the Quadratic Formula to solve an equation whose standard form is a perfect square trinomial equal to \\(0\\) gives just one solution. Notice that once the radicand is simplified it becomes \\(0\\), which leads to only one solution.",
+      "original": "Example \\(\\PageIndex{7}\\)\n\nSolve by using the Quadratic Formula: \\(4 x^{2}-20 x=-25\\).\n\nSolution:\n\n[Figure: .]\n\n            Add \\(25\\) to get the equation in standard form.\t\n\n[Figure: .]\n\n            Identify the values of \\(a, b\\), and \\(c\\).\t\n\n[Figure: .]\n\n            Write the quadratic formula.\t\n\n[Figure: .]\n\n            Then substitute in the values of \\(a, b\\), and \\(c\\).\t\n\n[Figure: .]\n\n            Simplify.\t\n\n[Figure: .]\n\n[Figure: .]\n\n            Simplify the radical.\t\n\n[Figure: .]\n\n            Simplify the fraction.\t\n\n[Figure: .]\n\nCheck:\n\nWe leave the check for you!\n\nTable 9.3.8\n\nDid you recognize that \\(4 x^{2}-20 x+25\\) is a perfect square trinomial. It is equivalent to \\((2 x-5)^{2}\\)? If you solve \\(4 x^{2}-20 x+25=0\\) by factoring and then using the Square Root Property, do you get the same result?",
+      "prompt": "Example \\(\\PageIndex{7}\\)\n\nSolve by using the Quadratic Formula: \\(4 x^{2}-20 x=-25\\).\n\nSolution:\n\n[Figure: .]\n\n            Add \\(25\\) to get the equation in standard form.\t\n\n[Figure: .]\n\n            Identify the values of \\(a, b\\), and \\(c\\).\t\n\n[Figure: .]\n\n            Write the quadratic formula.\t\n\n[Figure: .]\n\n            Then substitute in the values of \\(a, b\\), and \\(c\\).\t\n\n[Figure: .]\n\n            Simplify.\t\n\n[Figure: .]\n\n[Figure: .]\n\n            Simplify the radical.\t\n\n[Figure: .]\n\n            Simplify the fraction.\t\n\n[Figure: .]\n\nCheck:\n\nWe leave the check for you!\n\nTable 9.3.8\n\nDid you recognize that \\(4 x^{2}-20 x+25\\) is a perfect square trinomial. It is equivalent to \\((2 x-5)^{2}\\)? If you solve \\(4 x^{2}-20 x+25=0\\) by factoring and then using the Square Root Property, do you get the same result?",
+      "sourceAnswers": [],
+      "hasFigure": true,
+      "status": "draft",
+      "answerVerified": false,
+      "translationStatus": "pending",
+      "mappingStatus": "pending"
+    },
+    {
+      "ordinal": 27,
+      "sourceNumber": "",
+      "sourceAnchor": "",
+      "kind": "exercise-candidate",
+      "context": "When we solved linear equations, if an equation had too many fractions we cleared the fractions by multiplying both sides of the equation by the LCD. This gave us an equivalent equation—without fractions— to solve. We can use the same strategy with quadratic equations.\n\nThink about the equation \\((x-3)^{2}=0\\). We know from the Zero Product Property that this equation has only one solution, \\(x=3\\).\n\nWe will see in the next example how using the Quadratic Formula to solve an equation whose standard form is a perfect square trinomial equal to \\(0\\) gives just one solution. Notice that once the radicand is simplified it becomes \\(0\\), which leads to only one solution.",
+      "original": "Exercise \\(\\PageIndex{13}\\)\n\nSolve by using the Quadratic Formula: \\(r^{2}+10 r+25=0\\).\n\nAnswer\n\n\\(r=-5\\)",
+      "prompt": "Exercise \\(\\PageIndex{13}\\)\n\nSolve by using the Quadratic Formula: \\(r^{2}+10 r+25=0\\).",
+      "sourceAnswers": [
+        "\\(r=-5\\)"
+      ],
+      "hasFigure": false,
+      "status": "draft",
+      "answerVerified": false,
+      "translationStatus": "pending",
+      "mappingStatus": "pending"
+    },
+    {
+      "ordinal": 28,
+      "sourceNumber": "",
+      "sourceAnchor": "",
+      "kind": "exercise-candidate",
+      "context": "When we solved linear equations, if an equation had too many fractions we cleared the fractions by multiplying both sides of the equation by the LCD. This gave us an equivalent equation—without fractions— to solve. We can use the same strategy with quadratic equations.\n\nThink about the equation \\((x-3)^{2}=0\\). We know from the Zero Product Property that this equation has only one solution, \\(x=3\\).\n\nWe will see in the next example how using the Quadratic Formula to solve an equation whose standard form is a perfect square trinomial equal to \\(0\\) gives just one solution. Notice that once the radicand is simplified it becomes \\(0\\), which leads to only one solution.",
+      "original": "Exercise \\(\\PageIndex{14}\\)\n\nSolve by using the Quadratic Formula: \\(25 t^{2}-40 t=-16\\).\n\nAnswer\n\n\\(t=\\dfrac{4}{5}\\)",
+      "prompt": "Exercise \\(\\PageIndex{14}\\)\n\nSolve by using the Quadratic Formula: \\(25 t^{2}-40 t=-16\\).",
+      "sourceAnswers": [
+        "\\(t=\\dfrac{4}{5}\\)"
+      ],
+      "hasFigure": false,
+      "status": "draft",
+      "answerVerified": false,
+      "translationStatus": "pending",
+      "mappingStatus": "pending"
+    },
+    {
+      "ordinal": 29,
+      "sourceNumber": "",
+      "sourceAnchor": "",
+      "kind": "example-or-exercise",
+      "context": "Using the Discriminant \\(b^{2}-4ac\\), to Determine the Number and Type of Solutions of a Quadratic Equation\n\nFor a quadratic equation of the form \\(ax^{2}+bx+c=0\\), \\(a \\neq 0\\),",
+      "original": "Example \\(\\PageIndex{8}\\)\n\nDetermine the number of solutions to each quadratic equation.\n\n1. \\(3 x^{2}+7 x-9=0\\)\n\n2. \\(5 n^{2}+n+4=0\\)\n\n3. \\(9 y^{2}-6 y+1=0\\)\n\nSolution:\n\nTo determine the number of solutions of each quadratic equation, we will look at its discriminant.\n\na.\n\n\\(3 x^{2}+7 x-9=0\\)\n\nThe equation is in standard form, identify \\(a, b\\), and \\(c\\).\n\n\\(a=3, \\quad b=7, \\quad c=-9\\)\n\nWrite the discriminant.\n\n\\(b^{2}-4 a c\\)\n\nSubstitute in the values of \\(a, b\\), and \\(c\\).\n\n\\((7)^{2}-4 \\cdot 3 \\cdot(-9)\\)\n\nSimplify.\n\n\\(49+108\\)\n\n\\(157\\)\n\nSince the discriminant is positive, there are \\(2\\) real solutions to the equation.\n\nb.\n\n\\(5 n^{2}+n+4=0\\)\n\nThe equation is in standard form, identify \\(a, b\\), and \\(c\\).\n\n\\(a=5, \\quad b=1, \\quad c=4\\)\n\nWrite the discriminant.\n\n\\(b^{2}-4 a c\\)\n\nSubstitute in the values of \\(a, b\\), and \\(c\\).\n\n\\((1)^{2}-4 \\cdot 5 \\cdot 4\\)\n\nSimplify.\n\n\\(1-80\\)\n\n\\(-79\\)\n\nSince the discriminant is negative, there are \\(2\\) complex solutions to the equation.\n\nc.\n\n\\(9 y^{2}-6 y+1=0\\)\n\nThe equation is in standard form, identify \\(a, b\\), and \\(c\\).\n\n\\(a=9, \\quad b=-6, \\quad c=1\\)\n\nWrite the discriminant.\n\n\\(b^{2}-4 a c\\)\n\nSubstitute in the values of \\(a, b\\), and \\(c\\).\n\n\\((-6)^{2}-4 \\cdot 9 \\cdot 1\\)\n\nSimplify.\n\n\\(36-36\\)\n\n\\(0\\)\n\nSince the discriminant is \\(0\\), there is \\(1\\) real solution to the equation.",
+      "prompt": "Example \\(\\PageIndex{8}\\)\n\nDetermine the number of solutions to each quadratic equation.\n\n1. \\(3 x^{2}+7 x-9=0\\)\n\n2. \\(5 n^{2}+n+4=0\\)\n\n3. \\(9 y^{2}-6 y+1=0\\)\n\nSolution:\n\nTo determine the number of solutions of each quadratic equation, we will look at its discriminant.\n\na.\n\n\\(3 x^{2}+7 x-9=0\\)\n\nThe equation is in standard form, identify \\(a, b\\), and \\(c\\).\n\n\\(a=3, \\quad b=7, \\quad c=-9\\)\n\nWrite the discriminant.\n\n\\(b^{2}-4 a c\\)\n\nSubstitute in the values of \\(a, b\\), and \\(c\\).\n\n\\((7)^{2}-4 \\cdot 3 \\cdot(-9)\\)\n\nSimplify.\n\n\\(49+108\\)\n\n\\(157\\)\n\nSince the discriminant is positive, there are \\(2\\) real solutions to the equation.\n\nb.\n\n\\(5 n^{2}+n+4=0\\)\n\nThe equation is in standard form, identify \\(a, b\\), and \\(c\\).\n\n\\(a=5, \\quad b=1, \\quad c=4\\)\n\nWrite the discriminant.\n\n\\(b^{2}-4 a c\\)\n\nSubstitute in the values of \\(a, b\\), and \\(c\\).\n\n\\((1)^{2}-4 \\cdot 5 \\cdot 4\\)\n\nSimplify.\n\n\\(1-80\\)\n\n\\(-79\\)\n\nSince the discriminant is negative, there are \\(2\\) complex solutions to the equation.\n\nc.\n\n\\(9 y^{2}-6 y+1=0\\)\n\nThe equation is in standard form, identify \\(a, b\\), and \\(c\\).\n\n\\(a=9, \\quad b=-6, \\quad c=1\\)\n\nWrite the discriminant.\n\n\\(b^{2}-4 a c\\)\n\nSubstitute in the values of \\(a, b\\), and \\(c\\).\n\n\\((-6)^{2}-4 \\cdot 9 \\cdot 1\\)\n\nSimplify.\n\n\\(36-36\\)\n\n\\(0\\)\n\nSince the discriminant is \\(0\\), there is \\(1\\) real solution to the equation.",
+      "sourceAnswers": [],
+      "hasFigure": false,
+      "status": "draft",
+      "answerVerified": false,
+      "translationStatus": "pending",
+      "mappingStatus": "pending"
+    },
+    {
+      "ordinal": 30,
+      "sourceNumber": "",
+      "sourceAnchor": "",
+      "kind": "exercise-candidate",
+      "context": "Using the Discriminant \\(b^{2}-4ac\\), to Determine the Number and Type of Solutions of a Quadratic Equation\n\nFor a quadratic equation of the form \\(ax^{2}+bx+c=0\\), \\(a \\neq 0\\),",
+      "original": "Exercise \\(\\PageIndex{15}\\)\n\nDetermine the number and type of solutions to each quadratic equation.\n\n1. \\(8 m^{2}-3 m+6=0\\)\n\n2. \\(5 z^{2}+6 z-2=0\\)\n\n3. \\(9 w^{2}+24 w+16=0\\)\n\nAnswer\n\n1. \\(2\\) complex solutions\n\n2. \\(2\\) real solutions\n\n3. \\(1\\) real solution",
+      "prompt": "Exercise \\(\\PageIndex{15}\\)\n\nDetermine the number and type of solutions to each quadratic equation.\n\n1. \\(8 m^{2}-3 m+6=0\\)\n\n2. \\(5 z^{2}+6 z-2=0\\)\n\n3. \\(9 w^{2}+24 w+16=0\\)",
+      "sourceAnswers": [
+        "1. \\(2\\) complex solutions\n\n2. \\(2\\) real solutions\n\n3. \\(1\\) real solution"
+      ],
+      "hasFigure": false,
+      "status": "draft",
+      "answerVerified": false,
+      "translationStatus": "pending",
+      "mappingStatus": "pending"
+    },
+    {
+      "ordinal": 31,
+      "sourceNumber": "",
+      "sourceAnchor": "",
+      "kind": "exercise-candidate",
+      "context": "Using the Discriminant \\(b^{2}-4ac\\), to Determine the Number and Type of Solutions of a Quadratic Equation\n\nFor a quadratic equation of the form \\(ax^{2}+bx+c=0\\), \\(a \\neq 0\\),",
+      "original": "Exercise \\(\\PageIndex{16}\\)\n\nDetermine the number and type of solutions to each quadratic equation.\n\n1. \\(b^{2}+7 b-13=0\\)\n\n2. \\(5 a^{2}-6 a+10=0\\)\n\n3. \\(4 r^{2}-20 r+25=0\\)\n\nAnswer\n\n1. \\(2\\) real solutions\n\n2. \\(2\\) complex solutions\n\n3. \\(1\\) real solution",
+      "prompt": "Exercise \\(\\PageIndex{16}\\)\n\nDetermine the number and type of solutions to each quadratic equation.\n\n1. \\(b^{2}+7 b-13=0\\)\n\n2. \\(5 a^{2}-6 a+10=0\\)\n\n3. \\(4 r^{2}-20 r+25=0\\)",
+      "sourceAnswers": [
+        "1. \\(2\\) real solutions\n\n2. \\(2\\) complex solutions\n\n3. \\(1\\) real solution"
+      ],
+      "hasFigure": false,
+      "status": "draft",
+      "answerVerified": false,
+      "translationStatus": "pending",
+      "mappingStatus": "pending"
+    },
+    {
+      "ordinal": 32,
+      "sourceNumber": "1",
+      "sourceAnchor": "",
+      "kind": "exercise-candidate",
+      "context": "Methods for Solving Quadratic Equations",
+      "original": "1. Factoring",
+      "prompt": "1. Factoring",
+      "sourceAnswers": [],
+      "hasFigure": false,
+      "status": "draft",
+      "answerVerified": false,
+      "translationStatus": "pending",
+      "mappingStatus": "pending"
+    },
+    {
+      "ordinal": 33,
+      "sourceNumber": "2",
+      "sourceAnchor": "",
+      "kind": "exercise-candidate",
+      "context": "Methods for Solving Quadratic Equations",
+      "original": "2. Square Root Property",
+      "prompt": "2. Square Root Property",
+      "sourceAnswers": [],
+      "hasFigure": false,
+      "status": "draft",
+      "answerVerified": false,
+      "translationStatus": "pending",
+      "mappingStatus": "pending"
+    },
+    {
+      "ordinal": 34,
+      "sourceNumber": "3",
+      "sourceAnchor": "",
+      "kind": "exercise-candidate",
+      "context": "Methods for Solving Quadratic Equations",
+      "original": "3. Completing the Square",
+      "prompt": "3. Completing the Square",
+      "sourceAnswers": [],
+      "hasFigure": false,
+      "status": "draft",
+      "answerVerified": false,
+      "translationStatus": "pending",
+      "mappingStatus": "pending"
+    },
+    {
+      "ordinal": 35,
+      "sourceNumber": "4",
+      "sourceAnchor": "",
+      "kind": "exercise-candidate",
+      "context": "Methods for Solving Quadratic Equations",
+      "original": "4. Quadratic Formula",
+      "prompt": "4. Quadratic Formula",
+      "sourceAnswers": [],
+      "hasFigure": false,
+      "status": "draft",
+      "answerVerified": false,
+      "translationStatus": "pending",
+      "mappingStatus": "pending"
+    },
+    {
+      "ordinal": 36,
+      "sourceNumber": "1",
+      "sourceAnchor": "",
+      "kind": "exercise-candidate",
+      "context": "Identify the Most Appropriate Method to Solve a Quadratic Equation",
+      "original": "1. Try Factoring first. If the quadratic factors easily, this method is very quick.",
+      "prompt": "1. Try Factoring first. If the quadratic factors easily, this method is very quick.",
+      "sourceAnswers": [],
+      "hasFigure": false,
+      "status": "draft",
+      "answerVerified": false,
+      "translationStatus": "pending",
+      "mappingStatus": "pending"
+    },
+    {
+      "ordinal": 37,
+      "sourceNumber": "2",
+      "sourceAnchor": "",
+      "kind": "exercise-candidate",
+      "context": "Identify the Most Appropriate Method to Solve a Quadratic Equation",
+      "original": "2. Try the Square Root Property next. If the equation fits the form \\(ax^{2}=k\\) or \\(a(x−h)^{2}=k\\), it can easily be solved by using the Square Root Property.",
+      "prompt": "2. Try the Square Root Property next. If the equation fits the form \\(ax^{2}=k\\) or \\(a(x−h)^{2}=k\\), it can easily be solved by using the Square Root Property.",
+      "sourceAnswers": [],
+      "hasFigure": false,
+      "status": "draft",
+      "answerVerified": false,
+      "translationStatus": "pending",
+      "mappingStatus": "pending"
+    },
+    {
+      "ordinal": 38,
+      "sourceNumber": "3",
+      "sourceAnchor": "",
+      "kind": "exercise-candidate",
+      "context": "Identify the Most Appropriate Method to Solve a Quadratic Equation",
+      "original": "3. Use the Quadratic Formula. Any other quadratic equation is best solved by using the Quadratic Formula.",
+      "prompt": "3. Use the Quadratic Formula. Any other quadratic equation is best solved by using the Quadratic Formula.",
+      "sourceAnswers": [],
+      "hasFigure": false,
+      "status": "draft",
+      "answerVerified": false,
+      "translationStatus": "pending",
+      "mappingStatus": "pending"
+    },
+    {
+      "ordinal": 39,
+      "sourceNumber": "",
+      "sourceAnchor": "",
+      "kind": "example-or-exercise",
+      "context": "Identify the Most Appropriate Method to Solve a Quadratic Equation\n\nThe next example uses this strategy to decide how to solve each quadratic equation.",
+      "original": "Example \\(\\PageIndex{9}\\)\n\nIdentify the most appropriate method to use to solve each quadratic equation.\n\n1. \\(5 z^{2}=17\\)\n\n2. \\(4 x^{2}-12 x+9=0\\)\n\n3. \\(8 u^{2}+6 u=11\\)\n\nSolution:\n\na.\n\n\\(5z^{2}=17\\)\n\nSince the equation is in the \\(ax^{2}=k\\), the most appropriate method is to use the Square Root Property.\n\nb.\n\n\\(4 x^{2}-12 x+9=0\\)\n\nWe recognize that the left side of the equation is a perfect square trinomial, and so factoring will be the most appropriate method.\n\nc.\n\n\\(8 u^{2}+6 u=11\\)\n\nPut the equation in standard form.\n\n\\(8 u^{2}+6 u-11=0\\)\n\nWhile our first thought may be to try factoring, thinking about all the possibilities for trial and error method leads us to choose the Quadratic Formula as the most appropriate method.",
+      "prompt": "Example \\(\\PageIndex{9}\\)\n\nIdentify the most appropriate method to use to solve each quadratic equation.\n\n1. \\(5 z^{2}=17\\)\n\n2. \\(4 x^{2}-12 x+9=0\\)\n\n3. \\(8 u^{2}+6 u=11\\)\n\nSolution:\n\na.\n\n\\(5z^{2}=17\\)\n\nSince the equation is in the \\(ax^{2}=k\\), the most appropriate method is to use the Square Root Property.\n\nb.\n\n\\(4 x^{2}-12 x+9=0\\)\n\nWe recognize that the left side of the equation is a perfect square trinomial, and so factoring will be the most appropriate method.\n\nc.\n\n\\(8 u^{2}+6 u=11\\)\n\nPut the equation in standard form.\n\n\\(8 u^{2}+6 u-11=0\\)\n\nWhile our first thought may be to try factoring, thinking about all the possibilities for trial and error method leads us to choose the Quadratic Formula as the most appropriate method.",
+      "sourceAnswers": [],
+      "hasFigure": false,
+      "status": "draft",
+      "answerVerified": false,
+      "translationStatus": "pending",
+      "mappingStatus": "pending"
+    },
+    {
+      "ordinal": 40,
+      "sourceNumber": "",
+      "sourceAnchor": "",
+      "kind": "exercise-candidate",
+      "context": "Identify the Most Appropriate Method to Solve a Quadratic Equation\n\nThe next example uses this strategy to decide how to solve each quadratic equation.",
+      "original": "Exercise \\(\\PageIndex{17}\\)\n\nIdentify the most appropriate method to use to solve each quadratic equation.\n\n1. \\(x^{2}+6 x+8=0\\)\n\n2. \\((n-3)^{2}=16\\)\n\n3. \\(5 p^{2}-6 p=9\\)\n\nAnswer\n\n1. Factoring\n\n2. Square Root Property\n\n3. Quadratic Formula",
+      "prompt": "Exercise \\(\\PageIndex{17}\\)\n\nIdentify the most appropriate method to use to solve each quadratic equation.\n\n1. \\(x^{2}+6 x+8=0\\)\n\n2. \\((n-3)^{2}=16\\)\n\n3. \\(5 p^{2}-6 p=9\\)",
+      "sourceAnswers": [
+        "1. Factoring\n\n2. Square Root Property\n\n3. Quadratic Formula"
+      ],
+      "hasFigure": false,
+      "status": "draft",
+      "answerVerified": false,
+      "translationStatus": "pending",
+      "mappingStatus": "pending"
+    },
+    {
+      "ordinal": 41,
+      "sourceNumber": "",
+      "sourceAnchor": "",
+      "kind": "exercise-candidate",
+      "context": "Identify the Most Appropriate Method to Solve a Quadratic Equation\n\nThe next example uses this strategy to decide how to solve each quadratic equation.",
+      "original": "Exercise \\(\\PageIndex{18}\\)\n\nIdentify the most appropriate method to use to solve each quadratic equation.\n\n1. \\(8 a^{2}+3 a-9=0\\)\n\n2. \\(4 b^{2}+4 b+1=0\\)\n\n3. \\(5 c^{2}=125\\)\n\nAnswer\n\n1. Quadratic Formula\n\n2. Factoring or Square Root Property\n\n3. Square Root Property",
+      "prompt": "Exercise \\(\\PageIndex{18}\\)\n\nIdentify the most appropriate method to use to solve each quadratic equation.\n\n1. \\(8 a^{2}+3 a-9=0\\)\n\n2. \\(4 b^{2}+4 b+1=0\\)\n\n3. \\(5 c^{2}=125\\)",
+      "sourceAnswers": [
+        "1. Quadratic Formula\n\n2. Factoring or Square Root Property\n\n3. Square Root Property"
+      ],
+      "hasFigure": false,
+      "status": "draft",
+      "answerVerified": false,
+      "translationStatus": "pending",
+      "mappingStatus": "pending"
+    },
+    {
+      "ordinal": 42,
+      "sourceNumber": "1",
+      "sourceAnchor": "",
+      "kind": "exercise-candidate",
+      "context": "Key Concepts\n\n\\(x=\\dfrac{-b \\pm \\sqrt{b^{2}-4 a c}}{2 a}\\)",
+      "original": "1. Write the quadratic equation in standard form, \\(a x^{2}+b x+c=0\\). Identify the values of \\(a, b, c\\).",
+      "prompt": "1. Write the quadratic equation in standard form, \\(a x^{2}+b x+c=0\\). Identify the values of \\(a, b, c\\).",
+      "sourceAnswers": [],
+      "hasFigure": false,
+      "status": "draft",
+      "answerVerified": false,
+      "translationStatus": "pending",
+      "mappingStatus": "pending"
+    },
+    {
+      "ordinal": 43,
+      "sourceNumber": "2",
+      "sourceAnchor": "",
+      "kind": "exercise-candidate",
+      "context": "Key Concepts\n\n\\(x=\\dfrac{-b \\pm \\sqrt{b^{2}-4 a c}}{2 a}\\)",
+      "original": "2. Write the Quadratic Formula. Then substitute in the values of \\(a, b, c\\).",
+      "prompt": "2. Write the Quadratic Formula. Then substitute in the values of \\(a, b, c\\).",
+      "sourceAnswers": [],
+      "hasFigure": false,
+      "status": "draft",
+      "answerVerified": false,
+      "translationStatus": "pending",
+      "mappingStatus": "pending"
+    },
+    {
+      "ordinal": 44,
+      "sourceNumber": "3",
+      "sourceAnchor": "",
+      "kind": "exercise-candidate",
+      "context": "Key Concepts\n\n\\(x=\\dfrac{-b \\pm \\sqrt{b^{2}-4 a c}}{2 a}\\)",
+      "original": "3. Simplify.",
+      "prompt": "3. Simplify.",
+      "sourceAnswers": [],
+      "hasFigure": false,
+      "status": "draft",
+      "answerVerified": false,
+      "translationStatus": "pending",
+      "mappingStatus": "pending"
+    },
+    {
+      "ordinal": 45,
+      "sourceNumber": "4",
+      "sourceAnchor": "",
+      "kind": "exercise-candidate",
+      "context": "Key Concepts\n\n\\(x=\\dfrac{-b \\pm \\sqrt{b^{2}-4 a c}}{2 a}\\)",
+      "original": "4. Check the solutions.",
+      "prompt": "4. Check the solutions.",
+      "sourceAnswers": [],
+      "hasFigure": false,
+      "status": "draft",
+      "answerVerified": false,
+      "translationStatus": "pending",
+      "mappingStatus": "pending"
+    },
+    {
+      "ordinal": 46,
+      "sourceNumber": "1",
+      "sourceAnchor": "",
+      "kind": "exercise-candidate",
+      "context": "Key Concepts\n\n\\(x=\\dfrac{-b \\pm \\sqrt{b^{2}-4 a c}}{2 a}\\)",
+      "original": "1. Try Factoring first. If the quadratic factors easily, this method is very quick.",
+      "prompt": "1. Try Factoring first. If the quadratic factors easily, this method is very quick.",
+      "sourceAnswers": [],
+      "hasFigure": false,
+      "status": "draft",
+      "answerVerified": false,
+      "translationStatus": "pending",
+      "mappingStatus": "pending"
+    },
+    {
+      "ordinal": 47,
+      "sourceNumber": "2",
+      "sourceAnchor": "",
+      "kind": "exercise-candidate",
+      "context": "Key Concepts\n\n\\(x=\\dfrac{-b \\pm \\sqrt{b^{2}-4 a c}}{2 a}\\)",
+      "original": "2. Try the Square Root Property next. If the equation fits the form \\(a x^{2}=k\\) or \\(a(x-h)^{2}=k\\), it can easily be solved by using the Square Root Property.",
+      "prompt": "2. Try the Square Root Property next. If the equation fits the form \\(a x^{2}=k\\) or \\(a(x-h)^{2}=k\\), it can easily be solved by using the Square Root Property.",
+      "sourceAnswers": [],
+      "hasFigure": false,
+      "status": "draft",
+      "answerVerified": false,
+      "translationStatus": "pending",
+      "mappingStatus": "pending"
+    },
+    {
+      "ordinal": 48,
+      "sourceNumber": "3",
+      "sourceAnchor": "",
+      "kind": "exercise-candidate",
+      "context": "Key Concepts\n\n\\(x=\\dfrac{-b \\pm \\sqrt{b^{2}-4 a c}}{2 a}\\)",
+      "original": "3. Use the Quadratic Formula. Any other quadratic equation is best solved by using the Quadratic Formula.",
+      "prompt": "3. Use the Quadratic Formula. Any other quadratic equation is best solved by using the Quadratic Formula.",
+      "sourceAnswers": [],
+      "hasFigure": false,
+      "status": "draft",
+      "answerVerified": false,
+      "translationStatus": "pending",
+      "mappingStatus": "pending"
+    }
+  ],
+  "license": "CC BY 4.0",
+  "licenseEvidence": "This page titled 9.4: Solve Quadratic Equations Using the Quadratic Formula was last modified on Mon, 14 Feb 2022 01:07:17 GMT and is shared under a CC BY  4.0  license and was authored, remixed, and/or curated by OpenStax via source content that was edited to the style and standards of the LibreTexts platform.",
+  "url": "https://math.libretexts.org/Bookshelves/Algebra/Intermediate_Algebra_1e_(OpenStax)/09:_Quadratic_Equations_and_Functions/904:_Solve_Quadratic_Equations_Using_the_Quadratic_Formula",
+  "sha256": "e5403086e0927cc3c298eced65cb0b5382177f01cef1deafd2f082fc26bbbec9",
+  "checkedAt": "2026-10-07",
+  "id": "56ecbf68c0baa1df64de",
+  "bookId": "intermediate-algebra",
+  "licenseInherited": false,
+  "licenseSource": "https://math.libretexts.org/Bookshelves/Algebra/Intermediate_Algebra_1e_(OpenStax)/09:_Quadratic_Equations_and_Functions/904:_Solve_Quadratic_Equations_Using_the_Quadratic_Formula",
+  "licenseUrl": "https://creativecommons.org/licenses/by/4.0/",
+  "authors": "OpenStax / Lynn Marecek, Andrea Honeycutt Mathis",
+  "book": "Intermediate Algebra 1e",
+  "reviewStatus": "unreviewed",
+  "sourceLanguage": "en",
+  "translationStatus": "pending"
+}

@@ -1,0 +1,507 @@
+{
+  "title": "5.7: Inverses and Radical Functions",
+  "originalText": "Learning Objectives\n\nIn this section, you will:\n\nFind the inverse of an invertible polynomial function.\n\nRestrict the domain to find the inverse of a polynomial function.\n\nA mound of gravel is in the shape of a cone with the height equal to twice the radius.\n\n[Figure: Gravel in the shape of a cone.]\n\nFigure \\(\\PageIndex{1}\\)\n\nThe volume is found using a formula from elementary geometry.\n\n\\[ \\begin{align*} V&=\\dfrac{1}{3}\\pi r^2h \\\\[4pt] &=\\dfrac{1}{3}\\pi r^2(2r)\\\\[4pt] &=\\dfrac{2}{3}\\pi r^3 \\end{align*}\\]\n\nWe have written the volume \\(V\\) in terms of the radius \\(r\\). However, in some cases, we may start out with the volume and want to find the radius. For example: A customer purchases 100 cubic feet of gravel to construct a cone shape mound with a height twice the radius. What are the radius and height of the new cone? To answer this question, we use the formula\n\n\\[r=\\sqrt[3]{\\dfrac{3V}{2\\pi}} \\nonumber\\]\n\nThis function is the inverse of the formula for \\(V\\) in terms of \\(r\\).\n\nIn this section, we will explore the inverses of polynomial and rational functions and in particular the radical functions we encounter in the process.\n\nFinding the Inverse of a Polynomial Function\n\nTwo functions \\(f\\) and \\(g\\) are inverse functions if for every coordinate pair in \\(f\\), \\((a,b)\\), there exists a corresponding coordinate pair in the inverse function, \\(g\\), \\((b, a)\\). In other words, the coordinate pairs of the inverse functions have the input and output interchanged. Only one-to-one functions have inverses. Recall that a one-to-one function has a unique output value for each input value and passes the horizontal line test.\n\nFor example, suppose a water runoff collector is built in the shape of a parabolic trough as shown in Figure \\(\\PageIndex{2}\\). We can use the information in the figure to find the surface area of the water in the trough as a function of the depth of the water.\n\n[Figure: Diagram of a parabolic trough that is 18” in height, 3’ in length, and 12” in width.]\n\nFigure \\(\\PageIndex{2}\\)\n\nBecause it will be helpful to have an equation for the parabolic cross-sectional shape, we will impose a coordinate system at the cross section, with \\(x\\) measured horizontally and \\(y\\) measured vertically, with the origin at the vertex of the parabola (Figure \\(\\PageIndex{3}\\)).\n\n[Figure: Graph of a parabola.]\n\nFigure \\(\\PageIndex{3}\\)\n\nFrom this we find an equation for the parabolic shape. We placed the origin at the vertex of the parabola, so we know the equation will have form \\(y(x)=ax^2\\). Our equation will need to pass through the point \\((6, 18)\\), from which we can solve for the stretch factor \\(a\\).\n\n\\[ \\begin{align*} 18&=a6^2 \\\\[4pt] a &=\\dfrac{18}{36} \\\\[4pt] &=\\dfrac{1}{2} \\end{align*}\\]\n\nOur parabolic cross section has the equation\n\n\\(y(x)=\\dfrac{1}{2}x^2\\)\n\nWe are interested in the surface area of the water, so we must determine the width at the top of the water as a function of the water depth. For any depth \\(y\\), the width will be given by \\(2x\\), so we need to solve the equation above for \\(x\\) and find the inverse function. However, notice that the original function is not one-to-one, and indeed, given any output there are two inputs that produce the same output, one positive and one negative.\n\nTo find an inverse, we can restrict our original function to a limited domain on which it is one-to-one. In this case, it makes sense to restrict ourselves to positive \\(x\\) values. On this domain, we can find an inverse by solving for the input variable:\n\n\\[ \\begin{align*} y&=\\dfrac{1}{2}x^2 \\\\[4pt] 2y&=x^2 \\\\[4pt] x&=\\pm \\sqrt{2y} \\end{align*}\\]\n\nThis is not a function as written. We are limiting ourselves to positive \\(x\\) values, so we eliminate the negative solution, giving us the inverse function we’re looking for.\n\n\\(y=\\dfrac{x^2}{2}\\), \\(x>0\\)\n\nBecause \\(x\\) is the distance from the center of the parabola to either side, the entire width of the water at the top will be \\(2x\\). The trough is 3 feet (36 inches) long, so the surface area will then be:\n\n\\[ \\begin{align*} \\text{Area} &=l⋅w \\\\[4pt] &=36⋅2x \\\\[4pt] &=72x \\\\[4pt] &=72\\sqrt{2y} \\end{align*}\\]\n\nThis example illustrates two important points:\n\n1. When finding the inverse of a quadratic, we have to limit ourselves to a domain on which the function is one-to-one.\n\n2. The inverse of a quadratic function is a square root function. Both are toolkit functions and different types of power functions.\n\nFunctions involving roots are often called radical functions. While it is not possible to find an inverse of most polynomial functions, some basic polynomials do have inverses. Such functions are called invertible functions, and we use the notation \\(f^{−1}(x)\\).\n\nWarning: \\(f^{−1}(x)\\) is not the same as the reciprocal of the function \\(f(x)\\). This use of “–1” is reserved to denote inverse functions. To denote the reciprocal of a function \\(f(x)\\), we would need to write:\n\n\\[ (f(x))^{−1}=\\frac{1}{f(x)}.\\]\n\nAn important relationship between inverse functions is that they “undo” each other. If \\(f^{−1}\\) is the inverse of a function \\(f\\), then \\(f\\) is the inverse of the function \\(f^{−1}\\). In other words, whatever the function \\(f\\) does to \\(x\\), \\(f^{−1}\\) undoes it—and vice-versa.\n\n\\(f^{−1}(f(x))=x\\), for all \\(x\\) in the domain of \\(f\\)\n\nand\n\n\\(f(f^{−1}(x))=x\\), for all \\(x\\) in the domain of \\(f^{−1}\\)\n\nNote that the inverse switches the domain and range of the original function.\n\nVERIFYING TWO FUNCTIONS ARE INVERSES OF ONE ANOTHER\n\nTwo functions, \\(f\\) and \\(g\\), are inverses of one another if for all \\(x\\) in the domain of \\(f\\) and \\(g\\),\n\n\\(g(f(x))=f(g(x))=x\\)\n\nHowto: Given a polynomial function, find the inverse of the function by restricting the domain in such a way that the new function is one-to-one\n\n1. Replace \\(f(x)\\) with \\(y\\).\n\n2. Interchange \\(x\\) and \\(y\\).\n\n3. Solve for \\(y\\), and rename the function \\(f^{−1}(x)\\).\n\nExample \\(\\PageIndex{1}\\): Verifying Inverse Functions\n\nShow that \\(f(x)=\\frac{1}{x+1}\\) and \\(f^{−1}(x)=\\frac{1}{x}−1\\) are inverses, for \\(x≠0,−1\\).\n\nSolution\n\nWe must show that \\(f^{−1}(f(x))=x\\) and \\(f(f^{−1}(x))=x\\).\n\n\\[ \\begin{align*} f^{−1}(f(x)) &=f^{−1}\\left(\\dfrac{1}{x+1}\\right)\\\\[4pt] &=\\dfrac{1}{\\dfrac{1}{x+1}}−1\\\\[4pt] &=(x+1)−1\\\\[4pt] &=x\\end{align*}\\]\n\nand\n\n\\[ \\begin{align*}  f(f^{−1}(x)) &=f(\\dfrac{1}{x−1})\\\\[4pt] &=\\dfrac{1}{\\left(\\dfrac{1}{x−1}\\right)+1}\\\\[4pt] &=\\dfrac{1}{\\dfrac{1}{x}}\\\\[4pt] &=x\\end{align*}\\]\n\nTherefore, \\(f(x)=\\dfrac{1}{x+1}\\) and \\(f^{−1}(x)=\\dfrac{1}{x}−1\\) are inverses.\n\nExercise \\(\\PageIndex{1}\\)\n\nShow that \\(f(x)=\\frac{x+5}{3}\\) and \\(f^{−1}(x)=3x−5\\) are inverses.\n\nAnswer a\n\n\\(f^{−1}(f(x))=f^{−1}(\\frac{x+5}{3})=3(\\frac{x+5}{3})−5=(x−5)+5=x\\)\n\nAnswer b\n\n\\(f(f^{−1}(x))=f(3x−5)=\\frac{(3x−5)+5}{3}=\\frac{3x}{3}=x\\)\n\nExample \\(\\PageIndex{2}\\): Finding the Inverse of a Cubic Function\n\nFind the inverse of the function \\(f(x)=5x^3+1\\).\n\nSolution\n\nThis is a transformation of the basic cubic toolkit function, and based on our knowledge of that function, we know it is one-to-one. Solving for the inverse by solving for \\(x\\).\n\n\\(y=5x^3+1\\)\n\n\\(x=5y^3+1\\)\n\n\\(x−1=5y^3\\)\n\n\\(\\dfrac{x−1}{5}=y^3\\)\n\n\\(f^{−1}(x)=\\sqrt[3]{\\dfrac{x−1}{5}}\\)\n\nAnalysis\n\nLook at the graph of \\(f\\) and \\(f^{–1}\\). Notice that one graph is the reflection of the other about the line \\(y=x\\). This is always the case when graphing a function and its inverse function.\n\nAlso, since the method involved interchanging \\(x\\) and \\(y\\), notice corresponding points. If \\((a,b)\\) is on the graph of \\(f\\),then \\((b,a)\\) is on the graph of \\(f^{–1}\\). Since \\((0,1)\\) is on the graph of \\(f\\), then \\((1,0)\\) is on the graph of \\(f^{–1}\\). Similarly, since \\((1,6)\\) is on the graph of \\(f\\),then \\((6,1)\\) is on the graph of \\(f^{–1}\\) (Figure \\(\\PageIndex{9}\\)).\n\n[Figure: Graph of f(x)=5x^3+1 and its inverse, f^(-1)(x)=3sqrt((x-1)/(5)).]\n\nFigure \\(\\PageIndex{4}\\)\n\nExercise \\(\\PageIndex{2}\\)\n\nFind the inverse function of \\(f(x)=\\sqrt[3]{x+4}\\).\n\nAnswer\n\n\\(f^{−1}(x)=x^3−4\\)\n\nRestricting the Domain to Find the Inverse of a Polynomial Function\n\nSo far, we have been able to find the inverse functions of cubic functions without having to restrict their domains. However, as we know, not all cubic polynomials are one-to-one. Some functions that are not one-to-one may have their domain restricted so that they are one-to-one, but only over that domain. The function over the restricted domain would then have an inverse function. Since quadratic functions are not one-to-one, we must restrict their domain in order to find their inverses.\n\nRESTRICTING THE DOMAIN\n\nIf a function is not one-to-one, it cannot have an inverse. If we restrict the domain of the function so that it becomes one-to-one, thus creating a new function, this new function will have an inverse.\n\nHow to: Given a polynomial function, restrict the domain of a function that is not one-to-one and then find the inverse\n\n1. Restrict the domain by determining a domain on which the original function is one-to-one.\n\n2. Replace \\(f(x)\\) with \\(y\\).\n\n3. Interchange \\(x\\) and \\(y\\).\n\n4. Solve for \\(y\\), and rename the function or pair of function \\(f^{−1}(x)\\).\n\n5. Revise the formula for \\(f^{−1}(x)\\) by ensuring that the outputs of the inverse function correspond to the restricted domain of the original function.\n\nExample \\(\\PageIndex{3}\\): Restricting the Domain to Find the Inverse of a Polynomial Function\n\nFind the inverse function of \\(f\\):\n\n1. \\(f(x)={(x−4)}^2\\), \\(x≥4\\)\n\n2. \\(f(x)={(x−4)}^2\\), \\(x≤4\\)\n\nSolution\n\nThe original function \\(f(x)={(x−4)}^2\\) is not one-to-one, but the function is restricted to a domain of \\(x≥4\\) or \\(x≤4\\) on which it is one-to-one (Figure \\(\\PageIndex{6}\\)).\n\n[Figure: Two graphs of f(x)=(x-4)^2 where the first is when x>=4 and the second is when x<=4.]\n\nFigure \\(\\PageIndex{5}\\)\n\nTo find the inverse, start by replacing \\(f(x)\\) with the simple variable \\(y\\).\n\n\\(y={(x−4)}^2\\) Interchange \\(x\\) and \\(y\\).\n\n\\(x={(y−4)}^2\\) Take the square root.\n\n\\(\\pm \\sqrt{x}=y−4\\) Add \\(4\\) to both sides.\n\n\\(4\\pm \\sqrt{x} =y\\)\n\nThis is not a function as written. We need to examine the restrictions on the domain of the original function to determine the inverse. Since we reversed the roles of \\(x\\) and \\(y\\) for the original \\(f(x)\\), we looked at the domain: the values \\(x\\) could assume. When we reversed the roles of \\(x\\) and \\(y\\), this gave us the values \\(y\\) could assume. For this function, \\(x≥4\\), so for the inverse, we should have \\(y≥4\\), which is what our inverse function gives.\n\n1. The domain of the original function was restricted to \\(x≥4\\), so the outputs of the inverse need to be the same, \\(f(x)≥4\\), and we must use the + case:\n\n\\(f^{−1}(x)=4+\\sqrt{x}\\)\n\n2. The domain of the original function was restricted to \\(x≤4\\), so the outputs of the inverse need to be the same, \\(f(x)≤4\\), and we must use the – case:\n\n\\(f^{−1}(x)=4−\\sqrt{x}\\)\n\nAnalysis\n\nOn the graphs in Figure \\(\\PageIndex{6}\\), we see the original function graphed on the same set of axes as its inverse function. Notice that together the graphs show symmetry about the line \\(y=x\\). The coordinate pair \\((4,0)\\) is on the graph off f and the coordinate pair \\((0, 4)\\) is on the graph of \\(f^{−1}\\). For any coordinate pair, if \\((a, b)\\) is on the graph of \\(f\\), then \\((b, a)\\) is on the graph of \\(f^{−1}\\). Finally, observe that the graph of \\(f\\) intersects the graph of \\(f^{−1}\\) on the line \\(y=x\\). Points of intersection for the graphs of \\(f\\) and \\(f^{−1}\\) will always lie on the line \\(y=x\\).\n\n[Figure: Two graphs of a parabolic function with half of its inverse.]\n\nFigure \\(\\PageIndex{6}\\)\n\nExample \\(\\PageIndex{4}\\): Finding the Inverse of a Quadratic Function When the Restriction Is Not Specified\n\nRestrict the domain and then find the inverse of\n\n\\(f(x)={(x−2)}^2−3\\).\n\nSolution\n\nWe can see this is a parabola with vertex at \\((2,–3)\\) that opens upward. Because the graph will be decreasing on one side of the vertex and increasing on the other side, we can restrict this function to a domain on which it will be one-to-one by limiting the domain to \\(x≥2\\).\n\nTo find the inverse, we will use the vertex form of the quadratic. We start by replacing \\(f(x)\\) with a simple variable, \\(y\\), then solve for \\(x\\).\n\n\\(y={(x−2)}^2−3\\) Interchange \\(x\\) and \\(y\\).\n\n\\(x={(y−2)}^2−3\\) Add 3 to both sides.\n\n\\(x+3={(y−2)}^2\\) Take the square root.\n\n\\(\\pm \\sqrt{x+3}=y−2\\) Add 2 to both sides.\n\n\\(2\\pm \\sqrt{x+3}=y\\) Rename the function.\n\n\\(f^{−1}(x)=2\\pm \\sqrt{x+3}\\)\n\nNow we need to determine which case to use. Because we restricted our original function to a domain of \\(x≥2\\), the outputs of the inverse should be the same, telling us to utilize the + case\n\n\\(f^{−1}(x)=2+\\sqrt{x+3}\\)\n\nIf the quadratic had not been given in vertex form, rewriting it into vertex form would be the first step. This way we may easily observe the coordinates of the vertex to help us restrict the domain.\n\nAnalysis\n\nNotice that we arbitrarily decided to restrict the domain on \\(x≥2\\). We could just as easily have opted to restrict the domain to \\(x≤2\\), in which case \\(f^{−1}(x)=2−\\sqrt{x+3}\\). Observe the original function graphed on the same set of axes as its inverse function in Figure \\(\\PageIndex{7}\\). Notice that both graphs show symmetry about the line \\(y=x\\). The coordinate pair \\((2, −3)\\) is on the graph of \\(f\\) and the coordinate pair \\((−3, 2)\\) is on the graph of \\(f^{−1}\\). Observe from the graph of both functions on the same set of axes that\n\ndomain of \\(f=\\) range of \\(f^{–1}=[2,\\infty)\\)\n\nand\n\ndomain of \\(f^{–1}=\\) range of \\(f=[–3,\\infty)\\).\n\nFinally, observe that the graph of \\(f\\) intersects the graph of \\(f^{−1}\\) along the line \\(y=x\\).\n\n[Figure: Graph of a parabolic function with half of its inverse.]\n\nFigure \\(\\PageIndex{7}\\)\n\nExercise \\(\\PageIndex{4}\\)\n\nFind the inverse of the function \\(f(x)=x^2+1\\), on the domain \\(x≥0\\).\n\nAnswer\n\n\\(f^{−1}(x)=\\sqrt{x−1}\\)\n\nFinding Inverses\n\nNotice that the functions from previous examples were all polynomials, and their inverses were radical functions. If we want to find the inverse of a radical function, we will need to restrict the domain of the answer because the range of the original function is limited.\n\nHow to: Given a radical function, find the inverse\n\n1. Determine the range of the original function.\n\n2. Replace \\(f(x)\\) with \\(y\\), then solve for \\(x\\).\n\n3. If necessary, restrict the domain of the inverse function to the range of the original function.\n\nExample \\(\\PageIndex{5}\\): Finding the Inverse of a Radical Function\n\nRestrict the domain of the function \\(f(x)=\\sqrt{x−4}\\) and then find the inverse.\n\nSolution\n\nNote that the original function has range \\(f(x)≥0\\). Replace \\(f(x)\\) with \\(y\\), then solve for \\(x\\).\n\n\\(y=\\sqrt{x−4}\\) Replace \\(f(x)\\) with \\(y\\).\n\n\\(x=\\sqrt{y−4}\\) Interchange \\(x\\) and \\(y\\).\n\n\\(x=\\sqrt{y−4}\\) Square each side.\n\n\\(x^2=y−4\\) Add 4.\n\n\\(x^2+4=y\\) Rename the function \\(f^{−1}(x)\\).\n\n\\(f^{−1}(x)=x^2+4\\)\n\nRecall that the domain of this function must be limited to the range of the original function.\n\n\\(f^{−1}(x)=x^2+4\\), \\(x≥0\\)\n\nAnalysis\n\nNotice in Figure \\(\\PageIndex{8}\\) that the inverse is a reflection of the original function over the line \\(y=x\\). Because the original function has only positive outputs, the inverse function has only nonnegative inputs.\n\n[Figure: Graph of f(x)=sqrt(x-4) and its inverse, f^(-1)(x)=x^2+4.]\n\nFigure \\(\\PageIndex{8}\\)\n\nExercise \\(\\PageIndex{5}\\) \n\nRestrict the domain and then find the inverse of the function \\(f(x)=\\sqrt{2x+3}\\).\n\nAnswer\n\n\\(f^{−1}(x)=\\frac{x^2−3}{2}\\), \\(x≥0\\)\n\nSolving Applications of Radical Functions\n\nRadical functions are common in physical models, as we saw in the section opener. We now have enough tools to be able to solve the problem posed at the start of the section.\n\nExample \\(\\PageIndex{6}\\): Solving an Application with a Cubic Function\n\nA mound of gravel is in the shape of a cone with the height equal to twice the radius. The volume of the cone in terms of the radius is given by\n\n\\[V=\\dfrac{2}{3}\\pi r^3 \\nonumber\\]\n\nFind the inverse of the function \\(V=\\frac{2}{3}\\pi r^3\\) that determines the volume \\(V\\) of a cone and is a function of the radius \\(r\\). Then use the inverse function to calculate the radius of such a mound of gravel measuring 100 cubic feet. Use \\(\\pi=3.14\\).\n\nSolution\n\nStart with the given function for \\(V\\). Notice that the meaningful domain for the function is \\(r>0\\) since negative radii would not make sense in this context nor would a radius of \\(0\\). Also note the range of the function (hence, the domain of the inverse function) is \\(V>0\\). Solve for \\(r\\) in terms of \\(V\\), using the method outlined previously. Note that in real-world applications, we do not swap the variables when finding inverses. Instead, we change which variable is considered to be the independent variable.\n\n\\[  V =\\dfrac{2}{3}\\pi r^3\\nonumber \\]\n\nSolve for \\(r^3\\).\n\n\\[r^3 =\\dfrac{3V}{2\\pi} \\nonumber\\]\n\nSolve for \\(r\\).\n\n\\[ r=\\sqrt[3]{\\dfrac{3V}{2\\pi}} \\nonumber \\]\n\nThis is the result stated in the section opener. Now evaluate this for \\(V=100\\) and \\(\\pi=3.14\\).\n\n\\[ \\begin{align*}  r&=\\sqrt[3]{\\dfrac{3V}{2\\pi}} \\\\[4pt] &=\\sqrt[3]{\\dfrac{3⋅100}{2⋅3.14}} \\\\[4pt] &≈\\sqrt[3]{47.7707} \\\\[4pt] &≈3.63 \\end{align*}\\]\n\nTherefore, the radius is about 3.63 ft.\n\nDetermining the Domain of a Radical Function Composed with Other Functions\n\nWhen radical functions are composed with other functions, determining domain can become more complicated.\n\nExample \\(\\PageIndex{7}\\): Finding the Domain of a Radical Function Composed with a Rational Function\n\nFind the domain of the function:\n\n\\[f(x)=\\sqrt{\\frac{(x+2)(x−3)}{(x−1)}}. \\nonumber\\]\n\nSolution\n\nBecause a square root is only defined when the quantity under the radical is non-negative, we need to determine where\n\n\\[\\frac{(x+2)(x−3)}{(x−1)}≥0. \\nonumber\\]\n\nThe output of a rational function can change signs (change from positive to negative or vice versa) at x-intercepts and at vertical asymptotes. For this equation, the graph could change signs at \\(x=–2\\), \\(1\\), and \\(3\\).\n\nTo determine the intervals on which the rational expression is positive, we could test some values in the expression or sketch a graph. While both approaches work equally well, for this example we will use a graph as shown in Figure \\(\\PageIndex{9}\\).\n\n[Figure: Graph of a radical function that shows where the outputs are nonnegative.]\n\nFigure \\(\\PageIndex{9}\\)\n\nThis function has two x-intercepts, both of which exhibit linear behavior near the x-intercepts. There is one vertical asymptote, corresponding to a linear factor; this behavior is similar to the basic reciprocal toolkit function, and there is no horizontal asymptote because the degree of the numerator is larger than the degree of the denominator. There is a y-intercept at \\((0,\\sqrt{6})\\).\n\nFrom the y-intercept and x-intercept at \\(x=−2\\), we can sketch the left side of the graph. From the behavior at the asymptote, we can sketch the right side of the graph.\n\nFrom the graph, we can now tell on which intervals the outputs will be non-negative, so that we can be sure that the original function \\(f(x)\\) will be defined. \\(f(x)\\) has domain \\(−2≤x<1\\) or \\(x≥3\\), or in interval notation, \\([−2,1)∪[3,\\infty)\\).\n\nFinding Inverses of Rational Functions\n\nAs with finding inverses of quadratic functions, it is sometimes desirable to find the inverse of a rational function, particularly of rational functions that are the ratio of linear functions, such as in concentration applications.\n\nExample \\(\\PageIndex{8}\\): Finding the Inverse of a Rational Function\n\nThe function\n\n\\[\\displaystyle C=\\frac{20+0.4n}{100+n}\\]\n\nrepresents the concentration \\(C\\) of an acid solution after \\(n\\) mL of 40% solution has been added to 100 mL of a 20% solution. First, find the inverse of the function; that is, find an expression for \\(n\\) in terms of \\(C\\). Then use your result to determine how much of the 40% solution should be added so that the final mixture is a 35% solution.\n\nSolution\n\nWe first want the inverse of the function in order to determine how many mL we need for a given concentration. We will solve for \\(n\\) in terms of \\(C\\).\n\n\\[ \\begin{align*} C&=\\dfrac{20+0.4n}{100+n} \\\\[4pt] C(100+n)&=20+0.4n\\\\[4pt] 100C+Cn&=20+0.4n\\\\[4pt] 100C−20&=0.4n−Cn\\\\[4pt] 100C−20&=(0.4−C)n\\\\[4pt] n&=\\dfrac{100C−20}{0.4−C}\\end{align*}\\]\n\nNow evaluate this function at 35%, which is \\(C=0.35\\).\n\n\\[ \\begin{align*} n&=\\dfrac{100(0.35)−20}{0.4−0.35}\\\\[4pt] &=\\dfrac{15}{0.05}\\\\[4pt] &=300\\end{align*}\\]\n\nWe can conclude that 300 mL of the 40% solution should be added.\n\nExercise \\(\\PageIndex{8}\\)\n\nFind the inverse of the function \\(f(x)=\\frac{x+3}{x−2}\\).\n\nAnswer\n\n\\(f^{−1}(x)=\\frac{2x+3}{x−1}\\)\n\nMedia\n\nAccess these online resources for additional instruction and practice with inverses and radical functions.\n\nGraphing the Basic Square Root Function\n\nFind the Inverse of a Square Root Function\n\nFind the Inverse of a Rational Function\n\nFind the Inverse of a Rational Function and an Inverse Function Value\n\nInverse Functions\n\nKey Concepts\n\nThe inverse of a quadratic function is a square root function.\n\nIf \\(f^{−1}\\) is the inverse of a function \\(f\\), then \\(f\\) is the inverse of the function \\(f^{−1}\\). See Example \\(\\PageIndex{1}\\).\n\nWhile it is not possible to find an inverse of most polynomial functions, some basic polynomials are invertible. See Example \\(\\PageIndex{2}\\).\n\nTo find the inverse of certain functions, we must restrict the function to a domain on which it will be one-to-one. See Examples \\(\\PageIndex{3}\\) and \\(\\PageIndex{4}\\)\n\nWhen finding the inverse of a radical function, we need a restriction on the domain of the answer. See Example \\(\\PageIndex{5}\\) and \\(\\PageIndex{7}\\).\n\nInverse and radical and functions can be used to solve application problems. See Examples \\(\\PageIndex{6}\\) and \\(\\PageIndex{8}\\).\n\nThis page titled 5.7: Inverses and Radical Functions was last modified on Thu, 26 Dec 2024 22:30:44 GMT and is shared under a CC BY  4.0  license and was authored, remixed, and/or curated by OpenStax via source content that was edited to the style and standards of the LibreTexts platform.",
+  "figures": [
+    {
+      "url": "https://math.libretexts.org/@api/deki/files/14175/imageedit_2_2433068133.jpg?revision=1",
+      "alt": "Gravel in the shape of a cone.",
+      "credit": ""
+    },
+    {
+      "url": "https://math.libretexts.org/@api/deki/files/14176/imageedit_6_4648369640.jpg?revision=1",
+      "alt": "Diagram of a parabolic trough that is 18” in height, 3’ in length, and 12” in width.",
+      "credit": ""
+    },
+    {
+      "url": "https://math.libretexts.org/@api/deki/files/14177/imageedit_10_9399079024.jpg?revision=1",
+      "alt": "Graph of a parabola.",
+      "credit": ""
+    },
+    {
+      "url": "https://math.libretexts.org/@api/deki/files/14178/imageedit_15_7638014316.png?revision=1",
+      "alt": "Graph of f(x)=5x^3+1 and its inverse, f^(-1)(x)=3sqrt((x-1)/(5)).",
+      "credit": ""
+    },
+    {
+      "url": "https://math.libretexts.org/@api/deki/files/14179/imageedit_20_3159795906.png?revision=1",
+      "alt": "Two graphs of f(x)=(x-4)^2 where the first is when x>=4 and the second is when x<=4.",
+      "credit": ""
+    },
+    {
+      "url": "https://math.libretexts.org/@api/deki/files/14180/imageedit_25_7196299713.png?revision=1",
+      "alt": "Two graphs of a parabolic function with half of its inverse.",
+      "credit": ""
+    },
+    {
+      "url": "https://math.libretexts.org/@api/deki/files/14181/imageedit_31_9482710726.png?revision=1",
+      "alt": "Graph of a parabolic function with half of its inverse.",
+      "credit": ""
+    },
+    {
+      "url": "https://math.libretexts.org/@api/deki/files/14182/imageedit_36_9878837976.png?revision=1",
+      "alt": "Graph of f(x)=sqrt(x-4) and its inverse, f^(-1)(x)=x^2+4.",
+      "credit": ""
+    },
+    {
+      "url": "https://math.libretexts.org/@api/deki/files/14183/imageedit_41_2093212030.png?revision=1",
+      "alt": "Graph of a radical function that shows where the outputs are nonnegative.",
+      "credit": ""
+    }
+  ],
+  "references": [
+    {
+      "text": "Graphing the Basic Square Root Function",
+      "url": "http://openstaxcollege.org/l/graphsquareroot"
+    },
+    {
+      "text": "Find the Inverse of a Square Root Function",
+      "url": "http://openstaxcollege.org/l/inversesquare"
+    },
+    {
+      "text": "Find the Inverse of a Rational Function",
+      "url": "http://openstaxcollege.org/l/inverserational"
+    },
+    {
+      "text": "Find the Inverse of a Rational Function and an Inverse Function Value",
+      "url": "http://openstaxcollege.org/l/rationalinverse"
+    },
+    {
+      "text": "Inverse Functions",
+      "url": "http://openstaxcollege.org/l/inversefunction"
+    },
+    {
+      "text": "5.7: Inverses and Radical Functions",
+      "url": "https://math.libretexts.org/Bookshelves/Algebra/Algebra_and_Trigonometry_1e_(OpenStax)/05%3A_Polynomial_and_Rational_Functions/5.07%3A_Inverses_and_Radical_Functions"
+    },
+    {
+      "text": "CC BY  4.0",
+      "url": "https://creativecommons.org/licenses/by/4.0"
+    },
+    {
+      "text": "OpenStax",
+      "url": "https://openstax.org/"
+    },
+    {
+      "text": "source content",
+      "url": "https://openstax.org/details/books/precalculus"
+    }
+  ],
+  "exercises": [
+    {
+      "ordinal": 1,
+      "sourceNumber": "1",
+      "sourceAnchor": "",
+      "kind": "exercise-candidate",
+      "context": "Because \\(x\\) is the distance from the center of the parabola to either side, the entire width of the water at the top will be \\(2x\\). The trough is 3 feet (36 inches) long, so the surface area will then be:\n\n\\[ \\begin{align*} \\text{Area} &=l⋅w \\\\[4pt] &=36⋅2x \\\\[4pt] &=72x \\\\[4pt] &=72\\sqrt{2y} \\end{align*}\\]\n\nThis example illustrates two important points:",
+      "original": "1. When finding the inverse of a quadratic, we have to limit ourselves to a domain on which the function is one-to-one.",
+      "prompt": "1. When finding the inverse of a quadratic, we have to limit ourselves to a domain on which the function is one-to-one.",
+      "sourceAnswers": [],
+      "hasFigure": false,
+      "status": "draft",
+      "answerVerified": false,
+      "translationStatus": "pending",
+      "mappingStatus": "pending"
+    },
+    {
+      "ordinal": 2,
+      "sourceNumber": "2",
+      "sourceAnchor": "",
+      "kind": "exercise-candidate",
+      "context": "Because \\(x\\) is the distance from the center of the parabola to either side, the entire width of the water at the top will be \\(2x\\). The trough is 3 feet (36 inches) long, so the surface area will then be:\n\n\\[ \\begin{align*} \\text{Area} &=l⋅w \\\\[4pt] &=36⋅2x \\\\[4pt] &=72x \\\\[4pt] &=72\\sqrt{2y} \\end{align*}\\]\n\nThis example illustrates two important points:",
+      "original": "2. The inverse of a quadratic function is a square root function. Both are toolkit functions and different types of power functions.",
+      "prompt": "2. The inverse of a quadratic function is a square root function. Both are toolkit functions and different types of power functions.",
+      "sourceAnswers": [],
+      "hasFigure": false,
+      "status": "draft",
+      "answerVerified": false,
+      "translationStatus": "pending",
+      "mappingStatus": "pending"
+    },
+    {
+      "ordinal": 3,
+      "sourceNumber": "1",
+      "sourceAnchor": "",
+      "kind": "exercise-candidate",
+      "context": "Two functions, \\(f\\) and \\(g\\), are inverses of one another if for all \\(x\\) in the domain of \\(f\\) and \\(g\\),\n\n\\(g(f(x))=f(g(x))=x\\)\n\nHowto: Given a polynomial function, find the inverse of the function by restricting the domain in such a way that the new function is one-to-one",
+      "original": "1. Replace \\(f(x)\\) with \\(y\\).",
+      "prompt": "1. Replace \\(f(x)\\) with \\(y\\).",
+      "sourceAnswers": [],
+      "hasFigure": false,
+      "status": "draft",
+      "answerVerified": false,
+      "translationStatus": "pending",
+      "mappingStatus": "pending"
+    },
+    {
+      "ordinal": 4,
+      "sourceNumber": "2",
+      "sourceAnchor": "",
+      "kind": "exercise-candidate",
+      "context": "Two functions, \\(f\\) and \\(g\\), are inverses of one another if for all \\(x\\) in the domain of \\(f\\) and \\(g\\),\n\n\\(g(f(x))=f(g(x))=x\\)\n\nHowto: Given a polynomial function, find the inverse of the function by restricting the domain in such a way that the new function is one-to-one",
+      "original": "2. Interchange \\(x\\) and \\(y\\).",
+      "prompt": "2. Interchange \\(x\\) and \\(y\\).",
+      "sourceAnswers": [],
+      "hasFigure": false,
+      "status": "draft",
+      "answerVerified": false,
+      "translationStatus": "pending",
+      "mappingStatus": "pending"
+    },
+    {
+      "ordinal": 5,
+      "sourceNumber": "3",
+      "sourceAnchor": "",
+      "kind": "exercise-candidate",
+      "context": "Two functions, \\(f\\) and \\(g\\), are inverses of one another if for all \\(x\\) in the domain of \\(f\\) and \\(g\\),\n\n\\(g(f(x))=f(g(x))=x\\)\n\nHowto: Given a polynomial function, find the inverse of the function by restricting the domain in such a way that the new function is one-to-one",
+      "original": "3. Solve for \\(y\\), and rename the function \\(f^{−1}(x)\\).",
+      "prompt": "3. Solve for \\(y\\), and rename the function \\(f^{−1}(x)\\).",
+      "sourceAnswers": [],
+      "hasFigure": false,
+      "status": "draft",
+      "answerVerified": false,
+      "translationStatus": "pending",
+      "mappingStatus": "pending"
+    },
+    {
+      "ordinal": 6,
+      "sourceNumber": "",
+      "sourceAnchor": "",
+      "kind": "example-or-exercise",
+      "context": "Two functions, \\(f\\) and \\(g\\), are inverses of one another if for all \\(x\\) in the domain of \\(f\\) and \\(g\\),\n\n\\(g(f(x))=f(g(x))=x\\)\n\nHowto: Given a polynomial function, find the inverse of the function by restricting the domain in such a way that the new function is one-to-one",
+      "original": "Example \\(\\PageIndex{1}\\): Verifying Inverse Functions\n\nShow that \\(f(x)=\\frac{1}{x+1}\\) and \\(f^{−1}(x)=\\frac{1}{x}−1\\) are inverses, for \\(x≠0,−1\\).\n\nSolution\n\nWe must show that \\(f^{−1}(f(x))=x\\) and \\(f(f^{−1}(x))=x\\).\n\n\\[ \\begin{align*} f^{−1}(f(x)) &=f^{−1}\\left(\\dfrac{1}{x+1}\\right)\\\\[4pt] &=\\dfrac{1}{\\dfrac{1}{x+1}}−1\\\\[4pt] &=(x+1)−1\\\\[4pt] &=x\\end{align*}\\]\n\nand\n\n\\[ \\begin{align*}  f(f^{−1}(x)) &=f(\\dfrac{1}{x−1})\\\\[4pt] &=\\dfrac{1}{\\left(\\dfrac{1}{x−1}\\right)+1}\\\\[4pt] &=\\dfrac{1}{\\dfrac{1}{x}}\\\\[4pt] &=x\\end{align*}\\]\n\nTherefore, \\(f(x)=\\dfrac{1}{x+1}\\) and \\(f^{−1}(x)=\\dfrac{1}{x}−1\\) are inverses.",
+      "prompt": "Example \\(\\PageIndex{1}\\): Verifying Inverse Functions\n\nShow that \\(f(x)=\\frac{1}{x+1}\\) and \\(f^{−1}(x)=\\frac{1}{x}−1\\) are inverses, for \\(x≠0,−1\\).\n\nSolution\n\nWe must show that \\(f^{−1}(f(x))=x\\) and \\(f(f^{−1}(x))=x\\).\n\n\\[ \\begin{align*} f^{−1}(f(x)) &=f^{−1}\\left(\\dfrac{1}{x+1}\\right)\\\\[4pt] &=\\dfrac{1}{\\dfrac{1}{x+1}}−1\\\\[4pt] &=(x+1)−1\\\\[4pt] &=x\\end{align*}\\]\n\nand\n\n\\[ \\begin{align*}  f(f^{−1}(x)) &=f(\\dfrac{1}{x−1})\\\\[4pt] &=\\dfrac{1}{\\left(\\dfrac{1}{x−1}\\right)+1}\\\\[4pt] &=\\dfrac{1}{\\dfrac{1}{x}}\\\\[4pt] &=x\\end{align*}\\]\n\nTherefore, \\(f(x)=\\dfrac{1}{x+1}\\) and \\(f^{−1}(x)=\\dfrac{1}{x}−1\\) are inverses.",
+      "sourceAnswers": [],
+      "hasFigure": false,
+      "status": "draft",
+      "answerVerified": false,
+      "translationStatus": "pending",
+      "mappingStatus": "pending"
+    },
+    {
+      "ordinal": 7,
+      "sourceNumber": "",
+      "sourceAnchor": "",
+      "kind": "exercise-candidate",
+      "context": "Two functions, \\(f\\) and \\(g\\), are inverses of one another if for all \\(x\\) in the domain of \\(f\\) and \\(g\\),\n\n\\(g(f(x))=f(g(x))=x\\)\n\nHowto: Given a polynomial function, find the inverse of the function by restricting the domain in such a way that the new function is one-to-one",
+      "original": "Exercise \\(\\PageIndex{1}\\)\n\nShow that \\(f(x)=\\frac{x+5}{3}\\) and \\(f^{−1}(x)=3x−5\\) are inverses.\n\nAnswer a\n\n\\(f^{−1}(f(x))=f^{−1}(\\frac{x+5}{3})=3(\\frac{x+5}{3})−5=(x−5)+5=x\\)\n\nAnswer b\n\n\\(f(f^{−1}(x))=f(3x−5)=\\frac{(3x−5)+5}{3}=\\frac{3x}{3}=x\\)",
+      "prompt": "Exercise \\(\\PageIndex{1}\\)\n\nShow that \\(f(x)=\\frac{x+5}{3}\\) and \\(f^{−1}(x)=3x−5\\) are inverses.",
+      "sourceAnswers": [
+        "\\(f^{−1}(f(x))=f^{−1}(\\frac{x+5}{3})=3(\\frac{x+5}{3})−5=(x−5)+5=x\\)",
+        "\\(f(f^{−1}(x))=f(3x−5)=\\frac{(3x−5)+5}{3}=\\frac{3x}{3}=x\\)"
+      ],
+      "hasFigure": false,
+      "status": "draft",
+      "answerVerified": false,
+      "translationStatus": "pending",
+      "mappingStatus": "pending"
+    },
+    {
+      "ordinal": 8,
+      "sourceNumber": "",
+      "sourceAnchor": "",
+      "kind": "example-or-exercise",
+      "context": "Two functions, \\(f\\) and \\(g\\), are inverses of one another if for all \\(x\\) in the domain of \\(f\\) and \\(g\\),\n\n\\(g(f(x))=f(g(x))=x\\)\n\nHowto: Given a polynomial function, find the inverse of the function by restricting the domain in such a way that the new function is one-to-one",
+      "original": "Example \\(\\PageIndex{2}\\): Finding the Inverse of a Cubic Function\n\nFind the inverse of the function \\(f(x)=5x^3+1\\).\n\nSolution\n\nThis is a transformation of the basic cubic toolkit function, and based on our knowledge of that function, we know it is one-to-one. Solving for the inverse by solving for \\(x\\).\n\n\\(y=5x^3+1\\)\n\n\\(x=5y^3+1\\)\n\n\\(x−1=5y^3\\)\n\n\\(\\dfrac{x−1}{5}=y^3\\)\n\n\\(f^{−1}(x)=\\sqrt[3]{\\dfrac{x−1}{5}}\\)\n\nAnalysis\n\nLook at the graph of \\(f\\) and \\(f^{–1}\\). Notice that one graph is the reflection of the other about the line \\(y=x\\). This is always the case when graphing a function and its inverse function.\n\nAlso, since the method involved interchanging \\(x\\) and \\(y\\), notice corresponding points. If \\((a,b)\\) is on the graph of \\(f\\),then \\((b,a)\\) is on the graph of \\(f^{–1}\\). Since \\((0,1)\\) is on the graph of \\(f\\), then \\((1,0)\\) is on the graph of \\(f^{–1}\\). Similarly, since \\((1,6)\\) is on the graph of \\(f\\),then \\((6,1)\\) is on the graph of \\(f^{–1}\\) (Figure \\(\\PageIndex{9}\\)).\n\n[Figure: Graph of f(x)=5x^3+1 and its inverse, f^(-1)(x)=3sqrt((x-1)/(5)).]\n\nFigure \\(\\PageIndex{4}\\)",
+      "prompt": "Example \\(\\PageIndex{2}\\): Finding the Inverse of a Cubic Function\n\nFind the inverse of the function \\(f(x)=5x^3+1\\).\n\nSolution\n\nThis is a transformation of the basic cubic toolkit function, and based on our knowledge of that function, we know it is one-to-one. Solving for the inverse by solving for \\(x\\).\n\n\\(y=5x^3+1\\)\n\n\\(x=5y^3+1\\)\n\n\\(x−1=5y^3\\)\n\n\\(\\dfrac{x−1}{5}=y^3\\)\n\n\\(f^{−1}(x)=\\sqrt[3]{\\dfrac{x−1}{5}}\\)\n\nAnalysis\n\nLook at the graph of \\(f\\) and \\(f^{–1}\\). Notice that one graph is the reflection of the other about the line \\(y=x\\). This is always the case when graphing a function and its inverse function.\n\nAlso, since the method involved interchanging \\(x\\) and \\(y\\), notice corresponding points. If \\((a,b)\\) is on the graph of \\(f\\),then \\((b,a)\\) is on the graph of \\(f^{–1}\\). Since \\((0,1)\\) is on the graph of \\(f\\), then \\((1,0)\\) is on the graph of \\(f^{–1}\\). Similarly, since \\((1,6)\\) is on the graph of \\(f\\),then \\((6,1)\\) is on the graph of \\(f^{–1}\\) (Figure \\(\\PageIndex{9}\\)).\n\n[Figure: Graph of f(x)=5x^3+1 and its inverse, f^(-1)(x)=3sqrt((x-1)/(5)).]\n\nFigure \\(\\PageIndex{4}\\)",
+      "sourceAnswers": [],
+      "hasFigure": true,
+      "status": "draft",
+      "answerVerified": false,
+      "translationStatus": "pending",
+      "mappingStatus": "pending"
+    },
+    {
+      "ordinal": 9,
+      "sourceNumber": "",
+      "sourceAnchor": "",
+      "kind": "exercise-candidate",
+      "context": "Two functions, \\(f\\) and \\(g\\), are inverses of one another if for all \\(x\\) in the domain of \\(f\\) and \\(g\\),\n\n\\(g(f(x))=f(g(x))=x\\)\n\nHowto: Given a polynomial function, find the inverse of the function by restricting the domain in such a way that the new function is one-to-one",
+      "original": "Exercise \\(\\PageIndex{2}\\)\n\nFind the inverse function of \\(f(x)=\\sqrt[3]{x+4}\\).\n\nAnswer\n\n\\(f^{−1}(x)=x^3−4\\)",
+      "prompt": "Exercise \\(\\PageIndex{2}\\)\n\nFind the inverse function of \\(f(x)=\\sqrt[3]{x+4}\\).",
+      "sourceAnswers": [
+        "\\(f^{−1}(x)=x^3−4\\)"
+      ],
+      "hasFigure": false,
+      "status": "draft",
+      "answerVerified": false,
+      "translationStatus": "pending",
+      "mappingStatus": "pending"
+    },
+    {
+      "ordinal": 10,
+      "sourceNumber": "1",
+      "sourceAnchor": "",
+      "kind": "exercise-candidate",
+      "context": "RESTRICTING THE DOMAIN\n\nIf a function is not one-to-one, it cannot have an inverse. If we restrict the domain of the function so that it becomes one-to-one, thus creating a new function, this new function will have an inverse.\n\nHow to: Given a polynomial function, restrict the domain of a function that is not one-to-one and then find the inverse",
+      "original": "1. Restrict the domain by determining a domain on which the original function is one-to-one.",
+      "prompt": "1. Restrict the domain by determining a domain on which the original function is one-to-one.",
+      "sourceAnswers": [],
+      "hasFigure": false,
+      "status": "draft",
+      "answerVerified": false,
+      "translationStatus": "pending",
+      "mappingStatus": "pending"
+    },
+    {
+      "ordinal": 11,
+      "sourceNumber": "2",
+      "sourceAnchor": "",
+      "kind": "exercise-candidate",
+      "context": "RESTRICTING THE DOMAIN\n\nIf a function is not one-to-one, it cannot have an inverse. If we restrict the domain of the function so that it becomes one-to-one, thus creating a new function, this new function will have an inverse.\n\nHow to: Given a polynomial function, restrict the domain of a function that is not one-to-one and then find the inverse",
+      "original": "2. Replace \\(f(x)\\) with \\(y\\).",
+      "prompt": "2. Replace \\(f(x)\\) with \\(y\\).",
+      "sourceAnswers": [],
+      "hasFigure": false,
+      "status": "draft",
+      "answerVerified": false,
+      "translationStatus": "pending",
+      "mappingStatus": "pending"
+    },
+    {
+      "ordinal": 12,
+      "sourceNumber": "3",
+      "sourceAnchor": "",
+      "kind": "exercise-candidate",
+      "context": "RESTRICTING THE DOMAIN\n\nIf a function is not one-to-one, it cannot have an inverse. If we restrict the domain of the function so that it becomes one-to-one, thus creating a new function, this new function will have an inverse.\n\nHow to: Given a polynomial function, restrict the domain of a function that is not one-to-one and then find the inverse",
+      "original": "3. Interchange \\(x\\) and \\(y\\).",
+      "prompt": "3. Interchange \\(x\\) and \\(y\\).",
+      "sourceAnswers": [],
+      "hasFigure": false,
+      "status": "draft",
+      "answerVerified": false,
+      "translationStatus": "pending",
+      "mappingStatus": "pending"
+    },
+    {
+      "ordinal": 13,
+      "sourceNumber": "4",
+      "sourceAnchor": "",
+      "kind": "exercise-candidate",
+      "context": "RESTRICTING THE DOMAIN\n\nIf a function is not one-to-one, it cannot have an inverse. If we restrict the domain of the function so that it becomes one-to-one, thus creating a new function, this new function will have an inverse.\n\nHow to: Given a polynomial function, restrict the domain of a function that is not one-to-one and then find the inverse",
+      "original": "4. Solve for \\(y\\), and rename the function or pair of function \\(f^{−1}(x)\\).",
+      "prompt": "4. Solve for \\(y\\), and rename the function or pair of function \\(f^{−1}(x)\\).",
+      "sourceAnswers": [],
+      "hasFigure": false,
+      "status": "draft",
+      "answerVerified": false,
+      "translationStatus": "pending",
+      "mappingStatus": "pending"
+    },
+    {
+      "ordinal": 14,
+      "sourceNumber": "5",
+      "sourceAnchor": "",
+      "kind": "exercise-candidate",
+      "context": "RESTRICTING THE DOMAIN\n\nIf a function is not one-to-one, it cannot have an inverse. If we restrict the domain of the function so that it becomes one-to-one, thus creating a new function, this new function will have an inverse.\n\nHow to: Given a polynomial function, restrict the domain of a function that is not one-to-one and then find the inverse",
+      "original": "5. Revise the formula for \\(f^{−1}(x)\\) by ensuring that the outputs of the inverse function correspond to the restricted domain of the original function.",
+      "prompt": "5. Revise the formula for \\(f^{−1}(x)\\) by ensuring that the outputs of the inverse function correspond to the restricted domain of the original function.",
+      "sourceAnswers": [],
+      "hasFigure": false,
+      "status": "draft",
+      "answerVerified": false,
+      "translationStatus": "pending",
+      "mappingStatus": "pending"
+    },
+    {
+      "ordinal": 15,
+      "sourceNumber": "",
+      "sourceAnchor": "",
+      "kind": "example-or-exercise",
+      "context": "RESTRICTING THE DOMAIN\n\nIf a function is not one-to-one, it cannot have an inverse. If we restrict the domain of the function so that it becomes one-to-one, thus creating a new function, this new function will have an inverse.\n\nHow to: Given a polynomial function, restrict the domain of a function that is not one-to-one and then find the inverse",
+      "original": "Example \\(\\PageIndex{3}\\): Restricting the Domain to Find the Inverse of a Polynomial Function\n\nFind the inverse function of \\(f\\):\n\n1. \\(f(x)={(x−4)}^2\\), \\(x≥4\\)\n\n2. \\(f(x)={(x−4)}^2\\), \\(x≤4\\)\n\nSolution\n\nThe original function \\(f(x)={(x−4)}^2\\) is not one-to-one, but the function is restricted to a domain of \\(x≥4\\) or \\(x≤4\\) on which it is one-to-one (Figure \\(\\PageIndex{6}\\)).\n\n[Figure: Two graphs of f(x)=(x-4)^2 where the first is when x>=4 and the second is when x<=4.]\n\nFigure \\(\\PageIndex{5}\\)\n\nTo find the inverse, start by replacing \\(f(x)\\) with the simple variable \\(y\\).\n\n\\(y={(x−4)}^2\\) Interchange \\(x\\) and \\(y\\).\n\n\\(x={(y−4)}^2\\) Take the square root.\n\n\\(\\pm \\sqrt{x}=y−4\\) Add \\(4\\) to both sides.\n\n\\(4\\pm \\sqrt{x} =y\\)\n\nThis is not a function as written. We need to examine the restrictions on the domain of the original function to determine the inverse. Since we reversed the roles of \\(x\\) and \\(y\\) for the original \\(f(x)\\), we looked at the domain: the values \\(x\\) could assume. When we reversed the roles of \\(x\\) and \\(y\\), this gave us the values \\(y\\) could assume. For this function, \\(x≥4\\), so for the inverse, we should have \\(y≥4\\), which is what our inverse function gives.\n\n1. The domain of the original function was restricted to \\(x≥4\\), so the outputs of the inverse need to be the same, \\(f(x)≥4\\), and we must use the + case:\n\n\\(f^{−1}(x)=4+\\sqrt{x}\\)\n\n2. The domain of the original function was restricted to \\(x≤4\\), so the outputs of the inverse need to be the same, \\(f(x)≤4\\), and we must use the – case:\n\n\\(f^{−1}(x)=4−\\sqrt{x}\\)\n\nAnalysis\n\nOn the graphs in Figure \\(\\PageIndex{6}\\), we see the original function graphed on the same set of axes as its inverse function. Notice that together the graphs show symmetry about the line \\(y=x\\). The coordinate pair \\((4,0)\\) is on the graph off f and the coordinate pair \\((0, 4)\\) is on the graph of \\(f^{−1}\\). For any coordinate pair, if \\((a, b)\\) is on the graph of \\(f\\), then \\((b, a)\\) is on the graph of \\(f^{−1}\\). Finally, observe that the graph of \\(f\\) intersects the graph of \\(f^{−1}\\) on the line \\(y=x\\). Points of intersection for the graphs of \\(f\\) and \\(f^{−1}\\) will always lie on the line \\(y=x\\).\n\n[Figure: Two graphs of a parabolic function with half of its inverse.]\n\nFigure \\(\\PageIndex{6}\\)",
+      "prompt": "Example \\(\\PageIndex{3}\\): Restricting the Domain to Find the Inverse of a Polynomial Function\n\nFind the inverse function of \\(f\\):\n\n1. \\(f(x)={(x−4)}^2\\), \\(x≥4\\)\n\n2. \\(f(x)={(x−4)}^2\\), \\(x≤4\\)\n\nSolution\n\nThe original function \\(f(x)={(x−4)}^2\\) is not one-to-one, but the function is restricted to a domain of \\(x≥4\\) or \\(x≤4\\) on which it is one-to-one (Figure \\(\\PageIndex{6}\\)).\n\n[Figure: Two graphs of f(x)=(x-4)^2 where the first is when x>=4 and the second is when x<=4.]\n\nFigure \\(\\PageIndex{5}\\)\n\nTo find the inverse, start by replacing \\(f(x)\\) with the simple variable \\(y\\).\n\n\\(y={(x−4)}^2\\) Interchange \\(x\\) and \\(y\\).\n\n\\(x={(y−4)}^2\\) Take the square root.\n\n\\(\\pm \\sqrt{x}=y−4\\) Add \\(4\\) to both sides.\n\n\\(4\\pm \\sqrt{x} =y\\)\n\nThis is not a function as written. We need to examine the restrictions on the domain of the original function to determine the inverse. Since we reversed the roles of \\(x\\) and \\(y\\) for the original \\(f(x)\\), we looked at the domain: the values \\(x\\) could assume. When we reversed the roles of \\(x\\) and \\(y\\), this gave us the values \\(y\\) could assume. For this function, \\(x≥4\\), so for the inverse, we should have \\(y≥4\\), which is what our inverse function gives.\n\n1. The domain of the original function was restricted to \\(x≥4\\), so the outputs of the inverse need to be the same, \\(f(x)≥4\\), and we must use the + case:\n\n\\(f^{−1}(x)=4+\\sqrt{x}\\)\n\n2. The domain of the original function was restricted to \\(x≤4\\), so the outputs of the inverse need to be the same, \\(f(x)≤4\\), and we must use the – case:\n\n\\(f^{−1}(x)=4−\\sqrt{x}\\)\n\nAnalysis\n\nOn the graphs in Figure \\(\\PageIndex{6}\\), we see the original function graphed on the same set of axes as its inverse function. Notice that together the graphs show symmetry about the line \\(y=x\\). The coordinate pair \\((4,0)\\) is on the graph off f and the coordinate pair \\((0, 4)\\) is on the graph of \\(f^{−1}\\). For any coordinate pair, if \\((a, b)\\) is on the graph of \\(f\\), then \\((b, a)\\) is on the graph of \\(f^{−1}\\). Finally, observe that the graph of \\(f\\) intersects the graph of \\(f^{−1}\\) on the line \\(y=x\\). Points of intersection for the graphs of \\(f\\) and \\(f^{−1}\\) will always lie on the line \\(y=x\\).\n\n[Figure: Two graphs of a parabolic function with half of its inverse.]\n\nFigure \\(\\PageIndex{6}\\)",
+      "sourceAnswers": [],
+      "hasFigure": true,
+      "status": "draft",
+      "answerVerified": false,
+      "translationStatus": "pending",
+      "mappingStatus": "pending"
+    },
+    {
+      "ordinal": 16,
+      "sourceNumber": "",
+      "sourceAnchor": "",
+      "kind": "example-or-exercise",
+      "context": "RESTRICTING THE DOMAIN\n\nIf a function is not one-to-one, it cannot have an inverse. If we restrict the domain of the function so that it becomes one-to-one, thus creating a new function, this new function will have an inverse.\n\nHow to: Given a polynomial function, restrict the domain of a function that is not one-to-one and then find the inverse",
+      "original": "Example \\(\\PageIndex{4}\\): Finding the Inverse of a Quadratic Function When the Restriction Is Not Specified\n\nRestrict the domain and then find the inverse of\n\n\\(f(x)={(x−2)}^2−3\\).\n\nSolution\n\nWe can see this is a parabola with vertex at \\((2,–3)\\) that opens upward. Because the graph will be decreasing on one side of the vertex and increasing on the other side, we can restrict this function to a domain on which it will be one-to-one by limiting the domain to \\(x≥2\\).\n\nTo find the inverse, we will use the vertex form of the quadratic. We start by replacing \\(f(x)\\) with a simple variable, \\(y\\), then solve for \\(x\\).\n\n\\(y={(x−2)}^2−3\\) Interchange \\(x\\) and \\(y\\).\n\n\\(x={(y−2)}^2−3\\) Add 3 to both sides.\n\n\\(x+3={(y−2)}^2\\) Take the square root.\n\n\\(\\pm \\sqrt{x+3}=y−2\\) Add 2 to both sides.\n\n\\(2\\pm \\sqrt{x+3}=y\\) Rename the function.\n\n\\(f^{−1}(x)=2\\pm \\sqrt{x+3}\\)\n\nNow we need to determine which case to use. Because we restricted our original function to a domain of \\(x≥2\\), the outputs of the inverse should be the same, telling us to utilize the + case\n\n\\(f^{−1}(x)=2+\\sqrt{x+3}\\)\n\nIf the quadratic had not been given in vertex form, rewriting it into vertex form would be the first step. This way we may easily observe the coordinates of the vertex to help us restrict the domain.\n\nAnalysis\n\nNotice that we arbitrarily decided to restrict the domain on \\(x≥2\\). We could just as easily have opted to restrict the domain to \\(x≤2\\), in which case \\(f^{−1}(x)=2−\\sqrt{x+3}\\). Observe the original function graphed on the same set of axes as its inverse function in Figure \\(\\PageIndex{7}\\). Notice that both graphs show symmetry about the line \\(y=x\\). The coordinate pair \\((2, −3)\\) is on the graph of \\(f\\) and the coordinate pair \\((−3, 2)\\) is on the graph of \\(f^{−1}\\). Observe from the graph of both functions on the same set of axes that\n\ndomain of \\(f=\\) range of \\(f^{–1}=[2,\\infty)\\)\n\nand\n\ndomain of \\(f^{–1}=\\) range of \\(f=[–3,\\infty)\\).\n\nFinally, observe that the graph of \\(f\\) intersects the graph of \\(f^{−1}\\) along the line \\(y=x\\).\n\n[Figure: Graph of a parabolic function with half of its inverse.]\n\nFigure \\(\\PageIndex{7}\\)",
+      "prompt": "Example \\(\\PageIndex{4}\\): Finding the Inverse of a Quadratic Function When the Restriction Is Not Specified\n\nRestrict the domain and then find the inverse of\n\n\\(f(x)={(x−2)}^2−3\\).\n\nSolution\n\nWe can see this is a parabola with vertex at \\((2,–3)\\) that opens upward. Because the graph will be decreasing on one side of the vertex and increasing on the other side, we can restrict this function to a domain on which it will be one-to-one by limiting the domain to \\(x≥2\\).\n\nTo find the inverse, we will use the vertex form of the quadratic. We start by replacing \\(f(x)\\) with a simple variable, \\(y\\), then solve for \\(x\\).\n\n\\(y={(x−2)}^2−3\\) Interchange \\(x\\) and \\(y\\).\n\n\\(x={(y−2)}^2−3\\) Add 3 to both sides.\n\n\\(x+3={(y−2)}^2\\) Take the square root.\n\n\\(\\pm \\sqrt{x+3}=y−2\\) Add 2 to both sides.\n\n\\(2\\pm \\sqrt{x+3}=y\\) Rename the function.\n\n\\(f^{−1}(x)=2\\pm \\sqrt{x+3}\\)\n\nNow we need to determine which case to use. Because we restricted our original function to a domain of \\(x≥2\\), the outputs of the inverse should be the same, telling us to utilize the + case\n\n\\(f^{−1}(x)=2+\\sqrt{x+3}\\)\n\nIf the quadratic had not been given in vertex form, rewriting it into vertex form would be the first step. This way we may easily observe the coordinates of the vertex to help us restrict the domain.\n\nAnalysis\n\nNotice that we arbitrarily decided to restrict the domain on \\(x≥2\\). We could just as easily have opted to restrict the domain to \\(x≤2\\), in which case \\(f^{−1}(x)=2−\\sqrt{x+3}\\). Observe the original function graphed on the same set of axes as its inverse function in Figure \\(\\PageIndex{7}\\). Notice that both graphs show symmetry about the line \\(y=x\\). The coordinate pair \\((2, −3)\\) is on the graph of \\(f\\) and the coordinate pair \\((−3, 2)\\) is on the graph of \\(f^{−1}\\). Observe from the graph of both functions on the same set of axes that\n\ndomain of \\(f=\\) range of \\(f^{–1}=[2,\\infty)\\)\n\nand\n\ndomain of \\(f^{–1}=\\) range of \\(f=[–3,\\infty)\\).\n\nFinally, observe that the graph of \\(f\\) intersects the graph of \\(f^{−1}\\) along the line \\(y=x\\).\n\n[Figure: Graph of a parabolic function with half of its inverse.]\n\nFigure \\(\\PageIndex{7}\\)",
+      "sourceAnswers": [],
+      "hasFigure": true,
+      "status": "draft",
+      "answerVerified": false,
+      "translationStatus": "pending",
+      "mappingStatus": "pending"
+    },
+    {
+      "ordinal": 17,
+      "sourceNumber": "",
+      "sourceAnchor": "",
+      "kind": "exercise-candidate",
+      "context": "RESTRICTING THE DOMAIN\n\nIf a function is not one-to-one, it cannot have an inverse. If we restrict the domain of the function so that it becomes one-to-one, thus creating a new function, this new function will have an inverse.\n\nHow to: Given a polynomial function, restrict the domain of a function that is not one-to-one and then find the inverse",
+      "original": "Exercise \\(\\PageIndex{4}\\)\n\nFind the inverse of the function \\(f(x)=x^2+1\\), on the domain \\(x≥0\\).\n\nAnswer\n\n\\(f^{−1}(x)=\\sqrt{x−1}\\)",
+      "prompt": "Exercise \\(\\PageIndex{4}\\)\n\nFind the inverse of the function \\(f(x)=x^2+1\\), on the domain \\(x≥0\\).",
+      "sourceAnswers": [
+        "\\(f^{−1}(x)=\\sqrt{x−1}\\)"
+      ],
+      "hasFigure": false,
+      "status": "draft",
+      "answerVerified": false,
+      "translationStatus": "pending",
+      "mappingStatus": "pending"
+    },
+    {
+      "ordinal": 18,
+      "sourceNumber": "1",
+      "sourceAnchor": "",
+      "kind": "exercise-candidate",
+      "context": "Finding Inverses\n\nNotice that the functions from previous examples were all polynomials, and their inverses were radical functions. If we want to find the inverse of a radical function, we will need to restrict the domain of the answer because the range of the original function is limited.\n\nHow to: Given a radical function, find the inverse",
+      "original": "1. Determine the range of the original function.",
+      "prompt": "1. Determine the range of the original function.",
+      "sourceAnswers": [],
+      "hasFigure": false,
+      "status": "draft",
+      "answerVerified": false,
+      "translationStatus": "pending",
+      "mappingStatus": "pending"
+    },
+    {
+      "ordinal": 19,
+      "sourceNumber": "2",
+      "sourceAnchor": "",
+      "kind": "exercise-candidate",
+      "context": "Finding Inverses\n\nNotice that the functions from previous examples were all polynomials, and their inverses were radical functions. If we want to find the inverse of a radical function, we will need to restrict the domain of the answer because the range of the original function is limited.\n\nHow to: Given a radical function, find the inverse",
+      "original": "2. Replace \\(f(x)\\) with \\(y\\), then solve for \\(x\\).",
+      "prompt": "2. Replace \\(f(x)\\) with \\(y\\), then solve for \\(x\\).",
+      "sourceAnswers": [],
+      "hasFigure": false,
+      "status": "draft",
+      "answerVerified": false,
+      "translationStatus": "pending",
+      "mappingStatus": "pending"
+    },
+    {
+      "ordinal": 20,
+      "sourceNumber": "3",
+      "sourceAnchor": "",
+      "kind": "exercise-candidate",
+      "context": "Finding Inverses\n\nNotice that the functions from previous examples were all polynomials, and their inverses were radical functions. If we want to find the inverse of a radical function, we will need to restrict the domain of the answer because the range of the original function is limited.\n\nHow to: Given a radical function, find the inverse",
+      "original": "3. If necessary, restrict the domain of the inverse function to the range of the original function.",
+      "prompt": "3. If necessary, restrict the domain of the inverse function to the range of the original function.",
+      "sourceAnswers": [],
+      "hasFigure": false,
+      "status": "draft",
+      "answerVerified": false,
+      "translationStatus": "pending",
+      "mappingStatus": "pending"
+    },
+    {
+      "ordinal": 21,
+      "sourceNumber": "",
+      "sourceAnchor": "",
+      "kind": "example-or-exercise",
+      "context": "Finding Inverses\n\nNotice that the functions from previous examples were all polynomials, and their inverses were radical functions. If we want to find the inverse of a radical function, we will need to restrict the domain of the answer because the range of the original function is limited.\n\nHow to: Given a radical function, find the inverse",
+      "original": "Example \\(\\PageIndex{5}\\): Finding the Inverse of a Radical Function\n\nRestrict the domain of the function \\(f(x)=\\sqrt{x−4}\\) and then find the inverse.\n\nSolution\n\nNote that the original function has range \\(f(x)≥0\\). Replace \\(f(x)\\) with \\(y\\), then solve for \\(x\\).\n\n\\(y=\\sqrt{x−4}\\) Replace \\(f(x)\\) with \\(y\\).\n\n\\(x=\\sqrt{y−4}\\) Interchange \\(x\\) and \\(y\\).\n\n\\(x=\\sqrt{y−4}\\) Square each side.\n\n\\(x^2=y−4\\) Add 4.\n\n\\(x^2+4=y\\) Rename the function \\(f^{−1}(x)\\).\n\n\\(f^{−1}(x)=x^2+4\\)\n\nRecall that the domain of this function must be limited to the range of the original function.\n\n\\(f^{−1}(x)=x^2+4\\), \\(x≥0\\)\n\nAnalysis\n\nNotice in Figure \\(\\PageIndex{8}\\) that the inverse is a reflection of the original function over the line \\(y=x\\). Because the original function has only positive outputs, the inverse function has only nonnegative inputs.\n\n[Figure: Graph of f(x)=sqrt(x-4) and its inverse, f^(-1)(x)=x^2+4.]\n\nFigure \\(\\PageIndex{8}\\)",
+      "prompt": "Example \\(\\PageIndex{5}\\): Finding the Inverse of a Radical Function\n\nRestrict the domain of the function \\(f(x)=\\sqrt{x−4}\\) and then find the inverse.\n\nSolution\n\nNote that the original function has range \\(f(x)≥0\\). Replace \\(f(x)\\) with \\(y\\), then solve for \\(x\\).\n\n\\(y=\\sqrt{x−4}\\) Replace \\(f(x)\\) with \\(y\\).\n\n\\(x=\\sqrt{y−4}\\) Interchange \\(x\\) and \\(y\\).\n\n\\(x=\\sqrt{y−4}\\) Square each side.\n\n\\(x^2=y−4\\) Add 4.\n\n\\(x^2+4=y\\) Rename the function \\(f^{−1}(x)\\).\n\n\\(f^{−1}(x)=x^2+4\\)\n\nRecall that the domain of this function must be limited to the range of the original function.\n\n\\(f^{−1}(x)=x^2+4\\), \\(x≥0\\)\n\nAnalysis\n\nNotice in Figure \\(\\PageIndex{8}\\) that the inverse is a reflection of the original function over the line \\(y=x\\). Because the original function has only positive outputs, the inverse function has only nonnegative inputs.\n\n[Figure: Graph of f(x)=sqrt(x-4) and its inverse, f^(-1)(x)=x^2+4.]\n\nFigure \\(\\PageIndex{8}\\)",
+      "sourceAnswers": [],
+      "hasFigure": true,
+      "status": "draft",
+      "answerVerified": false,
+      "translationStatus": "pending",
+      "mappingStatus": "pending"
+    },
+    {
+      "ordinal": 22,
+      "sourceNumber": "",
+      "sourceAnchor": "",
+      "kind": "exercise-candidate",
+      "context": "Finding Inverses\n\nNotice that the functions from previous examples were all polynomials, and their inverses were radical functions. If we want to find the inverse of a radical function, we will need to restrict the domain of the answer because the range of the original function is limited.\n\nHow to: Given a radical function, find the inverse",
+      "original": "Exercise \\(\\PageIndex{5}\\) \n\nRestrict the domain and then find the inverse of the function \\(f(x)=\\sqrt{2x+3}\\).\n\nAnswer\n\n\\(f^{−1}(x)=\\frac{x^2−3}{2}\\), \\(x≥0\\)",
+      "prompt": "Exercise \\(\\PageIndex{5}\\) \n\nRestrict the domain and then find the inverse of the function \\(f(x)=\\sqrt{2x+3}\\).",
+      "sourceAnswers": [
+        "\\(f^{−1}(x)=\\frac{x^2−3}{2}\\), \\(x≥0\\)"
+      ],
+      "hasFigure": false,
+      "status": "draft",
+      "answerVerified": false,
+      "translationStatus": "pending",
+      "mappingStatus": "pending"
+    },
+    {
+      "ordinal": 23,
+      "sourceNumber": "",
+      "sourceAnchor": "",
+      "kind": "example-or-exercise",
+      "context": "Solving Applications of Radical Functions\n\nRadical functions are common in physical models, as we saw in the section opener. We now have enough tools to be able to solve the problem posed at the start of the section.",
+      "original": "Example \\(\\PageIndex{6}\\): Solving an Application with a Cubic Function\n\nA mound of gravel is in the shape of a cone with the height equal to twice the radius. The volume of the cone in terms of the radius is given by\n\n\\[V=\\dfrac{2}{3}\\pi r^3 \\nonumber\\]\n\nFind the inverse of the function \\(V=\\frac{2}{3}\\pi r^3\\) that determines the volume \\(V\\) of a cone and is a function of the radius \\(r\\). Then use the inverse function to calculate the radius of such a mound of gravel measuring 100 cubic feet. Use \\(\\pi=3.14\\).\n\nSolution\n\nStart with the given function for \\(V\\). Notice that the meaningful domain for the function is \\(r>0\\) since negative radii would not make sense in this context nor would a radius of \\(0\\). Also note the range of the function (hence, the domain of the inverse function) is \\(V>0\\). Solve for \\(r\\) in terms of \\(V\\), using the method outlined previously. Note that in real-world applications, we do not swap the variables when finding inverses. Instead, we change which variable is considered to be the independent variable.\n\n\\[  V =\\dfrac{2}{3}\\pi r^3\\nonumber \\]\n\nSolve for \\(r^3\\).\n\n\\[r^3 =\\dfrac{3V}{2\\pi} \\nonumber\\]\n\nSolve for \\(r\\).\n\n\\[ r=\\sqrt[3]{\\dfrac{3V}{2\\pi}} \\nonumber \\]\n\nThis is the result stated in the section opener. Now evaluate this for \\(V=100\\) and \\(\\pi=3.14\\).\n\n\\[ \\begin{align*}  r&=\\sqrt[3]{\\dfrac{3V}{2\\pi}} \\\\[4pt] &=\\sqrt[3]{\\dfrac{3⋅100}{2⋅3.14}} \\\\[4pt] &≈\\sqrt[3]{47.7707} \\\\[4pt] &≈3.63 \\end{align*}\\]\n\nTherefore, the radius is about 3.63 ft.",
+      "prompt": "Example \\(\\PageIndex{6}\\): Solving an Application with a Cubic Function\n\nA mound of gravel is in the shape of a cone with the height equal to twice the radius. The volume of the cone in terms of the radius is given by\n\n\\[V=\\dfrac{2}{3}\\pi r^3 \\nonumber\\]\n\nFind the inverse of the function \\(V=\\frac{2}{3}\\pi r^3\\) that determines the volume \\(V\\) of a cone and is a function of the radius \\(r\\). Then use the inverse function to calculate the radius of such a mound of gravel measuring 100 cubic feet. Use \\(\\pi=3.14\\).\n\nSolution\n\nStart with the given function for \\(V\\). Notice that the meaningful domain for the function is \\(r>0\\) since negative radii would not make sense in this context nor would a radius of \\(0\\). Also note the range of the function (hence, the domain of the inverse function) is \\(V>0\\). Solve for \\(r\\) in terms of \\(V\\), using the method outlined previously. Note that in real-world applications, we do not swap the variables when finding inverses. Instead, we change which variable is considered to be the independent variable.\n\n\\[  V =\\dfrac{2}{3}\\pi r^3\\nonumber \\]\n\nSolve for \\(r^3\\).\n\n\\[r^3 =\\dfrac{3V}{2\\pi} \\nonumber\\]\n\nSolve for \\(r\\).\n\n\\[ r=\\sqrt[3]{\\dfrac{3V}{2\\pi}} \\nonumber \\]\n\nThis is the result stated in the section opener. Now evaluate this for \\(V=100\\) and \\(\\pi=3.14\\).\n\n\\[ \\begin{align*}  r&=\\sqrt[3]{\\dfrac{3V}{2\\pi}} \\\\[4pt] &=\\sqrt[3]{\\dfrac{3⋅100}{2⋅3.14}} \\\\[4pt] &≈\\sqrt[3]{47.7707} \\\\[4pt] &≈3.63 \\end{align*}\\]\n\nTherefore, the radius is about 3.63 ft.",
+      "sourceAnswers": [],
+      "hasFigure": false,
+      "status": "draft",
+      "answerVerified": false,
+      "translationStatus": "pending",
+      "mappingStatus": "pending"
+    },
+    {
+      "ordinal": 24,
+      "sourceNumber": "",
+      "sourceAnchor": "",
+      "kind": "example-or-exercise",
+      "context": "Determining the Domain of a Radical Function Composed with Other Functions\n\nWhen radical functions are composed with other functions, determining domain can become more complicated.",
+      "original": "Example \\(\\PageIndex{7}\\): Finding the Domain of a Radical Function Composed with a Rational Function\n\nFind the domain of the function:\n\n\\[f(x)=\\sqrt{\\frac{(x+2)(x−3)}{(x−1)}}. \\nonumber\\]\n\nSolution\n\nBecause a square root is only defined when the quantity under the radical is non-negative, we need to determine where\n\n\\[\\frac{(x+2)(x−3)}{(x−1)}≥0. \\nonumber\\]\n\nThe output of a rational function can change signs (change from positive to negative or vice versa) at x-intercepts and at vertical asymptotes. For this equation, the graph could change signs at \\(x=–2\\), \\(1\\), and \\(3\\).\n\nTo determine the intervals on which the rational expression is positive, we could test some values in the expression or sketch a graph. While both approaches work equally well, for this example we will use a graph as shown in Figure \\(\\PageIndex{9}\\).\n\n[Figure: Graph of a radical function that shows where the outputs are nonnegative.]\n\nFigure \\(\\PageIndex{9}\\)\n\nThis function has two x-intercepts, both of which exhibit linear behavior near the x-intercepts. There is one vertical asymptote, corresponding to a linear factor; this behavior is similar to the basic reciprocal toolkit function, and there is no horizontal asymptote because the degree of the numerator is larger than the degree of the denominator. There is a y-intercept at \\((0,\\sqrt{6})\\).\n\nFrom the y-intercept and x-intercept at \\(x=−2\\), we can sketch the left side of the graph. From the behavior at the asymptote, we can sketch the right side of the graph.\n\nFrom the graph, we can now tell on which intervals the outputs will be non-negative, so that we can be sure that the original function \\(f(x)\\) will be defined. \\(f(x)\\) has domain \\(−2≤x<1\\) or \\(x≥3\\), or in interval notation, \\([−2,1)∪[3,\\infty)\\).",
+      "prompt": "Example \\(\\PageIndex{7}\\): Finding the Domain of a Radical Function Composed with a Rational Function\n\nFind the domain of the function:\n\n\\[f(x)=\\sqrt{\\frac{(x+2)(x−3)}{(x−1)}}. \\nonumber\\]\n\nSolution\n\nBecause a square root is only defined when the quantity under the radical is non-negative, we need to determine where\n\n\\[\\frac{(x+2)(x−3)}{(x−1)}≥0. \\nonumber\\]\n\nThe output of a rational function can change signs (change from positive to negative or vice versa) at x-intercepts and at vertical asymptotes. For this equation, the graph could change signs at \\(x=–2\\), \\(1\\), and \\(3\\).\n\nTo determine the intervals on which the rational expression is positive, we could test some values in the expression or sketch a graph. While both approaches work equally well, for this example we will use a graph as shown in Figure \\(\\PageIndex{9}\\).\n\n[Figure: Graph of a radical function that shows where the outputs are nonnegative.]\n\nFigure \\(\\PageIndex{9}\\)\n\nThis function has two x-intercepts, both of which exhibit linear behavior near the x-intercepts. There is one vertical asymptote, corresponding to a linear factor; this behavior is similar to the basic reciprocal toolkit function, and there is no horizontal asymptote because the degree of the numerator is larger than the degree of the denominator. There is a y-intercept at \\((0,\\sqrt{6})\\).\n\nFrom the y-intercept and x-intercept at \\(x=−2\\), we can sketch the left side of the graph. From the behavior at the asymptote, we can sketch the right side of the graph.\n\nFrom the graph, we can now tell on which intervals the outputs will be non-negative, so that we can be sure that the original function \\(f(x)\\) will be defined. \\(f(x)\\) has domain \\(−2≤x<1\\) or \\(x≥3\\), or in interval notation, \\([−2,1)∪[3,\\infty)\\).",
+      "sourceAnswers": [],
+      "hasFigure": true,
+      "status": "draft",
+      "answerVerified": false,
+      "translationStatus": "pending",
+      "mappingStatus": "pending"
+    },
+    {
+      "ordinal": 25,
+      "sourceNumber": "",
+      "sourceAnchor": "",
+      "kind": "example-or-exercise",
+      "context": "Finding Inverses of Rational Functions\n\nAs with finding inverses of quadratic functions, it is sometimes desirable to find the inverse of a rational function, particularly of rational functions that are the ratio of linear functions, such as in concentration applications.",
+      "original": "Example \\(\\PageIndex{8}\\): Finding the Inverse of a Rational Function\n\nThe function\n\n\\[\\displaystyle C=\\frac{20+0.4n}{100+n}\\]\n\nrepresents the concentration \\(C\\) of an acid solution after \\(n\\) mL of 40% solution has been added to 100 mL of a 20% solution. First, find the inverse of the function; that is, find an expression for \\(n\\) in terms of \\(C\\). Then use your result to determine how much of the 40% solution should be added so that the final mixture is a 35% solution.\n\nSolution\n\nWe first want the inverse of the function in order to determine how many mL we need for a given concentration. We will solve for \\(n\\) in terms of \\(C\\).\n\n\\[ \\begin{align*} C&=\\dfrac{20+0.4n}{100+n} \\\\[4pt] C(100+n)&=20+0.4n\\\\[4pt] 100C+Cn&=20+0.4n\\\\[4pt] 100C−20&=0.4n−Cn\\\\[4pt] 100C−20&=(0.4−C)n\\\\[4pt] n&=\\dfrac{100C−20}{0.4−C}\\end{align*}\\]\n\nNow evaluate this function at 35%, which is \\(C=0.35\\).\n\n\\[ \\begin{align*} n&=\\dfrac{100(0.35)−20}{0.4−0.35}\\\\[4pt] &=\\dfrac{15}{0.05}\\\\[4pt] &=300\\end{align*}\\]\n\nWe can conclude that 300 mL of the 40% solution should be added.",
+      "prompt": "Example \\(\\PageIndex{8}\\): Finding the Inverse of a Rational Function\n\nThe function\n\n\\[\\displaystyle C=\\frac{20+0.4n}{100+n}\\]\n\nrepresents the concentration \\(C\\) of an acid solution after \\(n\\) mL of 40% solution has been added to 100 mL of a 20% solution. First, find the inverse of the function; that is, find an expression for \\(n\\) in terms of \\(C\\). Then use your result to determine how much of the 40% solution should be added so that the final mixture is a 35% solution.\n\nSolution\n\nWe first want the inverse of the function in order to determine how many mL we need for a given concentration. We will solve for \\(n\\) in terms of \\(C\\).\n\n\\[ \\begin{align*} C&=\\dfrac{20+0.4n}{100+n} \\\\[4pt] C(100+n)&=20+0.4n\\\\[4pt] 100C+Cn&=20+0.4n\\\\[4pt] 100C−20&=0.4n−Cn\\\\[4pt] 100C−20&=(0.4−C)n\\\\[4pt] n&=\\dfrac{100C−20}{0.4−C}\\end{align*}\\]\n\nNow evaluate this function at 35%, which is \\(C=0.35\\).\n\n\\[ \\begin{align*} n&=\\dfrac{100(0.35)−20}{0.4−0.35}\\\\[4pt] &=\\dfrac{15}{0.05}\\\\[4pt] &=300\\end{align*}\\]\n\nWe can conclude that 300 mL of the 40% solution should be added.",
+      "sourceAnswers": [],
+      "hasFigure": false,
+      "status": "draft",
+      "answerVerified": false,
+      "translationStatus": "pending",
+      "mappingStatus": "pending"
+    },
+    {
+      "ordinal": 26,
+      "sourceNumber": "",
+      "sourceAnchor": "",
+      "kind": "exercise-candidate",
+      "context": "Finding Inverses of Rational Functions\n\nAs with finding inverses of quadratic functions, it is sometimes desirable to find the inverse of a rational function, particularly of rational functions that are the ratio of linear functions, such as in concentration applications.",
+      "original": "Exercise \\(\\PageIndex{8}\\)\n\nFind the inverse of the function \\(f(x)=\\frac{x+3}{x−2}\\).\n\nAnswer\n\n\\(f^{−1}(x)=\\frac{2x+3}{x−1}\\)",
+      "prompt": "Exercise \\(\\PageIndex{8}\\)\n\nFind the inverse of the function \\(f(x)=\\frac{x+3}{x−2}\\).",
+      "sourceAnswers": [
+        "\\(f^{−1}(x)=\\frac{2x+3}{x−1}\\)"
+      ],
+      "hasFigure": false,
+      "status": "draft",
+      "answerVerified": false,
+      "translationStatus": "pending",
+      "mappingStatus": "pending"
+    }
+  ],
+  "license": "CC BY 4.0",
+  "licenseEvidence": "This page titled 5.7: Inverses and Radical Functions was last modified on Thu, 26 Dec 2024 22:30:44 GMT and is shared under a CC BY  4.0  license and was authored, remixed, and/or curated by OpenStax via source content that was edited to the style and standards of the LibreTexts platform.",
+  "url": "https://math.libretexts.org/Bookshelves/Algebra/Algebra_and_Trigonometry_1e_(OpenStax)/05:_Polynomial_and_Rational_Functions/5.07:_Inverses_and_Radical_Functions",
+  "sha256": "9dd8e089df3f24bd128ef055c294b50c6889bfed60eb4559d9de8f0fdb22b102",
+  "checkedAt": "2026-10-07",
+  "id": "05a15c4e65606c3a2655",
+  "bookId": "algebra-trigonometry",
+  "licenseInherited": false,
+  "licenseSource": "https://math.libretexts.org/Bookshelves/Algebra/Algebra_and_Trigonometry_1e_(OpenStax)/05:_Polynomial_and_Rational_Functions/5.07:_Inverses_and_Radical_Functions",
+  "licenseUrl": "https://creativecommons.org/licenses/by/4.0/",
+  "authors": "OpenStax / Jay Abramson et al.",
+  "book": "Algebra and Trigonometry 1e",
+  "reviewStatus": "unreviewed",
+  "sourceLanguage": "en",
+  "translationStatus": "pending"
+}

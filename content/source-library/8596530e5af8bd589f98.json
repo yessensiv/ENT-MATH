@@ -1,0 +1,510 @@
+{
+  "title": "11.3: Systems of Nonlinear Equations and Inequalities - Two Variables",
+  "originalText": "Learning Objectives\n\nSolve a system of nonlinear equations using substitution.\n\nSolve a system of nonlinear equations using elimination.\n\nGraph a nonlinear inequality.\n\nGraph a system of nonlinear inequalities.\n\nHalley’s Comet (Figure \\(\\PageIndex{1}\\)) orbits the sun about once every \\(75\\) years. Its path can be considered to be a very elongated ellipse. Other comets follow similar paths in space. These orbital paths can be studied using systems of equations. These systems, however, are different from the ones we considered in the previous section because the equations are not linear.\n\n[Figure: CNX_Precalc_Figure_09_03_001.jpg]\n\nFigure \\(\\PageIndex{1}\\): Halley’s Comet (credit: \"NASA Blueshift\"/Flickr)\n\nIn this section, we will consider the intersection of a parabola and a line, a circle and a line, and a circle and an ellipse. The methods for solving systems of nonlinear equations are similar to those for linear equations.\n\nSolving a System of Nonlinear Equations Using Substitution\n\nA system of nonlinear equations is a system of two or more equations in two or more variables containing at least one equation that is not linear. Recall that a linear equation can take the form \\(Ax+By+C=0\\). Any equation that cannot be written in this form in nonlinear. The substitution method we used for linear systems is the same method we will use for nonlinear systems. We solve one equation for one variable and then substitute the result into the second equation to solve for another variable, and so on. There is, however, a variation in the possible outcomes.\n\nIntersection of a Parabola and a Line\n\nThere are three possible types of solutions for a system of nonlinear equations involving a parabola and a line.\n\nPossible Types of Solutions For Points of Intersection of a Parabola and a Line\n\nFigure \\(\\PageIndex{2}\\) illustrates possible solution sets for a system of equations involving a parabola and a line.\n\nNo solution - The line will never intersect the parabola.\n\nOne solution - The line is tangent to the parabola and intersects the parabola at exactly one point.\n\nTwo solutions - The line crosses on the inside of the parabola and intersects the parabola at two points.\n\n[Figure: 151131601187915.png]\n\nFigure \\(\\PageIndex{2}\\)\n\nHow to: Given a system of equations containing a line and a parabola, find the solution\n\n1. Solve the linear equation for one of the variables.\n\n2. Substitute the expression obtained in step one into the parabola equation.\n\n3. Solve for the remaining variable.\n\n4. Check your solutions in both equations.\n\nExample \\(\\PageIndex{1}\\): Solving a System of Nonlinear Equations Representing a Parabola and a Line\n\nSolve the system of equations.\n\n\\[\\begin{align*} x−y &= −1\\nonumber \\\\ y &= x^2+1 \\nonumber \\end{align*}\\]\n\nSolution\n\nSolve the first equation for \\(x\\) and then substitute the resulting expression into the second equation.\n\n\\[\\begin{align*} x−y &=−1\\nonumber \\\\ x &= y−1 \\;\\; & \\text{Solve for }x.\\nonumber \\\\\\nonumber \\\\ y &=x^2+1\\nonumber \\\\ y & ={(y−1)}^2+1 \\;\\; & \\text{Substitute expression for }x. \\nonumber \\end{align*}\\]\n\nExpand the equation and set it equal to zero.\n\n\\[ \\begin{align*} y & ={(y−1)}^2+1\\nonumber \\\\ &=(y^2−2y+1)+1\\nonumber \\\\ &=y^2−2y+2\\nonumber \\\\ 0 &= y^2−3y+2\\nonumber \\\\ &= (y−2)(y−1) \\nonumber \\end{align*}\\]\n\nSolving for \\(y\\) gives \\(y=2\\) and \\(y=1\\). Next, substitute each value for \\(y\\) into the first equation to solve for \\(x\\). Always substitute the value into the linear equation to check for extraneous solutions.\n\n\\[\\begin{align*} x−y &=−1\\nonumber \\\\ x−(2) &= −1\\nonumber \\\\ x &= 1\\nonumber \\\\ x−(1) &=−1\\nonumber \\\\ x &= 0 \\nonumber \\end{align*}\\]\n\nThe solutions are \\((1,2)\\) and \\((0,1)\\),which can be verified by substituting these \\((x,y)\\) values into both of the original equations (Figure \\(\\PageIndex{3}\\)).\n\n[Figure: imageedit_2_8582923434.png]\n\nFigure \\(\\PageIndex{3}\\)\n\nQ&A: Could we have substituted values for \\(y\\) into the second equation to solve for \\(x\\) in last example?\n\nYes, but because \\(x\\) is squared in the second equation this could give us extraneous solutions for \\(x\\).\n\nFor \\(y=1\\)\n\n\\[\\begin{align*} y &= x^2+1\\nonumber \\\\ y &= x^2+1\\nonumber \\\\ x^2 &= 0\\nonumber \\\\ x &= \\pm \\sqrt{0}=0 \\nonumber \\end{align*}\\]\n\nThis gives us the same value as in the solution.\n\nFor \\(y=2\\)\n\n\\[\\begin{align*} y &= x^2+1\\nonumber \\\\ 2 &= x^2+1\\nonumber \\\\ x^2 &= 1\\nonumber \\\\ x &= \\pm \\sqrt{1}=\\pm 1 \\nonumber \\end{align*}\\]\n\nNotice that \\(−1\\) is an extraneous solution.\n\nExercise \\(\\PageIndex{1}\\)\n\nSolve the given system of equations by substitution.\n\n\\[\\begin{align*} 3x−y &= −2\\nonumber \\\\ 2x^2−y &= 0 \\nonumber \\end{align*}\\]\n\nAnswer\n\n\\(\\left(−\\dfrac{1}{2},\\dfrac{1}{2}\\right)\\) and \\((2,8)\\)\n\nIntersection of a Circle and a Line\n\nJust as with a parabola and a line, there are three possible outcomes when solving a system of equations representing a circle and a line.\n\nPOSSIBLE TYPES OF SOLUTIONS FOR THE POINTS OF INTERSECTION OF A CIRCLE AND A LINE\n\nFigure \\(\\PageIndex{4}\\) illustrates possible solution sets for a system of equations involving a circle and a line.\n\nNo solution - The line does not intersect the circle.\n\nOne solution - The line is tangent to the circle and intersects the circle at exactly one point.\n\nTwo solutions - The line crosses the circle and intersects it at two points.\n\n[Figure: 11.4.1.png]\n\nFigure \\(\\PageIndex{4}\\)\n\nHow to: Given a system of equations containing a line and a circle, find the solution\n\n1. Solve the linear equation for one of the variables.\n\n2. Substitute the expression obtained in step one into the equation for the circle.\n\n3. Solve for the remaining variable.\n\n4. Check your solutions in both equations.\n\nExample \\(\\PageIndex{2}\\): Finding the Intersection of a Circle and a Line by Substitution\n\nFind the intersection of the given circle and the given line by substitution.\n\n\\[\\begin{align*} x^2+y^2 &= 5\\nonumber \\\\ y &= 3x−5 \\nonumber \\end{align*}\\]\n\nSolution\n\nOne of the equations has already been solved for \\(y\\). We will substitute \\(y=3x−5\\) into the equation for the circle.\n\n\\[\\begin{align*} x^2+{(3x−5)}^2 &= 5\\nonumber \\\\ x^2+9x^2−30x+25 &= 5\\nonumber \\\\ 10x^2−30x+20 &= 0 \\end{align*} \\]\n\nNow, we factor and solve for \\(x\\).\n\n\\[\\begin{align*} 10(x2−3x+2) &= 0\\nonumber \\\\ 10(x−2)(x−1) &= 0\\nonumber \\\\ x &= 2\\nonumber \\\\ x &= 1 \\nonumber \\end{align*}\\]\n\nSubstitute the two \\(x\\)-values into the original linear equation to solve for \\(y\\).\n\n\\[\\begin{align*} y &= 3(2)−5\\nonumber \\\\ &= 1\\nonumber \\\\ y &= 3(1)−5\\nonumber \\\\ &= −2 \\nonumber \\end{align*}\\]\n\nThe line intersects the circle at \\((2,1)\\) and \\((1,−2)\\),which can be verified by substituting these \\((x,y)\\) values into both of the original equations (Figure \\(\\PageIndex{5}\\)).\n\n[Figure: 11.4.5.png]\n\nFigure \\(\\PageIndex{5}\\)\n\nExercise \\(\\PageIndex{2}\\)\n\nSolve the system of nonlinear equations.\n\n\\[\\begin{align*} x^2+y^2 &= 10\\nonumber \\\\ x−3y &= −10 \\nonumber \\end{align*}\\]\n\nAnswer\n\n\\((−1,3)\\)\n\nSolving a System of Nonlinear Equations Using Elimination\n\nWe have seen that substitution is often the preferred method when a system of equations includes a linear equation and a nonlinear equation. However, when both equations in the system have like variables of the second degree, solving them using elimination by addition is often easier than substitution. Generally, elimination is a far simpler method when the system involves only two equations in two variables (a two-by-two system), rather than a three-by-three system, as there are fewer steps. As an example, we will investigate the possible types of solutions when solving a system of equations representing a circle and an ellipse.\n\nPOSSIBLE TYPES OF SOLUTIONS FOR THE POINTS OF INTERSECTION OF A CIRCLE AND AN ELLIPSE\n\nFigure \\(\\PageIndex{6}\\) illustrates possible solution sets for a system of equations involving a circle and an ellipse.\n\nNo solution - The circle and ellipse do not intersect. One shape is inside the other or the circle and the ellipse are a distance away from the other.\n\nOne solution - The circle and ellipse are tangent to each other, and intersect at exactly one point.\n\nTwo solutions - The circle and the ellipse intersect at two points.\n\nThree solutions - The circle and the ellipse intersect at three points.\n\nFour solutions - The circle and the ellipse intersect at four points.\n\n[Figure: 11.4.6.png]\n\nFigure \\(\\PageIndex{6}\\)\n\nExample \\(\\PageIndex{3}\\): Solving a System of Nonlinear Equations Representing a Circle and an Ellipse\n\nSolve the system of nonlinear equations.\n\n\\[\\begin{align*} x^2+y^2 &= 26 &(1)\\nonumber \\\\ 3x^2+25y^2 &= 100 & (2) \\nonumber \\end{align*}\\]\n\nSolution\n\nLet’s begin by multiplying equation (1) by \\(−3\\),and adding it to equation (2).\n\n\\[\\begin{align*} (−3)(x^2+y^2) = (−3)(26)&\\nonumber \\\\ −3x^2−3y^2 = −78 &\\nonumber \\\\ \\underline{3x^2+25y^2=100}&\\nonumber \\\\ 22y^2=22& \\nonumber \\end{align*}\\]\n\nAfter we add the two equations together, we solve for \\(y\\).\n\n\\[\\begin{align*} y^2 &= 1\\nonumber \\\\ y &= \\pm \\sqrt{1}=\\pm 1 \\nonumber \\end{align*}\\]\n\nSubstitute \\(y=\\pm 1\\) into one of the equations and solve for \\(x\\).\n\n\\[\\begin{align*} x^2+{(1)}^2 &= 26\\nonumber \\\\ x^2+1 &= 26\\nonumber \\\\ x^2 &= 25\\nonumber \\\\ x &= \\pm \\sqrt{25}=\\pm 5\\nonumber \\\\ x^2+{(−1)}^2 &= 26\\nonumber \\\\ x^2+1 &= 26\\nonumber \\\\ x^2 &= \\pm \\sqrt{25}=\\pm 5 \\nonumber \\end{align*}\\]\n\nThere are four solutions: \\((5,1)\\), \\((−5,1)\\), \\((5,−1)\\),and \\((−5,−1)\\). See Figure \\(\\PageIndex{7}\\).\n\n[Figure: 22.4.7.png]\n\nFigure \\(\\PageIndex{7}\\)\n\nExercise \\(\\PageIndex{3}\\)\n\nFind the solution set for the given system of nonlinear equations.\n\n\\[\\begin{align*} 4x^2+y^2 &= 13\\nonumber \\\\ x^2+y^2 &= 10 \\nonumber \\end{align*}\\]\n\nAnswer\n\n\\({(1,3),(1,−3),(−1,3),(−1,−3)}\\)\n\nGraphing a Nonlinear Inequality\n\nAll of the equations in the systems that we have encountered so far have involved equalities, but we may also encounter systems that involve inequalities. We have already learned to graph linear inequalities by graphing the corresponding equation, and then shading the region represented by the inequality symbol. Now, we will follow similar steps to graph a nonlinear inequality so that we can learn to solve systems of nonlinear inequalities. A nonlinear inequality is an inequality containing a nonlinear expression. Graphing a nonlinear inequality is much like graphing a linear inequality.\n\nRecall that when the inequality is greater than, \\(y>a\\),or less than, \\(y<a\\),the graph is drawn with a dashed line. When the inequality is greater than or equal to, \\(y≥a\\),or less than or equal to, \\(y≤a\\),the graph is drawn with a solid line. The graphs will create regions in the plane, and we will test each region for a solution. If one point in the region works, the whole region works. That is the region we shade (Figure \\(\\PageIndex{8}\\)).\n\n[Figure: CNX_Precalc_Figure_09_03_009.jpg]\n\nFigure \\(\\PageIndex{8}\\): (a) an example of \\(y>a\\); (b) an example of \\(y≥a\\); (c) an example of \\(y<a\\); (d) an example of \\(y≤a\\)\n\nHow to: Given an inequality bounded by a parabola, sketch a graph\n\n1. Graph the parabola as if it were an equation. This is the boundary for the region that is the solution set.\n\n2. If the boundary is included in the region (the operator is \\(≤\\) or \\(≥\\)), the parabola is graphed as a solid line.\n\n3. If the boundary is not included in the region (the operator is \\(<\\) or \\(>\\)), the parabola is graphed as a dashed line.\n\n4. Test a point in one of the regions to determine whether it satisfies the inequality statement. If the statement is true, the solution set is the region including the point. If the statement is false, the solution set is the region on the other side of the boundary line.\n\n5. Shade the region representing the solution set.\n\nExample \\(\\PageIndex{4}\\): Graphing an Inequality for a Parabola\n\nGraph the inequality \\(y>x^2+1\\).\n\nSolution\n\nFirst, graph the corresponding equation \\(y=x^2+1\\). Since \\(y>x^2+1\\) has a greater than symbol, we draw the graph with a dashed line. Then we choose points to test both inside and outside the parabola. Let’s test the points\n\n\\((0,2)\\) and \\((2,0)\\). One point is clearly inside the parabola and the other point is clearly outside.\n\n\\[\\begin{align*} y &> x^2+1\\nonumber \\\\ 2 &> (0)^2+1\\nonumber \\\\ 2 &>1 & \\text{True}\\nonumber \\\\\\nonumber \\\\\\nonumber \\\\ 0 &> (2)^2+1\\nonumber \\\\ 0 &> 5 & \\text{False} \\nonumber \\end{align*}\\]\n\nThe graph is shown in Figure \\(\\PageIndex{9}\\). We can see that the solution set consists of all points inside the parabola, but not on the graph itself.\n\n[Figure: imageedit_6_4849582791.png]\n\nFigure \\(\\PageIndex{9}\\)\n\nGraphing a System of Nonlinear Inequalities\n\nNow that we have learned to graph nonlinear inequalities, we can learn how to graph systems of nonlinear inequalities. A system of nonlinear inequalities is a system of two or more inequalities in two or more variables containing at least one inequality that is not linear. Graphing a system of nonlinear inequalities is similar to graphing a system of linear inequalities. The difference is that our graph may result in more shaded regions that represent a solution than we find in a system of linear inequalities. The solution to a nonlinear system of inequalities is the region of the graph where the shaded regions of the graph of each inequality overlap, or where the regions intersect, called the feasible region.\n\nHow to: Given a system of nonlinear inequalities, sketch a graph\n\n1. Find the intersection points by solving the corresponding system of nonlinear equations.\n\n2. Graph the nonlinear equations.\n\n3. Find the shaded regions of each inequality.\n\n4. Identify the feasible region as the intersection of the shaded regions of each inequality or the set of points common to each inequality.\n\nExample \\(\\PageIndex{5}\\): Graphing a System of Inequalities\n\nGraph the given system of inequalities.\n\n\\[\\begin{align*} x^2−y &≤ 0\\nonumber \\\\ 2x^2+y &≤ 12 \\nonumber \\end{align*}\\]\n\nSolution\n\nThese two equations are clearly parabolas. We can find the points of intersection by the elimination process: Add both equations and the variable \\(y\\) will be eliminated. Then we solve for \\(x\\).\n\n\\[\\begin{align*} x^2−y = 0&\\nonumber \\\\ \\underline{2x^2+y=12}&\\nonumber \\\\ 3x^2=12&\\nonumber \\\\ x^2=4 &\\nonumber \\\\ x=\\pm 2 & \\nonumber \\end{align*}\\]\n\nSubstitute the \\(x\\)-values into one of the equations and solve for \\(y\\).\n\n\\[\\begin{align*} x^2−y &= 0\\nonumber \\\\ {(2)}^2−y &= 0\\nonumber \\\\ 4−y &= 0\\nonumber \\\\ y &= 4\\nonumber \\\\\\nonumber \\\\ {(−2)}^2−y &= 0\\nonumber \\\\ 4−y &= 0\\nonumber \\\\ y &= 4 \\nonumber \\end{align*}\\]\n\nThe two points of intersection are \\((2,4)\\) and \\((−2,4)\\). Notice that the equations can be rewritten as follows.\n\n\\[\\begin{align*} x^2-y & ≤ 0\\nonumber \\\\ x^2 &≤ y\\nonumber \\\\ y &≥ x^2\\nonumber \\\\\\nonumber \\\\\\nonumber \\\\ 2x^2+y &≤ 12\\nonumber \\\\ y &≤ −2x^2+12 \\nonumber \\end{align*}\\]\n\nGraph each inequality. See Figure \\(\\PageIndex{10}\\). The feasible region is the region between the two equations bounded by \\(2x^2+y≤12\\) on the top and \\(x^2−y≤0\\) on the bottom.\n\n[Figure: imageedit_10_9451914448.png]\n\nFigure \\(\\PageIndex{10}\\)\n\nExercise \\(\\PageIndex{5}\\)\n\nGraph the given system of inequalities.\n\n\\[\\begin{align*} y &≥ x^2−1\\nonumber \\\\ x−y &≥ −1 \\nonumber \\end{align*}\\]\n\nAnswer\n\nShade the area bounded by the two curves, above the quadratic and below the line.\n\n[Figure: imageedit_14_4168208882.png]\n\nFigure \\(\\PageIndex{11}\\)\n\nMedia\n\nAccess these online resources for additional instruction and practice with nonlinear equations.\n\nSolve a System of Nonlinear Equations Using Substitution\n\nSolve a System of Nonlinear Equations Using Elimination\n\nKey Concepts\n\nThere are three possible types of solutions to a system of equations representing a line and a parabola: (1) no solution, the line does not intersect the parabola; (2) one solution, the line is tangent to the parabola; and (3) two solutions, the line intersects the parabola in two points. See Example \\(\\PageIndex{1}\\).\n\nThere are three possible types of solutions to a system of equations representing a circle and a line: (1) no solution, the line does not intersect the circle; (2) one solution, the line is tangent to the parabola; (3) two solutions, the line intersects the circle in two points. See Example \\(\\PageIndex{2}\\).\n\nThere are five possible types of solutions to the system of nonlinear equations representing an ellipse and a circle:\n\n    (1) no solution, the circle and the ellipse do not intersect; (2) one solution, the circle and the ellipse are tangent to each other; (3) two solutions, the circle and the ellipse intersect in two points; (4) three solutions, the circle and ellipse intersect in three places; (5) four solutions, the circle and the ellipse intersect in four points. See Example \\(\\PageIndex{3}\\).\n\nAn inequality is graphed in much the same way as an equation, except for > or <, we draw a dashed line and shade the region containing the solution set. See Example \\(\\PageIndex{4}\\).\n\nInequalities are solved the same way as equalities, but solutions to systems of inequalities must satisfy both inequalities. See Example \\(\\PageIndex{5}\\).\n\nContributors and Attributions\n\nJay Abramson (Arizona State University) with contributing authors. Textbook content produced by OpenStax College is licensed under a Creative Commons Attribution License 4.0 license. Download for free at https://openstax.org/details/books/precalculus.\n\nThis page titled 11.3: Systems of Nonlinear Equations and Inequalities - Two Variables was last modified on Sun, 27 Apr 2025 18:27:17 GMT and is shared under a CC BY  4.0  license and was authored, remixed, and/or curated by OpenStax via source content that was edited to the style and standards of the LibreTexts platform.",
+  "figures": [
+    {
+      "url": "https://math.libretexts.org/@api/deki/files/7543/CNX_Precalc_Figure_09_03_001.jpg?revision=1",
+      "alt": "CNX_Precalc_Figure_09_03_001.jpg",
+      "credit": ""
+    },
+    {
+      "url": "https://math.libretexts.org/@api/deki/files/7556/151131601187915.png?revision=1",
+      "alt": "151131601187915.png",
+      "credit": ""
+    },
+    {
+      "url": "https://math.libretexts.org/@api/deki/files/14029/imageedit_2_8582923434.png?revision=1",
+      "alt": "imageedit_2_8582923434.png",
+      "credit": ""
+    },
+    {
+      "url": "https://math.libretexts.org/@api/deki/files/7554/11.4.1.png?revision=1",
+      "alt": "11.4.1.png",
+      "credit": ""
+    },
+    {
+      "url": "https://math.libretexts.org/@api/deki/files/7557/11.4.5.png?revision=1",
+      "alt": "11.4.5.png",
+      "credit": ""
+    },
+    {
+      "url": "https://math.libretexts.org/@api/deki/files/7555/11.4.6.png?revision=1",
+      "alt": "11.4.6.png",
+      "credit": ""
+    },
+    {
+      "url": "https://math.libretexts.org/@api/deki/files/7558/22.4.7.png?revision=1",
+      "alt": "22.4.7.png",
+      "credit": ""
+    },
+    {
+      "url": "https://math.libretexts.org/@api/deki/files/7550/CNX_Precalc_Figure_09_03_009.jpg?revision=1&size=bestfit&width=825&height=397",
+      "alt": "CNX_Precalc_Figure_09_03_009.jpg",
+      "credit": ""
+    },
+    {
+      "url": "https://math.libretexts.org/@api/deki/files/14030/imageedit_6_4849582791.png?revision=1",
+      "alt": "imageedit_6_4849582791.png",
+      "credit": ""
+    },
+    {
+      "url": "https://math.libretexts.org/@api/deki/files/14031/imageedit_10_9451914448.png?revision=1",
+      "alt": "imageedit_10_9451914448.png",
+      "credit": ""
+    },
+    {
+      "url": "https://math.libretexts.org/@api/deki/files/14032/imageedit_14_4168208882.png?revision=1",
+      "alt": "imageedit_14_4168208882.png",
+      "credit": ""
+    }
+  ],
+  "references": [
+    {
+      "text": "Solve a System of Nonlinear Equations Using Substitution",
+      "url": "http://openstaxcollege.org/l/nonlinsub"
+    },
+    {
+      "text": "Solve a System of Nonlinear Equations Using Elimination",
+      "url": "http://openstaxcollege.org/l/nonlinelim"
+    },
+    {
+      "text": "Creative Commons Attribution License 4.0",
+      "url": "http://creativecommons.org/licenses/by/4.0/"
+    },
+    {
+      "text": "https://openstax.org/details/books/precalculus",
+      "url": "https://openstax.org/details/books/precalculus"
+    },
+    {
+      "text": "11.3: Systems of Nonlinear Equations and Inequalities - Two Variables",
+      "url": "https://math.libretexts.org/Bookshelves/Algebra/Algebra_and_Trigonometry_1e_(OpenStax)/11%3A_Systems_of_Equations_and_Inequalities/11.03%3A_Systems_of_Nonlinear_Equations_and_Inequalities_-_Two_Variables"
+    },
+    {
+      "text": "CC BY  4.0",
+      "url": "https://creativecommons.org/licenses/by/4.0"
+    },
+    {
+      "text": "OpenStax",
+      "url": "https://openstax.org/"
+    },
+    {
+      "text": "source content",
+      "url": "https://openstax.org/details/books/precalculus"
+    }
+  ],
+  "exercises": [
+    {
+      "ordinal": 1,
+      "sourceNumber": "1",
+      "sourceAnchor": "",
+      "kind": "exercise-candidate",
+      "context": "Intersection of a Parabola and a Line\n\nThere are three possible types of solutions for a system of nonlinear equations involving a parabola and a line.\n\nFigure \\(\\PageIndex{2}\\) illustrates possible solution sets for a system of equations involving a parabola and a line.",
+      "original": "1. Solve the linear equation for one of the variables.",
+      "prompt": "1. Solve the linear equation for one of the variables.",
+      "sourceAnswers": [],
+      "hasFigure": false,
+      "status": "draft",
+      "answerVerified": false,
+      "translationStatus": "pending",
+      "mappingStatus": "pending"
+    },
+    {
+      "ordinal": 2,
+      "sourceNumber": "2",
+      "sourceAnchor": "",
+      "kind": "exercise-candidate",
+      "context": "Intersection of a Parabola and a Line\n\nThere are three possible types of solutions for a system of nonlinear equations involving a parabola and a line.\n\nFigure \\(\\PageIndex{2}\\) illustrates possible solution sets for a system of equations involving a parabola and a line.",
+      "original": "2. Substitute the expression obtained in step one into the parabola equation.",
+      "prompt": "2. Substitute the expression obtained in step one into the parabola equation.",
+      "sourceAnswers": [],
+      "hasFigure": false,
+      "status": "draft",
+      "answerVerified": false,
+      "translationStatus": "pending",
+      "mappingStatus": "pending"
+    },
+    {
+      "ordinal": 3,
+      "sourceNumber": "3",
+      "sourceAnchor": "",
+      "kind": "exercise-candidate",
+      "context": "Intersection of a Parabola and a Line\n\nThere are three possible types of solutions for a system of nonlinear equations involving a parabola and a line.\n\nFigure \\(\\PageIndex{2}\\) illustrates possible solution sets for a system of equations involving a parabola and a line.",
+      "original": "3. Solve for the remaining variable.",
+      "prompt": "3. Solve for the remaining variable.",
+      "sourceAnswers": [],
+      "hasFigure": false,
+      "status": "draft",
+      "answerVerified": false,
+      "translationStatus": "pending",
+      "mappingStatus": "pending"
+    },
+    {
+      "ordinal": 4,
+      "sourceNumber": "4",
+      "sourceAnchor": "",
+      "kind": "exercise-candidate",
+      "context": "Intersection of a Parabola and a Line\n\nThere are three possible types of solutions for a system of nonlinear equations involving a parabola and a line.\n\nFigure \\(\\PageIndex{2}\\) illustrates possible solution sets for a system of equations involving a parabola and a line.",
+      "original": "4. Check your solutions in both equations.",
+      "prompt": "4. Check your solutions in both equations.",
+      "sourceAnswers": [],
+      "hasFigure": false,
+      "status": "draft",
+      "answerVerified": false,
+      "translationStatus": "pending",
+      "mappingStatus": "pending"
+    },
+    {
+      "ordinal": 5,
+      "sourceNumber": "",
+      "sourceAnchor": "",
+      "kind": "example-or-exercise",
+      "context": "Intersection of a Parabola and a Line\n\nThere are three possible types of solutions for a system of nonlinear equations involving a parabola and a line.\n\nFigure \\(\\PageIndex{2}\\) illustrates possible solution sets for a system of equations involving a parabola and a line.",
+      "original": "Example \\(\\PageIndex{1}\\): Solving a System of Nonlinear Equations Representing a Parabola and a Line\n\nSolve the system of equations.\n\n\\[\\begin{align*} x−y &= −1\\nonumber \\\\ y &= x^2+1 \\nonumber \\end{align*}\\]\n\nSolution\n\nSolve the first equation for \\(x\\) and then substitute the resulting expression into the second equation.\n\n\\[\\begin{align*} x−y &=−1\\nonumber \\\\ x &= y−1 \\;\\; & \\text{Solve for }x.\\nonumber \\\\\\nonumber \\\\ y &=x^2+1\\nonumber \\\\ y & ={(y−1)}^2+1 \\;\\; & \\text{Substitute expression for }x. \\nonumber \\end{align*}\\]\n\nExpand the equation and set it equal to zero.\n\n\\[ \\begin{align*} y & ={(y−1)}^2+1\\nonumber \\\\ &=(y^2−2y+1)+1\\nonumber \\\\ &=y^2−2y+2\\nonumber \\\\ 0 &= y^2−3y+2\\nonumber \\\\ &= (y−2)(y−1) \\nonumber \\end{align*}\\]\n\nSolving for \\(y\\) gives \\(y=2\\) and \\(y=1\\). Next, substitute each value for \\(y\\) into the first equation to solve for \\(x\\). Always substitute the value into the linear equation to check for extraneous solutions.\n\n\\[\\begin{align*} x−y &=−1\\nonumber \\\\ x−(2) &= −1\\nonumber \\\\ x &= 1\\nonumber \\\\ x−(1) &=−1\\nonumber \\\\ x &= 0 \\nonumber \\end{align*}\\]\n\nThe solutions are \\((1,2)\\) and \\((0,1)\\),which can be verified by substituting these \\((x,y)\\) values into both of the original equations (Figure \\(\\PageIndex{3}\\)).\n\n[Figure: imageedit_2_8582923434.png]\n\nFigure \\(\\PageIndex{3}\\)",
+      "prompt": "Example \\(\\PageIndex{1}\\): Solving a System of Nonlinear Equations Representing a Parabola and a Line\n\nSolve the system of equations.\n\n\\[\\begin{align*} x−y &= −1\\nonumber \\\\ y &= x^2+1 \\nonumber \\end{align*}\\]\n\nSolution\n\nSolve the first equation for \\(x\\) and then substitute the resulting expression into the second equation.\n\n\\[\\begin{align*} x−y &=−1\\nonumber \\\\ x &= y−1 \\;\\; & \\text{Solve for }x.\\nonumber \\\\\\nonumber \\\\ y &=x^2+1\\nonumber \\\\ y & ={(y−1)}^2+1 \\;\\; & \\text{Substitute expression for }x. \\nonumber \\end{align*}\\]\n\nExpand the equation and set it equal to zero.\n\n\\[ \\begin{align*} y & ={(y−1)}^2+1\\nonumber \\\\ &=(y^2−2y+1)+1\\nonumber \\\\ &=y^2−2y+2\\nonumber \\\\ 0 &= y^2−3y+2\\nonumber \\\\ &= (y−2)(y−1) \\nonumber \\end{align*}\\]\n\nSolving for \\(y\\) gives \\(y=2\\) and \\(y=1\\). Next, substitute each value for \\(y\\) into the first equation to solve for \\(x\\). Always substitute the value into the linear equation to check for extraneous solutions.\n\n\\[\\begin{align*} x−y &=−1\\nonumber \\\\ x−(2) &= −1\\nonumber \\\\ x &= 1\\nonumber \\\\ x−(1) &=−1\\nonumber \\\\ x &= 0 \\nonumber \\end{align*}\\]\n\nThe solutions are \\((1,2)\\) and \\((0,1)\\),which can be verified by substituting these \\((x,y)\\) values into both of the original equations (Figure \\(\\PageIndex{3}\\)).\n\n[Figure: imageedit_2_8582923434.png]\n\nFigure \\(\\PageIndex{3}\\)",
+      "sourceAnswers": [],
+      "hasFigure": true,
+      "status": "draft",
+      "answerVerified": false,
+      "translationStatus": "pending",
+      "mappingStatus": "pending"
+    },
+    {
+      "ordinal": 6,
+      "sourceNumber": "",
+      "sourceAnchor": "",
+      "kind": "exercise-candidate",
+      "context": "For \\(y=2\\)\n\n\\[\\begin{align*} y &= x^2+1\\nonumber \\\\ 2 &= x^2+1\\nonumber \\\\ x^2 &= 1\\nonumber \\\\ x &= \\pm \\sqrt{1}=\\pm 1 \\nonumber \\end{align*}\\]\n\nNotice that \\(−1\\) is an extraneous solution.",
+      "original": "Exercise \\(\\PageIndex{1}\\)\n\nSolve the given system of equations by substitution.\n\n\\[\\begin{align*} 3x−y &= −2\\nonumber \\\\ 2x^2−y &= 0 \\nonumber \\end{align*}\\]\n\nAnswer\n\n\\(\\left(−\\dfrac{1}{2},\\dfrac{1}{2}\\right)\\) and \\((2,8)\\)",
+      "prompt": "Exercise \\(\\PageIndex{1}\\)\n\nSolve the given system of equations by substitution.\n\n\\[\\begin{align*} 3x−y &= −2\\nonumber \\\\ 2x^2−y &= 0 \\nonumber \\end{align*}\\]",
+      "sourceAnswers": [
+        "\\(\\left(−\\dfrac{1}{2},\\dfrac{1}{2}\\right)\\) and \\((2,8)\\)"
+      ],
+      "hasFigure": false,
+      "status": "draft",
+      "answerVerified": false,
+      "translationStatus": "pending",
+      "mappingStatus": "pending"
+    },
+    {
+      "ordinal": 7,
+      "sourceNumber": "1",
+      "sourceAnchor": "",
+      "kind": "exercise-candidate",
+      "context": "Intersection of a Circle and a Line\n\nJust as with a parabola and a line, there are three possible outcomes when solving a system of equations representing a circle and a line.\n\nFigure \\(\\PageIndex{4}\\) illustrates possible solution sets for a system of equations involving a circle and a line.",
+      "original": "1. Solve the linear equation for one of the variables.",
+      "prompt": "1. Solve the linear equation for one of the variables.",
+      "sourceAnswers": [],
+      "hasFigure": false,
+      "status": "draft",
+      "answerVerified": false,
+      "translationStatus": "pending",
+      "mappingStatus": "pending"
+    },
+    {
+      "ordinal": 8,
+      "sourceNumber": "2",
+      "sourceAnchor": "",
+      "kind": "exercise-candidate",
+      "context": "Intersection of a Circle and a Line\n\nJust as with a parabola and a line, there are three possible outcomes when solving a system of equations representing a circle and a line.\n\nFigure \\(\\PageIndex{4}\\) illustrates possible solution sets for a system of equations involving a circle and a line.",
+      "original": "2. Substitute the expression obtained in step one into the equation for the circle.",
+      "prompt": "2. Substitute the expression obtained in step one into the equation for the circle.",
+      "sourceAnswers": [],
+      "hasFigure": false,
+      "status": "draft",
+      "answerVerified": false,
+      "translationStatus": "pending",
+      "mappingStatus": "pending"
+    },
+    {
+      "ordinal": 9,
+      "sourceNumber": "3",
+      "sourceAnchor": "",
+      "kind": "exercise-candidate",
+      "context": "Intersection of a Circle and a Line\n\nJust as with a parabola and a line, there are three possible outcomes when solving a system of equations representing a circle and a line.\n\nFigure \\(\\PageIndex{4}\\) illustrates possible solution sets for a system of equations involving a circle and a line.",
+      "original": "3. Solve for the remaining variable.",
+      "prompt": "3. Solve for the remaining variable.",
+      "sourceAnswers": [],
+      "hasFigure": false,
+      "status": "draft",
+      "answerVerified": false,
+      "translationStatus": "pending",
+      "mappingStatus": "pending"
+    },
+    {
+      "ordinal": 10,
+      "sourceNumber": "4",
+      "sourceAnchor": "",
+      "kind": "exercise-candidate",
+      "context": "Intersection of a Circle and a Line\n\nJust as with a parabola and a line, there are three possible outcomes when solving a system of equations representing a circle and a line.\n\nFigure \\(\\PageIndex{4}\\) illustrates possible solution sets for a system of equations involving a circle and a line.",
+      "original": "4. Check your solutions in both equations.",
+      "prompt": "4. Check your solutions in both equations.",
+      "sourceAnswers": [],
+      "hasFigure": false,
+      "status": "draft",
+      "answerVerified": false,
+      "translationStatus": "pending",
+      "mappingStatus": "pending"
+    },
+    {
+      "ordinal": 11,
+      "sourceNumber": "",
+      "sourceAnchor": "",
+      "kind": "example-or-exercise",
+      "context": "Intersection of a Circle and a Line\n\nJust as with a parabola and a line, there are three possible outcomes when solving a system of equations representing a circle and a line.\n\nFigure \\(\\PageIndex{4}\\) illustrates possible solution sets for a system of equations involving a circle and a line.",
+      "original": "Example \\(\\PageIndex{2}\\): Finding the Intersection of a Circle and a Line by Substitution\n\nFind the intersection of the given circle and the given line by substitution.\n\n\\[\\begin{align*} x^2+y^2 &= 5\\nonumber \\\\ y &= 3x−5 \\nonumber \\end{align*}\\]\n\nSolution\n\nOne of the equations has already been solved for \\(y\\). We will substitute \\(y=3x−5\\) into the equation for the circle.\n\n\\[\\begin{align*} x^2+{(3x−5)}^2 &= 5\\nonumber \\\\ x^2+9x^2−30x+25 &= 5\\nonumber \\\\ 10x^2−30x+20 &= 0 \\end{align*} \\]\n\nNow, we factor and solve for \\(x\\).\n\n\\[\\begin{align*} 10(x2−3x+2) &= 0\\nonumber \\\\ 10(x−2)(x−1) &= 0\\nonumber \\\\ x &= 2\\nonumber \\\\ x &= 1 \\nonumber \\end{align*}\\]\n\nSubstitute the two \\(x\\)-values into the original linear equation to solve for \\(y\\).\n\n\\[\\begin{align*} y &= 3(2)−5\\nonumber \\\\ &= 1\\nonumber \\\\ y &= 3(1)−5\\nonumber \\\\ &= −2 \\nonumber \\end{align*}\\]\n\nThe line intersects the circle at \\((2,1)\\) and \\((1,−2)\\),which can be verified by substituting these \\((x,y)\\) values into both of the original equations (Figure \\(\\PageIndex{5}\\)).\n\n[Figure: 11.4.5.png]\n\nFigure \\(\\PageIndex{5}\\)",
+      "prompt": "Example \\(\\PageIndex{2}\\): Finding the Intersection of a Circle and a Line by Substitution\n\nFind the intersection of the given circle and the given line by substitution.\n\n\\[\\begin{align*} x^2+y^2 &= 5\\nonumber \\\\ y &= 3x−5 \\nonumber \\end{align*}\\]\n\nSolution\n\nOne of the equations has already been solved for \\(y\\). We will substitute \\(y=3x−5\\) into the equation for the circle.\n\n\\[\\begin{align*} x^2+{(3x−5)}^2 &= 5\\nonumber \\\\ x^2+9x^2−30x+25 &= 5\\nonumber \\\\ 10x^2−30x+20 &= 0 \\end{align*} \\]\n\nNow, we factor and solve for \\(x\\).\n\n\\[\\begin{align*} 10(x2−3x+2) &= 0\\nonumber \\\\ 10(x−2)(x−1) &= 0\\nonumber \\\\ x &= 2\\nonumber \\\\ x &= 1 \\nonumber \\end{align*}\\]\n\nSubstitute the two \\(x\\)-values into the original linear equation to solve for \\(y\\).\n\n\\[\\begin{align*} y &= 3(2)−5\\nonumber \\\\ &= 1\\nonumber \\\\ y &= 3(1)−5\\nonumber \\\\ &= −2 \\nonumber \\end{align*}\\]\n\nThe line intersects the circle at \\((2,1)\\) and \\((1,−2)\\),which can be verified by substituting these \\((x,y)\\) values into both of the original equations (Figure \\(\\PageIndex{5}\\)).\n\n[Figure: 11.4.5.png]\n\nFigure \\(\\PageIndex{5}\\)",
+      "sourceAnswers": [],
+      "hasFigure": true,
+      "status": "draft",
+      "answerVerified": false,
+      "translationStatus": "pending",
+      "mappingStatus": "pending"
+    },
+    {
+      "ordinal": 12,
+      "sourceNumber": "",
+      "sourceAnchor": "",
+      "kind": "exercise-candidate",
+      "context": "Intersection of a Circle and a Line\n\nJust as with a parabola and a line, there are three possible outcomes when solving a system of equations representing a circle and a line.\n\nFigure \\(\\PageIndex{4}\\) illustrates possible solution sets for a system of equations involving a circle and a line.",
+      "original": "Exercise \\(\\PageIndex{2}\\)\n\nSolve the system of nonlinear equations.\n\n\\[\\begin{align*} x^2+y^2 &= 10\\nonumber \\\\ x−3y &= −10 \\nonumber \\end{align*}\\]\n\nAnswer\n\n\\((−1,3)\\)",
+      "prompt": "Exercise \\(\\PageIndex{2}\\)\n\nSolve the system of nonlinear equations.\n\n\\[\\begin{align*} x^2+y^2 &= 10\\nonumber \\\\ x−3y &= −10 \\nonumber \\end{align*}\\]",
+      "sourceAnswers": [
+        "\\((−1,3)\\)"
+      ],
+      "hasFigure": false,
+      "status": "draft",
+      "answerVerified": false,
+      "translationStatus": "pending",
+      "mappingStatus": "pending"
+    },
+    {
+      "ordinal": 13,
+      "sourceNumber": "",
+      "sourceAnchor": "",
+      "kind": "example-or-exercise",
+      "context": "Solving a System of Nonlinear Equations Using Elimination\n\nWe have seen that substitution is often the preferred method when a system of equations includes a linear equation and a nonlinear equation. However, when both equations in the system have like variables of the second degree, solving them using elimination by addition is often easier than substitution. Generally, elimination is a far simpler method when the system involves only two equations in two variables (a two-by-two system), rather than a three-by-three system, as there are fewer steps. As an example, we will investigate the possible types of solutions when solving a system of equations representing a circle and an ellipse.\n\nFigure \\(\\PageIndex{6}\\) illustrates possible solution sets for a system of equations involving a circle and an ellipse.",
+      "original": "Example \\(\\PageIndex{3}\\): Solving a System of Nonlinear Equations Representing a Circle and an Ellipse\n\nSolve the system of nonlinear equations.\n\n\\[\\begin{align*} x^2+y^2 &= 26 &(1)\\nonumber \\\\ 3x^2+25y^2 &= 100 & (2) \\nonumber \\end{align*}\\]\n\nSolution\n\nLet’s begin by multiplying equation (1) by \\(−3\\),and adding it to equation (2).\n\n\\[\\begin{align*} (−3)(x^2+y^2) = (−3)(26)&\\nonumber \\\\ −3x^2−3y^2 = −78 &\\nonumber \\\\ \\underline{3x^2+25y^2=100}&\\nonumber \\\\ 22y^2=22& \\nonumber \\end{align*}\\]\n\nAfter we add the two equations together, we solve for \\(y\\).\n\n\\[\\begin{align*} y^2 &= 1\\nonumber \\\\ y &= \\pm \\sqrt{1}=\\pm 1 \\nonumber \\end{align*}\\]\n\nSubstitute \\(y=\\pm 1\\) into one of the equations and solve for \\(x\\).\n\n\\[\\begin{align*} x^2+{(1)}^2 &= 26\\nonumber \\\\ x^2+1 &= 26\\nonumber \\\\ x^2 &= 25\\nonumber \\\\ x &= \\pm \\sqrt{25}=\\pm 5\\nonumber \\\\ x^2+{(−1)}^2 &= 26\\nonumber \\\\ x^2+1 &= 26\\nonumber \\\\ x^2 &= \\pm \\sqrt{25}=\\pm 5 \\nonumber \\end{align*}\\]\n\nThere are four solutions: \\((5,1)\\), \\((−5,1)\\), \\((5,−1)\\),and \\((−5,−1)\\). See Figure \\(\\PageIndex{7}\\).\n\n[Figure: 22.4.7.png]\n\nFigure \\(\\PageIndex{7}\\)",
+      "prompt": "Example \\(\\PageIndex{3}\\): Solving a System of Nonlinear Equations Representing a Circle and an Ellipse\n\nSolve the system of nonlinear equations.\n\n\\[\\begin{align*} x^2+y^2 &= 26 &(1)\\nonumber \\\\ 3x^2+25y^2 &= 100 & (2) \\nonumber \\end{align*}\\]\n\nSolution\n\nLet’s begin by multiplying equation (1) by \\(−3\\),and adding it to equation (2).\n\n\\[\\begin{align*} (−3)(x^2+y^2) = (−3)(26)&\\nonumber \\\\ −3x^2−3y^2 = −78 &\\nonumber \\\\ \\underline{3x^2+25y^2=100}&\\nonumber \\\\ 22y^2=22& \\nonumber \\end{align*}\\]\n\nAfter we add the two equations together, we solve for \\(y\\).\n\n\\[\\begin{align*} y^2 &= 1\\nonumber \\\\ y &= \\pm \\sqrt{1}=\\pm 1 \\nonumber \\end{align*}\\]\n\nSubstitute \\(y=\\pm 1\\) into one of the equations and solve for \\(x\\).\n\n\\[\\begin{align*} x^2+{(1)}^2 &= 26\\nonumber \\\\ x^2+1 &= 26\\nonumber \\\\ x^2 &= 25\\nonumber \\\\ x &= \\pm \\sqrt{25}=\\pm 5\\nonumber \\\\ x^2+{(−1)}^2 &= 26\\nonumber \\\\ x^2+1 &= 26\\nonumber \\\\ x^2 &= \\pm \\sqrt{25}=\\pm 5 \\nonumber \\end{align*}\\]\n\nThere are four solutions: \\((5,1)\\), \\((−5,1)\\), \\((5,−1)\\),and \\((−5,−1)\\). See Figure \\(\\PageIndex{7}\\).\n\n[Figure: 22.4.7.png]\n\nFigure \\(\\PageIndex{7}\\)",
+      "sourceAnswers": [],
+      "hasFigure": true,
+      "status": "draft",
+      "answerVerified": false,
+      "translationStatus": "pending",
+      "mappingStatus": "pending"
+    },
+    {
+      "ordinal": 14,
+      "sourceNumber": "",
+      "sourceAnchor": "",
+      "kind": "exercise-candidate",
+      "context": "Solving a System of Nonlinear Equations Using Elimination\n\nWe have seen that substitution is often the preferred method when a system of equations includes a linear equation and a nonlinear equation. However, when both equations in the system have like variables of the second degree, solving them using elimination by addition is often easier than substitution. Generally, elimination is a far simpler method when the system involves only two equations in two variables (a two-by-two system), rather than a three-by-three system, as there are fewer steps. As an example, we will investigate the possible types of solutions when solving a system of equations representing a circle and an ellipse.\n\nFigure \\(\\PageIndex{6}\\) illustrates possible solution sets for a system of equations involving a circle and an ellipse.",
+      "original": "Exercise \\(\\PageIndex{3}\\)\n\nFind the solution set for the given system of nonlinear equations.\n\n\\[\\begin{align*} 4x^2+y^2 &= 13\\nonumber \\\\ x^2+y^2 &= 10 \\nonumber \\end{align*}\\]\n\nAnswer\n\n\\({(1,3),(1,−3),(−1,3),(−1,−3)}\\)",
+      "prompt": "Exercise \\(\\PageIndex{3}\\)\n\nFind the solution set for the given system of nonlinear equations.\n\n\\[\\begin{align*} 4x^2+y^2 &= 13\\nonumber \\\\ x^2+y^2 &= 10 \\nonumber \\end{align*}\\]",
+      "sourceAnswers": [
+        "\\({(1,3),(1,−3),(−1,3),(−1,−3)}\\)"
+      ],
+      "hasFigure": false,
+      "status": "draft",
+      "answerVerified": false,
+      "translationStatus": "pending",
+      "mappingStatus": "pending"
+    },
+    {
+      "ordinal": 15,
+      "sourceNumber": "1",
+      "sourceAnchor": "",
+      "kind": "exercise-candidate",
+      "context": "Graphing a Nonlinear Inequality\n\nAll of the equations in the systems that we have encountered so far have involved equalities, but we may also encounter systems that involve inequalities. We have already learned to graph linear inequalities by graphing the corresponding equation, and then shading the region represented by the inequality symbol. Now, we will follow similar steps to graph a nonlinear inequality so that we can learn to solve systems of nonlinear inequalities. A nonlinear inequality is an inequality containing a nonlinear expression. Graphing a nonlinear inequality is much like graphing a linear inequality.\n\nRecall that when the inequality is greater than, \\(y>a\\),or less than, \\(y<a\\),the graph is drawn with a dashed line. When the inequality is greater than or equal to, \\(y≥a\\),or less than or equal to, \\(y≤a\\),the graph is drawn with a solid line. The graphs will create regions in the plane, and we will test each region for a solution. If one point in the region works, the whole region works. That is the region we shade (Figure \\(\\PageIndex{8}\\)).",
+      "original": "1. Graph the parabola as if it were an equation. This is the boundary for the region that is the solution set.",
+      "prompt": "1. Graph the parabola as if it were an equation. This is the boundary for the region that is the solution set.",
+      "sourceAnswers": [],
+      "hasFigure": false,
+      "status": "draft",
+      "answerVerified": false,
+      "translationStatus": "pending",
+      "mappingStatus": "pending"
+    },
+    {
+      "ordinal": 16,
+      "sourceNumber": "2",
+      "sourceAnchor": "",
+      "kind": "exercise-candidate",
+      "context": "Graphing a Nonlinear Inequality\n\nAll of the equations in the systems that we have encountered so far have involved equalities, but we may also encounter systems that involve inequalities. We have already learned to graph linear inequalities by graphing the corresponding equation, and then shading the region represented by the inequality symbol. Now, we will follow similar steps to graph a nonlinear inequality so that we can learn to solve systems of nonlinear inequalities. A nonlinear inequality is an inequality containing a nonlinear expression. Graphing a nonlinear inequality is much like graphing a linear inequality.\n\nRecall that when the inequality is greater than, \\(y>a\\),or less than, \\(y<a\\),the graph is drawn with a dashed line. When the inequality is greater than or equal to, \\(y≥a\\),or less than or equal to, \\(y≤a\\),the graph is drawn with a solid line. The graphs will create regions in the plane, and we will test each region for a solution. If one point in the region works, the whole region works. That is the region we shade (Figure \\(\\PageIndex{8}\\)).",
+      "original": "2. If the boundary is included in the region (the operator is \\(≤\\) or \\(≥\\)), the parabola is graphed as a solid line.",
+      "prompt": "2. If the boundary is included in the region (the operator is \\(≤\\) or \\(≥\\)), the parabola is graphed as a solid line.",
+      "sourceAnswers": [],
+      "hasFigure": false,
+      "status": "draft",
+      "answerVerified": false,
+      "translationStatus": "pending",
+      "mappingStatus": "pending"
+    },
+    {
+      "ordinal": 17,
+      "sourceNumber": "3",
+      "sourceAnchor": "",
+      "kind": "exercise-candidate",
+      "context": "Graphing a Nonlinear Inequality\n\nAll of the equations in the systems that we have encountered so far have involved equalities, but we may also encounter systems that involve inequalities. We have already learned to graph linear inequalities by graphing the corresponding equation, and then shading the region represented by the inequality symbol. Now, we will follow similar steps to graph a nonlinear inequality so that we can learn to solve systems of nonlinear inequalities. A nonlinear inequality is an inequality containing a nonlinear expression. Graphing a nonlinear inequality is much like graphing a linear inequality.\n\nRecall that when the inequality is greater than, \\(y>a\\),or less than, \\(y<a\\),the graph is drawn with a dashed line. When the inequality is greater than or equal to, \\(y≥a\\),or less than or equal to, \\(y≤a\\),the graph is drawn with a solid line. The graphs will create regions in the plane, and we will test each region for a solution. If one point in the region works, the whole region works. That is the region we shade (Figure \\(\\PageIndex{8}\\)).",
+      "original": "3. If the boundary is not included in the region (the operator is \\(<\\) or \\(>\\)), the parabola is graphed as a dashed line.",
+      "prompt": "3. If the boundary is not included in the region (the operator is \\(<\\) or \\(>\\)), the parabola is graphed as a dashed line.",
+      "sourceAnswers": [],
+      "hasFigure": false,
+      "status": "draft",
+      "answerVerified": false,
+      "translationStatus": "pending",
+      "mappingStatus": "pending"
+    },
+    {
+      "ordinal": 18,
+      "sourceNumber": "4",
+      "sourceAnchor": "",
+      "kind": "exercise-candidate",
+      "context": "Graphing a Nonlinear Inequality\n\nAll of the equations in the systems that we have encountered so far have involved equalities, but we may also encounter systems that involve inequalities. We have already learned to graph linear inequalities by graphing the corresponding equation, and then shading the region represented by the inequality symbol. Now, we will follow similar steps to graph a nonlinear inequality so that we can learn to solve systems of nonlinear inequalities. A nonlinear inequality is an inequality containing a nonlinear expression. Graphing a nonlinear inequality is much like graphing a linear inequality.\n\nRecall that when the inequality is greater than, \\(y>a\\),or less than, \\(y<a\\),the graph is drawn with a dashed line. When the inequality is greater than or equal to, \\(y≥a\\),or less than or equal to, \\(y≤a\\),the graph is drawn with a solid line. The graphs will create regions in the plane, and we will test each region for a solution. If one point in the region works, the whole region works. That is the region we shade (Figure \\(\\PageIndex{8}\\)).",
+      "original": "4. Test a point in one of the regions to determine whether it satisfies the inequality statement. If the statement is true, the solution set is the region including the point. If the statement is false, the solution set is the region on the other side of the boundary line.",
+      "prompt": "4. Test a point in one of the regions to determine whether it satisfies the inequality statement. If the statement is true, the solution set is the region including the point. If the statement is false, the solution set is the region on the other side of the boundary line.",
+      "sourceAnswers": [],
+      "hasFigure": false,
+      "status": "draft",
+      "answerVerified": false,
+      "translationStatus": "pending",
+      "mappingStatus": "pending"
+    },
+    {
+      "ordinal": 19,
+      "sourceNumber": "5",
+      "sourceAnchor": "",
+      "kind": "exercise-candidate",
+      "context": "Graphing a Nonlinear Inequality\n\nAll of the equations in the systems that we have encountered so far have involved equalities, but we may also encounter systems that involve inequalities. We have already learned to graph linear inequalities by graphing the corresponding equation, and then shading the region represented by the inequality symbol. Now, we will follow similar steps to graph a nonlinear inequality so that we can learn to solve systems of nonlinear inequalities. A nonlinear inequality is an inequality containing a nonlinear expression. Graphing a nonlinear inequality is much like graphing a linear inequality.\n\nRecall that when the inequality is greater than, \\(y>a\\),or less than, \\(y<a\\),the graph is drawn with a dashed line. When the inequality is greater than or equal to, \\(y≥a\\),or less than or equal to, \\(y≤a\\),the graph is drawn with a solid line. The graphs will create regions in the plane, and we will test each region for a solution. If one point in the region works, the whole region works. That is the region we shade (Figure \\(\\PageIndex{8}\\)).",
+      "original": "5. Shade the region representing the solution set.",
+      "prompt": "5. Shade the region representing the solution set.",
+      "sourceAnswers": [],
+      "hasFigure": false,
+      "status": "draft",
+      "answerVerified": false,
+      "translationStatus": "pending",
+      "mappingStatus": "pending"
+    },
+    {
+      "ordinal": 20,
+      "sourceNumber": "",
+      "sourceAnchor": "",
+      "kind": "example-or-exercise",
+      "context": "Graphing a Nonlinear Inequality\n\nAll of the equations in the systems that we have encountered so far have involved equalities, but we may also encounter systems that involve inequalities. We have already learned to graph linear inequalities by graphing the corresponding equation, and then shading the region represented by the inequality symbol. Now, we will follow similar steps to graph a nonlinear inequality so that we can learn to solve systems of nonlinear inequalities. A nonlinear inequality is an inequality containing a nonlinear expression. Graphing a nonlinear inequality is much like graphing a linear inequality.\n\nRecall that when the inequality is greater than, \\(y>a\\),or less than, \\(y<a\\),the graph is drawn with a dashed line. When the inequality is greater than or equal to, \\(y≥a\\),or less than or equal to, \\(y≤a\\),the graph is drawn with a solid line. The graphs will create regions in the plane, and we will test each region for a solution. If one point in the region works, the whole region works. That is the region we shade (Figure \\(\\PageIndex{8}\\)).",
+      "original": "Example \\(\\PageIndex{4}\\): Graphing an Inequality for a Parabola\n\nGraph the inequality \\(y>x^2+1\\).\n\nSolution\n\nFirst, graph the corresponding equation \\(y=x^2+1\\). Since \\(y>x^2+1\\) has a greater than symbol, we draw the graph with a dashed line. Then we choose points to test both inside and outside the parabola. Let’s test the points\n\n\\((0,2)\\) and \\((2,0)\\). One point is clearly inside the parabola and the other point is clearly outside.\n\n\\[\\begin{align*} y &> x^2+1\\nonumber \\\\ 2 &> (0)^2+1\\nonumber \\\\ 2 &>1 & \\text{True}\\nonumber \\\\\\nonumber \\\\\\nonumber \\\\ 0 &> (2)^2+1\\nonumber \\\\ 0 &> 5 & \\text{False} \\nonumber \\end{align*}\\]\n\nThe graph is shown in Figure \\(\\PageIndex{9}\\). We can see that the solution set consists of all points inside the parabola, but not on the graph itself.\n\n[Figure: imageedit_6_4849582791.png]\n\nFigure \\(\\PageIndex{9}\\)",
+      "prompt": "Example \\(\\PageIndex{4}\\): Graphing an Inequality for a Parabola\n\nGraph the inequality \\(y>x^2+1\\).\n\nSolution\n\nFirst, graph the corresponding equation \\(y=x^2+1\\). Since \\(y>x^2+1\\) has a greater than symbol, we draw the graph with a dashed line. Then we choose points to test both inside and outside the parabola. Let’s test the points\n\n\\((0,2)\\) and \\((2,0)\\). One point is clearly inside the parabola and the other point is clearly outside.\n\n\\[\\begin{align*} y &> x^2+1\\nonumber \\\\ 2 &> (0)^2+1\\nonumber \\\\ 2 &>1 & \\text{True}\\nonumber \\\\\\nonumber \\\\\\nonumber \\\\ 0 &> (2)^2+1\\nonumber \\\\ 0 &> 5 & \\text{False} \\nonumber \\end{align*}\\]\n\nThe graph is shown in Figure \\(\\PageIndex{9}\\). We can see that the solution set consists of all points inside the parabola, but not on the graph itself.\n\n[Figure: imageedit_6_4849582791.png]\n\nFigure \\(\\PageIndex{9}\\)",
+      "sourceAnswers": [],
+      "hasFigure": true,
+      "status": "draft",
+      "answerVerified": false,
+      "translationStatus": "pending",
+      "mappingStatus": "pending"
+    },
+    {
+      "ordinal": 21,
+      "sourceNumber": "1",
+      "sourceAnchor": "",
+      "kind": "exercise-candidate",
+      "context": "Graphing a System of Nonlinear Inequalities\n\nNow that we have learned to graph nonlinear inequalities, we can learn how to graph systems of nonlinear inequalities. A system of nonlinear inequalities is a system of two or more inequalities in two or more variables containing at least one inequality that is not linear. Graphing a system of nonlinear inequalities is similar to graphing a system of linear inequalities. The difference is that our graph may result in more shaded regions that represent a solution than we find in a system of linear inequalities. The solution to a nonlinear system of inequalities is the region of the graph where the shaded regions of the graph of each inequality overlap, or where the regions intersect, called the feasible region.",
+      "original": "1. Find the intersection points by solving the corresponding system of nonlinear equations.",
+      "prompt": "1. Find the intersection points by solving the corresponding system of nonlinear equations.",
+      "sourceAnswers": [],
+      "hasFigure": false,
+      "status": "draft",
+      "answerVerified": false,
+      "translationStatus": "pending",
+      "mappingStatus": "pending"
+    },
+    {
+      "ordinal": 22,
+      "sourceNumber": "2",
+      "sourceAnchor": "",
+      "kind": "exercise-candidate",
+      "context": "Graphing a System of Nonlinear Inequalities\n\nNow that we have learned to graph nonlinear inequalities, we can learn how to graph systems of nonlinear inequalities. A system of nonlinear inequalities is a system of two or more inequalities in two or more variables containing at least one inequality that is not linear. Graphing a system of nonlinear inequalities is similar to graphing a system of linear inequalities. The difference is that our graph may result in more shaded regions that represent a solution than we find in a system of linear inequalities. The solution to a nonlinear system of inequalities is the region of the graph where the shaded regions of the graph of each inequality overlap, or where the regions intersect, called the feasible region.",
+      "original": "2. Graph the nonlinear equations.",
+      "prompt": "2. Graph the nonlinear equations.",
+      "sourceAnswers": [],
+      "hasFigure": false,
+      "status": "draft",
+      "answerVerified": false,
+      "translationStatus": "pending",
+      "mappingStatus": "pending"
+    },
+    {
+      "ordinal": 23,
+      "sourceNumber": "3",
+      "sourceAnchor": "",
+      "kind": "exercise-candidate",
+      "context": "Graphing a System of Nonlinear Inequalities\n\nNow that we have learned to graph nonlinear inequalities, we can learn how to graph systems of nonlinear inequalities. A system of nonlinear inequalities is a system of two or more inequalities in two or more variables containing at least one inequality that is not linear. Graphing a system of nonlinear inequalities is similar to graphing a system of linear inequalities. The difference is that our graph may result in more shaded regions that represent a solution than we find in a system of linear inequalities. The solution to a nonlinear system of inequalities is the region of the graph where the shaded regions of the graph of each inequality overlap, or where the regions intersect, called the feasible region.",
+      "original": "3. Find the shaded regions of each inequality.",
+      "prompt": "3. Find the shaded regions of each inequality.",
+      "sourceAnswers": [],
+      "hasFigure": false,
+      "status": "draft",
+      "answerVerified": false,
+      "translationStatus": "pending",
+      "mappingStatus": "pending"
+    },
+    {
+      "ordinal": 24,
+      "sourceNumber": "4",
+      "sourceAnchor": "",
+      "kind": "exercise-candidate",
+      "context": "Graphing a System of Nonlinear Inequalities\n\nNow that we have learned to graph nonlinear inequalities, we can learn how to graph systems of nonlinear inequalities. A system of nonlinear inequalities is a system of two or more inequalities in two or more variables containing at least one inequality that is not linear. Graphing a system of nonlinear inequalities is similar to graphing a system of linear inequalities. The difference is that our graph may result in more shaded regions that represent a solution than we find in a system of linear inequalities. The solution to a nonlinear system of inequalities is the region of the graph where the shaded regions of the graph of each inequality overlap, or where the regions intersect, called the feasible region.",
+      "original": "4. Identify the feasible region as the intersection of the shaded regions of each inequality or the set of points common to each inequality.",
+      "prompt": "4. Identify the feasible region as the intersection of the shaded regions of each inequality or the set of points common to each inequality.",
+      "sourceAnswers": [],
+      "hasFigure": false,
+      "status": "draft",
+      "answerVerified": false,
+      "translationStatus": "pending",
+      "mappingStatus": "pending"
+    },
+    {
+      "ordinal": 25,
+      "sourceNumber": "",
+      "sourceAnchor": "",
+      "kind": "example-or-exercise",
+      "context": "Graphing a System of Nonlinear Inequalities\n\nNow that we have learned to graph nonlinear inequalities, we can learn how to graph systems of nonlinear inequalities. A system of nonlinear inequalities is a system of two or more inequalities in two or more variables containing at least one inequality that is not linear. Graphing a system of nonlinear inequalities is similar to graphing a system of linear inequalities. The difference is that our graph may result in more shaded regions that represent a solution than we find in a system of linear inequalities. The solution to a nonlinear system of inequalities is the region of the graph where the shaded regions of the graph of each inequality overlap, or where the regions intersect, called the feasible region.",
+      "original": "Example \\(\\PageIndex{5}\\): Graphing a System of Inequalities\n\nGraph the given system of inequalities.\n\n\\[\\begin{align*} x^2−y &≤ 0\\nonumber \\\\ 2x^2+y &≤ 12 \\nonumber \\end{align*}\\]\n\nSolution\n\nThese two equations are clearly parabolas. We can find the points of intersection by the elimination process: Add both equations and the variable \\(y\\) will be eliminated. Then we solve for \\(x\\).\n\n\\[\\begin{align*} x^2−y = 0&\\nonumber \\\\ \\underline{2x^2+y=12}&\\nonumber \\\\ 3x^2=12&\\nonumber \\\\ x^2=4 &\\nonumber \\\\ x=\\pm 2 & \\nonumber \\end{align*}\\]\n\nSubstitute the \\(x\\)-values into one of the equations and solve for \\(y\\).\n\n\\[\\begin{align*} x^2−y &= 0\\nonumber \\\\ {(2)}^2−y &= 0\\nonumber \\\\ 4−y &= 0\\nonumber \\\\ y &= 4\\nonumber \\\\\\nonumber \\\\ {(−2)}^2−y &= 0\\nonumber \\\\ 4−y &= 0\\nonumber \\\\ y &= 4 \\nonumber \\end{align*}\\]\n\nThe two points of intersection are \\((2,4)\\) and \\((−2,4)\\). Notice that the equations can be rewritten as follows.\n\n\\[\\begin{align*} x^2-y & ≤ 0\\nonumber \\\\ x^2 &≤ y\\nonumber \\\\ y &≥ x^2\\nonumber \\\\\\nonumber \\\\\\nonumber \\\\ 2x^2+y &≤ 12\\nonumber \\\\ y &≤ −2x^2+12 \\nonumber \\end{align*}\\]\n\nGraph each inequality. See Figure \\(\\PageIndex{10}\\). The feasible region is the region between the two equations bounded by \\(2x^2+y≤12\\) on the top and \\(x^2−y≤0\\) on the bottom.\n\n[Figure: imageedit_10_9451914448.png]\n\nFigure \\(\\PageIndex{10}\\)",
+      "prompt": "Example \\(\\PageIndex{5}\\): Graphing a System of Inequalities\n\nGraph the given system of inequalities.\n\n\\[\\begin{align*} x^2−y &≤ 0\\nonumber \\\\ 2x^2+y &≤ 12 \\nonumber \\end{align*}\\]\n\nSolution\n\nThese two equations are clearly parabolas. We can find the points of intersection by the elimination process: Add both equations and the variable \\(y\\) will be eliminated. Then we solve for \\(x\\).\n\n\\[\\begin{align*} x^2−y = 0&\\nonumber \\\\ \\underline{2x^2+y=12}&\\nonumber \\\\ 3x^2=12&\\nonumber \\\\ x^2=4 &\\nonumber \\\\ x=\\pm 2 & \\nonumber \\end{align*}\\]\n\nSubstitute the \\(x\\)-values into one of the equations and solve for \\(y\\).\n\n\\[\\begin{align*} x^2−y &= 0\\nonumber \\\\ {(2)}^2−y &= 0\\nonumber \\\\ 4−y &= 0\\nonumber \\\\ y &= 4\\nonumber \\\\\\nonumber \\\\ {(−2)}^2−y &= 0\\nonumber \\\\ 4−y &= 0\\nonumber \\\\ y &= 4 \\nonumber \\end{align*}\\]\n\nThe two points of intersection are \\((2,4)\\) and \\((−2,4)\\). Notice that the equations can be rewritten as follows.\n\n\\[\\begin{align*} x^2-y & ≤ 0\\nonumber \\\\ x^2 &≤ y\\nonumber \\\\ y &≥ x^2\\nonumber \\\\\\nonumber \\\\\\nonumber \\\\ 2x^2+y &≤ 12\\nonumber \\\\ y &≤ −2x^2+12 \\nonumber \\end{align*}\\]\n\nGraph each inequality. See Figure \\(\\PageIndex{10}\\). The feasible region is the region between the two equations bounded by \\(2x^2+y≤12\\) on the top and \\(x^2−y≤0\\) on the bottom.\n\n[Figure: imageedit_10_9451914448.png]\n\nFigure \\(\\PageIndex{10}\\)",
+      "sourceAnswers": [],
+      "hasFigure": true,
+      "status": "draft",
+      "answerVerified": false,
+      "translationStatus": "pending",
+      "mappingStatus": "pending"
+    },
+    {
+      "ordinal": 26,
+      "sourceNumber": "",
+      "sourceAnchor": "",
+      "kind": "exercise-candidate",
+      "context": "Graphing a System of Nonlinear Inequalities\n\nNow that we have learned to graph nonlinear inequalities, we can learn how to graph systems of nonlinear inequalities. A system of nonlinear inequalities is a system of two or more inequalities in two or more variables containing at least one inequality that is not linear. Graphing a system of nonlinear inequalities is similar to graphing a system of linear inequalities. The difference is that our graph may result in more shaded regions that represent a solution than we find in a system of linear inequalities. The solution to a nonlinear system of inequalities is the region of the graph where the shaded regions of the graph of each inequality overlap, or where the regions intersect, called the feasible region.",
+      "original": "Exercise \\(\\PageIndex{5}\\)\n\nGraph the given system of inequalities.\n\n\\[\\begin{align*} y &≥ x^2−1\\nonumber \\\\ x−y &≥ −1 \\nonumber \\end{align*}\\]\n\nAnswer\n\nShade the area bounded by the two curves, above the quadratic and below the line.\n\n[Figure: imageedit_14_4168208882.png]\n\nFigure \\(\\PageIndex{11}\\)",
+      "prompt": "Exercise \\(\\PageIndex{5}\\)\n\nGraph the given system of inequalities.\n\n\\[\\begin{align*} y &≥ x^2−1\\nonumber \\\\ x−y &≥ −1 \\nonumber \\end{align*}\\]",
+      "sourceAnswers": [
+        "Shade the area bounded by the two curves, above the quadratic and below the line.\n\n[Figure: imageedit_14_4168208882.png]\n\nFigure \\(\\PageIndex{11}\\)"
+      ],
+      "hasFigure": true,
+      "status": "draft",
+      "answerVerified": false,
+      "translationStatus": "pending",
+      "mappingStatus": "pending"
+    }
+  ],
+  "license": "CC BY 4.0",
+  "licenseEvidence": "This page titled 11.3: Systems of Nonlinear Equations and Inequalities - Two Variables was last modified on Sun, 27 Apr 2025 18:27:17 GMT and is shared under a CC BY  4.0  license and was authored, remixed, and/or curated by OpenStax via source content that was edited to the style and standards of the LibreTexts platform.",
+  "url": "https://math.libretexts.org/Bookshelves/Algebra/Algebra_and_Trigonometry_1e_(OpenStax)/11:_Systems_of_Equations_and_Inequalities/11.03:_Systems_of_Nonlinear_Equations_and_Inequalities_-_Two_Variables",
+  "sha256": "ebd6e67b70665d4f5e45c7447b5b79b30421039f2e06faf506164ea71bdc41db",
+  "checkedAt": "2026-10-07",
+  "id": "8596530e5af8bd589f98",
+  "bookId": "algebra-trigonometry",
+  "licenseInherited": false,
+  "licenseSource": "https://math.libretexts.org/Bookshelves/Algebra/Algebra_and_Trigonometry_1e_(OpenStax)/11:_Systems_of_Equations_and_Inequalities/11.03:_Systems_of_Nonlinear_Equations_and_Inequalities_-_Two_Variables",
+  "licenseUrl": "https://creativecommons.org/licenses/by/4.0/",
+  "authors": "OpenStax / Jay Abramson et al.",
+  "book": "Algebra and Trigonometry 1e",
+  "reviewStatus": "unreviewed",
+  "sourceLanguage": "en",
+  "translationStatus": "pending"
+}

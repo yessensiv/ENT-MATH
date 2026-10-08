@@ -1,0 +1,192 @@
+{
+  "title": "7.1: The Multiplication Rule for Counting",
+  "originalText": "[Figure: Close up of a hand lifting two playing cards at a poker table.]\n\nFigure \\(\\PageIndex{1}\\) : The Multiplication Rule for Counting allows us to compute more complicated probabilities, like drawing two aces from a deck. (credit: “Pair of Aces – Poker” by Poker Photos/Flickr, CC BY 2.0)\n\nLearning Objectives\n\nApply the Multiplication Rule for Counting to solve problems.\n\nOne of the first bits of mathematical knowledge children learn is how to count objects by pointing to them in turn and saying: “one, two, three, …” That’s a useful skill, but when the number of things that we need to count grows large, that method becomes onerous (or, for very large numbers, impossible for humans to accomplish in a typical human lifespan). So, mathematicians have developed short cuts to counting big numbers. These techniques fall under the mathematical discipline of combinatorics, which is devoted to counting.\n\nMultiplication as a Combinatorial Short Cut\n\nOne of the first combinatorial short cuts to counting students learn in school has to do with areas of rectangles. If we have a set of objects to be counted that can be physically arranged into a rectangular shape, then we can use multiplication to do the counting for us. Consider this set of objects (Figure \\(\\PageIndex{2}\\) ):\n\n[Figure: A group of beach balls arranged in 1 long row.]\n\nFigure \\(\\PageIndex{2}\\)\n\nCertainly we can count them by pointing and running through the numbers, but it’s more efficient to group them (Figure \\(\\PageIndex{3}\\) ).\n\n[Figure: A group of beach balls arranged in 4 rows of 6 balls.]\n\nFigure \\(\\PageIndex{3}\\)\n\nIf we group the balls by 4s, we see that we have 6 groups (or, we can see this arrangement as 4 groups of 6 balls). Since multiplication is repeated addition (i.e., \\(6×4=4+4+4+4+4+4\\)), we can use this grouping to quickly see that there are 24 balls.\n\nLet’s generalize this idea a little bit. Let’s say that we’re visiting a bakery that offers customized cupcakes. For the cake, we have three choices: vanilla, chocolate, and strawberry. Each cupcake can be topped with one of four types of frosting: vanilla, chocolate, lemon, and strawberry. How many different cupcake combinations are possible? We can think of laying out all the possibilities in a grid, with cake choices defining the rows and frosting choices defining the columns (Figure \\(\\PageIndex{4}\\) ).\n\n[Figure: A rectangular grid with 3 rows and 4 columns. The row headers representing the cakes show vanilla, chocolate, and strawberry. The column headers representing the frostings show vanilla, chocolate, lemon, and strawberry. Data from the grid are as follows. Row 1: vanilla cake with vanilla frosting, vanilla cake with chocolate frosting, vanilla cake with lemon frosting, and vanilla cake with strawberry frosting. Row 2: chocolate cake with vanilla frosting, chocolate cake with chocolate frosting, chocolate cake with lemon frosting, and chocolate cake with strawberry frosting. Row 3: strawberry cake with vanilla frosting, strawberry cake with chocolate frosting, strawberry cake with lemon frosting, and strawberry cake with strawberry frosting.]\n\nFigure \\(\\PageIndex{4}\\)\n\nSince there are 3 rows (cakes) and 4 columns (frostings), we have \\(3×4=12\\) possible combinations. This is the reasoning behind the Multiplication Rule for Counting, which is also known as the Fundamental Counting Principle. This rule says that if there are \\(n\\) ways to accomplish one task and \\(m\\) ways to accomplish a second task, then there are \\(n×m\\) ways to accomplish both tasks. We can tack on additional tasks by multiplying the number of ways to accomplish those tasks to our previous product.\n\nExample   \\(\\PageIndex{1}\\): Using the Multiplication Rule for Counting\n\nEvery card in a standard deck of cards has two identifying characteristics: a suit (clubs, diamonds, hearts, or spades; these are indicated by these symbols, respectively: \\(♣\\), \\(♢\\), \\(♡\\), \\(♠\\)) and a rank (ace, 2, 3, 4, 5, 6, 7, 8, 9, 10, jack, queen, and king; the letters A, J, Q, and K are used to represent the words). Each possible pair of suit and rank appears exactly once in the deck. How many cards are in the standard deck?\n\nAnswer\n\nSince there are 4 suits and 13 ranks, the number of cards must be \\(4×13=52\\)\n\n[Figure: A deck of playing cards sorted by suit into 4 groups. Each group is arranged from largest to smallest value.]\n\nFigure \\(\\PageIndex{5}\\) Standard Deck of Cards, Sorted by Rank and Suit (credit: \"Playing Cards, USS Arkansas\" by Naval History & Heritage Command/Flickr, CC BY 2.0)\n\nYour Turn \\(\\PageIndex{1}\\)\n\nJoe’s Pizza Shack offers pizzas with 4 different types of crust and a choice of 15 toppings. How many different one-topping pizzas can be made at Joe’s?\n\nExample \\(\\PageIndex{2}\\): Using the Multiplication Rule for Counting for 4 Groups\n\nThe University Combinatorics Club has 31 members: 8 seniors, 7 juniors, 5 sophomores, and 11 first-years. How many possible 4-person committees can be formed by selecting 1 member from each class?\n\nAnswer\n\nSince we have 8 choices for the senior, 7 choices for the junior, 5 for the sophomore, and 11 for the first-year, there are \\(8×7×5×11=3,080\\) different ways to fill out the committee.\n\nYour Turn \\(\\PageIndex{2}\\)\n\nThe menu for Joe’s Pizza Shack offers pizzas with 4 different types of crust and a choice of 15 toppings. Suppose that Joe’s also offers a choice of 3 sauces and 2 cheese blends. How many different one-topping pizzas can be made at Joe’s now?\n\nExample \\(\\PageIndex{3}\\): Using the Multiplication Rule for Counting for More Groups\n\nThe standard license plates for vehicles in a certain state consist of 6 characters: 3 letters followed by 3 digits. There are 26 letters in the alphabet and 10 digits (0 through 9) to choose from. How many license plates can be made using this format?\n\nAnswer\n\nSince there are 26 different letters and 10 different digits, the total number of possible license plates is \\(26×26×26×10×10×10=17,576,000\\).\n\nYour Turn \\(\\PageIndex{3}\\)\n\nAt a certain college, ID cards are issued to all students, faculty, and staff. These cards have unique ID codes for each person: a letter to indicate the person’s status (S for students, F for faculty, and E for staff), followed by 5 digits and finally 3 letters (these letters can be anything). How many different ID codes can be created using this scheme?\n\nCheck Your Understanding\n\n1. A website that lets you build custom belts has 18 different buckles and 30 different straps. How many different belts can be made using those materials?\n\n2. A chain of chicken restaurants offers a combo that includes your choice of 3 or 5 chicken strips, along with your choice of side dish. If there are 7 side dishes, how many different ways are there to build this combo meal?\n\n3. When you flip a coin, there are 2 possible outcomes: heads and tails. Let’s say you flip a coin 10 times, and after each you write down the result of the flip (H for heads, T for tails). How many different results (strings of 10 characters, where each is either an H or a T) are possible?\n\n4. A T-shirt company allows shoppers to customize their shirts in several ways. There are 5 sizes, 8 shirt colors, 4 designs, and 5 design colors. How many different shirts can be made?\n\n5. Josephine is trying to build her class schedule for next semester. Because of her work schedule, she has only 4 class periods that can work for her, and she must take 4 classes. If there are 15 classes that she could take during the first period, 18 during the second, 12 during the third, and 8 during the fourth, how many different schedules could Josephine build?\n\nThis page titled 7.1: The Multiplication Rule for Counting was last modified on Thu, 02 Jan 2025 11:07:44 GMT and is shared under a CC BY  4.0  license and was authored, remixed, and/or curated by OpenStax via source content that was edited to the style and standards of the LibreTexts platform.",
+  "figures": [
+    {
+      "url": "https://math.libretexts.org/@api/deki/files/110431/9cb5bab1a3a20730f5857314232d56cfa72d4dbf?revision=1",
+      "alt": "Close up of a hand lifting two playing cards at a poker table.",
+      "credit": ""
+    },
+    {
+      "url": "https://math.libretexts.org/@api/deki/files/110432/bf55257404191e4056f7e18423ef125d4d17ab35?revision=1",
+      "alt": "A group of beach balls arranged in 1 long row.",
+      "credit": ""
+    },
+    {
+      "url": "https://math.libretexts.org/@api/deki/files/110429/2abc6c51fff2c87bc982c2caeae0707eb3857f65?revision=1",
+      "alt": "A group of beach balls arranged in 4 rows of 6 balls.",
+      "credit": ""
+    },
+    {
+      "url": "https://math.libretexts.org/@api/deki/files/110433/1ce1781d04318caba466e64002c5ad7bdb5be7c4?revision=1&size=bestfit&width=550&height=550",
+      "alt": "A rectangular grid with 3 rows and 4 columns. The row headers representing the cakes show vanilla, chocolate, and strawberry. The column headers representing the frostings show vanilla, chocolate, lemon, and strawberry. Data from the grid are as follows. Row 1: vanilla cake with vanilla frosting, vanilla cake with chocolate frosting, vanilla cake with lemon frosting, and vanilla cake with strawberry frosting. Row 2: chocolate cake with vanilla frosting, chocolate cake with chocolate frosting, chocolate cake with lemon frosting, and chocolate cake with strawberry frosting. Row 3: strawberry cake with vanilla frosting, strawberry cake with chocolate frosting, strawberry cake with lemon frosting, and strawberry cake with strawberry frosting.",
+      "credit": ""
+    },
+    {
+      "url": "https://math.libretexts.org/@api/deki/files/110430/29675a616fdda363d003c594d9ecf152b53616d9?revision=1&size=bestfit&height=550",
+      "alt": "A deck of playing cards sorted by suit into 4 groups. Each group is arranged from largest to smallest value.",
+      "credit": ""
+    }
+  ],
+  "references": [
+    {
+      "text": "7.1: The Multiplication Rule for Counting",
+      "url": "https://math.libretexts.org/Bookshelves/Applied_Mathematics/Contemporary_Mathematics_(OpenStax)/07%3A_Probability/7.01%3A_The_Multiplication_Rule_for_Counting"
+    },
+    {
+      "text": "CC BY  4.0",
+      "url": "https://creativecommons.org/licenses/by/4.0"
+    },
+    {
+      "text": "OpenStax",
+      "url": "https://openstax.org/"
+    },
+    {
+      "text": "source content",
+      "url": "https://openstax.org/details/books/contemporary-mathematics"
+    }
+  ],
+  "exercises": [
+    {
+      "ordinal": 1,
+      "sourceNumber": "",
+      "sourceAnchor": "",
+      "kind": "example-or-exercise",
+      "context": "If we group the balls by 4s, we see that we have 6 groups (or, we can see this arrangement as 4 groups of 6 balls). Since multiplication is repeated addition (i.e., \\(6×4=4+4+4+4+4+4\\)), we can use this grouping to quickly see that there are 24 balls.\n\nLet’s generalize this idea a little bit. Let’s say that we’re visiting a bakery that offers customized cupcakes. For the cake, we have three choices: vanilla, chocolate, and strawberry. Each cupcake can be topped with one of four types of frosting: vanilla, chocolate, lemon, and strawberry. How many different cupcake combinations are possible? We can think of laying out all the possibilities in a grid, with cake choices defining the rows and frosting choices defining the columns (Figure \\(\\PageIndex{4}\\) ).\n\nSince there are 3 rows (cakes) and 4 columns (frostings), we have \\(3×4=12\\) possible combinations. This is the reasoning behind the Multiplication Rule for Counting, which is also known as the Fundamental Counting Principle. This rule says that if there are \\(n\\) ways to accomplish one task and \\(m\\) ways to accomplish a second task, then there are \\(n×m\\) ways to accomplish both tasks. We can tack on additional tasks by multiplying the number of ways to accomplish those tasks to our previous product.",
+      "original": "Example   \\(\\PageIndex{1}\\): Using the Multiplication Rule for Counting\n\nEvery card in a standard deck of cards has two identifying characteristics: a suit (clubs, diamonds, hearts, or spades; these are indicated by these symbols, respectively: \\(♣\\), \\(♢\\), \\(♡\\), \\(♠\\)) and a rank (ace, 2, 3, 4, 5, 6, 7, 8, 9, 10, jack, queen, and king; the letters A, J, Q, and K are used to represent the words). Each possible pair of suit and rank appears exactly once in the deck. How many cards are in the standard deck?\n\nAnswer\n\nSince there are 4 suits and 13 ranks, the number of cards must be \\(4×13=52\\)\n\n[Figure: A deck of playing cards sorted by suit into 4 groups. Each group is arranged from largest to smallest value.]\n\nFigure \\(\\PageIndex{5}\\) Standard Deck of Cards, Sorted by Rank and Suit (credit: \"Playing Cards, USS Arkansas\" by Naval History & Heritage Command/Flickr, CC BY 2.0)",
+      "prompt": "Example   \\(\\PageIndex{1}\\): Using the Multiplication Rule for Counting\n\nEvery card in a standard deck of cards has two identifying characteristics: a suit (clubs, diamonds, hearts, or spades; these are indicated by these symbols, respectively: \\(♣\\), \\(♢\\), \\(♡\\), \\(♠\\)) and a rank (ace, 2, 3, 4, 5, 6, 7, 8, 9, 10, jack, queen, and king; the letters A, J, Q, and K are used to represent the words). Each possible pair of suit and rank appears exactly once in the deck. How many cards are in the standard deck?",
+      "sourceAnswers": [
+        "Since there are 4 suits and 13 ranks, the number of cards must be \\(4×13=52\\)\n\n[Figure: A deck of playing cards sorted by suit into 4 groups. Each group is arranged from largest to smallest value.]\n\nFigure \\(\\PageIndex{5}\\) Standard Deck of Cards, Sorted by Rank and Suit (credit: \"Playing Cards, USS Arkansas\" by Naval History & Heritage Command/Flickr, CC BY 2.0)"
+      ],
+      "hasFigure": true,
+      "status": "draft",
+      "answerVerified": false,
+      "translationStatus": "pending",
+      "mappingStatus": "pending"
+    },
+    {
+      "ordinal": 2,
+      "sourceNumber": "",
+      "sourceAnchor": "",
+      "kind": "example-or-exercise",
+      "context": "Let’s generalize this idea a little bit. Let’s say that we’re visiting a bakery that offers customized cupcakes. For the cake, we have three choices: vanilla, chocolate, and strawberry. Each cupcake can be topped with one of four types of frosting: vanilla, chocolate, lemon, and strawberry. How many different cupcake combinations are possible? We can think of laying out all the possibilities in a grid, with cake choices defining the rows and frosting choices defining the columns (Figure \\(\\PageIndex{4}\\) ).\n\nSince there are 3 rows (cakes) and 4 columns (frostings), we have \\(3×4=12\\) possible combinations. This is the reasoning behind the Multiplication Rule for Counting, which is also known as the Fundamental Counting Principle. This rule says that if there are \\(n\\) ways to accomplish one task and \\(m\\) ways to accomplish a second task, then there are \\(n×m\\) ways to accomplish both tasks. We can tack on additional tasks by multiplying the number of ways to accomplish those tasks to our previous product.\n\nJoe’s Pizza Shack offers pizzas with 4 different types of crust and a choice of 15 toppings. How many different one-topping pizzas can be made at Joe’s?",
+      "original": "Example \\(\\PageIndex{2}\\): Using the Multiplication Rule for Counting for 4 Groups\n\nThe University Combinatorics Club has 31 members: 8 seniors, 7 juniors, 5 sophomores, and 11 first-years. How many possible 4-person committees can be formed by selecting 1 member from each class?\n\nAnswer\n\nSince we have 8 choices for the senior, 7 choices for the junior, 5 for the sophomore, and 11 for the first-year, there are \\(8×7×5×11=3,080\\) different ways to fill out the committee.",
+      "prompt": "Example \\(\\PageIndex{2}\\): Using the Multiplication Rule for Counting for 4 Groups\n\nThe University Combinatorics Club has 31 members: 8 seniors, 7 juniors, 5 sophomores, and 11 first-years. How many possible 4-person committees can be formed by selecting 1 member from each class?",
+      "sourceAnswers": [
+        "Since we have 8 choices for the senior, 7 choices for the junior, 5 for the sophomore, and 11 for the first-year, there are \\(8×7×5×11=3,080\\) different ways to fill out the committee."
+      ],
+      "hasFigure": false,
+      "status": "draft",
+      "answerVerified": false,
+      "translationStatus": "pending",
+      "mappingStatus": "pending"
+    },
+    {
+      "ordinal": 3,
+      "sourceNumber": "",
+      "sourceAnchor": "",
+      "kind": "example-or-exercise",
+      "context": "Since there are 3 rows (cakes) and 4 columns (frostings), we have \\(3×4=12\\) possible combinations. This is the reasoning behind the Multiplication Rule for Counting, which is also known as the Fundamental Counting Principle. This rule says that if there are \\(n\\) ways to accomplish one task and \\(m\\) ways to accomplish a second task, then there are \\(n×m\\) ways to accomplish both tasks. We can tack on additional tasks by multiplying the number of ways to accomplish those tasks to our previous product.\n\nJoe’s Pizza Shack offers pizzas with 4 different types of crust and a choice of 15 toppings. How many different one-topping pizzas can be made at Joe’s?\n\nThe menu for Joe’s Pizza Shack offers pizzas with 4 different types of crust and a choice of 15 toppings. Suppose that Joe’s also offers a choice of 3 sauces and 2 cheese blends. How many different one-topping pizzas can be made at Joe’s now?",
+      "original": "Example \\(\\PageIndex{3}\\): Using the Multiplication Rule for Counting for More Groups\n\nThe standard license plates for vehicles in a certain state consist of 6 characters: 3 letters followed by 3 digits. There are 26 letters in the alphabet and 10 digits (0 through 9) to choose from. How many license plates can be made using this format?\n\nAnswer\n\nSince there are 26 different letters and 10 different digits, the total number of possible license plates is \\(26×26×26×10×10×10=17,576,000\\).",
+      "prompt": "Example \\(\\PageIndex{3}\\): Using the Multiplication Rule for Counting for More Groups\n\nThe standard license plates for vehicles in a certain state consist of 6 characters: 3 letters followed by 3 digits. There are 26 letters in the alphabet and 10 digits (0 through 9) to choose from. How many license plates can be made using this format?",
+      "sourceAnswers": [
+        "Since there are 26 different letters and 10 different digits, the total number of possible license plates is \\(26×26×26×10×10×10=17,576,000\\)."
+      ],
+      "hasFigure": false,
+      "status": "draft",
+      "answerVerified": false,
+      "translationStatus": "pending",
+      "mappingStatus": "pending"
+    },
+    {
+      "ordinal": 4,
+      "sourceNumber": "1",
+      "sourceAnchor": "",
+      "kind": "exercise-candidate",
+      "context": "Check Your Understanding",
+      "original": "1. A website that lets you build custom belts has 18 different buckles and 30 different straps. How many different belts can be made using those materials?",
+      "prompt": "1. A website that lets you build custom belts has 18 different buckles and 30 different straps. How many different belts can be made using those materials?",
+      "sourceAnswers": [],
+      "hasFigure": false,
+      "status": "draft",
+      "answerVerified": false,
+      "translationStatus": "pending",
+      "mappingStatus": "pending"
+    },
+    {
+      "ordinal": 5,
+      "sourceNumber": "2",
+      "sourceAnchor": "",
+      "kind": "exercise-candidate",
+      "context": "Check Your Understanding",
+      "original": "2. A chain of chicken restaurants offers a combo that includes your choice of 3 or 5 chicken strips, along with your choice of side dish. If there are 7 side dishes, how many different ways are there to build this combo meal?",
+      "prompt": "2. A chain of chicken restaurants offers a combo that includes your choice of 3 or 5 chicken strips, along with your choice of side dish. If there are 7 side dishes, how many different ways are there to build this combo meal?",
+      "sourceAnswers": [],
+      "hasFigure": false,
+      "status": "draft",
+      "answerVerified": false,
+      "translationStatus": "pending",
+      "mappingStatus": "pending"
+    },
+    {
+      "ordinal": 6,
+      "sourceNumber": "3",
+      "sourceAnchor": "",
+      "kind": "exercise-candidate",
+      "context": "Check Your Understanding",
+      "original": "3. When you flip a coin, there are 2 possible outcomes: heads and tails. Let’s say you flip a coin 10 times, and after each you write down the result of the flip (H for heads, T for tails). How many different results (strings of 10 characters, where each is either an H or a T) are possible?",
+      "prompt": "3. When you flip a coin, there are 2 possible outcomes: heads and tails. Let’s say you flip a coin 10 times, and after each you write down the result of the flip (H for heads, T for tails). How many different results (strings of 10 characters, where each is either an H or a T) are possible?",
+      "sourceAnswers": [],
+      "hasFigure": false,
+      "status": "draft",
+      "answerVerified": false,
+      "translationStatus": "pending",
+      "mappingStatus": "pending"
+    },
+    {
+      "ordinal": 7,
+      "sourceNumber": "4",
+      "sourceAnchor": "",
+      "kind": "exercise-candidate",
+      "context": "Check Your Understanding",
+      "original": "4. A T-shirt company allows shoppers to customize their shirts in several ways. There are 5 sizes, 8 shirt colors, 4 designs, and 5 design colors. How many different shirts can be made?",
+      "prompt": "4. A T-shirt company allows shoppers to customize their shirts in several ways. There are 5 sizes, 8 shirt colors, 4 designs, and 5 design colors. How many different shirts can be made?",
+      "sourceAnswers": [],
+      "hasFigure": false,
+      "status": "draft",
+      "answerVerified": false,
+      "translationStatus": "pending",
+      "mappingStatus": "pending"
+    },
+    {
+      "ordinal": 8,
+      "sourceNumber": "5",
+      "sourceAnchor": "",
+      "kind": "exercise-candidate",
+      "context": "Check Your Understanding",
+      "original": "5. Josephine is trying to build her class schedule for next semester. Because of her work schedule, she has only 4 class periods that can work for her, and she must take 4 classes. If there are 15 classes that she could take during the first period, 18 during the second, 12 during the third, and 8 during the fourth, how many different schedules could Josephine build?",
+      "prompt": "5. Josephine is trying to build her class schedule for next semester. Because of her work schedule, she has only 4 class periods that can work for her, and she must take 4 classes. If there are 15 classes that she could take during the first period, 18 during the second, 12 during the third, and 8 during the fourth, how many different schedules could Josephine build?",
+      "sourceAnswers": [],
+      "hasFigure": false,
+      "status": "draft",
+      "answerVerified": false,
+      "translationStatus": "pending",
+      "mappingStatus": "pending"
+    }
+  ],
+  "license": "CC BY 4.0",
+  "licenseEvidence": "This page titled 7.1: The Multiplication Rule for Counting was last modified on Thu, 02 Jan 2025 11:07:44 GMT and is shared under a CC BY  4.0  license and was authored, remixed, and/or curated by OpenStax via source content that was edited to the style and standards of the LibreTexts platform.",
+  "url": "https://math.libretexts.org/Bookshelves/Applied_Mathematics/Contemporary_Mathematics_(OpenStax)/07:_Probability/7.01:_The_Multiplication_Rule_for_Counting",
+  "sha256": "a8de9e1a512cace1a840a7a92900fa1ec28ae066ba2ac5ef2c2d32f8958ffebd",
+  "checkedAt": "2026-10-07",
+  "id": "51d51401c4327a30d65a",
+  "bookId": "contemporary",
+  "licenseInherited": false,
+  "licenseSource": "https://math.libretexts.org/Bookshelves/Applied_Mathematics/Contemporary_Mathematics_(OpenStax)/07:_Probability/7.01:_The_Multiplication_Rule_for_Counting",
+  "licenseUrl": "https://creativecommons.org/licenses/by/4.0/",
+  "authors": "OpenStax / Donna Kirk et al.",
+  "book": "Contemporary Mathematics",
+  "reviewStatus": "unreviewed",
+  "sourceLanguage": "en",
+  "translationStatus": "pending"
+}

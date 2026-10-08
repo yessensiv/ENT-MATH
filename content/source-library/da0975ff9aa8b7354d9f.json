@@ -1,0 +1,458 @@
+{
+  "title": "2.3:  Constructing Truth Tables",
+  "originalText": "[Figure: A photo shows four people working together to complete a puzzle.]\n\nFigure \\(\\PageIndex{1}\\): Just like solving a puzzle, a computer programmer must consider all potential solutions in order to account for each possible outcome. (credit: modification of work “Deadline Xmas 2010” by Allan Henderson/Flickr, CC BY 2.0)\n\nLearning Objectives\n\nAfter completing this section, you should be able to:\n\n1. Interpret and apply negations, conjunctions, and disjunctions.\n\n2. Construct a truth table using negations, conjunctions, and disjunctions.\n\n3. Construct a truth table for a compound statement and interpret its validity.\n\nAre you familiar with the Choose Your Own Adventure book series written by Edward Packard? These gamebooks allow the reader to become one of the characters and make decisions that affect what happens next, resulting in different sequences of events in the story and endings based on the choices made. Writing a computer program is a little like what it must be like to write one of these books. The programmer must consider all the possible inputs that a user can put into the program and decide what will happen in each case, then write their program to account for each of these possible outcomes.\n\nA truth table is a graphical tool used to analyze all the possible truth values of the component logical statements to determine the validity of a statement or argument along with all its possible outcomes. The rows of the table correspond to each possible outcome for the given logical statement identified at the top of each column. A single logical statement \\(p\\) has two possible truth values, true or false. In truth tables, a capital T will represent true values, and a capital F will represent false values.\n\nIn this section, you will use the knowledge built in Statements and Quantifiers and Compound Statements to analyze arguments and determine their truth value and validity. A logical argument is valid if its conclusion follows from its premises, regardless of whether those premises are true or false. You will then explore the truth tables for negation, conjunction, and disjunction, and use these truth tables to analyze compound logical statements containing these connectives.\n\nInterpret and Apply Negations, Conjunctions, and Disjunctions\n\nThe negation of a statement will have the opposite truth value of the original statement. When \\(p\\) is true, \\(~p\\) is false, and when \\(p\\) is false, \\(~p\\) is true.\n\nExercise \\(\\PageIndex{1}\\)\n\nFor each logical statement, determine the truth value of its negation.\n\n1. \\(p\\): \\(3+5=8.\\)\n\n2. \\(q\\): All horses are mustangs.\n\n3. \\(~r\\): New Delhi is not the capital of India.\n\nAnswer\n\np is true because 3 + 5 does equal 8; therefore, the negation of p, ~ p : 3 + 5 ≠ 8 ~ p : 3 + 5 ≠ 8 , is false.\n\nq is false because there are other types of horses besides mustangs, such as Clydesdales or Arabians; therefore, the negation of q, ~ q , is true.\n\n~ r is false because New Delhi is the capital of India; therefore, the negation of ~r, r , is true.\n\nYour Turn  \\(\\PageIndex{1}\\)\n\nFor each logical statement, determine the truth value of its negation.\n\n1. \\(\\text~p\\): \\(3 \\times 5 = 14\\).\n\n2. \\(\\text~q\\): Some houses are built with bricks\n\n3. \\(r\\): Abuja is the capital of Nigeria.\n\nA conjunction is a logical and statement. For a conjunction to be true, both statements that make up the conjunction must be true. If at least one of the statements is false, the and statement is false.\n\n1. \\(p \\wedge q\\)\n\n2. \\(\\sim q \\wedge r\\)\n\n3. \\(\\sim p \\wedge q\\)\n\nAnswer\n\n1. \\(p\\) is true, and \\(q\\) is false. Because one statement is true, and the other statement is false, this makes the complete conjunction false.\n\n    2. \\(q\\) is false, so \\(\\sim q\\) is true, and \\(r\\) is true. Therefore, both statements are true, making the complete conjunction true.\n\n    3. \\(\\sim p\\) is false, and \\(q\\) is false. Because both statements are false, the complete conjunction is false.\n\nYour Turn  \\(\\PageIndex{2}\\)\n\nGiven \\(p\\) : Yellow is a primary color, \\(q\\) : Blue is a primary color, and \\(r\\) : Green is a primary color, determine the truth value of each conjunction.\n\n1. \\(p \\wedge q\\)\n\n2. \\(q \\wedge r\\)\n\n3. \\(\\sim r \\wedge p\\).\n\nCheckpoint\n\nThe only time a conjunction is true is if both statements that make up the conjunction are true.\n\nA disjunction is a logical inclusive or statement, which means that a disjunction is true if one or both statements that form it are true. The only way a logical inclusive or statement is false is if both statements that form the disjunction are false.\n\n1. \\(p \\vee q\\)\n\n2. \\(\\sim q \\vee r\\)\n\n3. \\(\\sim p \\vee q\\)\n\nAnswer\n\n1. \\(p\\) is true, and \\(q\\) is false. One statement is true, and one statement is false, which makes the complete disjunction true.\n\n2. \\(q\\) is false, so \\(\\sim q\\) is true, and \\(r\\) is true. Therefore, one statement is true, and the other statement is true, which makes the complete disjunction true.\n\n3. \\(\\sim p\\) is false, and \\(q\\) is false. When all of the component statements are false, the disjunction is false.\n\nYour Turn \\(\\PageIndex{3}\\)\n\nGiven \\(p\\) : Yellow is a primary color, \\(q\\) : Blue is a primary color, and \\(r\\) : Green is a primary color, determine the truth value of each disjunction.\n\n1. \\(p \\vee q\\)\n\n2. \\(\\sim p \\vee r\\)\n\n3. \\(q \\vee r\\)\n\nIn the next example, you will apply the dominance of connectives to find the truth values of compound statements containing negations, conjunctions, and disjunctions and use a table to record the results. When constructing a truth table to analyze an argument where you can determine the truth value of each component statement, the strategy is to create a table with two rows. The first row contains the symbols representing the components that make up the compound statement. The second row contains the truth values of each component below its symbol. Include as many columns as necessary to represent the value of each compound statement. The last column includes the complete compound statement with its truth value below it.\n\nLogic Part 2: Truth Values of Conjunctions: Is an \"AND\" statement true or false?\n\nLogic Part 3: Truth Values of Disjunctions: Is an \"OR\" statement true or false?\n\n1. \\(\\sim p \\wedge q \\vee r\\)\n\n2. \\(\\sim p \\vee q \\wedge r\\)\n\n3. \\(\\sim(p \\wedge r) \\vee q\\)\n\nAnswer\n\n1. Step 1: The statement \" \\(\\sim p \\wedge q \\vee r\\) \" contains three basic logical statements, \\(p, q\\), and \\(r\\), and three connectives, \\(\\sim, \\wedge, \\vee\\). When we place parentheses in the statement to indicate the dominance of connectives, the statement becomes \\((((\\sim p) \\wedge q) \\vee r)\\).\n\n    Step 2: After we have applied the dominance of connectives, we create a two row table that includes a column for each basic statement that makes up the compound statement, and an additional column for the contents of each parentheses. Because we have three sets of parentheses, we include a column for \\(\\sim p\\), the innermost parentheses, a column for \\((\\sim p) \\wedge q\\), the next set of parentheses, and \\(((\\sim p) \\wedge q) \\vee r\\) in the last column for the third parentheses.\n\n    Step 3: Once the table is created, we determine the truth value of each statement starting from left to right. The truth values of \\(p, q\\), and \\(r\\) are true, false, and true, respectively, so we place T, F, and \\(\\mathrm{T}\\) in the second row of the table. Because \\(p\\) is true, \\(\\sim p\\) is false.\n\n    Step 4: Next, evaluate \\(\\sim p \\wedge q\\) from the table: \\(\\sim p\\) is false, and \\(q\\) is also false, so \\(\\sim p \\wedge q\\) is false, because a conjunction is only true if both of the statements that make it are true. Place an \\(\\mathrm{F}\\) in the table below its heading.\n\n    Step 5: Finally, using the table, we understand that \\((\\sim p \\wedge q)\\) is false and \\(r\\) is true, so the complete statement \\((\\sim p \\wedge q) \\vee r\\) is false or true, which is true (because a disjunction is true whenever at least one of the statements that make it is true). Place a \\(\\mathrm{T}\\) in the last column of the table. The complete statement \\(\\sim p \\wedge q \\vee r\\) is true.\n\n                p\t\n\n[Figure: no alternative text in source]\nq\t\n\n[Figure: no alternative text in source]\nr\t\n                -p\t\n                (~p)∧q\t\n                ((~p)∧q)∨r\t\n\n[Figure: no alternative text in source]\nT\t\n\n[Figure: no alternative text in source]\nF\t\n                T\t\n\n[Figure: no alternative text in source]\nF\t\n\n[Figure: no alternative text in source]\nF\t\n\n[Figure: no alternative text in source]\nT\t\n\n2. Step 1: Applying the dominance of connectives to the original compound statement \\(\\sim p \\vee q \\wedge r\\), we get \\((((\\sim p) \\vee q) \\wedge r)\\).\n\nStep 2: The table needs columns for \\(p, q, r, \\sim p,(\\sim p) \\vee q\\), and \\(((\\sim p) \\vee q) \\wedge r\\).\n\nStep 3:The truth values of \\(p, q, r\\), and \\(\\sim p\\) are the same as in Question 1.\n\nStep 4: Next, \\(\\sim p \\vee q\\) is false or false, which is false, so we place an \\(\\mathrm{F}\\) below this statement in the table. This is the only time that a disjunction is false.\n\nStep 5: Finally, \\(\\sim p \\vee q\\) and \\(r\\) are the conjunction of the statements, \\(\\sim p \\vee q\\) and \\(r\\), and so the expressions evaluate to false and true, which is false. Recall that the only time an \"and\" statement is true is when both statements that form it are also true. The complete statement \\(\\sim p \\vee q \\wedge r\\) is false.\n\n            p\t\n\n[Figure: no alternative text in source]\nq\t\n\n[Figure: no alternative text in source]\nr\t\n            -p\t\n            (~p)∧q\t\n            ((~p)∧q)∨r\t\n\n            T\t\n            F\t\n            T\t\n            F\t\n            F\t\n            F\t\n\n3. Step 1: Applying the dominance of connectives to the original statement, we have: \\(((\\sim(p \\wedge r)) \\vee q)\\).\n\nStep 2: So, the table needs the following columns: \\(p, q, r, p \\wedge r, \\sim(p \\wedge r)\\), and \\(\\sim(p \\wedge r) \\vee q\\).\n\nStep 3: The truth values of \\(p, q\\), and \\(r\\) are the same as in Questions 1 and 2.\n\nStep 4: From the table it can be seen that \\(p \\wedge r\\) is true and true, which is true. So the negation of \\(p\\) and \\(r\\) is false, because the negation of a statement always has the opposite truth value of the original statement.\n\nStep 5: Finally, \\(\\sim(p \\wedge r) \\vee q\\) is the disjunction of \\(\\sim(p \\wedge r)\\) with \\(q\\), and so we have false or false, which makes the complete statement false.\n\n            p\t\n\n[Figure: no alternative text in source]\nq\t\n\n[Figure: no alternative text in source]\nr\t\n            -p\t\n            (~p)∧q\t\n            ((~p)∧q)∨r\t\n\n            T\t\n            F\t\n            T\t\n            T\t\n            F\t\n            F\t\n\nYour Turn  \\(\\PageIndex{4}\\)\n\nGiven \\(p\\) : Yellow is a primary color, \\(q\\) : Blue is a primary color, and \\(r\\) : Green is a primary color, determine the truth value of each compound statement, by constructing a truth table.\n\n1. \\(\\sim q \\wedge p \\vee r\\)\n\n2. \\(p \\vee q \\wedge \\sim r\\)\n\n3. \\(\\sim(p \\wedge r) \\wedge q\\)\n\nConstruct Truth Tables to Analyze All Possible Outcomes\n\nRecall from Statements and Questions that the negation of a statement will always have the opposite truth value of the original statement; if a statement \\(p\\) is false, then its negation \\(~p\\) is true, and if a statement \\(p\\) is true, then its negation \\(~p\\) is false. To create a truth table for the negation of statement \\(p\\), add a column with a heading of \\(~p\\), and for each row, input the truth value with the opposite value of the value listed in the column for \\(p\\), as depicted in the table below.\n\n            Negation\t\n\n            p\t\n            ~ p\t\n\n            T\t\n            F\t\n\n            F\t\n            T\t\n\nConjunctions and disjunctions are compound statements formed when two logical statements combine with the connectives “and” and “or” respectively. How does that change the number of possible outcomes and thus determine the number of rows in our truth table? The multiplication principle, also known as the fundamental counting principle, states that the number of ways you can select an item from a group of \\(n\\) items and another item from a group with \\(m\\) items is equal to the product of \\(m\\) and \\(n\\). Because each proposition \\(p\\) and \\(q\\) has two possible outcomes, true or false, the multiplication principle states that there will be \\(2×2=4\\) possible outcomes: {TT, TF, FT, FF}.\n\nThe tree diagram and table in Figure \\(\\PageIndex{2}\\) demonstrate the four possible outcomes for two propositions \\(p\\) and \\(q\\).\n\n[Figure: A horizontal flowchart and a table with five rows and three columns.]\n\nFigure \\(\\PageIndex{2}\\):\n\nA conjunction is a logical and statement. For a conjunction to be true, both the statements that make up the conjunction must be true. If at least one of the statements is false, the and statement is false.\n\nA disjunction is a logical inclusive or statement. Which means that a disjunction is true if one or both statements that make it are true. The only way a logical inclusive or statement is false is if both statements that make up the disjunction are false.\n\n            Conjunction (AND)\t\n\n            Disjunction (OR)\t\n\n            \\(p\\)\t\n            \\(q\\)\t\n            \\(p∧q\\)\t\n\n            \\(p\\)\t\n            \\(q\\)\t\n            \\(p∨q\\)\t\n\n            T\t\n            T\t\n            T\t\n\n            T\t\n            T\t\n            T\t\n\n            T\t\n            F\t\n            F\t\n\n            T\t\n            F\t\n            T\t\n\n            F\t\n            T\t\n            F\t\n\n            F\t\n            T\t\n            T\t\n\n            F\t\n            F\t\n            F\t\n\n            F\t\n            F\t\n            F\t\n\nLogic Part 4: Truth Values of Compound Statements with \"and\", \"or\", and \"not\"\n\nLogic Part 5: What are truth tables? How do you set them up?\n\nExercise \\(\\PageIndex{5}\\): Constructing Truth Tables to Analyze Compound Statements\n\nConstruct a truth table to analyze all possible outcomes for each of the following arguments.\n\n1. \\(p \\vee \\sim q\\)\n\n2. \\(\\sim(p \\wedge q)\\)\n\n3. \\((p \\vee \\sim q) \\wedge r\\)\n\nAnswer\n\n1. Step 1: Because there are two basic statements, \\(p\\) and \\(q\\), and each of these has two possible outcomes, we will have \\(2(2)=4\\) rows in our table to represent all possible outcomes: TT, TF, \\(\\mathrm{FT}\\), and FF. The columns will include \\(p, q, \\sim q\\), and \\(p \\vee \\sim q\\).\n\n    Step 2: Every value in column \\(\\sim q\\) will have the opposite truth value of the corresponding value in column \\(q\\) : F, T, F, and T.\n\n    Step 3: To complete the last column, evaluate each element in column \\(p\\) with the corresponding element in column \\(\\sim q\\) using the connective or.\n\n                p\t\n\n[Figure: no alternative text in source]\nq\t\n                \\(\\sim q\\)\t\n                \\(p \\vee \\sim q\\).\t\n\n                T\t\n                T\t\n                F\t\n                T\t\n\n                T\t\n                F\t\n                T\t\n                T\t\n\n                F\t\n                T\t\n                F\t\n                F\t\n\n                F\t\n                F\t\n                T\t\n                T\t\n\n2. Step 1: The columns will include \\(p, q, p \\wedge q\\), and \\(\\sim(p \\wedge q)\\). Because there are two basic statements, \\(p\\) and \\(q\\), the table will have four rows to account for all possible outcomes.\n\n    Step 2: The \\(p \\wedge q\\) column will be completed by evaluating the corresponding elements in columns \\(p\\) and \\(q\\) respectively with the and connective.\n\n    Step 3: The final column, \\(\\sim(p \\wedge q)\\), will be the negation of the \\(p \\wedge q\\) column.\n\n                p\t\n                q\t\n                \\(p \\wedge q\\)\t\n                \\(\\sim(p \\wedge q)\\)\t\n\n                T\t\n                T\t\n                T\t\n                F\t\n\n                T\t\n                F\t\n                F\t\n                T\t\n\n                F\t\n                T\t\n                F\t\n                T\t\n\n                F\t\n                F\t\n                F\t\n                T\t\n\n3. Step 1: This statement has three basic statements, \\(p, q\\), and \\(r\\). Because each basic statement has two possible truth values, true or false, the multiplication principal indicates there are \\(2(2)(2)=8\\) possible outcomes. So eight rows of outcomes are needed in the truth table to account for each possibility. Half of the eight possibilities must be true for the first statement, and half must be false.\n\n    Step 2: So, the first column for statement \\(p\\), will have four T's followed by four F's. In the second column for statement \\(q\\), when \\(p\\) is true, half the outcomes for \\(q\\) must be true and the other half must be false, and the same pattern will repeat for when \\(p\\) is false. So, column \\(q\\) will have TT, FF, FF, FF.\n\nStep 3: The column for the third statement, \\(r\\), must alternate between \\(T\\) and \\(F\\). Once, the three basic propositions are listed, you will need a column for \\(\\sim, p \\vee \\sim q\\), and \\((p \\vee \\sim q) \\wedge r\\).\n\n    Step 4: The column for the negation of \\(q, \\sim q\\), will have the opposite truth value of each value in column \\(q\\).\n\n    Step 5: Next, fill in the truth values for the column containing the statement \\(p \\vee \\sim q\\). The or statement is true if at least one of \\(p\\) or \\(\\sim q\\) is true, otherwise it is false.\n\n    Step 6: Finally, fill in the column containing the conjunction \\((p \\vee \\sim q) \\wedge r\\). To evaluate this statement, combine column \\(p \\vee \\sim q\\) and column \\(r\\) with the and connective. Recall, that only time \"and\" is true is when both values are true, otherwise the statement is false. The complete truth table is:\n\n                \\(p\\)\t\n                \\(q\\)\n[Figure: no alternative text in source]\n\n[Figure: no alternative text in source]\n\\(r\\)\t\n                \\(\\sim q\\)\t\n                \\(p \\vee \\sim q\\)\t\n                \\((p \\vee \\sim q) \\wedge r\\)\t\n\n                T\t\n                T\t\n                T\t\n                F\t\n                T\t\n                T\t\n\n                T\t\n                T\t\n                F\t\n                F\t\n                T\t\n                F\t\n\n                T\t\n                F\t\n                T\t\n                T\t\n                T\t\n                T\t\n\n                T\t\n                F\t\n                F\t\n                T\t\n                T\t\n                F\t\n\n                F\t\n                T\t\n                T\t\n                F\t\n                F\t\n                F\t\n\n                F\t\n                T\t\n                F\t\n                F\t\n                F\t\n                F\t\n\n                F\t\n                F\t\n                T\t\n                T\t\n                T\t\n                T\t\n\n                F\t\n                F\t\n                F\t\n                T\t\n                T\t\n                F\t\n\nYour Turn  \\(\\PageIndex{5}\\)\n\nConstruct a truth table to analyze all possible outcomes for each of the following arguments.\n\n1. \\(p \\wedge \\sim q\\)\n\n2. \\(\\sim(p \\vee q)\\)\n\n3. \\((p \\wedge \\sim q) \\vee r\\)\n\nLogic Part 6: More on Truth Tables and Setting Up Rows and Column Headings\n\nDetermine the Validity of a Truth Table for a Compound Statement\n\nA logical statement is valid if it is always true regardless of the truth values of its component parts. To test the validity of a compound statement, construct a truth table to analyze all possible outcomes. If the last column, representing the complete statement, contains only true values, the statement is valid.\n\nExercise \\(\\PageIndex{6}\\): Determining the Validity of Compound Statements\n\nConstruct a truth table to determine the validity of each of the following statements.\n\n1. \\(\\sim p \\wedge q\\)\n\n2. \\(\\sim(p \\wedge \\sim p)\\)\n\nAnswer\n\n1. Step 1: Because there are two statements, \\(p\\) and \\(q\\), and each of these has two possible outcomes, there will be \\(2(2)=4\\) rows in our table to represent all possible outcomes: TT, TF, \\(\\mathrm{FT}\\), and FF.\n\n    Step 2: The columns, will include \\(p, q, \\sim p\\) and \\(\\sim p \\wedge q\\). Every value in column \\(\\sim p\\) will have the opposite truth value of the corresponding value in column \\(p\\).\n\n    Step 3: To complete the last column, evaluate each element in column \\(\\sim p\\) with the corresponding element in column \\(q\\) using the connective and. The last column contains at least one false, therefore the statement \\(\\sim p \\wedge q\\) is not valid.\n\n                \\(p\\)\t\n                \\(q\\)\t\n                \\(\\sim p\\)\t\n                \\(\\sim \\boldsymbol{p} \\wedge \\boldsymbol{q}\\)\t\n\n                T\t\n                T\t\n                F\t\n                F\t\n\n                T\t\n                F\t\n                F\t\n                F\t\n\n                F\t\n                T\t\n                T\t\n                T\t\n\n                F\t\n                F\t\n                T\t\n                F\t\n\n2. Step 1: Because the statement \\(\\sim(p \\wedge \\sim p)\\) only contains one basic proposition, the truth table will only contain two rows. Statement \\(p\\) may be either true or false.\n\n    Step 2: The columns will include \\(p, \\sim p, p \\wedge \\sim p\\), and \\(\\sim(p \\wedge \\sim p)\\). Evaluate column \\(p \\wedge \\sim p\\) with the and connective, because the symbol \\(\\wedge\\) represents a conjunction or logical and statement. True and false is false, and false and true is also false.\n\n    Step 3: The final column is the negation of each entry in the third column, both of which are false, so the negation of false is true. Because all the truth values in the final column are true, the statement \\(\\sim(p \\wedge \\sim p)\\) is valid.\n\n[Figure: no alternative text in source]\n\\(p\\)\t\n                \\(\\sim p\\)\t\n                \\(p \\wedge \\sim p\\)\t\n                \\(\\sim(p \\wedge \\sim p)\\)\t\n\n                T\t\n                F\t\n                F\t\n                T\t\n\n                F\t\n                T\t\n                F\t\n                T\t\n\nYour Turn\\(\\PageIndex{6}\\)\n\nConstruct a truth table to determine the validity of each of the following statements.\n\n1. \\(p \\vee \\sim p\\)\n\n2. \\(\\sim p \\vee \\sim q\\)\n\nCheck Your Understanding\n\n1. A logical argument is _____ if its conclusion follows from its premises.\n\n2. A logical statement is valid if it is always _____.\n\n3. A _____ _____ is a tool used to analyze all the possible outcomes for a logical statement.\n\n4. The truth table for the conjunction, \\(p \\wedge q\\), has _____ rows of truth values.\n\n5. The truth table for the negation of a logical statement, \\(\\text{~}p\\), has _____ rows of truth values.\n\nThis page titled 2.3:  Constructing Truth Tables was last modified on Thu, 02 Jan 2025 11:07:44 GMT and is shared under a CC BY  4.0  license and was authored, remixed, and/or curated by OpenStax via source content that was edited to the style and standards of the LibreTexts platform.",
+  "figures": [
+    {
+      "url": "https://math.libretexts.org/@api/deki/files/109374/edd97a9a7a6c3139e74e5cd6e5b39ce55ab24efe?revision=1",
+      "alt": "A photo shows four people working together to complete a puzzle.",
+      "credit": ""
+    },
+    {
+      "url": "file:///C:/Users/JHALPE~1.DES/AppData/Local/Temp/msohtmlclip1/01/clip_image004.png",
+      "alt": "",
+      "credit": ""
+    },
+    {
+      "url": "file:///C:/Users/JHALPE~1.DES/AppData/Local/Temp/msohtmlclip1/01/clip_image006.png",
+      "alt": "",
+      "credit": ""
+    },
+    {
+      "url": "file:///C:/Users/JHALPE~1.DES/AppData/Local/Temp/msohtmlclip1/01/clip_image014.png",
+      "alt": "",
+      "credit": ""
+    },
+    {
+      "url": "file:///C:/Users/JHALPE~1.DES/AppData/Local/Temp/msohtmlclip1/01/clip_image016.png",
+      "alt": "",
+      "credit": ""
+    },
+    {
+      "url": "file:///C:/Users/JHALPE~1.DES/AppData/Local/Temp/msohtmlclip1/01/clip_image016.png",
+      "alt": "",
+      "credit": ""
+    },
+    {
+      "url": "file:///C:/Users/JHALPE~1.DES/AppData/Local/Temp/msohtmlclip1/01/clip_image016.png",
+      "alt": "",
+      "credit": ""
+    },
+    {
+      "url": "file:///C:/Users/JHALPE~1.DES/AppData/Local/Temp/msohtmlclip1/01/clip_image014.png",
+      "alt": "",
+      "credit": ""
+    },
+    {
+      "url": "file:///C:/Users/JHALPE~1.DES/AppData/Local/Temp/msohtmlclip1/01/clip_image004.png",
+      "alt": "",
+      "credit": ""
+    },
+    {
+      "url": "file:///C:/Users/JHALPE~1.DES/AppData/Local/Temp/msohtmlclip1/01/clip_image006.png",
+      "alt": "",
+      "credit": ""
+    },
+    {
+      "url": "file:///C:/Users/JHALPE~1.DES/AppData/Local/Temp/msohtmlclip1/01/clip_image004.png",
+      "alt": "",
+      "credit": ""
+    },
+    {
+      "url": "file:///C:/Users/JHALPE~1.DES/AppData/Local/Temp/msohtmlclip1/01/clip_image006.png",
+      "alt": "",
+      "credit": ""
+    },
+    {
+      "url": "https://math.libretexts.org/@api/deki/files/109373/e2926c866bc9139c312f8542d367cb3b2bed035b?revision=1",
+      "alt": "A horizontal flowchart and a table with five rows and three columns.",
+      "credit": ""
+    },
+    {
+      "url": "file:///C:/Users/JHALPE~1.DES/AppData/Local/Temp/msohtmlclip1/01/clip_image004.png",
+      "alt": "",
+      "credit": ""
+    },
+    {
+      "url": "file:///C:/Users/JHALPE~1.DES/AppData/Local/Temp/msohtmlclip1/01/clip_image002.png",
+      "alt": "",
+      "credit": ""
+    },
+    {
+      "url": "file:///C:/Users/JHALPE~1.DES/AppData/Local/Temp/msohtmlclip1/01/clip_image006.png",
+      "alt": "",
+      "credit": ""
+    },
+    {
+      "url": "file:///C:/Users/JHALPE~1.DES/AppData/Local/Temp/msohtmlclip1/01/clip_image002.png",
+      "alt": "",
+      "credit": ""
+    }
+  ],
+  "references": [
+    {
+      "text": "Logic Part 2: Truth Values of Conjunctions: Is an \"AND\" statement true or false?",
+      "url": "https://openstax.org/r/Truth_Values_of_Conjunctions"
+    },
+    {
+      "text": "Logic Part 3: Truth Values of Disjunctions: Is an \"OR\" statement true or false?",
+      "url": "https://openstax.org/r/Truth_Values_of_Disjunctions"
+    },
+    {
+      "text": "Logic Part 4: Truth Values of Compound Statements with \"and\", \"or\", and \"not\"",
+      "url": "https://openstax.org/r/opL9I4tZCC0"
+    },
+    {
+      "text": "Logic Part 5: What are truth tables? How do you set them up",
+      "url": "https://openstax.org/r/-tdSRqLGhaw"
+    },
+    {
+      "text": "Logic Part 6: More on Truth Tables and Setting Up Rows and Column Headings",
+      "url": "https://openstax.org/r/j3kKnUNIt6c"
+    },
+    {
+      "text": "2.3:  Constructing Truth Tables",
+      "url": "https://math.libretexts.org/Bookshelves/Applied_Mathematics/Contemporary_Mathematics_(OpenStax)/02%3A_Logic/2.03%3A__Constructing_Truth_Tables"
+    },
+    {
+      "text": "CC BY  4.0",
+      "url": "https://creativecommons.org/licenses/by/4.0"
+    },
+    {
+      "text": "OpenStax",
+      "url": "https://openstax.org/"
+    },
+    {
+      "text": "source content",
+      "url": "https://openstax.org/details/books/contemporary-mathematics"
+    }
+  ],
+  "exercises": [
+    {
+      "ordinal": 1,
+      "sourceNumber": "1",
+      "sourceAnchor": "",
+      "kind": "exercise-candidate",
+      "context": "After completing this section, you should be able to:",
+      "original": "1. Interpret and apply negations, conjunctions, and disjunctions.",
+      "prompt": "1. Interpret and apply negations, conjunctions, and disjunctions.",
+      "sourceAnswers": [],
+      "hasFigure": false,
+      "status": "draft",
+      "answerVerified": false,
+      "translationStatus": "pending",
+      "mappingStatus": "pending"
+    },
+    {
+      "ordinal": 2,
+      "sourceNumber": "2",
+      "sourceAnchor": "",
+      "kind": "exercise-candidate",
+      "context": "After completing this section, you should be able to:",
+      "original": "2. Construct a truth table using negations, conjunctions, and disjunctions.",
+      "prompt": "2. Construct a truth table using negations, conjunctions, and disjunctions.",
+      "sourceAnswers": [],
+      "hasFigure": false,
+      "status": "draft",
+      "answerVerified": false,
+      "translationStatus": "pending",
+      "mappingStatus": "pending"
+    },
+    {
+      "ordinal": 3,
+      "sourceNumber": "3",
+      "sourceAnchor": "",
+      "kind": "exercise-candidate",
+      "context": "After completing this section, you should be able to:",
+      "original": "3. Construct a truth table for a compound statement and interpret its validity.",
+      "prompt": "3. Construct a truth table for a compound statement and interpret its validity.",
+      "sourceAnswers": [],
+      "hasFigure": false,
+      "status": "draft",
+      "answerVerified": false,
+      "translationStatus": "pending",
+      "mappingStatus": "pending"
+    },
+    {
+      "ordinal": 4,
+      "sourceNumber": "",
+      "sourceAnchor": "",
+      "kind": "exercise-candidate",
+      "context": "Interpret and Apply Negations, Conjunctions, and Disjunctions\n\nThe negation of a statement will have the opposite truth value of the original statement. When \\(p\\) is true, \\(~p\\) is false, and when \\(p\\) is false, \\(~p\\) is true.",
+      "original": "Exercise \\(\\PageIndex{1}\\)\n\nFor each logical statement, determine the truth value of its negation.\n\n1. \\(p\\): \\(3+5=8.\\)\n\n2. \\(q\\): All horses are mustangs.\n\n3. \\(~r\\): New Delhi is not the capital of India.\n\nAnswer\n\np is true because 3 + 5 does equal 8; therefore, the negation of p, ~ p : 3 + 5 ≠ 8 ~ p : 3 + 5 ≠ 8 , is false.\n\nq is false because there are other types of horses besides mustangs, such as Clydesdales or Arabians; therefore, the negation of q, ~ q , is true.\n\n~ r is false because New Delhi is the capital of India; therefore, the negation of ~r, r , is true.",
+      "prompt": "Exercise \\(\\PageIndex{1}\\)\n\nFor each logical statement, determine the truth value of its negation.\n\n1. \\(p\\): \\(3+5=8.\\)\n\n2. \\(q\\): All horses are mustangs.\n\n3. \\(~r\\): New Delhi is not the capital of India.",
+      "sourceAnswers": [
+        "p is true because 3 + 5 does equal 8; therefore, the negation of p, ~ p : 3 + 5 ≠ 8 ~ p : 3 + 5 ≠ 8 , is false.\n\nq is false because there are other types of horses besides mustangs, such as Clydesdales or Arabians; therefore, the negation of q, ~ q , is true.\n\n~ r is false because New Delhi is the capital of India; therefore, the negation of ~r, r , is true."
+      ],
+      "hasFigure": false,
+      "status": "draft",
+      "answerVerified": false,
+      "translationStatus": "pending",
+      "mappingStatus": "pending"
+    },
+    {
+      "ordinal": 5,
+      "sourceNumber": "",
+      "sourceAnchor": "",
+      "kind": "example-or-exercise",
+      "context": "Interpret and Apply Negations, Conjunctions, and Disjunctions\n\nThe negation of a statement will have the opposite truth value of the original statement. When \\(p\\) is true, \\(~p\\) is false, and when \\(p\\) is false, \\(~p\\) is true.",
+      "original": "Your Turn  \\(\\PageIndex{1}\\)\n\nFor each logical statement, determine the truth value of its negation.\n\n1. \\(\\text~p\\): \\(3 \\times 5 = 14\\).\n\n2. \\(\\text~q\\): Some houses are built with bricks\n\n3. \\(r\\): Abuja is the capital of Nigeria.",
+      "prompt": "Your Turn  \\(\\PageIndex{1}\\)\n\nFor each logical statement, determine the truth value of its negation.\n\n1. \\(\\text~p\\): \\(3 \\times 5 = 14\\).\n\n2. \\(\\text~q\\): Some houses are built with bricks\n\n3. \\(r\\): Abuja is the capital of Nigeria.",
+      "sourceAnswers": [],
+      "hasFigure": false,
+      "status": "draft",
+      "answerVerified": false,
+      "translationStatus": "pending",
+      "mappingStatus": "pending"
+    },
+    {
+      "ordinal": 6,
+      "sourceNumber": "1",
+      "sourceAnchor": "",
+      "kind": "exercise-candidate",
+      "context": "Interpret and Apply Negations, Conjunctions, and Disjunctions\n\nThe negation of a statement will have the opposite truth value of the original statement. When \\(p\\) is true, \\(~p\\) is false, and when \\(p\\) is false, \\(~p\\) is true.\n\nA conjunction is a logical and statement. For a conjunction to be true, both statements that make up the conjunction must be true. If at least one of the statements is false, the and statement is false.",
+      "original": "1. \\(p \\wedge q\\)\n\n2. \\(\\sim q \\wedge r\\)\n\n3. \\(\\sim p \\wedge q\\)\n\nAnswer\n\n1. \\(p\\) is true, and \\(q\\) is false. Because one statement is true, and the other statement is false, this makes the complete conjunction false.\n\n    2. \\(q\\) is false, so \\(\\sim q\\) is true, and \\(r\\) is true. Therefore, both statements are true, making the complete conjunction true.\n\n    3. \\(\\sim p\\) is false, and \\(q\\) is false. Because both statements are false, the complete conjunction is false.",
+      "prompt": "1. \\(p \\wedge q\\)\n\n2. \\(\\sim q \\wedge r\\)\n\n3. \\(\\sim p \\wedge q\\)",
+      "sourceAnswers": [
+        "1. \\(p\\) is true, and \\(q\\) is false. Because one statement is true, and the other statement is false, this makes the complete conjunction false.\n\n    2. \\(q\\) is false, so \\(\\sim q\\) is true, and \\(r\\) is true. Therefore, both statements are true, making the complete conjunction true.\n\n    3. \\(\\sim p\\) is false, and \\(q\\) is false. Because both statements are false, the complete conjunction is false."
+      ],
+      "hasFigure": false,
+      "status": "draft",
+      "answerVerified": false,
+      "translationStatus": "pending",
+      "mappingStatus": "pending"
+    },
+    {
+      "ordinal": 7,
+      "sourceNumber": "",
+      "sourceAnchor": "",
+      "kind": "example-or-exercise",
+      "context": "Interpret and Apply Negations, Conjunctions, and Disjunctions\n\nThe negation of a statement will have the opposite truth value of the original statement. When \\(p\\) is true, \\(~p\\) is false, and when \\(p\\) is false, \\(~p\\) is true.\n\nA conjunction is a logical and statement. For a conjunction to be true, both statements that make up the conjunction must be true. If at least one of the statements is false, the and statement is false.",
+      "original": "Your Turn  \\(\\PageIndex{2}\\)\n\nGiven \\(p\\) : Yellow is a primary color, \\(q\\) : Blue is a primary color, and \\(r\\) : Green is a primary color, determine the truth value of each conjunction.\n\n1. \\(p \\wedge q\\)\n\n2. \\(q \\wedge r\\)\n\n3. \\(\\sim r \\wedge p\\).",
+      "prompt": "Your Turn  \\(\\PageIndex{2}\\)\n\nGiven \\(p\\) : Yellow is a primary color, \\(q\\) : Blue is a primary color, and \\(r\\) : Green is a primary color, determine the truth value of each conjunction.\n\n1. \\(p \\wedge q\\)\n\n2. \\(q \\wedge r\\)\n\n3. \\(\\sim r \\wedge p\\).",
+      "sourceAnswers": [],
+      "hasFigure": false,
+      "status": "draft",
+      "answerVerified": false,
+      "translationStatus": "pending",
+      "mappingStatus": "pending"
+    },
+    {
+      "ordinal": 8,
+      "sourceNumber": "1",
+      "sourceAnchor": "",
+      "kind": "exercise-candidate",
+      "context": "A conjunction is a logical and statement. For a conjunction to be true, both statements that make up the conjunction must be true. If at least one of the statements is false, the and statement is false.\n\nThe only time a conjunction is true is if both statements that make up the conjunction are true.\n\nA disjunction is a logical inclusive or statement, which means that a disjunction is true if one or both statements that form it are true. The only way a logical inclusive or statement is false is if both statements that form the disjunction are false.",
+      "original": "1. \\(p \\vee q\\)\n\n2. \\(\\sim q \\vee r\\)\n\n3. \\(\\sim p \\vee q\\)\n\nAnswer\n\n1. \\(p\\) is true, and \\(q\\) is false. One statement is true, and one statement is false, which makes the complete disjunction true.\n\n2. \\(q\\) is false, so \\(\\sim q\\) is true, and \\(r\\) is true. Therefore, one statement is true, and the other statement is true, which makes the complete disjunction true.\n\n3. \\(\\sim p\\) is false, and \\(q\\) is false. When all of the component statements are false, the disjunction is false.",
+      "prompt": "1. \\(p \\vee q\\)\n\n2. \\(\\sim q \\vee r\\)\n\n3. \\(\\sim p \\vee q\\)",
+      "sourceAnswers": [
+        "1. \\(p\\) is true, and \\(q\\) is false. One statement is true, and one statement is false, which makes the complete disjunction true.\n\n2. \\(q\\) is false, so \\(\\sim q\\) is true, and \\(r\\) is true. Therefore, one statement is true, and the other statement is true, which makes the complete disjunction true.\n\n3. \\(\\sim p\\) is false, and \\(q\\) is false. When all of the component statements are false, the disjunction is false."
+      ],
+      "hasFigure": false,
+      "status": "draft",
+      "answerVerified": false,
+      "translationStatus": "pending",
+      "mappingStatus": "pending"
+    },
+    {
+      "ordinal": 9,
+      "sourceNumber": "",
+      "sourceAnchor": "",
+      "kind": "example-or-exercise",
+      "context": "A conjunction is a logical and statement. For a conjunction to be true, both statements that make up the conjunction must be true. If at least one of the statements is false, the and statement is false.\n\nThe only time a conjunction is true is if both statements that make up the conjunction are true.\n\nA disjunction is a logical inclusive or statement, which means that a disjunction is true if one or both statements that form it are true. The only way a logical inclusive or statement is false is if both statements that form the disjunction are false.",
+      "original": "Your Turn \\(\\PageIndex{3}\\)\n\nGiven \\(p\\) : Yellow is a primary color, \\(q\\) : Blue is a primary color, and \\(r\\) : Green is a primary color, determine the truth value of each disjunction.\n\n1. \\(p \\vee q\\)\n\n2. \\(\\sim p \\vee r\\)\n\n3. \\(q \\vee r\\)",
+      "prompt": "Your Turn \\(\\PageIndex{3}\\)\n\nGiven \\(p\\) : Yellow is a primary color, \\(q\\) : Blue is a primary color, and \\(r\\) : Green is a primary color, determine the truth value of each disjunction.\n\n1. \\(p \\vee q\\)\n\n2. \\(\\sim p \\vee r\\)\n\n3. \\(q \\vee r\\)",
+      "sourceAnswers": [],
+      "hasFigure": false,
+      "status": "draft",
+      "answerVerified": false,
+      "translationStatus": "pending",
+      "mappingStatus": "pending"
+    },
+    {
+      "ordinal": 10,
+      "sourceNumber": "1",
+      "sourceAnchor": "",
+      "kind": "exercise-candidate",
+      "context": "In the next example, you will apply the dominance of connectives to find the truth values of compound statements containing negations, conjunctions, and disjunctions and use a table to record the results. When constructing a truth table to analyze an argument where you can determine the truth value of each component statement, the strategy is to create a table with two rows. The first row contains the symbols representing the components that make up the compound statement. The second row contains the truth values of each component below its symbol. Include as many columns as necessary to represent the value of each compound statement. The last column includes the complete compound statement with its truth value below it.\n\nLogic Part 2: Truth Values of Conjunctions: Is an \"AND\" statement true or false?\n\nLogic Part 3: Truth Values of Disjunctions: Is an \"OR\" statement true or false?",
+      "original": "1. \\(\\sim p \\wedge q \\vee r\\)\n\n2. \\(\\sim p \\vee q \\wedge r\\)\n\n3. \\(\\sim(p \\wedge r) \\vee q\\)\n\nAnswer\n\n1. Step 1: The statement \" \\(\\sim p \\wedge q \\vee r\\) \" contains three basic logical statements, \\(p, q\\), and \\(r\\), and three connectives, \\(\\sim, \\wedge, \\vee\\). When we place parentheses in the statement to indicate the dominance of connectives, the statement becomes \\((((\\sim p) \\wedge q) \\vee r)\\).\n\n    Step 2: After we have applied the dominance of connectives, we create a two row table that includes a column for each basic statement that makes up the compound statement, and an additional column for the contents of each parentheses. Because we have three sets of parentheses, we include a column for \\(\\sim p\\), the innermost parentheses, a column for \\((\\sim p) \\wedge q\\), the next set of parentheses, and \\(((\\sim p) \\wedge q) \\vee r\\) in the last column for the third parentheses.\n\n    Step 3: Once the table is created, we determine the truth value of each statement starting from left to right. The truth values of \\(p, q\\), and \\(r\\) are true, false, and true, respectively, so we place T, F, and \\(\\mathrm{T}\\) in the second row of the table. Because \\(p\\) is true, \\(\\sim p\\) is false.\n\n    Step 4: Next, evaluate \\(\\sim p \\wedge q\\) from the table: \\(\\sim p\\) is false, and \\(q\\) is also false, so \\(\\sim p \\wedge q\\) is false, because a conjunction is only true if both of the statements that make it are true. Place an \\(\\mathrm{F}\\) in the table below its heading.\n\n    Step 5: Finally, using the table, we understand that \\((\\sim p \\wedge q)\\) is false and \\(r\\) is true, so the complete statement \\((\\sim p \\wedge q) \\vee r\\) is false or true, which is true (because a disjunction is true whenever at least one of the statements that make it is true). Place a \\(\\mathrm{T}\\) in the last column of the table. The complete statement \\(\\sim p \\wedge q \\vee r\\) is true.\n\n                p\t\n\n[Figure: no alternative text in source]\nq\t\n\n[Figure: no alternative text in source]\nr\t\n                -p\t\n                (~p)∧q\t\n                ((~p)∧q)∨r\t\n\n[Figure: no alternative text in source]\nT\t\n\n[Figure: no alternative text in source]\nF\t\n                T\t\n\n[Figure: no alternative text in source]\nF\t\n\n[Figure: no alternative text in source]\nF\t\n\n[Figure: no alternative text in source]\nT\t\n\n2. Step 1: Applying the dominance of connectives to the original compound statement \\(\\sim p \\vee q \\wedge r\\), we get \\((((\\sim p) \\vee q) \\wedge r)\\).\n\nStep 2: The table needs columns for \\(p, q, r, \\sim p,(\\sim p) \\vee q\\), and \\(((\\sim p) \\vee q) \\wedge r\\).\n\nStep 3:The truth values of \\(p, q, r\\), and \\(\\sim p\\) are the same as in Question 1.\n\nStep 4: Next, \\(\\sim p \\vee q\\) is false or false, which is false, so we place an \\(\\mathrm{F}\\) below this statement in the table. This is the only time that a disjunction is false.\n\nStep 5: Finally, \\(\\sim p \\vee q\\) and \\(r\\) are the conjunction of the statements, \\(\\sim p \\vee q\\) and \\(r\\), and so the expressions evaluate to false and true, which is false. Recall that the only time an \"and\" statement is true is when both statements that form it are also true. The complete statement \\(\\sim p \\vee q \\wedge r\\) is false.\n\n            p\t\n\n[Figure: no alternative text in source]\nq\t\n\n[Figure: no alternative text in source]\nr\t\n            -p\t\n            (~p)∧q\t\n            ((~p)∧q)∨r\t\n\n            T\t\n            F\t\n            T\t\n            F\t\n            F\t\n            F\t\n\n3. Step 1: Applying the dominance of connectives to the original statement, we have: \\(((\\sim(p \\wedge r)) \\vee q)\\).\n\nStep 2: So, the table needs the following columns: \\(p, q, r, p \\wedge r, \\sim(p \\wedge r)\\), and \\(\\sim(p \\wedge r) \\vee q\\).\n\nStep 3: The truth values of \\(p, q\\), and \\(r\\) are the same as in Questions 1 and 2.\n\nStep 4: From the table it can be seen that \\(p \\wedge r\\) is true and true, which is true. So the negation of \\(p\\) and \\(r\\) is false, because the negation of a statement always has the opposite truth value of the original statement.\n\nStep 5: Finally, \\(\\sim(p \\wedge r) \\vee q\\) is the disjunction of \\(\\sim(p \\wedge r)\\) with \\(q\\), and so we have false or false, which makes the complete statement false.\n\n            p\t\n\n[Figure: no alternative text in source]\nq\t\n\n[Figure: no alternative text in source]\nr\t\n            -p\t\n            (~p)∧q\t\n            ((~p)∧q)∨r\t\n\n            T\t\n            F\t\n            T\t\n            T\t\n            F\t\n            F",
+      "prompt": "1. \\(\\sim p \\wedge q \\vee r\\)\n\n2. \\(\\sim p \\vee q \\wedge r\\)\n\n3. \\(\\sim(p \\wedge r) \\vee q\\)",
+      "sourceAnswers": [
+        "1. Step 1: The statement \" \\(\\sim p \\wedge q \\vee r\\) \" contains three basic logical statements, \\(p, q\\), and \\(r\\), and three connectives, \\(\\sim, \\wedge, \\vee\\). When we place parentheses in the statement to indicate the dominance of connectives, the statement becomes \\((((\\sim p) \\wedge q) \\vee r)\\).\n\n    Step 2: After we have applied the dominance of connectives, we create a two row table that includes a column for each basic statement that makes up the compound statement, and an additional column for the contents of each parentheses. Because we have three sets of parentheses, we include a column for \\(\\sim p\\), the innermost parentheses, a column for \\((\\sim p) \\wedge q\\), the next set of parentheses, and \\(((\\sim p) \\wedge q) \\vee r\\) in the last column for the third parentheses.\n\n    Step 3: Once the table is created, we determine the truth value of each statement starting from left to right. The truth values of \\(p, q\\), and \\(r\\) are true, false, and true, respectively, so we place T, F, and \\(\\mathrm{T}\\) in the second row of the table. Because \\(p\\) is true, \\(\\sim p\\) is false.\n\n    Step 4: Next, evaluate \\(\\sim p \\wedge q\\) from the table: \\(\\sim p\\) is false, and \\(q\\) is also false, so \\(\\sim p \\wedge q\\) is false, because a conjunction is only true if both of the statements that make it are true. Place an \\(\\mathrm{F}\\) in the table below its heading.\n\n    Step 5: Finally, using the table, we understand that \\((\\sim p \\wedge q)\\) is false and \\(r\\) is true, so the complete statement \\((\\sim p \\wedge q) \\vee r\\) is false or true, which is true (because a disjunction is true whenever at least one of the statements that make it is true). Place a \\(\\mathrm{T}\\) in the last column of the table. The complete statement \\(\\sim p \\wedge q \\vee r\\) is true.\n\n                p\t\n\n[Figure: no alternative text in source]\nq\t\n\n[Figure: no alternative text in source]\nr\t\n                -p\t\n                (~p)∧q\t\n                ((~p)∧q)∨r\t\n\n[Figure: no alternative text in source]\nT\t\n\n[Figure: no alternative text in source]\nF\t\n                T\t\n\n[Figure: no alternative text in source]\nF\t\n\n[Figure: no alternative text in source]\nF\t\n\n[Figure: no alternative text in source]\nT"
+      ],
+      "hasFigure": true,
+      "status": "draft",
+      "answerVerified": false,
+      "translationStatus": "pending",
+      "mappingStatus": "pending"
+    },
+    {
+      "ordinal": 11,
+      "sourceNumber": "",
+      "sourceAnchor": "",
+      "kind": "example-or-exercise",
+      "context": "In the next example, you will apply the dominance of connectives to find the truth values of compound statements containing negations, conjunctions, and disjunctions and use a table to record the results. When constructing a truth table to analyze an argument where you can determine the truth value of each component statement, the strategy is to create a table with two rows. The first row contains the symbols representing the components that make up the compound statement. The second row contains the truth values of each component below its symbol. Include as many columns as necessary to represent the value of each compound statement. The last column includes the complete compound statement with its truth value below it.\n\nLogic Part 2: Truth Values of Conjunctions: Is an \"AND\" statement true or false?\n\nLogic Part 3: Truth Values of Disjunctions: Is an \"OR\" statement true or false?",
+      "original": "Your Turn  \\(\\PageIndex{4}\\)\n\nGiven \\(p\\) : Yellow is a primary color, \\(q\\) : Blue is a primary color, and \\(r\\) : Green is a primary color, determine the truth value of each compound statement, by constructing a truth table.\n\n1. \\(\\sim q \\wedge p \\vee r\\)\n\n2. \\(p \\vee q \\wedge \\sim r\\)\n\n3. \\(\\sim(p \\wedge r) \\wedge q\\)",
+      "prompt": "Your Turn  \\(\\PageIndex{4}\\)\n\nGiven \\(p\\) : Yellow is a primary color, \\(q\\) : Blue is a primary color, and \\(r\\) : Green is a primary color, determine the truth value of each compound statement, by constructing a truth table.\n\n1. \\(\\sim q \\wedge p \\vee r\\)\n\n2. \\(p \\vee q \\wedge \\sim r\\)\n\n3. \\(\\sim(p \\wedge r) \\wedge q\\)",
+      "sourceAnswers": [],
+      "hasFigure": false,
+      "status": "draft",
+      "answerVerified": false,
+      "translationStatus": "pending",
+      "mappingStatus": "pending"
+    },
+    {
+      "ordinal": 12,
+      "sourceNumber": "",
+      "sourceAnchor": "",
+      "kind": "exercise-candidate",
+      "context": "A disjunction is a logical inclusive or statement. Which means that a disjunction is true if one or both statements that make it are true. The only way a logical inclusive or statement is false is if both statements that make up the disjunction are false.\n\nLogic Part 4: Truth Values of Compound Statements with \"and\", \"or\", and \"not\"\n\nLogic Part 5: What are truth tables? How do you set them up?",
+      "original": "Exercise \\(\\PageIndex{5}\\): Constructing Truth Tables to Analyze Compound Statements\n\nConstruct a truth table to analyze all possible outcomes for each of the following arguments.\n\n1. \\(p \\vee \\sim q\\)\n\n2. \\(\\sim(p \\wedge q)\\)\n\n3. \\((p \\vee \\sim q) \\wedge r\\)\n\nAnswer\n\n1. Step 1: Because there are two basic statements, \\(p\\) and \\(q\\), and each of these has two possible outcomes, we will have \\(2(2)=4\\) rows in our table to represent all possible outcomes: TT, TF, \\(\\mathrm{FT}\\), and FF. The columns will include \\(p, q, \\sim q\\), and \\(p \\vee \\sim q\\).\n\n    Step 2: Every value in column \\(\\sim q\\) will have the opposite truth value of the corresponding value in column \\(q\\) : F, T, F, and T.\n\n    Step 3: To complete the last column, evaluate each element in column \\(p\\) with the corresponding element in column \\(\\sim q\\) using the connective or.\n\n                p\t\n\n[Figure: no alternative text in source]\nq\t\n                \\(\\sim q\\)\t\n                \\(p \\vee \\sim q\\).\t\n\n                T\t\n                T\t\n                F\t\n                T\t\n\n                T\t\n                F\t\n                T\t\n                T\t\n\n                F\t\n                T\t\n                F\t\n                F\t\n\n                F\t\n                F\t\n                T\t\n                T\t\n\n2. Step 1: The columns will include \\(p, q, p \\wedge q\\), and \\(\\sim(p \\wedge q)\\). Because there are two basic statements, \\(p\\) and \\(q\\), the table will have four rows to account for all possible outcomes.\n\n    Step 2: The \\(p \\wedge q\\) column will be completed by evaluating the corresponding elements in columns \\(p\\) and \\(q\\) respectively with the and connective.\n\n    Step 3: The final column, \\(\\sim(p \\wedge q)\\), will be the negation of the \\(p \\wedge q\\) column.\n\n                p\t\n                q\t\n                \\(p \\wedge q\\)\t\n                \\(\\sim(p \\wedge q)\\)\t\n\n                T\t\n                T\t\n                T\t\n                F\t\n\n                T\t\n                F\t\n                F\t\n                T\t\n\n                F\t\n                T\t\n                F\t\n                T\t\n\n                F\t\n                F\t\n                F\t\n                T\t\n\n3. Step 1: This statement has three basic statements, \\(p, q\\), and \\(r\\). Because each basic statement has two possible truth values, true or false, the multiplication principal indicates there are \\(2(2)(2)=8\\) possible outcomes. So eight rows of outcomes are needed in the truth table to account for each possibility. Half of the eight possibilities must be true for the first statement, and half must be false.\n\n    Step 2: So, the first column for statement \\(p\\), will have four T's followed by four F's. In the second column for statement \\(q\\), when \\(p\\) is true, half the outcomes for \\(q\\) must be true and the other half must be false, and the same pattern will repeat for when \\(p\\) is false. So, column \\(q\\) will have TT, FF, FF, FF.\n\nStep 3: The column for the third statement, \\(r\\), must alternate between \\(T\\) and \\(F\\). Once, the three basic propositions are listed, you will need a column for \\(\\sim, p \\vee \\sim q\\), and \\((p \\vee \\sim q) \\wedge r\\).\n\n    Step 4: The column for the negation of \\(q, \\sim q\\), will have the opposite truth value of each value in column \\(q\\).\n\n    Step 5: Next, fill in the truth values for the column containing the statement \\(p \\vee \\sim q\\). The or statement is true if at least one of \\(p\\) or \\(\\sim q\\) is true, otherwise it is false.\n\n    Step 6: Finally, fill in the column containing the conjunction \\((p \\vee \\sim q) \\wedge r\\). To evaluate this statement, combine column \\(p \\vee \\sim q\\) and column \\(r\\) with the and connective. Recall, that only time \"and\" is true is when both values are true, otherwise the statement is false. The complete truth table is:\n\n                \\(p\\)\t\n                \\(q\\)\n[Figure: no alternative text in source]\n\n[Figure: no alternative text in source]\n\\(r\\)\t\n                \\(\\sim q\\)\t\n                \\(p \\vee \\sim q\\)\t\n                \\((p \\vee \\sim q) \\wedge r\\)\t\n\n                T\t\n                T\t\n                T\t\n                F\t\n                T\t\n                T\t\n\n                T\t\n                T\t\n                F\t\n                F\t\n                T\t\n                F\t\n\n                T\t\n                F\t\n                T\t\n                T\t\n                T\t\n                T\t\n\n                T\t\n                F\t\n                F\t\n                T\t\n                T\t\n                F\t\n\n                F\t\n                T\t\n                T\t\n                F\t\n                F\t\n                F\t\n\n                F\t\n                T\t\n                F\t\n                F\t\n                F\t\n                F\t\n\n                F\t\n                F\t\n                T\t\n                T\t\n                T\t\n                T\t\n\n                F\t\n                F\t\n                F\t\n                T\t\n                T\t\n                F",
+      "prompt": "Exercise \\(\\PageIndex{5}\\): Constructing Truth Tables to Analyze Compound Statements\n\nConstruct a truth table to analyze all possible outcomes for each of the following arguments.\n\n1. \\(p \\vee \\sim q\\)\n\n2. \\(\\sim(p \\wedge q)\\)\n\n3. \\((p \\vee \\sim q) \\wedge r\\)",
+      "sourceAnswers": [
+        "1. Step 1: Because there are two basic statements, \\(p\\) and \\(q\\), and each of these has two possible outcomes, we will have \\(2(2)=4\\) rows in our table to represent all possible outcomes: TT, TF, \\(\\mathrm{FT}\\), and FF. The columns will include \\(p, q, \\sim q\\), and \\(p \\vee \\sim q\\).\n\n    Step 2: Every value in column \\(\\sim q\\) will have the opposite truth value of the corresponding value in column \\(q\\) : F, T, F, and T.\n\n    Step 3: To complete the last column, evaluate each element in column \\(p\\) with the corresponding element in column \\(\\sim q\\) using the connective or.\n\n                p\t\n\n[Figure: no alternative text in source]\nq\t\n                \\(\\sim q\\)\t\n                \\(p \\vee \\sim q\\).\t\n\n                T\t\n                T\t\n                F\t\n                T\t\n\n                T\t\n                F\t\n                T\t\n                T\t\n\n                F\t\n                T\t\n                F\t\n                F\t\n\n                F\t\n                F\t\n                T\t\n                T\t\n\n2. Step 1: The columns will include \\(p, q, p \\wedge q\\), and \\(\\sim(p \\wedge q)\\). Because there are two basic statements, \\(p\\) and \\(q\\), the table will have four rows to account for all possible outcomes.\n\n    Step 2: The \\(p \\wedge q\\) column will be completed by evaluating the corresponding elements in columns \\(p\\) and \\(q\\) respectively with the and connective.\n\n    Step 3: The final column, \\(\\sim(p \\wedge q)\\), will be the negation of the \\(p \\wedge q\\) column.\n\n                p\t\n                q\t\n                \\(p \\wedge q\\)\t\n                \\(\\sim(p \\wedge q)\\)\t\n\n                T\t\n                T\t\n                T\t\n                F\t\n\n                T\t\n                F\t\n                F\t\n                T\t\n\n                F\t\n                T\t\n                F\t\n                T\t\n\n                F\t\n                F\t\n                F\t\n                T\t\n\n3. Step 1: This statement has three basic statements, \\(p, q\\), and \\(r\\). Because each basic statement has two possible truth values, true or false, the multiplication principal indicates there are \\(2(2)(2)=8\\) possible outcomes. So eight rows of outcomes are needed in the truth table to account for each possibility. Half of the eight possibilities must be true for the first statement, and half must be false.\n\n    Step 2: So, the first column for statement \\(p\\), will have four T's followed by four F's. In the second column for statement \\(q\\), when \\(p\\) is true, half the outcomes for \\(q\\) must be true and the other half must be false, and the same pattern will repeat for when \\(p\\) is false. So, column \\(q\\) will have TT, FF, FF, FF.\n\nStep 3: The column for the third statement, \\(r\\), must alternate between \\(T\\) and \\(F\\). Once, the three basic propositions are listed, you will need a column for \\(\\sim, p \\vee \\sim q\\), and \\((p \\vee \\sim q) \\wedge r\\).\n\n    Step 4: The column for the negation of \\(q, \\sim q\\), will have the opposite truth value of each value in column \\(q\\).\n\n    Step 5: Next, fill in the truth values for the column containing the statement \\(p \\vee \\sim q\\). The or statement is true if at least one of \\(p\\) or \\(\\sim q\\) is true, otherwise it is false.\n\n    Step 6: Finally, fill in the column containing the conjunction \\((p \\vee \\sim q) \\wedge r\\). To evaluate this statement, combine column \\(p \\vee \\sim q\\) and column \\(r\\) with the and connective. Recall, that only time \"and\" is true is when both values are true, otherwise the statement is false. The complete truth table is:\n\n                \\(p\\)\t\n                \\(q\\)\n[Figure: no alternative text in source]\n\n[Figure: no alternative text in source]\n\\(r\\)\t\n                \\(\\sim q\\)\t\n                \\(p \\vee \\sim q\\)\t\n                \\((p \\vee \\sim q) \\wedge r\\)\t\n\n                T\t\n                T\t\n                T\t\n                F\t\n                T\t\n                T\t\n\n                T\t\n                T\t\n                F\t\n                F\t\n                T\t\n                F\t\n\n                T\t\n                F\t\n                T\t\n                T\t\n                T\t\n                T\t\n\n                T\t\n                F\t\n                F\t\n                T\t\n                T\t\n                F\t\n\n                F\t\n                T\t\n                T\t\n                F\t\n                F\t\n                F\t\n\n                F\t\n                T\t\n                F\t\n                F\t\n                F\t\n                F\t\n\n                F\t\n                F\t\n                T\t\n                T\t\n                T\t\n                T\t\n\n                F\t\n                F\t\n                F\t\n                T\t\n                T\t\n                F"
+      ],
+      "hasFigure": true,
+      "status": "draft",
+      "answerVerified": false,
+      "translationStatus": "pending",
+      "mappingStatus": "pending"
+    },
+    {
+      "ordinal": 13,
+      "sourceNumber": "",
+      "sourceAnchor": "",
+      "kind": "example-or-exercise",
+      "context": "A disjunction is a logical inclusive or statement. Which means that a disjunction is true if one or both statements that make it are true. The only way a logical inclusive or statement is false is if both statements that make up the disjunction are false.\n\nLogic Part 4: Truth Values of Compound Statements with \"and\", \"or\", and \"not\"\n\nLogic Part 5: What are truth tables? How do you set them up?",
+      "original": "Your Turn  \\(\\PageIndex{5}\\)\n\nConstruct a truth table to analyze all possible outcomes for each of the following arguments.\n\n1. \\(p \\wedge \\sim q\\)\n\n2. \\(\\sim(p \\vee q)\\)\n\n3. \\((p \\wedge \\sim q) \\vee r\\)",
+      "prompt": "Your Turn  \\(\\PageIndex{5}\\)\n\nConstruct a truth table to analyze all possible outcomes for each of the following arguments.\n\n1. \\(p \\wedge \\sim q\\)\n\n2. \\(\\sim(p \\vee q)\\)\n\n3. \\((p \\wedge \\sim q) \\vee r\\)",
+      "sourceAnswers": [],
+      "hasFigure": false,
+      "status": "draft",
+      "answerVerified": false,
+      "translationStatus": "pending",
+      "mappingStatus": "pending"
+    },
+    {
+      "ordinal": 14,
+      "sourceNumber": "",
+      "sourceAnchor": "",
+      "kind": "exercise-candidate",
+      "context": "Determine the Validity of a Truth Table for a Compound Statement\n\nA logical statement is valid if it is always true regardless of the truth values of its component parts. To test the validity of a compound statement, construct a truth table to analyze all possible outcomes. If the last column, representing the complete statement, contains only true values, the statement is valid.",
+      "original": "Exercise \\(\\PageIndex{6}\\): Determining the Validity of Compound Statements\n\nConstruct a truth table to determine the validity of each of the following statements.\n\n1. \\(\\sim p \\wedge q\\)\n\n2. \\(\\sim(p \\wedge \\sim p)\\)\n\nAnswer\n\n1. Step 1: Because there are two statements, \\(p\\) and \\(q\\), and each of these has two possible outcomes, there will be \\(2(2)=4\\) rows in our table to represent all possible outcomes: TT, TF, \\(\\mathrm{FT}\\), and FF.\n\n    Step 2: The columns, will include \\(p, q, \\sim p\\) and \\(\\sim p \\wedge q\\). Every value in column \\(\\sim p\\) will have the opposite truth value of the corresponding value in column \\(p\\).\n\n    Step 3: To complete the last column, evaluate each element in column \\(\\sim p\\) with the corresponding element in column \\(q\\) using the connective and. The last column contains at least one false, therefore the statement \\(\\sim p \\wedge q\\) is not valid.\n\n                \\(p\\)\t\n                \\(q\\)\t\n                \\(\\sim p\\)\t\n                \\(\\sim \\boldsymbol{p} \\wedge \\boldsymbol{q}\\)\t\n\n                T\t\n                T\t\n                F\t\n                F\t\n\n                T\t\n                F\t\n                F\t\n                F\t\n\n                F\t\n                T\t\n                T\t\n                T\t\n\n                F\t\n                F\t\n                T\t\n                F\t\n\n2. Step 1: Because the statement \\(\\sim(p \\wedge \\sim p)\\) only contains one basic proposition, the truth table will only contain two rows. Statement \\(p\\) may be either true or false.\n\n    Step 2: The columns will include \\(p, \\sim p, p \\wedge \\sim p\\), and \\(\\sim(p \\wedge \\sim p)\\). Evaluate column \\(p \\wedge \\sim p\\) with the and connective, because the symbol \\(\\wedge\\) represents a conjunction or logical and statement. True and false is false, and false and true is also false.\n\n    Step 3: The final column is the negation of each entry in the third column, both of which are false, so the negation of false is true. Because all the truth values in the final column are true, the statement \\(\\sim(p \\wedge \\sim p)\\) is valid.\n\n[Figure: no alternative text in source]\n\\(p\\)\t\n                \\(\\sim p\\)\t\n                \\(p \\wedge \\sim p\\)\t\n                \\(\\sim(p \\wedge \\sim p)\\)\t\n\n                T\t\n                F\t\n                F\t\n                T\t\n\n                F\t\n                T\t\n                F\t\n                T",
+      "prompt": "Exercise \\(\\PageIndex{6}\\): Determining the Validity of Compound Statements\n\nConstruct a truth table to determine the validity of each of the following statements.\n\n1. \\(\\sim p \\wedge q\\)\n\n2. \\(\\sim(p \\wedge \\sim p)\\)",
+      "sourceAnswers": [
+        "1. Step 1: Because there are two statements, \\(p\\) and \\(q\\), and each of these has two possible outcomes, there will be \\(2(2)=4\\) rows in our table to represent all possible outcomes: TT, TF, \\(\\mathrm{FT}\\), and FF.\n\n    Step 2: The columns, will include \\(p, q, \\sim p\\) and \\(\\sim p \\wedge q\\). Every value in column \\(\\sim p\\) will have the opposite truth value of the corresponding value in column \\(p\\).\n\n    Step 3: To complete the last column, evaluate each element in column \\(\\sim p\\) with the corresponding element in column \\(q\\) using the connective and. The last column contains at least one false, therefore the statement \\(\\sim p \\wedge q\\) is not valid.\n\n                \\(p\\)\t\n                \\(q\\)\t\n                \\(\\sim p\\)\t\n                \\(\\sim \\boldsymbol{p} \\wedge \\boldsymbol{q}\\)\t\n\n                T\t\n                T\t\n                F\t\n                F\t\n\n                T\t\n                F\t\n                F\t\n                F\t\n\n                F\t\n                T\t\n                T\t\n                T\t\n\n                F\t\n                F\t\n                T\t\n                F\t\n\n2. Step 1: Because the statement \\(\\sim(p \\wedge \\sim p)\\) only contains one basic proposition, the truth table will only contain two rows. Statement \\(p\\) may be either true or false.\n\n    Step 2: The columns will include \\(p, \\sim p, p \\wedge \\sim p\\), and \\(\\sim(p \\wedge \\sim p)\\). Evaluate column \\(p \\wedge \\sim p\\) with the and connective, because the symbol \\(\\wedge\\) represents a conjunction or logical and statement. True and false is false, and false and true is also false.\n\n    Step 3: The final column is the negation of each entry in the third column, both of which are false, so the negation of false is true. Because all the truth values in the final column are true, the statement \\(\\sim(p \\wedge \\sim p)\\) is valid.\n\n[Figure: no alternative text in source]\n\\(p\\)\t\n                \\(\\sim p\\)\t\n                \\(p \\wedge \\sim p\\)\t\n                \\(\\sim(p \\wedge \\sim p)\\)\t\n\n                T\t\n                F\t\n                F\t\n                T\t\n\n                F\t\n                T\t\n                F\t\n                T"
+      ],
+      "hasFigure": true,
+      "status": "draft",
+      "answerVerified": false,
+      "translationStatus": "pending",
+      "mappingStatus": "pending"
+    },
+    {
+      "ordinal": 15,
+      "sourceNumber": "",
+      "sourceAnchor": "",
+      "kind": "example-or-exercise",
+      "context": "Determine the Validity of a Truth Table for a Compound Statement\n\nA logical statement is valid if it is always true regardless of the truth values of its component parts. To test the validity of a compound statement, construct a truth table to analyze all possible outcomes. If the last column, representing the complete statement, contains only true values, the statement is valid.",
+      "original": "Your Turn\\(\\PageIndex{6}\\)\n\nConstruct a truth table to determine the validity of each of the following statements.\n\n1. \\(p \\vee \\sim p\\)\n\n2. \\(\\sim p \\vee \\sim q\\)",
+      "prompt": "Your Turn\\(\\PageIndex{6}\\)\n\nConstruct a truth table to determine the validity of each of the following statements.\n\n1. \\(p \\vee \\sim p\\)\n\n2. \\(\\sim p \\vee \\sim q\\)",
+      "sourceAnswers": [],
+      "hasFigure": false,
+      "status": "draft",
+      "answerVerified": false,
+      "translationStatus": "pending",
+      "mappingStatus": "pending"
+    },
+    {
+      "ordinal": 16,
+      "sourceNumber": "1",
+      "sourceAnchor": "",
+      "kind": "exercise-candidate",
+      "context": "Check Your Understanding",
+      "original": "1. A logical argument is _____ if its conclusion follows from its premises.",
+      "prompt": "1. A logical argument is _____ if its conclusion follows from its premises.",
+      "sourceAnswers": [],
+      "hasFigure": false,
+      "status": "draft",
+      "answerVerified": false,
+      "translationStatus": "pending",
+      "mappingStatus": "pending"
+    },
+    {
+      "ordinal": 17,
+      "sourceNumber": "2",
+      "sourceAnchor": "",
+      "kind": "exercise-candidate",
+      "context": "Check Your Understanding",
+      "original": "2. A logical statement is valid if it is always _____.",
+      "prompt": "2. A logical statement is valid if it is always _____.",
+      "sourceAnswers": [],
+      "hasFigure": false,
+      "status": "draft",
+      "answerVerified": false,
+      "translationStatus": "pending",
+      "mappingStatus": "pending"
+    },
+    {
+      "ordinal": 18,
+      "sourceNumber": "3",
+      "sourceAnchor": "",
+      "kind": "exercise-candidate",
+      "context": "Check Your Understanding",
+      "original": "3. A _____ _____ is a tool used to analyze all the possible outcomes for a logical statement.",
+      "prompt": "3. A _____ _____ is a tool used to analyze all the possible outcomes for a logical statement.",
+      "sourceAnswers": [],
+      "hasFigure": false,
+      "status": "draft",
+      "answerVerified": false,
+      "translationStatus": "pending",
+      "mappingStatus": "pending"
+    },
+    {
+      "ordinal": 19,
+      "sourceNumber": "4",
+      "sourceAnchor": "",
+      "kind": "exercise-candidate",
+      "context": "Check Your Understanding",
+      "original": "4. The truth table for the conjunction, \\(p \\wedge q\\), has _____ rows of truth values.",
+      "prompt": "4. The truth table for the conjunction, \\(p \\wedge q\\), has _____ rows of truth values.",
+      "sourceAnswers": [],
+      "hasFigure": false,
+      "status": "draft",
+      "answerVerified": false,
+      "translationStatus": "pending",
+      "mappingStatus": "pending"
+    },
+    {
+      "ordinal": 20,
+      "sourceNumber": "5",
+      "sourceAnchor": "",
+      "kind": "exercise-candidate",
+      "context": "Check Your Understanding",
+      "original": "5. The truth table for the negation of a logical statement, \\(\\text{~}p\\), has _____ rows of truth values.",
+      "prompt": "5. The truth table for the negation of a logical statement, \\(\\text{~}p\\), has _____ rows of truth values.",
+      "sourceAnswers": [],
+      "hasFigure": false,
+      "status": "draft",
+      "answerVerified": false,
+      "translationStatus": "pending",
+      "mappingStatus": "pending"
+    }
+  ],
+  "license": "CC BY 4.0",
+  "licenseEvidence": "This page titled 2.3:  Constructing Truth Tables was last modified on Thu, 02 Jan 2025 11:07:44 GMT and is shared under a CC BY  4.0  license and was authored, remixed, and/or curated by OpenStax via source content that was edited to the style and standards of the LibreTexts platform.",
+  "url": "https://math.libretexts.org/Bookshelves/Applied_Mathematics/Contemporary_Mathematics_(OpenStax)/02:_Logic/2.03:__Constructing_Truth_Tables",
+  "sha256": "60ce5293d1a8a03919c8a6efcf45fb6f5966137d5ff31dfb30eded2690680174",
+  "checkedAt": "2026-10-07",
+  "id": "da0975ff9aa8b7354d9f",
+  "bookId": "contemporary",
+  "licenseInherited": false,
+  "licenseSource": "https://math.libretexts.org/Bookshelves/Applied_Mathematics/Contemporary_Mathematics_(OpenStax)/02:_Logic/2.03:__Constructing_Truth_Tables",
+  "licenseUrl": "https://creativecommons.org/licenses/by/4.0/",
+  "authors": "OpenStax / Donna Kirk et al.",
+  "book": "Contemporary Mathematics",
+  "reviewStatus": "unreviewed",
+  "sourceLanguage": "en",
+  "translationStatus": "pending"
+}

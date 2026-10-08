@@ -1,0 +1,690 @@
+{
+  "title": "12.5: Binomial Theorem",
+  "originalText": "Learning Objectives\n\nBy the end of this section, you will be able to:\n\nUse Pascal’s Triangle to expand a binomial\n\nEvaluate a binomial coefficient\n\nUse the Binomial Theorem to expand a binomial\n\nBefore you get started, take this readiness quiz.\n\n1. Simplify: \\(\\frac{7 \\cdot 6 \\cdot 5 \\cdot 4}{4 \\cdot 3 \\cdot 2 \\cdot 1}\\).\n\n    If you missed this problem, review Example 1.25.\n\n2. Expand: \\((3 x+5)^{2}\\).\n\n    If you missed this problem, review Example 5.32.\n\n3. Expand: \\((x-y)^{2}\\).\n\n    If you missed this problem, review Example 5.32.\n\nUse Pascal's Triangle to Expand a Binomial\n\nIn our previous work, we have squared binomials either by using FOIL or by using the Binomial Squares Pattern. We can also say that we expanded \\((a+b)^{2}\\).\n\n\\((a+b)^{2}=a^{2}+2 a b+b^{2}\\)\n\nTo expand \\((a+b)^{3}\\), we recognize that this is \\((a+b)^{2}(a+b)\\) and multiply.\n\n\\((a+b)^{3}\\)\n\n\\((a+b)^{2}(a+b)\\)\n\n\\(\\left(a^{2}+2 a b+b^{2}\\right)(a+b)\\)\n\n\\(a^{3}+2 a^{2} b+a b^{2}+a^{2} b+2 a b^{2}+b^{3}\\)\n\n\\(a^{3}+3 a^{2} b+3 a b^{2}+b^{3}\\)\n\n\\((a+b)^{3}=a^{3}+3 a^{2} b+3 a b^{2}+b^{3}\\)\n\nTo find a method that is less tedious that will work for higher expansions like \\((a+b)^{7}\\), we again look for patterns in some expansions.\n\n            Number of Terms\t\n            First Term\t\n            Last Term\t\n\n            \\((a+b)^{1}=a+b\\)\t\n            \\(2\\)\t\n            \\(a^{1}\\)\t\n            \\(b^{1}\\)\t\n\n            \\((a+b)^{2}=a^{2}+2 a b+b^{2}\\)\t\n            \\(3\\)\t\n            \\(a^{2}\\)\t\n            \\(b^{2}\\)\t\n\n            \\((a+b)^{3}=a^{3}+3 a^{2} b+3 a b^{2}+b^{3}\\)\t\n            \\(4\\)\t\n            \\(a^{3}\\)\t\n            \\(b^{3}\\)\t\n\n            \\((a+b)^{4}=a^{4}+4 a^{3} b+6 a^{2} b^{2}+4 a b^{3}+b^{4}\\)\t\n            \\(5\\)\t\n            \\(a^{4}\\)\t\n            \\(b^{4}\\)\t\n\n            \\((a+b)^{5}=a^{5}+5 a^{4} b+10 a^{3} b^{2}+10 a^{2} b^{3}+5 a b^{4}+b^{5}\\)\t\n            \\(6\\)\t\n            \\(a^{5}\\)\t\n            \\(b^{5}\\)\t\n\n            \\((a+b)^{n}\\)\t\n            \\(n\\)\t\n            \\(a^{n}\\)\t\n            \\(b^{n}\\)\t\n\nTable 12.4.1\n\nNotice the first and last terms show only one variable. Recall that \\(a^{0}=1\\), so we could rewrite the first and last terms to include both variables. For example, we could expand \\((a+b)^{3}\\) to show each term with both variables.\n\n[Figure: This figure shows the pattern a plus b to the power of 3 equals a to a power of 3 times b to a power of 0 plus 3 times a to a power of 2 times b to a power of 1 plus 3 a to a power of 0 times b to a power of 3.]\n\nFigure 12.4.1\n\nGenerally, we don’t show the zero exponents, just as we usually write \\(x\\) rather than \\(1x\\).\n\nNote\n\nPatterns in the Expansion of \\((a+b)^{n}\\)\n\nThe number of terms is \\(n+1\\).\n\nThe first term is \\(a^{n}\\) and the last term is \\(b^{n}\\).\n\nThe exponents on \\(a\\) decrease by one on each term going left to right.\n\nThe exponents on \\(b\\) increase by one on each term going left to right.\n\nThe sum of the exponents on any term is \\(n\\).\n\nLet’s look at an example to highlight the last three patterns.\n\n[Figure: This figure shows the pattern a plus b to the power of 5 equals a plus 5 times a times b plus 10 times a times b plus 5 times a times b plus b.]\n\nFigure 12.4.2\n\nFrom the patterns we identified, we see the variables in the expansion of \\((a+b)^{n}\\), would be\n\n\\((a+b)^{n}=a^{n}+\\_\\_\\_a^{n-1}b^{1}+\\_\\_\\_a^{n-2}b^{2}+\\ldots+\\_\\_\\_a^{1}b^{n-1}+b^{n}\\).\n\nTo find the coefficients of the terms, we write our expansions again focusing on the coefficients. We rewrite the coefficients to the right forming an array of coefficients.\n\n[Figure: A plus b to the power of 0 equals 1. The top level of Pascal’s Triangle is 1. A plus b to the power of 1 equals 1 a plus 1 b. The second level of Pascal’s Triangle is 1, 1. A plus b to the power of 2 equals 1 a to the power of 2 plus 2 a b plus 1 b to the power of 2. The third level of Pascal’s Triangle is 1, 2, 1. A plus b to the power of 3 equals 1 a to the power of 3 plus 3 a to the power of 2 b plus 3 a b to the power of 2 plus 1 b to the power of 3. The fourth level of Pascal’s Triangle is 1,3,3,1. A plus b to the power of 4 equals 1 a to the power of 4 plus 4 a to the power of 3 b plus 6 a to the power of 2 b to the power of 2 plus 4 a b to the power of 3 plus 1 b to the power of 4. The fifth level of Pascal’s Triangle is 1, 4, 6, 4, 1. A plus b to the power of 5 equals 1 a to the power of 5 plus 5 a to the power of 4 b plus 10 a to the power of 3 b to the power of 2 plus 10 a to the power of 2 b to the power of 3. The sixth row of the Pascal’s Triangle is 1, 5, 10, 10, 5, 1.]\n\nFigure 12.4.3\n\nThe array to the right is called Pascal’s Triangle. Notice each number in the array is the sum of the two closest numbers in the row above. We can find the next row by starting and ending with one and then adding two adjacent numbers.\n\n[Figure: This figure shows Pascal’s Triangle. The first level is 1. The second level is 1, 1. The third level is 1, 2, 1. The fourth level is 1, 3, 3, 1. The fifth level is 1, 4, 6, 4, 1. The sixth level is 1, 5, 10, 10, 5, 1. The seventh level is 1, 6, 15, 20, 15, 6, 1.]\n\nFigure 12.4.4\n\nThis triangle gives the coefficients of the terms when we expand binomials.\n\nDefinition \\(\\PageIndex{1}\\)\n\nPascal's Triangle\n\n[Figure: This figure shows Pascal’s Triangle. The first level is 1. The second level is 1, 1. The third level is 1, 2, 1. The fourth level is 1, 3, 3, 1. The fifth level is 1, 4, 6, 4, 1. The sixth level is 1, 5, 10, 10, 5, 1. The seventh level is 1, 6, 15, 20, 15, 6, 1.]\n\nFigure 12.4.5\n\nIn the next example, we will use this triangle and the patterns we recognized to expand the binomial.\n\nExample \\(\\PageIndex{1}\\)\n\nUse Pascal's Triangle to expand \\((x+y)^{6}\\).\n\nSolution:\n\nWe know the variables for this expansion will follow the pattern we identified. The nonzero exponents of \\(x\\) will start at six and decrease to one. The nonzero exponents of \\(y\\) will start at one and increase to six. The sum of the exponents in each term will be six. In our pattern, \\(a=x\\) and \\(b=y\\).\n\n\\(\\begin{array}{l}{(a+b)^{n}=a^{n}+\\_\\_\\_a^{n-1} b^{1}+\\_\\_\\_a^{n-2} b^{2}+\\ldots+\\_\\_\\_a^{1}b^{n-1}+b^{n}} \\\\ {(x+y)^{6}=x^{6}+\\_\\_\\_x^{5} y^{1}+\\_\\_\\_x^{4} y^{2}+\\_\\_\\_x^{3} y^{3}+\\_\\_\\_x^{2} y^{4}+\\_\\_\\_x^{1} y^{5}+y^{6}}\\end{array}\\)\n\n[Figure: This figure shows a plus b to the power of n equals a to the power of n plus a to the power if n minus 1 b to the power of 1 plus a to the power of n minus 2 b to the power if 2 plus ellipsis plus a to the power of 1 b to the power of n minus 1 plus b to the power of n. The next figure shows x plus y to the power of 6 equals x to the power of 6 plus x to the power of 5 y to the power of 1 plus x to the power of 4 y to the power of 2 plus x to the power of 3 y to the power of 3 plus x to the power of 2 y to the power of 4 plus x to the power of 1 y to the power of 5 plus y to the power of 6.]\n\nFigure 12.4.6\n\nExercise \\(\\PageIndex{1}\\)\n\nUse Pascal’s Triangle to expand \\((x+y)^{5}\\).\n\nAnswer\n\n\\(\\begin{array}{l}{x^{5}+5 x^{4} y+10 x^{3} y^{2}+10 x^{2} y^{3}} {+5 x y^{4}+y^{5}}\\end{array}\\)\n\nExercise \\(\\PageIndex{2}\\)\n\nUse Pascal’s Triangle to expand \\((p+q)^{7}\\).\n\nAnswer\n\n\\(\\begin{array}{c}{p^{7}+7 p^{6} q+21 p^{5} q^{2}+35 p^{4} q^{3}} {+35 p^{3} q^{4}+21 p^{2} q^{5}+7 p q^{6}+q^{7}}\\end{array}\\)\n\nIn the next example we want to expand a binomial with one variable and one constant. We need to identify the \\(a\\) and \\(b\\) to carefully apply the pattern.\n\nExample \\(\\PageIndex{2}\\)\n\nUse Pascal’s Triangle to expand \\((x+3)^{5}\\).\n\nSolution:\n\nWe identify the \\(a\\) and \\(b\\) of the pattern.\n\n[Figure: This figure shows how we identify a plus b to the power of n, in the pattern x plus 3 to the power of 5.]\n\nFigure 12.4.7\n\nIn our pattern, \\(a=x\\) and \\(b=3\\).\n\nWe know the variables for this expansion will follow the pattern we identified. The sum of the exponents in each term will be five.\n\n\\((a+b)^{n}=a^{n}+\\_\\_\\_a^{n-1}b^{1}+\\_\\_\\_a^{n-2}b^{2}+\\ldots+\\_\\_\\_a^{1}b^{n-1}+b^{n} \\)\n\n\\((x+3)^{5}=x^{5}+\\_\\_\\_x^{4}\\cdot3^{1}+\\_\\_\\_x^{3}\\cdot3^{2}+\\_\\_\\_x^{2}\\cdot3^{3}+\\_\\_\\_x^{1}\\cdot3^{4}+3^{5}\\)\n\n[Figure: This figure shows Pascal’s Triangle. The first level is 1. The second level is 1, 1. The third level is 1, 2, 1. The fourth level is 1, 3, 3, 1. The fifth level is 1, 4, 6, 4, 1. The sixth level is 1, 5, 10, 10, 5, 1. The seventh level is 1, 6, 15, 20, 15, 6, 1. This figure shows X plus 3 to the power of 5 equals 1 x to the power of 5 g 3 x to the power of 4 plus 10 g 9 x to the power of 3 plus 10 g 27 x to the power of 2 plus 5 g 81 x to the power of 1 plus 1 g 243. Then, x plus 3 to the power of 5 equals x to the power of 5 plus 15 x to the power of 4 plus 90 x to the power of 3 plus 270 x to the power of 2 plus 405 plus 243.]\n\nFigure 12.4.8\n\nExercise \\(\\PageIndex{3}\\)\n\nUse Pascal's Triangle to expand \\((x+2)^{4}\\).\n\nAnswer\n\n\\(x^{4}+8 x^{3}+24 x^{2}+32 x+16\\)\n\nExercise \\(\\PageIndex{4}\\)\n\nUse Pascal's Triangle to expand \\((x+1)^{6}\\).\n\nAnswer\n\n\\(\\begin{array}{l}{x^{6}+6 x^{5}+15 x^{4}+20 x^{3}+15 x^{2}} {+6 x+1}\\end{array}\\)\n\nIn the next example, the binomial is a difference and the first term has a constant times the variable. Once we identify the \\(a\\) and \\(b\\) of the pattern, we must once again carefully apply the pattern.\n\nExample \\(\\PageIndex{3}\\)\n\nUse Pascal's Triangle to expand \\((3x-2)^{4}\\).\n\nSolution:\n\nWe identify the \\(a\\) and \\(b\\) of the pattern.\n\n[Figure: This figure shows how we identify a plus b to the power of n, in the pattern 3 x minus 2 to the power of 4.]\n\nFigure 12.4.9\n\nIn our pattern, \\(a=3x\\) and \\(b=-2\\).\n\n[Figure: This figure shows Pascal’s Triangle. The first level is 1. The second level is 1, 1. The third level is 1, 2, 1. The fourth level is 1, 3, 3, 1. The fifth level is 1, 4, 6, 4, 1. The sixth level is 1, 5, 10, 10, 5, 1. The seventh level is 1, 6, 15, 20, 15, 6, 1.]\n\nFigure 12.4.10\n\n\\((a+b)^{n}=a^{n}+\\_\\_\\_a^{n-1}b^{1}+\\_\\_\\_a^{n-2}b^{2}+\\ldots+\\_\\_\\_a^{1}b^{n-1}+b^{n} \\)\n\n\\((3 x-2 )^{4}=1 \\cdot\\left(\\stackrel{3}{x}+4(3 x)^{3}(-2)^{1}+6(3 x)^{2}(-2)^{2}+4(3 x)^{1}(-2)^{3}+1 \\cdot(-2)^{4}\\right.\\)\n\n\\((3 x-2)^{4}=81 x^{4}+4\\left(27 x^{3}\\right)(-2)+6\\left(9 x^{2}\\right)(4)+4(3 x)(-8)+1 \\cdot 16\\)\n\n\\((3 x-2 )^{4}=81 x^{4}-216 x^{3}+216 x^{2}-96 x+16\\)\n\nExercise \\(\\PageIndex{5}\\)\n\nUse Pascal's Triangle to expand \\((2x-3)^{4}\\).\n\nAnswer\n\n\\(16 x^{4}-96 x^{3}+216 x^{2}-216 x+81\\)\n\nExercise \\(\\PageIndex{6}\\)\n\nUse Pascal's Triangle to expand \\((2x-1)^{6}\\).\n\nAnswer\n\n\\(\\begin{array}{l}{64 x^{6}-192 x^{5}+240 x^{4}-160 x^{3}} {+60 x^{2}-12 x+1}\\end{array}\\)\n\nEvaluate a Binomial Coefficient\n\nWhile Pascal’s Triangle is one method to expand a binomial, we will also look at another method. Before we get to that, we need to introduce some more factorial notation. This notation is not only used to expand binomials, but also in the study and use of probability.\n\nTo find the coefficients of the terms of expanded binomials, we will need to be able to evaluate the notation \\(\\left( \\begin{array}{l}{n} \\\\ {r}\\end{array}\\right)\\) which is called a binomial coefficient. We read \\(\\left( \\begin{array}{l}{n} \\\\ {r}\\end{array}\\right)\\) as “\\(n\\) choose \\(r\\)” or “\\(n\\) taken \\(r\\) at a time”.\n\nDefinition \\(\\PageIndex{1}\\)\n\nA binomial coefficient \\(\\left( \\begin{array}{l}{n} \\\\ {r}\\end{array}\\right)\\), where \\(r\\) and \\(b\\) are integers with \\(0 \\leq r \\leq n\\), is defined as\n\n\\(\\left( \\begin{array}{l}{n} \\\\ {r}\\end{array}\\right)=\\frac{n !}{r !(n-r) !}\\)\n\nWe read \\(\\left( \\begin{array}{l}{n} \\\\ {r}\\end{array}\\right)\\) as \"\\(n\\) choose \\(r\\)\" or \"\\(n\\) taken \\(r\\) at a time.\"\n\nExample \\(\\PageIndex{4}\\)\n\nEvaluate:\n\n1. \\(\\left( \\begin{array}{l}{5} \\\\ {1}\\end{array}\\right)\\)\n\n2. \\(\\left( \\begin{array}{l}{7} \\\\ {7}\\end{array}\\right)\\)\n\n3. \\(\\left( \\begin{array}{l}{4} \\\\ {0}\\end{array}\\right)\\)\n\n4. \\(\\left( \\begin{array}{l}{8} \\\\ {5}\\end{array}\\right)\\)\n\nSolution:\n\na. We will use the definition of a binomial coefficient,\n\n\\(\\left( \\begin{array}{l}{n} \\\\ {r}\\end{array}\\right)=\\frac{n !}{r !(n-r) !}\\)\n\n\\(\\left( \\begin{array}{l}{5} \\\\ {1}\\end{array}\\right)\\)\n\nUse the definition, \\(\\left( \\stackrel{5}{1}\\right)=\\frac{n !}{r !(n-r) !}\\), where \\(n=5, r=1\\).\n\n\\(\\frac{5 !}{1 !(5-1) !}\\)\n\nSimplify.\n\n\\(\\frac{5 !}{1 !(4) !}\\)\n\nRewrite \\(5!\\) as \\(5\\cdot 4!\\)\n\n\\(\\frac{5 \\cdot 4 !}{1 ! \\cdot 4 !}\\)\n\nSimplify, by removing common factors.\n\n\\(\\frac{5\\cdot \\cancel{4 !}}{1 ! \\cdot \\cancel{4 !}}\\)\n\nSimplify.\n\n\\(5\\)\n\n\\(\\left( \\begin{array}{l}{5} \\\\ {1}\\end{array}\\right)=5\\)\n\nb. \\(\\left( \\begin{array}{l}{7} \\\\ {7}\\end{array}\\right)\\)\n\nUse the definition, \\(\\left( \\stackrel{5}{1}\\right)=\\frac{n !}{r !(n-r) !}\\), where \\(n=7, r=7\\).\n\n\\(\\frac{7 !}{7 !(7-7) !}\\)\n\nSimplify.\n\n\\(\\frac{7 !}{7 !(0) !}\\)\n\nSimplify. Remember \\(0!=1\\).\n\n\\(1\\)\n\n\\(\\left( \\begin{array}{l}{7} \\\\ {7}\\end{array}\\right)=1\\)\n\nc. \\(\\left( \\begin{array}{l}{4} \\\\ {0}\\end{array}\\right)\\)\n\nUse the definition, \\(\\left( \\stackrel{5}{1}\\right)=\\frac{n !}{r !(n-r) !}\\), where \\(n=4, r=0\\).\n\n\\(\\frac{4 !}{0 !(4-0) !}\\)\n\nSimplify.\n\n\\(\\frac{4 !}{0 !(4) !}\\)\n\nSimplify.\n\n\\(1\\)\n\n\\(\\left( \\begin{array}{l}{4} \\\\ {0}\\end{array}\\right)=1\\)\n\nd. \\(\\left( \\begin{array}{l}{8} \\\\ {5}\\end{array}\\right)\\)\n\nUse the definition, \\(\\left( \\stackrel{5}{1}\\right)=\\frac{n !}{r !(n-r) !}\\), where \\(n=8, r=5\\).\n\n\\(\\frac{8 !}{5 !(8-5) !}\\)\n\nSimplify.\n\n\\(\\frac{8 !}{5 !(3) !}\\)\n\nRewrite \\(8!\\) as \\(8\\cdot 7\\cdot 6\\cdot 5!\\) and remove common factors.\n\n\\(\\frac{8\\cdot7\\cdot\\cancel{6}\\cdot\\cancel{5!}}{\\cancel{5!}\\cdot\\cancel{3}\\cdot\\cancel{2}\\cdot1}\\)\n\nSimplify.\n\n\\(56\\)\n\n\\(\\left( \\begin{array}{l}{8} \\\\ {5}\\end{array}\\right)=56\\)\n\nExercise \\(\\PageIndex{7}\\)\n\nEvaluate each binomial coefficient:\n\n1. \\(\\left( \\begin{array}{l}{6} \\\\ {1}\\end{array}\\right)\\)\n\n2. \\(\\left( \\begin{array}{l}{8} \\\\ {8}\\end{array}\\right)\\)\n\n3. \\(\\left( \\begin{array}{l}{5} \\\\ {0}\\end{array}\\right)\\)\n\n4. \\(\\left( \\begin{array}{l}{7} \\\\ {3}\\end{array}\\right)\\)\n\nAnswer\n\n1. \\(6\\)\n\n2. \\(1\\)\n\n3. \\(1\\)\n\n4. \\(35\\)\n\nExercise \\(\\PageIndex{8}\\)\n\nEvaluate each binomial coefficient:\n\n1. \\(\\left( \\begin{array}{l}{2} \\\\ {1}\\end{array}\\right)\\)\n\n2. \\(\\left( \\begin{array}{l}{11} \\\\ {11}\\end{array}\\right)\\)\n\n3. \\(\\left( \\begin{array}{l}{9} \\\\ {0}\\end{array}\\right)\\)\n\n4. \\(\\left( \\begin{array}{l}{6} \\\\ {5}\\end{array}\\right)\\)\n\nAnswer\n\n1. \\(2\\)\n\n2. \\(1\\)\n\n3. \\(1\\)\n\n4. \\(6\\)\n\nIn the previous example, \\((a)\\), \\((b)\\), \\((c)\\) demonstrate some special properties of binomial coefficients.\n\nDefinition \\(\\PageIndex{2}\\)\n\nProperties of Binomial Coefficients\n\n\\(\\left( \\begin{array}{l}{n} \\\\ {1}\\end{array}\\right)=n \\quad \\left( \\begin{array}{l}{n} \\\\ {n}\\end{array}\\right)=1 \\quad \\left( \\begin{array}{l}{n} \\\\ {0}\\end{array}\\right)=1\\)\n\nUse the Binomial Theorem to Expand a Binomial\n\nWe are now ready to use the alternate method of expanding binomials. The Binomial Theorem uses the same pattern for the variables, but uses the binomial coefficient for the coefficient of each term.\n\nDefinition \\(\\PageIndex{3}\\)\n\nBinomial Theorem\n\nFor any real numbers \\(a\\) and \\(b\\), and positive integer \\(n\\),\n\n\\((a+b)^{n}=\\left( \\begin{array}{c}{n} \\\\ {0}\\end{array}\\right) a^{n}+\\left( \\begin{array}{c}{n} \\\\ {1}\\end{array}\\right) a^{n-1} b^{1}+\\left( \\begin{array}{c}{n} \\\\ {2}\\end{array}\\right) a^{n-2} b^{2}+\\ldots+\\left( \\begin{array}{c}{n} \\\\ {r}\\end{array}\\right) a^{n-r} b^{r}+\\ldots+\\left( \\begin{array}{c}{n} \\\\ {n}\\end{array}\\right) b^{n}\\)\n\nExample \\(\\PageIndex{5}\\)\n\nUse the Binomial Theorem to expand \\((p+q)^{4}\\).\n\nSolution:\n\nWe identify the \\(a\\) and \\(b\\) of the pattern.\n\n[Figure: This figure shows how we identify a plus b to the power of n, in the pattern p plus q to the power of 4.]\n\nFigure 12.4.11\n\nIn our pattern, \\(a=p\\) and \\(b=q\\).\n\nWe use the Binomial Theorem.\n\n\\((a+b)^{n}=\\left( \\begin{array}{c}{n} \\\\ {0}\\end{array}\\right) a^{n}+\\left( \\begin{array}{c}{n} \\\\ {1}\\end{array}\\right) a^{n-1} b^{1}+\\left( \\begin{array}{c}{n} \\\\ {2}\\end{array}\\right) a^{n-2} b^{2}+\\ldots+\\left( \\begin{array}{c}{n} \\\\ {r}\\end{array}\\right) a^{n-r} b^{r}+\\ldots+\\left( \\begin{array}{c}{n} \\\\ {n}\\end{array}\\right) b^{n}\\)\n\nSubstitute in the values \\(a=p, b=q\\) and \\(n=4\\).\n\n\\((p+q)^{4}=\\left( \\begin{array}{c}{4} \\\\ {0}\\end{array}\\right) p^{4}+\\left( \\begin{array}{c}{4} \\\\ {1}\\end{array}\\right) p^{4-1} q^{1}+\\left( \\begin{array}{c}{4} \\\\ {2}\\end{array}\\right) p^{4-2} q^{2}+\\left( \\begin{array}{c}{4} \\\\ {3}\\end{array}\\right) p^{4-3} q^{3}+\\left( \\begin{array}{c}{4} \\\\ {4}\\end{array}\\right) q^{4}\\)\n\nSimplify the exponents.\n\n\\((p+q)^{4}=\\left( \\begin{array}{l}{4} \\\\ {0}\\end{array}\\right) p^{4}+\\left( \\begin{array}{c}{4} \\\\ {1}\\end{array}\\right) p^{3} q+\\left( \\begin{array}{c}{4} \\\\ {2}\\end{array}\\right) p^{2} q^{2}+\\left( \\begin{array}{c}{4} \\\\ {3}\\end{array}\\right) p q^{3}+\\left( \\begin{array}{c}{4} \\\\ {4}\\end{array}\\right) q^{4}\\)\n\nEvaluate the coefficients, remember, \\(\\left( \\begin{array}{l}{n} \\\\ {1}\\end{array}\\right)=n, \\left( \\begin{array}{l}{n} \\\\ {n}\\end{array}\\right)=1, \\left( \\begin{array}{l}{n} \\\\ {0}\\end{array}\\right)=1\\)\n\n\\((p+q)^{4}=1 p^{4}+4 p^{3} q^{1}+\\frac{4 !}{2 !(2) !} p^{2} q^{2}+\\frac{4 !}{3 !(4-3) !} p^{1} q^{3}+1 q^{4}\\)\n\n\\((p+q)^{4}=p^{4}+4 p^{3} q+6 p^{2} q^{2}+4 p q^{3}+q^{4}\\)\n\nExercise \\(\\PageIndex{9}\\)\n\nUse the Binomial Theorem to expand \\((x+y)^{5}\\).\n\nAnswer\n\n\\(\\begin{array}{l}{x^{5}+5 x^{4} y+10 x^{3} y^{2}+10 x^{2} y^{3}} {+5 x y^{4}+y^{5}}\\end{array}\\)\n\nExercise \\(\\PageIndex{10}\\)\n\nUse the Binomial Theorem to expand \\((m+n)^{6}\\).\n\nAnswer\n\n\\(\\begin{array}{l}{m^{6}+6 m^{5} n+15 m^{4} n^{2}+20 m^{3} n^{3}} {+15 m^{2} n^{4}+6 m n^{5}+n^{6}}\\end{array}\\)\n\nNotice that when we expanded \\((p+q)^{4}\\) in the last example, using the Binomial Theorem, we got the same coefficients we would get from using Pascal's Triangle.\n\n[Figure: The figure above is P plus q to the power of 4 equals 4 choose 0 times p to the power of 4 plus 4 choose 1 times p to the power of 3 q plus 4 choose 2 times p to the power of 2 q to the power of 2 plus 4 choose 3 times p q to the power of 3 plus 4 choose 4 times q to the power of 4. P plus q to the power of 4 equals p to the power of 4 p to the power of 3 q plus 6 p to the power of 2 q to the power of 2 plus 4 p q to the power of 3 plus q to the power of 4. This figure on the right shows Pascal’s Triangle. The first level is 1. The second level is 1, 1. The third level is 1, 2, 1. The fourth level is 1, 3, 3, 1. The fifth level is 1, 4, 6, 4, 1. The sixth level is 1, 5, 10, 10, 5, 1. The seventh level is 1, 6, 15, 20, 15, 6, 1.]\n\nFigure 12.4.12\n\nThe next example, the binomial is a difference. When the binomial is a difference, we must be careful in identifying the values we will use in the pattern.\n\nExample \\(\\PageIndex{6}\\)\n\nUse the Binomial Theorem to expand \\((x-2)^{5}\\).\n\nSolution:\n\nWe identify the \\(a\\) and \\(b\\) of the pattern.\n\n[Figure: This figure shows x minus 2 to the power of 5.]\n\nFigure 12.4.13\n\nIn our pattern, \\(a=x\\) and \\(b=-2\\).\n\nWe use the Binomial Theorem.\n\n\\((a+b)^{n}=\\left( \\begin{array}{c}{n} \\\\ {0}\\end{array}\\right) a^{n}+\\left( \\begin{array}{c}{n} \\\\ {1}\\end{array}\\right) a^{n-1} b^{1}+\\left( \\begin{array}{c}{n} \\\\ {2}\\end{array}\\right) a^{n-2} b^{2}+\\ldots+\\left( \\begin{array}{c}{n} \\\\ {r}\\end{array}\\right) a^{n-r} b^{r}+\\ldots+\\left( \\begin{array}{c}{n} \\\\ {n}\\end{array}\\right) b^{n}\\)\n\nSubstitute in the values \\(a=x, b=-2\\), and \\(n=5\\).\n\n\\((x-2)^{5}=\\left( \\begin{array}{l}{5} \\\\ {0}\\end{array}\\right) x^{5}+\\left( \\begin{array}{c}{5} \\\\ {1}\\end{array}\\right) x^{5-1}(-2)^{1}+\\left( \\begin{array}{c}{5} \\\\ {2}\\end{array}\\right) x^{5-2}(-2)^{2}+\\left( \\begin{array}{c}{5} \\\\ {3}\\end{array}\\right) x^{5-3}(-2)^{3}+\\left( \\begin{array}{c}{5} \\\\ {4}\\end{array}\\right) x^{5-4}(-2)^{4}+\\left( \\begin{array}{c}{5} \\\\ {5}\\end{array}\\right)(-2)^{5}\\)\n\nSimplify the coefficients. Remember, \\(\\left( \\begin{array}{l}{n} \\\\ {1}\\end{array}\\right)=n, \\left( \\begin{array}{l}{n} \\\\ {n}\\end{array}\\right)=1, \\left( \\begin{array}{l}{n} \\\\ {0}\\end{array}\\right)=1\\).\n\n\\((x-2)^{5}=\\left( \\begin{array}{l}{5} \\\\ {0}\\end{array}\\right) x^{5}+\\left( \\begin{array}{c}{5} \\\\ {1}\\end{array}\\right) x^{4}(-2)+\\left( \\begin{array}{c}{5} \\\\ {2}\\end{array}\\right) x^{3}(-2)^{2}+\\left( \\begin{array}{c}{5} \\\\ {3}\\end{array}\\right) x^{2}(-2)^{3}+\\left( \\begin{array}{c}{5} \\\\ {4}\\end{array}\\right) x(-2)^{4}+\\left( \\begin{array}{c}{5} \\\\ {5}\\end{array}\\right)(-2)^{5}\\)\n\n\\((x-2)^{5}=1 x^{5}+5(-2) x^{4}+\\frac{5 !}{2 ! \\cdot 3 !}(-2)^{2} x^{3}+\\frac{5 !}{3 ! 2 !}(-2)^{3} x^{2}+\\frac{5 !}{4 !1 !}(-2)^{4} x+1(-2)^{5}\\)\n\n\\((x-2)^{5}=x^{5}+5(-2) x^{4}+10 \\cdot 4 \\cdot x^{3}+10(-8) x^{2}+5 \\cdot 16 \\cdot x+1(-32)\\)\n\n\\((x-2)^{5}=x^{5}-10 x^{4}+40 x^{3}-80 x^{2}+80 x-32\\)\n\nExercise \\(\\PageIndex{11}\\)\n\nUse the Binomial Theorem to expand \\((x-3)^{5}\\).\n\nAnswer\n\n\\(\\begin{array}{l}{x^{5}-15 x^{4}+90 x^{3}-270 x^{2}} {+405 x-243}\\end{array}\\)\n\nExercise \\(\\PageIndex{12}\\)\n\nUse the Binomial Theorem to expand \\((y-1)^{6}\\).\n\nAnswer\n\n\\(\\begin{array}{l}{y^{6}-6 y^{5}+15 y^{4}-20 y^{3}+15 y^{2}} {-6 y+1}\\end{array}\\)\n\nThings can get messy when both terms have a coefficient and a variable.\n\nExample \\(\\PageIndex{7}\\)\n\nUse the Binomial Theorem to expand \\((2x-3y)^{4}\\).\n\nSolution:\n\nWe identify the \\(a\\) and \\(b\\) of the pattern.\n\n[Figure: This figure shows how we identify a plus b to the power of n, in the pattern 2 x minus 3 y times the power of 4.]\n\nFigure 12.4.14\n\nIn our pattern, \\(a=2x\\) and \\(b=-3y\\).\n\nWe use the Binomial Theorem.\n\n\\((a+b)^{n}=\\left( \\begin{array}{c}{n} \\\\ {0}\\end{array}\\right) a^{n}+\\left( \\begin{array}{c}{n} \\\\ {1}\\end{array}\\right) a^{n-1} b^{1}+\\left( \\begin{array}{c}{n} \\\\ {2}\\end{array}\\right) a^{n-2} b^{2}+\\ldots+\\left( \\begin{array}{c}{n} \\\\ {r}\\end{array}\\right) a^{n-r} b^{r}+\\ldots+\\left( \\begin{array}{c}{n} \\\\ {n}\\end{array}\\right) b^{n}\\)\n\nSubstitute in the values \\(a=2x, b=-3y\\) and \\(n=4\\).\n\n\\((2 x-3 y)^{4}=\\left( \\begin{array}{l}{4} \\\\ {0}\\end{array}\\right)(2 x)^{4}+\\left( \\begin{array}{c}{4} \\\\ {1}\\end{array}\\right)(2 x)^{4-1}(-3 y)^{1}+\\left( \\begin{array}{c}{4} \\\\ {2}\\end{array}\\right)(2 x)^{4-2}(-3 y)^{2}+\\left( \\begin{array}{c}{4} \\\\ {3}\\end{array}\\right)(2 x)^{4-3}(-3 y)^{3}+\\left( \\begin{array}{c}{4} \\\\ {4}\\end{array}\\right) (-3y)^{4}\\)\n\nSimplify the exponents.\n\n\\((2 x-3 y)^{4}=\\left( \\begin{array}{l}{4} \\\\ {0}\\end{array}\\right)(2 x)^{4}+\\left( \\begin{array}{c}{4} \\\\ {1}\\end{array}\\right)(2 x)^{3}(-3 y)^{1}+\\left( \\begin{array}{c}{4} \\\\ {2}\\end{array}\\right)(2 x)^{2}(-3 y)^{2}+\\left( \\begin{array}{c}{4} \\\\ {3}\\end{array}\\right)(2 x)^{1}(-3 y)^{3}+\\left( \\begin{array}{c}{4} \\\\ {4}\\end{array}\\right)(-3 y)^{4}\\)\n\nEvaluate the coefficients. Remember, \\(\\left( \\begin{array}{l}{n} \\\\ {1}\\end{array}\\right)=n, \\left( \\begin{array}{l}{n} \\\\ {n}\\end{array}\\right)=1, \\left( \\begin{array}{l}{n} \\\\ {0}\\end{array}\\right)=1\\)\n\n\\((2 x-3 y)^{4}=1(2 x)^{4}+4(2 x)^{3}(-3 y)^{1}+\\frac{4 !}{2 !(2 x) !}(2 x)^{2}+\\frac{4 !}{3 !(4-3) !}(2 x)^{3}(-3 y)^{3}+1(-3 y)^{4}\\)\n\n\\((2 x-3 y)^{4}=16 x^{4}+4 \\cdot 8 x^{3}(-3 y)+6\\left(4 x^{2}\\right)\\left(9 y^{2}\\right)+4(2 x)\\left(-27 y^{3}\\right)+81 y^{4}\\)\n\n\\((2 x-3 y)^{4}=16 x^{4}-96 x^{3} y+216 x^{2} y^{2}-216 x y^{3}+81 y^{4}\\)\n\nExercise \\(\\PageIndex{13}\\)\n\nUse the Binomial Theorem to expand \\((3x-2y)^{5}\\).\n\nAnswer\n\n\\(\\begin{array}{l}{243 x^{5}-810 x^{4} y+1080 x^{3} y^{2}} {-720 x^{2} y^{3}+240 x y^{4}-32 y^{5}}\\end{array}\\)\n\nExercise \\(\\PageIndex{14}\\)\n\nUse the Binomial Theorem to expand \\((4x-3y)^{4}\\).\n\nAnswer\n\n\\(\\begin{array}{l}{256 x^{4}-768 x^{3} y+864 x^{2} y^{2}} {-432 x y^{3}+81 y^{4}}\\end{array}\\)\n\nThe real beauty of the Binomial Theorem is that it gives a formula for any particular term of the expansion without having to compute the whole sum. Let’s look for a pattern in the Binomial Theorem.\n\n[Figure: This figure shows a plus b to the power of n equals n choose 0 times a to the power of n b to the power of 0 plus n choose 1 times a to the power of n minus 1 b to the 1 plus n choose 2 times a to the power of n minus 2 b to the power of 2 plus ellipsis plus n choose r times a to the power of n minus r plus ellipsis plus n choose n times b to the power of n.]\n\nFigure 12.4.15\n\nNotice, that in each case the exponent on the \\(b\\) is one less than the number of the term. The \\((r+1)^{st}\\) term is the term where the exponent of \\(b\\) is \\(r\\). So we can use the format of the \\((r+1)^{st}\\) term to find the value of a specific term.\n\nNote\n\nFind a Specific Term in a Binomial Expansion\n\nThe \\((r+1)^{s t}\\) term in the expansion of \\((a+b)^{n}\\) is\n\n\\(\\left( \\begin{array}{l}{n} \\\\ {r}\\end{array}\\right) a^{n-r} b^{r}\\)\n\nExample \\(\\PageIndex{8}\\)\n\nFind the fourth term of \\((x+y)^{7}\\).\n\nSolution:\n\n            In our pattern, \\(n=7, a=x\\) and \\(b=y\\).\t\n\n[Figure: .]\n\nWe are looking for the fourth term.\n\nSince \\(r+1=4\\), then \\(r=3\\).\n\n            Write the formula\t\n\n[Figure: .]\n\n            Substitute in the values, \\(n=7, r=3, a=x\\), and \\(b=y\\).\t\n\n[Figure: .]\n\n[Figure: .]\n\n[Figure: .]\n\n            Simplify.\t\n\n[Figure: .]\n\n            Simplify.\t\n\n[Figure: .]\n\nTable 12.4.1\n\nExercise \\(\\PageIndex{15}\\)\n\nFind the third term of \\((x+y)^{6}\\).\n\nAnswer\n\n\\(15x^{4}y^{2}\\)\n\nExercise \\(\\PageIndex{16}\\)\n\nFind the fifth term of \\((a+b)^{8}\\).\n\nAnswer\n\n\\(8ab^{7}\\)\n\nExample \\(\\PageIndex{9}\\)\n\nFind the coefficient of the \\(x^{6}\\) term of \\((x+3)^{9}\\).\n\nSolution:\n\n            In our pattern, then \\(n=9, a=x\\), and \\(b=3\\).\t\n\n[Figure: .]\n\nFigure 12.4.23\n\n            We are looking for the coefficient of the \\(x^{6}\\) term. Since \\(a=x\\), and \\(x^{9-r}=x^{6}\\), we know \\(r=3\\).\t\n\n            Write the formula.\t\n\n[Figure: .]\n\nFigure 12.4.24\n\n            Substitute in the values, \\(n=9, 4=3, a=x\\), and \\(b=3\\).\t\n\n[Figure: .]\n\nFigure 12.4.25\n\n[Figure: .]\n\nFigure 12.4.26\n\n[Figure: .]\n\nFigure 12.4.27\n\n            Simplify.\t\n\n[Figure: .]\n\nFigure 12.4.28\n\n            Simplify.\t\n\n[Figure: .]\n\nFigure 12.4.29\n\n            Simplify.\t\n\n[Figure: .]\n\nFigure 12.4.30\n\nTable 12.4.2\n\nExercise \\(\\PageIndex{17}\\)\n\nFind the coefficient of the \\(x^{5}\\) term of \\((x+4)^{8}\\).\n\nAnswer\n\n\\(7,168\\)\n\nExercise \\(\\PageIndex{18}\\)\n\nFind the coefficient of the \\(x^{4}\\) term of \\((x+2)^{7}\\).\n\nAnswer\n\n\\(280\\)\n\nAccess these online resources for additional instruction and practice with sequences.\n\nBinomial Expansion Using Pascal’s Triangle\n\nBinomial Coefficients\n\nKey Concepts\n\nPatterns in the expansion of \\((a+b)^{n}\\(\n\nThe number of terms is \\(n+1\\).\n\nThe first term is \\(a^{n}\\) and the last term is \\(b^{n}\\).\n\nThe exponents on \\(a\\) decrease by one on each term going left to right.\n\nThe exponents on \\(b\\) increase by one on each term going left to right.\n\nThe sum of the exponents on any term is \\(n\\).\n\nPascal’s Triangle\n\n[Figure: This figure shows Pascal’s Triangle. The first level is 1. The second level is 1, 1. The third level is 1, 2, 1. The fourth level is 1, 3, 3, 1. The fifth level is 1, 4, 6, 4, 1. The sixth level is 1, 5, 10, 10, 5, 1. The seventh level is 1, 6, 15, 20, 15, 6, 1]\n\nFigure 12.4.31\n\nBinomial Coefficient \\(\\left( \\begin{array}{l}{\\mathbf{n}} \\\\ {\\mathbf{r}}\\end{array}\\right)\\) : A binomial coefficient \\(\\left( \\begin{array}{l}{\\mathbf{n}} \\\\ {\\mathbf{r}}\\end{array}\\right)\\), where \\(r\\) and \\(n\\) are integers with \\(0≤r≤n\\), is defined as\n\n\\(\\left( \\begin{array}{l}{n} \\\\ {r}\\end{array}\\right)=\\frac{n !}{r !(n-r) !}\\)\n\nWe read \\(\\left( \\begin{array}{l}{n} \\\\ {r}\\end{array}\\right)\\) as “\\(n\\) choose \\(r\\)” or “\\(n\\) taken \\(r\\) at a time”.\n\nProperties of Binomial Coefficients\n\n\\(\\left( \\begin{array}{l}{n} \\\\ {1}\\end{array}\\right)=n \\quad \\left( \\begin{array}{l}{n} \\\\ {n}\\end{array}\\right)=1 \\quad \\left( \\begin{array}{l}{n} \\\\ {0}\\end{array}\\right)=1\\)\n\nBinomial Theorem:\n\nFor any real numbers \\(a\\), \\(b\\), and positive integer \\(n\\),\n\n\\((a+b)^{n}=\\left( \\begin{array}{c}{n} \\\\ {0}\\end{array}\\right) a^{n}+\\left( \\begin{array}{c}{n} \\\\ {1}\\end{array}\\right) a^{n-1} b^{1}+\\left( \\begin{array}{c}{n} \\\\ {2}\\end{array}\\right) a^{n-2} b^{2}+\\ldots+\\left( \\begin{array}{c}{n} \\\\ {r}\\end{array}\\right) a^{n-r} b^{r}+\\ldots+\\left( \\begin{array}{c}{n} \\\\ {n}\\end{array}\\right) b^{n}\\)\n\nThis page titled 12.5: Binomial Theorem was last modified on Mon, 14 Feb 2022 01:05:24 GMT and is shared under a CC BY  4.0  license and was authored, remixed, and/or curated by OpenStax via source content that was edited to the style and standards of the LibreTexts platform.",
+  "figures": [
+    {
+      "url": "https://math.libretexts.org/@api/deki/files/20996/08a77ac7e71b8e3f436d5c16c005029c1535392d?revision=1",
+      "alt": "This figure shows the pattern a plus b to the power of 3 equals a to a power of 3 times b to a power of 0 plus 3 times a to a power of 2 times b to a power of 1 plus 3 a to a power of 0 times b to a power of 3.",
+      "credit": ""
+    },
+    {
+      "url": "https://math.libretexts.org/@api/deki/files/21072/ee5ebf0eb4a477b4bfb744ae120d31d163e323bf?revision=1",
+      "alt": "This figure shows the pattern a plus b to the power of 5 equals a plus 5 times a times b plus 10 times a times b plus 5 times a times b plus b.",
+      "credit": ""
+    },
+    {
+      "url": "https://math.libretexts.org/@api/deki/files/21026/c8a055d13904ba180ddf9e30ee39023fba8929eb?revision=1",
+      "alt": "A plus b to the power of 0 equals 1. The top level of Pascal’s Triangle is 1. A plus b to the power of 1 equals 1 a plus 1 b. The second level of Pascal’s Triangle is 1, 1. A plus b to the power of 2 equals 1 a to the power of 2 plus 2 a b plus 1 b to the power of 2. The third level of Pascal’s Triangle is 1, 2, 1. A plus b to the power of 3 equals 1 a to the power of 3 plus 3 a to the power of 2 b plus 3 a b to the power of 2 plus 1 b to the power of 3. The fourth level of Pascal’s Triangle is 1,3,3,1. A plus b to the power of 4 equals 1 a to the power of 4 plus 4 a to the power of 3 b plus 6 a to the power of 2 b to the power of 2 plus 4 a b to the power of 3 plus 1 b to the power of 4. The fifth level of Pascal’s Triangle is 1, 4, 6, 4, 1. A plus b to the power of 5 equals 1 a to the power of 5 plus 5 a to the power of 4 b plus 10 a to the power of 3 b to the power of 2 plus 10 a to the power of 2 b to the power of 3. The sixth row of the Pascal’s Triangle is 1, 5, 10, 10, 5, 1.",
+      "credit": ""
+    },
+    {
+      "url": "https://math.libretexts.org/@api/deki/files/21069/fe5088452ca51e42553e256d7259808df2e52240?revision=1",
+      "alt": "This figure shows Pascal’s Triangle. The first level is 1. The second level is 1, 1. The third level is 1, 2, 1. The fourth level is 1, 3, 3, 1. The fifth level is 1, 4, 6, 4, 1. The sixth level is 1, 5, 10, 10, 5, 1. The seventh level is 1, 6, 15, 20, 15, 6, 1.",
+      "credit": ""
+    },
+    {
+      "url": "https://math.libretexts.org/@api/deki/files/21067/60790d2452c32da058844c6056dddc0173c09083?revision=1",
+      "alt": "This figure shows Pascal’s Triangle. The first level is 1. The second level is 1, 1. The third level is 1, 2, 1. The fourth level is 1, 3, 3, 1. The fifth level is 1, 4, 6, 4, 1. The sixth level is 1, 5, 10, 10, 5, 1. The seventh level is 1, 6, 15, 20, 15, 6, 1.",
+      "credit": ""
+    },
+    {
+      "url": "https://math.libretexts.org/@api/deki/files/21017/CNX_IntAlg_Figure_12_04_004_img.jpg?revision=1",
+      "alt": "This figure shows a plus b to the power of n equals a to the power of n plus a to the power if n minus 1 b to the power of 1 plus a to the power of n minus 2 b to the power if 2 plus ellipsis plus a to the power of 1 b to the power of n minus 1 plus b to the power of n. The next figure shows x plus y to the power of 6 equals x to the power of 6 plus x to the power of 5 y to the power of 1 plus x to the power of 4 y to the power of 2 plus x to the power of 3 y to the power of 3 plus x to the power of 2 y to the power of 4 plus x to the power of 1 y to the power of 5 plus y to the power of 6.",
+      "credit": ""
+    },
+    {
+      "url": "https://math.libretexts.org/@api/deki/files/21018/CNX_IntAlg_Figure_12_04_005_img.jpg?revision=1",
+      "alt": "This figure shows how we identify a plus b to the power of n, in the pattern x plus 3 to the power of 5.",
+      "credit": ""
+    },
+    {
+      "url": "https://math.libretexts.org/@api/deki/files/21070/CNX_IntAlg_Figure_12_04_006_img.jpg?revision=1",
+      "alt": "This figure shows Pascal’s Triangle. The first level is 1. The second level is 1, 1. The third level is 1, 2, 1. The fourth level is 1, 3, 3, 1. The fifth level is 1, 4, 6, 4, 1. The sixth level is 1, 5, 10, 10, 5, 1. The seventh level is 1, 6, 15, 20, 15, 6, 1. This figure shows X plus 3 to the power of 5 equals 1 x to the power of 5 g 3 x to the power of 4 plus 10 g 9 x to the power of 3 plus 10 g 27 x to the power of 2 plus 5 g 81 x to the power of 1 plus 1 g 243. Then, x plus 3 to the power of 5 equals x to the power of 5 plus 15 x to the power of 4 plus 90 x to the power of 3 plus 270 x to the power of 2 plus 405 plus 243.",
+      "credit": ""
+    },
+    {
+      "url": "https://math.libretexts.org/@api/deki/files/21068/CNX_IntAlg_Figure_12_04_007_img.jpg?revision=1",
+      "alt": "This figure shows how we identify a plus b to the power of n, in the pattern 3 x minus 2 to the power of 4.",
+      "credit": ""
+    },
+    {
+      "url": "https://math.libretexts.org/@api/deki/files/21004/CNX_IntAlg_Figure_12_04_008_img.jpg?revision=1",
+      "alt": "This figure shows Pascal’s Triangle. The first level is 1. The second level is 1, 1. The third level is 1, 2, 1. The fourth level is 1, 3, 3, 1. The fifth level is 1, 4, 6, 4, 1. The sixth level is 1, 5, 10, 10, 5, 1. The seventh level is 1, 6, 15, 20, 15, 6, 1.",
+      "credit": ""
+    },
+    {
+      "url": "https://math.libretexts.org/@api/deki/files/21048/CNX_IntAlg_Figure_12_04_009_img.jpg?revision=1",
+      "alt": "This figure shows how we identify a plus b to the power of n, in the pattern p plus q to the power of 4.",
+      "credit": ""
+    },
+    {
+      "url": "https://math.libretexts.org/@api/deki/files/21064/CNX_IntAlg_Figure_12_04_014_img.jpg?revision=1",
+      "alt": "The figure above is P plus q to the power of 4 equals 4 choose 0 times p to the power of 4 plus 4 choose 1 times p to the power of 3 q plus 4 choose 2 times p to the power of 2 q to the power of 2 plus 4 choose 3 times p q to the power of 3 plus 4 choose 4 times q to the power of 4. P plus q to the power of 4 equals p to the power of 4 p to the power of 3 q plus 6 p to the power of 2 q to the power of 2 plus 4 p q to the power of 3 plus q to the power of 4. This figure on the right shows Pascal’s Triangle. The first level is 1. The second level is 1, 1. The third level is 1, 2, 1. The fourth level is 1, 3, 3, 1. The fifth level is 1, 4, 6, 4, 1. The sixth level is 1, 5, 10, 10, 5, 1. The seventh level is 1, 6, 15, 20, 15, 6, 1.",
+      "credit": ""
+    },
+    {
+      "url": "https://math.libretexts.org/@api/deki/files/21092/CNX_IntAlg_Figure_12_04_010_img.jpg?revision=1",
+      "alt": "This figure shows x minus 2 to the power of 5.",
+      "credit": ""
+    },
+    {
+      "url": "https://math.libretexts.org/@api/deki/files/21093/CNX_IntAlg_Figure_12_04_011_img.jpg?revision=1",
+      "alt": "This figure shows how we identify a plus b to the power of n, in the pattern 2 x minus 3 y times the power of 4.",
+      "credit": ""
+    },
+    {
+      "url": "https://math.libretexts.org/@api/deki/files/21149/CNX_IntAlg_Figure_12_04_015_img.jpg?revision=1",
+      "alt": "This figure shows a plus b to the power of n equals n choose 0 times a to the power of n b to the power of 0 plus n choose 1 times a to the power of n minus 1 b to the 1 plus n choose 2 times a to the power of n minus 2 b to the power of 2 plus ellipsis plus n choose r times a to the power of n minus r plus ellipsis plus n choose n times b to the power of n.",
+      "credit": ""
+    },
+    {
+      "url": "https://math.libretexts.org/@api/deki/files/21137/CNX_IntAlg_Figure_12_04_016b_img.jpg?revision=1",
+      "alt": ".",
+      "credit": ""
+    },
+    {
+      "url": "https://math.libretexts.org/@api/deki/files/21161/CNX_IntAlg_Figure_12_04_016c_img.jpg?revision=1",
+      "alt": ".",
+      "credit": ""
+    },
+    {
+      "url": "https://math.libretexts.org/@api/deki/files/21147/CNX_IntAlg_Figure_12_04_016d_img.jpg?revision=1",
+      "alt": ".",
+      "credit": ""
+    },
+    {
+      "url": "https://math.libretexts.org/@api/deki/files/21251/CNX_IntAlg_Figure_12_04_016a_img.jpg?revision=1",
+      "alt": ".",
+      "credit": ""
+    },
+    {
+      "url": "https://math.libretexts.org/@api/deki/files/21120/CNX_IntAlg_Figure_12_04_016e_img.jpg?revision=1",
+      "alt": ".",
+      "credit": ""
+    },
+    {
+      "url": "https://math.libretexts.org/@api/deki/files/21209/CNX_IntAlg_Figure_12_04_016f_img.jpg?revision=1",
+      "alt": ".",
+      "credit": ""
+    },
+    {
+      "url": "https://math.libretexts.org/@api/deki/files/21188/CNX_IntAlg_Figure_12_04_016g_img.jpg?revision=1",
+      "alt": ".",
+      "credit": ""
+    },
+    {
+      "url": "https://math.libretexts.org/@api/deki/files/21169/CNX_IntAlg_Figure_12_04_017b_img.jpg?revision=1",
+      "alt": ".",
+      "credit": ""
+    },
+    {
+      "url": "https://math.libretexts.org/@api/deki/files/21183/CNX_IntAlg_Figure_12_04_017c_img.jpg?revision=1",
+      "alt": ".",
+      "credit": ""
+    },
+    {
+      "url": "https://math.libretexts.org/@api/deki/files/21215/CNX_IntAlg_Figure_12_04_017d_img.jpg?revision=1",
+      "alt": ".",
+      "credit": ""
+    },
+    {
+      "url": "https://math.libretexts.org/@api/deki/files/21231/CNX_IntAlg_Figure_12_04_017a_img.jpg?revision=1",
+      "alt": ".",
+      "credit": ""
+    },
+    {
+      "url": "https://math.libretexts.org/@api/deki/files/21451/CNX_IntAlg_Figure_12_04_017e_img.jpg?revision=1",
+      "alt": ".",
+      "credit": ""
+    },
+    {
+      "url": "https://math.libretexts.org/@api/deki/files/21302/CNX_IntAlg_Figure_12_04_017f_img_new.jpg?revision=1",
+      "alt": ".",
+      "credit": ""
+    },
+    {
+      "url": "https://math.libretexts.org/@api/deki/files/21194/CNX_IntAlg_Figure_12_04_017g_img_new.jpg?revision=1",
+      "alt": ".",
+      "credit": ""
+    },
+    {
+      "url": "https://math.libretexts.org/@api/deki/files/21203/CNX_IntAlg_Figure_12_04_017h_img_new.jpg?revision=1",
+      "alt": ".",
+      "credit": ""
+    },
+    {
+      "url": "https://math.libretexts.org/@api/deki/files/21335/CNX_IntAlg_Figure_12_04_013_img.jpg?revision=1",
+      "alt": "This figure shows Pascal’s Triangle. The first level is 1. The second level is 1, 1. The third level is 1, 2, 1. The fourth level is 1, 3, 3, 1. The fifth level is 1, 4, 6, 4, 1. The sixth level is 1, 5, 10, 10, 5, 1. The seventh level is 1, 6, 15, 20, 15, 6, 1",
+      "credit": ""
+    }
+  ],
+  "references": [
+    {
+      "text": "Binomial Expansion Using Pascal’s Triangle",
+      "url": "https://openstax.org/l/37binexpanpastr"
+    },
+    {
+      "text": "Binomial Coefficients",
+      "url": "https://openstax.org/l/37binocoeffic"
+    },
+    {
+      "text": "12.5: Binomial Theorem",
+      "url": "https://math.libretexts.org/Bookshelves/Algebra/Intermediate_Algebra_1e_(OpenStax)/12%3A_Sequences_Series_and_Binomial_Theorem/12.05%3A_Binomial_Theorem"
+    },
+    {
+      "text": "CC BY  4.0",
+      "url": "https://creativecommons.org/licenses/by/4.0"
+    },
+    {
+      "text": "OpenStax",
+      "url": "https://openstax.org/"
+    },
+    {
+      "text": "source content",
+      "url": "https://openstax.org/details/books/intermediate-algebra-2e"
+    }
+  ],
+  "exercises": [
+    {
+      "ordinal": 1,
+      "sourceNumber": "1",
+      "sourceAnchor": "",
+      "kind": "exercise-candidate",
+      "context": "By the end of this section, you will be able to:\n\nBefore you get started, take this readiness quiz.",
+      "original": "1. Simplify: \\(\\frac{7 \\cdot 6 \\cdot 5 \\cdot 4}{4 \\cdot 3 \\cdot 2 \\cdot 1}\\).\n\n    If you missed this problem, review Example 1.25.",
+      "prompt": "1. Simplify: \\(\\frac{7 \\cdot 6 \\cdot 5 \\cdot 4}{4 \\cdot 3 \\cdot 2 \\cdot 1}\\).\n\n    If you missed this problem, review Example 1.25.",
+      "sourceAnswers": [],
+      "hasFigure": false,
+      "status": "draft",
+      "answerVerified": false,
+      "translationStatus": "pending",
+      "mappingStatus": "pending"
+    },
+    {
+      "ordinal": 2,
+      "sourceNumber": "2",
+      "sourceAnchor": "",
+      "kind": "exercise-candidate",
+      "context": "By the end of this section, you will be able to:\n\nBefore you get started, take this readiness quiz.",
+      "original": "2. Expand: \\((3 x+5)^{2}\\).\n\n    If you missed this problem, review Example 5.32.",
+      "prompt": "2. Expand: \\((3 x+5)^{2}\\).\n\n    If you missed this problem, review Example 5.32.",
+      "sourceAnswers": [],
+      "hasFigure": false,
+      "status": "draft",
+      "answerVerified": false,
+      "translationStatus": "pending",
+      "mappingStatus": "pending"
+    },
+    {
+      "ordinal": 3,
+      "sourceNumber": "3",
+      "sourceAnchor": "",
+      "kind": "exercise-candidate",
+      "context": "By the end of this section, you will be able to:\n\nBefore you get started, take this readiness quiz.",
+      "original": "3. Expand: \\((x-y)^{2}\\).\n\n    If you missed this problem, review Example 5.32.",
+      "prompt": "3. Expand: \\((x-y)^{2}\\).\n\n    If you missed this problem, review Example 5.32.",
+      "sourceAnswers": [],
+      "hasFigure": false,
+      "status": "draft",
+      "answerVerified": false,
+      "translationStatus": "pending",
+      "mappingStatus": "pending"
+    },
+    {
+      "ordinal": 4,
+      "sourceNumber": "",
+      "sourceAnchor": "",
+      "kind": "example-or-exercise",
+      "context": "This triangle gives the coefficients of the terms when we expand binomials.\n\nPascal's Triangle\n\nIn the next example, we will use this triangle and the patterns we recognized to expand the binomial.",
+      "original": "Example \\(\\PageIndex{1}\\)\n\nUse Pascal's Triangle to expand \\((x+y)^{6}\\).\n\nSolution:\n\nWe know the variables for this expansion will follow the pattern we identified. The nonzero exponents of \\(x\\) will start at six and decrease to one. The nonzero exponents of \\(y\\) will start at one and increase to six. The sum of the exponents in each term will be six. In our pattern, \\(a=x\\) and \\(b=y\\).\n\n\\(\\begin{array}{l}{(a+b)^{n}=a^{n}+\\_\\_\\_a^{n-1} b^{1}+\\_\\_\\_a^{n-2} b^{2}+\\ldots+\\_\\_\\_a^{1}b^{n-1}+b^{n}} \\\\ {(x+y)^{6}=x^{6}+\\_\\_\\_x^{5} y^{1}+\\_\\_\\_x^{4} y^{2}+\\_\\_\\_x^{3} y^{3}+\\_\\_\\_x^{2} y^{4}+\\_\\_\\_x^{1} y^{5}+y^{6}}\\end{array}\\)\n\n[Figure: This figure shows a plus b to the power of n equals a to the power of n plus a to the power if n minus 1 b to the power of 1 plus a to the power of n minus 2 b to the power if 2 plus ellipsis plus a to the power of 1 b to the power of n minus 1 plus b to the power of n. The next figure shows x plus y to the power of 6 equals x to the power of 6 plus x to the power of 5 y to the power of 1 plus x to the power of 4 y to the power of 2 plus x to the power of 3 y to the power of 3 plus x to the power of 2 y to the power of 4 plus x to the power of 1 y to the power of 5 plus y to the power of 6.]\n\nFigure 12.4.6",
+      "prompt": "Example \\(\\PageIndex{1}\\)\n\nUse Pascal's Triangle to expand \\((x+y)^{6}\\).\n\nSolution:\n\nWe know the variables for this expansion will follow the pattern we identified. The nonzero exponents of \\(x\\) will start at six and decrease to one. The nonzero exponents of \\(y\\) will start at one and increase to six. The sum of the exponents in each term will be six. In our pattern, \\(a=x\\) and \\(b=y\\).\n\n\\(\\begin{array}{l}{(a+b)^{n}=a^{n}+\\_\\_\\_a^{n-1} b^{1}+\\_\\_\\_a^{n-2} b^{2}+\\ldots+\\_\\_\\_a^{1}b^{n-1}+b^{n}} \\\\ {(x+y)^{6}=x^{6}+\\_\\_\\_x^{5} y^{1}+\\_\\_\\_x^{4} y^{2}+\\_\\_\\_x^{3} y^{3}+\\_\\_\\_x^{2} y^{4}+\\_\\_\\_x^{1} y^{5}+y^{6}}\\end{array}\\)\n\n[Figure: This figure shows a plus b to the power of n equals a to the power of n plus a to the power if n minus 1 b to the power of 1 plus a to the power of n minus 2 b to the power if 2 plus ellipsis plus a to the power of 1 b to the power of n minus 1 plus b to the power of n. The next figure shows x plus y to the power of 6 equals x to the power of 6 plus x to the power of 5 y to the power of 1 plus x to the power of 4 y to the power of 2 plus x to the power of 3 y to the power of 3 plus x to the power of 2 y to the power of 4 plus x to the power of 1 y to the power of 5 plus y to the power of 6.]\n\nFigure 12.4.6",
+      "sourceAnswers": [],
+      "hasFigure": true,
+      "status": "draft",
+      "answerVerified": false,
+      "translationStatus": "pending",
+      "mappingStatus": "pending"
+    },
+    {
+      "ordinal": 5,
+      "sourceNumber": "",
+      "sourceAnchor": "",
+      "kind": "exercise-candidate",
+      "context": "This triangle gives the coefficients of the terms when we expand binomials.\n\nPascal's Triangle\n\nIn the next example, we will use this triangle and the patterns we recognized to expand the binomial.",
+      "original": "Exercise \\(\\PageIndex{1}\\)\n\nUse Pascal’s Triangle to expand \\((x+y)^{5}\\).\n\nAnswer\n\n\\(\\begin{array}{l}{x^{5}+5 x^{4} y+10 x^{3} y^{2}+10 x^{2} y^{3}} {+5 x y^{4}+y^{5}}\\end{array}\\)",
+      "prompt": "Exercise \\(\\PageIndex{1}\\)\n\nUse Pascal’s Triangle to expand \\((x+y)^{5}\\).",
+      "sourceAnswers": [
+        "\\(\\begin{array}{l}{x^{5}+5 x^{4} y+10 x^{3} y^{2}+10 x^{2} y^{3}} {+5 x y^{4}+y^{5}}\\end{array}\\)"
+      ],
+      "hasFigure": false,
+      "status": "draft",
+      "answerVerified": false,
+      "translationStatus": "pending",
+      "mappingStatus": "pending"
+    },
+    {
+      "ordinal": 6,
+      "sourceNumber": "",
+      "sourceAnchor": "",
+      "kind": "exercise-candidate",
+      "context": "This triangle gives the coefficients of the terms when we expand binomials.\n\nPascal's Triangle\n\nIn the next example, we will use this triangle and the patterns we recognized to expand the binomial.",
+      "original": "Exercise \\(\\PageIndex{2}\\)\n\nUse Pascal’s Triangle to expand \\((p+q)^{7}\\).\n\nAnswer\n\n\\(\\begin{array}{c}{p^{7}+7 p^{6} q+21 p^{5} q^{2}+35 p^{4} q^{3}} {+35 p^{3} q^{4}+21 p^{2} q^{5}+7 p q^{6}+q^{7}}\\end{array}\\)",
+      "prompt": "Exercise \\(\\PageIndex{2}\\)\n\nUse Pascal’s Triangle to expand \\((p+q)^{7}\\).",
+      "sourceAnswers": [
+        "\\(\\begin{array}{c}{p^{7}+7 p^{6} q+21 p^{5} q^{2}+35 p^{4} q^{3}} {+35 p^{3} q^{4}+21 p^{2} q^{5}+7 p q^{6}+q^{7}}\\end{array}\\)"
+      ],
+      "hasFigure": false,
+      "status": "draft",
+      "answerVerified": false,
+      "translationStatus": "pending",
+      "mappingStatus": "pending"
+    },
+    {
+      "ordinal": 7,
+      "sourceNumber": "",
+      "sourceAnchor": "",
+      "kind": "example-or-exercise",
+      "context": "Pascal's Triangle\n\nIn the next example, we will use this triangle and the patterns we recognized to expand the binomial.\n\nIn the next example we want to expand a binomial with one variable and one constant. We need to identify the \\(a\\) and \\(b\\) to carefully apply the pattern.",
+      "original": "Example \\(\\PageIndex{2}\\)\n\nUse Pascal’s Triangle to expand \\((x+3)^{5}\\).\n\nSolution:\n\nWe identify the \\(a\\) and \\(b\\) of the pattern.\n\n[Figure: This figure shows how we identify a plus b to the power of n, in the pattern x plus 3 to the power of 5.]\n\nFigure 12.4.7\n\nIn our pattern, \\(a=x\\) and \\(b=3\\).\n\nWe know the variables for this expansion will follow the pattern we identified. The sum of the exponents in each term will be five.\n\n\\((a+b)^{n}=a^{n}+\\_\\_\\_a^{n-1}b^{1}+\\_\\_\\_a^{n-2}b^{2}+\\ldots+\\_\\_\\_a^{1}b^{n-1}+b^{n} \\)\n\n\\((x+3)^{5}=x^{5}+\\_\\_\\_x^{4}\\cdot3^{1}+\\_\\_\\_x^{3}\\cdot3^{2}+\\_\\_\\_x^{2}\\cdot3^{3}+\\_\\_\\_x^{1}\\cdot3^{4}+3^{5}\\)\n\n[Figure: This figure shows Pascal’s Triangle. The first level is 1. The second level is 1, 1. The third level is 1, 2, 1. The fourth level is 1, 3, 3, 1. The fifth level is 1, 4, 6, 4, 1. The sixth level is 1, 5, 10, 10, 5, 1. The seventh level is 1, 6, 15, 20, 15, 6, 1. This figure shows X plus 3 to the power of 5 equals 1 x to the power of 5 g 3 x to the power of 4 plus 10 g 9 x to the power of 3 plus 10 g 27 x to the power of 2 plus 5 g 81 x to the power of 1 plus 1 g 243. Then, x plus 3 to the power of 5 equals x to the power of 5 plus 15 x to the power of 4 plus 90 x to the power of 3 plus 270 x to the power of 2 plus 405 plus 243.]\n\nFigure 12.4.8",
+      "prompt": "Example \\(\\PageIndex{2}\\)\n\nUse Pascal’s Triangle to expand \\((x+3)^{5}\\).\n\nSolution:\n\nWe identify the \\(a\\) and \\(b\\) of the pattern.\n\n[Figure: This figure shows how we identify a plus b to the power of n, in the pattern x plus 3 to the power of 5.]\n\nFigure 12.4.7\n\nIn our pattern, \\(a=x\\) and \\(b=3\\).\n\nWe know the variables for this expansion will follow the pattern we identified. The sum of the exponents in each term will be five.\n\n\\((a+b)^{n}=a^{n}+\\_\\_\\_a^{n-1}b^{1}+\\_\\_\\_a^{n-2}b^{2}+\\ldots+\\_\\_\\_a^{1}b^{n-1}+b^{n} \\)\n\n\\((x+3)^{5}=x^{5}+\\_\\_\\_x^{4}\\cdot3^{1}+\\_\\_\\_x^{3}\\cdot3^{2}+\\_\\_\\_x^{2}\\cdot3^{3}+\\_\\_\\_x^{1}\\cdot3^{4}+3^{5}\\)\n\n[Figure: This figure shows Pascal’s Triangle. The first level is 1. The second level is 1, 1. The third level is 1, 2, 1. The fourth level is 1, 3, 3, 1. The fifth level is 1, 4, 6, 4, 1. The sixth level is 1, 5, 10, 10, 5, 1. The seventh level is 1, 6, 15, 20, 15, 6, 1. This figure shows X plus 3 to the power of 5 equals 1 x to the power of 5 g 3 x to the power of 4 plus 10 g 9 x to the power of 3 plus 10 g 27 x to the power of 2 plus 5 g 81 x to the power of 1 plus 1 g 243. Then, x plus 3 to the power of 5 equals x to the power of 5 plus 15 x to the power of 4 plus 90 x to the power of 3 plus 270 x to the power of 2 plus 405 plus 243.]\n\nFigure 12.4.8",
+      "sourceAnswers": [],
+      "hasFigure": true,
+      "status": "draft",
+      "answerVerified": false,
+      "translationStatus": "pending",
+      "mappingStatus": "pending"
+    },
+    {
+      "ordinal": 8,
+      "sourceNumber": "",
+      "sourceAnchor": "",
+      "kind": "exercise-candidate",
+      "context": "Pascal's Triangle\n\nIn the next example, we will use this triangle and the patterns we recognized to expand the binomial.\n\nIn the next example we want to expand a binomial with one variable and one constant. We need to identify the \\(a\\) and \\(b\\) to carefully apply the pattern.",
+      "original": "Exercise \\(\\PageIndex{3}\\)\n\nUse Pascal's Triangle to expand \\((x+2)^{4}\\).\n\nAnswer\n\n\\(x^{4}+8 x^{3}+24 x^{2}+32 x+16\\)",
+      "prompt": "Exercise \\(\\PageIndex{3}\\)\n\nUse Pascal's Triangle to expand \\((x+2)^{4}\\).",
+      "sourceAnswers": [
+        "\\(x^{4}+8 x^{3}+24 x^{2}+32 x+16\\)"
+      ],
+      "hasFigure": false,
+      "status": "draft",
+      "answerVerified": false,
+      "translationStatus": "pending",
+      "mappingStatus": "pending"
+    },
+    {
+      "ordinal": 9,
+      "sourceNumber": "",
+      "sourceAnchor": "",
+      "kind": "exercise-candidate",
+      "context": "Pascal's Triangle\n\nIn the next example, we will use this triangle and the patterns we recognized to expand the binomial.\n\nIn the next example we want to expand a binomial with one variable and one constant. We need to identify the \\(a\\) and \\(b\\) to carefully apply the pattern.",
+      "original": "Exercise \\(\\PageIndex{4}\\)\n\nUse Pascal's Triangle to expand \\((x+1)^{6}\\).\n\nAnswer\n\n\\(\\begin{array}{l}{x^{6}+6 x^{5}+15 x^{4}+20 x^{3}+15 x^{2}} {+6 x+1}\\end{array}\\)",
+      "prompt": "Exercise \\(\\PageIndex{4}\\)\n\nUse Pascal's Triangle to expand \\((x+1)^{6}\\).",
+      "sourceAnswers": [
+        "\\(\\begin{array}{l}{x^{6}+6 x^{5}+15 x^{4}+20 x^{3}+15 x^{2}} {+6 x+1}\\end{array}\\)"
+      ],
+      "hasFigure": false,
+      "status": "draft",
+      "answerVerified": false,
+      "translationStatus": "pending",
+      "mappingStatus": "pending"
+    },
+    {
+      "ordinal": 10,
+      "sourceNumber": "",
+      "sourceAnchor": "",
+      "kind": "example-or-exercise",
+      "context": "In the next example, we will use this triangle and the patterns we recognized to expand the binomial.\n\nIn the next example we want to expand a binomial with one variable and one constant. We need to identify the \\(a\\) and \\(b\\) to carefully apply the pattern.\n\nIn the next example, the binomial is a difference and the first term has a constant times the variable. Once we identify the \\(a\\) and \\(b\\) of the pattern, we must once again carefully apply the pattern.",
+      "original": "Example \\(\\PageIndex{3}\\)\n\nUse Pascal's Triangle to expand \\((3x-2)^{4}\\).\n\nSolution:\n\nWe identify the \\(a\\) and \\(b\\) of the pattern.\n\n[Figure: This figure shows how we identify a plus b to the power of n, in the pattern 3 x minus 2 to the power of 4.]\n\nFigure 12.4.9\n\nIn our pattern, \\(a=3x\\) and \\(b=-2\\).\n\n[Figure: This figure shows Pascal’s Triangle. The first level is 1. The second level is 1, 1. The third level is 1, 2, 1. The fourth level is 1, 3, 3, 1. The fifth level is 1, 4, 6, 4, 1. The sixth level is 1, 5, 10, 10, 5, 1. The seventh level is 1, 6, 15, 20, 15, 6, 1.]\n\nFigure 12.4.10\n\n\\((a+b)^{n}=a^{n}+\\_\\_\\_a^{n-1}b^{1}+\\_\\_\\_a^{n-2}b^{2}+\\ldots+\\_\\_\\_a^{1}b^{n-1}+b^{n} \\)\n\n\\((3 x-2 )^{4}=1 \\cdot\\left(\\stackrel{3}{x}+4(3 x)^{3}(-2)^{1}+6(3 x)^{2}(-2)^{2}+4(3 x)^{1}(-2)^{3}+1 \\cdot(-2)^{4}\\right.\\)\n\n\\((3 x-2)^{4}=81 x^{4}+4\\left(27 x^{3}\\right)(-2)+6\\left(9 x^{2}\\right)(4)+4(3 x)(-8)+1 \\cdot 16\\)\n\n\\((3 x-2 )^{4}=81 x^{4}-216 x^{3}+216 x^{2}-96 x+16\\)",
+      "prompt": "Example \\(\\PageIndex{3}\\)\n\nUse Pascal's Triangle to expand \\((3x-2)^{4}\\).\n\nSolution:\n\nWe identify the \\(a\\) and \\(b\\) of the pattern.\n\n[Figure: This figure shows how we identify a plus b to the power of n, in the pattern 3 x minus 2 to the power of 4.]\n\nFigure 12.4.9\n\nIn our pattern, \\(a=3x\\) and \\(b=-2\\).\n\n[Figure: This figure shows Pascal’s Triangle. The first level is 1. The second level is 1, 1. The third level is 1, 2, 1. The fourth level is 1, 3, 3, 1. The fifth level is 1, 4, 6, 4, 1. The sixth level is 1, 5, 10, 10, 5, 1. The seventh level is 1, 6, 15, 20, 15, 6, 1.]\n\nFigure 12.4.10\n\n\\((a+b)^{n}=a^{n}+\\_\\_\\_a^{n-1}b^{1}+\\_\\_\\_a^{n-2}b^{2}+\\ldots+\\_\\_\\_a^{1}b^{n-1}+b^{n} \\)\n\n\\((3 x-2 )^{4}=1 \\cdot\\left(\\stackrel{3}{x}+4(3 x)^{3}(-2)^{1}+6(3 x)^{2}(-2)^{2}+4(3 x)^{1}(-2)^{3}+1 \\cdot(-2)^{4}\\right.\\)\n\n\\((3 x-2)^{4}=81 x^{4}+4\\left(27 x^{3}\\right)(-2)+6\\left(9 x^{2}\\right)(4)+4(3 x)(-8)+1 \\cdot 16\\)\n\n\\((3 x-2 )^{4}=81 x^{4}-216 x^{3}+216 x^{2}-96 x+16\\)",
+      "sourceAnswers": [],
+      "hasFigure": true,
+      "status": "draft",
+      "answerVerified": false,
+      "translationStatus": "pending",
+      "mappingStatus": "pending"
+    },
+    {
+      "ordinal": 11,
+      "sourceNumber": "",
+      "sourceAnchor": "",
+      "kind": "exercise-candidate",
+      "context": "In the next example, we will use this triangle and the patterns we recognized to expand the binomial.\n\nIn the next example we want to expand a binomial with one variable and one constant. We need to identify the \\(a\\) and \\(b\\) to carefully apply the pattern.\n\nIn the next example, the binomial is a difference and the first term has a constant times the variable. Once we identify the \\(a\\) and \\(b\\) of the pattern, we must once again carefully apply the pattern.",
+      "original": "Exercise \\(\\PageIndex{5}\\)\n\nUse Pascal's Triangle to expand \\((2x-3)^{4}\\).\n\nAnswer\n\n\\(16 x^{4}-96 x^{3}+216 x^{2}-216 x+81\\)",
+      "prompt": "Exercise \\(\\PageIndex{5}\\)\n\nUse Pascal's Triangle to expand \\((2x-3)^{4}\\).",
+      "sourceAnswers": [
+        "\\(16 x^{4}-96 x^{3}+216 x^{2}-216 x+81\\)"
+      ],
+      "hasFigure": false,
+      "status": "draft",
+      "answerVerified": false,
+      "translationStatus": "pending",
+      "mappingStatus": "pending"
+    },
+    {
+      "ordinal": 12,
+      "sourceNumber": "",
+      "sourceAnchor": "",
+      "kind": "exercise-candidate",
+      "context": "In the next example, we will use this triangle and the patterns we recognized to expand the binomial.\n\nIn the next example we want to expand a binomial with one variable and one constant. We need to identify the \\(a\\) and \\(b\\) to carefully apply the pattern.\n\nIn the next example, the binomial is a difference and the first term has a constant times the variable. Once we identify the \\(a\\) and \\(b\\) of the pattern, we must once again carefully apply the pattern.",
+      "original": "Exercise \\(\\PageIndex{6}\\)\n\nUse Pascal's Triangle to expand \\((2x-1)^{6}\\).\n\nAnswer\n\n\\(\\begin{array}{l}{64 x^{6}-192 x^{5}+240 x^{4}-160 x^{3}} {+60 x^{2}-12 x+1}\\end{array}\\)",
+      "prompt": "Exercise \\(\\PageIndex{6}\\)\n\nUse Pascal's Triangle to expand \\((2x-1)^{6}\\).",
+      "sourceAnswers": [
+        "\\(\\begin{array}{l}{64 x^{6}-192 x^{5}+240 x^{4}-160 x^{3}} {+60 x^{2}-12 x+1}\\end{array}\\)"
+      ],
+      "hasFigure": false,
+      "status": "draft",
+      "answerVerified": false,
+      "translationStatus": "pending",
+      "mappingStatus": "pending"
+    },
+    {
+      "ordinal": 13,
+      "sourceNumber": "",
+      "sourceAnchor": "",
+      "kind": "example-or-exercise",
+      "context": "A binomial coefficient \\(\\left( \\begin{array}{l}{n} \\\\ {r}\\end{array}\\right)\\), where \\(r\\) and \\(b\\) are integers with \\(0 \\leq r \\leq n\\), is defined as\n\n\\(\\left( \\begin{array}{l}{n} \\\\ {r}\\end{array}\\right)=\\frac{n !}{r !(n-r) !}\\)\n\nWe read \\(\\left( \\begin{array}{l}{n} \\\\ {r}\\end{array}\\right)\\) as \"\\(n\\) choose \\(r\\)\" or \"\\(n\\) taken \\(r\\) at a time.\"",
+      "original": "Example \\(\\PageIndex{4}\\)\n\nEvaluate:\n\n1. \\(\\left( \\begin{array}{l}{5} \\\\ {1}\\end{array}\\right)\\)\n\n2. \\(\\left( \\begin{array}{l}{7} \\\\ {7}\\end{array}\\right)\\)\n\n3. \\(\\left( \\begin{array}{l}{4} \\\\ {0}\\end{array}\\right)\\)\n\n4. \\(\\left( \\begin{array}{l}{8} \\\\ {5}\\end{array}\\right)\\)\n\nSolution:\n\na. We will use the definition of a binomial coefficient,\n\n\\(\\left( \\begin{array}{l}{n} \\\\ {r}\\end{array}\\right)=\\frac{n !}{r !(n-r) !}\\)\n\n\\(\\left( \\begin{array}{l}{5} \\\\ {1}\\end{array}\\right)\\)\n\nUse the definition, \\(\\left( \\stackrel{5}{1}\\right)=\\frac{n !}{r !(n-r) !}\\), where \\(n=5, r=1\\).\n\n\\(\\frac{5 !}{1 !(5-1) !}\\)\n\nSimplify.\n\n\\(\\frac{5 !}{1 !(4) !}\\)\n\nRewrite \\(5!\\) as \\(5\\cdot 4!\\)\n\n\\(\\frac{5 \\cdot 4 !}{1 ! \\cdot 4 !}\\)\n\nSimplify, by removing common factors.\n\n\\(\\frac{5\\cdot \\cancel{4 !}}{1 ! \\cdot \\cancel{4 !}}\\)\n\nSimplify.\n\n\\(5\\)\n\n\\(\\left( \\begin{array}{l}{5} \\\\ {1}\\end{array}\\right)=5\\)\n\nb. \\(\\left( \\begin{array}{l}{7} \\\\ {7}\\end{array}\\right)\\)\n\nUse the definition, \\(\\left( \\stackrel{5}{1}\\right)=\\frac{n !}{r !(n-r) !}\\), where \\(n=7, r=7\\).\n\n\\(\\frac{7 !}{7 !(7-7) !}\\)\n\nSimplify.\n\n\\(\\frac{7 !}{7 !(0) !}\\)\n\nSimplify. Remember \\(0!=1\\).\n\n\\(1\\)\n\n\\(\\left( \\begin{array}{l}{7} \\\\ {7}\\end{array}\\right)=1\\)\n\nc. \\(\\left( \\begin{array}{l}{4} \\\\ {0}\\end{array}\\right)\\)\n\nUse the definition, \\(\\left( \\stackrel{5}{1}\\right)=\\frac{n !}{r !(n-r) !}\\), where \\(n=4, r=0\\).\n\n\\(\\frac{4 !}{0 !(4-0) !}\\)\n\nSimplify.\n\n\\(\\frac{4 !}{0 !(4) !}\\)\n\nSimplify.\n\n\\(1\\)\n\n\\(\\left( \\begin{array}{l}{4} \\\\ {0}\\end{array}\\right)=1\\)\n\nd. \\(\\left( \\begin{array}{l}{8} \\\\ {5}\\end{array}\\right)\\)\n\nUse the definition, \\(\\left( \\stackrel{5}{1}\\right)=\\frac{n !}{r !(n-r) !}\\), where \\(n=8, r=5\\).\n\n\\(\\frac{8 !}{5 !(8-5) !}\\)\n\nSimplify.\n\n\\(\\frac{8 !}{5 !(3) !}\\)\n\nRewrite \\(8!\\) as \\(8\\cdot 7\\cdot 6\\cdot 5!\\) and remove common factors.\n\n\\(\\frac{8\\cdot7\\cdot\\cancel{6}\\cdot\\cancel{5!}}{\\cancel{5!}\\cdot\\cancel{3}\\cdot\\cancel{2}\\cdot1}\\)\n\nSimplify.\n\n\\(56\\)\n\n\\(\\left( \\begin{array}{l}{8} \\\\ {5}\\end{array}\\right)=56\\)",
+      "prompt": "Example \\(\\PageIndex{4}\\)\n\nEvaluate:\n\n1. \\(\\left( \\begin{array}{l}{5} \\\\ {1}\\end{array}\\right)\\)\n\n2. \\(\\left( \\begin{array}{l}{7} \\\\ {7}\\end{array}\\right)\\)\n\n3. \\(\\left( \\begin{array}{l}{4} \\\\ {0}\\end{array}\\right)\\)\n\n4. \\(\\left( \\begin{array}{l}{8} \\\\ {5}\\end{array}\\right)\\)\n\nSolution:\n\na. We will use the definition of a binomial coefficient,\n\n\\(\\left( \\begin{array}{l}{n} \\\\ {r}\\end{array}\\right)=\\frac{n !}{r !(n-r) !}\\)\n\n\\(\\left( \\begin{array}{l}{5} \\\\ {1}\\end{array}\\right)\\)\n\nUse the definition, \\(\\left( \\stackrel{5}{1}\\right)=\\frac{n !}{r !(n-r) !}\\), where \\(n=5, r=1\\).\n\n\\(\\frac{5 !}{1 !(5-1) !}\\)\n\nSimplify.\n\n\\(\\frac{5 !}{1 !(4) !}\\)\n\nRewrite \\(5!\\) as \\(5\\cdot 4!\\)\n\n\\(\\frac{5 \\cdot 4 !}{1 ! \\cdot 4 !}\\)\n\nSimplify, by removing common factors.\n\n\\(\\frac{5\\cdot \\cancel{4 !}}{1 ! \\cdot \\cancel{4 !}}\\)\n\nSimplify.\n\n\\(5\\)\n\n\\(\\left( \\begin{array}{l}{5} \\\\ {1}\\end{array}\\right)=5\\)\n\nb. \\(\\left( \\begin{array}{l}{7} \\\\ {7}\\end{array}\\right)\\)\n\nUse the definition, \\(\\left( \\stackrel{5}{1}\\right)=\\frac{n !}{r !(n-r) !}\\), where \\(n=7, r=7\\).\n\n\\(\\frac{7 !}{7 !(7-7) !}\\)\n\nSimplify.\n\n\\(\\frac{7 !}{7 !(0) !}\\)\n\nSimplify. Remember \\(0!=1\\).\n\n\\(1\\)\n\n\\(\\left( \\begin{array}{l}{7} \\\\ {7}\\end{array}\\right)=1\\)\n\nc. \\(\\left( \\begin{array}{l}{4} \\\\ {0}\\end{array}\\right)\\)\n\nUse the definition, \\(\\left( \\stackrel{5}{1}\\right)=\\frac{n !}{r !(n-r) !}\\), where \\(n=4, r=0\\).\n\n\\(\\frac{4 !}{0 !(4-0) !}\\)\n\nSimplify.\n\n\\(\\frac{4 !}{0 !(4) !}\\)\n\nSimplify.\n\n\\(1\\)\n\n\\(\\left( \\begin{array}{l}{4} \\\\ {0}\\end{array}\\right)=1\\)\n\nd. \\(\\left( \\begin{array}{l}{8} \\\\ {5}\\end{array}\\right)\\)\n\nUse the definition, \\(\\left( \\stackrel{5}{1}\\right)=\\frac{n !}{r !(n-r) !}\\), where \\(n=8, r=5\\).\n\n\\(\\frac{8 !}{5 !(8-5) !}\\)\n\nSimplify.\n\n\\(\\frac{8 !}{5 !(3) !}\\)\n\nRewrite \\(8!\\) as \\(8\\cdot 7\\cdot 6\\cdot 5!\\) and remove common factors.\n\n\\(\\frac{8\\cdot7\\cdot\\cancel{6}\\cdot\\cancel{5!}}{\\cancel{5!}\\cdot\\cancel{3}\\cdot\\cancel{2}\\cdot1}\\)\n\nSimplify.\n\n\\(56\\)\n\n\\(\\left( \\begin{array}{l}{8} \\\\ {5}\\end{array}\\right)=56\\)",
+      "sourceAnswers": [],
+      "hasFigure": false,
+      "status": "draft",
+      "answerVerified": false,
+      "translationStatus": "pending",
+      "mappingStatus": "pending"
+    },
+    {
+      "ordinal": 14,
+      "sourceNumber": "",
+      "sourceAnchor": "",
+      "kind": "exercise-candidate",
+      "context": "A binomial coefficient \\(\\left( \\begin{array}{l}{n} \\\\ {r}\\end{array}\\right)\\), where \\(r\\) and \\(b\\) are integers with \\(0 \\leq r \\leq n\\), is defined as\n\n\\(\\left( \\begin{array}{l}{n} \\\\ {r}\\end{array}\\right)=\\frac{n !}{r !(n-r) !}\\)\n\nWe read \\(\\left( \\begin{array}{l}{n} \\\\ {r}\\end{array}\\right)\\) as \"\\(n\\) choose \\(r\\)\" or \"\\(n\\) taken \\(r\\) at a time.\"",
+      "original": "Exercise \\(\\PageIndex{7}\\)\n\nEvaluate each binomial coefficient:\n\n1. \\(\\left( \\begin{array}{l}{6} \\\\ {1}\\end{array}\\right)\\)\n\n2. \\(\\left( \\begin{array}{l}{8} \\\\ {8}\\end{array}\\right)\\)\n\n3. \\(\\left( \\begin{array}{l}{5} \\\\ {0}\\end{array}\\right)\\)\n\n4. \\(\\left( \\begin{array}{l}{7} \\\\ {3}\\end{array}\\right)\\)\n\nAnswer\n\n1. \\(6\\)\n\n2. \\(1\\)\n\n3. \\(1\\)\n\n4. \\(35\\)",
+      "prompt": "Exercise \\(\\PageIndex{7}\\)\n\nEvaluate each binomial coefficient:\n\n1. \\(\\left( \\begin{array}{l}{6} \\\\ {1}\\end{array}\\right)\\)\n\n2. \\(\\left( \\begin{array}{l}{8} \\\\ {8}\\end{array}\\right)\\)\n\n3. \\(\\left( \\begin{array}{l}{5} \\\\ {0}\\end{array}\\right)\\)\n\n4. \\(\\left( \\begin{array}{l}{7} \\\\ {3}\\end{array}\\right)\\)",
+      "sourceAnswers": [
+        "1. \\(6\\)\n\n2. \\(1\\)\n\n3. \\(1\\)\n\n4. \\(35\\)"
+      ],
+      "hasFigure": false,
+      "status": "draft",
+      "answerVerified": false,
+      "translationStatus": "pending",
+      "mappingStatus": "pending"
+    },
+    {
+      "ordinal": 15,
+      "sourceNumber": "",
+      "sourceAnchor": "",
+      "kind": "exercise-candidate",
+      "context": "A binomial coefficient \\(\\left( \\begin{array}{l}{n} \\\\ {r}\\end{array}\\right)\\), where \\(r\\) and \\(b\\) are integers with \\(0 \\leq r \\leq n\\), is defined as\n\n\\(\\left( \\begin{array}{l}{n} \\\\ {r}\\end{array}\\right)=\\frac{n !}{r !(n-r) !}\\)\n\nWe read \\(\\left( \\begin{array}{l}{n} \\\\ {r}\\end{array}\\right)\\) as \"\\(n\\) choose \\(r\\)\" or \"\\(n\\) taken \\(r\\) at a time.\"",
+      "original": "Exercise \\(\\PageIndex{8}\\)\n\nEvaluate each binomial coefficient:\n\n1. \\(\\left( \\begin{array}{l}{2} \\\\ {1}\\end{array}\\right)\\)\n\n2. \\(\\left( \\begin{array}{l}{11} \\\\ {11}\\end{array}\\right)\\)\n\n3. \\(\\left( \\begin{array}{l}{9} \\\\ {0}\\end{array}\\right)\\)\n\n4. \\(\\left( \\begin{array}{l}{6} \\\\ {5}\\end{array}\\right)\\)\n\nAnswer\n\n1. \\(2\\)\n\n2. \\(1\\)\n\n3. \\(1\\)\n\n4. \\(6\\)",
+      "prompt": "Exercise \\(\\PageIndex{8}\\)\n\nEvaluate each binomial coefficient:\n\n1. \\(\\left( \\begin{array}{l}{2} \\\\ {1}\\end{array}\\right)\\)\n\n2. \\(\\left( \\begin{array}{l}{11} \\\\ {11}\\end{array}\\right)\\)\n\n3. \\(\\left( \\begin{array}{l}{9} \\\\ {0}\\end{array}\\right)\\)\n\n4. \\(\\left( \\begin{array}{l}{6} \\\\ {5}\\end{array}\\right)\\)",
+      "sourceAnswers": [
+        "1. \\(2\\)\n\n2. \\(1\\)\n\n3. \\(1\\)\n\n4. \\(6\\)"
+      ],
+      "hasFigure": false,
+      "status": "draft",
+      "answerVerified": false,
+      "translationStatus": "pending",
+      "mappingStatus": "pending"
+    },
+    {
+      "ordinal": 16,
+      "sourceNumber": "",
+      "sourceAnchor": "",
+      "kind": "example-or-exercise",
+      "context": "Binomial Theorem\n\nFor any real numbers \\(a\\) and \\(b\\), and positive integer \\(n\\),\n\n\\((a+b)^{n}=\\left( \\begin{array}{c}{n} \\\\ {0}\\end{array}\\right) a^{n}+\\left( \\begin{array}{c}{n} \\\\ {1}\\end{array}\\right) a^{n-1} b^{1}+\\left( \\begin{array}{c}{n} \\\\ {2}\\end{array}\\right) a^{n-2} b^{2}+\\ldots+\\left( \\begin{array}{c}{n} \\\\ {r}\\end{array}\\right) a^{n-r} b^{r}+\\ldots+\\left( \\begin{array}{c}{n} \\\\ {n}\\end{array}\\right) b^{n}\\)",
+      "original": "Example \\(\\PageIndex{5}\\)\n\nUse the Binomial Theorem to expand \\((p+q)^{4}\\).\n\nSolution:\n\nWe identify the \\(a\\) and \\(b\\) of the pattern.\n\n[Figure: This figure shows how we identify a plus b to the power of n, in the pattern p plus q to the power of 4.]\n\nFigure 12.4.11\n\nIn our pattern, \\(a=p\\) and \\(b=q\\).\n\nWe use the Binomial Theorem.\n\n\\((a+b)^{n}=\\left( \\begin{array}{c}{n} \\\\ {0}\\end{array}\\right) a^{n}+\\left( \\begin{array}{c}{n} \\\\ {1}\\end{array}\\right) a^{n-1} b^{1}+\\left( \\begin{array}{c}{n} \\\\ {2}\\end{array}\\right) a^{n-2} b^{2}+\\ldots+\\left( \\begin{array}{c}{n} \\\\ {r}\\end{array}\\right) a^{n-r} b^{r}+\\ldots+\\left( \\begin{array}{c}{n} \\\\ {n}\\end{array}\\right) b^{n}\\)\n\nSubstitute in the values \\(a=p, b=q\\) and \\(n=4\\).\n\n\\((p+q)^{4}=\\left( \\begin{array}{c}{4} \\\\ {0}\\end{array}\\right) p^{4}+\\left( \\begin{array}{c}{4} \\\\ {1}\\end{array}\\right) p^{4-1} q^{1}+\\left( \\begin{array}{c}{4} \\\\ {2}\\end{array}\\right) p^{4-2} q^{2}+\\left( \\begin{array}{c}{4} \\\\ {3}\\end{array}\\right) p^{4-3} q^{3}+\\left( \\begin{array}{c}{4} \\\\ {4}\\end{array}\\right) q^{4}\\)\n\nSimplify the exponents.\n\n\\((p+q)^{4}=\\left( \\begin{array}{l}{4} \\\\ {0}\\end{array}\\right) p^{4}+\\left( \\begin{array}{c}{4} \\\\ {1}\\end{array}\\right) p^{3} q+\\left( \\begin{array}{c}{4} \\\\ {2}\\end{array}\\right) p^{2} q^{2}+\\left( \\begin{array}{c}{4} \\\\ {3}\\end{array}\\right) p q^{3}+\\left( \\begin{array}{c}{4} \\\\ {4}\\end{array}\\right) q^{4}\\)\n\nEvaluate the coefficients, remember, \\(\\left( \\begin{array}{l}{n} \\\\ {1}\\end{array}\\right)=n, \\left( \\begin{array}{l}{n} \\\\ {n}\\end{array}\\right)=1, \\left( \\begin{array}{l}{n} \\\\ {0}\\end{array}\\right)=1\\)\n\n\\((p+q)^{4}=1 p^{4}+4 p^{3} q^{1}+\\frac{4 !}{2 !(2) !} p^{2} q^{2}+\\frac{4 !}{3 !(4-3) !} p^{1} q^{3}+1 q^{4}\\)\n\n\\((p+q)^{4}=p^{4}+4 p^{3} q+6 p^{2} q^{2}+4 p q^{3}+q^{4}\\)",
+      "prompt": "Example \\(\\PageIndex{5}\\)\n\nUse the Binomial Theorem to expand \\((p+q)^{4}\\).\n\nSolution:\n\nWe identify the \\(a\\) and \\(b\\) of the pattern.\n\n[Figure: This figure shows how we identify a plus b to the power of n, in the pattern p plus q to the power of 4.]\n\nFigure 12.4.11\n\nIn our pattern, \\(a=p\\) and \\(b=q\\).\n\nWe use the Binomial Theorem.\n\n\\((a+b)^{n}=\\left( \\begin{array}{c}{n} \\\\ {0}\\end{array}\\right) a^{n}+\\left( \\begin{array}{c}{n} \\\\ {1}\\end{array}\\right) a^{n-1} b^{1}+\\left( \\begin{array}{c}{n} \\\\ {2}\\end{array}\\right) a^{n-2} b^{2}+\\ldots+\\left( \\begin{array}{c}{n} \\\\ {r}\\end{array}\\right) a^{n-r} b^{r}+\\ldots+\\left( \\begin{array}{c}{n} \\\\ {n}\\end{array}\\right) b^{n}\\)\n\nSubstitute in the values \\(a=p, b=q\\) and \\(n=4\\).\n\n\\((p+q)^{4}=\\left( \\begin{array}{c}{4} \\\\ {0}\\end{array}\\right) p^{4}+\\left( \\begin{array}{c}{4} \\\\ {1}\\end{array}\\right) p^{4-1} q^{1}+\\left( \\begin{array}{c}{4} \\\\ {2}\\end{array}\\right) p^{4-2} q^{2}+\\left( \\begin{array}{c}{4} \\\\ {3}\\end{array}\\right) p^{4-3} q^{3}+\\left( \\begin{array}{c}{4} \\\\ {4}\\end{array}\\right) q^{4}\\)\n\nSimplify the exponents.\n\n\\((p+q)^{4}=\\left( \\begin{array}{l}{4} \\\\ {0}\\end{array}\\right) p^{4}+\\left( \\begin{array}{c}{4} \\\\ {1}\\end{array}\\right) p^{3} q+\\left( \\begin{array}{c}{4} \\\\ {2}\\end{array}\\right) p^{2} q^{2}+\\left( \\begin{array}{c}{4} \\\\ {3}\\end{array}\\right) p q^{3}+\\left( \\begin{array}{c}{4} \\\\ {4}\\end{array}\\right) q^{4}\\)\n\nEvaluate the coefficients, remember, \\(\\left( \\begin{array}{l}{n} \\\\ {1}\\end{array}\\right)=n, \\left( \\begin{array}{l}{n} \\\\ {n}\\end{array}\\right)=1, \\left( \\begin{array}{l}{n} \\\\ {0}\\end{array}\\right)=1\\)\n\n\\((p+q)^{4}=1 p^{4}+4 p^{3} q^{1}+\\frac{4 !}{2 !(2) !} p^{2} q^{2}+\\frac{4 !}{3 !(4-3) !} p^{1} q^{3}+1 q^{4}\\)\n\n\\((p+q)^{4}=p^{4}+4 p^{3} q+6 p^{2} q^{2}+4 p q^{3}+q^{4}\\)",
+      "sourceAnswers": [],
+      "hasFigure": true,
+      "status": "draft",
+      "answerVerified": false,
+      "translationStatus": "pending",
+      "mappingStatus": "pending"
+    },
+    {
+      "ordinal": 17,
+      "sourceNumber": "",
+      "sourceAnchor": "",
+      "kind": "exercise-candidate",
+      "context": "Binomial Theorem\n\nFor any real numbers \\(a\\) and \\(b\\), and positive integer \\(n\\),\n\n\\((a+b)^{n}=\\left( \\begin{array}{c}{n} \\\\ {0}\\end{array}\\right) a^{n}+\\left( \\begin{array}{c}{n} \\\\ {1}\\end{array}\\right) a^{n-1} b^{1}+\\left( \\begin{array}{c}{n} \\\\ {2}\\end{array}\\right) a^{n-2} b^{2}+\\ldots+\\left( \\begin{array}{c}{n} \\\\ {r}\\end{array}\\right) a^{n-r} b^{r}+\\ldots+\\left( \\begin{array}{c}{n} \\\\ {n}\\end{array}\\right) b^{n}\\)",
+      "original": "Exercise \\(\\PageIndex{9}\\)\n\nUse the Binomial Theorem to expand \\((x+y)^{5}\\).\n\nAnswer\n\n\\(\\begin{array}{l}{x^{5}+5 x^{4} y+10 x^{3} y^{2}+10 x^{2} y^{3}} {+5 x y^{4}+y^{5}}\\end{array}\\)",
+      "prompt": "Exercise \\(\\PageIndex{9}\\)\n\nUse the Binomial Theorem to expand \\((x+y)^{5}\\).",
+      "sourceAnswers": [
+        "\\(\\begin{array}{l}{x^{5}+5 x^{4} y+10 x^{3} y^{2}+10 x^{2} y^{3}} {+5 x y^{4}+y^{5}}\\end{array}\\)"
+      ],
+      "hasFigure": false,
+      "status": "draft",
+      "answerVerified": false,
+      "translationStatus": "pending",
+      "mappingStatus": "pending"
+    },
+    {
+      "ordinal": 18,
+      "sourceNumber": "",
+      "sourceAnchor": "",
+      "kind": "exercise-candidate",
+      "context": "Binomial Theorem\n\nFor any real numbers \\(a\\) and \\(b\\), and positive integer \\(n\\),\n\n\\((a+b)^{n}=\\left( \\begin{array}{c}{n} \\\\ {0}\\end{array}\\right) a^{n}+\\left( \\begin{array}{c}{n} \\\\ {1}\\end{array}\\right) a^{n-1} b^{1}+\\left( \\begin{array}{c}{n} \\\\ {2}\\end{array}\\right) a^{n-2} b^{2}+\\ldots+\\left( \\begin{array}{c}{n} \\\\ {r}\\end{array}\\right) a^{n-r} b^{r}+\\ldots+\\left( \\begin{array}{c}{n} \\\\ {n}\\end{array}\\right) b^{n}\\)",
+      "original": "Exercise \\(\\PageIndex{10}\\)\n\nUse the Binomial Theorem to expand \\((m+n)^{6}\\).\n\nAnswer\n\n\\(\\begin{array}{l}{m^{6}+6 m^{5} n+15 m^{4} n^{2}+20 m^{3} n^{3}} {+15 m^{2} n^{4}+6 m n^{5}+n^{6}}\\end{array}\\)",
+      "prompt": "Exercise \\(\\PageIndex{10}\\)\n\nUse the Binomial Theorem to expand \\((m+n)^{6}\\).",
+      "sourceAnswers": [
+        "\\(\\begin{array}{l}{m^{6}+6 m^{5} n+15 m^{4} n^{2}+20 m^{3} n^{3}} {+15 m^{2} n^{4}+6 m n^{5}+n^{6}}\\end{array}\\)"
+      ],
+      "hasFigure": false,
+      "status": "draft",
+      "answerVerified": false,
+      "translationStatus": "pending",
+      "mappingStatus": "pending"
+    },
+    {
+      "ordinal": 19,
+      "sourceNumber": "",
+      "sourceAnchor": "",
+      "kind": "example-or-exercise",
+      "context": "\\((a+b)^{n}=\\left( \\begin{array}{c}{n} \\\\ {0}\\end{array}\\right) a^{n}+\\left( \\begin{array}{c}{n} \\\\ {1}\\end{array}\\right) a^{n-1} b^{1}+\\left( \\begin{array}{c}{n} \\\\ {2}\\end{array}\\right) a^{n-2} b^{2}+\\ldots+\\left( \\begin{array}{c}{n} \\\\ {r}\\end{array}\\right) a^{n-r} b^{r}+\\ldots+\\left( \\begin{array}{c}{n} \\\\ {n}\\end{array}\\right) b^{n}\\)\n\nNotice that when we expanded \\((p+q)^{4}\\) in the last example, using the Binomial Theorem, we got the same coefficients we would get from using Pascal's Triangle.\n\nThe next example, the binomial is a difference. When the binomial is a difference, we must be careful in identifying the values we will use in the pattern.",
+      "original": "Example \\(\\PageIndex{6}\\)\n\nUse the Binomial Theorem to expand \\((x-2)^{5}\\).\n\nSolution:\n\nWe identify the \\(a\\) and \\(b\\) of the pattern.\n\n[Figure: This figure shows x minus 2 to the power of 5.]\n\nFigure 12.4.13\n\nIn our pattern, \\(a=x\\) and \\(b=-2\\).\n\nWe use the Binomial Theorem.\n\n\\((a+b)^{n}=\\left( \\begin{array}{c}{n} \\\\ {0}\\end{array}\\right) a^{n}+\\left( \\begin{array}{c}{n} \\\\ {1}\\end{array}\\right) a^{n-1} b^{1}+\\left( \\begin{array}{c}{n} \\\\ {2}\\end{array}\\right) a^{n-2} b^{2}+\\ldots+\\left( \\begin{array}{c}{n} \\\\ {r}\\end{array}\\right) a^{n-r} b^{r}+\\ldots+\\left( \\begin{array}{c}{n} \\\\ {n}\\end{array}\\right) b^{n}\\)\n\nSubstitute in the values \\(a=x, b=-2\\), and \\(n=5\\).\n\n\\((x-2)^{5}=\\left( \\begin{array}{l}{5} \\\\ {0}\\end{array}\\right) x^{5}+\\left( \\begin{array}{c}{5} \\\\ {1}\\end{array}\\right) x^{5-1}(-2)^{1}+\\left( \\begin{array}{c}{5} \\\\ {2}\\end{array}\\right) x^{5-2}(-2)^{2}+\\left( \\begin{array}{c}{5} \\\\ {3}\\end{array}\\right) x^{5-3}(-2)^{3}+\\left( \\begin{array}{c}{5} \\\\ {4}\\end{array}\\right) x^{5-4}(-2)^{4}+\\left( \\begin{array}{c}{5} \\\\ {5}\\end{array}\\right)(-2)^{5}\\)\n\nSimplify the coefficients. Remember, \\(\\left( \\begin{array}{l}{n} \\\\ {1}\\end{array}\\right)=n, \\left( \\begin{array}{l}{n} \\\\ {n}\\end{array}\\right)=1, \\left( \\begin{array}{l}{n} \\\\ {0}\\end{array}\\right)=1\\).\n\n\\((x-2)^{5}=\\left( \\begin{array}{l}{5} \\\\ {0}\\end{array}\\right) x^{5}+\\left( \\begin{array}{c}{5} \\\\ {1}\\end{array}\\right) x^{4}(-2)+\\left( \\begin{array}{c}{5} \\\\ {2}\\end{array}\\right) x^{3}(-2)^{2}+\\left( \\begin{array}{c}{5} \\\\ {3}\\end{array}\\right) x^{2}(-2)^{3}+\\left( \\begin{array}{c}{5} \\\\ {4}\\end{array}\\right) x(-2)^{4}+\\left( \\begin{array}{c}{5} \\\\ {5}\\end{array}\\right)(-2)^{5}\\)\n\n\\((x-2)^{5}=1 x^{5}+5(-2) x^{4}+\\frac{5 !}{2 ! \\cdot 3 !}(-2)^{2} x^{3}+\\frac{5 !}{3 ! 2 !}(-2)^{3} x^{2}+\\frac{5 !}{4 !1 !}(-2)^{4} x+1(-2)^{5}\\)\n\n\\((x-2)^{5}=x^{5}+5(-2) x^{4}+10 \\cdot 4 \\cdot x^{3}+10(-8) x^{2}+5 \\cdot 16 \\cdot x+1(-32)\\)\n\n\\((x-2)^{5}=x^{5}-10 x^{4}+40 x^{3}-80 x^{2}+80 x-32\\)",
+      "prompt": "Example \\(\\PageIndex{6}\\)\n\nUse the Binomial Theorem to expand \\((x-2)^{5}\\).\n\nSolution:\n\nWe identify the \\(a\\) and \\(b\\) of the pattern.\n\n[Figure: This figure shows x minus 2 to the power of 5.]\n\nFigure 12.4.13\n\nIn our pattern, \\(a=x\\) and \\(b=-2\\).\n\nWe use the Binomial Theorem.\n\n\\((a+b)^{n}=\\left( \\begin{array}{c}{n} \\\\ {0}\\end{array}\\right) a^{n}+\\left( \\begin{array}{c}{n} \\\\ {1}\\end{array}\\right) a^{n-1} b^{1}+\\left( \\begin{array}{c}{n} \\\\ {2}\\end{array}\\right) a^{n-2} b^{2}+\\ldots+\\left( \\begin{array}{c}{n} \\\\ {r}\\end{array}\\right) a^{n-r} b^{r}+\\ldots+\\left( \\begin{array}{c}{n} \\\\ {n}\\end{array}\\right) b^{n}\\)\n\nSubstitute in the values \\(a=x, b=-2\\), and \\(n=5\\).\n\n\\((x-2)^{5}=\\left( \\begin{array}{l}{5} \\\\ {0}\\end{array}\\right) x^{5}+\\left( \\begin{array}{c}{5} \\\\ {1}\\end{array}\\right) x^{5-1}(-2)^{1}+\\left( \\begin{array}{c}{5} \\\\ {2}\\end{array}\\right) x^{5-2}(-2)^{2}+\\left( \\begin{array}{c}{5} \\\\ {3}\\end{array}\\right) x^{5-3}(-2)^{3}+\\left( \\begin{array}{c}{5} \\\\ {4}\\end{array}\\right) x^{5-4}(-2)^{4}+\\left( \\begin{array}{c}{5} \\\\ {5}\\end{array}\\right)(-2)^{5}\\)\n\nSimplify the coefficients. Remember, \\(\\left( \\begin{array}{l}{n} \\\\ {1}\\end{array}\\right)=n, \\left( \\begin{array}{l}{n} \\\\ {n}\\end{array}\\right)=1, \\left( \\begin{array}{l}{n} \\\\ {0}\\end{array}\\right)=1\\).\n\n\\((x-2)^{5}=\\left( \\begin{array}{l}{5} \\\\ {0}\\end{array}\\right) x^{5}+\\left( \\begin{array}{c}{5} \\\\ {1}\\end{array}\\right) x^{4}(-2)+\\left( \\begin{array}{c}{5} \\\\ {2}\\end{array}\\right) x^{3}(-2)^{2}+\\left( \\begin{array}{c}{5} \\\\ {3}\\end{array}\\right) x^{2}(-2)^{3}+\\left( \\begin{array}{c}{5} \\\\ {4}\\end{array}\\right) x(-2)^{4}+\\left( \\begin{array}{c}{5} \\\\ {5}\\end{array}\\right)(-2)^{5}\\)\n\n\\((x-2)^{5}=1 x^{5}+5(-2) x^{4}+\\frac{5 !}{2 ! \\cdot 3 !}(-2)^{2} x^{3}+\\frac{5 !}{3 ! 2 !}(-2)^{3} x^{2}+\\frac{5 !}{4 !1 !}(-2)^{4} x+1(-2)^{5}\\)\n\n\\((x-2)^{5}=x^{5}+5(-2) x^{4}+10 \\cdot 4 \\cdot x^{3}+10(-8) x^{2}+5 \\cdot 16 \\cdot x+1(-32)\\)\n\n\\((x-2)^{5}=x^{5}-10 x^{4}+40 x^{3}-80 x^{2}+80 x-32\\)",
+      "sourceAnswers": [],
+      "hasFigure": true,
+      "status": "draft",
+      "answerVerified": false,
+      "translationStatus": "pending",
+      "mappingStatus": "pending"
+    },
+    {
+      "ordinal": 20,
+      "sourceNumber": "",
+      "sourceAnchor": "",
+      "kind": "exercise-candidate",
+      "context": "\\((a+b)^{n}=\\left( \\begin{array}{c}{n} \\\\ {0}\\end{array}\\right) a^{n}+\\left( \\begin{array}{c}{n} \\\\ {1}\\end{array}\\right) a^{n-1} b^{1}+\\left( \\begin{array}{c}{n} \\\\ {2}\\end{array}\\right) a^{n-2} b^{2}+\\ldots+\\left( \\begin{array}{c}{n} \\\\ {r}\\end{array}\\right) a^{n-r} b^{r}+\\ldots+\\left( \\begin{array}{c}{n} \\\\ {n}\\end{array}\\right) b^{n}\\)\n\nNotice that when we expanded \\((p+q)^{4}\\) in the last example, using the Binomial Theorem, we got the same coefficients we would get from using Pascal's Triangle.\n\nThe next example, the binomial is a difference. When the binomial is a difference, we must be careful in identifying the values we will use in the pattern.",
+      "original": "Exercise \\(\\PageIndex{11}\\)\n\nUse the Binomial Theorem to expand \\((x-3)^{5}\\).\n\nAnswer\n\n\\(\\begin{array}{l}{x^{5}-15 x^{4}+90 x^{3}-270 x^{2}} {+405 x-243}\\end{array}\\)",
+      "prompt": "Exercise \\(\\PageIndex{11}\\)\n\nUse the Binomial Theorem to expand \\((x-3)^{5}\\).",
+      "sourceAnswers": [
+        "\\(\\begin{array}{l}{x^{5}-15 x^{4}+90 x^{3}-270 x^{2}} {+405 x-243}\\end{array}\\)"
+      ],
+      "hasFigure": false,
+      "status": "draft",
+      "answerVerified": false,
+      "translationStatus": "pending",
+      "mappingStatus": "pending"
+    },
+    {
+      "ordinal": 21,
+      "sourceNumber": "",
+      "sourceAnchor": "",
+      "kind": "exercise-candidate",
+      "context": "\\((a+b)^{n}=\\left( \\begin{array}{c}{n} \\\\ {0}\\end{array}\\right) a^{n}+\\left( \\begin{array}{c}{n} \\\\ {1}\\end{array}\\right) a^{n-1} b^{1}+\\left( \\begin{array}{c}{n} \\\\ {2}\\end{array}\\right) a^{n-2} b^{2}+\\ldots+\\left( \\begin{array}{c}{n} \\\\ {r}\\end{array}\\right) a^{n-r} b^{r}+\\ldots+\\left( \\begin{array}{c}{n} \\\\ {n}\\end{array}\\right) b^{n}\\)\n\nNotice that when we expanded \\((p+q)^{4}\\) in the last example, using the Binomial Theorem, we got the same coefficients we would get from using Pascal's Triangle.\n\nThe next example, the binomial is a difference. When the binomial is a difference, we must be careful in identifying the values we will use in the pattern.",
+      "original": "Exercise \\(\\PageIndex{12}\\)\n\nUse the Binomial Theorem to expand \\((y-1)^{6}\\).\n\nAnswer\n\n\\(\\begin{array}{l}{y^{6}-6 y^{5}+15 y^{4}-20 y^{3}+15 y^{2}} {-6 y+1}\\end{array}\\)",
+      "prompt": "Exercise \\(\\PageIndex{12}\\)\n\nUse the Binomial Theorem to expand \\((y-1)^{6}\\).",
+      "sourceAnswers": [
+        "\\(\\begin{array}{l}{y^{6}-6 y^{5}+15 y^{4}-20 y^{3}+15 y^{2}} {-6 y+1}\\end{array}\\)"
+      ],
+      "hasFigure": false,
+      "status": "draft",
+      "answerVerified": false,
+      "translationStatus": "pending",
+      "mappingStatus": "pending"
+    },
+    {
+      "ordinal": 22,
+      "sourceNumber": "",
+      "sourceAnchor": "",
+      "kind": "example-or-exercise",
+      "context": "Notice that when we expanded \\((p+q)^{4}\\) in the last example, using the Binomial Theorem, we got the same coefficients we would get from using Pascal's Triangle.\n\nThe next example, the binomial is a difference. When the binomial is a difference, we must be careful in identifying the values we will use in the pattern.\n\nThings can get messy when both terms have a coefficient and a variable.",
+      "original": "Example \\(\\PageIndex{7}\\)\n\nUse the Binomial Theorem to expand \\((2x-3y)^{4}\\).\n\nSolution:\n\nWe identify the \\(a\\) and \\(b\\) of the pattern.\n\n[Figure: This figure shows how we identify a plus b to the power of n, in the pattern 2 x minus 3 y times the power of 4.]\n\nFigure 12.4.14\n\nIn our pattern, \\(a=2x\\) and \\(b=-3y\\).\n\nWe use the Binomial Theorem.\n\n\\((a+b)^{n}=\\left( \\begin{array}{c}{n} \\\\ {0}\\end{array}\\right) a^{n}+\\left( \\begin{array}{c}{n} \\\\ {1}\\end{array}\\right) a^{n-1} b^{1}+\\left( \\begin{array}{c}{n} \\\\ {2}\\end{array}\\right) a^{n-2} b^{2}+\\ldots+\\left( \\begin{array}{c}{n} \\\\ {r}\\end{array}\\right) a^{n-r} b^{r}+\\ldots+\\left( \\begin{array}{c}{n} \\\\ {n}\\end{array}\\right) b^{n}\\)\n\nSubstitute in the values \\(a=2x, b=-3y\\) and \\(n=4\\).\n\n\\((2 x-3 y)^{4}=\\left( \\begin{array}{l}{4} \\\\ {0}\\end{array}\\right)(2 x)^{4}+\\left( \\begin{array}{c}{4} \\\\ {1}\\end{array}\\right)(2 x)^{4-1}(-3 y)^{1}+\\left( \\begin{array}{c}{4} \\\\ {2}\\end{array}\\right)(2 x)^{4-2}(-3 y)^{2}+\\left( \\begin{array}{c}{4} \\\\ {3}\\end{array}\\right)(2 x)^{4-3}(-3 y)^{3}+\\left( \\begin{array}{c}{4} \\\\ {4}\\end{array}\\right) (-3y)^{4}\\)\n\nSimplify the exponents.\n\n\\((2 x-3 y)^{4}=\\left( \\begin{array}{l}{4} \\\\ {0}\\end{array}\\right)(2 x)^{4}+\\left( \\begin{array}{c}{4} \\\\ {1}\\end{array}\\right)(2 x)^{3}(-3 y)^{1}+\\left( \\begin{array}{c}{4} \\\\ {2}\\end{array}\\right)(2 x)^{2}(-3 y)^{2}+\\left( \\begin{array}{c}{4} \\\\ {3}\\end{array}\\right)(2 x)^{1}(-3 y)^{3}+\\left( \\begin{array}{c}{4} \\\\ {4}\\end{array}\\right)(-3 y)^{4}\\)\n\nEvaluate the coefficients. Remember, \\(\\left( \\begin{array}{l}{n} \\\\ {1}\\end{array}\\right)=n, \\left( \\begin{array}{l}{n} \\\\ {n}\\end{array}\\right)=1, \\left( \\begin{array}{l}{n} \\\\ {0}\\end{array}\\right)=1\\)\n\n\\((2 x-3 y)^{4}=1(2 x)^{4}+4(2 x)^{3}(-3 y)^{1}+\\frac{4 !}{2 !(2 x) !}(2 x)^{2}+\\frac{4 !}{3 !(4-3) !}(2 x)^{3}(-3 y)^{3}+1(-3 y)^{4}\\)\n\n\\((2 x-3 y)^{4}=16 x^{4}+4 \\cdot 8 x^{3}(-3 y)+6\\left(4 x^{2}\\right)\\left(9 y^{2}\\right)+4(2 x)\\left(-27 y^{3}\\right)+81 y^{4}\\)\n\n\\((2 x-3 y)^{4}=16 x^{4}-96 x^{3} y+216 x^{2} y^{2}-216 x y^{3}+81 y^{4}\\)",
+      "prompt": "Example \\(\\PageIndex{7}\\)\n\nUse the Binomial Theorem to expand \\((2x-3y)^{4}\\).\n\nSolution:\n\nWe identify the \\(a\\) and \\(b\\) of the pattern.\n\n[Figure: This figure shows how we identify a plus b to the power of n, in the pattern 2 x minus 3 y times the power of 4.]\n\nFigure 12.4.14\n\nIn our pattern, \\(a=2x\\) and \\(b=-3y\\).\n\nWe use the Binomial Theorem.\n\n\\((a+b)^{n}=\\left( \\begin{array}{c}{n} \\\\ {0}\\end{array}\\right) a^{n}+\\left( \\begin{array}{c}{n} \\\\ {1}\\end{array}\\right) a^{n-1} b^{1}+\\left( \\begin{array}{c}{n} \\\\ {2}\\end{array}\\right) a^{n-2} b^{2}+\\ldots+\\left( \\begin{array}{c}{n} \\\\ {r}\\end{array}\\right) a^{n-r} b^{r}+\\ldots+\\left( \\begin{array}{c}{n} \\\\ {n}\\end{array}\\right) b^{n}\\)\n\nSubstitute in the values \\(a=2x, b=-3y\\) and \\(n=4\\).\n\n\\((2 x-3 y)^{4}=\\left( \\begin{array}{l}{4} \\\\ {0}\\end{array}\\right)(2 x)^{4}+\\left( \\begin{array}{c}{4} \\\\ {1}\\end{array}\\right)(2 x)^{4-1}(-3 y)^{1}+\\left( \\begin{array}{c}{4} \\\\ {2}\\end{array}\\right)(2 x)^{4-2}(-3 y)^{2}+\\left( \\begin{array}{c}{4} \\\\ {3}\\end{array}\\right)(2 x)^{4-3}(-3 y)^{3}+\\left( \\begin{array}{c}{4} \\\\ {4}\\end{array}\\right) (-3y)^{4}\\)\n\nSimplify the exponents.\n\n\\((2 x-3 y)^{4}=\\left( \\begin{array}{l}{4} \\\\ {0}\\end{array}\\right)(2 x)^{4}+\\left( \\begin{array}{c}{4} \\\\ {1}\\end{array}\\right)(2 x)^{3}(-3 y)^{1}+\\left( \\begin{array}{c}{4} \\\\ {2}\\end{array}\\right)(2 x)^{2}(-3 y)^{2}+\\left( \\begin{array}{c}{4} \\\\ {3}\\end{array}\\right)(2 x)^{1}(-3 y)^{3}+\\left( \\begin{array}{c}{4} \\\\ {4}\\end{array}\\right)(-3 y)^{4}\\)\n\nEvaluate the coefficients. Remember, \\(\\left( \\begin{array}{l}{n} \\\\ {1}\\end{array}\\right)=n, \\left( \\begin{array}{l}{n} \\\\ {n}\\end{array}\\right)=1, \\left( \\begin{array}{l}{n} \\\\ {0}\\end{array}\\right)=1\\)\n\n\\((2 x-3 y)^{4}=1(2 x)^{4}+4(2 x)^{3}(-3 y)^{1}+\\frac{4 !}{2 !(2 x) !}(2 x)^{2}+\\frac{4 !}{3 !(4-3) !}(2 x)^{3}(-3 y)^{3}+1(-3 y)^{4}\\)\n\n\\((2 x-3 y)^{4}=16 x^{4}+4 \\cdot 8 x^{3}(-3 y)+6\\left(4 x^{2}\\right)\\left(9 y^{2}\\right)+4(2 x)\\left(-27 y^{3}\\right)+81 y^{4}\\)\n\n\\((2 x-3 y)^{4}=16 x^{4}-96 x^{3} y+216 x^{2} y^{2}-216 x y^{3}+81 y^{4}\\)",
+      "sourceAnswers": [],
+      "hasFigure": true,
+      "status": "draft",
+      "answerVerified": false,
+      "translationStatus": "pending",
+      "mappingStatus": "pending"
+    },
+    {
+      "ordinal": 23,
+      "sourceNumber": "",
+      "sourceAnchor": "",
+      "kind": "exercise-candidate",
+      "context": "Notice that when we expanded \\((p+q)^{4}\\) in the last example, using the Binomial Theorem, we got the same coefficients we would get from using Pascal's Triangle.\n\nThe next example, the binomial is a difference. When the binomial is a difference, we must be careful in identifying the values we will use in the pattern.\n\nThings can get messy when both terms have a coefficient and a variable.",
+      "original": "Exercise \\(\\PageIndex{13}\\)\n\nUse the Binomial Theorem to expand \\((3x-2y)^{5}\\).\n\nAnswer\n\n\\(\\begin{array}{l}{243 x^{5}-810 x^{4} y+1080 x^{3} y^{2}} {-720 x^{2} y^{3}+240 x y^{4}-32 y^{5}}\\end{array}\\)",
+      "prompt": "Exercise \\(\\PageIndex{13}\\)\n\nUse the Binomial Theorem to expand \\((3x-2y)^{5}\\).",
+      "sourceAnswers": [
+        "\\(\\begin{array}{l}{243 x^{5}-810 x^{4} y+1080 x^{3} y^{2}} {-720 x^{2} y^{3}+240 x y^{4}-32 y^{5}}\\end{array}\\)"
+      ],
+      "hasFigure": false,
+      "status": "draft",
+      "answerVerified": false,
+      "translationStatus": "pending",
+      "mappingStatus": "pending"
+    },
+    {
+      "ordinal": 24,
+      "sourceNumber": "",
+      "sourceAnchor": "",
+      "kind": "exercise-candidate",
+      "context": "Notice that when we expanded \\((p+q)^{4}\\) in the last example, using the Binomial Theorem, we got the same coefficients we would get from using Pascal's Triangle.\n\nThe next example, the binomial is a difference. When the binomial is a difference, we must be careful in identifying the values we will use in the pattern.\n\nThings can get messy when both terms have a coefficient and a variable.",
+      "original": "Exercise \\(\\PageIndex{14}\\)\n\nUse the Binomial Theorem to expand \\((4x-3y)^{4}\\).\n\nAnswer\n\n\\(\\begin{array}{l}{256 x^{4}-768 x^{3} y+864 x^{2} y^{2}} {-432 x y^{3}+81 y^{4}}\\end{array}\\)",
+      "prompt": "Exercise \\(\\PageIndex{14}\\)\n\nUse the Binomial Theorem to expand \\((4x-3y)^{4}\\).",
+      "sourceAnswers": [
+        "\\(\\begin{array}{l}{256 x^{4}-768 x^{3} y+864 x^{2} y^{2}} {-432 x y^{3}+81 y^{4}}\\end{array}\\)"
+      ],
+      "hasFigure": false,
+      "status": "draft",
+      "answerVerified": false,
+      "translationStatus": "pending",
+      "mappingStatus": "pending"
+    },
+    {
+      "ordinal": 25,
+      "sourceNumber": "",
+      "sourceAnchor": "",
+      "kind": "example-or-exercise",
+      "context": "Find a Specific Term in a Binomial Expansion\n\nThe \\((r+1)^{s t}\\) term in the expansion of \\((a+b)^{n}\\) is\n\n\\(\\left( \\begin{array}{l}{n} \\\\ {r}\\end{array}\\right) a^{n-r} b^{r}\\)",
+      "original": "Example \\(\\PageIndex{8}\\)\n\nFind the fourth term of \\((x+y)^{7}\\).\n\nSolution:\n\n            In our pattern, \\(n=7, a=x\\) and \\(b=y\\).\t\n\n[Figure: .]\n\nWe are looking for the fourth term.\n\nSince \\(r+1=4\\), then \\(r=3\\).\n\n            Write the formula\t\n\n[Figure: .]\n\n            Substitute in the values, \\(n=7, r=3, a=x\\), and \\(b=y\\).\t\n\n[Figure: .]\n\n[Figure: .]\n\n[Figure: .]\n\n            Simplify.\t\n\n[Figure: .]\n\n            Simplify.\t\n\n[Figure: .]\n\nTable 12.4.1",
+      "prompt": "Example \\(\\PageIndex{8}\\)\n\nFind the fourth term of \\((x+y)^{7}\\).\n\nSolution:\n\n            In our pattern, \\(n=7, a=x\\) and \\(b=y\\).\t\n\n[Figure: .]\n\nWe are looking for the fourth term.\n\nSince \\(r+1=4\\), then \\(r=3\\).\n\n            Write the formula\t\n\n[Figure: .]\n\n            Substitute in the values, \\(n=7, r=3, a=x\\), and \\(b=y\\).\t\n\n[Figure: .]\n\n[Figure: .]\n\n[Figure: .]\n\n            Simplify.\t\n\n[Figure: .]\n\n            Simplify.\t\n\n[Figure: .]\n\nTable 12.4.1",
+      "sourceAnswers": [],
+      "hasFigure": true,
+      "status": "draft",
+      "answerVerified": false,
+      "translationStatus": "pending",
+      "mappingStatus": "pending"
+    },
+    {
+      "ordinal": 26,
+      "sourceNumber": "",
+      "sourceAnchor": "",
+      "kind": "exercise-candidate",
+      "context": "Find a Specific Term in a Binomial Expansion\n\nThe \\((r+1)^{s t}\\) term in the expansion of \\((a+b)^{n}\\) is\n\n\\(\\left( \\begin{array}{l}{n} \\\\ {r}\\end{array}\\right) a^{n-r} b^{r}\\)",
+      "original": "Exercise \\(\\PageIndex{15}\\)\n\nFind the third term of \\((x+y)^{6}\\).\n\nAnswer\n\n\\(15x^{4}y^{2}\\)",
+      "prompt": "Exercise \\(\\PageIndex{15}\\)\n\nFind the third term of \\((x+y)^{6}\\).",
+      "sourceAnswers": [
+        "\\(15x^{4}y^{2}\\)"
+      ],
+      "hasFigure": false,
+      "status": "draft",
+      "answerVerified": false,
+      "translationStatus": "pending",
+      "mappingStatus": "pending"
+    },
+    {
+      "ordinal": 27,
+      "sourceNumber": "",
+      "sourceAnchor": "",
+      "kind": "exercise-candidate",
+      "context": "Find a Specific Term in a Binomial Expansion\n\nThe \\((r+1)^{s t}\\) term in the expansion of \\((a+b)^{n}\\) is\n\n\\(\\left( \\begin{array}{l}{n} \\\\ {r}\\end{array}\\right) a^{n-r} b^{r}\\)",
+      "original": "Exercise \\(\\PageIndex{16}\\)\n\nFind the fifth term of \\((a+b)^{8}\\).\n\nAnswer\n\n\\(8ab^{7}\\)",
+      "prompt": "Exercise \\(\\PageIndex{16}\\)\n\nFind the fifth term of \\((a+b)^{8}\\).",
+      "sourceAnswers": [
+        "\\(8ab^{7}\\)"
+      ],
+      "hasFigure": false,
+      "status": "draft",
+      "answerVerified": false,
+      "translationStatus": "pending",
+      "mappingStatus": "pending"
+    },
+    {
+      "ordinal": 28,
+      "sourceNumber": "",
+      "sourceAnchor": "",
+      "kind": "example-or-exercise",
+      "context": "Find a Specific Term in a Binomial Expansion\n\nThe \\((r+1)^{s t}\\) term in the expansion of \\((a+b)^{n}\\) is\n\n\\(\\left( \\begin{array}{l}{n} \\\\ {r}\\end{array}\\right) a^{n-r} b^{r}\\)",
+      "original": "Example \\(\\PageIndex{9}\\)\n\nFind the coefficient of the \\(x^{6}\\) term of \\((x+3)^{9}\\).\n\nSolution:\n\n            In our pattern, then \\(n=9, a=x\\), and \\(b=3\\).\t\n\n[Figure: .]\n\nFigure 12.4.23\n\n            We are looking for the coefficient of the \\(x^{6}\\) term. Since \\(a=x\\), and \\(x^{9-r}=x^{6}\\), we know \\(r=3\\).\t\n\n            Write the formula.\t\n\n[Figure: .]\n\nFigure 12.4.24\n\n            Substitute in the values, \\(n=9, 4=3, a=x\\), and \\(b=3\\).\t\n\n[Figure: .]\n\nFigure 12.4.25\n\n[Figure: .]\n\nFigure 12.4.26\n\n[Figure: .]\n\nFigure 12.4.27\n\n            Simplify.\t\n\n[Figure: .]\n\nFigure 12.4.28\n\n            Simplify.\t\n\n[Figure: .]\n\nFigure 12.4.29\n\n            Simplify.\t\n\n[Figure: .]\n\nFigure 12.4.30\n\nTable 12.4.2",
+      "prompt": "Example \\(\\PageIndex{9}\\)\n\nFind the coefficient of the \\(x^{6}\\) term of \\((x+3)^{9}\\).\n\nSolution:\n\n            In our pattern, then \\(n=9, a=x\\), and \\(b=3\\).\t\n\n[Figure: .]\n\nFigure 12.4.23\n\n            We are looking for the coefficient of the \\(x^{6}\\) term. Since \\(a=x\\), and \\(x^{9-r}=x^{6}\\), we know \\(r=3\\).\t\n\n            Write the formula.\t\n\n[Figure: .]\n\nFigure 12.4.24\n\n            Substitute in the values, \\(n=9, 4=3, a=x\\), and \\(b=3\\).\t\n\n[Figure: .]\n\nFigure 12.4.25\n\n[Figure: .]\n\nFigure 12.4.26\n\n[Figure: .]\n\nFigure 12.4.27\n\n            Simplify.\t\n\n[Figure: .]\n\nFigure 12.4.28\n\n            Simplify.\t\n\n[Figure: .]\n\nFigure 12.4.29\n\n            Simplify.\t\n\n[Figure: .]\n\nFigure 12.4.30\n\nTable 12.4.2",
+      "sourceAnswers": [],
+      "hasFigure": true,
+      "status": "draft",
+      "answerVerified": false,
+      "translationStatus": "pending",
+      "mappingStatus": "pending"
+    },
+    {
+      "ordinal": 29,
+      "sourceNumber": "",
+      "sourceAnchor": "",
+      "kind": "exercise-candidate",
+      "context": "Find a Specific Term in a Binomial Expansion\n\nThe \\((r+1)^{s t}\\) term in the expansion of \\((a+b)^{n}\\) is\n\n\\(\\left( \\begin{array}{l}{n} \\\\ {r}\\end{array}\\right) a^{n-r} b^{r}\\)",
+      "original": "Exercise \\(\\PageIndex{17}\\)\n\nFind the coefficient of the \\(x^{5}\\) term of \\((x+4)^{8}\\).\n\nAnswer\n\n\\(7,168\\)",
+      "prompt": "Exercise \\(\\PageIndex{17}\\)\n\nFind the coefficient of the \\(x^{5}\\) term of \\((x+4)^{8}\\).",
+      "sourceAnswers": [
+        "\\(7,168\\)"
+      ],
+      "hasFigure": false,
+      "status": "draft",
+      "answerVerified": false,
+      "translationStatus": "pending",
+      "mappingStatus": "pending"
+    },
+    {
+      "ordinal": 30,
+      "sourceNumber": "",
+      "sourceAnchor": "",
+      "kind": "exercise-candidate",
+      "context": "Find a Specific Term in a Binomial Expansion\n\nThe \\((r+1)^{s t}\\) term in the expansion of \\((a+b)^{n}\\) is\n\n\\(\\left( \\begin{array}{l}{n} \\\\ {r}\\end{array}\\right) a^{n-r} b^{r}\\)",
+      "original": "Exercise \\(\\PageIndex{18}\\)\n\nFind the coefficient of the \\(x^{4}\\) term of \\((x+2)^{7}\\).\n\nAnswer\n\n\\(280\\)",
+      "prompt": "Exercise \\(\\PageIndex{18}\\)\n\nFind the coefficient of the \\(x^{4}\\) term of \\((x+2)^{7}\\).",
+      "sourceAnswers": [
+        "\\(280\\)"
+      ],
+      "hasFigure": false,
+      "status": "draft",
+      "answerVerified": false,
+      "translationStatus": "pending",
+      "mappingStatus": "pending"
+    }
+  ],
+  "license": "CC BY 4.0",
+  "licenseEvidence": "This page titled 12.5: Binomial Theorem was last modified on Mon, 14 Feb 2022 01:05:24 GMT and is shared under a CC BY  4.0  license and was authored, remixed, and/or curated by OpenStax via source content that was edited to the style and standards of the LibreTexts platform.",
+  "url": "https://math.libretexts.org/Bookshelves/Algebra/Intermediate_Algebra_1e_(OpenStax)/12:_Sequences_Series_and_Binomial_Theorem/12.05:_Binomial_Theorem",
+  "sha256": "8a00e402dacff89fba191f543cc6c5bfc42ca4b18061a05a6ca510cb05aa973e",
+  "checkedAt": "2026-10-07",
+  "id": "0c148d26a109c7b5f7a4",
+  "bookId": "intermediate-algebra",
+  "licenseInherited": false,
+  "licenseSource": "https://math.libretexts.org/Bookshelves/Algebra/Intermediate_Algebra_1e_(OpenStax)/12:_Sequences_Series_and_Binomial_Theorem/12.05:_Binomial_Theorem",
+  "licenseUrl": "https://creativecommons.org/licenses/by/4.0/",
+  "authors": "OpenStax / Lynn Marecek, Andrea Honeycutt Mathis",
+  "book": "Intermediate Algebra 1e",
+  "reviewStatus": "unreviewed",
+  "sourceLanguage": "en",
+  "translationStatus": "pending"
+}

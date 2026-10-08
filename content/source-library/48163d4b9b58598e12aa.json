@@ -1,0 +1,484 @@
+{
+  "title": "10.8: Vectors",
+  "originalText": "Learning Objectives\n\nView vectors geometrically.\n\nFind magnitude and direction.\n\nPerform vector addition and scalar multiplication.\n\nFind the component form of a vector.\n\nFind the unit vector in the direction of \\(v\\).\n\nPerform operations with vectors in terms of \\(i\\) and \\(j\\).\n\nFind the dot product of two vectors.\n\nAn airplane is flying at an airspeed of \\(200\\) miles per hour headed on a SE bearing of \\(140°\\). A north wind (from north to south) is blowing at \\(16.2\\) miles per hour, as shown in Figure \\(\\PageIndex{1}\\). What are the ground speed and actual bearing of the plane?\n\n[Figure: Image of a plan flying SE at 140 degrees and the north wind blowing ]\n\nFigure \\(\\PageIndex{1}\\) \n\nGround speed refers to the speed of a plane relative to the ground. Airspeed refers to the speed a plane can travel relative to its surrounding air mass. These two quantities are not the same because of the effect of wind. In an earlier section, we used triangles to solve a similar problem involving the movement of boats. Later in this section, we will find the airplane’s ground speed and bearing, while investigating another approach to problems of this type. First, however, let’s examine the basics of vectors.\n\nA Geometric View of Vectors\n\nA vector is a specific quantity drawn as a line segment with an arrowhead at one end. It has an initial point, where it begins, and a terminal point, where it ends. A vector is defined by its magnitude, or the length of the line, and its direction, indicated by an arrowhead at the terminal point. Thus, a vector is a directed line segment. There are various symbols that distinguish vectors from other quantities:\n\nLower case, boldfaced type, with or without an arrow on top such as \\(u\\), \\(w\\), \\(\\overrightarrow{v}\\), \\(\\overrightarrow{u}\\), \\(\\overrightarrow{w}\\).\n\nGiven initial point \\(P\\) and terminal point \\(Q\\), a vector can be represented as \\(\\overrightarrow{PQ}\\). The arrowhead on top is what indicates that it is not just a line, but a directed line segment.\n\nGiven an initial point of \\((0,0)\\) and terminal point \\((a,b)\\), a vector may be represented as \\(⟨a,b⟩\\).\n\nThis last symbol \\(⟨a,b⟩\\) has special significance. It is called the standard position. The position vector has an initial point \\((0,0)\\) and a terminal point \\(⟨a,b⟩\\). To change any vector into the position vector, we think about the change in the x-coordinates and the change in the y-coordinates. Thus, if the initial point of a vector \\(\\overrightarrow{CD}\\) is \\(C(x_1,y_1)\\) and the terminal point is \\(D(x_2,y_2)\\), then the position vector is found by calculating\n\n\\[\\begin{align*} \\overrightarrow{AB} &= ⟨x_2−x_1,y_2−y_1⟩ \\\\[4pt] &= ⟨a,b⟩ \\end{align*}\\]\n\nIn Figure \\(\\PageIndex{2}\\), we see the original vector \\(\\overrightarrow{CD}\\) and the position vector \\(\\overrightarrow{AB}\\).\n\n[Figure: Plot of the original vector CD in blue and the position vector AB in orange extending from the origin.]\n\nFigure \\(\\PageIndex{2}\\)\n\nPROPERTIES OF VECTORS\n\nA vector is a directed line segment with an initial point and a terminal point. Vectors are identified by magnitude, or the length of the line, and direction, represented by the arrowhead pointing toward the terminal point. The position vector has an initial point at \\((0,0)\\) and is identified by its terminal point \\(⟨a,b⟩\\).\n\nExample \\(\\PageIndex{1A}\\): Find the Position Vector\n\nConsider the vector whose initial point is \\(P(2,3)\\) and terminal point is \\(Q(6,4)\\). Find the position vector.\n\nSolution\n\nThe position vector is found by subtracting one \\(x\\)-coordinate from the other \\(x\\)-coordinate, and one \\(y\\)-coordinate from the other \\(y\\)-coordinate. Thus\n\n\\[\\begin{align*} v &= ⟨6−2,4−3⟩ \\\\[4pt] &=⟨4,1⟩ \\end{align*}\\]\n\nThe position vector begins at \\((0,0)\\) and terminates at \\((4,1)\\). The graphs of both vectors are shown in Figure \\(\\PageIndex{3}\\).\n\n[Figure: Plot of the original vector in blue and the position vector in orange extending from the origin.]\n\nFigure \\(\\PageIndex{3}\\)\n\nWe see that the position vector is \\(⟨4,1⟩\\).\n\nExample \\(\\PageIndex{1B}\\): Drawing a Vector with the Given Criteria and Its Equivalent Position Vector\n\nFind the position vector given that vector \\(v\\) has an initial point at \\((−3,2)\\) and a terminal point at \\((4,5)\\), then graph both vectors in the same plane.\n\nSolution\n\nThe position vector is found using the following calculation:\n\n\\[\\begin{align*} v &= ⟨4−(−3),5−2⟩ \\\\[4pt] &= ⟨7,3⟩ \\end{align*}\\]\n\nThus, the position vector begins at \\((0,0)\\) and terminates at \\((7,3)\\). See Figure \\(\\PageIndex{4}\\).\n\n[Figure: Plot of the two given vectors their same position vector.]\n\nFigure \\(\\PageIndex{4}\\)\n\nExercise \\(\\PageIndex{1}\\)\n\nDraw a vector \\(\\vec{v}\\) that connects from the origin to the point \\((3,5)\\).\n\nAnswer\n\n[Figure: A vector from the origin to (3,5) - a line with an arrow at the (3,5) endpoint.]\n\nFigure \\(\\PageIndex{5}\\)\n\nFinding Magnitude and Direction\n\nTo work with a vector, we need to be able to find its magnitude and its direction. We find its magnitude using the Pythagorean Theorem or the distance formula, and we find its direction using the inverse tangent function.\n\nMAGNITUDE AND DIRECTION OF A VECTOR\n\nGiven a position vector \\(\\vec{v}=⟨a,b⟩\\),the magnitude is found by \\(| v |=\\sqrt{a^2+b^2}\\).The direction is equal to the angle formed with the \\(x\\)-axis, or with the \\(y\\)-axis, depending on the application. For a position vector, the direction is found by \\(\\tan \\theta=\\left(\\dfrac{b}{a}\\right)⇒\\theta={\\tan}^{−1}\\left(\\dfrac{b}{a}\\right)\\), as illustrated in Figure \\(\\PageIndex{6}\\).\n\n[Figure: Standard plot of a position vector (a,b) with magnitude |v| extending into Q1 at theta degrees. ]\n\nFigure \\(\\PageIndex{6}\\)\n\nTwo vectors \\(\\vec{v}\\) and \\(\\vec{u}\\) are considered equal if they have the same magnitude and the same direction. Additionally, if both vectors have the same position vector, they are equal.\n\nExample \\(\\PageIndex{2A}\\): Finding the Magnitude and Direction of a Vector\n\nFind the magnitude and direction of the vector with initial point \\(P(−8,1)\\) and terminal point \\(Q(−2,−5)\\).Draw the vector.\n\nSolution\n\nFirst, find the position vector.\n\n\\[\\begin{align*} u &= ⟨−2,−(−8),−5−1⟩ \\\\[4pt] &= ⟨6,−6⟩ \\end{align*}\\]\n\nWe use the Pythagorean Theorem to find the magnitude.\n\n\\[\\begin{align*} |u| &= \\sqrt{{(6)}^2+{(−6)}^2} \\\\[4pt] &= \\sqrt{72} \\\\[4pt] &=\\sqrt{62} \\end{align*}\\]\n\nThe direction is given as\n\n\\[\\begin{align*} \\tan \\theta & =\\dfrac{−6}{6}=−1\\rightarrow \\theta={\\tan}^{−1}(−1) \\\\[4pt] &= −45° \\end{align*}\\]\n\nHowever, the angle terminates in the fourth quadrant, so we add \\(360°\\) to obtain a positive angle. Thus, \\(−45°+360°=315°\\). See Figure \\(\\PageIndex{7}\\).\n\n[Figure: Plot of the position vector extending into Q4 from the origin with the magnitude 6rad2.]\n\nFigure \\(\\PageIndex{7}\\)\n\nExample \\(\\PageIndex{2B}\\): Showing That Two Vectors Are Equal\n\nShow that vector \\(\\vec{v}\\) with initial point at \\((5,−3)\\) and terminal point at \\((−1,2)\\) is equal to vector \\(\\vec{u}\\) with initial point at \\((−1,−3)\\) and terminal point at \\((−7,2)\\). Draw the position vector on the same grid as \\(\\vec{v}\\) and \\(\\vec{u}\\). Next, find the magnitude and direction of each vector.\n\nSolution\n\nAs shown in Figure \\(\\PageIndex{8}\\), draw the vector \\(\\vec{v}\\) starting at initial \\((5,−3)\\) and terminal point \\((−1,2)\\). Draw the vector \\(\\vec{u}\\) with initial point \\((−1,−3)\\) and terminal point \\((−7,2)\\). Find the standard position for each.\n\nNext, find and sketch the position vector for \\(\\vec{v}\\) and \\(\\vec{u}\\). We have\n\n\\[\\begin{align*} v &= ⟨−1−5,2−(−3)⟩ \\\\[4pt] &= ⟨−6,5⟩u \\\\[4pt] &= ⟨−7−(−1),2−(−3)⟩ \\\\[4pt] & =⟨−6,5⟩ \\end{align*}\\]\n\nSince the position vectors are the same, \\(\\vec{v}\\) and \\(\\vec{u}\\) are the same.\n\nAn alternative way to check for vector equality is to show that the magnitude and direction are the same for both vectors. To show that the magnitudes are equal, use the Pythagorean Theorem.\n\n\\[\\begin{align*} |v| &= \\sqrt{{(−1−5)}^2+{(2−(−3))}^2} \\\\[4pt] &= \\sqrt{{(−6)}^2+{(5)}^2} \\\\[4pt] &= \\sqrt{36+25} \\\\[4pt] &= \\sqrt{61} \\\\[4pt] |u| &= \\sqrt{{(−7−(−1))}^2+{(2−(−3))}^2} \\\\[4pt] &=\\sqrt{{(−6)}^2+{(5)}^2} \\\\[4pt] &= \\sqrt{36+25} \\\\[4pt] &= \\sqrt{61} \\end{align*}\\]\n\nAs the magnitudes are equal, we now need to verify the direction. Using the tangent function with the position vector gives\n\n\\[\\begin{align*} \\tan \\theta &= −\\dfrac{5}{6}⇒\\theta={\\tan}^{−1}\\left(−\\dfrac{5}{6}\\right) \\\\[4pt] & = −39.8° \\end{align*}\\]\n\nHowever, we can see that the position vector terminates in the second quadrant, so we add \\(180°\\). Thus, the direction is \\(−39.8°+180°=140.2°\\).\n\n[Figure: Plot of the two given vectors their same position vector.]\n\nFigure \\(\\PageIndex{8}\\)\n\nPerforming Vector Addition and Scalar Multiplication\n\nNow that we understand the properties of vectors, we can perform operations involving them. While it is convenient to think of the vector \\(u=⟨x,y⟩\\) as an arrow or directed line segment from the origin to the point \\((x,y)\\), vectors can be situated anywhere in the plane. The sum of two vectors \\(\\vec{u}\\) and \\(\\vec{v}\\), or vector addition, produces a third vector \\(\\overrightarrow{u+ v}\\), the resultant vector.\n\nTo find \\(\\overrightarrow{u + v}\\), we first draw the vector \\(\\vec{u}\\), and from the terminal end of \\(\\vec{u}\\), we drawn the vector \\(\\vec{v}\\). In other words, we have the initial point of \\(\\vec{v}\\) meet the terminal end of \\(\\vec{u}\\). This position corresponds to the notion that we move along the first vector and then, from its terminal point, we move along the second vector. The sum \\(\\overrightarrow{u + v}\\) is the resultant vector because it results from addition or subtraction of two vectors. The resultant vector travels directly from the beginning of \\(\\vec{u}\\) to the end of \\(\\vec{v}\\) in a straight path, as shown in Figure \\(\\PageIndex{9}\\).\n\n[Figure: Diagrams of vector addition and subtraction. ]\n\nFigure \\(\\PageIndex{9}\\)\n\nVector subtraction is similar to vector addition. To find \\(\\overrightarrow{u − v}\\), view it as \\(\\overrightarrow{u + (−v)}\\). Adding \\(\\overrightarrow{−v}\\) is reversing direction of \\(\\vec{v}\\) and adding it to the end of \\(\\vec{u}\\). The new vector begins at the start of \\(\\vec{u}\\) and stops at the end point of \\(\\overrightarrow{−v}\\). See Figure \\(\\PageIndex{10}\\) for a visual that compares vector addition and vector subtraction using parallelograms.\n\n[Figure: Showing vector addition and subtraction with parallelograms. For addition, the base is u, the side is v, the diagonal connecting the start of the base to the end of the side is u+v. For subtraction, thetop is u, the side is -v, and the diagonal connecting the start of the top to the end of the side is u-v.]\n\nFigure \\(\\PageIndex{10}\\)\n\nExample \\(\\PageIndex{3}\\): Adding and Subtracting Vectors\n\nGiven \\(u=⟨3,−2⟩\\) and \\(v=⟨−1,4⟩\\), find two new vectors \\(\\overrightarrow{u + v}\\), and \\(\\overrightarrow{u − v}\\).\n\nSolution\n\nTo find the sum of two vectors, we add the components. Thus,\n\n\\[ \\begin{align*} u+v &= ⟨3,−2⟩+⟨−1,4⟩ \\\\[4pt] &= ⟨3+(−1),−2+4⟩ \\\\[4pt] &=⟨2,2⟩ \\end{align*}\\]\n\nSee Figure \\(\\PageIndex{11a}\\).\n\nTo find the difference of two vectors, add the negative components of \\(\\vec{v}\\) to \\(\\vec{u}\\). Thus,\n\n\\[\\begin{align*}u+(−v) &=⟨3,−2⟩+⟨1,−4⟩ \\\\[4pt] &= ⟨3+1,−2+(−4)⟩ \\\\[4pt] &= ⟨4,−6⟩ \\end{align*}\\]\n\nSee Figure \\(\\PageIndex{11b}\\).\n\n[Figure: Further diagrams of vector addition and subtraction.]\n\nFigure \\(\\PageIndex{11}\\): (a) Sum of two vectors (b) Difference of two vectors\n\nMultiplying By a Scalar\n\nWhile adding and subtracting vectors gives us a new vector with a different magnitude and direction, the process of multiplying a vector by a scalar, a constant, changes only the magnitude of the vector or the length of the line. Scalar multiplication has no effect on the direction unless the scalar is negative, in which case the direction of the resulting vector is opposite the direction of the original vector.\n\nSCALAR MULTIPLICATION\n\nScalar multiplication involves the product of a vector and a scalar. Each component of the vector is multiplied by the scalar. Thus, to multiply \\(v=⟨a,b⟩\\) by \\(k\\), we have\n\n\\(kv=⟨ka,kb⟩\\)\n\nOnly the magnitude changes, unless \\(k\\) is negative, and then the vector reverses direction.\n\nExample \\(\\PageIndex{4}\\): Performing Scalar Multiplication\n\nGiven vector \\(\\vec{v}=⟨3,1⟩\\), find \\(3\\vec{v}\\), \\(\\dfrac{1}{2}\\), and \\(\\vec{−v}\\).\n\nSolution\n\nSee Figure \\(\\PageIndex{12}\\) for a geometric interpretation. If \\(\\vec{v}=⟨3,1⟩\\), then\n\n\\[\\begin{align*} 3v &= ⟨3⋅3,3⋅1⟩ \\\\[4pt] &= ⟨9,3⟩ \\\\[4pt]  \\dfrac{1}{2}v &= ⟨\\dfrac{1}{2}⋅3,\\dfrac{1}{2}⋅1⟩ \\\\[4pt] &=⟨\\dfrac{3}{2},\\dfrac{1}{2}⟩ \\\\[4pt] −v &=⟨−3,−1⟩ \\end{align*}\\]\n\n[Figure: Showing the effect of scaling a vector: 3x, 1x, .5x, and -1x. The 3x is three times as long, the 1x stays the same, the .5x halves the length, and the -1x reverses the direction of the vector but keeps the length the same. The rest keep the same direction; only the magnitude changes.]\n\nFigure \\(\\PageIndex{12}\\)\n\nAnalysis\n\nNotice that the vector \\(3\\vec{v}\\) is three times the length of \\(\\vec{v}\\), \\(\\dfrac{1}{2}\\vec{v}\\) is half the length of \\(\\vec{v}\\), and \\(\\overrightarrow{–v}\\) is the same length of \\(\\vec{v}\\), but in the opposite direction.\n\nExercise \\(\\PageIndex{2}\\)\n\nFind the scalar multiple \\(3u\\) given \\(\\vec{u}=⟨5,4⟩\\).\n\nAnswer\n\n\\(3u=⟨15,12⟩\\)\n\nExample \\(\\PageIndex{5}\\)\n\nFind a linear equation to solve for the following unknown quantities: One number exceeds another number by \\(17\\) and their sum is \\(31\\). Find the two numbers.\n\nSolution\n\nFirst, we must multiply each vector by the scalar.\n\n\\[\\begin{align*} 3u &= 3⟨3,−2⟩ \\\\[4pt] &= ⟨9,−6⟩ \\\\[4pt] 2v &= 2⟨−1,4⟩ \\\\[4pt] &= ⟨−2,8⟩ \\end{align*}\\]\n\nThen, add the two together.\n\n\\[\\begin{align*} w &= 3u+2v \\\\[4pt] &=⟨9,−6⟩+⟨−2,8⟩ \\\\[4pt] &= ⟨9−2,−6+8⟩ \\\\[4pt] &= ⟨7,2⟩ \\end{align*}\\]\n\nSo, \\(w=⟨7,2⟩\\).\n\nFinding Component Form\n\nIn some applications involving vectors, it is helpful for us to be able to break a vector down into its components. Vectors are comprised of two components: the horizontal component is the \\(x\\) direction, and the vertical component is the \\(y\\) direction. For example, we can see in the graph in Figure \\(\\PageIndex{13}\\) that the position vector \\(⟨2,3⟩\\) comes from adding the vectors \\(v_1\\) and \\(v_2\\). We have \\(v_2\\) with initial point \\((0,0)\\) and terminal point \\((2,0)\\).\n\n\\[\\begin{align*} v_1 &= ⟨2−0,0−0⟩ \\\\[4pt] &= ⟨2,0⟩ \\end{align*}\\]\n\nWe also have \\(v_2\\) with initial point \\((0,0)\\) and terminal point \\((0, 3)\\).\n\n\\[\\begin{align*} v_2 &= ⟨0−0,3−0⟩ \\\\[4pt] &= ⟨0,3⟩ \\end{align*}\\]\n\nTherefore, the position vector is\n\n\\[\\begin{align*} v &= ⟨2+0,3+0⟩ \\\\[4pt] &= ⟨2,3⟩ \\end{align*}\\]\n\nUsing the Pythagorean Theorem, the magnitude of \\(v_1\\) is \\(2\\), and the magnitude of \\(v_2\\) is \\(3\\). To find the magnitude of \\(v\\), use the formula with the position vector.\n\n\\[\\begin{align*} |v| &= \\sqrt{{|v_1|}^2+{|v_2|}^2} \\\\[4pt] &= \\sqrt{2^2+3^2} \\\\[4pt] &= \\sqrt{13} \\end{align*}\\]\n\nThe magnitude of \\(v\\) is \\(\\sqrt{13}\\). To find the direction, we use the tangent function \\(\\tan \\theta=\\dfrac{y}{x}\\).\n\n\\[\\begin{align*} \\tan \\theta &= \\dfrac{v_2}{v_1} \\\\[4pt] \\tan \\theta &= \\dfrac{3}{2} \\\\[4pt] \\theta &={\\tan}^{−1}\\left(\\dfrac{3}{2}\\right)=56.3° \\end{align*}\\]\n\n[Figure: Diagram of a vector in root position with its horizontal and vertical components.]\n\nFigure \\(\\PageIndex{13}\\)\n\nThus, the magnitude of \\(\\vec{v}\\) is \\(\\sqrt{13}\\) and the direction is \\(56.3^{\\circ}\\) off the horizontal.\n\nExample \\(\\PageIndex{6}\\): Finding the Components of the Vector\n\nFind the components of the vector \\(\\vec{v}\\) with initial point \\((3,2)\\) and terminal point \\((7,4)\\).\n\nSolution\n\nFirst find the standard position.\n\n\\[\\begin{align*} v &= ⟨7−3,4−2⟩ \\\\[4pt] &= ⟨4,2⟩ \\end{align*}\\]\n\nSee the illustration in Figure \\(\\PageIndex{14}\\).\n\n[Figure: Diagram of a vector in root position with its horizontal (4,0) and vertical (0,2) components.]\n\nFigure \\(\\PageIndex{14}\\)\n\nThe horizontal component is \\(\\vec{v_1}=⟨4,0⟩\\) and the vertical component is \\(\\vec{v_2}=⟨0,2⟩\\).\n\nFinding the Unit Vector in the Direction of \\(v\\)\n\nIn addition to finding a vector’s components, it is also useful in solving problems to find a vector in the same direction as the given vector, but of magnitude \\(1\\). We call a vector with a magnitude of \\(1\\) a unit vector. We can then preserve the direction of the original vector while simplifying calculations.\n\nUnit vectors are defined in terms of components. The horizontal unit vector is written as \\(\\vec{i}=⟨1,0⟩\\) and is directed along the positive horizontal axis. The vertical unit vector is written as \\(\\vec{j}=⟨0,1⟩\\) and is directed along the positive vertical axis. See Figure \\(\\PageIndex{15}\\).\n\n[Figure: Plot showing the unit vectors i=91,0) and j=(0,1)]\n\nFigure \\(\\PageIndex{15}\\)\n\nTHE UNIT VECTORS\n\nIf \\(\\vec{v}\\) is a nonzero vector, then \\(\\dfrac{v}{| v |}\\) is a unit vector in the direction of \\(v\\). Any vector divided by its magnitude is a unit vector. Notice that magnitude is always a scalar, and dividing by a scalar is the same as multiplying by the reciprocal of the scalar.\n\nExample \\(\\PageIndex{7}\\): Finding the Unit Vector in the Direction of \\(v\\)\n\nFind a unit vector in the same direction as \\(v=⟨−5,12⟩\\).\n\nSolution\n\nFirst, we will find the magnitude.\n\n\\[\\begin{align*} |v| &= \\sqrt{{(−5)}^2+{(12)}^2} \\\\[4pt] &= \\sqrt{25+144} \\\\[4pt] &=\\sqrt{169} \\\\[4pt] &= 13 \\end{align*}\\]\n\nThen we divide each component by \\(| v |\\), which gives a unit vector in the same direction as \\(\\vec{v}\\):\n\n\\(\\dfrac{v}{| v |} = −\\dfrac{5}{13}i+\\dfrac{12}{13}j \\)\n\nor, in component form\n\n\\(\\dfrac{v}{| v |}= \\left \\langle -\\dfrac{5}{13},\\dfrac{12}{13} \\right \\rangle\\)\n\nSee Figure \\(\\PageIndex{16}\\).\n\n[Figure: Plot showing the unit vector (-5/13, 12/13) in the direction of (-5, 12)]\n\nFigure \\(\\PageIndex{16}\\)\n\nVerify that the magnitude of the unit vector equals \\(1\\). The magnitude of \\(−\\dfrac{5}{13}i+\\dfrac{12}{13}j\\) is given as\n\n\\[\\begin{align*} \\sqrt{ {\\left(−\\dfrac{5}{13}\\right)}^2+{ \\left(\\dfrac{12}{13}\\right) }^2 } &= \\sqrt{\\dfrac{25}{169}+\\dfrac{144}{169}} \\\\[4pt] &= \\sqrt{\\dfrac{169}{169}}\\\\ &=1 \\end{align*}\\]\n\nThe vector \\(u=\\dfrac{5}{13}i+\\dfrac{12}{13}j\\) is the unit vector in the same direction as \\(v=⟨−5,12⟩\\).\n\nPerforming Operations with Vectors in Terms of \\(i\\) and \\(j\\)\n\nSo far, we have investigated the basics of vectors: magnitude and direction, vector addition and subtraction, scalar multiplication, the components of vectors, and the representation of vectors geometrically. Now that we are familiar with the general strategies used in working with vectors, we will represent vectors in rectangular coordinates in terms of \\(i\\) and \\(j\\).\n\nVECTORS IN THE RECTANGULAR PLANE\n\nGiven a vector \\(\\vec{v}\\) with initial point \\(P=(x_1,y_1)\\) and terminal point \\(Q=(x_2,y_2)\\), \\(\\vec{v}\\) is written as\n\n\\[v=(x_2−x_1)i+(y_1−y_2)j\\]\n\nThe position vector from \\((0,0)\\) to \\((a,b)\\), where \\((x_2−x_1)=a\\) and \\((y_2−y_1)=b\\), is written as \\(\\vec{v} = \\vec{ai}+ \\vec{bj}\\). This vector sum is called a linear combination of the vectors \\(\\vec{i}\\) and \\(\\vec{j}\\).\n\nThe magnitude of \\(\\vec{v} = \\overrightarrow{ai} + \\overrightarrow{bj}\\) is given as \\(| v |=\\sqrt{a^2+b^2}\\). See Figure \\(\\PageIndex{17}\\).\n\n[Figure: Plot showing vectors in rectangular coordinates in terms of i and j. The position vector v (in orange) extends from the origin to some point (a,b) in Q1. The horizontal (ai) and vertical (bj) components are shown.]\n\nFigure \\(\\PageIndex{17}\\)\n\nExample \\(\\PageIndex{8A}\\): Writing a Vector in Terms of \\(i\\) and \\(j\\)\n\nGiven a vector \\(\\vec{v}\\) with initial point \\(P=(2,−6)\\) and terminal point \\(Q=(−6,6)\\), write the vector in terms of \\(\\vec{i}\\) and \\(\\vec{j}\\).\n\nSolution\n\nBegin by writing the general form of the vector. Then replace the coordinates with the given values.\n\n\\[\\begin{align*} v &= (x_2−x_1)i+(y_2−y_1)j \\\\[4pt] &=(−6−2)i+(6−(−6))j \\\\[4pt] &= −8i+12j \\end{align*}\\]\n\nExample \\(\\PageIndex{8B}\\): Writing a Vector in Terms of \\(i\\) and \\(j\\) Using Initial and Terminal Points\n\nGiven initial point \\(P_1=(−1,3)\\) and terminal point \\(P_2=(2,7)\\), write the vector \\(\\vec{v}\\) in terms of \\(\\vec{i}\\) and \\(\\vec{j}\\).\n\nSolution\n\nBegin by writing the general form of the vector. Then replace the coordinates with the given values.\n\n\\[\\begin{align*} v &= (x_2−x_1)i+(y_2−y_1)j \\\\[4pt] v &= (2−(−1))i+(7−3)j \\\\[4pt] &= 3i+4j \\end{align*}\\]\n\nExercise \\(\\PageIndex{3}\\)\n\nWrite the vector \\(\\vec{u}\\) with initial point \\(P=(−1,6)\\) and terminal point \\(Q=(7,−5)\\) in terms of \\(\\vec{i}\\) and \\(\\vec{j}\\).\n\nAnswer\n\n\\(u=8i−11j\\)\n\nPerforming Operations on Vectors in Terms of \\(i\\) and \\(j\\)\n\nWhen vectors are written in terms of \\(i\\) and \\(j\\), we can carry out addition, subtraction, and scalar multiplication by performing operations on corresponding components.\n\nADDING AND SUBTRACTING VECTORS IN RECTANGULAR COORDINATES\n\nGiven \\(v = ai + bj\\) and \\(u = ci + dj\\), then\n\n\\[\\begin{align*} v+u &= (a+c)i+(b+d)j \\\\[4pt] v−u &= (a−c)i+(b−d)j \\end{align*}\\]\n\nExample \\(\\PageIndex{9}\\): Finding the Sum of the Vectors\n\nFind the sum of \\(v_1=2i−3j\\) and \\(v_2=4i+5j\\).\n\nSolution\n\n\\[\\begin{align*} v_1+v_2 &= (2+4)i+(−3+5)j \\\\[4pt] &= 6i+2j \\end{align*}\\]\n\nCalculating the Component Form of a Vector: Direction\n\nWe have seen how to draw vectors according to their initial and terminal points and how to find the position vector. We have also examined notation for vectors drawn specifically in the Cartesian coordinate plane using \\(i\\) and \\(j\\). For any of these vectors, we can calculate the magnitude. Now, we want to combine the key points, and look further at the ideas of magnitude and direction.\n\nCalculating direction follows the same straightforward process we used for polar coordinates. We find the direction of the vector by finding the angle to the horizontal. We do this by using the basic trigonometric identities, but with \\(| v |\\) replacing \\(r\\).\n\nVECTOR COMPONENTS IN TERMS OF MAGNITUDE AND DIRECTION\n\nGiven a position vector \\(v=⟨x,y⟩\\) and a direction angle \\(\\theta\\),\n\n\\[ \\begin{align*} \\cos \\theta &= \\dfrac{x}{|v|} \\text{ and } \\sin \\theta=y|v| \\\\[4pt]  x &= |v| \\cos \\theta \\\\[4pt] y &= |v| \\sin \\theta \\end{align*}\\]\n\nThus, \\(v=xi+yj=| v | \\cos \\theta i+| v | \\sin \\theta j\\), and magnitude is expressed as \\(| v |=\\sqrt{x^2+y^2}\\).\n\nExample \\(\\PageIndex{10}\\): Writing a Vector in Terms of Magnitude and Direction\n\nWrite a vector with length \\(7\\) at an angle of \\(135°\\) to the positive x-axis in terms of magnitude and direction.\n\nSolution\n\nUsing the conversion formulas \\(x=| v | \\cos \\theta i\\) and \\(y=| v | \\sin \\theta j\\), we find that\n\n\\[ \\begin{align*} x &= 7\\cos(135°)i \\\\[4pt] &= −\\dfrac{7\\sqrt{2}}{2} \\\\[4pt] y &=7 \\sin(135°)j \\\\[4pt] &= \\dfrac{7\\sqrt{2}}{2} \\end{align*}\\]\n\nThis vector can be written as \\(v=7\\cos(135°)i+7\\sin(135°)j\\) or simplified as\n\n\\(v=−\\dfrac{7\\sqrt{2}}{2}i+\\dfrac{7\\sqrt{2}}{2}j\\)\n\nExercise \\(\\PageIndex{4}\\)\n\nA vector travels from the origin to the point \\((3,5)\\). Write the vector in terms of magnitude and direction.\n\nAnswer\n\n\\(v=\\sqrt{34}\\cos(59°)i+\\sqrt{34}\\sin(59°)j\\)\n\nMagnitude = \\(34\\)\n\n\\(\\theta={\\tan}^{−1}\\left(\\dfrac{5}{3}\\right)=59.04°\\)\n\nFinding the Dot Product of Two Vectors\n\nAs we discussed earlier in the section, scalar multiplication involves multiplying a vector by a scalar, and the result is a vector. As we have seen, multiplying a vector by a number is called scalar multiplication. If we multiply a vector by a vector, there are two possibilities: the dot product and the cross product. We will only examine the dot product here; you may encounter the cross product in more advanced mathematics courses.\n\nThe dot product of two vectors involves multiplying two vectors together, and the result is a scalar.\n\nDOT PRODUCT\n\nThe dot product of two vectors \\(v=⟨a,b⟩\\) and \\(u=⟨c,d⟩\\) is the sum of the product of the horizontal components and the product of the vertical components.\n\n\\[v⋅u=ac+bd\\]\n\nTo find the angle between the two vectors, use the formula below.\n\n\\[\\cos \\theta=\\dfrac{v}{| v |}⋅\\dfrac{u}{| u |}\\]\n\nExample \\(\\PageIndex{11A}\\): Finding the Dot Product of Two Vectors\n\nFind the dot product of \\(v=⟨5,12⟩\\) and \\(u=⟨−3,4⟩\\).\n\nSolution\n\nUsing the formula, we have\n\n\\[\\begin{align*} v⋅u &= ⟨5,12⟩⋅⟨−3,4⟩ \\\\[4pt] &= 5⋅(−3)+12⋅4 \\\\[4pt] &= −15+48 \\\\[4pt] &= 33 \\end{align*}\\]\n\nExample \\(\\PageIndex{11B}\\): Finding the Dot Product of Two Vectors and the Angle between Them\n\nFind the dot product of \\(v_1 = 5i + 2j\\) and \\(v_2 = 3i + 7j\\). Then, find the angle between the two vectors.\n\nSolution\n\nFinding the dot product, we multiply corresponding components.\n\n\\[ \\begin{align*} v_1⋅v_2 &= ⟨5,2⟩⋅⟨3,7⟩ \\\\[4pt] &= 5⋅3+2⋅7 \\\\[4pt] &= 15+14 \\\\[4pt] &= 29 \\end{align*}\\]\n\nTo find the angle between them, we use the formula \\(\\cos \\theta=\\dfrac{v}{|v|}⋅\\dfrac{u}{|u|}\\).\n\n\\[\\begin{align*} \\dfrac{v}{|v|}\\cdot \\dfrac{u}{|u|} &= \\left \\langle \\dfrac{5}{\\sqrt{29}}+\\dfrac{2}{\\sqrt{29}} \\right \\rangle \\cdot \\left \\langle \\dfrac{3}{\\sqrt{58}}+\\dfrac{7}{\\sqrt{58}} \\right \\rangle \\\\[4pt] &=\\dfrac{5}{\\sqrt{29}}\\cdot \\dfrac{3}{\\sqrt{58}}+\\dfrac{2}{\\sqrt{29}}\\cdot \\dfrac{7}{\\sqrt{58}} \\\\[4pt] &= \\dfrac{15}{\\sqrt{1682}}+\\dfrac{14}{\\sqrt{1682}}\\\\ &=\\dfrac{29}{\\sqrt{1682}} \\\\[4pt] &= 0.707107 \\\\[4pt] {\\cos}^{-1}(0.707107) &= 45° \\end{align*}\\]\n\nSee Figure \\(\\PageIndex{18}\\).\n\n[Figure: Plot showing the two position vectors (3,7) and (5,2) and the 45 degree angle between them.]\n\nFigure \\(\\PageIndex{18}\\)\n\nExample \\(\\PageIndex{11C}\\): Finding the Angle between Two Vectors\n\nFind the angle between \\(u=⟨−3,4⟩\\) and \\(v=⟨5,12⟩\\).\n\nSolution\n\nUsing the formula, we have\n\n\\[\\begin{align*} \\theta &= {\\cos}^{−1}\\left(\\dfrac{u}{|u|}⋅\\dfrac{v}{|v|}\\right) \\\\[4pt] \\left(\\dfrac{u}{|u|}⋅\\dfrac{v}{|v|}\\right) &= \\dfrac{−3i+4j}{5}⋅\\dfrac{5i+12j}{13} \\\\[4pt] &= \\left(− \\dfrac{3}{5}⋅ \\dfrac{5}{13}\\right)+\\left(\\dfrac{4}{5}⋅ \\dfrac{12}{13}\\right) \\\\[4pt] &= −\\dfrac{15}{65}+\\dfrac{48}{65} \\\\[4pt] &= \\dfrac{33}{65} \\\\[4pt]  \\theta &= {\\cos}^{−1}\\left(\\dfrac{33}{65}\\right) \\\\[4pt] &= 59.5^{\\circ} \\end{align*}\\]\n\nSee Figure \\(\\PageIndex{19}\\).\n\n[Figure: Plot showing the two position vectors (-3,4) and (5,12) and the 59.5 degree angle between them.]\n\nFigure \\(\\PageIndex{19}\\)\n\nExample \\(\\PageIndex{11D}\\): Finding Ground Speed and Bearing Using Vectors\n\nWe now have the tools to solve the problem we introduced in the opening of the section.\n\nAn airplane is flying at an airspeed of \\(200\\) miles per hour headed on a SE bearing of \\(140°\\). A north wind (from north to south) is blowing at \\(16.2\\) miles per hour. What are the ground speed and actual bearing of the plane? See Figure \\(\\PageIndex{20}\\).\n\n[Figure: Image of a plan flying SE at 140 degrees and the north wind blowing.]\n\nFigure \\(\\PageIndex{20}\\)\n\nSolution\n\nThe ground speed is represented by \\(x\\) in the diagram, and we need to find the angle \\(\\alpha\\) in order to calculate the adjusted bearing, which will be \\(140°+\\alpha\\).\n\nNotice in Figure \\(\\PageIndex{20}\\), that angle \\(\\angle BCO\\) must be equal to angle \\(\\angle AOC\\) by the rule of alternating interior angles, so angle \\(\\angle BCO\\) is 140°. We can find \\(x\\) by the Law of Cosines:\n\n\\[\\begin{align*} x^2 &= {(16.2)}^2+{(200)}^2−2(16.2)(200) \\cos(140°) \\\\[4pt]  x^2 &= 45,226.41 \\\\[4pt] x &= \\sqrt{45,226.41} \\\\[4pt]  x &= 212.7 \\end{align*}\\]\n\nThe ground speed is approximately \\(213\\) miles per hour. Now we can calculate the bearing using the Law of Sines.\n\n\\[\\begin{align*} \\dfrac{\\sin \\alpha}{16.2} &= \\dfrac{\\sin(140°)}{212.7} \\\\[4pt] \\sin \\alpha &= \\dfrac{16.2 \\sin(140°)}{212.7} \\\\[4pt] &=0.04896 \\\\[4pt] {\\sin}^{−1}(0.04896) &= 2.8° \\end{align*}\\]\n\nTherefore, the plane has a SE bearing of \\(140°+2.8°=142.8°\\). The ground speed is \\(212.7\\) miles per hour.\n\nMedia: Access these online resources for additional instruction and practice with vectors.\n\nIntroduction to Vectors\n\nVector Operations\n\nThe Unit Vector\n\nKey Concepts\n\nThe position vector has its initial point at the origin. See Example \\(\\PageIndex{1}\\).\n\nIf the position vector is the same for two vectors, they are equal. See Example \\(\\PageIndex{2}\\).\n\nVectors are defined by their magnitude and direction. See Example \\(\\PageIndex{3}\\).\n\nIf two vectors have the same magnitude and direction, they are equal. See Example \\(\\PageIndex{4}\\).\n\nVector addition and subtraction result in a new vector found by adding or subtracting corresponding elements. See Example \\(\\PageIndex{5}\\).\n\nScalar multiplication is multiplying a vector by a constant. Only the magnitude changes; the direction stays the same. See Example \\(\\PageIndex{6}\\) and Example \\(\\PageIndex{7}\\).\n\nVectors are comprised of two components: the horizontal component along the positive \\(x\\)-axis, and the vertical component along the positive \\(y\\)-axis. See Example \\(\\PageIndex{8}\\).\n\nThe unit vector in the same direction of any nonzero vector is found by dividing the vector by its magnitude.\n\nThe magnitude of a vector in the rectangular coordinate system is \\(| v |=\\sqrt{a^2+b^2}\\). See Example \\(\\PageIndex{9}\\).\n\nIn the rectangular coordinate system, unit vectors may be represented in terms of \\(ii\\) and \\(jj\\) where \\(i\\) represents the horizontal component and \\(j\\) represents the vertical component. Then, \\(v = ai + bj\\) is a scalar multiple of \\(v\\) by real numbers \\(a\\) and \\(b\\). See Example \\(\\PageIndex{10}\\) and Example \\(\\PageIndex{11}\\).\n\nAdding and subtracting vectors in terms of \\(i\\) and \\(j\\) consists of adding or subtracting corresponding coefficients of \\(i\\) and corresponding coefficients of \\(j\\). See Example \\(\\PageIndex{12}\\).\n\nA vector \\(v = ai + bj\\) is written in terms of magnitude and direction as \\(v=| v |\\cos \\theta i+| v |\\sin \\theta j\\). See Example \\(\\PageIndex{13}\\).\n\nThe dot product of two vectors is the product of the \\(i\\) terms plus the product of the \\(j\\) terms. See Example \\(\\PageIndex{14}\\).\n\nWe can use the dot product to find the angle between two vectors. Example \\(\\PageIndex{15}\\) and Example \\(\\PageIndex{16}\\).\n\nDot products are useful for many types of physics applications. See Example \\(\\PageIndex{17}\\).\n\nContributors and Attributions\n\nJay Abramson (Arizona State University) with contributing authors. Textbook content produced by OpenStax College is licensed under a Creative Commons Attribution License 4.0 license. Download for free at https://openstax.org/details/books/precalculus.\n\nThis page titled 10.8: Vectors was last modified on Sun, 27 Apr 2025 18:27:21 GMT and is shared under a CC BY  4.0  license and was authored, remixed, and/or curated by OpenStax via source content that was edited to the style and standards of the LibreTexts platform.",
+  "figures": [
+    {
+      "url": "https://math.libretexts.org/@api/deki/files/7499/CNX_Precalc_Figure_08_08_001.jpg?revision=1",
+      "alt": "Image of a plan flying SE at 140 degrees and the north wind blowing ",
+      "credit": ""
+    },
+    {
+      "url": "https://math.libretexts.org/@api/deki/files/7521/CNX_Precalc_Figure_08_08_003n.jpg?revision=1",
+      "alt": "Plot of the original vector CD in blue and the position vector AB in orange extending from the origin.",
+      "credit": ""
+    },
+    {
+      "url": "https://math.libretexts.org/@api/deki/files/7522/CNX_Precalc_Figure_08_08_022n.jpg?revision=1&size=bestfit&width=380&height=272",
+      "alt": "Plot of the original vector in blue and the position vector in orange extending from the origin.",
+      "credit": ""
+    },
+    {
+      "url": "https://math.libretexts.org/@api/deki/files/7502/CNX_Precalc_Figure_08_08_004n.jpg?revision=1",
+      "alt": "Plot of the two given vectors their same position vector.",
+      "credit": ""
+    },
+    {
+      "url": "https://math.libretexts.org/@api/deki/files/7503/CNX_Precalc_Figure_08_08_006.jpg?revision=1",
+      "alt": "A vector from the origin to (3,5) - a line with an arrow at the (3,5) endpoint.",
+      "credit": ""
+    },
+    {
+      "url": "https://math.libretexts.org/@api/deki/files/7520/CNX_Precalc_Figure_08_08_017old.jpg?revision=1",
+      "alt": "Standard plot of a position vector (a,b) with magnitude |v| extending into Q1 at theta degrees. ",
+      "credit": ""
+    },
+    {
+      "url": "https://math.libretexts.org/@api/deki/files/7505/CNX_Precalc_Figure_08_08_018.jpg?revision=1",
+      "alt": "Plot of the position vector extending into Q4 from the origin with the magnitude 6rad2.",
+      "credit": ""
+    },
+    {
+      "url": "https://math.libretexts.org/@api/deki/files/7506/CNX_Precalc_Figure_08_08_005n.jpg?revision=1",
+      "alt": "Plot of the two given vectors their same position vector.",
+      "credit": ""
+    },
+    {
+      "url": "https://math.libretexts.org/@api/deki/files/7507/CNX_Precalc_Figure_08_08_008.jpg?revision=1",
+      "alt": "Diagrams of vector addition and subtraction. ",
+      "credit": ""
+    },
+    {
+      "url": "https://math.libretexts.org/@api/deki/files/7508/CNX_Precalc_Figure_08_08_009.jpg?revision=1",
+      "alt": "Showing vector addition and subtraction with parallelograms. For addition, the base is u, the side is v, the diagonal connecting the start of the base to the end of the side is u+v. For subtraction, thetop is u, the side is -v, and the diagonal connecting the start of the top to the end of the side is u-v.",
+      "credit": ""
+    },
+    {
+      "url": "https://math.libretexts.org/@api/deki/files/7509/CNX_Precalc_Figure_08_08_019.jpg?revision=1",
+      "alt": "Further diagrams of vector addition and subtraction.",
+      "credit": ""
+    },
+    {
+      "url": "https://math.libretexts.org/@api/deki/files/7510/CNX_Precalc_Figure_08_08_007.jpg?revision=1&size=bestfit&width=399&height=301",
+      "alt": "Showing the effect of scaling a vector: 3x, 1x, .5x, and -1x. The 3x is three times as long, the 1x stays the same, the .5x halves the length, and the -1x reverses the direction of the vector but keeps the length the same. The rest keep the same direction; only the magnitude changes.",
+      "credit": ""
+    },
+    {
+      "url": "https://math.libretexts.org/@api/deki/files/7511/CNX_Precalc_Figure_08_08_020.jpg?revision=1",
+      "alt": "Diagram of a vector in root position with its horizontal and vertical components.",
+      "credit": ""
+    },
+    {
+      "url": "https://math.libretexts.org/@api/deki/files/7512/CNX_Precalc_Figure_08_08_021.jpg?revision=1",
+      "alt": "Diagram of a vector in root position with its horizontal (4,0) and vertical (0,2) components.",
+      "credit": ""
+    },
+    {
+      "url": "https://math.libretexts.org/@api/deki/files/7513/CNX_Precalc_Figure_08_08_011n.jpg?revision=1",
+      "alt": "Plot showing the unit vectors i=91,0) and j=(0,1)",
+      "credit": ""
+    },
+    {
+      "url": "https://math.libretexts.org/@api/deki/files/7514/CNX_Precalc_Figure_08_08_012.jpg?revision=1&size=bestfit&width=343&height=442",
+      "alt": "Plot showing the unit vector (-5/13, 12/13) in the direction of (-5, 12)",
+      "credit": ""
+    },
+    {
+      "url": "https://math.libretexts.org/@api/deki/files/7519/CNX_Precalc_Figure_08_08_010new_(1).jpg?revision=1",
+      "alt": "Plot showing vectors in rectangular coordinates in terms of i and j. The position vector v (in orange) extends from the origin to some point (a,b) in Q1. The horizontal (ai) and vertical (bj) components are shown.",
+      "credit": ""
+    },
+    {
+      "url": "https://math.libretexts.org/@api/deki/files/7516/CNX_Precalc_Figure_08_08_014.jpg?revision=1&size=bestfit&width=388&height=321",
+      "alt": "Plot showing the two position vectors (3,7) and (5,2) and the 45 degree angle between them.",
+      "credit": ""
+    },
+    {
+      "url": "https://math.libretexts.org/@api/deki/files/7517/CNX_Precalc_Figure_08_08_013.jpg?revision=1&size=bestfit&width=366&height=472",
+      "alt": "Plot showing the two position vectors (-3,4) and (5,12) and the 59.5 degree angle between them.",
+      "credit": ""
+    },
+    {
+      "url": "https://math.libretexts.org/@api/deki/files/7518/CNX_Precalc_Figure_08_08_015.jpg?revision=1",
+      "alt": "Image of a plan flying SE at 140 degrees and the north wind blowing.",
+      "credit": ""
+    }
+  ],
+  "references": [
+    {
+      "text": "Introduction to Vectors",
+      "url": "http://openstaxcollege.org/l/introvectors"
+    },
+    {
+      "text": "Vector Operations",
+      "url": "http://openstaxcollege.org/l/vectoroperation"
+    },
+    {
+      "text": "The Unit Vector",
+      "url": "http://openstaxcollege.org/l/unitvector"
+    },
+    {
+      "text": "Creative Commons Attribution License 4.0",
+      "url": "http://creativecommons.org/licenses/by/4.0/"
+    },
+    {
+      "text": "https://openstax.org/details/books/precalculus",
+      "url": "https://openstax.org/details/books/precalculus"
+    },
+    {
+      "text": "10.8: Vectors",
+      "url": "https://math.libretexts.org/Bookshelves/Algebra/Algebra_and_Trigonometry_1e_(OpenStax)/10%3A_Further_Applications_of_Trigonometry/10.08%3A_Vectors"
+    },
+    {
+      "text": "CC BY  4.0",
+      "url": "https://creativecommons.org/licenses/by/4.0"
+    },
+    {
+      "text": "OpenStax",
+      "url": "https://openstax.org/"
+    },
+    {
+      "text": "source content",
+      "url": "https://openstax.org/details/books/precalculus"
+    }
+  ],
+  "exercises": [
+    {
+      "ordinal": 1,
+      "sourceNumber": "",
+      "sourceAnchor": "",
+      "kind": "example-or-exercise",
+      "context": "\\[\\begin{align*} \\overrightarrow{AB} &= ⟨x_2−x_1,y_2−y_1⟩ \\\\[4pt] &= ⟨a,b⟩ \\end{align*}\\]\n\nIn Figure \\(\\PageIndex{2}\\), we see the original vector \\(\\overrightarrow{CD}\\) and the position vector \\(\\overrightarrow{AB}\\).\n\nA vector is a directed line segment with an initial point and a terminal point. Vectors are identified by magnitude, or the length of the line, and direction, represented by the arrowhead pointing toward the terminal point. The position vector has an initial point at \\((0,0)\\) and is identified by its terminal point \\(⟨a,b⟩\\).",
+      "original": "Example \\(\\PageIndex{1A}\\): Find the Position Vector\n\nConsider the vector whose initial point is \\(P(2,3)\\) and terminal point is \\(Q(6,4)\\). Find the position vector.\n\nSolution\n\nThe position vector is found by subtracting one \\(x\\)-coordinate from the other \\(x\\)-coordinate, and one \\(y\\)-coordinate from the other \\(y\\)-coordinate. Thus\n\n\\[\\begin{align*} v &= ⟨6−2,4−3⟩ \\\\[4pt] &=⟨4,1⟩ \\end{align*}\\]\n\nThe position vector begins at \\((0,0)\\) and terminates at \\((4,1)\\). The graphs of both vectors are shown in Figure \\(\\PageIndex{3}\\).\n\n[Figure: Plot of the original vector in blue and the position vector in orange extending from the origin.]\n\nFigure \\(\\PageIndex{3}\\)\n\nWe see that the position vector is \\(⟨4,1⟩\\).",
+      "prompt": "Example \\(\\PageIndex{1A}\\): Find the Position Vector\n\nConsider the vector whose initial point is \\(P(2,3)\\) and terminal point is \\(Q(6,4)\\). Find the position vector.\n\nSolution\n\nThe position vector is found by subtracting one \\(x\\)-coordinate from the other \\(x\\)-coordinate, and one \\(y\\)-coordinate from the other \\(y\\)-coordinate. Thus\n\n\\[\\begin{align*} v &= ⟨6−2,4−3⟩ \\\\[4pt] &=⟨4,1⟩ \\end{align*}\\]\n\nThe position vector begins at \\((0,0)\\) and terminates at \\((4,1)\\). The graphs of both vectors are shown in Figure \\(\\PageIndex{3}\\).\n\n[Figure: Plot of the original vector in blue and the position vector in orange extending from the origin.]\n\nFigure \\(\\PageIndex{3}\\)\n\nWe see that the position vector is \\(⟨4,1⟩\\).",
+      "sourceAnswers": [],
+      "hasFigure": true,
+      "status": "draft",
+      "answerVerified": false,
+      "translationStatus": "pending",
+      "mappingStatus": "pending"
+    },
+    {
+      "ordinal": 2,
+      "sourceNumber": "",
+      "sourceAnchor": "",
+      "kind": "example-or-exercise",
+      "context": "\\[\\begin{align*} \\overrightarrow{AB} &= ⟨x_2−x_1,y_2−y_1⟩ \\\\[4pt] &= ⟨a,b⟩ \\end{align*}\\]\n\nIn Figure \\(\\PageIndex{2}\\), we see the original vector \\(\\overrightarrow{CD}\\) and the position vector \\(\\overrightarrow{AB}\\).\n\nA vector is a directed line segment with an initial point and a terminal point. Vectors are identified by magnitude, or the length of the line, and direction, represented by the arrowhead pointing toward the terminal point. The position vector has an initial point at \\((0,0)\\) and is identified by its terminal point \\(⟨a,b⟩\\).",
+      "original": "Example \\(\\PageIndex{1B}\\): Drawing a Vector with the Given Criteria and Its Equivalent Position Vector\n\nFind the position vector given that vector \\(v\\) has an initial point at \\((−3,2)\\) and a terminal point at \\((4,5)\\), then graph both vectors in the same plane.\n\nSolution\n\nThe position vector is found using the following calculation:\n\n\\[\\begin{align*} v &= ⟨4−(−3),5−2⟩ \\\\[4pt] &= ⟨7,3⟩ \\end{align*}\\]\n\nThus, the position vector begins at \\((0,0)\\) and terminates at \\((7,3)\\). See Figure \\(\\PageIndex{4}\\).\n\n[Figure: Plot of the two given vectors their same position vector.]\n\nFigure \\(\\PageIndex{4}\\)",
+      "prompt": "Example \\(\\PageIndex{1B}\\): Drawing a Vector with the Given Criteria and Its Equivalent Position Vector\n\nFind the position vector given that vector \\(v\\) has an initial point at \\((−3,2)\\) and a terminal point at \\((4,5)\\), then graph both vectors in the same plane.\n\nSolution\n\nThe position vector is found using the following calculation:\n\n\\[\\begin{align*} v &= ⟨4−(−3),5−2⟩ \\\\[4pt] &= ⟨7,3⟩ \\end{align*}\\]\n\nThus, the position vector begins at \\((0,0)\\) and terminates at \\((7,3)\\). See Figure \\(\\PageIndex{4}\\).\n\n[Figure: Plot of the two given vectors their same position vector.]\n\nFigure \\(\\PageIndex{4}\\)",
+      "sourceAnswers": [],
+      "hasFigure": true,
+      "status": "draft",
+      "answerVerified": false,
+      "translationStatus": "pending",
+      "mappingStatus": "pending"
+    },
+    {
+      "ordinal": 3,
+      "sourceNumber": "",
+      "sourceAnchor": "",
+      "kind": "exercise-candidate",
+      "context": "\\[\\begin{align*} \\overrightarrow{AB} &= ⟨x_2−x_1,y_2−y_1⟩ \\\\[4pt] &= ⟨a,b⟩ \\end{align*}\\]\n\nIn Figure \\(\\PageIndex{2}\\), we see the original vector \\(\\overrightarrow{CD}\\) and the position vector \\(\\overrightarrow{AB}\\).\n\nA vector is a directed line segment with an initial point and a terminal point. Vectors are identified by magnitude, or the length of the line, and direction, represented by the arrowhead pointing toward the terminal point. The position vector has an initial point at \\((0,0)\\) and is identified by its terminal point \\(⟨a,b⟩\\).",
+      "original": "Exercise \\(\\PageIndex{1}\\)\n\nDraw a vector \\(\\vec{v}\\) that connects from the origin to the point \\((3,5)\\).\n\nAnswer\n\n[Figure: A vector from the origin to (3,5) - a line with an arrow at the (3,5) endpoint.]\n\nFigure \\(\\PageIndex{5}\\)",
+      "prompt": "Exercise \\(\\PageIndex{1}\\)\n\nDraw a vector \\(\\vec{v}\\) that connects from the origin to the point \\((3,5)\\).",
+      "sourceAnswers": [
+        "[Figure: A vector from the origin to (3,5) - a line with an arrow at the (3,5) endpoint.]\n\nFigure \\(\\PageIndex{5}\\)"
+      ],
+      "hasFigure": true,
+      "status": "draft",
+      "answerVerified": false,
+      "translationStatus": "pending",
+      "mappingStatus": "pending"
+    },
+    {
+      "ordinal": 4,
+      "sourceNumber": "",
+      "sourceAnchor": "",
+      "kind": "example-or-exercise",
+      "context": "To work with a vector, we need to be able to find its magnitude and its direction. We find its magnitude using the Pythagorean Theorem or the distance formula, and we find its direction using the inverse tangent function.\n\nGiven a position vector \\(\\vec{v}=⟨a,b⟩\\),the magnitude is found by \\(| v |=\\sqrt{a^2+b^2}\\).The direction is equal to the angle formed with the \\(x\\)-axis, or with the \\(y\\)-axis, depending on the application. For a position vector, the direction is found by \\(\\tan \\theta=\\left(\\dfrac{b}{a}\\right)⇒\\theta={\\tan}^{−1}\\left(\\dfrac{b}{a}\\right)\\), as illustrated in Figure \\(\\PageIndex{6}\\).\n\nTwo vectors \\(\\vec{v}\\) and \\(\\vec{u}\\) are considered equal if they have the same magnitude and the same direction. Additionally, if both vectors have the same position vector, they are equal.",
+      "original": "Example \\(\\PageIndex{2A}\\): Finding the Magnitude and Direction of a Vector\n\nFind the magnitude and direction of the vector with initial point \\(P(−8,1)\\) and terminal point \\(Q(−2,−5)\\).Draw the vector.\n\nSolution\n\nFirst, find the position vector.\n\n\\[\\begin{align*} u &= ⟨−2,−(−8),−5−1⟩ \\\\[4pt] &= ⟨6,−6⟩ \\end{align*}\\]\n\nWe use the Pythagorean Theorem to find the magnitude.\n\n\\[\\begin{align*} |u| &= \\sqrt{{(6)}^2+{(−6)}^2} \\\\[4pt] &= \\sqrt{72} \\\\[4pt] &=\\sqrt{62} \\end{align*}\\]\n\nThe direction is given as\n\n\\[\\begin{align*} \\tan \\theta & =\\dfrac{−6}{6}=−1\\rightarrow \\theta={\\tan}^{−1}(−1) \\\\[4pt] &= −45° \\end{align*}\\]\n\nHowever, the angle terminates in the fourth quadrant, so we add \\(360°\\) to obtain a positive angle. Thus, \\(−45°+360°=315°\\). See Figure \\(\\PageIndex{7}\\).\n\n[Figure: Plot of the position vector extending into Q4 from the origin with the magnitude 6rad2.]\n\nFigure \\(\\PageIndex{7}\\)",
+      "prompt": "Example \\(\\PageIndex{2A}\\): Finding the Magnitude and Direction of a Vector\n\nFind the magnitude and direction of the vector with initial point \\(P(−8,1)\\) and terminal point \\(Q(−2,−5)\\).Draw the vector.\n\nSolution\n\nFirst, find the position vector.\n\n\\[\\begin{align*} u &= ⟨−2,−(−8),−5−1⟩ \\\\[4pt] &= ⟨6,−6⟩ \\end{align*}\\]\n\nWe use the Pythagorean Theorem to find the magnitude.\n\n\\[\\begin{align*} |u| &= \\sqrt{{(6)}^2+{(−6)}^2} \\\\[4pt] &= \\sqrt{72} \\\\[4pt] &=\\sqrt{62} \\end{align*}\\]\n\nThe direction is given as\n\n\\[\\begin{align*} \\tan \\theta & =\\dfrac{−6}{6}=−1\\rightarrow \\theta={\\tan}^{−1}(−1) \\\\[4pt] &= −45° \\end{align*}\\]\n\nHowever, the angle terminates in the fourth quadrant, so we add \\(360°\\) to obtain a positive angle. Thus, \\(−45°+360°=315°\\). See Figure \\(\\PageIndex{7}\\).\n\n[Figure: Plot of the position vector extending into Q4 from the origin with the magnitude 6rad2.]\n\nFigure \\(\\PageIndex{7}\\)",
+      "sourceAnswers": [],
+      "hasFigure": true,
+      "status": "draft",
+      "answerVerified": false,
+      "translationStatus": "pending",
+      "mappingStatus": "pending"
+    },
+    {
+      "ordinal": 5,
+      "sourceNumber": "",
+      "sourceAnchor": "",
+      "kind": "example-or-exercise",
+      "context": "To work with a vector, we need to be able to find its magnitude and its direction. We find its magnitude using the Pythagorean Theorem or the distance formula, and we find its direction using the inverse tangent function.\n\nGiven a position vector \\(\\vec{v}=⟨a,b⟩\\),the magnitude is found by \\(| v |=\\sqrt{a^2+b^2}\\).The direction is equal to the angle formed with the \\(x\\)-axis, or with the \\(y\\)-axis, depending on the application. For a position vector, the direction is found by \\(\\tan \\theta=\\left(\\dfrac{b}{a}\\right)⇒\\theta={\\tan}^{−1}\\left(\\dfrac{b}{a}\\right)\\), as illustrated in Figure \\(\\PageIndex{6}\\).\n\nTwo vectors \\(\\vec{v}\\) and \\(\\vec{u}\\) are considered equal if they have the same magnitude and the same direction. Additionally, if both vectors have the same position vector, they are equal.",
+      "original": "Example \\(\\PageIndex{2B}\\): Showing That Two Vectors Are Equal\n\nShow that vector \\(\\vec{v}\\) with initial point at \\((5,−3)\\) and terminal point at \\((−1,2)\\) is equal to vector \\(\\vec{u}\\) with initial point at \\((−1,−3)\\) and terminal point at \\((−7,2)\\). Draw the position vector on the same grid as \\(\\vec{v}\\) and \\(\\vec{u}\\). Next, find the magnitude and direction of each vector.\n\nSolution\n\nAs shown in Figure \\(\\PageIndex{8}\\), draw the vector \\(\\vec{v}\\) starting at initial \\((5,−3)\\) and terminal point \\((−1,2)\\). Draw the vector \\(\\vec{u}\\) with initial point \\((−1,−3)\\) and terminal point \\((−7,2)\\). Find the standard position for each.\n\nNext, find and sketch the position vector for \\(\\vec{v}\\) and \\(\\vec{u}\\). We have\n\n\\[\\begin{align*} v &= ⟨−1−5,2−(−3)⟩ \\\\[4pt] &= ⟨−6,5⟩u \\\\[4pt] &= ⟨−7−(−1),2−(−3)⟩ \\\\[4pt] & =⟨−6,5⟩ \\end{align*}\\]\n\nSince the position vectors are the same, \\(\\vec{v}\\) and \\(\\vec{u}\\) are the same.\n\nAn alternative way to check for vector equality is to show that the magnitude and direction are the same for both vectors. To show that the magnitudes are equal, use the Pythagorean Theorem.\n\n\\[\\begin{align*} |v| &= \\sqrt{{(−1−5)}^2+{(2−(−3))}^2} \\\\[4pt] &= \\sqrt{{(−6)}^2+{(5)}^2} \\\\[4pt] &= \\sqrt{36+25} \\\\[4pt] &= \\sqrt{61} \\\\[4pt] |u| &= \\sqrt{{(−7−(−1))}^2+{(2−(−3))}^2} \\\\[4pt] &=\\sqrt{{(−6)}^2+{(5)}^2} \\\\[4pt] &= \\sqrt{36+25} \\\\[4pt] &= \\sqrt{61} \\end{align*}\\]\n\nAs the magnitudes are equal, we now need to verify the direction. Using the tangent function with the position vector gives\n\n\\[\\begin{align*} \\tan \\theta &= −\\dfrac{5}{6}⇒\\theta={\\tan}^{−1}\\left(−\\dfrac{5}{6}\\right) \\\\[4pt] & = −39.8° \\end{align*}\\]\n\nHowever, we can see that the position vector terminates in the second quadrant, so we add \\(180°\\). Thus, the direction is \\(−39.8°+180°=140.2°\\).\n\n[Figure: Plot of the two given vectors their same position vector.]\n\nFigure \\(\\PageIndex{8}\\)",
+      "prompt": "Example \\(\\PageIndex{2B}\\): Showing That Two Vectors Are Equal\n\nShow that vector \\(\\vec{v}\\) with initial point at \\((5,−3)\\) and terminal point at \\((−1,2)\\) is equal to vector \\(\\vec{u}\\) with initial point at \\((−1,−3)\\) and terminal point at \\((−7,2)\\). Draw the position vector on the same grid as \\(\\vec{v}\\) and \\(\\vec{u}\\). Next, find the magnitude and direction of each vector.\n\nSolution\n\nAs shown in Figure \\(\\PageIndex{8}\\), draw the vector \\(\\vec{v}\\) starting at initial \\((5,−3)\\) and terminal point \\((−1,2)\\). Draw the vector \\(\\vec{u}\\) with initial point \\((−1,−3)\\) and terminal point \\((−7,2)\\). Find the standard position for each.\n\nNext, find and sketch the position vector for \\(\\vec{v}\\) and \\(\\vec{u}\\). We have\n\n\\[\\begin{align*} v &= ⟨−1−5,2−(−3)⟩ \\\\[4pt] &= ⟨−6,5⟩u \\\\[4pt] &= ⟨−7−(−1),2−(−3)⟩ \\\\[4pt] & =⟨−6,5⟩ \\end{align*}\\]\n\nSince the position vectors are the same, \\(\\vec{v}\\) and \\(\\vec{u}\\) are the same.\n\nAn alternative way to check for vector equality is to show that the magnitude and direction are the same for both vectors. To show that the magnitudes are equal, use the Pythagorean Theorem.\n\n\\[\\begin{align*} |v| &= \\sqrt{{(−1−5)}^2+{(2−(−3))}^2} \\\\[4pt] &= \\sqrt{{(−6)}^2+{(5)}^2} \\\\[4pt] &= \\sqrt{36+25} \\\\[4pt] &= \\sqrt{61} \\\\[4pt] |u| &= \\sqrt{{(−7−(−1))}^2+{(2−(−3))}^2} \\\\[4pt] &=\\sqrt{{(−6)}^2+{(5)}^2} \\\\[4pt] &= \\sqrt{36+25} \\\\[4pt] &= \\sqrt{61} \\end{align*}\\]\n\nAs the magnitudes are equal, we now need to verify the direction. Using the tangent function with the position vector gives\n\n\\[\\begin{align*} \\tan \\theta &= −\\dfrac{5}{6}⇒\\theta={\\tan}^{−1}\\left(−\\dfrac{5}{6}\\right) \\\\[4pt] & = −39.8° \\end{align*}\\]\n\nHowever, we can see that the position vector terminates in the second quadrant, so we add \\(180°\\). Thus, the direction is \\(−39.8°+180°=140.2°\\).\n\n[Figure: Plot of the two given vectors their same position vector.]\n\nFigure \\(\\PageIndex{8}\\)",
+      "sourceAnswers": [],
+      "hasFigure": true,
+      "status": "draft",
+      "answerVerified": false,
+      "translationStatus": "pending",
+      "mappingStatus": "pending"
+    },
+    {
+      "ordinal": 6,
+      "sourceNumber": "",
+      "sourceAnchor": "",
+      "kind": "example-or-exercise",
+      "context": "Now that we understand the properties of vectors, we can perform operations involving them. While it is convenient to think of the vector \\(u=⟨x,y⟩\\) as an arrow or directed line segment from the origin to the point \\((x,y)\\), vectors can be situated anywhere in the plane. The sum of two vectors \\(\\vec{u}\\) and \\(\\vec{v}\\), or vector addition, produces a third vector \\(\\overrightarrow{u+ v}\\), the resultant vector.\n\nTo find \\(\\overrightarrow{u + v}\\), we first draw the vector \\(\\vec{u}\\), and from the terminal end of \\(\\vec{u}\\), we drawn the vector \\(\\vec{v}\\). In other words, we have the initial point of \\(\\vec{v}\\) meet the terminal end of \\(\\vec{u}\\). This position corresponds to the notion that we move along the first vector and then, from its terminal point, we move along the second vector. The sum \\(\\overrightarrow{u + v}\\) is the resultant vector because it results from addition or subtraction of two vectors. The resultant vector travels directly from the beginning of \\(\\vec{u}\\) to the end of \\(\\vec{v}\\) in a straight path, as shown in Figure \\(\\PageIndex{9}\\).\n\nVector subtraction is similar to vector addition. To find \\(\\overrightarrow{u − v}\\), view it as \\(\\overrightarrow{u + (−v)}\\). Adding \\(\\overrightarrow{−v}\\) is reversing direction of \\(\\vec{v}\\) and adding it to the end of \\(\\vec{u}\\). The new vector begins at the start of \\(\\vec{u}\\) and stops at the end point of \\(\\overrightarrow{−v}\\). See Figure \\(\\PageIndex{10}\\) for a visual that compares vector addition and vector subtraction using parallelograms.",
+      "original": "Example \\(\\PageIndex{3}\\): Adding and Subtracting Vectors\n\nGiven \\(u=⟨3,−2⟩\\) and \\(v=⟨−1,4⟩\\), find two new vectors \\(\\overrightarrow{u + v}\\), and \\(\\overrightarrow{u − v}\\).\n\nSolution\n\nTo find the sum of two vectors, we add the components. Thus,\n\n\\[ \\begin{align*} u+v &= ⟨3,−2⟩+⟨−1,4⟩ \\\\[4pt] &= ⟨3+(−1),−2+4⟩ \\\\[4pt] &=⟨2,2⟩ \\end{align*}\\]\n\nSee Figure \\(\\PageIndex{11a}\\).\n\nTo find the difference of two vectors, add the negative components of \\(\\vec{v}\\) to \\(\\vec{u}\\). Thus,\n\n\\[\\begin{align*}u+(−v) &=⟨3,−2⟩+⟨1,−4⟩ \\\\[4pt] &= ⟨3+1,−2+(−4)⟩ \\\\[4pt] &= ⟨4,−6⟩ \\end{align*}\\]\n\nSee Figure \\(\\PageIndex{11b}\\).\n\n[Figure: Further diagrams of vector addition and subtraction.]\n\nFigure \\(\\PageIndex{11}\\): (a) Sum of two vectors (b) Difference of two vectors",
+      "prompt": "Example \\(\\PageIndex{3}\\): Adding and Subtracting Vectors\n\nGiven \\(u=⟨3,−2⟩\\) and \\(v=⟨−1,4⟩\\), find two new vectors \\(\\overrightarrow{u + v}\\), and \\(\\overrightarrow{u − v}\\).\n\nSolution\n\nTo find the sum of two vectors, we add the components. Thus,\n\n\\[ \\begin{align*} u+v &= ⟨3,−2⟩+⟨−1,4⟩ \\\\[4pt] &= ⟨3+(−1),−2+4⟩ \\\\[4pt] &=⟨2,2⟩ \\end{align*}\\]\n\nSee Figure \\(\\PageIndex{11a}\\).\n\nTo find the difference of two vectors, add the negative components of \\(\\vec{v}\\) to \\(\\vec{u}\\). Thus,\n\n\\[\\begin{align*}u+(−v) &=⟨3,−2⟩+⟨1,−4⟩ \\\\[4pt] &= ⟨3+1,−2+(−4)⟩ \\\\[4pt] &= ⟨4,−6⟩ \\end{align*}\\]\n\nSee Figure \\(\\PageIndex{11b}\\).\n\n[Figure: Further diagrams of vector addition and subtraction.]\n\nFigure \\(\\PageIndex{11}\\): (a) Sum of two vectors (b) Difference of two vectors",
+      "sourceAnswers": [],
+      "hasFigure": true,
+      "status": "draft",
+      "answerVerified": false,
+      "translationStatus": "pending",
+      "mappingStatus": "pending"
+    },
+    {
+      "ordinal": 7,
+      "sourceNumber": "",
+      "sourceAnchor": "",
+      "kind": "example-or-exercise",
+      "context": "Scalar multiplication involves the product of a vector and a scalar. Each component of the vector is multiplied by the scalar. Thus, to multiply \\(v=⟨a,b⟩\\) by \\(k\\), we have\n\n\\(kv=⟨ka,kb⟩\\)\n\nOnly the magnitude changes, unless \\(k\\) is negative, and then the vector reverses direction.",
+      "original": "Example \\(\\PageIndex{4}\\): Performing Scalar Multiplication\n\nGiven vector \\(\\vec{v}=⟨3,1⟩\\), find \\(3\\vec{v}\\), \\(\\dfrac{1}{2}\\), and \\(\\vec{−v}\\).\n\nSolution\n\nSee Figure \\(\\PageIndex{12}\\) for a geometric interpretation. If \\(\\vec{v}=⟨3,1⟩\\), then\n\n\\[\\begin{align*} 3v &= ⟨3⋅3,3⋅1⟩ \\\\[4pt] &= ⟨9,3⟩ \\\\[4pt]  \\dfrac{1}{2}v &= ⟨\\dfrac{1}{2}⋅3,\\dfrac{1}{2}⋅1⟩ \\\\[4pt] &=⟨\\dfrac{3}{2},\\dfrac{1}{2}⟩ \\\\[4pt] −v &=⟨−3,−1⟩ \\end{align*}\\]\n\n[Figure: Showing the effect of scaling a vector: 3x, 1x, .5x, and -1x. The 3x is three times as long, the 1x stays the same, the .5x halves the length, and the -1x reverses the direction of the vector but keeps the length the same. The rest keep the same direction; only the magnitude changes.]\n\nFigure \\(\\PageIndex{12}\\)",
+      "prompt": "Example \\(\\PageIndex{4}\\): Performing Scalar Multiplication\n\nGiven vector \\(\\vec{v}=⟨3,1⟩\\), find \\(3\\vec{v}\\), \\(\\dfrac{1}{2}\\), and \\(\\vec{−v}\\).\n\nSolution\n\nSee Figure \\(\\PageIndex{12}\\) for a geometric interpretation. If \\(\\vec{v}=⟨3,1⟩\\), then\n\n\\[\\begin{align*} 3v &= ⟨3⋅3,3⋅1⟩ \\\\[4pt] &= ⟨9,3⟩ \\\\[4pt]  \\dfrac{1}{2}v &= ⟨\\dfrac{1}{2}⋅3,\\dfrac{1}{2}⋅1⟩ \\\\[4pt] &=⟨\\dfrac{3}{2},\\dfrac{1}{2}⟩ \\\\[4pt] −v &=⟨−3,−1⟩ \\end{align*}\\]\n\n[Figure: Showing the effect of scaling a vector: 3x, 1x, .5x, and -1x. The 3x is three times as long, the 1x stays the same, the .5x halves the length, and the -1x reverses the direction of the vector but keeps the length the same. The rest keep the same direction; only the magnitude changes.]\n\nFigure \\(\\PageIndex{12}\\)",
+      "sourceAnswers": [],
+      "hasFigure": true,
+      "status": "draft",
+      "answerVerified": false,
+      "translationStatus": "pending",
+      "mappingStatus": "pending"
+    },
+    {
+      "ordinal": 8,
+      "sourceNumber": "",
+      "sourceAnchor": "",
+      "kind": "exercise-candidate",
+      "context": "Analysis\n\nNotice that the vector \\(3\\vec{v}\\) is three times the length of \\(\\vec{v}\\), \\(\\dfrac{1}{2}\\vec{v}\\) is half the length of \\(\\vec{v}\\), and \\(\\overrightarrow{–v}\\) is the same length of \\(\\vec{v}\\), but in the opposite direction.",
+      "original": "Exercise \\(\\PageIndex{2}\\)\n\nFind the scalar multiple \\(3u\\) given \\(\\vec{u}=⟨5,4⟩\\).\n\nAnswer\n\n\\(3u=⟨15,12⟩\\)",
+      "prompt": "Exercise \\(\\PageIndex{2}\\)\n\nFind the scalar multiple \\(3u\\) given \\(\\vec{u}=⟨5,4⟩\\).",
+      "sourceAnswers": [
+        "\\(3u=⟨15,12⟩\\)"
+      ],
+      "hasFigure": false,
+      "status": "draft",
+      "answerVerified": false,
+      "translationStatus": "pending",
+      "mappingStatus": "pending"
+    },
+    {
+      "ordinal": 9,
+      "sourceNumber": "",
+      "sourceAnchor": "",
+      "kind": "example-or-exercise",
+      "context": "Analysis\n\nNotice that the vector \\(3\\vec{v}\\) is three times the length of \\(\\vec{v}\\), \\(\\dfrac{1}{2}\\vec{v}\\) is half the length of \\(\\vec{v}\\), and \\(\\overrightarrow{–v}\\) is the same length of \\(\\vec{v}\\), but in the opposite direction.",
+      "original": "Example \\(\\PageIndex{5}\\)\n\nFind a linear equation to solve for the following unknown quantities: One number exceeds another number by \\(17\\) and their sum is \\(31\\). Find the two numbers.\n\nSolution\n\nFirst, we must multiply each vector by the scalar.\n\n\\[\\begin{align*} 3u &= 3⟨3,−2⟩ \\\\[4pt] &= ⟨9,−6⟩ \\\\[4pt] 2v &= 2⟨−1,4⟩ \\\\[4pt] &= ⟨−2,8⟩ \\end{align*}\\]\n\nThen, add the two together.\n\n\\[\\begin{align*} w &= 3u+2v \\\\[4pt] &=⟨9,−6⟩+⟨−2,8⟩ \\\\[4pt] &= ⟨9−2,−6+8⟩ \\\\[4pt] &= ⟨7,2⟩ \\end{align*}\\]\n\nSo, \\(w=⟨7,2⟩\\).",
+      "prompt": "Example \\(\\PageIndex{5}\\)\n\nFind a linear equation to solve for the following unknown quantities: One number exceeds another number by \\(17\\) and their sum is \\(31\\). Find the two numbers.\n\nSolution\n\nFirst, we must multiply each vector by the scalar.\n\n\\[\\begin{align*} 3u &= 3⟨3,−2⟩ \\\\[4pt] &= ⟨9,−6⟩ \\\\[4pt] 2v &= 2⟨−1,4⟩ \\\\[4pt] &= ⟨−2,8⟩ \\end{align*}\\]\n\nThen, add the two together.\n\n\\[\\begin{align*} w &= 3u+2v \\\\[4pt] &=⟨9,−6⟩+⟨−2,8⟩ \\\\[4pt] &= ⟨9−2,−6+8⟩ \\\\[4pt] &= ⟨7,2⟩ \\end{align*}\\]\n\nSo, \\(w=⟨7,2⟩\\).",
+      "sourceAnswers": [],
+      "hasFigure": false,
+      "status": "draft",
+      "answerVerified": false,
+      "translationStatus": "pending",
+      "mappingStatus": "pending"
+    },
+    {
+      "ordinal": 10,
+      "sourceNumber": "",
+      "sourceAnchor": "",
+      "kind": "example-or-exercise",
+      "context": "The magnitude of \\(v\\) is \\(\\sqrt{13}\\). To find the direction, we use the tangent function \\(\\tan \\theta=\\dfrac{y}{x}\\).\n\n\\[\\begin{align*} \\tan \\theta &= \\dfrac{v_2}{v_1} \\\\[4pt] \\tan \\theta &= \\dfrac{3}{2} \\\\[4pt] \\theta &={\\tan}^{−1}\\left(\\dfrac{3}{2}\\right)=56.3° \\end{align*}\\]\n\nThus, the magnitude of \\(\\vec{v}\\) is \\(\\sqrt{13}\\) and the direction is \\(56.3^{\\circ}\\) off the horizontal.",
+      "original": "Example \\(\\PageIndex{6}\\): Finding the Components of the Vector\n\nFind the components of the vector \\(\\vec{v}\\) with initial point \\((3,2)\\) and terminal point \\((7,4)\\).\n\nSolution\n\nFirst find the standard position.\n\n\\[\\begin{align*} v &= ⟨7−3,4−2⟩ \\\\[4pt] &= ⟨4,2⟩ \\end{align*}\\]\n\nSee the illustration in Figure \\(\\PageIndex{14}\\).\n\n[Figure: Diagram of a vector in root position with its horizontal (4,0) and vertical (0,2) components.]\n\nFigure \\(\\PageIndex{14}\\)\n\nThe horizontal component is \\(\\vec{v_1}=⟨4,0⟩\\) and the vertical component is \\(\\vec{v_2}=⟨0,2⟩\\).",
+      "prompt": "Example \\(\\PageIndex{6}\\): Finding the Components of the Vector\n\nFind the components of the vector \\(\\vec{v}\\) with initial point \\((3,2)\\) and terminal point \\((7,4)\\).\n\nSolution\n\nFirst find the standard position.\n\n\\[\\begin{align*} v &= ⟨7−3,4−2⟩ \\\\[4pt] &= ⟨4,2⟩ \\end{align*}\\]\n\nSee the illustration in Figure \\(\\PageIndex{14}\\).\n\n[Figure: Diagram of a vector in root position with its horizontal (4,0) and vertical (0,2) components.]\n\nFigure \\(\\PageIndex{14}\\)\n\nThe horizontal component is \\(\\vec{v_1}=⟨4,0⟩\\) and the vertical component is \\(\\vec{v_2}=⟨0,2⟩\\).",
+      "sourceAnswers": [],
+      "hasFigure": true,
+      "status": "draft",
+      "answerVerified": false,
+      "translationStatus": "pending",
+      "mappingStatus": "pending"
+    },
+    {
+      "ordinal": 11,
+      "sourceNumber": "",
+      "sourceAnchor": "",
+      "kind": "example-or-exercise",
+      "context": "In addition to finding a vector’s components, it is also useful in solving problems to find a vector in the same direction as the given vector, but of magnitude \\(1\\). We call a vector with a magnitude of \\(1\\) a unit vector. We can then preserve the direction of the original vector while simplifying calculations.\n\nUnit vectors are defined in terms of components. The horizontal unit vector is written as \\(\\vec{i}=⟨1,0⟩\\) and is directed along the positive horizontal axis. The vertical unit vector is written as \\(\\vec{j}=⟨0,1⟩\\) and is directed along the positive vertical axis. See Figure \\(\\PageIndex{15}\\).\n\nIf \\(\\vec{v}\\) is a nonzero vector, then \\(\\dfrac{v}{| v |}\\) is a unit vector in the direction of \\(v\\). Any vector divided by its magnitude is a unit vector. Notice that magnitude is always a scalar, and dividing by a scalar is the same as multiplying by the reciprocal of the scalar.",
+      "original": "Example \\(\\PageIndex{7}\\): Finding the Unit Vector in the Direction of \\(v\\)\n\nFind a unit vector in the same direction as \\(v=⟨−5,12⟩\\).\n\nSolution\n\nFirst, we will find the magnitude.\n\n\\[\\begin{align*} |v| &= \\sqrt{{(−5)}^2+{(12)}^2} \\\\[4pt] &= \\sqrt{25+144} \\\\[4pt] &=\\sqrt{169} \\\\[4pt] &= 13 \\end{align*}\\]\n\nThen we divide each component by \\(| v |\\), which gives a unit vector in the same direction as \\(\\vec{v}\\):\n\n\\(\\dfrac{v}{| v |} = −\\dfrac{5}{13}i+\\dfrac{12}{13}j \\)\n\nor, in component form\n\n\\(\\dfrac{v}{| v |}= \\left \\langle -\\dfrac{5}{13},\\dfrac{12}{13} \\right \\rangle\\)\n\nSee Figure \\(\\PageIndex{16}\\).\n\n[Figure: Plot showing the unit vector (-5/13, 12/13) in the direction of (-5, 12)]\n\nFigure \\(\\PageIndex{16}\\)\n\nVerify that the magnitude of the unit vector equals \\(1\\). The magnitude of \\(−\\dfrac{5}{13}i+\\dfrac{12}{13}j\\) is given as\n\n\\[\\begin{align*} \\sqrt{ {\\left(−\\dfrac{5}{13}\\right)}^2+{ \\left(\\dfrac{12}{13}\\right) }^2 } &= \\sqrt{\\dfrac{25}{169}+\\dfrac{144}{169}} \\\\[4pt] &= \\sqrt{\\dfrac{169}{169}}\\\\ &=1 \\end{align*}\\]\n\nThe vector \\(u=\\dfrac{5}{13}i+\\dfrac{12}{13}j\\) is the unit vector in the same direction as \\(v=⟨−5,12⟩\\).",
+      "prompt": "Example \\(\\PageIndex{7}\\): Finding the Unit Vector in the Direction of \\(v\\)\n\nFind a unit vector in the same direction as \\(v=⟨−5,12⟩\\).\n\nSolution\n\nFirst, we will find the magnitude.\n\n\\[\\begin{align*} |v| &= \\sqrt{{(−5)}^2+{(12)}^2} \\\\[4pt] &= \\sqrt{25+144} \\\\[4pt] &=\\sqrt{169} \\\\[4pt] &= 13 \\end{align*}\\]\n\nThen we divide each component by \\(| v |\\), which gives a unit vector in the same direction as \\(\\vec{v}\\):\n\n\\(\\dfrac{v}{| v |} = −\\dfrac{5}{13}i+\\dfrac{12}{13}j \\)\n\nor, in component form\n\n\\(\\dfrac{v}{| v |}= \\left \\langle -\\dfrac{5}{13},\\dfrac{12}{13} \\right \\rangle\\)\n\nSee Figure \\(\\PageIndex{16}\\).\n\n[Figure: Plot showing the unit vector (-5/13, 12/13) in the direction of (-5, 12)]\n\nFigure \\(\\PageIndex{16}\\)\n\nVerify that the magnitude of the unit vector equals \\(1\\). The magnitude of \\(−\\dfrac{5}{13}i+\\dfrac{12}{13}j\\) is given as\n\n\\[\\begin{align*} \\sqrt{ {\\left(−\\dfrac{5}{13}\\right)}^2+{ \\left(\\dfrac{12}{13}\\right) }^2 } &= \\sqrt{\\dfrac{25}{169}+\\dfrac{144}{169}} \\\\[4pt] &= \\sqrt{\\dfrac{169}{169}}\\\\ &=1 \\end{align*}\\]\n\nThe vector \\(u=\\dfrac{5}{13}i+\\dfrac{12}{13}j\\) is the unit vector in the same direction as \\(v=⟨−5,12⟩\\).",
+      "sourceAnswers": [],
+      "hasFigure": true,
+      "status": "draft",
+      "answerVerified": false,
+      "translationStatus": "pending",
+      "mappingStatus": "pending"
+    },
+    {
+      "ordinal": 12,
+      "sourceNumber": "",
+      "sourceAnchor": "",
+      "kind": "example-or-exercise",
+      "context": "\\[v=(x_2−x_1)i+(y_1−y_2)j\\]\n\nThe position vector from \\((0,0)\\) to \\((a,b)\\), where \\((x_2−x_1)=a\\) and \\((y_2−y_1)=b\\), is written as \\(\\vec{v} = \\vec{ai}+ \\vec{bj}\\). This vector sum is called a linear combination of the vectors \\(\\vec{i}\\) and \\(\\vec{j}\\).\n\nThe magnitude of \\(\\vec{v} = \\overrightarrow{ai} + \\overrightarrow{bj}\\) is given as \\(| v |=\\sqrt{a^2+b^2}\\). See Figure \\(\\PageIndex{17}\\).",
+      "original": "Example \\(\\PageIndex{8A}\\): Writing a Vector in Terms of \\(i\\) and \\(j\\)\n\nGiven a vector \\(\\vec{v}\\) with initial point \\(P=(2,−6)\\) and terminal point \\(Q=(−6,6)\\), write the vector in terms of \\(\\vec{i}\\) and \\(\\vec{j}\\).\n\nSolution\n\nBegin by writing the general form of the vector. Then replace the coordinates with the given values.\n\n\\[\\begin{align*} v &= (x_2−x_1)i+(y_2−y_1)j \\\\[4pt] &=(−6−2)i+(6−(−6))j \\\\[4pt] &= −8i+12j \\end{align*}\\]",
+      "prompt": "Example \\(\\PageIndex{8A}\\): Writing a Vector in Terms of \\(i\\) and \\(j\\)\n\nGiven a vector \\(\\vec{v}\\) with initial point \\(P=(2,−6)\\) and terminal point \\(Q=(−6,6)\\), write the vector in terms of \\(\\vec{i}\\) and \\(\\vec{j}\\).\n\nSolution\n\nBegin by writing the general form of the vector. Then replace the coordinates with the given values.\n\n\\[\\begin{align*} v &= (x_2−x_1)i+(y_2−y_1)j \\\\[4pt] &=(−6−2)i+(6−(−6))j \\\\[4pt] &= −8i+12j \\end{align*}\\]",
+      "sourceAnswers": [],
+      "hasFigure": false,
+      "status": "draft",
+      "answerVerified": false,
+      "translationStatus": "pending",
+      "mappingStatus": "pending"
+    },
+    {
+      "ordinal": 13,
+      "sourceNumber": "",
+      "sourceAnchor": "",
+      "kind": "example-or-exercise",
+      "context": "\\[v=(x_2−x_1)i+(y_1−y_2)j\\]\n\nThe position vector from \\((0,0)\\) to \\((a,b)\\), where \\((x_2−x_1)=a\\) and \\((y_2−y_1)=b\\), is written as \\(\\vec{v} = \\vec{ai}+ \\vec{bj}\\). This vector sum is called a linear combination of the vectors \\(\\vec{i}\\) and \\(\\vec{j}\\).\n\nThe magnitude of \\(\\vec{v} = \\overrightarrow{ai} + \\overrightarrow{bj}\\) is given as \\(| v |=\\sqrt{a^2+b^2}\\). See Figure \\(\\PageIndex{17}\\).",
+      "original": "Example \\(\\PageIndex{8B}\\): Writing a Vector in Terms of \\(i\\) and \\(j\\) Using Initial and Terminal Points\n\nGiven initial point \\(P_1=(−1,3)\\) and terminal point \\(P_2=(2,7)\\), write the vector \\(\\vec{v}\\) in terms of \\(\\vec{i}\\) and \\(\\vec{j}\\).\n\nSolution\n\nBegin by writing the general form of the vector. Then replace the coordinates with the given values.\n\n\\[\\begin{align*} v &= (x_2−x_1)i+(y_2−y_1)j \\\\[4pt] v &= (2−(−1))i+(7−3)j \\\\[4pt] &= 3i+4j \\end{align*}\\]",
+      "prompt": "Example \\(\\PageIndex{8B}\\): Writing a Vector in Terms of \\(i\\) and \\(j\\) Using Initial and Terminal Points\n\nGiven initial point \\(P_1=(−1,3)\\) and terminal point \\(P_2=(2,7)\\), write the vector \\(\\vec{v}\\) in terms of \\(\\vec{i}\\) and \\(\\vec{j}\\).\n\nSolution\n\nBegin by writing the general form of the vector. Then replace the coordinates with the given values.\n\n\\[\\begin{align*} v &= (x_2−x_1)i+(y_2−y_1)j \\\\[4pt] v &= (2−(−1))i+(7−3)j \\\\[4pt] &= 3i+4j \\end{align*}\\]",
+      "sourceAnswers": [],
+      "hasFigure": false,
+      "status": "draft",
+      "answerVerified": false,
+      "translationStatus": "pending",
+      "mappingStatus": "pending"
+    },
+    {
+      "ordinal": 14,
+      "sourceNumber": "",
+      "sourceAnchor": "",
+      "kind": "exercise-candidate",
+      "context": "\\[v=(x_2−x_1)i+(y_1−y_2)j\\]\n\nThe position vector from \\((0,0)\\) to \\((a,b)\\), where \\((x_2−x_1)=a\\) and \\((y_2−y_1)=b\\), is written as \\(\\vec{v} = \\vec{ai}+ \\vec{bj}\\). This vector sum is called a linear combination of the vectors \\(\\vec{i}\\) and \\(\\vec{j}\\).\n\nThe magnitude of \\(\\vec{v} = \\overrightarrow{ai} + \\overrightarrow{bj}\\) is given as \\(| v |=\\sqrt{a^2+b^2}\\). See Figure \\(\\PageIndex{17}\\).",
+      "original": "Exercise \\(\\PageIndex{3}\\)\n\nWrite the vector \\(\\vec{u}\\) with initial point \\(P=(−1,6)\\) and terminal point \\(Q=(7,−5)\\) in terms of \\(\\vec{i}\\) and \\(\\vec{j}\\).\n\nAnswer\n\n\\(u=8i−11j\\)",
+      "prompt": "Exercise \\(\\PageIndex{3}\\)\n\nWrite the vector \\(\\vec{u}\\) with initial point \\(P=(−1,6)\\) and terminal point \\(Q=(7,−5)\\) in terms of \\(\\vec{i}\\) and \\(\\vec{j}\\).",
+      "sourceAnswers": [
+        "\\(u=8i−11j\\)"
+      ],
+      "hasFigure": false,
+      "status": "draft",
+      "answerVerified": false,
+      "translationStatus": "pending",
+      "mappingStatus": "pending"
+    },
+    {
+      "ordinal": 15,
+      "sourceNumber": "",
+      "sourceAnchor": "",
+      "kind": "example-or-exercise",
+      "context": "When vectors are written in terms of \\(i\\) and \\(j\\), we can carry out addition, subtraction, and scalar multiplication by performing operations on corresponding components.\n\nGiven \\(v = ai + bj\\) and \\(u = ci + dj\\), then\n\n\\[\\begin{align*} v+u &= (a+c)i+(b+d)j \\\\[4pt] v−u &= (a−c)i+(b−d)j \\end{align*}\\]",
+      "original": "Example \\(\\PageIndex{9}\\): Finding the Sum of the Vectors\n\nFind the sum of \\(v_1=2i−3j\\) and \\(v_2=4i+5j\\).\n\nSolution\n\n\\[\\begin{align*} v_1+v_2 &= (2+4)i+(−3+5)j \\\\[4pt] &= 6i+2j \\end{align*}\\]",
+      "prompt": "Example \\(\\PageIndex{9}\\): Finding the Sum of the Vectors\n\nFind the sum of \\(v_1=2i−3j\\) and \\(v_2=4i+5j\\).\n\nSolution\n\n\\[\\begin{align*} v_1+v_2 &= (2+4)i+(−3+5)j \\\\[4pt] &= 6i+2j \\end{align*}\\]",
+      "sourceAnswers": [],
+      "hasFigure": false,
+      "status": "draft",
+      "answerVerified": false,
+      "translationStatus": "pending",
+      "mappingStatus": "pending"
+    },
+    {
+      "ordinal": 16,
+      "sourceNumber": "",
+      "sourceAnchor": "",
+      "kind": "example-or-exercise",
+      "context": "Given a position vector \\(v=⟨x,y⟩\\) and a direction angle \\(\\theta\\),\n\n\\[ \\begin{align*} \\cos \\theta &= \\dfrac{x}{|v|} \\text{ and } \\sin \\theta=y|v| \\\\[4pt]  x &= |v| \\cos \\theta \\\\[4pt] y &= |v| \\sin \\theta \\end{align*}\\]\n\nThus, \\(v=xi+yj=| v | \\cos \\theta i+| v | \\sin \\theta j\\), and magnitude is expressed as \\(| v |=\\sqrt{x^2+y^2}\\).",
+      "original": "Example \\(\\PageIndex{10}\\): Writing a Vector in Terms of Magnitude and Direction\n\nWrite a vector with length \\(7\\) at an angle of \\(135°\\) to the positive x-axis in terms of magnitude and direction.",
+      "prompt": "Example \\(\\PageIndex{10}\\): Writing a Vector in Terms of Magnitude and Direction\n\nWrite a vector with length \\(7\\) at an angle of \\(135°\\) to the positive x-axis in terms of magnitude and direction.",
+      "sourceAnswers": [],
+      "hasFigure": false,
+      "status": "draft",
+      "answerVerified": false,
+      "translationStatus": "pending",
+      "mappingStatus": "pending"
+    },
+    {
+      "ordinal": 17,
+      "sourceNumber": "",
+      "sourceAnchor": "",
+      "kind": "exercise-candidate",
+      "context": "\\[ \\begin{align*} x &= 7\\cos(135°)i \\\\[4pt] &= −\\dfrac{7\\sqrt{2}}{2} \\\\[4pt] y &=7 \\sin(135°)j \\\\[4pt] &= \\dfrac{7\\sqrt{2}}{2} \\end{align*}\\]\n\nThis vector can be written as \\(v=7\\cos(135°)i+7\\sin(135°)j\\) or simplified as\n\n\\(v=−\\dfrac{7\\sqrt{2}}{2}i+\\dfrac{7\\sqrt{2}}{2}j\\)",
+      "original": "Exercise \\(\\PageIndex{4}\\)\n\nA vector travels from the origin to the point \\((3,5)\\). Write the vector in terms of magnitude and direction.\n\nAnswer\n\n\\(v=\\sqrt{34}\\cos(59°)i+\\sqrt{34}\\sin(59°)j\\)\n\nMagnitude = \\(34\\)\n\n\\(\\theta={\\tan}^{−1}\\left(\\dfrac{5}{3}\\right)=59.04°\\)",
+      "prompt": "Exercise \\(\\PageIndex{4}\\)\n\nA vector travels from the origin to the point \\((3,5)\\). Write the vector in terms of magnitude and direction.",
+      "sourceAnswers": [
+        "\\(v=\\sqrt{34}\\cos(59°)i+\\sqrt{34}\\sin(59°)j\\)\n\nMagnitude = \\(34\\)\n\n\\(\\theta={\\tan}^{−1}\\left(\\dfrac{5}{3}\\right)=59.04°\\)"
+      ],
+      "hasFigure": false,
+      "status": "draft",
+      "answerVerified": false,
+      "translationStatus": "pending",
+      "mappingStatus": "pending"
+    },
+    {
+      "ordinal": 18,
+      "sourceNumber": "",
+      "sourceAnchor": "",
+      "kind": "example-or-exercise",
+      "context": "\\[v⋅u=ac+bd\\]\n\nTo find the angle between the two vectors, use the formula below.\n\n\\[\\cos \\theta=\\dfrac{v}{| v |}⋅\\dfrac{u}{| u |}\\]",
+      "original": "Example \\(\\PageIndex{11A}\\): Finding the Dot Product of Two Vectors\n\nFind the dot product of \\(v=⟨5,12⟩\\) and \\(u=⟨−3,4⟩\\).\n\nSolution\n\nUsing the formula, we have\n\n\\[\\begin{align*} v⋅u &= ⟨5,12⟩⋅⟨−3,4⟩ \\\\[4pt] &= 5⋅(−3)+12⋅4 \\\\[4pt] &= −15+48 \\\\[4pt] &= 33 \\end{align*}\\]",
+      "prompt": "Example \\(\\PageIndex{11A}\\): Finding the Dot Product of Two Vectors\n\nFind the dot product of \\(v=⟨5,12⟩\\) and \\(u=⟨−3,4⟩\\).\n\nSolution\n\nUsing the formula, we have\n\n\\[\\begin{align*} v⋅u &= ⟨5,12⟩⋅⟨−3,4⟩ \\\\[4pt] &= 5⋅(−3)+12⋅4 \\\\[4pt] &= −15+48 \\\\[4pt] &= 33 \\end{align*}\\]",
+      "sourceAnswers": [],
+      "hasFigure": false,
+      "status": "draft",
+      "answerVerified": false,
+      "translationStatus": "pending",
+      "mappingStatus": "pending"
+    },
+    {
+      "ordinal": 19,
+      "sourceNumber": "",
+      "sourceAnchor": "",
+      "kind": "example-or-exercise",
+      "context": "\\[v⋅u=ac+bd\\]\n\nTo find the angle between the two vectors, use the formula below.\n\n\\[\\cos \\theta=\\dfrac{v}{| v |}⋅\\dfrac{u}{| u |}\\]",
+      "original": "Example \\(\\PageIndex{11B}\\): Finding the Dot Product of Two Vectors and the Angle between Them\n\nFind the dot product of \\(v_1 = 5i + 2j\\) and \\(v_2 = 3i + 7j\\). Then, find the angle between the two vectors.\n\nSolution\n\nFinding the dot product, we multiply corresponding components.\n\n\\[ \\begin{align*} v_1⋅v_2 &= ⟨5,2⟩⋅⟨3,7⟩ \\\\[4pt] &= 5⋅3+2⋅7 \\\\[4pt] &= 15+14 \\\\[4pt] &= 29 \\end{align*}\\]\n\nTo find the angle between them, we use the formula \\(\\cos \\theta=\\dfrac{v}{|v|}⋅\\dfrac{u}{|u|}\\).\n\n\\[\\begin{align*} \\dfrac{v}{|v|}\\cdot \\dfrac{u}{|u|} &= \\left \\langle \\dfrac{5}{\\sqrt{29}}+\\dfrac{2}{\\sqrt{29}} \\right \\rangle \\cdot \\left \\langle \\dfrac{3}{\\sqrt{58}}+\\dfrac{7}{\\sqrt{58}} \\right \\rangle \\\\[4pt] &=\\dfrac{5}{\\sqrt{29}}\\cdot \\dfrac{3}{\\sqrt{58}}+\\dfrac{2}{\\sqrt{29}}\\cdot \\dfrac{7}{\\sqrt{58}} \\\\[4pt] &= \\dfrac{15}{\\sqrt{1682}}+\\dfrac{14}{\\sqrt{1682}}\\\\ &=\\dfrac{29}{\\sqrt{1682}} \\\\[4pt] &= 0.707107 \\\\[4pt] {\\cos}^{-1}(0.707107) &= 45° \\end{align*}\\]\n\nSee Figure \\(\\PageIndex{18}\\).\n\n[Figure: Plot showing the two position vectors (3,7) and (5,2) and the 45 degree angle between them.]\n\nFigure \\(\\PageIndex{18}\\)",
+      "prompt": "Example \\(\\PageIndex{11B}\\): Finding the Dot Product of Two Vectors and the Angle between Them\n\nFind the dot product of \\(v_1 = 5i + 2j\\) and \\(v_2 = 3i + 7j\\). Then, find the angle between the two vectors.\n\nSolution\n\nFinding the dot product, we multiply corresponding components.\n\n\\[ \\begin{align*} v_1⋅v_2 &= ⟨5,2⟩⋅⟨3,7⟩ \\\\[4pt] &= 5⋅3+2⋅7 \\\\[4pt] &= 15+14 \\\\[4pt] &= 29 \\end{align*}\\]\n\nTo find the angle between them, we use the formula \\(\\cos \\theta=\\dfrac{v}{|v|}⋅\\dfrac{u}{|u|}\\).\n\n\\[\\begin{align*} \\dfrac{v}{|v|}\\cdot \\dfrac{u}{|u|} &= \\left \\langle \\dfrac{5}{\\sqrt{29}}+\\dfrac{2}{\\sqrt{29}} \\right \\rangle \\cdot \\left \\langle \\dfrac{3}{\\sqrt{58}}+\\dfrac{7}{\\sqrt{58}} \\right \\rangle \\\\[4pt] &=\\dfrac{5}{\\sqrt{29}}\\cdot \\dfrac{3}{\\sqrt{58}}+\\dfrac{2}{\\sqrt{29}}\\cdot \\dfrac{7}{\\sqrt{58}} \\\\[4pt] &= \\dfrac{15}{\\sqrt{1682}}+\\dfrac{14}{\\sqrt{1682}}\\\\ &=\\dfrac{29}{\\sqrt{1682}} \\\\[4pt] &= 0.707107 \\\\[4pt] {\\cos}^{-1}(0.707107) &= 45° \\end{align*}\\]\n\nSee Figure \\(\\PageIndex{18}\\).\n\n[Figure: Plot showing the two position vectors (3,7) and (5,2) and the 45 degree angle between them.]\n\nFigure \\(\\PageIndex{18}\\)",
+      "sourceAnswers": [],
+      "hasFigure": true,
+      "status": "draft",
+      "answerVerified": false,
+      "translationStatus": "pending",
+      "mappingStatus": "pending"
+    },
+    {
+      "ordinal": 20,
+      "sourceNumber": "",
+      "sourceAnchor": "",
+      "kind": "example-or-exercise",
+      "context": "\\[v⋅u=ac+bd\\]\n\nTo find the angle between the two vectors, use the formula below.\n\n\\[\\cos \\theta=\\dfrac{v}{| v |}⋅\\dfrac{u}{| u |}\\]",
+      "original": "Example \\(\\PageIndex{11C}\\): Finding the Angle between Two Vectors\n\nFind the angle between \\(u=⟨−3,4⟩\\) and \\(v=⟨5,12⟩\\).\n\nSolution\n\nUsing the formula, we have\n\n\\[\\begin{align*} \\theta &= {\\cos}^{−1}\\left(\\dfrac{u}{|u|}⋅\\dfrac{v}{|v|}\\right) \\\\[4pt] \\left(\\dfrac{u}{|u|}⋅\\dfrac{v}{|v|}\\right) &= \\dfrac{−3i+4j}{5}⋅\\dfrac{5i+12j}{13} \\\\[4pt] &= \\left(− \\dfrac{3}{5}⋅ \\dfrac{5}{13}\\right)+\\left(\\dfrac{4}{5}⋅ \\dfrac{12}{13}\\right) \\\\[4pt] &= −\\dfrac{15}{65}+\\dfrac{48}{65} \\\\[4pt] &= \\dfrac{33}{65} \\\\[4pt]  \\theta &= {\\cos}^{−1}\\left(\\dfrac{33}{65}\\right) \\\\[4pt] &= 59.5^{\\circ} \\end{align*}\\]\n\nSee Figure \\(\\PageIndex{19}\\).\n\n[Figure: Plot showing the two position vectors (-3,4) and (5,12) and the 59.5 degree angle between them.]\n\nFigure \\(\\PageIndex{19}\\)",
+      "prompt": "Example \\(\\PageIndex{11C}\\): Finding the Angle between Two Vectors\n\nFind the angle between \\(u=⟨−3,4⟩\\) and \\(v=⟨5,12⟩\\).\n\nSolution\n\nUsing the formula, we have\n\n\\[\\begin{align*} \\theta &= {\\cos}^{−1}\\left(\\dfrac{u}{|u|}⋅\\dfrac{v}{|v|}\\right) \\\\[4pt] \\left(\\dfrac{u}{|u|}⋅\\dfrac{v}{|v|}\\right) &= \\dfrac{−3i+4j}{5}⋅\\dfrac{5i+12j}{13} \\\\[4pt] &= \\left(− \\dfrac{3}{5}⋅ \\dfrac{5}{13}\\right)+\\left(\\dfrac{4}{5}⋅ \\dfrac{12}{13}\\right) \\\\[4pt] &= −\\dfrac{15}{65}+\\dfrac{48}{65} \\\\[4pt] &= \\dfrac{33}{65} \\\\[4pt]  \\theta &= {\\cos}^{−1}\\left(\\dfrac{33}{65}\\right) \\\\[4pt] &= 59.5^{\\circ} \\end{align*}\\]\n\nSee Figure \\(\\PageIndex{19}\\).\n\n[Figure: Plot showing the two position vectors (-3,4) and (5,12) and the 59.5 degree angle between them.]\n\nFigure \\(\\PageIndex{19}\\)",
+      "sourceAnswers": [],
+      "hasFigure": true,
+      "status": "draft",
+      "answerVerified": false,
+      "translationStatus": "pending",
+      "mappingStatus": "pending"
+    },
+    {
+      "ordinal": 21,
+      "sourceNumber": "",
+      "sourceAnchor": "",
+      "kind": "example-or-exercise",
+      "context": "\\[v⋅u=ac+bd\\]\n\nTo find the angle between the two vectors, use the formula below.\n\n\\[\\cos \\theta=\\dfrac{v}{| v |}⋅\\dfrac{u}{| u |}\\]",
+      "original": "Example \\(\\PageIndex{11D}\\): Finding Ground Speed and Bearing Using Vectors\n\nWe now have the tools to solve the problem we introduced in the opening of the section.\n\nAn airplane is flying at an airspeed of \\(200\\) miles per hour headed on a SE bearing of \\(140°\\). A north wind (from north to south) is blowing at \\(16.2\\) miles per hour. What are the ground speed and actual bearing of the plane? See Figure \\(\\PageIndex{20}\\).\n\n[Figure: Image of a plan flying SE at 140 degrees and the north wind blowing.]\n\nFigure \\(\\PageIndex{20}\\)\n\nSolution\n\nThe ground speed is represented by \\(x\\) in the diagram, and we need to find the angle \\(\\alpha\\) in order to calculate the adjusted bearing, which will be \\(140°+\\alpha\\).\n\nNotice in Figure \\(\\PageIndex{20}\\), that angle \\(\\angle BCO\\) must be equal to angle \\(\\angle AOC\\) by the rule of alternating interior angles, so angle \\(\\angle BCO\\) is 140°. We can find \\(x\\) by the Law of Cosines:\n\n\\[\\begin{align*} x^2 &= {(16.2)}^2+{(200)}^2−2(16.2)(200) \\cos(140°) \\\\[4pt]  x^2 &= 45,226.41 \\\\[4pt] x &= \\sqrt{45,226.41} \\\\[4pt]  x &= 212.7 \\end{align*}\\]\n\nThe ground speed is approximately \\(213\\) miles per hour. Now we can calculate the bearing using the Law of Sines.\n\n\\[\\begin{align*} \\dfrac{\\sin \\alpha}{16.2} &= \\dfrac{\\sin(140°)}{212.7} \\\\[4pt] \\sin \\alpha &= \\dfrac{16.2 \\sin(140°)}{212.7} \\\\[4pt] &=0.04896 \\\\[4pt] {\\sin}^{−1}(0.04896) &= 2.8° \\end{align*}\\]\n\nTherefore, the plane has a SE bearing of \\(140°+2.8°=142.8°\\). The ground speed is \\(212.7\\) miles per hour.",
+      "prompt": "Example \\(\\PageIndex{11D}\\): Finding Ground Speed and Bearing Using Vectors\n\nWe now have the tools to solve the problem we introduced in the opening of the section.\n\nAn airplane is flying at an airspeed of \\(200\\) miles per hour headed on a SE bearing of \\(140°\\). A north wind (from north to south) is blowing at \\(16.2\\) miles per hour. What are the ground speed and actual bearing of the plane? See Figure \\(\\PageIndex{20}\\).\n\n[Figure: Image of a plan flying SE at 140 degrees and the north wind blowing.]\n\nFigure \\(\\PageIndex{20}\\)\n\nSolution\n\nThe ground speed is represented by \\(x\\) in the diagram, and we need to find the angle \\(\\alpha\\) in order to calculate the adjusted bearing, which will be \\(140°+\\alpha\\).\n\nNotice in Figure \\(\\PageIndex{20}\\), that angle \\(\\angle BCO\\) must be equal to angle \\(\\angle AOC\\) by the rule of alternating interior angles, so angle \\(\\angle BCO\\) is 140°. We can find \\(x\\) by the Law of Cosines:\n\n\\[\\begin{align*} x^2 &= {(16.2)}^2+{(200)}^2−2(16.2)(200) \\cos(140°) \\\\[4pt]  x^2 &= 45,226.41 \\\\[4pt] x &= \\sqrt{45,226.41} \\\\[4pt]  x &= 212.7 \\end{align*}\\]\n\nThe ground speed is approximately \\(213\\) miles per hour. Now we can calculate the bearing using the Law of Sines.\n\n\\[\\begin{align*} \\dfrac{\\sin \\alpha}{16.2} &= \\dfrac{\\sin(140°)}{212.7} \\\\[4pt] \\sin \\alpha &= \\dfrac{16.2 \\sin(140°)}{212.7} \\\\[4pt] &=0.04896 \\\\[4pt] {\\sin}^{−1}(0.04896) &= 2.8° \\end{align*}\\]\n\nTherefore, the plane has a SE bearing of \\(140°+2.8°=142.8°\\). The ground speed is \\(212.7\\) miles per hour.",
+      "sourceAnswers": [],
+      "hasFigure": true,
+      "status": "draft",
+      "answerVerified": false,
+      "translationStatus": "pending",
+      "mappingStatus": "pending"
+    }
+  ],
+  "license": "CC BY 4.0",
+  "licenseEvidence": "This page titled 10.8: Vectors was last modified on Sun, 27 Apr 2025 18:27:21 GMT and is shared under a CC BY  4.0  license and was authored, remixed, and/or curated by OpenStax via source content that was edited to the style and standards of the LibreTexts platform.",
+  "url": "https://math.libretexts.org/Bookshelves/Algebra/Algebra_and_Trigonometry_1e_(OpenStax)/10:_Further_Applications_of_Trigonometry/10.08:_Vectors",
+  "sha256": "1850597c3520d6998f0ea1140dc432da5788d79a8ab7b7e448658cfd66188220",
+  "checkedAt": "2026-10-07",
+  "id": "48163d4b9b58598e12aa",
+  "bookId": "algebra-trigonometry",
+  "licenseInherited": false,
+  "licenseSource": "https://math.libretexts.org/Bookshelves/Algebra/Algebra_and_Trigonometry_1e_(OpenStax)/10:_Further_Applications_of_Trigonometry/10.08:_Vectors",
+  "licenseUrl": "https://creativecommons.org/licenses/by/4.0/",
+  "authors": "OpenStax / Jay Abramson et al.",
+  "book": "Algebra and Trigonometry 1e",
+  "reviewStatus": "unreviewed",
+  "sourceLanguage": "en",
+  "translationStatus": "pending"
+}

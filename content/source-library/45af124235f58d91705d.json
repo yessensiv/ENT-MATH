@@ -1,0 +1,49 @@
+{
+  "title": "7.2: The Central Limit Theorem for Sample Means (Averages)",
+  "originalText": "The sampling distribution is a theoretical distribution. It is created by taking many samples of size n from a population. Each sample mean is then treated like a single observation of this new distribution, the sampling distribution. The genius of thinking this way is that it recognizes that when we sample we are creating an observation and that observation must come from some particular distribution. The Central Limit Theorem answers the question: from what distribution did a sample mean come? If this is discovered, then we can treat a sample mean just like any other observation and calculate probabilities about what values it might take on. We have effectively moved from the world of statistics where we know only what we have from the sample, to the world of probability where we know the distribution from which the sample mean came and the parameters of that distribution.\n\nThe reasons that one samples a population are obvious. The time and expense of checking every invoice to determine its validity or every shipment to see if it contains all the items may well exceed the cost of errors in billing or shipping. For some products, sampling would require destroying them, called destructive sampling. One such example is measuring the ability of a metal to withstand saltwater corrosion for parts on ocean going vessels.\n\nSampling thus raises an important question; just which sample was drawn. Even if the sample were randomly drawn, there are theoretically an almost infinite number of samples. With just 100 items, there are more than 75 million unique samples of size five that can be drawn. If six are in the sample, the number of possible samples increases to just more than one billion. Of the 75 million possible samples, then, which one did you get? If there is variation in the items to be sampled, there will be variation in the samples. One could draw an \"unlucky\" sample and make very wrong conclusions concerning the population. This recognition that any sample we draw is really only one from a distribution of samples provides us with what is probably the single most important theorem is statistics: the Central Limit Theorem. Without the Central Limit Theorem it would be impossible to proceed to inferential statistics from simple probability theory. In its most basic form, the Central Limit Theorem states that regardless of the underlying probability density function of the population data, the theoretical distribution of the means of samples from the population will be normally distributed. In essence, this says that the mean of a sample should be treated like an observation drawn from a normal distribution. The Central Limit Theorem only holds if the sample size is \"large enough\" which has been shown to be only 30 observations or more.\n\nFigure 7.2 graphically displays this very important proposition.\n\n[Figure: ...]\n\nFigure \\(\\PageIndex{1}\\)\n\nNotice that the horizontal axis in the top panel is labeled X. These are the individual observations of the population. This is the unknown distribution of the population values. The graph is purposefully drawn all squiggly to show that it does not matter just how odd ball it really is. Remember, we will never know what this distribution looks like, or its mean or standard deviation for that matter.\n\nThe horizontal axis in the bottom panel is labeled \\(\\bar{X}\\)–'s. This is the theoretical distribution called the sampling distribution of the means. Each observation on this distribution is a sample mean. All these sample means were calculated from individual samples with the same sample size. The theoretical sampling distribution contains all of the sample mean values from all the possible samples that could have been taken from the population. Of course, no one would ever actually take all of these samples, but if they did this is how they would look. And the Central Limit Theorem says that they will be normally distributed.\n\nThe Central Limit Theorem goes even further and tells us the mean and standard deviation of this theoretical distribution.\n\n    Table \\(\\PageIndex{1}\\)\n\n            Parameter\t\n            Population distribution\t\n            Sample\t\n            Sampling distribution of X–X–'s\t\n\n            Mean\t\n            μ\t\n            \\(\\bar{X}\\)\t\n            \\(\\mu_{\\bar{x}} \\quad\\) and \\(\\mathrm{E}\\left(\\mu_{\\bar{x}}\\right)=\\mu\\)\t\n\n            Standard deviation\t\n            σ\t\n            s\t\n            \\(\\sigma_{\\bar{x}}=\\dfrac{\\sigma}{\\sqrt{n}}\\)\t\n\nThe practical significance of The Central Limit Theorem is that now we can compute probabilities for drawing a sample mean, \\(\\bar{X}\\), in just the same way as we did for drawing specific observations, X's, when we knew the population mean and standard deviation and that the population data were normally distributed.. The standardizing formula has to be amended to recognize that the mean and standard deviation of the sampling distribution, sometimes, called the standard error of the mean, are different from those of the population distribution, but otherwise nothing has changed. The new standardizing formula is\n\n\\[Z=\\dfrac{\\bar{X}-\\mu_{\\bar{X}}}{\\sigma_{\\bar{X}}}=\\dfrac{\\bar{X}-\\mu}{\\dfrac{\\sigma}{\\sqrt{n}}}\\]\n\nNotice that \\(\\mu_{\\bar{X}}\\) in the first formula has been changed to simply \\(\\mu\\) in the second version. The reason is that mathematically it can be shown that the expected value of \\(\\mu_{\\bar{X}}\\) is equal to \\(\\mu\\). This was stated in Table \\(\\PageIndex{1}\\) above. Mathematically, the \\(\\mathrm{E}(\\mathrm{x})\\) symbol read the \"expected value of x \". This formula will be used in the next unit to provide estimates of the unknown population parameter \\(\\mu\\).\n\nThis page titled 7.2: The Central Limit Theorem for Sample Means (Averages) was last modified on Thu, 07 May 2026 20:01:44 GMT and is shared under a CC BY  4.0  license and was authored, remixed, and/or curated by OpenStax via source content that was edited to the style and standards of the LibreTexts platform.",
+  "figures": [
+    {
+      "url": "https://stats.libretexts.org/@api/deki/files/40926/d59be0b70e9044fa21d3702e7d2d88971594a38d?revision=1&size=bestfit&width=400",
+      "alt": "...",
+      "credit": ""
+    }
+  ],
+  "references": [
+    {
+      "text": "Figure 7.2",
+      "url": "https://openstax.org/books/introductory-business-statistics-2e/pages/7-1-the-central-limit-theorem-for-sample-means#fs-id7367289"
+    },
+    {
+      "text": "7.2: The Central Limit Theorem for Sample Means (Averages)",
+      "url": "https://stats.libretexts.org/Bookshelves/Introductory_Statistics/Introductory_Statistics_2e_(OpenStax)/07%3A_The_Central_Limit_Theorem/7.02%3A_The_Central_Limit_Theorem_for_Sample_Means_(Averages)"
+    },
+    {
+      "text": "CC BY  4.0",
+      "url": "https://creativecommons.org/licenses/by/4.0"
+    },
+    {
+      "text": "OpenStax",
+      "url": "https://openstax.org/"
+    },
+    {
+      "text": "source content",
+      "url": "https://openstax.org/details/books/introductory-statistics"
+    }
+  ],
+  "exercises": [],
+  "license": "CC BY 4.0",
+  "licenseEvidence": "This page titled 7.2: The Central Limit Theorem for Sample Means (Averages) was last modified on Thu, 07 May 2026 20:01:44 GMT and is shared under a CC BY  4.0  license and was authored, remixed, and/or curated by OpenStax via source content that was edited to the style and standards of the LibreTexts platform.",
+  "url": "https://stats.libretexts.org/Bookshelves/Introductory_Statistics/Introductory_Statistics_2e_(OpenStax)/07:_The_Central_Limit_Theorem/7.02:_The_Central_Limit_Theorem_for_Sample_Means_(Averages)",
+  "sha256": "f839493c38c2c8e238e8618e51e250276b3fc2c74708bad7ef87bb555d0568e4",
+  "checkedAt": "2026-10-07",
+  "id": "45af124235f58d91705d",
+  "bookId": "statistics",
+  "licenseInherited": false,
+  "licenseSource": "https://stats.libretexts.org/Bookshelves/Introductory_Statistics/Introductory_Statistics_2e_(OpenStax)/07:_The_Central_Limit_Theorem/7.02:_The_Central_Limit_Theorem_for_Sample_Means_(Averages)",
+  "licenseUrl": "https://creativecommons.org/licenses/by/4.0/",
+  "authors": "OpenStax / Barbara Illowsky, Susan Dean",
+  "book": "Introductory Statistics 2e",
+  "reviewStatus": "unreviewed",
+  "sourceLanguage": "en",
+  "translationStatus": "pending"
+}

@@ -1,0 +1,668 @@
+{
+  "title": "5.5: Zeros of Polynomial Functions",
+  "originalText": "Learning Objectives\n\nEvaluate a polynomial using the Remainder Theorem.\n\nUse the Factor Theorem to solve a polynomial equation.\n\nUse the Rational Zero Theorem to find rational zeros.\n\nFind zeros of a polynomial function.\n\nUse the Linear Factorization Theorem to find polynomials with given zeros.\n\nUse Descartes’ Rule of Signs.\n\nSolve real-world applications of polynomial equations\n\nA new bakery offers decorated sheet cakes for children’s birthday parties and other special occasions. The bakery wants the volume of a small cake to be 351 cubic inches. The cake is in the shape of a rectangular solid. They want the length of the cake to be four inches longer than the width of the cake and the height of the cake to be one-third of the width. What should the dimensions of the cake pan be?\n\nThis problem can be solved by writing a cubic function and solving a cubic equation for the volume of the cake. In this section, we will discuss a variety of tools for writing polynomial functions and solving polynomial equations.\n\nEvaluating a Polynomial Using the Remainder Theorem\n\nIn the last section, we learned how to divide polynomials. We can now use polynomial division to evaluate polynomials using the Remainder Theorem. If the polynomial is divided by \\(x–k\\), the remainder may be found quickly by evaluating the polynomial function at \\(k\\), that is, \\(f(k)\\). Let’s walk through the proof of the theorem.\n\nRecall that the Division Algorithm states that, given a polynomial dividend \\(f(x)\\) and a non-zero polynomial divisor \\(d(x)\\) where the degree of \\(d(x)\\) is less than or equal to the degree of \\(f(x)\\),there exist unique polynomials \\(q(x)\\) and \\(r(x)\\) such that\n\n\\[f(x)=d(x)q(x)+r(x) \\nonumber\\]\n\nIf the divisor, \\(d(x)\\), is \\(x−k\\), this takes the form\n\n\\[f(x)=(x−k)q(x)+r \\nonumber\\]\n\nSince the divisor \\(x−k\\)\n\nis linear, the remainder will be a constant, \\(r\\). And, if we evaluate this for \\(x=k\\), we have\n\n\\[\\begin{align*} f(k)&=(k−k)q(k)+r \\\\[4pt] &=0{\\cdot}q(k)+r \\\\[4pt] &=r \\end{align*}\\]\n\nIn other words, \\(f(k)\\) is the remainder obtained by dividing \\(f(x)\\)by \\(x−k\\).\n\nThe Remainder Theorem\n\nIf a polynomial \\(f(x)\\) is divided by \\(x−k\\),then the remainder is the value \\(f(k)\\).\n\n[Figure: alt]\nGiven a polynomial function \\(f\\), evaluate \\(f(x)\\) at \\(x=k\\) using the Remainder Theorem.\n\n1. Use synthetic division to divide the polynomial by \\(x−k\\).\n\n2. The remainder is the value \\(f(k)\\).\n\nExample \\(\\PageIndex{1}\\): Using the Remainder Theorem to Evaluate a Polynomial\n\nUse the Remainder Theorem to evaluate \\(f(x)=6x^4−x^3−15x^2+2x−7\\) at \\(x=2\\).\n\nSolution\n\nTo find the remainder using the Remainder Theorem, use synthetic division to divide the polynomial by \\(x−2\\).\n\n\\[ 2 \\begin{array}{|ccccc} \\; 6 & −1 & −15 & 2 & −7 \\\\  \\text{} & 12 & 22 & 14 & 32 \\\\ \\hline \\end{array} \\\\  \\begin{array}{ccccc}  6 & 11 & \\; 7 & \\;\\;16 & \\;\\; 25 \\end{array} \\]\n\nThe remainder is 25. Therefore, \\(f(2)=25\\).\n\nAnalysis\n\nWe can check our answer by evaluating \\(f(2)\\).\n\n\\[\\begin{align*} f(x)&=6x^4−x^3−15x^2+2x−7 \\\\ f(2)&=6(2)^4−(2)^3−15(2)^2+2(2)−7 \\\\ &=25 \\end{align*}\\]\n\nExercise \\(\\PageIndex{1}\\)\n\nse the Remainder Theorem to evaluate \\(f(x)=2x^5−3x^4−9x^3+8x^2+2\\) at \\(x=−3\\).\n\nAnswer\n\n\\(f(−3)=−412\\)\n\nUsing the Factor Theorem to Solve a Polynomial Equation\n\nThe Factor Theorem is another theorem that helps us analyze polynomial equations. It tells us how the zeros of a polynomial are related to the factors. Recall that the Division Algorithm.\n\n\\[f(x)=(x−k)q(x)+r\\]\n\nIf \\(k\\) is a zero, then the remainder \\(r\\)  is \\(f(k)=0\\)  and \\(f (x)=(x−k)q(x)+0\\)  or \\(f(x)=(x−k)q(x)\\).\n\nNotice, written in this form, \\(x−k\\) is a factor of \\(f(x)\\). We can conclude if \\(k\\)  is a zero of \\(f(x)\\), then \\(x−k\\) is a factor of \\(f(x)\\).\n\nSimilarly, if \\(x−k\\)  is a factor of \\(f(x)\\),  then the remainder of the Division Algorithm \\(f(x)=(x−k)q(x)+r\\)  is \\(0\\). This tells us that \\(k\\)  is a zero.\n\nThis pair of implications is the Factor Theorem. As we will soon see, a polynomial of degree \\(n\\)  in the complex number system will have \\(n\\)  zeros. We can use the Factor Theorem to completely factor a polynomial into the product of \\(n\\) factors. Once the polynomial has been completely factored, we can easily determine the zeros of the polynomial.\n\nTHE FACTOR THEOREM\n\nAccording to the Factor Theorem, \\(k\\)  is a zero of \\(f(x)\\)  if and only if \\((x−k)\\)  is a factor of \\(f(x)\\). \n\nHow to: Given a factor and a third-degree polynomial, use the Factor Theorem to factor the polynomial\n\n1. Use synthetic division to divide the polynomial by \\((x−k)\\).\n\n2. Confirm that the remainder is \\(0\\).\n\n3. Write the polynomial as the product of \\((x−k)\\) and the quadratic quotient.\n\n4. If possible, factor the quadratic.\n\n5. Write the polynomial as the product of factors.\n\nExample \\(\\PageIndex{2}\\): Using the Factor Theorem to Solve a Polynomial Equation\n\nShow that \\((x+2)\\)  is a factor of \\(x^3−6x^2−x+30\\). Find the remaining factors. Use the factors to determine the zeros of the polynomial.\n\nSolution\n\nWe can use synthetic division to show that \\((x+2)\\) is a factor of the polynomial.\n\n\\[ -2 \\begin{array}{|cccc} \\; 1 & −6 & −1 & 30  \\\\  \\text{} & -2 & 16 & -30 \\\\ \\hline \\end{array} \\\\  \\begin{array}{cccc}  1 & -8 & \\; 15 & \\;\\;0  \\end{array} \\]\n\nThe remainder is zero, so \\((x+2)\\) is a factor of the polynomial. We can use the Division Algorithm to write the polynomial as the product of the divisor and the quotient:\n\n\\[(x+2)(x^2−8x+15)\\]\n\nWe can factor the quadratic factor to write the polynomial as\n\n\\[(x+2)(x−3)(x−5)\\]\n\nBy the Factor Theorem, the zeros of \\(x^3−6x^2−x+30\\) are –2, 3, and 5.\n\nExercise \\(\\PageIndex{2}\\)\n\nUse the Factor Theorem to find the zeros of \\(f(x)=x^3+4x^2−4x−16\\)  given that \\((x−2)\\)  is a factor of the polynomial.\n\nAnswer\n\nThe zeros are 2, –2, and –4.\n\nUsing the Rational Zero Theorem to Find Rational Zeros\n\nAnother use for the Remainder Theorem is to test whether a rational number is a zero for a given polynomial. But first we need a pool of rational numbers to test. The Rational Zero Theorem helps us to narrow down the number of possible rational zeros using the ratio of the factors of the constant term and factors of the leading coefficient of the polynomial\n\nConsider a quadratic function with two zeros, \\(x=\\frac{2}{5}\\)  and \\(x=\\frac{3}{4}\\).  By the Factor Theorem, these zeros have factors associated with them. Let us set each factor equal to 0, and then construct the original quadratic function absent its stretching factor.\n\n[Figure: alt]\n\nNotice that two of the factors of the constant term, 6, are the two numerators from the original rational roots: 2 and 3. Similarly, two of the factors from the leading coefficient, 20, are the two denominators from the original rational roots: 5 and 4.\n\nWe can infer that the numerators of the rational roots will always be factors of the constant term and the denominators will be factors of the leading coefficient. This is the essence of the Rational Zero Theorem; it is a means to give us a pool of possible rational zeros.\n\nTHE RATIONAL ZERO THEOREM\n\nThe Rational Zero Theorem states that, if the polynomial \\(f(x)=a_nx^n+a_{n−1}x^{n−1}+...+a_1x+a_0\\) has integer coefficients, then every rational zero of \\(f(x)\\)  has the form \\(\\frac{p}{q}\\) where \\(p\\) is a factor of the constant term \\(a_0\\) and \\(q\\) is a factor of the leading coefficient \\(a_n\\).\n\nWhen the leading coefficient is 1, the possible rational zeros are the factors of the constant term.\n\nHow to: Given a polynomial function \\(f(x)\\), use the Rational Zero Theorem to find rational zeros.\n\n1. Determine all factors of the constant term and all factors of the leading coefficient.\n\n2. Determine all possible values of \\(\\dfrac{p}{q}\\), where \\(p\\) is a factor of the constant term and \\(q\\) is a factor of the leading coefficient. Be sure to include both positive and negative candidates.\n\n3. Determine which possible zeros are actual zeros by evaluating each case of \\(f(\\frac{p}{q})\\). \n\nExample \\(\\PageIndex{3}\\): Listing All Possible Rational Zeros\n\nList all possible rational zeros of \\(f(x)=2x^4−5x^3+x^2−4\\).\n\nSolution\n\nThe only possible rational zeros of \\(f(x)\\)  are the quotients of the factors of the last term, –4, and the factors of the leading coefficient, 2.\n\nThe constant term is –4; the factors of –4 are \\(p=±1,±2,±4\\).\n\nThe leading coefficient is 2; the factors of 2 are \\(q=±1,±2\\).\n\nIf any of the four real zeros are rational zeros, then they will be of one of the following factors of –4 divided by one of the factors of 2.\n\n\\[\\dfrac{p}{q}=±\\dfrac{1}{1},±\\dfrac{1}{2} \\; \\; \\; \\; \\; \\;    \\frac{p}{q}=±\\dfrac{2}{1},±\\dfrac{2}{2} \\; \\; \\; \\; \\; \\; \\dfrac{p}{q}=±\\dfrac{4}{1},±\\dfrac{4}{2} \\nonumber\\]\n\nNote that \\(\\frac{2}{2}=1\\) and \\(\\frac{4}{2}=2\\), which have already been listed. So we can shorten our list.\n\n\\[\\dfrac{p}{q} = \\dfrac{\\text{Factors of the last}}{\\text{Factors of the first}}=±1,±2,±4,±\\dfrac{1}{2}\\nonumber \\]\n\nExample \\(\\PageIndex{4}\\): Using the Rational Zero Theorem to Find Rational Zeros\n\nUse the Rational Zero Theorem to find the rational zeros of \\(f(x)=2x^3+x^2−4x+1\\).\n\nSolution\n\nThe Rational Zero Theorem tells us that if \\(\\frac{p}{q}\\) is a zero of \\(f(x)\\),  then \\(p\\) is a factor of 1 and \\(q\\) is a factor of 2.\n\n\\[ \\begin{align*} \\dfrac{p}{q}=\\dfrac{factor\\space of\\space constant\\space term}{factor\\space of\\space leading\\space coefficient} \\\\[4pt] &=\\dfrac{factor\\space of\\space 1}{factor\\space of\\space 2} \\end{align*}\\]\n\nThe factors of 1 are ±1 and the factors of 2 are ±1 and ±2. The possible values for \\(\\frac{p}{q}\\) are ±1 and \\(±\\frac{1}{2}\\). These are the possible rational zeros for the function. We can determine which of the possible zeros are actual zeros by substituting these values for \\(x\\) in \\(f(x)\\).\n\n\\[f(−1)=2{(−1)}^3+{(−1)}^2−4(−1)+1=4\\]\n\n\\[f(1)=1{(1)}^3+{(1)}^2−4(1)+1=0\\]\n\n\\[f(−\\dfrac{1}{2})=2{(−\\dfrac{1}{2})}^3+{(−\\dfrac{1}{2})}^2−4(−\\dfrac{1}{2})+1=3\\]\n\n\\[f(\\dfrac{1}{2})=2{(\\dfrac{1}{2})}^3+{(\\dfrac{1}{2})}^2−4(\\dfrac{1}{2})+1=−\\dfrac{1}{2}\\]\n\nOf those,  \\(−1\\),\\(−\\dfrac{1}{2}\\), and \\(\\dfrac{1}{2}\\) are not zeros of \\(f(x)\\). 1 is the only rational zero of \\(f(x)\\).\n\nExercise \\(\\PageIndex{3}\\)\n\nUse the Rational Zero Theorem to find the rational zeros of \\(f(x)=x^3−5x^2+2x+1\\).\n\nAnswer\n\nThere are no rational zeros.\n\nFinding the Zeros of Polynomial Functions\n\nThe Rational Zero Theorem helps us to narrow down the list of possible rational zeros for a polynomial function. Once we have done this, we can use synthetic division repeatedly to determine all of the zeros of a polynomial function.\n\nHow to: Given a polynomial function \\(f\\), use synthetic division to find its zeros.\n\n1. Use the Rational Zero Theorem to list all possible rational zeros of the function.\n\n2. Use synthetic division to evaluate a given possible zero by synthetically dividing the candidate into the polynomial. If the remainder is 0, the candidate is a zero. If the remainder is not zero, discard the candidate.\n\n3. Repeat step two using the quotient found with synthetic division. If possible, continue until the quotient is a quadratic.\n\n4. Find the zeros of the quadratic function. Two possible methods for solving quadratics are factoring and using the quadratic formula.\n\nExample \\(\\PageIndex{5}\\): Finding the Zeros of a Polynomial Function with Repeated Real Zeros\n\nFind the zeros of \\(f(x)=4x^3−3x−1\\).\n\nSolution\n\nThe Rational Zero Theorem tells us that if \\(\\dfrac{p}{q}\\) is a zero of \\(f(x)\\), then \\(p\\)  is a factor of –1 and \\(q\\) is a factor of 4.\n\n\\[\\begin{align*}\\dfrac{p}{q}=\\dfrac{factor\\space of\\space constant\\space term}{factor\\space of\\space leading\\space coefficient} \\\\[4pt] =\\dfrac{factor\\space of\\space -1}{factor\\space of\\space 4} \\end{align*}\\]\n\nThe factors of –1  are ±1  and the factors of 4  are ±1,±2, and ±4. The possible values for \\(\\dfrac{p}{q}\\) are \\(±1\\),\\(±\\dfrac{1}{2}\\), and \\(±\\dfrac{1}{4}\\). These are the possible rational zeros for the function. We will use synthetic division to evaluate each possible zero until we find one that gives a remainder of 0. Let’s begin with 1.\n\nDividing by \\((x−1)\\)  gives a remainder of 0, so 1 is a zero of the function. The polynomial can be written as\n\n\\[(x−1)(4x^2+4x+1) \\nonumber\\]\n\nThe quadratic is a perfect square. \\(f(x)\\)  can be written as\n\n\\[(x−1){(2x+1)}^2\\nonumber\\]\n\nWe already know that 1 is a zero. The other zero will have a multiplicity of 2 because the factor is squared. To find the other zero, we can set the factor equal to 0.\n\n\\[ \\begin{align*} 2x+1=0 \\\\[4pt] x &=−\\dfrac{1}{2} \\end{align*}\\]\n\nThe zeros of the function are 1 and \\(−\\frac{1}{2}\\) with multiplicity 2.\n\nAnalysis\n\nLook at the graph of the function \\(f\\) in Figure \\(\\PageIndex{1}\\). Notice, at \\(x =−0.5\\), the graph bounces off the x-axis, indicating the even multiplicity (2,4,6…) for the zero −0.5.  At \\(x=1\\), the graph crosses the x-axis, indicating the odd multiplicity (1,3,5…) for the zero \\(x=1\\).\n\n[Figure: CNX_Precalc_Figure_03_06_001.jpg]\n\nFigure \\(\\PageIndex{1}\\).\n\nUsing the Fundamental Theorem of Algebra\n\nNow that we can find rational zeros for a polynomial function, we will look at a theorem that discusses the number of complex zeros of a polynomial function. The Fundamental Theorem of Algebra tells us that every polynomial function has at least one complex zero. This theorem forms the foundation for solving polynomial equations.\n\nSuppose \\(f\\) is a polynomial function of degree four, and \\(f (x)=0\\). The Fundamental Theorem of Algebra states that there is at least one complex solution, call it \\(c_1\\). By the Factor Theorem, we can write \\(f(x)\\) as a product of \\(x−c_1\\) and a polynomial quotient. Since \\(x−c_1\\) is linear, the polynomial quotient will be of degree three. Now we apply the Fundamental Theorem of Algebra to the third-degree polynomial quotient. It will have at least one complex zero, call it \\(c_2\\). So we can write the polynomial quotient as a product of \\(x−c_2\\) and a new polynomial quotient of degree two. Continue to apply the Fundamental Theorem of Algebra until all of the zeros are found. There will be four of them and each one will yield a factor of \\(f(x)\\).\n\nTHE FUNDAMENTAL THEOREM OF ALGEBRA\n\nThe Fundamental Theorem of Algebra states that, if \\(f(x)\\) is a polynomial of degree \\(n > 0\\), then \\(f(x)\\) has at least one complex zero.\n\nWe can use this theorem to argue that, if \\(f(x)\\) is a polynomial of degree \\(n >0\\), and a  is a non-zero real number, then \\(f(x)\\) has exactly \\(n\\)  linear factors\n\n\\[f(x)=a(x−c_1)(x−c_2)...(x−c_n)\\]\n\nwhere \\(c_1,c_2\\),...,\\(c_n\\) are complex numbers. Therefore, \\(f(x)\\) has \\(n\\) roots if we allow for multiplicities.\n\nQ&A: Does every polynomial have at least one imaginary zero?\n\nNo. Real numbers are a subset of complex numbers, but not the other way around. A complex number is not necessarily imaginary. Real numbers are also complex numbers.\n\nExample \\(\\PageIndex{6}\\): Finding the Zeros of a Polynomial Function with Complex Zeros\n\nFind the zeros of \\(f(x)=3x^3+9x^2+x+3\\).\n\nSolution\n\nThe Rational Zero Theorem tells us that if \\(\\frac{p}{q}\\) is a zero of \\(f(x)\\), then \\(p\\) is a factor of 3 and \\(q\\) is a factor of 3.\n\n\\[ \\begin{align*} \\dfrac{p}{q}=\\dfrac{factor\\space of\\space constant\\space term}{factor\\space of\\space leading\\space coefficient} \\\\[4pt] &=\\dfrac{factor\\space of\\space 3}{factor\\space of\\space 3} \\end{align*}\\]\n\nThe factors of 3 are ±1 and  ±3. The possible values for \\(\\dfrac{p}{q}\\), and therefore the possible rational zeros for the function, are ±3,±1, and \\(±\\dfrac{1}{3}\\). We will use synthetic division to evaluate each possible zero until we find one that gives a remainder of 0. Let’s begin with –3.\n\nDividing by \\((x+3)\\) gives a remainder of 0, so –3 is a zero of the function. The polynomial can be written as\n\n\\[(x+3)(3x^2+1) \\nonumber\\]\n\nWe can then set the quadratic equal to 0 and solve to find the other zeros of the function.\n\n\\[ \\begin{align*} 3x^2+1=0 \\\\[4pt] x^2 &=−\\dfrac{1}{3} \\\\[4pt] x&=±−\\sqrt{\\dfrac{1}{3}} \\\\[4pt] &=±\\dfrac{i\\sqrt{3}}{3} \\end{align*}\\]\n\nThe zeros of \\(f(x)\\)  are \\(–3\\) and \\(±\\dfrac{i\\sqrt{3}}{3}\\).\n\nAnalysis\n\nLook at the graph of the function \\(f\\) in Figure \\(\\PageIndex{2}\\). Notice that, at \\(x =−3\\), the graph crosses the x-axis, indicating an odd multiplicity (1) for the zero \\(x=–3\\). Also note the presence of the two turning points. This means that, since there is a \\(3^{rd}\\) degree polynomial, we are looking at the maximum number of turning points. So, the end behavior of increasing without bound to the right and decreasing without bound to the left will continue. Thus, all the x-intercepts for the function are shown. So either the multiplicity of \\(x=−3\\) is 1 and there are two complex solutions, which is what we found, or the multiplicity at \\(x =−3\\) is three. Either way, our result is correct.\n\n[Figure: CNX_Precalc_Figure_03_06_002.jpg]\n\nFigure \\(\\PageIndex{2}\\).\n\n \\(\\PageIndex{4}\\)\n\nFind the zeros of \\(f(x)=2x^3+5x^2−11x+4\\).\n\nSolution\n\nThe zeros are \\(–4\\), \\(\\frac{1}{2}\\), and \\(1\\).\n\nUsing the Linear Factorization Theorem to Find Polynomials with Given Zeros\n\nA vital implication of the Fundamental Theorem of Algebra, as we stated above, is that a polynomial function of degree n  will have \\(n\\) zeros in the set of complex numbers, if we allow for multiplicities. This means that we can factor the polynomial function into \\(n\\) factors. The Linear Factorization Theorem tells us that a polynomial function will have the same number of factors as its degree, and that each factor will be in the form \\((x−c)\\), where c is a complex number.\n\nLet \\(f\\)  be a polynomial function with real coefficients, and suppose \\(a +bi\\), \\(b≠0\\),  is a zero of \\(f(x)\\).  Then, by the Factor Theorem, \\(x−(a+bi)\\)  is a factor of \\(f(x)\\).  For \\(f\\)  to have real coefficients, \\(x−(a−bi)\\)  must also be a factor of \\(f(x)\\).  This is true because any factor other than \\(x−(a−bi)\\),  when multiplied by \\(x−(a+bi)\\),  will leave imaginary components in the product. Only multiplication with conjugate pairs will eliminate the imaginary parts and result in real coefficients. In other words, if a polynomial function \\(f\\)  with real coefficients has a complex zero \\(a +bi\\),  then the complex conjugate \\(a−bi\\)  must also be a zero of \\(f(x)\\). This is called the Complex Conjugate Theorem.\n\n COMPLEX CONJUGATE THEOREM\n\nAccording to the Linear Factorization Theorem, a polynomial function will have the same number of factors as its degree, and each factor will be in the form \\((x−c)\\), where \\(c\\)  is a complex number.\n\nIf the polynomial function \\(f\\)  has real coefficients and a complex zero in the form \\(a+bi\\),  then the complex conjugate of the zero, \\(a−bi\\),  is also a zero.\n\nHow to\n\nGiven the zeros of a polynomial function \\(f\\) and a point \\((c, f(c))\\) on the graph of \\(f\\), use the Linear Factorization Theorem to find the polynomial function.\n\n1. Use the zeros to construct the linear factors of the polynomial.\n\n2. Multiply the linear factors to expand the polynomial.\n\n3. Substitute \\((c,f(c))\\) into the function to determine the leading coefficient.\n\n4. Simplify.\n\nExample \\(\\PageIndex{7}\\): Using the Linear Factorization Theorem to Find a Polynomial with Given Zeros\n\nFind a fourth degree polynomial with real coefficients that has zeros of \\(–3\\), \\(2\\), \\(i\\), such that \\(f(−2)=100\\).\n\nSolution\n\nBecause \\(x =i\\)  is a zero, by the Complex Conjugate Theorem \\(x =–i\\)  is also a zero. The polynomial must have factors of \\((x+3),(x−2),(x−i)\\), and \\((x+i)\\). Since we are looking for a degree 4 polynomial, and now have four zeros, we have all four factors. Let’s begin by multiplying these factors.\n\n\\[\\begin{align} f(x) & =a(x+3)(x−2)(x−i)(x+i) \\\\ f(x) & =a(x^2+x−6)(x^2+1) \\\\ f(x) & =a(x^4+x^3−5x^2+x−6) \\end{align} \\]\n\nWe need to find \\(a\\) to ensure \\(f(–2)=100\\). Substitute \\(x=–2\\)  and \\(f (-2)=100\\)  into \\(f (x)\\).\n\n\\[\\begin{align} 100=a({(−2)}^4+{(−2)}^3−5{(−2)}^2+(−2)−6) \\\\ 100=a(−20) \\\\ −5=a \\end{align} \\]\n\nSo the polynomial function is\n\n\\[f(x)=−5(x^4+x^3−5x^2+x−6)\\]\n\nor\n\n\\[f(x)=−5x^4−5x^3+25x^2−5x+30\\]\n\nAnalysis\n\nWe found that both \\(i\\) and \\(−i\\) were zeros, but only one of these zeros needed to be given. If \\(i\\) is a zero of a polynomial with real coefficients, then \\(−i\\) must also be a zero of the polynomial because \\(−i\\) is the complex conjugate of \\(i\\).\n\nQ&A\n\nIf \\(2+3i\\)  were given as a zero of a polynomial with real coefficients, would  \\(2−3i\\)  also need to be a zero?\n\nYes. When any complex number with an imaginary component is given as a zero of a polynomial with real coefficients, the conjugate must also be a zero of the polynomial.\n\n \\(\\PageIndex{5}\\)\n\nFind a third degree polynomial with real coefficients that has zeros of \\(5\\) and \\(−2i\\) such that \\(f (1)=10\\).\n\nSolution\n\n\\(f(x)=−\\frac{1}{2}x^3+\\frac{5}{2}x^2−2x+10\\)\n\nUsing Descartes’ Rule of Signs\n\nThere is a straightforward way to determine the possible numbers of positive and negative real zeros for any polynomial function. If the polynomial is written in descending order, Descartes’ Rule of Signs tells us of a relationship between the number of sign changes in \\(f(x)\\) and the number of positive real zeros. For example, the polynomial function below has one sign change.\n\n[Figure: CNX_Precalc_Figure_03_06_003.jpg]\n\nThis tells us that the function must have 1 positive real zero.\n\nThere is a similar relationship between the number of sign changes in \\(f(−x)\\) and the number of negative real zeros.\n\n[Figure: CNX_Precalc_Figure_03_06_004.jpg]\n\nIn this case, \\(f(−x)\\) has 3 sign changes. This tells us that \\(f(x)\\) could have 3 or 1 negative real zeros.\n\nDESCARTES’ RULE OF SIGNS\n\nAccording to Descartes’ Rule of Signs, if we let  \\(f(x)=a_nx^n+a_{n−1}x^{n−1}+...+a_1x+a_0\\)  be a polynomial function with real coefficients:\n\nThe number of positive real zeros is either equal to the number of sign changes of \\(f(x)\\) or is less than the number of sign changes by an even integer.\n\nThe number of negative real zeros is either equal to the number of sign changes of \\(f(−x)\\) or is less than the number of sign changes by an even integer.\n\nExample \\(\\PageIndex{8}\\): Using Descartes’ Rule of Signs\n\nUse Descartes’ Rule of Signs to determine the possible numbers of positive and negative real zeros for \\(f(x)=−x^4−3x^3+6x^2−4x−12\\).\n\nSolution\n\nBegin by determining the number of sign changes.\n\nThere are two sign changes, so there are either 2 or 0 positive real roots. Next, we examine \\(f(−x)\\) to determine the number of negative real roots.\n\n\\[ \\begin{align} f(−x) & =−{(−x)}^4−3{(−x)}^3+6{(−x)}^2−4(−x)−12 \\\\ f(−x) & =−x^4+3x^3+6x^2+4x−12 \\end{align} \\]\n\n[Figure: The function, f(-x)=-x^4+3x^3+6x^2+4x-12, has two sign change between -x^4 and 3x^3, and 4x and -12.`]\n\nAgain, there are two sign changes, so there are either 2 or 0 negative real roots.\n\nThere are four possibilities, as we can see in Table \\(\\PageIndex{1}\\).\n\n    Table \\(\\PageIndex{1}\\)\n\n            Positive Real Zeros\t\n            Negative Real Zeros\t\n            Complex Zeros\t\n            Total Zeros\t\n\n            2\t\n            2\t\n            0\t\n            4\t\n\n            2\t\n            0\t\n            2\t\n            4\t\n\n            0\t\n            2\t\n            2\t\n            4\t\n\n            0\t\n            0\t\n            4\t\n            4\t\n\nAnalysis\n\nWe can confirm the numbers of positive and negative real roots by examining a graph of the function. See Figure \\(\\PageIndex{3}\\). We can see from the graph that the function has 0 positive real roots and 2 negative real roots.\n\n[Figure: Graph of f(x)=-x^4-3x^3+6x^2-4x-12 with x-intercepts at -4.42 and -1.]\n\nFigure \\(\\PageIndex{3}\\).\n\n \\(\\PageIndex{6}\\)\n\nUse Descartes’ Rule of Signs to determine the maximum possible numbers of positive and negative real zeros for \\(f(x)=2x^4−10x^3+11x^2−15x+12\\).  Use a graph to verify the numbers of positive and negative real zeros for the function.\n\nSolution\n\nThere must be 4, 2, or 0 positive real roots and 0 negative real roots. The graph shows that there are 2 positive real zeros and 0 negative real zeros.\n\nSolving Real-World Applications\n\nWe have now introduced a variety of tools for solving polynomial equations. Let’s use these tools to solve the bakery problem from the beginning of the section.\n\nExample \\(\\PageIndex{9}\\)\n\nSolving Polynomial Equations\n\nA new bakery offers decorated sheet cakes for children’s birthday parties and other special occasions. The bakery wants the volume of a small cake to be 351 cubic inches. The cake is in the shape of a rectangular solid. They want the length of the cake to be four inches longer than the width of the cake and the height of the cake to be one-third of the width. What should the dimensions of the cake pan be?\n\nSolution\n\nBegin by writing an equation for the volume of the cake. The volume of a rectangular solid is given by \\(V=lwh\\). We were given that the length must be four inches longer than the width, so we can express the length of the cake as \\(l=w+4\\). We were given that the height of the cake is one-third of the width, so we can express the height of the cake as \\(h=\\dfrac{1}{3}w\\). Let’s write the volume of the cake in terms of width of the cake.\n\n\\[V=(w+4)(w)(\\dfrac{1}{3}w)\\]\n\n\\[V=\\dfrac{1}{3}w^3+\\dfrac{4}{3}w^2\\]\n\nSubstitute the given volume into this equation.\n\n\\(351=13w^3+43w^2\\)   Substitute 351 for V.\n\n\\(1053=w^3+4w^2\\)    Multiply both sides by 3.\n\n\\(0=w^3+7w^2−1053\\)   Subtract 1053 from both sides.\n\nDescartes' rule of signs tells us there is one positive solution. The Rational Zero Theorem tells us that the possible rational zeros are  \\(\\pm 1,±3,±9,±13,±27,±39,±81,±117,±351,\\)  and \\(±1053\\).  We can use synthetic division to test these possible zeros. Only positive numbers make sense as dimensions for a cake, so we need not test any negative values. Let’s begin by testing values that make the most sense as dimensions for a small sheet cake. Use synthetic division to check \\(x=1\\).\n\n[Figure: alt]\n\nSince 1 is not a solution, we will check \\(x=3\\).\n\n[Figure: alt]\n\nSince 3 is not a solution either, we will test \\(x=9\\).\n\n[Figure: alt]\n\nSynthetic division gives a remainder of 0, so 9 is a solution to the equation. We can use the relationships between the width and the other dimensions to determine the length and height of the sheet cake pan.\n\n\\(l=w+4=9+4=13\\) and \\(h=\\dfrac{1}{3}w=\\dfrac{1}{3}(9)=3\\)\n\nThe sheet cake pan should have dimensions 13 inches by 9 inches by 3 inches\n\n \\(\\PageIndex{7}\\)\n\nA shipping container in the shape of a rectangular solid must have a volume of 84 cubic meters. The client tells the manufacturer that, because of the contents, the length of the container must be one meter longer than the width, and the height must be one meter greater than twice the width. What should the dimensions of the container be?\n\nSolution\n\n3 meters by 4 meters by 7 meters\n\nMedia\n\nAccess these online resources for additional instruction and practice with zeros of polynomial functions.\n\nReal Zeros, Factors, and Graphs of Polynomial Functions\n\nComplex Factorization Theorem\n\nFind the Zeros of a Polynomial Function\n\nFind the Zeros of a Polynomial Function 2\n\nFind the Zeros of a Polynomial Function 3\n\nKey Concepts\n\nTo find \\(f(k)\\), determine the remainder of the polynomial \\(f(x)\\) when it is divided by \\(x−k\\). This is known as the Remainder Theorem. See Example \\(\\PageIndex{1}\\).\n\nAccording to the Factor Theorem, \\(k\\) is a zero of \\(f(x)\\)  if and only if \\((x−k)\\)  is a factor of \\(f(x)\\). See Example\\(\\PageIndex{2}\\).\n\nAccording to the Rational Zero Theorem, each rational zero of a polynomial function with integer coefficients will be equal to a factor of the constant term divided by a factor of the leading coefficient. See Example \\(\\PageIndex{3}\\) and Example \\(\\PageIndex{4}\\).\n\nWhen the leading coefficient is 1, the possible rational zeros are the factors of the constant term.\n\nSynthetic division can be used to find the zeros of a polynomial function. See Example \\(\\PageIndex{5}\\).\n\nAccording to the Fundamental Theorem, every polynomial function with degree greater than 0 has at least one complex zero. See Example \\(\\PageIndex{6}\\).\n\nAllowing for multiplicities, a polynomial function will have the same number of factors as its degree. Each factor will be in the form \\((x−c)\\), where \\(c\\)  is a complex number. See Example \\(\\PageIndex{7}\\).\n\nThe number of positive real zeros of a polynomial function is either the number of sign changes of the function or less than the number of sign changes by an even integer.\n\nThe number of negative real zeros of a polynomial function is either the number of sign changes of \\(f(−x)\\)  or less than the number of sign changes by an even integer. See Example \\(\\PageIndex{8}\\).\n\nPolynomial equations model many real-world scenarios. Solving the equations is easiest done by synthetic division. See Example \\(\\PageIndex{9}\\).\n\nGlossary\n\nDescartes’ Rule of Signs\n\na rule that determines the maximum possible numbers of positive and negative real zeros based on the number of sign changes of \\(f(x)\\) and \\(f(−x)\\)\n\nFactor Theorem\n\n\\(k\\) is a zero of polynomial function \\(f(x)\\) if and only if \\((x−k)\\) is a factor of \\(f(x)\\)\n\nFundamental Theorem of Algebra\n\na polynomial function with degree greater than 0 has at least one complex zero\n\nLinear Factorization Theorem\n\nallowing for multiplicities, a polynomial function will have the same number of factors as its degree, and each factor will be in the form \\((x−c)\\), where \\(c\\) is a complex number\n\nRational Zero Theorem\n\nthe possible rational zeros of a polynomial function have the form \\(\\frac{p}{q}\\) where \\(p\\) is a factor of the constant term and \\(q\\) is a factor of the leading coefficient.\n\nRemainder Theorem\n\nif a polynomial \\(f(x)\\) is divided by \\(x−k\\),then the remainder is equal to the value \\(f(k)\\)\n\nThis page titled 5.5: Zeros of Polynomial Functions was last modified on Thu, 26 Dec 2024 22:30:44 GMT and is shared under a CC BY  4.0  license and was authored, remixed, and/or curated by OpenStax via source content that was edited to the style and standards of the LibreTexts platform.",
+  "figures": [
+    {
+      "url": "https://math.libretexts.org/@api/deki/files/871/how-to.png?revision=1",
+      "alt": "alt",
+      "credit": ""
+    },
+    {
+      "url": "https://math.libretexts.org/@api/deki/files/6648/CNX_Precalc_Figure_03_03_022.jpg?revision=1",
+      "alt": "alt",
+      "credit": ""
+    },
+    {
+      "url": "https://math.libretexts.org/@api/deki/files/6673/CNX_Precalc_Figure_03_06_001.jpg?revision=1",
+      "alt": "CNX_Precalc_Figure_03_06_001.jpg",
+      "credit": ""
+    },
+    {
+      "url": "https://math.libretexts.org/@api/deki/files/6675/CNX_Precalc_Figure_03_06_002.jpg?revision=1",
+      "alt": "CNX_Precalc_Figure_03_06_002.jpg",
+      "credit": ""
+    },
+    {
+      "url": "https://math.libretexts.org/@api/deki/files/6676/CNX_Precalc_Figure_03_06_003.jpg?revision=1&size=bestfit&width=487&height=45",
+      "alt": "CNX_Precalc_Figure_03_06_003.jpg",
+      "credit": ""
+    },
+    {
+      "url": "https://math.libretexts.org/@api/deki/files/6677/CNX_Precalc_Figure_03_06_004.jpg?revision=1&size=bestfit&width=487&height=76",
+      "alt": "CNX_Precalc_Figure_03_06_004.jpg",
+      "credit": ""
+    },
+    {
+      "url": "https://math.libretexts.org/@api/deki/files/6740/CNX_Precalc_Figure_03_06_006.jpg?revision=1",
+      "alt": "The function, f(-x)=-x^4+3x^3+6x^2+4x-12, has two sign change between -x^4 and 3x^3, and 4x and -12.`",
+      "credit": ""
+    },
+    {
+      "url": "https://math.libretexts.org/@api/deki/files/6741/CNX_Precalc_Figure_03_06_007.jpg?revision=1",
+      "alt": "Graph of f(x)=-x^4-3x^3+6x^2-4x-12 with x-intercepts at -4.42 and -1.",
+      "credit": ""
+    },
+    {
+      "url": "https://math.libretexts.org/@api/deki/files/6742/CNX_CAT_Figure_05_01_008_(1).jpg?revision=1",
+      "alt": "alt",
+      "credit": ""
+    },
+    {
+      "url": "https://math.libretexts.org/@api/deki/files/6743/CNX_CAT_Figure_05_01_009.jpg?revision=1",
+      "alt": "alt",
+      "credit": ""
+    },
+    {
+      "url": "https://math.libretexts.org/@api/deki/files/6744/CNX_CAT_Figure_05_01_010.jpg?revision=1",
+      "alt": "alt",
+      "credit": ""
+    }
+  ],
+  "references": [
+    {
+      "text": "Real Zeros, Factors, and Graphs of Polynomial Functions",
+      "url": "http://openstaxcollege.org/l/realzeros"
+    },
+    {
+      "text": "Complex Factorization Theorem",
+      "url": "http://openstaxcollege.org/l/factortheorem"
+    },
+    {
+      "text": "Find the Zeros of a Polynomial Function",
+      "url": "http://openstaxcollege.org/l/findthezeros"
+    },
+    {
+      "text": "Find the Zeros of a Polynomial Function 2",
+      "url": "http://openstaxcollege.org/l/findthezeros2"
+    },
+    {
+      "text": "Find the Zeros of a Polynomial Function 3",
+      "url": "http://openstaxcollege.org/l/findthezeros3"
+    },
+    {
+      "text": "Example \\(\\PageIndex{1}\\)",
+      "url": "http://cnx.org/contents/E6wQevFf@5.200:G7V9LHif@6/Zeros-of-Polynomial-Functions#Example_03_06_01"
+    },
+    {
+      "text": "Example\\(\\PageIndex{2}\\)",
+      "url": "http://cnx.org/contents/E6wQevFf@5.200:G7V9LHif@6/Zeros-of-Polynomial-Functions#Example_03_06_02"
+    },
+    {
+      "text": "Example \\(\\PageIndex{3}\\)",
+      "url": "http://cnx.org/contents/E6wQevFf@5.200:G7V9LHif@6/Zeros-of-Polynomial-Functions#Example_03_06_03"
+    },
+    {
+      "text": "Example \\(\\PageIndex{4}\\)",
+      "url": "http://cnx.org/contents/E6wQevFf@5.200:G7V9LHif@6/Zeros-of-Polynomial-Functions#Example_03_06_04"
+    },
+    {
+      "text": "Example \\(\\PageIndex{5}\\)",
+      "url": "http://cnx.org/contents/E6wQevFf@5.200:G7V9LHif@6/Zeros-of-Polynomial-Functions#Example_03_06_05"
+    },
+    {
+      "text": "Example \\(\\PageIndex{6}\\)",
+      "url": "http://cnx.org/contents/E6wQevFf@5.200:G7V9LHif@6/Zeros-of-Polynomial-Functions#Example_03_06_06"
+    },
+    {
+      "text": "Example \\(\\PageIndex{7}\\)",
+      "url": "http://cnx.org/contents/E6wQevFf@5.200:G7V9LHif@6/Zeros-of-Polynomial-Functions#Example_03_06_07"
+    },
+    {
+      "text": "Example \\(\\PageIndex{8}\\)",
+      "url": "http://cnx.org/contents/E6wQevFf@5.200:G7V9LHif@6/Zeros-of-Polynomial-Functions#Example_03_06_08"
+    },
+    {
+      "text": "Example \\(\\PageIndex{9}\\)",
+      "url": "http://cnx.org/contents/E6wQevFf@5.200:G7V9LHif@6/Zeros-of-Polynomial-Functions#Example_03_06_09"
+    },
+    {
+      "text": "5.5: Zeros of Polynomial Functions",
+      "url": "https://math.libretexts.org/Bookshelves/Algebra/Algebra_and_Trigonometry_1e_(OpenStax)/05%3A_Polynomial_and_Rational_Functions/5.05%3A_Zeros_of_Polynomial_Functions"
+    },
+    {
+      "text": "CC BY  4.0",
+      "url": "https://creativecommons.org/licenses/by/4.0"
+    },
+    {
+      "text": "OpenStax",
+      "url": "https://openstax.org/"
+    },
+    {
+      "text": "source content",
+      "url": "https://openstax.org/details/books/precalculus"
+    }
+  ],
+  "exercises": [
+    {
+      "ordinal": 1,
+      "sourceNumber": "1",
+      "sourceAnchor": "",
+      "kind": "exercise-candidate",
+      "context": "The Remainder Theorem\n\nIf a polynomial \\(f(x)\\) is divided by \\(x−k\\),then the remainder is the value \\(f(k)\\).\n\n[Figure: alt]\nGiven a polynomial function \\(f\\), evaluate \\(f(x)\\) at \\(x=k\\) using the Remainder Theorem.",
+      "original": "1. Use synthetic division to divide the polynomial by \\(x−k\\).",
+      "prompt": "1. Use synthetic division to divide the polynomial by \\(x−k\\).",
+      "sourceAnswers": [],
+      "hasFigure": false,
+      "status": "draft",
+      "answerVerified": false,
+      "translationStatus": "pending",
+      "mappingStatus": "pending"
+    },
+    {
+      "ordinal": 2,
+      "sourceNumber": "2",
+      "sourceAnchor": "",
+      "kind": "exercise-candidate",
+      "context": "The Remainder Theorem\n\nIf a polynomial \\(f(x)\\) is divided by \\(x−k\\),then the remainder is the value \\(f(k)\\).\n\n[Figure: alt]\nGiven a polynomial function \\(f\\), evaluate \\(f(x)\\) at \\(x=k\\) using the Remainder Theorem.",
+      "original": "2. The remainder is the value \\(f(k)\\).",
+      "prompt": "2. The remainder is the value \\(f(k)\\).",
+      "sourceAnswers": [],
+      "hasFigure": false,
+      "status": "draft",
+      "answerVerified": false,
+      "translationStatus": "pending",
+      "mappingStatus": "pending"
+    },
+    {
+      "ordinal": 3,
+      "sourceNumber": "",
+      "sourceAnchor": "",
+      "kind": "example-or-exercise",
+      "context": "The Remainder Theorem\n\nIf a polynomial \\(f(x)\\) is divided by \\(x−k\\),then the remainder is the value \\(f(k)\\).\n\n[Figure: alt]\nGiven a polynomial function \\(f\\), evaluate \\(f(x)\\) at \\(x=k\\) using the Remainder Theorem.",
+      "original": "Example \\(\\PageIndex{1}\\): Using the Remainder Theorem to Evaluate a Polynomial\n\nUse the Remainder Theorem to evaluate \\(f(x)=6x^4−x^3−15x^2+2x−7\\) at \\(x=2\\).\n\nSolution\n\nTo find the remainder using the Remainder Theorem, use synthetic division to divide the polynomial by \\(x−2\\).\n\n\\[ 2 \\begin{array}{|ccccc} \\; 6 & −1 & −15 & 2 & −7 \\\\  \\text{} & 12 & 22 & 14 & 32 \\\\ \\hline \\end{array} \\\\  \\begin{array}{ccccc}  6 & 11 & \\; 7 & \\;\\;16 & \\;\\; 25 \\end{array} \\]\n\nThe remainder is 25. Therefore, \\(f(2)=25\\).\n\nAnalysis\n\nWe can check our answer by evaluating \\(f(2)\\).\n\n\\[\\begin{align*} f(x)&=6x^4−x^3−15x^2+2x−7 \\\\ f(2)&=6(2)^4−(2)^3−15(2)^2+2(2)−7 \\\\ &=25 \\end{align*}\\]",
+      "prompt": "Example \\(\\PageIndex{1}\\): Using the Remainder Theorem to Evaluate a Polynomial\n\nUse the Remainder Theorem to evaluate \\(f(x)=6x^4−x^3−15x^2+2x−7\\) at \\(x=2\\).\n\nSolution\n\nTo find the remainder using the Remainder Theorem, use synthetic division to divide the polynomial by \\(x−2\\).\n\n\\[ 2 \\begin{array}{|ccccc} \\; 6 & −1 & −15 & 2 & −7 \\\\  \\text{} & 12 & 22 & 14 & 32 \\\\ \\hline \\end{array} \\\\  \\begin{array}{ccccc}  6 & 11 & \\; 7 & \\;\\;16 & \\;\\; 25 \\end{array} \\]\n\nThe remainder is 25. Therefore, \\(f(2)=25\\).\n\nAnalysis\n\nWe can check our answer by evaluating \\(f(2)\\).\n\n\\[\\begin{align*} f(x)&=6x^4−x^3−15x^2+2x−7 \\\\ f(2)&=6(2)^4−(2)^3−15(2)^2+2(2)−7 \\\\ &=25 \\end{align*}\\]",
+      "sourceAnswers": [],
+      "hasFigure": false,
+      "status": "draft",
+      "answerVerified": false,
+      "translationStatus": "pending",
+      "mappingStatus": "pending"
+    },
+    {
+      "ordinal": 4,
+      "sourceNumber": "",
+      "sourceAnchor": "",
+      "kind": "exercise-candidate",
+      "context": "The Remainder Theorem\n\nIf a polynomial \\(f(x)\\) is divided by \\(x−k\\),then the remainder is the value \\(f(k)\\).\n\n[Figure: alt]\nGiven a polynomial function \\(f\\), evaluate \\(f(x)\\) at \\(x=k\\) using the Remainder Theorem.",
+      "original": "Exercise \\(\\PageIndex{1}\\)\n\nse the Remainder Theorem to evaluate \\(f(x)=2x^5−3x^4−9x^3+8x^2+2\\) at \\(x=−3\\).\n\nAnswer\n\n\\(f(−3)=−412\\)",
+      "prompt": "Exercise \\(\\PageIndex{1}\\)\n\nse the Remainder Theorem to evaluate \\(f(x)=2x^5−3x^4−9x^3+8x^2+2\\) at \\(x=−3\\).",
+      "sourceAnswers": [
+        "\\(f(−3)=−412\\)"
+      ],
+      "hasFigure": false,
+      "status": "draft",
+      "answerVerified": false,
+      "translationStatus": "pending",
+      "mappingStatus": "pending"
+    },
+    {
+      "ordinal": 5,
+      "sourceNumber": "1",
+      "sourceAnchor": "",
+      "kind": "exercise-candidate",
+      "context": "THE FACTOR THEOREM\n\nAccording to the Factor Theorem, \\(k\\)  is a zero of \\(f(x)\\)  if and only if \\((x−k)\\)  is a factor of \\(f(x)\\).\n\nHow to: Given a factor and a third-degree polynomial, use the Factor Theorem to factor the polynomial",
+      "original": "1. Use synthetic division to divide the polynomial by \\((x−k)\\).",
+      "prompt": "1. Use synthetic division to divide the polynomial by \\((x−k)\\).",
+      "sourceAnswers": [],
+      "hasFigure": false,
+      "status": "draft",
+      "answerVerified": false,
+      "translationStatus": "pending",
+      "mappingStatus": "pending"
+    },
+    {
+      "ordinal": 6,
+      "sourceNumber": "2",
+      "sourceAnchor": "",
+      "kind": "exercise-candidate",
+      "context": "THE FACTOR THEOREM\n\nAccording to the Factor Theorem, \\(k\\)  is a zero of \\(f(x)\\)  if and only if \\((x−k)\\)  is a factor of \\(f(x)\\).\n\nHow to: Given a factor and a third-degree polynomial, use the Factor Theorem to factor the polynomial",
+      "original": "2. Confirm that the remainder is \\(0\\).",
+      "prompt": "2. Confirm that the remainder is \\(0\\).",
+      "sourceAnswers": [],
+      "hasFigure": false,
+      "status": "draft",
+      "answerVerified": false,
+      "translationStatus": "pending",
+      "mappingStatus": "pending"
+    },
+    {
+      "ordinal": 7,
+      "sourceNumber": "3",
+      "sourceAnchor": "",
+      "kind": "exercise-candidate",
+      "context": "THE FACTOR THEOREM\n\nAccording to the Factor Theorem, \\(k\\)  is a zero of \\(f(x)\\)  if and only if \\((x−k)\\)  is a factor of \\(f(x)\\).\n\nHow to: Given a factor and a third-degree polynomial, use the Factor Theorem to factor the polynomial",
+      "original": "3. Write the polynomial as the product of \\((x−k)\\) and the quadratic quotient.",
+      "prompt": "3. Write the polynomial as the product of \\((x−k)\\) and the quadratic quotient.",
+      "sourceAnswers": [],
+      "hasFigure": false,
+      "status": "draft",
+      "answerVerified": false,
+      "translationStatus": "pending",
+      "mappingStatus": "pending"
+    },
+    {
+      "ordinal": 8,
+      "sourceNumber": "4",
+      "sourceAnchor": "",
+      "kind": "exercise-candidate",
+      "context": "THE FACTOR THEOREM\n\nAccording to the Factor Theorem, \\(k\\)  is a zero of \\(f(x)\\)  if and only if \\((x−k)\\)  is a factor of \\(f(x)\\).\n\nHow to: Given a factor and a third-degree polynomial, use the Factor Theorem to factor the polynomial",
+      "original": "4. If possible, factor the quadratic.",
+      "prompt": "4. If possible, factor the quadratic.",
+      "sourceAnswers": [],
+      "hasFigure": false,
+      "status": "draft",
+      "answerVerified": false,
+      "translationStatus": "pending",
+      "mappingStatus": "pending"
+    },
+    {
+      "ordinal": 9,
+      "sourceNumber": "5",
+      "sourceAnchor": "",
+      "kind": "exercise-candidate",
+      "context": "THE FACTOR THEOREM\n\nAccording to the Factor Theorem, \\(k\\)  is a zero of \\(f(x)\\)  if and only if \\((x−k)\\)  is a factor of \\(f(x)\\).\n\nHow to: Given a factor and a third-degree polynomial, use the Factor Theorem to factor the polynomial",
+      "original": "5. Write the polynomial as the product of factors.",
+      "prompt": "5. Write the polynomial as the product of factors.",
+      "sourceAnswers": [],
+      "hasFigure": false,
+      "status": "draft",
+      "answerVerified": false,
+      "translationStatus": "pending",
+      "mappingStatus": "pending"
+    },
+    {
+      "ordinal": 10,
+      "sourceNumber": "",
+      "sourceAnchor": "",
+      "kind": "example-or-exercise",
+      "context": "THE FACTOR THEOREM\n\nAccording to the Factor Theorem, \\(k\\)  is a zero of \\(f(x)\\)  if and only if \\((x−k)\\)  is a factor of \\(f(x)\\).\n\nHow to: Given a factor and a third-degree polynomial, use the Factor Theorem to factor the polynomial",
+      "original": "Example \\(\\PageIndex{2}\\): Using the Factor Theorem to Solve a Polynomial Equation\n\nShow that \\((x+2)\\)  is a factor of \\(x^3−6x^2−x+30\\). Find the remaining factors. Use the factors to determine the zeros of the polynomial.\n\nSolution\n\nWe can use synthetic division to show that \\((x+2)\\) is a factor of the polynomial.\n\n\\[ -2 \\begin{array}{|cccc} \\; 1 & −6 & −1 & 30  \\\\  \\text{} & -2 & 16 & -30 \\\\ \\hline \\end{array} \\\\  \\begin{array}{cccc}  1 & -8 & \\; 15 & \\;\\;0  \\end{array} \\]\n\nThe remainder is zero, so \\((x+2)\\) is a factor of the polynomial. We can use the Division Algorithm to write the polynomial as the product of the divisor and the quotient:\n\n\\[(x+2)(x^2−8x+15)\\]",
+      "prompt": "Example \\(\\PageIndex{2}\\): Using the Factor Theorem to Solve a Polynomial Equation\n\nShow that \\((x+2)\\)  is a factor of \\(x^3−6x^2−x+30\\). Find the remaining factors. Use the factors to determine the zeros of the polynomial.\n\nSolution\n\nWe can use synthetic division to show that \\((x+2)\\) is a factor of the polynomial.\n\n\\[ -2 \\begin{array}{|cccc} \\; 1 & −6 & −1 & 30  \\\\  \\text{} & -2 & 16 & -30 \\\\ \\hline \\end{array} \\\\  \\begin{array}{cccc}  1 & -8 & \\; 15 & \\;\\;0  \\end{array} \\]\n\nThe remainder is zero, so \\((x+2)\\) is a factor of the polynomial. We can use the Division Algorithm to write the polynomial as the product of the divisor and the quotient:\n\n\\[(x+2)(x^2−8x+15)\\]",
+      "sourceAnswers": [],
+      "hasFigure": false,
+      "status": "draft",
+      "answerVerified": false,
+      "translationStatus": "pending",
+      "mappingStatus": "pending"
+    },
+    {
+      "ordinal": 11,
+      "sourceNumber": "",
+      "sourceAnchor": "",
+      "kind": "exercise-candidate",
+      "context": "How to: Given a factor and a third-degree polynomial, use the Factor Theorem to factor the polynomial\n\nWe can factor the quadratic factor to write the polynomial as\n\nBy the Factor Theorem, the zeros of \\(x^3−6x^2−x+30\\) are –2, 3, and 5.",
+      "original": "Exercise \\(\\PageIndex{2}\\)\n\nUse the Factor Theorem to find the zeros of \\(f(x)=x^3+4x^2−4x−16\\)  given that \\((x−2)\\)  is a factor of the polynomial.\n\nAnswer\n\nThe zeros are 2, –2, and –4.",
+      "prompt": "Exercise \\(\\PageIndex{2}\\)\n\nUse the Factor Theorem to find the zeros of \\(f(x)=x^3+4x^2−4x−16\\)  given that \\((x−2)\\)  is a factor of the polynomial.",
+      "sourceAnswers": [
+        "The zeros are 2, –2, and –4."
+      ],
+      "hasFigure": false,
+      "status": "draft",
+      "answerVerified": false,
+      "translationStatus": "pending",
+      "mappingStatus": "pending"
+    },
+    {
+      "ordinal": 12,
+      "sourceNumber": "1",
+      "sourceAnchor": "",
+      "kind": "exercise-candidate",
+      "context": "The Rational Zero Theorem states that, if the polynomial \\(f(x)=a_nx^n+a_{n−1}x^{n−1}+...+a_1x+a_0\\) has integer coefficients, then every rational zero of \\(f(x)\\)  has the form \\(\\frac{p}{q}\\) where \\(p\\) is a factor of the constant term \\(a_0\\) and \\(q\\) is a factor of the leading coefficient \\(a_n\\).\n\nWhen the leading coefficient is 1, the possible rational zeros are the factors of the constant term.\n\nHow to: Given a polynomial function \\(f(x)\\), use the Rational Zero Theorem to find rational zeros.",
+      "original": "1. Determine all factors of the constant term and all factors of the leading coefficient.",
+      "prompt": "1. Determine all factors of the constant term and all factors of the leading coefficient.",
+      "sourceAnswers": [],
+      "hasFigure": false,
+      "status": "draft",
+      "answerVerified": false,
+      "translationStatus": "pending",
+      "mappingStatus": "pending"
+    },
+    {
+      "ordinal": 13,
+      "sourceNumber": "2",
+      "sourceAnchor": "",
+      "kind": "exercise-candidate",
+      "context": "The Rational Zero Theorem states that, if the polynomial \\(f(x)=a_nx^n+a_{n−1}x^{n−1}+...+a_1x+a_0\\) has integer coefficients, then every rational zero of \\(f(x)\\)  has the form \\(\\frac{p}{q}\\) where \\(p\\) is a factor of the constant term \\(a_0\\) and \\(q\\) is a factor of the leading coefficient \\(a_n\\).\n\nWhen the leading coefficient is 1, the possible rational zeros are the factors of the constant term.\n\nHow to: Given a polynomial function \\(f(x)\\), use the Rational Zero Theorem to find rational zeros.",
+      "original": "2. Determine all possible values of \\(\\dfrac{p}{q}\\), where \\(p\\) is a factor of the constant term and \\(q\\) is a factor of the leading coefficient. Be sure to include both positive and negative candidates.",
+      "prompt": "2. Determine all possible values of \\(\\dfrac{p}{q}\\), where \\(p\\) is a factor of the constant term and \\(q\\) is a factor of the leading coefficient. Be sure to include both positive and negative candidates.",
+      "sourceAnswers": [],
+      "hasFigure": false,
+      "status": "draft",
+      "answerVerified": false,
+      "translationStatus": "pending",
+      "mappingStatus": "pending"
+    },
+    {
+      "ordinal": 14,
+      "sourceNumber": "3",
+      "sourceAnchor": "",
+      "kind": "exercise-candidate",
+      "context": "The Rational Zero Theorem states that, if the polynomial \\(f(x)=a_nx^n+a_{n−1}x^{n−1}+...+a_1x+a_0\\) has integer coefficients, then every rational zero of \\(f(x)\\)  has the form \\(\\frac{p}{q}\\) where \\(p\\) is a factor of the constant term \\(a_0\\) and \\(q\\) is a factor of the leading coefficient \\(a_n\\).\n\nWhen the leading coefficient is 1, the possible rational zeros are the factors of the constant term.\n\nHow to: Given a polynomial function \\(f(x)\\), use the Rational Zero Theorem to find rational zeros.",
+      "original": "3. Determine which possible zeros are actual zeros by evaluating each case of \\(f(\\frac{p}{q})\\).",
+      "prompt": "3. Determine which possible zeros are actual zeros by evaluating each case of \\(f(\\frac{p}{q})\\).",
+      "sourceAnswers": [],
+      "hasFigure": false,
+      "status": "draft",
+      "answerVerified": false,
+      "translationStatus": "pending",
+      "mappingStatus": "pending"
+    },
+    {
+      "ordinal": 15,
+      "sourceNumber": "",
+      "sourceAnchor": "",
+      "kind": "example-or-exercise",
+      "context": "The Rational Zero Theorem states that, if the polynomial \\(f(x)=a_nx^n+a_{n−1}x^{n−1}+...+a_1x+a_0\\) has integer coefficients, then every rational zero of \\(f(x)\\)  has the form \\(\\frac{p}{q}\\) where \\(p\\) is a factor of the constant term \\(a_0\\) and \\(q\\) is a factor of the leading coefficient \\(a_n\\).\n\nWhen the leading coefficient is 1, the possible rational zeros are the factors of the constant term.\n\nHow to: Given a polynomial function \\(f(x)\\), use the Rational Zero Theorem to find rational zeros.",
+      "original": "Example \\(\\PageIndex{3}\\): Listing All Possible Rational Zeros\n\nList all possible rational zeros of \\(f(x)=2x^4−5x^3+x^2−4\\).\n\nSolution\n\nThe only possible rational zeros of \\(f(x)\\)  are the quotients of the factors of the last term, –4, and the factors of the leading coefficient, 2.\n\nThe constant term is –4; the factors of –4 are \\(p=±1,±2,±4\\).\n\nThe leading coefficient is 2; the factors of 2 are \\(q=±1,±2\\).\n\nIf any of the four real zeros are rational zeros, then they will be of one of the following factors of –4 divided by one of the factors of 2.\n\n\\[\\dfrac{p}{q}=±\\dfrac{1}{1},±\\dfrac{1}{2} \\; \\; \\; \\; \\; \\;    \\frac{p}{q}=±\\dfrac{2}{1},±\\dfrac{2}{2} \\; \\; \\; \\; \\; \\; \\dfrac{p}{q}=±\\dfrac{4}{1},±\\dfrac{4}{2} \\nonumber\\]",
+      "prompt": "Example \\(\\PageIndex{3}\\): Listing All Possible Rational Zeros\n\nList all possible rational zeros of \\(f(x)=2x^4−5x^3+x^2−4\\).\n\nSolution\n\nThe only possible rational zeros of \\(f(x)\\)  are the quotients of the factors of the last term, –4, and the factors of the leading coefficient, 2.\n\nThe constant term is –4; the factors of –4 are \\(p=±1,±2,±4\\).\n\nThe leading coefficient is 2; the factors of 2 are \\(q=±1,±2\\).\n\nIf any of the four real zeros are rational zeros, then they will be of one of the following factors of –4 divided by one of the factors of 2.\n\n\\[\\dfrac{p}{q}=±\\dfrac{1}{1},±\\dfrac{1}{2} \\; \\; \\; \\; \\; \\;    \\frac{p}{q}=±\\dfrac{2}{1},±\\dfrac{2}{2} \\; \\; \\; \\; \\; \\; \\dfrac{p}{q}=±\\dfrac{4}{1},±\\dfrac{4}{2} \\nonumber\\]",
+      "sourceAnswers": [],
+      "hasFigure": false,
+      "status": "draft",
+      "answerVerified": false,
+      "translationStatus": "pending",
+      "mappingStatus": "pending"
+    },
+    {
+      "ordinal": 16,
+      "sourceNumber": "",
+      "sourceAnchor": "",
+      "kind": "example-or-exercise",
+      "context": "How to: Given a polynomial function \\(f(x)\\), use the Rational Zero Theorem to find rational zeros.\n\nNote that \\(\\frac{2}{2}=1\\) and \\(\\frac{4}{2}=2\\), which have already been listed. So we can shorten our list.\n\n\\[\\dfrac{p}{q} = \\dfrac{\\text{Factors of the last}}{\\text{Factors of the first}}=±1,±2,±4,±\\dfrac{1}{2}\\nonumber \\]",
+      "original": "Example \\(\\PageIndex{4}\\): Using the Rational Zero Theorem to Find Rational Zeros\n\nUse the Rational Zero Theorem to find the rational zeros of \\(f(x)=2x^3+x^2−4x+1\\).\n\nSolution\n\nThe Rational Zero Theorem tells us that if \\(\\frac{p}{q}\\) is a zero of \\(f(x)\\),  then \\(p\\) is a factor of 1 and \\(q\\) is a factor of 2.\n\n\\[ \\begin{align*} \\dfrac{p}{q}=\\dfrac{factor\\space of\\space constant\\space term}{factor\\space of\\space leading\\space coefficient} \\\\[4pt] &=\\dfrac{factor\\space of\\space 1}{factor\\space of\\space 2} \\end{align*}\\]\n\nThe factors of 1 are ±1 and the factors of 2 are ±1 and ±2. The possible values for \\(\\frac{p}{q}\\) are ±1 and \\(±\\frac{1}{2}\\). These are the possible rational zeros for the function. We can determine which of the possible zeros are actual zeros by substituting these values for \\(x\\) in \\(f(x)\\).\n\n\\[f(−1)=2{(−1)}^3+{(−1)}^2−4(−1)+1=4\\]\n\n\\[f(1)=1{(1)}^3+{(1)}^2−4(1)+1=0\\]",
+      "prompt": "Example \\(\\PageIndex{4}\\): Using the Rational Zero Theorem to Find Rational Zeros\n\nUse the Rational Zero Theorem to find the rational zeros of \\(f(x)=2x^3+x^2−4x+1\\).\n\nSolution\n\nThe Rational Zero Theorem tells us that if \\(\\frac{p}{q}\\) is a zero of \\(f(x)\\),  then \\(p\\) is a factor of 1 and \\(q\\) is a factor of 2.\n\n\\[ \\begin{align*} \\dfrac{p}{q}=\\dfrac{factor\\space of\\space constant\\space term}{factor\\space of\\space leading\\space coefficient} \\\\[4pt] &=\\dfrac{factor\\space of\\space 1}{factor\\space of\\space 2} \\end{align*}\\]\n\nThe factors of 1 are ±1 and the factors of 2 are ±1 and ±2. The possible values for \\(\\frac{p}{q}\\) are ±1 and \\(±\\frac{1}{2}\\). These are the possible rational zeros for the function. We can determine which of the possible zeros are actual zeros by substituting these values for \\(x\\) in \\(f(x)\\).\n\n\\[f(−1)=2{(−1)}^3+{(−1)}^2−4(−1)+1=4\\]\n\n\\[f(1)=1{(1)}^3+{(1)}^2−4(1)+1=0\\]",
+      "sourceAnswers": [],
+      "hasFigure": false,
+      "status": "draft",
+      "answerVerified": false,
+      "translationStatus": "pending",
+      "mappingStatus": "pending"
+    },
+    {
+      "ordinal": 17,
+      "sourceNumber": "",
+      "sourceAnchor": "",
+      "kind": "exercise-candidate",
+      "context": "\\[\\dfrac{p}{q} = \\dfrac{\\text{Factors of the last}}{\\text{Factors of the first}}=±1,±2,±4,±\\dfrac{1}{2}\\nonumber \\]\n\n\\[f(−\\dfrac{1}{2})=2{(−\\dfrac{1}{2})}^3+{(−\\dfrac{1}{2})}^2−4(−\\dfrac{1}{2})+1=3\\]\n\nOf those,  \\(−1\\),\\(−\\dfrac{1}{2}\\), and \\(\\dfrac{1}{2}\\) are not zeros of \\(f(x)\\). 1 is the only rational zero of \\(f(x)\\).",
+      "original": "Exercise \\(\\PageIndex{3}\\)\n\nUse the Rational Zero Theorem to find the rational zeros of \\(f(x)=x^3−5x^2+2x+1\\).\n\nAnswer\n\nThere are no rational zeros.",
+      "prompt": "Exercise \\(\\PageIndex{3}\\)\n\nUse the Rational Zero Theorem to find the rational zeros of \\(f(x)=x^3−5x^2+2x+1\\).",
+      "sourceAnswers": [
+        "There are no rational zeros."
+      ],
+      "hasFigure": false,
+      "status": "draft",
+      "answerVerified": false,
+      "translationStatus": "pending",
+      "mappingStatus": "pending"
+    },
+    {
+      "ordinal": 18,
+      "sourceNumber": "1",
+      "sourceAnchor": "",
+      "kind": "exercise-candidate",
+      "context": "Finding the Zeros of Polynomial Functions\n\nThe Rational Zero Theorem helps us to narrow down the list of possible rational zeros for a polynomial function. Once we have done this, we can use synthetic division repeatedly to determine all of the zeros of a polynomial function.\n\nHow to: Given a polynomial function \\(f\\), use synthetic division to find its zeros.",
+      "original": "1. Use the Rational Zero Theorem to list all possible rational zeros of the function.",
+      "prompt": "1. Use the Rational Zero Theorem to list all possible rational zeros of the function.",
+      "sourceAnswers": [],
+      "hasFigure": false,
+      "status": "draft",
+      "answerVerified": false,
+      "translationStatus": "pending",
+      "mappingStatus": "pending"
+    },
+    {
+      "ordinal": 19,
+      "sourceNumber": "2",
+      "sourceAnchor": "",
+      "kind": "exercise-candidate",
+      "context": "Finding the Zeros of Polynomial Functions\n\nThe Rational Zero Theorem helps us to narrow down the list of possible rational zeros for a polynomial function. Once we have done this, we can use synthetic division repeatedly to determine all of the zeros of a polynomial function.\n\nHow to: Given a polynomial function \\(f\\), use synthetic division to find its zeros.",
+      "original": "2. Use synthetic division to evaluate a given possible zero by synthetically dividing the candidate into the polynomial. If the remainder is 0, the candidate is a zero. If the remainder is not zero, discard the candidate.",
+      "prompt": "2. Use synthetic division to evaluate a given possible zero by synthetically dividing the candidate into the polynomial. If the remainder is 0, the candidate is a zero. If the remainder is not zero, discard the candidate.",
+      "sourceAnswers": [],
+      "hasFigure": false,
+      "status": "draft",
+      "answerVerified": false,
+      "translationStatus": "pending",
+      "mappingStatus": "pending"
+    },
+    {
+      "ordinal": 20,
+      "sourceNumber": "3",
+      "sourceAnchor": "",
+      "kind": "exercise-candidate",
+      "context": "Finding the Zeros of Polynomial Functions\n\nThe Rational Zero Theorem helps us to narrow down the list of possible rational zeros for a polynomial function. Once we have done this, we can use synthetic division repeatedly to determine all of the zeros of a polynomial function.\n\nHow to: Given a polynomial function \\(f\\), use synthetic division to find its zeros.",
+      "original": "3. Repeat step two using the quotient found with synthetic division. If possible, continue until the quotient is a quadratic.",
+      "prompt": "3. Repeat step two using the quotient found with synthetic division. If possible, continue until the quotient is a quadratic.",
+      "sourceAnswers": [],
+      "hasFigure": false,
+      "status": "draft",
+      "answerVerified": false,
+      "translationStatus": "pending",
+      "mappingStatus": "pending"
+    },
+    {
+      "ordinal": 21,
+      "sourceNumber": "4",
+      "sourceAnchor": "",
+      "kind": "exercise-candidate",
+      "context": "Finding the Zeros of Polynomial Functions\n\nThe Rational Zero Theorem helps us to narrow down the list of possible rational zeros for a polynomial function. Once we have done this, we can use synthetic division repeatedly to determine all of the zeros of a polynomial function.\n\nHow to: Given a polynomial function \\(f\\), use synthetic division to find its zeros.",
+      "original": "4. Find the zeros of the quadratic function. Two possible methods for solving quadratics are factoring and using the quadratic formula.",
+      "prompt": "4. Find the zeros of the quadratic function. Two possible methods for solving quadratics are factoring and using the quadratic formula.",
+      "sourceAnswers": [],
+      "hasFigure": false,
+      "status": "draft",
+      "answerVerified": false,
+      "translationStatus": "pending",
+      "mappingStatus": "pending"
+    },
+    {
+      "ordinal": 22,
+      "sourceNumber": "",
+      "sourceAnchor": "",
+      "kind": "example-or-exercise",
+      "context": "Finding the Zeros of Polynomial Functions\n\nThe Rational Zero Theorem helps us to narrow down the list of possible rational zeros for a polynomial function. Once we have done this, we can use synthetic division repeatedly to determine all of the zeros of a polynomial function.\n\nHow to: Given a polynomial function \\(f\\), use synthetic division to find its zeros.",
+      "original": "Example \\(\\PageIndex{5}\\): Finding the Zeros of a Polynomial Function with Repeated Real Zeros\n\nFind the zeros of \\(f(x)=4x^3−3x−1\\).\n\nSolution\n\nThe Rational Zero Theorem tells us that if \\(\\dfrac{p}{q}\\) is a zero of \\(f(x)\\), then \\(p\\)  is a factor of –1 and \\(q\\) is a factor of 4.\n\n\\[\\begin{align*}\\dfrac{p}{q}=\\dfrac{factor\\space of\\space constant\\space term}{factor\\space of\\space leading\\space coefficient} \\\\[4pt] =\\dfrac{factor\\space of\\space -1}{factor\\space of\\space 4} \\end{align*}\\]\n\nThe factors of –1  are ±1  and the factors of 4  are ±1,±2, and ±4. The possible values for \\(\\dfrac{p}{q}\\) are \\(±1\\),\\(±\\dfrac{1}{2}\\), and \\(±\\dfrac{1}{4}\\). These are the possible rational zeros for the function. We will use synthetic division to evaluate each possible zero until we find one that gives a remainder of 0. Let’s begin with 1.\n\nDividing by \\((x−1)\\)  gives a remainder of 0, so 1 is a zero of the function. The polynomial can be written as\n\n\\[(x−1)(4x^2+4x+1) \\nonumber\\]\n\nThe quadratic is a perfect square. \\(f(x)\\)  can be written as\n\n\\[(x−1){(2x+1)}^2\\nonumber\\]\n\nWe already know that 1 is a zero. The other zero will have a multiplicity of 2 because the factor is squared. To find the other zero, we can set the factor equal to 0.\n\n\\[ \\begin{align*} 2x+1=0 \\\\[4pt] x &=−\\dfrac{1}{2} \\end{align*}\\]\n\nThe zeros of the function are 1 and \\(−\\frac{1}{2}\\) with multiplicity 2.\n\nAnalysis",
+      "prompt": "Example \\(\\PageIndex{5}\\): Finding the Zeros of a Polynomial Function with Repeated Real Zeros\n\nFind the zeros of \\(f(x)=4x^3−3x−1\\).\n\nSolution\n\nThe Rational Zero Theorem tells us that if \\(\\dfrac{p}{q}\\) is a zero of \\(f(x)\\), then \\(p\\)  is a factor of –1 and \\(q\\) is a factor of 4.\n\n\\[\\begin{align*}\\dfrac{p}{q}=\\dfrac{factor\\space of\\space constant\\space term}{factor\\space of\\space leading\\space coefficient} \\\\[4pt] =\\dfrac{factor\\space of\\space -1}{factor\\space of\\space 4} \\end{align*}\\]\n\nThe factors of –1  are ±1  and the factors of 4  are ±1,±2, and ±4. The possible values for \\(\\dfrac{p}{q}\\) are \\(±1\\),\\(±\\dfrac{1}{2}\\), and \\(±\\dfrac{1}{4}\\). These are the possible rational zeros for the function. We will use synthetic division to evaluate each possible zero until we find one that gives a remainder of 0. Let’s begin with 1.\n\nDividing by \\((x−1)\\)  gives a remainder of 0, so 1 is a zero of the function. The polynomial can be written as\n\n\\[(x−1)(4x^2+4x+1) \\nonumber\\]\n\nThe quadratic is a perfect square. \\(f(x)\\)  can be written as\n\n\\[(x−1){(2x+1)}^2\\nonumber\\]\n\nWe already know that 1 is a zero. The other zero will have a multiplicity of 2 because the factor is squared. To find the other zero, we can set the factor equal to 0.\n\n\\[ \\begin{align*} 2x+1=0 \\\\[4pt] x &=−\\dfrac{1}{2} \\end{align*}\\]\n\nThe zeros of the function are 1 and \\(−\\frac{1}{2}\\) with multiplicity 2.\n\nAnalysis",
+      "sourceAnswers": [],
+      "hasFigure": false,
+      "status": "draft",
+      "answerVerified": false,
+      "translationStatus": "pending",
+      "mappingStatus": "pending"
+    },
+    {
+      "ordinal": 23,
+      "sourceNumber": "",
+      "sourceAnchor": "",
+      "kind": "example-or-exercise",
+      "context": "where \\(c_1,c_2\\),...,\\(c_n\\) are complex numbers. Therefore, \\(f(x)\\) has \\(n\\) roots if we allow for multiplicities.\n\nQ&A: Does every polynomial have at least one imaginary zero?\n\nNo. Real numbers are a subset of complex numbers, but not the other way around. A complex number is not necessarily imaginary. Real numbers are also complex numbers.",
+      "original": "Example \\(\\PageIndex{6}\\): Finding the Zeros of a Polynomial Function with Complex Zeros\n\nFind the zeros of \\(f(x)=3x^3+9x^2+x+3\\).\n\nSolution\n\nThe Rational Zero Theorem tells us that if \\(\\frac{p}{q}\\) is a zero of \\(f(x)\\), then \\(p\\) is a factor of 3 and \\(q\\) is a factor of 3.\n\n\\[ \\begin{align*} \\dfrac{p}{q}=\\dfrac{factor\\space of\\space constant\\space term}{factor\\space of\\space leading\\space coefficient} \\\\[4pt] &=\\dfrac{factor\\space of\\space 3}{factor\\space of\\space 3} \\end{align*}\\]\n\nThe factors of 3 are ±1 and  ±3. The possible values for \\(\\dfrac{p}{q}\\), and therefore the possible rational zeros for the function, are ±3,±1, and \\(±\\dfrac{1}{3}\\). We will use synthetic division to evaluate each possible zero until we find one that gives a remainder of 0. Let’s begin with –3.\n\nDividing by \\((x+3)\\) gives a remainder of 0, so –3 is a zero of the function. The polynomial can be written as\n\n\\[(x+3)(3x^2+1) \\nonumber\\]",
+      "prompt": "Example \\(\\PageIndex{6}\\): Finding the Zeros of a Polynomial Function with Complex Zeros\n\nFind the zeros of \\(f(x)=3x^3+9x^2+x+3\\).\n\nSolution\n\nThe Rational Zero Theorem tells us that if \\(\\frac{p}{q}\\) is a zero of \\(f(x)\\), then \\(p\\) is a factor of 3 and \\(q\\) is a factor of 3.\n\n\\[ \\begin{align*} \\dfrac{p}{q}=\\dfrac{factor\\space of\\space constant\\space term}{factor\\space of\\space leading\\space coefficient} \\\\[4pt] &=\\dfrac{factor\\space of\\space 3}{factor\\space of\\space 3} \\end{align*}\\]\n\nThe factors of 3 are ±1 and  ±3. The possible values for \\(\\dfrac{p}{q}\\), and therefore the possible rational zeros for the function, are ±3,±1, and \\(±\\dfrac{1}{3}\\). We will use synthetic division to evaluate each possible zero until we find one that gives a remainder of 0. Let’s begin with –3.\n\nDividing by \\((x+3)\\) gives a remainder of 0, so –3 is a zero of the function. The polynomial can be written as\n\n\\[(x+3)(3x^2+1) \\nonumber\\]",
+      "sourceAnswers": [],
+      "hasFigure": false,
+      "status": "draft",
+      "answerVerified": false,
+      "translationStatus": "pending",
+      "mappingStatus": "pending"
+    },
+    {
+      "ordinal": 24,
+      "sourceNumber": "",
+      "sourceAnchor": "",
+      "kind": "exercise-candidate",
+      "context": "We can then set the quadratic equal to 0 and solve to find the other zeros of the function.\n\nThe zeros of \\(f(x)\\)  are \\(–3\\) and \\(±\\dfrac{i\\sqrt{3}}{3}\\).\n\nLook at the graph of the function \\(f\\) in Figure \\(\\PageIndex{2}\\). Notice that, at \\(x =−3\\), the graph crosses the x-axis, indicating an odd multiplicity (1) for the zero \\(x=–3\\). Also note the presence of the two turning points. This means that, since there is a \\(3^{rd}\\) degree polynomial, we are looking at the maximum number of turning points. So, the end behavior of increasing without bound to the right and decreasing without bound to the left will continue. Thus, all the x-intercepts for the function are shown. So either the multiplicity of \\(x=−3\\) is 1 and there are two complex solutions, which is what we found, or the multiplicity at \\(x =−3\\) is three. Either way, our result is correct.",
+      "original": "\\(\\PageIndex{4}\\)\n\nFind the zeros of \\(f(x)=2x^3+5x^2−11x+4\\).\n\nSolution\n\nThe zeros are \\(–4\\), \\(\\frac{1}{2}\\), and \\(1\\).",
+      "prompt": "\\(\\PageIndex{4}\\)\n\nFind the zeros of \\(f(x)=2x^3+5x^2−11x+4\\).\n\nSolution\n\nThe zeros are \\(–4\\), \\(\\frac{1}{2}\\), and \\(1\\).",
+      "sourceAnswers": [],
+      "hasFigure": false,
+      "status": "draft",
+      "answerVerified": false,
+      "translationStatus": "pending",
+      "mappingStatus": "pending"
+    },
+    {
+      "ordinal": 25,
+      "sourceNumber": "1",
+      "sourceAnchor": "",
+      "kind": "exercise-candidate",
+      "context": "Given the zeros of a polynomial function \\(f\\) and a point \\((c, f(c))\\) on the graph of \\(f\\), use the Linear Factorization Theorem to find the polynomial function.",
+      "original": "1. Use the zeros to construct the linear factors of the polynomial.",
+      "prompt": "1. Use the zeros to construct the linear factors of the polynomial.",
+      "sourceAnswers": [],
+      "hasFigure": false,
+      "status": "draft",
+      "answerVerified": false,
+      "translationStatus": "pending",
+      "mappingStatus": "pending"
+    },
+    {
+      "ordinal": 26,
+      "sourceNumber": "2",
+      "sourceAnchor": "",
+      "kind": "exercise-candidate",
+      "context": "Given the zeros of a polynomial function \\(f\\) and a point \\((c, f(c))\\) on the graph of \\(f\\), use the Linear Factorization Theorem to find the polynomial function.",
+      "original": "2. Multiply the linear factors to expand the polynomial.",
+      "prompt": "2. Multiply the linear factors to expand the polynomial.",
+      "sourceAnswers": [],
+      "hasFigure": false,
+      "status": "draft",
+      "answerVerified": false,
+      "translationStatus": "pending",
+      "mappingStatus": "pending"
+    },
+    {
+      "ordinal": 27,
+      "sourceNumber": "3",
+      "sourceAnchor": "",
+      "kind": "exercise-candidate",
+      "context": "Given the zeros of a polynomial function \\(f\\) and a point \\((c, f(c))\\) on the graph of \\(f\\), use the Linear Factorization Theorem to find the polynomial function.",
+      "original": "3. Substitute \\((c,f(c))\\) into the function to determine the leading coefficient.",
+      "prompt": "3. Substitute \\((c,f(c))\\) into the function to determine the leading coefficient.",
+      "sourceAnswers": [],
+      "hasFigure": false,
+      "status": "draft",
+      "answerVerified": false,
+      "translationStatus": "pending",
+      "mappingStatus": "pending"
+    },
+    {
+      "ordinal": 28,
+      "sourceNumber": "4",
+      "sourceAnchor": "",
+      "kind": "exercise-candidate",
+      "context": "Given the zeros of a polynomial function \\(f\\) and a point \\((c, f(c))\\) on the graph of \\(f\\), use the Linear Factorization Theorem to find the polynomial function.",
+      "original": "4. Simplify.",
+      "prompt": "4. Simplify.",
+      "sourceAnswers": [],
+      "hasFigure": false,
+      "status": "draft",
+      "answerVerified": false,
+      "translationStatus": "pending",
+      "mappingStatus": "pending"
+    },
+    {
+      "ordinal": 29,
+      "sourceNumber": "",
+      "sourceAnchor": "",
+      "kind": "example-or-exercise",
+      "context": "Given the zeros of a polynomial function \\(f\\) and a point \\((c, f(c))\\) on the graph of \\(f\\), use the Linear Factorization Theorem to find the polynomial function.",
+      "original": "Example \\(\\PageIndex{7}\\): Using the Linear Factorization Theorem to Find a Polynomial with Given Zeros\n\nFind a fourth degree polynomial with real coefficients that has zeros of \\(–3\\), \\(2\\), \\(i\\), such that \\(f(−2)=100\\).\n\nSolution\n\nBecause \\(x =i\\)  is a zero, by the Complex Conjugate Theorem \\(x =–i\\)  is also a zero. The polynomial must have factors of \\((x+3),(x−2),(x−i)\\), and \\((x+i)\\). Since we are looking for a degree 4 polynomial, and now have four zeros, we have all four factors. Let’s begin by multiplying these factors.\n\n\\[\\begin{align} f(x) & =a(x+3)(x−2)(x−i)(x+i) \\\\ f(x) & =a(x^2+x−6)(x^2+1) \\\\ f(x) & =a(x^4+x^3−5x^2+x−6) \\end{align} \\]",
+      "prompt": "Example \\(\\PageIndex{7}\\): Using the Linear Factorization Theorem to Find a Polynomial with Given Zeros\n\nFind a fourth degree polynomial with real coefficients that has zeros of \\(–3\\), \\(2\\), \\(i\\), such that \\(f(−2)=100\\).\n\nSolution\n\nBecause \\(x =i\\)  is a zero, by the Complex Conjugate Theorem \\(x =–i\\)  is also a zero. The polynomial must have factors of \\((x+3),(x−2),(x−i)\\), and \\((x+i)\\). Since we are looking for a degree 4 polynomial, and now have four zeros, we have all four factors. Let’s begin by multiplying these factors.\n\n\\[\\begin{align} f(x) & =a(x+3)(x−2)(x−i)(x+i) \\\\ f(x) & =a(x^2+x−6)(x^2+1) \\\\ f(x) & =a(x^4+x^3−5x^2+x−6) \\end{align} \\]",
+      "sourceAnswers": [],
+      "hasFigure": false,
+      "status": "draft",
+      "answerVerified": false,
+      "translationStatus": "pending",
+      "mappingStatus": "pending"
+    },
+    {
+      "ordinal": 30,
+      "sourceNumber": "",
+      "sourceAnchor": "",
+      "kind": "exercise-candidate",
+      "context": "If \\(2+3i\\)  were given as a zero of a polynomial with real coefficients, would  \\(2−3i\\)  also need to be a zero?\n\nYes. When any complex number with an imaginary component is given as a zero of a polynomial with real coefficients, the conjugate must also be a zero of the polynomial.",
+      "original": "\\(\\PageIndex{5}\\)\n\nFind a third degree polynomial with real coefficients that has zeros of \\(5\\) and \\(−2i\\) such that \\(f (1)=10\\).\n\nSolution\n\n\\(f(x)=−\\frac{1}{2}x^3+\\frac{5}{2}x^2−2x+10\\)",
+      "prompt": "\\(\\PageIndex{5}\\)\n\nFind a third degree polynomial with real coefficients that has zeros of \\(5\\) and \\(−2i\\) such that \\(f (1)=10\\).\n\nSolution\n\n\\(f(x)=−\\frac{1}{2}x^3+\\frac{5}{2}x^2−2x+10\\)",
+      "sourceAnswers": [],
+      "hasFigure": false,
+      "status": "draft",
+      "answerVerified": false,
+      "translationStatus": "pending",
+      "mappingStatus": "pending"
+    },
+    {
+      "ordinal": 31,
+      "sourceNumber": "",
+      "sourceAnchor": "",
+      "kind": "example-or-exercise",
+      "context": "In this case, \\(f(−x)\\) has 3 sign changes. This tells us that \\(f(x)\\) could have 3 or 1 negative real zeros.\n\nDESCARTES’ RULE OF SIGNS\n\nAccording to Descartes’ Rule of Signs, if we let  \\(f(x)=a_nx^n+a_{n−1}x^{n−1}+...+a_1x+a_0\\)  be a polynomial function with real coefficients:",
+      "original": "Example \\(\\PageIndex{8}\\): Using Descartes’ Rule of Signs\n\nUse Descartes’ Rule of Signs to determine the possible numbers of positive and negative real zeros for \\(f(x)=−x^4−3x^3+6x^2−4x−12\\).\n\nSolution\n\nBegin by determining the number of sign changes.\n\nThere are two sign changes, so there are either 2 or 0 positive real roots. Next, we examine \\(f(−x)\\) to determine the number of negative real roots.\n\n\\[ \\begin{align} f(−x) & =−{(−x)}^4−3{(−x)}^3+6{(−x)}^2−4(−x)−12 \\\\ f(−x) & =−x^4+3x^3+6x^2+4x−12 \\end{align} \\]",
+      "prompt": "Example \\(\\PageIndex{8}\\): Using Descartes’ Rule of Signs\n\nUse Descartes’ Rule of Signs to determine the possible numbers of positive and negative real zeros for \\(f(x)=−x^4−3x^3+6x^2−4x−12\\).\n\nSolution\n\nBegin by determining the number of sign changes.\n\nThere are two sign changes, so there are either 2 or 0 positive real roots. Next, we examine \\(f(−x)\\) to determine the number of negative real roots.\n\n\\[ \\begin{align} f(−x) & =−{(−x)}^4−3{(−x)}^3+6{(−x)}^2−4(−x)−12 \\\\ f(−x) & =−x^4+3x^3+6x^2+4x−12 \\end{align} \\]",
+      "sourceAnswers": [],
+      "hasFigure": false,
+      "status": "draft",
+      "answerVerified": false,
+      "translationStatus": "pending",
+      "mappingStatus": "pending"
+    },
+    {
+      "ordinal": 32,
+      "sourceNumber": "",
+      "sourceAnchor": "",
+      "kind": "exercise-candidate",
+      "context": "Again, there are two sign changes, so there are either 2 or 0 negative real roots.\n\nThere are four possibilities, as we can see in Table \\(\\PageIndex{1}\\).\n\nWe can confirm the numbers of positive and negative real roots by examining a graph of the function. See Figure \\(\\PageIndex{3}\\). We can see from the graph that the function has 0 positive real roots and 2 negative real roots.",
+      "original": "\\(\\PageIndex{6}\\)\n\nUse Descartes’ Rule of Signs to determine the maximum possible numbers of positive and negative real zeros for \\(f(x)=2x^4−10x^3+11x^2−15x+12\\).  Use a graph to verify the numbers of positive and negative real zeros for the function.\n\nSolution\n\nThere must be 4, 2, or 0 positive real roots and 0 negative real roots. The graph shows that there are 2 positive real zeros and 0 negative real zeros.",
+      "prompt": "\\(\\PageIndex{6}\\)\n\nUse Descartes’ Rule of Signs to determine the maximum possible numbers of positive and negative real zeros for \\(f(x)=2x^4−10x^3+11x^2−15x+12\\).  Use a graph to verify the numbers of positive and negative real zeros for the function.\n\nSolution\n\nThere must be 4, 2, or 0 positive real roots and 0 negative real roots. The graph shows that there are 2 positive real zeros and 0 negative real zeros.",
+      "sourceAnswers": [],
+      "hasFigure": false,
+      "status": "draft",
+      "answerVerified": false,
+      "translationStatus": "pending",
+      "mappingStatus": "pending"
+    },
+    {
+      "ordinal": 33,
+      "sourceNumber": "",
+      "sourceAnchor": "",
+      "kind": "example-or-exercise",
+      "context": "Solving Real-World Applications\n\nWe have now introduced a variety of tools for solving polynomial equations. Let’s use these tools to solve the bakery problem from the beginning of the section.",
+      "original": "Example \\(\\PageIndex{9}\\)",
+      "prompt": "Example \\(\\PageIndex{9}\\)",
+      "sourceAnswers": [],
+      "hasFigure": false,
+      "status": "draft",
+      "answerVerified": false,
+      "translationStatus": "pending",
+      "mappingStatus": "pending"
+    },
+    {
+      "ordinal": 34,
+      "sourceNumber": "",
+      "sourceAnchor": "",
+      "kind": "exercise-candidate",
+      "context": "Since 3 is not a solution either, we will test \\(x=9\\).\n\nSynthetic division gives a remainder of 0, so 9 is a solution to the equation. We can use the relationships between the width and the other dimensions to determine the length and height of the sheet cake pan.\n\nThe sheet cake pan should have dimensions 13 inches by 9 inches by 3 inches",
+      "original": "\\(\\PageIndex{7}\\)\n\nA shipping container in the shape of a rectangular solid must have a volume of 84 cubic meters. The client tells the manufacturer that, because of the contents, the length of the container must be one meter longer than the width, and the height must be one meter greater than twice the width. What should the dimensions of the container be?\n\nSolution\n\n3 meters by 4 meters by 7 meters",
+      "prompt": "\\(\\PageIndex{7}\\)\n\nA shipping container in the shape of a rectangular solid must have a volume of 84 cubic meters. The client tells the manufacturer that, because of the contents, the length of the container must be one meter longer than the width, and the height must be one meter greater than twice the width. What should the dimensions of the container be?\n\nSolution\n\n3 meters by 4 meters by 7 meters",
+      "sourceAnswers": [],
+      "hasFigure": false,
+      "status": "draft",
+      "answerVerified": false,
+      "translationStatus": "pending",
+      "mappingStatus": "pending"
+    }
+  ],
+  "license": "CC BY 4.0",
+  "licenseEvidence": "This page titled 5.5: Zeros of Polynomial Functions was last modified on Thu, 26 Dec 2024 22:30:44 GMT and is shared under a CC BY  4.0  license and was authored, remixed, and/or curated by OpenStax via source content that was edited to the style and standards of the LibreTexts platform.",
+  "url": "https://math.libretexts.org/Bookshelves/Algebra/Algebra_and_Trigonometry_1e_(OpenStax)/05:_Polynomial_and_Rational_Functions/5.05:_Zeros_of_Polynomial_Functions",
+  "sha256": "02fc0e0630a6e68e1c81a3173d955aa06a6af26df70bb1d84c796870de790376",
+  "checkedAt": "2026-10-07",
+  "id": "b9d007435ebea2d4c339",
+  "bookId": "algebra-trigonometry",
+  "licenseInherited": false,
+  "licenseSource": "https://math.libretexts.org/Bookshelves/Algebra/Algebra_and_Trigonometry_1e_(OpenStax)/05:_Polynomial_and_Rational_Functions/5.05:_Zeros_of_Polynomial_Functions",
+  "licenseUrl": "https://creativecommons.org/licenses/by/4.0/",
+  "authors": "OpenStax / Jay Abramson et al.",
+  "book": "Algebra and Trigonometry 1e",
+  "reviewStatus": "unreviewed",
+  "sourceLanguage": "en",
+  "translationStatus": "pending"
+}

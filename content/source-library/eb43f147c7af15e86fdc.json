@@ -1,0 +1,39 @@
+{
+  "title": "12.11.1: Key Concepts",
+  "originalText": "12.1 Graph Basics\n\nGraphs and multigraphs represent objects as vertices and the relationships between the objects as edges.\n\nThe degree of a vertex is the number of edges that meet it and the degree can be zero.\n\nAn edge must have a vertex at each end.\n\nMultigraphs may contain loops and double edges, but simple graphs may not.\n\n12.2 Graph Structures\n\nThe sum of the degrees of the vertices in a graph is twice the number of edges.\n\nIn a complete graph every pair of vertices is adjacent.\n\nA subgraph is part of a larger graph.\n\nCycles are a sequence of connected vertices that begin and end at the same vertex but never visit any vertex twice.\n\n12.3 Comparing Graphs\n\nTwo graphs are isomorphic if they have the same structure.\n\nWhen graphs are relatively small, we can use visual inspection to identify an isomorphism by transforming one graph into another without breaking connections or adding new ones.\n\nAn isomorphism between two graphs preserves adjacency.\n\nIf two graphs differ in number of vertices, number of edges, degrees of vertices, or types of subgraphs, they cannot be isomorphic.\n\nWhen the complements of two graphs are isomorphic, so are the graphs themselves.\n\n12.4 Navigating Graphs\n\nWalks, trails, and paths are ways to navigate through a graph using a sequence of connected vertices and edges.\n\nClosed walks, circuits, and directed cycles are ways to navigate from a vertex on a graph and return to the same vertex.\n\nColorings are a way to organize the vertices of a graph into groups so that no two members of a group are adjacent.\n\nMaps can be represented with planar graphs, which can always be colored using four colors or fewer.\n\n12.5 Euler Circuits\n\nA connected graph has only one component.\n\nThe Euler circuit theorem states that an Euler circuit exists in every connected graph in which all vertices have even degree, but not in disconnected graphs or any graph with one or more vertices of odd degree.\n\nThe Chinese postman problem asks how to find the shortest closed trail that visits all edges at least once.\n\nIf an Euler circuit exists, it is always the best solution to the Chinese postman problem.\n\nEulerization is the process of adding duplicate edges to a graph so that the new multigraph has an Euler circuit.\n\nThe minimum number of duplicated edges needed to eulerize a graph is half the number of odd vertices or more.\n\n12.6 Euler Trails\n\nAn Euler trail exists whenever a graph has exactly two vertices of odd degree.\n\nWhen a bridge is removed from a graph, the number of components increases.\n\nA bridge is never part of a circuit.\n\nWhen a local bridge is removed from a graph, the distance between vertices increases.\n\nAn edge that is part of a triangle is never a local bridge.\n\n12.7 Hamilton Cycles\n\nA Hamilton cycle is a directed cycle, or circuit, that visits each vertex exactly once.\n\nSome Hamilton cycles are also Euler circuits, but some are not.\n\nHamilton cycles that follow the same undirected cycle in the same direction are considered the same cycle even if they begin at a different vertex.\n\nThe number of unique Hamilton cycles in a complete graph with n vertices is the same as the number of ways to arrange \\(n−1\\) distinct objects.\n\nWeighted graphs have a value assigned to each edge, which can represent distance, time, money and other quantities.\n\n12.8 Hamilton Paths\n\nA Hamilton path visits every vertex exactly once.\n\nSome Hamilton paths are also Euler trails, but some are not.\n\n12.9 Traveling Salesperson Problem\n\nA brute force algorithm always finds the ideal solution but can be impractical whereas a greedy algorithm is efficient but usually does not lead to the ideal solution.\n\nA Hamilton cycle of lowest weight is a solution to the traveling salesperson problem.\n\nThe brute force method finds a Hamilton cycle of lowest weight in a complete graph.\n\nThe nearest neighbor method is a greedy algorithm that finds a Hamilton cycle of relatively low weight in a complete graph.\n\n12.10 Trees\n\nA brute force algorithm always finds the ideal solution but can be impractical whereas a greedy algorithm is efficient but usually does not lead to the ideal solution.\n\nA Hamilton cycle of lowest weight is a solution to the traveling salesperson problem.\n\nThe brute force method finds a Hamilton cycle of lowest weight in a complete graph.\n\nThe nearest neighbor method is a greedy algorithm that finds a Hamilton cycle of relatively low weight in a complete graph.\n\nThis page titled 12.11.1: Key Concepts was last modified on Thu, 02 Jan 2025 09:27:37 GMT and is shared under a CC BY  4.0  license and was authored, remixed, and/or curated by OpenStax via source content that was edited to the style and standards of the LibreTexts platform.",
+  "figures": [],
+  "references": [
+    {
+      "text": "12.11.1: Key Concepts",
+      "url": "https://math.libretexts.org/Bookshelves/Applied_Mathematics/Contemporary_Mathematics_(OpenStax)/12%3A_Graph_Theory/12.11%3A_Chapter_Summary/12.11.01%3A_Key_Concepts"
+    },
+    {
+      "text": "CC BY  4.0",
+      "url": "https://creativecommons.org/licenses/by/4.0"
+    },
+    {
+      "text": "OpenStax",
+      "url": "https://openstax.org/"
+    },
+    {
+      "text": "source content",
+      "url": "https://openstax.org/details/books/contemporary-mathematics"
+    }
+  ],
+  "exercises": [],
+  "license": "CC BY 4.0",
+  "licenseEvidence": "This page titled 12.11.1: Key Concepts was last modified on Thu, 02 Jan 2025 09:27:37 GMT and is shared under a CC BY  4.0  license and was authored, remixed, and/or curated by OpenStax via source content that was edited to the style and standards of the LibreTexts platform.",
+  "url": "https://math.libretexts.org/Bookshelves/Applied_Mathematics/Contemporary_Mathematics_(OpenStax)/12:_Graph_Theory/12.11:_Chapter_Summary/12.11.01:_Key_Concepts",
+  "sha256": "46b4a90d58547572a969c9850aa358a117c201d72cb3f8c3bf9994c6ba161b72",
+  "checkedAt": "2026-10-07",
+  "id": "eb43f147c7af15e86fdc",
+  "bookId": "contemporary",
+  "licenseInherited": false,
+  "licenseSource": "https://math.libretexts.org/Bookshelves/Applied_Mathematics/Contemporary_Mathematics_(OpenStax)/12:_Graph_Theory/12.11:_Chapter_Summary/12.11.01:_Key_Concepts",
+  "licenseUrl": "https://creativecommons.org/licenses/by/4.0/",
+  "authors": "OpenStax / Donna Kirk et al.",
+  "book": "Contemporary Mathematics",
+  "reviewStatus": "unreviewed",
+  "sourceLanguage": "en",
+  "translationStatus": "pending"
+}

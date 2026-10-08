@@ -1,0 +1,278 @@
+{
+  "title": "10.2: Comparing Two Independent Population Means",
+  "originalText": "The comparison of two independent population means is very common and provides a way to test the hypothesis that the two groups differ from each other. Is the night shift less productive than the day shift, are the rates of return from fixed asset investments different from those from common stock investments, and so on? An observed difference between two sample means depends on both the means and the sample standard deviations. Very different means can occur by chance if there is great variation among the individual samples. The test statistic will have to account for this fact. The test comparing two independent population means with unknown and possibly unequal population standard deviations is called the Aspin-Welch t-test. The degrees of freedom formula we will see later was developed by Aspin-Welch.\n\nWhen we developed the hypothesis test for the mean and proportions we began with the Central Limit Theorem. We recognized that a sample mean came from a distribution of sample means, and sample proportions came from the sampling distribution of sample proportions. This made our sample parameters, the sample means and sample proportions, into random variables. It was important for us to know the distribution that these random variables came from. The Central Limit Theorem gave us the answer: the normal distribution. Our Z and t statistics came from this theorem. This provided us with the solution to our question of how to measure the probability that a sample mean came from a distribution with a particular hypothesized value of the mean or proportion. In both cases that was the question: what is the probability that the mean (or proportion) from our sample data came from a population distribution with the hypothesized value we are interested in?\n\nNow we are interested in whether or not two samples have the same mean. Our question has not changed: Do these two samples come from the same population distribution? To approach this problem we create a new random variable. We recognize that we have two sample means, one from each set of data, and thus we have two random variables coming from two unknown distributions. To solve the problem we create a new random variable, the difference between the sample means. This new random variable also has a distribution and, again, the Central Limit Theorem tells us that this new distribution is normally distributed, regardless of the underlying distributions of the original data. A graph may help to understand this concept.\n\n[Figure: ...]\n\nFigure \\(\\PageIndex{1}\\)\n\nPictured are two distributions of data, \\(X_1\\) and \\(X_2\\), with unknown means and standard deviations. The second panel shows the sampling distribution of the newly created random variable \\(\\left(\\bar{X}_1-\\bar{X}_2\\right)\\). This distribution is the theoretical distribution of many sample means from population 1 minus sample means from population 2 . The Central Limit Theorem tells us that this theoretical sampling distribution of differences in sample means is normally distributed, regardless of the distribution of the actual population data shown in the top panel. Because the sampling distribution is normally distributed, we can develop a standardizing formula and calculate probabilities from the standard normal distribution in the bottom panel, the \\(Z\\) distribution. We have seen this same analysis before in The Central Limit Theorem Figure 7.2.\n\nThe Central Limit Theorem, as before, provides us with the standard deviation of the sampling distribution, and further, that the expected value of the mean of the distribution of differences in sample means is equal to the differences in the population means. Mathematically this can be stated:\n\n\\[E\\left(\\mu_{\\bar{x}_1}-\\mu_{\\bar{x}_2}\\right)=\\mu_1-\\mu_2\\]\n\nBecause we do not know the population standard deviations, we estimate them using the two sample standard deviations from our independent samples. For the hypothesis test, we calculate the estimated standard deviation, or standard error, of the difference in sample means, \\(\\bar{X}_1-\\bar{X}_2\\).\n\nThe standard error is:\n\n\\[\\sqrt{\\dfrac{\\left(s_1\\right)^2}{n_1}+\\dfrac{\\left(s_2\\right)^2}{n_2}}\\]\n\nWe remember that substituting the sample variance for the population variance when we did not have the population variance was the technique we used when building the confidence interval and the test statistic for the test of hypothesis for a single mean back in Confidence Intervals and Hypothesis Testing_with One Sample. The test statistic ( \\(t\\)-score) is calculated as follows:\n\n\\[t_c=\\dfrac{\\left(\\bar{x}_1-\\bar{x}_2\\right)-\\delta_0}{\\sqrt{\\dfrac{\\left(s_1\\right)^2}{n_1}+\\dfrac{\\left(s_2\\right)^2}{n_2}}}\\]\n\nwhere:\n\n\\(s_1\\) and \\(s_2\\), the sample standard deviations, are estimates of \\(\\sigma_1\\) and \\(\\sigma_2\\), respectively and\n\n\\(\\sigma_1\\) and \\(\\sigma_2\\) are the unknown population standard deviations.\n\n\\(\\bar{x}_1\\) and \\(\\bar{x}_2\\) are the sample means. \\(\\mu_1\\) and \\(\\mu_2\\) are the unknown population means.\n\n\\(\\delta=\\) the hypothesized differences between the two populations means.\n\nSubstituting the sample variances of the two sample groups when the populations variances are unknown and the sample size is large, the \\(t\\)-distribution will provide good estimates using degrees of freedom:\n\n\\[v=n_1+n_2-2 .\\]\n\nLarge in this case would be greater than 100 observations from the combined two groups ( \\(n_1+n_2\\) ) although other statisticians suggest that the definition of large is greater than 30 observations for each of the two groups.\n\nThe number of degrees of freedom (df) requires a somewhat complicated calculation. The \\(d f\\) are not always a whole number. The test statistic above is approximated by the Student's \\(t\\)-distribution with \\(d f\\) as follows:\n\nDegrees of Freedom\n\n\\[\\text { The standard error is: } d f=\\dfrac{\\left(\\dfrac{\\left(s_1\\right)^2}{n_1}+\\dfrac{\\left(s_2\\right)^2}{n_2}\\right)^2}{\\left(\\dfrac{1}{n_1 1}\\right)\\left(\\dfrac{\\left(s_1\\right)^2}{n_1}\\right)^2+\\left(\\dfrac{1}{n_2-1}\\right)\\left(\\dfrac{\\left(s_2\\right)^2}{n_2}\\right)^2}\\]\n\nWhen both sample sizes \\(n_1\\) and \\(n_2\\) are 30 or larger, the Student's \\(t\\) approximation is very good. If each sample has more than 30 observations then the degrees of freedom can be calculated as \\(n_1+n_2-2\\).\n\nThe format of the sampling distribution, differences in sample means, specifies that the format of the null and alternative hypothesis is:\n\nThe test hypothesis for differences between two means\n\n\\[\\begin{array}{l}\n\nH_0: \\mu_1-\\mu_2=\\delta_0 \\\\\n\nH_{\\mathrm{a}}: \\mu_1-\\mu_2 \\neq \\delta_0\n\n\\end{array}\\]\n\nwhere \\(\\delta_0\\) is the hypothesized difference between the two means. If the question is simply \"is there any difference between the means?\" then \\(\\delta_0=0\\) and the null and alternative hypotheses becomes:\n\n\\[\\begin{array}{l}\n\nH_0: \\mu_1=\\mu_2 \\\\\n\nH_{\\mathrm{a}}: \\mu_1 \\neq \\mu_2\n\n\\end{array}\\]\n\nAn example of when \\(\\delta_0\\) might not be zero is when the comparison of the two groups requires a specific difference for the decision to be meaningful. Imagine that you are making a capital investment. You are considering changing from your current model machine to another. You measure the productivity of your machines by the speed they produce the product. It may be that a contender to replace the old model is faster in terms of product throughput, but is also more expensive. The second machine may also have more maintenance costs, setup costs, etc. The null hypothesis would be set up so that the new machine would have to be better than the old one by enough to cover these extra costs in terms of speed and cost of production. This form of the null and alternative hypothesis shows how valuable this particular hypothesis test can be. For most of our work we will be testing simple hypotheses asking if there is any difference between the two distribution means.\n\nExercise \\(\\PageIndex{1}\\)\n\nIndependent groups\n\nThe Kona Iki Corporation produces coconut milk. They take coconuts and extract the milk inside by drilling a hole and pouring the milk into a vat for processing. They have both a day shift (called the B shift) and a night shift (called the G shift) to do this part of the process. They would like to know if the day shift and the night shift are equally efficient in processing the coconuts. A study is done sampling 9 shifts of the G shift and 16 shifts of the B shift. The results of the number of hours required to process 100 pounds of coconuts is presented in Table 10.1. A study is done and data are collected, resulting in the data in Table 10.1.\n\n            Sample Size\t\n            Average Number of Hours to Process 100 Pounds of Coconuts\t\n            Sample Standard Deviation\t\n\n            G Shift\t\n            9\t\n            2\t\n            0.866\t\n\n            B Shift\t\n            16\t\n            3.2\t\n            1.00\t\n\nProblem\n\nIs there a difference in the mean amount of time for each shift to process 100 pounds of coconuts? Test at the 5% level of significance.\n\nAnswer\n\nThe population standard deviations are not known and cannot be assumed to equal each other.\n\n    Let \\(g\\) be the subscript for the G Shift and \\(b\\) be the subscript for the B Shift. Then, \\(\\mu_g\\) is the population mean for G Shift and \\(\\mu_b\\) is the population mean for B Shift. This is a test of two independent groups, two population means.\n\nRandom variable: \\(\\bar{X}_g-\\bar{X}_b=\\) difference in the sample mean amount of time between the G Shift and the B Shift takes to process the coconuts.\n\n\\[\\begin{array}{ll}\n\n    H_0: \\mu_g=\\mu_b & H_0: \\mu_g-\\mu_b=0 \\\\\n\n    H_a: \\mu_g \\neq \\mu_b & H_a: \\mu_g-\\mu_b \\neq 0\n\n    \\end{array}\\]\n\nThe words \"the same\" tell you \\(H_0\\) has an \" \\(=\\) \". Since there are no other words to indicate \\(H_a\\), is either faster or slower. This is a two tailed test.\n\nDistribution for the test: Use \\(t_{d f}\\) where \\(d f\\) is calculated using the \\(d f\\) formula for independent groups, two population means above. Using a calculator, \\(d f\\) is approximately 18.8462.\n\n[Figure: This is a normal distribution curve representing the difference in the average amount of time girls and boys play sports all day. The mean is equal to zero, and the values -1.2, 0, and 1.2 are labeled on the horizontal axis. Two vertical lines extend from -1.2 and 1.2 to the curve. The region to the left of x = -1.2 and the region to the right of x = 1.2 are shaded to represent the p-value. The area of each region is 0.0028.]\n\nFigure \\(\\PageIndex{2}\\)\n\nWe next find the critical value on the t-table using the degrees of freedom from above. The critical value, 2.093, is found in the .025 column, this is α/2, at 19 degrees of freedom. (The convention is to round up the degrees of freedom to make the conclusion more conservative.) Next we calculate the test statistic and mark this on the t-distribution graph.\n\nMake a decision: Since the calculated t-value is in the tail we cannot accept the null hypothesis that there is no difference between the two groups. The means are different.\n\nThe graph has included the sampling distribution of the differences in the sample means to show how the t-distribution aligns with the sampling distribution data. We see in the top panel that the calculated difference in the two means is -1.2 and the bottom panel shows that this is 3.01 standard deviations from the mean. Typically we do not need to show the sampling distribution graph and can rely on the graph of the test statistic, the t-distribution in this case, to reach our conclusion.\n\nConclusion: At the 5% level of significance, the sample data show there is sufficient evidence to conclude that the mean number of hours that the G Shift takes to process 100 pounds of coconuts is different from the B Shift (mean number of hours for the B Shift is greater than the mean number of hours for the G Shift).\n\nTry It \\(\\PageIndex{1}\\)\n\nTwo samples are shown in the table below. Both have normal distributions. The means for the two populations are thought to be the same. Is there a difference in the means? Test at the 5% level of significance.\n\n            Sample Size\t\n            Sample Mean\t\n            Sample Standard Deviation\t\n\n            Population A\t\n            25\t\n            5\t\n            1\t\n\n            Population B\t\n            16\t\n            4.7\t\n            1.2\t\n\nNote\n\nWhen the sum of the sample sizes is larger than \\(30\\left(n_1+n_2>30\\right)\\) you can use the normal distribution to approximate the Student's \\(t\\). Use the Student's \\(t\\) distribution, however, whenever possible.\n\nExercise \\(\\PageIndex{2}\\)\n\nA study is done to determine if Company A retains its workers longer than Company B. It is believed that Company A has a higher retention than Company B. The study finds that in a sample of 11 workers at Company A their average time with the company is four years with a standard deviation of 1.5 years. A sample of 9 workers at Company B finds that the average time with the company was 3.5 years with a standard deviation of 1 year. Test this proposition at the 1% level of significance.\n\nProblem\n\na. Is this a test of two means or two proportions?\n\nb. Are the populations standard deviations known or unknown?\n\nc. Which distribution do you use to perform the test?\n\nd. What is the random variable?\n\ne. What are the null and alternate hypotheses?\n\nf. Is this test right-, left-, or two-tailed?\n\ng. What is the value of the test statistic?\n\nh. Can you accept/reject the null hypothesis?\n\ni. Conclusion:\n\nAnswer\n\na. two means because time is a continuous random variable.\n\nb. unknown\n\nc. Student's t\n\nd. \\(\\bar{X}_A-\\bar{X}_B\\)\n\ne.\n\n\\(H_{\\varnothing}: \\mu_A \\leq \\mu_B\\)\n\n\\(H_a: \\mu_A>\\mu_B\\)\n\nf. right one-tailed test\n\n[Figure: This is a normal distribution curve with mean equal to 0. A vertical line near the tail of the curve to the right of zero extends from the axis to the curve. The region under the curve to the right of the line is shaded.]\n\nFigure \\(\\PageIndex{3}\\): Copy and Paste Caption here. (Copyright; author via source)\n\ng. \\(\\mathrm{t}_{\\mathrm{c}}=\\dfrac{\\left(\\bar{X}_1-\\bar{X}_2\\right)-\\delta_0}{\\sqrt{\\dfrac{S_1^2}{n_1}+\\dfrac{S_2^2}{n_2}}}=0.89\\)\n\nh. Cannot reject the null hypothesis that there is no difference between the two groups. Test statistic is not in the tail. The critical value of the t-distribution is 2.764 with 10 degrees of freedom. This example shows how difficult it is to reject a null hypothesis with a very small sample. The critical values require very large test statistics to reach the tail.\n\ni. At the 1% level of significance, from the sample data, there is not sufficient evidence to conclude that the retention of workers at Company A is longer than Company B, on average.\n\nTry It \\(\\PageIndex{2}\\)\n\nA study is done to determine if Company A retains its workers longer than Company B. Company A samples 15 workers, and their average time with the company is five years with a standard deviation of 1.2. Company B samples 20 workers, and their average time with the company is 4.5 years with a standard deviation of 0.8. The populations are normally distributed.\n\n1. Are the population standard deviations known?\n\n2. Conduct an appropriate hypothesis test. At the 5% significance level, what is your conclusion?\n\nExercise \\(\\PageIndex{3}\\)\n\nAn interesting research question is the effect, if any, that different types of teaching formats have on the grade outcomes of students. To investigate this issue one sample of students' grades was taken from a hybrid class and another sample taken from a standard lecture format class. Both classes were for the same subject. The mean course grade in percent for the 35 hybrid students is 74 with a standard deviation of 16. The mean grades of the 40 students form the standard lecture class was 76 percent with a standard deviation of 9. Test at 5% to see if there is any significant difference in the population mean grades between standard lecture course and hybrid class.\n\nAnswer\n\nWe begin by noting that we have two groups, students from a hybrid class and students from a standard lecture format class. We also note that the random variable, what we are interested in, is students' grades, a continuous random variable. We could have asked the research question in a different way and had a binary random variable. For example, we could have studied the percentage of students with a failing grade, or with an A grade. Both of these would be binary and thus a test of proportions and not a test of means as is the case here. Finally, there is no presumption as to which format might lead to higher grades so the hypothesis is stated as a two-tailed test.\n\n\\[\\begin{array}{l}\n\n    \\mathrm{H}_0: \\mu_1=\\mu_2 \\\\\n\n    \\mathrm{H}_a: \\mu_1 \\neq \\mu_2\n\n    \\end{array}\\]\n\nAs would virtually always be the case, we do not know the population variances of the two distributions and thus our test statistic is:\n\n\\[t_c=\\dfrac{\\left(\\bar{x}_1-\\bar{x}_2\\right)-\\delta_0}{\\sqrt{\\dfrac{s^2}{n_1}+\\dfrac{s^2}{n_2}}}=\\dfrac{(74-76)-0}{\\sqrt{\\dfrac{16^2}{35}+\\dfrac{9^2}{40}}}=-0.65\\]\n\nTo determine the critical value of the Student's \\(t\\) we need the degrees of freedom. For this case we use: \\(\\mathrm{df}=\\mathrm{n} 1+\\mathrm{n} 2-2=35+40-2=73\\). This is large enough to consider it the normal distribution thus \\(t_{a / 2}=1.96\\). Again as always we determine if the calculated value is in the tail determined by the critical value. In this case we do not even need to look up the critical value: the calculated value of the difference in these two average grades is not even one standard deviation apart. Certainly not in the tail.\n\nConclusion: Cannot reject the null at \\(\\alpha=5 \\%\\). Therefore, evidence does not exist to prove that the grades in hybrid and standard classes differ.\n\nTry It \\(\\PageIndex{2}\\)\n\nTwo professors, A and B, teach classes on the same subjects. Scores of 10 students from each class are selected randomly. The final exam scores of the students are as follows:\n\nProfessor A:\n\n            97\t\n            62\t\n            73\t\n            58\t\n            84\t\n\n            74\t\n            66\t\n            93\t\n            73\t\n            85\t\n\nProfessor B:\n\n            85\t\n            64\t\n            74\t\n            55\t\n            76\t\n\n            67\t\n            72\t\n            84\t\n            71\t\n            98\t\n\nProfessor A says that the mean score of their class is more than the mean of professor B’s class. Is professor A correct? Test at a 5% significance level. Answer the following questions:\n\n1. Is this a test of two means or two proportions?\n\n2. Are the population standard deviations known or unknown?\n\n3. Which distribution do you use to perform the test?\n\n4. What is the random variable?\n\n5. What are the null and alternative hypotheses? Write the null and alternative hypotheses in words and in symbols.\n\n6. Is this test right-, left-, or two-tailed?\n\n7. What is the p-value?\n\n8. Do you reject or not reject the null hypothesis?\n\n9. At the ___ level of significance, from the sample data, there ___ (is/is not) sufficient evidence to conclude that ___.\n\nThis page titled 10.2: Comparing Two Independent Population Means was last modified on Thu, 07 May 2026 20:02:41 GMT and is shared under a CC BY  4.0  license and was authored, remixed, and/or curated by OpenStax via source content that was edited to the style and standards of the LibreTexts platform.",
+  "figures": [
+    {
+      "url": "https://stats.libretexts.org/@api/deki/files/40918/556a1f2102ffb2e59066903b2bb6d9c4a9ef136e?revision=1&size=bestfit&width=500&height=663",
+      "alt": "...",
+      "credit": ""
+    },
+    {
+      "url": "https://stats.libretexts.org/@api/deki/files/40917/a3ff995f878eb04dca05e7a46190dc26503261ea?revision=1&size=bestfit&width=500&height=556",
+      "alt": "This is a normal distribution curve representing the difference in the average amount of time girls and boys play sports all day. The mean is equal to zero, and the values -1.2, 0, and 1.2 are labeled on the horizontal axis. Two vertical lines extend from -1.2 and 1.2 to the curve. The region to the left of x = -1.2 and the region to the right of x = 1.2 are shaded to represent the p-value. The area of each region is 0.0028.",
+      "credit": ""
+    },
+    {
+      "url": "https://stats.libretexts.org/@api/deki/files/40916/4b0401770142aaa255f2d19ccd8e9b792d7d9d92?revision=1&size=bestfit&width=500&height=393",
+      "alt": "This is a normal distribution curve with mean equal to 0. A vertical line near the tail of the curve to the right of zero extends from the axis to the curve. The region under the curve to the right of the line is shaded.",
+      "credit": ""
+    }
+  ],
+  "references": [
+    {
+      "text": "Table 10.1",
+      "url": "https://openstax.org/books/introductory-business-statistics-2e/pages/10-1-comparing-two-independent-population-means#uid888"
+    },
+    {
+      "text": "Table 10.1",
+      "url": "https://openstax.org/books/introductory-business-statistics-2e/pages/10-1-comparing-two-independent-population-means#uid888"
+    },
+    {
+      "text": "10.2: Comparing Two Independent Population Means",
+      "url": "https://stats.libretexts.org/Bookshelves/Introductory_Statistics/Introductory_Statistics_2e_(OpenStax)/10%3A_Hypothesis_Testing_with_Two_Samples/10.02%3A_Comparing_Two_Independent_Population_Means"
+    },
+    {
+      "text": "CC BY  4.0",
+      "url": "https://creativecommons.org/licenses/by/4.0"
+    },
+    {
+      "text": "OpenStax",
+      "url": "https://openstax.org/"
+    },
+    {
+      "text": "source content",
+      "url": "https://openstax.org/details/books/introductory-statistics"
+    }
+  ],
+  "exercises": [
+    {
+      "ordinal": 1,
+      "sourceNumber": "",
+      "sourceAnchor": "",
+      "kind": "exercise-candidate",
+      "context": "where \\(\\delta_0\\) is the hypothesized difference between the two means. If the question is simply \"is there any difference between the means?\" then \\(\\delta_0=0\\) and the null and alternative hypotheses becomes:\n\n\\[\\begin{array}{l}\n\nH_0: \\mu_1=\\mu_2 \\\\\n\nH_{\\mathrm{a}}: \\mu_1 \\neq \\mu_2\n\n\\end{array}\\]\n\nAn example of when \\(\\delta_0\\) might not be zero is when the comparison of the two groups requires a specific difference for the decision to be meaningful. Imagine that you are making a capital investment. You are considering changing from your current model machine to another. You measure the productivity of your machines by the speed they produce the product. It may be that a contender to replace the old model is faster in terms of product throughput, but is also more expensive. The second machine may also have more maintenance costs, setup costs, etc. The null hypothesis would be set up so that the new machine would have to be better than the old one by enough to cover these extra costs in terms of speed and cost of production. This form of the null and alternative hypothesis shows how valuable this particular hypothesis test can be. For most of our work we will be testing simple hypotheses asking if there is any difference between the two distribution means.",
+      "original": "Exercise \\(\\PageIndex{1}\\)\n\nIndependent groups\n\nThe Kona Iki Corporation produces coconut milk. They take coconuts and extract the milk inside by drilling a hole and pouring the milk into a vat for processing. They have both a day shift (called the B shift) and a night shift (called the G shift) to do this part of the process. They would like to know if the day shift and the night shift are equally efficient in processing the coconuts. A study is done sampling 9 shifts of the G shift and 16 shifts of the B shift. The results of the number of hours required to process 100 pounds of coconuts is presented in Table 10.1. A study is done and data are collected, resulting in the data in Table 10.1.\n\n            Sample Size\t\n            Average Number of Hours to Process 100 Pounds of Coconuts\t\n            Sample Standard Deviation\t\n\n            G Shift\t\n            9\t\n            2\t\n            0.866\t\n\n            B Shift\t\n            16\t\n            3.2\t\n            1.00\t\n\nProblem\n\nIs there a difference in the mean amount of time for each shift to process 100 pounds of coconuts? Test at the 5% level of significance.",
+      "prompt": "Exercise \\(\\PageIndex{1}\\)\n\nIndependent groups\n\nThe Kona Iki Corporation produces coconut milk. They take coconuts and extract the milk inside by drilling a hole and pouring the milk into a vat for processing. They have both a day shift (called the B shift) and a night shift (called the G shift) to do this part of the process. They would like to know if the day shift and the night shift are equally efficient in processing the coconuts. A study is done sampling 9 shifts of the G shift and 16 shifts of the B shift. The results of the number of hours required to process 100 pounds of coconuts is presented in Table 10.1. A study is done and data are collected, resulting in the data in Table 10.1.\n\n            Sample Size\t\n            Average Number of Hours to Process 100 Pounds of Coconuts\t\n            Sample Standard Deviation\t\n\n            G Shift\t\n            9\t\n            2\t\n            0.866\t\n\n            B Shift\t\n            16\t\n            3.2\t\n            1.00\t\n\nProblem\n\nIs there a difference in the mean amount of time for each shift to process 100 pounds of coconuts? Test at the 5% level of significance.",
+      "sourceAnswers": [],
+      "hasFigure": false,
+      "status": "draft",
+      "answerVerified": false,
+      "translationStatus": "pending",
+      "mappingStatus": "pending"
+    },
+    {
+      "ordinal": 2,
+      "sourceNumber": "",
+      "sourceAnchor": "",
+      "kind": "exercise-candidate",
+      "context": "Conclusion: At the 5% level of significance, the sample data show there is sufficient evidence to conclude that the mean number of hours that the G Shift takes to process 100 pounds of coconuts is different from the B Shift (mean number of hours for the B Shift is greater than the mean number of hours for the G Shift).\n\nTwo samples are shown in the table below. Both have normal distributions. The means for the two populations are thought to be the same. Is there a difference in the means? Test at the 5% level of significance.\n\nWhen the sum of the sample sizes is larger than \\(30\\left(n_1+n_2>30\\right)\\) you can use the normal distribution to approximate the Student's \\(t\\). Use the Student's \\(t\\) distribution, however, whenever possible.",
+      "original": "Exercise \\(\\PageIndex{2}\\)\n\nA study is done to determine if Company A retains its workers longer than Company B. It is believed that Company A has a higher retention than Company B. The study finds that in a sample of 11 workers at Company A their average time with the company is four years with a standard deviation of 1.5 years. A sample of 9 workers at Company B finds that the average time with the company was 3.5 years with a standard deviation of 1 year. Test this proposition at the 1% level of significance.\n\nProblem\n\na. Is this a test of two means or two proportions?",
+      "prompt": "Exercise \\(\\PageIndex{2}\\)\n\nA study is done to determine if Company A retains its workers longer than Company B. It is believed that Company A has a higher retention than Company B. The study finds that in a sample of 11 workers at Company A their average time with the company is four years with a standard deviation of 1.5 years. A sample of 9 workers at Company B finds that the average time with the company was 3.5 years with a standard deviation of 1 year. Test this proposition at the 1% level of significance.\n\nProblem\n\na. Is this a test of two means or two proportions?",
+      "sourceAnswers": [
+        ""
+      ],
+      "hasFigure": false,
+      "status": "draft",
+      "answerVerified": false,
+      "translationStatus": "pending",
+      "mappingStatus": "pending"
+    },
+    {
+      "ordinal": 3,
+      "sourceNumber": "1",
+      "sourceAnchor": "",
+      "kind": "exercise-candidate",
+      "context": "h. Can you accept/reject the null hypothesis?\n\ni. Conclusion:\n\nA study is done to determine if Company A retains its workers longer than Company B. Company A samples 15 workers, and their average time with the company is five years with a standard deviation of 1.2. Company B samples 20 workers, and their average time with the company is 4.5 years with a standard deviation of 0.8. The populations are normally distributed.",
+      "original": "1. Are the population standard deviations known?",
+      "prompt": "1. Are the population standard deviations known?",
+      "sourceAnswers": [],
+      "hasFigure": false,
+      "status": "draft",
+      "answerVerified": false,
+      "translationStatus": "pending",
+      "mappingStatus": "pending"
+    },
+    {
+      "ordinal": 4,
+      "sourceNumber": "2",
+      "sourceAnchor": "",
+      "kind": "exercise-candidate",
+      "context": "h. Can you accept/reject the null hypothesis?\n\ni. Conclusion:\n\nA study is done to determine if Company A retains its workers longer than Company B. Company A samples 15 workers, and their average time with the company is five years with a standard deviation of 1.2. Company B samples 20 workers, and their average time with the company is 4.5 years with a standard deviation of 0.8. The populations are normally distributed.",
+      "original": "2. Conduct an appropriate hypothesis test. At the 5% significance level, what is your conclusion?",
+      "prompt": "2. Conduct an appropriate hypothesis test. At the 5% significance level, what is your conclusion?",
+      "sourceAnswers": [],
+      "hasFigure": false,
+      "status": "draft",
+      "answerVerified": false,
+      "translationStatus": "pending",
+      "mappingStatus": "pending"
+    },
+    {
+      "ordinal": 5,
+      "sourceNumber": "",
+      "sourceAnchor": "",
+      "kind": "exercise-candidate",
+      "context": "h. Can you accept/reject the null hypothesis?\n\ni. Conclusion:\n\nA study is done to determine if Company A retains its workers longer than Company B. Company A samples 15 workers, and their average time with the company is five years with a standard deviation of 1.2. Company B samples 20 workers, and their average time with the company is 4.5 years with a standard deviation of 0.8. The populations are normally distributed.",
+      "original": "Exercise \\(\\PageIndex{3}\\)\n\nAn interesting research question is the effect, if any, that different types of teaching formats have on the grade outcomes of students. To investigate this issue one sample of students' grades was taken from a hybrid class and another sample taken from a standard lecture format class. Both classes were for the same subject. The mean course grade in percent for the 35 hybrid students is 74 with a standard deviation of 16. The mean grades of the 40 students form the standard lecture class was 76 percent with a standard deviation of 9. Test at 5% to see if there is any significant difference in the population mean grades between standard lecture course and hybrid class.\n\nAnswer\n\nWe begin by noting that we have two groups, students from a hybrid class and students from a standard lecture format class. We also note that the random variable, what we are interested in, is students' grades, a continuous random variable. We could have asked the research question in a different way and had a binary random variable. For example, we could have studied the percentage of students with a failing grade, or with an A grade. Both of these would be binary and thus a test of proportions and not a test of means as is the case here. Finally, there is no presumption as to which format might lead to higher grades so the hypothesis is stated as a two-tailed test.\n\n\\[\\begin{array}{l}\n\n    \\mathrm{H}_0: \\mu_1=\\mu_2 \\\\\n\n    \\mathrm{H}_a: \\mu_1 \\neq \\mu_2\n\n    \\end{array}\\]\n\nAs would virtually always be the case, we do not know the population variances of the two distributions and thus our test statistic is:\n\n\\[t_c=\\dfrac{\\left(\\bar{x}_1-\\bar{x}_2\\right)-\\delta_0}{\\sqrt{\\dfrac{s^2}{n_1}+\\dfrac{s^2}{n_2}}}=\\dfrac{(74-76)-0}{\\sqrt{\\dfrac{16^2}{35}+\\dfrac{9^2}{40}}}=-0.65\\]\n\nTo determine the critical value of the Student's \\(t\\) we need the degrees of freedom. For this case we use: \\(\\mathrm{df}=\\mathrm{n} 1+\\mathrm{n} 2-2=35+40-2=73\\). This is large enough to consider it the normal distribution thus \\(t_{a / 2}=1.96\\). Again as always we determine if the calculated value is in the tail determined by the critical value. In this case we do not even need to look up the critical value: the calculated value of the difference in these two average grades is not even one standard deviation apart. Certainly not in the tail.\n\nConclusion: Cannot reject the null at \\(\\alpha=5 \\%\\). Therefore, evidence does not exist to prove that the grades in hybrid and standard classes differ.",
+      "prompt": "Exercise \\(\\PageIndex{3}\\)\n\nAn interesting research question is the effect, if any, that different types of teaching formats have on the grade outcomes of students. To investigate this issue one sample of students' grades was taken from a hybrid class and another sample taken from a standard lecture format class. Both classes were for the same subject. The mean course grade in percent for the 35 hybrid students is 74 with a standard deviation of 16. The mean grades of the 40 students form the standard lecture class was 76 percent with a standard deviation of 9. Test at 5% to see if there is any significant difference in the population mean grades between standard lecture course and hybrid class.",
+      "sourceAnswers": [
+        "We begin by noting that we have two groups, students from a hybrid class and students from a standard lecture format class. We also note that the random variable, what we are interested in, is students' grades, a continuous random variable. We could have asked the research question in a different way and had a binary random variable. For example, we could have studied the percentage of students with a failing grade, or with an A grade. Both of these would be binary and thus a test of proportions and not a test of means as is the case here. Finally, there is no presumption as to which format might lead to higher grades so the hypothesis is stated as a two-tailed test.\n\n\\[\\begin{array}{l}\n\n    \\mathrm{H}_0: \\mu_1=\\mu_2 \\\\\n\n    \\mathrm{H}_a: \\mu_1 \\neq \\mu_2\n\n    \\end{array}\\]\n\nAs would virtually always be the case, we do not know the population variances of the two distributions and thus our test statistic is:\n\n\\[t_c=\\dfrac{\\left(\\bar{x}_1-\\bar{x}_2\\right)-\\delta_0}{\\sqrt{\\dfrac{s^2}{n_1}+\\dfrac{s^2}{n_2}}}=\\dfrac{(74-76)-0}{\\sqrt{\\dfrac{16^2}{35}+\\dfrac{9^2}{40}}}=-0.65\\]\n\nTo determine the critical value of the Student's \\(t\\) we need the degrees of freedom. For this case we use: \\(\\mathrm{df}=\\mathrm{n} 1+\\mathrm{n} 2-2=35+40-2=73\\). This is large enough to consider it the normal distribution thus \\(t_{a / 2}=1.96\\). Again as always we determine if the calculated value is in the tail determined by the critical value. In this case we do not even need to look up the critical value: the calculated value of the difference in these two average grades is not even one standard deviation apart. Certainly not in the tail.\n\nConclusion: Cannot reject the null at \\(\\alpha=5 \\%\\). Therefore, evidence does not exist to prove that the grades in hybrid and standard classes differ."
+      ],
+      "hasFigure": false,
+      "status": "draft",
+      "answerVerified": false,
+      "translationStatus": "pending",
+      "mappingStatus": "pending"
+    },
+    {
+      "ordinal": 6,
+      "sourceNumber": "1",
+      "sourceAnchor": "",
+      "kind": "exercise-candidate",
+      "context": "Professor B:\n\nProfessor A says that the mean score of their class is more than the mean of professor B’s class. Is professor A correct? Test at a 5% significance level. Answer the following questions:",
+      "original": "1. Is this a test of two means or two proportions?",
+      "prompt": "1. Is this a test of two means or two proportions?",
+      "sourceAnswers": [],
+      "hasFigure": false,
+      "status": "draft",
+      "answerVerified": false,
+      "translationStatus": "pending",
+      "mappingStatus": "pending"
+    },
+    {
+      "ordinal": 7,
+      "sourceNumber": "2",
+      "sourceAnchor": "",
+      "kind": "exercise-candidate",
+      "context": "Professor B:\n\nProfessor A says that the mean score of their class is more than the mean of professor B’s class. Is professor A correct? Test at a 5% significance level. Answer the following questions:",
+      "original": "2. Are the population standard deviations known or unknown?",
+      "prompt": "2. Are the population standard deviations known or unknown?",
+      "sourceAnswers": [],
+      "hasFigure": false,
+      "status": "draft",
+      "answerVerified": false,
+      "translationStatus": "pending",
+      "mappingStatus": "pending"
+    },
+    {
+      "ordinal": 8,
+      "sourceNumber": "3",
+      "sourceAnchor": "",
+      "kind": "exercise-candidate",
+      "context": "Professor B:\n\nProfessor A says that the mean score of their class is more than the mean of professor B’s class. Is professor A correct? Test at a 5% significance level. Answer the following questions:",
+      "original": "3. Which distribution do you use to perform the test?",
+      "prompt": "3. Which distribution do you use to perform the test?",
+      "sourceAnswers": [],
+      "hasFigure": false,
+      "status": "draft",
+      "answerVerified": false,
+      "translationStatus": "pending",
+      "mappingStatus": "pending"
+    },
+    {
+      "ordinal": 9,
+      "sourceNumber": "4",
+      "sourceAnchor": "",
+      "kind": "exercise-candidate",
+      "context": "Professor B:\n\nProfessor A says that the mean score of their class is more than the mean of professor B’s class. Is professor A correct? Test at a 5% significance level. Answer the following questions:",
+      "original": "4. What is the random variable?",
+      "prompt": "4. What is the random variable?",
+      "sourceAnswers": [],
+      "hasFigure": false,
+      "status": "draft",
+      "answerVerified": false,
+      "translationStatus": "pending",
+      "mappingStatus": "pending"
+    },
+    {
+      "ordinal": 10,
+      "sourceNumber": "5",
+      "sourceAnchor": "",
+      "kind": "exercise-candidate",
+      "context": "Professor B:\n\nProfessor A says that the mean score of their class is more than the mean of professor B’s class. Is professor A correct? Test at a 5% significance level. Answer the following questions:",
+      "original": "5. What are the null and alternative hypotheses? Write the null and alternative hypotheses in words and in symbols.",
+      "prompt": "5. What are the null and alternative hypotheses? Write the null and alternative hypotheses in words and in symbols.",
+      "sourceAnswers": [],
+      "hasFigure": false,
+      "status": "draft",
+      "answerVerified": false,
+      "translationStatus": "pending",
+      "mappingStatus": "pending"
+    },
+    {
+      "ordinal": 11,
+      "sourceNumber": "6",
+      "sourceAnchor": "",
+      "kind": "exercise-candidate",
+      "context": "Professor B:\n\nProfessor A says that the mean score of their class is more than the mean of professor B’s class. Is professor A correct? Test at a 5% significance level. Answer the following questions:",
+      "original": "6. Is this test right-, left-, or two-tailed?",
+      "prompt": "6. Is this test right-, left-, or two-tailed?",
+      "sourceAnswers": [],
+      "hasFigure": false,
+      "status": "draft",
+      "answerVerified": false,
+      "translationStatus": "pending",
+      "mappingStatus": "pending"
+    },
+    {
+      "ordinal": 12,
+      "sourceNumber": "7",
+      "sourceAnchor": "",
+      "kind": "exercise-candidate",
+      "context": "Professor B:\n\nProfessor A says that the mean score of their class is more than the mean of professor B’s class. Is professor A correct? Test at a 5% significance level. Answer the following questions:",
+      "original": "7. What is the p-value?",
+      "prompt": "7. What is the p-value?",
+      "sourceAnswers": [],
+      "hasFigure": false,
+      "status": "draft",
+      "answerVerified": false,
+      "translationStatus": "pending",
+      "mappingStatus": "pending"
+    },
+    {
+      "ordinal": 13,
+      "sourceNumber": "8",
+      "sourceAnchor": "",
+      "kind": "exercise-candidate",
+      "context": "Professor B:\n\nProfessor A says that the mean score of their class is more than the mean of professor B’s class. Is professor A correct? Test at a 5% significance level. Answer the following questions:",
+      "original": "8. Do you reject or not reject the null hypothesis?",
+      "prompt": "8. Do you reject or not reject the null hypothesis?",
+      "sourceAnswers": [],
+      "hasFigure": false,
+      "status": "draft",
+      "answerVerified": false,
+      "translationStatus": "pending",
+      "mappingStatus": "pending"
+    },
+    {
+      "ordinal": 14,
+      "sourceNumber": "9",
+      "sourceAnchor": "",
+      "kind": "exercise-candidate",
+      "context": "Professor B:\n\nProfessor A says that the mean score of their class is more than the mean of professor B’s class. Is professor A correct? Test at a 5% significance level. Answer the following questions:",
+      "original": "9. At the ___ level of significance, from the sample data, there ___ (is/is not) sufficient evidence to conclude that ___.",
+      "prompt": "9. At the ___ level of significance, from the sample data, there ___ (is/is not) sufficient evidence to conclude that ___.",
+      "sourceAnswers": [],
+      "hasFigure": false,
+      "status": "draft",
+      "answerVerified": false,
+      "translationStatus": "pending",
+      "mappingStatus": "pending"
+    }
+  ],
+  "license": "CC BY 4.0",
+  "licenseEvidence": "This page titled 10.2: Comparing Two Independent Population Means was last modified on Thu, 07 May 2026 20:02:41 GMT and is shared under a CC BY  4.0  license and was authored, remixed, and/or curated by OpenStax via source content that was edited to the style and standards of the LibreTexts platform.",
+  "url": "https://stats.libretexts.org/Bookshelves/Introductory_Statistics/Introductory_Statistics_2e_(OpenStax)/10:_Hypothesis_Testing_with_Two_Samples/10.02:_Comparing_Two_Independent_Population_Means",
+  "sha256": "032c464dcf4d7686d0a21d817125cb4adf1b3bd83a37940e954be47c2e865d9b",
+  "checkedAt": "2026-10-07",
+  "id": "d32e83520f50ad7b2bb5",
+  "bookId": "statistics",
+  "licenseInherited": false,
+  "licenseSource": "https://stats.libretexts.org/Bookshelves/Introductory_Statistics/Introductory_Statistics_2e_(OpenStax)/10:_Hypothesis_Testing_with_Two_Samples/10.02:_Comparing_Two_Independent_Population_Means",
+  "licenseUrl": "https://creativecommons.org/licenses/by/4.0/",
+  "authors": "OpenStax / Barbara Illowsky, Susan Dean",
+  "book": "Introductory Statistics 2e",
+  "reviewStatus": "unreviewed",
+  "sourceLanguage": "en",
+  "translationStatus": "pending"
+}

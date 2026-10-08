@@ -1,0 +1,45 @@
+{
+  "title": "8.1: Introduction",
+  "originalText": "[Figure: This is a photo of M&Ms piled together. The M&Ms are red, blue, green, yellow, orange and brown.]\n\nFigure \\(\\PageIndex{1}\\): Have you ever wondered what the average number of M&Ms in a bag at the grocery store is? You can use confidence intervals to answer this question. (credit: modification of work “sweet, orange, food, green, red, color, brown, blue, colorful, yellow, chocolate, snack, dessert, toy, plain, candy, sweetness, treat, confectionery, coated, m ms, hard shell, snack food, jelly bean”/ Pxhere, Public Domain)\n\nSuppose you were trying to determine the rent of a two-bedroom apartment in your town. You might look in the classified section of the newspaper, write down several rents listed, and average them together. You would have obtained a point estimate of the true mean. If you are trying to determine the percentage of times you make a basket when shooting a basketball, you might count the number of shots you make and divide that by the number of shots you attempted. In this case, you would have obtained a point estimate for the true proportion the parameter p in the binomial probability density function.\n\nWe use sample data to make generalizations about an unknown population. This part of statistics is called inferential statistics. The sample data help us to make an estimate of a population parameter. We realize that the point estimate is most likely not the exact value of the population parameter, but close to it. After calculating point estimates, we construct interval estimates, called confidence intervals. What statistics provides us beyond a simple average, or point estimate, is an estimate to which we can attach a probability of accuracy, what we will call a confidence level. We make inferences with a known level of probability.\n\nIn this chapter, you will learn to construct and interpret confidence intervals. You will also learn a new distribution, the Student's-t, and how it is used with these intervals. Throughout the chapter, it is important to keep in mind that the confidence interval is a random variable. It is the population parameter that is fixed.\n\nIf you worked in the marketing department of an entertainment company, you might be interested in the mean number of songs a consumer downloads a month from Apple Music. If so, you could conduct a survey and calculate the sample mean, \\(\\bar{x}\\), and the sample standard deviation, \\(s\\). You would use \\(\\bar{x}\\) to estimate the population mean and \\(s\\) to estimate the population standard deviation. The sample mean, \\(\\bar{x}\\), is the point estimate for the population mean, \\(\\mu\\). The sample standard deviation, \\(s\\), is the point estimate for the population standard deviation, \\(\\sigma\\).\n\n\\(\\bar{x}\\) and \\(s\\) are each called a statistic.\n\nA confidence interval is another type of estimate but, instead of being just one number, it is an interval of numbers. The interval of numbers is a range of values calculated from a given set of sample data. The confidence interval is likely to include the unknown population parameter.\n\nSuppose, for the Apple Music example, we do not know the population mean \\(\\mu\\), but we do know the sample mean and that the population standard deviation is \\(\\sigma=1\\) and our sample size is 100. Then, by the central limit theorem, the standard deviation of the sampling distribution of the sample means is\n\n\\[\\dfrac{\\sigma}{\\sqrt{n}}=\\dfrac{1}{\\sqrt{100}}=0.1\\]\n\nThe Empirical Rule, which applies to the normal distribution, says that in approximately \\(95 \\%\\) of the samples, the sample mean, \\(\\bar{x}\\), will be within two standard deviations of the population mean \\(\\mu\\). For our Apple Music example, two standard deviations is \\((2)(0.1)=0.2\\). The sample mean \\(\\bar{x}\\) is likely to be within 0.2 units of \\(\\mu\\).\n\nBecause \\(\\bar{x}\\) is within 0.2 units of \\(\\mu\\), which is unknown, then \\(\\mu\\) is likely to be within 0.2 units of \\(\\bar{x}\\) with \\(95 \\%\\) probability. The population mean \\(\\mu\\) is contained in an interval whose lower number is calculated by taking the sample mean and subtracting two standard deviations (2)(0.1) and whose upper number is calculated by taking the sample mean and adding two standard deviations. In other words, \\(\\mu\\) is between \\(\\bar{x}-0.2\\) and \\(\\bar{x}+0.2\\) in \\(95 \\%\\) of all the samples.\n\nFor the Apple Music example, suppose that a sample produced a sample mean \\(\\bar{x}=2\\). Then with \\(95 \\%\\) probability the unknown population mean \\(\\mu\\) is between\n\n\\[\\bar{x}-0.2=2-0.2=1.8 \\text { and } \\bar{x}+0.2=2+0.2=2.2\\]\n\nWe say that we are \\(95 \\%\\) confident that the unknown population mean number of songs downloaded from Apple Music per month is between 1.8 and 2.2. The 95\\% confidence interval is (1.8, 2.2). Please note that we talked in terms of 95\\% confidence using the empirical rule. The empirical rule for two standard deviations is only approximately \\(95 \\%\\) of the probability under the normal distribution. To be precise, two standard deviations under a normal distribution is actually \\(95.44 \\%\\) of the probability. To calculate the exact \\(95 \\%\\) confidence level we would use 1.96 standard deviations.\n\nThe \\(95 \\%\\) confidence interval implies two possibilities. Either the interval \\((1.8,2.2)\\) contains the true mean \\(\\mu\\), or our sample produced an \\(\\bar{x}\\) that is not within 0.2 units of the true mean \\(\\mu\\). The first possibility happens for \\(95 \\%\\) of wellchosen samples. It is important to remember that the second possibility happens for \\(5 \\%\\) of samples, even though correct procedures are followed.\n\nRemember that a confidence interval is created for an unknown population parameter like the population mean, \\(\\mu\\).\n\nFor the confidence interval for a mean the formula would be:\n\n\\[\\mu=\\bar{X} \\pm Z_\\alpha{ }^\\sigma / \\sqrt{n}\\]\n\nOr written another way as:\n\n\\[\\bar{X}-Z_\\alpha{ }^\\sigma / \\sqrt{n} \\leq \\mu \\leq \\bar{X}+Z_\\alpha{ }^\\sigma / \\sqrt{n}\\]\n\nWhere \\(\\bar{X}\\) is the sample mean. \\(Z_\\alpha\\) is determined by the level of confidence desired by the analyst, and \\(\\sigma / \\sqrt{n}\\) is the standard deviation of the sampling distribution for means given to us by the Central Limit Theorem.\n\nThis page titled 8.1: Introduction was last modified on Thu, 07 May 2026 20:02:28 GMT and is shared under a CC BY  4.0  license and was authored, remixed, and/or curated by OpenStax via source content that was edited to the style and standards of the LibreTexts platform.",
+  "figures": [
+    {
+      "url": "https://stats.libretexts.org/@api/deki/files/40822/e1a981d5789dcb0851375e045029510d7d907d1e?revision=1",
+      "alt": "This is a photo of M&Ms piled together. The M&Ms are red, blue, green, yellow, orange and brown.",
+      "credit": ""
+    }
+  ],
+  "references": [
+    {
+      "text": "8.1: Introduction",
+      "url": "https://stats.libretexts.org/Bookshelves/Introductory_Statistics/Introductory_Statistics_2e_(OpenStax)/08%3A_Confidence_Intervals/8.01%3A_Introduction"
+    },
+    {
+      "text": "CC BY  4.0",
+      "url": "https://creativecommons.org/licenses/by/4.0"
+    },
+    {
+      "text": "OpenStax",
+      "url": "https://openstax.org/"
+    },
+    {
+      "text": "source content",
+      "url": "https://openstax.org/details/books/introductory-statistics"
+    }
+  ],
+  "exercises": [],
+  "license": "CC BY 4.0",
+  "licenseEvidence": "This page titled 8.1: Introduction was last modified on Thu, 07 May 2026 20:02:28 GMT and is shared under a CC BY  4.0  license and was authored, remixed, and/or curated by OpenStax via source content that was edited to the style and standards of the LibreTexts platform.",
+  "url": "https://stats.libretexts.org/Bookshelves/Introductory_Statistics/Introductory_Statistics_2e_(OpenStax)/08:_Confidence_Intervals/8.01:_Introduction",
+  "sha256": "d42e07cbf00eeb74de37c4fabc459b1a6cf5951621e75bfba811b01d81e098e2",
+  "checkedAt": "2026-10-07",
+  "id": "e7e58489409f1e0a6c03",
+  "bookId": "statistics",
+  "licenseInherited": false,
+  "licenseSource": "https://stats.libretexts.org/Bookshelves/Introductory_Statistics/Introductory_Statistics_2e_(OpenStax)/08:_Confidence_Intervals/8.01:_Introduction",
+  "licenseUrl": "https://creativecommons.org/licenses/by/4.0/",
+  "authors": "OpenStax / Barbara Illowsky, Susan Dean",
+  "book": "Introductory Statistics 2e",
+  "reviewStatus": "unreviewed",
+  "sourceLanguage": "en",
+  "translationStatus": "pending"
+}

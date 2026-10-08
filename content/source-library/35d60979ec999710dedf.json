@@ -1,0 +1,1116 @@
+{
+  "title": "4.6: Solve Systems of Equations Using Matrices",
+  "originalText": "Learning Objectives\n\nBy the end of this section, you will be able to:\n\nWrite the augmented matrix for a system of equations\n\nUse row operations on a matrix\n\nSolve systems of equations using matrices\n\nBefore you get started, take this readiness quiz.\n\n1. Solve: \\(3(x+2)+4=4(2x−1)+9\\).\n\n    If you missed this problem, review [link].\n\n2. Solve: \\(0.25p+0.25(x+4)=5.20\\).\n\n    If you missed this problem, review [link].\n\n3. Evaluate when \\(x=−2\\) and \\(y=3:2x^2−xy+3y^2\\).\n\n    If you missed this problem, review [link].\n\nWrite the Augmented Matrix for a System of Equations\n\nSolving a system of equations can be a tedious operation where a simple mistake can wreak havoc on finding the solution. An alternative method which uses the basic procedures of elimination but with notation that is simpler is available. The method involves using a matrix. A matrix is a rectangular array of numbers arranged in rows and columns.\n\nMATRIX\n\nA matrix is a rectangular array of numbers arranged in rows and columns.\n\nA matrix with m rows and n columns has order \\(m\\times n\\). The matrix on the left below has 2 rows and 3 columns and so it has order \\(2\\times 3\\). We say it is a 2 by 3 matrix.\n\n[Figure: Figure shows two matrices. The one on the left has the numbers minus 3, minus 2 and 2 in the first row and the numbers minus 1, 4 and 5 in the second row. The rows and columns are enclosed within brackets. Thus, it has 2 rows and 3 columns. It is labeled 2 cross 3 or 2 by 3 matrix. The matrix on the right is similar but with 3 rows and 4 columns. It is labeled 3 by 4 matrix.]\n\nEach number in the matrix is called an element or entry in the matrix.\n\nWe will use a matrix to represent a system of linear equations. We write each equation in standard form and the coefficients of the variables and the constant of each equation becomes a row in the matrix. Each column then would be the coefficients of one of the variables in the system or the constants. A vertical line replaces the equal signs. We call the resulting matrix the augmented matrix for the system of equations.\n\n[Figure: The equations are 3x plus y equals minus 3 and 2x plus 3y equals 6. A 2 by 3 matrix is shown. The first row is 3, 1, minus 3. The second row is 2, 3, 6. The first column is labeled coefficients of x. The second column is labeled coefficients of y and the third is labeled constants.]\n\nNotice the first column is made up of all the coefficients of x, the second column is the all the coefficients of y, and the third column is all the constants.\n\nExample \\(\\PageIndex{1}\\)\n\nⓐ \\(\\left\\{ \\begin{array} {l} 5x−3y=−1 \\\\ y=2x−2 \\end{array} \\right. \\) ⓑ \\( \\left\\{ \\begin{array} {l} 6x−5y+2z=3 \\\\ 2x+y−4z=5 \\\\ 3x−3y+z=−1 \\end{array} \\right. \\)\n\nAnswer\n\nⓐ The second equation is not in standard form. We rewrite the second equation in standard form.\n\n\\[\\begin{aligned} y=2x−2 \\\\ −2x+y=−2 \\end{aligned} \\nonumber\\]\n\nWe replace the second equation with its standard form. In the augmented matrix, the first equation gives us the first row and the second equation gives us the second row. The vertical line replaces the equal signs.\n\n[Figure: The equations are 3x plus y equals minus 3 and 2x plus 3y equals 6. A 2 by 3 matrix is shown. The first row is 3, 1, minus 3. The second row is 2, 3, 6. The first column is labeled coefficients of x. The second column is labeled coefficients of y and the third is labeled constants.]\n\nⓑ All three equations are in standard form. In the augmented matrix the first equation gives us the first row, the second equation gives us the second row, and the third equation gives us the third row. The vertical line replaces the equal signs.\n\n[Figure: The equations are 6x minus 5y plus 2z equals 3, 2x plus y minus 4z equals 5 and 3x minus 3y plus z equals minus 1. A 4 by 3 matrix is shown whose first row is 6, minus 5, 2, 3. Its second row is 2, 1, minus 4, 5. Its third row is 3, minus 3, 1 and minus 1. Its first three columns are labeled x, y and z respectively.]\n\nExample \\(\\PageIndex{2}\\)\n\nWrite each system of linear equations as an augmented matrix:\n\nⓐ \\(\\left\\{ \\begin{array} {l} 3x+8y=−3 \\\\ 2x=−5y−3 \\end{array} \\right. \\) ⓑ \\(\\left\\{ \\begin{array} {l} 2x−5y+3z=8 \\\\ 3x−y+4z=7 \\\\ x+3y+2z=−3 \\end{array} \\right. \\)\n\nAnswer\n\nⓐ \\(\\left[ \\begin{array} {cc|c} 3 &8 &-3 \\\\ 2 &5 &−3 \\end{array} \\right] \\)\n\nⓑ \\(\\left[ \\begin{array} {ccc|c} 2 &5 &-3 &8 \\\\ 3 &-1 &4 &7 \\\\ 1 &3 &2 &−3 \\end{array} \\right] \\)\n\nExample \\(\\PageIndex{3}\\)\n\nWrite each system of linear equations as an augmented matrix:\n\nⓐ \\(\\left\\{ \\begin{array} {l} 11x=−9y−5 \\\\ 7x+5y=−1 \\end{array} \\right. \\) ⓑ \\(\\left\\{ \\begin{array} {l} 5x−3y+2z=−5 \\\\ 2x−y−z=4 \\\\ 3x−2y+2z=−7 \\end{array} \\right. \\)\n\nAnswer\n\nⓐ \\(\\left[ \\begin{array} {cc|c} 11 &9 &−5 \\\\ 7 &5 &−1 \\end{array} \\right] \\)\n\n    ⓑ \\(\\left[ \\begin{array} {ccc|c} 5 &−3 &2 &−5 \\\\ 2 &−1 &−1 &4 \\\\ 3 &−2 &2 &−7 \\end{array} \\right] \\)\n\nIt is important as we solve systems of equations using matrices to be able to go back and forth between the system and the matrix. The next example asks us to take the information in the matrix and write the system of equations.\n\nExample \\(\\PageIndex{4}\\)\n\nWrite the system of equations that corresponds to the augmented matrix:\n\n\\(\\left[ \\begin{array} {ccc|c} 4 &−3 &3 &−1 \\\\ 1 &2 &−1 &2 \\\\ −2 &−1 &3 &−4 \\end{array} \\right] \\).\n\nAnswer\n\nWe remember that each row corresponds to an equation and that each entry is a coefficient of a variable or the constant. The vertical line replaces the equal sign. Since this matrix is a \\(4\\times 3\\), we know it will translate into a system of three equations with three variables.\n\n[Figure: A 3 by 4 matrix is shown. Its first row is 4, minus 3, 3, minus 1. Its second row is 1, 2, minus 1, 2. Its third row is minus 2, minus 1, 3, minus 4. The three equations are 4x minus 3y plus 3z equals minus 1, x plus 2y minus z equals 2 and minus 2x minus y plus 3z equals minus 4.]\n\nExample \\(\\PageIndex{5}\\)\n\nWrite the system of equations that corresponds to the augmented matrix: \\(\\left[ \\begin{array} {ccc|c} 1 &−1 &2 &3 \\\\ 2 &1 &−2 &1 \\\\ 4 &−1 &2 &0 \\end{array} \\right] \\).\n\nAnswer\n\n\\(\\left\\{ \\begin{array} {l} x−y+2z=3 \\\\ 2x+y−2z=1 \\\\ 4x−y+2z=0 \\end{array} \\right.\\)\n\nExample \\(\\PageIndex{6}\\)\n\nWrite the system of equations that corresponds to the augmented matrix: \\(\\left[ \\begin{array} {ccc|c} 1 &1 &1 &4 \\\\ 2 &3 &−1 &8 \\\\ 1 &1 &−1 &3 \\end{array} \\right] \\).\n\nAnswer\n\n\\(\\left\\{ \\begin{array} {l} x+y+z=4 \\\\ 2x+3y−z=8 \\\\ x+y−z=3 \\end{array} \\right.\\)\n\nUse Row Operations on a Matrix\n\nOnce a system of equations is in its augmented matrix form, we will perform operations on the rows that will lead us to the solution.\n\nTo solve by elimination, it doesn’t matter which order we place the equations in the system. Similarly, in the matrix we can interchange the rows.\n\nWhen we solve by elimination, we often multiply one of the equations by a constant. Since each row represents an equation, and we can multiply each side of an equation by a constant, similarly we can multiply each entry in a row by any real number except 0.\n\nIn elimination, we often add a multiple of one row to another row. In the matrix we can replace a row with its sum with a multiple of another row.\n\nThese actions are called row operations and will help us use the matrix to solve a system of equations.\n\nROW OPERATIONS\n\nIn a matrix, the following operations can be performed on any row and the resulting matrix will be equivalent to the original matrix.\n\n1. Interchange any two rows.\n\n2. Multiply a row by any real number except 0.\n\n3. Add a nonzero multiple of one row to another row.\n\nPerforming these operations is easy to do but all the arithmetic can result in a mistake. If we use a system to record the row operation in each step, it is much easier to go back and check our work.\n\nWe use capital letters with subscripts to represent each row. We then show the operation to the left of the new matrix. To show interchanging a row:\n\n[Figure: A 2 by 3 matrix is shown. Its first row, labeled R2 is 2, minus 1, 2. Its second row, labeled R1 is 5, minus 3, minus 1.]\n\nTo multiply row 2 by \\(−3\\):\n\n[Figure: A 2 by 3 matrix is shown. Its first row is 5, minus 3, minus 1. Its second row is 2, minus 1, 2. An arrow point from this matrix to another one on the right. The first row of the new matrix is the same. The second row is preceded by minus 3 R2. It is minus 6, 3, minus 6.]\n\nTo multiply row 2 by \\(−3\\) and add it to row 1:\n\n[Figure: A 2 by 3 matrix is shown. Its first row is 5, minus 3, minus 1. Its second row is 2, minus 1, 2. An arrow point from this matrix to another one on the right. The first row of the new matrix is preceded by minus 3 R2 plus R1. It is minus 1, 0, minus 7. The second row is 2, minus 1, 2.]\n\nExample \\(\\PageIndex{7}\\)\n\nPerform the indicated operations on the augmented matrix:\n\nⓐ Interchange rows 2 and 3.\n\nⓑ Multiply row 2 by 5.\n\nⓒ Multiply row 3 by −2−2 and add to row 1.\n\n\\( \\left[ \\begin{array} {ccc|c} 6 &−5 &2 &3 \\\\ 2 &1 &−4 &5 \\\\ 3 &−3 &1 &−1 \\end{array} \\right] \\)\n\nAnswer\n\nⓐ We interchange rows 2 and 3.\n\n[Figure: Two 3 by 4 matrices are shown. In the one on the left, the first row is 6, minus 5, 2, 3. The second row is 2, 1, minus 4, 5. The third row is 3, minus 3, 1, minus 1. The second matrix is similar except that rows 2 and 3 are interchanged.]\n\nⓑ We multiply row 2 by 5.\n\n[Figure: Two 3 by 4 matrices are shown. In the one on the left, the first row is 6, minus 5, 2, 3. The second row is 2, 1, minus 4, 5. The third row is 3, minus 3, 1, minus 1. The second matrix is similar to the first except that row 2, preceded by 5 R2, is 10, 5, minus 20, 25.]\n\nⓒ We multiply row 3 by \\(−2\\) and add to row 1.\n\n[Figure: In the 3 by 4 matrix, the first row is 6, minus 5, 2, 3. The second row is 2, 1, minus 4, 5. The third row is 3, minus 3, 1, minus 1. Performing the operation minus 2 R3 plus R1 on the first row, the first row becomes 6 plus minus 2 times 3, minus 5 plus minus 2 times minus 3, 2 plus minus 2 times 1 and 3 plus minus 2 times minus 1. This becomes 0, 1, 0, 5. The remaining 2 rows of the new matrix are the same.]\n\nExample \\(\\PageIndex{8}\\)\n\nPerform the indicated operations on the augmented matrix:\n\nⓐ Interchange rows 1 and 3.\n\nⓑ Multiply row 3 by 3.\n\nⓒ Multiply row 1 by 2 and add to row 2.\n\n\\( \\left[ \\begin{array} {ccc|c} 5 &−2 &-2 &-2 \\\\ 4 &-1 &−4 &4 \\\\ -2 &3 &0 &−1 \\end{array} \\right] \\)\n\nAnswer\n\nⓐ \\( \\left[ \\begin{array} {ccc|c} −2 &3 &0 &−2 \\\\ 4 &−1 &−4 &4 \\\\ 5 &−2 &−2 &−2 \\end{array} \\right] \\)\n\nⓑ \\( \\left[ \\begin{array} {ccc|c}−2 &3 &0 &−2 \\\\ 4 &−1 &−4 &4 \\\\ 15 &−6 &−6 &−6 \\end{array} \\right] \\)\n\nⓒ \\( \\left[ \\begin{array} {ccc|c} -2 &3 &0 &2 \\\\ 0 &5 &-4 &0  \\\\ 15 &-6 &-6 &-6 \\end{array} \\right] \\)\n\nExample \\(\\PageIndex{9}\\)\n\nPerform the indicated operations on the augmented matrix:\n\nⓐ Interchange rows 1 and 2,\n\nⓑ Multiply row 1 by 2,\n\nⓒ Multiply row 2 by 3 and add to row 1.\n\n\\( \\left[ \\begin{array} {ccc|c} 2 &−3 &−2 &−4 \\\\ 4 &1 &−3 &2 \\\\ 5 &0 &4 &−1 \\end{array} \\right] \\)\n\nAnswer\n\nⓐ \\( \\left[ \\begin{array} {ccc|c} 4 &1 &−3 &2 \\\\ 2 &−3 &−2 &−4 \\\\ 5 &0 &4 &−1 \\end{array} \\right] \\)\n\n    ⓑ \\( \\left[ \\begin{array} {ccc|c} 8 &2 &−6 &4 \\\\ 2 &−3 &−2 &−4 \\\\ 5 &0 &4 &−1 \\end{array} \\right] \\)\n\n    ⓒ \\( \\left[ \\begin{array} {ccc|c} 14 &−7 &−12 &−8 \\\\ 2 &−3 &−2 &−4 \\\\ 5 &0 &4 &−1 \\end{array} \\right] \\)\n\nNow that we have practiced the row operations, we will look at an augmented matrix and figure out what operation we will use to reach a goal. This is exactly what we did when we did elimination. We decided what number to multiply a row by in order that a variable would be eliminated when we added the rows together.\n\nGiven this system, what would you do to eliminate x?\n\n[Figure: The two equations are x minus y equals 2 and 4x minus 8y equals 0. Multiplying the first by minus 4, we get minus 4x plus 4y equals minus 8. Adding this to the second equation we get minus 4y equals minus 8.]\n\nThis next example essentially does the same thing, but to the matrix.\n\nExample \\(\\PageIndex{10}\\)\n\nPerform the needed row operation that will get the first entry in row 2 to be zero in the augmented matrix: \\( \\left[ \\begin{array} {cc|c} 1 &−1 &2 \\\\ 4 &−8 &0 \\end{array} \\right] \\)\n\nAnswer\n\nTo make the 4 a 0, we could multiply row 1 by \\(−4\\) and then add it to row 2.\n\n[Figure: The 2 by 3 matrix is 1, minus 1, 2 and 4, minus 8, 0. Performing the operation minus 4R1 plus R2 on row 2, the second row of the new matrix becomes 0, minus 4, minus 8. The first row remains the same.]\n\nExample \\(\\PageIndex{11}\\)\n\nPerform the needed row operation that will get the first entry in row 2 to be zero in the augmented matrix: \\( \\left[ \\begin{array} {cc|c} 1 &−1 &2 \\\\ 3 &−6 &2 \\end{array} \\right] \\)\n\nAnswer\n\n\\( \\left[ \\begin{array} {cc|c} 1 &−1 &2 \\\\ 0 &−3 &−4 \\end{array} \\right] \\)\n\nExample \\(\\PageIndex{12}\\)\n\nPerform the needed row operation that will get the first entry in row 2 to be zero in the augmented matrix: \\( \\left[ \\begin{array} {cc|c} 1 &−1 &3 \\\\ -2 &−3 &2 \\end{array} \\right] \\)\n\nAnswer\n\n\\( \\left[ \\begin{array} {cc|c} 1 &−1 &3 \\\\ 0 &−5 &8 \\end{array} \\right] \\)\n\nSolve Systems of Equations Using Matrices\n\nTo solve a system of equations using matrices, we transform the augmented matrix into a matrix in row-echelon form using row operations. For a consistent and independent system of equations, its augmented matrix is in row-echelon form when to the left of the vertical line, each entry on the diagonal is a 1 and all entries below the diagonal are zeros.\n\nROW-ECHELON FORM\n\nFor a consistent and independent system of equations, its augmented matrix is in row-echelon form when to the left of the vertical line, each entry on the diagonal is a 1 and all entries below the diagonal are zeros.\n\n[Figure: A 2 by 3 matrix is shown on the left. Its first row is 1, a, b. Its second row is 0, 1, c. An arrow points diagonally down and right, overlapping both the 1s in the matrix. A 3 by 4 matrix is shown on the right. Its first row is 1, a, b, d. Its second row is 0, 1, c, e. Its third row is 0, 0, 1, f. An arrow points diagonally down and right, overlapping all the 1s in the matrix. a, b, c, d, e, f are real numbers.]\n\nOnce we get the augmented matrix into row-echelon form, we can write the equivalent system of equations and read the value of at least one variable. We then substitute this value in another equation to continue to solve for the other variables. This process is illustrated in the next example.\n\nHow to Solve a System of Equations Using a Matrix\n\nSolve the system of equations using a matrix: \\(\\left\\{ \\begin{array} {l} 3x+4y=5 \\\\ x+2y=1 \\end{array} \\right. \\)\n\nAnswer\n\n[Figure: The equations are 3x plus 4y equals 5 and x plus 2y equals 1. Step 1. Write the augmented matrix for the system of equations. We get a 2 by 3 matrix with first row 3, 4, 5 and second row 1, 2, 1.]\n\n[Figure: Step 2. Using row operations get the entry in row 1, column 1 to be 1. Interchange rows R1 and R2.]\n\n[Figure: Step 3. Using row operations, get zeros in column 1 below the 1. Multiply row 1 by minus 3 and add it to row 2. Row 2 becomes 0, minus 2, 2.]\n\n[Figure: Step 4. Using row operations, get the entry in row 2, column 2 to be 1. Multiply row 2 by minus half. Row 2 becomes 0, 1, minus 1.]\n\n[Figure: Step 5. Continue the process until the matrix is in row-echelon form. The matrix is now in row-echelon form.]\n\n[Figure: Step 6. Write the corresponding system of equations. We get x plus 2y equals 1 and y equals minus 1.]\n\n[Figure: Step 7. Use substitution to find the remaining variables. Substitute y equals negative 1 into x plus 2y equals 1. X plus 2 times negative 1 equals 1. X minus 2 equals 1. We get x equal to 3.]\n\n[Figure: Step 8. Write the solution as an ordered pair or triple. Ordered pair is (3, negative 1).]\n\n[Figure: Step 9. Check that the solution makes the original equations true.]\n\nExample \\(\\PageIndex{14}\\)\n\nSolve the system of equations using a matrix: \\(\\left\\{ \\begin{array} {l} 2x+y=7 \\\\ x−2y=6 \\end{array} \\right. \\)\n\nAnswer\n\nThe solution is \\((4,−1)\\).\n\nExample \\(\\PageIndex{15}\\)\n\nSolve the system of equations using a matrix: \\(\\left\\{ \\begin{array} {l} 2x+y=−4 \\\\ x−y=−2 \\end{array} \\right. \\)\n\nAnswer\n\nThe solution is \\((−2,0)\\).\n\nThe steps are summarized here.\n\nSOLVE A SYSTEM OF EQUATIONS USING MATRICES.\n\n1. Write the augmented matrix for the system of equations.\n\n2. Using row operations get the entry in row 1, column 1 to be 1.\n\n3. Using row operations, get zeros in column 1 below the 1.\n\n4. Using row operations, get the entry in row 2, column 2 to be 1.\n\n5. Continue the process until the matrix is in row-echelon form.\n\n6. Write the corresponding system of equations.\n\n7. Use substitution to find the remaining variables.\n\n8. Write the solution as an ordered pair or triple.\n\n9. Check that the solution makes the original equations true.\n\nHere is a visual to show the order for getting the 1’s and 0’s in the proper position for row-echelon form.\n\n[Figure: The figure shows 3 steps for a 2 by 3 matrix and 6 steps for a 3 by 4 matrix. For the former, step 1 is to get a 1 in row 1 column 1. Step to is to get a 0 is row 2 column 1. Step 3 is to get a 1 in row 2 column 2. For a 3 by 4 matrix, step 1 is to get a 1 in row 1 column 1. Step 2 is to get a 0 in row 2 column 1. Step 3 is to get a 0 in row 3 column 1. Step 4 is to get a 1 in row 2 column 2. Step 5 is to get a 0 in row 3 column 2. Step 6 is to get a 1 in row 3 column 3.]\n\nWe use the same procedure when the system of equations has three equations.\n\nExample \\(\\PageIndex{16}\\)\n\nSolve the system of equations using a matrix: \\(\\left\\{ \\begin{array} {l} 3x+8y+2z=−5 \\\\ 2x+5y−3z=0 \\\\ x+2y−2z=−1 \\end{array} \\right. \\)\n\nAnswer\n\n[Figure: .]\n\n                Write the augmented matrix for the equations.\t\n\n[Figure: .]\n\n                Interchange row 1 and 3 to get the entry in\n\n                row 1, column 1 to be 1.\t\n\n[Figure: .]\n\n                Using row operations, get zeros in column 1 below the 1.\t\n\n[Figure: .]\n\n[Figure: .]\n\n                The entry in row 2, column 2 is now 1.\t\n\n                Continue the process until the matrix\n\n                is in row-echelon form.\t\n\n[Figure: .]\n\n[Figure: .]\n\n                The matrix is now in row-echelon form.\t\n\n[Figure: .]\n\n                Write the corresponding system of equations.\t\n\n[Figure: .]\n\n                Use substitution to find the remaining variables.\t\n\n[Figure: .]\n\n[Figure: .]\n\n[Figure: .]\n\n                Write the solution as an ordered pair or triple.\t\n\n[Figure: .]\n\n                Check that the solution makes the original equations true.\t\n                We leave the check for you.\t\n\nExample \\(\\PageIndex{17}\\)\n\nSolve the system of equations using a matrix: \\(\\left\\{ \\begin{array} {l} 2x−5y+3z=8 \\\\ 3x−y+4z=7 \\\\ x+3y+2z=−3 \\end{array} \\right. \\)\n\nAnswer\n\n\\((6,−1,−3)\\)\n\nExample \\(\\PageIndex{18}\\)\n\nSolve the system of equations using a matrix: \\(\\left\\{ \\begin{array} {l} −3x+y+z=−4 \\\\ −x+2y−2z=1 \\\\ 2x−y−z=−1 \\end{array} \\right. \\)\n\nAnswer\n\n\\((5,7,4)\\)\n\nSo far our work with matrices has only been with systems that are consistent and independent, which means they have exactly one solution. Let’s now look at what happens when we use a matrix for a dependent or inconsistent system.\n\nExample \\(\\PageIndex{19}\\)\n\nSolve the system of equations using a matrix: \\(\\left\\{ \\begin{array} {l} x+y+3z=0 \\\\ x+3y+5z=0 \\\\ 2x+4z=1 \\end{array} \\right. \\)\n\nAnswer\n\n[Figure: .]\n\n                Write the augmented matrix for the equations.\t\n\n[Figure: .]\n\n                The entry in row 1, column 1 is 1.\t\n\n                Using row operations, get zeros in column 1 below the 1.\t\n\n[Figure: .]\n\n[Figure: .]\n\n                Continue the process until the matrix is in row-echelon form.\t\n\n[Figure: .]\n\n                Multiply row 2 by 2 and add it to row 3.\t\n\n[Figure: .]\n\n                At this point, we have all zeros on the left of row 3.\t\n\n                Write the corresponding system of equations.\t\n\n[Figure: .]\n\n                Since \\(0 \\neq 1 \\) we have a false statement. Just as when we solved a system using other methods, this tells us we have an inconsistent system. There is no solution.\t\n\nExample \\(\\PageIndex{20}\\)\n\nSolve the system of equations using a matrix: \\(\\left\\{ \\begin{array} {l} x−2y+2z=1 \\\\ −2x+y−z=2 \\\\ x−y+z=5 \\end{array} \\right. \\)\n\nAnswer\n\nno solution\n\nExample \\(\\PageIndex{21}\\)\n\nSolve the system of equations using a matrix: \\(\\left\\{ \\begin{array} {l} 3x+4y−3z=−2 \\\\ −2x+3y−z=−1 \\\\ 2x+y−2z=6 \\end{array} \\right. \\)\n\nAnswer\n\nno solution\n\nThe last system was inconsistent and so had no solutions. The next example is dependent and has infinitely many solutions.\n\nExample \\(\\PageIndex{22}\\)\n\nSolve the system of equations using a matrix: \\(\\left\\{ \\begin{array} {l} x−2y+3z=1 \\\\ x+y−3z=7 \\\\ 3x−4y+5z=7 \\end{array} \\right. \\)\n\nAnswer\n\n[Figure: .]\n\n                Write the augmented matrix for the equations.\t\n\n[Figure: .]\n\n                The entry in row 1, column 1 is 1.\t\n\n                Using row operations, get zeros in column 1 below the 1.\t\n\n[Figure: .]\n\n[Figure: .]\n\n                Continue the process until the matrix is in row-echelon form.\t\n\n[Figure: .]\n\n                Multiply row 2 by \\(−2\\) and add it to row 3.\t\n\n[Figure: .]\n\n                At this point, we have all zeros in the bottom row.\t\n\n                Write the corresponding system of equations.\t\n\n[Figure: .]\n\n                Since \\(0=0\\) we have a true statement. Just as when we solved by substitution, this tells us we have a dependent system. There are infinitely many solutions.\t\n\n                Solve for y in terms of z in the second equation.\t\n\n[Figure: .]\n\n                Solve the first equation for x in terms of z.\t\n\n[Figure: .]\n\n                Substitute \\(y=2z+2\\).\t\n\n[Figure: .]\n\n                Simplify.\t\n\n[Figure: .]\n\n                Simplify.\t\n\n[Figure: .]\n\n                Simplify.\t\n\n[Figure: .]\n\n                The system has infinitely many solutions \\((x,y,z)\\), where \\(x=z+5;\\space y=2z+2;\\space z\\) is any real number.\t\n\nExample \\(\\PageIndex{23}\\)\n\nSolve the system of equations using a matrix: \\(\\left\\{ \\begin{array} {l} x+y−z=0 \\\\ 2x+4y−2z=6 \\\\ 3x+6y−3z=9 \\end{array} \\right. \\)\n\nAnswer\n\ninfinitely many solutions \\((x,y,z)\\), where \\(x=z−3;\\space y=3;\\space z\\) is any real number.\n\nExample \\(\\PageIndex{24}\\)\n\nSolve the system of equations using a matrix: \\(\\left\\{ \\begin{array} {l} x−y−z=1 \\\\ −x+2y−3z=−4 \\\\ 3x−2y−7z=0 \\end{array} \\right. \\)\n\nAnswer\n\ninfinitely many solutions \\((x,y,z)\\), where \\(x=5z−2;\\space y=4z−3;\\space z\\) is any real number.\n\nAccess this online resource for additional instruction and practice with Gaussian Elimination.\n\nGaussian Elimination\n\nKey Concepts\n\nMatrix: A matrix is a rectangular array of numbers arranged in rows and columns. A matrix with m rows and n columns has order \\(m\\times n\\). The matrix on the left below has 2 rows and 3 columns and so it has order \\(2\\times 3\\). We say it is a 2 by 3 matrix.\n\n[Figure: Figure shows two matrices. The one on the left has the numbers minus 3, minus 2 and 2 in the first row and the numbers minus 1, 4 and 5 in the second row. The rows and columns are enclosed within brackets. Thus, it has 2 rows and 3 columns. It is labeled 2 cross 3 or 2 by 3 matrix. The matrix on the right is similar but with 3 rows and 4 columns. It is labeled 3 by 4 matrix.]\n\n    Each number in the matrix is called an element or entry in the matrix.\n\nRow Operations: In a matrix, the following operations can be performed on any row and the resulting matrix will be equivalent to the original matrix.\n\nInterchange any two rows\n\nMultiply a row by any real number except 0\n\nAdd a nonzero multiple of one row to another row\n\nRow-Echelon Form: For a consistent and independent system of equations, its augmented matrix is in row-echelon form when to the left of the vertical line, each entry on the diagonal is a 1 and all entries below the diagonal are zeros.\n\n[Figure: Figure shows two matrices. The one on the left has the numbers minus 3, minus 2 and 2 in the first row and the numbers minus 1, 4 and 5 in the second row. The rows and columns are enclosed within brackets. Thus, it has 2 rows and 3 columns. It is labeled 2 cross 3 or 2 by 3 matrix. The matrix on the right is similar but with 3 rows and 4 columns. It is labeled 3 by 4 matrix.]\n\nHow to solve a system of equations using matrices.\n\n1. Write the augmented matrix for the system of equations.\n\n2. Using row operations get the entry in row 1, column 1 to be 1.\n\n3. Using row operations, get zeros in column 1 below the 1.\n\n4. Using row operations, get the entry in row 2, column 2 to be 1.\n\n5. Continue the process until the matrix is in row-echelon form.\n\n6. Write the corresponding system of equations.\n\n7. Use substitution to find the remaining variables.\n\n8. Write the solution as an ordered pair or triple.\n\n9. Check that the solution makes the original equations true.\n\nGlossary\n\nmatrix\n\nA matrix is a rectangular array of numbers arranged in rows and columns.\n\nrow-echelon form\n\nA matrix is in row-echelon form when to the left of the vertical line, each entry on the diagonal is a 1 and all entries below the diagonal are zeros.\n\nThis page titled 4.6: Solve Systems of Equations Using Matrices was last modified on Fri, 04 Oct 2024 16:58:02 GMT and is shared under a CC BY  4.0  license and was authored, remixed, and/or curated by OpenStax via source content that was edited to the style and standards of the LibreTexts platform.",
+  "figures": [
+    {
+      "url": "https://math.libretexts.org/@api/deki/files/19714/CNX_IntAlg_Figure_04_05_001_img_new.jpg?revision=1",
+      "alt": "Figure shows two matrices. The one on the left has the numbers minus 3, minus 2 and 2 in the first row and the numbers minus 1, 4 and 5 in the second row. The rows and columns are enclosed within brackets. Thus, it has 2 rows and 3 columns. It is labeled 2 cross 3 or 2 by 3 matrix. The matrix on the right is similar but with 3 rows and 4 columns. It is labeled 3 by 4 matrix.",
+      "credit": ""
+    },
+    {
+      "url": "https://math.libretexts.org/@api/deki/files/19729/CNX_IntAlg_Figure_04_05_002_img_Errata.jpg?revision=1",
+      "alt": "The equations are 3x plus y equals minus 3 and 2x plus 3y equals 6. A 2 by 3 matrix is shown. The first row is 3, 1, minus 3. The second row is 2, 3, 6. The first column is labeled coefficients of x. The second column is labeled coefficients of y and the third is labeled constants.",
+      "credit": ""
+    },
+    {
+      "url": "https://math.libretexts.org/@api/deki/files/19730/CNX_IntAlg_Figure_04_05_003_img_new.jpg?revision=1",
+      "alt": "The equations are 3x plus y equals minus 3 and 2x plus 3y equals 6. A 2 by 3 matrix is shown. The first row is 3, 1, minus 3. The second row is 2, 3, 6. The first column is labeled coefficients of x. The second column is labeled coefficients of y and the third is labeled constants.",
+      "credit": ""
+    },
+    {
+      "url": "https://math.libretexts.org/@api/deki/files/19734/CNX_IntAlg_Figure_04_05_004_img_new.jpg?revision=1",
+      "alt": "The equations are 6x minus 5y plus 2z equals 3, 2x plus y minus 4z equals 5 and 3x minus 3y plus z equals minus 1. A 4 by 3 matrix is shown whose first row is 6, minus 5, 2, 3. Its second row is 2, 1, minus 4, 5. Its third row is 3, minus 3, 1 and minus 1. Its first three columns are labeled x, y and z respectively.",
+      "credit": ""
+    },
+    {
+      "url": "https://math.libretexts.org/@api/deki/files/19711/CNX_IntAlg_Figure_04_05_005_img_new.jpg?revision=1",
+      "alt": "A 3 by 4 matrix is shown. Its first row is 4, minus 3, 3, minus 1. Its second row is 1, 2, minus 1, 2. Its third row is minus 2, minus 1, 3, minus 4. The three equations are 4x minus 3y plus 3z equals minus 1, x plus 2y minus z equals 2 and minus 2x minus y plus 3z equals minus 4.",
+      "credit": ""
+    },
+    {
+      "url": "https://math.libretexts.org/@api/deki/files/19712/CNX_IntAlg_Figure_04_05_006_img_new.jpg?revision=1",
+      "alt": "A 2 by 3 matrix is shown. Its first row, labeled R2 is 2, minus 1, 2. Its second row, labeled R1 is 5, minus 3, minus 1.",
+      "credit": ""
+    },
+    {
+      "url": "https://math.libretexts.org/@api/deki/files/19694/CNX_IntAlg_Figure_04_05_007_img_new.jpg?revision=1",
+      "alt": "A 2 by 3 matrix is shown. Its first row is 5, minus 3, minus 1. Its second row is 2, minus 1, 2. An arrow point from this matrix to another one on the right. The first row of the new matrix is the same. The second row is preceded by minus 3 R2. It is minus 6, 3, minus 6.",
+      "credit": ""
+    },
+    {
+      "url": "https://math.libretexts.org/@api/deki/files/19698/CNX_IntAlg_Figure_04_05_008_img_new.jpg?revision=1",
+      "alt": "A 2 by 3 matrix is shown. Its first row is 5, minus 3, minus 1. Its second row is 2, minus 1, 2. An arrow point from this matrix to another one on the right. The first row of the new matrix is preceded by minus 3 R2 plus R1. It is minus 1, 0, minus 7. The second row is 2, minus 1, 2.",
+      "credit": ""
+    },
+    {
+      "url": "https://math.libretexts.org/@api/deki/files/19710/CNX_IntAlg_Figure_04_05_009_img_new.jpg?revision=1",
+      "alt": "Two 3 by 4 matrices are shown. In the one on the left, the first row is 6, minus 5, 2, 3. The second row is 2, 1, minus 4, 5. The third row is 3, minus 3, 1, minus 1. The second matrix is similar except that rows 2 and 3 are interchanged.",
+      "credit": ""
+    },
+    {
+      "url": "https://math.libretexts.org/@api/deki/files/19728/CNX_IntAlg_Figure_04_05_010_img_new.jpg?revision=1",
+      "alt": "Two 3 by 4 matrices are shown. In the one on the left, the first row is 6, minus 5, 2, 3. The second row is 2, 1, minus 4, 5. The third row is 3, minus 3, 1, minus 1. The second matrix is similar to the first except that row 2, preceded by 5 R2, is 10, 5, minus 20, 25.",
+      "credit": ""
+    },
+    {
+      "url": "https://math.libretexts.org/@api/deki/files/19761/CNX_IntAlg_Figure_04_05_011_img_new.jpg?revision=1",
+      "alt": "In the 3 by 4 matrix, the first row is 6, minus 5, 2, 3. The second row is 2, 1, minus 4, 5. The third row is 3, minus 3, 1, minus 1. Performing the operation minus 2 R3 plus R1 on the first row, the first row becomes 6 plus minus 2 times 3, minus 5 plus minus 2 times minus 3, 2 plus minus 2 times 1 and 3 plus minus 2 times minus 1. This becomes 0, 1, 0, 5. The remaining 2 rows of the new matrix are the same.",
+      "credit": ""
+    },
+    {
+      "url": "https://math.libretexts.org/@api/deki/files/19771/CNX_IntAlg_Figure_04_05_012_img_new.jpg?revision=1",
+      "alt": "The two equations are x minus y equals 2 and 4x minus 8y equals 0. Multiplying the first by minus 4, we get minus 4x plus 4y equals minus 8. Adding this to the second equation we get minus 4y equals minus 8.",
+      "credit": ""
+    },
+    {
+      "url": "https://math.libretexts.org/@api/deki/files/19799/CNX_IntAlg_Figure_04_05_013_img_new.jpg?revision=1",
+      "alt": "The 2 by 3 matrix is 1, minus 1, 2 and 4, minus 8, 0. Performing the operation minus 4R1 plus R2 on row 2, the second row of the new matrix becomes 0, minus 4, minus 8. The first row remains the same.",
+      "credit": ""
+    },
+    {
+      "url": "https://math.libretexts.org/@api/deki/files/19758/CNX_IntAlg_Figure_04_05_014_img_new.jpg?revision=1",
+      "alt": "A 2 by 3 matrix is shown on the left. Its first row is 1, a, b. Its second row is 0, 1, c. An arrow points diagonally down and right, overlapping both the 1s in the matrix. A 3 by 4 matrix is shown on the right. Its first row is 1, a, b, d. Its second row is 0, 1, c, e. Its third row is 0, 0, 1, f. An arrow points diagonally down and right, overlapping all the 1s in the matrix. a, b, c, d, e, f are real numbers.",
+      "credit": ""
+    },
+    {
+      "url": "https://math.libretexts.org/@api/deki/files/19843/CNX_IntAlg_Figure_04_05_015a_img_new.jpg?revision=1",
+      "alt": "The equations are 3x plus 4y equals 5 and x plus 2y equals 1. Step 1. Write the augmented matrix for the system of equations. We get a 2 by 3 matrix with first row 3, 4, 5 and second row 1, 2, 1.",
+      "credit": ""
+    },
+    {
+      "url": "https://math.libretexts.org/@api/deki/files/19773/CNX_IntAlg_Figure_04_05_015b_img_new.jpg?revision=1",
+      "alt": "Step 2. Using row operations get the entry in row 1, column 1 to be 1. Interchange rows R1 and R2.",
+      "credit": ""
+    },
+    {
+      "url": "https://math.libretexts.org/@api/deki/files/19832/CNX_IntAlg_Figure_04_05_015c_img_new.jpg?revision=1",
+      "alt": "Step 3. Using row operations, get zeros in column 1 below the 1. Multiply row 1 by minus 3 and add it to row 2. Row 2 becomes 0, minus 2, 2.",
+      "credit": ""
+    },
+    {
+      "url": "https://math.libretexts.org/@api/deki/files/19778/CNX_IntAlg_Figure_04_05_015d_img_new.jpg?revision=1",
+      "alt": "Step 4. Using row operations, get the entry in row 2, column 2 to be 1. Multiply row 2 by minus half. Row 2 becomes 0, 1, minus 1.",
+      "credit": ""
+    },
+    {
+      "url": "https://math.libretexts.org/@api/deki/files/19886/CNX_IntAlg_Figure_04_05_015e_img_new.jpg?revision=1",
+      "alt": "Step 5. Continue the process until the matrix is in row-echelon form. The matrix is now in row-echelon form.",
+      "credit": ""
+    },
+    {
+      "url": "https://math.libretexts.org/@api/deki/files/19930/CNX_IntAlg_Figure_04_05_015f_img_new.jpg?revision=1",
+      "alt": "Step 6. Write the corresponding system of equations. We get x plus 2y equals 1 and y equals minus 1.",
+      "credit": ""
+    },
+    {
+      "url": "https://math.libretexts.org/@api/deki/files/19984/CNX_IntAlg_Figure_04_05_015g_img_new.jpg?revision=1",
+      "alt": "Step 7. Use substitution to find the remaining variables. Substitute y equals negative 1 into x plus 2y equals 1. X plus 2 times negative 1 equals 1. X minus 2 equals 1. We get x equal to 3.",
+      "credit": ""
+    },
+    {
+      "url": "https://math.libretexts.org/@api/deki/files/20037/CNX_IntAlg_Figure_04_05_015h_img_new.jpg?revision=1",
+      "alt": "Step 8. Write the solution as an ordered pair or triple. Ordered pair is (3, negative 1).",
+      "credit": ""
+    },
+    {
+      "url": "https://math.libretexts.org/@api/deki/files/20131/CNX_IntAlg_Figure_04_05_015i_img_new.jpg?revision=1",
+      "alt": "Step 9. Check that the solution makes the original equations true.",
+      "credit": ""
+    },
+    {
+      "url": "https://math.libretexts.org/@api/deki/files/20172/CNX_IntAlg_Figure_04_05_016_img_new.jpg?revision=1",
+      "alt": "The figure shows 3 steps for a 2 by 3 matrix and 6 steps for a 3 by 4 matrix. For the former, step 1 is to get a 1 in row 1 column 1. Step to is to get a 0 is row 2 column 1. Step 3 is to get a 1 in row 2 column 2. For a 3 by 4 matrix, step 1 is to get a 1 in row 1 column 1. Step 2 is to get a 0 in row 2 column 1. Step 3 is to get a 0 in row 3 column 1. Step 4 is to get a 1 in row 2 column 2. Step 5 is to get a 0 in row 3 column 2. Step 6 is to get a 1 in row 3 column 3.",
+      "credit": ""
+    },
+    {
+      "url": "https://math.libretexts.org/@api/deki/files/19947/CNX_IntAlg_Figure_04_05_017a_img.jpg?revision=1",
+      "alt": ".",
+      "credit": ""
+    },
+    {
+      "url": "https://math.libretexts.org/@api/deki/files/20059/CNX_IntAlg_Figure_04_05_017b_img.jpg?revision=1",
+      "alt": ".",
+      "credit": ""
+    },
+    {
+      "url": "https://math.libretexts.org/@api/deki/files/19956/CNX_IntAlg_Figure_04_05_017c_img.jpg?revision=1",
+      "alt": ".",
+      "credit": ""
+    },
+    {
+      "url": "https://math.libretexts.org/@api/deki/files/20060/CNX_IntAlg_Figure_04_05_017d_img.jpg?revision=1",
+      "alt": ".",
+      "credit": ""
+    },
+    {
+      "url": "https://math.libretexts.org/@api/deki/files/20074/CNX_IntAlg_Figure_04_05_017e_img.jpg?revision=1",
+      "alt": ".",
+      "credit": ""
+    },
+    {
+      "url": "https://math.libretexts.org/@api/deki/files/20277/CNX_IntAlg_Figure_04_05_017f_img.jpg?revision=1",
+      "alt": ".",
+      "credit": ""
+    },
+    {
+      "url": "https://math.libretexts.org/@api/deki/files/20101/CNX_IntAlg_Figure_04_05_017g_img.jpg?revision=1",
+      "alt": ".",
+      "credit": ""
+    },
+    {
+      "url": "https://math.libretexts.org/@api/deki/files/20411/CNX_IntAlg_Figure_04_05_017h_img.jpg?revision=1",
+      "alt": ".",
+      "credit": ""
+    },
+    {
+      "url": "https://math.libretexts.org/@api/deki/files/20414/CNX_IntAlg_Figure_04_05_017i_img.jpg?revision=1",
+      "alt": ".",
+      "credit": ""
+    },
+    {
+      "url": "https://math.libretexts.org/@api/deki/files/20113/CNX_IntAlg_Figure_04_05_017k_img.jpg?revision=1",
+      "alt": ".",
+      "credit": ""
+    },
+    {
+      "url": "https://math.libretexts.org/@api/deki/files/20137/CNX_IntAlg_Figure_04_05_017l_img.jpg?revision=1",
+      "alt": ".",
+      "credit": ""
+    },
+    {
+      "url": "https://math.libretexts.org/@api/deki/files/20180/CNX_IntAlg_Figure_04_05_017m_img.jpg?revision=1",
+      "alt": ".",
+      "credit": ""
+    },
+    {
+      "url": "https://math.libretexts.org/@api/deki/files/20185/CNX_IntAlg_Figure_04_05_017n_img.jpg?revision=1",
+      "alt": ".",
+      "credit": ""
+    },
+    {
+      "url": "https://math.libretexts.org/@api/deki/files/20181/CNX_IntAlg_Figure_04_05_018a_img.jpg?revision=1",
+      "alt": ".",
+      "credit": ""
+    },
+    {
+      "url": "https://math.libretexts.org/@api/deki/files/20161/CNX_IntAlg_Figure_04_05_018b_img.jpg?revision=1",
+      "alt": ".",
+      "credit": ""
+    },
+    {
+      "url": "https://math.libretexts.org/@api/deki/files/20178/CNX_IntAlg_Figure_04_05_018c_img.jpg?revision=1",
+      "alt": ".",
+      "credit": ""
+    },
+    {
+      "url": "https://math.libretexts.org/@api/deki/files/20260/CNX_IntAlg_Figure_04_05_018d_img.jpg?revision=1",
+      "alt": ".",
+      "credit": ""
+    },
+    {
+      "url": "https://math.libretexts.org/@api/deki/files/20206/CNX_IntAlg_Figure_04_05_018e_img.jpg?revision=1",
+      "alt": ".",
+      "credit": ""
+    },
+    {
+      "url": "https://math.libretexts.org/@api/deki/files/20319/CNX_IntAlg_Figure_04_05_018f_img.jpg?revision=1",
+      "alt": ".",
+      "credit": ""
+    },
+    {
+      "url": "https://math.libretexts.org/@api/deki/files/20297/CNX_IntAlg_Figure_04_05_018g_img.jpg?revision=1",
+      "alt": ".",
+      "credit": ""
+    },
+    {
+      "url": "https://math.libretexts.org/@api/deki/files/20215/CNX_IntAlg_Figure_04_05_019a_img.jpg?revision=1",
+      "alt": ".",
+      "credit": ""
+    },
+    {
+      "url": "https://math.libretexts.org/@api/deki/files/20299/CNX_IntAlg_Figure_04_05_019b_img.jpg?revision=1",
+      "alt": ".",
+      "credit": ""
+    },
+    {
+      "url": "https://math.libretexts.org/@api/deki/files/20350/CNX_IntAlg_Figure_04_05_019c_img.jpg?revision=1",
+      "alt": ".",
+      "credit": ""
+    },
+    {
+      "url": "https://math.libretexts.org/@api/deki/files/20365/CNX_IntAlg_Figure_04_05_019d_img.jpg?revision=1",
+      "alt": ".",
+      "credit": ""
+    },
+    {
+      "url": "https://math.libretexts.org/@api/deki/files/20387/CNX_IntAlg_Figure_04_05_019e_img.jpg?revision=1",
+      "alt": ".",
+      "credit": ""
+    },
+    {
+      "url": "https://math.libretexts.org/@api/deki/files/20382/CNX_IntAlg_Figure_04_05_019f_img.jpg?revision=1",
+      "alt": ".",
+      "credit": ""
+    },
+    {
+      "url": "https://math.libretexts.org/@api/deki/files/20497/CNX_IntAlg_Figure_04_05_019g_img.jpg?revision=1",
+      "alt": ".",
+      "credit": ""
+    },
+    {
+      "url": "https://math.libretexts.org/@api/deki/files/35871/CNX_IntAlg_Figure_04_05_019h_img.jpg?revision=1",
+      "alt": ".",
+      "credit": ""
+    },
+    {
+      "url": "https://math.libretexts.org/@api/deki/files/20333/CNX_IntAlg_Figure_04_05_019i_img.jpg?revision=1",
+      "alt": ".",
+      "credit": ""
+    },
+    {
+      "url": "https://math.libretexts.org/@api/deki/files/20423/CNX_IntAlg_Figure_04_05_019j_img.jpg?revision=1",
+      "alt": ".",
+      "credit": ""
+    },
+    {
+      "url": "https://math.libretexts.org/@api/deki/files/20351/CNX_IntAlg_Figure_04_05_019k_img.jpg?revision=1",
+      "alt": ".",
+      "credit": ""
+    },
+    {
+      "url": "https://math.libretexts.org/@api/deki/files/20375/CNX_IntAlg_Figure_04_05_019l_img.jpg?revision=1",
+      "alt": ".",
+      "credit": ""
+    },
+    {
+      "url": "https://math.libretexts.org/@api/deki/files/20376/CNX_IntAlg_Figure_04_05_019m_img.jpg?revision=1",
+      "alt": ".",
+      "credit": ""
+    },
+    {
+      "url": "https://math.libretexts.org/@api/deki/files/20403/CNX_IntAlg_Figure_04_05_020_img_new.jpg?revision=1",
+      "alt": "Figure shows two matrices. The one on the left has the numbers minus 3, minus 2 and 2 in the first row and the numbers minus 1, 4 and 5 in the second row. The rows and columns are enclosed within brackets. Thus, it has 2 rows and 3 columns. It is labeled 2 cross 3 or 2 by 3 matrix. The matrix on the right is similar but with 3 rows and 4 columns. It is labeled 3 by 4 matrix.",
+      "credit": ""
+    },
+    {
+      "url": "https://math.libretexts.org/@api/deki/files/20399/CNX_IntAlg_Figure_04_05_021_img_new.jpg?revision=1",
+      "alt": "Figure shows two matrices. The one on the left has the numbers minus 3, minus 2 and 2 in the first row and the numbers minus 1, 4 and 5 in the second row. The rows and columns are enclosed within brackets. Thus, it has 2 rows and 3 columns. It is labeled 2 cross 3 or 2 by 3 matrix. The matrix on the right is similar but with 3 rows and 4 columns. It is labeled 3 by 4 matrix.",
+      "credit": ""
+    }
+  ],
+  "references": [
+    {
+      "text": "[link]",
+      "url": "https://math.libretexts.org/Bookshelves/Algebra/Intermediate_Algebra_1e_(OpenStax)/02%3A_Solving_Linear_Equations/2.02%3A_Use_a_General_Strategy_to_Solve_Linear_Equations#eg5"
+    },
+    {
+      "text": "[link]",
+      "url": "https://math.libretexts.org/Bookshelves/Algebra/Intermediate_Algebra_1e_(OpenStax)/02%3A_Solving_Linear_Equations/2.02%3A_Use_a_General_Strategy_to_Solve_Linear_Equations#eg35"
+    },
+    {
+      "text": "[link]",
+      "url": "https://math.libretexts.org/Bookshelves/Algebra/Intermediate_Algebra_1e_(OpenStax)/01%3A_Foundations/1.03%3A_Integers#mult"
+    },
+    {
+      "text": "4.6: Solve Systems of Equations Using Matrices",
+      "url": "https://math.libretexts.org/Bookshelves/Algebra/Intermediate_Algebra_1e_(OpenStax)/04%3A_Systems_of_Linear_Equations/4.06%3A_Solve_Systems_of_Equations_Using_Matrices"
+    },
+    {
+      "text": "CC BY  4.0",
+      "url": "https://creativecommons.org/licenses/by/4.0"
+    },
+    {
+      "text": "OpenStax",
+      "url": "https://openstax.org/"
+    },
+    {
+      "text": "source content",
+      "url": "https://openstax.org/details/books/intermediate-algebra-2e"
+    }
+  ],
+  "exercises": [
+    {
+      "ordinal": 1,
+      "sourceNumber": "1",
+      "sourceAnchor": "",
+      "kind": "exercise-candidate",
+      "context": "By the end of this section, you will be able to:\n\nBefore you get started, take this readiness quiz.",
+      "original": "1. Solve: \\(3(x+2)+4=4(2x−1)+9\\).\n\n    If you missed this problem, review [link].",
+      "prompt": "1. Solve: \\(3(x+2)+4=4(2x−1)+9\\).\n\n    If you missed this problem, review [link].",
+      "sourceAnswers": [],
+      "hasFigure": false,
+      "status": "draft",
+      "answerVerified": false,
+      "translationStatus": "pending",
+      "mappingStatus": "pending"
+    },
+    {
+      "ordinal": 2,
+      "sourceNumber": "2",
+      "sourceAnchor": "",
+      "kind": "exercise-candidate",
+      "context": "By the end of this section, you will be able to:\n\nBefore you get started, take this readiness quiz.",
+      "original": "2. Solve: \\(0.25p+0.25(x+4)=5.20\\).\n\n    If you missed this problem, review [link].",
+      "prompt": "2. Solve: \\(0.25p+0.25(x+4)=5.20\\).\n\n    If you missed this problem, review [link].",
+      "sourceAnswers": [],
+      "hasFigure": false,
+      "status": "draft",
+      "answerVerified": false,
+      "translationStatus": "pending",
+      "mappingStatus": "pending"
+    },
+    {
+      "ordinal": 3,
+      "sourceNumber": "3",
+      "sourceAnchor": "",
+      "kind": "exercise-candidate",
+      "context": "By the end of this section, you will be able to:\n\nBefore you get started, take this readiness quiz.",
+      "original": "3. Evaluate when \\(x=−2\\) and \\(y=3:2x^2−xy+3y^2\\).\n\n    If you missed this problem, review [link].",
+      "prompt": "3. Evaluate when \\(x=−2\\) and \\(y=3:2x^2−xy+3y^2\\).\n\n    If you missed this problem, review [link].",
+      "sourceAnswers": [],
+      "hasFigure": false,
+      "status": "draft",
+      "answerVerified": false,
+      "translationStatus": "pending",
+      "mappingStatus": "pending"
+    },
+    {
+      "ordinal": 4,
+      "sourceNumber": "",
+      "sourceAnchor": "",
+      "kind": "exercise-candidate",
+      "context": "We will use a matrix to represent a system of linear equations. We write each equation in standard form and the coefficients of the variables and the constant of each equation becomes a row in the matrix. Each column then would be the coefficients of one of the variables in the system or the constants. A vertical line replaces the equal signs. We call the resulting matrix the augmented matrix for the system of equations.\n\n[Figure: The equations are 3x plus y equals minus 3 and 2x plus 3y equals 6. A 2 by 3 matrix is shown. The first row is 3, 1, minus 3. The second row is 2, 3, 6. The first column is labeled coefficients of x. The second column is labeled coefficients of y and the third is labeled constants.]\n\nNotice the first column is made up of all the coefficients of x, the second column is the all the coefficients of y, and the third column is all the constants.",
+      "original": "Example \\(\\PageIndex{1}\\)\n\nⓐ \\(\\left\\{ \\begin{array} {l} 5x−3y=−1 \\\\ y=2x−2 \\end{array} \\right. \\) ⓑ \\( \\left\\{ \\begin{array} {l} 6x−5y+2z=3 \\\\ 2x+y−4z=5 \\\\ 3x−3y+z=−1 \\end{array} \\right. \\)\n\nAnswer\n\nⓐ The second equation is not in standard form. We rewrite the second equation in standard form.\n\n\\[\\begin{aligned} y=2x−2 \\\\ −2x+y=−2 \\end{aligned} \\nonumber\\]\n\nWe replace the second equation with its standard form. In the augmented matrix, the first equation gives us the first row and the second equation gives us the second row. The vertical line replaces the equal signs.\n\n[Figure: The equations are 3x plus y equals minus 3 and 2x plus 3y equals 6. A 2 by 3 matrix is shown. The first row is 3, 1, minus 3. The second row is 2, 3, 6. The first column is labeled coefficients of x. The second column is labeled coefficients of y and the third is labeled constants.]\n\nⓑ All three equations are in standard form. In the augmented matrix the first equation gives us the first row, the second equation gives us the second row, and the third equation gives us the third row. The vertical line replaces the equal signs.\n\n[Figure: The equations are 6x minus 5y plus 2z equals 3, 2x plus y minus 4z equals 5 and 3x minus 3y plus z equals minus 1. A 4 by 3 matrix is shown whose first row is 6, minus 5, 2, 3. Its second row is 2, 1, minus 4, 5. Its third row is 3, minus 3, 1 and minus 1. Its first three columns are labeled x, y and z respectively.]",
+      "prompt": "Example \\(\\PageIndex{1}\\)\n\nⓐ \\(\\left\\{ \\begin{array} {l} 5x−3y=−1 \\\\ y=2x−2 \\end{array} \\right. \\) ⓑ \\( \\left\\{ \\begin{array} {l} 6x−5y+2z=3 \\\\ 2x+y−4z=5 \\\\ 3x−3y+z=−1 \\end{array} \\right. \\)",
+      "sourceAnswers": [
+        "ⓐ The second equation is not in standard form. We rewrite the second equation in standard form.\n\n\\[\\begin{aligned} y=2x−2 \\\\ −2x+y=−2 \\end{aligned} \\nonumber\\]\n\nWe replace the second equation with its standard form. In the augmented matrix, the first equation gives us the first row and the second equation gives us the second row. The vertical line replaces the equal signs.\n\n[Figure: The equations are 3x plus y equals minus 3 and 2x plus 3y equals 6. A 2 by 3 matrix is shown. The first row is 3, 1, minus 3. The second row is 2, 3, 6. The first column is labeled coefficients of x. The second column is labeled coefficients of y and the third is labeled constants.]\n\nⓑ All three equations are in standard form. In the augmented matrix the first equation gives us the first row, the second equation gives us the second row, and the third equation gives us the third row. The vertical line replaces the equal signs.\n\n[Figure: The equations are 6x minus 5y plus 2z equals 3, 2x plus y minus 4z equals 5 and 3x minus 3y plus z equals minus 1. A 4 by 3 matrix is shown whose first row is 6, minus 5, 2, 3. Its second row is 2, 1, minus 4, 5. Its third row is 3, minus 3, 1 and minus 1. Its first three columns are labeled x, y and z respectively.]"
+      ],
+      "hasFigure": true,
+      "status": "draft",
+      "answerVerified": false,
+      "translationStatus": "pending",
+      "mappingStatus": "pending"
+    },
+    {
+      "ordinal": 5,
+      "sourceNumber": "",
+      "sourceAnchor": "",
+      "kind": "exercise-candidate",
+      "context": "We will use a matrix to represent a system of linear equations. We write each equation in standard form and the coefficients of the variables and the constant of each equation becomes a row in the matrix. Each column then would be the coefficients of one of the variables in the system or the constants. A vertical line replaces the equal signs. We call the resulting matrix the augmented matrix for the system of equations.\n\n[Figure: The equations are 3x plus y equals minus 3 and 2x plus 3y equals 6. A 2 by 3 matrix is shown. The first row is 3, 1, minus 3. The second row is 2, 3, 6. The first column is labeled coefficients of x. The second column is labeled coefficients of y and the third is labeled constants.]\n\nNotice the first column is made up of all the coefficients of x, the second column is the all the coefficients of y, and the third column is all the constants.",
+      "original": "Example \\(\\PageIndex{2}\\)\n\nWrite each system of linear equations as an augmented matrix:\n\nⓐ \\(\\left\\{ \\begin{array} {l} 3x+8y=−3 \\\\ 2x=−5y−3 \\end{array} \\right. \\) ⓑ \\(\\left\\{ \\begin{array} {l} 2x−5y+3z=8 \\\\ 3x−y+4z=7 \\\\ x+3y+2z=−3 \\end{array} \\right. \\)\n\nAnswer\n\nⓐ \\(\\left[ \\begin{array} {cc|c} 3 &8 &-3 \\\\ 2 &5 &−3 \\end{array} \\right] \\)\n\nⓑ \\(\\left[ \\begin{array} {ccc|c} 2 &5 &-3 &8 \\\\ 3 &-1 &4 &7 \\\\ 1 &3 &2 &−3 \\end{array} \\right] \\)",
+      "prompt": "Example \\(\\PageIndex{2}\\)\n\nWrite each system of linear equations as an augmented matrix:\n\nⓐ \\(\\left\\{ \\begin{array} {l} 3x+8y=−3 \\\\ 2x=−5y−3 \\end{array} \\right. \\) ⓑ \\(\\left\\{ \\begin{array} {l} 2x−5y+3z=8 \\\\ 3x−y+4z=7 \\\\ x+3y+2z=−3 \\end{array} \\right. \\)",
+      "sourceAnswers": [
+        "ⓐ \\(\\left[ \\begin{array} {cc|c} 3 &8 &-3 \\\\ 2 &5 &−3 \\end{array} \\right] \\)\n\nⓑ \\(\\left[ \\begin{array} {ccc|c} 2 &5 &-3 &8 \\\\ 3 &-1 &4 &7 \\\\ 1 &3 &2 &−3 \\end{array} \\right] \\)"
+      ],
+      "hasFigure": false,
+      "status": "draft",
+      "answerVerified": false,
+      "translationStatus": "pending",
+      "mappingStatus": "pending"
+    },
+    {
+      "ordinal": 6,
+      "sourceNumber": "",
+      "sourceAnchor": "",
+      "kind": "exercise-candidate",
+      "context": "We will use a matrix to represent a system of linear equations. We write each equation in standard form and the coefficients of the variables and the constant of each equation becomes a row in the matrix. Each column then would be the coefficients of one of the variables in the system or the constants. A vertical line replaces the equal signs. We call the resulting matrix the augmented matrix for the system of equations.\n\n[Figure: The equations are 3x plus y equals minus 3 and 2x plus 3y equals 6. A 2 by 3 matrix is shown. The first row is 3, 1, minus 3. The second row is 2, 3, 6. The first column is labeled coefficients of x. The second column is labeled coefficients of y and the third is labeled constants.]\n\nNotice the first column is made up of all the coefficients of x, the second column is the all the coefficients of y, and the third column is all the constants.",
+      "original": "Example \\(\\PageIndex{3}\\)\n\nWrite each system of linear equations as an augmented matrix:\n\nⓐ \\(\\left\\{ \\begin{array} {l} 11x=−9y−5 \\\\ 7x+5y=−1 \\end{array} \\right. \\) ⓑ \\(\\left\\{ \\begin{array} {l} 5x−3y+2z=−5 \\\\ 2x−y−z=4 \\\\ 3x−2y+2z=−7 \\end{array} \\right. \\)\n\nAnswer\n\nⓐ \\(\\left[ \\begin{array} {cc|c} 11 &9 &−5 \\\\ 7 &5 &−1 \\end{array} \\right] \\)\n\n    ⓑ \\(\\left[ \\begin{array} {ccc|c} 5 &−3 &2 &−5 \\\\ 2 &−1 &−1 &4 \\\\ 3 &−2 &2 &−7 \\end{array} \\right] \\)",
+      "prompt": "Example \\(\\PageIndex{3}\\)\n\nWrite each system of linear equations as an augmented matrix:\n\nⓐ \\(\\left\\{ \\begin{array} {l} 11x=−9y−5 \\\\ 7x+5y=−1 \\end{array} \\right. \\) ⓑ \\(\\left\\{ \\begin{array} {l} 5x−3y+2z=−5 \\\\ 2x−y−z=4 \\\\ 3x−2y+2z=−7 \\end{array} \\right. \\)",
+      "sourceAnswers": [
+        "ⓐ \\(\\left[ \\begin{array} {cc|c} 11 &9 &−5 \\\\ 7 &5 &−1 \\end{array} \\right] \\)\n\n    ⓑ \\(\\left[ \\begin{array} {ccc|c} 5 &−3 &2 &−5 \\\\ 2 &−1 &−1 &4 \\\\ 3 &−2 &2 &−7 \\end{array} \\right] \\)"
+      ],
+      "hasFigure": false,
+      "status": "draft",
+      "answerVerified": false,
+      "translationStatus": "pending",
+      "mappingStatus": "pending"
+    },
+    {
+      "ordinal": 7,
+      "sourceNumber": "",
+      "sourceAnchor": "",
+      "kind": "exercise-candidate",
+      "context": "[Figure: The equations are 3x plus y equals minus 3 and 2x plus 3y equals 6. A 2 by 3 matrix is shown. The first row is 3, 1, minus 3. The second row is 2, 3, 6. The first column is labeled coefficients of x. The second column is labeled coefficients of y and the third is labeled constants.]\n\nNotice the first column is made up of all the coefficients of x, the second column is the all the coefficients of y, and the third column is all the constants.\n\nIt is important as we solve systems of equations using matrices to be able to go back and forth between the system and the matrix. The next example asks us to take the information in the matrix and write the system of equations.",
+      "original": "Example \\(\\PageIndex{4}\\)\n\nWrite the system of equations that corresponds to the augmented matrix:\n\n\\(\\left[ \\begin{array} {ccc|c} 4 &−3 &3 &−1 \\\\ 1 &2 &−1 &2 \\\\ −2 &−1 &3 &−4 \\end{array} \\right] \\).\n\nAnswer\n\nWe remember that each row corresponds to an equation and that each entry is a coefficient of a variable or the constant. The vertical line replaces the equal sign. Since this matrix is a \\(4\\times 3\\), we know it will translate into a system of three equations with three variables.\n\n[Figure: A 3 by 4 matrix is shown. Its first row is 4, minus 3, 3, minus 1. Its second row is 1, 2, minus 1, 2. Its third row is minus 2, minus 1, 3, minus 4. The three equations are 4x minus 3y plus 3z equals minus 1, x plus 2y minus z equals 2 and minus 2x minus y plus 3z equals minus 4.]",
+      "prompt": "Example \\(\\PageIndex{4}\\)\n\nWrite the system of equations that corresponds to the augmented matrix:\n\n\\(\\left[ \\begin{array} {ccc|c} 4 &−3 &3 &−1 \\\\ 1 &2 &−1 &2 \\\\ −2 &−1 &3 &−4 \\end{array} \\right] \\).",
+      "sourceAnswers": [
+        "We remember that each row corresponds to an equation and that each entry is a coefficient of a variable or the constant. The vertical line replaces the equal sign. Since this matrix is a \\(4\\times 3\\), we know it will translate into a system of three equations with three variables.\n\n[Figure: A 3 by 4 matrix is shown. Its first row is 4, minus 3, 3, minus 1. Its second row is 1, 2, minus 1, 2. Its third row is minus 2, minus 1, 3, minus 4. The three equations are 4x minus 3y plus 3z equals minus 1, x plus 2y minus z equals 2 and minus 2x minus y plus 3z equals minus 4.]"
+      ],
+      "hasFigure": true,
+      "status": "draft",
+      "answerVerified": false,
+      "translationStatus": "pending",
+      "mappingStatus": "pending"
+    },
+    {
+      "ordinal": 8,
+      "sourceNumber": "",
+      "sourceAnchor": "",
+      "kind": "exercise-candidate",
+      "context": "[Figure: The equations are 3x plus y equals minus 3 and 2x plus 3y equals 6. A 2 by 3 matrix is shown. The first row is 3, 1, minus 3. The second row is 2, 3, 6. The first column is labeled coefficients of x. The second column is labeled coefficients of y and the third is labeled constants.]\n\nNotice the first column is made up of all the coefficients of x, the second column is the all the coefficients of y, and the third column is all the constants.\n\nIt is important as we solve systems of equations using matrices to be able to go back and forth between the system and the matrix. The next example asks us to take the information in the matrix and write the system of equations.",
+      "original": "Example \\(\\PageIndex{5}\\)\n\nWrite the system of equations that corresponds to the augmented matrix: \\(\\left[ \\begin{array} {ccc|c} 1 &−1 &2 &3 \\\\ 2 &1 &−2 &1 \\\\ 4 &−1 &2 &0 \\end{array} \\right] \\).\n\nAnswer\n\n\\(\\left\\{ \\begin{array} {l} x−y+2z=3 \\\\ 2x+y−2z=1 \\\\ 4x−y+2z=0 \\end{array} \\right.\\)",
+      "prompt": "Example \\(\\PageIndex{5}\\)\n\nWrite the system of equations that corresponds to the augmented matrix: \\(\\left[ \\begin{array} {ccc|c} 1 &−1 &2 &3 \\\\ 2 &1 &−2 &1 \\\\ 4 &−1 &2 &0 \\end{array} \\right] \\).",
+      "sourceAnswers": [
+        "\\(\\left\\{ \\begin{array} {l} x−y+2z=3 \\\\ 2x+y−2z=1 \\\\ 4x−y+2z=0 \\end{array} \\right.\\)"
+      ],
+      "hasFigure": false,
+      "status": "draft",
+      "answerVerified": false,
+      "translationStatus": "pending",
+      "mappingStatus": "pending"
+    },
+    {
+      "ordinal": 9,
+      "sourceNumber": "",
+      "sourceAnchor": "",
+      "kind": "exercise-candidate",
+      "context": "[Figure: The equations are 3x plus y equals minus 3 and 2x plus 3y equals 6. A 2 by 3 matrix is shown. The first row is 3, 1, minus 3. The second row is 2, 3, 6. The first column is labeled coefficients of x. The second column is labeled coefficients of y and the third is labeled constants.]\n\nNotice the first column is made up of all the coefficients of x, the second column is the all the coefficients of y, and the third column is all the constants.\n\nIt is important as we solve systems of equations using matrices to be able to go back and forth between the system and the matrix. The next example asks us to take the information in the matrix and write the system of equations.",
+      "original": "Example \\(\\PageIndex{6}\\)\n\nWrite the system of equations that corresponds to the augmented matrix: \\(\\left[ \\begin{array} {ccc|c} 1 &1 &1 &4 \\\\ 2 &3 &−1 &8 \\\\ 1 &1 &−1 &3 \\end{array} \\right] \\).\n\nAnswer\n\n\\(\\left\\{ \\begin{array} {l} x+y+z=4 \\\\ 2x+3y−z=8 \\\\ x+y−z=3 \\end{array} \\right.\\)",
+      "prompt": "Example \\(\\PageIndex{6}\\)\n\nWrite the system of equations that corresponds to the augmented matrix: \\(\\left[ \\begin{array} {ccc|c} 1 &1 &1 &4 \\\\ 2 &3 &−1 &8 \\\\ 1 &1 &−1 &3 \\end{array} \\right] \\).",
+      "sourceAnswers": [
+        "\\(\\left\\{ \\begin{array} {l} x+y+z=4 \\\\ 2x+3y−z=8 \\\\ x+y−z=3 \\end{array} \\right.\\)"
+      ],
+      "hasFigure": false,
+      "status": "draft",
+      "answerVerified": false,
+      "translationStatus": "pending",
+      "mappingStatus": "pending"
+    },
+    {
+      "ordinal": 10,
+      "sourceNumber": "1",
+      "sourceAnchor": "",
+      "kind": "exercise-candidate",
+      "context": "In elimination, we often add a multiple of one row to another row. In the matrix we can replace a row with its sum with a multiple of another row.\n\nThese actions are called row operations and will help us use the matrix to solve a system of equations.\n\nIn a matrix, the following operations can be performed on any row and the resulting matrix will be equivalent to the original matrix.",
+      "original": "1. Interchange any two rows.",
+      "prompt": "1. Interchange any two rows.",
+      "sourceAnswers": [],
+      "hasFigure": false,
+      "status": "draft",
+      "answerVerified": false,
+      "translationStatus": "pending",
+      "mappingStatus": "pending"
+    },
+    {
+      "ordinal": 11,
+      "sourceNumber": "2",
+      "sourceAnchor": "",
+      "kind": "exercise-candidate",
+      "context": "In elimination, we often add a multiple of one row to another row. In the matrix we can replace a row with its sum with a multiple of another row.\n\nThese actions are called row operations and will help us use the matrix to solve a system of equations.\n\nIn a matrix, the following operations can be performed on any row and the resulting matrix will be equivalent to the original matrix.",
+      "original": "2. Multiply a row by any real number except 0.",
+      "prompt": "2. Multiply a row by any real number except 0.",
+      "sourceAnswers": [],
+      "hasFigure": false,
+      "status": "draft",
+      "answerVerified": false,
+      "translationStatus": "pending",
+      "mappingStatus": "pending"
+    },
+    {
+      "ordinal": 12,
+      "sourceNumber": "3",
+      "sourceAnchor": "",
+      "kind": "exercise-candidate",
+      "context": "In elimination, we often add a multiple of one row to another row. In the matrix we can replace a row with its sum with a multiple of another row.\n\nThese actions are called row operations and will help us use the matrix to solve a system of equations.\n\nIn a matrix, the following operations can be performed on any row and the resulting matrix will be equivalent to the original matrix.",
+      "original": "3. Add a nonzero multiple of one row to another row.",
+      "prompt": "3. Add a nonzero multiple of one row to another row.",
+      "sourceAnswers": [],
+      "hasFigure": false,
+      "status": "draft",
+      "answerVerified": false,
+      "translationStatus": "pending",
+      "mappingStatus": "pending"
+    },
+    {
+      "ordinal": 13,
+      "sourceNumber": "",
+      "sourceAnchor": "",
+      "kind": "exercise-candidate",
+      "context": "[Figure: A 2 by 3 matrix is shown. Its first row is 5, minus 3, minus 1. Its second row is 2, minus 1, 2. An arrow point from this matrix to another one on the right. The first row of the new matrix is the same. The second row is preceded by minus 3 R2. It is minus 6, 3, minus 6.]\n\nTo multiply row 2 by \\(−3\\) and add it to row 1:\n\n[Figure: A 2 by 3 matrix is shown. Its first row is 5, minus 3, minus 1. Its second row is 2, minus 1, 2. An arrow point from this matrix to another one on the right. The first row of the new matrix is preceded by minus 3 R2 plus R1. It is minus 1, 0, minus 7. The second row is 2, minus 1, 2.]",
+      "original": "Example \\(\\PageIndex{7}\\)\n\nPerform the indicated operations on the augmented matrix:\n\nⓐ Interchange rows 2 and 3.\n\nⓑ Multiply row 2 by 5.\n\nⓒ Multiply row 3 by −2−2 and add to row 1.\n\n\\( \\left[ \\begin{array} {ccc|c} 6 &−5 &2 &3 \\\\ 2 &1 &−4 &5 \\\\ 3 &−3 &1 &−1 \\end{array} \\right] \\)\n\nAnswer\n\nⓐ We interchange rows 2 and 3.\n\n[Figure: Two 3 by 4 matrices are shown. In the one on the left, the first row is 6, minus 5, 2, 3. The second row is 2, 1, minus 4, 5. The third row is 3, minus 3, 1, minus 1. The second matrix is similar except that rows 2 and 3 are interchanged.]\n\nⓑ We multiply row 2 by 5.\n\n[Figure: Two 3 by 4 matrices are shown. In the one on the left, the first row is 6, minus 5, 2, 3. The second row is 2, 1, minus 4, 5. The third row is 3, minus 3, 1, minus 1. The second matrix is similar to the first except that row 2, preceded by 5 R2, is 10, 5, minus 20, 25.]\n\nⓒ We multiply row 3 by \\(−2\\) and add to row 1.\n\n[Figure: In the 3 by 4 matrix, the first row is 6, minus 5, 2, 3. The second row is 2, 1, minus 4, 5. The third row is 3, minus 3, 1, minus 1. Performing the operation minus 2 R3 plus R1 on the first row, the first row becomes 6 plus minus 2 times 3, minus 5 plus minus 2 times minus 3, 2 plus minus 2 times 1 and 3 plus minus 2 times minus 1. This becomes 0, 1, 0, 5. The remaining 2 rows of the new matrix are the same.]",
+      "prompt": "Example \\(\\PageIndex{7}\\)\n\nPerform the indicated operations on the augmented matrix:\n\nⓐ Interchange rows 2 and 3.\n\nⓑ Multiply row 2 by 5.\n\nⓒ Multiply row 3 by −2−2 and add to row 1.\n\n\\( \\left[ \\begin{array} {ccc|c} 6 &−5 &2 &3 \\\\ 2 &1 &−4 &5 \\\\ 3 &−3 &1 &−1 \\end{array} \\right] \\)",
+      "sourceAnswers": [
+        "ⓐ We interchange rows 2 and 3.\n\n[Figure: Two 3 by 4 matrices are shown. In the one on the left, the first row is 6, minus 5, 2, 3. The second row is 2, 1, minus 4, 5. The third row is 3, minus 3, 1, minus 1. The second matrix is similar except that rows 2 and 3 are interchanged.]\n\nⓑ We multiply row 2 by 5.\n\n[Figure: Two 3 by 4 matrices are shown. In the one on the left, the first row is 6, minus 5, 2, 3. The second row is 2, 1, minus 4, 5. The third row is 3, minus 3, 1, minus 1. The second matrix is similar to the first except that row 2, preceded by 5 R2, is 10, 5, minus 20, 25.]\n\nⓒ We multiply row 3 by \\(−2\\) and add to row 1.\n\n[Figure: In the 3 by 4 matrix, the first row is 6, minus 5, 2, 3. The second row is 2, 1, minus 4, 5. The third row is 3, minus 3, 1, minus 1. Performing the operation minus 2 R3 plus R1 on the first row, the first row becomes 6 plus minus 2 times 3, minus 5 plus minus 2 times minus 3, 2 plus minus 2 times 1 and 3 plus minus 2 times minus 1. This becomes 0, 1, 0, 5. The remaining 2 rows of the new matrix are the same.]"
+      ],
+      "hasFigure": true,
+      "status": "draft",
+      "answerVerified": false,
+      "translationStatus": "pending",
+      "mappingStatus": "pending"
+    },
+    {
+      "ordinal": 14,
+      "sourceNumber": "",
+      "sourceAnchor": "",
+      "kind": "exercise-candidate",
+      "context": "[Figure: A 2 by 3 matrix is shown. Its first row is 5, minus 3, minus 1. Its second row is 2, minus 1, 2. An arrow point from this matrix to another one on the right. The first row of the new matrix is the same. The second row is preceded by minus 3 R2. It is minus 6, 3, minus 6.]\n\nTo multiply row 2 by \\(−3\\) and add it to row 1:\n\n[Figure: A 2 by 3 matrix is shown. Its first row is 5, minus 3, minus 1. Its second row is 2, minus 1, 2. An arrow point from this matrix to another one on the right. The first row of the new matrix is preceded by minus 3 R2 plus R1. It is minus 1, 0, minus 7. The second row is 2, minus 1, 2.]",
+      "original": "Example \\(\\PageIndex{8}\\)\n\nPerform the indicated operations on the augmented matrix:\n\nⓐ Interchange rows 1 and 3.\n\nⓑ Multiply row 3 by 3.\n\nⓒ Multiply row 1 by 2 and add to row 2.\n\n\\( \\left[ \\begin{array} {ccc|c} 5 &−2 &-2 &-2 \\\\ 4 &-1 &−4 &4 \\\\ -2 &3 &0 &−1 \\end{array} \\right] \\)\n\nAnswer\n\nⓐ \\( \\left[ \\begin{array} {ccc|c} −2 &3 &0 &−2 \\\\ 4 &−1 &−4 &4 \\\\ 5 &−2 &−2 &−2 \\end{array} \\right] \\)\n\nⓑ \\( \\left[ \\begin{array} {ccc|c}−2 &3 &0 &−2 \\\\ 4 &−1 &−4 &4 \\\\ 15 &−6 &−6 &−6 \\end{array} \\right] \\)\n\nⓒ \\( \\left[ \\begin{array} {ccc|c} -2 &3 &0 &2 \\\\ 0 &5 &-4 &0  \\\\ 15 &-6 &-6 &-6 \\end{array} \\right] \\)",
+      "prompt": "Example \\(\\PageIndex{8}\\)\n\nPerform the indicated operations on the augmented matrix:\n\nⓐ Interchange rows 1 and 3.\n\nⓑ Multiply row 3 by 3.\n\nⓒ Multiply row 1 by 2 and add to row 2.\n\n\\( \\left[ \\begin{array} {ccc|c} 5 &−2 &-2 &-2 \\\\ 4 &-1 &−4 &4 \\\\ -2 &3 &0 &−1 \\end{array} \\right] \\)",
+      "sourceAnswers": [
+        "ⓐ \\( \\left[ \\begin{array} {ccc|c} −2 &3 &0 &−2 \\\\ 4 &−1 &−4 &4 \\\\ 5 &−2 &−2 &−2 \\end{array} \\right] \\)\n\nⓑ \\( \\left[ \\begin{array} {ccc|c}−2 &3 &0 &−2 \\\\ 4 &−1 &−4 &4 \\\\ 15 &−6 &−6 &−6 \\end{array} \\right] \\)\n\nⓒ \\( \\left[ \\begin{array} {ccc|c} -2 &3 &0 &2 \\\\ 0 &5 &-4 &0  \\\\ 15 &-6 &-6 &-6 \\end{array} \\right] \\)"
+      ],
+      "hasFigure": false,
+      "status": "draft",
+      "answerVerified": false,
+      "translationStatus": "pending",
+      "mappingStatus": "pending"
+    },
+    {
+      "ordinal": 15,
+      "sourceNumber": "",
+      "sourceAnchor": "",
+      "kind": "exercise-candidate",
+      "context": "[Figure: A 2 by 3 matrix is shown. Its first row is 5, minus 3, minus 1. Its second row is 2, minus 1, 2. An arrow point from this matrix to another one on the right. The first row of the new matrix is the same. The second row is preceded by minus 3 R2. It is minus 6, 3, minus 6.]\n\nTo multiply row 2 by \\(−3\\) and add it to row 1:\n\n[Figure: A 2 by 3 matrix is shown. Its first row is 5, minus 3, minus 1. Its second row is 2, minus 1, 2. An arrow point from this matrix to another one on the right. The first row of the new matrix is preceded by minus 3 R2 plus R1. It is minus 1, 0, minus 7. The second row is 2, minus 1, 2.]",
+      "original": "Example \\(\\PageIndex{9}\\)\n\nPerform the indicated operations on the augmented matrix:\n\nⓐ Interchange rows 1 and 2,\n\nⓑ Multiply row 1 by 2,\n\nⓒ Multiply row 2 by 3 and add to row 1.\n\n\\( \\left[ \\begin{array} {ccc|c} 2 &−3 &−2 &−4 \\\\ 4 &1 &−3 &2 \\\\ 5 &0 &4 &−1 \\end{array} \\right] \\)\n\nAnswer\n\nⓐ \\( \\left[ \\begin{array} {ccc|c} 4 &1 &−3 &2 \\\\ 2 &−3 &−2 &−4 \\\\ 5 &0 &4 &−1 \\end{array} \\right] \\)\n\n    ⓑ \\( \\left[ \\begin{array} {ccc|c} 8 &2 &−6 &4 \\\\ 2 &−3 &−2 &−4 \\\\ 5 &0 &4 &−1 \\end{array} \\right] \\)\n\n    ⓒ \\( \\left[ \\begin{array} {ccc|c} 14 &−7 &−12 &−8 \\\\ 2 &−3 &−2 &−4 \\\\ 5 &0 &4 &−1 \\end{array} \\right] \\)",
+      "prompt": "Example \\(\\PageIndex{9}\\)\n\nPerform the indicated operations on the augmented matrix:\n\nⓐ Interchange rows 1 and 2,\n\nⓑ Multiply row 1 by 2,\n\nⓒ Multiply row 2 by 3 and add to row 1.\n\n\\( \\left[ \\begin{array} {ccc|c} 2 &−3 &−2 &−4 \\\\ 4 &1 &−3 &2 \\\\ 5 &0 &4 &−1 \\end{array} \\right] \\)",
+      "sourceAnswers": [
+        "ⓐ \\( \\left[ \\begin{array} {ccc|c} 4 &1 &−3 &2 \\\\ 2 &−3 &−2 &−4 \\\\ 5 &0 &4 &−1 \\end{array} \\right] \\)\n\n    ⓑ \\( \\left[ \\begin{array} {ccc|c} 8 &2 &−6 &4 \\\\ 2 &−3 &−2 &−4 \\\\ 5 &0 &4 &−1 \\end{array} \\right] \\)\n\n    ⓒ \\( \\left[ \\begin{array} {ccc|c} 14 &−7 &−12 &−8 \\\\ 2 &−3 &−2 &−4 \\\\ 5 &0 &4 &−1 \\end{array} \\right] \\)"
+      ],
+      "hasFigure": false,
+      "status": "draft",
+      "answerVerified": false,
+      "translationStatus": "pending",
+      "mappingStatus": "pending"
+    },
+    {
+      "ordinal": 16,
+      "sourceNumber": "",
+      "sourceAnchor": "",
+      "kind": "exercise-candidate",
+      "context": "Given this system, what would you do to eliminate x?\n\n[Figure: The two equations are x minus y equals 2 and 4x minus 8y equals 0. Multiplying the first by minus 4, we get minus 4x plus 4y equals minus 8. Adding this to the second equation we get minus 4y equals minus 8.]\n\nThis next example essentially does the same thing, but to the matrix.",
+      "original": "Example \\(\\PageIndex{10}\\)\n\nPerform the needed row operation that will get the first entry in row 2 to be zero in the augmented matrix: \\( \\left[ \\begin{array} {cc|c} 1 &−1 &2 \\\\ 4 &−8 &0 \\end{array} \\right] \\)\n\nAnswer\n\nTo make the 4 a 0, we could multiply row 1 by \\(−4\\) and then add it to row 2.\n\n[Figure: The 2 by 3 matrix is 1, minus 1, 2 and 4, minus 8, 0. Performing the operation minus 4R1 plus R2 on row 2, the second row of the new matrix becomes 0, minus 4, minus 8. The first row remains the same.]",
+      "prompt": "Example \\(\\PageIndex{10}\\)\n\nPerform the needed row operation that will get the first entry in row 2 to be zero in the augmented matrix: \\( \\left[ \\begin{array} {cc|c} 1 &−1 &2 \\\\ 4 &−8 &0 \\end{array} \\right] \\)",
+      "sourceAnswers": [
+        "To make the 4 a 0, we could multiply row 1 by \\(−4\\) and then add it to row 2.\n\n[Figure: The 2 by 3 matrix is 1, minus 1, 2 and 4, minus 8, 0. Performing the operation minus 4R1 plus R2 on row 2, the second row of the new matrix becomes 0, minus 4, minus 8. The first row remains the same.]"
+      ],
+      "hasFigure": true,
+      "status": "draft",
+      "answerVerified": false,
+      "translationStatus": "pending",
+      "mappingStatus": "pending"
+    },
+    {
+      "ordinal": 17,
+      "sourceNumber": "",
+      "sourceAnchor": "",
+      "kind": "exercise-candidate",
+      "context": "Given this system, what would you do to eliminate x?\n\n[Figure: The two equations are x minus y equals 2 and 4x minus 8y equals 0. Multiplying the first by minus 4, we get minus 4x plus 4y equals minus 8. Adding this to the second equation we get minus 4y equals minus 8.]\n\nThis next example essentially does the same thing, but to the matrix.",
+      "original": "Example \\(\\PageIndex{11}\\)\n\nPerform the needed row operation that will get the first entry in row 2 to be zero in the augmented matrix: \\( \\left[ \\begin{array} {cc|c} 1 &−1 &2 \\\\ 3 &−6 &2 \\end{array} \\right] \\)\n\nAnswer\n\n\\( \\left[ \\begin{array} {cc|c} 1 &−1 &2 \\\\ 0 &−3 &−4 \\end{array} \\right] \\)",
+      "prompt": "Example \\(\\PageIndex{11}\\)\n\nPerform the needed row operation that will get the first entry in row 2 to be zero in the augmented matrix: \\( \\left[ \\begin{array} {cc|c} 1 &−1 &2 \\\\ 3 &−6 &2 \\end{array} \\right] \\)",
+      "sourceAnswers": [
+        "\\( \\left[ \\begin{array} {cc|c} 1 &−1 &2 \\\\ 0 &−3 &−4 \\end{array} \\right] \\)"
+      ],
+      "hasFigure": false,
+      "status": "draft",
+      "answerVerified": false,
+      "translationStatus": "pending",
+      "mappingStatus": "pending"
+    },
+    {
+      "ordinal": 18,
+      "sourceNumber": "",
+      "sourceAnchor": "",
+      "kind": "exercise-candidate",
+      "context": "Given this system, what would you do to eliminate x?\n\n[Figure: The two equations are x minus y equals 2 and 4x minus 8y equals 0. Multiplying the first by minus 4, we get minus 4x plus 4y equals minus 8. Adding this to the second equation we get minus 4y equals minus 8.]\n\nThis next example essentially does the same thing, but to the matrix.",
+      "original": "Example \\(\\PageIndex{12}\\)\n\nPerform the needed row operation that will get the first entry in row 2 to be zero in the augmented matrix: \\( \\left[ \\begin{array} {cc|c} 1 &−1 &3 \\\\ -2 &−3 &2 \\end{array} \\right] \\)\n\nAnswer\n\n\\( \\left[ \\begin{array} {cc|c} 1 &−1 &3 \\\\ 0 &−5 &8 \\end{array} \\right] \\)",
+      "prompt": "Example \\(\\PageIndex{12}\\)\n\nPerform the needed row operation that will get the first entry in row 2 to be zero in the augmented matrix: \\( \\left[ \\begin{array} {cc|c} 1 &−1 &3 \\\\ -2 &−3 &2 \\end{array} \\right] \\)",
+      "sourceAnswers": [
+        "\\( \\left[ \\begin{array} {cc|c} 1 &−1 &3 \\\\ 0 &−5 &8 \\end{array} \\right] \\)"
+      ],
+      "hasFigure": false,
+      "status": "draft",
+      "answerVerified": false,
+      "translationStatus": "pending",
+      "mappingStatus": "pending"
+    },
+    {
+      "ordinal": 19,
+      "sourceNumber": "",
+      "sourceAnchor": "",
+      "kind": "exercise-candidate",
+      "context": "For a consistent and independent system of equations, its augmented matrix is in row-echelon form when to the left of the vertical line, each entry on the diagonal is a 1 and all entries below the diagonal are zeros.\n\n[Figure: A 2 by 3 matrix is shown on the left. Its first row is 1, a, b. Its second row is 0, 1, c. An arrow points diagonally down and right, overlapping both the 1s in the matrix. A 3 by 4 matrix is shown on the right. Its first row is 1, a, b, d. Its second row is 0, 1, c, e. Its third row is 0, 0, 1, f. An arrow points diagonally down and right, overlapping all the 1s in the matrix. a, b, c, d, e, f are real numbers.]\n\nOnce we get the augmented matrix into row-echelon form, we can write the equivalent system of equations and read the value of at least one variable. We then substitute this value in another equation to continue to solve for the other variables. This process is illustrated in the next example.",
+      "original": "How to Solve a System of Equations Using a Matrix\n\nSolve the system of equations using a matrix: \\(\\left\\{ \\begin{array} {l} 3x+4y=5 \\\\ x+2y=1 \\end{array} \\right. \\)\n\nAnswer\n\n[Figure: The equations are 3x plus 4y equals 5 and x plus 2y equals 1. Step 1. Write the augmented matrix for the system of equations. We get a 2 by 3 matrix with first row 3, 4, 5 and second row 1, 2, 1.]\n\n[Figure: Step 2. Using row operations get the entry in row 1, column 1 to be 1. Interchange rows R1 and R2.]\n\n[Figure: Step 3. Using row operations, get zeros in column 1 below the 1. Multiply row 1 by minus 3 and add it to row 2. Row 2 becomes 0, minus 2, 2.]\n\n[Figure: Step 4. Using row operations, get the entry in row 2, column 2 to be 1. Multiply row 2 by minus half. Row 2 becomes 0, 1, minus 1.]\n\n[Figure: Step 5. Continue the process until the matrix is in row-echelon form. The matrix is now in row-echelon form.]\n\n[Figure: Step 6. Write the corresponding system of equations. We get x plus 2y equals 1 and y equals minus 1.]\n\n[Figure: Step 7. Use substitution to find the remaining variables. Substitute y equals negative 1 into x plus 2y equals 1. X plus 2 times negative 1 equals 1. X minus 2 equals 1. We get x equal to 3.]\n\n[Figure: Step 8. Write the solution as an ordered pair or triple. Ordered pair is (3, negative 1).]\n\n[Figure: Step 9. Check that the solution makes the original equations true.]",
+      "prompt": "How to Solve a System of Equations Using a Matrix\n\nSolve the system of equations using a matrix: \\(\\left\\{ \\begin{array} {l} 3x+4y=5 \\\\ x+2y=1 \\end{array} \\right. \\)",
+      "sourceAnswers": [
+        "[Figure: The equations are 3x plus 4y equals 5 and x plus 2y equals 1. Step 1. Write the augmented matrix for the system of equations. We get a 2 by 3 matrix with first row 3, 4, 5 and second row 1, 2, 1.]\n\n[Figure: Step 2. Using row operations get the entry in row 1, column 1 to be 1. Interchange rows R1 and R2.]\n\n[Figure: Step 3. Using row operations, get zeros in column 1 below the 1. Multiply row 1 by minus 3 and add it to row 2. Row 2 becomes 0, minus 2, 2.]\n\n[Figure: Step 4. Using row operations, get the entry in row 2, column 2 to be 1. Multiply row 2 by minus half. Row 2 becomes 0, 1, minus 1.]\n\n[Figure: Step 5. Continue the process until the matrix is in row-echelon form. The matrix is now in row-echelon form.]\n\n[Figure: Step 6. Write the corresponding system of equations. We get x plus 2y equals 1 and y equals minus 1.]\n\n[Figure: Step 7. Use substitution to find the remaining variables. Substitute y equals negative 1 into x plus 2y equals 1. X plus 2 times negative 1 equals 1. X minus 2 equals 1. We get x equal to 3.]\n\n[Figure: Step 8. Write the solution as an ordered pair or triple. Ordered pair is (3, negative 1).]\n\n[Figure: Step 9. Check that the solution makes the original equations true.]"
+      ],
+      "hasFigure": true,
+      "status": "draft",
+      "answerVerified": false,
+      "translationStatus": "pending",
+      "mappingStatus": "pending"
+    },
+    {
+      "ordinal": 20,
+      "sourceNumber": "",
+      "sourceAnchor": "",
+      "kind": "exercise-candidate",
+      "context": "For a consistent and independent system of equations, its augmented matrix is in row-echelon form when to the left of the vertical line, each entry on the diagonal is a 1 and all entries below the diagonal are zeros.\n\n[Figure: A 2 by 3 matrix is shown on the left. Its first row is 1, a, b. Its second row is 0, 1, c. An arrow points diagonally down and right, overlapping both the 1s in the matrix. A 3 by 4 matrix is shown on the right. Its first row is 1, a, b, d. Its second row is 0, 1, c, e. Its third row is 0, 0, 1, f. An arrow points diagonally down and right, overlapping all the 1s in the matrix. a, b, c, d, e, f are real numbers.]\n\nOnce we get the augmented matrix into row-echelon form, we can write the equivalent system of equations and read the value of at least one variable. We then substitute this value in another equation to continue to solve for the other variables. This process is illustrated in the next example.",
+      "original": "Example \\(\\PageIndex{14}\\)\n\nSolve the system of equations using a matrix: \\(\\left\\{ \\begin{array} {l} 2x+y=7 \\\\ x−2y=6 \\end{array} \\right. \\)\n\nAnswer\n\nThe solution is \\((4,−1)\\).",
+      "prompt": "Example \\(\\PageIndex{14}\\)\n\nSolve the system of equations using a matrix: \\(\\left\\{ \\begin{array} {l} 2x+y=7 \\\\ x−2y=6 \\end{array} \\right. \\)",
+      "sourceAnswers": [
+        "The solution is \\((4,−1)\\)."
+      ],
+      "hasFigure": false,
+      "status": "draft",
+      "answerVerified": false,
+      "translationStatus": "pending",
+      "mappingStatus": "pending"
+    },
+    {
+      "ordinal": 21,
+      "sourceNumber": "",
+      "sourceAnchor": "",
+      "kind": "exercise-candidate",
+      "context": "For a consistent and independent system of equations, its augmented matrix is in row-echelon form when to the left of the vertical line, each entry on the diagonal is a 1 and all entries below the diagonal are zeros.\n\n[Figure: A 2 by 3 matrix is shown on the left. Its first row is 1, a, b. Its second row is 0, 1, c. An arrow points diagonally down and right, overlapping both the 1s in the matrix. A 3 by 4 matrix is shown on the right. Its first row is 1, a, b, d. Its second row is 0, 1, c, e. Its third row is 0, 0, 1, f. An arrow points diagonally down and right, overlapping all the 1s in the matrix. a, b, c, d, e, f are real numbers.]\n\nOnce we get the augmented matrix into row-echelon form, we can write the equivalent system of equations and read the value of at least one variable. We then substitute this value in another equation to continue to solve for the other variables. This process is illustrated in the next example.",
+      "original": "Example \\(\\PageIndex{15}\\)\n\nSolve the system of equations using a matrix: \\(\\left\\{ \\begin{array} {l} 2x+y=−4 \\\\ x−y=−2 \\end{array} \\right. \\)\n\nAnswer\n\nThe solution is \\((−2,0)\\).",
+      "prompt": "Example \\(\\PageIndex{15}\\)\n\nSolve the system of equations using a matrix: \\(\\left\\{ \\begin{array} {l} 2x+y=−4 \\\\ x−y=−2 \\end{array} \\right. \\)",
+      "sourceAnswers": [
+        "The solution is \\((−2,0)\\)."
+      ],
+      "hasFigure": false,
+      "status": "draft",
+      "answerVerified": false,
+      "translationStatus": "pending",
+      "mappingStatus": "pending"
+    },
+    {
+      "ordinal": 22,
+      "sourceNumber": "1",
+      "sourceAnchor": "",
+      "kind": "exercise-candidate",
+      "context": "[Figure: A 2 by 3 matrix is shown on the left. Its first row is 1, a, b. Its second row is 0, 1, c. An arrow points diagonally down and right, overlapping both the 1s in the matrix. A 3 by 4 matrix is shown on the right. Its first row is 1, a, b, d. Its second row is 0, 1, c, e. Its third row is 0, 0, 1, f. An arrow points diagonally down and right, overlapping all the 1s in the matrix. a, b, c, d, e, f are real numbers.]\n\nOnce we get the augmented matrix into row-echelon form, we can write the equivalent system of equations and read the value of at least one variable. We then substitute this value in another equation to continue to solve for the other variables. This process is illustrated in the next example.\n\nThe steps are summarized here.",
+      "original": "1. Write the augmented matrix for the system of equations.",
+      "prompt": "1. Write the augmented matrix for the system of equations.",
+      "sourceAnswers": [],
+      "hasFigure": false,
+      "status": "draft",
+      "answerVerified": false,
+      "translationStatus": "pending",
+      "mappingStatus": "pending"
+    },
+    {
+      "ordinal": 23,
+      "sourceNumber": "2",
+      "sourceAnchor": "",
+      "kind": "exercise-candidate",
+      "context": "[Figure: A 2 by 3 matrix is shown on the left. Its first row is 1, a, b. Its second row is 0, 1, c. An arrow points diagonally down and right, overlapping both the 1s in the matrix. A 3 by 4 matrix is shown on the right. Its first row is 1, a, b, d. Its second row is 0, 1, c, e. Its third row is 0, 0, 1, f. An arrow points diagonally down and right, overlapping all the 1s in the matrix. a, b, c, d, e, f are real numbers.]\n\nOnce we get the augmented matrix into row-echelon form, we can write the equivalent system of equations and read the value of at least one variable. We then substitute this value in another equation to continue to solve for the other variables. This process is illustrated in the next example.\n\nThe steps are summarized here.",
+      "original": "2. Using row operations get the entry in row 1, column 1 to be 1.",
+      "prompt": "2. Using row operations get the entry in row 1, column 1 to be 1.",
+      "sourceAnswers": [],
+      "hasFigure": false,
+      "status": "draft",
+      "answerVerified": false,
+      "translationStatus": "pending",
+      "mappingStatus": "pending"
+    },
+    {
+      "ordinal": 24,
+      "sourceNumber": "3",
+      "sourceAnchor": "",
+      "kind": "exercise-candidate",
+      "context": "[Figure: A 2 by 3 matrix is shown on the left. Its first row is 1, a, b. Its second row is 0, 1, c. An arrow points diagonally down and right, overlapping both the 1s in the matrix. A 3 by 4 matrix is shown on the right. Its first row is 1, a, b, d. Its second row is 0, 1, c, e. Its third row is 0, 0, 1, f. An arrow points diagonally down and right, overlapping all the 1s in the matrix. a, b, c, d, e, f are real numbers.]\n\nOnce we get the augmented matrix into row-echelon form, we can write the equivalent system of equations and read the value of at least one variable. We then substitute this value in another equation to continue to solve for the other variables. This process is illustrated in the next example.\n\nThe steps are summarized here.",
+      "original": "3. Using row operations, get zeros in column 1 below the 1.",
+      "prompt": "3. Using row operations, get zeros in column 1 below the 1.",
+      "sourceAnswers": [],
+      "hasFigure": false,
+      "status": "draft",
+      "answerVerified": false,
+      "translationStatus": "pending",
+      "mappingStatus": "pending"
+    },
+    {
+      "ordinal": 25,
+      "sourceNumber": "4",
+      "sourceAnchor": "",
+      "kind": "exercise-candidate",
+      "context": "[Figure: A 2 by 3 matrix is shown on the left. Its first row is 1, a, b. Its second row is 0, 1, c. An arrow points diagonally down and right, overlapping both the 1s in the matrix. A 3 by 4 matrix is shown on the right. Its first row is 1, a, b, d. Its second row is 0, 1, c, e. Its third row is 0, 0, 1, f. An arrow points diagonally down and right, overlapping all the 1s in the matrix. a, b, c, d, e, f are real numbers.]\n\nOnce we get the augmented matrix into row-echelon form, we can write the equivalent system of equations and read the value of at least one variable. We then substitute this value in another equation to continue to solve for the other variables. This process is illustrated in the next example.\n\nThe steps are summarized here.",
+      "original": "4. Using row operations, get the entry in row 2, column 2 to be 1.",
+      "prompt": "4. Using row operations, get the entry in row 2, column 2 to be 1.",
+      "sourceAnswers": [],
+      "hasFigure": false,
+      "status": "draft",
+      "answerVerified": false,
+      "translationStatus": "pending",
+      "mappingStatus": "pending"
+    },
+    {
+      "ordinal": 26,
+      "sourceNumber": "5",
+      "sourceAnchor": "",
+      "kind": "exercise-candidate",
+      "context": "[Figure: A 2 by 3 matrix is shown on the left. Its first row is 1, a, b. Its second row is 0, 1, c. An arrow points diagonally down and right, overlapping both the 1s in the matrix. A 3 by 4 matrix is shown on the right. Its first row is 1, a, b, d. Its second row is 0, 1, c, e. Its third row is 0, 0, 1, f. An arrow points diagonally down and right, overlapping all the 1s in the matrix. a, b, c, d, e, f are real numbers.]\n\nOnce we get the augmented matrix into row-echelon form, we can write the equivalent system of equations and read the value of at least one variable. We then substitute this value in another equation to continue to solve for the other variables. This process is illustrated in the next example.\n\nThe steps are summarized here.",
+      "original": "5. Continue the process until the matrix is in row-echelon form.",
+      "prompt": "5. Continue the process until the matrix is in row-echelon form.",
+      "sourceAnswers": [],
+      "hasFigure": false,
+      "status": "draft",
+      "answerVerified": false,
+      "translationStatus": "pending",
+      "mappingStatus": "pending"
+    },
+    {
+      "ordinal": 27,
+      "sourceNumber": "6",
+      "sourceAnchor": "",
+      "kind": "exercise-candidate",
+      "context": "[Figure: A 2 by 3 matrix is shown on the left. Its first row is 1, a, b. Its second row is 0, 1, c. An arrow points diagonally down and right, overlapping both the 1s in the matrix. A 3 by 4 matrix is shown on the right. Its first row is 1, a, b, d. Its second row is 0, 1, c, e. Its third row is 0, 0, 1, f. An arrow points diagonally down and right, overlapping all the 1s in the matrix. a, b, c, d, e, f are real numbers.]\n\nOnce we get the augmented matrix into row-echelon form, we can write the equivalent system of equations and read the value of at least one variable. We then substitute this value in another equation to continue to solve for the other variables. This process is illustrated in the next example.\n\nThe steps are summarized here.",
+      "original": "6. Write the corresponding system of equations.",
+      "prompt": "6. Write the corresponding system of equations.",
+      "sourceAnswers": [],
+      "hasFigure": false,
+      "status": "draft",
+      "answerVerified": false,
+      "translationStatus": "pending",
+      "mappingStatus": "pending"
+    },
+    {
+      "ordinal": 28,
+      "sourceNumber": "7",
+      "sourceAnchor": "",
+      "kind": "exercise-candidate",
+      "context": "[Figure: A 2 by 3 matrix is shown on the left. Its first row is 1, a, b. Its second row is 0, 1, c. An arrow points diagonally down and right, overlapping both the 1s in the matrix. A 3 by 4 matrix is shown on the right. Its first row is 1, a, b, d. Its second row is 0, 1, c, e. Its third row is 0, 0, 1, f. An arrow points diagonally down and right, overlapping all the 1s in the matrix. a, b, c, d, e, f are real numbers.]\n\nOnce we get the augmented matrix into row-echelon form, we can write the equivalent system of equations and read the value of at least one variable. We then substitute this value in another equation to continue to solve for the other variables. This process is illustrated in the next example.\n\nThe steps are summarized here.",
+      "original": "7. Use substitution to find the remaining variables.",
+      "prompt": "7. Use substitution to find the remaining variables.",
+      "sourceAnswers": [],
+      "hasFigure": false,
+      "status": "draft",
+      "answerVerified": false,
+      "translationStatus": "pending",
+      "mappingStatus": "pending"
+    },
+    {
+      "ordinal": 29,
+      "sourceNumber": "8",
+      "sourceAnchor": "",
+      "kind": "exercise-candidate",
+      "context": "[Figure: A 2 by 3 matrix is shown on the left. Its first row is 1, a, b. Its second row is 0, 1, c. An arrow points diagonally down and right, overlapping both the 1s in the matrix. A 3 by 4 matrix is shown on the right. Its first row is 1, a, b, d. Its second row is 0, 1, c, e. Its third row is 0, 0, 1, f. An arrow points diagonally down and right, overlapping all the 1s in the matrix. a, b, c, d, e, f are real numbers.]\n\nOnce we get the augmented matrix into row-echelon form, we can write the equivalent system of equations and read the value of at least one variable. We then substitute this value in another equation to continue to solve for the other variables. This process is illustrated in the next example.\n\nThe steps are summarized here.",
+      "original": "8. Write the solution as an ordered pair or triple.",
+      "prompt": "8. Write the solution as an ordered pair or triple.",
+      "sourceAnswers": [],
+      "hasFigure": false,
+      "status": "draft",
+      "answerVerified": false,
+      "translationStatus": "pending",
+      "mappingStatus": "pending"
+    },
+    {
+      "ordinal": 30,
+      "sourceNumber": "9",
+      "sourceAnchor": "",
+      "kind": "exercise-candidate",
+      "context": "[Figure: A 2 by 3 matrix is shown on the left. Its first row is 1, a, b. Its second row is 0, 1, c. An arrow points diagonally down and right, overlapping both the 1s in the matrix. A 3 by 4 matrix is shown on the right. Its first row is 1, a, b, d. Its second row is 0, 1, c, e. Its third row is 0, 0, 1, f. An arrow points diagonally down and right, overlapping all the 1s in the matrix. a, b, c, d, e, f are real numbers.]\n\nOnce we get the augmented matrix into row-echelon form, we can write the equivalent system of equations and read the value of at least one variable. We then substitute this value in another equation to continue to solve for the other variables. This process is illustrated in the next example.\n\nThe steps are summarized here.",
+      "original": "9. Check that the solution makes the original equations true.",
+      "prompt": "9. Check that the solution makes the original equations true.",
+      "sourceAnswers": [],
+      "hasFigure": false,
+      "status": "draft",
+      "answerVerified": false,
+      "translationStatus": "pending",
+      "mappingStatus": "pending"
+    },
+    {
+      "ordinal": 31,
+      "sourceNumber": "",
+      "sourceAnchor": "",
+      "kind": "exercise-candidate",
+      "context": "Here is a visual to show the order for getting the 1’s and 0’s in the proper position for row-echelon form.\n\n[Figure: The figure shows 3 steps for a 2 by 3 matrix and 6 steps for a 3 by 4 matrix. For the former, step 1 is to get a 1 in row 1 column 1. Step to is to get a 0 is row 2 column 1. Step 3 is to get a 1 in row 2 column 2. For a 3 by 4 matrix, step 1 is to get a 1 in row 1 column 1. Step 2 is to get a 0 in row 2 column 1. Step 3 is to get a 0 in row 3 column 1. Step 4 is to get a 1 in row 2 column 2. Step 5 is to get a 0 in row 3 column 2. Step 6 is to get a 1 in row 3 column 3.]\n\nWe use the same procedure when the system of equations has three equations.",
+      "original": "Example \\(\\PageIndex{16}\\)\n\nSolve the system of equations using a matrix: \\(\\left\\{ \\begin{array} {l} 3x+8y+2z=−5 \\\\ 2x+5y−3z=0 \\\\ x+2y−2z=−1 \\end{array} \\right. \\)\n\nAnswer\n\n[Figure: .]\n\n                Write the augmented matrix for the equations.\t\n\n[Figure: .]\n\n                Interchange row 1 and 3 to get the entry in\n\n                row 1, column 1 to be 1.\t\n\n[Figure: .]\n\n                Using row operations, get zeros in column 1 below the 1.\t\n\n[Figure: .]\n\n[Figure: .]\n\n                The entry in row 2, column 2 is now 1.\t\n\n                Continue the process until the matrix\n\n                is in row-echelon form.\t\n\n[Figure: .]\n\n[Figure: .]\n\n                The matrix is now in row-echelon form.\t\n\n[Figure: .]\n\n                Write the corresponding system of equations.\t\n\n[Figure: .]\n\n                Use substitution to find the remaining variables.\t\n\n[Figure: .]\n\n[Figure: .]\n\n[Figure: .]\n\n                Write the solution as an ordered pair or triple.\t\n\n[Figure: .]\n\n                Check that the solution makes the original equations true.\t\n                We leave the check for you.",
+      "prompt": "Example \\(\\PageIndex{16}\\)\n\nSolve the system of equations using a matrix: \\(\\left\\{ \\begin{array} {l} 3x+8y+2z=−5 \\\\ 2x+5y−3z=0 \\\\ x+2y−2z=−1 \\end{array} \\right. \\)",
+      "sourceAnswers": [
+        "[Figure: .]\n\n                Write the augmented matrix for the equations.\t\n\n[Figure: .]\n\n                Interchange row 1 and 3 to get the entry in\n\n                row 1, column 1 to be 1.\t\n\n[Figure: .]\n\n                Using row operations, get zeros in column 1 below the 1.\t\n\n[Figure: .]\n\n[Figure: .]\n\n                The entry in row 2, column 2 is now 1.\t\n\n                Continue the process until the matrix\n\n                is in row-echelon form.\t\n\n[Figure: .]\n\n[Figure: .]\n\n                The matrix is now in row-echelon form.\t\n\n[Figure: .]\n\n                Write the corresponding system of equations.\t\n\n[Figure: .]\n\n                Use substitution to find the remaining variables.\t\n\n[Figure: .]\n\n[Figure: .]\n\n[Figure: .]\n\n                Write the solution as an ordered pair or triple.\t\n\n[Figure: .]\n\n                Check that the solution makes the original equations true.\t\n                We leave the check for you."
+      ],
+      "hasFigure": true,
+      "status": "draft",
+      "answerVerified": false,
+      "translationStatus": "pending",
+      "mappingStatus": "pending"
+    },
+    {
+      "ordinal": 32,
+      "sourceNumber": "",
+      "sourceAnchor": "",
+      "kind": "exercise-candidate",
+      "context": "Here is a visual to show the order for getting the 1’s and 0’s in the proper position for row-echelon form.\n\n[Figure: The figure shows 3 steps for a 2 by 3 matrix and 6 steps for a 3 by 4 matrix. For the former, step 1 is to get a 1 in row 1 column 1. Step to is to get a 0 is row 2 column 1. Step 3 is to get a 1 in row 2 column 2. For a 3 by 4 matrix, step 1 is to get a 1 in row 1 column 1. Step 2 is to get a 0 in row 2 column 1. Step 3 is to get a 0 in row 3 column 1. Step 4 is to get a 1 in row 2 column 2. Step 5 is to get a 0 in row 3 column 2. Step 6 is to get a 1 in row 3 column 3.]\n\nWe use the same procedure when the system of equations has three equations.",
+      "original": "Example \\(\\PageIndex{17}\\)\n\nSolve the system of equations using a matrix: \\(\\left\\{ \\begin{array} {l} 2x−5y+3z=8 \\\\ 3x−y+4z=7 \\\\ x+3y+2z=−3 \\end{array} \\right. \\)\n\nAnswer\n\n\\((6,−1,−3)\\)",
+      "prompt": "Example \\(\\PageIndex{17}\\)\n\nSolve the system of equations using a matrix: \\(\\left\\{ \\begin{array} {l} 2x−5y+3z=8 \\\\ 3x−y+4z=7 \\\\ x+3y+2z=−3 \\end{array} \\right. \\)",
+      "sourceAnswers": [
+        "\\((6,−1,−3)\\)"
+      ],
+      "hasFigure": false,
+      "status": "draft",
+      "answerVerified": false,
+      "translationStatus": "pending",
+      "mappingStatus": "pending"
+    },
+    {
+      "ordinal": 33,
+      "sourceNumber": "",
+      "sourceAnchor": "",
+      "kind": "exercise-candidate",
+      "context": "Here is a visual to show the order for getting the 1’s and 0’s in the proper position for row-echelon form.\n\n[Figure: The figure shows 3 steps for a 2 by 3 matrix and 6 steps for a 3 by 4 matrix. For the former, step 1 is to get a 1 in row 1 column 1. Step to is to get a 0 is row 2 column 1. Step 3 is to get a 1 in row 2 column 2. For a 3 by 4 matrix, step 1 is to get a 1 in row 1 column 1. Step 2 is to get a 0 in row 2 column 1. Step 3 is to get a 0 in row 3 column 1. Step 4 is to get a 1 in row 2 column 2. Step 5 is to get a 0 in row 3 column 2. Step 6 is to get a 1 in row 3 column 3.]\n\nWe use the same procedure when the system of equations has three equations.",
+      "original": "Example \\(\\PageIndex{18}\\)\n\nSolve the system of equations using a matrix: \\(\\left\\{ \\begin{array} {l} −3x+y+z=−4 \\\\ −x+2y−2z=1 \\\\ 2x−y−z=−1 \\end{array} \\right. \\)\n\nAnswer\n\n\\((5,7,4)\\)",
+      "prompt": "Example \\(\\PageIndex{18}\\)\n\nSolve the system of equations using a matrix: \\(\\left\\{ \\begin{array} {l} −3x+y+z=−4 \\\\ −x+2y−2z=1 \\\\ 2x−y−z=−1 \\end{array} \\right. \\)",
+      "sourceAnswers": [
+        "\\((5,7,4)\\)"
+      ],
+      "hasFigure": false,
+      "status": "draft",
+      "answerVerified": false,
+      "translationStatus": "pending",
+      "mappingStatus": "pending"
+    },
+    {
+      "ordinal": 34,
+      "sourceNumber": "",
+      "sourceAnchor": "",
+      "kind": "exercise-candidate",
+      "context": "[Figure: The figure shows 3 steps for a 2 by 3 matrix and 6 steps for a 3 by 4 matrix. For the former, step 1 is to get a 1 in row 1 column 1. Step to is to get a 0 is row 2 column 1. Step 3 is to get a 1 in row 2 column 2. For a 3 by 4 matrix, step 1 is to get a 1 in row 1 column 1. Step 2 is to get a 0 in row 2 column 1. Step 3 is to get a 0 in row 3 column 1. Step 4 is to get a 1 in row 2 column 2. Step 5 is to get a 0 in row 3 column 2. Step 6 is to get a 1 in row 3 column 3.]\n\nWe use the same procedure when the system of equations has three equations.\n\nSo far our work with matrices has only been with systems that are consistent and independent, which means they have exactly one solution. Let’s now look at what happens when we use a matrix for a dependent or inconsistent system.",
+      "original": "Example \\(\\PageIndex{19}\\)\n\nSolve the system of equations using a matrix: \\(\\left\\{ \\begin{array} {l} x+y+3z=0 \\\\ x+3y+5z=0 \\\\ 2x+4z=1 \\end{array} \\right. \\)\n\nAnswer\n\n[Figure: .]\n\n                Write the augmented matrix for the equations.\t\n\n[Figure: .]\n\n                The entry in row 1, column 1 is 1.\t\n\n                Using row operations, get zeros in column 1 below the 1.\t\n\n[Figure: .]\n\n[Figure: .]\n\n                Continue the process until the matrix is in row-echelon form.\t\n\n[Figure: .]\n\n                Multiply row 2 by 2 and add it to row 3.\t\n\n[Figure: .]\n\n                At this point, we have all zeros on the left of row 3.\t\n\n                Write the corresponding system of equations.\t\n\n[Figure: .]\n\n                Since \\(0 \\neq 1 \\) we have a false statement. Just as when we solved a system using other methods, this tells us we have an inconsistent system. There is no solution.",
+      "prompt": "Example \\(\\PageIndex{19}\\)\n\nSolve the system of equations using a matrix: \\(\\left\\{ \\begin{array} {l} x+y+3z=0 \\\\ x+3y+5z=0 \\\\ 2x+4z=1 \\end{array} \\right. \\)",
+      "sourceAnswers": [
+        "[Figure: .]\n\n                Write the augmented matrix for the equations.\t\n\n[Figure: .]\n\n                The entry in row 1, column 1 is 1.\t\n\n                Using row operations, get zeros in column 1 below the 1.\t\n\n[Figure: .]\n\n[Figure: .]\n\n                Continue the process until the matrix is in row-echelon form.\t\n\n[Figure: .]\n\n                Multiply row 2 by 2 and add it to row 3.\t\n\n[Figure: .]\n\n                At this point, we have all zeros on the left of row 3.\t\n\n                Write the corresponding system of equations.\t\n\n[Figure: .]\n\n                Since \\(0 \\neq 1 \\) we have a false statement. Just as when we solved a system using other methods, this tells us we have an inconsistent system. There is no solution."
+      ],
+      "hasFigure": true,
+      "status": "draft",
+      "answerVerified": false,
+      "translationStatus": "pending",
+      "mappingStatus": "pending"
+    },
+    {
+      "ordinal": 35,
+      "sourceNumber": "",
+      "sourceAnchor": "",
+      "kind": "exercise-candidate",
+      "context": "[Figure: The figure shows 3 steps for a 2 by 3 matrix and 6 steps for a 3 by 4 matrix. For the former, step 1 is to get a 1 in row 1 column 1. Step to is to get a 0 is row 2 column 1. Step 3 is to get a 1 in row 2 column 2. For a 3 by 4 matrix, step 1 is to get a 1 in row 1 column 1. Step 2 is to get a 0 in row 2 column 1. Step 3 is to get a 0 in row 3 column 1. Step 4 is to get a 1 in row 2 column 2. Step 5 is to get a 0 in row 3 column 2. Step 6 is to get a 1 in row 3 column 3.]\n\nWe use the same procedure when the system of equations has three equations.\n\nSo far our work with matrices has only been with systems that are consistent and independent, which means they have exactly one solution. Let’s now look at what happens when we use a matrix for a dependent or inconsistent system.",
+      "original": "Example \\(\\PageIndex{20}\\)\n\nSolve the system of equations using a matrix: \\(\\left\\{ \\begin{array} {l} x−2y+2z=1 \\\\ −2x+y−z=2 \\\\ x−y+z=5 \\end{array} \\right. \\)\n\nAnswer\n\nno solution",
+      "prompt": "Example \\(\\PageIndex{20}\\)\n\nSolve the system of equations using a matrix: \\(\\left\\{ \\begin{array} {l} x−2y+2z=1 \\\\ −2x+y−z=2 \\\\ x−y+z=5 \\end{array} \\right. \\)",
+      "sourceAnswers": [
+        "no solution"
+      ],
+      "hasFigure": false,
+      "status": "draft",
+      "answerVerified": false,
+      "translationStatus": "pending",
+      "mappingStatus": "pending"
+    },
+    {
+      "ordinal": 36,
+      "sourceNumber": "",
+      "sourceAnchor": "",
+      "kind": "exercise-candidate",
+      "context": "[Figure: The figure shows 3 steps for a 2 by 3 matrix and 6 steps for a 3 by 4 matrix. For the former, step 1 is to get a 1 in row 1 column 1. Step to is to get a 0 is row 2 column 1. Step 3 is to get a 1 in row 2 column 2. For a 3 by 4 matrix, step 1 is to get a 1 in row 1 column 1. Step 2 is to get a 0 in row 2 column 1. Step 3 is to get a 0 in row 3 column 1. Step 4 is to get a 1 in row 2 column 2. Step 5 is to get a 0 in row 3 column 2. Step 6 is to get a 1 in row 3 column 3.]\n\nWe use the same procedure when the system of equations has three equations.\n\nSo far our work with matrices has only been with systems that are consistent and independent, which means they have exactly one solution. Let’s now look at what happens when we use a matrix for a dependent or inconsistent system.",
+      "original": "Example \\(\\PageIndex{21}\\)\n\nSolve the system of equations using a matrix: \\(\\left\\{ \\begin{array} {l} 3x+4y−3z=−2 \\\\ −2x+3y−z=−1 \\\\ 2x+y−2z=6 \\end{array} \\right. \\)\n\nAnswer\n\nno solution",
+      "prompt": "Example \\(\\PageIndex{21}\\)\n\nSolve the system of equations using a matrix: \\(\\left\\{ \\begin{array} {l} 3x+4y−3z=−2 \\\\ −2x+3y−z=−1 \\\\ 2x+y−2z=6 \\end{array} \\right. \\)",
+      "sourceAnswers": [
+        "no solution"
+      ],
+      "hasFigure": false,
+      "status": "draft",
+      "answerVerified": false,
+      "translationStatus": "pending",
+      "mappingStatus": "pending"
+    },
+    {
+      "ordinal": 37,
+      "sourceNumber": "",
+      "sourceAnchor": "",
+      "kind": "exercise-candidate",
+      "context": "We use the same procedure when the system of equations has three equations.\n\nSo far our work with matrices has only been with systems that are consistent and independent, which means they have exactly one solution. Let’s now look at what happens when we use a matrix for a dependent or inconsistent system.\n\nThe last system was inconsistent and so had no solutions. The next example is dependent and has infinitely many solutions.",
+      "original": "Example \\(\\PageIndex{22}\\)\n\nSolve the system of equations using a matrix: \\(\\left\\{ \\begin{array} {l} x−2y+3z=1 \\\\ x+y−3z=7 \\\\ 3x−4y+5z=7 \\end{array} \\right. \\)\n\nAnswer\n\n[Figure: .]\n\n                Write the augmented matrix for the equations.\t\n\n[Figure: .]\n\n                The entry in row 1, column 1 is 1.\t\n\n                Using row operations, get zeros in column 1 below the 1.\t\n\n[Figure: .]\n\n[Figure: .]\n\n                Continue the process until the matrix is in row-echelon form.\t\n\n[Figure: .]\n\n                Multiply row 2 by \\(−2\\) and add it to row 3.\t\n\n[Figure: .]\n\n                At this point, we have all zeros in the bottom row.\t\n\n                Write the corresponding system of equations.\t\n\n[Figure: .]\n\n                Since \\(0=0\\) we have a true statement. Just as when we solved by substitution, this tells us we have a dependent system. There are infinitely many solutions.\t\n\n                Solve for y in terms of z in the second equation.\t\n\n[Figure: .]\n\n                Solve the first equation for x in terms of z.\t\n\n[Figure: .]\n\n                Substitute \\(y=2z+2\\).\t\n\n[Figure: .]\n\n                Simplify.\t\n\n[Figure: .]\n\n                Simplify.\t\n\n[Figure: .]\n\n                Simplify.\t\n\n[Figure: .]\n\n                The system has infinitely many solutions \\((x,y,z)\\), where \\(x=z+5;\\space y=2z+2;\\space z\\) is any real number.",
+      "prompt": "Example \\(\\PageIndex{22}\\)\n\nSolve the system of equations using a matrix: \\(\\left\\{ \\begin{array} {l} x−2y+3z=1 \\\\ x+y−3z=7 \\\\ 3x−4y+5z=7 \\end{array} \\right. \\)",
+      "sourceAnswers": [
+        "[Figure: .]\n\n                Write the augmented matrix for the equations.\t\n\n[Figure: .]\n\n                The entry in row 1, column 1 is 1.\t\n\n                Using row operations, get zeros in column 1 below the 1.\t\n\n[Figure: .]\n\n[Figure: .]\n\n                Continue the process until the matrix is in row-echelon form.\t\n\n[Figure: .]\n\n                Multiply row 2 by \\(−2\\) and add it to row 3.\t\n\n[Figure: .]\n\n                At this point, we have all zeros in the bottom row.\t\n\n                Write the corresponding system of equations.\t\n\n[Figure: .]\n\n                Since \\(0=0\\) we have a true statement. Just as when we solved by substitution, this tells us we have a dependent system. There are infinitely many solutions.\t\n\n                Solve for y in terms of z in the second equation.\t\n\n[Figure: .]\n\n                Solve the first equation for x in terms of z.\t\n\n[Figure: .]\n\n                Substitute \\(y=2z+2\\).\t\n\n[Figure: .]\n\n                Simplify.\t\n\n[Figure: .]\n\n                Simplify.\t\n\n[Figure: .]\n\n                Simplify.\t\n\n[Figure: .]\n\n                The system has infinitely many solutions \\((x,y,z)\\), where \\(x=z+5;\\space y=2z+2;\\space z\\) is any real number."
+      ],
+      "hasFigure": true,
+      "status": "draft",
+      "answerVerified": false,
+      "translationStatus": "pending",
+      "mappingStatus": "pending"
+    },
+    {
+      "ordinal": 38,
+      "sourceNumber": "",
+      "sourceAnchor": "",
+      "kind": "exercise-candidate",
+      "context": "We use the same procedure when the system of equations has three equations.\n\nSo far our work with matrices has only been with systems that are consistent and independent, which means they have exactly one solution. Let’s now look at what happens when we use a matrix for a dependent or inconsistent system.\n\nThe last system was inconsistent and so had no solutions. The next example is dependent and has infinitely many solutions.",
+      "original": "Example \\(\\PageIndex{23}\\)\n\nSolve the system of equations using a matrix: \\(\\left\\{ \\begin{array} {l} x+y−z=0 \\\\ 2x+4y−2z=6 \\\\ 3x+6y−3z=9 \\end{array} \\right. \\)\n\nAnswer\n\ninfinitely many solutions \\((x,y,z)\\), where \\(x=z−3;\\space y=3;\\space z\\) is any real number.",
+      "prompt": "Example \\(\\PageIndex{23}\\)\n\nSolve the system of equations using a matrix: \\(\\left\\{ \\begin{array} {l} x+y−z=0 \\\\ 2x+4y−2z=6 \\\\ 3x+6y−3z=9 \\end{array} \\right. \\)",
+      "sourceAnswers": [
+        "infinitely many solutions \\((x,y,z)\\), where \\(x=z−3;\\space y=3;\\space z\\) is any real number."
+      ],
+      "hasFigure": false,
+      "status": "draft",
+      "answerVerified": false,
+      "translationStatus": "pending",
+      "mappingStatus": "pending"
+    },
+    {
+      "ordinal": 39,
+      "sourceNumber": "",
+      "sourceAnchor": "",
+      "kind": "exercise-candidate",
+      "context": "We use the same procedure when the system of equations has three equations.\n\nSo far our work with matrices has only been with systems that are consistent and independent, which means they have exactly one solution. Let’s now look at what happens when we use a matrix for a dependent or inconsistent system.\n\nThe last system was inconsistent and so had no solutions. The next example is dependent and has infinitely many solutions.",
+      "original": "Example \\(\\PageIndex{24}\\)\n\nSolve the system of equations using a matrix: \\(\\left\\{ \\begin{array} {l} x−y−z=1 \\\\ −x+2y−3z=−4 \\\\ 3x−2y−7z=0 \\end{array} \\right. \\)\n\nAnswer\n\ninfinitely many solutions \\((x,y,z)\\), where \\(x=5z−2;\\space y=4z−3;\\space z\\) is any real number.",
+      "prompt": "Example \\(\\PageIndex{24}\\)\n\nSolve the system of equations using a matrix: \\(\\left\\{ \\begin{array} {l} x−y−z=1 \\\\ −x+2y−3z=−4 \\\\ 3x−2y−7z=0 \\end{array} \\right. \\)",
+      "sourceAnswers": [
+        "infinitely many solutions \\((x,y,z)\\), where \\(x=5z−2;\\space y=4z−3;\\space z\\) is any real number."
+      ],
+      "hasFigure": false,
+      "status": "draft",
+      "answerVerified": false,
+      "translationStatus": "pending",
+      "mappingStatus": "pending"
+    },
+    {
+      "ordinal": 40,
+      "sourceNumber": "1",
+      "sourceAnchor": "",
+      "kind": "exercise-candidate",
+      "context": "Key Concepts",
+      "original": "1. Write the augmented matrix for the system of equations.",
+      "prompt": "1. Write the augmented matrix for the system of equations.",
+      "sourceAnswers": [],
+      "hasFigure": false,
+      "status": "draft",
+      "answerVerified": false,
+      "translationStatus": "pending",
+      "mappingStatus": "pending"
+    },
+    {
+      "ordinal": 41,
+      "sourceNumber": "2",
+      "sourceAnchor": "",
+      "kind": "exercise-candidate",
+      "context": "Key Concepts",
+      "original": "2. Using row operations get the entry in row 1, column 1 to be 1.",
+      "prompt": "2. Using row operations get the entry in row 1, column 1 to be 1.",
+      "sourceAnswers": [],
+      "hasFigure": false,
+      "status": "draft",
+      "answerVerified": false,
+      "translationStatus": "pending",
+      "mappingStatus": "pending"
+    },
+    {
+      "ordinal": 42,
+      "sourceNumber": "3",
+      "sourceAnchor": "",
+      "kind": "exercise-candidate",
+      "context": "Key Concepts",
+      "original": "3. Using row operations, get zeros in column 1 below the 1.",
+      "prompt": "3. Using row operations, get zeros in column 1 below the 1.",
+      "sourceAnswers": [],
+      "hasFigure": false,
+      "status": "draft",
+      "answerVerified": false,
+      "translationStatus": "pending",
+      "mappingStatus": "pending"
+    },
+    {
+      "ordinal": 43,
+      "sourceNumber": "4",
+      "sourceAnchor": "",
+      "kind": "exercise-candidate",
+      "context": "Key Concepts",
+      "original": "4. Using row operations, get the entry in row 2, column 2 to be 1.",
+      "prompt": "4. Using row operations, get the entry in row 2, column 2 to be 1.",
+      "sourceAnswers": [],
+      "hasFigure": false,
+      "status": "draft",
+      "answerVerified": false,
+      "translationStatus": "pending",
+      "mappingStatus": "pending"
+    },
+    {
+      "ordinal": 44,
+      "sourceNumber": "5",
+      "sourceAnchor": "",
+      "kind": "exercise-candidate",
+      "context": "Key Concepts",
+      "original": "5. Continue the process until the matrix is in row-echelon form.",
+      "prompt": "5. Continue the process until the matrix is in row-echelon form.",
+      "sourceAnswers": [],
+      "hasFigure": false,
+      "status": "draft",
+      "answerVerified": false,
+      "translationStatus": "pending",
+      "mappingStatus": "pending"
+    },
+    {
+      "ordinal": 45,
+      "sourceNumber": "6",
+      "sourceAnchor": "",
+      "kind": "exercise-candidate",
+      "context": "Key Concepts",
+      "original": "6. Write the corresponding system of equations.",
+      "prompt": "6. Write the corresponding system of equations.",
+      "sourceAnswers": [],
+      "hasFigure": false,
+      "status": "draft",
+      "answerVerified": false,
+      "translationStatus": "pending",
+      "mappingStatus": "pending"
+    },
+    {
+      "ordinal": 46,
+      "sourceNumber": "7",
+      "sourceAnchor": "",
+      "kind": "exercise-candidate",
+      "context": "Key Concepts",
+      "original": "7. Use substitution to find the remaining variables.",
+      "prompt": "7. Use substitution to find the remaining variables.",
+      "sourceAnswers": [],
+      "hasFigure": false,
+      "status": "draft",
+      "answerVerified": false,
+      "translationStatus": "pending",
+      "mappingStatus": "pending"
+    },
+    {
+      "ordinal": 47,
+      "sourceNumber": "8",
+      "sourceAnchor": "",
+      "kind": "exercise-candidate",
+      "context": "Key Concepts",
+      "original": "8. Write the solution as an ordered pair or triple.",
+      "prompt": "8. Write the solution as an ordered pair or triple.",
+      "sourceAnswers": [],
+      "hasFigure": false,
+      "status": "draft",
+      "answerVerified": false,
+      "translationStatus": "pending",
+      "mappingStatus": "pending"
+    },
+    {
+      "ordinal": 48,
+      "sourceNumber": "9",
+      "sourceAnchor": "",
+      "kind": "exercise-candidate",
+      "context": "Key Concepts",
+      "original": "9. Check that the solution makes the original equations true.",
+      "prompt": "9. Check that the solution makes the original equations true.",
+      "sourceAnswers": [],
+      "hasFigure": false,
+      "status": "draft",
+      "answerVerified": false,
+      "translationStatus": "pending",
+      "mappingStatus": "pending"
+    }
+  ],
+  "license": "CC BY 4.0",
+  "licenseEvidence": "This page titled 4.6: Solve Systems of Equations Using Matrices was last modified on Fri, 04 Oct 2024 16:58:02 GMT and is shared under a CC BY  4.0  license and was authored, remixed, and/or curated by OpenStax via source content that was edited to the style and standards of the LibreTexts platform.",
+  "url": "https://math.libretexts.org/Bookshelves/Algebra/Intermediate_Algebra_1e_(OpenStax)/04:_Systems_of_Linear_Equations/4.06:_Solve_Systems_of_Equations_Using_Matrices",
+  "sha256": "721cf5984ebf1118e820fe4c7fae348429667ccf7a39dc1f18c580fe76f1e9e6",
+  "checkedAt": "2026-10-07",
+  "id": "35d60979ec999710dedf",
+  "bookId": "intermediate-algebra",
+  "licenseInherited": false,
+  "licenseSource": "https://math.libretexts.org/Bookshelves/Algebra/Intermediate_Algebra_1e_(OpenStax)/04:_Systems_of_Linear_Equations/4.06:_Solve_Systems_of_Equations_Using_Matrices",
+  "licenseUrl": "https://creativecommons.org/licenses/by/4.0/",
+  "authors": "OpenStax / Lynn Marecek, Andrea Honeycutt Mathis",
+  "book": "Intermediate Algebra 1e",
+  "reviewStatus": "unreviewed",
+  "sourceLanguage": "en",
+  "translationStatus": "pending"
+}

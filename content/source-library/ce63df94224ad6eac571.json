@@ -1,0 +1,516 @@
+{
+  "title": "6.3: Logarithmic Functions",
+  "originalText": "Learning Objectives\n\nConvert from logarithmic to exponential form.\n\nConvert from exponential to logarithmic form.\n\nEvaluate logarithms.\n\nUse common logarithms.\n\nUse natural logarithms.\n\nIn 2010, a major earthquake struck Haiti, destroying or damaging over 285,000 homes. One year later, another, stronger earthquake devastated Honshu, Japan, destroying or damaging over 332,000 buildings,^( )like those shown in Figure \\(\\PageIndex{1}\\). Even though both caused substantial damage, the earthquake in 2011 was 100 times stronger than the earthquake in Haiti. How do we know? The magnitudes of earthquakes are measured on a scale known as the Richter Scale. The Haitian earthquake registered a 7.0 on the Richter Scale^( )whereas the Japanese earthquake registered a 9.0.\n\n[Figure: Photo of the aftermath of the earthquake in Japan with a focus on the Japanese flag.]\n\nFigure \\(\\PageIndex{1}\\): Devastation of March 11, 2011 earthquake in Honshu, Japan. (credit: Daniel Pierce).\n\nThe Richter Scale is a base-ten logarithmic scale. In other words, an earthquake of magnitude \\(8\\) is not twice as great as an earthquake of magnitude \\(4\\). It is\n\n\\[10^{8−4}=10^4=10,000 \\nonumber\\]\n\ntimes as great! In this lesson, we will investigate the nature of the Richter Scale and the base-ten function upon which it depends.\n\nConverting from Logarithmic to Exponential Form\n\nIn order to analyze the magnitude of earthquakes or compare the magnitudes of two different earthquakes, we need to be able to convert between logarithmic and exponential form. For example, suppose the amount of energy released from one earthquake were 500 times greater than the amount of energy released from another. We want to calculate the difference in magnitude. The equation that represents this problem is \\(10^x=500\\), where \\(x\\) represents the difference in magnitudes on the Richter Scale. How would we solve for \\(x\\)?\n\nWe have not yet learned a method for solving exponential equations. None of the algebraic tools discussed so far is sufficient to solve \\(10^x=500\\). We know that \\({10}^2=100\\) and \\({10}^3=1000\\), so it is clear that \\(x\\) must be some value between 2 and 3, since \\(y={10}^x\\) is increasing. We can examine a graph, as in Figure \\(\\PageIndex{1}\\), to better estimate the solution.\n\n[Figure: Graph of the intersections of the equations y=10^x and y=500.]\n\nFigure \\(\\PageIndex{2}\\)\n\nEstimating from a graph, however, is imprecise. To find an algebraic solution, we must introduce a new function. Observe that the graph in Figure \\(\\PageIndex{2}\\) passes the horizontal line test. The exponential function \\(y=b^x\\) is one-to-one, so its inverse, \\(x=b^y\\) is also a function. As is the case with all inverse functions, we simply interchange \\(x\\) and \\(y\\) and solve for \\(y\\) to find the inverse function. To represent \\(y\\) as a function of \\(x\\), we use a logarithmic function of the form \\(y={\\log}_b(x)\\). The base \\(b\\) logarithm of a number is the exponent by which we must raise \\(b\\) to get that number.\n\nWe read a logarithmic expression as, “The logarithm with base \\(b\\) of \\(x\\) is equal to \\(y\\),” or, simplified, “log base \\(b\\) of \\(x\\) is \\(y\\).” We can also say, “\\(b\\) raised to the power of \\(y\\) is \\(x\\),” because logs are exponents. For example, the base \\(2\\) logarithm of \\(32\\) is \\(5\\), because \\(5\\) is the exponent we must apply to \\(2\\) to get \\(32\\). Since \\(2^5=32\\), we can write \\({\\log}_232=5\\). We read this as “log base \\(2\\) of \\(32\\) is \\(5\\).”\n\nWe can express the relationship between logarithmic form and its corresponding exponential form as follows:\n\n\\[\\begin{align} \\log_b(x)=y\\Leftrightarrow b^y=x, b> 0, b\\neq 1 \\end{align}\\]\n\nNote that the base \\(b\\) is always positive.\n\n[Figure: log xx.jpg]\n\nBecause logarithm is a function, it is most correctly written as \\(\\log_b(x)\\), using parentheses to denote function evaluation, just as we would with \\(f(x)\\). However, when the input is a single variable or number, it is common to see the parentheses dropped and the expression written without parentheses, as \\(\\log_bx\\). Note that many calculators require parentheses around the \\(x\\).\n\nWe can illustrate the notation of logarithms as follows:\n\n[Figure: CNX_Precalc_Figure_04_03_003_gsa7.jpg]\n\nNotice that, comparing the logarithm function and the exponential function, the input and the output are switched. This means \\(y={\\log}^b(x)\\) and \\(y=b^x\\) are inverse functions.\n\nDEFINITION OF THE LOGARITHMIC FUNCTION\n\nA logarithm base \\(b\\) of a positive number \\(x\\) satisfies the following definition.\n\nFor \\(x>0\\), \\(b>0\\), \\(b≠1\\),\n\n\\[\\begin{align} y={\\log}_b(x)\\text{ is equivalent to } b^y=x \\end{align}\\]\n\nwhere,\n\nwe read \\({\\log}_b(x)\\) as, “the logarithm with base \\(b\\) of \\(x\\)” or the “log base \\(b\\) of \\(x\\).\"\n\nthe logarithm \\(y\\) is the exponent to which \\(b\\) must be raised to get \\(x\\).\n\nAlso, since the logarithmic and exponential functions switch the \\(x\\) and \\(y\\) values, the domain and range of the exponential function are interchanged for the logarithmic function. Therefore,\n\nthe domain of the logarithm function with base \\(b\\) is \\((0,\\infty)\\).\n\nthe range of the logarithm function with base \\(b\\) is \\((−\\infty,\\infty)\\).\n\nQ&A: Can we take the logarithm of a negative number?\n\nNo. Because the base of an exponential function is always positive, no power of that base can ever be negative. We can never take the logarithm of a negative number. Also, we cannot take the logarithm of zero. Calculators may output a log of a negative number when in complex mode, but the log of a negative number is not a real number.\n\nHow to: Given an equation in logarithmic form \\({\\log}_b(x)=y\\), convert it to exponential form\n\n1. Examine the equation \\(y={\\log}_bx\\) and identify \\(b\\), \\(y\\),and \\(x\\).\n\n2. Rewrite \\({\\log}_bx=y\\) as \\(b^y=x\\).\n\nExample \\(\\PageIndex{1}\\): Converting from Logarithmic Form to Exponential Form​​​​​​\n\nWrite the following logarithmic equations in exponential form.\n\n1. \\({\\log}_6(\\sqrt{6})=\\dfrac{1}{2}\\)\n\n2. \\({\\log}_3(9)=2\\)\n\nSolution\n\nFirst, identify the values of \\(b\\), \\(y\\),and \\(x\\). Then, write the equation in the form \\(b^y=x\\).\n\n1. \\({\\log}_6(\\sqrt{6})=\\dfrac{1}{2}\\)\n\nHere, \\(b=6\\), \\(y=\\dfrac{1}{2}\\),and \\(x=\\sqrt{6}\\). Therefore, the equation \\({\\log}_6(\\sqrt{6})=\\dfrac{1}{2}\\) is equivalent to\n\n\\(6^{\\tfrac{1}{2}}=\\sqrt{6}\\)\n\n2. \\({\\log}_3(9)=2\\)\n\nHere, \\(b=3\\), \\(y=2\\),and \\(x=9\\). Therefore, the equation \\({\\log}_3(9)=2\\) is equivalent to\n\n\\(3^2=9\\)\n\nExercise \\(\\PageIndex{1}\\)\n\nWrite the following logarithmic equations in exponential form.\n\n1. \\({\\log}_{10}(1,000,000)=6\\)\n\n2. \\({\\log}_5(25)=2\\)\n\nAnswer a\n\n\\({\\log}_{10}(1,000,000)=6\\) is equivalent to \\({10}^6=1,000,000\\)\n\nAnswer b\n\n\\({\\log}_5(25)=2\\) is equivalent to \\(5^2=25\\)\n\nConverting from Exponential to Logarithmic Form\n\nTo convert from exponents to logarithms, we follow the same steps in reverse. We identify the base \\(b\\),exponent \\(x\\),and output \\(y\\). Then we write \\(x={\\log}_b(y)\\).\n\nExample \\(\\PageIndex{2}\\): Converting from Exponential Form to Logarithmic Form\n\nWrite the following exponential equations in logarithmic form.\n\n1. \\(2^3=8\\)\n\n2. \\(5^2=25\\)\n\n3. \\({10}^{−4}=\\dfrac{1}{10,000}\\)\n\nSolution\n\nFirst, identify the values of \\(b\\), \\(y\\),and \\(x\\). Then, write the equation in the form \\(x={\\log}_b(y)\\).\n\n1. \\(2^3=8\\)\n\nHere, \\(b=2\\), \\(x=3\\),and \\(y=8\\). Therefore, the equation \\(2^3=8\\) is equivalent to \\({\\log}_2(8)=3\\).\n\n2. \\(5^2=25\\)\n\nHere, \\(b=5\\), \\(x=2\\),and \\(y=25\\). Therefore, the equation \\(5^2=25\\) is equivalent to \\({\\log}_5(25)=2\\).\n\n3. \\({10}^{−4}=\\dfrac{1}{10,000}\\)\n\nHere, \\(b=10\\), \\(x=−4\\),and \\(y=\\dfrac{1}{10,000}\\). Therefore, the equation \\({10}^{−4}=\\dfrac{1}{10,000}\\) is equivalent to \\({\\log}_{10} \\left (\\dfrac{1}{10,000} \\right )=−4\\).\n\nExercise \\(\\PageIndex{2}\\)\n\nWrite the following exponential equations in logarithmic form.\n\n1. \\(3^2=9\\)\n\n2. \\(5^3=125\\)\n\n3. \\(2^{−1}=\\dfrac{1}{2}\\)\n\nAnswer a\n\n\\(3^2=9\\) is equivalent to \\({\\log}_3(9)=2\\)\n\nAnswer b\n\n\\(5^3=125\\) is equivalent to \\({\\log}_5(125)=3\\)\n\nAnswer c\n\n\\(2^{−1}=\\dfrac{1}{2}\\) is equivalent to \\({\\log}_2 \\left (\\dfrac{1}{2} \\right )=−1\\)\n\nEvaluating Logarithms\n\nKnowing the squares, cubes, and roots of numbers allows us to evaluate many logarithms mentally. For example, consider \\({\\log}_28\\). We ask, “To what exponent must \\(2\\)  be raised in order to get 8?” Because we already know \\(2^3=8\\), it follows that \\({\\log}_28=3\\).\n\nNow consider solving \\({\\log}_749\\) and \\({\\log}_327\\) mentally.\n\nWe ask, “To what exponent must \\(7\\) be raised in order to get \\(49\\)?” We know \\(7^2=49\\). Therefore, \\({\\log}_749=2\\)\n\nWe ask, “To what exponent must \\(3\\) be raised in order to get \\(27\\)?” We know \\(3^3=27\\). Therefore, \\(\\log_{3}27=3\\)\n\nEven some seemingly more complicated logarithms can be evaluated without a calculator. For example, let’s evaluate \\(\\log_{\\ce{2/3}} \\frac{4}{9}\\) mentally.\n\nWe ask, “To what exponent must \\(\\ce{2/3}\\) be raised in order to get \\(\\ce{4/9}\\)? ” We know \\(2^2=4\\) and \\(3^2=9\\), so \\[{\\left(\\dfrac{2}{3} \\right )}^2=\\dfrac{4}{9}. \\nonumber\\] Therefore, \\[{\\log}_{\\ce{2/3}} \\left (\\dfrac{4}{9} \\right )=2. \\nonumber\\]\n\nHow to: Given a logarithm of the form \\(y={\\log}_b(x)\\),evaluate it mentally\n\n1. Rewrite the argument \\(x\\) as a power of \\(b\\): \\(b^y=x\\). \n\n2. Use previous knowledge of powers of \\(b\\) identify \\(y\\) by asking, “To what exponent should \\(b\\) be raised in order to get \\(x\\)?”\n\nExample \\(\\PageIndex{3}\\): Solving Logarithms Mentally\n\nSolve \\(y={\\log}_4(64)\\) without using a calculator.\n\nSolution\n\nFirst we rewrite the logarithm in exponential form: \\(4^y=64\\). Next, we ask, “To what exponent must \\(4\\) be raised in order to get \\(64\\)?”\n\nWe know\n\n\\(4^3=64\\)\n\nTherefore,\n\n\\({\\log}_4(64)=3\\)\n\nExercise \\(\\PageIndex{3}\\)\n\nSolve \\(y={\\log}_{121}(11)\\) without using a calculator.\n\nAnswer\n\n\\({\\log}_{121}(11)=\\dfrac{1}{2}\\) (recalling that \\(\\sqrt{121}={(121)}^{\\tfrac{1}{2}}=11)\\)\n\nExample \\(\\PageIndex{4}\\): Evaluating the Logarithm of a Reciprocal\n\nEvaluate \\(y={\\log}_3 \\left (\\dfrac{1}{27} \\right )\\) without using a calculator.\n\nSolution\n\nFirst we rewrite the logarithm in exponential form: \\(3^y=\\dfrac{1}{27}\\). Next, we ask, “To what exponent must \\(3\\) be raised in order to get \\(\\dfrac{1}{27}\\)?”\n\nWe know \\(3^3=27\\),but what must we do to get the reciprocal, \\(\\dfrac{1}{27}\\)? Recall from working with exponents that \\(b^{−a}=\\dfrac{1}{b^a}\\). We use this information to write\n\n\\[\\begin{align*} 3^{-3}&= \\dfrac{1}{3^3}\\\\ &= \\dfrac{1}{27} \\end{align*}\\]\n\nTherefore, \\({\\log}_3 \\left (\\dfrac{1}{27} \\right )=−3\\). \n\nExercise \\(\\PageIndex{4}\\)\n\nEvaluate \\(y={\\log}_2 \\left (\\dfrac{1}{32} \\right )\\) without using a calculator.\n\nAnswer\n\n\\({\\log}_2 \\left (\\dfrac{1}{32} \\right )=−5\\)\n\nUsing Common Logarithms\n\nSometimes we may see a logarithm written without a base. In this case, we assume that the base is \\(10\\). In other words, the expression \\(\\log(x)\\) means \\({\\log}_{10}(x)\\). We call a base \\(-10\\) logarithm a common logarithm. Common logarithms are used to measure the Richter Scale mentioned at the beginning of the section. Scales for measuring the brightness of stars and the pH of acids and bases also use common logarithms.\n\nDEFINITION OF THE COMMON LOGARITHM\n\nA common logarithm is a logarithm with base \\(10\\). We write \\({\\log}_{10}(x)\\) simply as \\(\\log(x)\\). The common logarithm of a positive number \\(x\\) satisfies the following definition.\n\nFor \\(x>0\\),\n\n\\[\\begin{align} y={\\log}(x)\\text{ is equivalent to } {10}^y=x \\end{align}\\]\n\nWe read \\(\\log(x)\\) as, “the logarithm with base \\(10\\) of \\(x\\) ” or “log base \\(10\\) of \\(x\\).”\n\nThe logarithm \\(y\\) is the exponent to which \\(10\\) must be raised to get \\(x\\).\n\nHow to: Given a common logarithm of the form \\(y=\\log(x)\\), evaluate it mentally\n\n1. Rewrite the argument \\(x\\) as a power of \\(10\\): \\({10}^y=x\\).\n\n2. Use previous knowledge of powers of \\(10\\) to identify \\(y\\) by asking, “To what exponent must \\(10\\) be raised in order to get \\(x\\)?”\n\nExample \\(\\PageIndex{5}\\): Finding the Value of a Common Logarithm Mentally\n\nEvaluate \\(y=\\log(1000)\\) without using a calculator.\n\nSolution\n\nFirst we rewrite the logarithm in exponential form: \\({10}^y=1000\\). Next, we ask, “To what exponent must \\(10\\) be raised in order to get \\(1000\\)?” We know\n\n\\({10}^3=1000\\)\n\nTherefore, \\(\\log(1000)=3\\).\n\nExercise \\(\\PageIndex{5}\\)\n\nEvaluate \\(y=\\log(1,000,000)\\).\n\nAnswer\n\n\\(\\log(1,000,000)=6\\)\n\nHow to: Given a common logarithm with the form \\(y=\\log(x)\\),evaluate it using a calculator\n\n1. Press [LOG].\n\n2. Enter the value given for \\(x\\),followed by [ ) ].\n\n3. Press [ENTER].\n\nExample \\(\\PageIndex{6}\\): ​​​​​​Finding the Value of a Common Logarithm Using a Calculator\n\nEvaluate \\(y=\\log(321)\\) to four decimal places using a calculator.\n\nSolution\n\nPress [LOG].\n\nEnter 321, followed by [ ) ].\n\nPress [ENTER].\n\nRounding to four decimal places, \\(\\log(321)≈2.5065\\).\n\nAnalysis\n\nNote that \\({10}^2=100\\) and that \\({10}^3=1000\\). Since \\(321\\) is between \\(100\\) and \\(1000\\), we know that \\(\\log(321)\\) must be between \\(\\log(100)\\) and \\(\\log(1000)\\). This gives us the following:\n\n\\(100<321<1000\\)\n\n\\(2<2.5065<3\\)\n\nExercise \\(\\PageIndex{6}\\)\n\nEvaluate \\(y=\\log(123)\\) to four decimal places using a calculator.\n\nAnswer\n\n\\(\\log(123)≈2.0899\\)\n\nExample \\(\\PageIndex{7}\\): Rewriting and Solving a Real-World Exponential Model\n\nThe amount of energy released from one earthquake was \\(500\\) times greater than the amount of energy released from another. The equation \\({10}^x=500\\) represents this situation, where \\(x\\) is the difference in magnitudes on the Richter Scale. To the nearest thousandth, what was the difference in magnitudes?\n\nSolution\n\nWe begin by rewriting the exponential equation in logarithmic form.\n\n\\({10}^x=500\\)\n\n\\(\\log(500)=x\\) Use the definition of the common log.\n\nNext we evaluate the logarithm using a calculator:\n\nPress [LOG].\n\nEnter \\(500\\),followed by [ ) ].\n\nPress [ENTER].\n\nTo the nearest thousandth, \\(\\log(500)≈2.699\\).\n\nThe difference in magnitudes was about \\(2.699\\).\n\nExercise \\(\\PageIndex{7}\\)\n\n​​​​The amount of energy released from one earthquake was \\(8,500\\) times greater than the amount of energy released from another. The equation \\({10}^x=8500\\) represents this situation, where \\(x\\) is the difference in magnitudes on the Richter Scale. To the nearest thousandth, what was the difference in magnitudes?\n\nAnswer\n\nThe difference in magnitudes was about \\(3.929\\). \n\nUsing Natural Logarithms\n\nThe most frequently used base for logarithms is \\(e\\). Base \\(e\\) logarithms are important in calculus and some scientific applications; they are called natural logarithms. The base \\(e\\) logarithm, \\({\\log}_e(x)\\), has its own notation,\\(\\ln(x)\\). Most values of \\(\\ln(x)\\) can be found only using a calculator. The major exception is that, because the logarithm of \\(1\\) is always \\(0\\) in any base, \\(\\ln1=0\\). For other natural logarithms, we can use the \\(\\ln\\) key that can be found on most scientific calculators. We can also find the natural logarithm of any power of \\(e\\) using the inverse property of logarithms.\n\nDEFINITION OF THE NATURAL LOGARITHM\n\nA natural logarithm is a logarithm with base \\(e\\). We write \\({\\log}_e(x)\\) simply as \\(\\ln(x)\\). The natural logarithm of a positive number \\(x\\) satisfies the following definition.\n\nFor \\(x>0\\),\n\n\\(y=\\ln(x)\\) is equivalent to \\(e^y=x\\)\n\nWe read \\(\\ln(x)\\) as, “the logarithm with base \\(e\\) of \\(x\\)” or “the natural logarithm of \\(x\\).”\n\nThe logarithm \\(y\\) is the exponent to which \\(e\\) must be raised to get \\(x\\).\n\nSince the functions \\(y=e^x\\) and \\(y=\\ln(x)\\) are inverse functions, \\(\\ln(e^x)=x\\) for all \\(x\\) and \\(e^{\\ln (x)}=x\\) for \\(x>0\\).\n\nHow to: Given a natural logarithm with the form \\(y=\\ln(x)\\), evaluate it using a calculator\n\n1. Press [LN].\n\n2. Enter the value given for \\(x\\), followed by [ ) ].\n\n3. Press [ENTER].\n\nExample \\(\\PageIndex{8}\\): Evaluating a Natural Logarithm Using a Calculator\n\nEvaluate \\(y=\\ln(500)\\) to four decimal places using a calculator.\n\nSolution\n\nPress [LN].\n\nEnter \\(500\\),followed by [ ) ].\n\nPress [ENTER].\n\nRounding to four decimal places, \\(\\ln(500)≈6.2146\\)\n\nExercise \\(\\PageIndex{8}\\)\n\nEvaluate \\(\\ln(−500)\\).\n\nAnswer\n\nIt is not possible to take the logarithm of a negative number in the set of real numbers.\n\nMedia\n\nAccess this online resource for additional instruction and practice with logarithms.\n\nIntroduction to Logarithms\n\nKey Equations\n\n            Definition of the logarithmic function\t\n            For \\(x>0\\), \\(b>0\\), \\(b≠1\\), \\(y={\\log}_b(x)\\) if and only if \\(b^y=x\\).\t\n\n            Definition of the common logarithm\t\n            For \\(x>0\\), \\(y=\\log(x)\\) if and only if \\({10}^y=x\\).\t\n\n            Definition of the natural logarithm\t\n            For \\(x>0\\), \\(y=\\ln(x)\\) if and only if \\(e^y=x\\).\t\n\nKey Concepts\n\nThe inverse of an exponential function is a logarithmic function, and the inverse of a logarithmic function is an exponential function.\n\nLogarithmic equations can be written in an equivalent exponential form, using the definition of a logarithm. See Example \\(\\PageIndex{1}\\).\n\nExponential equations can be written in their equivalent logarithmic form using the definition of a logarithm See Example \\(\\PageIndex{2}\\).\n\nLogarithmic functions with base \\(b\\) can be evaluated mentally using previous knowledge of powers of \\(b\\). See Example \\(\\PageIndex{3}\\) and Example \\(\\PageIndex{4}\\).\n\nCommon logarithms can be evaluated mentally using previous knowledge of powers of \\(10\\). See Example \\(\\PageIndex{5}\\).\n\nWhen common logarithms cannot be evaluated mentally, a calculator can be used. See Example \\(\\PageIndex{6}\\).\n\nReal-world exponential problems with base \\(10\\) can be rewritten as a common logarithm and then evaluated using a calculator. See Example \\(\\PageIndex{7}\\).\n\nNatural logarithms can be evaluated using a calculator Example \\(\\PageIndex{8}\\).\n\nContributors and Attributions\n\nJay Abramson (Arizona State University) with contributing authors. Textbook content produced by OpenStax College is licensed under a Creative Commons Attribution License 4.0 license. Download for free at https://openstax.org/details/books/precalculus.\n\nThis page titled 6.3: Logarithmic Functions was last modified on Sun, 27 Apr 2025 18:28:18 GMT and is shared under a CC BY  4.0  license and was authored, remixed, and/or curated by OpenStax via source content that was edited to the style and standards of the LibreTexts platform.",
+  "figures": [
+    {
+      "url": "https://math.libretexts.org/@api/deki/files/12071/fig_6.4.1.jpg?revision=1",
+      "alt": "Photo of the aftermath of the earthquake in Japan with a focus on the Japanese flag.",
+      "credit": ""
+    },
+    {
+      "url": "https://math.libretexts.org/@api/deki/files/12072/fig_6.4.2.jpg?revision=1",
+      "alt": "Graph of the intersections of the equations y=10^x and y=500.",
+      "credit": ""
+    },
+    {
+      "url": "https://math.libretexts.org/@api/deki/files/12074/log_xx.jpg?revision=1",
+      "alt": "log xx.jpg",
+      "credit": ""
+    },
+    {
+      "url": "https://math.libretexts.org/@api/deki/files/131050/CNX_Precalc_Figure_04_03_003_gsa7.jpg?revision=1",
+      "alt": "CNX_Precalc_Figure_04_03_003_gsa7.jpg",
+      "credit": ""
+    }
+  ],
+  "references": [
+    {
+      "text": "Richter Scale",
+      "url": "https://geo.libretexts.org/Textmaps/Map%3A_Fundamentals_of_Geology_(Schulte)/Earthquakes/08_Reading%3A_Earthquake_Intensity"
+    },
+    {
+      "text": "Introduction to Logarithms",
+      "url": "http://openstaxcollege.org/l/intrologarithms"
+    },
+    {
+      "text": "Creative Commons Attribution License 4.0",
+      "url": "http://creativecommons.org/licenses/by/4.0/"
+    },
+    {
+      "text": "https://openstax.org/details/books/precalculus",
+      "url": "https://openstax.org/details/books/precalculus"
+    },
+    {
+      "text": "6.3: Logarithmic Functions",
+      "url": "https://math.libretexts.org/Bookshelves/Algebra/Algebra_and_Trigonometry_1e_(OpenStax)/06%3A_Exponential_and_Logarithmic_Functions/6.03%3A_Logarithmic_Functions"
+    },
+    {
+      "text": "CC BY  4.0",
+      "url": "https://creativecommons.org/licenses/by/4.0"
+    },
+    {
+      "text": "OpenStax",
+      "url": "https://openstax.org/"
+    },
+    {
+      "text": "source content",
+      "url": "https://openstax.org/details/books/precalculus"
+    }
+  ],
+  "exercises": [
+    {
+      "ordinal": 1,
+      "sourceNumber": "1",
+      "sourceAnchor": "",
+      "kind": "exercise-candidate",
+      "context": "where,\n\nAlso, since the logarithmic and exponential functions switch the \\(x\\) and \\(y\\) values, the domain and range of the exponential function are interchanged for the logarithmic function. Therefore,\n\nNo. Because the base of an exponential function is always positive, no power of that base can ever be negative. We can never take the logarithm of a negative number. Also, we cannot take the logarithm of zero. Calculators may output a log of a negative number when in complex mode, but the log of a negative number is not a real number.",
+      "original": "1. Examine the equation \\(y={\\log}_bx\\) and identify \\(b\\), \\(y\\),and \\(x\\).",
+      "prompt": "1. Examine the equation \\(y={\\log}_bx\\) and identify \\(b\\), \\(y\\),and \\(x\\).",
+      "sourceAnswers": [],
+      "hasFigure": false,
+      "status": "draft",
+      "answerVerified": false,
+      "translationStatus": "pending",
+      "mappingStatus": "pending"
+    },
+    {
+      "ordinal": 2,
+      "sourceNumber": "2",
+      "sourceAnchor": "",
+      "kind": "exercise-candidate",
+      "context": "where,\n\nAlso, since the logarithmic and exponential functions switch the \\(x\\) and \\(y\\) values, the domain and range of the exponential function are interchanged for the logarithmic function. Therefore,\n\nNo. Because the base of an exponential function is always positive, no power of that base can ever be negative. We can never take the logarithm of a negative number. Also, we cannot take the logarithm of zero. Calculators may output a log of a negative number when in complex mode, but the log of a negative number is not a real number.",
+      "original": "2. Rewrite \\({\\log}_bx=y\\) as \\(b^y=x\\).",
+      "prompt": "2. Rewrite \\({\\log}_bx=y\\) as \\(b^y=x\\).",
+      "sourceAnswers": [],
+      "hasFigure": false,
+      "status": "draft",
+      "answerVerified": false,
+      "translationStatus": "pending",
+      "mappingStatus": "pending"
+    },
+    {
+      "ordinal": 3,
+      "sourceNumber": "",
+      "sourceAnchor": "",
+      "kind": "example-or-exercise",
+      "context": "where,\n\nAlso, since the logarithmic and exponential functions switch the \\(x\\) and \\(y\\) values, the domain and range of the exponential function are interchanged for the logarithmic function. Therefore,\n\nNo. Because the base of an exponential function is always positive, no power of that base can ever be negative. We can never take the logarithm of a negative number. Also, we cannot take the logarithm of zero. Calculators may output a log of a negative number when in complex mode, but the log of a negative number is not a real number.",
+      "original": "Example \\(\\PageIndex{1}\\): Converting from Logarithmic Form to Exponential Form​​​​​​\n\nWrite the following logarithmic equations in exponential form.\n\n1. \\({\\log}_6(\\sqrt{6})=\\dfrac{1}{2}\\)\n\n2. \\({\\log}_3(9)=2\\)\n\nSolution\n\nFirst, identify the values of \\(b\\), \\(y\\),and \\(x\\). Then, write the equation in the form \\(b^y=x\\).\n\n1. \\({\\log}_6(\\sqrt{6})=\\dfrac{1}{2}\\)\n\nHere, \\(b=6\\), \\(y=\\dfrac{1}{2}\\),and \\(x=\\sqrt{6}\\). Therefore, the equation \\({\\log}_6(\\sqrt{6})=\\dfrac{1}{2}\\) is equivalent to\n\n\\(6^{\\tfrac{1}{2}}=\\sqrt{6}\\)\n\n2. \\({\\log}_3(9)=2\\)\n\nHere, \\(b=3\\), \\(y=2\\),and \\(x=9\\). Therefore, the equation \\({\\log}_3(9)=2\\) is equivalent to\n\n\\(3^2=9\\)",
+      "prompt": "Example \\(\\PageIndex{1}\\): Converting from Logarithmic Form to Exponential Form​​​​​​\n\nWrite the following logarithmic equations in exponential form.\n\n1. \\({\\log}_6(\\sqrt{6})=\\dfrac{1}{2}\\)\n\n2. \\({\\log}_3(9)=2\\)\n\nSolution\n\nFirst, identify the values of \\(b\\), \\(y\\),and \\(x\\). Then, write the equation in the form \\(b^y=x\\).\n\n1. \\({\\log}_6(\\sqrt{6})=\\dfrac{1}{2}\\)\n\nHere, \\(b=6\\), \\(y=\\dfrac{1}{2}\\),and \\(x=\\sqrt{6}\\). Therefore, the equation \\({\\log}_6(\\sqrt{6})=\\dfrac{1}{2}\\) is equivalent to\n\n\\(6^{\\tfrac{1}{2}}=\\sqrt{6}\\)\n\n2. \\({\\log}_3(9)=2\\)\n\nHere, \\(b=3\\), \\(y=2\\),and \\(x=9\\). Therefore, the equation \\({\\log}_3(9)=2\\) is equivalent to\n\n\\(3^2=9\\)",
+      "sourceAnswers": [],
+      "hasFigure": false,
+      "status": "draft",
+      "answerVerified": false,
+      "translationStatus": "pending",
+      "mappingStatus": "pending"
+    },
+    {
+      "ordinal": 4,
+      "sourceNumber": "",
+      "sourceAnchor": "",
+      "kind": "exercise-candidate",
+      "context": "where,\n\nAlso, since the logarithmic and exponential functions switch the \\(x\\) and \\(y\\) values, the domain and range of the exponential function are interchanged for the logarithmic function. Therefore,\n\nNo. Because the base of an exponential function is always positive, no power of that base can ever be negative. We can never take the logarithm of a negative number. Also, we cannot take the logarithm of zero. Calculators may output a log of a negative number when in complex mode, but the log of a negative number is not a real number.",
+      "original": "Exercise \\(\\PageIndex{1}\\)\n\nWrite the following logarithmic equations in exponential form.\n\n1. \\({\\log}_{10}(1,000,000)=6\\)\n\n2. \\({\\log}_5(25)=2\\)\n\nAnswer a\n\n\\({\\log}_{10}(1,000,000)=6\\) is equivalent to \\({10}^6=1,000,000\\)\n\nAnswer b\n\n\\({\\log}_5(25)=2\\) is equivalent to \\(5^2=25\\)",
+      "prompt": "Exercise \\(\\PageIndex{1}\\)\n\nWrite the following logarithmic equations in exponential form.\n\n1. \\({\\log}_{10}(1,000,000)=6\\)\n\n2. \\({\\log}_5(25)=2\\)",
+      "sourceAnswers": [
+        "\\({\\log}_{10}(1,000,000)=6\\) is equivalent to \\({10}^6=1,000,000\\)",
+        "\\({\\log}_5(25)=2\\) is equivalent to \\(5^2=25\\)"
+      ],
+      "hasFigure": false,
+      "status": "draft",
+      "answerVerified": false,
+      "translationStatus": "pending",
+      "mappingStatus": "pending"
+    },
+    {
+      "ordinal": 5,
+      "sourceNumber": "",
+      "sourceAnchor": "",
+      "kind": "example-or-exercise",
+      "context": "Converting from Exponential to Logarithmic Form\n\nTo convert from exponents to logarithms, we follow the same steps in reverse. We identify the base \\(b\\),exponent \\(x\\),and output \\(y\\). Then we write \\(x={\\log}_b(y)\\).",
+      "original": "Example \\(\\PageIndex{2}\\): Converting from Exponential Form to Logarithmic Form\n\nWrite the following exponential equations in logarithmic form.\n\n1. \\(2^3=8\\)\n\n2. \\(5^2=25\\)\n\n3. \\({10}^{−4}=\\dfrac{1}{10,000}\\)\n\nSolution\n\nFirst, identify the values of \\(b\\), \\(y\\),and \\(x\\). Then, write the equation in the form \\(x={\\log}_b(y)\\).\n\n1. \\(2^3=8\\)\n\nHere, \\(b=2\\), \\(x=3\\),and \\(y=8\\). Therefore, the equation \\(2^3=8\\) is equivalent to \\({\\log}_2(8)=3\\).\n\n2. \\(5^2=25\\)\n\nHere, \\(b=5\\), \\(x=2\\),and \\(y=25\\). Therefore, the equation \\(5^2=25\\) is equivalent to \\({\\log}_5(25)=2\\).\n\n3. \\({10}^{−4}=\\dfrac{1}{10,000}\\)\n\nHere, \\(b=10\\), \\(x=−4\\),and \\(y=\\dfrac{1}{10,000}\\). Therefore, the equation \\({10}^{−4}=\\dfrac{1}{10,000}\\) is equivalent to \\({\\log}_{10} \\left (\\dfrac{1}{10,000} \\right )=−4\\).",
+      "prompt": "Example \\(\\PageIndex{2}\\): Converting from Exponential Form to Logarithmic Form\n\nWrite the following exponential equations in logarithmic form.\n\n1. \\(2^3=8\\)\n\n2. \\(5^2=25\\)\n\n3. \\({10}^{−4}=\\dfrac{1}{10,000}\\)\n\nSolution\n\nFirst, identify the values of \\(b\\), \\(y\\),and \\(x\\). Then, write the equation in the form \\(x={\\log}_b(y)\\).\n\n1. \\(2^3=8\\)\n\nHere, \\(b=2\\), \\(x=3\\),and \\(y=8\\). Therefore, the equation \\(2^3=8\\) is equivalent to \\({\\log}_2(8)=3\\).\n\n2. \\(5^2=25\\)\n\nHere, \\(b=5\\), \\(x=2\\),and \\(y=25\\). Therefore, the equation \\(5^2=25\\) is equivalent to \\({\\log}_5(25)=2\\).\n\n3. \\({10}^{−4}=\\dfrac{1}{10,000}\\)\n\nHere, \\(b=10\\), \\(x=−4\\),and \\(y=\\dfrac{1}{10,000}\\). Therefore, the equation \\({10}^{−4}=\\dfrac{1}{10,000}\\) is equivalent to \\({\\log}_{10} \\left (\\dfrac{1}{10,000} \\right )=−4\\).",
+      "sourceAnswers": [],
+      "hasFigure": false,
+      "status": "draft",
+      "answerVerified": false,
+      "translationStatus": "pending",
+      "mappingStatus": "pending"
+    },
+    {
+      "ordinal": 6,
+      "sourceNumber": "",
+      "sourceAnchor": "",
+      "kind": "exercise-candidate",
+      "context": "Converting from Exponential to Logarithmic Form\n\nTo convert from exponents to logarithms, we follow the same steps in reverse. We identify the base \\(b\\),exponent \\(x\\),and output \\(y\\). Then we write \\(x={\\log}_b(y)\\).",
+      "original": "Exercise \\(\\PageIndex{2}\\)\n\nWrite the following exponential equations in logarithmic form.\n\n1. \\(3^2=9\\)\n\n2. \\(5^3=125\\)\n\n3. \\(2^{−1}=\\dfrac{1}{2}\\)\n\nAnswer a\n\n\\(3^2=9\\) is equivalent to \\({\\log}_3(9)=2\\)\n\nAnswer b\n\n\\(5^3=125\\) is equivalent to \\({\\log}_5(125)=3\\)\n\nAnswer c\n\n\\(2^{−1}=\\dfrac{1}{2}\\) is equivalent to \\({\\log}_2 \\left (\\dfrac{1}{2} \\right )=−1\\)",
+      "prompt": "Exercise \\(\\PageIndex{2}\\)\n\nWrite the following exponential equations in logarithmic form.\n\n1. \\(3^2=9\\)\n\n2. \\(5^3=125\\)\n\n3. \\(2^{−1}=\\dfrac{1}{2}\\)",
+      "sourceAnswers": [
+        "\\(3^2=9\\) is equivalent to \\({\\log}_3(9)=2\\)",
+        "\\(5^3=125\\) is equivalent to \\({\\log}_5(125)=3\\)",
+        "\\(2^{−1}=\\dfrac{1}{2}\\) is equivalent to \\({\\log}_2 \\left (\\dfrac{1}{2} \\right )=−1\\)"
+      ],
+      "hasFigure": false,
+      "status": "draft",
+      "answerVerified": false,
+      "translationStatus": "pending",
+      "mappingStatus": "pending"
+    },
+    {
+      "ordinal": 7,
+      "sourceNumber": "1",
+      "sourceAnchor": "",
+      "kind": "exercise-candidate",
+      "context": "Knowing the squares, cubes, and roots of numbers allows us to evaluate many logarithms mentally. For example, consider \\({\\log}_28\\). We ask, “To what exponent must \\(2\\)  be raised in order to get 8?” Because we already know \\(2^3=8\\), it follows that \\({\\log}_28=3\\).\n\nNow consider solving \\({\\log}_749\\) and \\({\\log}_327\\) mentally.\n\nEven some seemingly more complicated logarithms can be evaluated without a calculator. For example, let’s evaluate \\(\\log_{\\ce{2/3}} \\frac{4}{9}\\) mentally.",
+      "original": "1. Rewrite the argument \\(x\\) as a power of \\(b\\): \\(b^y=x\\).",
+      "prompt": "1. Rewrite the argument \\(x\\) as a power of \\(b\\): \\(b^y=x\\).",
+      "sourceAnswers": [],
+      "hasFigure": false,
+      "status": "draft",
+      "answerVerified": false,
+      "translationStatus": "pending",
+      "mappingStatus": "pending"
+    },
+    {
+      "ordinal": 8,
+      "sourceNumber": "2",
+      "sourceAnchor": "",
+      "kind": "exercise-candidate",
+      "context": "Knowing the squares, cubes, and roots of numbers allows us to evaluate many logarithms mentally. For example, consider \\({\\log}_28\\). We ask, “To what exponent must \\(2\\)  be raised in order to get 8?” Because we already know \\(2^3=8\\), it follows that \\({\\log}_28=3\\).\n\nNow consider solving \\({\\log}_749\\) and \\({\\log}_327\\) mentally.\n\nEven some seemingly more complicated logarithms can be evaluated without a calculator. For example, let’s evaluate \\(\\log_{\\ce{2/3}} \\frac{4}{9}\\) mentally.",
+      "original": "2. Use previous knowledge of powers of \\(b\\) identify \\(y\\) by asking, “To what exponent should \\(b\\) be raised in order to get \\(x\\)?”",
+      "prompt": "2. Use previous knowledge of powers of \\(b\\) identify \\(y\\) by asking, “To what exponent should \\(b\\) be raised in order to get \\(x\\)?”",
+      "sourceAnswers": [],
+      "hasFigure": false,
+      "status": "draft",
+      "answerVerified": false,
+      "translationStatus": "pending",
+      "mappingStatus": "pending"
+    },
+    {
+      "ordinal": 9,
+      "sourceNumber": "",
+      "sourceAnchor": "",
+      "kind": "example-or-exercise",
+      "context": "Knowing the squares, cubes, and roots of numbers allows us to evaluate many logarithms mentally. For example, consider \\({\\log}_28\\). We ask, “To what exponent must \\(2\\)  be raised in order to get 8?” Because we already know \\(2^3=8\\), it follows that \\({\\log}_28=3\\).\n\nNow consider solving \\({\\log}_749\\) and \\({\\log}_327\\) mentally.\n\nEven some seemingly more complicated logarithms can be evaluated without a calculator. For example, let’s evaluate \\(\\log_{\\ce{2/3}} \\frac{4}{9}\\) mentally.",
+      "original": "Example \\(\\PageIndex{3}\\): Solving Logarithms Mentally\n\nSolve \\(y={\\log}_4(64)\\) without using a calculator.\n\nSolution\n\nFirst we rewrite the logarithm in exponential form: \\(4^y=64\\). Next, we ask, “To what exponent must \\(4\\) be raised in order to get \\(64\\)?”\n\nWe know\n\n\\(4^3=64\\)\n\nTherefore,\n\n\\({\\log}_4(64)=3\\)",
+      "prompt": "Example \\(\\PageIndex{3}\\): Solving Logarithms Mentally\n\nSolve \\(y={\\log}_4(64)\\) without using a calculator.\n\nSolution\n\nFirst we rewrite the logarithm in exponential form: \\(4^y=64\\). Next, we ask, “To what exponent must \\(4\\) be raised in order to get \\(64\\)?”\n\nWe know\n\n\\(4^3=64\\)\n\nTherefore,\n\n\\({\\log}_4(64)=3\\)",
+      "sourceAnswers": [],
+      "hasFigure": false,
+      "status": "draft",
+      "answerVerified": false,
+      "translationStatus": "pending",
+      "mappingStatus": "pending"
+    },
+    {
+      "ordinal": 10,
+      "sourceNumber": "",
+      "sourceAnchor": "",
+      "kind": "exercise-candidate",
+      "context": "Knowing the squares, cubes, and roots of numbers allows us to evaluate many logarithms mentally. For example, consider \\({\\log}_28\\). We ask, “To what exponent must \\(2\\)  be raised in order to get 8?” Because we already know \\(2^3=8\\), it follows that \\({\\log}_28=3\\).\n\nNow consider solving \\({\\log}_749\\) and \\({\\log}_327\\) mentally.\n\nEven some seemingly more complicated logarithms can be evaluated without a calculator. For example, let’s evaluate \\(\\log_{\\ce{2/3}} \\frac{4}{9}\\) mentally.",
+      "original": "Exercise \\(\\PageIndex{3}\\)\n\nSolve \\(y={\\log}_{121}(11)\\) without using a calculator.\n\nAnswer\n\n\\({\\log}_{121}(11)=\\dfrac{1}{2}\\) (recalling that \\(\\sqrt{121}={(121)}^{\\tfrac{1}{2}}=11)\\)",
+      "prompt": "Exercise \\(\\PageIndex{3}\\)\n\nSolve \\(y={\\log}_{121}(11)\\) without using a calculator.",
+      "sourceAnswers": [
+        "\\({\\log}_{121}(11)=\\dfrac{1}{2}\\) (recalling that \\(\\sqrt{121}={(121)}^{\\tfrac{1}{2}}=11)\\)"
+      ],
+      "hasFigure": false,
+      "status": "draft",
+      "answerVerified": false,
+      "translationStatus": "pending",
+      "mappingStatus": "pending"
+    },
+    {
+      "ordinal": 11,
+      "sourceNumber": "",
+      "sourceAnchor": "",
+      "kind": "example-or-exercise",
+      "context": "Knowing the squares, cubes, and roots of numbers allows us to evaluate many logarithms mentally. For example, consider \\({\\log}_28\\). We ask, “To what exponent must \\(2\\)  be raised in order to get 8?” Because we already know \\(2^3=8\\), it follows that \\({\\log}_28=3\\).\n\nNow consider solving \\({\\log}_749\\) and \\({\\log}_327\\) mentally.\n\nEven some seemingly more complicated logarithms can be evaluated without a calculator. For example, let’s evaluate \\(\\log_{\\ce{2/3}} \\frac{4}{9}\\) mentally.",
+      "original": "Example \\(\\PageIndex{4}\\): Evaluating the Logarithm of a Reciprocal\n\nEvaluate \\(y={\\log}_3 \\left (\\dfrac{1}{27} \\right )\\) without using a calculator.\n\nSolution\n\nFirst we rewrite the logarithm in exponential form: \\(3^y=\\dfrac{1}{27}\\). Next, we ask, “To what exponent must \\(3\\) be raised in order to get \\(\\dfrac{1}{27}\\)?”\n\nWe know \\(3^3=27\\),but what must we do to get the reciprocal, \\(\\dfrac{1}{27}\\)? Recall from working with exponents that \\(b^{−a}=\\dfrac{1}{b^a}\\). We use this information to write\n\n\\[\\begin{align*} 3^{-3}&= \\dfrac{1}{3^3}\\\\ &= \\dfrac{1}{27} \\end{align*}\\]\n\nTherefore, \\({\\log}_3 \\left (\\dfrac{1}{27} \\right )=−3\\).",
+      "prompt": "Example \\(\\PageIndex{4}\\): Evaluating the Logarithm of a Reciprocal\n\nEvaluate \\(y={\\log}_3 \\left (\\dfrac{1}{27} \\right )\\) without using a calculator.\n\nSolution\n\nFirst we rewrite the logarithm in exponential form: \\(3^y=\\dfrac{1}{27}\\). Next, we ask, “To what exponent must \\(3\\) be raised in order to get \\(\\dfrac{1}{27}\\)?”\n\nWe know \\(3^3=27\\),but what must we do to get the reciprocal, \\(\\dfrac{1}{27}\\)? Recall from working with exponents that \\(b^{−a}=\\dfrac{1}{b^a}\\). We use this information to write\n\n\\[\\begin{align*} 3^{-3}&= \\dfrac{1}{3^3}\\\\ &= \\dfrac{1}{27} \\end{align*}\\]\n\nTherefore, \\({\\log}_3 \\left (\\dfrac{1}{27} \\right )=−3\\).",
+      "sourceAnswers": [],
+      "hasFigure": false,
+      "status": "draft",
+      "answerVerified": false,
+      "translationStatus": "pending",
+      "mappingStatus": "pending"
+    },
+    {
+      "ordinal": 12,
+      "sourceNumber": "",
+      "sourceAnchor": "",
+      "kind": "exercise-candidate",
+      "context": "Knowing the squares, cubes, and roots of numbers allows us to evaluate many logarithms mentally. For example, consider \\({\\log}_28\\). We ask, “To what exponent must \\(2\\)  be raised in order to get 8?” Because we already know \\(2^3=8\\), it follows that \\({\\log}_28=3\\).\n\nNow consider solving \\({\\log}_749\\) and \\({\\log}_327\\) mentally.\n\nEven some seemingly more complicated logarithms can be evaluated without a calculator. For example, let’s evaluate \\(\\log_{\\ce{2/3}} \\frac{4}{9}\\) mentally.",
+      "original": "Exercise \\(\\PageIndex{4}\\)\n\nEvaluate \\(y={\\log}_2 \\left (\\dfrac{1}{32} \\right )\\) without using a calculator.\n\nAnswer\n\n\\({\\log}_2 \\left (\\dfrac{1}{32} \\right )=−5\\)",
+      "prompt": "Exercise \\(\\PageIndex{4}\\)\n\nEvaluate \\(y={\\log}_2 \\left (\\dfrac{1}{32} \\right )\\) without using a calculator.",
+      "sourceAnswers": [
+        "\\({\\log}_2 \\left (\\dfrac{1}{32} \\right )=−5\\)"
+      ],
+      "hasFigure": false,
+      "status": "draft",
+      "answerVerified": false,
+      "translationStatus": "pending",
+      "mappingStatus": "pending"
+    },
+    {
+      "ordinal": 13,
+      "sourceNumber": "1",
+      "sourceAnchor": "",
+      "kind": "exercise-candidate",
+      "context": "\\[\\begin{align} y={\\log}(x)\\text{ is equivalent to } {10}^y=x \\end{align}\\]\n\nWe read \\(\\log(x)\\) as, “the logarithm with base \\(10\\) of \\(x\\) ” or “log base \\(10\\) of \\(x\\).”\n\nThe logarithm \\(y\\) is the exponent to which \\(10\\) must be raised to get \\(x\\).",
+      "original": "1. Rewrite the argument \\(x\\) as a power of \\(10\\): \\({10}^y=x\\).",
+      "prompt": "1. Rewrite the argument \\(x\\) as a power of \\(10\\): \\({10}^y=x\\).",
+      "sourceAnswers": [],
+      "hasFigure": false,
+      "status": "draft",
+      "answerVerified": false,
+      "translationStatus": "pending",
+      "mappingStatus": "pending"
+    },
+    {
+      "ordinal": 14,
+      "sourceNumber": "2",
+      "sourceAnchor": "",
+      "kind": "exercise-candidate",
+      "context": "\\[\\begin{align} y={\\log}(x)\\text{ is equivalent to } {10}^y=x \\end{align}\\]\n\nWe read \\(\\log(x)\\) as, “the logarithm with base \\(10\\) of \\(x\\) ” or “log base \\(10\\) of \\(x\\).”\n\nThe logarithm \\(y\\) is the exponent to which \\(10\\) must be raised to get \\(x\\).",
+      "original": "2. Use previous knowledge of powers of \\(10\\) to identify \\(y\\) by asking, “To what exponent must \\(10\\) be raised in order to get \\(x\\)?”",
+      "prompt": "2. Use previous knowledge of powers of \\(10\\) to identify \\(y\\) by asking, “To what exponent must \\(10\\) be raised in order to get \\(x\\)?”",
+      "sourceAnswers": [],
+      "hasFigure": false,
+      "status": "draft",
+      "answerVerified": false,
+      "translationStatus": "pending",
+      "mappingStatus": "pending"
+    },
+    {
+      "ordinal": 15,
+      "sourceNumber": "",
+      "sourceAnchor": "",
+      "kind": "example-or-exercise",
+      "context": "\\[\\begin{align} y={\\log}(x)\\text{ is equivalent to } {10}^y=x \\end{align}\\]\n\nWe read \\(\\log(x)\\) as, “the logarithm with base \\(10\\) of \\(x\\) ” or “log base \\(10\\) of \\(x\\).”\n\nThe logarithm \\(y\\) is the exponent to which \\(10\\) must be raised to get \\(x\\).",
+      "original": "Example \\(\\PageIndex{5}\\): Finding the Value of a Common Logarithm Mentally\n\nEvaluate \\(y=\\log(1000)\\) without using a calculator.\n\nSolution\n\nFirst we rewrite the logarithm in exponential form: \\({10}^y=1000\\). Next, we ask, “To what exponent must \\(10\\) be raised in order to get \\(1000\\)?” We know\n\n\\({10}^3=1000\\)\n\nTherefore, \\(\\log(1000)=3\\).",
+      "prompt": "Example \\(\\PageIndex{5}\\): Finding the Value of a Common Logarithm Mentally\n\nEvaluate \\(y=\\log(1000)\\) without using a calculator.\n\nSolution\n\nFirst we rewrite the logarithm in exponential form: \\({10}^y=1000\\). Next, we ask, “To what exponent must \\(10\\) be raised in order to get \\(1000\\)?” We know\n\n\\({10}^3=1000\\)\n\nTherefore, \\(\\log(1000)=3\\).",
+      "sourceAnswers": [],
+      "hasFigure": false,
+      "status": "draft",
+      "answerVerified": false,
+      "translationStatus": "pending",
+      "mappingStatus": "pending"
+    },
+    {
+      "ordinal": 16,
+      "sourceNumber": "",
+      "sourceAnchor": "",
+      "kind": "exercise-candidate",
+      "context": "\\[\\begin{align} y={\\log}(x)\\text{ is equivalent to } {10}^y=x \\end{align}\\]\n\nWe read \\(\\log(x)\\) as, “the logarithm with base \\(10\\) of \\(x\\) ” or “log base \\(10\\) of \\(x\\).”\n\nThe logarithm \\(y\\) is the exponent to which \\(10\\) must be raised to get \\(x\\).",
+      "original": "Exercise \\(\\PageIndex{5}\\)\n\nEvaluate \\(y=\\log(1,000,000)\\).\n\nAnswer\n\n\\(\\log(1,000,000)=6\\)",
+      "prompt": "Exercise \\(\\PageIndex{5}\\)\n\nEvaluate \\(y=\\log(1,000,000)\\).",
+      "sourceAnswers": [
+        "\\(\\log(1,000,000)=6\\)"
+      ],
+      "hasFigure": false,
+      "status": "draft",
+      "answerVerified": false,
+      "translationStatus": "pending",
+      "mappingStatus": "pending"
+    },
+    {
+      "ordinal": 17,
+      "sourceNumber": "1",
+      "sourceAnchor": "",
+      "kind": "exercise-candidate",
+      "context": "\\[\\begin{align} y={\\log}(x)\\text{ is equivalent to } {10}^y=x \\end{align}\\]\n\nWe read \\(\\log(x)\\) as, “the logarithm with base \\(10\\) of \\(x\\) ” or “log base \\(10\\) of \\(x\\).”\n\nThe logarithm \\(y\\) is the exponent to which \\(10\\) must be raised to get \\(x\\).",
+      "original": "1. Press [LOG].",
+      "prompt": "1. Press [LOG].",
+      "sourceAnswers": [],
+      "hasFigure": false,
+      "status": "draft",
+      "answerVerified": false,
+      "translationStatus": "pending",
+      "mappingStatus": "pending"
+    },
+    {
+      "ordinal": 18,
+      "sourceNumber": "2",
+      "sourceAnchor": "",
+      "kind": "exercise-candidate",
+      "context": "\\[\\begin{align} y={\\log}(x)\\text{ is equivalent to } {10}^y=x \\end{align}\\]\n\nWe read \\(\\log(x)\\) as, “the logarithm with base \\(10\\) of \\(x\\) ” or “log base \\(10\\) of \\(x\\).”\n\nThe logarithm \\(y\\) is the exponent to which \\(10\\) must be raised to get \\(x\\).",
+      "original": "2. Enter the value given for \\(x\\),followed by [ ) ].",
+      "prompt": "2. Enter the value given for \\(x\\),followed by [ ) ].",
+      "sourceAnswers": [],
+      "hasFigure": false,
+      "status": "draft",
+      "answerVerified": false,
+      "translationStatus": "pending",
+      "mappingStatus": "pending"
+    },
+    {
+      "ordinal": 19,
+      "sourceNumber": "3",
+      "sourceAnchor": "",
+      "kind": "exercise-candidate",
+      "context": "\\[\\begin{align} y={\\log}(x)\\text{ is equivalent to } {10}^y=x \\end{align}\\]\n\nWe read \\(\\log(x)\\) as, “the logarithm with base \\(10\\) of \\(x\\) ” or “log base \\(10\\) of \\(x\\).”\n\nThe logarithm \\(y\\) is the exponent to which \\(10\\) must be raised to get \\(x\\).",
+      "original": "3. Press [ENTER].",
+      "prompt": "3. Press [ENTER].",
+      "sourceAnswers": [],
+      "hasFigure": false,
+      "status": "draft",
+      "answerVerified": false,
+      "translationStatus": "pending",
+      "mappingStatus": "pending"
+    },
+    {
+      "ordinal": 20,
+      "sourceNumber": "",
+      "sourceAnchor": "",
+      "kind": "example-or-exercise",
+      "context": "\\[\\begin{align} y={\\log}(x)\\text{ is equivalent to } {10}^y=x \\end{align}\\]\n\nWe read \\(\\log(x)\\) as, “the logarithm with base \\(10\\) of \\(x\\) ” or “log base \\(10\\) of \\(x\\).”\n\nThe logarithm \\(y\\) is the exponent to which \\(10\\) must be raised to get \\(x\\).",
+      "original": "Example \\(\\PageIndex{6}\\): ​​​​​​Finding the Value of a Common Logarithm Using a Calculator\n\nEvaluate \\(y=\\log(321)\\) to four decimal places using a calculator.\n\nSolution\n\nPress [LOG].\n\nEnter 321, followed by [ ) ].\n\nPress [ENTER].\n\nRounding to four decimal places, \\(\\log(321)≈2.5065\\).\n\nAnalysis\n\nNote that \\({10}^2=100\\) and that \\({10}^3=1000\\). Since \\(321\\) is between \\(100\\) and \\(1000\\), we know that \\(\\log(321)\\) must be between \\(\\log(100)\\) and \\(\\log(1000)\\). This gives us the following:\n\n\\(100<321<1000\\)\n\n\\(2<2.5065<3\\)",
+      "prompt": "Example \\(\\PageIndex{6}\\): ​​​​​​Finding the Value of a Common Logarithm Using a Calculator\n\nEvaluate \\(y=\\log(321)\\) to four decimal places using a calculator.\n\nSolution\n\nPress [LOG].\n\nEnter 321, followed by [ ) ].\n\nPress [ENTER].\n\nRounding to four decimal places, \\(\\log(321)≈2.5065\\).\n\nAnalysis\n\nNote that \\({10}^2=100\\) and that \\({10}^3=1000\\). Since \\(321\\) is between \\(100\\) and \\(1000\\), we know that \\(\\log(321)\\) must be between \\(\\log(100)\\) and \\(\\log(1000)\\). This gives us the following:\n\n\\(100<321<1000\\)\n\n\\(2<2.5065<3\\)",
+      "sourceAnswers": [],
+      "hasFigure": false,
+      "status": "draft",
+      "answerVerified": false,
+      "translationStatus": "pending",
+      "mappingStatus": "pending"
+    },
+    {
+      "ordinal": 21,
+      "sourceNumber": "",
+      "sourceAnchor": "",
+      "kind": "exercise-candidate",
+      "context": "\\[\\begin{align} y={\\log}(x)\\text{ is equivalent to } {10}^y=x \\end{align}\\]\n\nWe read \\(\\log(x)\\) as, “the logarithm with base \\(10\\) of \\(x\\) ” or “log base \\(10\\) of \\(x\\).”\n\nThe logarithm \\(y\\) is the exponent to which \\(10\\) must be raised to get \\(x\\).",
+      "original": "Exercise \\(\\PageIndex{6}\\)\n\nEvaluate \\(y=\\log(123)\\) to four decimal places using a calculator.\n\nAnswer\n\n\\(\\log(123)≈2.0899\\)",
+      "prompt": "Exercise \\(\\PageIndex{6}\\)\n\nEvaluate \\(y=\\log(123)\\) to four decimal places using a calculator.",
+      "sourceAnswers": [
+        "\\(\\log(123)≈2.0899\\)"
+      ],
+      "hasFigure": false,
+      "status": "draft",
+      "answerVerified": false,
+      "translationStatus": "pending",
+      "mappingStatus": "pending"
+    },
+    {
+      "ordinal": 22,
+      "sourceNumber": "",
+      "sourceAnchor": "",
+      "kind": "example-or-exercise",
+      "context": "\\[\\begin{align} y={\\log}(x)\\text{ is equivalent to } {10}^y=x \\end{align}\\]\n\nWe read \\(\\log(x)\\) as, “the logarithm with base \\(10\\) of \\(x\\) ” or “log base \\(10\\) of \\(x\\).”\n\nThe logarithm \\(y\\) is the exponent to which \\(10\\) must be raised to get \\(x\\).",
+      "original": "Example \\(\\PageIndex{7}\\): Rewriting and Solving a Real-World Exponential Model\n\nThe amount of energy released from one earthquake was \\(500\\) times greater than the amount of energy released from another. The equation \\({10}^x=500\\) represents this situation, where \\(x\\) is the difference in magnitudes on the Richter Scale. To the nearest thousandth, what was the difference in magnitudes?\n\nSolution\n\nWe begin by rewriting the exponential equation in logarithmic form.\n\n\\({10}^x=500\\)\n\n\\(\\log(500)=x\\) Use the definition of the common log.\n\nNext we evaluate the logarithm using a calculator:\n\nPress [LOG].\n\nEnter \\(500\\),followed by [ ) ].\n\nPress [ENTER].\n\nTo the nearest thousandth, \\(\\log(500)≈2.699\\).\n\nThe difference in magnitudes was about \\(2.699\\).",
+      "prompt": "Example \\(\\PageIndex{7}\\): Rewriting and Solving a Real-World Exponential Model\n\nThe amount of energy released from one earthquake was \\(500\\) times greater than the amount of energy released from another. The equation \\({10}^x=500\\) represents this situation, where \\(x\\) is the difference in magnitudes on the Richter Scale. To the nearest thousandth, what was the difference in magnitudes?\n\nSolution\n\nWe begin by rewriting the exponential equation in logarithmic form.\n\n\\({10}^x=500\\)\n\n\\(\\log(500)=x\\) Use the definition of the common log.\n\nNext we evaluate the logarithm using a calculator:\n\nPress [LOG].\n\nEnter \\(500\\),followed by [ ) ].\n\nPress [ENTER].\n\nTo the nearest thousandth, \\(\\log(500)≈2.699\\).\n\nThe difference in magnitudes was about \\(2.699\\).",
+      "sourceAnswers": [],
+      "hasFigure": false,
+      "status": "draft",
+      "answerVerified": false,
+      "translationStatus": "pending",
+      "mappingStatus": "pending"
+    },
+    {
+      "ordinal": 23,
+      "sourceNumber": "",
+      "sourceAnchor": "",
+      "kind": "exercise-candidate",
+      "context": "\\[\\begin{align} y={\\log}(x)\\text{ is equivalent to } {10}^y=x \\end{align}\\]\n\nWe read \\(\\log(x)\\) as, “the logarithm with base \\(10\\) of \\(x\\) ” or “log base \\(10\\) of \\(x\\).”\n\nThe logarithm \\(y\\) is the exponent to which \\(10\\) must be raised to get \\(x\\).",
+      "original": "Exercise \\(\\PageIndex{7}\\)\n\n​​​​The amount of energy released from one earthquake was \\(8,500\\) times greater than the amount of energy released from another. The equation \\({10}^x=8500\\) represents this situation, where \\(x\\) is the difference in magnitudes on the Richter Scale. To the nearest thousandth, what was the difference in magnitudes?\n\nAnswer\n\nThe difference in magnitudes was about \\(3.929\\).",
+      "prompt": "Exercise \\(\\PageIndex{7}\\)\n\n​​​​The amount of energy released from one earthquake was \\(8,500\\) times greater than the amount of energy released from another. The equation \\({10}^x=8500\\) represents this situation, where \\(x\\) is the difference in magnitudes on the Richter Scale. To the nearest thousandth, what was the difference in magnitudes?",
+      "sourceAnswers": [
+        "The difference in magnitudes was about \\(3.929\\)."
+      ],
+      "hasFigure": false,
+      "status": "draft",
+      "answerVerified": false,
+      "translationStatus": "pending",
+      "mappingStatus": "pending"
+    },
+    {
+      "ordinal": 24,
+      "sourceNumber": "1",
+      "sourceAnchor": "",
+      "kind": "exercise-candidate",
+      "context": "We read \\(\\ln(x)\\) as, “the logarithm with base \\(e\\) of \\(x\\)” or “the natural logarithm of \\(x\\).”\n\nThe logarithm \\(y\\) is the exponent to which \\(e\\) must be raised to get \\(x\\).\n\nSince the functions \\(y=e^x\\) and \\(y=\\ln(x)\\) are inverse functions, \\(\\ln(e^x)=x\\) for all \\(x\\) and \\(e^{\\ln (x)}=x\\) for \\(x>0\\).",
+      "original": "1. Press [LN].",
+      "prompt": "1. Press [LN].",
+      "sourceAnswers": [],
+      "hasFigure": false,
+      "status": "draft",
+      "answerVerified": false,
+      "translationStatus": "pending",
+      "mappingStatus": "pending"
+    },
+    {
+      "ordinal": 25,
+      "sourceNumber": "2",
+      "sourceAnchor": "",
+      "kind": "exercise-candidate",
+      "context": "We read \\(\\ln(x)\\) as, “the logarithm with base \\(e\\) of \\(x\\)” or “the natural logarithm of \\(x\\).”\n\nThe logarithm \\(y\\) is the exponent to which \\(e\\) must be raised to get \\(x\\).\n\nSince the functions \\(y=e^x\\) and \\(y=\\ln(x)\\) are inverse functions, \\(\\ln(e^x)=x\\) for all \\(x\\) and \\(e^{\\ln (x)}=x\\) for \\(x>0\\).",
+      "original": "2. Enter the value given for \\(x\\), followed by [ ) ].",
+      "prompt": "2. Enter the value given for \\(x\\), followed by [ ) ].",
+      "sourceAnswers": [],
+      "hasFigure": false,
+      "status": "draft",
+      "answerVerified": false,
+      "translationStatus": "pending",
+      "mappingStatus": "pending"
+    },
+    {
+      "ordinal": 26,
+      "sourceNumber": "3",
+      "sourceAnchor": "",
+      "kind": "exercise-candidate",
+      "context": "We read \\(\\ln(x)\\) as, “the logarithm with base \\(e\\) of \\(x\\)” or “the natural logarithm of \\(x\\).”\n\nThe logarithm \\(y\\) is the exponent to which \\(e\\) must be raised to get \\(x\\).\n\nSince the functions \\(y=e^x\\) and \\(y=\\ln(x)\\) are inverse functions, \\(\\ln(e^x)=x\\) for all \\(x\\) and \\(e^{\\ln (x)}=x\\) for \\(x>0\\).",
+      "original": "3. Press [ENTER].",
+      "prompt": "3. Press [ENTER].",
+      "sourceAnswers": [],
+      "hasFigure": false,
+      "status": "draft",
+      "answerVerified": false,
+      "translationStatus": "pending",
+      "mappingStatus": "pending"
+    },
+    {
+      "ordinal": 27,
+      "sourceNumber": "",
+      "sourceAnchor": "",
+      "kind": "example-or-exercise",
+      "context": "We read \\(\\ln(x)\\) as, “the logarithm with base \\(e\\) of \\(x\\)” or “the natural logarithm of \\(x\\).”\n\nThe logarithm \\(y\\) is the exponent to which \\(e\\) must be raised to get \\(x\\).\n\nSince the functions \\(y=e^x\\) and \\(y=\\ln(x)\\) are inverse functions, \\(\\ln(e^x)=x\\) for all \\(x\\) and \\(e^{\\ln (x)}=x\\) for \\(x>0\\).",
+      "original": "Example \\(\\PageIndex{8}\\): Evaluating a Natural Logarithm Using a Calculator\n\nEvaluate \\(y=\\ln(500)\\) to four decimal places using a calculator.\n\nSolution\n\nPress [LN].\n\nEnter \\(500\\),followed by [ ) ].\n\nPress [ENTER].\n\nRounding to four decimal places, \\(\\ln(500)≈6.2146\\)",
+      "prompt": "Example \\(\\PageIndex{8}\\): Evaluating a Natural Logarithm Using a Calculator\n\nEvaluate \\(y=\\ln(500)\\) to four decimal places using a calculator.\n\nSolution\n\nPress [LN].\n\nEnter \\(500\\),followed by [ ) ].\n\nPress [ENTER].\n\nRounding to four decimal places, \\(\\ln(500)≈6.2146\\)",
+      "sourceAnswers": [],
+      "hasFigure": false,
+      "status": "draft",
+      "answerVerified": false,
+      "translationStatus": "pending",
+      "mappingStatus": "pending"
+    },
+    {
+      "ordinal": 28,
+      "sourceNumber": "",
+      "sourceAnchor": "",
+      "kind": "exercise-candidate",
+      "context": "We read \\(\\ln(x)\\) as, “the logarithm with base \\(e\\) of \\(x\\)” or “the natural logarithm of \\(x\\).”\n\nThe logarithm \\(y\\) is the exponent to which \\(e\\) must be raised to get \\(x\\).\n\nSince the functions \\(y=e^x\\) and \\(y=\\ln(x)\\) are inverse functions, \\(\\ln(e^x)=x\\) for all \\(x\\) and \\(e^{\\ln (x)}=x\\) for \\(x>0\\).",
+      "original": "Exercise \\(\\PageIndex{8}\\)\n\nEvaluate \\(\\ln(−500)\\).\n\nAnswer\n\nIt is not possible to take the logarithm of a negative number in the set of real numbers.",
+      "prompt": "Exercise \\(\\PageIndex{8}\\)\n\nEvaluate \\(\\ln(−500)\\).",
+      "sourceAnswers": [
+        "It is not possible to take the logarithm of a negative number in the set of real numbers."
+      ],
+      "hasFigure": false,
+      "status": "draft",
+      "answerVerified": false,
+      "translationStatus": "pending",
+      "mappingStatus": "pending"
+    }
+  ],
+  "license": "CC BY 4.0",
+  "licenseEvidence": "This page titled 6.3: Logarithmic Functions was last modified on Sun, 27 Apr 2025 18:28:18 GMT and is shared under a CC BY  4.0  license and was authored, remixed, and/or curated by OpenStax via source content that was edited to the style and standards of the LibreTexts platform.",
+  "url": "https://math.libretexts.org/Bookshelves/Algebra/Algebra_and_Trigonometry_1e_(OpenStax)/06:_Exponential_and_Logarithmic_Functions/6.03:_Logarithmic_Functions",
+  "sha256": "5d9fc033f10f08efd99614c88c55897fc6e69f0b9cd4888f087c2d634c4bef4e",
+  "checkedAt": "2026-10-07",
+  "id": "ce63df94224ad6eac571",
+  "bookId": "algebra-trigonometry",
+  "licenseInherited": false,
+  "licenseSource": "https://math.libretexts.org/Bookshelves/Algebra/Algebra_and_Trigonometry_1e_(OpenStax)/06:_Exponential_and_Logarithmic_Functions/6.03:_Logarithmic_Functions",
+  "licenseUrl": "https://creativecommons.org/licenses/by/4.0/",
+  "authors": "OpenStax / Jay Abramson et al.",
+  "book": "Algebra and Trigonometry 1e",
+  "reviewStatus": "unreviewed",
+  "sourceLanguage": "en",
+  "translationStatus": "pending"
+}

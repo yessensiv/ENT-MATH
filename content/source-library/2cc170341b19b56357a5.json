@@ -1,0 +1,718 @@
+{
+  "title": "5.3: Graphs of Polynomial Functions",
+  "originalText": "Learning Objectives\n\nRecognize characteristics of graphs of polynomial functions.\n\nUse factoring to find zeros of polynomial functions.\n\nIdentify zeros and their multiplicities.\n\nDetermine end behavior.\n\nUnderstand the relationship between degree and turning points.\n\nGraph polynomial functions.\n\nUse the Intermediate Value Theorem.\n\nThe revenue in millions of dollars for a fictional cable company from 2006 through 2013 is shown in Table \\(\\PageIndex{1}\\).\n\n    Table \\(\\PageIndex{1}\\)\n\n            Year\t\n            2006\t\n            2007\t\n            2008\t\n            2009\t\n            2010\t\n            2011\t\n            2012\t\n            2013\t\n\n            Revenues\t\n            52.4\t\n            52.8\t\n            51.2\t\n            49.5\t\n            48.6\t\n            48.6\t\n            48.7\t\n            47.1\t\n\nThe revenue can be modeled by the polynomial function\n\n\\[R(t)=−0.037t^4+1.414t^3−19.777t^2+118.696t−205.332\\]\n\nwhere \\(R\\) represents the revenue in millions of dollars and \\(t\\) represents the year, with \\(t=6\\) corresponding to 2006. Over which intervals is the revenue for the company increasing? Over which intervals is the revenue for the company decreasing? These questions, along with many others, can be answered by examining the graph of the polynomial function. We have already explored the local behavior of quadratics, a special case of polynomials. In this section we will explore the local behavior of polynomials in general.\n\nRecognizing Characteristics of Graphs of Polynomial Functions\n\nPolynomial functions of degree 2 or more have graphs that do not have sharp corners; recall that these types of graphs are called smooth curves. Polynomial functions also display graphs that have no breaks. Curves with no breaks are called continuous. Figure \\(\\PageIndex{1}\\) shows a graph that represents a polynomial function and a graph that represents a function that is not a polynomial.\n\n[Figure: Graph of f(x)=x^3-0.01x]\n\nFigure \\(\\PageIndex{1}\\): Graph of \\(f(x)=x^3-0.01x\\).\n\nExample \\(\\PageIndex{1}\\): Recognizing Polynomial Functions\n\nWhich of the graphs in Figure \\(\\PageIndex{2}\\) represents a polynomial function?\n\n[Figure: Two graphs in which one has a polynomial function and the other has a function closely resembling a polynomial but is not. Two graphs in which one has a polynomial function and the other has a function closely resembling a polynomial but is not.]\n\nFigure \\(\\PageIndex{2}\\)\n\nSolution\n\nThe graphs of \\(f\\) and \\(h\\) are graphs of polynomial functions. They are smooth and continuous.\n\nThe graphs of \\(g\\) and \\(k\\) are graphs of functions that are not polynomials. The graph of function \\(g\\) has a sharp corner. The graph of function \\(k\\) is not continuous.\n\nQ&A\n\nDo all polynomial functions have as their domain all real numbers?\n\nYes. Any real number is a valid input for a polynomial function.\n\nUsing Factoring to Find Zeros of Polynomial Functions\n\nRecall that if \\(f\\) is a polynomial function, the values of \\(x\\) for which \\(f(x)=0\\) are called zeros of \\(f\\). If the equation of the polynomial function can be factored, we can set each factor equal to zero and solve for the zeros.\n\nWe can use this method to find x-intercepts because at the x-intercepts we find the input values when the output value is zero. For general polynomials, this can be a challenging prospect. While quadratics can be solved using the relatively simple quadratic formula, the corresponding formulas for cubic and fourth-degree polynomials are not simple enough to remember, and formulas do not exist for general higher-degree polynomials. Consequently, we will limit ourselves to three cases in this section:\n\nThe polynomial can be factored using known methods: greatest common factor and trinomial factoring.\n\nThe polynomial is given in factored form.\n\nTechnology is used to determine the intercepts.\n\nHOwTO: Given a polynomial function \\(f\\), find the x-intercepts by factoring\n\n1. Set \\(f(x)=0\\).\n\n2. If the polynomial function is not given in factored form:\n\n1. Factor out any common monomial factors.\n\n2. Factor any factorable binomials or trinomials.\n\n3. Set each factor equal to zero and solve to find the x-intercepts.\n\nExample \\(\\PageIndex{2}\\): Finding the x-Intercepts of a Polynomial Function by Factoring\n\nFind the x-intercepts of \\(f(x)=x^6−3x^4+2x^2\\).\n\nSolution\n\nWe can attempt to factor this polynomial to find solutions for \\(f(x)=0\\).\n\n\\[\\begin{align*} x^6−3x^4+2x^2&=0 & &\\text{Factor out the greatest common factor.} \\\\ x^2(x^4−3x^2+2)&=0 & &\\text{Factor the trinomial.} \\\\ x^2(x^2−1)(x^2−2)&=0 & &\\text{Set each factor equal to zero.} \\end{align*}\\]\n\n\\[\\begin{align*} x^2&=0 & & & (x^2−1)&=0 & & & (x^2−2)&=0 \\\\ x^2&=0 & &\\text{ or } & x^2&=1 & &\\text{ or } & x^2&=2 \\\\ x&=0 &&& x&={\\pm}1 &&& x&={\\pm}\\sqrt{2} \\end{align*}\\] .\n\nThis gives us five x-intercepts: \\((0,0)\\), \\((1,0)\\), \\((−1,0)\\), \\((\\sqrt{2},0)\\),and \\((−\\sqrt{2},0)\\) (Figure \\(\\PageIndex{3}\\)). We can see that this is an even function.\n\n[Figure: An even function]\n\nFigure \\(\\PageIndex{3}\\).\n\nExample \\(\\PageIndex{3}\\): Finding the x-Intercepts of a Polynomial Function by Factoring\n\nFind the x-intercepts of \\(f(x)=x^3−5x^2−x+5\\).\n\nSolution\n\nFind solutions for \\(f(x)=0\\) by factoring.\n\n\\[\\begin{align*} x^3−5x^2−x+5&=0 &\\text{Factor by grouping.} \\\\ x^2(x−5)−(x−5)&=0 &\\text{Factor out the common factor.} \\\\ (x^2−1)(x−5)&=0 &\\text{Factor the difference of squares.} \\\\ (x+1)(x−1)(x−5)&=0 &\\text{Set each factor equal to zero.} \\end{align*}\\]\n\n\\[\\begin{align*} x+1&=0 & &\\text{or} & x−1&=0 & &\\text{or} & x−5&=0 \\\\ x&=−1 &&& x&=1 &&& x&=5\\end{align*}\\]\n\nThere are three x-intercepts: \\((−1,0)\\), \\((1,0)\\), and \\((5,0)\\) (Figure \\(\\PageIndex{4}\\)).\n\n[Figure: Graph of f(x)=x^3-5x^2-x+5 with its three intercepts (-1, 0), (1, 0), and (5, 0).]\n\nFigure \\(\\PageIndex{4}\\): Graph of \\(f(x)\\).\n\nExample \\(\\PageIndex{4}\\): Finding the y- and x-Intercepts of a Polynomial in Factored Form\n\nFind the y- and x-intercepts of \\(g(x)=(x−2)^2(2x+3)\\).\n\nSolution\n\nThe y-intercept can be found by evaluating \\(g(0)\\).\n\n\\[\\begin{align*} g(0)&=(0−2)^2(2(0)+3) \\\\ &=12 \\end{align*}\\]\n\nSo the y-intercept is \\((0,12)\\).\n\nThe x-intercepts can be found by solving \\(g(x)=0\\).\n\n\\[(x−2)^2(2x+3)=0\\]\n\n\\[\\begin{align*} (x−2)^2&=0 & & & (2x+3)&=0 \\\\ x−2&=0 & &\\text{or} & x&=−\\dfrac{3}{2} \\\\ x&=2 \\end{align*}\\]\n\nSo the x-intercepts are \\((2,0)\\) and \\(\\left(−\\dfrac{3}{2},0\\right)\\).\n\nAnalysis\n\nWe can always check that our answers are reasonable by using a graphing calculator to graph the polynomial as shown in Figure \\(\\PageIndex{5}\\).\n\n[Figure: Graph of g(x)=(x-2)^2(2x+3) with its two x-intercepts (2, 0) and (-3/2, 0) and its y-intercept (0, 12).]\n\nFigure \\(\\PageIndex{5}\\): Graph of \\(g(x)\\).\n\nExample \\(\\PageIndex{5}\\): Finding the x-Intercepts of a Polynomial Function Using a Graph\n\nFind the x-intercepts of \\(h(x)=x^3+4x^2+x−6\\).\n\nSolution\n\nThis polynomial is not in factored form, has no common factors, and does not appear to be factorable using techniques previously discussed. Fortunately, we can use technology to find the intercepts. Keep in mind that some values make graphing difficult by hand. In these cases, we can take advantage of graphing utilities.\n\nLooking at the graph of this function, as shown in Figure \\(\\PageIndex{6}\\), it appears that there are x-intercepts at \\(x=−3,−2, \\text{ and }1\\).\n\n[Figure: Graph of h(x)=x^3+4x^2+x-6.]\n\nFigure \\(\\PageIndex{6}\\): Graph of \\(h(x)\\).\n\nWe can check whether these are correct by substituting these values for \\(x\\) and verifying that\n\n\\[h(−3)=h(−2)=h(1)=0. \\nonumber\\]\n\nSince \\(h(x)=x^3+4x^2+x−6\\), we have:\n\n\\[ \\begin{align*} h(−3)&=(−3)^3+4(−3)^2+(−3)−6=−27+36−3−6=0 \\\\[4pt] h(−2) &=(−2)^3+4(−2)^2+(−2)−6 =−8+16−2−6=0 \\\\[4pt] h(1)&=(1)^3+4(1)^2+(1)−6=1+4+1−6=0 \\end{align*}\\]\n\nEach x-intercept corresponds to a zero of the polynomial function and each zero yields a factor, so we can now write the polynomial in factored form.\n\n\\[\\begin{align*} h(x)&=x^3+4x^2+x−6 \\\\ &=(x+3)(x+2)(x−1) \\end{align*}\\]\n\nExercise \\(\\PageIndex{1}\\)\n\nFind the y-and x-intercepts of the function \\(f(x)=x^4−19x^2+30x\\).\n\nAnswer\n\ny-intercept \\((0,0)\\);\n\nx-intercepts \\((0,0)\\), \\((–5,0)\\), \\((2,0)\\), and \\((3,0)\\)\n\nIdentifying Zeros and Their Multiplicities\n\nGraphs behave differently at various x-intercepts. Sometimes, the graph will cross over the horizontal axis at an intercept. Other times, the graph will touch the horizontal axis and bounce off. Suppose, for example, we graph the function\n\n\\[f(x)=(x+3)(x−2)^2(x+1)^3.\\]\n\nNotice in Figure \\(\\PageIndex{7}\\) that the behavior of the function at each of the x-intercepts is different.\n\n[Figure: Graph of f(x)=(x+3)(x-2)^2(x+1)^3.]\n\nFigure \\(\\PageIndex{7}\\): Identifying the behavior of the graph at an x-intercept by examining the multiplicity of the zero.\n\nThe x-intercept −3 is the solution of equation \\((x+3)=0\\). The graph passes directly through thex-intercept at \\(x=−3\\). The factor is linear (has a degree of 1), so the behavior near the intercept is like that of a line—it passes directly through the intercept. We call this a single zero because the zero corresponds to a single factor of the function.\n\nThe x-intercept 2 is the repeated solution of equation \\((x−2)^2=0\\). The graph touches the axis at the intercept and changes direction. The factor is quadratic (degree 2), so the behavior near the intercept is like that of a quadratic—it bounces off of the horizontal axis at the intercept.\n\n\\[(x−2)^2=(x−2)(x−2)\\]\n\nThe factor is repeated, that is, the factor \\((x−2)\\) appears twice. The number of times a given factor appears in the factored form of the equation of a polynomial is called the multiplicity. The zero associated with this factor, \\(x=2\\), has multiplicity 2 because the factor \\((x−2)\\) occurs twice.\n\nThe x-intercept −1 is the repeated solution of factor \\((x+1)^3=0\\).The graph passes through the axis at the intercept, but flattens out a bit first. This factor is cubic (degree 3), so the behavior near the intercept is like that of a cubic—with the same S-shape near the intercept as the toolkit function \\(f(x)=x^3\\). We call this a triple zero, or a zero with multiplicity 3.\n\nFor zeros with even multiplicities, the graphs touch or are tangent to the x-axis. For zeros with odd multiplicities, the graphs cross or intersect the x-axis. See Figure \\(\\PageIndex{8}\\) for examples of graphs of polynomial functions with multiplicity 1, 2, and 3.\n\n[Figure: Three graphs showing three different polynomial functions with multiplicity 1, 2, and 3.]\n\nFigure \\(\\PageIndex{8}\\): Three graphs showing three different polynomial functions with multiplicity 1, 2, and 3.\n\nFor higher even powers, such as 4, 6, and 8, the graph will still touch and bounce off of the horizontal axis but, for each increasing even power, the graph will appear flatter as it approaches and leaves the x-axis.\n\nFor higher odd powers, such as 5, 7, and 9, the graph will still cross through the horizontal axis, but for each increasing odd power, the graph will appear flatter as it approaches and leaves the x-axis.\n\nGraphical Behavior of Polynomials at x-Intercepts\n\nIf a polynomial contains a factor of the form \\((x−h)^p\\), the behavior near the x-intercepth is determined by the power \\(p\\). We say that \\(x=h\\) is a zero of multiplicity \\(p\\).\n\nThe graph of a polynomial function will touch the x-axis at zeros with even multiplicities. The graph will cross the x-axis at zeros with odd multiplicities.\n\nThe sum of the multiplicities is the degree of the polynomial function.\n\nHOWTO: Given a graph of a polynomial function of degree \\(n\\), identify the zeros and their multiplicities\n\n1. If the graph crosses the x-axis and appears almost linear at the intercept, it is a single zero.\n\n2. If the graph touches the x-axis and bounces off of the axis, it is a zero with even multiplicity.\n\n3. If the graph crosses the x-axis at a zero, it is a zero with odd multiplicity.\n\n4. The sum of the multiplicities is \\(n\\).\n\nExample \\(\\PageIndex{6}\\): Identifying Zeros and Their Multiplicities\n\nUse the graph of the function of degree 6 in Figure \\(\\PageIndex{9}\\) to identify the zeros of the function and their possible multiplicities.\n\n[Figure: Graph of an even-degree polynomial with degree 6.]\n\nFigure \\(\\PageIndex{9}\\): Graph of a polynomial function with degree 5.\n\nSolution\n\nThe polynomial function is of degree \\(n\\). The sum of the multiplicities must be \\(n\\).\n\nStarting from the left, the first zero occurs at \\(x=−3\\). The graph touches the x-axis, so the multiplicity of the zero must be even. The zero of −3 has multiplicity 2.\n\nThe next zero occurs at \\(x=−1\\). The graph looks almost linear at this point. This is a single zero of multiplicity 1.\n\nThe last zero occurs at \\(x=4\\).The graph crosses the x-axis, so the multiplicity of the zero must be odd. We know that the multiplicity is likely 3 and that the sum of the multiplicities is likely 6.\n\nExercise \\(\\PageIndex{2}\\)\n\nUse the graph of the function of degree 5 in Figure \\(\\PageIndex{10}\\) to identify the zeros of the function and their multiplicities.\n\n[Figure: Graph of a polynomial function with degree 5.]\n\nFigure \\(\\PageIndex{10}\\): Graph of a polynomial function with degree 5.\n\nAnswer\n\nThe graph has a zero of –5 with multiplicity 1, a zero of –1 with multiplicity 2, and a zero of 3 with even multiplicity.\n\nDetermining End Behavior\n\nAs we have already learned, the behavior of a graph of a polynomial function of the form\n\n\\[f(x)=a_nx^n+a_{n−1}x^{n−1}+...+a_1x+a_0\\]\n\nwill either ultimately rise or fall as \\(x\\) increases without bound and will either rise or fall as \\(x\\) decreases without bound. This is because for very large inputs, say 100 or 1,000, the leading term dominates the size of the output. The same is true for very small inputs, say –100 or –1,000.\n\nRecall that we call this behavior the end behavior of a function. As we pointed out when discussing quadratic equations, when the leading term of a polynomial function, \\(a_nx^n\\), is an even power function, as \\(x\\) increases or decreases without bound, \\(f(x)\\) increases without bound. When the leading term is an odd power function, as \\(x\\) decreases without bound, \\(f(x)\\) also decreases without bound; as \\(x\\) increases without bound, \\(f(x)\\) also increases without bound. If the leading term is negative, it will change the direction of the end behavior. Figure \\(\\PageIndex{11}\\) summarizes all four cases.\n\n[Figure: Table showing the end behavior of odd and even polynomials with positive and negative coefficients]\n\nFigure \\(\\PageIndex{11}\\).\n\nUnderstanding the Relationship between Degree and Turning Points\n\nIn addition to the end behavior, recall that we can analyze a polynomial function’s local behavior. It may have a turning point where the graph changes from increasing to decreasing (rising to falling) or decreasing to increasing (falling to rising). Look at the graph of the polynomial function \\(f(x)=x^4−x^3−4x^2+4x\\) in Figure \\(\\PageIndex{12}\\). The graph has three turning points.\n\n[Figure: Graph of f(x)=x^4-x^3-4x^2+4x which denotes where the function increases and decreases and its turning points.]\n\nFigure \\(\\PageIndex{12}\\): Graph of \\(f(x)=x^4-x^3-4x^2+4x\\)\n\nThis function \\(f\\) is a 4th degree polynomial function and has 3 turning points. The maximum number of turning points of a polynomial function is always one less than the degree of the function.\n\nDefinition: Interpreting Turning Points\n\nA turning point is a point of the graph where the graph changes from increasing to decreasing (rising to falling) or decreasing to increasing (falling to rising). A polynomial of degree \\(n\\) will have at most \\(n−1\\) turning points.\n\nExample \\(\\PageIndex{7}\\): Finding the Maximum Number of Turning Points Using the Degree of a Polynomial Function\n\nFind the maximum number of turning points of each polynomial function.\n\n1. \\(f(x)=−x^3+4x^5−3x^2+1\\)\n\n2. \\(f(x)=−(x−1)^2(1+2x^2)\\)\n\nSolution\n\na. \\(f(x)=−x^3+4x^5−3x^2+1\\)\n\nFirst, rewrite the polynomial function in descending order: \\(f(x)=4x^5−x^3−3x^2+1\\)\n\nIdentify the degree of the polynomial function. This polynomial function is of degree 5.\n\nThe maximum number of turning points is \\(5−1=4\\).\n\nb. \\(f(x)=−(x−1)^2(1+2x^2)\\)\n\nFirst, identify the leading term of the polynomial function if the function were expanded.\n\n[Figure: imageedit_33_3540887475.png]\n\nThen, identify the degree of the polynomial function. This polynomial function is of degree 4.\n\nThe maximum number of turning points is \\(4−1=3\\).\n\nGraphing Polynomial Functions\n\nWe can use what we have learned about multiplicities, end behavior, and turning points to sketch graphs of polynomial functions. Let us put this all together and look at the steps required to graph polynomial functions.\n\nHowto: Given a polynomial function, sketch the graph\n\n1. Find the intercepts.\n\n2. Check for symmetry. If the function is an even function, its graph is symmetrical about the y-axis, that is, \\(f(−x)=f(x)\\). If a function is an odd function, its graph is symmetrical about the origin, that is, \\(f(−x)=−f(x)\\).\n\n3. Use the multiplicities of the zeros to determine the behavior of the polynomial at the x-intercepts.\n\n4. Determine the end behavior by examining the leading term.\n\n5. Use the end behavior and the behavior at the intercepts to sketch a graph.\n\n6. Ensure that the number of turning points does not exceed one less than the degree of the polynomial.\n\n7. Optionally, use technology to check the graph.\n\nExample \\(\\PageIndex{8}\\): Sketching the Graph of a Polynomial Function\n\nSketch a graph of \\(f(x)=−2(x+3)^2(x−5)\\).\n\nSolution\n\nThis graph has two x-intercepts. At \\(x=−3\\), the factor is squared, indicating a multiplicity of 2. The graph will bounce at this x-intercept. At \\(x=5\\),the function has a multiplicity of one, indicating the graph will cross through the axis at this intercept.\n\nThe y-intercept is found by evaluating \\(f(0)\\).\n\n\\[\\begin{align*} f(0)&=−2(0+3)^2(0−5) \\\\ &=−2⋅9⋅(−5) \\\\ &=90 \\end{align*}\\]\n\nThe y-intercept is \\((0,90)\\).\n\nAdditionally, we can see the leading term, if this polynomial were multiplied out, would be \\(−2x3\\), so the end behavior is that of a vertically reflected cubic, with the outputs decreasing as the inputs approach infinity, and the outputs increasing as the inputs approach negative infinity. See Figure \\(\\PageIndex{13}\\).\n\n[Figure: Showing the distribution for the leading term.]\n\nFigure \\(\\PageIndex{13}\\): Showing the distribution for the leading term.\n\nTo sketch this, we consider that:\n\nAs \\(x{\\rightarrow}−{\\infty}\\) the function \\(f(x){\\rightarrow}{\\infty}\\),so we know the graph starts in the second quadrant and is decreasing toward the x-axis.\n\nSince \\(f(−x)=−2(−x+3)^2(−x–5)\\) is not equal to \\(f(x)\\), the graph does not display symmetry.\n\nAt \\((−3,0)\\), the graph bounces off of thex-axis, so the function must start increasing.\n\nAt \\((0,90)\\), the graph crosses the y-axis at the y-intercept. See Figure \\(\\PageIndex{14}\\).\n\n[Figure:  Graph of the end behavior and intercepts, (-3, 0) and (0, 90), for the function f(x)=-2(x+3)^2(x-5).]\n\nFigure \\(\\PageIndex{14}\\): Graph of the end behavior and intercepts, \\((-3, 0)\\) and \\((0, 90)\\), for the function \\(f(x)=-2(x+3)^2(x-5)\\).\n\nSomewhere after this point, the graph must turn back down or start decreasing toward the horizontal axis because the graph passes through the next intercept at \\((5,0)\\). See Figure \\(\\PageIndex{15}\\).\n\n[Figure: Graph of the end behavior and intercepts, (-3, 0), (0, 90) and (5, 0), for the function f(x)=-2(x+3)^2(x-5).]\n\nFigure \\(\\PageIndex{15}\\): Graph of the end behavior and intercepts, \\((-3, 0)\\), \\((0, 90)\\) and \\((5, 0)\\), for the function \\(f(x)=-2(x+3)^2(x-5)\\).\n\nAs \\(x{\\rightarrow}{\\infty}\\) the function \\(f(x){\\rightarrow}−{\\infty}\\),\n\nso we know the graph continues to decrease, and we can stop drawing the graph in the fourth quadrant.\n\nUsing technology, we can create the graph for the polynomial function, shown in Figure \\(\\PageIndex{16}\\), and verify that the resulting graph looks like our sketch in Figure \\(\\PageIndex{15}\\).\n\n[Figure: The complete graph of the polynomial function f(x)=−2(x+3)^2(x−5)]\n\nFigure \\(\\PageIndex{16}\\): The complete graph of the polynomial function \\(f(x)=−2(x+3)^2(x−5)\\).\n\nExercise \\(\\PageIndex{8}\\)\n\nSketch a graph of \\(f(x)=\\dfrac{1}{4}x(x−1)^4(x+3)^3\\).\n\nAnswer\n\n[Figure: alt]\n\nFigure \\(\\PageIndex{17}\\): Graph of \\(f(x)=\\frac{1}{4}x(x−1)^4(x+3)^3\\)\n\nUsing the Intermediate Value Theorem\n\nIn some situations, we may know two points on a graph but not the zeros. If those two points are on opposite sides of the x-axis, we can confirm that there is a zero between them. Consider a polynomial function \\(f\\) whose graph is smooth and continuous. The Intermediate Value Theorem states that for two numbers \\(a\\) and \\(b\\) in the domain of \\(f\\),if \\(a<b\\) and \\(f(a){\\neq}f(b)\\),then the function \\(f\\) takes on every value between \\(f(a)\\) and \\(f(b)\\). We can apply this theorem to a special case that is useful in graphing polynomial functions. If a point on the graph of a continuous function \\(f\\) at \\(x=a\\) lies above the x-axis and another point at \\(x=b\\) lies below thex-axis, there must exist a third point between \\(x=a\\) and \\(x=b\\) where the graph crosses the x-axis. Call this point \\((c,f(c))\\).This means that we are assured there is a solution \\(c\\) where \\(f(c)=0\\).\n\nIn other words, the Intermediate Value Theorem tells us that when a polynomial function changes from a negative value to a positive value, the function must cross the x-axis. Figure \\(\\PageIndex{18}\\) shows that there is a zero between \\(a\\) and \\(b\\).\n\n[Figure: Graph of an odd-degree polynomial function that shows a point f(a) that’s negative, f(b) that’s positive, and f(c) that’s 0. ]\n\nFigure \\(\\PageIndex{18}\\): Using the Intermediate Value Theorem to show there exists a zero.\n\nDefinition: Intermediate Value Theorem\n\nLet \\(f\\) be a polynomial function. The Intermediate Value Theorem states that if \\(f(a)\\) and \\(f(b)\\) have opposite signs, then there exists at least one value \\(c\\) between \\(a\\) and \\(b\\) for which \\(f(c)=0\\).\n\nExample \\(\\PageIndex{9}\\): Using the Intermediate Value Theorem\n\nShow that the function \\(f(x)=x^3−5x^2+3x+6\\) has at least two real zeros between \\(x=1\\) and \\(x=4\\).\n\nSolution\n\nAs a start, evaluate \\(f(x)\\) at the integer values \\(x=1,\\;2,\\;3,\\; \\text{and }4\\) (Table \\(\\PageIndex{2}\\)).\n\n    Table \\(\\PageIndex{2}\\)\n\n            \\(x\\)\t\n            1\t\n            2\t\n            3\t\n            4\t\n\n            \\(f(x)\\)\t\n            5\t\n            0\t\n            -3\t\n            2\t\n\nWe see that one zero occurs at \\(x=2\\). Also, since \\(f(3)\\) is negative and \\(f(4)\\) is positive, by the Intermediate Value Theorem, there must be at least one real zero between 3 and 4.\n\nWe have shown that there are at least two real zeros between \\(x=1\\) and \\(x=4\\).\n\nAnalysis\n\nWe can also see on the graph of the function in Figure \\(\\PageIndex{19}\\) that there are two real zeros between \\(x=1\\) and \\(x=4\\).\n\n[Figure: Graph of f(x)=x^3-5x^2+3x+6 and shows, by the Intermediate Value Theorem, that there exists two zeros since f(1)=5 and f(4)=2 are positive and f(3) = -3 is negative.]\n\nFigure \\(\\PageIndex{19}\\).\n\nExercise \\(\\PageIndex{4}\\)\n\nShow that the function \\(f(x)=7x^5−9x^4−x^2\\) has at least one real zero between \\(x=1\\) and \\(x=2\\).\n\nAnswer\n\nBecause \\(f\\) is a polynomial function and since \\(f(1)\\) is negative and \\(f(2)\\) is positive, there is at least one real zero between \\(x=1\\) and \\(x=2\\).\n\nWriting Formulas for Polynomial Functions\n\nNow that we know how to find zeros of polynomial functions, we can use them to write formulas based on graphs. Because a polynomial function written in factored form will have an x-intercept where each factor is equal to zero, we can form a function that will pass through a set of x-intercepts by introducing a corresponding set of factors.\n\nNote: Factored Form of Polynomials\n\nIf a polynomial of lowest degree \\(p\\) has horizontal intercepts at \\(x=x_1,x_2,…,x_n\\), then the polynomial can be written in the factored form: \\(f(x)=a(x−x_1)^{p_1}(x−x_2)^{p_2}⋯(x−x_n)^{p_n}\\) where the powers \\(p_i\\) on each factor can be determined by the behavior of the graph at the corresponding intercept, and the stretch factor \\(a\\) can be determined given a value of the function other than the x-intercept.\n\n[Figure: alt]\nGiven a graph of a polynomial function, write a formula for the function.\n\n1. Identify the x-intercepts of the graph to find the factors of the polynomial.\n\n2. Examine the behavior of the graph at the x-intercepts to determine the multiplicity of each factor.\n\n3. Find the polynomial of least degree containing all the factors found in the previous step.\n\n4. Use any other point on the graph (the y-intercept may be easiest) to determine the stretch factor.\n\nExample \\(\\PageIndex{10}\\): Writing a Formula for a Polynomial Function from the Graph\n\nWrite a formula for the polynomial function shown in Figure \\(\\PageIndex{20}\\).\n\n[Figure: Graph of a positive even-degree polynomial with zeros at x=-3, 2, 5 and y=-2.]\n\nFigure \\(\\PageIndex{20}\\).\n\nSolution\n\nThis graph has three x-intercepts: \\(x=−3,\\;2,\\text{ and }5\\). The y-intercept is located at \\((0,2)\\).At \\(x=−3\\) and \\( x=5\\), the graph passes through the axis linearly, suggesting the corresponding factors of the polynomial will be linear. At \\(x=2\\), the graph bounces at the intercept, suggesting the corresponding factor of the polynomial will be second degree (quadratic). Together, this gives us\n\n\\[f(x)=a(x+3)(x−2)^2(x−5)\\]\n\nTo determine the stretch factor, we utilize another point on the graph. We will use the y-intercept \\((0,–2)\\), to solve for \\(a\\).\n\n\\[\\begin{align*} f(0)&=a(0+3)(0−2)^2(0−5) \\\\ −2&=a(0+3)(0−2)^2(0−5) \\\\ −2&=−60a \\\\ a&=\\dfrac{1}{30} \\end{align*}\\]\n\nThe graphed polynomial appears to represent the function \\(f(x)=\\dfrac{1}{30}(x+3)(x−2)^2(x−5)\\).\n\nExercise \\(\\PageIndex{5}\\)\n\nGiven the graph shown in Figure \\(\\PageIndex{21}\\), write a formula for the function shown.\n\n[Figure: Graph of a negative even-degree polynomial with zeros at x=-1, 2, 4 and y=-4.]\n\nFigure \\(\\PageIndex{21}\\).\n\nAnswer\n\n\\(f(x)=−\\frac{1}{8}(x−2)^3(x+1)^2(x−4)\\)\n\nUsing Local and Global Extrema\n\nWith quadratics, we were able to algebraically find the maximum or minimum value of the function by finding the vertex. For general polynomials, finding these turning points is not possible without more advanced techniques from calculus. Even then, finding where extrema occur can still be algebraically challenging. For now, we will estimate the locations of turning points using technology to generate a graph.\n\nEach turning point represents a local minimum or maximum. Sometimes, a turning point is the highest or lowest point on the entire graph. In these cases, we say that the turning point is a global maximum or a global minimum. These are also referred to as the absolute maximum and absolute minimum values of the function.\n\nNote: Local and Global Extrema\n\nA local maximum or local minimum at \\(x=a\\) (sometimes called the relative maximum or minimum, respectively) is the output at the highest or lowest point on the graph in an open interval around \\(x=a\\).If a function has a local maximum at \\(a\\), then \\(f(a){\\geq}f(x)\\)for all \\(x\\) in an open interval around \\(x=a\\). If a function has a local minimum at \\(a\\), then \\(f(a){\\leq}f(x)\\)for all \\(x\\) in an open interval around \\(x=a\\).\n\nA global maximum or global minimum is the output at the highest or lowest point of the function. If a function has a global maximum at \\(a\\), then \\(f(a){\\geq}f(x)\\) for all \\(x\\). If a function has a global minimum at \\(a\\), then \\(f(a){\\leq}f(x)\\) for all \\(x\\).\n\nWe can see the difference between local and global extrema in Figure \\(\\PageIndex{22}\\).\n\n[Figure: Graph of an even-degree polynomial that denotes the local maximum and minimum and the global maximum.]\n\nFigure \\(\\PageIndex{22}\\): Graph of an even-degree polynomial that denotes the local maximum and minimum and the global maximum.\n\n[Figure: alt]\n Do all polynomial functions have a global minimum or maximum?\n\nNo. Only polynomial functions of even degree have a global minimum or maximum. For example, \\(f(x)=x\\) has neither a global maximum nor a global minimum.\n\nExample \\(\\PageIndex{11}\\): Using Local Extrema to Solve Applications\n\nAn open-top box is to be constructed by cutting out squares from each corner of a 14 cm by 20 cm sheet of plastic then folding up the sides. Find the size of squares that should be cut out to maximize the volume enclosed by the box.\n\nSolution\n\nWe will start this problem by drawing a picture like that in Figure \\(\\PageIndex{23}\\), labeling the width of the cut-out squares with a variable, \\(w\\).\n\n[Figure: Diagram of a rectangle with four squares at the corners.]\n\nFigure \\(\\PageIndex{23}\\): Diagram of a rectangle with four squares at the corners.\n\nNotice that after a square is cut out from each end, it leaves \\(a(14−2w)\\) cm by \\((20−2w)\\) cm rectangle for the base of the box, and the box will be \\(w\\) cm tall. This gives the volume\n\n\\[\\begin{align*} V(w)&=(20−2w)(14−2w)w \\\\ &=280w−68w^2+4w^3 \\end{align*}\\]\n\nNotice, since the factors are \\(20–2w\\), \\(14–2w\\), and \\(w\\), the three zeros are \\(10, \\,7,\\) and \\(0,) respectively. Because a height of \\(0\\) cm is not reasonable, we consider the only the zeros \\(10\\) and \\(7.\\) The shortest side is \\(14\\) and we are cutting off two squares, so values \\(w\\) may take on are greater than zero or less than \\(7.\\) This means we will restrict the domain of this function to \\(0<w<7\\).Using technology to sketch the graph of \\(V(w)\\) on this reasonable domain, we get a graph like that in Figure \\(\\PageIndex{24}\\). We can use this graph to estimate the maximum value for the volume, restricted to values for \\(w\\) that are reasonable for this problem—values from 0 to 7.\n\n[Figure: Graph of V(w)=(20-2w)(14-2w)w where the x-axis is labeled w and the y-axis is labeled V(w).]\n\nFigure \\(\\PageIndex{24}\\): Graph of \\(V(w)=(20-2w)(14-2w)w\\)\n\nFrom this graph, we turn our focus to only the portion on the reasonable domain, \\([0, 7]\\). We can estimate the maximum value to be around 340 cubic cm, which occurs when the squares are about 2.75 cm on each side. To improve this estimate, we could use advanced features of our technology, if available, or simply change our window to zoom in on our graph to produce Figure \\(\\PageIndex{25}\\).\n\n[Figure: Graph of V(w)=(20-2w)(14-2w)w where the x-axis is labeled w and the y-axis is labeled V(w) on the domain [2.4, 3].]\n\nFigure \\(\\PageIndex{25}\\): Graph of \\(V(w)=(20-2w)(14-2w)w\\).\n\nFrom this zoomed-in view, we can refine our estimate for the maximum volume to about 339 cubic cm, when the squares measure approximately 2.7 cm on each side.\n\nExercise \\(\\PageIndex{1}\\)\n\nUse technology to find the maximum and minimum values on the interval \\([−1,4]\\) of the function \\(f(x)=−0.2(x−2)^3(x+1)^2(x−4)\\).\n\nAnswer\n\nThe minimum occurs at approximately the point \\((0,−6.5)\\),\n\n    and the maximum occurs at approximately the point \\((3.5,7)\\).\n\nKey Concepts\n\nPolynomial functions of degree 2 or more are smooth, continuous functions.\n\nTo find the zeros of a polynomial function, if it can be factored, factor the function and set each factor equal to zero.\n\nAnother way to find the x-intercepts of a polynomial function is to graph the function and identify the points at which the graph crosses the x-axis.\n\nThe multiplicity of a zero determines how the graph behaves at the x-intercepts.\n\nThe graph of a polynomial will cross the horizontal axis at a zero with odd multiplicity.\n\nThe graph of a polynomial will touch the horizontal axis at a zero with even multiplicity.\n\nThe end behavior of a polynomial function depends on the leading term.\n\nThe graph of a polynomial function changes direction at its turning points.\n\nA polynomial function of degree \\(n\\) has at most \\(n−1\\) turning points.\n\nTo graph polynomial functions, find the zeros and their multiplicities, determine the end behavior, and ensure that the final graph has at most \\(n−1\\) turning points.\n\nGraphing a polynomial function helps to estimate local and global extremas.\n\nThe Intermediate Value Theorem tells us that if \\(f(a)\\) and \\(f(b)\\) have opposite signs, then there exists at least one value \\(c\\) between \\(a\\) and \\(b\\) for which \\(f(c)=0\\).\n\nGlossary\n\nglobal maximum\n\nhighest turning point on a graph; \\(f(a)\\) where \\(f(a){\\geq}f(x)\\) for all \\(x\\).\n\nglobal minimum\n\nlowest turning point on a graph; \\(f(a)\\) where \\(f(a){\\leq}f(x)\\) for all \\(x\\).\n\nIntermediate Value Theorem\n\nfor two numbers \\(a\\) and \\(b\\) in the domain of \\(f\\), if \\(a<b\\) and \\(f(a){\\neq}f(b)\\), then the functionf takes on every value between \\(f(a)\\) and \\(f(b)\\); specifically, when a polynomial function changes from a negative value to a positive value, the function must cross the x-axis\n\nmultiplicity\n\nthe number of times a given factor appears in the factored form of the equation of a polynomial; if a polynomial contains a factor of the form \\((x−h)^p\\), \\(x=h\\) is a zero of multiplicity \\(p\\).\n\nThis page titled 5.3: Graphs of Polynomial Functions was last modified on Thu, 26 Dec 2024 22:30:43 GMT and is shared under a CC BY  4.0  license and was authored, remixed, and/or curated by OpenStax via source content that was edited to the style and standards of the LibreTexts platform.",
+  "figures": [
+    {
+      "url": "https://math.libretexts.org/@api/deki/files/13608/imageedit_83_2554829496.jpg?revision=1",
+      "alt": "Graph of f(x)=x^3-0.01x",
+      "credit": ""
+    },
+    {
+      "url": "https://math.libretexts.org/@api/deki/files/13592/imageedit_2_7812660388.png?revision=1",
+      "alt": "Two graphs in which one has a polynomial function and the other has a function closely resembling a polynomial but is not. Two graphs in which one has a polynomial function and the other has a function closely resembling a polynomial but is not.",
+      "credit": ""
+    },
+    {
+      "url": "https://math.libretexts.org/@api/deki/files/13593/imageedit_6_3304876759.png?revision=1",
+      "alt": "An even function",
+      "credit": ""
+    },
+    {
+      "url": "https://math.libretexts.org/@api/deki/files/13594/imageedit_11_4676280271.png?revision=1",
+      "alt": "Graph of f(x)=x^3-5x^2-x+5 with its three intercepts (-1, 0), (1, 0), and (5, 0).",
+      "credit": ""
+    },
+    {
+      "url": "https://math.libretexts.org/@api/deki/files/13595/imageedit_16_3557857058.png?revision=1",
+      "alt": "Graph of g(x)=(x-2)^2(2x+3) with its two x-intercepts (2, 0) and (-3/2, 0) and its y-intercept (0, 12).",
+      "credit": ""
+    },
+    {
+      "url": "https://math.libretexts.org/@api/deki/files/13597/imageedit_21_5017811536.png?revision=1",
+      "alt": "Graph of h(x)=x^3+4x^2+x-6.",
+      "credit": ""
+    },
+    {
+      "url": "https://math.libretexts.org/@api/deki/files/1305/CNX_Precalc_Figure_03_04_007.jpg?revision=1",
+      "alt": "Graph of f(x)=(x+3)(x-2)^2(x+1)^3.",
+      "credit": ""
+    },
+    {
+      "url": "https://math.libretexts.org/@api/deki/files/1306/CNX_Precalc_Figure_03_04_008.jpg?revision=1",
+      "alt": "Three graphs showing three different polynomial functions with multiplicity 1, 2, and 3.",
+      "credit": ""
+    },
+    {
+      "url": "https://math.libretexts.org/@api/deki/files/13596/imageedit_25_5432597156.png?revision=1",
+      "alt": "Graph of an even-degree polynomial with degree 6.",
+      "credit": ""
+    },
+    {
+      "url": "https://math.libretexts.org/@api/deki/files/13598/imageedit_29_5207312539.png?revision=1",
+      "alt": "Graph of a polynomial function with degree 5.",
+      "credit": ""
+    },
+    {
+      "url": "https://math.libretexts.org/@api/deki/files/1309/CNX_Precalc_Figure_03_04_011abcdn.jpg?revision=1",
+      "alt": "Table showing the end behavior of odd and even polynomials with positive and negative coefficients",
+      "credit": ""
+    },
+    {
+      "url": "https://math.libretexts.org/@api/deki/files/1310/CNX_Precalc_Figure_03_04_015.jpg?revision=1",
+      "alt": "Graph of f(x)=x^4-x^3-4x^2+4x which denotes where the function increases and decreases and its turning points.",
+      "credit": ""
+    },
+    {
+      "url": "https://math.libretexts.org/@api/deki/files/13599/imageedit_33_3540887475.png?revision=1",
+      "alt": "imageedit_33_3540887475.png",
+      "credit": ""
+    },
+    {
+      "url": "https://math.libretexts.org/@api/deki/files/13600/imageedit_38_6826709490.png?revision=1",
+      "alt": "Showing the distribution for the leading term.",
+      "credit": ""
+    },
+    {
+      "url": "https://math.libretexts.org/@api/deki/files/13601/imageedit_43_3221495307.png?revision=1",
+      "alt": " Graph of the end behavior and intercepts, (-3, 0) and (0, 90), for the function f(x)=-2(x+3)^2(x-5).",
+      "credit": ""
+    },
+    {
+      "url": "https://math.libretexts.org/@api/deki/files/13602/imageedit_50_4489063072.png?revision=1",
+      "alt": "Graph of the end behavior and intercepts, (-3, 0), (0, 90) and (5, 0), for the function f(x)=-2(x+3)^2(x-5).",
+      "credit": ""
+    },
+    {
+      "url": "https://math.libretexts.org/@api/deki/files/13603/imageedit_54_8848089560.png?revision=1",
+      "alt": "The complete graph of the polynomial function f(x)=−2(x+3)^2(x−5)",
+      "credit": ""
+    },
+    {
+      "url": "https://math.libretexts.org/@api/deki/files/51396/openstaxprecal5-4-exercise8.jpg?revision=1",
+      "alt": "alt",
+      "credit": ""
+    },
+    {
+      "url": "https://math.libretexts.org/@api/deki/files/1328/CNX_Precalc_Figure_03_04_022.jpg?revision=1",
+      "alt": "Graph of an odd-degree polynomial function that shows a point f(a) that’s negative, f(b) that’s positive, and f(c) that’s 0. ",
+      "credit": ""
+    },
+    {
+      "url": "https://math.libretexts.org/@api/deki/files/1329/CNX_Precalc_Figure_03_04_023.jpg?revision=1",
+      "alt": "Graph of f(x)=x^3-5x^2+3x+6 and shows, by the Intermediate Value Theorem, that there exists two zeros since f(1)=5 and f(4)=2 are positive and f(3) = -3 is negative.",
+      "credit": ""
+    },
+    {
+      "url": "https://math.libretexts.org/@api/deki/files/871/how-to.png?revision=1",
+      "alt": "alt",
+      "credit": ""
+    },
+    {
+      "url": "https://math.libretexts.org/@api/deki/files/1330/CNX_Precalc_Figure_03_04_024.jpg?revision=1",
+      "alt": "Graph of a positive even-degree polynomial with zeros at x=-3, 2, 5 and y=-2.",
+      "credit": ""
+    },
+    {
+      "url": "https://math.libretexts.org/@api/deki/files/1331/CNX_Precalc_Figure_03_04_025.jpg?revision=1",
+      "alt": "Graph of a negative even-degree polynomial with zeros at x=-1, 2, 4 and y=-4.",
+      "credit": ""
+    },
+    {
+      "url": "https://math.libretexts.org/@api/deki/files/13604/imageedit_64_4180407218.png?revision=1",
+      "alt": "Graph of an even-degree polynomial that denotes the local maximum and minimum and the global maximum.",
+      "credit": ""
+    },
+    {
+      "url": "https://math.libretexts.org/@api/deki/files/876/QA.png?revision=1",
+      "alt": "alt",
+      "credit": ""
+    },
+    {
+      "url": "https://math.libretexts.org/@api/deki/files/13605/imageedit_69_4332393527.png?revision=1",
+      "alt": "Diagram of a rectangle with four squares at the corners.",
+      "credit": ""
+    },
+    {
+      "url": "https://math.libretexts.org/@api/deki/files/13606/imageedit_74_8116209983.png?revision=1",
+      "alt": "Graph of V(w)=(20-2w)(14-2w)w where the x-axis is labeled w and the y-axis is labeled V(w).",
+      "credit": ""
+    },
+    {
+      "url": "https://math.libretexts.org/@api/deki/files/13607/imageedit_79_7982765682.png?revision=1",
+      "alt": "Graph of V(w)=(20-2w)(14-2w)w where the x-axis is labeled w and the y-axis is labeled V(w) on the domain [2.4, 3].",
+      "credit": ""
+    }
+  ],
+  "references": [
+    {
+      "text": "5.3: Graphs of Polynomial Functions",
+      "url": "https://math.libretexts.org/Bookshelves/Algebra/Algebra_and_Trigonometry_1e_(OpenStax)/05%3A_Polynomial_and_Rational_Functions/5.03%3A_Graphs_of_Polynomial_Functions"
+    },
+    {
+      "text": "CC BY  4.0",
+      "url": "https://creativecommons.org/licenses/by/4.0"
+    },
+    {
+      "text": "OpenStax",
+      "url": "https://openstax.org/"
+    },
+    {
+      "text": "source content",
+      "url": "https://openstax.org/details/books/precalculus"
+    }
+  ],
+  "exercises": [
+    {
+      "ordinal": 1,
+      "sourceNumber": "",
+      "sourceAnchor": "",
+      "kind": "example-or-exercise",
+      "context": "Recognizing Characteristics of Graphs of Polynomial Functions\n\nPolynomial functions of degree 2 or more have graphs that do not have sharp corners; recall that these types of graphs are called smooth curves. Polynomial functions also display graphs that have no breaks. Curves with no breaks are called continuous. Figure \\(\\PageIndex{1}\\) shows a graph that represents a polynomial function and a graph that represents a function that is not a polynomial.",
+      "original": "Example \\(\\PageIndex{1}\\): Recognizing Polynomial Functions\n\nWhich of the graphs in Figure \\(\\PageIndex{2}\\) represents a polynomial function?\n\n[Figure: Two graphs in which one has a polynomial function and the other has a function closely resembling a polynomial but is not. Two graphs in which one has a polynomial function and the other has a function closely resembling a polynomial but is not.]\n\nFigure \\(\\PageIndex{2}\\)\n\nSolution\n\nThe graphs of \\(f\\) and \\(h\\) are graphs of polynomial functions. They are smooth and continuous.\n\nThe graphs of \\(g\\) and \\(k\\) are graphs of functions that are not polynomials. The graph of function \\(g\\) has a sharp corner. The graph of function \\(k\\) is not continuous.",
+      "prompt": "Example \\(\\PageIndex{1}\\): Recognizing Polynomial Functions\n\nWhich of the graphs in Figure \\(\\PageIndex{2}\\) represents a polynomial function?\n\n[Figure: Two graphs in which one has a polynomial function and the other has a function closely resembling a polynomial but is not. Two graphs in which one has a polynomial function and the other has a function closely resembling a polynomial but is not.]\n\nFigure \\(\\PageIndex{2}\\)\n\nSolution\n\nThe graphs of \\(f\\) and \\(h\\) are graphs of polynomial functions. They are smooth and continuous.\n\nThe graphs of \\(g\\) and \\(k\\) are graphs of functions that are not polynomials. The graph of function \\(g\\) has a sharp corner. The graph of function \\(k\\) is not continuous.",
+      "sourceAnswers": [],
+      "hasFigure": true,
+      "status": "draft",
+      "answerVerified": false,
+      "translationStatus": "pending",
+      "mappingStatus": "pending"
+    },
+    {
+      "ordinal": 2,
+      "sourceNumber": "1",
+      "sourceAnchor": "",
+      "kind": "exercise-candidate",
+      "context": "We can use this method to find x-intercepts because at the x-intercepts we find the input values when the output value is zero. For general polynomials, this can be a challenging prospect. While quadratics can be solved using the relatively simple quadratic formula, the corresponding formulas for cubic and fourth-degree polynomials are not simple enough to remember, and formulas do not exist for general higher-degree polynomials. Consequently, we will limit ourselves to three cases in this section:\n\nThe polynomial can be factored using known methods: greatest common factor and trinomial factoring.\n\nThe polynomial is given in factored form.\n\nTechnology is used to determine the intercepts.\n\nHOwTO: Given a polynomial function \\(f\\), find the x-intercepts by factoring",
+      "original": "1. Set \\(f(x)=0\\).",
+      "prompt": "1. Set \\(f(x)=0\\).",
+      "sourceAnswers": [],
+      "hasFigure": false,
+      "status": "draft",
+      "answerVerified": false,
+      "translationStatus": "pending",
+      "mappingStatus": "pending"
+    },
+    {
+      "ordinal": 3,
+      "sourceNumber": "2",
+      "sourceAnchor": "",
+      "kind": "exercise-candidate",
+      "context": "We can use this method to find x-intercepts because at the x-intercepts we find the input values when the output value is zero. For general polynomials, this can be a challenging prospect. While quadratics can be solved using the relatively simple quadratic formula, the corresponding formulas for cubic and fourth-degree polynomials are not simple enough to remember, and formulas do not exist for general higher-degree polynomials. Consequently, we will limit ourselves to three cases in this section:\n\nThe polynomial can be factored using known methods: greatest common factor and trinomial factoring.\n\nThe polynomial is given in factored form.\n\nTechnology is used to determine the intercepts.\n\nHOwTO: Given a polynomial function \\(f\\), find the x-intercepts by factoring",
+      "original": "2. If the polynomial function is not given in factored form:\n\n1. Factor out any common monomial factors.\n\n2. Factor any factorable binomials or trinomials.",
+      "prompt": "2. If the polynomial function is not given in factored form:\n\n1. Factor out any common monomial factors.\n\n2. Factor any factorable binomials or trinomials.",
+      "sourceAnswers": [],
+      "hasFigure": false,
+      "status": "draft",
+      "answerVerified": false,
+      "translationStatus": "pending",
+      "mappingStatus": "pending"
+    },
+    {
+      "ordinal": 4,
+      "sourceNumber": "3",
+      "sourceAnchor": "",
+      "kind": "exercise-candidate",
+      "context": "We can use this method to find x-intercepts because at the x-intercepts we find the input values when the output value is zero. For general polynomials, this can be a challenging prospect. While quadratics can be solved using the relatively simple quadratic formula, the corresponding formulas for cubic and fourth-degree polynomials are not simple enough to remember, and formulas do not exist for general higher-degree polynomials. Consequently, we will limit ourselves to three cases in this section:\n\nThe polynomial can be factored using known methods: greatest common factor and trinomial factoring.\n\nThe polynomial is given in factored form.\n\nTechnology is used to determine the intercepts.\n\nHOwTO: Given a polynomial function \\(f\\), find the x-intercepts by factoring",
+      "original": "3. Set each factor equal to zero and solve to find the x-intercepts.",
+      "prompt": "3. Set each factor equal to zero and solve to find the x-intercepts.",
+      "sourceAnswers": [],
+      "hasFigure": false,
+      "status": "draft",
+      "answerVerified": false,
+      "translationStatus": "pending",
+      "mappingStatus": "pending"
+    },
+    {
+      "ordinal": 5,
+      "sourceNumber": "",
+      "sourceAnchor": "",
+      "kind": "example-or-exercise",
+      "context": "We can use this method to find x-intercepts because at the x-intercepts we find the input values when the output value is zero. For general polynomials, this can be a challenging prospect. While quadratics can be solved using the relatively simple quadratic formula, the corresponding formulas for cubic and fourth-degree polynomials are not simple enough to remember, and formulas do not exist for general higher-degree polynomials. Consequently, we will limit ourselves to three cases in this section:\n\nThe polynomial can be factored using known methods: greatest common factor and trinomial factoring.\n\nThe polynomial is given in factored form.\n\nTechnology is used to determine the intercepts.\n\nHOwTO: Given a polynomial function \\(f\\), find the x-intercepts by factoring",
+      "original": "Example \\(\\PageIndex{2}\\): Finding the x-Intercepts of a Polynomial Function by Factoring\n\nFind the x-intercepts of \\(f(x)=x^6−3x^4+2x^2\\).\n\nSolution\n\nWe can attempt to factor this polynomial to find solutions for \\(f(x)=0\\).\n\n\\[\\begin{align*} x^6−3x^4+2x^2&=0 & &\\text{Factor out the greatest common factor.} \\\\ x^2(x^4−3x^2+2)&=0 & &\\text{Factor the trinomial.} \\\\ x^2(x^2−1)(x^2−2)&=0 & &\\text{Set each factor equal to zero.} \\end{align*}\\]\n\n\\[\\begin{align*} x^2&=0 & & & (x^2−1)&=0 & & & (x^2−2)&=0 \\\\ x^2&=0 & &\\text{ or } & x^2&=1 & &\\text{ or } & x^2&=2 \\\\ x&=0 &&& x&={\\pm}1 &&& x&={\\pm}\\sqrt{2} \\end{align*}\\] .\n\nThis gives us five x-intercepts: \\((0,0)\\), \\((1,0)\\), \\((−1,0)\\), \\((\\sqrt{2},0)\\),and \\((−\\sqrt{2},0)\\) (Figure \\(\\PageIndex{3}\\)). We can see that this is an even function.\n\n[Figure: An even function]\n\nFigure \\(\\PageIndex{3}\\).",
+      "prompt": "Example \\(\\PageIndex{2}\\): Finding the x-Intercepts of a Polynomial Function by Factoring\n\nFind the x-intercepts of \\(f(x)=x^6−3x^4+2x^2\\).\n\nSolution\n\nWe can attempt to factor this polynomial to find solutions for \\(f(x)=0\\).\n\n\\[\\begin{align*} x^6−3x^4+2x^2&=0 & &\\text{Factor out the greatest common factor.} \\\\ x^2(x^4−3x^2+2)&=0 & &\\text{Factor the trinomial.} \\\\ x^2(x^2−1)(x^2−2)&=0 & &\\text{Set each factor equal to zero.} \\end{align*}\\]\n\n\\[\\begin{align*} x^2&=0 & & & (x^2−1)&=0 & & & (x^2−2)&=0 \\\\ x^2&=0 & &\\text{ or } & x^2&=1 & &\\text{ or } & x^2&=2 \\\\ x&=0 &&& x&={\\pm}1 &&& x&={\\pm}\\sqrt{2} \\end{align*}\\] .\n\nThis gives us five x-intercepts: \\((0,0)\\), \\((1,0)\\), \\((−1,0)\\), \\((\\sqrt{2},0)\\),and \\((−\\sqrt{2},0)\\) (Figure \\(\\PageIndex{3}\\)). We can see that this is an even function.\n\n[Figure: An even function]\n\nFigure \\(\\PageIndex{3}\\).",
+      "sourceAnswers": [],
+      "hasFigure": true,
+      "status": "draft",
+      "answerVerified": false,
+      "translationStatus": "pending",
+      "mappingStatus": "pending"
+    },
+    {
+      "ordinal": 6,
+      "sourceNumber": "",
+      "sourceAnchor": "",
+      "kind": "example-or-exercise",
+      "context": "We can use this method to find x-intercepts because at the x-intercepts we find the input values when the output value is zero. For general polynomials, this can be a challenging prospect. While quadratics can be solved using the relatively simple quadratic formula, the corresponding formulas for cubic and fourth-degree polynomials are not simple enough to remember, and formulas do not exist for general higher-degree polynomials. Consequently, we will limit ourselves to three cases in this section:\n\nThe polynomial can be factored using known methods: greatest common factor and trinomial factoring.\n\nThe polynomial is given in factored form.\n\nTechnology is used to determine the intercepts.\n\nHOwTO: Given a polynomial function \\(f\\), find the x-intercepts by factoring",
+      "original": "Example \\(\\PageIndex{3}\\): Finding the x-Intercepts of a Polynomial Function by Factoring\n\nFind the x-intercepts of \\(f(x)=x^3−5x^2−x+5\\).\n\nSolution\n\nFind solutions for \\(f(x)=0\\) by factoring.\n\n\\[\\begin{align*} x^3−5x^2−x+5&=0 &\\text{Factor by grouping.} \\\\ x^2(x−5)−(x−5)&=0 &\\text{Factor out the common factor.} \\\\ (x^2−1)(x−5)&=0 &\\text{Factor the difference of squares.} \\\\ (x+1)(x−1)(x−5)&=0 &\\text{Set each factor equal to zero.} \\end{align*}\\]\n\n\\[\\begin{align*} x+1&=0 & &\\text{or} & x−1&=0 & &\\text{or} & x−5&=0 \\\\ x&=−1 &&& x&=1 &&& x&=5\\end{align*}\\]\n\nThere are three x-intercepts: \\((−1,0)\\), \\((1,0)\\), and \\((5,0)\\) (Figure \\(\\PageIndex{4}\\)).\n\n[Figure: Graph of f(x)=x^3-5x^2-x+5 with its three intercepts (-1, 0), (1, 0), and (5, 0).]\n\nFigure \\(\\PageIndex{4}\\): Graph of \\(f(x)\\).",
+      "prompt": "Example \\(\\PageIndex{3}\\): Finding the x-Intercepts of a Polynomial Function by Factoring\n\nFind the x-intercepts of \\(f(x)=x^3−5x^2−x+5\\).\n\nSolution\n\nFind solutions for \\(f(x)=0\\) by factoring.\n\n\\[\\begin{align*} x^3−5x^2−x+5&=0 &\\text{Factor by grouping.} \\\\ x^2(x−5)−(x−5)&=0 &\\text{Factor out the common factor.} \\\\ (x^2−1)(x−5)&=0 &\\text{Factor the difference of squares.} \\\\ (x+1)(x−1)(x−5)&=0 &\\text{Set each factor equal to zero.} \\end{align*}\\]\n\n\\[\\begin{align*} x+1&=0 & &\\text{or} & x−1&=0 & &\\text{or} & x−5&=0 \\\\ x&=−1 &&& x&=1 &&& x&=5\\end{align*}\\]\n\nThere are three x-intercepts: \\((−1,0)\\), \\((1,0)\\), and \\((5,0)\\) (Figure \\(\\PageIndex{4}\\)).\n\n[Figure: Graph of f(x)=x^3-5x^2-x+5 with its three intercepts (-1, 0), (1, 0), and (5, 0).]\n\nFigure \\(\\PageIndex{4}\\): Graph of \\(f(x)\\).",
+      "sourceAnswers": [],
+      "hasFigure": true,
+      "status": "draft",
+      "answerVerified": false,
+      "translationStatus": "pending",
+      "mappingStatus": "pending"
+    },
+    {
+      "ordinal": 7,
+      "sourceNumber": "",
+      "sourceAnchor": "",
+      "kind": "example-or-exercise",
+      "context": "We can use this method to find x-intercepts because at the x-intercepts we find the input values when the output value is zero. For general polynomials, this can be a challenging prospect. While quadratics can be solved using the relatively simple quadratic formula, the corresponding formulas for cubic and fourth-degree polynomials are not simple enough to remember, and formulas do not exist for general higher-degree polynomials. Consequently, we will limit ourselves to three cases in this section:\n\nThe polynomial can be factored using known methods: greatest common factor and trinomial factoring.\n\nThe polynomial is given in factored form.\n\nTechnology is used to determine the intercepts.\n\nHOwTO: Given a polynomial function \\(f\\), find the x-intercepts by factoring",
+      "original": "Example \\(\\PageIndex{4}\\): Finding the y- and x-Intercepts of a Polynomial in Factored Form\n\nFind the y- and x-intercepts of \\(g(x)=(x−2)^2(2x+3)\\).\n\nSolution\n\nThe y-intercept can be found by evaluating \\(g(0)\\).\n\n\\[\\begin{align*} g(0)&=(0−2)^2(2(0)+3) \\\\ &=12 \\end{align*}\\]\n\nSo the y-intercept is \\((0,12)\\).\n\nThe x-intercepts can be found by solving \\(g(x)=0\\).\n\n\\[(x−2)^2(2x+3)=0\\]\n\n\\[\\begin{align*} (x−2)^2&=0 & & & (2x+3)&=0 \\\\ x−2&=0 & &\\text{or} & x&=−\\dfrac{3}{2} \\\\ x&=2 \\end{align*}\\]\n\nSo the x-intercepts are \\((2,0)\\) and \\(\\left(−\\dfrac{3}{2},0\\right)\\).\n\nAnalysis\n\nWe can always check that our answers are reasonable by using a graphing calculator to graph the polynomial as shown in Figure \\(\\PageIndex{5}\\).\n\n[Figure: Graph of g(x)=(x-2)^2(2x+3) with its two x-intercepts (2, 0) and (-3/2, 0) and its y-intercept (0, 12).]\n\nFigure \\(\\PageIndex{5}\\): Graph of \\(g(x)\\).",
+      "prompt": "Example \\(\\PageIndex{4}\\): Finding the y- and x-Intercepts of a Polynomial in Factored Form\n\nFind the y- and x-intercepts of \\(g(x)=(x−2)^2(2x+3)\\).\n\nSolution\n\nThe y-intercept can be found by evaluating \\(g(0)\\).\n\n\\[\\begin{align*} g(0)&=(0−2)^2(2(0)+3) \\\\ &=12 \\end{align*}\\]\n\nSo the y-intercept is \\((0,12)\\).\n\nThe x-intercepts can be found by solving \\(g(x)=0\\).\n\n\\[(x−2)^2(2x+3)=0\\]\n\n\\[\\begin{align*} (x−2)^2&=0 & & & (2x+3)&=0 \\\\ x−2&=0 & &\\text{or} & x&=−\\dfrac{3}{2} \\\\ x&=2 \\end{align*}\\]\n\nSo the x-intercepts are \\((2,0)\\) and \\(\\left(−\\dfrac{3}{2},0\\right)\\).\n\nAnalysis\n\nWe can always check that our answers are reasonable by using a graphing calculator to graph the polynomial as shown in Figure \\(\\PageIndex{5}\\).\n\n[Figure: Graph of g(x)=(x-2)^2(2x+3) with its two x-intercepts (2, 0) and (-3/2, 0) and its y-intercept (0, 12).]\n\nFigure \\(\\PageIndex{5}\\): Graph of \\(g(x)\\).",
+      "sourceAnswers": [],
+      "hasFigure": true,
+      "status": "draft",
+      "answerVerified": false,
+      "translationStatus": "pending",
+      "mappingStatus": "pending"
+    },
+    {
+      "ordinal": 8,
+      "sourceNumber": "",
+      "sourceAnchor": "",
+      "kind": "example-or-exercise",
+      "context": "We can use this method to find x-intercepts because at the x-intercepts we find the input values when the output value is zero. For general polynomials, this can be a challenging prospect. While quadratics can be solved using the relatively simple quadratic formula, the corresponding formulas for cubic and fourth-degree polynomials are not simple enough to remember, and formulas do not exist for general higher-degree polynomials. Consequently, we will limit ourselves to three cases in this section:\n\nThe polynomial can be factored using known methods: greatest common factor and trinomial factoring.\n\nThe polynomial is given in factored form.\n\nTechnology is used to determine the intercepts.\n\nHOwTO: Given a polynomial function \\(f\\), find the x-intercepts by factoring",
+      "original": "Example \\(\\PageIndex{5}\\): Finding the x-Intercepts of a Polynomial Function Using a Graph\n\nFind the x-intercepts of \\(h(x)=x^3+4x^2+x−6\\).\n\nSolution\n\nThis polynomial is not in factored form, has no common factors, and does not appear to be factorable using techniques previously discussed. Fortunately, we can use technology to find the intercepts. Keep in mind that some values make graphing difficult by hand. In these cases, we can take advantage of graphing utilities.\n\nLooking at the graph of this function, as shown in Figure \\(\\PageIndex{6}\\), it appears that there are x-intercepts at \\(x=−3,−2, \\text{ and }1\\).\n\n[Figure: Graph of h(x)=x^3+4x^2+x-6.]\n\nFigure \\(\\PageIndex{6}\\): Graph of \\(h(x)\\).\n\nWe can check whether these are correct by substituting these values for \\(x\\) and verifying that\n\n\\[h(−3)=h(−2)=h(1)=0. \\nonumber\\]\n\nSince \\(h(x)=x^3+4x^2+x−6\\), we have:\n\n\\[ \\begin{align*} h(−3)&=(−3)^3+4(−3)^2+(−3)−6=−27+36−3−6=0 \\\\[4pt] h(−2) &=(−2)^3+4(−2)^2+(−2)−6 =−8+16−2−6=0 \\\\[4pt] h(1)&=(1)^3+4(1)^2+(1)−6=1+4+1−6=0 \\end{align*}\\]\n\nEach x-intercept corresponds to a zero of the polynomial function and each zero yields a factor, so we can now write the polynomial in factored form.\n\n\\[\\begin{align*} h(x)&=x^3+4x^2+x−6 \\\\ &=(x+3)(x+2)(x−1) \\end{align*}\\]",
+      "prompt": "Example \\(\\PageIndex{5}\\): Finding the x-Intercepts of a Polynomial Function Using a Graph\n\nFind the x-intercepts of \\(h(x)=x^3+4x^2+x−6\\).\n\nSolution\n\nThis polynomial is not in factored form, has no common factors, and does not appear to be factorable using techniques previously discussed. Fortunately, we can use technology to find the intercepts. Keep in mind that some values make graphing difficult by hand. In these cases, we can take advantage of graphing utilities.\n\nLooking at the graph of this function, as shown in Figure \\(\\PageIndex{6}\\), it appears that there are x-intercepts at \\(x=−3,−2, \\text{ and }1\\).\n\n[Figure: Graph of h(x)=x^3+4x^2+x-6.]\n\nFigure \\(\\PageIndex{6}\\): Graph of \\(h(x)\\).\n\nWe can check whether these are correct by substituting these values for \\(x\\) and verifying that\n\n\\[h(−3)=h(−2)=h(1)=0. \\nonumber\\]\n\nSince \\(h(x)=x^3+4x^2+x−6\\), we have:\n\n\\[ \\begin{align*} h(−3)&=(−3)^3+4(−3)^2+(−3)−6=−27+36−3−6=0 \\\\[4pt] h(−2) &=(−2)^3+4(−2)^2+(−2)−6 =−8+16−2−6=0 \\\\[4pt] h(1)&=(1)^3+4(1)^2+(1)−6=1+4+1−6=0 \\end{align*}\\]\n\nEach x-intercept corresponds to a zero of the polynomial function and each zero yields a factor, so we can now write the polynomial in factored form.\n\n\\[\\begin{align*} h(x)&=x^3+4x^2+x−6 \\\\ &=(x+3)(x+2)(x−1) \\end{align*}\\]",
+      "sourceAnswers": [],
+      "hasFigure": true,
+      "status": "draft",
+      "answerVerified": false,
+      "translationStatus": "pending",
+      "mappingStatus": "pending"
+    },
+    {
+      "ordinal": 9,
+      "sourceNumber": "",
+      "sourceAnchor": "",
+      "kind": "exercise-candidate",
+      "context": "We can use this method to find x-intercepts because at the x-intercepts we find the input values when the output value is zero. For general polynomials, this can be a challenging prospect. While quadratics can be solved using the relatively simple quadratic formula, the corresponding formulas for cubic and fourth-degree polynomials are not simple enough to remember, and formulas do not exist for general higher-degree polynomials. Consequently, we will limit ourselves to three cases in this section:\n\nThe polynomial can be factored using known methods: greatest common factor and trinomial factoring.\n\nThe polynomial is given in factored form.\n\nTechnology is used to determine the intercepts.\n\nHOwTO: Given a polynomial function \\(f\\), find the x-intercepts by factoring",
+      "original": "Exercise \\(\\PageIndex{1}\\)\n\nFind the y-and x-intercepts of the function \\(f(x)=x^4−19x^2+30x\\).\n\nAnswer\n\ny-intercept \\((0,0)\\);\n\nx-intercepts \\((0,0)\\), \\((–5,0)\\), \\((2,0)\\), and \\((3,0)\\)",
+      "prompt": "Exercise \\(\\PageIndex{1}\\)\n\nFind the y-and x-intercepts of the function \\(f(x)=x^4−19x^2+30x\\).",
+      "sourceAnswers": [
+        "y-intercept \\((0,0)\\);\n\nx-intercepts \\((0,0)\\), \\((–5,0)\\), \\((2,0)\\), and \\((3,0)\\)"
+      ],
+      "hasFigure": false,
+      "status": "draft",
+      "answerVerified": false,
+      "translationStatus": "pending",
+      "mappingStatus": "pending"
+    },
+    {
+      "ordinal": 10,
+      "sourceNumber": "1",
+      "sourceAnchor": "",
+      "kind": "exercise-candidate",
+      "context": "The graph of a polynomial function will touch the x-axis at zeros with even multiplicities. The graph will cross the x-axis at zeros with odd multiplicities.\n\nThe sum of the multiplicities is the degree of the polynomial function.\n\nHOWTO: Given a graph of a polynomial function of degree \\(n\\), identify the zeros and their multiplicities",
+      "original": "1. If the graph crosses the x-axis and appears almost linear at the intercept, it is a single zero.",
+      "prompt": "1. If the graph crosses the x-axis and appears almost linear at the intercept, it is a single zero.",
+      "sourceAnswers": [],
+      "hasFigure": false,
+      "status": "draft",
+      "answerVerified": false,
+      "translationStatus": "pending",
+      "mappingStatus": "pending"
+    },
+    {
+      "ordinal": 11,
+      "sourceNumber": "2",
+      "sourceAnchor": "",
+      "kind": "exercise-candidate",
+      "context": "The graph of a polynomial function will touch the x-axis at zeros with even multiplicities. The graph will cross the x-axis at zeros with odd multiplicities.\n\nThe sum of the multiplicities is the degree of the polynomial function.\n\nHOWTO: Given a graph of a polynomial function of degree \\(n\\), identify the zeros and their multiplicities",
+      "original": "2. If the graph touches the x-axis and bounces off of the axis, it is a zero with even multiplicity.",
+      "prompt": "2. If the graph touches the x-axis and bounces off of the axis, it is a zero with even multiplicity.",
+      "sourceAnswers": [],
+      "hasFigure": false,
+      "status": "draft",
+      "answerVerified": false,
+      "translationStatus": "pending",
+      "mappingStatus": "pending"
+    },
+    {
+      "ordinal": 12,
+      "sourceNumber": "3",
+      "sourceAnchor": "",
+      "kind": "exercise-candidate",
+      "context": "The graph of a polynomial function will touch the x-axis at zeros with even multiplicities. The graph will cross the x-axis at zeros with odd multiplicities.\n\nThe sum of the multiplicities is the degree of the polynomial function.\n\nHOWTO: Given a graph of a polynomial function of degree \\(n\\), identify the zeros and their multiplicities",
+      "original": "3. If the graph crosses the x-axis at a zero, it is a zero with odd multiplicity.",
+      "prompt": "3. If the graph crosses the x-axis at a zero, it is a zero with odd multiplicity.",
+      "sourceAnswers": [],
+      "hasFigure": false,
+      "status": "draft",
+      "answerVerified": false,
+      "translationStatus": "pending",
+      "mappingStatus": "pending"
+    },
+    {
+      "ordinal": 13,
+      "sourceNumber": "4",
+      "sourceAnchor": "",
+      "kind": "exercise-candidate",
+      "context": "The graph of a polynomial function will touch the x-axis at zeros with even multiplicities. The graph will cross the x-axis at zeros with odd multiplicities.\n\nThe sum of the multiplicities is the degree of the polynomial function.\n\nHOWTO: Given a graph of a polynomial function of degree \\(n\\), identify the zeros and their multiplicities",
+      "original": "4. The sum of the multiplicities is \\(n\\).",
+      "prompt": "4. The sum of the multiplicities is \\(n\\).",
+      "sourceAnswers": [],
+      "hasFigure": false,
+      "status": "draft",
+      "answerVerified": false,
+      "translationStatus": "pending",
+      "mappingStatus": "pending"
+    },
+    {
+      "ordinal": 14,
+      "sourceNumber": "",
+      "sourceAnchor": "",
+      "kind": "example-or-exercise",
+      "context": "The graph of a polynomial function will touch the x-axis at zeros with even multiplicities. The graph will cross the x-axis at zeros with odd multiplicities.\n\nThe sum of the multiplicities is the degree of the polynomial function.\n\nHOWTO: Given a graph of a polynomial function of degree \\(n\\), identify the zeros and their multiplicities",
+      "original": "Example \\(\\PageIndex{6}\\): Identifying Zeros and Their Multiplicities\n\nUse the graph of the function of degree 6 in Figure \\(\\PageIndex{9}\\) to identify the zeros of the function and their possible multiplicities.\n\n[Figure: Graph of an even-degree polynomial with degree 6.]\n\nFigure \\(\\PageIndex{9}\\): Graph of a polynomial function with degree 5.\n\nSolution\n\nThe polynomial function is of degree \\(n\\). The sum of the multiplicities must be \\(n\\).\n\nStarting from the left, the first zero occurs at \\(x=−3\\). The graph touches the x-axis, so the multiplicity of the zero must be even. The zero of −3 has multiplicity 2.\n\nThe next zero occurs at \\(x=−1\\). The graph looks almost linear at this point. This is a single zero of multiplicity 1.\n\nThe last zero occurs at \\(x=4\\).The graph crosses the x-axis, so the multiplicity of the zero must be odd. We know that the multiplicity is likely 3 and that the sum of the multiplicities is likely 6.",
+      "prompt": "Example \\(\\PageIndex{6}\\): Identifying Zeros and Their Multiplicities\n\nUse the graph of the function of degree 6 in Figure \\(\\PageIndex{9}\\) to identify the zeros of the function and their possible multiplicities.\n\n[Figure: Graph of an even-degree polynomial with degree 6.]\n\nFigure \\(\\PageIndex{9}\\): Graph of a polynomial function with degree 5.\n\nSolution\n\nThe polynomial function is of degree \\(n\\). The sum of the multiplicities must be \\(n\\).\n\nStarting from the left, the first zero occurs at \\(x=−3\\). The graph touches the x-axis, so the multiplicity of the zero must be even. The zero of −3 has multiplicity 2.\n\nThe next zero occurs at \\(x=−1\\). The graph looks almost linear at this point. This is a single zero of multiplicity 1.\n\nThe last zero occurs at \\(x=4\\).The graph crosses the x-axis, so the multiplicity of the zero must be odd. We know that the multiplicity is likely 3 and that the sum of the multiplicities is likely 6.",
+      "sourceAnswers": [],
+      "hasFigure": true,
+      "status": "draft",
+      "answerVerified": false,
+      "translationStatus": "pending",
+      "mappingStatus": "pending"
+    },
+    {
+      "ordinal": 15,
+      "sourceNumber": "",
+      "sourceAnchor": "",
+      "kind": "exercise-candidate",
+      "context": "The graph of a polynomial function will touch the x-axis at zeros with even multiplicities. The graph will cross the x-axis at zeros with odd multiplicities.\n\nThe sum of the multiplicities is the degree of the polynomial function.\n\nHOWTO: Given a graph of a polynomial function of degree \\(n\\), identify the zeros and their multiplicities",
+      "original": "Exercise \\(\\PageIndex{2}\\)\n\nUse the graph of the function of degree 5 in Figure \\(\\PageIndex{10}\\) to identify the zeros of the function and their multiplicities.\n\n[Figure: Graph of a polynomial function with degree 5.]\n\nFigure \\(\\PageIndex{10}\\): Graph of a polynomial function with degree 5.\n\nAnswer\n\nThe graph has a zero of –5 with multiplicity 1, a zero of –1 with multiplicity 2, and a zero of 3 with even multiplicity.",
+      "prompt": "Exercise \\(\\PageIndex{2}\\)\n\nUse the graph of the function of degree 5 in Figure \\(\\PageIndex{10}\\) to identify the zeros of the function and their multiplicities.\n\n[Figure: Graph of a polynomial function with degree 5.]\n\nFigure \\(\\PageIndex{10}\\): Graph of a polynomial function with degree 5.",
+      "sourceAnswers": [
+        "The graph has a zero of –5 with multiplicity 1, a zero of –1 with multiplicity 2, and a zero of 3 with even multiplicity."
+      ],
+      "hasFigure": true,
+      "status": "draft",
+      "answerVerified": false,
+      "translationStatus": "pending",
+      "mappingStatus": "pending"
+    },
+    {
+      "ordinal": 16,
+      "sourceNumber": "",
+      "sourceAnchor": "",
+      "kind": "example-or-exercise",
+      "context": "This function \\(f\\) is a 4th degree polynomial function and has 3 turning points. The maximum number of turning points of a polynomial function is always one less than the degree of the function.\n\nDefinition: Interpreting Turning Points\n\nA turning point is a point of the graph where the graph changes from increasing to decreasing (rising to falling) or decreasing to increasing (falling to rising). A polynomial of degree \\(n\\) will have at most \\(n−1\\) turning points.",
+      "original": "Example \\(\\PageIndex{7}\\): Finding the Maximum Number of Turning Points Using the Degree of a Polynomial Function\n\nFind the maximum number of turning points of each polynomial function.\n\n1. \\(f(x)=−x^3+4x^5−3x^2+1\\)\n\n2. \\(f(x)=−(x−1)^2(1+2x^2)\\)\n\nSolution\n\na. \\(f(x)=−x^3+4x^5−3x^2+1\\)\n\nFirst, rewrite the polynomial function in descending order: \\(f(x)=4x^5−x^3−3x^2+1\\)\n\nIdentify the degree of the polynomial function. This polynomial function is of degree 5.\n\nThe maximum number of turning points is \\(5−1=4\\).\n\nb. \\(f(x)=−(x−1)^2(1+2x^2)\\)\n\nFirst, identify the leading term of the polynomial function if the function were expanded.\n\n[Figure: imageedit_33_3540887475.png]\n\nThen, identify the degree of the polynomial function. This polynomial function is of degree 4.\n\nThe maximum number of turning points is \\(4−1=3\\).",
+      "prompt": "Example \\(\\PageIndex{7}\\): Finding the Maximum Number of Turning Points Using the Degree of a Polynomial Function\n\nFind the maximum number of turning points of each polynomial function.\n\n1. \\(f(x)=−x^3+4x^5−3x^2+1\\)\n\n2. \\(f(x)=−(x−1)^2(1+2x^2)\\)\n\nSolution\n\na. \\(f(x)=−x^3+4x^5−3x^2+1\\)\n\nFirst, rewrite the polynomial function in descending order: \\(f(x)=4x^5−x^3−3x^2+1\\)\n\nIdentify the degree of the polynomial function. This polynomial function is of degree 5.\n\nThe maximum number of turning points is \\(5−1=4\\).\n\nb. \\(f(x)=−(x−1)^2(1+2x^2)\\)\n\nFirst, identify the leading term of the polynomial function if the function were expanded.\n\n[Figure: imageedit_33_3540887475.png]\n\nThen, identify the degree of the polynomial function. This polynomial function is of degree 4.\n\nThe maximum number of turning points is \\(4−1=3\\).",
+      "sourceAnswers": [],
+      "hasFigure": true,
+      "status": "draft",
+      "answerVerified": false,
+      "translationStatus": "pending",
+      "mappingStatus": "pending"
+    },
+    {
+      "ordinal": 17,
+      "sourceNumber": "1",
+      "sourceAnchor": "",
+      "kind": "exercise-candidate",
+      "context": "Graphing Polynomial Functions\n\nWe can use what we have learned about multiplicities, end behavior, and turning points to sketch graphs of polynomial functions. Let us put this all together and look at the steps required to graph polynomial functions.\n\nHowto: Given a polynomial function, sketch the graph",
+      "original": "1. Find the intercepts.",
+      "prompt": "1. Find the intercepts.",
+      "sourceAnswers": [],
+      "hasFigure": false,
+      "status": "draft",
+      "answerVerified": false,
+      "translationStatus": "pending",
+      "mappingStatus": "pending"
+    },
+    {
+      "ordinal": 18,
+      "sourceNumber": "2",
+      "sourceAnchor": "",
+      "kind": "exercise-candidate",
+      "context": "Graphing Polynomial Functions\n\nWe can use what we have learned about multiplicities, end behavior, and turning points to sketch graphs of polynomial functions. Let us put this all together and look at the steps required to graph polynomial functions.\n\nHowto: Given a polynomial function, sketch the graph",
+      "original": "2. Check for symmetry. If the function is an even function, its graph is symmetrical about the y-axis, that is, \\(f(−x)=f(x)\\). If a function is an odd function, its graph is symmetrical about the origin, that is, \\(f(−x)=−f(x)\\).",
+      "prompt": "2. Check for symmetry. If the function is an even function, its graph is symmetrical about the y-axis, that is, \\(f(−x)=f(x)\\). If a function is an odd function, its graph is symmetrical about the origin, that is, \\(f(−x)=−f(x)\\).",
+      "sourceAnswers": [],
+      "hasFigure": false,
+      "status": "draft",
+      "answerVerified": false,
+      "translationStatus": "pending",
+      "mappingStatus": "pending"
+    },
+    {
+      "ordinal": 19,
+      "sourceNumber": "3",
+      "sourceAnchor": "",
+      "kind": "exercise-candidate",
+      "context": "Graphing Polynomial Functions\n\nWe can use what we have learned about multiplicities, end behavior, and turning points to sketch graphs of polynomial functions. Let us put this all together and look at the steps required to graph polynomial functions.\n\nHowto: Given a polynomial function, sketch the graph",
+      "original": "3. Use the multiplicities of the zeros to determine the behavior of the polynomial at the x-intercepts.",
+      "prompt": "3. Use the multiplicities of the zeros to determine the behavior of the polynomial at the x-intercepts.",
+      "sourceAnswers": [],
+      "hasFigure": false,
+      "status": "draft",
+      "answerVerified": false,
+      "translationStatus": "pending",
+      "mappingStatus": "pending"
+    },
+    {
+      "ordinal": 20,
+      "sourceNumber": "4",
+      "sourceAnchor": "",
+      "kind": "exercise-candidate",
+      "context": "Graphing Polynomial Functions\n\nWe can use what we have learned about multiplicities, end behavior, and turning points to sketch graphs of polynomial functions. Let us put this all together and look at the steps required to graph polynomial functions.\n\nHowto: Given a polynomial function, sketch the graph",
+      "original": "4. Determine the end behavior by examining the leading term.",
+      "prompt": "4. Determine the end behavior by examining the leading term.",
+      "sourceAnswers": [],
+      "hasFigure": false,
+      "status": "draft",
+      "answerVerified": false,
+      "translationStatus": "pending",
+      "mappingStatus": "pending"
+    },
+    {
+      "ordinal": 21,
+      "sourceNumber": "5",
+      "sourceAnchor": "",
+      "kind": "exercise-candidate",
+      "context": "Graphing Polynomial Functions\n\nWe can use what we have learned about multiplicities, end behavior, and turning points to sketch graphs of polynomial functions. Let us put this all together and look at the steps required to graph polynomial functions.\n\nHowto: Given a polynomial function, sketch the graph",
+      "original": "5. Use the end behavior and the behavior at the intercepts to sketch a graph.",
+      "prompt": "5. Use the end behavior and the behavior at the intercepts to sketch a graph.",
+      "sourceAnswers": [],
+      "hasFigure": false,
+      "status": "draft",
+      "answerVerified": false,
+      "translationStatus": "pending",
+      "mappingStatus": "pending"
+    },
+    {
+      "ordinal": 22,
+      "sourceNumber": "6",
+      "sourceAnchor": "",
+      "kind": "exercise-candidate",
+      "context": "Graphing Polynomial Functions\n\nWe can use what we have learned about multiplicities, end behavior, and turning points to sketch graphs of polynomial functions. Let us put this all together and look at the steps required to graph polynomial functions.\n\nHowto: Given a polynomial function, sketch the graph",
+      "original": "6. Ensure that the number of turning points does not exceed one less than the degree of the polynomial.",
+      "prompt": "6. Ensure that the number of turning points does not exceed one less than the degree of the polynomial.",
+      "sourceAnswers": [],
+      "hasFigure": false,
+      "status": "draft",
+      "answerVerified": false,
+      "translationStatus": "pending",
+      "mappingStatus": "pending"
+    },
+    {
+      "ordinal": 23,
+      "sourceNumber": "7",
+      "sourceAnchor": "",
+      "kind": "exercise-candidate",
+      "context": "Graphing Polynomial Functions\n\nWe can use what we have learned about multiplicities, end behavior, and turning points to sketch graphs of polynomial functions. Let us put this all together and look at the steps required to graph polynomial functions.\n\nHowto: Given a polynomial function, sketch the graph",
+      "original": "7. Optionally, use technology to check the graph.",
+      "prompt": "7. Optionally, use technology to check the graph.",
+      "sourceAnswers": [],
+      "hasFigure": false,
+      "status": "draft",
+      "answerVerified": false,
+      "translationStatus": "pending",
+      "mappingStatus": "pending"
+    },
+    {
+      "ordinal": 24,
+      "sourceNumber": "",
+      "sourceAnchor": "",
+      "kind": "example-or-exercise",
+      "context": "Graphing Polynomial Functions\n\nWe can use what we have learned about multiplicities, end behavior, and turning points to sketch graphs of polynomial functions. Let us put this all together and look at the steps required to graph polynomial functions.\n\nHowto: Given a polynomial function, sketch the graph",
+      "original": "Example \\(\\PageIndex{8}\\): Sketching the Graph of a Polynomial Function\n\nSketch a graph of \\(f(x)=−2(x+3)^2(x−5)\\).\n\nSolution\n\nThis graph has two x-intercepts. At \\(x=−3\\), the factor is squared, indicating a multiplicity of 2. The graph will bounce at this x-intercept. At \\(x=5\\),the function has a multiplicity of one, indicating the graph will cross through the axis at this intercept.\n\nThe y-intercept is found by evaluating \\(f(0)\\).\n\n\\[\\begin{align*} f(0)&=−2(0+3)^2(0−5) \\\\ &=−2⋅9⋅(−5) \\\\ &=90 \\end{align*}\\]\n\nThe y-intercept is \\((0,90)\\).\n\nAdditionally, we can see the leading term, if this polynomial were multiplied out, would be \\(−2x3\\), so the end behavior is that of a vertically reflected cubic, with the outputs decreasing as the inputs approach infinity, and the outputs increasing as the inputs approach negative infinity. See Figure \\(\\PageIndex{13}\\).\n\n[Figure: Showing the distribution for the leading term.]\n\nFigure \\(\\PageIndex{13}\\): Showing the distribution for the leading term.\n\nTo sketch this, we consider that:\n\nAs \\(x{\\rightarrow}−{\\infty}\\) the function \\(f(x){\\rightarrow}{\\infty}\\),so we know the graph starts in the second quadrant and is decreasing toward the x-axis.\n\nSince \\(f(−x)=−2(−x+3)^2(−x–5)\\) is not equal to \\(f(x)\\), the graph does not display symmetry.\n\nAt \\((−3,0)\\), the graph bounces off of thex-axis, so the function must start increasing.\n\nAt \\((0,90)\\), the graph crosses the y-axis at the y-intercept. See Figure \\(\\PageIndex{14}\\).\n\n[Figure:  Graph of the end behavior and intercepts, (-3, 0) and (0, 90), for the function f(x)=-2(x+3)^2(x-5).]\n\nFigure \\(\\PageIndex{14}\\): Graph of the end behavior and intercepts, \\((-3, 0)\\) and \\((0, 90)\\), for the function \\(f(x)=-2(x+3)^2(x-5)\\).\n\nSomewhere after this point, the graph must turn back down or start decreasing toward the horizontal axis because the graph passes through the next intercept at \\((5,0)\\). See Figure \\(\\PageIndex{15}\\).\n\n[Figure: Graph of the end behavior and intercepts, (-3, 0), (0, 90) and (5, 0), for the function f(x)=-2(x+3)^2(x-5).]\n\nFigure \\(\\PageIndex{15}\\): Graph of the end behavior and intercepts, \\((-3, 0)\\), \\((0, 90)\\) and \\((5, 0)\\), for the function \\(f(x)=-2(x+3)^2(x-5)\\).\n\nAs \\(x{\\rightarrow}{\\infty}\\) the function \\(f(x){\\rightarrow}−{\\infty}\\),\n\nso we know the graph continues to decrease, and we can stop drawing the graph in the fourth quadrant.\n\nUsing technology, we can create the graph for the polynomial function, shown in Figure \\(\\PageIndex{16}\\), and verify that the resulting graph looks like our sketch in Figure \\(\\PageIndex{15}\\).\n\n[Figure: The complete graph of the polynomial function f(x)=−2(x+3)^2(x−5)]\n\nFigure \\(\\PageIndex{16}\\): The complete graph of the polynomial function \\(f(x)=−2(x+3)^2(x−5)\\).",
+      "prompt": "Example \\(\\PageIndex{8}\\): Sketching the Graph of a Polynomial Function\n\nSketch a graph of \\(f(x)=−2(x+3)^2(x−5)\\).\n\nSolution\n\nThis graph has two x-intercepts. At \\(x=−3\\), the factor is squared, indicating a multiplicity of 2. The graph will bounce at this x-intercept. At \\(x=5\\),the function has a multiplicity of one, indicating the graph will cross through the axis at this intercept.\n\nThe y-intercept is found by evaluating \\(f(0)\\).\n\n\\[\\begin{align*} f(0)&=−2(0+3)^2(0−5) \\\\ &=−2⋅9⋅(−5) \\\\ &=90 \\end{align*}\\]\n\nThe y-intercept is \\((0,90)\\).\n\nAdditionally, we can see the leading term, if this polynomial were multiplied out, would be \\(−2x3\\), so the end behavior is that of a vertically reflected cubic, with the outputs decreasing as the inputs approach infinity, and the outputs increasing as the inputs approach negative infinity. See Figure \\(\\PageIndex{13}\\).\n\n[Figure: Showing the distribution for the leading term.]\n\nFigure \\(\\PageIndex{13}\\): Showing the distribution for the leading term.\n\nTo sketch this, we consider that:\n\nAs \\(x{\\rightarrow}−{\\infty}\\) the function \\(f(x){\\rightarrow}{\\infty}\\),so we know the graph starts in the second quadrant and is decreasing toward the x-axis.\n\nSince \\(f(−x)=−2(−x+3)^2(−x–5)\\) is not equal to \\(f(x)\\), the graph does not display symmetry.\n\nAt \\((−3,0)\\), the graph bounces off of thex-axis, so the function must start increasing.\n\nAt \\((0,90)\\), the graph crosses the y-axis at the y-intercept. See Figure \\(\\PageIndex{14}\\).\n\n[Figure:  Graph of the end behavior and intercepts, (-3, 0) and (0, 90), for the function f(x)=-2(x+3)^2(x-5).]\n\nFigure \\(\\PageIndex{14}\\): Graph of the end behavior and intercepts, \\((-3, 0)\\) and \\((0, 90)\\), for the function \\(f(x)=-2(x+3)^2(x-5)\\).\n\nSomewhere after this point, the graph must turn back down or start decreasing toward the horizontal axis because the graph passes through the next intercept at \\((5,0)\\). See Figure \\(\\PageIndex{15}\\).\n\n[Figure: Graph of the end behavior and intercepts, (-3, 0), (0, 90) and (5, 0), for the function f(x)=-2(x+3)^2(x-5).]\n\nFigure \\(\\PageIndex{15}\\): Graph of the end behavior and intercepts, \\((-3, 0)\\), \\((0, 90)\\) and \\((5, 0)\\), for the function \\(f(x)=-2(x+3)^2(x-5)\\).\n\nAs \\(x{\\rightarrow}{\\infty}\\) the function \\(f(x){\\rightarrow}−{\\infty}\\),\n\nso we know the graph continues to decrease, and we can stop drawing the graph in the fourth quadrant.\n\nUsing technology, we can create the graph for the polynomial function, shown in Figure \\(\\PageIndex{16}\\), and verify that the resulting graph looks like our sketch in Figure \\(\\PageIndex{15}\\).\n\n[Figure: The complete graph of the polynomial function f(x)=−2(x+3)^2(x−5)]\n\nFigure \\(\\PageIndex{16}\\): The complete graph of the polynomial function \\(f(x)=−2(x+3)^2(x−5)\\).",
+      "sourceAnswers": [],
+      "hasFigure": true,
+      "status": "draft",
+      "answerVerified": false,
+      "translationStatus": "pending",
+      "mappingStatus": "pending"
+    },
+    {
+      "ordinal": 25,
+      "sourceNumber": "",
+      "sourceAnchor": "",
+      "kind": "exercise-candidate",
+      "context": "Graphing Polynomial Functions\n\nWe can use what we have learned about multiplicities, end behavior, and turning points to sketch graphs of polynomial functions. Let us put this all together and look at the steps required to graph polynomial functions.\n\nHowto: Given a polynomial function, sketch the graph",
+      "original": "Exercise \\(\\PageIndex{8}\\)\n\nSketch a graph of \\(f(x)=\\dfrac{1}{4}x(x−1)^4(x+3)^3\\).\n\nAnswer\n\n[Figure: alt]\n\nFigure \\(\\PageIndex{17}\\): Graph of \\(f(x)=\\frac{1}{4}x(x−1)^4(x+3)^3\\)",
+      "prompt": "Exercise \\(\\PageIndex{8}\\)\n\nSketch a graph of \\(f(x)=\\dfrac{1}{4}x(x−1)^4(x+3)^3\\).",
+      "sourceAnswers": [
+        "[Figure: alt]\n\nFigure \\(\\PageIndex{17}\\): Graph of \\(f(x)=\\frac{1}{4}x(x−1)^4(x+3)^3\\)"
+      ],
+      "hasFigure": true,
+      "status": "draft",
+      "answerVerified": false,
+      "translationStatus": "pending",
+      "mappingStatus": "pending"
+    },
+    {
+      "ordinal": 26,
+      "sourceNumber": "",
+      "sourceAnchor": "",
+      "kind": "example-or-exercise",
+      "context": "In other words, the Intermediate Value Theorem tells us that when a polynomial function changes from a negative value to a positive value, the function must cross the x-axis. Figure \\(\\PageIndex{18}\\) shows that there is a zero between \\(a\\) and \\(b\\).\n\nDefinition: Intermediate Value Theorem\n\nLet \\(f\\) be a polynomial function. The Intermediate Value Theorem states that if \\(f(a)\\) and \\(f(b)\\) have opposite signs, then there exists at least one value \\(c\\) between \\(a\\) and \\(b\\) for which \\(f(c)=0\\).",
+      "original": "Example \\(\\PageIndex{9}\\): Using the Intermediate Value Theorem\n\nShow that the function \\(f(x)=x^3−5x^2+3x+6\\) has at least two real zeros between \\(x=1\\) and \\(x=4\\).\n\nSolution\n\nAs a start, evaluate \\(f(x)\\) at the integer values \\(x=1,\\;2,\\;3,\\; \\text{and }4\\) (Table \\(\\PageIndex{2}\\)).\n\n    Table \\(\\PageIndex{2}\\)\n\n            \\(x\\)\t\n            1\t\n            2\t\n            3\t\n            4\t\n\n            \\(f(x)\\)\t\n            5\t\n            0\t\n            -3\t\n            2\t\n\nWe see that one zero occurs at \\(x=2\\). Also, since \\(f(3)\\) is negative and \\(f(4)\\) is positive, by the Intermediate Value Theorem, there must be at least one real zero between 3 and 4.\n\nWe have shown that there are at least two real zeros between \\(x=1\\) and \\(x=4\\).\n\nAnalysis\n\nWe can also see on the graph of the function in Figure \\(\\PageIndex{19}\\) that there are two real zeros between \\(x=1\\) and \\(x=4\\).\n\n[Figure: Graph of f(x)=x^3-5x^2+3x+6 and shows, by the Intermediate Value Theorem, that there exists two zeros since f(1)=5 and f(4)=2 are positive and f(3) = -3 is negative.]\n\nFigure \\(\\PageIndex{19}\\).",
+      "prompt": "Example \\(\\PageIndex{9}\\): Using the Intermediate Value Theorem\n\nShow that the function \\(f(x)=x^3−5x^2+3x+6\\) has at least two real zeros between \\(x=1\\) and \\(x=4\\).\n\nSolution\n\nAs a start, evaluate \\(f(x)\\) at the integer values \\(x=1,\\;2,\\;3,\\; \\text{and }4\\) (Table \\(\\PageIndex{2}\\)).\n\n    Table \\(\\PageIndex{2}\\)\n\n            \\(x\\)\t\n            1\t\n            2\t\n            3\t\n            4\t\n\n            \\(f(x)\\)\t\n            5\t\n            0\t\n            -3\t\n            2\t\n\nWe see that one zero occurs at \\(x=2\\). Also, since \\(f(3)\\) is negative and \\(f(4)\\) is positive, by the Intermediate Value Theorem, there must be at least one real zero between 3 and 4.\n\nWe have shown that there are at least two real zeros between \\(x=1\\) and \\(x=4\\).\n\nAnalysis\n\nWe can also see on the graph of the function in Figure \\(\\PageIndex{19}\\) that there are two real zeros between \\(x=1\\) and \\(x=4\\).\n\n[Figure: Graph of f(x)=x^3-5x^2+3x+6 and shows, by the Intermediate Value Theorem, that there exists two zeros since f(1)=5 and f(4)=2 are positive and f(3) = -3 is negative.]\n\nFigure \\(\\PageIndex{19}\\).",
+      "sourceAnswers": [],
+      "hasFigure": true,
+      "status": "draft",
+      "answerVerified": false,
+      "translationStatus": "pending",
+      "mappingStatus": "pending"
+    },
+    {
+      "ordinal": 27,
+      "sourceNumber": "",
+      "sourceAnchor": "",
+      "kind": "exercise-candidate",
+      "context": "In other words, the Intermediate Value Theorem tells us that when a polynomial function changes from a negative value to a positive value, the function must cross the x-axis. Figure \\(\\PageIndex{18}\\) shows that there is a zero between \\(a\\) and \\(b\\).\n\nDefinition: Intermediate Value Theorem\n\nLet \\(f\\) be a polynomial function. The Intermediate Value Theorem states that if \\(f(a)\\) and \\(f(b)\\) have opposite signs, then there exists at least one value \\(c\\) between \\(a\\) and \\(b\\) for which \\(f(c)=0\\).",
+      "original": "Exercise \\(\\PageIndex{4}\\)\n\nShow that the function \\(f(x)=7x^5−9x^4−x^2\\) has at least one real zero between \\(x=1\\) and \\(x=2\\).\n\nAnswer\n\nBecause \\(f\\) is a polynomial function and since \\(f(1)\\) is negative and \\(f(2)\\) is positive, there is at least one real zero between \\(x=1\\) and \\(x=2\\).",
+      "prompt": "Exercise \\(\\PageIndex{4}\\)\n\nShow that the function \\(f(x)=7x^5−9x^4−x^2\\) has at least one real zero between \\(x=1\\) and \\(x=2\\).",
+      "sourceAnswers": [
+        "Because \\(f\\) is a polynomial function and since \\(f(1)\\) is negative and \\(f(2)\\) is positive, there is at least one real zero between \\(x=1\\) and \\(x=2\\)."
+      ],
+      "hasFigure": false,
+      "status": "draft",
+      "answerVerified": false,
+      "translationStatus": "pending",
+      "mappingStatus": "pending"
+    },
+    {
+      "ordinal": 28,
+      "sourceNumber": "1",
+      "sourceAnchor": "",
+      "kind": "exercise-candidate",
+      "context": "Note: Factored Form of Polynomials\n\nIf a polynomial of lowest degree \\(p\\) has horizontal intercepts at \\(x=x_1,x_2,…,x_n\\), then the polynomial can be written in the factored form: \\(f(x)=a(x−x_1)^{p_1}(x−x_2)^{p_2}⋯(x−x_n)^{p_n}\\) where the powers \\(p_i\\) on each factor can be determined by the behavior of the graph at the corresponding intercept, and the stretch factor \\(a\\) can be determined given a value of the function other than the x-intercept.\n\n[Figure: alt]\nGiven a graph of a polynomial function, write a formula for the function.",
+      "original": "1. Identify the x-intercepts of the graph to find the factors of the polynomial.",
+      "prompt": "1. Identify the x-intercepts of the graph to find the factors of the polynomial.",
+      "sourceAnswers": [],
+      "hasFigure": false,
+      "status": "draft",
+      "answerVerified": false,
+      "translationStatus": "pending",
+      "mappingStatus": "pending"
+    },
+    {
+      "ordinal": 29,
+      "sourceNumber": "2",
+      "sourceAnchor": "",
+      "kind": "exercise-candidate",
+      "context": "Note: Factored Form of Polynomials\n\nIf a polynomial of lowest degree \\(p\\) has horizontal intercepts at \\(x=x_1,x_2,…,x_n\\), then the polynomial can be written in the factored form: \\(f(x)=a(x−x_1)^{p_1}(x−x_2)^{p_2}⋯(x−x_n)^{p_n}\\) where the powers \\(p_i\\) on each factor can be determined by the behavior of the graph at the corresponding intercept, and the stretch factor \\(a\\) can be determined given a value of the function other than the x-intercept.\n\n[Figure: alt]\nGiven a graph of a polynomial function, write a formula for the function.",
+      "original": "2. Examine the behavior of the graph at the x-intercepts to determine the multiplicity of each factor.",
+      "prompt": "2. Examine the behavior of the graph at the x-intercepts to determine the multiplicity of each factor.",
+      "sourceAnswers": [],
+      "hasFigure": false,
+      "status": "draft",
+      "answerVerified": false,
+      "translationStatus": "pending",
+      "mappingStatus": "pending"
+    },
+    {
+      "ordinal": 30,
+      "sourceNumber": "3",
+      "sourceAnchor": "",
+      "kind": "exercise-candidate",
+      "context": "Note: Factored Form of Polynomials\n\nIf a polynomial of lowest degree \\(p\\) has horizontal intercepts at \\(x=x_1,x_2,…,x_n\\), then the polynomial can be written in the factored form: \\(f(x)=a(x−x_1)^{p_1}(x−x_2)^{p_2}⋯(x−x_n)^{p_n}\\) where the powers \\(p_i\\) on each factor can be determined by the behavior of the graph at the corresponding intercept, and the stretch factor \\(a\\) can be determined given a value of the function other than the x-intercept.\n\n[Figure: alt]\nGiven a graph of a polynomial function, write a formula for the function.",
+      "original": "3. Find the polynomial of least degree containing all the factors found in the previous step.",
+      "prompt": "3. Find the polynomial of least degree containing all the factors found in the previous step.",
+      "sourceAnswers": [],
+      "hasFigure": false,
+      "status": "draft",
+      "answerVerified": false,
+      "translationStatus": "pending",
+      "mappingStatus": "pending"
+    },
+    {
+      "ordinal": 31,
+      "sourceNumber": "4",
+      "sourceAnchor": "",
+      "kind": "exercise-candidate",
+      "context": "Note: Factored Form of Polynomials\n\nIf a polynomial of lowest degree \\(p\\) has horizontal intercepts at \\(x=x_1,x_2,…,x_n\\), then the polynomial can be written in the factored form: \\(f(x)=a(x−x_1)^{p_1}(x−x_2)^{p_2}⋯(x−x_n)^{p_n}\\) where the powers \\(p_i\\) on each factor can be determined by the behavior of the graph at the corresponding intercept, and the stretch factor \\(a\\) can be determined given a value of the function other than the x-intercept.\n\n[Figure: alt]\nGiven a graph of a polynomial function, write a formula for the function.",
+      "original": "4. Use any other point on the graph (the y-intercept may be easiest) to determine the stretch factor.",
+      "prompt": "4. Use any other point on the graph (the y-intercept may be easiest) to determine the stretch factor.",
+      "sourceAnswers": [],
+      "hasFigure": false,
+      "status": "draft",
+      "answerVerified": false,
+      "translationStatus": "pending",
+      "mappingStatus": "pending"
+    },
+    {
+      "ordinal": 32,
+      "sourceNumber": "",
+      "sourceAnchor": "",
+      "kind": "example-or-exercise",
+      "context": "Note: Factored Form of Polynomials\n\nIf a polynomial of lowest degree \\(p\\) has horizontal intercepts at \\(x=x_1,x_2,…,x_n\\), then the polynomial can be written in the factored form: \\(f(x)=a(x−x_1)^{p_1}(x−x_2)^{p_2}⋯(x−x_n)^{p_n}\\) where the powers \\(p_i\\) on each factor can be determined by the behavior of the graph at the corresponding intercept, and the stretch factor \\(a\\) can be determined given a value of the function other than the x-intercept.\n\n[Figure: alt]\nGiven a graph of a polynomial function, write a formula for the function.",
+      "original": "Example \\(\\PageIndex{10}\\): Writing a Formula for a Polynomial Function from the Graph\n\nWrite a formula for the polynomial function shown in Figure \\(\\PageIndex{20}\\).\n\n[Figure: Graph of a positive even-degree polynomial with zeros at x=-3, 2, 5 and y=-2.]\n\nFigure \\(\\PageIndex{20}\\).\n\nSolution\n\nThis graph has three x-intercepts: \\(x=−3,\\;2,\\text{ and }5\\). The y-intercept is located at \\((0,2)\\).At \\(x=−3\\) and \\( x=5\\), the graph passes through the axis linearly, suggesting the corresponding factors of the polynomial will be linear. At \\(x=2\\), the graph bounces at the intercept, suggesting the corresponding factor of the polynomial will be second degree (quadratic). Together, this gives us\n\n\\[f(x)=a(x+3)(x−2)^2(x−5)\\]\n\nTo determine the stretch factor, we utilize another point on the graph. We will use the y-intercept \\((0,–2)\\), to solve for \\(a\\).\n\n\\[\\begin{align*} f(0)&=a(0+3)(0−2)^2(0−5) \\\\ −2&=a(0+3)(0−2)^2(0−5) \\\\ −2&=−60a \\\\ a&=\\dfrac{1}{30} \\end{align*}\\]\n\nThe graphed polynomial appears to represent the function \\(f(x)=\\dfrac{1}{30}(x+3)(x−2)^2(x−5)\\).",
+      "prompt": "Example \\(\\PageIndex{10}\\): Writing a Formula for a Polynomial Function from the Graph\n\nWrite a formula for the polynomial function shown in Figure \\(\\PageIndex{20}\\).\n\n[Figure: Graph of a positive even-degree polynomial with zeros at x=-3, 2, 5 and y=-2.]\n\nFigure \\(\\PageIndex{20}\\).\n\nSolution\n\nThis graph has three x-intercepts: \\(x=−3,\\;2,\\text{ and }5\\). The y-intercept is located at \\((0,2)\\).At \\(x=−3\\) and \\( x=5\\), the graph passes through the axis linearly, suggesting the corresponding factors of the polynomial will be linear. At \\(x=2\\), the graph bounces at the intercept, suggesting the corresponding factor of the polynomial will be second degree (quadratic). Together, this gives us\n\n\\[f(x)=a(x+3)(x−2)^2(x−5)\\]\n\nTo determine the stretch factor, we utilize another point on the graph. We will use the y-intercept \\((0,–2)\\), to solve for \\(a\\).\n\n\\[\\begin{align*} f(0)&=a(0+3)(0−2)^2(0−5) \\\\ −2&=a(0+3)(0−2)^2(0−5) \\\\ −2&=−60a \\\\ a&=\\dfrac{1}{30} \\end{align*}\\]\n\nThe graphed polynomial appears to represent the function \\(f(x)=\\dfrac{1}{30}(x+3)(x−2)^2(x−5)\\).",
+      "sourceAnswers": [],
+      "hasFigure": true,
+      "status": "draft",
+      "answerVerified": false,
+      "translationStatus": "pending",
+      "mappingStatus": "pending"
+    },
+    {
+      "ordinal": 33,
+      "sourceNumber": "",
+      "sourceAnchor": "",
+      "kind": "exercise-candidate",
+      "context": "Note: Factored Form of Polynomials\n\nIf a polynomial of lowest degree \\(p\\) has horizontal intercepts at \\(x=x_1,x_2,…,x_n\\), then the polynomial can be written in the factored form: \\(f(x)=a(x−x_1)^{p_1}(x−x_2)^{p_2}⋯(x−x_n)^{p_n}\\) where the powers \\(p_i\\) on each factor can be determined by the behavior of the graph at the corresponding intercept, and the stretch factor \\(a\\) can be determined given a value of the function other than the x-intercept.\n\n[Figure: alt]\nGiven a graph of a polynomial function, write a formula for the function.",
+      "original": "Exercise \\(\\PageIndex{5}\\)\n\nGiven the graph shown in Figure \\(\\PageIndex{21}\\), write a formula for the function shown.\n\n[Figure: Graph of a negative even-degree polynomial with zeros at x=-1, 2, 4 and y=-4.]\n\nFigure \\(\\PageIndex{21}\\).\n\nAnswer\n\n\\(f(x)=−\\frac{1}{8}(x−2)^3(x+1)^2(x−4)\\)",
+      "prompt": "Exercise \\(\\PageIndex{5}\\)\n\nGiven the graph shown in Figure \\(\\PageIndex{21}\\), write a formula for the function shown.\n\n[Figure: Graph of a negative even-degree polynomial with zeros at x=-1, 2, 4 and y=-4.]\n\nFigure \\(\\PageIndex{21}\\).",
+      "sourceAnswers": [
+        "\\(f(x)=−\\frac{1}{8}(x−2)^3(x+1)^2(x−4)\\)"
+      ],
+      "hasFigure": true,
+      "status": "draft",
+      "answerVerified": false,
+      "translationStatus": "pending",
+      "mappingStatus": "pending"
+    },
+    {
+      "ordinal": 34,
+      "sourceNumber": "",
+      "sourceAnchor": "",
+      "kind": "example-or-exercise",
+      "context": "We can see the difference between local and global extrema in Figure \\(\\PageIndex{22}\\).\n\n[Figure: alt]\n Do all polynomial functions have a global minimum or maximum?\n\nNo. Only polynomial functions of even degree have a global minimum or maximum. For example, \\(f(x)=x\\) has neither a global maximum nor a global minimum.",
+      "original": "Example \\(\\PageIndex{11}\\): Using Local Extrema to Solve Applications\n\nAn open-top box is to be constructed by cutting out squares from each corner of a 14 cm by 20 cm sheet of plastic then folding up the sides. Find the size of squares that should be cut out to maximize the volume enclosed by the box.\n\nSolution\n\nWe will start this problem by drawing a picture like that in Figure \\(\\PageIndex{23}\\), labeling the width of the cut-out squares with a variable, \\(w\\).\n\n[Figure: Diagram of a rectangle with four squares at the corners.]\n\nFigure \\(\\PageIndex{23}\\): Diagram of a rectangle with four squares at the corners.\n\nNotice that after a square is cut out from each end, it leaves \\(a(14−2w)\\) cm by \\((20−2w)\\) cm rectangle for the base of the box, and the box will be \\(w\\) cm tall. This gives the volume\n\n\\[\\begin{align*} V(w)&=(20−2w)(14−2w)w \\\\ &=280w−68w^2+4w^3 \\end{align*}\\]\n\nNotice, since the factors are \\(20–2w\\), \\(14–2w\\), and \\(w\\), the three zeros are \\(10, \\,7,\\) and \\(0,) respectively. Because a height of \\(0\\) cm is not reasonable, we consider the only the zeros \\(10\\) and \\(7.\\) The shortest side is \\(14\\) and we are cutting off two squares, so values \\(w\\) may take on are greater than zero or less than \\(7.\\) This means we will restrict the domain of this function to \\(0<w<7\\).Using technology to sketch the graph of \\(V(w)\\) on this reasonable domain, we get a graph like that in Figure \\(\\PageIndex{24}\\). We can use this graph to estimate the maximum value for the volume, restricted to values for \\(w\\) that are reasonable for this problem—values from 0 to 7.\n\n[Figure: Graph of V(w)=(20-2w)(14-2w)w where the x-axis is labeled w and the y-axis is labeled V(w).]\n\nFigure \\(\\PageIndex{24}\\): Graph of \\(V(w)=(20-2w)(14-2w)w\\)\n\nFrom this graph, we turn our focus to only the portion on the reasonable domain, \\([0, 7]\\). We can estimate the maximum value to be around 340 cubic cm, which occurs when the squares are about 2.75 cm on each side. To improve this estimate, we could use advanced features of our technology, if available, or simply change our window to zoom in on our graph to produce Figure \\(\\PageIndex{25}\\).\n\n[Figure: Graph of V(w)=(20-2w)(14-2w)w where the x-axis is labeled w and the y-axis is labeled V(w) on the domain [2.4, 3].]\n\nFigure \\(\\PageIndex{25}\\): Graph of \\(V(w)=(20-2w)(14-2w)w\\).\n\nFrom this zoomed-in view, we can refine our estimate for the maximum volume to about 339 cubic cm, when the squares measure approximately 2.7 cm on each side.",
+      "prompt": "Example \\(\\PageIndex{11}\\): Using Local Extrema to Solve Applications\n\nAn open-top box is to be constructed by cutting out squares from each corner of a 14 cm by 20 cm sheet of plastic then folding up the sides. Find the size of squares that should be cut out to maximize the volume enclosed by the box.\n\nSolution\n\nWe will start this problem by drawing a picture like that in Figure \\(\\PageIndex{23}\\), labeling the width of the cut-out squares with a variable, \\(w\\).\n\n[Figure: Diagram of a rectangle with four squares at the corners.]\n\nFigure \\(\\PageIndex{23}\\): Diagram of a rectangle with four squares at the corners.\n\nNotice that after a square is cut out from each end, it leaves \\(a(14−2w)\\) cm by \\((20−2w)\\) cm rectangle for the base of the box, and the box will be \\(w\\) cm tall. This gives the volume\n\n\\[\\begin{align*} V(w)&=(20−2w)(14−2w)w \\\\ &=280w−68w^2+4w^3 \\end{align*}\\]\n\nNotice, since the factors are \\(20–2w\\), \\(14–2w\\), and \\(w\\), the three zeros are \\(10, \\,7,\\) and \\(0,) respectively. Because a height of \\(0\\) cm is not reasonable, we consider the only the zeros \\(10\\) and \\(7.\\) The shortest side is \\(14\\) and we are cutting off two squares, so values \\(w\\) may take on are greater than zero or less than \\(7.\\) This means we will restrict the domain of this function to \\(0<w<7\\).Using technology to sketch the graph of \\(V(w)\\) on this reasonable domain, we get a graph like that in Figure \\(\\PageIndex{24}\\). We can use this graph to estimate the maximum value for the volume, restricted to values for \\(w\\) that are reasonable for this problem—values from 0 to 7.\n\n[Figure: Graph of V(w)=(20-2w)(14-2w)w where the x-axis is labeled w and the y-axis is labeled V(w).]\n\nFigure \\(\\PageIndex{24}\\): Graph of \\(V(w)=(20-2w)(14-2w)w\\)\n\nFrom this graph, we turn our focus to only the portion on the reasonable domain, \\([0, 7]\\). We can estimate the maximum value to be around 340 cubic cm, which occurs when the squares are about 2.75 cm on each side. To improve this estimate, we could use advanced features of our technology, if available, or simply change our window to zoom in on our graph to produce Figure \\(\\PageIndex{25}\\).\n\n[Figure: Graph of V(w)=(20-2w)(14-2w)w where the x-axis is labeled w and the y-axis is labeled V(w) on the domain [2.4, 3].]\n\nFigure \\(\\PageIndex{25}\\): Graph of \\(V(w)=(20-2w)(14-2w)w\\).\n\nFrom this zoomed-in view, we can refine our estimate for the maximum volume to about 339 cubic cm, when the squares measure approximately 2.7 cm on each side.",
+      "sourceAnswers": [],
+      "hasFigure": true,
+      "status": "draft",
+      "answerVerified": false,
+      "translationStatus": "pending",
+      "mappingStatus": "pending"
+    },
+    {
+      "ordinal": 35,
+      "sourceNumber": "",
+      "sourceAnchor": "",
+      "kind": "exercise-candidate",
+      "context": "We can see the difference between local and global extrema in Figure \\(\\PageIndex{22}\\).\n\n[Figure: alt]\n Do all polynomial functions have a global minimum or maximum?\n\nNo. Only polynomial functions of even degree have a global minimum or maximum. For example, \\(f(x)=x\\) has neither a global maximum nor a global minimum.",
+      "original": "Exercise \\(\\PageIndex{1}\\)\n\nUse technology to find the maximum and minimum values on the interval \\([−1,4]\\) of the function \\(f(x)=−0.2(x−2)^3(x+1)^2(x−4)\\).\n\nAnswer\n\nThe minimum occurs at approximately the point \\((0,−6.5)\\),\n\n    and the maximum occurs at approximately the point \\((3.5,7)\\).",
+      "prompt": "Exercise \\(\\PageIndex{1}\\)\n\nUse technology to find the maximum and minimum values on the interval \\([−1,4]\\) of the function \\(f(x)=−0.2(x−2)^3(x+1)^2(x−4)\\).",
+      "sourceAnswers": [
+        "The minimum occurs at approximately the point \\((0,−6.5)\\),\n\n    and the maximum occurs at approximately the point \\((3.5,7)\\)."
+      ],
+      "hasFigure": false,
+      "status": "draft",
+      "answerVerified": false,
+      "translationStatus": "pending",
+      "mappingStatus": "pending"
+    }
+  ],
+  "license": "CC BY 4.0",
+  "licenseEvidence": "This page titled 5.3: Graphs of Polynomial Functions was last modified on Thu, 26 Dec 2024 22:30:43 GMT and is shared under a CC BY  4.0  license and was authored, remixed, and/or curated by OpenStax via source content that was edited to the style and standards of the LibreTexts platform.",
+  "url": "https://math.libretexts.org/Bookshelves/Algebra/Algebra_and_Trigonometry_1e_(OpenStax)/05:_Polynomial_and_Rational_Functions/5.03:_Graphs_of_Polynomial_Functions",
+  "sha256": "f2e181a7fc7c9dc6a42942b41eb2018b5dd8979a11522a43a8cc6d60e7cc889c",
+  "checkedAt": "2026-10-07",
+  "id": "2cc170341b19b56357a5",
+  "bookId": "algebra-trigonometry",
+  "licenseInherited": false,
+  "licenseSource": "https://math.libretexts.org/Bookshelves/Algebra/Algebra_and_Trigonometry_1e_(OpenStax)/05:_Polynomial_and_Rational_Functions/5.03:_Graphs_of_Polynomial_Functions",
+  "licenseUrl": "https://creativecommons.org/licenses/by/4.0/",
+  "authors": "OpenStax / Jay Abramson et al.",
+  "book": "Algebra and Trigonometry 1e",
+  "reviewStatus": "unreviewed",
+  "sourceLanguage": "en",
+  "translationStatus": "pending"
+}

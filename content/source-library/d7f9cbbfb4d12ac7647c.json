@@ -1,0 +1,333 @@
+{
+  "title": "2.4:  Truth Tables for the Conditional and Biconditional",
+  "originalText": "[Figure: A laptop screen shows coding.]\n\nFigure \\(\\PageIndex{1}\\): If-then statements use logic to execute directions. (credit: “Coding” by Carlos Varela/Flickr, CC BY 2.0)\n\nLearning Objectives\n\nAfter completing this section, you should be able to:\n\n1. Use and apply the conditional to construct a truth table.\n\n2. Use and apply the biconditional to construct a truth table.\n\n3. Use truth tables to determine the validity of conditional and biconditional statements.\n\nComputer languages use if-then or if-then-else statements as decision statements:\n\nIf the hypothesis is true, then do something.\n\nOr, if the hypothesis is true, then do something; else do something else.\n\nFor example, the following representation of computer code creates an if-then-else decision statement:\n\nCheck value of variable \\(i\\).\n\nIf \\(i<1\\), then print \"Hello, World!\" else print \"Goodbye\".\n\nIn this imaginary program, the if-then statement evaluates and acts on the value of the variable \\(i\\). For instance, if \\(i=0\\), the program would consider the statement \\(i<1\\) as true and “Hello, World!” would appear on the computer screen. If instead, \\(i=3\\), the program would consider the statement \\(i<1\\) as false (because 3 is greater than 1), and print “Goodbye” on the screen.\n\nIn this section, we will apply similar reasoning without the use of computer programs.\n\nPeople in Mathematics\n\nThe Countess of Lovelace, Ada Lovelace, is credited with writing the first computer program. She wrote an algorithm to work with Charles Babbage’s Analytical Engine that could compute the Bernoulli numbers in 1843. In doing so, she became the first person to write a program for a machine that would produce more than just a simple calculation. The computer programming language ADA is named after her.\n\nReference: Posamentier, Alfred and Spreitzer Christian, “Chapter 34 Ada Lovelace: English (1815-1852)” pp. 272-278, Math Makers: The Lives and Works of 50 Famous Mathematicians, Prometheus Books, 2019.\n\nUse and Apply the Conditional to Construct a Truth Table\n\nA conditional is a logical statement of the form if \\(p\\), then \\(q\\). The conditional statement in logic is a promise or contract. The only time the conditional, \\(p→q,\\) is false is when the contract or promise is broken.\n\nFor example, consider the following scenario. A child’s parent says, “If you do your homework, then you can play your video games.” The child really wants to play their video games, so they get started right away, finish within an hour, and then show their parent the completed homework. The parent thanks the child for doing a great job on their homework and allows them to play video games. Both the parent and child are happy. The contract was satisfied; true implies true is true.\n\nNow, suppose the child does not start their homework right away, and then struggles to complete it. They eventually finish and show it to their parent. The parent again thanks the child for completing their homework, but then informs the child that it is too late in the evening to play video games, and that they must begin to get ready for bed. Now, the child is really upset. They held up their part of the contract, but they did not receive the promised reward. The contract was broken; true implies false is false.\n\nSo, what happens if the child does not do their homework? In this case, the hypothesis is false. No contract has been entered, therefore, no contract can be broken. If the conclusion is false, the child does not get to play video games and might not be happy, but this outcome is expected because the child did not complete their end of the bargain. They did not complete their homework. False implies false is true. The last option is not as intuitive. If the parent lets the child play video games, even if they did not do their homework, neither parent nor child are going to be upset. False implies true is true.\n\nThe truth table for the conditional statement below summarizes these results.\n\n            \\(p\\)\t\n            \\(q\\)\t\n            \\(p→q\\)\t\n\n            T\t\n            T\t\n            T\t\n\n            T\t\n            F\t\n            F\t\n\n            F\t\n            T\t\n            T\t\n\n            F\t\n            F\t\n            T\t\n\nCheckpoint\n\nNotice that the only time the conditional statement, \\(p→q,\\) is false is when the hypothesis, \\(p\\), is true and the conclusion, \\(q\\), is false.\n\nVideo\n\nLogic Part 8: The Conditional and Tautologies\n\nExercise \\(\\PageIndex{1}\\): Constructing Truth Tables for Conditional Statements\n\nAssume both of the following statements are true: \\(p\\): My sibling washed the dishes, and \\(q\\): My parents paid them $5.00. Create a truth table to determine the truth value of each of the following conditional statements.\n\n1. \\(p→q\\)\n\n2. \\(p→~q\\)\n\n3. \\(~p→q\\)\n\nAnswer\n\nBecause p is true and q is true, the statement p → q is, “If my sibling washed the dishes, then my parents paid them $5.00.” My sibling did wash the dishes, since p p is true, and the parents did pay the sibling $5.00, so the contract was entered and completed. The conditional statement is true, as indicated by the truth table representing this case:\n\n    T → T = T.\n\n                \\(p\\)\t\n                \\(q\\)\t\n                \\(p→q\\)\t\n\n                T\t\n                T\t\n                T\t\n\np → ~ q p\n\n2. p → ~ q p → ~ q translates to the statement, “If my sibling washed the dishes, then my parents did not pay them $5.00.” p p is true, but ~ q ~ q is false. The sibling completed their end of the contract, but they did not get paid. The contract was broken by the parents. The conditional statement is false, as indicated by the truth table representing this case:\n\nT → F = F.\n\n                \\(p\\)\t\n                \\(q\\)\t\n                \\(~q\\)\t\n                \\(p→~q\\)\t\n\n                T\t\n                T\t\n                F\t\n                F\t\n\n3. ~ p → q translates to the statement, “If my sibling did not wash the dishes, then my parents paid them $5.00.” ~ p is false, but q is true. The sibling did not do the dishes. No contract was entered, so it could not be broken. The parents decided to pay them $5.00 anyway. The conditional statement is true, as indicated by the truth table representing this case: F → T = T.\n\n                \\(p\\)\t\n                \\(q\\)\t\n                \\(~p\\)\t\n                \\(~p→q\\)\t\n\n                T\t\n                T\t\n                F\t\n                T\t\n\nYour Turn \\(\\PageIndex{1}\\)\n\nAssume p is true and q is false. p: Kevin vacuumed the living room, and q: Kevin's parents did not let him borrow the car. Create a truth table to determine the truth value of each of the following conditional statements.\n\n1. p→q\n\n2. p→~q\n\n3. ~p→q\n\nExercise \\(\\PageIndex{2}\\): Determining Validity of Conditional Statements\n\nConstruct a truth table to analyze all possible outcomes for each of the following statements then determine whether they are valid.\n\n1. p∧q→~q\n\n2. p→~p∨q\n\nAnswer\n\n1. Applying the dominance of connectives, the statement p ∧ q → ~ q  is equivalent to ( p ∧ q ) → ( ~ q ). So, the columns of the truth table will include p , q, p ∧ q, ~ q, and p ∧ q → ~ q. Because there are only two basic propositions, p and q , the table will have 2 ( 2 ) = 4 2 ( 2 ) = 4 rows of truth values to account for all the possible outcomes. The statement is not valid because the last column is not all true.\n\n                \\(p\\)\t\n                \\(q\\)\t\n                \\(p∧q\\)\t\n                \\(~q\\)\t\n                \\(p∧q→~q\\)\t\n\n                T\t\n                T\t\n                T\t\n                F\t\n                F\t\n\n                T\t\n                F\t\n                F\t\n                T\t\n                T\t\n\n                F\t\n                T\t\n                F\t\n                F\t\n                T\t\n\n                F\t\n                F\t\n                F\t\n                T\t\n                T\t\n\nApplying the dominance of connectives, the statement p → ~ p ∨ q  is equivalent to ( p ) → ( ( ~ p ) ∨ q ). So, the columns of the truth table will include p , q , ~ p, ~ p ∨ q, and p → ( ~ p ∨ q ). Because there are only two basic propositions, p and q , the table will have 2 ( 2 ) = 4 2 ( 2 ) = 4 rows of truth values to account for all the possible outcomes. The statement is not valid because the last column is not all true.\n\n                \\(p\\)\t\n                \\(q\\)\t\n                \\(~p\\)\t\n                \\(~p∨q\\)\t\n                \\(p→(~p∨q)\\)\t\n\n                T\t\n                T\t\n                F\t\n                T\t\n                T\t\n\n                T\t\n                F\t\n                F\t\n                F\t\n                F\t\n\n                F\t\n                T\t\n                T\t\n                T\t\n                T\t\n\n                F\t\n                F\t\n                T\t\n                T\t\n                T\t\n\nYour Turn \\(\\PageIndex{2}\\)\n\nConstruct a truth table to analyze all possible outcomes for each of the following statements, then determine whether they are valid.\n\n1. \\(q \\rightarrow \\sim p \\vee q\\)\n\n2. \\(\\sim p \\rightarrow q \\wedge p\\)\n\nUse and Apply the Biconditional to Construct a Truth Table\n\nThe biconditional, \\(p↔q\\), is a two way contract; it is equivalent to the statement \\((p→q)∧(q→p).\\) A biconditional statement, \\(p↔q,\\) is true whenever the truth value of the hypothesis matches the truth value of the conclusion, otherwise it is false.\n\nThe truth table for the biconditional is summarized below.\n\n            \\(p\\)\t\n            \\(q\\)\t\n            \\(p↔q\\)\t\n\n            T\t\n            T\t\n            T\t\n\n            T\t\n            F\t\n            F\t\n\n            F\t\n            T\t\n            F\t\n\n            F\t\n            F\t\n            T\t\n\nVideo\n\nLogic Part 11B: Biconditional and Summary of Truth Value Rules in Logic\n\nExercise \\(\\PageIndex{3}\\): Constructing Truth Tables for Biconditional Statements\n\nAssume both of the following statements are true: \\(p\\) : The plumber fixed the leak, and \\(q\\) : The homeowner paid the plumber \\(\\$ 150.00\\). Create a truth table to determine the truth value of each of the following biconditional statements.\n\n1. \\(p \\leftrightarrow q\\)\n\n2. \\(p \\leftrightarrow \\sim q\\)\n\n3. \\(\\sim p \\leftrightarrow \\sim q\\)\n\nAnswer\n\n1. Because p p is true and q q is true, the statement p ↔ q p ↔ q is “The plumber fixed the leak if and only if the homeowner paid them $150.00.” Because both p p and q q are true, the leak was fixed and the plumber was paid, meaning both parties satisfied their end of the bargain. The biconditional statement is true, as indicated by the truth table representing this case: T ↔ T = T.\n\n                \\(p\\)\t\n                \\(q\\)\t\n                \\(p↔q\\)\t\n\n                T\t\n                T\t\n                T\t\n\n2. p → ~ q p → ~ q translates to the statement, “The plumber fixed the leak if and only if the homeowner did not pay them $150.” If the plumber fixed the leak and the homeowner did not pay them, the homeowner will have broken their end of the contract. The biconditional statement is false, as indicated by the truth table representing this case:\n\n    T ↔ F = F.\n\n                \\(p\\)\t\n                \\(q\\)\t\n                \\(~q\\)\t\n                \\(p↔~q\\)\t\n\n                T\t\n                T\t\n                F\t\n                F\t\n\n3. ~ p ↔ ~ q ~ p ↔ ~ q translates to the statement, “The plumber did not fix the leak if and only if the homeowner did not pay them $150.” In this case, neither party—the plumber nor the homeowner—entered into the contract. The leak was not repaired, and the plumber was not paid. No agreement was broken. The biconditional statement is true, as indicated by the truth table representing this case: F ↔ F = T.\n\n                \\(p\\)\t\n                \\(q\\)\t\n                \\(~p\\)\t\n                \\(~q\\)\t\n                \\(~p↔~q\\)\t\n\n                T\t\n                T\t\n                F\t\n                F\t\n                T\t\n\nYour Turn \\(\\PageIndex{3}\\)\n\nAssume \\(p\\) is true and \\(q\\) is false: \\(p\\) : The contractor fixed the broken window, and \\(q\\) : The homeowner paid the contractor \\(\\$ 200\\). Create a truth table to determine the truth value of each of the following biconditional statements.\n\n1. \\(p \\leftrightarrow q\\)\n\n2. \\(p \\leftrightarrow \\sim q\\)\n\n3. \\(\\sim p \\leftrightarrow q\\)\n\nCheckpoint\n\nThe biconditional, \\(p↔q,\\) is true whenever the truth values of \\(p\\) and \\(q\\) match, otherwise it is false.\n\nVideo\n\nLogic Part 13: Truth Tables to Determine if Argument is Valid or Invalid\n\nExercise \\(\\PageIndex{1}\\): Determining Validity of Biconditional Statements\n\nConstruct a truth table to analyze all possible outcomes for each of the following statements, then determine whether they are valid.\n\n1. \\(p \\wedge q \\leftrightarrow p \\wedge \\sim q\\)\n\n2. \\(p \\vee q \\leftrightarrow \\sim p \\vee q\\)\n\n3. \\(p \\rightarrow q \\leftrightarrow \\sim q \\rightarrow \\sim p\\)\n\n4. \\(p \\wedge q \\rightarrow \\sim r \\leftrightarrow p \\wedge q \\wedge r\\)\n\nAnswer\n\n1. Applying the dominance of connectives, the statement \\(p \\wedge q \\leftrightarrow p \\wedge \\sim q\\) is equivalent to \\((p \\wedge q) \\leftrightarrow(p \\wedge(\\sim q))\\). So, the columns of the truth table will include \\(p, q, p \\wedge q, \\sim q, p \\wedge \\sim q\\) and \\((p \\wedge q) \\leftrightarrow(p \\wedge \\sim q)\\). Because there are only two basic propositions, \\(p\\) and \\(q\\), the table will have \\(2(2)=4\\) rows of truth values to account for all the possible outcomes. The statement is not valid because the last column is not all true.\n\n                \\(p\\)\t\n                \\(q\\)\t\n                \\(p∧q\\)\t\n                \\(~q\\)\t\n                \\(p∧~q\\)\t\n                \\((p∧q)↔(p∧~q)\\)\t\n\n                T\t\n                T\t\n                T\t\n                F\t\n                F\t\n                F\t\n\n                T\t\n                F\t\n                F\t\n                T\t\n                T\t\n                F\t\n\n                F\t\n                T\t\n                F\t\n                F\t\n                F\t\n                T\t\n\n                F\t\n                F\t\n                F\t\n                T\t\n                F\t\n                T\t\n\n2. Applying the dominance of connectives, the statement \\(p \\vee q \\leftrightarrow \\sim p \\vee q\\) is equivalent to \\((p \\vee q) \\leftrightarrow((\\sim p) \\vee q)\\). So, the columns of the truth table will include \\(p, q, p \\vee q, \\sim p, \\sim p \\vee q\\), and \\((p \\vee q) \\leftrightarrow(\\sim p \\vee q)\\). Because there are only two basic propositions, \\(p\\) and \\(q\\), the table will have \\(2(2)=4\\) rows of truth values to account for all the possible outcomes. The statement is not valid because the last column is not all true.\n\n                \\(p\\)\t\n                \\(q\\)\t\n                \\(p∨q\\)\t\n                \\(~p\\)\t\n                \\(~p∨q\\)\t\n                \\((p∨q)↔(~p∨q)\\)\t\n\n                T\t\n                T\t\n                T\t\n                F\t\n                T\t\n                T\t\n\n                T\t\n                F\t\n                T\t\n                F\t\n                F\t\n                F\t\n\n                F\t\n                T\t\n                T\t\n                T\t\n                T\t\n                T\t\n\n                F\t\n                F\t\n                F\t\n                T\t\n                T\t\n                F\t\n\n3. Applying the dominance of connectives, the statement \\(p \\rightarrow q \\leftrightarrow \\sim q \\rightarrow \\sim p\\) is equivalent to \\((p \\rightarrow q) \\leftrightarrow((\\sim q) \\rightarrow(\\sim p))\\). So, the columns of the truth table will include \\(p, q, p \\rightarrow q, \\sim q\\), \\(\\sim p, \\sim q \\rightarrow \\sim p\\), and \\((p \\rightarrow q) \\leftrightarrow(\\sim q \\rightarrow \\sim p)\\). Because there are only two basic propositions, \\(p\\) and \\(q\\) the table will have \\(2(2)=4\\) rows of truth values to account for all the possible outcomes. The statement is valid because the last column is all true.\n\n                \\(p\\)\t\n                \\(q\\)\t\n                \\(p→q\\)\t\n                \\(~q\\)\t\n                \\(~p\\)\t\n                \\(~q→~p\\)\t\n                \\((p→q)↔(~q→~p)\\)\t\n\n                T\t\n                T\t\n                T\t\n                F\t\n                F\t\n                T\t\n                T\t\n\n                T\t\n                F\t\n                F\t\n                T\t\n                F\t\n                F\t\n                T\t\n\n                F\t\n                T\t\n                T\t\n                F\t\n                T\t\n                T\t\n                T\t\n\n                F\t\n                F\t\n                T\t\n                T\t\n                T\t\n                T\t\n                T\t\n\n4. Applying the dominance of connectives, the statement \\(p \\wedge q \\rightarrow \\sim r \\leftrightarrow p \\wedge q \\wedge r\\) is equivalent to \\(((p \\wedge q) \\rightarrow(\\sim r)) \\leftrightarrow((p \\wedge q) \\wedge r)\\). So, the columns of the truth table will include \\(p, q, r\\), \\(\\sim r, p \\wedge q,(p \\wedge q) \\wedge \\sim r,(p \\wedge q) \\wedge r\\), and \\(((p \\wedge q) \\rightarrow(\\sim r)) \\leftrightarrow((p \\wedge q) \\wedge r)\\). Because there are three basic propositions, \\(p, q\\), and \\(r\\), the table will have \\(2(2)(2)=8\\) rows of truth values to account for all the possible outcomes. The statement is not valid because the last column is not all true.\n\n                \\(p\\)\t\n                \\(q\\)\t\n                \\(r\\)\t\n                \\(~r\\)\t\n                \\(p∧q\\)\t\n                \\((p∧q)→~r\\)\t\n                \\((p∧q)∧r\\)\t\n                \\((p∧q→~r)↔(p∧q∧r)\\)\t\n\n                T\t\n                T\t\n                T\t\n                F\t\n                T\t\n                F\t\n                T\t\n                T\t\n\n                T\t\n                T\t\n                F\t\n                T\t\n                T\t\n                T\t\n                F\t\n                T\t\n\n                T\t\n                F\t\n                T\t\n                F\t\n                F\t\n                T\t\n                F\t\n                F\t\n\n                T\t\n                F\t\n                F\t\n                T\t\n                F\t\n                T\t\n                F\t\n                F\t\n\n                F\t\n                T\t\n                T\t\n                F\t\n                F\t\n                T\t\n                F\t\n                F\t\n\n                F\t\n                T\t\n                F\t\n                T\t\n                F\t\n                T\t\n                F\t\n                F\t\n\n                F\t\n                F\t\n                T\t\n                F\t\n                F\t\n                T\t\n                F\t\n                F\t\n\n                F\t\n                F\t\n                F\t\n                T\t\n                F\t\n                T\t\n                F\t\n                F\t\n\nYour Turn \\(\\PageIndex{1}\\)\n\nConstruct a truth table to analyze all possible outcomes for each of the following statements, then determine whether they are valid.\n\n1. \\(\\sim(p \\wedge q) \\leftrightarrow(\\sim p \\vee \\sim q)\\)\n\n2. \\(\\sim p \\leftrightarrow q \\wedge p\\)\n\n3. \\(p \\rightarrow q \\leftrightarrow \\sim p \\vee q\\)\n\n4. \\(p \\wedge q \\rightarrow r \\leftrightarrow \\sim p \\vee \\sim q \\vee r\\)\n\nCheck Your Understanding\n\n1. 1. In logic, a conditional statement can be thought of as a _____________.\n\n2. If the hypothesis, \\(p\\), of a conditional statement is true, the _____, \\(q\\), must also be true for the conditional statement \\(\\(p \\to q\\) to be true.\n\n3. If the ______________ of a conditional statement is false, the conditional statement is true.\n\n4. The symbolic form of the _____________________ statement is \\(p \\leftrightarrow q\\)\n\n5. The _____________________ statement is equivalent to the statement \\((p \\to q) \\wedge \\left( {q \\to p} \\right).\\)\n\n6. \\(p\\) if and only if q is ____________ whenever the truth value of \\(p\\) matches the truth value of q, otherwise it is false.\n\nThis page titled 2.4:  Truth Tables for the Conditional and Biconditional was last modified on Thu, 02 Jan 2025 09:27:05 GMT and is shared under a CC BY  4.0  license and was authored, remixed, and/or curated by OpenStax via source content that was edited to the style and standards of the LibreTexts platform.",
+  "figures": [
+    {
+      "url": "https://math.libretexts.org/@api/deki/files/109375/92f8ac1090d3c8650de8b38f2132af9b3801566c?revision=1",
+      "alt": "A laptop screen shows coding.",
+      "credit": ""
+    }
+  ],
+  "references": [
+    {
+      "text": "Logic Part 8: The Conditional and Tautologies",
+      "url": "https://openstax.org/r/Conditional_and_Tautologies"
+    },
+    {
+      "text": "1",
+      "url": "https://openstax.org/books/contemporary-mathematics/pages/chapter-2#277759-solution"
+    },
+    {
+      "text": "2",
+      "url": "https://openstax.org/books/contemporary-mathematics/pages/chapter-2#277760-solution"
+    },
+    {
+      "text": "3",
+      "url": "https://openstax.org/books/contemporary-mathematics/pages/chapter-2#277761-solution"
+    },
+    {
+      "text": "Logic Part 11B: Biconditional and Summary of Truth Value Rules in Logic",
+      "url": "https://openstax.org/r/omKzui0Fytk"
+    },
+    {
+      "text": "Logic Part 13: Truth Tables to Determine if Argument is Valid or Invalid",
+      "url": "https://openstax.org/r/AQB3svnxxiw"
+    },
+    {
+      "text": "2.4:  Truth Tables for the Conditional and Biconditional",
+      "url": "https://math.libretexts.org/Bookshelves/Applied_Mathematics/Contemporary_Mathematics_(OpenStax)/02%3A_Logic/2.04%3A__Truth_Tables_for_the_Conditional_and_Biconditional"
+    },
+    {
+      "text": "CC BY  4.0",
+      "url": "https://creativecommons.org/licenses/by/4.0"
+    },
+    {
+      "text": "OpenStax",
+      "url": "https://openstax.org/"
+    },
+    {
+      "text": "source content",
+      "url": "https://openstax.org/details/books/contemporary-mathematics"
+    }
+  ],
+  "exercises": [
+    {
+      "ordinal": 1,
+      "sourceNumber": "1",
+      "sourceAnchor": "",
+      "kind": "exercise-candidate",
+      "context": "After completing this section, you should be able to:",
+      "original": "1. Use and apply the conditional to construct a truth table.",
+      "prompt": "1. Use and apply the conditional to construct a truth table.",
+      "sourceAnswers": [],
+      "hasFigure": false,
+      "status": "draft",
+      "answerVerified": false,
+      "translationStatus": "pending",
+      "mappingStatus": "pending"
+    },
+    {
+      "ordinal": 2,
+      "sourceNumber": "2",
+      "sourceAnchor": "",
+      "kind": "exercise-candidate",
+      "context": "After completing this section, you should be able to:",
+      "original": "2. Use and apply the biconditional to construct a truth table.",
+      "prompt": "2. Use and apply the biconditional to construct a truth table.",
+      "sourceAnswers": [],
+      "hasFigure": false,
+      "status": "draft",
+      "answerVerified": false,
+      "translationStatus": "pending",
+      "mappingStatus": "pending"
+    },
+    {
+      "ordinal": 3,
+      "sourceNumber": "3",
+      "sourceAnchor": "",
+      "kind": "exercise-candidate",
+      "context": "After completing this section, you should be able to:",
+      "original": "3. Use truth tables to determine the validity of conditional and biconditional statements.",
+      "prompt": "3. Use truth tables to determine the validity of conditional and biconditional statements.",
+      "sourceAnswers": [],
+      "hasFigure": false,
+      "status": "draft",
+      "answerVerified": false,
+      "translationStatus": "pending",
+      "mappingStatus": "pending"
+    },
+    {
+      "ordinal": 4,
+      "sourceNumber": "",
+      "sourceAnchor": "",
+      "kind": "exercise-candidate",
+      "context": "The truth table for the conditional statement below summarizes these results.\n\nNotice that the only time the conditional statement, \\(p→q,\\) is false is when the hypothesis, \\(p\\), is true and the conclusion, \\(q\\), is false.\n\nLogic Part 8: The Conditional and Tautologies",
+      "original": "Exercise \\(\\PageIndex{1}\\): Constructing Truth Tables for Conditional Statements\n\nAssume both of the following statements are true: \\(p\\): My sibling washed the dishes, and \\(q\\): My parents paid them $5.00. Create a truth table to determine the truth value of each of the following conditional statements.\n\n1. \\(p→q\\)\n\n2. \\(p→~q\\)\n\n3. \\(~p→q\\)\n\nAnswer\n\nBecause p is true and q is true, the statement p → q is, “If my sibling washed the dishes, then my parents paid them $5.00.” My sibling did wash the dishes, since p p is true, and the parents did pay the sibling $5.00, so the contract was entered and completed. The conditional statement is true, as indicated by the truth table representing this case:\n\n    T → T = T.\n\n                \\(p\\)\t\n                \\(q\\)\t\n                \\(p→q\\)\t\n\n                T\t\n                T\t\n                T\t\n\np → ~ q p\n\n2. p → ~ q p → ~ q translates to the statement, “If my sibling washed the dishes, then my parents did not pay them $5.00.” p p is true, but ~ q ~ q is false. The sibling completed their end of the contract, but they did not get paid. The contract was broken by the parents. The conditional statement is false, as indicated by the truth table representing this case:\n\nT → F = F.\n\n                \\(p\\)\t\n                \\(q\\)\t\n                \\(~q\\)\t\n                \\(p→~q\\)\t\n\n                T\t\n                T\t\n                F\t\n                F\t\n\n3. ~ p → q translates to the statement, “If my sibling did not wash the dishes, then my parents paid them $5.00.” ~ p is false, but q is true. The sibling did not do the dishes. No contract was entered, so it could not be broken. The parents decided to pay them $5.00 anyway. The conditional statement is true, as indicated by the truth table representing this case: F → T = T.\n\n                \\(p\\)\t\n                \\(q\\)\t\n                \\(~p\\)\t\n                \\(~p→q\\)\t\n\n                T\t\n                T\t\n                F\t\n                T",
+      "prompt": "Exercise \\(\\PageIndex{1}\\): Constructing Truth Tables for Conditional Statements\n\nAssume both of the following statements are true: \\(p\\): My sibling washed the dishes, and \\(q\\): My parents paid them $5.00. Create a truth table to determine the truth value of each of the following conditional statements.\n\n1. \\(p→q\\)\n\n2. \\(p→~q\\)\n\n3. \\(~p→q\\)",
+      "sourceAnswers": [
+        "Because p is true and q is true, the statement p → q is, “If my sibling washed the dishes, then my parents paid them $5.00.” My sibling did wash the dishes, since p p is true, and the parents did pay the sibling $5.00, so the contract was entered and completed. The conditional statement is true, as indicated by the truth table representing this case:\n\n    T → T = T.\n\n                \\(p\\)\t\n                \\(q\\)\t\n                \\(p→q\\)\t\n\n                T\t\n                T\t\n                T\t\n\np → ~ q p\n\n2. p → ~ q p → ~ q translates to the statement, “If my sibling washed the dishes, then my parents did not pay them $5.00.” p p is true, but ~ q ~ q is false. The sibling completed their end of the contract, but they did not get paid. The contract was broken by the parents. The conditional statement is false, as indicated by the truth table representing this case:\n\nT → F = F.\n\n                \\(p\\)\t\n                \\(q\\)\t\n                \\(~q\\)\t\n                \\(p→~q\\)\t\n\n                T\t\n                T\t\n                F\t\n                F\t\n\n3. ~ p → q translates to the statement, “If my sibling did not wash the dishes, then my parents paid them $5.00.” ~ p is false, but q is true. The sibling did not do the dishes. No contract was entered, so it could not be broken. The parents decided to pay them $5.00 anyway. The conditional statement is true, as indicated by the truth table representing this case: F → T = T.\n\n                \\(p\\)\t\n                \\(q\\)\t\n                \\(~p\\)\t\n                \\(~p→q\\)\t\n\n                T\t\n                T\t\n                F\t\n                T"
+      ],
+      "hasFigure": false,
+      "status": "draft",
+      "answerVerified": false,
+      "translationStatus": "pending",
+      "mappingStatus": "pending"
+    },
+    {
+      "ordinal": 5,
+      "sourceNumber": "",
+      "sourceAnchor": "",
+      "kind": "example-or-exercise",
+      "context": "The truth table for the conditional statement below summarizes these results.\n\nNotice that the only time the conditional statement, \\(p→q,\\) is false is when the hypothesis, \\(p\\), is true and the conclusion, \\(q\\), is false.\n\nLogic Part 8: The Conditional and Tautologies",
+      "original": "Your Turn \\(\\PageIndex{1}\\)\n\nAssume p is true and q is false. p: Kevin vacuumed the living room, and q: Kevin's parents did not let him borrow the car. Create a truth table to determine the truth value of each of the following conditional statements.\n\n1. p→q\n\n2. p→~q\n\n3. ~p→q",
+      "prompt": "Your Turn \\(\\PageIndex{1}\\)\n\nAssume p is true and q is false. p: Kevin vacuumed the living room, and q: Kevin's parents did not let him borrow the car. Create a truth table to determine the truth value of each of the following conditional statements.\n\n1. p→q\n\n2. p→~q\n\n3. ~p→q",
+      "sourceAnswers": [],
+      "hasFigure": false,
+      "status": "draft",
+      "answerVerified": false,
+      "translationStatus": "pending",
+      "mappingStatus": "pending"
+    },
+    {
+      "ordinal": 6,
+      "sourceNumber": "",
+      "sourceAnchor": "",
+      "kind": "exercise-candidate",
+      "context": "The truth table for the conditional statement below summarizes these results.\n\nNotice that the only time the conditional statement, \\(p→q,\\) is false is when the hypothesis, \\(p\\), is true and the conclusion, \\(q\\), is false.\n\nLogic Part 8: The Conditional and Tautologies",
+      "original": "Exercise \\(\\PageIndex{2}\\): Determining Validity of Conditional Statements\n\nConstruct a truth table to analyze all possible outcomes for each of the following statements then determine whether they are valid.\n\n1. p∧q→~q\n\n2. p→~p∨q\n\nAnswer\n\n1. Applying the dominance of connectives, the statement p ∧ q → ~ q  is equivalent to ( p ∧ q ) → ( ~ q ). So, the columns of the truth table will include p , q, p ∧ q, ~ q, and p ∧ q → ~ q. Because there are only two basic propositions, p and q , the table will have 2 ( 2 ) = 4 2 ( 2 ) = 4 rows of truth values to account for all the possible outcomes. The statement is not valid because the last column is not all true.\n\n                \\(p\\)\t\n                \\(q\\)\t\n                \\(p∧q\\)\t\n                \\(~q\\)\t\n                \\(p∧q→~q\\)\t\n\n                T\t\n                T\t\n                T\t\n                F\t\n                F\t\n\n                T\t\n                F\t\n                F\t\n                T\t\n                T\t\n\n                F\t\n                T\t\n                F\t\n                F\t\n                T\t\n\n                F\t\n                F\t\n                F\t\n                T\t\n                T\t\n\nApplying the dominance of connectives, the statement p → ~ p ∨ q  is equivalent to ( p ) → ( ( ~ p ) ∨ q ). So, the columns of the truth table will include p , q , ~ p, ~ p ∨ q, and p → ( ~ p ∨ q ). Because there are only two basic propositions, p and q , the table will have 2 ( 2 ) = 4 2 ( 2 ) = 4 rows of truth values to account for all the possible outcomes. The statement is not valid because the last column is not all true.\n\n                \\(p\\)\t\n                \\(q\\)\t\n                \\(~p\\)\t\n                \\(~p∨q\\)\t\n                \\(p→(~p∨q)\\)\t\n\n                T\t\n                T\t\n                F\t\n                T\t\n                T\t\n\n                T\t\n                F\t\n                F\t\n                F\t\n                F\t\n\n                F\t\n                T\t\n                T\t\n                T\t\n                T\t\n\n                F\t\n                F\t\n                T\t\n                T\t\n                T",
+      "prompt": "Exercise \\(\\PageIndex{2}\\): Determining Validity of Conditional Statements\n\nConstruct a truth table to analyze all possible outcomes for each of the following statements then determine whether they are valid.\n\n1. p∧q→~q\n\n2. p→~p∨q",
+      "sourceAnswers": [
+        "1. Applying the dominance of connectives, the statement p ∧ q → ~ q  is equivalent to ( p ∧ q ) → ( ~ q ). So, the columns of the truth table will include p , q, p ∧ q, ~ q, and p ∧ q → ~ q. Because there are only two basic propositions, p and q , the table will have 2 ( 2 ) = 4 2 ( 2 ) = 4 rows of truth values to account for all the possible outcomes. The statement is not valid because the last column is not all true.\n\n                \\(p\\)\t\n                \\(q\\)\t\n                \\(p∧q\\)\t\n                \\(~q\\)\t\n                \\(p∧q→~q\\)\t\n\n                T\t\n                T\t\n                T\t\n                F\t\n                F\t\n\n                T\t\n                F\t\n                F\t\n                T\t\n                T\t\n\n                F\t\n                T\t\n                F\t\n                F\t\n                T\t\n\n                F\t\n                F\t\n                F\t\n                T\t\n                T\t\n\nApplying the dominance of connectives, the statement p → ~ p ∨ q  is equivalent to ( p ) → ( ( ~ p ) ∨ q ). So, the columns of the truth table will include p , q , ~ p, ~ p ∨ q, and p → ( ~ p ∨ q ). Because there are only two basic propositions, p and q , the table will have 2 ( 2 ) = 4 2 ( 2 ) = 4 rows of truth values to account for all the possible outcomes. The statement is not valid because the last column is not all true.\n\n                \\(p\\)\t\n                \\(q\\)\t\n                \\(~p\\)\t\n                \\(~p∨q\\)\t\n                \\(p→(~p∨q)\\)\t\n\n                T\t\n                T\t\n                F\t\n                T\t\n                T\t\n\n                T\t\n                F\t\n                F\t\n                F\t\n                F\t\n\n                F\t\n                T\t\n                T\t\n                T\t\n                T\t\n\n                F\t\n                F\t\n                T\t\n                T\t\n                T"
+      ],
+      "hasFigure": false,
+      "status": "draft",
+      "answerVerified": false,
+      "translationStatus": "pending",
+      "mappingStatus": "pending"
+    },
+    {
+      "ordinal": 7,
+      "sourceNumber": "",
+      "sourceAnchor": "",
+      "kind": "example-or-exercise",
+      "context": "The truth table for the conditional statement below summarizes these results.\n\nNotice that the only time the conditional statement, \\(p→q,\\) is false is when the hypothesis, \\(p\\), is true and the conclusion, \\(q\\), is false.\n\nLogic Part 8: The Conditional and Tautologies",
+      "original": "Your Turn \\(\\PageIndex{2}\\)\n\nConstruct a truth table to analyze all possible outcomes for each of the following statements, then determine whether they are valid.\n\n1. \\(q \\rightarrow \\sim p \\vee q\\)\n\n2. \\(\\sim p \\rightarrow q \\wedge p\\)",
+      "prompt": "Your Turn \\(\\PageIndex{2}\\)\n\nConstruct a truth table to analyze all possible outcomes for each of the following statements, then determine whether they are valid.\n\n1. \\(q \\rightarrow \\sim p \\vee q\\)\n\n2. \\(\\sim p \\rightarrow q \\wedge p\\)",
+      "sourceAnswers": [],
+      "hasFigure": false,
+      "status": "draft",
+      "answerVerified": false,
+      "translationStatus": "pending",
+      "mappingStatus": "pending"
+    },
+    {
+      "ordinal": 8,
+      "sourceNumber": "",
+      "sourceAnchor": "",
+      "kind": "exercise-candidate",
+      "context": "The biconditional, \\(p↔q\\), is a two way contract; it is equivalent to the statement \\((p→q)∧(q→p).\\) A biconditional statement, \\(p↔q,\\) is true whenever the truth value of the hypothesis matches the truth value of the conclusion, otherwise it is false.\n\nThe truth table for the biconditional is summarized below.\n\nLogic Part 11B: Biconditional and Summary of Truth Value Rules in Logic",
+      "original": "Exercise \\(\\PageIndex{3}\\): Constructing Truth Tables for Biconditional Statements\n\nAssume both of the following statements are true: \\(p\\) : The plumber fixed the leak, and \\(q\\) : The homeowner paid the plumber \\(\\$ 150.00\\). Create a truth table to determine the truth value of each of the following biconditional statements.\n\n1. \\(p \\leftrightarrow q\\)\n\n2. \\(p \\leftrightarrow \\sim q\\)\n\n3. \\(\\sim p \\leftrightarrow \\sim q\\)\n\nAnswer\n\n1. Because p p is true and q q is true, the statement p ↔ q p ↔ q is “The plumber fixed the leak if and only if the homeowner paid them $150.00.” Because both p p and q q are true, the leak was fixed and the plumber was paid, meaning both parties satisfied their end of the bargain. The biconditional statement is true, as indicated by the truth table representing this case: T ↔ T = T.\n\n                \\(p\\)\t\n                \\(q\\)\t\n                \\(p↔q\\)\t\n\n                T\t\n                T\t\n                T\t\n\n2. p → ~ q p → ~ q translates to the statement, “The plumber fixed the leak if and only if the homeowner did not pay them $150.” If the plumber fixed the leak and the homeowner did not pay them, the homeowner will have broken their end of the contract. The biconditional statement is false, as indicated by the truth table representing this case:\n\n    T ↔ F = F.\n\n                \\(p\\)\t\n                \\(q\\)\t\n                \\(~q\\)\t\n                \\(p↔~q\\)\t\n\n                T\t\n                T\t\n                F\t\n                F\t\n\n3. ~ p ↔ ~ q ~ p ↔ ~ q translates to the statement, “The plumber did not fix the leak if and only if the homeowner did not pay them $150.” In this case, neither party—the plumber nor the homeowner—entered into the contract. The leak was not repaired, and the plumber was not paid. No agreement was broken. The biconditional statement is true, as indicated by the truth table representing this case: F ↔ F = T.\n\n                \\(p\\)\t\n                \\(q\\)\t\n                \\(~p\\)\t\n                \\(~q\\)\t\n                \\(~p↔~q\\)\t\n\n                T\t\n                T\t\n                F\t\n                F\t\n                T",
+      "prompt": "Exercise \\(\\PageIndex{3}\\): Constructing Truth Tables for Biconditional Statements\n\nAssume both of the following statements are true: \\(p\\) : The plumber fixed the leak, and \\(q\\) : The homeowner paid the plumber \\(\\$ 150.00\\). Create a truth table to determine the truth value of each of the following biconditional statements.\n\n1. \\(p \\leftrightarrow q\\)\n\n2. \\(p \\leftrightarrow \\sim q\\)\n\n3. \\(\\sim p \\leftrightarrow \\sim q\\)",
+      "sourceAnswers": [
+        "1. Because p p is true and q q is true, the statement p ↔ q p ↔ q is “The plumber fixed the leak if and only if the homeowner paid them $150.00.” Because both p p and q q are true, the leak was fixed and the plumber was paid, meaning both parties satisfied their end of the bargain. The biconditional statement is true, as indicated by the truth table representing this case: T ↔ T = T.\n\n                \\(p\\)\t\n                \\(q\\)\t\n                \\(p↔q\\)\t\n\n                T\t\n                T\t\n                T\t\n\n2. p → ~ q p → ~ q translates to the statement, “The plumber fixed the leak if and only if the homeowner did not pay them $150.” If the plumber fixed the leak and the homeowner did not pay them, the homeowner will have broken their end of the contract. The biconditional statement is false, as indicated by the truth table representing this case:\n\n    T ↔ F = F.\n\n                \\(p\\)\t\n                \\(q\\)\t\n                \\(~q\\)\t\n                \\(p↔~q\\)\t\n\n                T\t\n                T\t\n                F\t\n                F\t\n\n3. ~ p ↔ ~ q ~ p ↔ ~ q translates to the statement, “The plumber did not fix the leak if and only if the homeowner did not pay them $150.” In this case, neither party—the plumber nor the homeowner—entered into the contract. The leak was not repaired, and the plumber was not paid. No agreement was broken. The biconditional statement is true, as indicated by the truth table representing this case: F ↔ F = T.\n\n                \\(p\\)\t\n                \\(q\\)\t\n                \\(~p\\)\t\n                \\(~q\\)\t\n                \\(~p↔~q\\)\t\n\n                T\t\n                T\t\n                F\t\n                F\t\n                T"
+      ],
+      "hasFigure": false,
+      "status": "draft",
+      "answerVerified": false,
+      "translationStatus": "pending",
+      "mappingStatus": "pending"
+    },
+    {
+      "ordinal": 9,
+      "sourceNumber": "",
+      "sourceAnchor": "",
+      "kind": "example-or-exercise",
+      "context": "The biconditional, \\(p↔q\\), is a two way contract; it is equivalent to the statement \\((p→q)∧(q→p).\\) A biconditional statement, \\(p↔q,\\) is true whenever the truth value of the hypothesis matches the truth value of the conclusion, otherwise it is false.\n\nThe truth table for the biconditional is summarized below.\n\nLogic Part 11B: Biconditional and Summary of Truth Value Rules in Logic",
+      "original": "Your Turn \\(\\PageIndex{3}\\)\n\nAssume \\(p\\) is true and \\(q\\) is false: \\(p\\) : The contractor fixed the broken window, and \\(q\\) : The homeowner paid the contractor \\(\\$ 200\\). Create a truth table to determine the truth value of each of the following biconditional statements.\n\n1. \\(p \\leftrightarrow q\\)\n\n2. \\(p \\leftrightarrow \\sim q\\)\n\n3. \\(\\sim p \\leftrightarrow q\\)",
+      "prompt": "Your Turn \\(\\PageIndex{3}\\)\n\nAssume \\(p\\) is true and \\(q\\) is false: \\(p\\) : The contractor fixed the broken window, and \\(q\\) : The homeowner paid the contractor \\(\\$ 200\\). Create a truth table to determine the truth value of each of the following biconditional statements.\n\n1. \\(p \\leftrightarrow q\\)\n\n2. \\(p \\leftrightarrow \\sim q\\)\n\n3. \\(\\sim p \\leftrightarrow q\\)",
+      "sourceAnswers": [],
+      "hasFigure": false,
+      "status": "draft",
+      "answerVerified": false,
+      "translationStatus": "pending",
+      "mappingStatus": "pending"
+    },
+    {
+      "ordinal": 10,
+      "sourceNumber": "",
+      "sourceAnchor": "",
+      "kind": "exercise-candidate",
+      "context": "Logic Part 11B: Biconditional and Summary of Truth Value Rules in Logic\n\nThe biconditional, \\(p↔q,\\) is true whenever the truth values of \\(p\\) and \\(q\\) match, otherwise it is false.\n\nLogic Part 13: Truth Tables to Determine if Argument is Valid or Invalid",
+      "original": "Exercise \\(\\PageIndex{1}\\): Determining Validity of Biconditional Statements\n\nConstruct a truth table to analyze all possible outcomes for each of the following statements, then determine whether they are valid.\n\n1. \\(p \\wedge q \\leftrightarrow p \\wedge \\sim q\\)\n\n2. \\(p \\vee q \\leftrightarrow \\sim p \\vee q\\)\n\n3. \\(p \\rightarrow q \\leftrightarrow \\sim q \\rightarrow \\sim p\\)\n\n4. \\(p \\wedge q \\rightarrow \\sim r \\leftrightarrow p \\wedge q \\wedge r\\)\n\nAnswer\n\n1. Applying the dominance of connectives, the statement \\(p \\wedge q \\leftrightarrow p \\wedge \\sim q\\) is equivalent to \\((p \\wedge q) \\leftrightarrow(p \\wedge(\\sim q))\\). So, the columns of the truth table will include \\(p, q, p \\wedge q, \\sim q, p \\wedge \\sim q\\) and \\((p \\wedge q) \\leftrightarrow(p \\wedge \\sim q)\\). Because there are only two basic propositions, \\(p\\) and \\(q\\), the table will have \\(2(2)=4\\) rows of truth values to account for all the possible outcomes. The statement is not valid because the last column is not all true.\n\n                \\(p\\)\t\n                \\(q\\)\t\n                \\(p∧q\\)\t\n                \\(~q\\)\t\n                \\(p∧~q\\)\t\n                \\((p∧q)↔(p∧~q)\\)\t\n\n                T\t\n                T\t\n                T\t\n                F\t\n                F\t\n                F\t\n\n                T\t\n                F\t\n                F\t\n                T\t\n                T\t\n                F\t\n\n                F\t\n                T\t\n                F\t\n                F\t\n                F\t\n                T\t\n\n                F\t\n                F\t\n                F\t\n                T\t\n                F\t\n                T\t\n\n2. Applying the dominance of connectives, the statement \\(p \\vee q \\leftrightarrow \\sim p \\vee q\\) is equivalent to \\((p \\vee q) \\leftrightarrow((\\sim p) \\vee q)\\). So, the columns of the truth table will include \\(p, q, p \\vee q, \\sim p, \\sim p \\vee q\\), and \\((p \\vee q) \\leftrightarrow(\\sim p \\vee q)\\). Because there are only two basic propositions, \\(p\\) and \\(q\\), the table will have \\(2(2)=4\\) rows of truth values to account for all the possible outcomes. The statement is not valid because the last column is not all true.\n\n                \\(p\\)\t\n                \\(q\\)\t\n                \\(p∨q\\)\t\n                \\(~p\\)\t\n                \\(~p∨q\\)\t\n                \\((p∨q)↔(~p∨q)\\)\t\n\n                T\t\n                T\t\n                T\t\n                F\t\n                T\t\n                T\t\n\n                T\t\n                F\t\n                T\t\n                F\t\n                F\t\n                F\t\n\n                F\t\n                T\t\n                T\t\n                T\t\n                T\t\n                T\t\n\n                F\t\n                F\t\n                F\t\n                T\t\n                T\t\n                F\t\n\n3. Applying the dominance of connectives, the statement \\(p \\rightarrow q \\leftrightarrow \\sim q \\rightarrow \\sim p\\) is equivalent to \\((p \\rightarrow q) \\leftrightarrow((\\sim q) \\rightarrow(\\sim p))\\). So, the columns of the truth table will include \\(p, q, p \\rightarrow q, \\sim q\\), \\(\\sim p, \\sim q \\rightarrow \\sim p\\), and \\((p \\rightarrow q) \\leftrightarrow(\\sim q \\rightarrow \\sim p)\\). Because there are only two basic propositions, \\(p\\) and \\(q\\) the table will have \\(2(2)=4\\) rows of truth values to account for all the possible outcomes. The statement is valid because the last column is all true.\n\n                \\(p\\)\t\n                \\(q\\)\t\n                \\(p→q\\)\t\n                \\(~q\\)\t\n                \\(~p\\)\t\n                \\(~q→~p\\)\t\n                \\((p→q)↔(~q→~p)\\)\t\n\n                T\t\n                T\t\n                T\t\n                F\t\n                F\t\n                T\t\n                T\t\n\n                T\t\n                F\t\n                F\t\n                T\t\n                F\t\n                F\t\n                T\t\n\n                F\t\n                T\t\n                T\t\n                F\t\n                T\t\n                T\t\n                T\t\n\n                F\t\n                F\t\n                T\t\n                T\t\n                T\t\n                T\t\n                T\t\n\n4. Applying the dominance of connectives, the statement \\(p \\wedge q \\rightarrow \\sim r \\leftrightarrow p \\wedge q \\wedge r\\) is equivalent to \\(((p \\wedge q) \\rightarrow(\\sim r)) \\leftrightarrow((p \\wedge q) \\wedge r)\\). So, the columns of the truth table will include \\(p, q, r\\), \\(\\sim r, p \\wedge q,(p \\wedge q) \\wedge \\sim r,(p \\wedge q) \\wedge r\\), and \\(((p \\wedge q) \\rightarrow(\\sim r)) \\leftrightarrow((p \\wedge q) \\wedge r)\\). Because there are three basic propositions, \\(p, q\\), and \\(r\\), the table will have \\(2(2)(2)=8\\) rows of truth values to account for all the possible outcomes. The statement is not valid because the last column is not all true.\n\n                \\(p\\)\t\n                \\(q\\)\t\n                \\(r\\)\t\n                \\(~r\\)\t\n                \\(p∧q\\)\t\n                \\((p∧q)→~r\\)\t\n                \\((p∧q)∧r\\)\t\n                \\((p∧q→~r)↔(p∧q∧r)\\)\t\n\n                T\t\n                T\t\n                T\t\n                F\t\n                T\t\n                F\t\n                T\t\n                T\t\n\n                T\t\n                T\t\n                F\t\n                T\t\n                T\t\n                T\t\n                F\t\n                T\t\n\n                T\t\n                F\t\n                T\t\n                F\t\n                F\t\n                T\t\n                F\t\n                F\t\n\n                T\t\n                F\t\n                F\t\n                T\t\n                F\t\n                T\t\n                F\t\n                F\t\n\n                F\t\n                T\t\n                T\t\n                F\t\n                F\t\n                T\t\n                F\t\n                F\t\n\n                F\t\n                T\t\n                F\t\n                T\t\n                F\t\n                T\t\n                F\t\n                F\t\n\n                F\t\n                F\t\n                T\t\n                F\t\n                F\t\n                T\t\n                F\t\n                F\t\n\n                F\t\n                F\t\n                F\t\n                T\t\n                F\t\n                T\t\n                F\t\n                F",
+      "prompt": "Exercise \\(\\PageIndex{1}\\): Determining Validity of Biconditional Statements\n\nConstruct a truth table to analyze all possible outcomes for each of the following statements, then determine whether they are valid.\n\n1. \\(p \\wedge q \\leftrightarrow p \\wedge \\sim q\\)\n\n2. \\(p \\vee q \\leftrightarrow \\sim p \\vee q\\)\n\n3. \\(p \\rightarrow q \\leftrightarrow \\sim q \\rightarrow \\sim p\\)\n\n4. \\(p \\wedge q \\rightarrow \\sim r \\leftrightarrow p \\wedge q \\wedge r\\)",
+      "sourceAnswers": [
+        "1. Applying the dominance of connectives, the statement \\(p \\wedge q \\leftrightarrow p \\wedge \\sim q\\) is equivalent to \\((p \\wedge q) \\leftrightarrow(p \\wedge(\\sim q))\\). So, the columns of the truth table will include \\(p, q, p \\wedge q, \\sim q, p \\wedge \\sim q\\) and \\((p \\wedge q) \\leftrightarrow(p \\wedge \\sim q)\\). Because there are only two basic propositions, \\(p\\) and \\(q\\), the table will have \\(2(2)=4\\) rows of truth values to account for all the possible outcomes. The statement is not valid because the last column is not all true.\n\n                \\(p\\)\t\n                \\(q\\)\t\n                \\(p∧q\\)\t\n                \\(~q\\)\t\n                \\(p∧~q\\)\t\n                \\((p∧q)↔(p∧~q)\\)\t\n\n                T\t\n                T\t\n                T\t\n                F\t\n                F\t\n                F\t\n\n                T\t\n                F\t\n                F\t\n                T\t\n                T\t\n                F\t\n\n                F\t\n                T\t\n                F\t\n                F\t\n                F\t\n                T\t\n\n                F\t\n                F\t\n                F\t\n                T\t\n                F\t\n                T\t\n\n2. Applying the dominance of connectives, the statement \\(p \\vee q \\leftrightarrow \\sim p \\vee q\\) is equivalent to \\((p \\vee q) \\leftrightarrow((\\sim p) \\vee q)\\). So, the columns of the truth table will include \\(p, q, p \\vee q, \\sim p, \\sim p \\vee q\\), and \\((p \\vee q) \\leftrightarrow(\\sim p \\vee q)\\). Because there are only two basic propositions, \\(p\\) and \\(q\\), the table will have \\(2(2)=4\\) rows of truth values to account for all the possible outcomes. The statement is not valid because the last column is not all true.\n\n                \\(p\\)\t\n                \\(q\\)\t\n                \\(p∨q\\)\t\n                \\(~p\\)\t\n                \\(~p∨q\\)\t\n                \\((p∨q)↔(~p∨q)\\)\t\n\n                T\t\n                T\t\n                T\t\n                F\t\n                T\t\n                T\t\n\n                T\t\n                F\t\n                T\t\n                F\t\n                F\t\n                F\t\n\n                F\t\n                T\t\n                T\t\n                T\t\n                T\t\n                T\t\n\n                F\t\n                F\t\n                F\t\n                T\t\n                T\t\n                F\t\n\n3. Applying the dominance of connectives, the statement \\(p \\rightarrow q \\leftrightarrow \\sim q \\rightarrow \\sim p\\) is equivalent to \\((p \\rightarrow q) \\leftrightarrow((\\sim q) \\rightarrow(\\sim p))\\). So, the columns of the truth table will include \\(p, q, p \\rightarrow q, \\sim q\\), \\(\\sim p, \\sim q \\rightarrow \\sim p\\), and \\((p \\rightarrow q) \\leftrightarrow(\\sim q \\rightarrow \\sim p)\\). Because there are only two basic propositions, \\(p\\) and \\(q\\) the table will have \\(2(2)=4\\) rows of truth values to account for all the possible outcomes. The statement is valid because the last column is all true.\n\n                \\(p\\)\t\n                \\(q\\)\t\n                \\(p→q\\)\t\n                \\(~q\\)\t\n                \\(~p\\)\t\n                \\(~q→~p\\)\t\n                \\((p→q)↔(~q→~p)\\)\t\n\n                T\t\n                T\t\n                T\t\n                F\t\n                F\t\n                T\t\n                T\t\n\n                T\t\n                F\t\n                F\t\n                T\t\n                F\t\n                F\t\n                T\t\n\n                F\t\n                T\t\n                T\t\n                F\t\n                T\t\n                T\t\n                T\t\n\n                F\t\n                F\t\n                T\t\n                T\t\n                T\t\n                T\t\n                T\t\n\n4. Applying the dominance of connectives, the statement \\(p \\wedge q \\rightarrow \\sim r \\leftrightarrow p \\wedge q \\wedge r\\) is equivalent to \\(((p \\wedge q) \\rightarrow(\\sim r)) \\leftrightarrow((p \\wedge q) \\wedge r)\\). So, the columns of the truth table will include \\(p, q, r\\), \\(\\sim r, p \\wedge q,(p \\wedge q) \\wedge \\sim r,(p \\wedge q) \\wedge r\\), and \\(((p \\wedge q) \\rightarrow(\\sim r)) \\leftrightarrow((p \\wedge q) \\wedge r)\\). Because there are three basic propositions, \\(p, q\\), and \\(r\\), the table will have \\(2(2)(2)=8\\) rows of truth values to account for all the possible outcomes. The statement is not valid because the last column is not all true.\n\n                \\(p\\)\t\n                \\(q\\)\t\n                \\(r\\)\t\n                \\(~r\\)\t\n                \\(p∧q\\)\t\n                \\((p∧q)→~r\\)\t\n                \\((p∧q)∧r\\)\t\n                \\((p∧q→~r)↔(p∧q∧r)\\)\t\n\n                T\t\n                T\t\n                T\t\n                F\t\n                T\t\n                F\t\n                T\t\n                T\t\n\n                T\t\n                T\t\n                F\t\n                T\t\n                T\t\n                T\t\n                F\t\n                T\t\n\n                T\t\n                F\t\n                T\t\n                F\t\n                F\t\n                T\t\n                F\t\n                F\t\n\n                T\t\n                F\t\n                F\t\n                T\t\n                F\t\n                T\t\n                F\t\n                F\t\n\n                F\t\n                T\t\n                T\t\n                F\t\n                F\t\n                T\t\n                F\t\n                F\t\n\n                F\t\n                T\t\n                F\t\n                T\t\n                F\t\n                T\t\n                F\t\n                F\t\n\n                F\t\n                F\t\n                T\t\n                F\t\n                F\t\n                T\t\n                F\t\n                F\t\n\n                F\t\n                F\t\n                F\t\n                T\t\n                F\t\n                T\t\n                F\t\n                F"
+      ],
+      "hasFigure": false,
+      "status": "draft",
+      "answerVerified": false,
+      "translationStatus": "pending",
+      "mappingStatus": "pending"
+    },
+    {
+      "ordinal": 11,
+      "sourceNumber": "",
+      "sourceAnchor": "",
+      "kind": "example-or-exercise",
+      "context": "Logic Part 11B: Biconditional and Summary of Truth Value Rules in Logic\n\nThe biconditional, \\(p↔q,\\) is true whenever the truth values of \\(p\\) and \\(q\\) match, otherwise it is false.\n\nLogic Part 13: Truth Tables to Determine if Argument is Valid or Invalid",
+      "original": "Your Turn \\(\\PageIndex{1}\\)\n\nConstruct a truth table to analyze all possible outcomes for each of the following statements, then determine whether they are valid.\n\n1. \\(\\sim(p \\wedge q) \\leftrightarrow(\\sim p \\vee \\sim q)\\)\n\n2. \\(\\sim p \\leftrightarrow q \\wedge p\\)\n\n3. \\(p \\rightarrow q \\leftrightarrow \\sim p \\vee q\\)\n\n4. \\(p \\wedge q \\rightarrow r \\leftrightarrow \\sim p \\vee \\sim q \\vee r\\)",
+      "prompt": "Your Turn \\(\\PageIndex{1}\\)\n\nConstruct a truth table to analyze all possible outcomes for each of the following statements, then determine whether they are valid.\n\n1. \\(\\sim(p \\wedge q) \\leftrightarrow(\\sim p \\vee \\sim q)\\)\n\n2. \\(\\sim p \\leftrightarrow q \\wedge p\\)\n\n3. \\(p \\rightarrow q \\leftrightarrow \\sim p \\vee q\\)\n\n4. \\(p \\wedge q \\rightarrow r \\leftrightarrow \\sim p \\vee \\sim q \\vee r\\)",
+      "sourceAnswers": [],
+      "hasFigure": false,
+      "status": "draft",
+      "answerVerified": false,
+      "translationStatus": "pending",
+      "mappingStatus": "pending"
+    },
+    {
+      "ordinal": 12,
+      "sourceNumber": "1",
+      "sourceAnchor": "",
+      "kind": "exercise-candidate",
+      "context": "Check Your Understanding",
+      "original": "1. 1. In logic, a conditional statement can be thought of as a _____________.",
+      "prompt": "1. 1. In logic, a conditional statement can be thought of as a _____________.",
+      "sourceAnswers": [],
+      "hasFigure": false,
+      "status": "draft",
+      "answerVerified": false,
+      "translationStatus": "pending",
+      "mappingStatus": "pending"
+    },
+    {
+      "ordinal": 13,
+      "sourceNumber": "2",
+      "sourceAnchor": "",
+      "kind": "exercise-candidate",
+      "context": "Check Your Understanding",
+      "original": "2. If the hypothesis, \\(p\\), of a conditional statement is true, the _____, \\(q\\), must also be true for the conditional statement \\(\\(p \\to q\\) to be true.",
+      "prompt": "2. If the hypothesis, \\(p\\), of a conditional statement is true, the _____, \\(q\\), must also be true for the conditional statement \\(\\(p \\to q\\) to be true.",
+      "sourceAnswers": [],
+      "hasFigure": false,
+      "status": "draft",
+      "answerVerified": false,
+      "translationStatus": "pending",
+      "mappingStatus": "pending"
+    },
+    {
+      "ordinal": 14,
+      "sourceNumber": "3",
+      "sourceAnchor": "",
+      "kind": "exercise-candidate",
+      "context": "Check Your Understanding",
+      "original": "3. If the ______________ of a conditional statement is false, the conditional statement is true.",
+      "prompt": "3. If the ______________ of a conditional statement is false, the conditional statement is true.",
+      "sourceAnswers": [],
+      "hasFigure": false,
+      "status": "draft",
+      "answerVerified": false,
+      "translationStatus": "pending",
+      "mappingStatus": "pending"
+    },
+    {
+      "ordinal": 15,
+      "sourceNumber": "4",
+      "sourceAnchor": "",
+      "kind": "exercise-candidate",
+      "context": "Check Your Understanding",
+      "original": "4. The symbolic form of the _____________________ statement is \\(p \\leftrightarrow q\\)",
+      "prompt": "4. The symbolic form of the _____________________ statement is \\(p \\leftrightarrow q\\)",
+      "sourceAnswers": [],
+      "hasFigure": false,
+      "status": "draft",
+      "answerVerified": false,
+      "translationStatus": "pending",
+      "mappingStatus": "pending"
+    },
+    {
+      "ordinal": 16,
+      "sourceNumber": "5",
+      "sourceAnchor": "",
+      "kind": "exercise-candidate",
+      "context": "Check Your Understanding",
+      "original": "5. The _____________________ statement is equivalent to the statement \\((p \\to q) \\wedge \\left( {q \\to p} \\right).\\)",
+      "prompt": "5. The _____________________ statement is equivalent to the statement \\((p \\to q) \\wedge \\left( {q \\to p} \\right).\\)",
+      "sourceAnswers": [],
+      "hasFigure": false,
+      "status": "draft",
+      "answerVerified": false,
+      "translationStatus": "pending",
+      "mappingStatus": "pending"
+    },
+    {
+      "ordinal": 17,
+      "sourceNumber": "6",
+      "sourceAnchor": "",
+      "kind": "exercise-candidate",
+      "context": "Check Your Understanding",
+      "original": "6. \\(p\\) if and only if q is ____________ whenever the truth value of \\(p\\) matches the truth value of q, otherwise it is false.",
+      "prompt": "6. \\(p\\) if and only if q is ____________ whenever the truth value of \\(p\\) matches the truth value of q, otherwise it is false.",
+      "sourceAnswers": [],
+      "hasFigure": false,
+      "status": "draft",
+      "answerVerified": false,
+      "translationStatus": "pending",
+      "mappingStatus": "pending"
+    }
+  ],
+  "license": "CC BY 4.0",
+  "licenseEvidence": "This page titled 2.4:  Truth Tables for the Conditional and Biconditional was last modified on Thu, 02 Jan 2025 09:27:05 GMT and is shared under a CC BY  4.0  license and was authored, remixed, and/or curated by OpenStax via source content that was edited to the style and standards of the LibreTexts platform.",
+  "url": "https://math.libretexts.org/Bookshelves/Applied_Mathematics/Contemporary_Mathematics_(OpenStax)/02:_Logic/2.04:__Truth_Tables_for_the_Conditional_and_Biconditional",
+  "sha256": "8ad5b13ba93f6f74fbec441061676f2a535fe8607631ace829bc103596b47549",
+  "checkedAt": "2026-10-07",
+  "id": "d7f9cbbfb4d12ac7647c",
+  "bookId": "contemporary",
+  "licenseInherited": false,
+  "licenseSource": "https://math.libretexts.org/Bookshelves/Applied_Mathematics/Contemporary_Mathematics_(OpenStax)/02:_Logic/2.04:__Truth_Tables_for_the_Conditional_and_Biconditional",
+  "licenseUrl": "https://creativecommons.org/licenses/by/4.0/",
+  "authors": "OpenStax / Donna Kirk et al.",
+  "book": "Contemporary Mathematics",
+  "reviewStatus": "unreviewed",
+  "sourceLanguage": "en",
+  "translationStatus": "pending"
+}

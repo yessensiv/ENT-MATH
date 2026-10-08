@@ -1,0 +1,493 @@
+{
+  "title": "10.6: Solve Exponential and Logarithmic Equations",
+  "originalText": "Learning Objectives\n\nBy the end of this section, you will be able to:\n\nSolve logarithmic equations using the properties of logarithms\n\nSolve exponential equations using logarithms\n\nUse exponential models in applications\n\nBefore you get started, take this readiness quiz.\n\n1. Solve: \\(x^{2}=16\\).\n\n    If you missed this problem, review Example 6.46.\n\n2. Solve: \\(x^{2}−5x+6=0\\).\n\n    If you missed this problem, review Example 6.45.\n\n3. Solve: \\(x(x+6)=2x+5\\).\n\n    If you missed this problem, review Example 6.47.\n\nSolve Logarithmic Equations Using the Properties of Logarithms\n\nIn the section on logarithmic functions, we solved some equations by rewriting the equation in exponential form. Now that we have the properties of logarithms, we have additional methods we can use to solve logarithmic equations.\n\nIf our equation has two logarithms we can use a property that says that if \\(\\log _{a} M=\\log _{a} N\\) then it is true that \\(M=N\\). This is the One-to-One Property of Logarithmic Equations.\n\nDefinition \\(\\PageIndex{1}\\)\n\nOne-to-One Property of Logarithmic Equations\n\nFor \\(M>0,N>0,a>0\\), and \\(a≠1\\) is any real number:\n\nIf \\(\\log _{a} M=\\log _{a} N,\\) then \\(M=N\\).\n\nTo use this property, we must be certain that both sides of the equation are written with the same base.\n\nRemember that logarithms are defined only for positive real numbers. Check your results in the original equation. You may have obtained a result that gives a logarithm of zero or a negative number.\n\nExample \\(\\PageIndex{1}\\)\n\nSolve: \\(2 \\log _{5} x=\\log _{5} 81\\).\n\nSolution:\n\n\\(2 \\log _{5} x=\\log _{5} 81\\)\n\nUse the Power Property.\n\n\\(\\log _{5} x^{2}=\\log _{5} 81\\)\n\nUse the One-to-One Property, if \\(\\log _{a} M=\\log _{a} N\\), then \\(M=N\\).\n\n\\(x^{2}=81\\)\n\nSolve using the Square Root Property.\n\n\\(x=\\pm 9\\)\n\nWe eliminate \\(x=-9\\) as we cannot take the logarithm of a negative number.\n\n\\(x=9, \\cancel{x=-9}\\)\n\nCheck. \\(x=9\\)\n\n\\(\\begin{aligned}2 \\log _{5} x&=\\log _{5} 81 \\\\ 2 \\log _{5} 9 &\\stackrel{?}{=} \\log _{5} 81 \\\\ \\log _{5} 9^{2} & \\stackrel{?}{=}\\log _{5} 81 \\\\ \\log _{5} 81 & =\\log _{5} 81\\end{aligned}\\)\n\nExercise \\(\\PageIndex{1}\\)\n\nSolve: \\(2 \\log _{3} x=\\log _{3} 36\\)\n\nAnswer\n\n\\(x=6\\)\n\nExercise \\(\\PageIndex{2}\\)\n\nSolve: \\(3 \\log x=\\log 64\\)\n\nAnswer\n\n\\(x=4\\)\n\nAnother strategy to use to solve logarithmic equations is to condense sums or differences into a single logarithm.\n\nExample \\(\\PageIndex{2}\\)\n\nSolve: \\(\\log _{3} x+\\log _{3}(x-8)=2\\).\n\nSolution:\n\n\\(\\log _{3} x+\\log _{3}(x-8)=2\\)\n\nUse the Product Property, \\(\\log _{a} M+\\log _{a} N=\\log _{a} M \\cdot N\\).\n\n\\(\\log _{3} x(x-8)=2\\)\n\nRewrite in exponential form.\n\n\\(3^{2}=x(x-8)\\)\n\nSimplify.\n\n\\(9=x^{2}-8 x\\)\n\nSubtract \\(9\\) from each side.\n\n\\(0=x^{2}-8 x-9\\)\n\nFactor.\n\n\\(0=(x-9)(x+1)\\)\n\nUse the Zero-Product-Property\n\n\\(x-9=0, \\quad x+1=0\\)\n\nSolve each equation.\n\n\\(x=9, \\quad \\cancel{x=-1}\\)\n\nCheck. \\(x=-1\\)\n\n\\(\\begin{aligned} \\log _{3} x+\\log _{3}(x-8)&=2 \\\\ \\log _{3}(-1)+\\log _{3}(-1-8) &\\stackrel{?}{=}2\\end{aligned}\\)\n\nWe cannot take the log of a negative number.\n\nCheck. \\(x=9\\)\n\n\\(\\begin{aligned} \\log _{3} x+\\log _{3}(x-8) &=2 \\\\ \\log _{3} 9+\\log _{3}(9-8) & \\stackrel{?}{=} 2 \\\\ 2+0 &\\stackrel{?}{=}2 \\\\ 2 &=2 \\end{aligned}\\)\n\nExercise \\(\\PageIndex{3}\\)\n\nSolve: \\(\\log _{2} x+\\log _{2}(x-2)=3\\)\n\nAnswer\n\n\\(x=4\\)\n\nExercise \\(\\PageIndex{4}\\)\n\nSolve: \\(\\log _{2} x+\\log _{2}(x-6)=4\\)\n\nAnswer\n\n\\(x=8\\)\n\nWhen there are logarithms on both sides, we condense each side into a single logarithm. Remember to use the Power Property as needed.\n\nExample \\(\\PageIndex{3}\\)\n\nSolve: \\(\\log _{4}(x+6)-\\log _{4}(2 x+5)=-\\log _{4} x\\).\n\nSolution:\n\n\\(\\log _{4}(x+6)-\\log _{4}(2 x+5)=-\\log _{4} x\\)\n\nUse the Quotient Property on the left side and the PowerProperty on the right.\n\n\\(\\log _{4}\\left(\\frac{x+6}{2 x+5}\\right)=\\log _{4} x^{-1}\\)\n\nRewrite \\(x^{-1}=\\frac{1}{x}\\).\n\n\\(\\log _{4}\\left(\\frac{x+6}{2 x+5}\\right)=\\log _{4} \\frac{1}{x}\\)\n\nUse the One-to-One Property, if \\(\\log _{a} M=\\log _{a} N\\), then \\(M=N\\).\n\n\\(\\frac{x+6}{2 x+5}=\\frac{1}{x}\\)\n\nSolve the rational equation.\n\n\\(x(x+6)=2 x+5\\)\n\nDistribute.\n\n\\(x^{2}+6 x=2 x+5\\)\n\nWrite in standard form.\n\n\\(x^{2}+4 x-5=0\\)\n\nFactor.\n\n\\((x+5)(x-1)=0\\)\n\nUse the Zero-Product-Property.\n\n\\(x+5=0, \\quad x-1=0\\)\n\nSolve each equation.\n\n\\(\\cancel{x=-5}, \\quad x=1\\)\n\nCheck.\n\nWe leave the check for you.\n\nExercise \\(\\PageIndex{5}\\)\n\nSolve: \\(\\log (x+2)-\\log (4 x+3)=-\\log x\\).\n\nAnswer\n\n\\(x=3\\)\n\nExercise \\(\\PageIndex{6}\\)\n\nSolve: \\(\\log (x-2)-\\log (4 x+16)=\\log \\frac{1}{x}\\).\n\nAnswer\n\n\\(x=8\\)\n\nExample \\(\\PageIndex{4}\\) Solve Exponential Equations Using Logarithms\n\nSolve \\(5^{x}=11\\). Find the exact answer and then approximate it to three decimal places.\n\nSolution:\n\n\\(5^{x}=11\\)\n\nSince the exponential is isolated, take the logarithm of both sides.\n\n\\(\\log 5^{x}=\\log 11\\)\n\nUse the Power Property to get the \\(x\\) as a factor, not an exponent.\n\n\\(x \\log 5=\\log 11\\)\n\nSolve for \\(x\\). Find the exact answer.\n\n\\(x=\\frac{\\log 11}{\\log 5}\\)\n\nApproximate the answer.\n\n\\(x \\approx 1.490\\)\n\nSince \\(5^{1}=5\\) and \\(5^{2}=25\\), does it makes sense that \\(5^{1.490}≈11\\)?\n\nExercise \\(\\PageIndex{7}\\)\n\nSolve \\(7^{x}=43\\). Find the exact answer and then approximate it to three decimal places.\n\nAnswer\n\n\\(x=\\frac{\\log 43}{\\log 7} \\approx 1.933\\)\n\nExercise \\(\\PageIndex{8}\\)\n\nSolve \\(8^{x}=98\\). Find the exact answer and then approximate it to three decimal places.\n\nAnswer\n\n\\(x=\\frac{\\log 98}{\\log 8} \\approx 2.205\\)\n\nWhen we take the logarithm of both sides we will get the same result whether we use the common or the natural logarithm (try using the natural log in the last example. Did you get the same result?) When the exponential has base \\(e\\), we use the natural logarithm.\n\nExample \\(\\PageIndex{5}\\)\n\nSolve \\(3e^{x+2}=24\\). Find the exact answer and then approximate it to three decimal places.\n\nSolution:\n\n\\(3 e^{x+2}=24\\)\n\nIsolate the exponential by dividing both sides by \\(3\\).\n\n\\(e^{x+2}=8\\)\n\nTake the natural logarithm of both sides.\n\n\\(\\ln e^{x+2}=\\ln 8\\)\n\nUse the Power Property to get the \\(x\\) as a factor, not an exponent.\n\n\\((x+2) \\ln e=\\ln 8\\)\n\nUse the property \\(\\ln e=1\\) to simplify.\n\n\\(x+2=\\ln 8\\)\n\nSolve the equation. Find the exact answer.\n\n\\(x=\\ln 8-2\\)\n\nApproximate the answer.\n\n\\(x \\approx 0.079\\)\n\nExercise \\(\\PageIndex{9}\\)\n\nSolve \\(2e^{x−2}=18\\). Find the exact answer and then approximate it to three decimal places.\n\nAnswer\n\n\\(x=\\ln 9+2 \\approx 4.197\\)\n\nExercise \\(\\PageIndex{10}\\)\n\nSolve \\(5e^{2x}=25\\). Find the exact answer and then approximate it to three decimal places.\n\nAnswer\n\n\\(x=\\frac{\\ln 5}{2} \\approx 0.805\\)\n\nUse Exponential Models in Applications\n\nIn previous sections we were able to solve some applications that were modeled with exponential equations. Now that we have so many more options to solve these equations, we are able to solve more applications.\n\nWe will again use the Compound Interest Formulas and so we list them here for reference.\n\nDefinition \\(\\PageIndex{2}\\)\n\nCompound Interest\n\nFor a principal, \\(P\\), invested at an interest rate, \\(r\\), for \\(t\\) years, the new balance, \\(A\\) is:\n\n\\(\\begin{array}{ll}{A=P\\left(1+\\frac{r}{n}\\right)^{n t}} & {\\text { when compounded } n \\text { times a year. }} \\\\ {A=P e^{r t}} & {\\text { when compounded continuously. }}\\end{array}\\)\n\nExample \\(\\PageIndex{6}\\)\n\nJermael’s parents put $\\(10,000\\) in investments for his college expenses on his first birthday. They hope the investments will be worth $\\(50,000\\) when he turns \\(18\\). If the interest compounds continuously, approximately what rate of growth will they need to achieve their goal?\n\nSolution:\n\nIdentify the variables in the formula.\n\n\\(\\begin{aligned} A &=\\$ 50,000 \\\\ P &=\\$ 10,000 \\\\ r &=? \\\\ t &=17 \\text { years } \\\\ A &=P e^{r t} \\end{aligned}\\)\n\nSubstitute the values into the formula.\n\n\\(50,000=10,000 e^{r \\cdot 17}\\)\n\nSolve for \\(r\\). Divide each side by \\(10,000\\).\n\n\\(5=e^{17 r}\\)\n\nTake the natural log of each side.\n\n\\(\\ln 5=\\ln e^{17 r}\\)\n\nUse the Power Property.\n\n\\(\\ln 5=17 r \\ln e\\)\n\nSimplify.\n\n\\(\\ln 5=17 r\\)\n\nDivide each side by \\(17\\).\n\n\\(\\frac{\\ln 5}{17}=r\\)\n\nApproximate the answer.\n\n\\(r \\approx 0.095\\)\n\nConvert to a percentage.\n\n\\(r \\approx 9.5 \\%\\)\n\nThey need the rate of growth to be approximately \\(9.5\\)%.\n\nExercise \\(\\PageIndex{11}\\)\n\nHector invests $\\(10,000\\) at age \\(21\\). He hopes the investments will be worth $\\(150,000\\) when he turns \\(50\\). If the interest compounds continuously, approximately what rate of growth will he need to achieve his goal?\n\nAnswer\n\n\\(r \\approx 9.3 \\%\\)\n\nExercise \\(\\PageIndex{12}\\)\n\nRachel invests $\\(15,000\\) at age \\(25\\). She hopes the investments will be worth $\\(90,000\\) when she turns \\(40\\). If the interest compounds continuously, approximately what rate of growth will she need to achieve her goal?\n\nAnswer\n\n\\(r \\approx 11.9 \\%\\)\n\nWe have seen that growth and decay are modeled by exponential functions. For growth and decay we use the formula \\(A=A_{0} e^{k t}\\). Exponential growth has a positive rate of growth or growth constant, \\(k\\), and exponential decay has a negative rate of growth or decay constant, \\(k\\).\n\nDefinition \\(\\PageIndex{3}\\)\n\nExponential Growth and Decay\n\nFor an original amount, \\(A_{0}\\), that grows or decays at a rate, \\(k\\), for a certain time, \\(t\\), the final amount, \\(A\\), is:\n\n\\(A=A_{0} e^{k t}\\)\n\nWe can now solve applications that give us enough information to determine the rate of growth. We can then use that rate of growth to predict other situations.\n\nExample \\(\\PageIndex{7}\\)\n\nResearchers recorded that a certain bacteria population grew from \\(100\\) to \\(300\\) in \\(3\\) hours. At this rate of growth, how many bacteria will there be \\(24\\) hours from the start of the experiment?\n\nSolution:\n\nThis problem requires two main steps. First we must find the unknown rate, \\(k\\). Then we use that value of \\(k\\) to help us find the unknown number of bacteria.\n\nIdentify the variables in the formula.\n\n\\(\\begin{aligned} A &=300 \\\\ A_{0} &=100 \\\\ k &=? \\\\ t &=3 \\text { hours } \\\\ A &=A_{0} e^{k t} \\end{aligned}\\)\n\nSubstitute the values in the formula.\n\n\\(300=100 e^{k \\cdot 3}\\)\n\nSolve for \\(k\\). Divide each side by \\(100\\).\n\n\\(3=e^{3 k}\\)\n\nTake the natural log of each side.\n\n\\(\\ln 3=\\ln e^{3 k}\\)\n\nUse the Power Property.\n\n\\(\\ln 3=3 k \\ln e\\)\n\nSimplify.\n\n\\(\\ln 3=3 k\\)\n\nDivide each side by \\(3\\).\n\n\\(\\frac{\\ln 3}{3}=k\\)\n\nApproximate the answer.\n\n\\(k \\approx 0.366\\)\n\nWe use this rate of growth to predict the number of bacteria there will be in \\(24\\) hours.\n\n\\(\\begin{aligned} A &=? \\\\ A_{0} &=100 \\\\ k &=\\frac{\\ln 3}{3} \\\\ t &=24 \\text { hours } \\\\ A &=A_{0} e^{k t} \\end{aligned}\\)\n\nSubstitute in the values.\n\n\\(A=100 e^{\\frac{\\ln 3}{3} \\cdot 24}\\)\n\nEvaluate.\n\n\\(A \\approx 656,100\\)\n\nAt this rate of growth, they can expect \\(656,100\\) bacteria.\n\nExercise \\(\\PageIndex{13}\\)\n\nResearchers recorded that a certain bacteria population grew from \\(100\\) to \\(500\\) in \\(6\\) hours. At this rate of growth, how many bacteria will there be \\(24\\) hours from the start of the experiment?\n\nAnswer\n\nThere will be \\(62,500\\) bacteria.\n\nExercise \\(\\PageIndex{14}\\)\n\nResearchers recorded that a certain bacteria population declined from \\(700,000\\) to \\(400,000\\) in \\(5\\) hours after the administration of medication. At this rate of decay, how many bacteria will there be \\(24\\) hours from the start of the experiment?\n\nAnswer\n\nThere will be \\(5,870,061\\) bacteria.\n\nRadioactive substances decay or decompose according to the exponential decay formula. The amount of time it takes for the substance to decay to half of its original amount is called the half-life of the substance.\n\nSimilar to the previous example, we can use the given information to determine the constant of decay, and then use that constant to answer other questions.\n\nExample \\(\\PageIndex{8}\\)\n\nThe half-life of radium-226 is \\(1,590\\) years. How much of a \\(100\\) mg sample will be left in \\(500\\) years?\n\nSolution:\n\nThis problem requires two main steps. First we must find the decay constant \\(k\\). If we start with \\(100\\)-mg, at the half-life there will be \\(50\\)-mg remaining. We will use this information to find \\(k\\). Then we use that value of \\(k\\) to help us find the amount of sample that will be left in \\(500\\) years.\n\nIdentify the variables in the formula.\n\n\\(\\begin{aligned} A &=50 \\\\ A_{0} &=100 \\\\ k &=? \\\\ t &=1590 \\text { years } \\\\ A &=A_{0} e^{k t} \\end{aligned}\\)\n\nSubstitute the values in the formula.\n\n\\(50=100 e^{k \\cdot 1590}\\)\n\nSolve for \\(k\\). Divide each side by \\(100\\).\n\n\\(0.5=e^{1590 k}\\)\n\nTake the natural log of each side.\n\n\\(\\ln 0.5=\\ln e^{1590 k}\\)\n\nUse the Power Property.\n\n\\(\\ln 0.5=1590 k \\ln e\\)\n\nSimplify.\n\n\\(\\ln 0.5=1590 k\\)\n\nDivide each side by \\(1590\\).\n\n\\(\\frac{\\ln 0.5}{1590}=k\\) exact answer\n\nWe use this rate of growth to predict the amount that will be left in \\(500\\) years.\n\n\\(\\begin{aligned} A &=? \\\\ A_{0} &=100 \\\\ k &=\\frac{\\ln 0.5}{1590} \\\\ t &=500\\: \\mathrm{years} \\\\ A &=A_{0} e^{k t} \\end{aligned}\\)\n\nSubstitute in the values.\n\n\\(A=100 e^{\\frac{1 \\mathrm{n} 0.5}{1500} \\cdot 500}\\)\n\nEvaluate.\n\n\\(A \\approx 80.4 \\mathrm{mg}\\)\n\nIn \\(500\\) years there would be approximately \\(80.4\\) mg remaining.\n\nExercise \\(\\PageIndex{15}\\)\n\nThe half-life of magnesium-27 is \\(9.45\\) minutes. How much of a \\(10\\)-mg sample will be left in \\(6\\) minutes?\n\nAnswer\n\nThere will be \\(6.43\\) mg left.\n\nExercise \\(\\PageIndex{16}\\)\n\nThe half-life of radioactive iodine is \\(60\\) days. How much of a \\(50\\)-mg sample will be left in \\(40\\) days?\n\nAnswer\n\nThere will be \\(31.5\\) mg left.\n\nAccess these online resources for additional instruction and practice with solving exponential and logarithmic equations.\n\nSolving Logarithmic Equations\n\nSolving Logarithm Equations\n\nFinding the rate or time in a word problem on exponential growth or decay\n\nFinding the rate or time in a word problem on exponential growth or decay\n\nKey Concepts\n\nOne-to-One Property of Logarithmic Equations: For \\(M>0, N>0, a>0\\), and \\(a≠1\\) is any real number:\n\nIf \\(\\log _{a} M=\\log _{a} N,\\) then \\(M=N\\)\n\nCompound Interest:\n\n    For a principal, \\(P\\), invested at an interest rate, \\(r\\), for \\(t\\) years, the new balance, \\(A\\), is:\n\n\\(\\begin{array}{ll}{A} & {=P\\left(1+\\frac{r}{n}\\right)^{n t}} & {\\text { when compounded } n \\text { times a year. }} \\\\ {A} & {=P e^{r t}} & {\\text { when compounded continuously. }}\\end{array}\\)\n\nExponential Growth and Decay: For an original amount, \\(A_{0}\\) that grows or decays at a rate, \\(r\\), for a certain time \\(t\\), the final amount, \\(A\\), is \\(A=A_{0} e^{r t}\\).\n\nThis page titled 10.6: Solve Exponential and Logarithmic Equations was last modified on Mon, 14 Feb 2022 01:05:32 GMT and is shared under a CC BY  4.0  license and was authored, remixed, and/or curated by OpenStax via source content that was edited to the style and standards of the LibreTexts platform.",
+  "figures": [],
+  "references": [
+    {
+      "text": "Solving Logarithmic Equations",
+      "url": "https://openstax.org/l/37Solvelog"
+    },
+    {
+      "text": "Solving Logarithm Equations",
+      "url": "https://openstax.org/l/37sSolvelogeqs2"
+    },
+    {
+      "text": "Finding the rate or time in a word problem on exponential growth or decay",
+      "url": "https://openstax.org/l/37Solveforrate"
+    },
+    {
+      "text": "Finding the rate or time in a word problem on exponential growth or decay",
+      "url": "https://openstax.org/l/37Solveforrate2"
+    },
+    {
+      "text": "10.6: Solve Exponential and Logarithmic Equations",
+      "url": "https://math.libretexts.org/Bookshelves/Algebra/Intermediate_Algebra_1e_(OpenStax)/10%3A_Exponential_and_Logarithmic_Functions/10.06%3A_Solve_Exponential_and_Logarithmic_Equations"
+    },
+    {
+      "text": "CC BY  4.0",
+      "url": "https://creativecommons.org/licenses/by/4.0"
+    },
+    {
+      "text": "OpenStax",
+      "url": "https://openstax.org/"
+    },
+    {
+      "text": "source content",
+      "url": "https://openstax.org/details/books/intermediate-algebra-2e"
+    }
+  ],
+  "exercises": [
+    {
+      "ordinal": 1,
+      "sourceNumber": "1",
+      "sourceAnchor": "",
+      "kind": "exercise-candidate",
+      "context": "By the end of this section, you will be able to:\n\nBefore you get started, take this readiness quiz.",
+      "original": "1. Solve: \\(x^{2}=16\\).\n\n    If you missed this problem, review Example 6.46.",
+      "prompt": "1. Solve: \\(x^{2}=16\\).\n\n    If you missed this problem, review Example 6.46.",
+      "sourceAnswers": [],
+      "hasFigure": false,
+      "status": "draft",
+      "answerVerified": false,
+      "translationStatus": "pending",
+      "mappingStatus": "pending"
+    },
+    {
+      "ordinal": 2,
+      "sourceNumber": "2",
+      "sourceAnchor": "",
+      "kind": "exercise-candidate",
+      "context": "By the end of this section, you will be able to:\n\nBefore you get started, take this readiness quiz.",
+      "original": "2. Solve: \\(x^{2}−5x+6=0\\).\n\n    If you missed this problem, review Example 6.45.",
+      "prompt": "2. Solve: \\(x^{2}−5x+6=0\\).\n\n    If you missed this problem, review Example 6.45.",
+      "sourceAnswers": [],
+      "hasFigure": false,
+      "status": "draft",
+      "answerVerified": false,
+      "translationStatus": "pending",
+      "mappingStatus": "pending"
+    },
+    {
+      "ordinal": 3,
+      "sourceNumber": "3",
+      "sourceAnchor": "",
+      "kind": "exercise-candidate",
+      "context": "By the end of this section, you will be able to:\n\nBefore you get started, take this readiness quiz.",
+      "original": "3. Solve: \\(x(x+6)=2x+5\\).\n\n    If you missed this problem, review Example 6.47.",
+      "prompt": "3. Solve: \\(x(x+6)=2x+5\\).\n\n    If you missed this problem, review Example 6.47.",
+      "sourceAnswers": [],
+      "hasFigure": false,
+      "status": "draft",
+      "answerVerified": false,
+      "translationStatus": "pending",
+      "mappingStatus": "pending"
+    },
+    {
+      "ordinal": 4,
+      "sourceNumber": "",
+      "sourceAnchor": "",
+      "kind": "example-or-exercise",
+      "context": "If \\(\\log _{a} M=\\log _{a} N,\\) then \\(M=N\\).\n\nTo use this property, we must be certain that both sides of the equation are written with the same base.\n\nRemember that logarithms are defined only for positive real numbers. Check your results in the original equation. You may have obtained a result that gives a logarithm of zero or a negative number.",
+      "original": "Example \\(\\PageIndex{1}\\)\n\nSolve: \\(2 \\log _{5} x=\\log _{5} 81\\).\n\nSolution:\n\n\\(2 \\log _{5} x=\\log _{5} 81\\)\n\nUse the Power Property.\n\n\\(\\log _{5} x^{2}=\\log _{5} 81\\)\n\nUse the One-to-One Property, if \\(\\log _{a} M=\\log _{a} N\\), then \\(M=N\\).\n\n\\(x^{2}=81\\)\n\nSolve using the Square Root Property.\n\n\\(x=\\pm 9\\)\n\nWe eliminate \\(x=-9\\) as we cannot take the logarithm of a negative number.\n\n\\(x=9, \\cancel{x=-9}\\)\n\nCheck. \\(x=9\\)\n\n\\(\\begin{aligned}2 \\log _{5} x&=\\log _{5} 81 \\\\ 2 \\log _{5} 9 &\\stackrel{?}{=} \\log _{5} 81 \\\\ \\log _{5} 9^{2} & \\stackrel{?}{=}\\log _{5} 81 \\\\ \\log _{5} 81 & =\\log _{5} 81\\end{aligned}\\)",
+      "prompt": "Example \\(\\PageIndex{1}\\)\n\nSolve: \\(2 \\log _{5} x=\\log _{5} 81\\).\n\nSolution:\n\n\\(2 \\log _{5} x=\\log _{5} 81\\)\n\nUse the Power Property.\n\n\\(\\log _{5} x^{2}=\\log _{5} 81\\)\n\nUse the One-to-One Property, if \\(\\log _{a} M=\\log _{a} N\\), then \\(M=N\\).\n\n\\(x^{2}=81\\)\n\nSolve using the Square Root Property.\n\n\\(x=\\pm 9\\)\n\nWe eliminate \\(x=-9\\) as we cannot take the logarithm of a negative number.\n\n\\(x=9, \\cancel{x=-9}\\)\n\nCheck. \\(x=9\\)\n\n\\(\\begin{aligned}2 \\log _{5} x&=\\log _{5} 81 \\\\ 2 \\log _{5} 9 &\\stackrel{?}{=} \\log _{5} 81 \\\\ \\log _{5} 9^{2} & \\stackrel{?}{=}\\log _{5} 81 \\\\ \\log _{5} 81 & =\\log _{5} 81\\end{aligned}\\)",
+      "sourceAnswers": [],
+      "hasFigure": false,
+      "status": "draft",
+      "answerVerified": false,
+      "translationStatus": "pending",
+      "mappingStatus": "pending"
+    },
+    {
+      "ordinal": 5,
+      "sourceNumber": "",
+      "sourceAnchor": "",
+      "kind": "exercise-candidate",
+      "context": "If \\(\\log _{a} M=\\log _{a} N,\\) then \\(M=N\\).\n\nTo use this property, we must be certain that both sides of the equation are written with the same base.\n\nRemember that logarithms are defined only for positive real numbers. Check your results in the original equation. You may have obtained a result that gives a logarithm of zero or a negative number.",
+      "original": "Exercise \\(\\PageIndex{1}\\)\n\nSolve: \\(2 \\log _{3} x=\\log _{3} 36\\)\n\nAnswer\n\n\\(x=6\\)",
+      "prompt": "Exercise \\(\\PageIndex{1}\\)\n\nSolve: \\(2 \\log _{3} x=\\log _{3} 36\\)",
+      "sourceAnswers": [
+        "\\(x=6\\)"
+      ],
+      "hasFigure": false,
+      "status": "draft",
+      "answerVerified": false,
+      "translationStatus": "pending",
+      "mappingStatus": "pending"
+    },
+    {
+      "ordinal": 6,
+      "sourceNumber": "",
+      "sourceAnchor": "",
+      "kind": "exercise-candidate",
+      "context": "If \\(\\log _{a} M=\\log _{a} N,\\) then \\(M=N\\).\n\nTo use this property, we must be certain that both sides of the equation are written with the same base.\n\nRemember that logarithms are defined only for positive real numbers. Check your results in the original equation. You may have obtained a result that gives a logarithm of zero or a negative number.",
+      "original": "Exercise \\(\\PageIndex{2}\\)\n\nSolve: \\(3 \\log x=\\log 64\\)\n\nAnswer\n\n\\(x=4\\)",
+      "prompt": "Exercise \\(\\PageIndex{2}\\)\n\nSolve: \\(3 \\log x=\\log 64\\)",
+      "sourceAnswers": [
+        "\\(x=4\\)"
+      ],
+      "hasFigure": false,
+      "status": "draft",
+      "answerVerified": false,
+      "translationStatus": "pending",
+      "mappingStatus": "pending"
+    },
+    {
+      "ordinal": 7,
+      "sourceNumber": "",
+      "sourceAnchor": "",
+      "kind": "example-or-exercise",
+      "context": "To use this property, we must be certain that both sides of the equation are written with the same base.\n\nRemember that logarithms are defined only for positive real numbers. Check your results in the original equation. You may have obtained a result that gives a logarithm of zero or a negative number.\n\nAnother strategy to use to solve logarithmic equations is to condense sums or differences into a single logarithm.",
+      "original": "Example \\(\\PageIndex{2}\\)\n\nSolve: \\(\\log _{3} x+\\log _{3}(x-8)=2\\).\n\nSolution:\n\n\\(\\log _{3} x+\\log _{3}(x-8)=2\\)\n\nUse the Product Property, \\(\\log _{a} M+\\log _{a} N=\\log _{a} M \\cdot N\\).\n\n\\(\\log _{3} x(x-8)=2\\)\n\nRewrite in exponential form.\n\n\\(3^{2}=x(x-8)\\)\n\nSimplify.\n\n\\(9=x^{2}-8 x\\)\n\nSubtract \\(9\\) from each side.\n\n\\(0=x^{2}-8 x-9\\)\n\nFactor.\n\n\\(0=(x-9)(x+1)\\)\n\nUse the Zero-Product-Property\n\n\\(x-9=0, \\quad x+1=0\\)\n\nSolve each equation.\n\n\\(x=9, \\quad \\cancel{x=-1}\\)\n\nCheck. \\(x=-1\\)\n\n\\(\\begin{aligned} \\log _{3} x+\\log _{3}(x-8)&=2 \\\\ \\log _{3}(-1)+\\log _{3}(-1-8) &\\stackrel{?}{=}2\\end{aligned}\\)\n\nWe cannot take the log of a negative number.\n\nCheck. \\(x=9\\)\n\n\\(\\begin{aligned} \\log _{3} x+\\log _{3}(x-8) &=2 \\\\ \\log _{3} 9+\\log _{3}(9-8) & \\stackrel{?}{=} 2 \\\\ 2+0 &\\stackrel{?}{=}2 \\\\ 2 &=2 \\end{aligned}\\)",
+      "prompt": "Example \\(\\PageIndex{2}\\)\n\nSolve: \\(\\log _{3} x+\\log _{3}(x-8)=2\\).\n\nSolution:\n\n\\(\\log _{3} x+\\log _{3}(x-8)=2\\)\n\nUse the Product Property, \\(\\log _{a} M+\\log _{a} N=\\log _{a} M \\cdot N\\).\n\n\\(\\log _{3} x(x-8)=2\\)\n\nRewrite in exponential form.\n\n\\(3^{2}=x(x-8)\\)\n\nSimplify.\n\n\\(9=x^{2}-8 x\\)\n\nSubtract \\(9\\) from each side.\n\n\\(0=x^{2}-8 x-9\\)\n\nFactor.\n\n\\(0=(x-9)(x+1)\\)\n\nUse the Zero-Product-Property\n\n\\(x-9=0, \\quad x+1=0\\)\n\nSolve each equation.\n\n\\(x=9, \\quad \\cancel{x=-1}\\)\n\nCheck. \\(x=-1\\)\n\n\\(\\begin{aligned} \\log _{3} x+\\log _{3}(x-8)&=2 \\\\ \\log _{3}(-1)+\\log _{3}(-1-8) &\\stackrel{?}{=}2\\end{aligned}\\)\n\nWe cannot take the log of a negative number.\n\nCheck. \\(x=9\\)\n\n\\(\\begin{aligned} \\log _{3} x+\\log _{3}(x-8) &=2 \\\\ \\log _{3} 9+\\log _{3}(9-8) & \\stackrel{?}{=} 2 \\\\ 2+0 &\\stackrel{?}{=}2 \\\\ 2 &=2 \\end{aligned}\\)",
+      "sourceAnswers": [],
+      "hasFigure": false,
+      "status": "draft",
+      "answerVerified": false,
+      "translationStatus": "pending",
+      "mappingStatus": "pending"
+    },
+    {
+      "ordinal": 8,
+      "sourceNumber": "",
+      "sourceAnchor": "",
+      "kind": "exercise-candidate",
+      "context": "To use this property, we must be certain that both sides of the equation are written with the same base.\n\nRemember that logarithms are defined only for positive real numbers. Check your results in the original equation. You may have obtained a result that gives a logarithm of zero or a negative number.\n\nAnother strategy to use to solve logarithmic equations is to condense sums or differences into a single logarithm.",
+      "original": "Exercise \\(\\PageIndex{3}\\)\n\nSolve: \\(\\log _{2} x+\\log _{2}(x-2)=3\\)\n\nAnswer\n\n\\(x=4\\)",
+      "prompt": "Exercise \\(\\PageIndex{3}\\)\n\nSolve: \\(\\log _{2} x+\\log _{2}(x-2)=3\\)",
+      "sourceAnswers": [
+        "\\(x=4\\)"
+      ],
+      "hasFigure": false,
+      "status": "draft",
+      "answerVerified": false,
+      "translationStatus": "pending",
+      "mappingStatus": "pending"
+    },
+    {
+      "ordinal": 9,
+      "sourceNumber": "",
+      "sourceAnchor": "",
+      "kind": "exercise-candidate",
+      "context": "To use this property, we must be certain that both sides of the equation are written with the same base.\n\nRemember that logarithms are defined only for positive real numbers. Check your results in the original equation. You may have obtained a result that gives a logarithm of zero or a negative number.\n\nAnother strategy to use to solve logarithmic equations is to condense sums or differences into a single logarithm.",
+      "original": "Exercise \\(\\PageIndex{4}\\)\n\nSolve: \\(\\log _{2} x+\\log _{2}(x-6)=4\\)\n\nAnswer\n\n\\(x=8\\)",
+      "prompt": "Exercise \\(\\PageIndex{4}\\)\n\nSolve: \\(\\log _{2} x+\\log _{2}(x-6)=4\\)",
+      "sourceAnswers": [
+        "\\(x=8\\)"
+      ],
+      "hasFigure": false,
+      "status": "draft",
+      "answerVerified": false,
+      "translationStatus": "pending",
+      "mappingStatus": "pending"
+    },
+    {
+      "ordinal": 10,
+      "sourceNumber": "",
+      "sourceAnchor": "",
+      "kind": "example-or-exercise",
+      "context": "Remember that logarithms are defined only for positive real numbers. Check your results in the original equation. You may have obtained a result that gives a logarithm of zero or a negative number.\n\nAnother strategy to use to solve logarithmic equations is to condense sums or differences into a single logarithm.\n\nWhen there are logarithms on both sides, we condense each side into a single logarithm. Remember to use the Power Property as needed.",
+      "original": "Example \\(\\PageIndex{3}\\)\n\nSolve: \\(\\log _{4}(x+6)-\\log _{4}(2 x+5)=-\\log _{4} x\\).\n\nSolution:\n\n\\(\\log _{4}(x+6)-\\log _{4}(2 x+5)=-\\log _{4} x\\)\n\nUse the Quotient Property on the left side and the PowerProperty on the right.\n\n\\(\\log _{4}\\left(\\frac{x+6}{2 x+5}\\right)=\\log _{4} x^{-1}\\)\n\nRewrite \\(x^{-1}=\\frac{1}{x}\\).\n\n\\(\\log _{4}\\left(\\frac{x+6}{2 x+5}\\right)=\\log _{4} \\frac{1}{x}\\)\n\nUse the One-to-One Property, if \\(\\log _{a} M=\\log _{a} N\\), then \\(M=N\\).\n\n\\(\\frac{x+6}{2 x+5}=\\frac{1}{x}\\)\n\nSolve the rational equation.\n\n\\(x(x+6)=2 x+5\\)\n\nDistribute.\n\n\\(x^{2}+6 x=2 x+5\\)\n\nWrite in standard form.\n\n\\(x^{2}+4 x-5=0\\)\n\nFactor.\n\n\\((x+5)(x-1)=0\\)\n\nUse the Zero-Product-Property.\n\n\\(x+5=0, \\quad x-1=0\\)\n\nSolve each equation.\n\n\\(\\cancel{x=-5}, \\quad x=1\\)\n\nCheck.\n\nWe leave the check for you.",
+      "prompt": "Example \\(\\PageIndex{3}\\)\n\nSolve: \\(\\log _{4}(x+6)-\\log _{4}(2 x+5)=-\\log _{4} x\\).\n\nSolution:\n\n\\(\\log _{4}(x+6)-\\log _{4}(2 x+5)=-\\log _{4} x\\)\n\nUse the Quotient Property on the left side and the PowerProperty on the right.\n\n\\(\\log _{4}\\left(\\frac{x+6}{2 x+5}\\right)=\\log _{4} x^{-1}\\)\n\nRewrite \\(x^{-1}=\\frac{1}{x}\\).\n\n\\(\\log _{4}\\left(\\frac{x+6}{2 x+5}\\right)=\\log _{4} \\frac{1}{x}\\)\n\nUse the One-to-One Property, if \\(\\log _{a} M=\\log _{a} N\\), then \\(M=N\\).\n\n\\(\\frac{x+6}{2 x+5}=\\frac{1}{x}\\)\n\nSolve the rational equation.\n\n\\(x(x+6)=2 x+5\\)\n\nDistribute.\n\n\\(x^{2}+6 x=2 x+5\\)\n\nWrite in standard form.\n\n\\(x^{2}+4 x-5=0\\)\n\nFactor.\n\n\\((x+5)(x-1)=0\\)\n\nUse the Zero-Product-Property.\n\n\\(x+5=0, \\quad x-1=0\\)\n\nSolve each equation.\n\n\\(\\cancel{x=-5}, \\quad x=1\\)\n\nCheck.\n\nWe leave the check for you.",
+      "sourceAnswers": [],
+      "hasFigure": false,
+      "status": "draft",
+      "answerVerified": false,
+      "translationStatus": "pending",
+      "mappingStatus": "pending"
+    },
+    {
+      "ordinal": 11,
+      "sourceNumber": "",
+      "sourceAnchor": "",
+      "kind": "exercise-candidate",
+      "context": "Remember that logarithms are defined only for positive real numbers. Check your results in the original equation. You may have obtained a result that gives a logarithm of zero or a negative number.\n\nAnother strategy to use to solve logarithmic equations is to condense sums or differences into a single logarithm.\n\nWhen there are logarithms on both sides, we condense each side into a single logarithm. Remember to use the Power Property as needed.",
+      "original": "Exercise \\(\\PageIndex{5}\\)\n\nSolve: \\(\\log (x+2)-\\log (4 x+3)=-\\log x\\).\n\nAnswer\n\n\\(x=3\\)",
+      "prompt": "Exercise \\(\\PageIndex{5}\\)\n\nSolve: \\(\\log (x+2)-\\log (4 x+3)=-\\log x\\).",
+      "sourceAnswers": [
+        "\\(x=3\\)"
+      ],
+      "hasFigure": false,
+      "status": "draft",
+      "answerVerified": false,
+      "translationStatus": "pending",
+      "mappingStatus": "pending"
+    },
+    {
+      "ordinal": 12,
+      "sourceNumber": "",
+      "sourceAnchor": "",
+      "kind": "exercise-candidate",
+      "context": "Remember that logarithms are defined only for positive real numbers. Check your results in the original equation. You may have obtained a result that gives a logarithm of zero or a negative number.\n\nAnother strategy to use to solve logarithmic equations is to condense sums or differences into a single logarithm.\n\nWhen there are logarithms on both sides, we condense each side into a single logarithm. Remember to use the Power Property as needed.",
+      "original": "Exercise \\(\\PageIndex{6}\\)\n\nSolve: \\(\\log (x-2)-\\log (4 x+16)=\\log \\frac{1}{x}\\).\n\nAnswer\n\n\\(x=8\\)",
+      "prompt": "Exercise \\(\\PageIndex{6}\\)\n\nSolve: \\(\\log (x-2)-\\log (4 x+16)=\\log \\frac{1}{x}\\).",
+      "sourceAnswers": [
+        "\\(x=8\\)"
+      ],
+      "hasFigure": false,
+      "status": "draft",
+      "answerVerified": false,
+      "translationStatus": "pending",
+      "mappingStatus": "pending"
+    },
+    {
+      "ordinal": 13,
+      "sourceNumber": "",
+      "sourceAnchor": "",
+      "kind": "example-or-exercise",
+      "context": "Remember that logarithms are defined only for positive real numbers. Check your results in the original equation. You may have obtained a result that gives a logarithm of zero or a negative number.\n\nAnother strategy to use to solve logarithmic equations is to condense sums or differences into a single logarithm.\n\nWhen there are logarithms on both sides, we condense each side into a single logarithm. Remember to use the Power Property as needed.",
+      "original": "Example \\(\\PageIndex{4}\\) Solve Exponential Equations Using Logarithms\n\nSolve \\(5^{x}=11\\). Find the exact answer and then approximate it to three decimal places.\n\nSolution:\n\n\\(5^{x}=11\\)\n\nSince the exponential is isolated, take the logarithm of both sides.\n\n\\(\\log 5^{x}=\\log 11\\)\n\nUse the Power Property to get the \\(x\\) as a factor, not an exponent.\n\n\\(x \\log 5=\\log 11\\)\n\nSolve for \\(x\\). Find the exact answer.\n\n\\(x=\\frac{\\log 11}{\\log 5}\\)\n\nApproximate the answer.\n\n\\(x \\approx 1.490\\)\n\nSince \\(5^{1}=5\\) and \\(5^{2}=25\\), does it makes sense that \\(5^{1.490}≈11\\)?",
+      "prompt": "Example \\(\\PageIndex{4}\\) Solve Exponential Equations Using Logarithms\n\nSolve \\(5^{x}=11\\). Find the exact answer and then approximate it to three decimal places.\n\nSolution:\n\n\\(5^{x}=11\\)\n\nSince the exponential is isolated, take the logarithm of both sides.\n\n\\(\\log 5^{x}=\\log 11\\)\n\nUse the Power Property to get the \\(x\\) as a factor, not an exponent.\n\n\\(x \\log 5=\\log 11\\)\n\nSolve for \\(x\\). Find the exact answer.\n\n\\(x=\\frac{\\log 11}{\\log 5}\\)\n\nApproximate the answer.\n\n\\(x \\approx 1.490\\)\n\nSince \\(5^{1}=5\\) and \\(5^{2}=25\\), does it makes sense that \\(5^{1.490}≈11\\)?",
+      "sourceAnswers": [],
+      "hasFigure": false,
+      "status": "draft",
+      "answerVerified": false,
+      "translationStatus": "pending",
+      "mappingStatus": "pending"
+    },
+    {
+      "ordinal": 14,
+      "sourceNumber": "",
+      "sourceAnchor": "",
+      "kind": "exercise-candidate",
+      "context": "Remember that logarithms are defined only for positive real numbers. Check your results in the original equation. You may have obtained a result that gives a logarithm of zero or a negative number.\n\nAnother strategy to use to solve logarithmic equations is to condense sums or differences into a single logarithm.\n\nWhen there are logarithms on both sides, we condense each side into a single logarithm. Remember to use the Power Property as needed.",
+      "original": "Exercise \\(\\PageIndex{7}\\)\n\nSolve \\(7^{x}=43\\). Find the exact answer and then approximate it to three decimal places.\n\nAnswer\n\n\\(x=\\frac{\\log 43}{\\log 7} \\approx 1.933\\)",
+      "prompt": "Exercise \\(\\PageIndex{7}\\)\n\nSolve \\(7^{x}=43\\). Find the exact answer and then approximate it to three decimal places.",
+      "sourceAnswers": [
+        "\\(x=\\frac{\\log 43}{\\log 7} \\approx 1.933\\)"
+      ],
+      "hasFigure": false,
+      "status": "draft",
+      "answerVerified": false,
+      "translationStatus": "pending",
+      "mappingStatus": "pending"
+    },
+    {
+      "ordinal": 15,
+      "sourceNumber": "",
+      "sourceAnchor": "",
+      "kind": "exercise-candidate",
+      "context": "Remember that logarithms are defined only for positive real numbers. Check your results in the original equation. You may have obtained a result that gives a logarithm of zero or a negative number.\n\nAnother strategy to use to solve logarithmic equations is to condense sums or differences into a single logarithm.\n\nWhen there are logarithms on both sides, we condense each side into a single logarithm. Remember to use the Power Property as needed.",
+      "original": "Exercise \\(\\PageIndex{8}\\)\n\nSolve \\(8^{x}=98\\). Find the exact answer and then approximate it to three decimal places.\n\nAnswer\n\n\\(x=\\frac{\\log 98}{\\log 8} \\approx 2.205\\)",
+      "prompt": "Exercise \\(\\PageIndex{8}\\)\n\nSolve \\(8^{x}=98\\). Find the exact answer and then approximate it to three decimal places.",
+      "sourceAnswers": [
+        "\\(x=\\frac{\\log 98}{\\log 8} \\approx 2.205\\)"
+      ],
+      "hasFigure": false,
+      "status": "draft",
+      "answerVerified": false,
+      "translationStatus": "pending",
+      "mappingStatus": "pending"
+    },
+    {
+      "ordinal": 16,
+      "sourceNumber": "",
+      "sourceAnchor": "",
+      "kind": "example-or-exercise",
+      "context": "Another strategy to use to solve logarithmic equations is to condense sums or differences into a single logarithm.\n\nWhen there are logarithms on both sides, we condense each side into a single logarithm. Remember to use the Power Property as needed.\n\nWhen we take the logarithm of both sides we will get the same result whether we use the common or the natural logarithm (try using the natural log in the last example. Did you get the same result?) When the exponential has base \\(e\\), we use the natural logarithm.",
+      "original": "Example \\(\\PageIndex{5}\\)\n\nSolve \\(3e^{x+2}=24\\). Find the exact answer and then approximate it to three decimal places.\n\nSolution:\n\n\\(3 e^{x+2}=24\\)\n\nIsolate the exponential by dividing both sides by \\(3\\).\n\n\\(e^{x+2}=8\\)\n\nTake the natural logarithm of both sides.\n\n\\(\\ln e^{x+2}=\\ln 8\\)\n\nUse the Power Property to get the \\(x\\) as a factor, not an exponent.\n\n\\((x+2) \\ln e=\\ln 8\\)\n\nUse the property \\(\\ln e=1\\) to simplify.\n\n\\(x+2=\\ln 8\\)\n\nSolve the equation. Find the exact answer.\n\n\\(x=\\ln 8-2\\)\n\nApproximate the answer.\n\n\\(x \\approx 0.079\\)",
+      "prompt": "Example \\(\\PageIndex{5}\\)\n\nSolve \\(3e^{x+2}=24\\). Find the exact answer and then approximate it to three decimal places.\n\nSolution:\n\n\\(3 e^{x+2}=24\\)\n\nIsolate the exponential by dividing both sides by \\(3\\).\n\n\\(e^{x+2}=8\\)\n\nTake the natural logarithm of both sides.\n\n\\(\\ln e^{x+2}=\\ln 8\\)\n\nUse the Power Property to get the \\(x\\) as a factor, not an exponent.\n\n\\((x+2) \\ln e=\\ln 8\\)\n\nUse the property \\(\\ln e=1\\) to simplify.\n\n\\(x+2=\\ln 8\\)\n\nSolve the equation. Find the exact answer.\n\n\\(x=\\ln 8-2\\)\n\nApproximate the answer.\n\n\\(x \\approx 0.079\\)",
+      "sourceAnswers": [],
+      "hasFigure": false,
+      "status": "draft",
+      "answerVerified": false,
+      "translationStatus": "pending",
+      "mappingStatus": "pending"
+    },
+    {
+      "ordinal": 17,
+      "sourceNumber": "",
+      "sourceAnchor": "",
+      "kind": "exercise-candidate",
+      "context": "Another strategy to use to solve logarithmic equations is to condense sums or differences into a single logarithm.\n\nWhen there are logarithms on both sides, we condense each side into a single logarithm. Remember to use the Power Property as needed.\n\nWhen we take the logarithm of both sides we will get the same result whether we use the common or the natural logarithm (try using the natural log in the last example. Did you get the same result?) When the exponential has base \\(e\\), we use the natural logarithm.",
+      "original": "Exercise \\(\\PageIndex{9}\\)\n\nSolve \\(2e^{x−2}=18\\). Find the exact answer and then approximate it to three decimal places.\n\nAnswer\n\n\\(x=\\ln 9+2 \\approx 4.197\\)",
+      "prompt": "Exercise \\(\\PageIndex{9}\\)\n\nSolve \\(2e^{x−2}=18\\). Find the exact answer and then approximate it to three decimal places.",
+      "sourceAnswers": [
+        "\\(x=\\ln 9+2 \\approx 4.197\\)"
+      ],
+      "hasFigure": false,
+      "status": "draft",
+      "answerVerified": false,
+      "translationStatus": "pending",
+      "mappingStatus": "pending"
+    },
+    {
+      "ordinal": 18,
+      "sourceNumber": "",
+      "sourceAnchor": "",
+      "kind": "exercise-candidate",
+      "context": "Another strategy to use to solve logarithmic equations is to condense sums or differences into a single logarithm.\n\nWhen there are logarithms on both sides, we condense each side into a single logarithm. Remember to use the Power Property as needed.\n\nWhen we take the logarithm of both sides we will get the same result whether we use the common or the natural logarithm (try using the natural log in the last example. Did you get the same result?) When the exponential has base \\(e\\), we use the natural logarithm.",
+      "original": "Exercise \\(\\PageIndex{10}\\)\n\nSolve \\(5e^{2x}=25\\). Find the exact answer and then approximate it to three decimal places.\n\nAnswer\n\n\\(x=\\frac{\\ln 5}{2} \\approx 0.805\\)",
+      "prompt": "Exercise \\(\\PageIndex{10}\\)\n\nSolve \\(5e^{2x}=25\\). Find the exact answer and then approximate it to three decimal places.",
+      "sourceAnswers": [
+        "\\(x=\\frac{\\ln 5}{2} \\approx 0.805\\)"
+      ],
+      "hasFigure": false,
+      "status": "draft",
+      "answerVerified": false,
+      "translationStatus": "pending",
+      "mappingStatus": "pending"
+    },
+    {
+      "ordinal": 19,
+      "sourceNumber": "",
+      "sourceAnchor": "",
+      "kind": "example-or-exercise",
+      "context": "Compound Interest\n\nFor a principal, \\(P\\), invested at an interest rate, \\(r\\), for \\(t\\) years, the new balance, \\(A\\) is:\n\n\\(\\begin{array}{ll}{A=P\\left(1+\\frac{r}{n}\\right)^{n t}} & {\\text { when compounded } n \\text { times a year. }} \\\\ {A=P e^{r t}} & {\\text { when compounded continuously. }}\\end{array}\\)",
+      "original": "Example \\(\\PageIndex{6}\\)\n\nJermael’s parents put $\\(10,000\\) in investments for his college expenses on his first birthday. They hope the investments will be worth $\\(50,000\\) when he turns \\(18\\). If the interest compounds continuously, approximately what rate of growth will they need to achieve their goal?\n\nSolution:\n\nIdentify the variables in the formula.\n\n\\(\\begin{aligned} A &=\\$ 50,000 \\\\ P &=\\$ 10,000 \\\\ r &=? \\\\ t &=17 \\text { years } \\\\ A &=P e^{r t} \\end{aligned}\\)\n\nSubstitute the values into the formula.\n\n\\(50,000=10,000 e^{r \\cdot 17}\\)\n\nSolve for \\(r\\). Divide each side by \\(10,000\\).\n\n\\(5=e^{17 r}\\)\n\nTake the natural log of each side.\n\n\\(\\ln 5=\\ln e^{17 r}\\)\n\nUse the Power Property.\n\n\\(\\ln 5=17 r \\ln e\\)\n\nSimplify.\n\n\\(\\ln 5=17 r\\)\n\nDivide each side by \\(17\\).\n\n\\(\\frac{\\ln 5}{17}=r\\)\n\nApproximate the answer.\n\n\\(r \\approx 0.095\\)\n\nConvert to a percentage.\n\n\\(r \\approx 9.5 \\%\\)\n\nThey need the rate of growth to be approximately \\(9.5\\)%.",
+      "prompt": "Example \\(\\PageIndex{6}\\)\n\nJermael’s parents put $\\(10,000\\) in investments for his college expenses on his first birthday. They hope the investments will be worth $\\(50,000\\) when he turns \\(18\\). If the interest compounds continuously, approximately what rate of growth will they need to achieve their goal?\n\nSolution:\n\nIdentify the variables in the formula.\n\n\\(\\begin{aligned} A &=\\$ 50,000 \\\\ P &=\\$ 10,000 \\\\ r &=? \\\\ t &=17 \\text { years } \\\\ A &=P e^{r t} \\end{aligned}\\)\n\nSubstitute the values into the formula.\n\n\\(50,000=10,000 e^{r \\cdot 17}\\)\n\nSolve for \\(r\\). Divide each side by \\(10,000\\).\n\n\\(5=e^{17 r}\\)\n\nTake the natural log of each side.\n\n\\(\\ln 5=\\ln e^{17 r}\\)\n\nUse the Power Property.\n\n\\(\\ln 5=17 r \\ln e\\)\n\nSimplify.\n\n\\(\\ln 5=17 r\\)\n\nDivide each side by \\(17\\).\n\n\\(\\frac{\\ln 5}{17}=r\\)\n\nApproximate the answer.\n\n\\(r \\approx 0.095\\)\n\nConvert to a percentage.\n\n\\(r \\approx 9.5 \\%\\)\n\nThey need the rate of growth to be approximately \\(9.5\\)%.",
+      "sourceAnswers": [],
+      "hasFigure": false,
+      "status": "draft",
+      "answerVerified": false,
+      "translationStatus": "pending",
+      "mappingStatus": "pending"
+    },
+    {
+      "ordinal": 20,
+      "sourceNumber": "",
+      "sourceAnchor": "",
+      "kind": "exercise-candidate",
+      "context": "Compound Interest\n\nFor a principal, \\(P\\), invested at an interest rate, \\(r\\), for \\(t\\) years, the new balance, \\(A\\) is:\n\n\\(\\begin{array}{ll}{A=P\\left(1+\\frac{r}{n}\\right)^{n t}} & {\\text { when compounded } n \\text { times a year. }} \\\\ {A=P e^{r t}} & {\\text { when compounded continuously. }}\\end{array}\\)",
+      "original": "Exercise \\(\\PageIndex{11}\\)\n\nHector invests $\\(10,000\\) at age \\(21\\). He hopes the investments will be worth $\\(150,000\\) when he turns \\(50\\). If the interest compounds continuously, approximately what rate of growth will he need to achieve his goal?\n\nAnswer\n\n\\(r \\approx 9.3 \\%\\)",
+      "prompt": "Exercise \\(\\PageIndex{11}\\)\n\nHector invests $\\(10,000\\) at age \\(21\\). He hopes the investments will be worth $\\(150,000\\) when he turns \\(50\\). If the interest compounds continuously, approximately what rate of growth will he need to achieve his goal?",
+      "sourceAnswers": [
+        "\\(r \\approx 9.3 \\%\\)"
+      ],
+      "hasFigure": false,
+      "status": "draft",
+      "answerVerified": false,
+      "translationStatus": "pending",
+      "mappingStatus": "pending"
+    },
+    {
+      "ordinal": 21,
+      "sourceNumber": "",
+      "sourceAnchor": "",
+      "kind": "exercise-candidate",
+      "context": "Compound Interest\n\nFor a principal, \\(P\\), invested at an interest rate, \\(r\\), for \\(t\\) years, the new balance, \\(A\\) is:\n\n\\(\\begin{array}{ll}{A=P\\left(1+\\frac{r}{n}\\right)^{n t}} & {\\text { when compounded } n \\text { times a year. }} \\\\ {A=P e^{r t}} & {\\text { when compounded continuously. }}\\end{array}\\)",
+      "original": "Exercise \\(\\PageIndex{12}\\)\n\nRachel invests $\\(15,000\\) at age \\(25\\). She hopes the investments will be worth $\\(90,000\\) when she turns \\(40\\). If the interest compounds continuously, approximately what rate of growth will she need to achieve her goal?\n\nAnswer\n\n\\(r \\approx 11.9 \\%\\)",
+      "prompt": "Exercise \\(\\PageIndex{12}\\)\n\nRachel invests $\\(15,000\\) at age \\(25\\). She hopes the investments will be worth $\\(90,000\\) when she turns \\(40\\). If the interest compounds continuously, approximately what rate of growth will she need to achieve her goal?",
+      "sourceAnswers": [
+        "\\(r \\approx 11.9 \\%\\)"
+      ],
+      "hasFigure": false,
+      "status": "draft",
+      "answerVerified": false,
+      "translationStatus": "pending",
+      "mappingStatus": "pending"
+    },
+    {
+      "ordinal": 22,
+      "sourceNumber": "",
+      "sourceAnchor": "",
+      "kind": "example-or-exercise",
+      "context": "For an original amount, \\(A_{0}\\), that grows or decays at a rate, \\(k\\), for a certain time, \\(t\\), the final amount, \\(A\\), is:\n\n\\(A=A_{0} e^{k t}\\)\n\nWe can now solve applications that give us enough information to determine the rate of growth. We can then use that rate of growth to predict other situations.",
+      "original": "Example \\(\\PageIndex{7}\\)\n\nResearchers recorded that a certain bacteria population grew from \\(100\\) to \\(300\\) in \\(3\\) hours. At this rate of growth, how many bacteria will there be \\(24\\) hours from the start of the experiment?\n\nSolution:\n\nThis problem requires two main steps. First we must find the unknown rate, \\(k\\). Then we use that value of \\(k\\) to help us find the unknown number of bacteria.\n\nIdentify the variables in the formula.\n\n\\(\\begin{aligned} A &=300 \\\\ A_{0} &=100 \\\\ k &=? \\\\ t &=3 \\text { hours } \\\\ A &=A_{0} e^{k t} \\end{aligned}\\)\n\nSubstitute the values in the formula.\n\n\\(300=100 e^{k \\cdot 3}\\)\n\nSolve for \\(k\\). Divide each side by \\(100\\).\n\n\\(3=e^{3 k}\\)\n\nTake the natural log of each side.\n\n\\(\\ln 3=\\ln e^{3 k}\\)\n\nUse the Power Property.\n\n\\(\\ln 3=3 k \\ln e\\)\n\nSimplify.\n\n\\(\\ln 3=3 k\\)\n\nDivide each side by \\(3\\).\n\n\\(\\frac{\\ln 3}{3}=k\\)\n\nApproximate the answer.\n\n\\(k \\approx 0.366\\)\n\nWe use this rate of growth to predict the number of bacteria there will be in \\(24\\) hours.\n\n\\(\\begin{aligned} A &=? \\\\ A_{0} &=100 \\\\ k &=\\frac{\\ln 3}{3} \\\\ t &=24 \\text { hours } \\\\ A &=A_{0} e^{k t} \\end{aligned}\\)\n\nSubstitute in the values.\n\n\\(A=100 e^{\\frac{\\ln 3}{3} \\cdot 24}\\)\n\nEvaluate.\n\n\\(A \\approx 656,100\\)\n\nAt this rate of growth, they can expect \\(656,100\\) bacteria.",
+      "prompt": "Example \\(\\PageIndex{7}\\)\n\nResearchers recorded that a certain bacteria population grew from \\(100\\) to \\(300\\) in \\(3\\) hours. At this rate of growth, how many bacteria will there be \\(24\\) hours from the start of the experiment?\n\nSolution:\n\nThis problem requires two main steps. First we must find the unknown rate, \\(k\\). Then we use that value of \\(k\\) to help us find the unknown number of bacteria.\n\nIdentify the variables in the formula.\n\n\\(\\begin{aligned} A &=300 \\\\ A_{0} &=100 \\\\ k &=? \\\\ t &=3 \\text { hours } \\\\ A &=A_{0} e^{k t} \\end{aligned}\\)\n\nSubstitute the values in the formula.\n\n\\(300=100 e^{k \\cdot 3}\\)\n\nSolve for \\(k\\). Divide each side by \\(100\\).\n\n\\(3=e^{3 k}\\)\n\nTake the natural log of each side.\n\n\\(\\ln 3=\\ln e^{3 k}\\)\n\nUse the Power Property.\n\n\\(\\ln 3=3 k \\ln e\\)\n\nSimplify.\n\n\\(\\ln 3=3 k\\)\n\nDivide each side by \\(3\\).\n\n\\(\\frac{\\ln 3}{3}=k\\)\n\nApproximate the answer.\n\n\\(k \\approx 0.366\\)\n\nWe use this rate of growth to predict the number of bacteria there will be in \\(24\\) hours.\n\n\\(\\begin{aligned} A &=? \\\\ A_{0} &=100 \\\\ k &=\\frac{\\ln 3}{3} \\\\ t &=24 \\text { hours } \\\\ A &=A_{0} e^{k t} \\end{aligned}\\)\n\nSubstitute in the values.\n\n\\(A=100 e^{\\frac{\\ln 3}{3} \\cdot 24}\\)\n\nEvaluate.\n\n\\(A \\approx 656,100\\)\n\nAt this rate of growth, they can expect \\(656,100\\) bacteria.",
+      "sourceAnswers": [],
+      "hasFigure": false,
+      "status": "draft",
+      "answerVerified": false,
+      "translationStatus": "pending",
+      "mappingStatus": "pending"
+    },
+    {
+      "ordinal": 23,
+      "sourceNumber": "",
+      "sourceAnchor": "",
+      "kind": "exercise-candidate",
+      "context": "For an original amount, \\(A_{0}\\), that grows or decays at a rate, \\(k\\), for a certain time, \\(t\\), the final amount, \\(A\\), is:\n\n\\(A=A_{0} e^{k t}\\)\n\nWe can now solve applications that give us enough information to determine the rate of growth. We can then use that rate of growth to predict other situations.",
+      "original": "Exercise \\(\\PageIndex{13}\\)\n\nResearchers recorded that a certain bacteria population grew from \\(100\\) to \\(500\\) in \\(6\\) hours. At this rate of growth, how many bacteria will there be \\(24\\) hours from the start of the experiment?\n\nAnswer\n\nThere will be \\(62,500\\) bacteria.",
+      "prompt": "Exercise \\(\\PageIndex{13}\\)\n\nResearchers recorded that a certain bacteria population grew from \\(100\\) to \\(500\\) in \\(6\\) hours. At this rate of growth, how many bacteria will there be \\(24\\) hours from the start of the experiment?",
+      "sourceAnswers": [
+        "There will be \\(62,500\\) bacteria."
+      ],
+      "hasFigure": false,
+      "status": "draft",
+      "answerVerified": false,
+      "translationStatus": "pending",
+      "mappingStatus": "pending"
+    },
+    {
+      "ordinal": 24,
+      "sourceNumber": "",
+      "sourceAnchor": "",
+      "kind": "exercise-candidate",
+      "context": "For an original amount, \\(A_{0}\\), that grows or decays at a rate, \\(k\\), for a certain time, \\(t\\), the final amount, \\(A\\), is:\n\n\\(A=A_{0} e^{k t}\\)\n\nWe can now solve applications that give us enough information to determine the rate of growth. We can then use that rate of growth to predict other situations.",
+      "original": "Exercise \\(\\PageIndex{14}\\)\n\nResearchers recorded that a certain bacteria population declined from \\(700,000\\) to \\(400,000\\) in \\(5\\) hours after the administration of medication. At this rate of decay, how many bacteria will there be \\(24\\) hours from the start of the experiment?\n\nAnswer\n\nThere will be \\(5,870,061\\) bacteria.",
+      "prompt": "Exercise \\(\\PageIndex{14}\\)\n\nResearchers recorded that a certain bacteria population declined from \\(700,000\\) to \\(400,000\\) in \\(5\\) hours after the administration of medication. At this rate of decay, how many bacteria will there be \\(24\\) hours from the start of the experiment?",
+      "sourceAnswers": [
+        "There will be \\(5,870,061\\) bacteria."
+      ],
+      "hasFigure": false,
+      "status": "draft",
+      "answerVerified": false,
+      "translationStatus": "pending",
+      "mappingStatus": "pending"
+    },
+    {
+      "ordinal": 25,
+      "sourceNumber": "",
+      "sourceAnchor": "",
+      "kind": "example-or-exercise",
+      "context": "We can now solve applications that give us enough information to determine the rate of growth. We can then use that rate of growth to predict other situations.\n\nRadioactive substances decay or decompose according to the exponential decay formula. The amount of time it takes for the substance to decay to half of its original amount is called the half-life of the substance.\n\nSimilar to the previous example, we can use the given information to determine the constant of decay, and then use that constant to answer other questions.",
+      "original": "Example \\(\\PageIndex{8}\\)\n\nThe half-life of radium-226 is \\(1,590\\) years. How much of a \\(100\\) mg sample will be left in \\(500\\) years?\n\nSolution:\n\nThis problem requires two main steps. First we must find the decay constant \\(k\\). If we start with \\(100\\)-mg, at the half-life there will be \\(50\\)-mg remaining. We will use this information to find \\(k\\). Then we use that value of \\(k\\) to help us find the amount of sample that will be left in \\(500\\) years.\n\nIdentify the variables in the formula.\n\n\\(\\begin{aligned} A &=50 \\\\ A_{0} &=100 \\\\ k &=? \\\\ t &=1590 \\text { years } \\\\ A &=A_{0} e^{k t} \\end{aligned}\\)\n\nSubstitute the values in the formula.\n\n\\(50=100 e^{k \\cdot 1590}\\)\n\nSolve for \\(k\\). Divide each side by \\(100\\).\n\n\\(0.5=e^{1590 k}\\)\n\nTake the natural log of each side.\n\n\\(\\ln 0.5=\\ln e^{1590 k}\\)\n\nUse the Power Property.\n\n\\(\\ln 0.5=1590 k \\ln e\\)\n\nSimplify.\n\n\\(\\ln 0.5=1590 k\\)\n\nDivide each side by \\(1590\\).\n\n\\(\\frac{\\ln 0.5}{1590}=k\\) exact answer\n\nWe use this rate of growth to predict the amount that will be left in \\(500\\) years.\n\n\\(\\begin{aligned} A &=? \\\\ A_{0} &=100 \\\\ k &=\\frac{\\ln 0.5}{1590} \\\\ t &=500\\: \\mathrm{years} \\\\ A &=A_{0} e^{k t} \\end{aligned}\\)\n\nSubstitute in the values.\n\n\\(A=100 e^{\\frac{1 \\mathrm{n} 0.5}{1500} \\cdot 500}\\)\n\nEvaluate.\n\n\\(A \\approx 80.4 \\mathrm{mg}\\)\n\nIn \\(500\\) years there would be approximately \\(80.4\\) mg remaining.",
+      "prompt": "Example \\(\\PageIndex{8}\\)\n\nThe half-life of radium-226 is \\(1,590\\) years. How much of a \\(100\\) mg sample will be left in \\(500\\) years?\n\nSolution:\n\nThis problem requires two main steps. First we must find the decay constant \\(k\\). If we start with \\(100\\)-mg, at the half-life there will be \\(50\\)-mg remaining. We will use this information to find \\(k\\). Then we use that value of \\(k\\) to help us find the amount of sample that will be left in \\(500\\) years.\n\nIdentify the variables in the formula.\n\n\\(\\begin{aligned} A &=50 \\\\ A_{0} &=100 \\\\ k &=? \\\\ t &=1590 \\text { years } \\\\ A &=A_{0} e^{k t} \\end{aligned}\\)\n\nSubstitute the values in the formula.\n\n\\(50=100 e^{k \\cdot 1590}\\)\n\nSolve for \\(k\\). Divide each side by \\(100\\).\n\n\\(0.5=e^{1590 k}\\)\n\nTake the natural log of each side.\n\n\\(\\ln 0.5=\\ln e^{1590 k}\\)\n\nUse the Power Property.\n\n\\(\\ln 0.5=1590 k \\ln e\\)\n\nSimplify.\n\n\\(\\ln 0.5=1590 k\\)\n\nDivide each side by \\(1590\\).\n\n\\(\\frac{\\ln 0.5}{1590}=k\\) exact answer\n\nWe use this rate of growth to predict the amount that will be left in \\(500\\) years.\n\n\\(\\begin{aligned} A &=? \\\\ A_{0} &=100 \\\\ k &=\\frac{\\ln 0.5}{1590} \\\\ t &=500\\: \\mathrm{years} \\\\ A &=A_{0} e^{k t} \\end{aligned}\\)\n\nSubstitute in the values.\n\n\\(A=100 e^{\\frac{1 \\mathrm{n} 0.5}{1500} \\cdot 500}\\)\n\nEvaluate.\n\n\\(A \\approx 80.4 \\mathrm{mg}\\)\n\nIn \\(500\\) years there would be approximately \\(80.4\\) mg remaining.",
+      "sourceAnswers": [],
+      "hasFigure": false,
+      "status": "draft",
+      "answerVerified": false,
+      "translationStatus": "pending",
+      "mappingStatus": "pending"
+    },
+    {
+      "ordinal": 26,
+      "sourceNumber": "",
+      "sourceAnchor": "",
+      "kind": "exercise-candidate",
+      "context": "We can now solve applications that give us enough information to determine the rate of growth. We can then use that rate of growth to predict other situations.\n\nRadioactive substances decay or decompose according to the exponential decay formula. The amount of time it takes for the substance to decay to half of its original amount is called the half-life of the substance.\n\nSimilar to the previous example, we can use the given information to determine the constant of decay, and then use that constant to answer other questions.",
+      "original": "Exercise \\(\\PageIndex{15}\\)\n\nThe half-life of magnesium-27 is \\(9.45\\) minutes. How much of a \\(10\\)-mg sample will be left in \\(6\\) minutes?\n\nAnswer\n\nThere will be \\(6.43\\) mg left.",
+      "prompt": "Exercise \\(\\PageIndex{15}\\)\n\nThe half-life of magnesium-27 is \\(9.45\\) minutes. How much of a \\(10\\)-mg sample will be left in \\(6\\) minutes?",
+      "sourceAnswers": [
+        "There will be \\(6.43\\) mg left."
+      ],
+      "hasFigure": false,
+      "status": "draft",
+      "answerVerified": false,
+      "translationStatus": "pending",
+      "mappingStatus": "pending"
+    },
+    {
+      "ordinal": 27,
+      "sourceNumber": "",
+      "sourceAnchor": "",
+      "kind": "exercise-candidate",
+      "context": "We can now solve applications that give us enough information to determine the rate of growth. We can then use that rate of growth to predict other situations.\n\nRadioactive substances decay or decompose according to the exponential decay formula. The amount of time it takes for the substance to decay to half of its original amount is called the half-life of the substance.\n\nSimilar to the previous example, we can use the given information to determine the constant of decay, and then use that constant to answer other questions.",
+      "original": "Exercise \\(\\PageIndex{16}\\)\n\nThe half-life of radioactive iodine is \\(60\\) days. How much of a \\(50\\)-mg sample will be left in \\(40\\) days?\n\nAnswer\n\nThere will be \\(31.5\\) mg left.",
+      "prompt": "Exercise \\(\\PageIndex{16}\\)\n\nThe half-life of radioactive iodine is \\(60\\) days. How much of a \\(50\\)-mg sample will be left in \\(40\\) days?",
+      "sourceAnswers": [
+        "There will be \\(31.5\\) mg left."
+      ],
+      "hasFigure": false,
+      "status": "draft",
+      "answerVerified": false,
+      "translationStatus": "pending",
+      "mappingStatus": "pending"
+    }
+  ],
+  "license": "CC BY 4.0",
+  "licenseEvidence": "This page titled 10.6: Solve Exponential and Logarithmic Equations was last modified on Mon, 14 Feb 2022 01:05:32 GMT and is shared under a CC BY  4.0  license and was authored, remixed, and/or curated by OpenStax via source content that was edited to the style and standards of the LibreTexts platform.",
+  "url": "https://math.libretexts.org/Bookshelves/Algebra/Intermediate_Algebra_1e_(OpenStax)/10:_Exponential_and_Logarithmic_Functions/10.06:_Solve_Exponential_and_Logarithmic_Equations",
+  "sha256": "4827826282f18f38359ce69b9d8c24f50e4db16252acf602a3c1d6833ee7778d",
+  "checkedAt": "2026-10-07",
+  "id": "abd7e1ceebe549f09e51",
+  "bookId": "intermediate-algebra",
+  "licenseInherited": false,
+  "licenseSource": "https://math.libretexts.org/Bookshelves/Algebra/Intermediate_Algebra_1e_(OpenStax)/10:_Exponential_and_Logarithmic_Functions/10.06:_Solve_Exponential_and_Logarithmic_Equations",
+  "licenseUrl": "https://creativecommons.org/licenses/by/4.0/",
+  "authors": "OpenStax / Lynn Marecek, Andrea Honeycutt Mathis",
+  "book": "Intermediate Algebra 1e",
+  "reviewStatus": "unreviewed",
+  "sourceLanguage": "en",
+  "translationStatus": "pending"
+}

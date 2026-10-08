@@ -1,0 +1,997 @@
+{
+  "title": "10.2: Finding Composite and Inverse Functions",
+  "originalText": "Learning Objectives\n\nBy the end of this section, you will be able to:\n\nFind and evaluate composite functions\n\nDetermine whether a function is one-to-one\n\nFind the inverse of a function\n\nBefore you get started, take this readiness quiz.\n\n1. If \\(f(x)=2 x-3\\) and \\(g(x)=x^{2}+2 x-3\\), find \\(f(4)\\).\n\n    If you missed this problem, review Example 3.48.\n\n2. Solve for \\(x\\), \\(3x+2y=12\\).\n\n    If you missed this problem, review Example 2.31.\n\n3. Simplify: \\(5 \\frac{(x+4)}{5}-4\\).\n\n    If you missed this problem, review Example 1.25.\n\nIn this chapter, we will introduce two new types of functions, exponential functions and logarithmic functions. These functions are used extensively in business and the sciences as we will see.\n\nFind and Evaluate Composite Functions\n\nBefore we introduce the functions, we need to look at another operation on functions called composition. In composition, the output of one function is the input of a second function. For functions \\(f\\) and \\(g\\), the composition is written \\(f∘g\\) and is defined by \\((f∘g)(x)=f(g(x))\\).\n\nWe read \\(f(g(x))\\) as “\\(f\\) of \\(g\\) of \\(x\\).”\n\n[Figure: This figure shows x as the input to a box denoted as function g with g of x as the output of the box. Then, g of x is the input to a box denoted as function f with f of g of x as the output of the box.]\n\nFigure 10.1.1\n\nTo do a composition, the output of the first function, \\(g(x)\\), becomes the input of the second function, \\(f\\), and so we must be sure that it is part of the domain of \\(f\\).\n\nDefinition \\(\\PageIndex{1}\\)\n\nThe composition of functions \\(f\\) and \\(g\\) is written \\(f \\cdot g\\) and is defined by\n\n\\((f \\circ g)(x)=f(g(x))\\)\n\nWe read \\(f(g(x))\\) as \\(f\\) of \\(g\\) of \\(x\\).\n\nWe have actually used composition without using the notation many times before. When we graphed quadratic functions using translations, we were composing functions. For example, if we first graphed \\(g(x)=x^{2}\\) as a parabola and then shifted it down vertically four units, we were using the composition defined by \\((f∘g)(x)=f(g(x))\\) where \\(f(x)=x−4\\).\n\n[Figure: This figure shows x as the input to a box denoted as g of x equals x squared with x squared as the output of the box. Then, x squared is the input to a box denoted as f of x equals x minus 4 with f of g of x equals x squared minus 4 as the output of the box.]\n\nFigure 10.1.2\n\nExample \\(\\PageIndex{1}\\)\n\nFor functions \\(f(x)=4x-5\\) and \\(g(x)=2x+3\\), find\n\n1. \\((f \\circ g)(x)\\)\n\n2. \\((g \\circ f)(x)\\)\n\n3. \\((f \\cdot g)(x)\\)\n\nSolution:\n\n1. \n\n                Use the definition of \\((f \\circ g)(x)\\).\t\n\n[Figure: .]\n\n[Figure: .]\n\n[Figure: .]\n\n[Figure: .]\n\n[Figure: .]\n\n                Distribute.\t\n\n[Figure: .]\n\n                Simplify.\t\n\n[Figure: .]\n\n    Table 10.1.1\n\n2. \n\n                Use the definition of \\((f \\circ g)(x)\\).\t\n\n[Figure: .]\n\n[Figure: .]\n\n[Figure: .]\n\n[Figure: .]\n\n[Figure: .]\n\n                Distribute.\t\n\n[Figure: .]\n\n                Simplify.\t\n\n[Figure: .]\n\n    Table 10.1.2\n\nNotice the difference in the result in part a. and part b.\n\nc. Notice that \\((f \\cdot g)(x)\\) is different than \\((f \\circ g)(x)\\). In part a. we did the composition of the functions. Now in part c. we are not composing them, we are multiplying them.\n\nUse the definition of \\((f \\cdot g)(x)\\).\n\n\\((f \\cdot g)(x)=f(x) \\cdot g(x)\\)\n\nSubstitute \\(f(x)=4 x-5\\) and \\(g(x)=2 x+3\\).\n\n\\((f \\cdot g)(x)=(4 x-5) \\cdot(2 x+3)\\)\n\nMultiply.\n\n\\((f \\cdot g)(x)=8 x^{2}+2 x-15\\)\n\nExercise \\(\\PageIndex{1}\\)\n\nFor functions \\(f(x)=3x-2\\) and \\(g(x)=5x+1\\), find\n\n1. \\((f \\circ g)(x)\\)\n\n2. \\((g \\circ f)(x)\\)\n\n3. \\((f \\cdot g)(x)\\)\n\nAnswer\n\n1. \\(15x+1\\)\n\n2. \\(15x-9\\)\n\n3. \\(15 x^{2}-7 x-2\\)\n\nExercise \\(\\PageIndex{2}\\)\n\nFor functions \\(f(x)=4 x-3\\), and \\(g(x)=6x-5\\), find\n\n1. \\((f \\circ g)(x)\\)\n\n2. \\((g \\circ f)(x)\\)\n\n3. \\((f \\cdot g)(x)\\)\n\nAnswer\n\n1. \\(24 x-23\\)\n\n2. \\(24 x-23\\)\n\n3. \\(24 x^{2}-38 x+15\\)\n\nIn the next example we will evaluate a composition for a specific value.\n\nExample \\(\\PageIndex{2}\\)\n\nFor functions \\(f(x)=x^{2}-4\\), and \\(g(x)=3 x+2\\), find:\n\n1. \\((f \\circ g)(-3)\\)\n\n2. \\((g \\circ f)(-1)\\)\n\n3. \\((f \\circ f)(2)\\)\n\nSolution:\n\n1. \n\n                Use the definition of \\((f \\circ g)(-3)\\).\t\n\n[Figure: .]\n\n[Figure: .]\n\n[Figure: .]\n\n                Simplify.\t\n\n[Figure: .]\n\n[Figure: .]\n\n[Figure: .]\n\n                Simplify.\t\n\n[Figure: .]\n\n    Table 10.1.3\n\n2. \n\n                Use the definition of \\((g \\circ f)(-1)\\).\t\n\n[Figure: .]\n\n[Figure: .]\n\n[Figure: .]\n\n                Simplify.\t\n\n[Figure: .]\n\n[Figure: .]\n\n[Figure: .]\n\n                Simplify.\t\n\n[Figure: .]\n\n    Table 10.1.4\n\n3. \n\n                Use the definition of \\((f \\circ f)(2)\\).\t\n\n[Figure: .]\n\n[Figure: .]\n\n[Figure: .]\n\n                Simplify.\t\n\n[Figure: .]\n\n[Figure: .]\n\n[Figure: .]\n\n                Simplify.\t\n\n[Figure: .]\n\n    Table 10.1.5\n\nExercise \\(\\PageIndex{3}\\)\n\nFor functions \\(f(x)=x^{2}-9\\), and \\(g(x)=2x+5\\), find\n\n1. \\((f \\circ g)(-2)\\)\n\n2. \\((g \\circ f)(-3)\\)\n\n3. \\((f \\circ f)(4)\\)\n\nAnswer\n\n1. \\(-8\\)\n\n2. \\(5\\)\n\n3. \\(40\\)\n\nExercise \\(\\PageIndex{4}\\)\n\nFor functions \\(f(x)=x^{2}+1\\), and \\(g(x)=3x-5\\), find\n\n1. \\((f \\circ g)(-1)\\)\n\n2. \\((g \\circ f)(2)\\)\n\n3. \\((f \\circ f)(-1)\\)\n\nAnswer\n\n1. \\(65\\)\n\n2. \\(10\\)\n\n3. \\(5\\)\n\nDetermine Whether a Function is One-to-One\n\nWhen we first introduced functions, we said a function is a relation that assigns to each element in its domain exactly one element in the range. For each ordered pair in the relation, each \\(x\\)-value is matched with only one \\(y\\)-value.\n\nWe used the birthday example to help us understand the definition. Every person has a birthday, but no one has two birthdays and it is okay for two people to share a birthday. Since each person has exactly one birthday, that relation is a function.\n\n[Figure: This figure shows two tables. To the left is the table labeled Name, which from top to bottom reads Alison, Penelope, June, Gregory, Geoffrey, Lauren, Stephen, Alice, Liz, and Danny. The table on the right is labeled Birthday, which from top to bottom reads January 12, February 3, April 25, May 10, May 23, July 24, August 2, and September 15. There are arrows going from Alison to April 25, Penelope to May 23, June to August 2, Gregory to September 15, Geoffrey to January 12, Lauren to May 10, Stephen to July 24, Alice to February 3, Liz to July 24, and Danny to no birthday.]\n\nFigure 10.1.38\n\nA function is one-to-one if each value in the range has exactly one element in the domain. For each ordered pair in the function, each y-value is matched with only one \\(x\\)-value.\n\nOur example of the birthday relation is not a one-to-one function. Two people can share the same birthday. The range value August 2 is the birthday of Liz and June, and so one range value has two domain values. Therefore, the function is not one-to-one.\n\nDefinition \\(\\PageIndex{2}\\)\n\nA function is one-to-one if each value in the range corresponds to one element in the domain. For each ordered pair in the function, each \\(y\\)-value is matched with only one \\(x\\)-value. There are no repeated \\(y\\)-values.\n\nExample \\(\\PageIndex{3}\\)\n\nFor each set of ordered pairs, determine if it represents a function and, if so, if the function is one-to-one.\n\n1. \\(\\{(-3,27),(-2,8),(-1,1),(0,0),(1,1),(2,8),(3,27)\\}\\)\n\n2. \\(\\{(0,0),(1,1),(4,2),(9,3),(16,4)\\}\\)\n\nSolution:\n\n1. \\(\\{(-3,27),(-2,8),(-1,1),(0,0),(1,1),(2,8),(3,27)\\}\\)\n\nEach \\(x\\)-value is matched with only one \\(y\\)-value. So this relation is a function.\n\nBut each \\(y\\)-value is not paired with only one \\(x\\)-value, \\((−3,27)\\) and \\((3,27)\\), for example. So this function is not one-to-one.\n\n2. \\(\\{(0,0),(1,1),(4,2),(9,3),(16,4)\\}\\)\n\nEach \\(x\\)-value is matched with only one \\(y\\)-value. So this relation is a function.\n\nSince each \\(y\\)-value is paired with only one \\(x\\)-value, this function is one-to-one.\n\nExercise \\(\\PageIndex{5}\\)\n\nFor each set of ordered pairs, determine if it represents a function and if so, is the function one-to-one.\n\n1. \\(\\{(-3,-6),(-2,-4),(-1,-2),(0,0),(1,2),(2,4),(3,6)\\}\\)\n\n2. \\(\\{(-4,8),(-2,4),(-1,2),(0,0),(1,2),(2,4),(4,8)\\}\\)\n\nAnswer\n\n1. One-to-one function\n\n2. Function; not one-to-one\n\nExercise \\(\\PageIndex{6}\\)\n\nFor each set of ordered pairs, determine if it represents a function and if so, is the function one-to-one.\n\n1. \\(\\{(27,-3),(8,-2),(1,-1),(0,0),(1,1),(8,2),(27,3)\\}\\)\n\n2. \\(\\{(7,-3),(-5,-4),(8,0),(0,0),(-6,4),(-2,2),(-1,3)\\}\\)\n\nAnswer\n\n1. Not a function\n\n2. Function; not one-to-one\n\nTo help us determine whether a relation is a function, we use the vertical line test. A set of points in a rectangular coordinate system is the graph of a function if every vertical line intersects the graph in at most one point. Also, if any vertical line intersects the graph in more than one point, the graph does not represent a function.\n\nThe vertical line is representing an \\(x\\)-value and we check that it intersects the graph in only one \\(y\\)-value. Then it is a function.\n\nTo check if a function is one-to-one, we use a similar process. We use a horizontal line and check that each horizontal line intersects the graph in only one point. The horizontal line is representing a \\(y\\)-value and we check that it intersects the graph in only one \\(x\\)-value. If every horizontal line intersects the graph of a function in at most one point, it is a one-to-one function. This is the horizontal line test.\n\nDefinition \\(\\PageIndex{3}\\)\n\nHorizontal Line Test\n\nIf every horizontal line intersects the graph of a function in at most one point, it is a one-to-one function.\n\nWe can test whether a graph of a relation is a function by using the vertical line test. We can then tell if the function is one-to-one by applying the horizontal line test.\n\nExample \\(\\PageIndex{4}\\)\n\nDetermine\n\n1. whether each graph is the graph of a function and, if so,\n\n2. whether it is one-to-one\n\n[Figure: This first graph shows a straight line passing through (0, 2) and (3, 0). This second shows a parabola opening up with vertex at (0, negative 1).]\n\nFigure 10.1.39\n\nSolution:\n\n1. \n\n[Figure: This figure shows a straight line passing through (0, 2) and (3, 0), with a red vertical line that only passes through one point and a blue horizontal line that only passes through one point.]\n\n    Figure 10.1.40\n\nSince any vertical line intersects the graph in at most one point, the graph is the graph of a function. Since any horizontal line intersects the graph in at most one point, the graph is the graph of a one-to-one function.\n\nb.\n\n[Figure: This figure shows a parabola opening up with vertex at (0, negative 1), with a red vertical line that only passes through one point and a blue horizontal line that passes through two points.]\n\nFigure 10.1.41\n\nSince any vertical line intersects the graph in at most one point, the graph is the graph of a function. The horizontal line shown on the graph intersects it in two points. This graph does not represent a one-to-one function.\n\nExercise \\(\\PageIndex{7}\\)\n\nDetermine\n\n1. whether each graph is the graph of a function and, if so,\n\n2. whether it is one-to-one\n\n[Figure: Graph a shows a parabola opening to the right with vertex at (negative 1, 0). Graph b shows an exponential function that does not cross the x axis and that passes through (0, 1) before increasing rapidly.]\n\nFigure 10.1.42\n\nAnswer\n\n1. Not a function\n\n2. One-to-one function\n\nExercise \\(\\PageIndex{8}\\)\n\nDetermine\n\n1. whether each graph is the graph of a function and, if so,\n\n2. whether it is one-to-one\n\n[Figure: Graph a shows a parabola opening up with vertex at (0, 3). Graph b shows a straight line passing through (0, negative 2) and (2, 0).]\n\nFigure 10.1.43\n\nAnswer\n\n1. Function; not one-to-one\n\n2. One-to-one function\n\nFind the Inverse of a Function\n\nLet’s look at a one-to one function, \\(f\\), represented by the ordered pairs \\(\\{(0,5),(1,6),(2,7),(3,8)\\}\\). For each \\(x\\)-value, \\(f\\) adds \\(5\\) to get the \\(y\\)-value. To ‘undo’ the addition of \\(5\\), we subtract \\(5\\) from each \\(y\\)-value and get back to the original \\(x\\)-value. We can call this “taking the inverse of \\(f\\)” and name the function \\(f^{−1}\\).\n\n[Figure: This figure shows the set (0, 5), (1, 6), (2, 7) and (3, 8) on the left side of an oval. The oval contains the numbers 0, 1, 2, and 3. There are black arrows from these numbers that point to the numbers 5, 6, 7, and 8, respectively in a second oval to the right of the first. Above this, there is a black arrow labeled â€œf add 5â€ coming from the left oval to the right oval. There are red arrows from the numbers 5, 6, 7, and 8 in the right oval to the numbers 0, 1, 2, and 3, respectively, in the left oval. Below this, we have a red arrow labeled â€œf with a superscript negative 1â€ and â€œsubtract 5â€. To the right of this, we have the set (5, 0), (6, 1), (7, 2) and (8, 3).]\n\nFigure 10.1.44\n\nNotice that that the ordered pairs of \\(f\\) and \\(f^{−1}\\) have their \\(x\\)-values and \\(y\\)-values reversed. The domain of \\(f\\) is the range of \\(f^{−1}\\) and the domain of \\(f^{−1}\\) is the range of \\(f\\).\n\nDefinition \\(\\PageIndex{4}\\)\n\nInverse of a Function Defined by Ordered Pairs\n\nIf \\(f(x)\\) is a one-to-one function whose ordered pairs are of the form \\((x,y)\\), then its inverse function \\(f^{−1}(x)\\) is the set of ordered pairs \\((y,x)\\).\n\nIn the next example we will find the inverse of a function defined by ordered pairs.\n\nExample \\(\\PageIndex{5}\\)\n\nFind the inverse of the function \\(\\{(0,3),(1,5),(2,7),(3,9)\\}\\). Determine the domain and range of the inverse function.\n\nSolution:\n\nThis function is one-to-one since every \\(x\\)-value is paired with exactly one \\(y\\)-value.\n\nTo find the inverse we reverse the \\(x\\)-values and \\(y\\)-values in the ordered pairs of the function.\n\n\\(\\begin{array}{ll} {\\text{Function}}&{\\{(0,3),(1,5),(2,7),(3,9)\\}} \\\\ {\\text{Inverse Function}}& {\\{(3,0), (5,1), (7,2), (9,3)\\}} \\\\ {\\text{Domain of Inverse Function}}&{\\{3, 5, 7, 9\\}} \\\\ {\\text{Range of Inverse Function}}&{\\{0, 1, 2, 3\\}} \\end{array}\\)\n\nExercise \\(\\PageIndex{9}\\)\n\nFind the inverse of \\(\\{(0,4),(1,7),(2,10),(3,13)\\}\\). Determine the domain and range of the inverse function.\n\nAnswer\n\nInverse function: \\(\\{(4,0),(7,1),(10,2),(13,3)\\}\\). Domain: \\(\\{4,7,10,13\\}\\). Range: \\(\\{0,1,2,3\\}\\).\n\nExercise \\(\\PageIndex{10}\\)\n\nFind the inverse of \\(\\{(-1,4),(-2,1),(-3,0),(-4,2)\\}\\). Determine the domain and range of the inverse function.\n\nAnswer\n\nInverse function: \\(\\{(4,-1),(1,-2),(0,-3),(2,-4)\\}\\). Domain: \\(\\{0,1,2,4\\}\\). Range: \\(\\{-4,-3,-2,-1\\}\\).\n\nWe just noted that if \\(f(x)\\) is a one-to-one function whose ordered pairs are of the form \\((x,y)\\), then its inverse function \\(f^{−1}(x)\\) is the set of ordered pairs \\((y,x)\\).\n\nSo if a point \\((a,b)\\) is on the graph of a function \\(f(x)\\), then the ordered pair \\((b,a)\\) is on the graph of \\(f^{−1}(x)\\). See Figure 10.1.43.\n\n[Figure: This figure shows the line y equals x with points (3,1) and (1,3) on either side of the line. These two points are connected by a dashed blue line segment.]\n\nFigure 10.1.45\n\nThe distance between any two pairs \\((a,b)\\) and \\((b,a)\\) is cut in half by the line \\(y=x\\). So we say the points are mirror images of each other through the line \\(y=x\\).\n\nSince every point on the graph of a function \\(f(x)\\) is a mirror image of a point on the graph of \\(f^{−1}(x)\\), we say the graphs are mirror images of each other through the line \\(y=x\\). We will use this concept to graph the inverse of a function in the next example.\n\nExample \\(\\PageIndex{6}\\)\n\nGraph, on the same coordinate system, the inverse of the one-to one function shown.\n\n[Figure: This figure shows a line from (negative 5, negative 3) to (negative 3, negative 1) then to (negative 1,0) then to (0,2) and then to (3, 4).]\n\nFigure 10.1.46\n\nSolution:\n\nWe can use points on the graph to find points on the inverse graph. Some points on the graph are: \\((−5,−3),(−3,−1),(−1,0),(0,2),(3,4)\\).\n\nSo, the inverse function will contain the points: \\((−3,−5),(−1,−3),(0,−1),(2,0),(4,3)\\).\n\n[Figure: This figure shows a line from (negative 5, negative 3) to (negative 3, negative 1) then to (negative 1, 0) then to (0,2) and then to (3, 4). Then there is a dashed line to denote y equals x. There is also a line from (negative 3, negative 5) to (negative 1, negative 3) then to (0, negative 1), then to (2, 0) and then to (4, 3).]\n\nFigure 10.1.47\n\nNotice how the graph of the original function and the graph of the inverse functions are mirror images through the line \\(y=x\\).\n\nExercise \\(\\PageIndex{11}\\)\n\nGraph, on the same coordinate system, the inverse of the one-to one function.\n\n[Figure: The graph shows a line from (negative 3, negative 4) to (negative 2, negative 2) then to (0, negative 1), then to (1, 2) and then to (4, 3). The graph shows a line from (negative 3, 4) to (0, 3) then to (1, 2) and then to (4, 1).]\n\nFigure 10.1.48\n\nAnswer\n\n[Figure: This figure shows a line from (negative 4, negative 3) to (negative 2, negative 2) then to (negative 1, 0) then to (2, 1) and then to (3, 4).]\n\nFigure 10.1.49\n\nExercise \\(\\PageIndex{12}\\)\n\nGraph, on the same coordinate system, the inverse of the one-to one function.\n\n[Figure: .]\n\nFigure 10.1.50\n\nAnswer\n\n[Figure: Graph extends from negative 4 to 4 on both axes. Points plotted are (negative 3, 4), (0, 3), (1, 2), and (4, 1). Line segments connect points.]\n\nFigure 10.1.51\n\nWhen we began our discussion of an inverse function, we talked about how the inverse function ‘undoes’ what the original function did to a value in its domain in order to get back to the original \\(x\\)-value.\n\n[Figure: This figure shows x as the input to a box denoted as function f with f of x as the output of the box. Then, f of x is the input to a box denoted as function f superscript negative 1 with f superscript negative 1 of f of x equals x as the output of the box.]\n\nFigure 10.1.52\n\nDefinition \\(\\PageIndex{5}\\)\n\nInverse Functions\n\n\\(f^{-1}(f(x))=x\\), for all \\(x\\) in the domain of \\(f\\)\n\n\\(f\\left(f^{-1}(x)\\right)=x\\), for all \\(x\\) in the domain of \\(f^{-1}\\)\n\nWe can use this property to verify that two functions are inverses of each other.\n\nExample \\(\\PageIndex{7}\\)\n\nVerify that \\(f(x)=5x−1\\) and \\(g(x)=\\frac{x+1}{5}\\) are inverse functions.\n\nSolution:\n\nThe functions are inverses of each other if \\(g(f(x))=x\\) and \\(f(g(x))=x\\).\n\n[Figure: .]\n\n            Substitue \\(5x-1\\) for \\(f(x)\\).\t\n\n[Figure: .]\n\n[Figure: .]\n\n[Figure: .]\n\n            Simplify.\t\n\n[Figure: .]\n\n            Simplify.\t\n\n[Figure: .]\n\n[Figure: .]\n\nFigure 10.1.59\n\n            Substitute \\(\\frac{x+1}{5}\\) for \\(g(x)\\).\t\n\n[Figure: .]\n\n[Figure: .]\n\n[Figure: .]\n\n            Simplify.\t\n\n[Figure: .]\n\n            Simplify.\t\n\n[Figure: .]\n\nTable 10.1.6\n\nSince both \\(g(f(x))=x\\) and \\(f(g(x))=x\\) are true, the functions \\(f(x)=5x−1\\) and \\(g(x)=\\frac{x+1}{5}\\) are inverse functions. That is, they are inverses of each other.\n\nExercise \\(\\PageIndex{13}\\)\n\nVerify that the functions are inverse functions. \\(f(x)=4 x-3\\) and \\(g(x)=\\frac{x+3}{4}\\).\n\nAnswer\n\n\\(g(f(x))=x\\), and \\(f(g(x))=x\\), so they are inverses.\n\nExercise \\(\\PageIndex{14}\\)\n\nVerify that the functions are inverse functions. \\(f(x)=2 x+6\\) and \\(g(x)=\\frac{x-6}{2}\\)\n\nAnswer\n\n\\(g(f(x))=x,\\) and \\(f(g(x))=x,\\) so they are inverses.\n\nWe have found inverses of function defined by ordered pairs and from a graph. We will now look at how to find an inverse using an algebraic equation. The method uses the idea that if \\(f(x)\\) is a one-to-one function with ordered pairs \\((x,y)\\), then its inverse function \\(f^{−1}(x)\\) is the set of ordered pairs \\((y,x)\\).\n\nIf we reverse the \\(x\\) and \\(y\\) in the function and then solve for \\(y\\), we get our inverse function.\n\nExample \\(\\PageIndex{8}\\) How to Find the Inverse of a One-to-One Function\n\nFind the inverse of \\(f(x)=4 x+7\\).\n\nSolution:\n\n            Step 1. Substitute \\(y\\) for \\(f(x)\\).\t\n            Replace \\(f(x)\\) with \\(y\\).\t\n            \\(\\begin{aligned} f(x) &=4 x+7 \\\\ y &=4 x+7 \\end{aligned}\\)\t\n\n            Step 2: Interchange the variables \\(x\\) and \\(y\\).\t\n            Replace \\(x\\) with \\(y\\) and then \\(y\\) with \\(x\\).\t\n            \\(x=4y+7\\)\t\n\n            Step 3: Solve for \\(y\\).\t\n\nSubtract \\(7\\) from each side.\n\nDivide by \\(4\\).\n\n            \\(x-7=4 y\\)\n\n            \\(\\frac{x-7}{4}=y\\)\t\n\n            Step 4: Substitute \\(f^{-1}(x)\\) for \\(y\\).\t\n            Replace \\(y\\) with \\(f^{-1}(x)\\).\t\n            \\(\\frac{x-7}{4}=f^{-1}(x)\\)\t\n\n            Step 5: Verify that the functions are inverses.\t\n\nShow \\(f^{-1}(f(x))=x\\)\n\nand \\(f\\left(f^{-1}(x)\\right)=x\\)\n\n            \\(\\begin{aligned} f^{-1}(f(x)) & \\stackrel{?}{=} x \\\\f^{-1}(4x+7)&\\stackrel{?}{=}x\\\\ \\frac{(4x+7)-7}{4}&\\stackrel{?}{=}x \\\\ \\frac{4x}{4}&\\stackrel{?}{=}x\\\\x&=x \\\\ \\\\f(f^{-1}(x))&\\stackrel{?}{=}x \\\\f \\left(\\frac{x-7}{4} \\right)&\\stackrel{?}{=}x \\\\ 4\\left(\\frac{x-7}{4} \\right) + 7 &\\stackrel{?}{=}x \\\\ x-7+7&\\stackrel{?}{=}x \\\\x&=x \\end{aligned}\\)\t\n\nTable 10.1.7\n\nExercise \\(\\PageIndex{15}\\)\n\nFind the inverse of the function \\(f(x)=5x-3\\).\n\nAnswer\n\n\\(f^{-1}(x)=\\frac{x+3}{5}\\)\n\nExercise \\(\\PageIndex{16}\\)\n\nFind the inverse of the function \\(f(x)=8 x+5\\).\n\nAnswer\n\n\\(f^{-1}(x)=\\frac{x-5}{8}\\)\n\nWe summarize the steps below.\n\nHow to Find the Inverse of a One-to-One Function\n\n1. Substitute \\(y\\) for \\(f(x)\\).\n\n2. Interchange the variables \\(x\\) and \\(y\\).\n\n3. Solve for \\(y\\).\n\n4. Substitute \\(f^{−1}(x)\\) for \\(y\\).\n\n5. Verify that the functions are inverses.\n\nExample \\(\\PageIndex{9}\\) How to Find the Inverse of a One-to-One Function\n\nFind the inverse of \\(f(x)=\\sqrt[5]{2 x-3}\\).\n\nSolution:\n\n\\(f(x)=\\sqrt[5]{2 x-3}\\)\n\nSubstitute \\(y\\) for \\(f(x)\\).\n\n\\(y=\\sqrt[5]{2 x-3}\\)\n\nInterchange the variables \\(x\\) and \\(y\\).\n\n\\(x=\\sqrt[5]{2 y-3}\\)\n\nSolve for \\(y\\).\n\n\\(\\begin{aligned}(x)^{5} &=(\\sqrt[5]{2 y-3})^{5} \\\\ x^{5} &=2 y-3 \\\\ x^{5}+3 &=2 y \\\\ \\frac{x^{5}+3}{2} &=y \\end{aligned}\\)\n\nSubstitute \\(f^{-1}(x)\\) for \\(y\\).\n\n\\(f^{-1}(x)=\\frac{x^{5}+3}{2}\\)\n\nVerify that the functions are inverses.\n\n\\(\\begin{array}{rr} {f^{-1}(f(x)) \\stackrel{?}{=} x} & {f\\left(f^{-1}(x)\\right) \\stackrel{?}{=} x} \\\\ {f^{-1}(\\sqrt[5]{2x-3})\\stackrel{?}{=}x}&{f\\left(\\frac{x^{5}+3}{2} \\right)}\\stackrel{?}{=}x \\\\ {\\frac{(\\sqrt[5]{2x-3})^{5}+3}{2}\\stackrel{?}{=}x}&{\\sqrt[5]{2\\left(\\frac{x^{5}+3}{2} \\right)-3}\\stackrel{?}{=}x} \\\\ {\\frac{2x-3+3}{2}\\stackrel{?}{=}x}&{\\sqrt[5]{x^{5}+3-3}\\stackrel{?}{=}x}\\\\ {\\frac{2x}{2}\\stackrel{?}{=}x}&{\\sqrt[5]{x^{5}}\\stackrel{?}{=}x} \\\\ {x=x}&{x=x} \\end{array}\\)\n\nExercise \\(\\PageIndex{17}\\)\n\nFind the inverse of the function \\(f(x)=\\sqrt[5]{3 x-2}\\).\n\nAnswer\n\n\\(f^{-1}(x)=\\frac{x^{5}+2}{3}\\)\n\nExercise \\(\\PageIndex{18}\\)\n\nFind the inverse of the function \\(f(x)=\\sqrt[4]{6 x-7}\\).\n\nAnswer\n\n\\(f^{-1}(x)=\\frac{x^{4}+7}{6}\\)\n\nKey Concepts\n\nComposition of Functions: The composition of functions \\(f\\) and \\(g\\), is written \\(f∘g\\) and is defined by\n\n\\((f \\circ g)(x)=f(g(x))\\)\n\n    We read \\(f(g(x))\\) as \\(f\\) of \\(g\\) of \\(x\\).\n\nHorizontal Line Test: If every horizontal line, intersects the graph of a function in at most one point, it is a one-to-one function.\n\nInverse of a Function Defined by Ordered Pairs: If \\(f(x)\\) is a one-to-one function whose ordered pairs are of the form \\((x,y)\\), then its inverse function \\(f^{−1}(x)\\) is the set of ordered pairs \\((y,x)\\).\n\nInverse Functions: For every \\(x\\) in the domain of one-to-one function \\(f\\) and \\(f^{−1}\\),\n\n\\(f^{-1}(f(x))=x\\)\n\n    \\(f\\left(f^{-1}(x)\\right)=x\\)\n\nHow to Find the Inverse of a One-to-One Function:\n\n1. Substitute \\(y\\) for \\(f(x)\\).\n\n2. Interchange the variables \\(x\\) and \\(y\\).\n\n3. Solve for \\(y\\).\n\n4. Substitute \\(f^{−1}(x)\\) for \\(y\\).\n\n5. Verify that the functions are inverses.\n\nGlossary\n\none-to-one function\n\nA function is one-to-one if each value in the range has exactly one element in the domain. For each ordered pair in the function, each \\(y\\)-value is matched with only one \\(x\\)-value.\n\nThis page titled 10.2: Finding Composite and Inverse Functions was last modified on Mon, 14 Feb 2022 01:06:53 GMT and is shared under a CC BY  4.0  license and was authored, remixed, and/or curated by OpenStax via source content that was edited to the style and standards of the LibreTexts platform.",
+  "figures": [
+    {
+      "url": "https://math.libretexts.org/@api/deki/files/21309/3d77e140e3f421625f5559950c91bd9425289bfb?revision=1",
+      "alt": "This figure shows x as the input to a box denoted as function g with g of x as the output of the box. Then, g of x is the input to a box denoted as function f with f of g of x as the output of the box.",
+      "credit": ""
+    },
+    {
+      "url": "https://math.libretexts.org/@api/deki/files/21247/7994a5de149a1a110601f246ffa22e0b0cefa0a3?revision=1",
+      "alt": "This figure shows x as the input to a box denoted as g of x equals x squared with x squared as the output of the box. Then, x squared is the input to a box denoted as f of x equals x minus 4 with f of g of x equals x squared minus 4 as the output of the box.",
+      "credit": ""
+    },
+    {
+      "url": "https://math.libretexts.org/@api/deki/files/21306/CNX_IntAlg_Figure_10_01_003c_img.jpg?revision=1",
+      "alt": ".",
+      "credit": ""
+    },
+    {
+      "url": "https://math.libretexts.org/@api/deki/files/21249/CNX_IntAlg_Figure_10_01_003a_img.jpg?revision=1",
+      "alt": ".",
+      "credit": ""
+    },
+    {
+      "url": "https://math.libretexts.org/@api/deki/files/21308/CNX_IntAlg_Figure_10_01_003d_img.jpg?revision=1",
+      "alt": ".",
+      "credit": ""
+    },
+    {
+      "url": "https://math.libretexts.org/@api/deki/files/21453/CNX_IntAlg_Figure_10_01_003b_img.jpg?revision=1",
+      "alt": ".",
+      "credit": ""
+    },
+    {
+      "url": "https://math.libretexts.org/@api/deki/files/21307/CNX_IntAlg_Figure_10_01_003e_img.jpg?revision=1",
+      "alt": ".",
+      "credit": ""
+    },
+    {
+      "url": "https://math.libretexts.org/@api/deki/files/21310/CNX_IntAlg_Figure_10_01_003f_img.jpg?revision=1",
+      "alt": ".",
+      "credit": ""
+    },
+    {
+      "url": "https://math.libretexts.org/@api/deki/files/21456/CNX_IntAlg_Figure_10_01_003g_img.jpg?revision=1",
+      "alt": ".",
+      "credit": ""
+    },
+    {
+      "url": "https://math.libretexts.org/@api/deki/files/21248/CNX_IntAlg_Figure_10_01_004c_img.jpg?revision=1",
+      "alt": ".",
+      "credit": ""
+    },
+    {
+      "url": "https://math.libretexts.org/@api/deki/files/21265/CNX_IntAlg_Figure_10_01_004a_img.jpg?revision=1",
+      "alt": ".",
+      "credit": ""
+    },
+    {
+      "url": "https://math.libretexts.org/@api/deki/files/21359/CNX_IntAlg_Figure_10_01_004d_img.jpg?revision=1",
+      "alt": ".",
+      "credit": ""
+    },
+    {
+      "url": "https://math.libretexts.org/@api/deki/files/21352/CNX_IntAlg_Figure_10_01_004b_img.jpg?revision=1",
+      "alt": ".",
+      "credit": ""
+    },
+    {
+      "url": "https://math.libretexts.org/@api/deki/files/21388/CNX_IntAlg_Figure_10_01_004e_img.jpg?revision=1",
+      "alt": ".",
+      "credit": ""
+    },
+    {
+      "url": "https://math.libretexts.org/@api/deki/files/21410/CNX_IntAlg_Figure_10_01_004f_img.jpg?revision=1",
+      "alt": ".",
+      "credit": ""
+    },
+    {
+      "url": "https://math.libretexts.org/@api/deki/files/21485/CNX_IntAlg_Figure_10_01_004g_img.jpg?revision=1",
+      "alt": ".",
+      "credit": ""
+    },
+    {
+      "url": "https://math.libretexts.org/@api/deki/files/21472/CNX_IntAlg_Figure_10_01_005c_img.jpg?revision=1",
+      "alt": ".",
+      "credit": ""
+    },
+    {
+      "url": "https://math.libretexts.org/@api/deki/files/21473/CNX_IntAlg_Figure_10_01_005a_img.jpg?revision=1",
+      "alt": ".",
+      "credit": ""
+    },
+    {
+      "url": "https://math.libretexts.org/@api/deki/files/21381/CNX_IntAlg_Figure_10_01_005d_img.jpg?revision=1",
+      "alt": ".",
+      "credit": ""
+    },
+    {
+      "url": "https://math.libretexts.org/@api/deki/files/21428/CNX_IntAlg_Figure_10_01_005e_img.jpg?revision=1",
+      "alt": ".",
+      "credit": ""
+    },
+    {
+      "url": "https://math.libretexts.org/@api/deki/files/21420/CNX_IntAlg_Figure_10_01_005b_img.jpg?revision=1",
+      "alt": ".",
+      "credit": ""
+    },
+    {
+      "url": "https://math.libretexts.org/@api/deki/files/21488/CNX_IntAlg_Figure_10_01_005f_img.jpg?revision=1",
+      "alt": ".",
+      "credit": ""
+    },
+    {
+      "url": "https://math.libretexts.org/@api/deki/files/21553/CNX_IntAlg_Figure_10_01_005g_img.jpg?revision=1",
+      "alt": ".",
+      "credit": ""
+    },
+    {
+      "url": "https://math.libretexts.org/@api/deki/files/21556/CNX_IntAlg_Figure_10_01_006c_img.jpg?revision=1",
+      "alt": ".",
+      "credit": ""
+    },
+    {
+      "url": "https://math.libretexts.org/@api/deki/files/21502/CNX_IntAlg_Figure_10_01_006a_img.jpg?revision=1",
+      "alt": ".",
+      "credit": ""
+    },
+    {
+      "url": "https://math.libretexts.org/@api/deki/files/21576/CNX_IntAlg_Figure_10_01_006d_img.jpg?revision=1",
+      "alt": ".",
+      "credit": ""
+    },
+    {
+      "url": "https://math.libretexts.org/@api/deki/files/21519/CNX_IntAlg_Figure_10_01_006e_img.jpg?revision=1",
+      "alt": ".",
+      "credit": ""
+    },
+    {
+      "url": "https://math.libretexts.org/@api/deki/files/21690/CNX_IntAlg_Figure_10_01_006b_img.jpg?revision=1",
+      "alt": ".",
+      "credit": ""
+    },
+    {
+      "url": "https://math.libretexts.org/@api/deki/files/21567/CNX_IntAlg_Figure_10_01_006f_img.jpg?revision=1",
+      "alt": ".",
+      "credit": ""
+    },
+    {
+      "url": "https://math.libretexts.org/@api/deki/files/21740/CNX_IntAlg_Figure_10_01_006g_img.jpg?revision=1",
+      "alt": ".",
+      "credit": ""
+    },
+    {
+      "url": "https://math.libretexts.org/@api/deki/files/21750/CNX_IntAlg_Figure_10_01_007c_img.jpg?revision=1",
+      "alt": ".",
+      "credit": ""
+    },
+    {
+      "url": "https://math.libretexts.org/@api/deki/files/21791/CNX_IntAlg_Figure_10_01_007a_img.jpg?revision=1",
+      "alt": ".",
+      "credit": ""
+    },
+    {
+      "url": "https://math.libretexts.org/@api/deki/files/21785/CNX_IntAlg_Figure_10_01_007d_img.jpg?revision=1",
+      "alt": ".",
+      "credit": ""
+    },
+    {
+      "url": "https://math.libretexts.org/@api/deki/files/21616/CNX_IntAlg_Figure_10_01_007e_img.jpg?revision=1",
+      "alt": ".",
+      "credit": ""
+    },
+    {
+      "url": "https://math.libretexts.org/@api/deki/files/21832/CNX_IntAlg_Figure_10_01_007b_img.jpg?revision=1",
+      "alt": ".",
+      "credit": ""
+    },
+    {
+      "url": "https://math.libretexts.org/@api/deki/files/21673/CNX_IntAlg_Figure_10_01_007f_img.jpg?revision=1",
+      "alt": ".",
+      "credit": ""
+    },
+    {
+      "url": "https://math.libretexts.org/@api/deki/files/21638/CNX_IntAlg_Figure_10_01_007g_img.jpg?revision=1",
+      "alt": ".",
+      "credit": ""
+    },
+    {
+      "url": "https://math.libretexts.org/@api/deki/files/21901/CNX_IntAlg_Figure_10_01_008_img.jpg?revision=1",
+      "alt": "This figure shows two tables. To the left is the table labeled Name, which from top to bottom reads Alison, Penelope, June, Gregory, Geoffrey, Lauren, Stephen, Alice, Liz, and Danny. The table on the right is labeled Birthday, which from top to bottom reads January 12, February 3, April 25, May 10, May 23, July 24, August 2, and September 15. There are arrows going from Alison to April 25, Penelope to May 23, June to August 2, Gregory to September 15, Geoffrey to January 12, Lauren to May 10, Stephen to July 24, Alice to February 3, Liz to July 24, and Danny to no birthday.",
+      "credit": ""
+    },
+    {
+      "url": "https://math.libretexts.org/@api/deki/files/21906/CNX_IntAlg_Figure_10_01_009_img.jpg?revision=1",
+      "alt": "This first graph shows a straight line passing through (0, 2) and (3, 0). This second shows a parabola opening up with vertex at (0, negative 1).",
+      "credit": ""
+    },
+    {
+      "url": "https://math.libretexts.org/@api/deki/files/21929/CNX_IntAlg_Figure_10_01_010_img.jpg?revision=1",
+      "alt": "This figure shows a straight line passing through (0, 2) and (3, 0), with a red vertical line that only passes through one point and a blue horizontal line that only passes through one point.",
+      "credit": ""
+    },
+    {
+      "url": "https://math.libretexts.org/@api/deki/files/21978/CNX_IntAlg_Figure_10_01_011_img.jpg?revision=1",
+      "alt": "This figure shows a parabola opening up with vertex at (0, negative 1), with a red vertical line that only passes through one point and a blue horizontal line that passes through two points.",
+      "credit": ""
+    },
+    {
+      "url": "https://math.libretexts.org/@api/deki/files/22012/CNX_IntAlg_Figure_10_01_012_img.jpg?revision=1",
+      "alt": "Graph a shows a parabola opening to the right with vertex at (negative 1, 0). Graph b shows an exponential function that does not cross the x axis and that passes through (0, 1) before increasing rapidly.",
+      "credit": ""
+    },
+    {
+      "url": "https://math.libretexts.org/@api/deki/files/21999/CNX_IntAlg_Figure_10_01_013_img.jpg?revision=1",
+      "alt": "Graph a shows a parabola opening up with vertex at (0, 3). Graph b shows a straight line passing through (0, negative 2) and (2, 0).",
+      "credit": ""
+    },
+    {
+      "url": "https://math.libretexts.org/@api/deki/files/22101/CNX_IntAlg_Figure_10_01_014_img.jpg?revision=1",
+      "alt": "This figure shows the set (0, 5), (1, 6), (2, 7) and (3, 8) on the left side of an oval. The oval contains the numbers 0, 1, 2, and 3. There are black arrows from these numbers that point to the numbers 5, 6, 7, and 8, respectively in a second oval to the right of the first. Above this, there is a black arrow labeled â€œf add 5â€ coming from the left oval to the right oval. There are red arrows from the numbers 5, 6, 7, and 8 in the right oval to the numbers 0, 1, 2, and 3, respectively, in the left oval. Below this, we have a red arrow labeled â€œf with a superscript negative 1â€ and â€œsubtract 5â€. To the right of this, we have the set (5, 0), (6, 1), (7, 2) and (8, 3).",
+      "credit": ""
+    },
+    {
+      "url": "https://math.libretexts.org/@api/deki/files/21931/CNX_IntAlg_Figure_10_01_015.jpg?revision=1",
+      "alt": "This figure shows the line y equals x with points (3,1) and (1,3) on either side of the line. These two points are connected by a dashed blue line segment.",
+      "credit": ""
+    },
+    {
+      "url": "https://math.libretexts.org/@api/deki/files/22048/CNX_IntAlg_Figure_10_01_016_img.jpg?revision=1",
+      "alt": "This figure shows a line from (negative 5, negative 3) to (negative 3, negative 1) then to (negative 1,0) then to (0,2) and then to (3, 4).",
+      "credit": ""
+    },
+    {
+      "url": "https://math.libretexts.org/@api/deki/files/22064/CNX_IntAlg_Figure_10_01_017_img.jpg?revision=1",
+      "alt": "This figure shows a line from (negative 5, negative 3) to (negative 3, negative 1) then to (negative 1, 0) then to (0,2) and then to (3, 4). Then there is a dashed line to denote y equals x. There is also a line from (negative 3, negative 5) to (negative 1, negative 3) then to (0, negative 1), then to (2, 0) and then to (4, 3).",
+      "credit": ""
+    },
+    {
+      "url": "https://math.libretexts.org/@api/deki/files/35699/CNX_IntAlg_Figure_10_01_018_img.jpg?revision=1",
+      "alt": "The graph shows a line from (negative 3, negative 4) to (negative 2, negative 2) then to (0, negative 1), then to (1, 2) and then to (4, 3). The graph shows a line from (negative 3, 4) to (0, 3) then to (1, 2) and then to (4, 1).",
+      "credit": ""
+    },
+    {
+      "url": "https://math.libretexts.org/@api/deki/files/22039/CNX_IntAlg_Figure_10_01_301_img.jpg?revision=1",
+      "alt": "This figure shows a line from (negative 4, negative 3) to (negative 2, negative 2) then to (negative 1, 0) then to (2, 1) and then to (3, 4).",
+      "credit": ""
+    },
+    {
+      "url": "https://math.libretexts.org/@api/deki/files/22062/CNX_IntAlg_Figure_10_01_022_img.jpg?revision=1",
+      "alt": ".",
+      "credit": ""
+    },
+    {
+      "url": "https://math.libretexts.org/@api/deki/files/22124/CNX_IntAlg_Figure_10_01_302_img.jpg?revision=1",
+      "alt": "Graph extends from negative 4 to 4 on both axes. Points plotted are (negative 3, 4), (0, 3), (1, 2), and (4, 1). Line segments connect points.",
+      "credit": ""
+    },
+    {
+      "url": "https://math.libretexts.org/@api/deki/files/35702/CNX_IntAlg_Figure_10_01_019_img.jpg?revision=1",
+      "alt": "This figure shows x as the input to a box denoted as function f with f of x as the output of the box. Then, f of x is the input to a box denoted as function f superscript negative 1 with f superscript negative 1 of f of x equals x as the output of the box.",
+      "credit": ""
+    },
+    {
+      "url": "https://math.libretexts.org/@api/deki/files/22073/CNX_IntAlg_Figure_10_01_020c_img.jpg?revision=1",
+      "alt": ".",
+      "credit": ""
+    },
+    {
+      "url": "https://math.libretexts.org/@api/deki/files/22159/CNX_IntAlg_Figure_10_01_020d_img.jpg?revision=1",
+      "alt": ".",
+      "credit": ""
+    },
+    {
+      "url": "https://math.libretexts.org/@api/deki/files/35701/CNX_IntAlg_Figure_10_01_020a_img.jpg?revision=1",
+      "alt": ".",
+      "credit": ""
+    },
+    {
+      "url": "https://math.libretexts.org/@api/deki/files/22161/CNX_IntAlg_Figure_10_01_020e_img.jpg?revision=1",
+      "alt": ".",
+      "credit": ""
+    },
+    {
+      "url": "https://math.libretexts.org/@api/deki/files/35700/CNX_IntAlg_Figure_10_01_020f_img.jpg?revision=1",
+      "alt": ".",
+      "credit": ""
+    },
+    {
+      "url": "https://math.libretexts.org/@api/deki/files/22171/CNX_IntAlg_Figure_10_01_020g_img.jpg?revision=1",
+      "alt": ".",
+      "credit": ""
+    },
+    {
+      "url": "https://math.libretexts.org/@api/deki/files/35698/CNX_IntAlg_Figure_10_01_020h_img.jpg?revision=1",
+      "alt": ".",
+      "credit": ""
+    },
+    {
+      "url": "https://math.libretexts.org/@api/deki/files/22213/CNX_IntAlg_Figure_10_01_020i_img.jpg?revision=1",
+      "alt": ".",
+      "credit": ""
+    },
+    {
+      "url": "https://math.libretexts.org/@api/deki/files/22211/CNX_IntAlg_Figure_10_01_020b_img.jpg?revision=1",
+      "alt": ".",
+      "credit": ""
+    },
+    {
+      "url": "https://math.libretexts.org/@api/deki/files/22135/CNX_IntAlg_Figure_10_01_020j_img.jpg?revision=1",
+      "alt": ".",
+      "credit": ""
+    },
+    {
+      "url": "https://math.libretexts.org/@api/deki/files/22141/CNX_IntAlg_Figure_10_01_020k_img.jpg?revision=1",
+      "alt": ".",
+      "credit": ""
+    },
+    {
+      "url": "https://math.libretexts.org/@api/deki/files/22146/CNX_IntAlg_Figure_10_01_020l_img.jpg?revision=1",
+      "alt": ".",
+      "credit": ""
+    }
+  ],
+  "references": [
+    {
+      "text": "10.2: Finding Composite and Inverse Functions",
+      "url": "https://math.libretexts.org/Bookshelves/Algebra/Intermediate_Algebra_1e_(OpenStax)/10%3A_Exponential_and_Logarithmic_Functions/10.02%3A_Finding_Composite_and_Inverse_Functions"
+    },
+    {
+      "text": "CC BY  4.0",
+      "url": "https://creativecommons.org/licenses/by/4.0"
+    },
+    {
+      "text": "OpenStax",
+      "url": "https://openstax.org/"
+    },
+    {
+      "text": "source content",
+      "url": "https://openstax.org/details/books/intermediate-algebra-2e"
+    }
+  ],
+  "exercises": [
+    {
+      "ordinal": 1,
+      "sourceNumber": "1",
+      "sourceAnchor": "",
+      "kind": "exercise-candidate",
+      "context": "By the end of this section, you will be able to:\n\nBefore you get started, take this readiness quiz.",
+      "original": "1. If \\(f(x)=2 x-3\\) and \\(g(x)=x^{2}+2 x-3\\), find \\(f(4)\\).\n\n    If you missed this problem, review Example 3.48.",
+      "prompt": "1. If \\(f(x)=2 x-3\\) and \\(g(x)=x^{2}+2 x-3\\), find \\(f(4)\\).\n\n    If you missed this problem, review Example 3.48.",
+      "sourceAnswers": [],
+      "hasFigure": false,
+      "status": "draft",
+      "answerVerified": false,
+      "translationStatus": "pending",
+      "mappingStatus": "pending"
+    },
+    {
+      "ordinal": 2,
+      "sourceNumber": "2",
+      "sourceAnchor": "",
+      "kind": "exercise-candidate",
+      "context": "By the end of this section, you will be able to:\n\nBefore you get started, take this readiness quiz.",
+      "original": "2. Solve for \\(x\\), \\(3x+2y=12\\).\n\n    If you missed this problem, review Example 2.31.",
+      "prompt": "2. Solve for \\(x\\), \\(3x+2y=12\\).\n\n    If you missed this problem, review Example 2.31.",
+      "sourceAnswers": [],
+      "hasFigure": false,
+      "status": "draft",
+      "answerVerified": false,
+      "translationStatus": "pending",
+      "mappingStatus": "pending"
+    },
+    {
+      "ordinal": 3,
+      "sourceNumber": "3",
+      "sourceAnchor": "",
+      "kind": "exercise-candidate",
+      "context": "By the end of this section, you will be able to:\n\nBefore you get started, take this readiness quiz.",
+      "original": "3. Simplify: \\(5 \\frac{(x+4)}{5}-4\\).\n\n    If you missed this problem, review Example 1.25.",
+      "prompt": "3. Simplify: \\(5 \\frac{(x+4)}{5}-4\\).\n\n    If you missed this problem, review Example 1.25.",
+      "sourceAnswers": [],
+      "hasFigure": false,
+      "status": "draft",
+      "answerVerified": false,
+      "translationStatus": "pending",
+      "mappingStatus": "pending"
+    },
+    {
+      "ordinal": 4,
+      "sourceNumber": "",
+      "sourceAnchor": "",
+      "kind": "example-or-exercise",
+      "context": "\\((f \\circ g)(x)=f(g(x))\\)\n\nWe read \\(f(g(x))\\) as \\(f\\) of \\(g\\) of \\(x\\).\n\nWe have actually used composition without using the notation many times before. When we graphed quadratic functions using translations, we were composing functions. For example, if we first graphed \\(g(x)=x^{2}\\) as a parabola and then shifted it down vertically four units, we were using the composition defined by \\((f∘g)(x)=f(g(x))\\) where \\(f(x)=x−4\\).",
+      "original": "Example \\(\\PageIndex{1}\\)\n\nFor functions \\(f(x)=4x-5\\) and \\(g(x)=2x+3\\), find\n\n1. \\((f \\circ g)(x)\\)\n\n2. \\((g \\circ f)(x)\\)\n\n3. \\((f \\cdot g)(x)\\)\n\nSolution:\n\n1. \n\n                Use the definition of \\((f \\circ g)(x)\\).\t\n\n[Figure: .]\n\n[Figure: .]\n\n[Figure: .]\n\n[Figure: .]\n\n[Figure: .]\n\n                Distribute.\t\n\n[Figure: .]\n\n                Simplify.\t\n\n[Figure: .]\n\n    Table 10.1.1\n\n2. \n\n                Use the definition of \\((f \\circ g)(x)\\).\t\n\n[Figure: .]\n\n[Figure: .]\n\n[Figure: .]\n\n[Figure: .]\n\n[Figure: .]\n\n                Distribute.\t\n\n[Figure: .]\n\n                Simplify.\t\n\n[Figure: .]\n\n    Table 10.1.2\n\nNotice the difference in the result in part a. and part b.\n\nc. Notice that \\((f \\cdot g)(x)\\) is different than \\((f \\circ g)(x)\\). In part a. we did the composition of the functions. Now in part c. we are not composing them, we are multiplying them.\n\nUse the definition of \\((f \\cdot g)(x)\\).\n\n\\((f \\cdot g)(x)=f(x) \\cdot g(x)\\)\n\nSubstitute \\(f(x)=4 x-5\\) and \\(g(x)=2 x+3\\).\n\n\\((f \\cdot g)(x)=(4 x-5) \\cdot(2 x+3)\\)\n\nMultiply.\n\n\\((f \\cdot g)(x)=8 x^{2}+2 x-15\\)",
+      "prompt": "Example \\(\\PageIndex{1}\\)\n\nFor functions \\(f(x)=4x-5\\) and \\(g(x)=2x+3\\), find\n\n1. \\((f \\circ g)(x)\\)\n\n2. \\((g \\circ f)(x)\\)\n\n3. \\((f \\cdot g)(x)\\)\n\nSolution:\n\n1. \n\n                Use the definition of \\((f \\circ g)(x)\\).\t\n\n[Figure: .]\n\n[Figure: .]\n\n[Figure: .]\n\n[Figure: .]\n\n[Figure: .]\n\n                Distribute.\t\n\n[Figure: .]\n\n                Simplify.\t\n\n[Figure: .]\n\n    Table 10.1.1\n\n2. \n\n                Use the definition of \\((f \\circ g)(x)\\).\t\n\n[Figure: .]\n\n[Figure: .]\n\n[Figure: .]\n\n[Figure: .]\n\n[Figure: .]\n\n                Distribute.\t\n\n[Figure: .]\n\n                Simplify.\t\n\n[Figure: .]\n\n    Table 10.1.2\n\nNotice the difference in the result in part a. and part b.\n\nc. Notice that \\((f \\cdot g)(x)\\) is different than \\((f \\circ g)(x)\\). In part a. we did the composition of the functions. Now in part c. we are not composing them, we are multiplying them.\n\nUse the definition of \\((f \\cdot g)(x)\\).\n\n\\((f \\cdot g)(x)=f(x) \\cdot g(x)\\)\n\nSubstitute \\(f(x)=4 x-5\\) and \\(g(x)=2 x+3\\).\n\n\\((f \\cdot g)(x)=(4 x-5) \\cdot(2 x+3)\\)\n\nMultiply.\n\n\\((f \\cdot g)(x)=8 x^{2}+2 x-15\\)",
+      "sourceAnswers": [],
+      "hasFigure": true,
+      "status": "draft",
+      "answerVerified": false,
+      "translationStatus": "pending",
+      "mappingStatus": "pending"
+    },
+    {
+      "ordinal": 5,
+      "sourceNumber": "",
+      "sourceAnchor": "",
+      "kind": "exercise-candidate",
+      "context": "\\((f \\circ g)(x)=f(g(x))\\)\n\nWe read \\(f(g(x))\\) as \\(f\\) of \\(g\\) of \\(x\\).\n\nWe have actually used composition without using the notation many times before. When we graphed quadratic functions using translations, we were composing functions. For example, if we first graphed \\(g(x)=x^{2}\\) as a parabola and then shifted it down vertically four units, we were using the composition defined by \\((f∘g)(x)=f(g(x))\\) where \\(f(x)=x−4\\).",
+      "original": "Exercise \\(\\PageIndex{1}\\)\n\nFor functions \\(f(x)=3x-2\\) and \\(g(x)=5x+1\\), find\n\n1. \\((f \\circ g)(x)\\)\n\n2. \\((g \\circ f)(x)\\)\n\n3. \\((f \\cdot g)(x)\\)\n\nAnswer\n\n1. \\(15x+1\\)\n\n2. \\(15x-9\\)\n\n3. \\(15 x^{2}-7 x-2\\)",
+      "prompt": "Exercise \\(\\PageIndex{1}\\)\n\nFor functions \\(f(x)=3x-2\\) and \\(g(x)=5x+1\\), find\n\n1. \\((f \\circ g)(x)\\)\n\n2. \\((g \\circ f)(x)\\)\n\n3. \\((f \\cdot g)(x)\\)",
+      "sourceAnswers": [
+        "1. \\(15x+1\\)\n\n2. \\(15x-9\\)\n\n3. \\(15 x^{2}-7 x-2\\)"
+      ],
+      "hasFigure": false,
+      "status": "draft",
+      "answerVerified": false,
+      "translationStatus": "pending",
+      "mappingStatus": "pending"
+    },
+    {
+      "ordinal": 6,
+      "sourceNumber": "",
+      "sourceAnchor": "",
+      "kind": "exercise-candidate",
+      "context": "\\((f \\circ g)(x)=f(g(x))\\)\n\nWe read \\(f(g(x))\\) as \\(f\\) of \\(g\\) of \\(x\\).\n\nWe have actually used composition without using the notation many times before. When we graphed quadratic functions using translations, we were composing functions. For example, if we first graphed \\(g(x)=x^{2}\\) as a parabola and then shifted it down vertically four units, we were using the composition defined by \\((f∘g)(x)=f(g(x))\\) where \\(f(x)=x−4\\).",
+      "original": "Exercise \\(\\PageIndex{2}\\)\n\nFor functions \\(f(x)=4 x-3\\), and \\(g(x)=6x-5\\), find\n\n1. \\((f \\circ g)(x)\\)\n\n2. \\((g \\circ f)(x)\\)\n\n3. \\((f \\cdot g)(x)\\)\n\nAnswer\n\n1. \\(24 x-23\\)\n\n2. \\(24 x-23\\)\n\n3. \\(24 x^{2}-38 x+15\\)",
+      "prompt": "Exercise \\(\\PageIndex{2}\\)\n\nFor functions \\(f(x)=4 x-3\\), and \\(g(x)=6x-5\\), find\n\n1. \\((f \\circ g)(x)\\)\n\n2. \\((g \\circ f)(x)\\)\n\n3. \\((f \\cdot g)(x)\\)",
+      "sourceAnswers": [
+        "1. \\(24 x-23\\)\n\n2. \\(24 x-23\\)\n\n3. \\(24 x^{2}-38 x+15\\)"
+      ],
+      "hasFigure": false,
+      "status": "draft",
+      "answerVerified": false,
+      "translationStatus": "pending",
+      "mappingStatus": "pending"
+    },
+    {
+      "ordinal": 7,
+      "sourceNumber": "",
+      "sourceAnchor": "",
+      "kind": "example-or-exercise",
+      "context": "We read \\(f(g(x))\\) as \\(f\\) of \\(g\\) of \\(x\\).\n\nWe have actually used composition without using the notation many times before. When we graphed quadratic functions using translations, we were composing functions. For example, if we first graphed \\(g(x)=x^{2}\\) as a parabola and then shifted it down vertically four units, we were using the composition defined by \\((f∘g)(x)=f(g(x))\\) where \\(f(x)=x−4\\).\n\nIn the next example we will evaluate a composition for a specific value.",
+      "original": "Example \\(\\PageIndex{2}\\)\n\nFor functions \\(f(x)=x^{2}-4\\), and \\(g(x)=3 x+2\\), find:\n\n1. \\((f \\circ g)(-3)\\)\n\n2. \\((g \\circ f)(-1)\\)\n\n3. \\((f \\circ f)(2)\\)\n\nSolution:\n\n1. \n\n                Use the definition of \\((f \\circ g)(-3)\\).\t\n\n[Figure: .]\n\n[Figure: .]\n\n[Figure: .]\n\n                Simplify.\t\n\n[Figure: .]\n\n[Figure: .]\n\n[Figure: .]\n\n                Simplify.\t\n\n[Figure: .]\n\n    Table 10.1.3\n\n2. \n\n                Use the definition of \\((g \\circ f)(-1)\\).\t\n\n[Figure: .]\n\n[Figure: .]\n\n[Figure: .]\n\n                Simplify.\t\n\n[Figure: .]\n\n[Figure: .]\n\n[Figure: .]\n\n                Simplify.\t\n\n[Figure: .]\n\n    Table 10.1.4\n\n3. \n\n                Use the definition of \\((f \\circ f)(2)\\).\t\n\n[Figure: .]\n\n[Figure: .]\n\n[Figure: .]\n\n                Simplify.\t\n\n[Figure: .]\n\n[Figure: .]\n\n[Figure: .]\n\n                Simplify.\t\n\n[Figure: .]\n\n    Table 10.1.5",
+      "prompt": "Example \\(\\PageIndex{2}\\)\n\nFor functions \\(f(x)=x^{2}-4\\), and \\(g(x)=3 x+2\\), find:\n\n1. \\((f \\circ g)(-3)\\)\n\n2. \\((g \\circ f)(-1)\\)\n\n3. \\((f \\circ f)(2)\\)\n\nSolution:\n\n1. \n\n                Use the definition of \\((f \\circ g)(-3)\\).\t\n\n[Figure: .]\n\n[Figure: .]\n\n[Figure: .]\n\n                Simplify.\t\n\n[Figure: .]\n\n[Figure: .]\n\n[Figure: .]\n\n                Simplify.\t\n\n[Figure: .]\n\n    Table 10.1.3\n\n2. \n\n                Use the definition of \\((g \\circ f)(-1)\\).\t\n\n[Figure: .]\n\n[Figure: .]\n\n[Figure: .]\n\n                Simplify.\t\n\n[Figure: .]\n\n[Figure: .]\n\n[Figure: .]\n\n                Simplify.\t\n\n[Figure: .]\n\n    Table 10.1.4\n\n3. \n\n                Use the definition of \\((f \\circ f)(2)\\).\t\n\n[Figure: .]\n\n[Figure: .]\n\n[Figure: .]\n\n                Simplify.\t\n\n[Figure: .]\n\n[Figure: .]\n\n[Figure: .]\n\n                Simplify.\t\n\n[Figure: .]\n\n    Table 10.1.5",
+      "sourceAnswers": [],
+      "hasFigure": true,
+      "status": "draft",
+      "answerVerified": false,
+      "translationStatus": "pending",
+      "mappingStatus": "pending"
+    },
+    {
+      "ordinal": 8,
+      "sourceNumber": "",
+      "sourceAnchor": "",
+      "kind": "exercise-candidate",
+      "context": "We read \\(f(g(x))\\) as \\(f\\) of \\(g\\) of \\(x\\).\n\nWe have actually used composition without using the notation many times before. When we graphed quadratic functions using translations, we were composing functions. For example, if we first graphed \\(g(x)=x^{2}\\) as a parabola and then shifted it down vertically four units, we were using the composition defined by \\((f∘g)(x)=f(g(x))\\) where \\(f(x)=x−4\\).\n\nIn the next example we will evaluate a composition for a specific value.",
+      "original": "Exercise \\(\\PageIndex{3}\\)\n\nFor functions \\(f(x)=x^{2}-9\\), and \\(g(x)=2x+5\\), find\n\n1. \\((f \\circ g)(-2)\\)\n\n2. \\((g \\circ f)(-3)\\)\n\n3. \\((f \\circ f)(4)\\)\n\nAnswer\n\n1. \\(-8\\)\n\n2. \\(5\\)\n\n3. \\(40\\)",
+      "prompt": "Exercise \\(\\PageIndex{3}\\)\n\nFor functions \\(f(x)=x^{2}-9\\), and \\(g(x)=2x+5\\), find\n\n1. \\((f \\circ g)(-2)\\)\n\n2. \\((g \\circ f)(-3)\\)\n\n3. \\((f \\circ f)(4)\\)",
+      "sourceAnswers": [
+        "1. \\(-8\\)\n\n2. \\(5\\)\n\n3. \\(40\\)"
+      ],
+      "hasFigure": false,
+      "status": "draft",
+      "answerVerified": false,
+      "translationStatus": "pending",
+      "mappingStatus": "pending"
+    },
+    {
+      "ordinal": 9,
+      "sourceNumber": "",
+      "sourceAnchor": "",
+      "kind": "exercise-candidate",
+      "context": "We read \\(f(g(x))\\) as \\(f\\) of \\(g\\) of \\(x\\).\n\nWe have actually used composition without using the notation many times before. When we graphed quadratic functions using translations, we were composing functions. For example, if we first graphed \\(g(x)=x^{2}\\) as a parabola and then shifted it down vertically four units, we were using the composition defined by \\((f∘g)(x)=f(g(x))\\) where \\(f(x)=x−4\\).\n\nIn the next example we will evaluate a composition for a specific value.",
+      "original": "Exercise \\(\\PageIndex{4}\\)\n\nFor functions \\(f(x)=x^{2}+1\\), and \\(g(x)=3x-5\\), find\n\n1. \\((f \\circ g)(-1)\\)\n\n2. \\((g \\circ f)(2)\\)\n\n3. \\((f \\circ f)(-1)\\)\n\nAnswer\n\n1. \\(65\\)\n\n2. \\(10\\)\n\n3. \\(5\\)",
+      "prompt": "Exercise \\(\\PageIndex{4}\\)\n\nFor functions \\(f(x)=x^{2}+1\\), and \\(g(x)=3x-5\\), find\n\n1. \\((f \\circ g)(-1)\\)\n\n2. \\((g \\circ f)(2)\\)\n\n3. \\((f \\circ f)(-1)\\)",
+      "sourceAnswers": [
+        "1. \\(65\\)\n\n2. \\(10\\)\n\n3. \\(5\\)"
+      ],
+      "hasFigure": false,
+      "status": "draft",
+      "answerVerified": false,
+      "translationStatus": "pending",
+      "mappingStatus": "pending"
+    },
+    {
+      "ordinal": 10,
+      "sourceNumber": "",
+      "sourceAnchor": "",
+      "kind": "example-or-exercise",
+      "context": "A function is one-to-one if each value in the range has exactly one element in the domain. For each ordered pair in the function, each y-value is matched with only one \\(x\\)-value.\n\nOur example of the birthday relation is not a one-to-one function. Two people can share the same birthday. The range value August 2 is the birthday of Liz and June, and so one range value has two domain values. Therefore, the function is not one-to-one.\n\nA function is one-to-one if each value in the range corresponds to one element in the domain. For each ordered pair in the function, each \\(y\\)-value is matched with only one \\(x\\)-value. There are no repeated \\(y\\)-values.",
+      "original": "Example \\(\\PageIndex{3}\\)\n\nFor each set of ordered pairs, determine if it represents a function and, if so, if the function is one-to-one.\n\n1. \\(\\{(-3,27),(-2,8),(-1,1),(0,0),(1,1),(2,8),(3,27)\\}\\)\n\n2. \\(\\{(0,0),(1,1),(4,2),(9,3),(16,4)\\}\\)\n\nSolution:\n\n1. \\(\\{(-3,27),(-2,8),(-1,1),(0,0),(1,1),(2,8),(3,27)\\}\\)\n\nEach \\(x\\)-value is matched with only one \\(y\\)-value. So this relation is a function.\n\nBut each \\(y\\)-value is not paired with only one \\(x\\)-value, \\((−3,27)\\) and \\((3,27)\\), for example. So this function is not one-to-one.\n\n2. \\(\\{(0,0),(1,1),(4,2),(9,3),(16,4)\\}\\)\n\nEach \\(x\\)-value is matched with only one \\(y\\)-value. So this relation is a function.\n\nSince each \\(y\\)-value is paired with only one \\(x\\)-value, this function is one-to-one.",
+      "prompt": "Example \\(\\PageIndex{3}\\)\n\nFor each set of ordered pairs, determine if it represents a function and, if so, if the function is one-to-one.\n\n1. \\(\\{(-3,27),(-2,8),(-1,1),(0,0),(1,1),(2,8),(3,27)\\}\\)\n\n2. \\(\\{(0,0),(1,1),(4,2),(9,3),(16,4)\\}\\)\n\nSolution:\n\n1. \\(\\{(-3,27),(-2,8),(-1,1),(0,0),(1,1),(2,8),(3,27)\\}\\)\n\nEach \\(x\\)-value is matched with only one \\(y\\)-value. So this relation is a function.\n\nBut each \\(y\\)-value is not paired with only one \\(x\\)-value, \\((−3,27)\\) and \\((3,27)\\), for example. So this function is not one-to-one.\n\n2. \\(\\{(0,0),(1,1),(4,2),(9,3),(16,4)\\}\\)\n\nEach \\(x\\)-value is matched with only one \\(y\\)-value. So this relation is a function.\n\nSince each \\(y\\)-value is paired with only one \\(x\\)-value, this function is one-to-one.",
+      "sourceAnswers": [],
+      "hasFigure": false,
+      "status": "draft",
+      "answerVerified": false,
+      "translationStatus": "pending",
+      "mappingStatus": "pending"
+    },
+    {
+      "ordinal": 11,
+      "sourceNumber": "",
+      "sourceAnchor": "",
+      "kind": "exercise-candidate",
+      "context": "A function is one-to-one if each value in the range has exactly one element in the domain. For each ordered pair in the function, each y-value is matched with only one \\(x\\)-value.\n\nOur example of the birthday relation is not a one-to-one function. Two people can share the same birthday. The range value August 2 is the birthday of Liz and June, and so one range value has two domain values. Therefore, the function is not one-to-one.\n\nA function is one-to-one if each value in the range corresponds to one element in the domain. For each ordered pair in the function, each \\(y\\)-value is matched with only one \\(x\\)-value. There are no repeated \\(y\\)-values.",
+      "original": "Exercise \\(\\PageIndex{5}\\)\n\nFor each set of ordered pairs, determine if it represents a function and if so, is the function one-to-one.\n\n1. \\(\\{(-3,-6),(-2,-4),(-1,-2),(0,0),(1,2),(2,4),(3,6)\\}\\)\n\n2. \\(\\{(-4,8),(-2,4),(-1,2),(0,0),(1,2),(2,4),(4,8)\\}\\)\n\nAnswer\n\n1. One-to-one function\n\n2. Function; not one-to-one",
+      "prompt": "Exercise \\(\\PageIndex{5}\\)\n\nFor each set of ordered pairs, determine if it represents a function and if so, is the function one-to-one.\n\n1. \\(\\{(-3,-6),(-2,-4),(-1,-2),(0,0),(1,2),(2,4),(3,6)\\}\\)\n\n2. \\(\\{(-4,8),(-2,4),(-1,2),(0,0),(1,2),(2,4),(4,8)\\}\\)",
+      "sourceAnswers": [
+        "1. One-to-one function\n\n2. Function; not one-to-one"
+      ],
+      "hasFigure": false,
+      "status": "draft",
+      "answerVerified": false,
+      "translationStatus": "pending",
+      "mappingStatus": "pending"
+    },
+    {
+      "ordinal": 12,
+      "sourceNumber": "",
+      "sourceAnchor": "",
+      "kind": "exercise-candidate",
+      "context": "A function is one-to-one if each value in the range has exactly one element in the domain. For each ordered pair in the function, each y-value is matched with only one \\(x\\)-value.\n\nOur example of the birthday relation is not a one-to-one function. Two people can share the same birthday. The range value August 2 is the birthday of Liz and June, and so one range value has two domain values. Therefore, the function is not one-to-one.\n\nA function is one-to-one if each value in the range corresponds to one element in the domain. For each ordered pair in the function, each \\(y\\)-value is matched with only one \\(x\\)-value. There are no repeated \\(y\\)-values.",
+      "original": "Exercise \\(\\PageIndex{6}\\)\n\nFor each set of ordered pairs, determine if it represents a function and if so, is the function one-to-one.\n\n1. \\(\\{(27,-3),(8,-2),(1,-1),(0,0),(1,1),(8,2),(27,3)\\}\\)\n\n2. \\(\\{(7,-3),(-5,-4),(8,0),(0,0),(-6,4),(-2,2),(-1,3)\\}\\)\n\nAnswer\n\n1. Not a function\n\n2. Function; not one-to-one",
+      "prompt": "Exercise \\(\\PageIndex{6}\\)\n\nFor each set of ordered pairs, determine if it represents a function and if so, is the function one-to-one.\n\n1. \\(\\{(27,-3),(8,-2),(1,-1),(0,0),(1,1),(8,2),(27,3)\\}\\)\n\n2. \\(\\{(7,-3),(-5,-4),(8,0),(0,0),(-6,4),(-2,2),(-1,3)\\}\\)",
+      "sourceAnswers": [
+        "1. Not a function\n\n2. Function; not one-to-one"
+      ],
+      "hasFigure": false,
+      "status": "draft",
+      "answerVerified": false,
+      "translationStatus": "pending",
+      "mappingStatus": "pending"
+    },
+    {
+      "ordinal": 13,
+      "sourceNumber": "",
+      "sourceAnchor": "",
+      "kind": "example-or-exercise",
+      "context": "Horizontal Line Test\n\nIf every horizontal line intersects the graph of a function in at most one point, it is a one-to-one function.\n\nWe can test whether a graph of a relation is a function by using the vertical line test. We can then tell if the function is one-to-one by applying the horizontal line test.",
+      "original": "Example \\(\\PageIndex{4}\\)\n\nDetermine\n\n1. whether each graph is the graph of a function and, if so,\n\n2. whether it is one-to-one\n\n[Figure: This first graph shows a straight line passing through (0, 2) and (3, 0). This second shows a parabola opening up with vertex at (0, negative 1).]\n\nFigure 10.1.39\n\nSolution:\n\n1. \n\n[Figure: This figure shows a straight line passing through (0, 2) and (3, 0), with a red vertical line that only passes through one point and a blue horizontal line that only passes through one point.]\n\n    Figure 10.1.40\n\nSince any vertical line intersects the graph in at most one point, the graph is the graph of a function. Since any horizontal line intersects the graph in at most one point, the graph is the graph of a one-to-one function.\n\nb.\n\n[Figure: This figure shows a parabola opening up with vertex at (0, negative 1), with a red vertical line that only passes through one point and a blue horizontal line that passes through two points.]\n\nFigure 10.1.41\n\nSince any vertical line intersects the graph in at most one point, the graph is the graph of a function. The horizontal line shown on the graph intersects it in two points. This graph does not represent a one-to-one function.",
+      "prompt": "Example \\(\\PageIndex{4}\\)\n\nDetermine\n\n1. whether each graph is the graph of a function and, if so,\n\n2. whether it is one-to-one\n\n[Figure: This first graph shows a straight line passing through (0, 2) and (3, 0). This second shows a parabola opening up with vertex at (0, negative 1).]\n\nFigure 10.1.39\n\nSolution:\n\n1. \n\n[Figure: This figure shows a straight line passing through (0, 2) and (3, 0), with a red vertical line that only passes through one point and a blue horizontal line that only passes through one point.]\n\n    Figure 10.1.40\n\nSince any vertical line intersects the graph in at most one point, the graph is the graph of a function. Since any horizontal line intersects the graph in at most one point, the graph is the graph of a one-to-one function.\n\nb.\n\n[Figure: This figure shows a parabola opening up with vertex at (0, negative 1), with a red vertical line that only passes through one point and a blue horizontal line that passes through two points.]\n\nFigure 10.1.41\n\nSince any vertical line intersects the graph in at most one point, the graph is the graph of a function. The horizontal line shown on the graph intersects it in two points. This graph does not represent a one-to-one function.",
+      "sourceAnswers": [],
+      "hasFigure": true,
+      "status": "draft",
+      "answerVerified": false,
+      "translationStatus": "pending",
+      "mappingStatus": "pending"
+    },
+    {
+      "ordinal": 14,
+      "sourceNumber": "",
+      "sourceAnchor": "",
+      "kind": "exercise-candidate",
+      "context": "Horizontal Line Test\n\nIf every horizontal line intersects the graph of a function in at most one point, it is a one-to-one function.\n\nWe can test whether a graph of a relation is a function by using the vertical line test. We can then tell if the function is one-to-one by applying the horizontal line test.",
+      "original": "Exercise \\(\\PageIndex{7}\\)\n\nDetermine\n\n1. whether each graph is the graph of a function and, if so,\n\n2. whether it is one-to-one\n\n[Figure: Graph a shows a parabola opening to the right with vertex at (negative 1, 0). Graph b shows an exponential function that does not cross the x axis and that passes through (0, 1) before increasing rapidly.]\n\nFigure 10.1.42\n\nAnswer\n\n1. Not a function\n\n2. One-to-one function",
+      "prompt": "Exercise \\(\\PageIndex{7}\\)\n\nDetermine\n\n1. whether each graph is the graph of a function and, if so,\n\n2. whether it is one-to-one\n\n[Figure: Graph a shows a parabola opening to the right with vertex at (negative 1, 0). Graph b shows an exponential function that does not cross the x axis and that passes through (0, 1) before increasing rapidly.]\n\nFigure 10.1.42",
+      "sourceAnswers": [
+        "1. Not a function\n\n2. One-to-one function"
+      ],
+      "hasFigure": true,
+      "status": "draft",
+      "answerVerified": false,
+      "translationStatus": "pending",
+      "mappingStatus": "pending"
+    },
+    {
+      "ordinal": 15,
+      "sourceNumber": "",
+      "sourceAnchor": "",
+      "kind": "exercise-candidate",
+      "context": "Horizontal Line Test\n\nIf every horizontal line intersects the graph of a function in at most one point, it is a one-to-one function.\n\nWe can test whether a graph of a relation is a function by using the vertical line test. We can then tell if the function is one-to-one by applying the horizontal line test.",
+      "original": "Exercise \\(\\PageIndex{8}\\)\n\nDetermine\n\n1. whether each graph is the graph of a function and, if so,\n\n2. whether it is one-to-one\n\n[Figure: Graph a shows a parabola opening up with vertex at (0, 3). Graph b shows a straight line passing through (0, negative 2) and (2, 0).]\n\nFigure 10.1.43\n\nAnswer\n\n1. Function; not one-to-one\n\n2. One-to-one function",
+      "prompt": "Exercise \\(\\PageIndex{8}\\)\n\nDetermine\n\n1. whether each graph is the graph of a function and, if so,\n\n2. whether it is one-to-one\n\n[Figure: Graph a shows a parabola opening up with vertex at (0, 3). Graph b shows a straight line passing through (0, negative 2) and (2, 0).]\n\nFigure 10.1.43",
+      "sourceAnswers": [
+        "1. Function; not one-to-one\n\n2. One-to-one function"
+      ],
+      "hasFigure": true,
+      "status": "draft",
+      "answerVerified": false,
+      "translationStatus": "pending",
+      "mappingStatus": "pending"
+    },
+    {
+      "ordinal": 16,
+      "sourceNumber": "",
+      "sourceAnchor": "",
+      "kind": "example-or-exercise",
+      "context": "Inverse of a Function Defined by Ordered Pairs\n\nIf \\(f(x)\\) is a one-to-one function whose ordered pairs are of the form \\((x,y)\\), then its inverse function \\(f^{−1}(x)\\) is the set of ordered pairs \\((y,x)\\).\n\nIn the next example we will find the inverse of a function defined by ordered pairs.",
+      "original": "Example \\(\\PageIndex{5}\\)\n\nFind the inverse of the function \\(\\{(0,3),(1,5),(2,7),(3,9)\\}\\). Determine the domain and range of the inverse function.\n\nSolution:\n\nThis function is one-to-one since every \\(x\\)-value is paired with exactly one \\(y\\)-value.\n\nTo find the inverse we reverse the \\(x\\)-values and \\(y\\)-values in the ordered pairs of the function.\n\n\\(\\begin{array}{ll} {\\text{Function}}&{\\{(0,3),(1,5),(2,7),(3,9)\\}} \\\\ {\\text{Inverse Function}}& {\\{(3,0), (5,1), (7,2), (9,3)\\}} \\\\ {\\text{Domain of Inverse Function}}&{\\{3, 5, 7, 9\\}} \\\\ {\\text{Range of Inverse Function}}&{\\{0, 1, 2, 3\\}} \\end{array}\\)",
+      "prompt": "Example \\(\\PageIndex{5}\\)\n\nFind the inverse of the function \\(\\{(0,3),(1,5),(2,7),(3,9)\\}\\). Determine the domain and range of the inverse function.\n\nSolution:\n\nThis function is one-to-one since every \\(x\\)-value is paired with exactly one \\(y\\)-value.\n\nTo find the inverse we reverse the \\(x\\)-values and \\(y\\)-values in the ordered pairs of the function.\n\n\\(\\begin{array}{ll} {\\text{Function}}&{\\{(0,3),(1,5),(2,7),(3,9)\\}} \\\\ {\\text{Inverse Function}}& {\\{(3,0), (5,1), (7,2), (9,3)\\}} \\\\ {\\text{Domain of Inverse Function}}&{\\{3, 5, 7, 9\\}} \\\\ {\\text{Range of Inverse Function}}&{\\{0, 1, 2, 3\\}} \\end{array}\\)",
+      "sourceAnswers": [],
+      "hasFigure": false,
+      "status": "draft",
+      "answerVerified": false,
+      "translationStatus": "pending",
+      "mappingStatus": "pending"
+    },
+    {
+      "ordinal": 17,
+      "sourceNumber": "",
+      "sourceAnchor": "",
+      "kind": "exercise-candidate",
+      "context": "Inverse of a Function Defined by Ordered Pairs\n\nIf \\(f(x)\\) is a one-to-one function whose ordered pairs are of the form \\((x,y)\\), then its inverse function \\(f^{−1}(x)\\) is the set of ordered pairs \\((y,x)\\).\n\nIn the next example we will find the inverse of a function defined by ordered pairs.",
+      "original": "Exercise \\(\\PageIndex{9}\\)\n\nFind the inverse of \\(\\{(0,4),(1,7),(2,10),(3,13)\\}\\). Determine the domain and range of the inverse function.\n\nAnswer\n\nInverse function: \\(\\{(4,0),(7,1),(10,2),(13,3)\\}\\). Domain: \\(\\{4,7,10,13\\}\\). Range: \\(\\{0,1,2,3\\}\\).",
+      "prompt": "Exercise \\(\\PageIndex{9}\\)\n\nFind the inverse of \\(\\{(0,4),(1,7),(2,10),(3,13)\\}\\). Determine the domain and range of the inverse function.",
+      "sourceAnswers": [
+        "Inverse function: \\(\\{(4,0),(7,1),(10,2),(13,3)\\}\\). Domain: \\(\\{4,7,10,13\\}\\). Range: \\(\\{0,1,2,3\\}\\)."
+      ],
+      "hasFigure": false,
+      "status": "draft",
+      "answerVerified": false,
+      "translationStatus": "pending",
+      "mappingStatus": "pending"
+    },
+    {
+      "ordinal": 18,
+      "sourceNumber": "",
+      "sourceAnchor": "",
+      "kind": "exercise-candidate",
+      "context": "Inverse of a Function Defined by Ordered Pairs\n\nIf \\(f(x)\\) is a one-to-one function whose ordered pairs are of the form \\((x,y)\\), then its inverse function \\(f^{−1}(x)\\) is the set of ordered pairs \\((y,x)\\).\n\nIn the next example we will find the inverse of a function defined by ordered pairs.",
+      "original": "Exercise \\(\\PageIndex{10}\\)\n\nFind the inverse of \\(\\{(-1,4),(-2,1),(-3,0),(-4,2)\\}\\). Determine the domain and range of the inverse function.\n\nAnswer\n\nInverse function: \\(\\{(4,-1),(1,-2),(0,-3),(2,-4)\\}\\). Domain: \\(\\{0,1,2,4\\}\\). Range: \\(\\{-4,-3,-2,-1\\}\\).",
+      "prompt": "Exercise \\(\\PageIndex{10}\\)\n\nFind the inverse of \\(\\{(-1,4),(-2,1),(-3,0),(-4,2)\\}\\). Determine the domain and range of the inverse function.",
+      "sourceAnswers": [
+        "Inverse function: \\(\\{(4,-1),(1,-2),(0,-3),(2,-4)\\}\\). Domain: \\(\\{0,1,2,4\\}\\). Range: \\(\\{-4,-3,-2,-1\\}\\)."
+      ],
+      "hasFigure": false,
+      "status": "draft",
+      "answerVerified": false,
+      "translationStatus": "pending",
+      "mappingStatus": "pending"
+    },
+    {
+      "ordinal": 19,
+      "sourceNumber": "",
+      "sourceAnchor": "",
+      "kind": "example-or-exercise",
+      "context": "So if a point \\((a,b)\\) is on the graph of a function \\(f(x)\\), then the ordered pair \\((b,a)\\) is on the graph of \\(f^{−1}(x)\\). See Figure 10.1.43.\n\nThe distance between any two pairs \\((a,b)\\) and \\((b,a)\\) is cut in half by the line \\(y=x\\). So we say the points are mirror images of each other through the line \\(y=x\\).\n\nSince every point on the graph of a function \\(f(x)\\) is a mirror image of a point on the graph of \\(f^{−1}(x)\\), we say the graphs are mirror images of each other through the line \\(y=x\\). We will use this concept to graph the inverse of a function in the next example.",
+      "original": "Example \\(\\PageIndex{6}\\)\n\nGraph, on the same coordinate system, the inverse of the one-to one function shown.\n\n[Figure: This figure shows a line from (negative 5, negative 3) to (negative 3, negative 1) then to (negative 1,0) then to (0,2) and then to (3, 4).]\n\nFigure 10.1.46\n\nSolution:\n\nWe can use points on the graph to find points on the inverse graph. Some points on the graph are: \\((−5,−3),(−3,−1),(−1,0),(0,2),(3,4)\\).\n\nSo, the inverse function will contain the points: \\((−3,−5),(−1,−3),(0,−1),(2,0),(4,3)\\).\n\n[Figure: This figure shows a line from (negative 5, negative 3) to (negative 3, negative 1) then to (negative 1, 0) then to (0,2) and then to (3, 4). Then there is a dashed line to denote y equals x. There is also a line from (negative 3, negative 5) to (negative 1, negative 3) then to (0, negative 1), then to (2, 0) and then to (4, 3).]\n\nFigure 10.1.47\n\nNotice how the graph of the original function and the graph of the inverse functions are mirror images through the line \\(y=x\\).",
+      "prompt": "Example \\(\\PageIndex{6}\\)\n\nGraph, on the same coordinate system, the inverse of the one-to one function shown.\n\n[Figure: This figure shows a line from (negative 5, negative 3) to (negative 3, negative 1) then to (negative 1,0) then to (0,2) and then to (3, 4).]\n\nFigure 10.1.46\n\nSolution:\n\nWe can use points on the graph to find points on the inverse graph. Some points on the graph are: \\((−5,−3),(−3,−1),(−1,0),(0,2),(3,4)\\).\n\nSo, the inverse function will contain the points: \\((−3,−5),(−1,−3),(0,−1),(2,0),(4,3)\\).\n\n[Figure: This figure shows a line from (negative 5, negative 3) to (negative 3, negative 1) then to (negative 1, 0) then to (0,2) and then to (3, 4). Then there is a dashed line to denote y equals x. There is also a line from (negative 3, negative 5) to (negative 1, negative 3) then to (0, negative 1), then to (2, 0) and then to (4, 3).]\n\nFigure 10.1.47\n\nNotice how the graph of the original function and the graph of the inverse functions are mirror images through the line \\(y=x\\).",
+      "sourceAnswers": [],
+      "hasFigure": true,
+      "status": "draft",
+      "answerVerified": false,
+      "translationStatus": "pending",
+      "mappingStatus": "pending"
+    },
+    {
+      "ordinal": 20,
+      "sourceNumber": "",
+      "sourceAnchor": "",
+      "kind": "exercise-candidate",
+      "context": "So if a point \\((a,b)\\) is on the graph of a function \\(f(x)\\), then the ordered pair \\((b,a)\\) is on the graph of \\(f^{−1}(x)\\). See Figure 10.1.43.\n\nThe distance between any two pairs \\((a,b)\\) and \\((b,a)\\) is cut in half by the line \\(y=x\\). So we say the points are mirror images of each other through the line \\(y=x\\).\n\nSince every point on the graph of a function \\(f(x)\\) is a mirror image of a point on the graph of \\(f^{−1}(x)\\), we say the graphs are mirror images of each other through the line \\(y=x\\). We will use this concept to graph the inverse of a function in the next example.",
+      "original": "Exercise \\(\\PageIndex{11}\\)\n\nGraph, on the same coordinate system, the inverse of the one-to one function.\n\n[Figure: The graph shows a line from (negative 3, negative 4) to (negative 2, negative 2) then to (0, negative 1), then to (1, 2) and then to (4, 3). The graph shows a line from (negative 3, 4) to (0, 3) then to (1, 2) and then to (4, 1).]\n\nFigure 10.1.48\n\nAnswer\n\n[Figure: This figure shows a line from (negative 4, negative 3) to (negative 2, negative 2) then to (negative 1, 0) then to (2, 1) and then to (3, 4).]\n\nFigure 10.1.49",
+      "prompt": "Exercise \\(\\PageIndex{11}\\)\n\nGraph, on the same coordinate system, the inverse of the one-to one function.\n\n[Figure: The graph shows a line from (negative 3, negative 4) to (negative 2, negative 2) then to (0, negative 1), then to (1, 2) and then to (4, 3). The graph shows a line from (negative 3, 4) to (0, 3) then to (1, 2) and then to (4, 1).]\n\nFigure 10.1.48",
+      "sourceAnswers": [
+        "[Figure: This figure shows a line from (negative 4, negative 3) to (negative 2, negative 2) then to (negative 1, 0) then to (2, 1) and then to (3, 4).]\n\nFigure 10.1.49"
+      ],
+      "hasFigure": true,
+      "status": "draft",
+      "answerVerified": false,
+      "translationStatus": "pending",
+      "mappingStatus": "pending"
+    },
+    {
+      "ordinal": 21,
+      "sourceNumber": "",
+      "sourceAnchor": "",
+      "kind": "exercise-candidate",
+      "context": "So if a point \\((a,b)\\) is on the graph of a function \\(f(x)\\), then the ordered pair \\((b,a)\\) is on the graph of \\(f^{−1}(x)\\). See Figure 10.1.43.\n\nThe distance between any two pairs \\((a,b)\\) and \\((b,a)\\) is cut in half by the line \\(y=x\\). So we say the points are mirror images of each other through the line \\(y=x\\).\n\nSince every point on the graph of a function \\(f(x)\\) is a mirror image of a point on the graph of \\(f^{−1}(x)\\), we say the graphs are mirror images of each other through the line \\(y=x\\). We will use this concept to graph the inverse of a function in the next example.",
+      "original": "Exercise \\(\\PageIndex{12}\\)\n\nGraph, on the same coordinate system, the inverse of the one-to one function.\n\n[Figure: .]\n\nFigure 10.1.50\n\nAnswer\n\n[Figure: Graph extends from negative 4 to 4 on both axes. Points plotted are (negative 3, 4), (0, 3), (1, 2), and (4, 1). Line segments connect points.]\n\nFigure 10.1.51",
+      "prompt": "Exercise \\(\\PageIndex{12}\\)\n\nGraph, on the same coordinate system, the inverse of the one-to one function.\n\n[Figure: .]\n\nFigure 10.1.50",
+      "sourceAnswers": [
+        "[Figure: Graph extends from negative 4 to 4 on both axes. Points plotted are (negative 3, 4), (0, 3), (1, 2), and (4, 1). Line segments connect points.]\n\nFigure 10.1.51"
+      ],
+      "hasFigure": true,
+      "status": "draft",
+      "answerVerified": false,
+      "translationStatus": "pending",
+      "mappingStatus": "pending"
+    },
+    {
+      "ordinal": 22,
+      "sourceNumber": "",
+      "sourceAnchor": "",
+      "kind": "example-or-exercise",
+      "context": "\\(f^{-1}(f(x))=x\\), for all \\(x\\) in the domain of \\(f\\)\n\n\\(f\\left(f^{-1}(x)\\right)=x\\), for all \\(x\\) in the domain of \\(f^{-1}\\)\n\nWe can use this property to verify that two functions are inverses of each other.",
+      "original": "Example \\(\\PageIndex{7}\\)\n\nVerify that \\(f(x)=5x−1\\) and \\(g(x)=\\frac{x+1}{5}\\) are inverse functions.\n\nSolution:\n\nThe functions are inverses of each other if \\(g(f(x))=x\\) and \\(f(g(x))=x\\).\n\n[Figure: .]\n\n            Substitue \\(5x-1\\) for \\(f(x)\\).\t\n\n[Figure: .]\n\n[Figure: .]\n\n[Figure: .]\n\n            Simplify.\t\n\n[Figure: .]\n\n            Simplify.\t\n\n[Figure: .]\n\n[Figure: .]\n\nFigure 10.1.59\n\n            Substitute \\(\\frac{x+1}{5}\\) for \\(g(x)\\).\t\n\n[Figure: .]\n\n[Figure: .]\n\n[Figure: .]\n\n            Simplify.\t\n\n[Figure: .]\n\n            Simplify.\t\n\n[Figure: .]\n\nTable 10.1.6\n\nSince both \\(g(f(x))=x\\) and \\(f(g(x))=x\\) are true, the functions \\(f(x)=5x−1\\) and \\(g(x)=\\frac{x+1}{5}\\) are inverse functions. That is, they are inverses of each other.",
+      "prompt": "Example \\(\\PageIndex{7}\\)\n\nVerify that \\(f(x)=5x−1\\) and \\(g(x)=\\frac{x+1}{5}\\) are inverse functions.\n\nSolution:\n\nThe functions are inverses of each other if \\(g(f(x))=x\\) and \\(f(g(x))=x\\).\n\n[Figure: .]\n\n            Substitue \\(5x-1\\) for \\(f(x)\\).\t\n\n[Figure: .]\n\n[Figure: .]\n\n[Figure: .]\n\n            Simplify.\t\n\n[Figure: .]\n\n            Simplify.\t\n\n[Figure: .]\n\n[Figure: .]\n\nFigure 10.1.59\n\n            Substitute \\(\\frac{x+1}{5}\\) for \\(g(x)\\).\t\n\n[Figure: .]\n\n[Figure: .]\n\n[Figure: .]\n\n            Simplify.\t\n\n[Figure: .]\n\n            Simplify.\t\n\n[Figure: .]\n\nTable 10.1.6\n\nSince both \\(g(f(x))=x\\) and \\(f(g(x))=x\\) are true, the functions \\(f(x)=5x−1\\) and \\(g(x)=\\frac{x+1}{5}\\) are inverse functions. That is, they are inverses of each other.",
+      "sourceAnswers": [],
+      "hasFigure": true,
+      "status": "draft",
+      "answerVerified": false,
+      "translationStatus": "pending",
+      "mappingStatus": "pending"
+    },
+    {
+      "ordinal": 23,
+      "sourceNumber": "",
+      "sourceAnchor": "",
+      "kind": "exercise-candidate",
+      "context": "\\(f^{-1}(f(x))=x\\), for all \\(x\\) in the domain of \\(f\\)\n\n\\(f\\left(f^{-1}(x)\\right)=x\\), for all \\(x\\) in the domain of \\(f^{-1}\\)\n\nWe can use this property to verify that two functions are inverses of each other.",
+      "original": "Exercise \\(\\PageIndex{13}\\)\n\nVerify that the functions are inverse functions. \\(f(x)=4 x-3\\) and \\(g(x)=\\frac{x+3}{4}\\).\n\nAnswer\n\n\\(g(f(x))=x\\), and \\(f(g(x))=x\\), so they are inverses.",
+      "prompt": "Exercise \\(\\PageIndex{13}\\)\n\nVerify that the functions are inverse functions. \\(f(x)=4 x-3\\) and \\(g(x)=\\frac{x+3}{4}\\).",
+      "sourceAnswers": [
+        "\\(g(f(x))=x\\), and \\(f(g(x))=x\\), so they are inverses."
+      ],
+      "hasFigure": false,
+      "status": "draft",
+      "answerVerified": false,
+      "translationStatus": "pending",
+      "mappingStatus": "pending"
+    },
+    {
+      "ordinal": 24,
+      "sourceNumber": "",
+      "sourceAnchor": "",
+      "kind": "exercise-candidate",
+      "context": "\\(f^{-1}(f(x))=x\\), for all \\(x\\) in the domain of \\(f\\)\n\n\\(f\\left(f^{-1}(x)\\right)=x\\), for all \\(x\\) in the domain of \\(f^{-1}\\)\n\nWe can use this property to verify that two functions are inverses of each other.",
+      "original": "Exercise \\(\\PageIndex{14}\\)\n\nVerify that the functions are inverse functions. \\(f(x)=2 x+6\\) and \\(g(x)=\\frac{x-6}{2}\\)\n\nAnswer\n\n\\(g(f(x))=x,\\) and \\(f(g(x))=x,\\) so they are inverses.",
+      "prompt": "Exercise \\(\\PageIndex{14}\\)\n\nVerify that the functions are inverse functions. \\(f(x)=2 x+6\\) and \\(g(x)=\\frac{x-6}{2}\\)",
+      "sourceAnswers": [
+        "\\(g(f(x))=x,\\) and \\(f(g(x))=x,\\) so they are inverses."
+      ],
+      "hasFigure": false,
+      "status": "draft",
+      "answerVerified": false,
+      "translationStatus": "pending",
+      "mappingStatus": "pending"
+    },
+    {
+      "ordinal": 25,
+      "sourceNumber": "",
+      "sourceAnchor": "",
+      "kind": "example-or-exercise",
+      "context": "We can use this property to verify that two functions are inverses of each other.\n\nWe have found inverses of function defined by ordered pairs and from a graph. We will now look at how to find an inverse using an algebraic equation. The method uses the idea that if \\(f(x)\\) is a one-to-one function with ordered pairs \\((x,y)\\), then its inverse function \\(f^{−1}(x)\\) is the set of ordered pairs \\((y,x)\\).\n\nIf we reverse the \\(x\\) and \\(y\\) in the function and then solve for \\(y\\), we get our inverse function.",
+      "original": "Example \\(\\PageIndex{8}\\) How to Find the Inverse of a One-to-One Function\n\nFind the inverse of \\(f(x)=4 x+7\\).\n\nSolution:\n\n            Step 1. Substitute \\(y\\) for \\(f(x)\\).\t\n            Replace \\(f(x)\\) with \\(y\\).\t\n            \\(\\begin{aligned} f(x) &=4 x+7 \\\\ y &=4 x+7 \\end{aligned}\\)\t\n\n            Step 2: Interchange the variables \\(x\\) and \\(y\\).\t\n            Replace \\(x\\) with \\(y\\) and then \\(y\\) with \\(x\\).\t\n            \\(x=4y+7\\)\t\n\n            Step 3: Solve for \\(y\\).\t\n\nSubtract \\(7\\) from each side.\n\nDivide by \\(4\\).\n\n            \\(x-7=4 y\\)\n\n            \\(\\frac{x-7}{4}=y\\)\t\n\n            Step 4: Substitute \\(f^{-1}(x)\\) for \\(y\\).\t\n            Replace \\(y\\) with \\(f^{-1}(x)\\).\t\n            \\(\\frac{x-7}{4}=f^{-1}(x)\\)\t\n\n            Step 5: Verify that the functions are inverses.\t\n\nShow \\(f^{-1}(f(x))=x\\)\n\nand \\(f\\left(f^{-1}(x)\\right)=x\\)\n\n            \\(\\begin{aligned} f^{-1}(f(x)) & \\stackrel{?}{=} x \\\\f^{-1}(4x+7)&\\stackrel{?}{=}x\\\\ \\frac{(4x+7)-7}{4}&\\stackrel{?}{=}x \\\\ \\frac{4x}{4}&\\stackrel{?}{=}x\\\\x&=x \\\\ \\\\f(f^{-1}(x))&\\stackrel{?}{=}x \\\\f \\left(\\frac{x-7}{4} \\right)&\\stackrel{?}{=}x \\\\ 4\\left(\\frac{x-7}{4} \\right) + 7 &\\stackrel{?}{=}x \\\\ x-7+7&\\stackrel{?}{=}x \\\\x&=x \\end{aligned}\\)\t\n\nTable 10.1.7",
+      "prompt": "Example \\(\\PageIndex{8}\\) How to Find the Inverse of a One-to-One Function\n\nFind the inverse of \\(f(x)=4 x+7\\).\n\nSolution:\n\n            Step 1. Substitute \\(y\\) for \\(f(x)\\).\t\n            Replace \\(f(x)\\) with \\(y\\).\t\n            \\(\\begin{aligned} f(x) &=4 x+7 \\\\ y &=4 x+7 \\end{aligned}\\)\t\n\n            Step 2: Interchange the variables \\(x\\) and \\(y\\).\t\n            Replace \\(x\\) with \\(y\\) and then \\(y\\) with \\(x\\).\t\n            \\(x=4y+7\\)\t\n\n            Step 3: Solve for \\(y\\).\t\n\nSubtract \\(7\\) from each side.\n\nDivide by \\(4\\).\n\n            \\(x-7=4 y\\)\n\n            \\(\\frac{x-7}{4}=y\\)\t\n\n            Step 4: Substitute \\(f^{-1}(x)\\) for \\(y\\).\t\n            Replace \\(y\\) with \\(f^{-1}(x)\\).\t\n            \\(\\frac{x-7}{4}=f^{-1}(x)\\)\t\n\n            Step 5: Verify that the functions are inverses.\t\n\nShow \\(f^{-1}(f(x))=x\\)\n\nand \\(f\\left(f^{-1}(x)\\right)=x\\)\n\n            \\(\\begin{aligned} f^{-1}(f(x)) & \\stackrel{?}{=} x \\\\f^{-1}(4x+7)&\\stackrel{?}{=}x\\\\ \\frac{(4x+7)-7}{4}&\\stackrel{?}{=}x \\\\ \\frac{4x}{4}&\\stackrel{?}{=}x\\\\x&=x \\\\ \\\\f(f^{-1}(x))&\\stackrel{?}{=}x \\\\f \\left(\\frac{x-7}{4} \\right)&\\stackrel{?}{=}x \\\\ 4\\left(\\frac{x-7}{4} \\right) + 7 &\\stackrel{?}{=}x \\\\ x-7+7&\\stackrel{?}{=}x \\\\x&=x \\end{aligned}\\)\t\n\nTable 10.1.7",
+      "sourceAnswers": [],
+      "hasFigure": false,
+      "status": "draft",
+      "answerVerified": false,
+      "translationStatus": "pending",
+      "mappingStatus": "pending"
+    },
+    {
+      "ordinal": 26,
+      "sourceNumber": "",
+      "sourceAnchor": "",
+      "kind": "exercise-candidate",
+      "context": "We can use this property to verify that two functions are inverses of each other.\n\nWe have found inverses of function defined by ordered pairs and from a graph. We will now look at how to find an inverse using an algebraic equation. The method uses the idea that if \\(f(x)\\) is a one-to-one function with ordered pairs \\((x,y)\\), then its inverse function \\(f^{−1}(x)\\) is the set of ordered pairs \\((y,x)\\).\n\nIf we reverse the \\(x\\) and \\(y\\) in the function and then solve for \\(y\\), we get our inverse function.",
+      "original": "Exercise \\(\\PageIndex{15}\\)\n\nFind the inverse of the function \\(f(x)=5x-3\\).\n\nAnswer\n\n\\(f^{-1}(x)=\\frac{x+3}{5}\\)",
+      "prompt": "Exercise \\(\\PageIndex{15}\\)\n\nFind the inverse of the function \\(f(x)=5x-3\\).",
+      "sourceAnswers": [
+        "\\(f^{-1}(x)=\\frac{x+3}{5}\\)"
+      ],
+      "hasFigure": false,
+      "status": "draft",
+      "answerVerified": false,
+      "translationStatus": "pending",
+      "mappingStatus": "pending"
+    },
+    {
+      "ordinal": 27,
+      "sourceNumber": "",
+      "sourceAnchor": "",
+      "kind": "exercise-candidate",
+      "context": "We can use this property to verify that two functions are inverses of each other.\n\nWe have found inverses of function defined by ordered pairs and from a graph. We will now look at how to find an inverse using an algebraic equation. The method uses the idea that if \\(f(x)\\) is a one-to-one function with ordered pairs \\((x,y)\\), then its inverse function \\(f^{−1}(x)\\) is the set of ordered pairs \\((y,x)\\).\n\nIf we reverse the \\(x\\) and \\(y\\) in the function and then solve for \\(y\\), we get our inverse function.",
+      "original": "Exercise \\(\\PageIndex{16}\\)\n\nFind the inverse of the function \\(f(x)=8 x+5\\).\n\nAnswer\n\n\\(f^{-1}(x)=\\frac{x-5}{8}\\)",
+      "prompt": "Exercise \\(\\PageIndex{16}\\)\n\nFind the inverse of the function \\(f(x)=8 x+5\\).",
+      "sourceAnswers": [
+        "\\(f^{-1}(x)=\\frac{x-5}{8}\\)"
+      ],
+      "hasFigure": false,
+      "status": "draft",
+      "answerVerified": false,
+      "translationStatus": "pending",
+      "mappingStatus": "pending"
+    },
+    {
+      "ordinal": 28,
+      "sourceNumber": "1",
+      "sourceAnchor": "",
+      "kind": "exercise-candidate",
+      "context": "How to Find the Inverse of a One-to-One Function",
+      "original": "1. Substitute \\(y\\) for \\(f(x)\\).",
+      "prompt": "1. Substitute \\(y\\) for \\(f(x)\\).",
+      "sourceAnswers": [],
+      "hasFigure": false,
+      "status": "draft",
+      "answerVerified": false,
+      "translationStatus": "pending",
+      "mappingStatus": "pending"
+    },
+    {
+      "ordinal": 29,
+      "sourceNumber": "2",
+      "sourceAnchor": "",
+      "kind": "exercise-candidate",
+      "context": "How to Find the Inverse of a One-to-One Function",
+      "original": "2. Interchange the variables \\(x\\) and \\(y\\).",
+      "prompt": "2. Interchange the variables \\(x\\) and \\(y\\).",
+      "sourceAnswers": [],
+      "hasFigure": false,
+      "status": "draft",
+      "answerVerified": false,
+      "translationStatus": "pending",
+      "mappingStatus": "pending"
+    },
+    {
+      "ordinal": 30,
+      "sourceNumber": "3",
+      "sourceAnchor": "",
+      "kind": "exercise-candidate",
+      "context": "How to Find the Inverse of a One-to-One Function",
+      "original": "3. Solve for \\(y\\).",
+      "prompt": "3. Solve for \\(y\\).",
+      "sourceAnswers": [],
+      "hasFigure": false,
+      "status": "draft",
+      "answerVerified": false,
+      "translationStatus": "pending",
+      "mappingStatus": "pending"
+    },
+    {
+      "ordinal": 31,
+      "sourceNumber": "4",
+      "sourceAnchor": "",
+      "kind": "exercise-candidate",
+      "context": "How to Find the Inverse of a One-to-One Function",
+      "original": "4. Substitute \\(f^{−1}(x)\\) for \\(y\\).",
+      "prompt": "4. Substitute \\(f^{−1}(x)\\) for \\(y\\).",
+      "sourceAnswers": [],
+      "hasFigure": false,
+      "status": "draft",
+      "answerVerified": false,
+      "translationStatus": "pending",
+      "mappingStatus": "pending"
+    },
+    {
+      "ordinal": 32,
+      "sourceNumber": "5",
+      "sourceAnchor": "",
+      "kind": "exercise-candidate",
+      "context": "How to Find the Inverse of a One-to-One Function",
+      "original": "5. Verify that the functions are inverses.",
+      "prompt": "5. Verify that the functions are inverses.",
+      "sourceAnswers": [],
+      "hasFigure": false,
+      "status": "draft",
+      "answerVerified": false,
+      "translationStatus": "pending",
+      "mappingStatus": "pending"
+    },
+    {
+      "ordinal": 33,
+      "sourceNumber": "",
+      "sourceAnchor": "",
+      "kind": "example-or-exercise",
+      "context": "How to Find the Inverse of a One-to-One Function",
+      "original": "Example \\(\\PageIndex{9}\\) How to Find the Inverse of a One-to-One Function\n\nFind the inverse of \\(f(x)=\\sqrt[5]{2 x-3}\\).\n\nSolution:\n\n\\(f(x)=\\sqrt[5]{2 x-3}\\)\n\nSubstitute \\(y\\) for \\(f(x)\\).\n\n\\(y=\\sqrt[5]{2 x-3}\\)\n\nInterchange the variables \\(x\\) and \\(y\\).\n\n\\(x=\\sqrt[5]{2 y-3}\\)\n\nSolve for \\(y\\).\n\n\\(\\begin{aligned}(x)^{5} &=(\\sqrt[5]{2 y-3})^{5} \\\\ x^{5} &=2 y-3 \\\\ x^{5}+3 &=2 y \\\\ \\frac{x^{5}+3}{2} &=y \\end{aligned}\\)\n\nSubstitute \\(f^{-1}(x)\\) for \\(y\\).\n\n\\(f^{-1}(x)=\\frac{x^{5}+3}{2}\\)\n\nVerify that the functions are inverses.\n\n\\(\\begin{array}{rr} {f^{-1}(f(x)) \\stackrel{?}{=} x} & {f\\left(f^{-1}(x)\\right) \\stackrel{?}{=} x} \\\\ {f^{-1}(\\sqrt[5]{2x-3})\\stackrel{?}{=}x}&{f\\left(\\frac{x^{5}+3}{2} \\right)}\\stackrel{?}{=}x \\\\ {\\frac{(\\sqrt[5]{2x-3})^{5}+3}{2}\\stackrel{?}{=}x}&{\\sqrt[5]{2\\left(\\frac{x^{5}+3}{2} \\right)-3}\\stackrel{?}{=}x} \\\\ {\\frac{2x-3+3}{2}\\stackrel{?}{=}x}&{\\sqrt[5]{x^{5}+3-3}\\stackrel{?}{=}x}\\\\ {\\frac{2x}{2}\\stackrel{?}{=}x}&{\\sqrt[5]{x^{5}}\\stackrel{?}{=}x} \\\\ {x=x}&{x=x} \\end{array}\\)",
+      "prompt": "Example \\(\\PageIndex{9}\\) How to Find the Inverse of a One-to-One Function\n\nFind the inverse of \\(f(x)=\\sqrt[5]{2 x-3}\\).\n\nSolution:\n\n\\(f(x)=\\sqrt[5]{2 x-3}\\)\n\nSubstitute \\(y\\) for \\(f(x)\\).\n\n\\(y=\\sqrt[5]{2 x-3}\\)\n\nInterchange the variables \\(x\\) and \\(y\\).\n\n\\(x=\\sqrt[5]{2 y-3}\\)\n\nSolve for \\(y\\).\n\n\\(\\begin{aligned}(x)^{5} &=(\\sqrt[5]{2 y-3})^{5} \\\\ x^{5} &=2 y-3 \\\\ x^{5}+3 &=2 y \\\\ \\frac{x^{5}+3}{2} &=y \\end{aligned}\\)\n\nSubstitute \\(f^{-1}(x)\\) for \\(y\\).\n\n\\(f^{-1}(x)=\\frac{x^{5}+3}{2}\\)\n\nVerify that the functions are inverses.\n\n\\(\\begin{array}{rr} {f^{-1}(f(x)) \\stackrel{?}{=} x} & {f\\left(f^{-1}(x)\\right) \\stackrel{?}{=} x} \\\\ {f^{-1}(\\sqrt[5]{2x-3})\\stackrel{?}{=}x}&{f\\left(\\frac{x^{5}+3}{2} \\right)}\\stackrel{?}{=}x \\\\ {\\frac{(\\sqrt[5]{2x-3})^{5}+3}{2}\\stackrel{?}{=}x}&{\\sqrt[5]{2\\left(\\frac{x^{5}+3}{2} \\right)-3}\\stackrel{?}{=}x} \\\\ {\\frac{2x-3+3}{2}\\stackrel{?}{=}x}&{\\sqrt[5]{x^{5}+3-3}\\stackrel{?}{=}x}\\\\ {\\frac{2x}{2}\\stackrel{?}{=}x}&{\\sqrt[5]{x^{5}}\\stackrel{?}{=}x} \\\\ {x=x}&{x=x} \\end{array}\\)",
+      "sourceAnswers": [],
+      "hasFigure": false,
+      "status": "draft",
+      "answerVerified": false,
+      "translationStatus": "pending",
+      "mappingStatus": "pending"
+    },
+    {
+      "ordinal": 34,
+      "sourceNumber": "",
+      "sourceAnchor": "",
+      "kind": "exercise-candidate",
+      "context": "How to Find the Inverse of a One-to-One Function",
+      "original": "Exercise \\(\\PageIndex{17}\\)\n\nFind the inverse of the function \\(f(x)=\\sqrt[5]{3 x-2}\\).\n\nAnswer\n\n\\(f^{-1}(x)=\\frac{x^{5}+2}{3}\\)",
+      "prompt": "Exercise \\(\\PageIndex{17}\\)\n\nFind the inverse of the function \\(f(x)=\\sqrt[5]{3 x-2}\\).",
+      "sourceAnswers": [
+        "\\(f^{-1}(x)=\\frac{x^{5}+2}{3}\\)"
+      ],
+      "hasFigure": false,
+      "status": "draft",
+      "answerVerified": false,
+      "translationStatus": "pending",
+      "mappingStatus": "pending"
+    },
+    {
+      "ordinal": 35,
+      "sourceNumber": "",
+      "sourceAnchor": "",
+      "kind": "exercise-candidate",
+      "context": "How to Find the Inverse of a One-to-One Function",
+      "original": "Exercise \\(\\PageIndex{18}\\)\n\nFind the inverse of the function \\(f(x)=\\sqrt[4]{6 x-7}\\).\n\nAnswer\n\n\\(f^{-1}(x)=\\frac{x^{4}+7}{6}\\)",
+      "prompt": "Exercise \\(\\PageIndex{18}\\)\n\nFind the inverse of the function \\(f(x)=\\sqrt[4]{6 x-7}\\).",
+      "sourceAnswers": [
+        "\\(f^{-1}(x)=\\frac{x^{4}+7}{6}\\)"
+      ],
+      "hasFigure": false,
+      "status": "draft",
+      "answerVerified": false,
+      "translationStatus": "pending",
+      "mappingStatus": "pending"
+    },
+    {
+      "ordinal": 36,
+      "sourceNumber": "1",
+      "sourceAnchor": "",
+      "kind": "exercise-candidate",
+      "context": "Key Concepts\n\n\\((f \\circ g)(x)=f(g(x))\\)\n\n\\(f^{-1}(f(x))=x\\)\n\n    \\(f\\left(f^{-1}(x)\\right)=x\\)",
+      "original": "1. Substitute \\(y\\) for \\(f(x)\\).",
+      "prompt": "1. Substitute \\(y\\) for \\(f(x)\\).",
+      "sourceAnswers": [],
+      "hasFigure": false,
+      "status": "draft",
+      "answerVerified": false,
+      "translationStatus": "pending",
+      "mappingStatus": "pending"
+    },
+    {
+      "ordinal": 37,
+      "sourceNumber": "2",
+      "sourceAnchor": "",
+      "kind": "exercise-candidate",
+      "context": "Key Concepts\n\n\\((f \\circ g)(x)=f(g(x))\\)\n\n\\(f^{-1}(f(x))=x\\)\n\n    \\(f\\left(f^{-1}(x)\\right)=x\\)",
+      "original": "2. Interchange the variables \\(x\\) and \\(y\\).",
+      "prompt": "2. Interchange the variables \\(x\\) and \\(y\\).",
+      "sourceAnswers": [],
+      "hasFigure": false,
+      "status": "draft",
+      "answerVerified": false,
+      "translationStatus": "pending",
+      "mappingStatus": "pending"
+    },
+    {
+      "ordinal": 38,
+      "sourceNumber": "3",
+      "sourceAnchor": "",
+      "kind": "exercise-candidate",
+      "context": "Key Concepts\n\n\\((f \\circ g)(x)=f(g(x))\\)\n\n\\(f^{-1}(f(x))=x\\)\n\n    \\(f\\left(f^{-1}(x)\\right)=x\\)",
+      "original": "3. Solve for \\(y\\).",
+      "prompt": "3. Solve for \\(y\\).",
+      "sourceAnswers": [],
+      "hasFigure": false,
+      "status": "draft",
+      "answerVerified": false,
+      "translationStatus": "pending",
+      "mappingStatus": "pending"
+    },
+    {
+      "ordinal": 39,
+      "sourceNumber": "4",
+      "sourceAnchor": "",
+      "kind": "exercise-candidate",
+      "context": "Key Concepts\n\n\\((f \\circ g)(x)=f(g(x))\\)\n\n\\(f^{-1}(f(x))=x\\)\n\n    \\(f\\left(f^{-1}(x)\\right)=x\\)",
+      "original": "4. Substitute \\(f^{−1}(x)\\) for \\(y\\).",
+      "prompt": "4. Substitute \\(f^{−1}(x)\\) for \\(y\\).",
+      "sourceAnswers": [],
+      "hasFigure": false,
+      "status": "draft",
+      "answerVerified": false,
+      "translationStatus": "pending",
+      "mappingStatus": "pending"
+    },
+    {
+      "ordinal": 40,
+      "sourceNumber": "5",
+      "sourceAnchor": "",
+      "kind": "exercise-candidate",
+      "context": "Key Concepts\n\n\\((f \\circ g)(x)=f(g(x))\\)\n\n\\(f^{-1}(f(x))=x\\)\n\n    \\(f\\left(f^{-1}(x)\\right)=x\\)",
+      "original": "5. Verify that the functions are inverses.",
+      "prompt": "5. Verify that the functions are inverses.",
+      "sourceAnswers": [],
+      "hasFigure": false,
+      "status": "draft",
+      "answerVerified": false,
+      "translationStatus": "pending",
+      "mappingStatus": "pending"
+    }
+  ],
+  "license": "CC BY 4.0",
+  "licenseEvidence": "This page titled 10.2: Finding Composite and Inverse Functions was last modified on Mon, 14 Feb 2022 01:06:53 GMT and is shared under a CC BY  4.0  license and was authored, remixed, and/or curated by OpenStax via source content that was edited to the style and standards of the LibreTexts platform.",
+  "url": "https://math.libretexts.org/Bookshelves/Algebra/Intermediate_Algebra_1e_(OpenStax)/10:_Exponential_and_Logarithmic_Functions/10.02:_Finding_Composite_and_Inverse_Functions",
+  "sha256": "93783f59958f62a896d5fccc5962209ba43f96a122bd4774a91c66ae5634a66e",
+  "checkedAt": "2026-10-07",
+  "id": "c517c24aecf653fd4566",
+  "bookId": "intermediate-algebra",
+  "licenseInherited": false,
+  "licenseSource": "https://math.libretexts.org/Bookshelves/Algebra/Intermediate_Algebra_1e_(OpenStax)/10:_Exponential_and_Logarithmic_Functions/10.02:_Finding_Composite_and_Inverse_Functions",
+  "licenseUrl": "https://creativecommons.org/licenses/by/4.0/",
+  "authors": "OpenStax / Lynn Marecek, Andrea Honeycutt Mathis",
+  "book": "Intermediate Algebra 1e",
+  "reviewStatus": "unreviewed",
+  "sourceLanguage": "en",
+  "translationStatus": "pending"
+}

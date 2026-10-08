@@ -1,0 +1,383 @@
+{
+  "title": "3.3: Rates of Change and Behavior of Graphs",
+  "originalText": "Learning Objectives\n\nFind the average rate of change of a function.\n\nUse a graph to determine where a function is increasing, decreasing, or constant.\n\nUse a graph to locate local maxima and local minima.\n\nUse a graph to locate the absolute maximum and absolute minimum.\n\nGasoline costs have experienced some wild fluctuations over the last several decades. Table \\(\\PageIndex{1}\\) lists the average cost, in dollars, of a gallon of gasoline for the years 2005–2012. The cost of gasoline can be considered as a function of year.\n\n    Table \\(\\PageIndex{1}\\)\n\n            \\(y\\)\t\n            2005\t\n            2006\t\n            2007\t\n            2008\t\n            2009\t\n            2010\t\n            2011\t\n            2012\t\n\n            \\(C(y)\\)\t\n            2.31\t\n            2.62\t\n            2.84\t\n            3.30\t\n            2.41\t\n            2.84\t\n            3.58\t\n            3.68\t\n\nIf we were interested only in how the gasoline prices changed between 2005 and 2012, we could compute that the cost per gallon had increased from $2.31 to $3.68, an increase of $1.37. While this is interesting, it might be more useful to look at how much the price changed per year. In this section, we will investigate changes such as these.\n\nFinding the Average Rate of Change of a Function\n\nThe price change per year is a rate of change because it describes how an output quantity changes relative to the change in the input quantity. We can see that the price of gasoline in Table \\(\\PageIndex{1}\\) did not change by the same amount each year, so the rate of change was not constant. If we use only the beginning and ending data, we would be finding the average rate of change over the specified period of time. To find the average rate of change, we divide the change in the output value by the change in the input value.\n\n\\[\\begin{align*} \\text{Average rate of change}&=\\dfrac{\\text{Change in output}}{\\text{Change in input}} \\\\[4pt] &=\\dfrac{\\Delta y}{\\Delta x}\\\\[4pt] &=\\dfrac{y_2-y_1}{x_2-x_1}\\\\[4pt] &=\\dfrac{f(x_2)-f(x_1)}{x_2-x_1}\\end{align*} \\label{1.3.1}\\]\n\nThe Greek letter \\(\\Delta\\) (delta) signifies the change in a quantity; we read the ratio as “delta-\\(y\\) over delta-\\(x\\)” or “the change in \\(y\\) divided by the change in \\(x\\).” Occasionally we write \\(\\Delta f\\) instead of \\(\\Delta y\\), which still represents the change in the function’s output value resulting from a change to its input value. It does not mean we are changing the function into some other function.\n\nIn our example, the gasoline price increased by $1.37 from 2005 to 2012. Over 7 years, the average rate of change was\n\n\\[\\dfrac{\\Delta y}{\\Delta x}=\\dfrac{$1.37}{7 \\text{years}}\\approx \\text{0.196 dollars per year.} \\label{1.3.2}\\]\n\nOn average, the price of gas increased by about 19.6¢ each year. Other examples of rates of change include:\n\nA population of rats increasing by 40 rats per week\n\nA car traveling 68 miles per hour (distance traveled changes by 68 miles each hour as time passes)\n\nA car driving 27 miles per gallon (distance traveled changes by 27 miles for each gallon)\n\nThe current through an electrical circuit increasing by 0.125 amperes for every volt of increased voltage\n\nThe amount of money in a college account decreasing by $4,000 per quarter\n\nDefinition: Rate of Change\n\nA rate of change describes how an output quantity changes relative to the change in the input quantity. The units on a rate of change are “output units per input units.”\n\nThe average rate of change between two input values is the total change of the function values (output values) divided by the change in the input values.\n\n\\[\\dfrac{\\Delta y}{\\Delta x}=\\dfrac{f(x_2)-f(x_1)}{x_2-x_1}\\]\n\nHow To...\n\nGiven the value of a function at different points, calculate the average rate of change of a function for the interval between two values \\(x_1\\) and \\(x_2\\).\n\n1. Calculate the difference \\(y_2−y_1=\\Delta y\\).\n\n2. Calculate the difference \\(x_2−x_1=\\Delta x\\).\n\n3. Find the ratio \\(\\dfrac{\\Delta y}{\\Delta x}\\).\n\nExample \\(\\PageIndex{1}\\): Computing an Average Rate of Change\n\nUsing the data in Table \\(\\PageIndex{1}\\), find the average rate of change of the price of gasoline between 2007 and 2009.\n\nSolution\n\nIn 2007, the price of gasoline was $2.84. In 2009, the cost was $2.41. The average rate of change is\n\n\\[\\begin{align*} \\dfrac{\\Delta y}{\\Delta x}&=\\dfrac{y_2−y_1}{x_2−x_1} \\\\[4pt] &=\\dfrac{$2.41−$2.84}{2009−2007} \\\\[4pt] &=\\dfrac{−$0.43}{2 \\text{ years}} \\\\[4pt] &=−$0.22 \\text{ per year} \\end{align*}\\]\n\nAnalysis\n\nNote that a decrease is expressed by a negative change or “negative increase.” A rate of change is negative when the output decreases as the input increases or when the output increases as the input decreases.\n\nExercise \\(\\PageIndex{1}\\)\n\nUsing the data in Table \\(\\PageIndex{1}\\), find the average rate of change between 2005 and 2010.\n\nSolution\n\n\\(\\dfrac{$2.84−$2.315}{5 \\text{ years}} =\\dfrac{$0.535}{5 \\text{ years}} =$0.106 \\text{per year.}\\)\n\nExample \\(\\PageIndex{2}\\): Computing Average Rate of Change from a Graph\n\nGiven the function \\(g(t)\\) shown in Figure \\(\\PageIndex{1}\\), find the average rate of change on the interval \\([−1,2]\\).\n\n[Figure: Graph of a parabola.]\n\nFigure \\(\\PageIndex{1}\\): Graph of a parabola.\n\nSolution\n\nAt \\(t=−1\\), Figure \\(\\PageIndex{2}\\) shows \\(g(−1)=4\\). At \\(t=2\\),the graph shows \\(g(2)=1\\).\n\n[Figure: Graph of a parabola with a line from points (-1, 4) and (2, 1) to show the changes for g(t) and t.]\n\nFigure \\(\\PageIndex{2}\\): Graph of a parabola with a line from points (-1, 4) and (2, 1) to show the changes for g(t) and t.\n\nThe horizontal change \\(\\Delta t=3\\) is shown by the red arrow, and the vertical change \\(\\Delta g(t)=−3\\) is shown by the turquoise arrow. The output changes by –3 while the input changes by 3, giving an average rate of change of\n\n\\[\\dfrac{1−4}{2−(−1)}=\\dfrac{−3}{3}=−1\\]\n\nAnalysis\n\nNote that the order we choose is very important. If, for example, we use \\(\\dfrac{y_2−y_1}{x_1−x_2}\\), we will not get the correct answer. Decide which point will be 1 and which point will be 2, and keep the coordinates fixed as \\((x_1,y_1)\\) and \\((x_2,y_2)\\).\n\nExample \\(\\PageIndex{3}\\): Computing Average Rate of Change from a Table\n\nAfter picking up a friend who lives 10 miles away, Anna records her distance from home over time. The values are shown in Table \\(\\PageIndex{2}\\). Find her average speed over the first 6 hours.\n\n    Table \\(\\PageIndex{2}\\)\n\n            \\(t\\) (hours)\t\n            0\t\n            1\t\n            2\t\n            3\t\n            4\t\n            5\t\n            6\t\n            7\t\n\n            \\(D(t)\\)  (miles)\t\n            10\t\n            55\t\n            90\t\n            153\t\n            214\t\n            240\t\n            292\t\n            300\t\n\nSolution\n\nHere, the average speed is the average rate of change. She traveled 292 miles in 6 hours, for an average speed of\n\n\\[\\begin{align*}\\dfrac{292−10}{6−0}&=\\dfrac{282}{6}\\\\[4pt] &= 47\\end{align*}\\]\n\nThe average speed is about 47 miles per hour.\n\nAnalysis\n\nBecause the speed is not constant, the average speed depends on the interval chosen. For the interval \\([2,3]\\), the average speed is 63 miles per hour.\n\nExample \\(\\PageIndex{4}\\): Computing Average Rate of Change for a Function Expressed as a Formula\n\nCompute the average rate of change of \\(f(x)=x^2−\\frac{1}{x}\\) on the interval \\([2, 4]\\).\n\nSolution\n\nWe can start by computing the function values at each endpoint of the interval.\n\n\\[\\begin{align*}f(2)&=2^2−\\frac{1}{2} f(4)&=4^2−\\frac{1}{4} \\\\[4pt] &=4−\\frac{1}{2} &=16−\\frac{1}{4} \\\\[4pt] &=72 &=\\frac{63}{4}\\end{align*}\\]\n\nNow we compute the average rate of change.\n\n\\[\\begin{align*}\\text{Average rate of change} &=\\dfrac{f(4)−f(2)}{4−2} \\\\[4pt] &=\\dfrac{\\frac{63}{4}-\\frac{7}{2}}{4-2} \\\\[4pt] &=\\dfrac{\\frac{49}{4}}{2} \\\\[4pt] &= \\dfrac{49}{8}\\end{align*}\\]\n\nExercise \\(\\PageIndex{2}\\)\n\nFind the average rate of change of \\(f(x)=x−2\\sqrt{x}\\) on the interval \\([1, 9]\\).\n\nSolution\n\n\\(\\frac{1}{2}\\)\n\nExample \\(\\PageIndex{5}\\): Finding the Average Rate of Change of a Force\n\nThe electrostatic force \\(F\\), measured in newtons, between two charged particles can be related to the distance between the particles \\(d\\),in centimeters, by the formula \\(F(d)=\\frac{2}{d^2}\\). Find the average rate of change of force if the distance between the particles is increased from 2 cm to 6 cm.\n\nSolution\n\nWe are computing the average rate of change of \\(F(d)=\\dfrac{2}{d^2}\\) on the interval \\([2,6]\\).\n\n\\[\\begin{align*}\\text{Average rate of change }&=\\dfrac{F(6)−F(2)}{6−2} \\\\[4pt] &=\\dfrac{\\frac{2}{6^2}-\\frac{2}{2^2}}{6-2} & \\text{Simplify} \\\\[4pt] &=\\dfrac{\\frac{2}{36}-\\frac{2}{4}}{4} \\\\[4pt] &=\\dfrac{-\\frac{16}{36}}{4} & \\text{Combine numerator terms.} \\\\[4pt] &=−\\dfrac{1}{9} & \\text{Simplify}\\end{align*}\\]\n\nThe average rate of change is \\(−\\frac{1}{9}\\) newton per centimeter.\n\nExample \\(\\PageIndex{6}\\): Finding an Average Rate of Change as an Expression\n\nFind the average rate of change of \\(g(t)=t^2+3t+1\\) on the interval \\([0, a]\\). The answer will be an expression involving \\(a\\).\n\nSolution\n\nWe use the average rate of change formula.\n\n\\(\\begin{align*}\\text{Average rate of change} &=\\dfrac{g(a)−g(0)}{a−0} & \\text{Evaluate.} \\\\[4pt] &=\\dfrac{(a^2+3a+1)−(0^2+3(0)+1)}{a−0} & \\text{Simplify.} \\\\[4pt] &=\\dfrac{a^2+3a+1−1}{a} & \\text{Simplify and factor.}\\\\[4pt] &= \\dfrac{a(a+3)}{a} & \\text{Divide by the common factor a.}\\\\[4pt] &= a+3 \\end{align*}\\)\n\nThis result tells us the average rate of change in terms of a between \\(t=0\\) and any other point \\(t=a\\). For example, on the interval \\([0,5]\\), the average rate of change would be \\(5+3=8\\).\n\nExercise \\(\\PageIndex{3}\\)\n\nFind the average rate of change of \\(f(x)=x^2+2x−8\\) on the interval \\([5, a]\\).\n\nSolution\n\n\\(a+7\\)\n\nUsing a Graph to Determine Where a Function is Increasing, Decreasing, or Constant\n\nAs part of exploring how functions change, we can identify intervals over which the function is changing in specific ways. We say that a function is increasing on an interval if the function values increase as the input values increase within that interval. Similarly, a function is decreasing on an interval if the function values decrease as the input values increase over that interval. The average rate of change of an increasing function is positive, and the average rate of change of a decreasing function is negative. Figure \\(\\PageIndex{3}\\) shows examples of increasing and decreasing intervals on a function.\n\n[Figure: Graph of a polynomial that shows the increasing and decreasing intervals and local maximum and minimum.]\n\nFigure \\(\\PageIndex{3}\\): The function \\(f(x)=x^3−12x\\) is increasing on \\((−\\infty, −2)\\cup (2,\\infty)\\) and is decreasing on \\((−2, 2)\\).\n\nWhile some functions are increasing (or decreasing) over their entire domain, many others are not. A value of the input where a function changes from increasing to decreasing (as we go from left to right, that is, as the input variable increases) is called a local maximum. If a function has more than one, we say it has local maxima. Similarly, a value of the input where a function changes from decreasing to increasing as the input variable increases is called a local minimum. The plural form is “local minima.” Together, local maxima and minima are called local extrema, or local extreme values, of the function. (The singular form is “extremum.”) Often, the term local is replaced by the term relative. In this text, we will use the term local.\n\nClearly, a function is neither increasing nor decreasing on an interval where it is constant. A function is also neither increasing nor decreasing at extrema. Note that we have to speak of local extrema, because any given local extremum as defined here is not necessarily the highest maximum or lowest minimum in the function’s entire domain.\n\nFor the function whose graph is shown in Figure \\(\\PageIndex{4}\\), the local maximum is 16, and it occurs at \\(x=−2\\). The local minimum is −16 and it occurs at \\(x=2\\).\n\n[Figure: Graph of a polynomial that shows the increasing and decreasing intervals and local maximum.] Definition of a local maximum]\n\nFigure \\(\\PageIndex{4}\\): Graph of a polynomial that shows the increasing and decreasing intervals and local maximum.maximum\n\nTo locate the local maxima and minima from a graph, we need to observe the graph to determine where the graph attains its highest and lowest points, respectively, within an open interval. Like the summit of a roller coaster, the graph of a function is higher at a local maximum than at nearby points on both sides. The graph will also be lower at a local minimum than at neighboring points. Figure \\(\\PageIndex{5}\\) illustrates these ideas for a local maximum.\n\n[Figure: Graph of a polynomial that shows the increasing and decreasing intervals and local maximum.]\n\nFigure \\(\\PageIndex{5}\\): Definition of a local maximum\n\nThese observations lead us to a formal definition of local extrema.\n\nLocal Minima and Local Maxima\n\nA function \\(f\\) is an  increasing function on an open interval if \\(f(b)>f(a)\\) for every \\(a\\), \\(b\\) interval where \\(b>a\\).\n\nA function \\(f\\) is a decreasing function on an open interval if \\(f(b)<f(a)\\) for every \\(a\\), \\(b\\) interval where \\(b>a\\).\n\nA function \\(f\\) has a local maximum at a point \\(b\\) in an open interval \\((a,c)\\) if \\(f(b)\\) is greater than or equal to \\(f(x)\\) for every point \\(x\\) (\\(x\\) does not equal \\(b\\)) in the interval. Likewise, \\(f\\) has a local minimum at a point \\(b\\) in \\((a,c)\\) if \\(f(b)\\) is less than or equal to \\(f(x)\\) for every \\(x\\) (\\(x\\) does not equal \\(b\\)) in the interval.\n\nExample \\(\\PageIndex{7}\\) Finding Increasing and Decreasing Intervals on a Graph\n\nGiven the function \\(p(t)\\) in Figure \\(\\PageIndex{6}\\), identify the intervals on which the function appears to be increasing.\n\n[Figure: [Graph of a polynomial.]]\n\nFigure \\(\\PageIndex{6}\\): Graph of a polynomial.\n\nSolution\n\nWe see that the function is not constant on any interval. The function is increasing where it slants upward as we move to the right and decreasing where it slants downward as we move to the right. The function appears to be increasing from \\(t=1\\) to \\(t=3\\) and from \\(t=4\\) on.\n\nIn interval notation, we would say the function appears to be increasing on the interval \\((1,3)\\) and the interval \\((4,\\infty)\\).\n\nAnalysis\n\nNotice in this example that we used open intervals (intervals that do not include the endpoints), because the function is neither increasing nor decreasing at \\(t=1\\), \\(t=3\\), and \\(t=4\\). These points are the local extrema (two minima and a maximum).\n\nExample \\(\\PageIndex{8}\\): Finding Local Extrema from a Graph\n\nGraph the function \\(f(x)=\\frac{2}{x}+\\frac{x}{3}\\). Then use the graph to estimate the local extrema of the function and to determine the intervals on which the function is increasing.\n\nSolution\n\nUsing technology, we find that the graph of the function looks like that in Figure \\(\\PageIndex{7}\\). It appears there is a low point, or local minimum, between \\(x=2\\) and \\(x=3\\), and a mirror-image high point, or local maximum, somewhere between \\(x=−3\\) and \\(x=−2\\)\n\n[Figure: Graph of a reciprocal function.]\n.\n\nFigure \\(\\PageIndex{7}\\): Graph of a reciprocal function.\n\nAnalysis\n\nMost graphing calculators and graphing utilities can estimate the location of maxima and minima. Figure \\(\\PageIndex{8}\\) provides screen images from two different technologies, showing the estimate for the local maximum and minimum.\n\n[Figure: Graph of the reciprocal function on a graphing calculator.]\n\nFigure \\(\\PageIndex{8}\\): Graph of the reciprocal function on a graphing calculator.\n\nBased on these estimates, the function is increasing on the interval \\((−\\infty,−2.449)\\) and \\((2.449,\\infty)\\). Notice that, while we expect the extrema to be symmetric, the two different technologies agree only up to four decimals due to the differing approximation algorithms used by each. (The exact location of the extrema is at \\(\\pm\\sqrt{6}\\), but determining this requires calculus.)\n\nExercise \\(\\PageIndex{8}\\)\n\nGraph the function \\(f(x)=x^3−6x^2−15x+20\\) to estimate the local extrema of the function. Use these to determine the intervals on which the function is increasing and decreasing.\n\nSolution\n\nThe local maximum appears to occur at \\((−1,28)\\), and the local minimum occurs at \\((5,−80)\\). The function is increasing on \\((−\\infty,−1)\\cup(5,\\infty)\\) and decreasing on \\((−1,5)\\).\n\n[Figure: Graph of a polynomial with a local maximum at (-1, 28) and local minimum at (5, -80).]\n\nGraph of a polynomial with a local maximum at (-1, 28) and local minimum at (5, -80).\n\nExample \\(\\PageIndex{9}\\): Finding Local Maxima and Minima from a Graph\n\nFor the function f whose graph is shown in Figure \\(\\PageIndex{9}\\), find all local maxima and minima.\n\n[Figure: Graph of a polynomial.]\n\nFigure \\(\\PageIndex{9}\\): Graph of a polynomial.\n\nSolution\n\nObserve the graph of \\(f\\). The graph attains a local maximum at \\(x=1\\) because it is the highest point in an open interval around \\(x=1\\).The local maximum is the y-coordinate at \\(x=1\\), which is 2.\n\nThe graph attains a local minimum at \\(x=−1\\) because it is the lowest point in an open interval around \\(x=−1\\). The local minimum is the y-coordinate at \\(x=−1\\), which is −2.\n\nAnalyzing the Toolkit Functions for Increasing or Decreasing Intervals\n\nWe will now return to our toolkit functions and discuss their graphical behavior in Figure \\(\\PageIndex{10}\\), Figure \\(\\PageIndex{11}\\), and Figure \\(\\PageIndex{12}\\).\n\n[Figure: Table showing the increasing and decreasing intervals of the toolkit functions.]\n\nFigure \\(\\PageIndex{10}\\)\n\n[Figure: Table showing the increasing and decreasing intervals of the toolkit functions.]\n.\n\nFigure \\(\\PageIndex{11}\\)\n\n[Figure: Table showing the increasing and decreasing intervals of the toolkit functions.]\n\nFigure \\(\\PageIndex{12}\\)\n\nUse A Graph to Locate the Absolute Maximum and Absolute Minimum\n\nThere is a difference between locating the highest and lowest points on a graph in a region around an open interval (locally) and locating the highest and lowest points on the graph for the entire domain. The y-coordinates (output) at the highest and lowest points are called the absolute maximum and absolute minimum, respectively. To locate absolute maxima and minima from a graph, we need to observe the graph to determine where the graph attains it highest and lowest points on the domain of the function (Figure \\(\\PageIndex{13}\\)).\n\n[Figure: Graph of a segment of a parabola with an absolute minimum at (0, -2) and absolute maximum at (2, 2).]\n\nFigure \\(\\PageIndex{13}\\): Graph of a segment of a parabola with an absolute minimum at (0, -2) and absolute maximum at (2, 2).\n\nNot every function has an absolute maximum or minimum value. The toolkit function \\(f(x)=x^3\\) is one such function.\n\nAbsolute Maxima and Minima\n\nThe absolute maximum of \\(f\\) at \\(x=c\\) is \\(f(c)\\) where \\(f(c)≥f(x)\\) for all \\(x\\) in the domain of \\(f\\).\n\nThe absolute minimum of \\(f\\) at \\(x=d\\) is \\(f(d)\\) where \\(f(d)≤f(x)\\) for all \\(x\\) in the domain of \\(f\\).\n\nExample \\(\\PageIndex{10}\\): Finding Absolute Maxima and Minima from a Graph\n\nFor the function f shown in Figure \\(\\PageIndex{14}\\), find all absolute maxima and minima.\n\n[Figure: Graph of a polynomial.]\n\nFigure \\(\\PageIndex{14}\\): Graph of a polynomial.\n\nSolution\n\nObserve the graph of \\(f\\). The graph attains an absolute maximum in two locations, \\(x=−2\\) and \\(x=2\\), because at these locations, the graph attains its highest point on the domain of the function. The absolute maximum is the y-coordinate at \\(x=−2\\) and \\(x=2\\), which is 16.\n\nThe graph attains an absolute minimum at x=3, because it is the lowest point on the domain of the function’s graph. The absolute minimum is the y-coordinate at x=3,which is−10.\n\nKey Equations\n\nAverage rate of change: \\(\\dfrac{\\Delta y}{\\Delta x}=\\dfrac{f(x_2)-f(x_1)}{x_2-x_1}\\)\n\nKey Concepts\n\nA rate of change relates a change in an output quantity to a change in an input quantity. The average rate of change is determined using only the beginning and ending data. See Example.\n\nIdentifying points that mark the interval on a graph can be used to find the average rate of change. See Example.\n\nComparing pairs of input and output values in a table can also be used to find the average rate of change. See Example.\n\nAn average rate of change can also be computed by determining the function values at the endpoints of an interval described by a formula. See Example and Example.\n\nThe average rate of change can sometimes be determined as an expression. See Example.\n\nA function is increasing where its rate of change is positive and decreasing where its rate of change is negative. See Example.\n\nA local maximum is where a function changes from increasing to decreasing and has an output value larger (more positive or less negative) than output values at neighboring input values.\n\nA local minimum is where the function changes from decreasing to increasing (as the input increases) and has an output value smaller (more negative or less positive) than output values at neighboring input values.\n\nMinima and maxima are also called extrema.\n\nWe can find local extrema from a graph. See Example and Example.\n\nThe highest and lowest points on a graph indicate the maxima and minima. See Example.\n\nThis page titled 3.3: Rates of Change and Behavior of Graphs was last modified on Thu, 26 Dec 2024 22:30:42 GMT and is shared under a CC BY  4.0  license and was authored, remixed, and/or curated by OpenStax via source content that was edited to the style and standards of the LibreTexts platform.",
+  "figures": [
+    {
+      "url": "https://math.libretexts.org/@api/deki/files/913/CNX_Precalc_Figure_01_03_001.jpg?revision=1",
+      "alt": "Graph of a parabola.",
+      "credit": ""
+    },
+    {
+      "url": "https://math.libretexts.org/@api/deki/files/914/CNX_Precalc_Figure_01_03_002.jpg?revision=1",
+      "alt": "Graph of a parabola with a line from points (-1, 4) and (2, 1) to show the changes for g(t) and t.",
+      "credit": ""
+    },
+    {
+      "url": "https://math.libretexts.org/@api/deki/files/915/CNX_Precalc_Figure_01_03_004.jpg?revision=1",
+      "alt": "Graph of a polynomial that shows the increasing and decreasing intervals and local maximum and minimum.",
+      "credit": ""
+    },
+    {
+      "url": "https://math.libretexts.org/@api/deki/files/916/CNX_Precalc_Figure_01_03_014.jpg?revision=1",
+      "alt": "Graph of a polynomial that shows the increasing and decreasing intervals and local maximum.] Definition of a local maximum",
+      "credit": ""
+    },
+    {
+      "url": "https://math.libretexts.org/@api/deki/files/917/CNX_Precalc_Figure_01_03_005.jpg?revision=1",
+      "alt": "Graph of a polynomial that shows the increasing and decreasing intervals and local maximum.",
+      "credit": ""
+    },
+    {
+      "url": "https://math.libretexts.org/@api/deki/files/920/CNX_Precalc_Figure_01_03_006.jpg?revision=1",
+      "alt": "[Graph of a polynomial.]",
+      "credit": ""
+    },
+    {
+      "url": "https://math.libretexts.org/@api/deki/files/921/CNX_Precalc_Figure_01_03_007.jpg?revision=1",
+      "alt": "Graph of a reciprocal function.",
+      "credit": ""
+    },
+    {
+      "url": "https://math.libretexts.org/@api/deki/files/922/CNX_Precalc_Figure_01_03_008ab.jpg?revision=1",
+      "alt": "Graph of the reciprocal function on a graphing calculator.",
+      "credit": ""
+    },
+    {
+      "url": "https://math.libretexts.org/@api/deki/files/923/CNX_Precalc_Figure_01_03_010.jpg?revision=1",
+      "alt": "Graph of a polynomial with a local maximum at (-1, 28) and local minimum at (5, -80).",
+      "credit": ""
+    },
+    {
+      "url": "https://math.libretexts.org/@api/deki/files/924/CNX_Precalc_Figure_01_03_011.jpg?revision=1",
+      "alt": "Graph of a polynomial.",
+      "credit": ""
+    },
+    {
+      "url": "https://math.libretexts.org/@api/deki/files/926/CNX_Precalc_Figure_01_03_012a.jpg?revision=1",
+      "alt": "Table showing the increasing and decreasing intervals of the toolkit functions.",
+      "credit": ""
+    },
+    {
+      "url": "https://math.libretexts.org/@api/deki/files/927/CNX_Precalc_Figure_01_03_012b.jpg?revision=1",
+      "alt": "Table showing the increasing and decreasing intervals of the toolkit functions.",
+      "credit": ""
+    },
+    {
+      "url": "https://math.libretexts.org/@api/deki/files/925/CNX_Precalc_Figure_01_03_012.jpg?revision=1",
+      "alt": "Table showing the increasing and decreasing intervals of the toolkit functions.",
+      "credit": ""
+    },
+    {
+      "url": "https://math.libretexts.org/@api/deki/files/928/CNX_Precalc_Figure_01_03_015.jpg?revision=1",
+      "alt": "Graph of a segment of a parabola with an absolute minimum at (0, -2) and absolute maximum at (2, 2).",
+      "credit": ""
+    },
+    {
+      "url": "https://math.libretexts.org/@api/deki/files/929/CNX_Precalc_Figure_01_03_013.jpg?revision=1",
+      "alt": "Graph of a polynomial.",
+      "credit": ""
+    }
+  ],
+  "references": [
+    {
+      "text": "electrostatic force",
+      "url": "https://phys.libretexts.org/TextMaps/Introductory_Physics_TextMaps/Map%3A_College_Physics_(OpenStax)/18%3A_Electric_Charge_and_Electric_Field/18.3%3A_Coulomb's_Law"
+    },
+    {
+      "text": "3.3: Rates of Change and Behavior of Graphs",
+      "url": "https://math.libretexts.org/Bookshelves/Algebra/Algebra_and_Trigonometry_1e_(OpenStax)/03%3A_Functions/3.03%3A_Rates_of_Change_and_Behavior_of_Graphs"
+    },
+    {
+      "text": "CC BY  4.0",
+      "url": "https://creativecommons.org/licenses/by/4.0"
+    },
+    {
+      "text": "OpenStax",
+      "url": "https://openstax.org/"
+    },
+    {
+      "text": "source content",
+      "url": "https://openstax.org/details/books/precalculus"
+    }
+  ],
+  "exercises": [
+    {
+      "ordinal": 1,
+      "sourceNumber": "1",
+      "sourceAnchor": "",
+      "kind": "exercise-candidate",
+      "context": "\\[\\dfrac{\\Delta y}{\\Delta x}=\\dfrac{f(x_2)-f(x_1)}{x_2-x_1}\\]\n\nHow To...\n\nGiven the value of a function at different points, calculate the average rate of change of a function for the interval between two values \\(x_1\\) and \\(x_2\\).",
+      "original": "1. Calculate the difference \\(y_2−y_1=\\Delta y\\).",
+      "prompt": "1. Calculate the difference \\(y_2−y_1=\\Delta y\\).",
+      "sourceAnswers": [],
+      "hasFigure": false,
+      "status": "draft",
+      "answerVerified": false,
+      "translationStatus": "pending",
+      "mappingStatus": "pending"
+    },
+    {
+      "ordinal": 2,
+      "sourceNumber": "2",
+      "sourceAnchor": "",
+      "kind": "exercise-candidate",
+      "context": "\\[\\dfrac{\\Delta y}{\\Delta x}=\\dfrac{f(x_2)-f(x_1)}{x_2-x_1}\\]\n\nHow To...\n\nGiven the value of a function at different points, calculate the average rate of change of a function for the interval between two values \\(x_1\\) and \\(x_2\\).",
+      "original": "2. Calculate the difference \\(x_2−x_1=\\Delta x\\).",
+      "prompt": "2. Calculate the difference \\(x_2−x_1=\\Delta x\\).",
+      "sourceAnswers": [],
+      "hasFigure": false,
+      "status": "draft",
+      "answerVerified": false,
+      "translationStatus": "pending",
+      "mappingStatus": "pending"
+    },
+    {
+      "ordinal": 3,
+      "sourceNumber": "3",
+      "sourceAnchor": "",
+      "kind": "exercise-candidate",
+      "context": "\\[\\dfrac{\\Delta y}{\\Delta x}=\\dfrac{f(x_2)-f(x_1)}{x_2-x_1}\\]\n\nHow To...\n\nGiven the value of a function at different points, calculate the average rate of change of a function for the interval between two values \\(x_1\\) and \\(x_2\\).",
+      "original": "3. Find the ratio \\(\\dfrac{\\Delta y}{\\Delta x}\\).",
+      "prompt": "3. Find the ratio \\(\\dfrac{\\Delta y}{\\Delta x}\\).",
+      "sourceAnswers": [],
+      "hasFigure": false,
+      "status": "draft",
+      "answerVerified": false,
+      "translationStatus": "pending",
+      "mappingStatus": "pending"
+    },
+    {
+      "ordinal": 4,
+      "sourceNumber": "",
+      "sourceAnchor": "",
+      "kind": "example-or-exercise",
+      "context": "\\[\\dfrac{\\Delta y}{\\Delta x}=\\dfrac{f(x_2)-f(x_1)}{x_2-x_1}\\]\n\nHow To...\n\nGiven the value of a function at different points, calculate the average rate of change of a function for the interval between two values \\(x_1\\) and \\(x_2\\).",
+      "original": "Example \\(\\PageIndex{1}\\): Computing an Average Rate of Change\n\nUsing the data in Table \\(\\PageIndex{1}\\), find the average rate of change of the price of gasoline between 2007 and 2009.\n\nSolution\n\nIn 2007, the price of gasoline was $2.84. In 2009, the cost was $2.41. The average rate of change is\n\n\\[\\begin{align*} \\dfrac{\\Delta y}{\\Delta x}&=\\dfrac{y_2−y_1}{x_2−x_1} \\\\[4pt] &=\\dfrac{$2.41−$2.84}{2009−2007} \\\\[4pt] &=\\dfrac{−$0.43}{2 \\text{ years}} \\\\[4pt] &=−$0.22 \\text{ per year} \\end{align*}\\]\n\nAnalysis\n\nNote that a decrease is expressed by a negative change or “negative increase.” A rate of change is negative when the output decreases as the input increases or when the output increases as the input decreases.",
+      "prompt": "Example \\(\\PageIndex{1}\\): Computing an Average Rate of Change\n\nUsing the data in Table \\(\\PageIndex{1}\\), find the average rate of change of the price of gasoline between 2007 and 2009.\n\nSolution\n\nIn 2007, the price of gasoline was $2.84. In 2009, the cost was $2.41. The average rate of change is\n\n\\[\\begin{align*} \\dfrac{\\Delta y}{\\Delta x}&=\\dfrac{y_2−y_1}{x_2−x_1} \\\\[4pt] &=\\dfrac{$2.41−$2.84}{2009−2007} \\\\[4pt] &=\\dfrac{−$0.43}{2 \\text{ years}} \\\\[4pt] &=−$0.22 \\text{ per year} \\end{align*}\\]\n\nAnalysis\n\nNote that a decrease is expressed by a negative change or “negative increase.” A rate of change is negative when the output decreases as the input increases or when the output increases as the input decreases.",
+      "sourceAnswers": [],
+      "hasFigure": false,
+      "status": "draft",
+      "answerVerified": false,
+      "translationStatus": "pending",
+      "mappingStatus": "pending"
+    },
+    {
+      "ordinal": 5,
+      "sourceNumber": "",
+      "sourceAnchor": "",
+      "kind": "exercise-candidate",
+      "context": "\\[\\dfrac{\\Delta y}{\\Delta x}=\\dfrac{f(x_2)-f(x_1)}{x_2-x_1}\\]\n\nHow To...\n\nGiven the value of a function at different points, calculate the average rate of change of a function for the interval between two values \\(x_1\\) and \\(x_2\\).",
+      "original": "Exercise \\(\\PageIndex{1}\\)\n\nUsing the data in Table \\(\\PageIndex{1}\\), find the average rate of change between 2005 and 2010.\n\nSolution\n\n\\(\\dfrac{$2.84−$2.315}{5 \\text{ years}} =\\dfrac{$0.535}{5 \\text{ years}} =$0.106 \\text{per year.}\\)",
+      "prompt": "Exercise \\(\\PageIndex{1}\\)\n\nUsing the data in Table \\(\\PageIndex{1}\\), find the average rate of change between 2005 and 2010.",
+      "sourceAnswers": [
+        "\\(\\dfrac{$2.84−$2.315}{5 \\text{ years}} =\\dfrac{$0.535}{5 \\text{ years}} =$0.106 \\text{per year.}\\)"
+      ],
+      "hasFigure": false,
+      "status": "draft",
+      "answerVerified": false,
+      "translationStatus": "pending",
+      "mappingStatus": "pending"
+    },
+    {
+      "ordinal": 6,
+      "sourceNumber": "",
+      "sourceAnchor": "",
+      "kind": "example-or-exercise",
+      "context": "\\[\\dfrac{\\Delta y}{\\Delta x}=\\dfrac{f(x_2)-f(x_1)}{x_2-x_1}\\]\n\nHow To...\n\nGiven the value of a function at different points, calculate the average rate of change of a function for the interval between two values \\(x_1\\) and \\(x_2\\).",
+      "original": "Example \\(\\PageIndex{2}\\): Computing Average Rate of Change from a Graph\n\nGiven the function \\(g(t)\\) shown in Figure \\(\\PageIndex{1}\\), find the average rate of change on the interval \\([−1,2]\\).\n\n[Figure: Graph of a parabola.]\n\nFigure \\(\\PageIndex{1}\\): Graph of a parabola.\n\nSolution\n\nAt \\(t=−1\\), Figure \\(\\PageIndex{2}\\) shows \\(g(−1)=4\\). At \\(t=2\\),the graph shows \\(g(2)=1\\).\n\n[Figure: Graph of a parabola with a line from points (-1, 4) and (2, 1) to show the changes for g(t) and t.]\n\nFigure \\(\\PageIndex{2}\\): Graph of a parabola with a line from points (-1, 4) and (2, 1) to show the changes for g(t) and t.\n\nThe horizontal change \\(\\Delta t=3\\) is shown by the red arrow, and the vertical change \\(\\Delta g(t)=−3\\) is shown by the turquoise arrow. The output changes by –3 while the input changes by 3, giving an average rate of change of\n\n\\[\\dfrac{1−4}{2−(−1)}=\\dfrac{−3}{3}=−1\\]\n\nAnalysis\n\nNote that the order we choose is very important. If, for example, we use \\(\\dfrac{y_2−y_1}{x_1−x_2}\\), we will not get the correct answer. Decide which point will be 1 and which point will be 2, and keep the coordinates fixed as \\((x_1,y_1)\\) and \\((x_2,y_2)\\).",
+      "prompt": "Example \\(\\PageIndex{2}\\): Computing Average Rate of Change from a Graph\n\nGiven the function \\(g(t)\\) shown in Figure \\(\\PageIndex{1}\\), find the average rate of change on the interval \\([−1,2]\\).\n\n[Figure: Graph of a parabola.]\n\nFigure \\(\\PageIndex{1}\\): Graph of a parabola.\n\nSolution\n\nAt \\(t=−1\\), Figure \\(\\PageIndex{2}\\) shows \\(g(−1)=4\\). At \\(t=2\\),the graph shows \\(g(2)=1\\).\n\n[Figure: Graph of a parabola with a line from points (-1, 4) and (2, 1) to show the changes for g(t) and t.]\n\nFigure \\(\\PageIndex{2}\\): Graph of a parabola with a line from points (-1, 4) and (2, 1) to show the changes for g(t) and t.\n\nThe horizontal change \\(\\Delta t=3\\) is shown by the red arrow, and the vertical change \\(\\Delta g(t)=−3\\) is shown by the turquoise arrow. The output changes by –3 while the input changes by 3, giving an average rate of change of\n\n\\[\\dfrac{1−4}{2−(−1)}=\\dfrac{−3}{3}=−1\\]\n\nAnalysis\n\nNote that the order we choose is very important. If, for example, we use \\(\\dfrac{y_2−y_1}{x_1−x_2}\\), we will not get the correct answer. Decide which point will be 1 and which point will be 2, and keep the coordinates fixed as \\((x_1,y_1)\\) and \\((x_2,y_2)\\).",
+      "sourceAnswers": [],
+      "hasFigure": true,
+      "status": "draft",
+      "answerVerified": false,
+      "translationStatus": "pending",
+      "mappingStatus": "pending"
+    },
+    {
+      "ordinal": 7,
+      "sourceNumber": "",
+      "sourceAnchor": "",
+      "kind": "example-or-exercise",
+      "context": "\\[\\dfrac{\\Delta y}{\\Delta x}=\\dfrac{f(x_2)-f(x_1)}{x_2-x_1}\\]\n\nHow To...\n\nGiven the value of a function at different points, calculate the average rate of change of a function for the interval between two values \\(x_1\\) and \\(x_2\\).",
+      "original": "Example \\(\\PageIndex{3}\\): Computing Average Rate of Change from a Table\n\nAfter picking up a friend who lives 10 miles away, Anna records her distance from home over time. The values are shown in Table \\(\\PageIndex{2}\\). Find her average speed over the first 6 hours.\n\n    Table \\(\\PageIndex{2}\\)\n\n            \\(t\\) (hours)\t\n            0\t\n            1\t\n            2\t\n            3\t\n            4\t\n            5\t\n            6\t\n            7\t\n\n            \\(D(t)\\)  (miles)\t\n            10\t\n            55\t\n            90\t\n            153\t\n            214\t\n            240\t\n            292\t\n            300\t\n\nSolution\n\nHere, the average speed is the average rate of change. She traveled 292 miles in 6 hours, for an average speed of\n\n\\[\\begin{align*}\\dfrac{292−10}{6−0}&=\\dfrac{282}{6}\\\\[4pt] &= 47\\end{align*}\\]\n\nThe average speed is about 47 miles per hour.\n\nAnalysis\n\nBecause the speed is not constant, the average speed depends on the interval chosen. For the interval \\([2,3]\\), the average speed is 63 miles per hour.",
+      "prompt": "Example \\(\\PageIndex{3}\\): Computing Average Rate of Change from a Table\n\nAfter picking up a friend who lives 10 miles away, Anna records her distance from home over time. The values are shown in Table \\(\\PageIndex{2}\\). Find her average speed over the first 6 hours.\n\n    Table \\(\\PageIndex{2}\\)\n\n            \\(t\\) (hours)\t\n            0\t\n            1\t\n            2\t\n            3\t\n            4\t\n            5\t\n            6\t\n            7\t\n\n            \\(D(t)\\)  (miles)\t\n            10\t\n            55\t\n            90\t\n            153\t\n            214\t\n            240\t\n            292\t\n            300\t\n\nSolution\n\nHere, the average speed is the average rate of change. She traveled 292 miles in 6 hours, for an average speed of\n\n\\[\\begin{align*}\\dfrac{292−10}{6−0}&=\\dfrac{282}{6}\\\\[4pt] &= 47\\end{align*}\\]\n\nThe average speed is about 47 miles per hour.\n\nAnalysis\n\nBecause the speed is not constant, the average speed depends on the interval chosen. For the interval \\([2,3]\\), the average speed is 63 miles per hour.",
+      "sourceAnswers": [],
+      "hasFigure": false,
+      "status": "draft",
+      "answerVerified": false,
+      "translationStatus": "pending",
+      "mappingStatus": "pending"
+    },
+    {
+      "ordinal": 8,
+      "sourceNumber": "",
+      "sourceAnchor": "",
+      "kind": "example-or-exercise",
+      "context": "\\[\\dfrac{\\Delta y}{\\Delta x}=\\dfrac{f(x_2)-f(x_1)}{x_2-x_1}\\]\n\nHow To...\n\nGiven the value of a function at different points, calculate the average rate of change of a function for the interval between two values \\(x_1\\) and \\(x_2\\).",
+      "original": "Example \\(\\PageIndex{4}\\): Computing Average Rate of Change for a Function Expressed as a Formula\n\nCompute the average rate of change of \\(f(x)=x^2−\\frac{1}{x}\\) on the interval \\([2, 4]\\).\n\nSolution\n\nWe can start by computing the function values at each endpoint of the interval.\n\n\\[\\begin{align*}f(2)&=2^2−\\frac{1}{2} f(4)&=4^2−\\frac{1}{4} \\\\[4pt] &=4−\\frac{1}{2} &=16−\\frac{1}{4} \\\\[4pt] &=72 &=\\frac{63}{4}\\end{align*}\\]\n\nNow we compute the average rate of change.\n\n\\[\\begin{align*}\\text{Average rate of change} &=\\dfrac{f(4)−f(2)}{4−2} \\\\[4pt] &=\\dfrac{\\frac{63}{4}-\\frac{7}{2}}{4-2} \\\\[4pt] &=\\dfrac{\\frac{49}{4}}{2} \\\\[4pt] &= \\dfrac{49}{8}\\end{align*}\\]",
+      "prompt": "Example \\(\\PageIndex{4}\\): Computing Average Rate of Change for a Function Expressed as a Formula\n\nCompute the average rate of change of \\(f(x)=x^2−\\frac{1}{x}\\) on the interval \\([2, 4]\\).\n\nSolution\n\nWe can start by computing the function values at each endpoint of the interval.\n\n\\[\\begin{align*}f(2)&=2^2−\\frac{1}{2} f(4)&=4^2−\\frac{1}{4} \\\\[4pt] &=4−\\frac{1}{2} &=16−\\frac{1}{4} \\\\[4pt] &=72 &=\\frac{63}{4}\\end{align*}\\]\n\nNow we compute the average rate of change.\n\n\\[\\begin{align*}\\text{Average rate of change} &=\\dfrac{f(4)−f(2)}{4−2} \\\\[4pt] &=\\dfrac{\\frac{63}{4}-\\frac{7}{2}}{4-2} \\\\[4pt] &=\\dfrac{\\frac{49}{4}}{2} \\\\[4pt] &= \\dfrac{49}{8}\\end{align*}\\]",
+      "sourceAnswers": [],
+      "hasFigure": false,
+      "status": "draft",
+      "answerVerified": false,
+      "translationStatus": "pending",
+      "mappingStatus": "pending"
+    },
+    {
+      "ordinal": 9,
+      "sourceNumber": "",
+      "sourceAnchor": "",
+      "kind": "exercise-candidate",
+      "context": "\\[\\dfrac{\\Delta y}{\\Delta x}=\\dfrac{f(x_2)-f(x_1)}{x_2-x_1}\\]\n\nHow To...\n\nGiven the value of a function at different points, calculate the average rate of change of a function for the interval between two values \\(x_1\\) and \\(x_2\\).",
+      "original": "Exercise \\(\\PageIndex{2}\\)\n\nFind the average rate of change of \\(f(x)=x−2\\sqrt{x}\\) on the interval \\([1, 9]\\).\n\nSolution\n\n\\(\\frac{1}{2}\\)",
+      "prompt": "Exercise \\(\\PageIndex{2}\\)\n\nFind the average rate of change of \\(f(x)=x−2\\sqrt{x}\\) on the interval \\([1, 9]\\).",
+      "sourceAnswers": [
+        "\\(\\frac{1}{2}\\)"
+      ],
+      "hasFigure": false,
+      "status": "draft",
+      "answerVerified": false,
+      "translationStatus": "pending",
+      "mappingStatus": "pending"
+    },
+    {
+      "ordinal": 10,
+      "sourceNumber": "",
+      "sourceAnchor": "",
+      "kind": "example-or-exercise",
+      "context": "\\[\\dfrac{\\Delta y}{\\Delta x}=\\dfrac{f(x_2)-f(x_1)}{x_2-x_1}\\]\n\nHow To...\n\nGiven the value of a function at different points, calculate the average rate of change of a function for the interval between two values \\(x_1\\) and \\(x_2\\).",
+      "original": "Example \\(\\PageIndex{5}\\): Finding the Average Rate of Change of a Force\n\nThe electrostatic force \\(F\\), measured in newtons, between two charged particles can be related to the distance between the particles \\(d\\),in centimeters, by the formula \\(F(d)=\\frac{2}{d^2}\\). Find the average rate of change of force if the distance between the particles is increased from 2 cm to 6 cm.\n\nSolution\n\nWe are computing the average rate of change of \\(F(d)=\\dfrac{2}{d^2}\\) on the interval \\([2,6]\\).\n\n\\[\\begin{align*}\\text{Average rate of change }&=\\dfrac{F(6)−F(2)}{6−2} \\\\[4pt] &=\\dfrac{\\frac{2}{6^2}-\\frac{2}{2^2}}{6-2} & \\text{Simplify} \\\\[4pt] &=\\dfrac{\\frac{2}{36}-\\frac{2}{4}}{4} \\\\[4pt] &=\\dfrac{-\\frac{16}{36}}{4} & \\text{Combine numerator terms.} \\\\[4pt] &=−\\dfrac{1}{9} & \\text{Simplify}\\end{align*}\\]\n\nThe average rate of change is \\(−\\frac{1}{9}\\) newton per centimeter.",
+      "prompt": "Example \\(\\PageIndex{5}\\): Finding the Average Rate of Change of a Force\n\nThe electrostatic force \\(F\\), measured in newtons, between two charged particles can be related to the distance between the particles \\(d\\),in centimeters, by the formula \\(F(d)=\\frac{2}{d^2}\\). Find the average rate of change of force if the distance between the particles is increased from 2 cm to 6 cm.\n\nSolution\n\nWe are computing the average rate of change of \\(F(d)=\\dfrac{2}{d^2}\\) on the interval \\([2,6]\\).\n\n\\[\\begin{align*}\\text{Average rate of change }&=\\dfrac{F(6)−F(2)}{6−2} \\\\[4pt] &=\\dfrac{\\frac{2}{6^2}-\\frac{2}{2^2}}{6-2} & \\text{Simplify} \\\\[4pt] &=\\dfrac{\\frac{2}{36}-\\frac{2}{4}}{4} \\\\[4pt] &=\\dfrac{-\\frac{16}{36}}{4} & \\text{Combine numerator terms.} \\\\[4pt] &=−\\dfrac{1}{9} & \\text{Simplify}\\end{align*}\\]\n\nThe average rate of change is \\(−\\frac{1}{9}\\) newton per centimeter.",
+      "sourceAnswers": [],
+      "hasFigure": false,
+      "status": "draft",
+      "answerVerified": false,
+      "translationStatus": "pending",
+      "mappingStatus": "pending"
+    },
+    {
+      "ordinal": 11,
+      "sourceNumber": "",
+      "sourceAnchor": "",
+      "kind": "example-or-exercise",
+      "context": "\\[\\dfrac{\\Delta y}{\\Delta x}=\\dfrac{f(x_2)-f(x_1)}{x_2-x_1}\\]\n\nHow To...\n\nGiven the value of a function at different points, calculate the average rate of change of a function for the interval between two values \\(x_1\\) and \\(x_2\\).",
+      "original": "Example \\(\\PageIndex{6}\\): Finding an Average Rate of Change as an Expression\n\nFind the average rate of change of \\(g(t)=t^2+3t+1\\) on the interval \\([0, a]\\). The answer will be an expression involving \\(a\\).\n\nSolution\n\nWe use the average rate of change formula.\n\n\\(\\begin{align*}\\text{Average rate of change} &=\\dfrac{g(a)−g(0)}{a−0} & \\text{Evaluate.} \\\\[4pt] &=\\dfrac{(a^2+3a+1)−(0^2+3(0)+1)}{a−0} & \\text{Simplify.} \\\\[4pt] &=\\dfrac{a^2+3a+1−1}{a} & \\text{Simplify and factor.}\\\\[4pt] &= \\dfrac{a(a+3)}{a} & \\text{Divide by the common factor a.}\\\\[4pt] &= a+3 \\end{align*}\\)\n\nThis result tells us the average rate of change in terms of a between \\(t=0\\) and any other point \\(t=a\\). For example, on the interval \\([0,5]\\), the average rate of change would be \\(5+3=8\\).",
+      "prompt": "Example \\(\\PageIndex{6}\\): Finding an Average Rate of Change as an Expression\n\nFind the average rate of change of \\(g(t)=t^2+3t+1\\) on the interval \\([0, a]\\). The answer will be an expression involving \\(a\\).\n\nSolution\n\nWe use the average rate of change formula.\n\n\\(\\begin{align*}\\text{Average rate of change} &=\\dfrac{g(a)−g(0)}{a−0} & \\text{Evaluate.} \\\\[4pt] &=\\dfrac{(a^2+3a+1)−(0^2+3(0)+1)}{a−0} & \\text{Simplify.} \\\\[4pt] &=\\dfrac{a^2+3a+1−1}{a} & \\text{Simplify and factor.}\\\\[4pt] &= \\dfrac{a(a+3)}{a} & \\text{Divide by the common factor a.}\\\\[4pt] &= a+3 \\end{align*}\\)\n\nThis result tells us the average rate of change in terms of a between \\(t=0\\) and any other point \\(t=a\\). For example, on the interval \\([0,5]\\), the average rate of change would be \\(5+3=8\\).",
+      "sourceAnswers": [],
+      "hasFigure": false,
+      "status": "draft",
+      "answerVerified": false,
+      "translationStatus": "pending",
+      "mappingStatus": "pending"
+    },
+    {
+      "ordinal": 12,
+      "sourceNumber": "",
+      "sourceAnchor": "",
+      "kind": "exercise-candidate",
+      "context": "\\[\\dfrac{\\Delta y}{\\Delta x}=\\dfrac{f(x_2)-f(x_1)}{x_2-x_1}\\]\n\nHow To...\n\nGiven the value of a function at different points, calculate the average rate of change of a function for the interval between two values \\(x_1\\) and \\(x_2\\).",
+      "original": "Exercise \\(\\PageIndex{3}\\)\n\nFind the average rate of change of \\(f(x)=x^2+2x−8\\) on the interval \\([5, a]\\).\n\nSolution\n\n\\(a+7\\)",
+      "prompt": "Exercise \\(\\PageIndex{3}\\)\n\nFind the average rate of change of \\(f(x)=x^2+2x−8\\) on the interval \\([5, a]\\).",
+      "sourceAnswers": [
+        "\\(a+7\\)"
+      ],
+      "hasFigure": false,
+      "status": "draft",
+      "answerVerified": false,
+      "translationStatus": "pending",
+      "mappingStatus": "pending"
+    },
+    {
+      "ordinal": 13,
+      "sourceNumber": "",
+      "sourceAnchor": "",
+      "kind": "example-or-exercise",
+      "context": "These observations lead us to a formal definition of local extrema.\n\nLocal Minima and Local Maxima\n\nA function \\(f\\) has a local maximum at a point \\(b\\) in an open interval \\((a,c)\\) if \\(f(b)\\) is greater than or equal to \\(f(x)\\) for every point \\(x\\) (\\(x\\) does not equal \\(b\\)) in the interval. Likewise, \\(f\\) has a local minimum at a point \\(b\\) in \\((a,c)\\) if \\(f(b)\\) is less than or equal to \\(f(x)\\) for every \\(x\\) (\\(x\\) does not equal \\(b\\)) in the interval.",
+      "original": "Example \\(\\PageIndex{7}\\) Finding Increasing and Decreasing Intervals on a Graph\n\nGiven the function \\(p(t)\\) in Figure \\(\\PageIndex{6}\\), identify the intervals on which the function appears to be increasing.\n\n[Figure: [Graph of a polynomial.]]\n\nFigure \\(\\PageIndex{6}\\): Graph of a polynomial.\n\nSolution\n\nWe see that the function is not constant on any interval. The function is increasing where it slants upward as we move to the right and decreasing where it slants downward as we move to the right. The function appears to be increasing from \\(t=1\\) to \\(t=3\\) and from \\(t=4\\) on.\n\nIn interval notation, we would say the function appears to be increasing on the interval \\((1,3)\\) and the interval \\((4,\\infty)\\).\n\nAnalysis\n\nNotice in this example that we used open intervals (intervals that do not include the endpoints), because the function is neither increasing nor decreasing at \\(t=1\\), \\(t=3\\), and \\(t=4\\). These points are the local extrema (two minima and a maximum).",
+      "prompt": "Example \\(\\PageIndex{7}\\) Finding Increasing and Decreasing Intervals on a Graph\n\nGiven the function \\(p(t)\\) in Figure \\(\\PageIndex{6}\\), identify the intervals on which the function appears to be increasing.\n\n[Figure: [Graph of a polynomial.]]\n\nFigure \\(\\PageIndex{6}\\): Graph of a polynomial.\n\nSolution\n\nWe see that the function is not constant on any interval. The function is increasing where it slants upward as we move to the right and decreasing where it slants downward as we move to the right. The function appears to be increasing from \\(t=1\\) to \\(t=3\\) and from \\(t=4\\) on.\n\nIn interval notation, we would say the function appears to be increasing on the interval \\((1,3)\\) and the interval \\((4,\\infty)\\).\n\nAnalysis\n\nNotice in this example that we used open intervals (intervals that do not include the endpoints), because the function is neither increasing nor decreasing at \\(t=1\\), \\(t=3\\), and \\(t=4\\). These points are the local extrema (two minima and a maximum).",
+      "sourceAnswers": [],
+      "hasFigure": true,
+      "status": "draft",
+      "answerVerified": false,
+      "translationStatus": "pending",
+      "mappingStatus": "pending"
+    },
+    {
+      "ordinal": 14,
+      "sourceNumber": "",
+      "sourceAnchor": "",
+      "kind": "example-or-exercise",
+      "context": "These observations lead us to a formal definition of local extrema.\n\nLocal Minima and Local Maxima\n\nA function \\(f\\) has a local maximum at a point \\(b\\) in an open interval \\((a,c)\\) if \\(f(b)\\) is greater than or equal to \\(f(x)\\) for every point \\(x\\) (\\(x\\) does not equal \\(b\\)) in the interval. Likewise, \\(f\\) has a local minimum at a point \\(b\\) in \\((a,c)\\) if \\(f(b)\\) is less than or equal to \\(f(x)\\) for every \\(x\\) (\\(x\\) does not equal \\(b\\)) in the interval.",
+      "original": "Example \\(\\PageIndex{8}\\): Finding Local Extrema from a Graph\n\nGraph the function \\(f(x)=\\frac{2}{x}+\\frac{x}{3}\\). Then use the graph to estimate the local extrema of the function and to determine the intervals on which the function is increasing.\n\nSolution\n\nUsing technology, we find that the graph of the function looks like that in Figure \\(\\PageIndex{7}\\). It appears there is a low point, or local minimum, between \\(x=2\\) and \\(x=3\\), and a mirror-image high point, or local maximum, somewhere between \\(x=−3\\) and \\(x=−2\\)\n\n[Figure: Graph of a reciprocal function.]\n.\n\nFigure \\(\\PageIndex{7}\\): Graph of a reciprocal function.\n\nAnalysis\n\nMost graphing calculators and graphing utilities can estimate the location of maxima and minima. Figure \\(\\PageIndex{8}\\) provides screen images from two different technologies, showing the estimate for the local maximum and minimum.\n\n[Figure: Graph of the reciprocal function on a graphing calculator.]\n\nFigure \\(\\PageIndex{8}\\): Graph of the reciprocal function on a graphing calculator.\n\nBased on these estimates, the function is increasing on the interval \\((−\\infty,−2.449)\\) and \\((2.449,\\infty)\\). Notice that, while we expect the extrema to be symmetric, the two different technologies agree only up to four decimals due to the differing approximation algorithms used by each. (The exact location of the extrema is at \\(\\pm\\sqrt{6}\\), but determining this requires calculus.)",
+      "prompt": "Example \\(\\PageIndex{8}\\): Finding Local Extrema from a Graph\n\nGraph the function \\(f(x)=\\frac{2}{x}+\\frac{x}{3}\\). Then use the graph to estimate the local extrema of the function and to determine the intervals on which the function is increasing.\n\nSolution\n\nUsing technology, we find that the graph of the function looks like that in Figure \\(\\PageIndex{7}\\). It appears there is a low point, or local minimum, between \\(x=2\\) and \\(x=3\\), and a mirror-image high point, or local maximum, somewhere between \\(x=−3\\) and \\(x=−2\\)\n\n[Figure: Graph of a reciprocal function.]\n.\n\nFigure \\(\\PageIndex{7}\\): Graph of a reciprocal function.\n\nAnalysis\n\nMost graphing calculators and graphing utilities can estimate the location of maxima and minima. Figure \\(\\PageIndex{8}\\) provides screen images from two different technologies, showing the estimate for the local maximum and minimum.\n\n[Figure: Graph of the reciprocal function on a graphing calculator.]\n\nFigure \\(\\PageIndex{8}\\): Graph of the reciprocal function on a graphing calculator.\n\nBased on these estimates, the function is increasing on the interval \\((−\\infty,−2.449)\\) and \\((2.449,\\infty)\\). Notice that, while we expect the extrema to be symmetric, the two different technologies agree only up to four decimals due to the differing approximation algorithms used by each. (The exact location of the extrema is at \\(\\pm\\sqrt{6}\\), but determining this requires calculus.)",
+      "sourceAnswers": [],
+      "hasFigure": true,
+      "status": "draft",
+      "answerVerified": false,
+      "translationStatus": "pending",
+      "mappingStatus": "pending"
+    },
+    {
+      "ordinal": 15,
+      "sourceNumber": "",
+      "sourceAnchor": "",
+      "kind": "exercise-candidate",
+      "context": "These observations lead us to a formal definition of local extrema.\n\nLocal Minima and Local Maxima\n\nA function \\(f\\) has a local maximum at a point \\(b\\) in an open interval \\((a,c)\\) if \\(f(b)\\) is greater than or equal to \\(f(x)\\) for every point \\(x\\) (\\(x\\) does not equal \\(b\\)) in the interval. Likewise, \\(f\\) has a local minimum at a point \\(b\\) in \\((a,c)\\) if \\(f(b)\\) is less than or equal to \\(f(x)\\) for every \\(x\\) (\\(x\\) does not equal \\(b\\)) in the interval.",
+      "original": "Exercise \\(\\PageIndex{8}\\)\n\nGraph the function \\(f(x)=x^3−6x^2−15x+20\\) to estimate the local extrema of the function. Use these to determine the intervals on which the function is increasing and decreasing.\n\nSolution\n\nThe local maximum appears to occur at \\((−1,28)\\), and the local minimum occurs at \\((5,−80)\\). The function is increasing on \\((−\\infty,−1)\\cup(5,\\infty)\\) and decreasing on \\((−1,5)\\).\n\n[Figure: Graph of a polynomial with a local maximum at (-1, 28) and local minimum at (5, -80).]\n\nGraph of a polynomial with a local maximum at (-1, 28) and local minimum at (5, -80).",
+      "prompt": "Exercise \\(\\PageIndex{8}\\)\n\nGraph the function \\(f(x)=x^3−6x^2−15x+20\\) to estimate the local extrema of the function. Use these to determine the intervals on which the function is increasing and decreasing.",
+      "sourceAnswers": [
+        "The local maximum appears to occur at \\((−1,28)\\), and the local minimum occurs at \\((5,−80)\\). The function is increasing on \\((−\\infty,−1)\\cup(5,\\infty)\\) and decreasing on \\((−1,5)\\).\n\n[Figure: Graph of a polynomial with a local maximum at (-1, 28) and local minimum at (5, -80).]\n\nGraph of a polynomial with a local maximum at (-1, 28) and local minimum at (5, -80)."
+      ],
+      "hasFigure": true,
+      "status": "draft",
+      "answerVerified": false,
+      "translationStatus": "pending",
+      "mappingStatus": "pending"
+    },
+    {
+      "ordinal": 16,
+      "sourceNumber": "",
+      "sourceAnchor": "",
+      "kind": "example-or-exercise",
+      "context": "These observations lead us to a formal definition of local extrema.\n\nLocal Minima and Local Maxima\n\nA function \\(f\\) has a local maximum at a point \\(b\\) in an open interval \\((a,c)\\) if \\(f(b)\\) is greater than or equal to \\(f(x)\\) for every point \\(x\\) (\\(x\\) does not equal \\(b\\)) in the interval. Likewise, \\(f\\) has a local minimum at a point \\(b\\) in \\((a,c)\\) if \\(f(b)\\) is less than or equal to \\(f(x)\\) for every \\(x\\) (\\(x\\) does not equal \\(b\\)) in the interval.",
+      "original": "Example \\(\\PageIndex{9}\\): Finding Local Maxima and Minima from a Graph\n\nFor the function f whose graph is shown in Figure \\(\\PageIndex{9}\\), find all local maxima and minima.\n\n[Figure: Graph of a polynomial.]\n\nFigure \\(\\PageIndex{9}\\): Graph of a polynomial.\n\nSolution\n\nObserve the graph of \\(f\\). The graph attains a local maximum at \\(x=1\\) because it is the highest point in an open interval around \\(x=1\\).The local maximum is the y-coordinate at \\(x=1\\), which is 2.\n\nThe graph attains a local minimum at \\(x=−1\\) because it is the lowest point in an open interval around \\(x=−1\\). The local minimum is the y-coordinate at \\(x=−1\\), which is −2.",
+      "prompt": "Example \\(\\PageIndex{9}\\): Finding Local Maxima and Minima from a Graph\n\nFor the function f whose graph is shown in Figure \\(\\PageIndex{9}\\), find all local maxima and minima.\n\n[Figure: Graph of a polynomial.]\n\nFigure \\(\\PageIndex{9}\\): Graph of a polynomial.\n\nSolution\n\nObserve the graph of \\(f\\). The graph attains a local maximum at \\(x=1\\) because it is the highest point in an open interval around \\(x=1\\).The local maximum is the y-coordinate at \\(x=1\\), which is 2.\n\nThe graph attains a local minimum at \\(x=−1\\) because it is the lowest point in an open interval around \\(x=−1\\). The local minimum is the y-coordinate at \\(x=−1\\), which is −2.",
+      "sourceAnswers": [],
+      "hasFigure": true,
+      "status": "draft",
+      "answerVerified": false,
+      "translationStatus": "pending",
+      "mappingStatus": "pending"
+    },
+    {
+      "ordinal": 17,
+      "sourceNumber": "",
+      "sourceAnchor": "",
+      "kind": "example-or-exercise",
+      "context": "There is a difference between locating the highest and lowest points on a graph in a region around an open interval (locally) and locating the highest and lowest points on the graph for the entire domain. The y-coordinates (output) at the highest and lowest points are called the absolute maximum and absolute minimum, respectively. To locate absolute maxima and minima from a graph, we need to observe the graph to determine where the graph attains it highest and lowest points on the domain of the function (Figure \\(\\PageIndex{13}\\)).\n\nNot every function has an absolute maximum or minimum value. The toolkit function \\(f(x)=x^3\\) is one such function.\n\nAbsolute Maxima and Minima",
+      "original": "Example \\(\\PageIndex{10}\\): Finding Absolute Maxima and Minima from a Graph\n\nFor the function f shown in Figure \\(\\PageIndex{14}\\), find all absolute maxima and minima.\n\n[Figure: Graph of a polynomial.]\n\nFigure \\(\\PageIndex{14}\\): Graph of a polynomial.\n\nSolution\n\nObserve the graph of \\(f\\). The graph attains an absolute maximum in two locations, \\(x=−2\\) and \\(x=2\\), because at these locations, the graph attains its highest point on the domain of the function. The absolute maximum is the y-coordinate at \\(x=−2\\) and \\(x=2\\), which is 16.\n\nThe graph attains an absolute minimum at x=3, because it is the lowest point on the domain of the function’s graph. The absolute minimum is the y-coordinate at x=3,which is−10.",
+      "prompt": "Example \\(\\PageIndex{10}\\): Finding Absolute Maxima and Minima from a Graph\n\nFor the function f shown in Figure \\(\\PageIndex{14}\\), find all absolute maxima and minima.\n\n[Figure: Graph of a polynomial.]\n\nFigure \\(\\PageIndex{14}\\): Graph of a polynomial.\n\nSolution\n\nObserve the graph of \\(f\\). The graph attains an absolute maximum in two locations, \\(x=−2\\) and \\(x=2\\), because at these locations, the graph attains its highest point on the domain of the function. The absolute maximum is the y-coordinate at \\(x=−2\\) and \\(x=2\\), which is 16.\n\nThe graph attains an absolute minimum at x=3, because it is the lowest point on the domain of the function’s graph. The absolute minimum is the y-coordinate at x=3,which is−10.",
+      "sourceAnswers": [],
+      "hasFigure": true,
+      "status": "draft",
+      "answerVerified": false,
+      "translationStatus": "pending",
+      "mappingStatus": "pending"
+    }
+  ],
+  "license": "CC BY 4.0",
+  "licenseEvidence": "This page titled 3.3: Rates of Change and Behavior of Graphs was last modified on Thu, 26 Dec 2024 22:30:42 GMT and is shared under a CC BY  4.0  license and was authored, remixed, and/or curated by OpenStax via source content that was edited to the style and standards of the LibreTexts platform.",
+  "url": "https://math.libretexts.org/Bookshelves/Algebra/Algebra_and_Trigonometry_1e_(OpenStax)/03:_Functions/3.03:_Rates_of_Change_and_Behavior_of_Graphs",
+  "sha256": "b5eb625f234a2727b374a23d3cc6263a29b4f57083fd2c9aa0a6a7afe028c7b8",
+  "checkedAt": "2026-10-07",
+  "id": "ba464b9564f469ed20c1",
+  "bookId": "algebra-trigonometry",
+  "licenseInherited": false,
+  "licenseSource": "https://math.libretexts.org/Bookshelves/Algebra/Algebra_and_Trigonometry_1e_(OpenStax)/03:_Functions/3.03:_Rates_of_Change_and_Behavior_of_Graphs",
+  "licenseUrl": "https://creativecommons.org/licenses/by/4.0/",
+  "authors": "OpenStax / Jay Abramson et al.",
+  "book": "Algebra and Trigonometry 1e",
+  "reviewStatus": "unreviewed",
+  "sourceLanguage": "en",
+  "translationStatus": "pending"
+}

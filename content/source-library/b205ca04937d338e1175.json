@@ -1,0 +1,429 @@
+{
+  "title": "12.4: Rotation of Axes",
+  "originalText": "Learning Objectives\n\nIdentify nondegenerate conic sections given their general form equations.\n\nUse rotation of axes formulas.\n\nWrite equations of rotated conics in standard form.\n\nIdentify conics without rotating axes.\n\nAs we have seen, conic sections are formed when a plane intersects two right circular cones aligned tip to tip and extending infinitely far in opposite directions, which we also call a cone. The way in which we slice the cone will determine the type of conic section formed at the intersection. A circle is formed by slicing a cone with a plane perpendicular to the axis of symmetry of the cone. An ellipse is formed by slicing a single cone with a slanted plane not perpendicular to the axis of symmetry. A parabola is formed by slicing the plane through the top or bottom of the double-cone, whereas a hyperbola is formed when the plane slices both the top and bottom of the cone (Figure \\(\\PageIndex{1}\\)).\n\n[Figure: imageedit_2_4675119068.jpg]\n\nFigure \\(\\PageIndex{1}\\): The nondegenerate conic sections\n\nEllipses, circles, hyperbolas, and parabolas are sometimes called the nondegenerate conic sections, in contrast to the degenerate conic sections, which are shown in Figure \\(\\PageIndex{2}\\). A degenerate conic results when a plane intersects the double cone and passes through the apex. Depending on the angle of the plane, three types of degenerate conic sections are possible: a point, a line, or two intersecting lines.\n\n[Figure: imageedit_6_5854995623.jpg]\n\nFigure \\(\\PageIndex{2}\\): Degenerate conic sections\n\nIdentifying Nondegenerate Conics in General Form\n\nIn previous sections of this chapter, we have focused on the standard form equations for nondegenerate conic sections. In this section, we will shift our focus to the general form equation, which can be used for any conic. The general form is set equal to zero, and the terms and coefficients are given in a particular order, as shown below.\n\n\\(Ax^2+Bxy+Cy^2+Dx+Ey+F=0\\)\n\nwhere \\(A\\), \\(B\\), and \\(C\\) are not all zero. We can use the values of the coefficients to identify which type conic is represented by a given equation.\n\nYou may notice that the general form equation has an \\(xy\\) term that we have not seen in any of the standard form equations. As we will discuss later, the \\(xy\\) term rotates the conic whenever \\(B\\) is not equal to zero.\n\n    Table \\(\\PageIndex{1}\\)\n\n            Conic Sections\t\n            Example\t\n\n            ellipse\t\n            \\(4x^2+9y^2=1\\)\t\n\n            circle\t\n            \\(4x^2+4y^2=1\\)\t\n\n            hyperbola\t\n            \\(4x^2−9y^2=1\\)\t\n\n            parabola\t\n            \\(4x^2=9y\\) or \\(4y^2=9x\\)\t\n\n            one line\t\n            \\(4x+9y=1\\)\t\n\n            intersecting lines\t\n            \\((x−4)(y+4)=0\\)\t\n\n            parallel lines\t\n            \\((x−4)(x−9)=0\\)\t\n\n            a point\t\n            \\(4x^2+4y^2=0\\)\t\n\n            no graph\t\n            \\(4x^2+4y^2=−1\\)\t\n\nGENERAL FORM OF CONIC SECTIONS\n\nA conic section has the general form\n\n\\[Ax^2+Bxy+Cy^2+Dx+Ey+F=0 \\label{gen}\\]\n\nwhere \\(A\\), \\(B\\), and \\(C\\) are not all zero. Table \\(\\PageIndex{2}\\) summarizes the different conic sections where \\(B=0\\), and \\(A\\) and \\(C\\) are nonzero real numbers. This indicates that the conic has not been rotated.\n\n    Table \\(\\PageIndex{2}\\)\n\n            ellipse\t\n            \\(Ax^2+Cy^2+Dx+Ey+F=0\\), \\(A≠C\\) and \\(AC>0\\)\t\n\n            circle\t\n            \\(Ax^2+Cy^2+Dx+Ey+F=0\\), \\(A=C\\)\t\n\n            hyperbola\t\n            \\(Ax^2−Cy^2+Dx+Ey+F=0\\) or \\(−Ax^2+Cy^2+Dx+Ey+F=0\\), where \\(A\\) and \\(C\\) are positive\t\n\n            parabola\t\n            \\(Ax^2+Dx+Ey+F=0\\) or \\(Cy^2+Dx+Ey+F=0\\)\t\n\nHow to: Given the equation of a conic, identify the type of conic\n\n1. Rewrite the equation in the general form (Equation \\ref{gen}), \\(Ax^2+Bxy+Cy^2+Dx+Ey+F=0\\)\n\n2. Identify the values of \\(A\\) and \\(C\\) from the general form.\n\nIf \\(A\\) and \\(C\\) are nonzero, have the same sign, and are not equal to each other, then the graph may be an ellipse.\n\nIf \\(A\\) and \\(C\\) are equal and nonzero and have the same sign, then the graph may be a circle.\n\nIf \\(A\\) and \\(C\\) are nonzero and have opposite signs, then the graph may be a hyperbola.\n\nIf either \\(A\\) or \\(C\\) is zero, then the graph may be a parabola.\n\nIf \\(B=0\\), the conic section will have a vertical and/or horizontal axes. If \\(B\\) does not equal 0, as shown below, the conic section is rotated. Notice the phrase “may be” in the definitions. That is because the equation may not represent a conic section at all, depending on the values of \\(A\\), \\(B\\), \\(C\\), \\(D\\), \\(E\\), and \\(F\\). For example, the degenerate case of a circle or an ellipse is a point:\n\n\\[Ax^2+By^2=0,\\]\n\nwhen \\(A\\) and \\(B\\) have the same sign.\n\nThe degenerate case of a hyperbola is two intersecting straight lines: \\(Ax^2+By^2=0\\), when \\(A\\) and \\(B\\) have opposite signs.\n\nOn the other hand, the equation, \\(Ax^2+By^2+1=0\\), when \\(A\\) and \\(B\\) are positive does not represent a graph at all, since there are no real ordered pairs which satisfy it.\n\nExample \\(\\PageIndex{1}\\): Identifying a Conic from Its General Form\n\nIdentify the graph of each of the following nondegenerate conic sections.\n\n1. \\(4x^2−9y^2+36x+36y−125=0\\)\n\n2. \\(9y^2+16x+36y−10=0\\)\n\n3. \\(3x^2+3y^2−2x−6y−4=0\\)\n\n4. \\(−25x^2−4y^2+100x+16y+20=0\\)\n\nSolution\n\n1. Rewriting the general form (Equation \\ref{gen}), we have \\[\\begin{align*} \\color{red}{A} \\color{black}x ^ { 2 } + \\color{blue}{B} \\color{black}x y + \\color{red}{C} \\color{black} y ^ { 2 } + \\color{blue}{D} \\color{black} x + \\color{blue}{E} \\color{black} y + \\color{blue}{F} \\color{black} &= 0 \\\\[4pt] 4 x ^ { 2 } + 0 x y + ( - 9 ) y ^ { 2 } + 36 x + 36 y + ( - 125 ) &= 0 \\end{align*}\\] with \\(A=4\\) and \\(C=−9\\), so we observe that \\(A\\) and \\(C\\) have opposite signs. The graph of this equation is a hyperbola.\n\n2. Rewriting the general form (Equation \\ref{gen}), we have \\[\\begin{align*} \\color{red}{A} \\color{black}x ^ { 2 } + \\color{blue}{B} \\color{black}x y + \\color{red}{C} \\color{black} y ^ { 2 } + \\color{blue}{D} \\color{black} x + \\color{blue}{E} \\color{black} y + \\color{blue}{F} \\color{black} &= 0 \\\\[4pt]  0 x ^ { 2 } + 0 x y + 9 y ^ { 2 } + 16 x + 36 y + ( - 10 ) &= 0 \\end{align*}\\] with \\(A=0\\) and \\(C=9\\). We can determine that the equation is a parabola, since \\(A\\) is zero.\n\n3. Rewriting the general form (Equation \\ref{gen}), we have \\[\\begin{align*} \\color{red}{A} \\color{black}x ^ { 2 } + \\color{blue}{B} \\color{black}x y + \\color{red}{C} \\color{black} y ^ { 2 } + \\color{blue}{D} \\color{black} x + \\color{blue}{E} \\color{black} y + \\color{blue}{F} \\color{black} &= 0 \\\\[4pt]  3 x ^ { 2 } + 0 x y + 3 y ^ { 2 } + ( - 2 ) x + ( - 6 ) y + ( - 4 ) &= 0 \\end{align*}\\] with \\(A=3\\) and \\(C=3\\). Because \\(A=C\\), the graph of this equation is a circle.\n\n4. Rewriting the general form (Equation \\ref{gen}), we have  \\[\\begin{align*} \\color{red}{A} \\color{black}x ^ { 2 } + \\color{blue}{B} \\color{black}x y + \\color{red}{C} \\color{black} y ^ { 2 } + \\color{blue}{D} \\color{black} x + \\color{blue}{E} \\color{black} y + \\color{blue}{F} \\color{black} &= 0 \\\\[4pt]  ( - 25 ) x ^ { 2 } + 0 x y + ( - 4 ) y ^ { 2 } + 100 x + 16 y + 20 &= 0   \\end{align*}\\] with \\(A=−25\\) and \\(C=−4\\). Because \\(AC>0\\) and \\(A≠C\\), the graph of this equation is an ellipse.\n\nExercise \\(\\PageIndex{1}\\)\n\nIdentify the graph of each of the following nondegenerate conic sections.\n\n1. \\(16y^2−x^2+x−4y−9=0\\)\n\n2. \\(16x^2+4y^2+16x+49y−81=0\\)\n\nAnswer a\n\nhyperbola\n\nAnswer b\n\nellipse\n\nFinding a New Representation of the Given Equation after Rotating through a Given Angle\n\nUntil now, we have looked at equations of conic sections without an \\(xy\\) term, which aligns the graphs with the x- and y-axes. When we add an \\(xy\\) term, we are rotating the conic about the origin. If the x- and y-axes are rotated through an angle, say \\(\\theta\\),then every point on the plane may be thought of as having two representations: \\((x,y)\\) on the Cartesian plane with the original x-axis and y-axis, and \\((x^\\prime ,y^\\prime )\\) on the new plane defined by the new, rotated axes, called the x'-axis and y'-axis (Figure \\(\\PageIndex{3}\\)).\n\n[Figure: CNX_Precalc_Figure_10_04_003.jpg]\n\nFigure \\(\\PageIndex{3}\\): The graph of the rotated ellipse \\(x^2+y^2–xy–15=0\\)\n\nWe will find the relationships between \\(x\\) and \\(y\\) on the Cartesian plane with \\(x^\\prime \\) and \\(y^\\prime \\) on the new rotated plane (Figure \\(\\PageIndex{4}\\)).\n\n[Figure: CNX_Precalc_Figure_10_04_004.jpg]\n\nFigure \\(\\PageIndex{4}\\): The Cartesian plane with \\(x\\)- and \\(y\\)-axes and the resulting \\(x^\\prime\\)− and \\(y^\\prime\\)−axes formed by a rotation by an angle \\(\\theta\\).\n\nThe original coordinate x- and y-axes have unit vectors \\(\\hat{i}\\) and \\(\\hat{j}\\). The rotated coordinate axes have unit vectors \\(\\hat{i}^\\prime\\) and \\(\\hat{j}^\\prime\\).The angle \\(\\theta\\) is known as the angle of rotation (Figure \\(\\PageIndex{5}\\)). We may write the new unit vectors in terms of the original ones.\n\n\\[\\hat{i}′=\\cos \\theta \\hat{i}+\\sin \\theta \\hat{j}\\]\n\n\\[\\hat{j}′=−\\sin \\theta \\hat{i}+\\cos \\theta \\hat{j}\\]\n\n[Figure: CNX_Precalc_Figure_10_04_005.jpg]\n\nFigure \\(\\PageIndex{5}\\): Relationship between the old and new coordinate planes.\n\nConsider a vector \\(\\vec{u}\\) in the new coordinate plane. It may be represented in terms of its coordinate axes.\n\n\\[\\begin{align*}  \\vec{u}&=x^\\prime i′+y^\\prime j′ \\\\[4pt] &=x^\\prime (i \\cos \\theta+j \\sin \\theta)+y^\\prime (−i \\sin \\theta+j \\cos \\theta) & \\text{Substitute.} \\\\[4pt] &=ix' \\cos \\theta+jx' \\sin \\theta−iy' \\sin \\theta+jy' \\cos \\theta & \\text{Distribute.} \\\\[4pt] &=ix' \\cos \\theta−iy' \\sin \\theta+jx' \\sin \\theta+jy' \\cos \\theta & \\text{Apply commutative property.} \\\\[4pt] &=(x' \\cos \\theta−y' \\sin \\theta)i+(x' \\sin \\theta+y' \\cos \\theta)j & \\text{Factor by grouping.} \\end{align*}\\]\n\nBecause \\(\\vec{u}=x^\\prime i′+y^\\prime j′\\), we have representations of \\(x\\) and \\(y\\) in terms of the new coordinate system.\n\n\\(x=x^\\prime \\cos \\theta−y^\\prime \\sin \\theta\\)\n\nand\n\n\\(y=x^\\prime \\sin \\theta+y^\\prime \\cos \\theta\\)\n\nEQUATIONS OF ROTATION\n\nIf a point \\((x,y)\\) on the Cartesian plane is represented on a new coordinate plane where the axes of rotation are formed by rotating an angle \\(\\theta\\) from the positive x-axis, then the coordinates of the point with respect to the new axes are \\((x^\\prime ,y^\\prime )\\). We can use the following equations of rotation to define the relationship between \\((x,y)\\) and \\((x^\\prime , y^\\prime )\\):\n\n\\[x=x^\\prime \\cos \\theta−y^\\prime \\sin \\theta\\]\n\nand\n\n\\[y=x^\\prime \\sin \\theta+y^\\prime \\cos \\theta\\]\n\nHow to: Given the equation of a conic, find a new representation after rotating through an angle\n\n1. Find \\(x\\) and \\(y\\) where \\(x=x^\\prime \\cos \\theta−y^\\prime \\sin \\theta\\) and \\(y=x^\\prime \\sin \\theta+y^\\prime \\cos \\theta\\).\n\n2. Substitute the expression for \\(x\\) and \\(y\\) into in the given equation, then simplify.\n\n3. Write the equations with \\(x^\\prime \\) and \\(y^\\prime \\) in standard form.\n\nExample \\(\\PageIndex{2}\\): Finding a New Representation of an Equation after Rotating through a Given Angle\n\nFind a new representation of the equation \\(2x^2−xy+2y^2−30=0\\) after rotating through an angle of \\(\\theta=45°\\).\n\nSolution\n\nFind \\(x\\) and \\(y\\), where \\(x=x^\\prime \\cos \\theta−y^\\prime \\sin \\theta\\) and \\(y=x^\\prime \\sin \\theta+y^\\prime \\cos \\theta\\).\n\nBecause \\(\\theta=45°\\),\n\n\\[\\begin{align*} x &= x^\\prime \\cos(45°)−y^\\prime \\sin(45°) \\\\[4pt] x &= x^\\prime \\left(\\dfrac{1}{\\sqrt{2}}\\right)−y^\\prime \\left(\\dfrac{1}{\\sqrt{2}}\\right) \\\\[4pt] x &=\\dfrac{x^\\prime −y^\\prime }{\\sqrt{2}} \\end{align*}\\]\n\nand\n\n\\[\\begin{align*} y &= x^\\prime \\sin(45°)+y^\\prime \\cos(45°) \\\\[4pt] y &= x^\\prime \\left(\\dfrac{1}{\\sqrt{2}}\\right) + y^\\prime \\left(\\dfrac{1}{\\sqrt{2}}\\right) \\\\[4pt] y &= \\dfrac{x^\\prime +y^\\prime }{\\sqrt{2}} \\end{align*}\\]\n\nSubstitute \\(x=x^\\prime \\cos\\theta−y^\\prime \\sin\\theta\\) and \\(y=x^\\prime \\sin \\theta+y^\\prime \\cos \\theta\\) into \\(2x^2−xy+2y^2−30=0\\).\n\n\\(2{\\left(\\dfrac{x^\\prime −y^\\prime }{\\sqrt{2}}\\right)}^2−\\left(\\dfrac{x^\\prime −y^\\prime }{\\sqrt{2}}\\right)\\left(\\dfrac{x^\\prime +y^\\prime }{\\sqrt{2}}\\right)+2{\\left(\\dfrac{x^\\prime +y^\\prime }{\\sqrt{2}}\\right)}^2−30=0\\)\n\nSimplify.\n\n\\(\\begin{array}{rl} 2\\dfrac{(x^\\prime−y^\\prime )(x^\\prime −y^\\prime )}{2}−\\dfrac{(x^\\prime −y^\\prime )(x^\\prime +y^\\prime )}{2}+2\\dfrac{(x^\\prime +y^\\prime )(x^\\prime +y^\\prime )}{2}−30=0 & \\text{FOIL method} \\\\[4pt] {x^\\prime }^2−2x^\\prime y^\\prime +{y^\\prime }^2−\\dfrac{({x^\\prime }^2−{y^\\prime }^2)}{2}+{x^\\prime }^2+2x^\\prime y^\\prime +{y^\\prime }^2−30=0 & \\text{Combine like terms.} \\\\[4pt] 2{x^\\prime }^2+2{y^\\prime }^2−\\dfrac{({x^\\prime }^2−{y^\\prime }^2)}{2}=30 & \\text{Combine like terms.} \\\\[4pt] 2(2{x^\\prime }^2+2{y^\\prime }^2−\\dfrac{({x^\\prime }^2−{y^\\prime }^2)}{2})=2(30) & \\text{Multiply both sides by 2.} \\\\[4pt] 4{x^\\prime }^2+4{y^\\prime }^2−({x^\\prime }^2−{y^\\prime }^2)=60 & \\text{Simplify. } \\\\[4pt] 4{x^\\prime }^2+4{y^\\prime }^2−{x^\\prime }^2+{y^\\prime }2=60 & \\text{Distribute.} \\\\[4pt] \\dfrac{3{x^\\prime }^2}{60}+\\dfrac{5{y^\\prime }^2}{60}=\\dfrac{60}{60} & \\text{Set equal to 1.} \\end{array} \\)\n\nWrite the equations with \\(x^\\prime \\) and \\(y^\\prime \\) in the standard form.\n\n\\[\\dfrac{{x^\\prime }^2}{20}+\\dfrac{{y^\\prime}^2}{12}=1 \\nonumber\\]\n\nThis equation is an ellipse. Figure \\(\\PageIndex{6}\\) shows the graph.\n\n[Figure: imageedit_10_2436746571.png]\n\nFigure \\(\\PageIndex{6}\\)\n\nWriting Equations of Rotated Conics in Standard Form\n\nNow that we can find the standard form of a conic when we are given an angle of rotation, we will learn how to transform the equation of a conic given in the form \\(Ax^2+Bxy+Cy^2+Dx+Ey+F=0\\) into standard form by rotating the axes. To do so, we will rewrite the general form as an equation in the \\(x^\\prime \\) and \\(y^\\prime \\) coordinate system without the \\(x^\\prime y^\\prime \\) term, by rotating the axes by a measure of \\(\\theta\\) that satisfies\n\n\\[\\cot(2\\theta)=\\dfrac{A−C}{B}\\]\n\nWe have learned already that any conic may be represented by the second degree equation\n\n\\(Ax^2+Bxy+Cy^2+Dx+Ey+F=0\\)\n\nwhere \\(A\\), \\(B\\),and \\(C\\) are not all zero. However, if \\(B≠0\\), then we have an \\(xy\\) term that prevents us from rewriting the equation in standard form. To eliminate it, we can rotate the axes by an acute angle \\(\\theta\\) where \\(\\cot(2\\theta)=\\dfrac{A−C}{B}\\).\n\nIf \\(\\cot(2\\theta)>0\\), then \\(2\\theta\\) is in the first quadrant, and \\(\\theta\\) is between \\((0°,45°)\\).\n\nIf \\(\\cot(2\\theta)<0\\), then \\(2\\theta\\) is in the second quadrant, and \\(\\theta\\) is between \\((45°,90°)\\).\n\nIf \\(A=C\\), then \\(\\theta=45°\\).\n\nHow to: Given an equation for a conic in the \\(x^\\prime y^\\prime \\) system, rewrite the equation without the \\(x^\\prime y^\\prime \\) term in terms of \\(x^\\prime \\) and \\(y^\\prime \\),where the \\(x^\\prime \\) and \\(y^\\prime \\) axes are rotations of the standard axes by \\(\\theta\\) degrees\n\n1. Find \\(\\cot(2\\theta)\\).\n\n2. Find \\(\\sin \\theta\\) and \\(\\cos \\theta\\).\n\n3. Substitute \\(\\sin \\theta\\) and \\(\\cos \\theta\\) into \\(x=x^\\prime \\cos \\theta−y^\\prime \\sin \\theta\\) and \\(y=x^\\prime \\sin \\theta+y^\\prime \\cos \\theta\\).\n\n4. Substitute the expression for \\(x\\) and \\(y\\) into in the given equation, and then simplify.\n\n5. Write the equations with \\(x^\\prime \\) and \\(y^\\prime \\) in the standard form with respect to the rotated axes.\n\nExample \\(\\PageIndex{3}\\): Rewriting an Equation with respect to the \\(x^\\prime\\)  and \\(y^\\prime\\)  axes without the \\(x^\\prime y^\\prime\\)  Term\n\nRewrite the equation \\(8x^2−12xy+17y^2=20\\) in the \\(x^\\prime y^\\prime \\) system without an \\(x^\\prime y^\\prime \\) term.\n\nSolution\n\nFirst, we find \\(\\cot(2\\theta)\\).\n\n\\(8x^2−12xy+17y^2=20\\rightarrow A=8\\), \\(B=−12\\) and \\(C=17\\)\n\n[Figure: imageedit_14_9742345318.png]\n\nFigure \\(\\PageIndex{7}\\)\n\nFrom Figure \\(\\PageIndex{7}\\):\n\n\\[ \\begin{align*} \\cot(2\\theta) &=\\dfrac{A−C}{B}=\\dfrac{8−17}{−12} \\\\[4pt] & =\\dfrac{−9}{−12}=\\dfrac{3}{4} \\end{align*}\\]\n\n\\(\\cot(2\\theta)=\\dfrac{3}{4}=\\dfrac{\\text{adjacent}}{\\text{opposite}}\\)\n\nSo the hypotenuse is\n\n\\[ \\begin{align*} 3^2+4^2 &=h^2 \\\\[4pt] 9+16 &=h^2 \\\\[4pt] 25&=h^2 \\\\[4pt] h&=5 \\end{align*}\\]\n\nNext, we find \\(\\sin \\theta\\) and \\(\\cos \\theta\\).\n\n\\[ \\begin{align*} \\sin \\theta &=\\sqrt{\\dfrac{1−\\cos(2\\theta)}{2}}=\\sqrt{\\dfrac{1−\\dfrac{3}{5}}{2}}=\\sqrt{\\dfrac{\\dfrac{5}{5}−\\dfrac{3}{5}}{2}}=\\sqrt{\\dfrac{5−3}{5}⋅\\dfrac{1}{2}}=\\sqrt{\\dfrac{2}{10}}=\\sqrt{\\dfrac{1}{5}} \\\\ \\sin \\theta &= \\dfrac{1}{\\sqrt{5}} \\\\ \\cos \\theta &= \\sqrt{\\dfrac{1+\\cos(2\\theta)}{2}}=\\sqrt{\\dfrac{1+\\dfrac{3}{5}}{2}}=\\sqrt{\\dfrac{\\dfrac{5}{5}+\\dfrac{3}{5}}{2}}=\\sqrt{\\dfrac{5+3}{5}⋅\\dfrac{1}{2}}=\\sqrt{\\dfrac{8}{10}}=\\sqrt{\\dfrac{4}{5}} \\\\ \\cos \\theta &= \\dfrac{2}{\\sqrt{5}} \\end{align*}\\]\n\nSubstitute the values of \\(\\sin \\theta\\) and \\(\\cos \\theta\\) into \\(x=x^\\prime \\cos \\theta−y^\\prime \\sin \\theta\\) and \\(y=x^\\prime \\sin \\theta+y^\\prime \\cos \\theta\\).\n\n\\[ \\begin{align*} x &=x'\\cos \\theta−y^\\prime \\sin \\theta \\\\[4pt]  &=x^\\prime \\left(\\dfrac{2}{\\sqrt{5}}\\right)−y^\\prime \\left(\\dfrac{1}{\\sqrt{5}}\\right) \\\\[4pt] &=\\dfrac{2x^\\prime −y^\\prime }{\\sqrt{5}} \\end{align*}\\]\n\nand\n\n\\[ \\begin{align*} y&=x^\\prime \\sin \\theta+y^\\prime \\cos \\theta \\\\[4pt] &=x^\\prime \\left(\\dfrac{1}{\\sqrt{5}}\\right)+y^\\prime \\left(\\dfrac{2}{\\sqrt{5}}\\right) \\\\[4pt] &=\\dfrac{x^\\prime +2y^\\prime }{\\sqrt{5}} \\end{align*}\\]\n\nSubstitute the expressions for \\(x\\) and \\(y\\) into in the given equation, and then simplify.\n\n\\[ \\begin{align*} 8{\\left(\\dfrac{2x^\\prime −y^\\prime }{\\sqrt{5}}\\right)}^2−12\\left(\\dfrac{2x^\\prime −y^\\prime }{\\sqrt{5}}\\right)\\left(\\dfrac{x^\\prime +2y^\\prime }{\\sqrt{5}}\\right)+17{\\left(\\dfrac{x^\\prime +2y^\\prime }{\\sqrt{5}}\\right)}^2&=20 \\\\[4pt]  8\\left(\\dfrac{(2x^\\prime −y^\\prime )(2x^\\prime −y^\\prime )}{5}\\right)−12\\left(\\dfrac{(2x^\\prime −y^\\prime )(x^\\prime +2y^\\prime )}{5}\\right)+17\\left(\\dfrac{(x^\\prime +2y^\\prime )(x^\\prime +2y^\\prime )}{5}\\right)&=20 \\\\[4pt]  8(4{x^\\prime }^2−4x^\\prime y^\\prime +{y^\\prime }^2)−12(2{x^\\prime }^2+3x^\\prime y^\\prime −2{y^\\prime }^2)+17({x^\\prime }^2+4x^\\prime y^\\prime +4{y^\\prime }^2)&=100 \\\\[4pt]  32{x^\\prime }^2−32x^\\prime y^\\prime +8{y^\\prime }^2−24{x^\\prime }^2−36x^\\prime y^\\prime +24{y^\\prime }^2+17{x^\\prime }^2+68x^\\prime y^\\prime +68{y^\\prime }^2&=100 \\\\[4pt]  25{x^\\prime }^2+100{y^\\prime }^2&=100 \\\\[4pt]  \\dfrac{25}{100}{x^\\prime }^2+\\dfrac{100}{100}{y^\\prime }^2&=\\dfrac{100}{100}  \\end{align*}\\]\n\nWrite the equations with \\(x^\\prime \\) and \\(y^\\prime \\) in the standard form with respect to the new coordinate system.\n\n\\[\\dfrac{{x^\\prime }^2}{4}+\\dfrac{{y^\\prime }^2}{1}=1 \\nonumber\\]\n\nFigure \\(\\PageIndex{8}\\) shows the graph of the ellipse.\n\n[Figure: imageedit_18_8476133234.png]\n\nFigure \\(\\PageIndex{8}\\)\n\nExercise \\(\\PageIndex{2}\\)\n\nRewrite the \\(13x^2−6\\sqrt{3}xy+7y^2=16\\) in the \\(x^\\prime y^\\prime \\) system without the \\(x^\\prime y^\\prime \\) term.\n\nAnswer\n\n\\(\\dfrac{{x^\\prime }^2}{4}+\\dfrac{{y^\\prime }^2}{1}=1\\)\n\nExample \\(\\PageIndex{4}\\) :Graphing an Equation That Has No \\(x^\\prime y^\\prime \\) Terms\n\nGraph the following equation relative to the \\(x^\\prime y^\\prime \\) system:\n\n\\(x^2+12xy−4y^2=30\\)\n\nSolution\n\nFirst, we find \\(\\cot(2\\theta)\\).\n\n\\(x^2+12xy−4y^2=20\\rightarrow A=1\\), \\(B=12\\),and \\(C=−4\\)\n\n\\[\\begin{align*} \\cot(2\\theta) &= \\dfrac{A−C}{B} \\\\ \\cot(2\\theta) &= \\dfrac{1−(−4)}{12} \\\\ \\cot(2\\theta) &= \\dfrac{5}{12} \\end{align*}\\]\n\nBecause \\(\\cot(2\\theta)=\\dfrac{5}{12}\\), we can draw a reference triangle as in Figure \\(\\PageIndex{9}\\).\n\n[Figure: imageedit_22_9251267068.png]\n\nFigure \\(\\PageIndex{9}\\)\n\n\\(\\cot(2\\theta)=\\dfrac{5}{12}=\\dfrac{adjacent}{opposite}\\)\n\nThus, the hypotenuse is\n\n\\[ \\begin{align*} 5^2+{12}^2&=h^2 \\\\[4pt] 25+144 &=h^2 \\\\[4pt] 169 &=h^2 \\\\[4pt] h&=13 \\end{align*}\\]\n\nNext, we find \\(\\sin \\theta\\) and \\(\\cos \\theta\\). We will use half-angle identities.\n\n\\(\\sin \\theta=\\sqrt{\\dfrac{1−\\cos(2\\theta)}{2}}=\\sqrt{\\dfrac{1−\\dfrac{5}{13}}{2}}=\\sqrt{\\dfrac{\\dfrac{13}{13}−\\dfrac{5}{13}}{2}}=\\sqrt{\\dfrac{8}{13}⋅\\dfrac{1}{2}}=\\dfrac{2}{\\sqrt{13}}\\)\n\n\\(\\cos \\theta=\\sqrt{\\dfrac{1+\\cos(2\\theta)}{2}}=\\sqrt{\\dfrac{1+\\dfrac{5}{13}}{2}}=\\sqrt{\\dfrac{\\dfrac{13}{13}+\\dfrac{5}{13}}{2}}=\\sqrt{\\dfrac{18}{13}⋅\\dfrac{1}{2}}=\\dfrac{3}{\\sqrt{13}}\\)\n\nNow we find \\(x\\) and \\(y\\).\n\n\\(x=x^\\prime \\cos \\theta−y^\\prime \\sin \\theta\\)\n\n\\(x=x^\\prime \\left(\\dfrac{3}{\\sqrt{13}}\\right)−y^\\prime \\left(\\dfrac{2}{\\sqrt{13}}\\right)\\)\n\n\\(x=\\dfrac{3x^\\prime −2y^\\prime }{\\sqrt{13}}\\)\n\nand\n\n\\(y=x^\\prime \\sin \\theta+y^\\prime \\cos \\theta\\)\n\n\\(y=x^\\prime \\left(\\dfrac{2}{\\sqrt{13}}\\right)+y^\\prime \\left(\\dfrac{3}{\\sqrt{13}}\\right)\\)\n\n\\(y=\\dfrac{2x^\\prime +3y^\\prime }{\\sqrt{13}}\\)\n\nNow we substitute \\(x=\\dfrac{3x^\\prime −2y^\\prime }{\\sqrt{13}}\\) and \\(y=\\dfrac{2x^\\prime +3y^\\prime }{\\sqrt{13}}\\) into \\(x^2+12xy−4y^2=30\\).\n\n\\(\\begin{array}{rl} {\\left(\\dfrac{3x^\\prime −2y^\\prime }{\\sqrt{13}}\\right)}^2+12\\left(\\dfrac{3x^\\prime −2y^\\prime }{\\sqrt{13}}\\right)\\left(\\dfrac{2x^\\prime +3y^\\prime }{\\sqrt{13}}\\right)−4{\\left(\\dfrac{2x^\\prime +3y^\\prime }{\\sqrt{13}}\\right)}^2=30 \\\\ \\left(\\dfrac{1}{13}\\right)[ {(3x^\\prime −2y^\\prime )}^2+12(3x^\\prime −2y^\\prime )(2x^\\prime +3y^\\prime )−4{(2x^\\prime +3y^\\prime )}^2 ]=30 & \\text{Factor.} \\\\ \\left(\\dfrac{1}{13}\\right)[ 9{x^\\prime }^2−12x^\\prime y^\\prime +4{y^\\prime }^2+12(6{x^\\prime }^2+5x^\\prime y^\\prime −6{y^\\prime }^2)−4(4{x^\\prime }^2+12x^\\prime y^\\prime +9{y^\\prime }^2) ]=30 & \\text{Multiply.} \\\\ \\left(\\dfrac{1}{13}\\right)[ 9{x^\\prime }^2−12x^\\prime y^\\prime +4{y^\\prime }^2+72{x^\\prime }^2+60x^\\prime y^\\prime −72{y^\\prime }^2−16{x^\\prime }^2−48x^\\prime y^\\prime −36{y^\\prime }^2 ]=30 & \\text{Distribute.} \\\\ \\left(\\dfrac{1}{13}\\right)[ 65{x^\\prime }^2−104{y^\\prime }^2 ]=30 & \\text{Combine like terms.} \\\\ 65{x^\\prime }^2−104{y^\\prime }^2=390 & \\text{Multiply.} \\\\ \\dfrac{{x^\\prime }^2}{6}−\\dfrac{4{y^\\prime }^2}{15}=1 & \\text{Divide by 390.} \\end{array}\\)\n\nFigure \\(\\PageIndex{10}\\) shows the graph of the hyperbola \\(\\dfrac{{x^\\prime }^2}{6}−\\dfrac{4{y^\\prime }^2}{15}=1\\)\n\n[Figure: imageedit_26_7758236974.png]\n\nFigure \\(\\PageIndex{10}\\)\n\nIdentifying Conics without Rotating Axes\n\nNow we have come full circle. How do we identify the type of conic described by an equation? What happens when the axes are rotated? Recall, the general form of a conic is\n\n\\(Ax^2+Bxy+Cy^2+Dx+Ey+F=0\\)\n\nIf we apply the rotation formulas to this equation we get the form\n\n\\(A′{x^\\prime }^2+B′x^\\prime y^\\prime +C′{y^\\prime }^2+D′x^\\prime +E′y^\\prime +F′=0\\)\n\nIt may be shown that\n\n\\(B^2−4AC={B′}^2−4A′C′\\)\n\nThe expression does not vary after rotation, so we call the expression invariant. The discriminant, \\(B^2−4AC\\), is invariant and remains unchanged after rotation. Because the discriminant remains unchanged, observing the discriminant enables us to identify the conic section.\n\nHOWTO: USING THE DISCRIMINANT TO IDENTIFY A CONIC\n\nIf the equation\n\n\\[Ax^2+Bxy+Cy^2+Dx+Ey+F=0\\]\n\nis transformed by rotating axes into the equation\n\n\\[A′{x^\\prime }^2+B′x^\\prime y^\\prime +C′{y^\\prime }^2+D′x^\\prime +E′y^\\prime +F′=0\\]\n\nthen \\[B^2−4AC={B′}^2−4A′C′\\]\n\nThe equation \\(Ax^2+Bxy+Cy^2+Dx+Ey+F=0\\) is an ellipse, a parabola, or a hyperbola, or a degenerate case of one of these. If the discriminant, \\(B^2−4AC\\), is\n\n\\(<0\\), the conic section is an ellipse\n\n\\(=0\\), the conic section is a parabola\n\n\\(>0\\), the conic section is a hyperbola\n\nExample \\(\\PageIndex{5}\\): Identifying the Conic without Rotating Axes\n\nIdentify the conic for each of the following without rotating axes.\n\n1. \\(5x^2+2\\sqrt{3}xy+2y^2−5=0\\)\n\n2. \\(5x^2+2\\sqrt{3}xy+12y^2−5=0\\)\n\nSolution\n\na. Let’s begin by determining \\(A\\), \\(B\\), and \\(C\\).\n\n\\(\\underbrace{5}_{A}x^2+\\underbrace{2\\sqrt{3}}_{B}xy+\\underbrace{2}_{C}y^2−5=0\\)\n\nNow, we find the discriminant.\n\n\\[\\begin{align*} B^2−4AC &= {(2\\sqrt{3})}^2−4(5)(2) \\\\ &=4(3)−40 \\\\ &=12−40 \\\\ &=−28<0 \\end{align*}\\]\n\nTherefore, \\(5x^2+2\\sqrt{3}xy+2y^2−5=0\\) represents an ellipse.\n\nb. Again, let’s begin by determining \\(A\\),\\(B\\), and \\(C\\).\n\n\\(\\underbrace{5}_{A}x^2+\\underbrace{2\\sqrt{3}}_{B}xy+\\underbrace{12}_{C}y^2−5=0 \\nonumber\\)\n\nNow, we find the discriminant.\n\n\\[\\begin{align*} B^2−4AC &= {(2\\sqrt{3})}^2−4(5)(12) \\\\ &= 4(3)−240 \\\\ &= 12−240 \\\\ &=−228<0 \\end{align*}\\]\n\nTherefore, \\(5x^2+2\\sqrt{3}xy+12y^2−5=0\\) represents an ellipse.\n\nExercise \\(\\PageIndex{3}\\)\n\nIdentify the conic for each of the following without rotating axes.\n\n1. \\(x^2−9xy+3y^2−12=0\\)\n\n2. \\(10x^2−9xy+4y^2−4=0\\)\n\nAnswer a\n\nhyperbola\n\nAnswer b\n\nellipse\n\nKey Equations\n\n            General Form equation of a conic section\t\n            \\(Ax^2+Bxy+Cy^2+Dx+Ey+F=0\\)\t\n\n            Rotation of a conic section\t\n\n\\(x=x^\\prime \\cos \\theta−y^\\prime \\sin \\theta\\)\n\n\\(y=x^\\prime \\sin \\theta+y^\\prime \\cos \\theta\\)\n\n            Angle of rotation\t\n            \\(\\theta\\), where \\(\\cot(2\\theta)=\\dfrac{A−C}{B}\\)\t\n\nKey Concepts\n\nFour basic shapes can result from the intersection of a plane with a pair of right circular cones connected tail to tail. They include an ellipse, a circle, a hyperbola, and a parabola.\n\nA nondegenerate conic section has the general form \\(Ax^2+Bxy+Cy^2+Dx+Ey+F=0\\) where \\(A\\), \\(B\\) and \\(C\\) are not all zero. The values of \\(A\\), \\(B\\), and \\(C\\) determine the type of conic. See Example \\(\\PageIndex{1}\\).\n\nEquations of conic sections with an \\(xy\\) term have been rotated about the origin. See Example \\(\\PageIndex{2}\\).\n\nThe general form can be transformed into an equation in the \\(x^\\prime \\) and \\(y^\\prime \\) coordinate system without the \\(x^\\prime y^\\prime \\) term. See Example \\(\\PageIndex{3}\\) and Example \\(\\PageIndex{4}\\).\n\nAn expression is described as invariant if it remains unchanged after rotating. Because the discriminant is invariant, observing it enables us to identify the conic section. See Example \\(\\PageIndex{5}\\).\n\nThis page titled 12.4: Rotation of Axes was last modified on Sun, 27 Apr 2025 18:27:18 GMT and is shared under a CC BY  4.0  license and was authored, remixed, and/or curated by OpenStax via source content that was edited to the style and standards of the LibreTexts platform.",
+  "figures": [
+    {
+      "url": "https://math.libretexts.org/@api/deki/files/11395/imageedit_2_4675119068.jpg?revision=1",
+      "alt": "imageedit_2_4675119068.jpg",
+      "credit": ""
+    },
+    {
+      "url": "https://math.libretexts.org/@api/deki/files/11396/imageedit_6_5854995623.jpg?revision=1",
+      "alt": "imageedit_6_5854995623.jpg",
+      "credit": ""
+    },
+    {
+      "url": "https://math.libretexts.org/@api/deki/files/6818/CNX_Precalc_Figure_10_04_003.jpg?revision=1",
+      "alt": "CNX_Precalc_Figure_10_04_003.jpg",
+      "credit": ""
+    },
+    {
+      "url": "https://math.libretexts.org/@api/deki/files/6819/CNX_Precalc_Figure_10_04_004.jpg?revision=1",
+      "alt": "CNX_Precalc_Figure_10_04_004.jpg",
+      "credit": ""
+    },
+    {
+      "url": "https://math.libretexts.org/@api/deki/files/6820/CNX_Precalc_Figure_10_04_005.jpg?revision=1",
+      "alt": "CNX_Precalc_Figure_10_04_005.jpg",
+      "credit": ""
+    },
+    {
+      "url": "https://math.libretexts.org/@api/deki/files/11397/imageedit_10_2436746571.png?revision=1",
+      "alt": "imageedit_10_2436746571.png",
+      "credit": ""
+    },
+    {
+      "url": "https://math.libretexts.org/@api/deki/files/11398/imageedit_14_9742345318.png?revision=1",
+      "alt": "imageedit_14_9742345318.png",
+      "credit": ""
+    },
+    {
+      "url": "https://math.libretexts.org/@api/deki/files/11399/imageedit_18_8476133234.png?revision=1",
+      "alt": "imageedit_18_8476133234.png",
+      "credit": ""
+    },
+    {
+      "url": "https://math.libretexts.org/@api/deki/files/11400/imageedit_22_9251267068.png?revision=1",
+      "alt": "imageedit_22_9251267068.png",
+      "credit": ""
+    },
+    {
+      "url": "https://math.libretexts.org/@api/deki/files/11401/imageedit_26_7758236974.png?revision=1",
+      "alt": "imageedit_26_7758236974.png",
+      "credit": ""
+    }
+  ],
+  "references": [
+    {
+      "text": "12.4: Rotation of Axes",
+      "url": "https://math.libretexts.org/Bookshelves/Algebra/Algebra_and_Trigonometry_1e_(OpenStax)/12%3A_Analytic_Geometry/12.04%3A_Rotation_of_Axes"
+    },
+    {
+      "text": "CC BY  4.0",
+      "url": "https://creativecommons.org/licenses/by/4.0"
+    },
+    {
+      "text": "OpenStax",
+      "url": "https://openstax.org/"
+    },
+    {
+      "text": "source content",
+      "url": "https://openstax.org/details/books/precalculus"
+    }
+  ],
+  "exercises": [
+    {
+      "ordinal": 1,
+      "sourceNumber": "1",
+      "sourceAnchor": "",
+      "kind": "exercise-candidate",
+      "context": "A conic section has the general form\n\n\\[Ax^2+Bxy+Cy^2+Dx+Ey+F=0 \\label{gen}\\]\n\nwhere \\(A\\), \\(B\\), and \\(C\\) are not all zero. Table \\(\\PageIndex{2}\\) summarizes the different conic sections where \\(B=0\\), and \\(A\\) and \\(C\\) are nonzero real numbers. This indicates that the conic has not been rotated.",
+      "original": "1. Rewrite the equation in the general form (Equation \\ref{gen}), \\(Ax^2+Bxy+Cy^2+Dx+Ey+F=0\\)",
+      "prompt": "1. Rewrite the equation in the general form (Equation \\ref{gen}), \\(Ax^2+Bxy+Cy^2+Dx+Ey+F=0\\)",
+      "sourceAnswers": [],
+      "hasFigure": false,
+      "status": "draft",
+      "answerVerified": false,
+      "translationStatus": "pending",
+      "mappingStatus": "pending"
+    },
+    {
+      "ordinal": 2,
+      "sourceNumber": "2",
+      "sourceAnchor": "",
+      "kind": "exercise-candidate",
+      "context": "A conic section has the general form\n\n\\[Ax^2+Bxy+Cy^2+Dx+Ey+F=0 \\label{gen}\\]\n\nwhere \\(A\\), \\(B\\), and \\(C\\) are not all zero. Table \\(\\PageIndex{2}\\) summarizes the different conic sections where \\(B=0\\), and \\(A\\) and \\(C\\) are nonzero real numbers. This indicates that the conic has not been rotated.",
+      "original": "2. Identify the values of \\(A\\) and \\(C\\) from the general form.\n\nIf \\(A\\) and \\(C\\) are nonzero, have the same sign, and are not equal to each other, then the graph may be an ellipse.\n\nIf \\(A\\) and \\(C\\) are equal and nonzero and have the same sign, then the graph may be a circle.\n\nIf \\(A\\) and \\(C\\) are nonzero and have opposite signs, then the graph may be a hyperbola.\n\nIf either \\(A\\) or \\(C\\) is zero, then the graph may be a parabola.",
+      "prompt": "2. Identify the values of \\(A\\) and \\(C\\) from the general form.\n\nIf \\(A\\) and \\(C\\) are nonzero, have the same sign, and are not equal to each other, then the graph may be an ellipse.\n\nIf \\(A\\) and \\(C\\) are equal and nonzero and have the same sign, then the graph may be a circle.\n\nIf \\(A\\) and \\(C\\) are nonzero and have opposite signs, then the graph may be a hyperbola.\n\nIf either \\(A\\) or \\(C\\) is zero, then the graph may be a parabola.",
+      "sourceAnswers": [],
+      "hasFigure": false,
+      "status": "draft",
+      "answerVerified": false,
+      "translationStatus": "pending",
+      "mappingStatus": "pending"
+    },
+    {
+      "ordinal": 3,
+      "sourceNumber": "",
+      "sourceAnchor": "",
+      "kind": "example-or-exercise",
+      "context": "when \\(A\\) and \\(B\\) have the same sign.\n\nThe degenerate case of a hyperbola is two intersecting straight lines: \\(Ax^2+By^2=0\\), when \\(A\\) and \\(B\\) have opposite signs.\n\nOn the other hand, the equation, \\(Ax^2+By^2+1=0\\), when \\(A\\) and \\(B\\) are positive does not represent a graph at all, since there are no real ordered pairs which satisfy it.",
+      "original": "Example \\(\\PageIndex{1}\\): Identifying a Conic from Its General Form\n\nIdentify the graph of each of the following nondegenerate conic sections.\n\n1. \\(4x^2−9y^2+36x+36y−125=0\\)\n\n2. \\(9y^2+16x+36y−10=0\\)\n\n3. \\(3x^2+3y^2−2x−6y−4=0\\)\n\n4. \\(−25x^2−4y^2+100x+16y+20=0\\)",
+      "prompt": "Example \\(\\PageIndex{1}\\): Identifying a Conic from Its General Form\n\nIdentify the graph of each of the following nondegenerate conic sections.\n\n1. \\(4x^2−9y^2+36x+36y−125=0\\)\n\n2. \\(9y^2+16x+36y−10=0\\)\n\n3. \\(3x^2+3y^2−2x−6y−4=0\\)\n\n4. \\(−25x^2−4y^2+100x+16y+20=0\\)",
+      "sourceAnswers": [],
+      "hasFigure": false,
+      "status": "draft",
+      "answerVerified": false,
+      "translationStatus": "pending",
+      "mappingStatus": "pending"
+    },
+    {
+      "ordinal": 4,
+      "sourceNumber": "1",
+      "sourceAnchor": "",
+      "kind": "exercise-candidate",
+      "context": "when \\(A\\) and \\(B\\) have the same sign.\n\nThe degenerate case of a hyperbola is two intersecting straight lines: \\(Ax^2+By^2=0\\), when \\(A\\) and \\(B\\) have opposite signs.\n\nOn the other hand, the equation, \\(Ax^2+By^2+1=0\\), when \\(A\\) and \\(B\\) are positive does not represent a graph at all, since there are no real ordered pairs which satisfy it.",
+      "original": "1. Rewriting the general form (Equation \\ref{gen}), we have \\[\\begin{align*} \\color{red}{A} \\color{black}x ^ { 2 } + \\color{blue}{B} \\color{black}x y + \\color{red}{C} \\color{black} y ^ { 2 } + \\color{blue}{D} \\color{black} x + \\color{blue}{E} \\color{black} y + \\color{blue}{F} \\color{black} &= 0 \\\\[4pt] 4 x ^ { 2 } + 0 x y + ( - 9 ) y ^ { 2 } + 36 x + 36 y + ( - 125 ) &= 0 \\end{align*}\\] with \\(A=4\\) and \\(C=−9\\), so we observe that \\(A\\) and \\(C\\) have opposite signs. The graph of this equation is a hyperbola.",
+      "prompt": "1. Rewriting the general form (Equation \\ref{gen}), we have \\[\\begin{align*} \\color{red}{A} \\color{black}x ^ { 2 } + \\color{blue}{B} \\color{black}x y + \\color{red}{C} \\color{black} y ^ { 2 } + \\color{blue}{D} \\color{black} x + \\color{blue}{E} \\color{black} y + \\color{blue}{F} \\color{black} &= 0 \\\\[4pt] 4 x ^ { 2 } + 0 x y + ( - 9 ) y ^ { 2 } + 36 x + 36 y + ( - 125 ) &= 0 \\end{align*}\\] with \\(A=4\\) and \\(C=−9\\), so we observe that \\(A\\) and \\(C\\) have opposite signs. The graph of this equation is a hyperbola.",
+      "sourceAnswers": [],
+      "hasFigure": false,
+      "status": "draft",
+      "answerVerified": false,
+      "translationStatus": "pending",
+      "mappingStatus": "pending"
+    },
+    {
+      "ordinal": 5,
+      "sourceNumber": "2",
+      "sourceAnchor": "",
+      "kind": "exercise-candidate",
+      "context": "when \\(A\\) and \\(B\\) have the same sign.\n\nThe degenerate case of a hyperbola is two intersecting straight lines: \\(Ax^2+By^2=0\\), when \\(A\\) and \\(B\\) have opposite signs.\n\nOn the other hand, the equation, \\(Ax^2+By^2+1=0\\), when \\(A\\) and \\(B\\) are positive does not represent a graph at all, since there are no real ordered pairs which satisfy it.",
+      "original": "2. Rewriting the general form (Equation \\ref{gen}), we have \\[\\begin{align*} \\color{red}{A} \\color{black}x ^ { 2 } + \\color{blue}{B} \\color{black}x y + \\color{red}{C} \\color{black} y ^ { 2 } + \\color{blue}{D} \\color{black} x + \\color{blue}{E} \\color{black} y + \\color{blue}{F} \\color{black} &= 0 \\\\[4pt]  0 x ^ { 2 } + 0 x y + 9 y ^ { 2 } + 16 x + 36 y + ( - 10 ) &= 0 \\end{align*}\\] with \\(A=0\\) and \\(C=9\\). We can determine that the equation is a parabola, since \\(A\\) is zero.",
+      "prompt": "2. Rewriting the general form (Equation \\ref{gen}), we have \\[\\begin{align*} \\color{red}{A} \\color{black}x ^ { 2 } + \\color{blue}{B} \\color{black}x y + \\color{red}{C} \\color{black} y ^ { 2 } + \\color{blue}{D} \\color{black} x + \\color{blue}{E} \\color{black} y + \\color{blue}{F} \\color{black} &= 0 \\\\[4pt]  0 x ^ { 2 } + 0 x y + 9 y ^ { 2 } + 16 x + 36 y + ( - 10 ) &= 0 \\end{align*}\\] with \\(A=0\\) and \\(C=9\\). We can determine that the equation is a parabola, since \\(A\\) is zero.",
+      "sourceAnswers": [],
+      "hasFigure": false,
+      "status": "draft",
+      "answerVerified": false,
+      "translationStatus": "pending",
+      "mappingStatus": "pending"
+    },
+    {
+      "ordinal": 6,
+      "sourceNumber": "3",
+      "sourceAnchor": "",
+      "kind": "exercise-candidate",
+      "context": "when \\(A\\) and \\(B\\) have the same sign.\n\nThe degenerate case of a hyperbola is two intersecting straight lines: \\(Ax^2+By^2=0\\), when \\(A\\) and \\(B\\) have opposite signs.\n\nOn the other hand, the equation, \\(Ax^2+By^2+1=0\\), when \\(A\\) and \\(B\\) are positive does not represent a graph at all, since there are no real ordered pairs which satisfy it.",
+      "original": "3. Rewriting the general form (Equation \\ref{gen}), we have \\[\\begin{align*} \\color{red}{A} \\color{black}x ^ { 2 } + \\color{blue}{B} \\color{black}x y + \\color{red}{C} \\color{black} y ^ { 2 } + \\color{blue}{D} \\color{black} x + \\color{blue}{E} \\color{black} y + \\color{blue}{F} \\color{black} &= 0 \\\\[4pt]  3 x ^ { 2 } + 0 x y + 3 y ^ { 2 } + ( - 2 ) x + ( - 6 ) y + ( - 4 ) &= 0 \\end{align*}\\] with \\(A=3\\) and \\(C=3\\). Because \\(A=C\\), the graph of this equation is a circle.",
+      "prompt": "3. Rewriting the general form (Equation \\ref{gen}), we have \\[\\begin{align*} \\color{red}{A} \\color{black}x ^ { 2 } + \\color{blue}{B} \\color{black}x y + \\color{red}{C} \\color{black} y ^ { 2 } + \\color{blue}{D} \\color{black} x + \\color{blue}{E} \\color{black} y + \\color{blue}{F} \\color{black} &= 0 \\\\[4pt]  3 x ^ { 2 } + 0 x y + 3 y ^ { 2 } + ( - 2 ) x + ( - 6 ) y + ( - 4 ) &= 0 \\end{align*}\\] with \\(A=3\\) and \\(C=3\\). Because \\(A=C\\), the graph of this equation is a circle.",
+      "sourceAnswers": [],
+      "hasFigure": false,
+      "status": "draft",
+      "answerVerified": false,
+      "translationStatus": "pending",
+      "mappingStatus": "pending"
+    },
+    {
+      "ordinal": 7,
+      "sourceNumber": "4",
+      "sourceAnchor": "",
+      "kind": "exercise-candidate",
+      "context": "when \\(A\\) and \\(B\\) have the same sign.\n\nThe degenerate case of a hyperbola is two intersecting straight lines: \\(Ax^2+By^2=0\\), when \\(A\\) and \\(B\\) have opposite signs.\n\nOn the other hand, the equation, \\(Ax^2+By^2+1=0\\), when \\(A\\) and \\(B\\) are positive does not represent a graph at all, since there are no real ordered pairs which satisfy it.",
+      "original": "4. Rewriting the general form (Equation \\ref{gen}), we have  \\[\\begin{align*} \\color{red}{A} \\color{black}x ^ { 2 } + \\color{blue}{B} \\color{black}x y + \\color{red}{C} \\color{black} y ^ { 2 } + \\color{blue}{D} \\color{black} x + \\color{blue}{E} \\color{black} y + \\color{blue}{F} \\color{black} &= 0 \\\\[4pt]  ( - 25 ) x ^ { 2 } + 0 x y + ( - 4 ) y ^ { 2 } + 100 x + 16 y + 20 &= 0   \\end{align*}\\] with \\(A=−25\\) and \\(C=−4\\). Because \\(AC>0\\) and \\(A≠C\\), the graph of this equation is an ellipse.",
+      "prompt": "4. Rewriting the general form (Equation \\ref{gen}), we have  \\[\\begin{align*} \\color{red}{A} \\color{black}x ^ { 2 } + \\color{blue}{B} \\color{black}x y + \\color{red}{C} \\color{black} y ^ { 2 } + \\color{blue}{D} \\color{black} x + \\color{blue}{E} \\color{black} y + \\color{blue}{F} \\color{black} &= 0 \\\\[4pt]  ( - 25 ) x ^ { 2 } + 0 x y + ( - 4 ) y ^ { 2 } + 100 x + 16 y + 20 &= 0   \\end{align*}\\] with \\(A=−25\\) and \\(C=−4\\). Because \\(AC>0\\) and \\(A≠C\\), the graph of this equation is an ellipse.",
+      "sourceAnswers": [],
+      "hasFigure": false,
+      "status": "draft",
+      "answerVerified": false,
+      "translationStatus": "pending",
+      "mappingStatus": "pending"
+    },
+    {
+      "ordinal": 8,
+      "sourceNumber": "",
+      "sourceAnchor": "",
+      "kind": "exercise-candidate",
+      "context": "when \\(A\\) and \\(B\\) have the same sign.\n\nThe degenerate case of a hyperbola is two intersecting straight lines: \\(Ax^2+By^2=0\\), when \\(A\\) and \\(B\\) have opposite signs.\n\nOn the other hand, the equation, \\(Ax^2+By^2+1=0\\), when \\(A\\) and \\(B\\) are positive does not represent a graph at all, since there are no real ordered pairs which satisfy it.",
+      "original": "Exercise \\(\\PageIndex{1}\\)\n\nIdentify the graph of each of the following nondegenerate conic sections.\n\n1. \\(16y^2−x^2+x−4y−9=0\\)\n\n2. \\(16x^2+4y^2+16x+49y−81=0\\)\n\nAnswer a\n\nhyperbola\n\nAnswer b\n\nellipse",
+      "prompt": "Exercise \\(\\PageIndex{1}\\)\n\nIdentify the graph of each of the following nondegenerate conic sections.\n\n1. \\(16y^2−x^2+x−4y−9=0\\)\n\n2. \\(16x^2+4y^2+16x+49y−81=0\\)",
+      "sourceAnswers": [
+        "hyperbola",
+        "ellipse"
+      ],
+      "hasFigure": false,
+      "status": "draft",
+      "answerVerified": false,
+      "translationStatus": "pending",
+      "mappingStatus": "pending"
+    },
+    {
+      "ordinal": 9,
+      "sourceNumber": "1",
+      "sourceAnchor": "",
+      "kind": "exercise-candidate",
+      "context": "\\[x=x^\\prime \\cos \\theta−y^\\prime \\sin \\theta\\]\n\nand\n\n\\[y=x^\\prime \\sin \\theta+y^\\prime \\cos \\theta\\]",
+      "original": "1. Find \\(x\\) and \\(y\\) where \\(x=x^\\prime \\cos \\theta−y^\\prime \\sin \\theta\\) and \\(y=x^\\prime \\sin \\theta+y^\\prime \\cos \\theta\\).",
+      "prompt": "1. Find \\(x\\) and \\(y\\) where \\(x=x^\\prime \\cos \\theta−y^\\prime \\sin \\theta\\) and \\(y=x^\\prime \\sin \\theta+y^\\prime \\cos \\theta\\).",
+      "sourceAnswers": [],
+      "hasFigure": false,
+      "status": "draft",
+      "answerVerified": false,
+      "translationStatus": "pending",
+      "mappingStatus": "pending"
+    },
+    {
+      "ordinal": 10,
+      "sourceNumber": "2",
+      "sourceAnchor": "",
+      "kind": "exercise-candidate",
+      "context": "\\[x=x^\\prime \\cos \\theta−y^\\prime \\sin \\theta\\]\n\nand\n\n\\[y=x^\\prime \\sin \\theta+y^\\prime \\cos \\theta\\]",
+      "original": "2. Substitute the expression for \\(x\\) and \\(y\\) into in the given equation, then simplify.",
+      "prompt": "2. Substitute the expression for \\(x\\) and \\(y\\) into in the given equation, then simplify.",
+      "sourceAnswers": [],
+      "hasFigure": false,
+      "status": "draft",
+      "answerVerified": false,
+      "translationStatus": "pending",
+      "mappingStatus": "pending"
+    },
+    {
+      "ordinal": 11,
+      "sourceNumber": "3",
+      "sourceAnchor": "",
+      "kind": "exercise-candidate",
+      "context": "\\[x=x^\\prime \\cos \\theta−y^\\prime \\sin \\theta\\]\n\nand\n\n\\[y=x^\\prime \\sin \\theta+y^\\prime \\cos \\theta\\]",
+      "original": "3. Write the equations with \\(x^\\prime \\) and \\(y^\\prime \\) in standard form.",
+      "prompt": "3. Write the equations with \\(x^\\prime \\) and \\(y^\\prime \\) in standard form.",
+      "sourceAnswers": [],
+      "hasFigure": false,
+      "status": "draft",
+      "answerVerified": false,
+      "translationStatus": "pending",
+      "mappingStatus": "pending"
+    },
+    {
+      "ordinal": 12,
+      "sourceNumber": "",
+      "sourceAnchor": "",
+      "kind": "example-or-exercise",
+      "context": "\\[x=x^\\prime \\cos \\theta−y^\\prime \\sin \\theta\\]\n\nand\n\n\\[y=x^\\prime \\sin \\theta+y^\\prime \\cos \\theta\\]",
+      "original": "Example \\(\\PageIndex{2}\\): Finding a New Representation of an Equation after Rotating through a Given Angle\n\nFind a new representation of the equation \\(2x^2−xy+2y^2−30=0\\) after rotating through an angle of \\(\\theta=45°\\).\n\nSolution\n\nFind \\(x\\) and \\(y\\), where \\(x=x^\\prime \\cos \\theta−y^\\prime \\sin \\theta\\) and \\(y=x^\\prime \\sin \\theta+y^\\prime \\cos \\theta\\).\n\nBecause \\(\\theta=45°\\),\n\n\\[\\begin{align*} x &= x^\\prime \\cos(45°)−y^\\prime \\sin(45°) \\\\[4pt] x &= x^\\prime \\left(\\dfrac{1}{\\sqrt{2}}\\right)−y^\\prime \\left(\\dfrac{1}{\\sqrt{2}}\\right) \\\\[4pt] x &=\\dfrac{x^\\prime −y^\\prime }{\\sqrt{2}} \\end{align*}\\]\n\nand\n\n\\[\\begin{align*} y &= x^\\prime \\sin(45°)+y^\\prime \\cos(45°) \\\\[4pt] y &= x^\\prime \\left(\\dfrac{1}{\\sqrt{2}}\\right) + y^\\prime \\left(\\dfrac{1}{\\sqrt{2}}\\right) \\\\[4pt] y &= \\dfrac{x^\\prime +y^\\prime }{\\sqrt{2}} \\end{align*}\\]\n\nSubstitute \\(x=x^\\prime \\cos\\theta−y^\\prime \\sin\\theta\\) and \\(y=x^\\prime \\sin \\theta+y^\\prime \\cos \\theta\\) into \\(2x^2−xy+2y^2−30=0\\).\n\n\\(2{\\left(\\dfrac{x^\\prime −y^\\prime }{\\sqrt{2}}\\right)}^2−\\left(\\dfrac{x^\\prime −y^\\prime }{\\sqrt{2}}\\right)\\left(\\dfrac{x^\\prime +y^\\prime }{\\sqrt{2}}\\right)+2{\\left(\\dfrac{x^\\prime +y^\\prime }{\\sqrt{2}}\\right)}^2−30=0\\)\n\nSimplify.\n\n\\(\\begin{array}{rl} 2\\dfrac{(x^\\prime−y^\\prime )(x^\\prime −y^\\prime )}{2}−\\dfrac{(x^\\prime −y^\\prime )(x^\\prime +y^\\prime )}{2}+2\\dfrac{(x^\\prime +y^\\prime )(x^\\prime +y^\\prime )}{2}−30=0 & \\text{FOIL method} \\\\[4pt] {x^\\prime }^2−2x^\\prime y^\\prime +{y^\\prime }^2−\\dfrac{({x^\\prime }^2−{y^\\prime }^2)}{2}+{x^\\prime }^2+2x^\\prime y^\\prime +{y^\\prime }^2−30=0 & \\text{Combine like terms.} \\\\[4pt] 2{x^\\prime }^2+2{y^\\prime }^2−\\dfrac{({x^\\prime }^2−{y^\\prime }^2)}{2}=30 & \\text{Combine like terms.} \\\\[4pt] 2(2{x^\\prime }^2+2{y^\\prime }^2−\\dfrac{({x^\\prime }^2−{y^\\prime }^2)}{2})=2(30) & \\text{Multiply both sides by 2.} \\\\[4pt] 4{x^\\prime }^2+4{y^\\prime }^2−({x^\\prime }^2−{y^\\prime }^2)=60 & \\text{Simplify. } \\\\[4pt] 4{x^\\prime }^2+4{y^\\prime }^2−{x^\\prime }^2+{y^\\prime }2=60 & \\text{Distribute.} \\\\[4pt] \\dfrac{3{x^\\prime }^2}{60}+\\dfrac{5{y^\\prime }^2}{60}=\\dfrac{60}{60} & \\text{Set equal to 1.} \\end{array} \\)\n\nWrite the equations with \\(x^\\prime \\) and \\(y^\\prime \\) in the standard form.\n\n\\[\\dfrac{{x^\\prime }^2}{20}+\\dfrac{{y^\\prime}^2}{12}=1 \\nonumber\\]\n\nThis equation is an ellipse. Figure \\(\\PageIndex{6}\\) shows the graph.\n\n[Figure: imageedit_10_2436746571.png]\n\nFigure \\(\\PageIndex{6}\\)",
+      "prompt": "Example \\(\\PageIndex{2}\\): Finding a New Representation of an Equation after Rotating through a Given Angle\n\nFind a new representation of the equation \\(2x^2−xy+2y^2−30=0\\) after rotating through an angle of \\(\\theta=45°\\).\n\nSolution\n\nFind \\(x\\) and \\(y\\), where \\(x=x^\\prime \\cos \\theta−y^\\prime \\sin \\theta\\) and \\(y=x^\\prime \\sin \\theta+y^\\prime \\cos \\theta\\).\n\nBecause \\(\\theta=45°\\),\n\n\\[\\begin{align*} x &= x^\\prime \\cos(45°)−y^\\prime \\sin(45°) \\\\[4pt] x &= x^\\prime \\left(\\dfrac{1}{\\sqrt{2}}\\right)−y^\\prime \\left(\\dfrac{1}{\\sqrt{2}}\\right) \\\\[4pt] x &=\\dfrac{x^\\prime −y^\\prime }{\\sqrt{2}} \\end{align*}\\]\n\nand\n\n\\[\\begin{align*} y &= x^\\prime \\sin(45°)+y^\\prime \\cos(45°) \\\\[4pt] y &= x^\\prime \\left(\\dfrac{1}{\\sqrt{2}}\\right) + y^\\prime \\left(\\dfrac{1}{\\sqrt{2}}\\right) \\\\[4pt] y &= \\dfrac{x^\\prime +y^\\prime }{\\sqrt{2}} \\end{align*}\\]\n\nSubstitute \\(x=x^\\prime \\cos\\theta−y^\\prime \\sin\\theta\\) and \\(y=x^\\prime \\sin \\theta+y^\\prime \\cos \\theta\\) into \\(2x^2−xy+2y^2−30=0\\).\n\n\\(2{\\left(\\dfrac{x^\\prime −y^\\prime }{\\sqrt{2}}\\right)}^2−\\left(\\dfrac{x^\\prime −y^\\prime }{\\sqrt{2}}\\right)\\left(\\dfrac{x^\\prime +y^\\prime }{\\sqrt{2}}\\right)+2{\\left(\\dfrac{x^\\prime +y^\\prime }{\\sqrt{2}}\\right)}^2−30=0\\)\n\nSimplify.\n\n\\(\\begin{array}{rl} 2\\dfrac{(x^\\prime−y^\\prime )(x^\\prime −y^\\prime )}{2}−\\dfrac{(x^\\prime −y^\\prime )(x^\\prime +y^\\prime )}{2}+2\\dfrac{(x^\\prime +y^\\prime )(x^\\prime +y^\\prime )}{2}−30=0 & \\text{FOIL method} \\\\[4pt] {x^\\prime }^2−2x^\\prime y^\\prime +{y^\\prime }^2−\\dfrac{({x^\\prime }^2−{y^\\prime }^2)}{2}+{x^\\prime }^2+2x^\\prime y^\\prime +{y^\\prime }^2−30=0 & \\text{Combine like terms.} \\\\[4pt] 2{x^\\prime }^2+2{y^\\prime }^2−\\dfrac{({x^\\prime }^2−{y^\\prime }^2)}{2}=30 & \\text{Combine like terms.} \\\\[4pt] 2(2{x^\\prime }^2+2{y^\\prime }^2−\\dfrac{({x^\\prime }^2−{y^\\prime }^2)}{2})=2(30) & \\text{Multiply both sides by 2.} \\\\[4pt] 4{x^\\prime }^2+4{y^\\prime }^2−({x^\\prime }^2−{y^\\prime }^2)=60 & \\text{Simplify. } \\\\[4pt] 4{x^\\prime }^2+4{y^\\prime }^2−{x^\\prime }^2+{y^\\prime }2=60 & \\text{Distribute.} \\\\[4pt] \\dfrac{3{x^\\prime }^2}{60}+\\dfrac{5{y^\\prime }^2}{60}=\\dfrac{60}{60} & \\text{Set equal to 1.} \\end{array} \\)\n\nWrite the equations with \\(x^\\prime \\) and \\(y^\\prime \\) in the standard form.\n\n\\[\\dfrac{{x^\\prime }^2}{20}+\\dfrac{{y^\\prime}^2}{12}=1 \\nonumber\\]\n\nThis equation is an ellipse. Figure \\(\\PageIndex{6}\\) shows the graph.\n\n[Figure: imageedit_10_2436746571.png]\n\nFigure \\(\\PageIndex{6}\\)",
+      "sourceAnswers": [],
+      "hasFigure": true,
+      "status": "draft",
+      "answerVerified": false,
+      "translationStatus": "pending",
+      "mappingStatus": "pending"
+    },
+    {
+      "ordinal": 13,
+      "sourceNumber": "1",
+      "sourceAnchor": "",
+      "kind": "exercise-candidate",
+      "context": "We have learned already that any conic may be represented by the second degree equation\n\n\\(Ax^2+Bxy+Cy^2+Dx+Ey+F=0\\)\n\nwhere \\(A\\), \\(B\\),and \\(C\\) are not all zero. However, if \\(B≠0\\), then we have an \\(xy\\) term that prevents us from rewriting the equation in standard form. To eliminate it, we can rotate the axes by an acute angle \\(\\theta\\) where \\(\\cot(2\\theta)=\\dfrac{A−C}{B}\\).",
+      "original": "1. Find \\(\\cot(2\\theta)\\).",
+      "prompt": "1. Find \\(\\cot(2\\theta)\\).",
+      "sourceAnswers": [],
+      "hasFigure": false,
+      "status": "draft",
+      "answerVerified": false,
+      "translationStatus": "pending",
+      "mappingStatus": "pending"
+    },
+    {
+      "ordinal": 14,
+      "sourceNumber": "2",
+      "sourceAnchor": "",
+      "kind": "exercise-candidate",
+      "context": "We have learned already that any conic may be represented by the second degree equation\n\n\\(Ax^2+Bxy+Cy^2+Dx+Ey+F=0\\)\n\nwhere \\(A\\), \\(B\\),and \\(C\\) are not all zero. However, if \\(B≠0\\), then we have an \\(xy\\) term that prevents us from rewriting the equation in standard form. To eliminate it, we can rotate the axes by an acute angle \\(\\theta\\) where \\(\\cot(2\\theta)=\\dfrac{A−C}{B}\\).",
+      "original": "2. Find \\(\\sin \\theta\\) and \\(\\cos \\theta\\).",
+      "prompt": "2. Find \\(\\sin \\theta\\) and \\(\\cos \\theta\\).",
+      "sourceAnswers": [],
+      "hasFigure": false,
+      "status": "draft",
+      "answerVerified": false,
+      "translationStatus": "pending",
+      "mappingStatus": "pending"
+    },
+    {
+      "ordinal": 15,
+      "sourceNumber": "3",
+      "sourceAnchor": "",
+      "kind": "exercise-candidate",
+      "context": "We have learned already that any conic may be represented by the second degree equation\n\n\\(Ax^2+Bxy+Cy^2+Dx+Ey+F=0\\)\n\nwhere \\(A\\), \\(B\\),and \\(C\\) are not all zero. However, if \\(B≠0\\), then we have an \\(xy\\) term that prevents us from rewriting the equation in standard form. To eliminate it, we can rotate the axes by an acute angle \\(\\theta\\) where \\(\\cot(2\\theta)=\\dfrac{A−C}{B}\\).",
+      "original": "3. Substitute \\(\\sin \\theta\\) and \\(\\cos \\theta\\) into \\(x=x^\\prime \\cos \\theta−y^\\prime \\sin \\theta\\) and \\(y=x^\\prime \\sin \\theta+y^\\prime \\cos \\theta\\).",
+      "prompt": "3. Substitute \\(\\sin \\theta\\) and \\(\\cos \\theta\\) into \\(x=x^\\prime \\cos \\theta−y^\\prime \\sin \\theta\\) and \\(y=x^\\prime \\sin \\theta+y^\\prime \\cos \\theta\\).",
+      "sourceAnswers": [],
+      "hasFigure": false,
+      "status": "draft",
+      "answerVerified": false,
+      "translationStatus": "pending",
+      "mappingStatus": "pending"
+    },
+    {
+      "ordinal": 16,
+      "sourceNumber": "4",
+      "sourceAnchor": "",
+      "kind": "exercise-candidate",
+      "context": "We have learned already that any conic may be represented by the second degree equation\n\n\\(Ax^2+Bxy+Cy^2+Dx+Ey+F=0\\)\n\nwhere \\(A\\), \\(B\\),and \\(C\\) are not all zero. However, if \\(B≠0\\), then we have an \\(xy\\) term that prevents us from rewriting the equation in standard form. To eliminate it, we can rotate the axes by an acute angle \\(\\theta\\) where \\(\\cot(2\\theta)=\\dfrac{A−C}{B}\\).",
+      "original": "4. Substitute the expression for \\(x\\) and \\(y\\) into in the given equation, and then simplify.",
+      "prompt": "4. Substitute the expression for \\(x\\) and \\(y\\) into in the given equation, and then simplify.",
+      "sourceAnswers": [],
+      "hasFigure": false,
+      "status": "draft",
+      "answerVerified": false,
+      "translationStatus": "pending",
+      "mappingStatus": "pending"
+    },
+    {
+      "ordinal": 17,
+      "sourceNumber": "5",
+      "sourceAnchor": "",
+      "kind": "exercise-candidate",
+      "context": "We have learned already that any conic may be represented by the second degree equation\n\n\\(Ax^2+Bxy+Cy^2+Dx+Ey+F=0\\)\n\nwhere \\(A\\), \\(B\\),and \\(C\\) are not all zero. However, if \\(B≠0\\), then we have an \\(xy\\) term that prevents us from rewriting the equation in standard form. To eliminate it, we can rotate the axes by an acute angle \\(\\theta\\) where \\(\\cot(2\\theta)=\\dfrac{A−C}{B}\\).",
+      "original": "5. Write the equations with \\(x^\\prime \\) and \\(y^\\prime \\) in the standard form with respect to the rotated axes.",
+      "prompt": "5. Write the equations with \\(x^\\prime \\) and \\(y^\\prime \\) in the standard form with respect to the rotated axes.",
+      "sourceAnswers": [],
+      "hasFigure": false,
+      "status": "draft",
+      "answerVerified": false,
+      "translationStatus": "pending",
+      "mappingStatus": "pending"
+    },
+    {
+      "ordinal": 18,
+      "sourceNumber": "",
+      "sourceAnchor": "",
+      "kind": "example-or-exercise",
+      "context": "We have learned already that any conic may be represented by the second degree equation\n\n\\(Ax^2+Bxy+Cy^2+Dx+Ey+F=0\\)\n\nwhere \\(A\\), \\(B\\),and \\(C\\) are not all zero. However, if \\(B≠0\\), then we have an \\(xy\\) term that prevents us from rewriting the equation in standard form. To eliminate it, we can rotate the axes by an acute angle \\(\\theta\\) where \\(\\cot(2\\theta)=\\dfrac{A−C}{B}\\).",
+      "original": "Example \\(\\PageIndex{3}\\): Rewriting an Equation with respect to the \\(x^\\prime\\)  and \\(y^\\prime\\)  axes without the \\(x^\\prime y^\\prime\\)  Term\n\nRewrite the equation \\(8x^2−12xy+17y^2=20\\) in the \\(x^\\prime y^\\prime \\) system without an \\(x^\\prime y^\\prime \\) term.\n\nSolution\n\nFirst, we find \\(\\cot(2\\theta)\\).\n\n\\(8x^2−12xy+17y^2=20\\rightarrow A=8\\), \\(B=−12\\) and \\(C=17\\)\n\n[Figure: imageedit_14_9742345318.png]\n\nFigure \\(\\PageIndex{7}\\)\n\nFrom Figure \\(\\PageIndex{7}\\):\n\n\\[ \\begin{align*} \\cot(2\\theta) &=\\dfrac{A−C}{B}=\\dfrac{8−17}{−12} \\\\[4pt] & =\\dfrac{−9}{−12}=\\dfrac{3}{4} \\end{align*}\\]\n\n\\(\\cot(2\\theta)=\\dfrac{3}{4}=\\dfrac{\\text{adjacent}}{\\text{opposite}}\\)\n\nSo the hypotenuse is\n\n\\[ \\begin{align*} 3^2+4^2 &=h^2 \\\\[4pt] 9+16 &=h^2 \\\\[4pt] 25&=h^2 \\\\[4pt] h&=5 \\end{align*}\\]\n\nNext, we find \\(\\sin \\theta\\) and \\(\\cos \\theta\\).\n\n\\[ \\begin{align*} \\sin \\theta &=\\sqrt{\\dfrac{1−\\cos(2\\theta)}{2}}=\\sqrt{\\dfrac{1−\\dfrac{3}{5}}{2}}=\\sqrt{\\dfrac{\\dfrac{5}{5}−\\dfrac{3}{5}}{2}}=\\sqrt{\\dfrac{5−3}{5}⋅\\dfrac{1}{2}}=\\sqrt{\\dfrac{2}{10}}=\\sqrt{\\dfrac{1}{5}} \\\\ \\sin \\theta &= \\dfrac{1}{\\sqrt{5}} \\\\ \\cos \\theta &= \\sqrt{\\dfrac{1+\\cos(2\\theta)}{2}}=\\sqrt{\\dfrac{1+\\dfrac{3}{5}}{2}}=\\sqrt{\\dfrac{\\dfrac{5}{5}+\\dfrac{3}{5}}{2}}=\\sqrt{\\dfrac{5+3}{5}⋅\\dfrac{1}{2}}=\\sqrt{\\dfrac{8}{10}}=\\sqrt{\\dfrac{4}{5}} \\\\ \\cos \\theta &= \\dfrac{2}{\\sqrt{5}} \\end{align*}\\]\n\nSubstitute the values of \\(\\sin \\theta\\) and \\(\\cos \\theta\\) into \\(x=x^\\prime \\cos \\theta−y^\\prime \\sin \\theta\\) and \\(y=x^\\prime \\sin \\theta+y^\\prime \\cos \\theta\\).\n\n\\[ \\begin{align*} x &=x'\\cos \\theta−y^\\prime \\sin \\theta \\\\[4pt]  &=x^\\prime \\left(\\dfrac{2}{\\sqrt{5}}\\right)−y^\\prime \\left(\\dfrac{1}{\\sqrt{5}}\\right) \\\\[4pt] &=\\dfrac{2x^\\prime −y^\\prime }{\\sqrt{5}} \\end{align*}\\]\n\nand\n\n\\[ \\begin{align*} y&=x^\\prime \\sin \\theta+y^\\prime \\cos \\theta \\\\[4pt] &=x^\\prime \\left(\\dfrac{1}{\\sqrt{5}}\\right)+y^\\prime \\left(\\dfrac{2}{\\sqrt{5}}\\right) \\\\[4pt] &=\\dfrac{x^\\prime +2y^\\prime }{\\sqrt{5}} \\end{align*}\\]\n\nSubstitute the expressions for \\(x\\) and \\(y\\) into in the given equation, and then simplify.\n\n\\[ \\begin{align*} 8{\\left(\\dfrac{2x^\\prime −y^\\prime }{\\sqrt{5}}\\right)}^2−12\\left(\\dfrac{2x^\\prime −y^\\prime }{\\sqrt{5}}\\right)\\left(\\dfrac{x^\\prime +2y^\\prime }{\\sqrt{5}}\\right)+17{\\left(\\dfrac{x^\\prime +2y^\\prime }{\\sqrt{5}}\\right)}^2&=20 \\\\[4pt]  8\\left(\\dfrac{(2x^\\prime −y^\\prime )(2x^\\prime −y^\\prime )}{5}\\right)−12\\left(\\dfrac{(2x^\\prime −y^\\prime )(x^\\prime +2y^\\prime )}{5}\\right)+17\\left(\\dfrac{(x^\\prime +2y^\\prime )(x^\\prime +2y^\\prime )}{5}\\right)&=20 \\\\[4pt]  8(4{x^\\prime }^2−4x^\\prime y^\\prime +{y^\\prime }^2)−12(2{x^\\prime }^2+3x^\\prime y^\\prime −2{y^\\prime }^2)+17({x^\\prime }^2+4x^\\prime y^\\prime +4{y^\\prime }^2)&=100 \\\\[4pt]  32{x^\\prime }^2−32x^\\prime y^\\prime +8{y^\\prime }^2−24{x^\\prime }^2−36x^\\prime y^\\prime +24{y^\\prime }^2+17{x^\\prime }^2+68x^\\prime y^\\prime +68{y^\\prime }^2&=100 \\\\[4pt]  25{x^\\prime }^2+100{y^\\prime }^2&=100 \\\\[4pt]  \\dfrac{25}{100}{x^\\prime }^2+\\dfrac{100}{100}{y^\\prime }^2&=\\dfrac{100}{100}  \\end{align*}\\]\n\nWrite the equations with \\(x^\\prime \\) and \\(y^\\prime \\) in the standard form with respect to the new coordinate system.\n\n\\[\\dfrac{{x^\\prime }^2}{4}+\\dfrac{{y^\\prime }^2}{1}=1 \\nonumber\\]\n\nFigure \\(\\PageIndex{8}\\) shows the graph of the ellipse.\n\n[Figure: imageedit_18_8476133234.png]\n\nFigure \\(\\PageIndex{8}\\)",
+      "prompt": "Example \\(\\PageIndex{3}\\): Rewriting an Equation with respect to the \\(x^\\prime\\)  and \\(y^\\prime\\)  axes without the \\(x^\\prime y^\\prime\\)  Term\n\nRewrite the equation \\(8x^2−12xy+17y^2=20\\) in the \\(x^\\prime y^\\prime \\) system without an \\(x^\\prime y^\\prime \\) term.\n\nSolution\n\nFirst, we find \\(\\cot(2\\theta)\\).\n\n\\(8x^2−12xy+17y^2=20\\rightarrow A=8\\), \\(B=−12\\) and \\(C=17\\)\n\n[Figure: imageedit_14_9742345318.png]\n\nFigure \\(\\PageIndex{7}\\)\n\nFrom Figure \\(\\PageIndex{7}\\):\n\n\\[ \\begin{align*} \\cot(2\\theta) &=\\dfrac{A−C}{B}=\\dfrac{8−17}{−12} \\\\[4pt] & =\\dfrac{−9}{−12}=\\dfrac{3}{4} \\end{align*}\\]\n\n\\(\\cot(2\\theta)=\\dfrac{3}{4}=\\dfrac{\\text{adjacent}}{\\text{opposite}}\\)\n\nSo the hypotenuse is\n\n\\[ \\begin{align*} 3^2+4^2 &=h^2 \\\\[4pt] 9+16 &=h^2 \\\\[4pt] 25&=h^2 \\\\[4pt] h&=5 \\end{align*}\\]\n\nNext, we find \\(\\sin \\theta\\) and \\(\\cos \\theta\\).\n\n\\[ \\begin{align*} \\sin \\theta &=\\sqrt{\\dfrac{1−\\cos(2\\theta)}{2}}=\\sqrt{\\dfrac{1−\\dfrac{3}{5}}{2}}=\\sqrt{\\dfrac{\\dfrac{5}{5}−\\dfrac{3}{5}}{2}}=\\sqrt{\\dfrac{5−3}{5}⋅\\dfrac{1}{2}}=\\sqrt{\\dfrac{2}{10}}=\\sqrt{\\dfrac{1}{5}} \\\\ \\sin \\theta &= \\dfrac{1}{\\sqrt{5}} \\\\ \\cos \\theta &= \\sqrt{\\dfrac{1+\\cos(2\\theta)}{2}}=\\sqrt{\\dfrac{1+\\dfrac{3}{5}}{2}}=\\sqrt{\\dfrac{\\dfrac{5}{5}+\\dfrac{3}{5}}{2}}=\\sqrt{\\dfrac{5+3}{5}⋅\\dfrac{1}{2}}=\\sqrt{\\dfrac{8}{10}}=\\sqrt{\\dfrac{4}{5}} \\\\ \\cos \\theta &= \\dfrac{2}{\\sqrt{5}} \\end{align*}\\]\n\nSubstitute the values of \\(\\sin \\theta\\) and \\(\\cos \\theta\\) into \\(x=x^\\prime \\cos \\theta−y^\\prime \\sin \\theta\\) and \\(y=x^\\prime \\sin \\theta+y^\\prime \\cos \\theta\\).\n\n\\[ \\begin{align*} x &=x'\\cos \\theta−y^\\prime \\sin \\theta \\\\[4pt]  &=x^\\prime \\left(\\dfrac{2}{\\sqrt{5}}\\right)−y^\\prime \\left(\\dfrac{1}{\\sqrt{5}}\\right) \\\\[4pt] &=\\dfrac{2x^\\prime −y^\\prime }{\\sqrt{5}} \\end{align*}\\]\n\nand\n\n\\[ \\begin{align*} y&=x^\\prime \\sin \\theta+y^\\prime \\cos \\theta \\\\[4pt] &=x^\\prime \\left(\\dfrac{1}{\\sqrt{5}}\\right)+y^\\prime \\left(\\dfrac{2}{\\sqrt{5}}\\right) \\\\[4pt] &=\\dfrac{x^\\prime +2y^\\prime }{\\sqrt{5}} \\end{align*}\\]\n\nSubstitute the expressions for \\(x\\) and \\(y\\) into in the given equation, and then simplify.\n\n\\[ \\begin{align*} 8{\\left(\\dfrac{2x^\\prime −y^\\prime }{\\sqrt{5}}\\right)}^2−12\\left(\\dfrac{2x^\\prime −y^\\prime }{\\sqrt{5}}\\right)\\left(\\dfrac{x^\\prime +2y^\\prime }{\\sqrt{5}}\\right)+17{\\left(\\dfrac{x^\\prime +2y^\\prime }{\\sqrt{5}}\\right)}^2&=20 \\\\[4pt]  8\\left(\\dfrac{(2x^\\prime −y^\\prime )(2x^\\prime −y^\\prime )}{5}\\right)−12\\left(\\dfrac{(2x^\\prime −y^\\prime )(x^\\prime +2y^\\prime )}{5}\\right)+17\\left(\\dfrac{(x^\\prime +2y^\\prime )(x^\\prime +2y^\\prime )}{5}\\right)&=20 \\\\[4pt]  8(4{x^\\prime }^2−4x^\\prime y^\\prime +{y^\\prime }^2)−12(2{x^\\prime }^2+3x^\\prime y^\\prime −2{y^\\prime }^2)+17({x^\\prime }^2+4x^\\prime y^\\prime +4{y^\\prime }^2)&=100 \\\\[4pt]  32{x^\\prime }^2−32x^\\prime y^\\prime +8{y^\\prime }^2−24{x^\\prime }^2−36x^\\prime y^\\prime +24{y^\\prime }^2+17{x^\\prime }^2+68x^\\prime y^\\prime +68{y^\\prime }^2&=100 \\\\[4pt]  25{x^\\prime }^2+100{y^\\prime }^2&=100 \\\\[4pt]  \\dfrac{25}{100}{x^\\prime }^2+\\dfrac{100}{100}{y^\\prime }^2&=\\dfrac{100}{100}  \\end{align*}\\]\n\nWrite the equations with \\(x^\\prime \\) and \\(y^\\prime \\) in the standard form with respect to the new coordinate system.\n\n\\[\\dfrac{{x^\\prime }^2}{4}+\\dfrac{{y^\\prime }^2}{1}=1 \\nonumber\\]\n\nFigure \\(\\PageIndex{8}\\) shows the graph of the ellipse.\n\n[Figure: imageedit_18_8476133234.png]\n\nFigure \\(\\PageIndex{8}\\)",
+      "sourceAnswers": [],
+      "hasFigure": true,
+      "status": "draft",
+      "answerVerified": false,
+      "translationStatus": "pending",
+      "mappingStatus": "pending"
+    },
+    {
+      "ordinal": 19,
+      "sourceNumber": "",
+      "sourceAnchor": "",
+      "kind": "exercise-candidate",
+      "context": "We have learned already that any conic may be represented by the second degree equation\n\n\\(Ax^2+Bxy+Cy^2+Dx+Ey+F=0\\)\n\nwhere \\(A\\), \\(B\\),and \\(C\\) are not all zero. However, if \\(B≠0\\), then we have an \\(xy\\) term that prevents us from rewriting the equation in standard form. To eliminate it, we can rotate the axes by an acute angle \\(\\theta\\) where \\(\\cot(2\\theta)=\\dfrac{A−C}{B}\\).",
+      "original": "Exercise \\(\\PageIndex{2}\\)\n\nRewrite the \\(13x^2−6\\sqrt{3}xy+7y^2=16\\) in the \\(x^\\prime y^\\prime \\) system without the \\(x^\\prime y^\\prime \\) term.\n\nAnswer\n\n\\(\\dfrac{{x^\\prime }^2}{4}+\\dfrac{{y^\\prime }^2}{1}=1\\)",
+      "prompt": "Exercise \\(\\PageIndex{2}\\)\n\nRewrite the \\(13x^2−6\\sqrt{3}xy+7y^2=16\\) in the \\(x^\\prime y^\\prime \\) system without the \\(x^\\prime y^\\prime \\) term.",
+      "sourceAnswers": [
+        "\\(\\dfrac{{x^\\prime }^2}{4}+\\dfrac{{y^\\prime }^2}{1}=1\\)"
+      ],
+      "hasFigure": false,
+      "status": "draft",
+      "answerVerified": false,
+      "translationStatus": "pending",
+      "mappingStatus": "pending"
+    },
+    {
+      "ordinal": 20,
+      "sourceNumber": "",
+      "sourceAnchor": "",
+      "kind": "example-or-exercise",
+      "context": "We have learned already that any conic may be represented by the second degree equation\n\n\\(Ax^2+Bxy+Cy^2+Dx+Ey+F=0\\)\n\nwhere \\(A\\), \\(B\\),and \\(C\\) are not all zero. However, if \\(B≠0\\), then we have an \\(xy\\) term that prevents us from rewriting the equation in standard form. To eliminate it, we can rotate the axes by an acute angle \\(\\theta\\) where \\(\\cot(2\\theta)=\\dfrac{A−C}{B}\\).",
+      "original": "Example \\(\\PageIndex{4}\\) :Graphing an Equation That Has No \\(x^\\prime y^\\prime \\) Terms\n\nGraph the following equation relative to the \\(x^\\prime y^\\prime \\) system:\n\n\\(x^2+12xy−4y^2=30\\)\n\nSolution\n\nFirst, we find \\(\\cot(2\\theta)\\).\n\n\\(x^2+12xy−4y^2=20\\rightarrow A=1\\), \\(B=12\\),and \\(C=−4\\)\n\n\\[\\begin{align*} \\cot(2\\theta) &= \\dfrac{A−C}{B} \\\\ \\cot(2\\theta) &= \\dfrac{1−(−4)}{12} \\\\ \\cot(2\\theta) &= \\dfrac{5}{12} \\end{align*}\\]\n\nBecause \\(\\cot(2\\theta)=\\dfrac{5}{12}\\), we can draw a reference triangle as in Figure \\(\\PageIndex{9}\\).\n\n[Figure: imageedit_22_9251267068.png]\n\nFigure \\(\\PageIndex{9}\\)\n\n\\(\\cot(2\\theta)=\\dfrac{5}{12}=\\dfrac{adjacent}{opposite}\\)\n\nThus, the hypotenuse is\n\n\\[ \\begin{align*} 5^2+{12}^2&=h^2 \\\\[4pt] 25+144 &=h^2 \\\\[4pt] 169 &=h^2 \\\\[4pt] h&=13 \\end{align*}\\]\n\nNext, we find \\(\\sin \\theta\\) and \\(\\cos \\theta\\). We will use half-angle identities.\n\n\\(\\sin \\theta=\\sqrt{\\dfrac{1−\\cos(2\\theta)}{2}}=\\sqrt{\\dfrac{1−\\dfrac{5}{13}}{2}}=\\sqrt{\\dfrac{\\dfrac{13}{13}−\\dfrac{5}{13}}{2}}=\\sqrt{\\dfrac{8}{13}⋅\\dfrac{1}{2}}=\\dfrac{2}{\\sqrt{13}}\\)\n\n\\(\\cos \\theta=\\sqrt{\\dfrac{1+\\cos(2\\theta)}{2}}=\\sqrt{\\dfrac{1+\\dfrac{5}{13}}{2}}=\\sqrt{\\dfrac{\\dfrac{13}{13}+\\dfrac{5}{13}}{2}}=\\sqrt{\\dfrac{18}{13}⋅\\dfrac{1}{2}}=\\dfrac{3}{\\sqrt{13}}\\)\n\nNow we find \\(x\\) and \\(y\\).\n\n\\(x=x^\\prime \\cos \\theta−y^\\prime \\sin \\theta\\)\n\n\\(x=x^\\prime \\left(\\dfrac{3}{\\sqrt{13}}\\right)−y^\\prime \\left(\\dfrac{2}{\\sqrt{13}}\\right)\\)\n\n\\(x=\\dfrac{3x^\\prime −2y^\\prime }{\\sqrt{13}}\\)\n\nand\n\n\\(y=x^\\prime \\sin \\theta+y^\\prime \\cos \\theta\\)\n\n\\(y=x^\\prime \\left(\\dfrac{2}{\\sqrt{13}}\\right)+y^\\prime \\left(\\dfrac{3}{\\sqrt{13}}\\right)\\)\n\n\\(y=\\dfrac{2x^\\prime +3y^\\prime }{\\sqrt{13}}\\)\n\nNow we substitute \\(x=\\dfrac{3x^\\prime −2y^\\prime }{\\sqrt{13}}\\) and \\(y=\\dfrac{2x^\\prime +3y^\\prime }{\\sqrt{13}}\\) into \\(x^2+12xy−4y^2=30\\).\n\n\\(\\begin{array}{rl} {\\left(\\dfrac{3x^\\prime −2y^\\prime }{\\sqrt{13}}\\right)}^2+12\\left(\\dfrac{3x^\\prime −2y^\\prime }{\\sqrt{13}}\\right)\\left(\\dfrac{2x^\\prime +3y^\\prime }{\\sqrt{13}}\\right)−4{\\left(\\dfrac{2x^\\prime +3y^\\prime }{\\sqrt{13}}\\right)}^2=30 \\\\ \\left(\\dfrac{1}{13}\\right)[ {(3x^\\prime −2y^\\prime )}^2+12(3x^\\prime −2y^\\prime )(2x^\\prime +3y^\\prime )−4{(2x^\\prime +3y^\\prime )}^2 ]=30 & \\text{Factor.} \\\\ \\left(\\dfrac{1}{13}\\right)[ 9{x^\\prime }^2−12x^\\prime y^\\prime +4{y^\\prime }^2+12(6{x^\\prime }^2+5x^\\prime y^\\prime −6{y^\\prime }^2)−4(4{x^\\prime }^2+12x^\\prime y^\\prime +9{y^\\prime }^2) ]=30 & \\text{Multiply.} \\\\ \\left(\\dfrac{1}{13}\\right)[ 9{x^\\prime }^2−12x^\\prime y^\\prime +4{y^\\prime }^2+72{x^\\prime }^2+60x^\\prime y^\\prime −72{y^\\prime }^2−16{x^\\prime }^2−48x^\\prime y^\\prime −36{y^\\prime }^2 ]=30 & \\text{Distribute.} \\\\ \\left(\\dfrac{1}{13}\\right)[ 65{x^\\prime }^2−104{y^\\prime }^2 ]=30 & \\text{Combine like terms.} \\\\ 65{x^\\prime }^2−104{y^\\prime }^2=390 & \\text{Multiply.} \\\\ \\dfrac{{x^\\prime }^2}{6}−\\dfrac{4{y^\\prime }^2}{15}=1 & \\text{Divide by 390.} \\end{array}\\)\n\nFigure \\(\\PageIndex{10}\\) shows the graph of the hyperbola \\(\\dfrac{{x^\\prime }^2}{6}−\\dfrac{4{y^\\prime }^2}{15}=1\\)\n\n[Figure: imageedit_26_7758236974.png]\n\nFigure \\(\\PageIndex{10}\\)",
+      "prompt": "Example \\(\\PageIndex{4}\\) :Graphing an Equation That Has No \\(x^\\prime y^\\prime \\) Terms\n\nGraph the following equation relative to the \\(x^\\prime y^\\prime \\) system:\n\n\\(x^2+12xy−4y^2=30\\)\n\nSolution\n\nFirst, we find \\(\\cot(2\\theta)\\).\n\n\\(x^2+12xy−4y^2=20\\rightarrow A=1\\), \\(B=12\\),and \\(C=−4\\)\n\n\\[\\begin{align*} \\cot(2\\theta) &= \\dfrac{A−C}{B} \\\\ \\cot(2\\theta) &= \\dfrac{1−(−4)}{12} \\\\ \\cot(2\\theta) &= \\dfrac{5}{12} \\end{align*}\\]\n\nBecause \\(\\cot(2\\theta)=\\dfrac{5}{12}\\), we can draw a reference triangle as in Figure \\(\\PageIndex{9}\\).\n\n[Figure: imageedit_22_9251267068.png]\n\nFigure \\(\\PageIndex{9}\\)\n\n\\(\\cot(2\\theta)=\\dfrac{5}{12}=\\dfrac{adjacent}{opposite}\\)\n\nThus, the hypotenuse is\n\n\\[ \\begin{align*} 5^2+{12}^2&=h^2 \\\\[4pt] 25+144 &=h^2 \\\\[4pt] 169 &=h^2 \\\\[4pt] h&=13 \\end{align*}\\]\n\nNext, we find \\(\\sin \\theta\\) and \\(\\cos \\theta\\). We will use half-angle identities.\n\n\\(\\sin \\theta=\\sqrt{\\dfrac{1−\\cos(2\\theta)}{2}}=\\sqrt{\\dfrac{1−\\dfrac{5}{13}}{2}}=\\sqrt{\\dfrac{\\dfrac{13}{13}−\\dfrac{5}{13}}{2}}=\\sqrt{\\dfrac{8}{13}⋅\\dfrac{1}{2}}=\\dfrac{2}{\\sqrt{13}}\\)\n\n\\(\\cos \\theta=\\sqrt{\\dfrac{1+\\cos(2\\theta)}{2}}=\\sqrt{\\dfrac{1+\\dfrac{5}{13}}{2}}=\\sqrt{\\dfrac{\\dfrac{13}{13}+\\dfrac{5}{13}}{2}}=\\sqrt{\\dfrac{18}{13}⋅\\dfrac{1}{2}}=\\dfrac{3}{\\sqrt{13}}\\)\n\nNow we find \\(x\\) and \\(y\\).\n\n\\(x=x^\\prime \\cos \\theta−y^\\prime \\sin \\theta\\)\n\n\\(x=x^\\prime \\left(\\dfrac{3}{\\sqrt{13}}\\right)−y^\\prime \\left(\\dfrac{2}{\\sqrt{13}}\\right)\\)\n\n\\(x=\\dfrac{3x^\\prime −2y^\\prime }{\\sqrt{13}}\\)\n\nand\n\n\\(y=x^\\prime \\sin \\theta+y^\\prime \\cos \\theta\\)\n\n\\(y=x^\\prime \\left(\\dfrac{2}{\\sqrt{13}}\\right)+y^\\prime \\left(\\dfrac{3}{\\sqrt{13}}\\right)\\)\n\n\\(y=\\dfrac{2x^\\prime +3y^\\prime }{\\sqrt{13}}\\)\n\nNow we substitute \\(x=\\dfrac{3x^\\prime −2y^\\prime }{\\sqrt{13}}\\) and \\(y=\\dfrac{2x^\\prime +3y^\\prime }{\\sqrt{13}}\\) into \\(x^2+12xy−4y^2=30\\).\n\n\\(\\begin{array}{rl} {\\left(\\dfrac{3x^\\prime −2y^\\prime }{\\sqrt{13}}\\right)}^2+12\\left(\\dfrac{3x^\\prime −2y^\\prime }{\\sqrt{13}}\\right)\\left(\\dfrac{2x^\\prime +3y^\\prime }{\\sqrt{13}}\\right)−4{\\left(\\dfrac{2x^\\prime +3y^\\prime }{\\sqrt{13}}\\right)}^2=30 \\\\ \\left(\\dfrac{1}{13}\\right)[ {(3x^\\prime −2y^\\prime )}^2+12(3x^\\prime −2y^\\prime )(2x^\\prime +3y^\\prime )−4{(2x^\\prime +3y^\\prime )}^2 ]=30 & \\text{Factor.} \\\\ \\left(\\dfrac{1}{13}\\right)[ 9{x^\\prime }^2−12x^\\prime y^\\prime +4{y^\\prime }^2+12(6{x^\\prime }^2+5x^\\prime y^\\prime −6{y^\\prime }^2)−4(4{x^\\prime }^2+12x^\\prime y^\\prime +9{y^\\prime }^2) ]=30 & \\text{Multiply.} \\\\ \\left(\\dfrac{1}{13}\\right)[ 9{x^\\prime }^2−12x^\\prime y^\\prime +4{y^\\prime }^2+72{x^\\prime }^2+60x^\\prime y^\\prime −72{y^\\prime }^2−16{x^\\prime }^2−48x^\\prime y^\\prime −36{y^\\prime }^2 ]=30 & \\text{Distribute.} \\\\ \\left(\\dfrac{1}{13}\\right)[ 65{x^\\prime }^2−104{y^\\prime }^2 ]=30 & \\text{Combine like terms.} \\\\ 65{x^\\prime }^2−104{y^\\prime }^2=390 & \\text{Multiply.} \\\\ \\dfrac{{x^\\prime }^2}{6}−\\dfrac{4{y^\\prime }^2}{15}=1 & \\text{Divide by 390.} \\end{array}\\)\n\nFigure \\(\\PageIndex{10}\\) shows the graph of the hyperbola \\(\\dfrac{{x^\\prime }^2}{6}−\\dfrac{4{y^\\prime }^2}{15}=1\\)\n\n[Figure: imageedit_26_7758236974.png]\n\nFigure \\(\\PageIndex{10}\\)",
+      "sourceAnswers": [],
+      "hasFigure": true,
+      "status": "draft",
+      "answerVerified": false,
+      "translationStatus": "pending",
+      "mappingStatus": "pending"
+    },
+    {
+      "ordinal": 21,
+      "sourceNumber": "",
+      "sourceAnchor": "",
+      "kind": "example-or-exercise",
+      "context": "\\[A′{x^\\prime }^2+B′x^\\prime y^\\prime +C′{y^\\prime }^2+D′x^\\prime +E′y^\\prime +F′=0\\]\n\nthen \\[B^2−4AC={B′}^2−4A′C′\\]\n\nThe equation \\(Ax^2+Bxy+Cy^2+Dx+Ey+F=0\\) is an ellipse, a parabola, or a hyperbola, or a degenerate case of one of these. If the discriminant, \\(B^2−4AC\\), is",
+      "original": "Example \\(\\PageIndex{5}\\): Identifying the Conic without Rotating Axes\n\nIdentify the conic for each of the following without rotating axes.\n\n1. \\(5x^2+2\\sqrt{3}xy+2y^2−5=0\\)\n\n2. \\(5x^2+2\\sqrt{3}xy+12y^2−5=0\\)\n\nSolution\n\na. Let’s begin by determining \\(A\\), \\(B\\), and \\(C\\).\n\n\\(\\underbrace{5}_{A}x^2+\\underbrace{2\\sqrt{3}}_{B}xy+\\underbrace{2}_{C}y^2−5=0\\)\n\nNow, we find the discriminant.\n\n\\[\\begin{align*} B^2−4AC &= {(2\\sqrt{3})}^2−4(5)(2) \\\\ &=4(3)−40 \\\\ &=12−40 \\\\ &=−28<0 \\end{align*}\\]\n\nTherefore, \\(5x^2+2\\sqrt{3}xy+2y^2−5=0\\) represents an ellipse.\n\nb. Again, let’s begin by determining \\(A\\),\\(B\\), and \\(C\\).\n\n\\(\\underbrace{5}_{A}x^2+\\underbrace{2\\sqrt{3}}_{B}xy+\\underbrace{12}_{C}y^2−5=0 \\nonumber\\)\n\nNow, we find the discriminant.\n\n\\[\\begin{align*} B^2−4AC &= {(2\\sqrt{3})}^2−4(5)(12) \\\\ &= 4(3)−240 \\\\ &= 12−240 \\\\ &=−228<0 \\end{align*}\\]\n\nTherefore, \\(5x^2+2\\sqrt{3}xy+12y^2−5=0\\) represents an ellipse.",
+      "prompt": "Example \\(\\PageIndex{5}\\): Identifying the Conic without Rotating Axes\n\nIdentify the conic for each of the following without rotating axes.\n\n1. \\(5x^2+2\\sqrt{3}xy+2y^2−5=0\\)\n\n2. \\(5x^2+2\\sqrt{3}xy+12y^2−5=0\\)\n\nSolution\n\na. Let’s begin by determining \\(A\\), \\(B\\), and \\(C\\).\n\n\\(\\underbrace{5}_{A}x^2+\\underbrace{2\\sqrt{3}}_{B}xy+\\underbrace{2}_{C}y^2−5=0\\)\n\nNow, we find the discriminant.\n\n\\[\\begin{align*} B^2−4AC &= {(2\\sqrt{3})}^2−4(5)(2) \\\\ &=4(3)−40 \\\\ &=12−40 \\\\ &=−28<0 \\end{align*}\\]\n\nTherefore, \\(5x^2+2\\sqrt{3}xy+2y^2−5=0\\) represents an ellipse.\n\nb. Again, let’s begin by determining \\(A\\),\\(B\\), and \\(C\\).\n\n\\(\\underbrace{5}_{A}x^2+\\underbrace{2\\sqrt{3}}_{B}xy+\\underbrace{12}_{C}y^2−5=0 \\nonumber\\)\n\nNow, we find the discriminant.\n\n\\[\\begin{align*} B^2−4AC &= {(2\\sqrt{3})}^2−4(5)(12) \\\\ &= 4(3)−240 \\\\ &= 12−240 \\\\ &=−228<0 \\end{align*}\\]\n\nTherefore, \\(5x^2+2\\sqrt{3}xy+12y^2−5=0\\) represents an ellipse.",
+      "sourceAnswers": [],
+      "hasFigure": false,
+      "status": "draft",
+      "answerVerified": false,
+      "translationStatus": "pending",
+      "mappingStatus": "pending"
+    },
+    {
+      "ordinal": 22,
+      "sourceNumber": "",
+      "sourceAnchor": "",
+      "kind": "exercise-candidate",
+      "context": "\\[A′{x^\\prime }^2+B′x^\\prime y^\\prime +C′{y^\\prime }^2+D′x^\\prime +E′y^\\prime +F′=0\\]\n\nthen \\[B^2−4AC={B′}^2−4A′C′\\]\n\nThe equation \\(Ax^2+Bxy+Cy^2+Dx+Ey+F=0\\) is an ellipse, a parabola, or a hyperbola, or a degenerate case of one of these. If the discriminant, \\(B^2−4AC\\), is",
+      "original": "Exercise \\(\\PageIndex{3}\\)\n\nIdentify the conic for each of the following without rotating axes.\n\n1. \\(x^2−9xy+3y^2−12=0\\)\n\n2. \\(10x^2−9xy+4y^2−4=0\\)\n\nAnswer a\n\nhyperbola\n\nAnswer b\n\nellipse",
+      "prompt": "Exercise \\(\\PageIndex{3}\\)\n\nIdentify the conic for each of the following without rotating axes.\n\n1. \\(x^2−9xy+3y^2−12=0\\)\n\n2. \\(10x^2−9xy+4y^2−4=0\\)",
+      "sourceAnswers": [
+        "hyperbola",
+        "ellipse"
+      ],
+      "hasFigure": false,
+      "status": "draft",
+      "answerVerified": false,
+      "translationStatus": "pending",
+      "mappingStatus": "pending"
+    }
+  ],
+  "license": "CC BY 4.0",
+  "licenseEvidence": "This page titled 12.4: Rotation of Axes was last modified on Sun, 27 Apr 2025 18:27:18 GMT and is shared under a CC BY  4.0  license and was authored, remixed, and/or curated by OpenStax via source content that was edited to the style and standards of the LibreTexts platform.",
+  "url": "https://math.libretexts.org/Bookshelves/Algebra/Algebra_and_Trigonometry_1e_(OpenStax)/12:_Analytic_Geometry/12.04:_Rotation_of_Axes",
+  "sha256": "8e09b0c2d5a73e8e549944ee211050bf22d025de10f789cce2effcfdb6be057f",
+  "checkedAt": "2026-10-07",
+  "id": "b205ca04937d338e1175",
+  "bookId": "algebra-trigonometry",
+  "licenseInherited": false,
+  "licenseSource": "https://math.libretexts.org/Bookshelves/Algebra/Algebra_and_Trigonometry_1e_(OpenStax)/12:_Analytic_Geometry/12.04:_Rotation_of_Axes",
+  "licenseUrl": "https://creativecommons.org/licenses/by/4.0/",
+  "authors": "OpenStax / Jay Abramson et al.",
+  "book": "Algebra and Trigonometry 1e",
+  "reviewStatus": "unreviewed",
+  "sourceLanguage": "en",
+  "translationStatus": "pending"
+}

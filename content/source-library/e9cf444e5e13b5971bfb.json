@@ -1,0 +1,315 @@
+{
+  "title": "4.7: Poisson Distribution",
+  "originalText": "There are two main characteristics of a Poisson experiment.\n\n1. The Poisson probability distribution gives the probability of a number of events occurring in a fixed interval of time or space if these events happen with a known average rate and independently of the time since the last event. For example, a book editor might be interested in the number of words spelled incorrectly in a particular book. It might be that, on the average, there are five words spelled incorrectly in 100 pages. The interval is the 100 pages.\n\n2. The Poisson distribution may be used to approximate the binomial if the probability of success is \"small\" (such as 0.01) and the number of trials is \"large\" (such as 1,000). You will verify the relationship in the homework exercises. n is the number of trials, and p is the probability of a \"success.\"\n\nThe random variable X = the number of occurrences in the interval of interest.\n\nExample \\(\\PageIndex{1}\\)\n\nThe average number of loaves of bread put on a shelf in a bakery in a half-hour period is 12 . Of interest is the number of loaves of bread put on the shelf in five minutes. The time interval of interest is five minutes. What is the probability that the number of loaves, selected randomly, put on the shelf in five minutes is three?\n\nSolution\n\nLet \\(X=\\) the number of loaves of bread put on the shelf in five minutes. If the average number of loaves put on the shelf in 30 minutes (half-hour) is 12, then the average number of loaves put on the shelf in five minutes is \\(\\left(\\frac{5}{30}\\right)(12)=2\\) loaves of bread.\n\nThe probability question asks you to find \\(P(x=3)\\).\n\nTry It \\(\\PageIndex{1}\\)\n\nThe average number of fish caught in an hour is eight. Of interest is the number of fish caught in 15 minutes. The time interval of interest is 15 minutes. What is the average number of fish caught in 15 minutes?\n\nExercise \\(\\PageIndex{1}\\)\n\nA bank expects to receive six bad checks per day, on average. What is the probability of the bank getting fewer than five bad checks on any given day? Of interest is the number of checks the bank receives in one day, so the time interval of interest is one day. Let X = the number of bad checks the bank receives in one day. If the bank expects to receive six bad checks per day then the average is six checks per day. Write a mathematical statement for the probability question.\n\nAnswer\n\nP (x < 5)\n\nTry It \\(\\PageIndex{1}\\)\n\nAn electronics store expects to have ten returns per day on average. The manager wants to know the probability of the store getting fewer than eight returns on any given day. State the probability question mathematically.\n\nExercise \\(\\PageIndex{2}\\)\n\nYou notice that a news reporter says \"uh,\" on average, two times per broadcast. What is the probability that the news reporter says \"uh\" more than two times per broadcast.\n\nThis is a Poisson problem because you are interested in knowing the number of times the news reporter says \"uh\" during a broadcast.\n\na. What is the interval of interest?\n\nb. What is the average number of times the news reporter says \"uh\" during one broadcast?\n\nc. Let X = ____________. What values does X take on?\n\nd. The probability question is P (______).\n\nAnswer\n\na. one broadcast measured in minutes\n\nb. 2\n\nc. Let X = the number of times the news reporter says \"uh\" during one broadcast. x = 0, 1, 2, 3, ..\n\nd. P (x > 2)\n\nTry It \\(\\PageIndex{2}\\)\n\nAn emergency room at a particular hospital gets an average of five patients per hour. A doctor wants to know the probability that the ER gets more than five patients per hour. Give the reason why this would be a Poisson distribution.\n\nNotation for the Poisson: P = Poisson Probability Distribution Function\n\n\\(X \\sim P(\\mu)\\)\n\nRead this as \" \\(X\\) is a random variable with a Poisson distribution.\" The parameter is \\(\\mu(\\) or \\(\\lambda) ; \\mu(\\) or \\(\\lambda)=\\) the mean for the interval of our interest. The mean is the number of occurrences that occur on average during the interval period.\n\nExample \\(\\PageIndex{1}\\)\n\nLeah receives about six telephone calls between 8 a.m. and 10 a.m. What is the probability that Leah receives more than one call in the next 15 minutes?\n\nSolution\n\nLet \\(X=\\) the number of calls Leah receives in 15 minutes. (The interval of interest is 15 minutes or \\(\\frac{1}{4}\\) hour.)\n\n\\[\n\nx=0,1,2,3, \\ldots\n\n\\]\n\nIf Leah receives, on the average, six telephone calls in two hours, and there are eight 15 minute intervals in two hours, then Leah receives\n\n\\(\\left(\\frac{1}{8}\\right)(6)=0.75\\) calls in 15 minutes, on average. So, \\(\\mu=0.75\\) for this problem.\n\nThe Poisson distribution is discrete, and thus \\(>1\\) includes all whole numbers through infinity. The solution is to subtract the probability less than 1 thus \\(1-[P(x=0)+P(x=1)]\\)\n\n\\[\\begin{array}{c}\n\nP(x)=\\frac{\\mu^x e^{-\\mu}}{x!} \\\\\n\nP(x>1)=1-P(x \\leq 1)=1-[P(x=0)+P(x=1)] \\\\\n\n=1-\\left[\\frac{0.75^0 e^{-0.75}}{0!}+\\frac{0.75^1 e^{-0.75}}{1!}\\right] \\\\\n\n=1-\\left[\\frac{(1)(0.4724)}{1}+\\frac{(0.75)(0.4724)}{1}\\right] \\\\\n\n=1-[0.4724+0.3543]=0.1733\n\n\\end{array}\\]\n\n[Figure: Histogram of probability distribution of the given data.]\n\nFigure \\(\\PageIndex{1}\\):\n\nThe y-axis in Figure \\(\\PageIndex{1}\\) contains the probability of x where X = the number of calls in 15 minutes\n\nTry It \\(\\PageIndex{3}\\)\n\nA customer service center receives about ten emails every half-hour. What is the probability that the customer service center receives more than four emails in the next six minutes?\n\nExercise \\(\\PageIndex{3}\\)\n\nAccording to Baydin, an email management company, an email user gets, on average, 147 emails per day. Let X = the number of emails an email user receives per day. The discrete random variable X takes on the values x = 0, 1, 2 …. The random variable X has a Poisson distribution: X ~ P (147). The mean is 147 emails.\n\n1. What is the probability that an email user receives exactly 160 emails per day?\n\n2. What is the probability that an email user receives at most 160 emails per day?\n\n3. What is the standard deviation?\n\nAnswer\n\na. \\(P(x=160)=\\sim P(147,160) \\approx 0.0180\\)\n\nb. \\(P(x \\leq 160)=\\sim P(147,160) \\approx 0.8666\\)\n\nc. Standard Deviation \\(=\\sigma=\\sqrt{\\mu}=\\sqrt{147} \\approx 12.1244\\)\n\nTry It \\(\\PageIndex{4}\\)\n\nAccording to a recent poll by the Pew Internet Project, people between the ages of 14 and 17 send an average of 187 text messages each day. Let X = the number of texts that a girl aged 14 to 17 sends per day. The discrete random variable X takes on the values x = 0, 1, 2 …. The random variable X has a Poisson distribution: X ~ P(187). The mean is 187 text messages.\n\n1. What is the probability that a person sends exactly 175 texts per day?\n\n2. What is the probability that a person sends at most 150 texts per day?\n\n3. What is the standard deviation?\n\nExercise \\(\\PageIndex{4}\\)\n\nText message users receive or send an average of 41.5 text messages per day.\n\n1. How many text messages does a text message user receive or send per hour?\n\n2. What is the probability that a text message user receives or sends two messages per hour?\n\n3. What is the probability that a text message user receives or sends more than two messages per hour?\n\nAnswer\n\na. Let \\(X=\\) the number of texts that a user sends or receives in one hour. The average number of texts received per hour is \\(\\dfrac{41.5}{24} \\approx 1.7292\\).\n\nb. \\(P(x=2)=\\dfrac{\\mu^x e^{-\\mu}}{\\mathrm{x}!}=\\dfrac{1.729^2 e^{-1.729}}{2!}=0.265\\)\n\nc. \\(P(x>2)=1-P(x \\leq 2)=1-\\left[\\dfrac{7^0 e^{-7}}{0!}+\\dfrac{7^1 e^{-7}}{1!}+\\dfrac{7^2 e^{-7}}{2!}\\right]=0.250\\)\n\nTry It \\(\\PageIndex{5}\\)\n\nAtlanta’s Hartsfield-Jackson International Airport is the busiest airport in the world. On average there are 2,700 arrivals and departures each day.\n\n1. How many airplanes arrive and depart the airport per hour?\n\n2. What is the probability that there are exactly 100 arrivals and departures in one hour?\n\n3. What is the probability that there are at most 100 arrivals and departures in one hour?\n\nSolution\n\n1. Let X = the number of texts that a user sends or receives in one hour. The average number of texts received per hour is 41.524\" role=\"presentation\" style=\"position: relative;\">41.524\\(\\frac{41.5}{24}\\) ≈ 1.7292.\n\n2. X ~ P(1.7292), so P(x = 2) = poissonpdf(1.7292, 2) ≈ 0.2653\n\n3. P(x > 2) = 1 – P(x ≤ 2) = 1 – poissoncdf(1.7292, 2) ≈ 1 – 0.7495 = 0.2505\n\nExercise \\(\\PageIndex{6}\\)\n\nOn a specific day in May starting at 4:30 PM, the probability of low seismic activity for the next 48 hours in Alaska was reported as about 1.02%. Use this information for the next 200 days to find the probability that there will be low seismic activity in ten of the next 200 days. Use both the binomial and Poisson distributions to calculate the probabilities. Are they close?\n\nAnswer\n\nLet \\(X=\\) the number of days with low seismic activity.\n\nUsing the binomial distribution:\n\n\\[P(x=10)=\\dfrac{200!}{10!(200-10)!} \\times .0102^{10} \\times .9898^{190}=0.000039\\]\n\nUsing the Poisson distribution:\n\n\\[\\begin{array}{l}\n\n    \\text { Calculate } \\mu=n p=200(0.0102) \\approx 2.04 \\\\\n\n    P(x=10)=\\dfrac{\\mu^x e^{-\\mu}}{\\mathrm{x}!}=\\dfrac{2.04^{10} e^{-2.04}}{10!}=0.000045\n\n    \\end{array}\\]\n\nWe expect the approximation to be good because \\(n\\) is large (greater than 20) and \\(p\\) is small (less than \\(0.05)\\). The results are close-both probabilities reported are almost 0 .\n\nSolution\n\nLet X = the number of days with low seismic activity.\n\nUsing the binomial distribution:\n\nP(x = 10) = binompdf(200, .0102, 10) ≈ 0.000039\n\nUsing the Poisson distribution:\n\nCalculate μ = np = 200(0.0102) ≈ 2.04\n\nP(x = 10) = poissonpdf(2.04, 10) ≈ 0.000045\n\nWe expect the approximation to be good because n is large (greater than 20) and p is small (less than 0.05). The results are close—both probabilities reported are almost 0.\n\nTry It \\(\\PageIndex{6}\\)\n\nOn a specific day in May starting at 4:30 PM, the probability of moderate seismic activity for the next 48 hours in the Kuril Islands off the coast of Japan was reported at about 1.43%. Use this information for the next 100 days to find the probability that there will be low seismic activity in five of the next 100 days. Use both the binomial and Poisson distributions to calculate the probabilities. Are they close?\n\nThis page titled 4.7: Poisson Distribution was last modified on Thu, 07 May 2026 20:05:50 GMT and is shared under a CC BY  4.0  license and was authored, remixed, and/or curated by OpenStax via source content that was edited to the style and standards of the LibreTexts platform.",
+  "figures": [
+    {
+      "url": "https://stats.libretexts.org/@api/deki/files/40943/e3812fafd47287ad4f278c125788bb0d642f2cb9?revision=1&size=bestfit&height=320",
+      "alt": "Histogram of probability distribution of the given data.",
+      "credit": ""
+    }
+  ],
+  "references": [
+    {
+      "text": "4.7: Poisson Distribution",
+      "url": "https://stats.libretexts.org/Bookshelves/Introductory_Statistics/Introductory_Statistics_2e_(OpenStax)/04%3A_Discrete_Random_Variables/4.07%3A_Poisson_Distribution"
+    },
+    {
+      "text": "CC BY  4.0",
+      "url": "https://creativecommons.org/licenses/by/4.0"
+    },
+    {
+      "text": "OpenStax",
+      "url": "https://openstax.org/"
+    },
+    {
+      "text": "source content",
+      "url": "https://openstax.org/details/books/introductory-statistics"
+    }
+  ],
+  "exercises": [
+    {
+      "ordinal": 1,
+      "sourceNumber": "1",
+      "sourceAnchor": "",
+      "kind": "exercise-candidate",
+      "context": "There are two main characteristics of a Poisson experiment.",
+      "original": "1. The Poisson probability distribution gives the probability of a number of events occurring in a fixed interval of time or space if these events happen with a known average rate and independently of the time since the last event. For example, a book editor might be interested in the number of words spelled incorrectly in a particular book. It might be that, on the average, there are five words spelled incorrectly in 100 pages. The interval is the 100 pages.",
+      "prompt": "1. The Poisson probability distribution gives the probability of a number of events occurring in a fixed interval of time or space if these events happen with a known average rate and independently of the time since the last event. For example, a book editor might be interested in the number of words spelled incorrectly in a particular book. It might be that, on the average, there are five words spelled incorrectly in 100 pages. The interval is the 100 pages.",
+      "sourceAnswers": [],
+      "hasFigure": false,
+      "status": "draft",
+      "answerVerified": false,
+      "translationStatus": "pending",
+      "mappingStatus": "pending"
+    },
+    {
+      "ordinal": 2,
+      "sourceNumber": "2",
+      "sourceAnchor": "",
+      "kind": "exercise-candidate",
+      "context": "There are two main characteristics of a Poisson experiment.",
+      "original": "2. The Poisson distribution may be used to approximate the binomial if the probability of success is \"small\" (such as 0.01) and the number of trials is \"large\" (such as 1,000). You will verify the relationship in the homework exercises. n is the number of trials, and p is the probability of a \"success.\"",
+      "prompt": "2. The Poisson distribution may be used to approximate the binomial if the probability of success is \"small\" (such as 0.01) and the number of trials is \"large\" (such as 1,000). You will verify the relationship in the homework exercises. n is the number of trials, and p is the probability of a \"success.\"",
+      "sourceAnswers": [],
+      "hasFigure": false,
+      "status": "draft",
+      "answerVerified": false,
+      "translationStatus": "pending",
+      "mappingStatus": "pending"
+    },
+    {
+      "ordinal": 3,
+      "sourceNumber": "",
+      "sourceAnchor": "",
+      "kind": "example-or-exercise",
+      "context": "There are two main characteristics of a Poisson experiment.\n\nThe random variable X = the number of occurrences in the interval of interest.",
+      "original": "Example \\(\\PageIndex{1}\\)\n\nThe average number of loaves of bread put on a shelf in a bakery in a half-hour period is 12 . Of interest is the number of loaves of bread put on the shelf in five minutes. The time interval of interest is five minutes. What is the probability that the number of loaves, selected randomly, put on the shelf in five minutes is three?\n\nSolution\n\nLet \\(X=\\) the number of loaves of bread put on the shelf in five minutes. If the average number of loaves put on the shelf in 30 minutes (half-hour) is 12, then the average number of loaves put on the shelf in five minutes is \\(\\left(\\frac{5}{30}\\right)(12)=2\\) loaves of bread.\n\nThe probability question asks you to find \\(P(x=3)\\).",
+      "prompt": "Example \\(\\PageIndex{1}\\)\n\nThe average number of loaves of bread put on a shelf in a bakery in a half-hour period is 12 . Of interest is the number of loaves of bread put on the shelf in five minutes. The time interval of interest is five minutes. What is the probability that the number of loaves, selected randomly, put on the shelf in five minutes is three?\n\nSolution\n\nLet \\(X=\\) the number of loaves of bread put on the shelf in five minutes. If the average number of loaves put on the shelf in 30 minutes (half-hour) is 12, then the average number of loaves put on the shelf in five minutes is \\(\\left(\\frac{5}{30}\\right)(12)=2\\) loaves of bread.\n\nThe probability question asks you to find \\(P(x=3)\\).",
+      "sourceAnswers": [],
+      "hasFigure": false,
+      "status": "draft",
+      "answerVerified": false,
+      "translationStatus": "pending",
+      "mappingStatus": "pending"
+    },
+    {
+      "ordinal": 4,
+      "sourceNumber": "",
+      "sourceAnchor": "",
+      "kind": "exercise-candidate",
+      "context": "There are two main characteristics of a Poisson experiment.\n\nThe random variable X = the number of occurrences in the interval of interest.\n\nThe average number of fish caught in an hour is eight. Of interest is the number of fish caught in 15 minutes. The time interval of interest is 15 minutes. What is the average number of fish caught in 15 minutes?",
+      "original": "Exercise \\(\\PageIndex{1}\\)\n\nA bank expects to receive six bad checks per day, on average. What is the probability of the bank getting fewer than five bad checks on any given day? Of interest is the number of checks the bank receives in one day, so the time interval of interest is one day. Let X = the number of bad checks the bank receives in one day. If the bank expects to receive six bad checks per day then the average is six checks per day. Write a mathematical statement for the probability question.\n\nAnswer\n\nP (x < 5)",
+      "prompt": "Exercise \\(\\PageIndex{1}\\)\n\nA bank expects to receive six bad checks per day, on average. What is the probability of the bank getting fewer than five bad checks on any given day? Of interest is the number of checks the bank receives in one day, so the time interval of interest is one day. Let X = the number of bad checks the bank receives in one day. If the bank expects to receive six bad checks per day then the average is six checks per day. Write a mathematical statement for the probability question.",
+      "sourceAnswers": [
+        "P (x < 5)"
+      ],
+      "hasFigure": false,
+      "status": "draft",
+      "answerVerified": false,
+      "translationStatus": "pending",
+      "mappingStatus": "pending"
+    },
+    {
+      "ordinal": 5,
+      "sourceNumber": "",
+      "sourceAnchor": "",
+      "kind": "exercise-candidate",
+      "context": "The random variable X = the number of occurrences in the interval of interest.\n\nThe average number of fish caught in an hour is eight. Of interest is the number of fish caught in 15 minutes. The time interval of interest is 15 minutes. What is the average number of fish caught in 15 minutes?\n\nAn electronics store expects to have ten returns per day on average. The manager wants to know the probability of the store getting fewer than eight returns on any given day. State the probability question mathematically.",
+      "original": "Exercise \\(\\PageIndex{2}\\)\n\nYou notice that a news reporter says \"uh,\" on average, two times per broadcast. What is the probability that the news reporter says \"uh\" more than two times per broadcast.\n\nThis is a Poisson problem because you are interested in knowing the number of times the news reporter says \"uh\" during a broadcast.\n\na. What is the interval of interest?\n\nb. What is the average number of times the news reporter says \"uh\" during one broadcast?\n\nc. Let X = ____________. What values does X take on?\n\nd. The probability question is P (______).\n\nAnswer\n\na. one broadcast measured in minutes\n\nb. 2\n\nc. Let X = the number of times the news reporter says \"uh\" during one broadcast. x = 0, 1, 2, 3, ..\n\nd. P (x > 2)",
+      "prompt": "Exercise \\(\\PageIndex{2}\\)\n\nYou notice that a news reporter says \"uh,\" on average, two times per broadcast. What is the probability that the news reporter says \"uh\" more than two times per broadcast.\n\nThis is a Poisson problem because you are interested in knowing the number of times the news reporter says \"uh\" during a broadcast.\n\na. What is the interval of interest?\n\nb. What is the average number of times the news reporter says \"uh\" during one broadcast?\n\nc. Let X = ____________. What values does X take on?\n\nd. The probability question is P (______).",
+      "sourceAnswers": [
+        "a. one broadcast measured in minutes\n\nb. 2\n\nc. Let X = the number of times the news reporter says \"uh\" during one broadcast. x = 0, 1, 2, 3, ..\n\nd. P (x > 2)"
+      ],
+      "hasFigure": false,
+      "status": "draft",
+      "answerVerified": false,
+      "translationStatus": "pending",
+      "mappingStatus": "pending"
+    },
+    {
+      "ordinal": 6,
+      "sourceNumber": "",
+      "sourceAnchor": "",
+      "kind": "example-or-exercise",
+      "context": "Notation for the Poisson: P = Poisson Probability Distribution Function\n\n\\(X \\sim P(\\mu)\\)\n\nRead this as \" \\(X\\) is a random variable with a Poisson distribution.\" The parameter is \\(\\mu(\\) or \\(\\lambda) ; \\mu(\\) or \\(\\lambda)=\\) the mean for the interval of our interest. The mean is the number of occurrences that occur on average during the interval period.",
+      "original": "Example \\(\\PageIndex{1}\\)\n\nLeah receives about six telephone calls between 8 a.m. and 10 a.m. What is the probability that Leah receives more than one call in the next 15 minutes?\n\nSolution\n\nLet \\(X=\\) the number of calls Leah receives in 15 minutes. (The interval of interest is 15 minutes or \\(\\frac{1}{4}\\) hour.)\n\n\\[\n\nx=0,1,2,3, \\ldots\n\n\\]\n\nIf Leah receives, on the average, six telephone calls in two hours, and there are eight 15 minute intervals in two hours, then Leah receives\n\n\\(\\left(\\frac{1}{8}\\right)(6)=0.75\\) calls in 15 minutes, on average. So, \\(\\mu=0.75\\) for this problem.\n\nThe Poisson distribution is discrete, and thus \\(>1\\) includes all whole numbers through infinity. The solution is to subtract the probability less than 1 thus \\(1-[P(x=0)+P(x=1)]\\)\n\n\\[\\begin{array}{c}\n\nP(x)=\\frac{\\mu^x e^{-\\mu}}{x!} \\\\\n\nP(x>1)=1-P(x \\leq 1)=1-[P(x=0)+P(x=1)] \\\\\n\n=1-\\left[\\frac{0.75^0 e^{-0.75}}{0!}+\\frac{0.75^1 e^{-0.75}}{1!}\\right] \\\\\n\n=1-\\left[\\frac{(1)(0.4724)}{1}+\\frac{(0.75)(0.4724)}{1}\\right] \\\\\n\n=1-[0.4724+0.3543]=0.1733\n\n\\end{array}\\]\n\n[Figure: Histogram of probability distribution of the given data.]\n\nFigure \\(\\PageIndex{1}\\):\n\nThe y-axis in Figure \\(\\PageIndex{1}\\) contains the probability of x where X = the number of calls in 15 minutes",
+      "prompt": "Example \\(\\PageIndex{1}\\)\n\nLeah receives about six telephone calls between 8 a.m. and 10 a.m. What is the probability that Leah receives more than one call in the next 15 minutes?\n\nSolution\n\nLet \\(X=\\) the number of calls Leah receives in 15 minutes. (The interval of interest is 15 minutes or \\(\\frac{1}{4}\\) hour.)\n\n\\[\n\nx=0,1,2,3, \\ldots\n\n\\]\n\nIf Leah receives, on the average, six telephone calls in two hours, and there are eight 15 minute intervals in two hours, then Leah receives\n\n\\(\\left(\\frac{1}{8}\\right)(6)=0.75\\) calls in 15 minutes, on average. So, \\(\\mu=0.75\\) for this problem.\n\nThe Poisson distribution is discrete, and thus \\(>1\\) includes all whole numbers through infinity. The solution is to subtract the probability less than 1 thus \\(1-[P(x=0)+P(x=1)]\\)\n\n\\[\\begin{array}{c}\n\nP(x)=\\frac{\\mu^x e^{-\\mu}}{x!} \\\\\n\nP(x>1)=1-P(x \\leq 1)=1-[P(x=0)+P(x=1)] \\\\\n\n=1-\\left[\\frac{0.75^0 e^{-0.75}}{0!}+\\frac{0.75^1 e^{-0.75}}{1!}\\right] \\\\\n\n=1-\\left[\\frac{(1)(0.4724)}{1}+\\frac{(0.75)(0.4724)}{1}\\right] \\\\\n\n=1-[0.4724+0.3543]=0.1733\n\n\\end{array}\\]\n\n[Figure: Histogram of probability distribution of the given data.]\n\nFigure \\(\\PageIndex{1}\\):\n\nThe y-axis in Figure \\(\\PageIndex{1}\\) contains the probability of x where X = the number of calls in 15 minutes",
+      "sourceAnswers": [],
+      "hasFigure": true,
+      "status": "draft",
+      "answerVerified": false,
+      "translationStatus": "pending",
+      "mappingStatus": "pending"
+    },
+    {
+      "ordinal": 7,
+      "sourceNumber": "",
+      "sourceAnchor": "",
+      "kind": "exercise-candidate",
+      "context": "\\(X \\sim P(\\mu)\\)\n\nRead this as \" \\(X\\) is a random variable with a Poisson distribution.\" The parameter is \\(\\mu(\\) or \\(\\lambda) ; \\mu(\\) or \\(\\lambda)=\\) the mean for the interval of our interest. The mean is the number of occurrences that occur on average during the interval period.\n\nA customer service center receives about ten emails every half-hour. What is the probability that the customer service center receives more than four emails in the next six minutes?",
+      "original": "Exercise \\(\\PageIndex{3}\\)\n\nAccording to Baydin, an email management company, an email user gets, on average, 147 emails per day. Let X = the number of emails an email user receives per day. The discrete random variable X takes on the values x = 0, 1, 2 …. The random variable X has a Poisson distribution: X ~ P (147). The mean is 147 emails.\n\n1. What is the probability that an email user receives exactly 160 emails per day?\n\n2. What is the probability that an email user receives at most 160 emails per day?\n\n3. What is the standard deviation?\n\nAnswer\n\na. \\(P(x=160)=\\sim P(147,160) \\approx 0.0180\\)\n\nb. \\(P(x \\leq 160)=\\sim P(147,160) \\approx 0.8666\\)\n\nc. Standard Deviation \\(=\\sigma=\\sqrt{\\mu}=\\sqrt{147} \\approx 12.1244\\)",
+      "prompt": "Exercise \\(\\PageIndex{3}\\)\n\nAccording to Baydin, an email management company, an email user gets, on average, 147 emails per day. Let X = the number of emails an email user receives per day. The discrete random variable X takes on the values x = 0, 1, 2 …. The random variable X has a Poisson distribution: X ~ P (147). The mean is 147 emails.\n\n1. What is the probability that an email user receives exactly 160 emails per day?\n\n2. What is the probability that an email user receives at most 160 emails per day?\n\n3. What is the standard deviation?",
+      "sourceAnswers": [
+        "a. \\(P(x=160)=\\sim P(147,160) \\approx 0.0180\\)\n\nb. \\(P(x \\leq 160)=\\sim P(147,160) \\approx 0.8666\\)\n\nc. Standard Deviation \\(=\\sigma=\\sqrt{\\mu}=\\sqrt{147} \\approx 12.1244\\)"
+      ],
+      "hasFigure": false,
+      "status": "draft",
+      "answerVerified": false,
+      "translationStatus": "pending",
+      "mappingStatus": "pending"
+    },
+    {
+      "ordinal": 8,
+      "sourceNumber": "1",
+      "sourceAnchor": "",
+      "kind": "exercise-candidate",
+      "context": "Read this as \" \\(X\\) is a random variable with a Poisson distribution.\" The parameter is \\(\\mu(\\) or \\(\\lambda) ; \\mu(\\) or \\(\\lambda)=\\) the mean for the interval of our interest. The mean is the number of occurrences that occur on average during the interval period.\n\nA customer service center receives about ten emails every half-hour. What is the probability that the customer service center receives more than four emails in the next six minutes?\n\nAccording to a recent poll by the Pew Internet Project, people between the ages of 14 and 17 send an average of 187 text messages each day. Let X = the number of texts that a girl aged 14 to 17 sends per day. The discrete random variable X takes on the values x = 0, 1, 2 …. The random variable X has a Poisson distribution: X ~ P(187). The mean is 187 text messages.",
+      "original": "1. What is the probability that a person sends exactly 175 texts per day?",
+      "prompt": "1. What is the probability that a person sends exactly 175 texts per day?",
+      "sourceAnswers": [],
+      "hasFigure": false,
+      "status": "draft",
+      "answerVerified": false,
+      "translationStatus": "pending",
+      "mappingStatus": "pending"
+    },
+    {
+      "ordinal": 9,
+      "sourceNumber": "2",
+      "sourceAnchor": "",
+      "kind": "exercise-candidate",
+      "context": "Read this as \" \\(X\\) is a random variable with a Poisson distribution.\" The parameter is \\(\\mu(\\) or \\(\\lambda) ; \\mu(\\) or \\(\\lambda)=\\) the mean for the interval of our interest. The mean is the number of occurrences that occur on average during the interval period.\n\nA customer service center receives about ten emails every half-hour. What is the probability that the customer service center receives more than four emails in the next six minutes?\n\nAccording to a recent poll by the Pew Internet Project, people between the ages of 14 and 17 send an average of 187 text messages each day. Let X = the number of texts that a girl aged 14 to 17 sends per day. The discrete random variable X takes on the values x = 0, 1, 2 …. The random variable X has a Poisson distribution: X ~ P(187). The mean is 187 text messages.",
+      "original": "2. What is the probability that a person sends at most 150 texts per day?",
+      "prompt": "2. What is the probability that a person sends at most 150 texts per day?",
+      "sourceAnswers": [],
+      "hasFigure": false,
+      "status": "draft",
+      "answerVerified": false,
+      "translationStatus": "pending",
+      "mappingStatus": "pending"
+    },
+    {
+      "ordinal": 10,
+      "sourceNumber": "3",
+      "sourceAnchor": "",
+      "kind": "exercise-candidate",
+      "context": "Read this as \" \\(X\\) is a random variable with a Poisson distribution.\" The parameter is \\(\\mu(\\) or \\(\\lambda) ; \\mu(\\) or \\(\\lambda)=\\) the mean for the interval of our interest. The mean is the number of occurrences that occur on average during the interval period.\n\nA customer service center receives about ten emails every half-hour. What is the probability that the customer service center receives more than four emails in the next six minutes?\n\nAccording to a recent poll by the Pew Internet Project, people between the ages of 14 and 17 send an average of 187 text messages each day. Let X = the number of texts that a girl aged 14 to 17 sends per day. The discrete random variable X takes on the values x = 0, 1, 2 …. The random variable X has a Poisson distribution: X ~ P(187). The mean is 187 text messages.",
+      "original": "3. What is the standard deviation?",
+      "prompt": "3. What is the standard deviation?",
+      "sourceAnswers": [],
+      "hasFigure": false,
+      "status": "draft",
+      "answerVerified": false,
+      "translationStatus": "pending",
+      "mappingStatus": "pending"
+    },
+    {
+      "ordinal": 11,
+      "sourceNumber": "",
+      "sourceAnchor": "",
+      "kind": "exercise-candidate",
+      "context": "Read this as \" \\(X\\) is a random variable with a Poisson distribution.\" The parameter is \\(\\mu(\\) or \\(\\lambda) ; \\mu(\\) or \\(\\lambda)=\\) the mean for the interval of our interest. The mean is the number of occurrences that occur on average during the interval period.\n\nA customer service center receives about ten emails every half-hour. What is the probability that the customer service center receives more than four emails in the next six minutes?\n\nAccording to a recent poll by the Pew Internet Project, people between the ages of 14 and 17 send an average of 187 text messages each day. Let X = the number of texts that a girl aged 14 to 17 sends per day. The discrete random variable X takes on the values x = 0, 1, 2 …. The random variable X has a Poisson distribution: X ~ P(187). The mean is 187 text messages.",
+      "original": "Exercise \\(\\PageIndex{4}\\)\n\nText message users receive or send an average of 41.5 text messages per day.\n\n1. How many text messages does a text message user receive or send per hour?\n\n2. What is the probability that a text message user receives or sends two messages per hour?\n\n3. What is the probability that a text message user receives or sends more than two messages per hour?\n\nAnswer\n\na. Let \\(X=\\) the number of texts that a user sends or receives in one hour. The average number of texts received per hour is \\(\\dfrac{41.5}{24} \\approx 1.7292\\).\n\nb. \\(P(x=2)=\\dfrac{\\mu^x e^{-\\mu}}{\\mathrm{x}!}=\\dfrac{1.729^2 e^{-1.729}}{2!}=0.265\\)\n\nc. \\(P(x>2)=1-P(x \\leq 2)=1-\\left[\\dfrac{7^0 e^{-7}}{0!}+\\dfrac{7^1 e^{-7}}{1!}+\\dfrac{7^2 e^{-7}}{2!}\\right]=0.250\\)",
+      "prompt": "Exercise \\(\\PageIndex{4}\\)\n\nText message users receive or send an average of 41.5 text messages per day.\n\n1. How many text messages does a text message user receive or send per hour?\n\n2. What is the probability that a text message user receives or sends two messages per hour?\n\n3. What is the probability that a text message user receives or sends more than two messages per hour?",
+      "sourceAnswers": [
+        "a. Let \\(X=\\) the number of texts that a user sends or receives in one hour. The average number of texts received per hour is \\(\\dfrac{41.5}{24} \\approx 1.7292\\).\n\nb. \\(P(x=2)=\\dfrac{\\mu^x e^{-\\mu}}{\\mathrm{x}!}=\\dfrac{1.729^2 e^{-1.729}}{2!}=0.265\\)\n\nc. \\(P(x>2)=1-P(x \\leq 2)=1-\\left[\\dfrac{7^0 e^{-7}}{0!}+\\dfrac{7^1 e^{-7}}{1!}+\\dfrac{7^2 e^{-7}}{2!}\\right]=0.250\\)"
+      ],
+      "hasFigure": false,
+      "status": "draft",
+      "answerVerified": false,
+      "translationStatus": "pending",
+      "mappingStatus": "pending"
+    },
+    {
+      "ordinal": 12,
+      "sourceNumber": "1",
+      "sourceAnchor": "",
+      "kind": "exercise-candidate",
+      "context": "A customer service center receives about ten emails every half-hour. What is the probability that the customer service center receives more than four emails in the next six minutes?\n\nAccording to a recent poll by the Pew Internet Project, people between the ages of 14 and 17 send an average of 187 text messages each day. Let X = the number of texts that a girl aged 14 to 17 sends per day. The discrete random variable X takes on the values x = 0, 1, 2 …. The random variable X has a Poisson distribution: X ~ P(187). The mean is 187 text messages.\n\nAtlanta’s Hartsfield-Jackson International Airport is the busiest airport in the world. On average there are 2,700 arrivals and departures each day.",
+      "original": "1. How many airplanes arrive and depart the airport per hour?",
+      "prompt": "1. How many airplanes arrive and depart the airport per hour?",
+      "sourceAnswers": [],
+      "hasFigure": false,
+      "status": "draft",
+      "answerVerified": false,
+      "translationStatus": "pending",
+      "mappingStatus": "pending"
+    },
+    {
+      "ordinal": 13,
+      "sourceNumber": "2",
+      "sourceAnchor": "",
+      "kind": "exercise-candidate",
+      "context": "A customer service center receives about ten emails every half-hour. What is the probability that the customer service center receives more than four emails in the next six minutes?\n\nAccording to a recent poll by the Pew Internet Project, people between the ages of 14 and 17 send an average of 187 text messages each day. Let X = the number of texts that a girl aged 14 to 17 sends per day. The discrete random variable X takes on the values x = 0, 1, 2 …. The random variable X has a Poisson distribution: X ~ P(187). The mean is 187 text messages.\n\nAtlanta’s Hartsfield-Jackson International Airport is the busiest airport in the world. On average there are 2,700 arrivals and departures each day.",
+      "original": "2. What is the probability that there are exactly 100 arrivals and departures in one hour?",
+      "prompt": "2. What is the probability that there are exactly 100 arrivals and departures in one hour?",
+      "sourceAnswers": [],
+      "hasFigure": false,
+      "status": "draft",
+      "answerVerified": false,
+      "translationStatus": "pending",
+      "mappingStatus": "pending"
+    },
+    {
+      "ordinal": 14,
+      "sourceNumber": "3",
+      "sourceAnchor": "",
+      "kind": "exercise-candidate",
+      "context": "A customer service center receives about ten emails every half-hour. What is the probability that the customer service center receives more than four emails in the next six minutes?\n\nAccording to a recent poll by the Pew Internet Project, people between the ages of 14 and 17 send an average of 187 text messages each day. Let X = the number of texts that a girl aged 14 to 17 sends per day. The discrete random variable X takes on the values x = 0, 1, 2 …. The random variable X has a Poisson distribution: X ~ P(187). The mean is 187 text messages.\n\nAtlanta’s Hartsfield-Jackson International Airport is the busiest airport in the world. On average there are 2,700 arrivals and departures each day.",
+      "original": "3. What is the probability that there are at most 100 arrivals and departures in one hour?",
+      "prompt": "3. What is the probability that there are at most 100 arrivals and departures in one hour?",
+      "sourceAnswers": [],
+      "hasFigure": false,
+      "status": "draft",
+      "answerVerified": false,
+      "translationStatus": "pending",
+      "mappingStatus": "pending"
+    },
+    {
+      "ordinal": 15,
+      "sourceNumber": "",
+      "sourceAnchor": "fs-idm133688624",
+      "kind": "exercise-candidate",
+      "context": "A customer service center receives about ten emails every half-hour. What is the probability that the customer service center receives more than four emails in the next six minutes?\n\nAccording to a recent poll by the Pew Internet Project, people between the ages of 14 and 17 send an average of 187 text messages each day. Let X = the number of texts that a girl aged 14 to 17 sends per day. The discrete random variable X takes on the values x = 0, 1, 2 …. The random variable X has a Poisson distribution: X ~ P(187). The mean is 187 text messages.\n\nAtlanta’s Hartsfield-Jackson International Airport is the busiest airport in the world. On average there are 2,700 arrivals and departures each day.",
+      "original": "Solution\n\n1. Let X = the number of texts that a user sends or receives in one hour. The average number of texts received per hour is 41.524\" role=\"presentation\" style=\"position: relative;\">41.524\\(\\frac{41.5}{24}\\) ≈ 1.7292.\n\n2. X ~ P(1.7292), so P(x = 2) = poissonpdf(1.7292, 2) ≈ 0.2653\n\n3. P(x > 2) = 1 – P(x ≤ 2) = 1 – poissoncdf(1.7292, 2) ≈ 1 – 0.7495 = 0.2505",
+      "prompt": "",
+      "sourceAnswers": [
+        "Solution\n\n1. Let X = the number of texts that a user sends or receives in one hour. The average number of texts received per hour is 41.524\" role=\"presentation\" style=\"position: relative;\">41.524\\(\\frac{41.5}{24}\\) ≈ 1.7292.\n\n2. X ~ P(1.7292), so P(x = 2) = poissonpdf(1.7292, 2) ≈ 0.2653\n\n3. P(x > 2) = 1 – P(x ≤ 2) = 1 – poissoncdf(1.7292, 2) ≈ 1 – 0.7495 = 0.2505"
+      ],
+      "hasFigure": false,
+      "status": "draft",
+      "answerVerified": false,
+      "translationStatus": "pending",
+      "mappingStatus": "pending"
+    },
+    {
+      "ordinal": 16,
+      "sourceNumber": "",
+      "sourceAnchor": "",
+      "kind": "exercise-candidate",
+      "context": "A customer service center receives about ten emails every half-hour. What is the probability that the customer service center receives more than four emails in the next six minutes?\n\nAccording to a recent poll by the Pew Internet Project, people between the ages of 14 and 17 send an average of 187 text messages each day. Let X = the number of texts that a girl aged 14 to 17 sends per day. The discrete random variable X takes on the values x = 0, 1, 2 …. The random variable X has a Poisson distribution: X ~ P(187). The mean is 187 text messages.\n\nAtlanta’s Hartsfield-Jackson International Airport is the busiest airport in the world. On average there are 2,700 arrivals and departures each day.",
+      "original": "Exercise \\(\\PageIndex{6}\\)\n\nOn a specific day in May starting at 4:30 PM, the probability of low seismic activity for the next 48 hours in Alaska was reported as about 1.02%. Use this information for the next 200 days to find the probability that there will be low seismic activity in ten of the next 200 days. Use both the binomial and Poisson distributions to calculate the probabilities. Are they close?\n\nAnswer\n\nLet \\(X=\\) the number of days with low seismic activity.\n\nUsing the binomial distribution:\n\n\\[P(x=10)=\\dfrac{200!}{10!(200-10)!} \\times .0102^{10} \\times .9898^{190}=0.000039\\]\n\nUsing the Poisson distribution:\n\n\\[\\begin{array}{l}\n\n    \\text { Calculate } \\mu=n p=200(0.0102) \\approx 2.04 \\\\\n\n    P(x=10)=\\dfrac{\\mu^x e^{-\\mu}}{\\mathrm{x}!}=\\dfrac{2.04^{10} e^{-2.04}}{10!}=0.000045\n\n    \\end{array}\\]\n\nWe expect the approximation to be good because \\(n\\) is large (greater than 20) and \\(p\\) is small (less than \\(0.05)\\). The results are close-both probabilities reported are almost 0 .",
+      "prompt": "Exercise \\(\\PageIndex{6}\\)\n\nOn a specific day in May starting at 4:30 PM, the probability of low seismic activity for the next 48 hours in Alaska was reported as about 1.02%. Use this information for the next 200 days to find the probability that there will be low seismic activity in ten of the next 200 days. Use both the binomial and Poisson distributions to calculate the probabilities. Are they close?",
+      "sourceAnswers": [
+        "Let \\(X=\\) the number of days with low seismic activity.\n\nUsing the binomial distribution:\n\n\\[P(x=10)=\\dfrac{200!}{10!(200-10)!} \\times .0102^{10} \\times .9898^{190}=0.000039\\]\n\nUsing the Poisson distribution:\n\n\\[\\begin{array}{l}\n\n    \\text { Calculate } \\mu=n p=200(0.0102) \\approx 2.04 \\\\\n\n    P(x=10)=\\dfrac{\\mu^x e^{-\\mu}}{\\mathrm{x}!}=\\dfrac{2.04^{10} e^{-2.04}}{10!}=0.000045\n\n    \\end{array}\\]\n\nWe expect the approximation to be good because \\(n\\) is large (greater than 20) and \\(p\\) is small (less than \\(0.05)\\). The results are close-both probabilities reported are almost 0 ."
+      ],
+      "hasFigure": false,
+      "status": "draft",
+      "answerVerified": false,
+      "translationStatus": "pending",
+      "mappingStatus": "pending"
+    },
+    {
+      "ordinal": 17,
+      "sourceNumber": "",
+      "sourceAnchor": "fs-idm140268064",
+      "kind": "exercise-candidate",
+      "context": "A customer service center receives about ten emails every half-hour. What is the probability that the customer service center receives more than four emails in the next six minutes?\n\nAccording to a recent poll by the Pew Internet Project, people between the ages of 14 and 17 send an average of 187 text messages each day. Let X = the number of texts that a girl aged 14 to 17 sends per day. The discrete random variable X takes on the values x = 0, 1, 2 …. The random variable X has a Poisson distribution: X ~ P(187). The mean is 187 text messages.\n\nAtlanta’s Hartsfield-Jackson International Airport is the busiest airport in the world. On average there are 2,700 arrivals and departures each day.",
+      "original": "Solution\n\nLet X = the number of days with low seismic activity.\n\nUsing the binomial distribution:\n\nP(x = 10) = binompdf(200, .0102, 10) ≈ 0.000039\n\nUsing the Poisson distribution:\n\nCalculate μ = np = 200(0.0102) ≈ 2.04\n\nP(x = 10) = poissonpdf(2.04, 10) ≈ 0.000045\n\nWe expect the approximation to be good because n is large (greater than 20) and p is small (less than 0.05). The results are close—both probabilities reported are almost 0.",
+      "prompt": "",
+      "sourceAnswers": [
+        "Solution\n\nLet X = the number of days with low seismic activity.\n\nUsing the binomial distribution:\n\nP(x = 10) = binompdf(200, .0102, 10) ≈ 0.000039\n\nUsing the Poisson distribution:\n\nCalculate μ = np = 200(0.0102) ≈ 2.04\n\nP(x = 10) = poissonpdf(2.04, 10) ≈ 0.000045\n\nWe expect the approximation to be good because n is large (greater than 20) and p is small (less than 0.05). The results are close—both probabilities reported are almost 0."
+      ],
+      "hasFigure": false,
+      "status": "draft",
+      "answerVerified": false,
+      "translationStatus": "pending",
+      "mappingStatus": "pending"
+    }
+  ],
+  "license": "CC BY 4.0",
+  "licenseEvidence": "This page titled 4.7: Poisson Distribution was last modified on Thu, 07 May 2026 20:05:50 GMT and is shared under a CC BY  4.0  license and was authored, remixed, and/or curated by OpenStax via source content that was edited to the style and standards of the LibreTexts platform.",
+  "url": "https://stats.libretexts.org/Bookshelves/Introductory_Statistics/Introductory_Statistics_2e_(OpenStax)/04:_Discrete_Random_Variables/4.07:_Poisson_Distribution",
+  "sha256": "3288c5f5209924647937cc5ea284858912b004cd2238cb1c1ebc5fd54742522d",
+  "checkedAt": "2026-10-07",
+  "id": "e9cf444e5e13b5971bfb",
+  "bookId": "statistics",
+  "licenseInherited": false,
+  "licenseSource": "https://stats.libretexts.org/Bookshelves/Introductory_Statistics/Introductory_Statistics_2e_(OpenStax)/04:_Discrete_Random_Variables/4.07:_Poisson_Distribution",
+  "licenseUrl": "https://creativecommons.org/licenses/by/4.0/",
+  "authors": "OpenStax / Barbara Illowsky, Susan Dean",
+  "book": "Introductory Statistics 2e",
+  "reviewStatus": "unreviewed",
+  "sourceLanguage": "en",
+  "translationStatus": "pending"
+}

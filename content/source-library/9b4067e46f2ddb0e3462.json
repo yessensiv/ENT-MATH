@@ -1,0 +1,486 @@
+{
+  "title": "9.7: Solving Systems with Gaussian Elimination",
+  "originalText": "Learning Objectives\n\nIn this section, you will:\n\nWrite the augmented matrix of a system of equations.\n\nWrite the system of equations from an augmented matrix.\n\nPerform row operations on a matrix.\n\nSolve a system of linear equations using matrices.\n\n[Figure: aee12499521086e17f9b79780fcab7b94a47ef02]\n\nFigure 1 German\nmathematician Carl Friedrich Gauss (1777–1855).\n\nCarl Friedrich Gauss lived during the late 18th\ncentury and early 19th century, but he is still considered one of\nthe most prolific mathematicians in history. His contributions to\nthe science of mathematics and physics span fields such as algebra,\nnumber theory, analysis, differential geometry, astronomy, and\noptics, among others. His discoveries regarding matrix theory\nchanged the way mathematicians have worked for the last two\ncenturies.\n\nWe first encountered Gaussian elimination\nin Systems\nof Linear Equations: Two Variables. In this section, we\nwill revisit this technique for solving systems, this time using\nmatrices.\n\nWriting the Augmented Matrix of a\nSystem of Equations\n\nA matrix can serve as a device for representing and\nsolving a system of equations. To express a system in matrix form,\nwe extract the coefficients of the variables and the constants, and\nthese become the entries of the matrix. We use a vertical line to\nseparate the coefficient entries from the constants, essentially\nreplacing the equal signs. When a system is written in this form,\nwe call it an augmented matrix.\n\nFor example, consider the following 2×22×2 system of\nequations.\n\n3x+4y=74x−2y=53x+4y=74x−2y=5\n\nWe can write this system as an augmented matrix:\n\n[344−2 ∣∣∣ 75][ 344−2 | 75 ]\n\nWe can also write a matrix containing just the coefficients.\nThis is called the coefficient matrix.\n\n[344−2][ 344−2 ]\n\nA three-by-three system of equations such as\n\n3x−y−z=0       x+y=5   2x−3z=23x−y−z=0       x+y=5    2x−3z=2\n\nhas a coefficient matrix\n\n⎡⎣⎢312−110−10−3⎤⎦⎥[ 3−1−111020−3 ]\n\nand is represented by the augmented matrix\n\n⎡⎣⎢312−110−10−3 ∣∣∣∣ 052⎤⎦⎥[ 3−1−111020−3 | 052 ]\n\nNotice that the matrix is written so that the variables line up\nin their own columns: x-terms\ngo in the first column, y-terms\nin the second column, and z-terms in the third column. It is very important\nthat each equation is written in standard\nform ax+by+cz=dax+by+cz=d so that the variables line up.\nWhen there is a missing variable term in an equation, the\ncoefficient is 0.\n\nHOW\nTO\n\nGiven a system of equations, write an augmented\nmatrix.\n\n1. Write the coefficients of the x-terms as the numbers down the first column.\n\n2. Write the coefficients of the y-terms as the numbers down the second column.\n\n3. If there are z-terms, write\nthe coefficients as the numbers down the third column.\n\n4. Draw a vertical line and write the constants to the right of\nthe line.\n\nEXAMPLE 1\n\nWriting the Augmented Matrix for a\nSystem of Equations\n\nWrite the augmented matrix for the given system of\nequations.\n\n  x+2y−z=32x−y+2z=6 x−3y+3z=4  x+2y−z=32x−y+2z=6 x−3y+3z=4\n\nAnswer\n\nTRY\nIT #1\n\nWrite the augmented matrix of the given system of equations.\n\n4x−3y=113x+2y=44x−3y=113x+2y=4\n\nWriting a System of Equations from an\nAugmented Matrix\n\nWe can use augmented matrices to help us solve systems of\nequations because they simplify operations when the systems are not\nencumbered by the variables. However, it is important to understand\nhow to move back and forth between formats in order to make finding\nsolutions smoother and more intuitive. Here, we will use the\ninformation in an augmented matrix to write the system of\nequations in standard form.\n\nEXAMPLE 2\n\nWriting a System of Equations from an\nAugmented Matrix Form\n\nFind the system of equations from the augmented matrix.\n\n⎡⎣⎢12−3−3−55−5−44 ∣∣∣∣ −256⎤⎦⎥[ 1−3−52−5−4−354 | −256 ]\n\nAnswer\n\nTRY\nIT #2\n\nWrite the system of equations from the augmented matrix.\n\n⎡⎣⎢120−1−11131∣∣∣∣51−9⎤⎦⎥[ 1−112−13011|51−9 ]\n\nPerforming Row Operations on a\nMatrix\n\nNow that we can write systems of equations in augmented matrix\nform, we will examine the various row\noperations that can be performed on a matrix, such as\naddition, multiplication by a constant, and interchanging rows.\n\nPerforming row operations on a matrix is the method we use for\nsolving a system of equations. In order to solve the system of\nequations, we want to convert the matrix\nto row-echelon form, in which there are ones\ndown the main diagonal from the upper\nleft corner to the lower right corner, and zeros in every position\nbelow the main diagonal as shown.\n\nRow-echelon form⎡⎣⎢100a10bd1⎤⎦⎥Row-echelon form[ 1ab01d001 ]\n\nWe use row operations corresponding to equation operations to\nobtain a new matrix that\nis row-equivalent in a simpler form.\nHere are the guidelines to obtaining row-echelon form.\n\n1. In any nonzero row, the first nonzero number is a 1. It is\ncalled a leading 1.\n\n2. Any all-zero rows are placed at the bottom on the matrix.\n\n3. Any leading 1 is below and to the right of a previous leading\n1.\n\n4. Any column containing a leading 1 has zeros in all other\npositions in the column.\n\nTo solve a system of equations we can perform the following row\noperations to convert the coefficient matrix to\nrow-echelon form and do back-substitution to find the solution.\n\n1. Interchange rows. (Notation: Ri↔RjRi↔Rj )\n\n2. Multiply a row by a constant.\n(Notation: cRicRi )\n\n3. Add the product of a row multiplied by a constant to another\nrow. (Notation: Ri+cRj)Ri+cRj)\n\nEach of the row operations corresponds to the operations we have\nalready learned to solve systems of equations in three variables.\nWith these operations, there are some key moves that will quickly\nachieve the goal of writing a matrix in row-echelon form. To obtain\na matrix in row-echelon form for finding solutions, we use Gaussian\nelimination, a method that uses row operations to obtain a 1 as the\nfirst entry so that row 1 can be used to convert the remaining\nrows.\n\nGAUSSIAN ELIMINATION\n\nThe Gaussian elimination method\nrefers to a strategy used to obtain the row-echelon form of a\nmatrix. The goal is to write matrix AA with the number 1\nas the entry down the main diagonal and have all zeros below.\n\nA=⎡⎣⎢a11a21a31a12a22a32a13a23a33⎤⎦⎥−→−−−−−−−−−−−−−After Gaussian eliminationA=⎡⎣⎢100b1210b13b231⎤⎦⎥A=[ a11a12a13a21a22a23a31a32a33 ]→After Gaussian eliminationA=[ 1b12b1301b23001 ]\n\nThe first step of the Gaussian strategy includes obtaining a 1\nas the first entry, so that row 1 may be used to alter the rows\nbelow.\n\nHOW\nTO\n\nGiven an augmented matrix, perform row operations to\nachieve row-echelon form.\n\n1. The first equation should have a leading coefficient of 1.\nInterchange rows or multiply by a constant, if necessary.\n\n2. Use row operations to obtain zeros down the first column below\nthe first entry of 1.\n\n3. Use row operations to obtain a 1 in row 2, column 2.\n\n4. Use row operations to obtain zeros down column 2, below the\nentry of 1.\n\n5. Use row operations to obtain a 1 in row 3, column 3.\n\n6. Continue this process for all rows until there is a 1 in every\nentry down the main diagonal and there are only zeros below.\n\n7. If any rows contain all zeros, place them at the bottom.\n\nEXAMPLE 3\n\nSolving a 2×22×2 System by\nGaussian Elimination\n\nSolve the given system by Gaussian elimination.\n\n2x+3y=6   x−y=122x+3y=6   x−y=12\n\nAnswer\n\nTRY\nIT #3\n\nSolve the given system by Gaussian elimination.\n\n4x+3y=11 x−3y=−14x+3y=11 x−3y=−1\n\nEXAMPLE 4\n\nUsing Gaussian Elimination to Solve a\nSystem of Equations\n\nUse Gaussian elimination to solve the\ngiven 2×22×2 system of equations.\n\n 2x+y=14x+2y=6 2x+y=14x+2y=6\n\nAnswer\n\nEXAMPLE 5\n\nSolving a Dependent\nSystem\n\nSolve the system of equations.\n\n3x+4y=126x+8y=243x+4y=126x+8y=24\n\nAnswer\n\nEXAMPLE 6\n\nPerforming Row Operations on a 3×3\nAugmented Matrix to Obtain Row-Echelon Form\n\nPerform row operations on the given matrix to obtain row-echelon\nform.\n\n⎡⎣⎢12−3−3−53464 ∣∣∣∣ 366⎤⎦⎥[ 1−342−56−334 | 366 ]\n\nAnswer\n\nTRY\nIT #4\n\nWrite the system of equations in row-echelon form.\n\n x−2y+3z=9−x+3y=−42x−5y+5z=17 x−2y+3z=9−x+3y=−42x−5y+5z=17\n\nSolving a System of Linear Equations\nUsing Matrices\n\nWe have seen how to write a system of equations with\nan augmented matrix, and then how to use row operations and\nback-substitution to obtain row-echelon form. Now, we will\ntake row-echelon form a step farther to solve a 3 by 3 system of\nlinear equations. The general idea is to eliminate all but one\nvariable using row operations and then back-substitute to solve for\nthe other variables.\n\nEXAMPLE 7\n\nSolving a System of Linear Equations\nUsing Matrices\n\nSolve the system of linear equations using matrices.\n\nx−y+z=82x+3y−z=−23x−2y−9z=9x−y+z=82x+3y−z=−23x−2y−9z=9\n\nAnswer\n\nEXAMPLE 8\n\nSolving a Dependent System of Linear\nEquations Using Matrices\n\nSolve the following system of linear equations using\nmatrices.\n\n−x−2y+z=−1 2x+3y=2y−2z=0−x−2y+z=−1 2x+3y=2y−2z=0\n\nAnswer\n\nTRY\nIT #5\n\nSolve the system using matrices.\n\nx+4y−z=42x+5y+8z=15x+3y−3z=1x+4y−z=42x+5y+8z=15x+3y−3z=1\n\nQ&A\n\nCan any system of linear equations be solved by Gaussian\nelimination?\n\nYes, a system of linear equations of\nany size can be solved by Gaussian elimination.\n\nHOW\nTO\n\nGiven a system of equations, solve with matrices using a\ncalculator.\n\n1. Save the augmented matrix as a matrix\nvariable [A],[B],[C], ….[A],[B],[C], ….\n\n2. Use the ref( function in the\ncalculator, calling up each matrix variable as needed.\n\nEXAMPLE 9\n\nSolving Systems of Equations with\nMatrices Using a Calculator\n\nSolve the system of equations.\n\n 5x+3y+9z=−1−2x+3y−z=−2−x−4y+5z=1 5x+3y+9z=−1−2x+3y−z=−2−x−4y+5z=1\n\nAnswer\n\nEXAMPLE 10\n\nApplying 2 × 2 Matrices to\nFinance\n\nCarolyn invests a total of $12,000 in two municipal bonds, one\npaying 10.5% interest and the other paying 12% interest. The annual\ninterest earned on the two investments last year was $1,335. How\nmuch was invested at each rate?\n\nAnswer\n\nEXAMPLE 11\n\nApplying 3 × 3 Matrices to\nFinance\n\nAva invests a total of $10,000 in three accounts, one paying 5%\ninterest, another paying 8% interest, and the third paying 9%\ninterest. The annual interest earned on the three investments last\nyear was $770. The amount invested at 9% was twice the amount\ninvested at 5%. How much was invested at each rate?\n\nAnswer\n\nTRY\nIT #6\n\nA small shoe company took out a loan of $1,500,000 to expand\ntheir inventory. Part of the money was borrowed at 7%, part was\nborrowed at 8%, and part was borrowed at 10%. The amount borrowed\nat 10% was four times the amount borrowed at 7%, and the annual\ninterest on all three loans was $130,500. Use matrices to find the\namount borrowed at each rate.\n\nMEDIA\n\nAccess these online resources for additional instruction and\npractice with solving systems of linear equations using Gaussian\nelimination.\n\nSolve a System of Two Equations\nUsing an Augmented Matrix\n\nSolve a System of Three\nEquations Using an Augmented Matrix\n\nAugmented Matrices on the\nCalculator\n\n9.6 Section\nExercises\n\nVerbal\n\n1. \n\nCan any system of linear equations be written as an augmented\nmatrix? Explain why or why not. Explain how to write that augmented\nmatrix.\n\n2. \n\nCan any matrix be written as a system of linear equations?\nExplain why or why not. Explain how to write that system of\nequations.\n\n3. \n\nIs there only one correct method of using row operations on a\nmatrix? Try to explain two different row operations possible to\nsolve the augmented\nmatrix [913−2 ∣∣∣ 06].[ 931−2 | 06 ].\n\n4. \n\nCan a matrix whose entry is 0 on the diagonal be solved? Explain\nwhy or why not. What would you do to remedy the situation?\n\n5. \n\nCan a matrix that has 0 entries for an entire row have one\nsolution? Explain why or why not.\n\nAlgebraic\n\nFor the following exercises, write the augmented matrix for the\nlinear system.\n\n6. \n\n8x−37y=82x+12y=38x−37y=82x+12y=3\n\n7. \n\n  16y=49x−y=2  16y=49x−y=2\n\n8. \n\n3x+2y+10z=3−6x+2y+5z=13            4x+z=183x+2y+10z=3−6x+2y+5z=13            4x+z=18\n\n9. \n\n x+5y+8z=1912x+3y=43x+4y+9z=−7 x+5y+8z=1912x+3y=43x+4y+9z=−7\n\n10. \n\n6x+12y+16z=4 19x−5y+3z=−9            x+2y=−86x+12y+16z=4 19x−5y+3z=−9            x+2y=−8\n\nFor the following exercises, write the linear system from the\naugmented matrix.\n\n11. \n\n[−265−18 ∣∣∣ 526][ −256−18 | 526 ]\n\n12. \n\n[310417 ∣∣∣ 10439][ 341017 | 10439 ]\n\n13. \n\n⎡⎣⎢3−182−95047 ∣∣∣∣ 3−18⎤⎦⎥[ 320−1−94857 | 3−18 ]\n\n14. \n\n⎡⎣⎢8−102970153 ∣∣∣∣ 433810⎤⎦⎥[ 8291−175003 | 433810 ]\n\n15. \n\n⎡⎣⎢408517−258−3 ∣∣∣∣ 122−5⎤⎦⎥[ 45−2015887−3 | 122−5 ]\n\nFor the following exercises, solve the system by Gaussian\nelimination.\n\n16. \n\n[1000 ∣∣∣ 30][ 1000 | 30 ]\n\n17. \n\n[1100 ∣∣∣ 12][ 1010 | 12 ]\n\n18. \n\n[1425 ∣∣∣ 36][ 1245 | 36 ]\n\n19. \n\n[−142−5 ∣∣∣ −36][ −124−5 | −36 ]\n\n20. \n\n[−2002 ∣∣∣ 1−1][ −2002 | 1−1 ]\n\n21. \n\n 2x−3y=−95x+4y=58 2x−3y=−95x+4y=58\n\n22. \n\n6x+2y=−43x+4y=−176x+2y=−43x+4y=−17\n\n23. \n\n2x+3y=12 4x+y=142x+3y=12 4x+y=14\n\n24. \n\n−4x−3y=−2 3x−5y=−13−4x−3y=−2 3x−5y=−13\n\n25. \n\n−5x+8y=310x+6y=5−5x+8y=310x+6y=5\n\n26. \n\n 3x+4y=12−6x−8y=−24 3x+4y=12−6x−8y=−24\n\n27. \n\n−60x+45y=12 20x−15y=−4−60x+45y=12 20x−15y=−4\n\n28. \n\n11x+10y=4315x+20y=6511x+10y=4315x+20y=65\n\n29. \n\n2x−y=23x+2y=172x−y=23x+2y=17\n\n30. \n\n−1.06x−2.25y=5.51−5.03x−1.08y=5.40−1.06x−2.25y=5.51−5.03x−1.08y=5.40\n\n31. \n\n34x−35y=414x+23y=134x−35y=414x+23y=1\n\n32. \n\n14x−23y=−112x+13y=314x−23y=−112x+13y=3\n\n33. \n\n⎡⎣⎢100010011 ∣∣∣∣ 314587⎤⎦⎥[ 100011001 | 314587 ]\n\n34. \n\n⎡⎣⎢110011101 ∣∣∣∣ 5020−90⎤⎦⎥[ 101110011 | 5020−90 ]\n\n35. \n\n⎡⎣⎢100250368 ∣∣∣∣ 479⎤⎦⎥[ 123056008 | 479 ]\n\n36. \n\n⎡⎣⎢−0.1−0.40.60.30.20.1−0.10.10.7 ∣∣∣∣ 0.20.8−0.8⎤⎦⎥[ −0.10.3−0.1−0.40.20.10.60.10.7 | 0.20.8−0.8 ]\n\n37. \n\n−2x+3y−2z=3     4x+2y−z=94x−8y+2z=−6−2x+3y−2z=3     4x+2y−z=94x−8y+2z=−6\n\n38. \n\n     x+y−4z=−4 5x−3y−2z=0 2x+6y+7z=30     x+y−4z=−4 5x−3y−2z=0 2x+6y+7z=30\n\n39. \n\n     2x+3y+2z=1 −4x−6y−4z=−210x+15y+10z=5     2x+3y+2z=1 −4x−6y−4z=−210x+15y+10z=5\n\n40. \n\n   x+2y−z=1−x−2y+2z=−23x+6y−3z=5   x+2y−z=1−x−2y+2z=−23x+6y−3z=5\n\n41. \n\n   x+2y−z=1−x−2y+2z=−23x+6y−3z=3   x+2y−z=1−x−2y+2z=−23x+6y−3z=3\n\n42. \n\nx+y=2  x+z=1−y−z=−3x+y=2  x+z=1−y−z=−3\n\n43. \n\nx+y+z=100   x+2z=125−y+2z=25x+y+z=100   x+2z=125−y+2z=25\n\n44. \n\n14x−23z=−1215x+13y=4715y−13z=2914x−23z=−1215x+13y=4715y−13z=29\n\n45. \n\n−12x+12y+17z=−5314  12x−12y+14z=3   14x+15y+13z=2315−12x+12y+17z=−5314  12x−12y+14z=3   14x+15y+13z=2315\n\n46. \n\n−12x−13y+14z=−296  15x+16y−17z=431210−18x+19y+110z=−4945−12x−13y+14z=−296  15x+16y−17z=431210−18x+19y+110z=−4945\n\nExtensions\n\nFor the following exercises, use Gaussian elimination to solve\nthe system.\n\n47. \n\nx−17+y−28+z−34=0x+y+z=6x+23+2y+z−33=5x−17+y−28+z−34=0x+y+z=6x+23+2y+z−33=5\n\n48. \n\nx−14−y+14+3z=−1 x+52+y+74−z=4        x+y−z−22=1x−14−y+14+3z=−1 x+52+y+74−z=4        x+y−z−22=1\n\n49. \n\nx−34−y−13+2z=−1x+52+y+52+z+52=8x+y+z=1x−34−y−13+2z=−1x+52+y+52+z+52=8x+y+z=1\n\n50. \n\nx−310+y+32−2z=3x+54−y−18+z=32x−14+y+42+3z=32x−310+y+32−2z=3x+54−y−18+z=32x−14+y+42+3z=32\n\n51. \n\nx−34−y−13+2z=−1x+52+y+52+z+52=7x+y+z=1x−34−y−13+2z=−1x+52+y+52+z+52=7x+y+z=1\n\nReal-World Applications\n\nFor the following exercises, set up the augmented matrix that\ndescribes the situation, and solve for the desired solution.\n\n52. \n\nEvery day, a cupcake store sells 5,000 cupcakes in chocolate and\nvanilla flavors. If the chocolate flavor is 3 times as popular as\nthe vanilla flavor, how many of each cupcake sell per day?\n\n53. \n\nAt a competing cupcake store, $4,520 worth of cupcakes are sold\ndaily. The chocolate cupcakes cost $2.25 and the red velvet\ncupcakes cost $1.75. If the total number of cupcakes sold per day\nis 2,200, how many of each flavor are sold each day?\n\n54. \n\nYou invested $10,000 into two accounts: one that has simple 3%\ninterest, the other with 2.5% interest. If your total interest\npayment after one year was $283.50, how much was in each account\nafter the year passed?\n\n55. \n\nYou invested $2,300 into account 1, and $2,700 into account 2.\nIf the total amount of interest after one year is $254, and account\n2 has 1.5 times the interest rate of account 1, what are the\ninterest rates? Assume simple interest rates.\n\n56. \n\nBikes’R’Us manufactures bikes, which sell for $250. It costs the\nmanufacturer $180 per bike, plus a startup fee of $3,500. After how\nmany bikes sold will the manufacturer break even?\n\n57. \n\nA major appliance store is considering purchasing vacuums from a\nsmall manufacturer. The store would be able to purchase the vacuums\nfor $86 each, with a delivery fee of $9,200, regardless of how many\nvacuums are sold. If the store needs to start seeing a profit after\n230 units are sold, how much should they charge for the\nvacuums?\n\n58. \n\nThe three most popular ice cream flavors are chocolate,\nstrawberry, and vanilla, comprising 83% of the flavors sold at an\nice cream shop. If vanilla sells 1% more than twice strawberry, and\nchocolate sells 11% more than vanilla, how much of the total ice\ncream consumption are the vanilla, chocolate, and strawberry\nflavors?\n\n59. \n\nAt an ice cream shop, three flavors are increasing in demand.\nLast year, banana, pumpkin, and rocky road ice cream made up 12% of\ntotal ice cream sales. This year, the same three ice creams made up\n16.9% of ice cream sales. The rocky road sales doubled, the banana\nsales increased by 50%, and the pumpkin sales increased by 20%. If\nthe rocky road ice cream had one less percent of sales than the\nbanana ice cream, find out the percentage of ice cream sales each\nindividual ice cream made last year.\n\n60. \n\nA bag of mixed nuts contains cashews, pistachios, and almonds.\nThere are 1,000 total nuts in the bag, and there are 100 less\nalmonds than pistachios. The cashews weigh 3 g, pistachios weigh 4\ng, and almonds weigh 5 g. If the bag weighs 3.7 kg, find out how\nmany of each type of nut is in the bag.\n\n61. \n\nA bag of mixed nuts contains cashews, pistachios, and almonds.\nOriginally there were 900 nuts in the bag. 30% of the almonds, 20%\nof the cashews, and 10% of the pistachios were eaten, and now there\nare 770 nuts left in the bag. Originally, there were 100 more\ncashews than almonds. Figure out how many of each type of nut was\nin the bag to begin with.\n\nThis page titled 9.7: Solving Systems with Gaussian Elimination was last modified on Sun, 28 May 2023 07:33:42 GMT and is shared under a CC BY  4.0  license and was authored, remixed, and/or curated by OpenStax via source content that was edited to the style and standards of the LibreTexts platform.",
+  "figures": [
+    {
+      "url": "https://math.libretexts.org/@api/deki/files/105844/aee12499521086e17f9b79780fcab7b94a47ef02?revision=1",
+      "alt": "aee12499521086e17f9b79780fcab7b94a47ef02",
+      "credit": ""
+    }
+  ],
+  "references": [
+    {
+      "text": "Systems\nof Linear Equations: Two Variables",
+      "url": "https://openstax.org/books/precalculus/pages/9-2-systems-of-linear-equations-three-variables"
+    },
+    {
+      "text": "Solve a System of Two Equations\nUsing an Augmented Matrix",
+      "url": "http://openstax.org/l/system2augmat"
+    },
+    {
+      "text": "Solve a System of Three\nEquations Using an Augmented Matrix",
+      "url": "http://openstax.org/l/system3augmat"
+    },
+    {
+      "text": "Augmented Matrices on the\nCalculator",
+      "url": "http://openstax.org/l/augmatcalc"
+    },
+    {
+      "text": "1",
+      "url": "https://openstax.org/books/precalculus/pages/chapter-9#fs-id1165137570878-solution"
+    },
+    {
+      "text": "3",
+      "url": "https://openstax.org/books/precalculus/pages/chapter-9#fs-id1165133307007-solution"
+    },
+    {
+      "text": "5",
+      "url": "https://openstax.org/books/precalculus/pages/chapter-9#fs-id1165132939190-solution"
+    },
+    {
+      "text": "7",
+      "url": "https://openstax.org/books/precalculus/pages/chapter-9#fs-id1165135434887-solution"
+    },
+    {
+      "text": "9",
+      "url": "https://openstax.org/books/precalculus/pages/chapter-9#fs-id1165135187927-solution"
+    },
+    {
+      "text": "11",
+      "url": "https://openstax.org/books/precalculus/pages/chapter-9#fs-id1165137659721-solution"
+    },
+    {
+      "text": "13",
+      "url": "https://openstax.org/books/precalculus/pages/chapter-9#fs-id1165137592598-solution"
+    },
+    {
+      "text": "15",
+      "url": "https://openstax.org/books/precalculus/pages/chapter-9#fs-id1165132919444-solution"
+    },
+    {
+      "text": "17",
+      "url": "https://openstax.org/books/precalculus/pages/chapter-9#fs-id1165134383141-solution"
+    },
+    {
+      "text": "19",
+      "url": "https://openstax.org/books/precalculus/pages/chapter-9#fs-id1165135194307-solution"
+    },
+    {
+      "text": "21",
+      "url": "https://openstax.org/books/precalculus/pages/chapter-9#fs-id1165137433552-solution"
+    },
+    {
+      "text": "23",
+      "url": "https://openstax.org/books/precalculus/pages/chapter-9#fs-id1165134070922-solution"
+    },
+    {
+      "text": "25",
+      "url": "https://openstax.org/books/precalculus/pages/chapter-9#fs-id1165137843916-solution"
+    },
+    {
+      "text": "27",
+      "url": "https://openstax.org/books/precalculus/pages/chapter-9#fs-id1165135451328-solution"
+    },
+    {
+      "text": "29",
+      "url": "https://openstax.org/books/precalculus/pages/chapter-9#fs-id1165134358547-solution"
+    },
+    {
+      "text": "31",
+      "url": "https://openstax.org/books/precalculus/pages/chapter-9#fs-id1165135468179-solution"
+    },
+    {
+      "text": "33",
+      "url": "https://openstax.org/books/precalculus/pages/chapter-9#fs-id1165134431916-solution"
+    },
+    {
+      "text": "35",
+      "url": "https://openstax.org/books/precalculus/pages/chapter-9#fs-id1165134205141-solution"
+    },
+    {
+      "text": "37",
+      "url": "https://openstax.org/books/precalculus/pages/chapter-9#fs-id1165135502162-solution"
+    },
+    {
+      "text": "39",
+      "url": "https://openstax.org/books/precalculus/pages/chapter-9#fs-id1165137666046-solution"
+    },
+    {
+      "text": "41",
+      "url": "https://openstax.org/books/precalculus/pages/chapter-9#fs-id1165135320600-solution"
+    },
+    {
+      "text": "43",
+      "url": "https://openstax.org/books/precalculus/pages/chapter-9#fs-id1165135331715-solution"
+    },
+    {
+      "text": "45",
+      "url": "https://openstax.org/books/precalculus/pages/chapter-9#fs-id1165135664809-solution"
+    },
+    {
+      "text": "47",
+      "url": "https://openstax.org/books/precalculus/pages/chapter-9#fs-id1165135319437-solution"
+    },
+    {
+      "text": "49",
+      "url": "https://openstax.org/books/precalculus/pages/chapter-9#fs-id1165135481001-solution"
+    },
+    {
+      "text": "51",
+      "url": "https://openstax.org/books/precalculus/pages/chapter-9#fs-id1165137737633-solution"
+    },
+    {
+      "text": "53",
+      "url": "https://openstax.org/books/precalculus/pages/chapter-9#fs-id1165137411128-solution"
+    },
+    {
+      "text": "55",
+      "url": "https://openstax.org/books/precalculus/pages/chapter-9#fs-id1165135168229-solution"
+    },
+    {
+      "text": "57",
+      "url": "https://openstax.org/books/precalculus/pages/chapter-9#fs-id1165133015273-solution"
+    },
+    {
+      "text": "59",
+      "url": "https://openstax.org/books/precalculus/pages/chapter-9#fs-id1165135390950-solution"
+    },
+    {
+      "text": "61",
+      "url": "https://openstax.org/books/precalculus/pages/chapter-9#fs-id1165134385661-solution"
+    },
+    {
+      "text": "9.7: Solving Systems with Gaussian Elimination",
+      "url": "https://math.libretexts.org/Bookshelves/Precalculus/Precalculus_2e_(OpenStax)/09%3A_Systems_of_Equations_and_Inequalities/9.07%3A_Solving_Systems_with_Gaussian_Elimination"
+    },
+    {
+      "text": "CC BY  4.0",
+      "url": "https://creativecommons.org/licenses/by/4.0"
+    },
+    {
+      "text": "OpenStax",
+      "url": "https://openstax.org/"
+    },
+    {
+      "text": "source content",
+      "url": "https://openstax.org/details/books/precalculus"
+    }
+  ],
+  "exercises": [
+    {
+      "ordinal": 1,
+      "sourceNumber": "1",
+      "sourceAnchor": "",
+      "kind": "exercise-candidate",
+      "context": "Given a system of equations, write an augmented\nmatrix.",
+      "original": "1. Write the coefficients of the x-terms as the numbers down the first column.",
+      "prompt": "1. Write the coefficients of the x-terms as the numbers down the first column.",
+      "sourceAnswers": [],
+      "hasFigure": false,
+      "status": "draft",
+      "answerVerified": false,
+      "translationStatus": "pending",
+      "mappingStatus": "pending"
+    },
+    {
+      "ordinal": 2,
+      "sourceNumber": "2",
+      "sourceAnchor": "",
+      "kind": "exercise-candidate",
+      "context": "Given a system of equations, write an augmented\nmatrix.",
+      "original": "2. Write the coefficients of the y-terms as the numbers down the second column.",
+      "prompt": "2. Write the coefficients of the y-terms as the numbers down the second column.",
+      "sourceAnswers": [],
+      "hasFigure": false,
+      "status": "draft",
+      "answerVerified": false,
+      "translationStatus": "pending",
+      "mappingStatus": "pending"
+    },
+    {
+      "ordinal": 3,
+      "sourceNumber": "3",
+      "sourceAnchor": "",
+      "kind": "exercise-candidate",
+      "context": "Given a system of equations, write an augmented\nmatrix.",
+      "original": "3. If there are z-terms, write\nthe coefficients as the numbers down the third column.",
+      "prompt": "3. If there are z-terms, write\nthe coefficients as the numbers down the third column.",
+      "sourceAnswers": [],
+      "hasFigure": false,
+      "status": "draft",
+      "answerVerified": false,
+      "translationStatus": "pending",
+      "mappingStatus": "pending"
+    },
+    {
+      "ordinal": 4,
+      "sourceNumber": "4",
+      "sourceAnchor": "",
+      "kind": "exercise-candidate",
+      "context": "Given a system of equations, write an augmented\nmatrix.",
+      "original": "4. Draw a vertical line and write the constants to the right of\nthe line.",
+      "prompt": "4. Draw a vertical line and write the constants to the right of\nthe line.",
+      "sourceAnswers": [],
+      "hasFigure": false,
+      "status": "draft",
+      "answerVerified": false,
+      "translationStatus": "pending",
+      "mappingStatus": "pending"
+    },
+    {
+      "ordinal": 5,
+      "sourceNumber": "1",
+      "sourceAnchor": "",
+      "kind": "exercise-candidate",
+      "context": "Performing row operations on a matrix is the method we use for\nsolving a system of equations. In order to solve the system of\nequations, we want to convert the matrix\nto row-echelon form, in which there are ones\ndown the main diagonal from the upper\nleft corner to the lower right corner, and zeros in every position\nbelow the main diagonal as shown.\n\nRow-echelon form⎡⎣⎢100a10bd1⎤⎦⎥Row-echelon form[ 1ab01d001 ]\n\nWe use row operations corresponding to equation operations to\nobtain a new matrix that\nis row-equivalent in a simpler form.\nHere are the guidelines to obtaining row-echelon form.",
+      "original": "1. In any nonzero row, the first nonzero number is a 1. It is\ncalled a leading 1.",
+      "prompt": "1. In any nonzero row, the first nonzero number is a 1. It is\ncalled a leading 1.",
+      "sourceAnswers": [],
+      "hasFigure": false,
+      "status": "draft",
+      "answerVerified": false,
+      "translationStatus": "pending",
+      "mappingStatus": "pending"
+    },
+    {
+      "ordinal": 6,
+      "sourceNumber": "2",
+      "sourceAnchor": "",
+      "kind": "exercise-candidate",
+      "context": "Performing row operations on a matrix is the method we use for\nsolving a system of equations. In order to solve the system of\nequations, we want to convert the matrix\nto row-echelon form, in which there are ones\ndown the main diagonal from the upper\nleft corner to the lower right corner, and zeros in every position\nbelow the main diagonal as shown.\n\nRow-echelon form⎡⎣⎢100a10bd1⎤⎦⎥Row-echelon form[ 1ab01d001 ]\n\nWe use row operations corresponding to equation operations to\nobtain a new matrix that\nis row-equivalent in a simpler form.\nHere are the guidelines to obtaining row-echelon form.",
+      "original": "2. Any all-zero rows are placed at the bottom on the matrix.",
+      "prompt": "2. Any all-zero rows are placed at the bottom on the matrix.",
+      "sourceAnswers": [],
+      "hasFigure": false,
+      "status": "draft",
+      "answerVerified": false,
+      "translationStatus": "pending",
+      "mappingStatus": "pending"
+    },
+    {
+      "ordinal": 7,
+      "sourceNumber": "3",
+      "sourceAnchor": "",
+      "kind": "exercise-candidate",
+      "context": "Performing row operations on a matrix is the method we use for\nsolving a system of equations. In order to solve the system of\nequations, we want to convert the matrix\nto row-echelon form, in which there are ones\ndown the main diagonal from the upper\nleft corner to the lower right corner, and zeros in every position\nbelow the main diagonal as shown.\n\nRow-echelon form⎡⎣⎢100a10bd1⎤⎦⎥Row-echelon form[ 1ab01d001 ]\n\nWe use row operations corresponding to equation operations to\nobtain a new matrix that\nis row-equivalent in a simpler form.\nHere are the guidelines to obtaining row-echelon form.",
+      "original": "3. Any leading 1 is below and to the right of a previous leading\n1.",
+      "prompt": "3. Any leading 1 is below and to the right of a previous leading\n1.",
+      "sourceAnswers": [],
+      "hasFigure": false,
+      "status": "draft",
+      "answerVerified": false,
+      "translationStatus": "pending",
+      "mappingStatus": "pending"
+    },
+    {
+      "ordinal": 8,
+      "sourceNumber": "4",
+      "sourceAnchor": "",
+      "kind": "exercise-candidate",
+      "context": "Performing row operations on a matrix is the method we use for\nsolving a system of equations. In order to solve the system of\nequations, we want to convert the matrix\nto row-echelon form, in which there are ones\ndown the main diagonal from the upper\nleft corner to the lower right corner, and zeros in every position\nbelow the main diagonal as shown.\n\nRow-echelon form⎡⎣⎢100a10bd1⎤⎦⎥Row-echelon form[ 1ab01d001 ]\n\nWe use row operations corresponding to equation operations to\nobtain a new matrix that\nis row-equivalent in a simpler form.\nHere are the guidelines to obtaining row-echelon form.",
+      "original": "4. Any column containing a leading 1 has zeros in all other\npositions in the column.",
+      "prompt": "4. Any column containing a leading 1 has zeros in all other\npositions in the column.",
+      "sourceAnswers": [],
+      "hasFigure": false,
+      "status": "draft",
+      "answerVerified": false,
+      "translationStatus": "pending",
+      "mappingStatus": "pending"
+    },
+    {
+      "ordinal": 9,
+      "sourceNumber": "1",
+      "sourceAnchor": "",
+      "kind": "exercise-candidate",
+      "context": "Row-echelon form⎡⎣⎢100a10bd1⎤⎦⎥Row-echelon form[ 1ab01d001 ]\n\nWe use row operations corresponding to equation operations to\nobtain a new matrix that\nis row-equivalent in a simpler form.\nHere are the guidelines to obtaining row-echelon form.\n\nTo solve a system of equations we can perform the following row\noperations to convert the coefficient matrix to\nrow-echelon form and do back-substitution to find the solution.",
+      "original": "1. Interchange rows. (Notation: Ri↔RjRi↔Rj )",
+      "prompt": "1. Interchange rows. (Notation: Ri↔RjRi↔Rj )",
+      "sourceAnswers": [],
+      "hasFigure": false,
+      "status": "draft",
+      "answerVerified": false,
+      "translationStatus": "pending",
+      "mappingStatus": "pending"
+    },
+    {
+      "ordinal": 10,
+      "sourceNumber": "2",
+      "sourceAnchor": "",
+      "kind": "exercise-candidate",
+      "context": "Row-echelon form⎡⎣⎢100a10bd1⎤⎦⎥Row-echelon form[ 1ab01d001 ]\n\nWe use row operations corresponding to equation operations to\nobtain a new matrix that\nis row-equivalent in a simpler form.\nHere are the guidelines to obtaining row-echelon form.\n\nTo solve a system of equations we can perform the following row\noperations to convert the coefficient matrix to\nrow-echelon form and do back-substitution to find the solution.",
+      "original": "2. Multiply a row by a constant.\n(Notation: cRicRi )",
+      "prompt": "2. Multiply a row by a constant.\n(Notation: cRicRi )",
+      "sourceAnswers": [],
+      "hasFigure": false,
+      "status": "draft",
+      "answerVerified": false,
+      "translationStatus": "pending",
+      "mappingStatus": "pending"
+    },
+    {
+      "ordinal": 11,
+      "sourceNumber": "3",
+      "sourceAnchor": "",
+      "kind": "exercise-candidate",
+      "context": "Row-echelon form⎡⎣⎢100a10bd1⎤⎦⎥Row-echelon form[ 1ab01d001 ]\n\nWe use row operations corresponding to equation operations to\nobtain a new matrix that\nis row-equivalent in a simpler form.\nHere are the guidelines to obtaining row-echelon form.\n\nTo solve a system of equations we can perform the following row\noperations to convert the coefficient matrix to\nrow-echelon form and do back-substitution to find the solution.",
+      "original": "3. Add the product of a row multiplied by a constant to another\nrow. (Notation: Ri+cRj)Ri+cRj)",
+      "prompt": "3. Add the product of a row multiplied by a constant to another\nrow. (Notation: Ri+cRj)Ri+cRj)",
+      "sourceAnswers": [],
+      "hasFigure": false,
+      "status": "draft",
+      "answerVerified": false,
+      "translationStatus": "pending",
+      "mappingStatus": "pending"
+    },
+    {
+      "ordinal": 12,
+      "sourceNumber": "1",
+      "sourceAnchor": "",
+      "kind": "exercise-candidate",
+      "context": "Given an augmented matrix, perform row operations to\nachieve row-echelon form.",
+      "original": "1. The first equation should have a leading coefficient of 1.\nInterchange rows or multiply by a constant, if necessary.",
+      "prompt": "1. The first equation should have a leading coefficient of 1.\nInterchange rows or multiply by a constant, if necessary.",
+      "sourceAnswers": [],
+      "hasFigure": false,
+      "status": "draft",
+      "answerVerified": false,
+      "translationStatus": "pending",
+      "mappingStatus": "pending"
+    },
+    {
+      "ordinal": 13,
+      "sourceNumber": "2",
+      "sourceAnchor": "",
+      "kind": "exercise-candidate",
+      "context": "Given an augmented matrix, perform row operations to\nachieve row-echelon form.",
+      "original": "2. Use row operations to obtain zeros down the first column below\nthe first entry of 1.",
+      "prompt": "2. Use row operations to obtain zeros down the first column below\nthe first entry of 1.",
+      "sourceAnswers": [],
+      "hasFigure": false,
+      "status": "draft",
+      "answerVerified": false,
+      "translationStatus": "pending",
+      "mappingStatus": "pending"
+    },
+    {
+      "ordinal": 14,
+      "sourceNumber": "3",
+      "sourceAnchor": "",
+      "kind": "exercise-candidate",
+      "context": "Given an augmented matrix, perform row operations to\nachieve row-echelon form.",
+      "original": "3. Use row operations to obtain a 1 in row 2, column 2.",
+      "prompt": "3. Use row operations to obtain a 1 in row 2, column 2.",
+      "sourceAnswers": [],
+      "hasFigure": false,
+      "status": "draft",
+      "answerVerified": false,
+      "translationStatus": "pending",
+      "mappingStatus": "pending"
+    },
+    {
+      "ordinal": 15,
+      "sourceNumber": "4",
+      "sourceAnchor": "",
+      "kind": "exercise-candidate",
+      "context": "Given an augmented matrix, perform row operations to\nachieve row-echelon form.",
+      "original": "4. Use row operations to obtain zeros down column 2, below the\nentry of 1.",
+      "prompt": "4. Use row operations to obtain zeros down column 2, below the\nentry of 1.",
+      "sourceAnswers": [],
+      "hasFigure": false,
+      "status": "draft",
+      "answerVerified": false,
+      "translationStatus": "pending",
+      "mappingStatus": "pending"
+    },
+    {
+      "ordinal": 16,
+      "sourceNumber": "5",
+      "sourceAnchor": "",
+      "kind": "exercise-candidate",
+      "context": "Given an augmented matrix, perform row operations to\nachieve row-echelon form.",
+      "original": "5. Use row operations to obtain a 1 in row 3, column 3.",
+      "prompt": "5. Use row operations to obtain a 1 in row 3, column 3.",
+      "sourceAnswers": [],
+      "hasFigure": false,
+      "status": "draft",
+      "answerVerified": false,
+      "translationStatus": "pending",
+      "mappingStatus": "pending"
+    },
+    {
+      "ordinal": 17,
+      "sourceNumber": "6",
+      "sourceAnchor": "",
+      "kind": "exercise-candidate",
+      "context": "Given an augmented matrix, perform row operations to\nachieve row-echelon form.",
+      "original": "6. Continue this process for all rows until there is a 1 in every\nentry down the main diagonal and there are only zeros below.",
+      "prompt": "6. Continue this process for all rows until there is a 1 in every\nentry down the main diagonal and there are only zeros below.",
+      "sourceAnswers": [],
+      "hasFigure": false,
+      "status": "draft",
+      "answerVerified": false,
+      "translationStatus": "pending",
+      "mappingStatus": "pending"
+    },
+    {
+      "ordinal": 18,
+      "sourceNumber": "7",
+      "sourceAnchor": "",
+      "kind": "exercise-candidate",
+      "context": "Given an augmented matrix, perform row operations to\nachieve row-echelon form.",
+      "original": "7. If any rows contain all zeros, place them at the bottom.",
+      "prompt": "7. If any rows contain all zeros, place them at the bottom.",
+      "sourceAnswers": [],
+      "hasFigure": false,
+      "status": "draft",
+      "answerVerified": false,
+      "translationStatus": "pending",
+      "mappingStatus": "pending"
+    },
+    {
+      "ordinal": 19,
+      "sourceNumber": "1",
+      "sourceAnchor": "",
+      "kind": "exercise-candidate",
+      "context": "Given a system of equations, solve with matrices using a\ncalculator.",
+      "original": "1. Save the augmented matrix as a matrix\nvariable [A],[B],[C], ….[A],[B],[C], ….",
+      "prompt": "1. Save the augmented matrix as a matrix\nvariable [A],[B],[C], ….[A],[B],[C], ….",
+      "sourceAnswers": [],
+      "hasFigure": false,
+      "status": "draft",
+      "answerVerified": false,
+      "translationStatus": "pending",
+      "mappingStatus": "pending"
+    },
+    {
+      "ordinal": 20,
+      "sourceNumber": "2",
+      "sourceAnchor": "",
+      "kind": "exercise-candidate",
+      "context": "Given a system of equations, solve with matrices using a\ncalculator.",
+      "original": "2. Use the ref( function in the\ncalculator, calling up each matrix variable as needed.",
+      "prompt": "2. Use the ref( function in the\ncalculator, calling up each matrix variable as needed.",
+      "sourceAnswers": [],
+      "hasFigure": false,
+      "status": "draft",
+      "answerVerified": false,
+      "translationStatus": "pending",
+      "mappingStatus": "pending"
+    }
+  ],
+  "license": "CC BY 4.0",
+  "licenseEvidence": "This page titled 9.7: Solving Systems with Gaussian Elimination was last modified on Sun, 28 May 2023 07:33:42 GMT and is shared under a CC BY  4.0  license and was authored, remixed, and/or curated by OpenStax via source content that was edited to the style and standards of the LibreTexts platform.",
+  "url": "https://math.libretexts.org/Bookshelves/Precalculus/Precalculus_2e_(OpenStax)/09:_Systems_of_Equations_and_Inequalities/9.07:_Solving_Systems_with_Gaussian_Elimination",
+  "sha256": "edd03310eda78b4bfe895ca603481ca2c50fa0c39ae4b435afd47998e2a2422a",
+  "checkedAt": "2026-10-07",
+  "id": "9b4067e46f2ddb0e3462",
+  "bookId": "precalculus",
+  "licenseInherited": false,
+  "licenseSource": "https://math.libretexts.org/Bookshelves/Precalculus/Precalculus_2e_(OpenStax)/09:_Systems_of_Equations_and_Inequalities/9.07:_Solving_Systems_with_Gaussian_Elimination",
+  "licenseUrl": "https://creativecommons.org/licenses/by/4.0/",
+  "authors": "OpenStax / Jay Abramson et al.",
+  "book": "Precalculus 2e",
+  "reviewStatus": "unreviewed",
+  "sourceLanguage": "en",
+  "translationStatus": "pending"
+}

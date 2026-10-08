@@ -1,0 +1,529 @@
+{
+  "title": "13.2: Arithmetic Sequences",
+  "originalText": "Learning Objectives\n\nFind the common difference for an arithmetic sequence.\n\nWrite terms of an arithmetic sequence.\n\nUse a recursive formula for an arithmetic sequence.\n\nUse an explicit formula for an arithmetic sequence.\n\nCompanies often make large purchases, such as computers and vehicles, for business use. The book-value of these supplies decreases each year for tax purposes. This decrease in value is called depreciation. One method of calculating depreciation is straight-line depreciation, in which the value of the asset decreases by the same amount each year.\n\nAs an example, consider a woman who starts a small contracting business. She purchases a new truck for \\($25,000\\). After five years, she estimates that she will be able to sell the truck for \\($8,000\\). The loss in value of the truck will therefore be \\($17,000\\), which is \\($3,400\\) per year for five years. The truck will be worth \\($21,600\\) after the first year; \\($18,200\\) after two years; \\($14,800\\) after three years; \\($11,400\\) after four years; and \\($8,000\\) at the end of five years. In this section, we will consider specific kinds of sequences that will allow us to calculate depreciation, such as the truck’s value.\n\nFinding Common Differences\n\nThe values of the truck in the example are said to form an arithmetic sequence because they change by a constant amount each year. Each term increases or decreases by the same constant value called the common difference of the sequence. For this sequence, the common difference is \\(-3,400\\).\n\n[Figure: A sequence, {25000, 21600, 18200, 14800, 8000}, that shows the terms differ only by -3400.]\n\nThe sequence below is another example of an arithmetic sequence. In this case, the constant difference is \\(3\\). You can choose any term of the sequence, and add \\(3\\) to find the subsequent term.\n\n[Figure: A sequence {3, 6, 9, 12, 15, ...} that shows the terms only differ by 3.]\n\nARITHMETIC SEQUENCE\n\nAn arithmetic sequence is a sequence that has the property that the difference between any two consecutive terms is a constant. This constant is called the common difference. If \\(a_1\\) is the first term of an arithmetic sequence and \\(d\\) is the common difference, the sequence will be:\n\n\\[\\{a_n\\}=\\{a_1,a_1+d,a_1+2d,a_1+3d,...\\}\\]\n\nExample \\(\\PageIndex{1}\\): Finding Common Differences\n\nIs each sequence arithmetic? If so, find the common difference.\n\n1. \\(\\{1,2,4,8,16,...\\}\\)\n\n2. \\(\\{−3,1,5,9,13,...\\}\\)\n\nSolution\n\nSubtract each term from the subsequent term to determine whether a common difference exists.\n\n1. The sequence is not arithmetic because there is no common difference. \n\n\\(2-1={\\color{red}1} \\qquad 4-2={\\color{red}2} \\qquad 8-4={\\color{red}4} \\qquad 16-8={\\color{red}8}\\)\n\n2. The sequence is arithmetic because there is a common difference. The common difference is \\(4\\). \n\n\\(1-(-3)={\\color{red}4} \\qquad 5-1={\\color{red}4} \\qquad 9-5={\\color{red}4} \\qquad 13-9={\\color{red}4}\\)\n\nAnalysis\n\nThe graph of each of these sequences is shown in Figure \\(\\PageIndex{1}\\). We can see from the graphs that, although both sequences show growth, (a) is not linear whereas (b) is linear. Arithmetic sequences have a constant rate of change so their graphs will always be points on a line.\n\n[Figure: Two graphs of arithmetic sequences. Graph (a) grows exponentially while graph (b) grows linearly.]\n\nFigure \\(\\PageIndex{1}\\)\n\nQ&A\n\nIf we are told that a sequence is arithmetic, do we have to subtract every term from the following term to find the common difference?\n\nNo. If we know that the sequence is arithmetic, we can choose any one term in the sequence, and subtract it from the subsequent term to find the common difference.\n\nExercise \\(\\PageIndex{1A}\\)\n\nIs the given sequence arithmetic? If so, find the common difference.\n\n\\(\\{18, 16, 14, 12, 10,…\\}\\)\n\nAnswer\n\nThe sequence is arithmetic. The common difference is \\(–2\\).\n\nExercise \\(\\PageIndex{1B}\\)\n\nIs the given sequence arithmetic? If so, find the common difference.\n\n\\(\\{1, 3, 6, 10, 15,…\\}\\)\n\nAnswer\n\nThe sequence is not arithmetic because \\(3−1≠6−3\\).\n\nWriting Terms of Arithmetic Sequences\n\nNow that we can recognize an arithmetic sequence, we will find the terms if we are given the first term and the common difference. The terms can be found by beginning with the first term and adding the common difference repeatedly. In addition, any term can also be found by plugging in the values of \\(n\\) and \\(d\\) into formula below.\n\n\\[a_n=a_1+(n−1)d\\]\n\nHow to: Given the first term and the common difference of an arithmetic sequence, find the first several terms.\n\n1. Add the common difference to the first term to find the second term.\n\n2. Add the common difference to the second term to find the third term.\n\n3. Continue until all of the desired terms are identified.\n\n4. Write the terms separated by commas within brackets.\n\nExample \\(\\PageIndex{2}\\): Writing Terms of Arithmetic Sequences\n\nWrite the first five terms of the arithmetic sequence with \\(a_1=17\\) and \\(d=−3\\).\n\nSolution\n\nAdding \\(−3\\) is the same as subtracting \\(3\\). Beginning with the first term, subtract \\(3\\) from each term to find the next term.\n\nThe first five terms are \\(\\{17,14,11,8,5\\}\\)\n\nAnalysis\n\nAs expected, the graph of the sequence consists of points on a line as shown in Figure \\(\\PageIndex{2}\\).\n\n[Figure: Graph of the arithmetic sequence. The points form a negative line.]\n\nFigure \\(\\PageIndex{2}\\)\n\nExercise \\(\\PageIndex{2}\\)\n\nList the first five terms of the arithmetic sequence with \\(a_1=1\\) and \\(d=5\\).\n\nAnswer\n\n\\(\\{1, 6, 11, 16, 21\\}\\)\n\nHow to: Given any the first term and any other term in an arithmetic sequence, find a given term.\n\n1. Substitute the values given for \\(a_1\\), \\(a_n\\), \\(n\\) into the formula \\(a_n=a_1+(n−1)d\\) to solve for \\(d\\).\n\n2. Find a given term by substituting the appropriate values for \\(a_1\\), \\(n\\), and \\(d\\) into the formula \\(a_n=a_1+(n−1)d\\).\n\nExample \\(\\PageIndex{3}\\): Writing Terms of Arithmetic Sequences\n\nGiven \\(a_1=8\\) and \\(a_4=14\\), find \\(a_5\\).\n\nSolution\n\nThe sequence can be written in terms of the initial term \\(8\\) and the common difference \\(d\\).\n\n\\(\\{8,8+d,8+2d,8+3d\\}\\)\n\nWe know the fourth term equals \\(14\\); we know the fourth term has the form \\(a_1+3d=8+3d\\).\n\nWe can find the common difference \\(d\\).\n\n\\[\\begin{align*} a_n&= a_1+(n-1)d \\\\ a_4&= a_1+3d \\\\ a_4&=8+3d\\qquad \\text{Write the fourth term of the sequence in terms of }a_1 \\text{ and } d. \\\\ 14&=8+3d\\qquad \\text{Substitute }14 \\text{ for } a_4. \\\\ d&=2\\qquad \\text{Solve for the common difference.} \\end{align*}\\]\n\nFind the fifth term by adding the common difference to the fourth term.\n\n\\(a_5=a_4+2=16\\)\n\nAnalysis\n\nNotice that the common difference is added to the first term once to find the second term, twice to find the third term, three times to find the fourth term, and so on. The tenth term could be found by adding the common difference to the first term nine times or by using the equation \\(a_n=a_1+(n−1)d\\).\n\nExercise \\(\\PageIndex{3}\\)\n\nGiven \\(a_3=7\\) and \\(a_5=17\\), find \\(a_2\\).\n\nAnswer\n\n\\(a_2=2\\)\n\nUsing Recursive Formulas for Arithmetic Sequences\n\nSome arithmetic sequences are defined in terms of the previous term using a recursive formula. The formula provides an algebraic rule for determining the terms of the sequence. A recursive formula allows us to find any term of an arithmetic sequence using a function of the preceding term. Each term is the sum of the previous term and the common difference. For example, if the common difference is \\(5\\), then each term is the previous term plus \\(5\\). As with any recursive formula, the first term must be given.\n\n\\(a_n=a_n−1+d\\)\n\nfor \\(n≥2\\)\n\nNote: RECURSIVE FORMULA FOR AN ARITHMETIC SEQUENCE\n\nThe recursive formula for an arithmetic sequence with common difference \\(d\\) is:\n\n\\[a_n=a_n−1+d\\]\n\nfor \\(n≥2\\)\n\nHow to: Given an arithmetic sequence, write its recursive formula.\n\n1. Subtract any term from the subsequent term to find the common difference.\n\n2. State the initial term and substitute the common difference into the recursive formula for arithmetic sequences.\n\nExample \\(\\PageIndex{4}\\):  Writing a Recursive Formula for an Arithmetic Sequence\n\nWrite a recursive formula for the arithmetic sequence.\n\n\\(\\{−18, −7, 4, 15, 26, …\\}\\)\n\nSolution\n\nThe first term is given as \\(−18\\). The common difference can be found by subtracting the first term from the second term.\n\n\\(d=−7−(−18)=11\\)\n\nSubstitute the initial term and the common difference into the recursive formula for arithmetic sequences.\n\n\\(a_1=−18\\)\n\n\\(a_n=a_{n−1}+11\\)\n\nfor \\(n≥2\\)\n\nAnalysis\n\nWe see that the common difference is the slope of the line formed when we graph the terms of the sequence, as shown in Figure \\(\\PageIndex{3}\\). The growth pattern of the sequence shows the constant difference of 11 units.\n\n[Figure: Graph of the arithmetic sequence. The points form a positive line.]\n\nFigure \\(\\PageIndex{3}\\)\n\nQ&A\n\nDo we have to subtract the first term from the second term to find the common difference?\n\nNo. We can subtract any term in the sequence from the subsequent term. It is, however, most common to subtract the first term from the second term because it is often the easiest method of finding the common difference.\n\nExercise \\(\\PageIndex{4}\\)\n\nWrite a recursive formula for the arithmetic sequence.\n\n\\(\\{25, 37, 49, 61, …\\}\\)\n\nAnswer\n\n\\(\\begin{align*}a_1 &= 25 \\\\ a_n &= a_{n−1}+12 , \\text{ for }n≥2 \\end{align*}\\)\n\nUsing Explicit Formulas for Arithmetic Sequences\n\nWe can think of an arithmetic sequence as a function on the domain of the natural numbers; it is a linear function because it has a constant rate of change. The common difference is the constant rate of change, or the slope of the function. We can construct the linear function if we know the slope and the vertical intercept.\n\n\\(a_n=a_1+d(n−1)\\)\n\nTo find the \\(y\\)-intercept of the function, we can subtract the common difference from the first term of the sequence. Consider the following sequence.\n\n[Figure: A sequence, {200, 150, 100, 50, 0, ...}, that shows the terms differ only by -50.]\n\nThe common difference is \\(−50\\), so the sequence represents a linear function with a slope of \\(−50\\). To find the \\(y\\)-intercept, we subtract \\(−50\\) from \\(200\\): \\(200−(−50)=200+50=250\\). You can also find the \\(y\\)-intercept by graphing the function and determining where a line that connects the points would intersect the vertical axis. The graph is shown in Figure \\(\\PageIndex{4}\\).\n\n[Figure: Graph of the arithmetic sequence. The points form a negative line.]\n\nFigure \\(\\PageIndex{4}\\)\n\nRecall the slope-intercept form of a line is \\(y=mx+b\\). When dealing with sequences, we use \\(a_n\\) in place of \\(y\\) and \\(n\\) in place of \\(x\\). If we know the slope and vertical intercept of the function, we can substitute them for \\(m\\) and \\(b\\) in the slope-intercept form of a line. Substituting \\(−50\\) for the slope and \\(250\\) for the vertical intercept, we get the following equation:\n\n\\(a_n=−50n+250\\)\n\nWe do not need to find the vertical intercept to write an explicit formula for an arithmetic sequence. Another explicit formula for this sequence is \\(a_n=200−50(n−1)\\), which simplifies to \\(a_n=−50n+250\\).\n\nNote: EXPLICIT FORMULA FOR AN ARITHMETIC SEQUENCE\n\nAn explicit formula for the \\(n^{th}\\) term of an arithmetic sequence is given by\n\n\\[a_n=a_1+d(n−1)\\]\n\nHow to: Given the first several terms for an arithmetic sequence, write an explicit formula.\n\n1. Find the common difference, \\(a_2−a_1\\).\n\n2. Substitute the common difference and the first term into \\(a_n=a_1+d(n−1)\\).\n\nExample \\(\\PageIndex{5}\\): Writing the nth Term Explicit Formula for an Arithmetic Sequence\n\nWrite an explicit formula for the arithmetic sequence.\n\n\\(\\{2, 12, 22, 32, 42, …\\}\\)\n\nSolution\n\nThe common difference can be found by subtracting the first term from the second term.\n\n\\[\\begin{align*} d &= a_2−a_1 \\\\ &= 12−2 \\\\ &= 10 \\end{align*}\\]\n\nThe common difference is \\(10\\). Substitute the common difference and the first term of the sequence into the formula and simplify.\n\n\\[\\begin{align*}a_n &= 2+10(n−1) \\\\ a_n &= 10n−8 \\end{align*}\\]\n\nAnalysis\n\nThe graph of this sequence, represented in Figure \\(\\PageIndex{5}\\), shows a slope of \\(10\\) and a vertical intercept of \\(−8\\).\n\n[Figure: Graph of the arithmetic sequence. The points form a positive line.]\n\nFigure \\(\\PageIndex{5}\\)\n\nExercise \\(\\PageIndex{5}\\)\n\nWrite an explicit formula for the following arithmetic sequence.\n\n\\(\\{50,47,44,41,…\\}\\)\n\nAnswer\n\n\\(a_n=53−3n\\)\n\nFinding the Number of Terms in a Finite Arithmetic Sequence\n\nExplicit formulas can be used to determine the number of terms in a finite arithmetic sequence. We need to find the common difference, and then determine how many times the common difference must be added to the first term to obtain the final term of the sequence.\n\nHow to: Given the first three terms and the last term of a finite arithmetic sequence, find the total number of terms.\n\n1. Find the common difference \\(d\\).\n\n2. Substitute the common difference and the first term into \\(a_n=a_1+d(n–1)\\).\n\n3. Substitute the last term for \\(a_n\\) and solve for \\(n\\).\n\nExample \\(\\PageIndex{6}\\): Finding the Number of Terms in a Finite Arithmetic Sequence\n\nFind the number of terms in the finite arithmetic sequence.\n\n\\(\\{8, 1, –6, ..., –41\\}\\)\n\nSolution\n\nThe common difference can be found by subtracting the first term from the second term.\n\n\\(1−8=−7\\)\n\nThe common difference is \\(−7\\). Substitute the common difference and the initial term of the sequence into the nth term formula and simplify.\n\n\\[\\begin{align*} a_n &= a_1+d(n−1) \\\\ a_n &= 8+−7(n−1) \\\\ a_n &= 15−7n \\end{align*}\\]\n\nSubstitute \\(−41\\) for \\(a_n\\) and solve for \\(n\\)\n\n\\[\\begin{align*} -41&=15-7n\\\\ 8&=n \\end{align*}\\]\n\nThere are eight terms in the sequence.\n\nExercise \\(\\PageIndex{6}\\)\n\nFind the number of terms in the finite arithmetic sequence.\n\n\\(\\{6, 11, 16, ..., 56\\}\\)\n\nAnswer\n\nThere are \\(11\\) terms in the sequence.\n\nSolving Application Problems with Arithmetic Sequences\n\nIn many application problems, it often makes sense to use an initial term of \\(a_0\\) instead of \\(a_1\\). In these problems, we alter the explicit formula slightly to account for the difference in initial terms. We use the following formula:\n\n\\[a_n=a_0+dn\\]\n\nExample \\(\\PageIndex{7}\\): Solving Application Problems with Arithmetic Sequences\n\nA five-year old child receives an allowance of \\($1\\) each week. His parents promise him an annual increase of \\($2\\) per week.\n\n1. Write a formula for the child’s weekly allowance in a given year.\n\n2. What will the child’s allowance be when he is \\(16\\) years old?\n\nSolution\n\n1. The situation can be modeled by an arithmetic sequence with an initial term of \\(1\\) and a common difference of \\(2\\).\n\nLet \\(A\\) be the amount of the allowance and \\(n\\) be the number of years after age \\(5\\). Using the altered explicit formula for an arithmetic sequence we get:\n\n\\(A_n=1+2n\\)\n\n2. We can find the number of years since age \\(5\\) by subtracting.\n\n\\(16−5=11\\)\n\nWe are looking for the child’s allowance after \\(11\\) years. Substitute \\(11\\) into the formula to find the child’s allowance at age \\(16\\).\n\n\\(A_{11}=1+2(11)=23\\)\n\nThe child’s allowance at age \\(16\\) will be \\($23\\) per week.\n\nExercise \\(\\PageIndex{7}\\)\n\nA woman decides to go for a \\(10\\)-minute run every day this week and plans to increase the time of her daily run by \\(4\\) minutes each week. Write a formula for the time of her run after \\(n\\) weeks. How long will her daily run be \\(8\\) weeks from today?\n\nAnswer\n\nThe formula is \\(T_n=10+4n\\), and it will take her \\(42\\) minutes.\n\nMedia\n\nAccess this online resource for additional instruction and practice with arithmetic sequences.\n\nArithmetic Sequences\n\nKey Equations\n\n            recursive formula for nth term of an arithmetic sequence\t\n            \\(a_n=a_{n−1}+d\\) \\(n≥2\\)\t\n\n            explicit formula for nth term of an arithmetic sequence\t\n            \\(a_n=a_1+d(n−1)\\)\t\n\nKey Concepts\n\nAn arithmetic sequence is a sequence where the difference between any two consecutive terms is a constant.\n\nThe constant between two consecutive terms is called the common difference.\n\nThe common difference is the number added to any one term of an arithmetic sequence that generates the subsequent term. See Example \\(\\PageIndex{1}\\).\n\nThe terms of an arithmetic sequence can be found by beginning with the initial term and adding the common difference repeatedly. See Example \\(\\PageIndex{2}\\) and Example \\(\\PageIndex{3}\\).\n\nA recursive formula for an arithmetic sequence with common difference dd is given by \\(a_n=a_{n−1}+d\\), \\(n≥2\\). See Example \\(\\PageIndex{4}\\).\n\nAs with any recursive formula, the initial term of the sequence must be given.\n\nAn explicit formula for an arithmetic sequence with common difference \\(d\\) is given by \\(a_n=a_1+d(n−1)\\). See Example \\(\\PageIndex{5}\\).\n\nAn explicit formula can be used to find the number of terms in a sequence. See Example \\(\\PageIndex{6}\\).\n\nIn application problems, we sometimes alter the explicit formula slightly to \\(a_n=a_0+dn\\). See Example \\(\\PageIndex{7}\\).\n\nContributors and Attributions\n\nJay Abramson (Arizona State University) with contributing authors. Textbook content produced by OpenStax College is licensed under a Creative Commons Attribution License 4.0 license. Download for free at https://openstax.org/details/books/precalculus.\n\nThis page titled 13.2: Arithmetic Sequences was last modified on Sun, 27 Apr 2025 18:28:26 GMT and is shared under a CC BY  4.0  license and was authored, remixed, and/or curated by OpenStax via source content that was edited to the style and standards of the LibreTexts platform.",
+  "figures": [
+    {
+      "url": "https://math.libretexts.org/@api/deki/files/5835/CNX_Precalc_Figure_11_02_001.jpg?revision=1&size=bestfit&width=487&height=68",
+      "alt": "A sequence, {25000, 21600, 18200, 14800, 8000}, that shows the terms differ only by -3400.",
+      "credit": ""
+    },
+    {
+      "url": "https://math.libretexts.org/@api/deki/files/5836/CNX_Precalc_Figure_11_02_002.jpg?revision=1&size=bestfit&width=487&height=68",
+      "alt": "A sequence {3, 6, 9, 12, 15, ...} that shows the terms only differ by 3.",
+      "credit": ""
+    },
+    {
+      "url": "https://math.libretexts.org/@api/deki/files/5837/CNX_Precalc_Figure_11_02_003.jpg?revision=1&size=bestfit&width=625&height=303",
+      "alt": "Two graphs of arithmetic sequences. Graph (a) grows exponentially while graph (b) grows linearly.",
+      "credit": ""
+    },
+    {
+      "url": "https://math.libretexts.org/@api/deki/files/5838/CNX_Precalc_Figure_11_02_004.jpg?revision=1&size=bestfit&width=321&height=249",
+      "alt": "Graph of the arithmetic sequence. The points form a negative line.",
+      "credit": ""
+    },
+    {
+      "url": "https://math.libretexts.org/@api/deki/files/5839/CNX_Precalc_Figure_11_02_005.jpg?revision=1&size=bestfit&width=323&height=249",
+      "alt": "Graph of the arithmetic sequence. The points form a positive line.",
+      "credit": ""
+    },
+    {
+      "url": "https://math.libretexts.org/@api/deki/files/5840/CNX_Precalc_Figure_11_02_006.jpg?revision=1&size=bestfit&width=487&height=68",
+      "alt": "A sequence, {200, 150, 100, 50, 0, ...}, that shows the terms differ only by -50.",
+      "credit": ""
+    },
+    {
+      "url": "https://math.libretexts.org/@api/deki/files/5841/CNX_Precalc_Figure_11_02_007.jpg?revision=1&size=bestfit&width=328&height=250",
+      "alt": "Graph of the arithmetic sequence. The points form a negative line.",
+      "credit": ""
+    },
+    {
+      "url": "https://math.libretexts.org/@api/deki/files/131051/CNX_Precalc_Figure_11_02_008_b843.jpg?revision=1",
+      "alt": "Graph of the arithmetic sequence. The points form a positive line.",
+      "credit": ""
+    }
+  ],
+  "references": [
+    {
+      "text": "Arithmetic Sequences",
+      "url": "http://openstaxcollege.org/l/arithmeticseq"
+    },
+    {
+      "text": "Creative Commons Attribution License 4.0",
+      "url": "http://creativecommons.org/licenses/by/4.0/"
+    },
+    {
+      "text": "https://openstax.org/details/books/precalculus",
+      "url": "https://openstax.org/details/books/precalculus"
+    },
+    {
+      "text": "13.2: Arithmetic Sequences",
+      "url": "https://math.libretexts.org/Bookshelves/Algebra/Algebra_and_Trigonometry_1e_(OpenStax)/13%3A_Sequences_Probability_and_Counting_Theory/13.02%3A_Arithmetic_Sequences"
+    },
+    {
+      "text": "CC BY  4.0",
+      "url": "https://creativecommons.org/licenses/by/4.0"
+    },
+    {
+      "text": "OpenStax",
+      "url": "https://openstax.org/"
+    },
+    {
+      "text": "source content",
+      "url": "https://openstax.org/details/books/precalculus"
+    }
+  ],
+  "exercises": [
+    {
+      "ordinal": 1,
+      "sourceNumber": "",
+      "sourceAnchor": "",
+      "kind": "example-or-exercise",
+      "context": "[Figure: A sequence {3, 6, 9, 12, 15, ...} that shows the terms only differ by 3.]\n\nAn arithmetic sequence is a sequence that has the property that the difference between any two consecutive terms is a constant. This constant is called the common difference. If \\(a_1\\) is the first term of an arithmetic sequence and \\(d\\) is the common difference, the sequence will be:\n\n\\[\\{a_n\\}=\\{a_1,a_1+d,a_1+2d,a_1+3d,...\\}\\]",
+      "original": "Example \\(\\PageIndex{1}\\): Finding Common Differences\n\nIs each sequence arithmetic? If so, find the common difference.\n\n1. \\(\\{1,2,4,8,16,...\\}\\)\n\n2. \\(\\{−3,1,5,9,13,...\\}\\)\n\nSolution\n\nSubtract each term from the subsequent term to determine whether a common difference exists.\n\n1. The sequence is not arithmetic because there is no common difference. \n\n\\(2-1={\\color{red}1} \\qquad 4-2={\\color{red}2} \\qquad 8-4={\\color{red}4} \\qquad 16-8={\\color{red}8}\\)\n\n2. The sequence is arithmetic because there is a common difference. The common difference is \\(4\\). \n\n\\(1-(-3)={\\color{red}4} \\qquad 5-1={\\color{red}4} \\qquad 9-5={\\color{red}4} \\qquad 13-9={\\color{red}4}\\)",
+      "prompt": "Example \\(\\PageIndex{1}\\): Finding Common Differences\n\nIs each sequence arithmetic? If so, find the common difference.\n\n1. \\(\\{1,2,4,8,16,...\\}\\)\n\n2. \\(\\{−3,1,5,9,13,...\\}\\)\n\nSolution\n\nSubtract each term from the subsequent term to determine whether a common difference exists.\n\n1. The sequence is not arithmetic because there is no common difference. \n\n\\(2-1={\\color{red}1} \\qquad 4-2={\\color{red}2} \\qquad 8-4={\\color{red}4} \\qquad 16-8={\\color{red}8}\\)\n\n2. The sequence is arithmetic because there is a common difference. The common difference is \\(4\\). \n\n\\(1-(-3)={\\color{red}4} \\qquad 5-1={\\color{red}4} \\qquad 9-5={\\color{red}4} \\qquad 13-9={\\color{red}4}\\)",
+      "sourceAnswers": [],
+      "hasFigure": false,
+      "status": "draft",
+      "answerVerified": false,
+      "translationStatus": "pending",
+      "mappingStatus": "pending"
+    },
+    {
+      "ordinal": 2,
+      "sourceNumber": "",
+      "sourceAnchor": "",
+      "kind": "exercise-candidate",
+      "context": "The graph of each of these sequences is shown in Figure \\(\\PageIndex{1}\\). We can see from the graphs that, although both sequences show growth, (a) is not linear whereas (b) is linear. Arithmetic sequences have a constant rate of change so their graphs will always be points on a line.\n\nIf we are told that a sequence is arithmetic, do we have to subtract every term from the following term to find the common difference?\n\nNo. If we know that the sequence is arithmetic, we can choose any one term in the sequence, and subtract it from the subsequent term to find the common difference.",
+      "original": "Exercise \\(\\PageIndex{1A}\\)\n\nIs the given sequence arithmetic? If so, find the common difference.\n\n\\(\\{18, 16, 14, 12, 10,…\\}\\)\n\nAnswer\n\nThe sequence is arithmetic. The common difference is \\(–2\\).",
+      "prompt": "Exercise \\(\\PageIndex{1A}\\)\n\nIs the given sequence arithmetic? If so, find the common difference.\n\n\\(\\{18, 16, 14, 12, 10,…\\}\\)",
+      "sourceAnswers": [
+        "The sequence is arithmetic. The common difference is \\(–2\\)."
+      ],
+      "hasFigure": false,
+      "status": "draft",
+      "answerVerified": false,
+      "translationStatus": "pending",
+      "mappingStatus": "pending"
+    },
+    {
+      "ordinal": 3,
+      "sourceNumber": "",
+      "sourceAnchor": "",
+      "kind": "exercise-candidate",
+      "context": "The graph of each of these sequences is shown in Figure \\(\\PageIndex{1}\\). We can see from the graphs that, although both sequences show growth, (a) is not linear whereas (b) is linear. Arithmetic sequences have a constant rate of change so their graphs will always be points on a line.\n\nIf we are told that a sequence is arithmetic, do we have to subtract every term from the following term to find the common difference?\n\nNo. If we know that the sequence is arithmetic, we can choose any one term in the sequence, and subtract it from the subsequent term to find the common difference.",
+      "original": "Exercise \\(\\PageIndex{1B}\\)\n\nIs the given sequence arithmetic? If so, find the common difference.\n\n\\(\\{1, 3, 6, 10, 15,…\\}\\)\n\nAnswer\n\nThe sequence is not arithmetic because \\(3−1≠6−3\\).",
+      "prompt": "Exercise \\(\\PageIndex{1B}\\)\n\nIs the given sequence arithmetic? If so, find the common difference.\n\n\\(\\{1, 3, 6, 10, 15,…\\}\\)",
+      "sourceAnswers": [
+        "The sequence is not arithmetic because \\(3−1≠6−3\\)."
+      ],
+      "hasFigure": false,
+      "status": "draft",
+      "answerVerified": false,
+      "translationStatus": "pending",
+      "mappingStatus": "pending"
+    },
+    {
+      "ordinal": 4,
+      "sourceNumber": "1",
+      "sourceAnchor": "",
+      "kind": "exercise-candidate",
+      "context": "Writing Terms of Arithmetic Sequences\n\nNow that we can recognize an arithmetic sequence, we will find the terms if we are given the first term and the common difference. The terms can be found by beginning with the first term and adding the common difference repeatedly. In addition, any term can also be found by plugging in the values of \\(n\\) and \\(d\\) into formula below.\n\n\\[a_n=a_1+(n−1)d\\]",
+      "original": "1. Add the common difference to the first term to find the second term.",
+      "prompt": "1. Add the common difference to the first term to find the second term.",
+      "sourceAnswers": [],
+      "hasFigure": false,
+      "status": "draft",
+      "answerVerified": false,
+      "translationStatus": "pending",
+      "mappingStatus": "pending"
+    },
+    {
+      "ordinal": 5,
+      "sourceNumber": "2",
+      "sourceAnchor": "",
+      "kind": "exercise-candidate",
+      "context": "Writing Terms of Arithmetic Sequences\n\nNow that we can recognize an arithmetic sequence, we will find the terms if we are given the first term and the common difference. The terms can be found by beginning with the first term and adding the common difference repeatedly. In addition, any term can also be found by plugging in the values of \\(n\\) and \\(d\\) into formula below.\n\n\\[a_n=a_1+(n−1)d\\]",
+      "original": "2. Add the common difference to the second term to find the third term.",
+      "prompt": "2. Add the common difference to the second term to find the third term.",
+      "sourceAnswers": [],
+      "hasFigure": false,
+      "status": "draft",
+      "answerVerified": false,
+      "translationStatus": "pending",
+      "mappingStatus": "pending"
+    },
+    {
+      "ordinal": 6,
+      "sourceNumber": "3",
+      "sourceAnchor": "",
+      "kind": "exercise-candidate",
+      "context": "Writing Terms of Arithmetic Sequences\n\nNow that we can recognize an arithmetic sequence, we will find the terms if we are given the first term and the common difference. The terms can be found by beginning with the first term and adding the common difference repeatedly. In addition, any term can also be found by plugging in the values of \\(n\\) and \\(d\\) into formula below.\n\n\\[a_n=a_1+(n−1)d\\]",
+      "original": "3. Continue until all of the desired terms are identified.",
+      "prompt": "3. Continue until all of the desired terms are identified.",
+      "sourceAnswers": [],
+      "hasFigure": false,
+      "status": "draft",
+      "answerVerified": false,
+      "translationStatus": "pending",
+      "mappingStatus": "pending"
+    },
+    {
+      "ordinal": 7,
+      "sourceNumber": "4",
+      "sourceAnchor": "",
+      "kind": "exercise-candidate",
+      "context": "Writing Terms of Arithmetic Sequences\n\nNow that we can recognize an arithmetic sequence, we will find the terms if we are given the first term and the common difference. The terms can be found by beginning with the first term and adding the common difference repeatedly. In addition, any term can also be found by plugging in the values of \\(n\\) and \\(d\\) into formula below.\n\n\\[a_n=a_1+(n−1)d\\]",
+      "original": "4. Write the terms separated by commas within brackets.",
+      "prompt": "4. Write the terms separated by commas within brackets.",
+      "sourceAnswers": [],
+      "hasFigure": false,
+      "status": "draft",
+      "answerVerified": false,
+      "translationStatus": "pending",
+      "mappingStatus": "pending"
+    },
+    {
+      "ordinal": 8,
+      "sourceNumber": "",
+      "sourceAnchor": "",
+      "kind": "example-or-exercise",
+      "context": "Writing Terms of Arithmetic Sequences\n\nNow that we can recognize an arithmetic sequence, we will find the terms if we are given the first term and the common difference. The terms can be found by beginning with the first term and adding the common difference repeatedly. In addition, any term can also be found by plugging in the values of \\(n\\) and \\(d\\) into formula below.\n\n\\[a_n=a_1+(n−1)d\\]",
+      "original": "Example \\(\\PageIndex{2}\\): Writing Terms of Arithmetic Sequences\n\nWrite the first five terms of the arithmetic sequence with \\(a_1=17\\) and \\(d=−3\\).\n\nSolution\n\nAdding \\(−3\\) is the same as subtracting \\(3\\). Beginning with the first term, subtract \\(3\\) from each term to find the next term.\n\nThe first five terms are \\(\\{17,14,11,8,5\\}\\)",
+      "prompt": "Example \\(\\PageIndex{2}\\): Writing Terms of Arithmetic Sequences\n\nWrite the first five terms of the arithmetic sequence with \\(a_1=17\\) and \\(d=−3\\).\n\nSolution\n\nAdding \\(−3\\) is the same as subtracting \\(3\\). Beginning with the first term, subtract \\(3\\) from each term to find the next term.\n\nThe first five terms are \\(\\{17,14,11,8,5\\}\\)",
+      "sourceAnswers": [],
+      "hasFigure": false,
+      "status": "draft",
+      "answerVerified": false,
+      "translationStatus": "pending",
+      "mappingStatus": "pending"
+    },
+    {
+      "ordinal": 9,
+      "sourceNumber": "",
+      "sourceAnchor": "",
+      "kind": "exercise-candidate",
+      "context": "Analysis\n\nAs expected, the graph of the sequence consists of points on a line as shown in Figure \\(\\PageIndex{2}\\).",
+      "original": "Exercise \\(\\PageIndex{2}\\)\n\nList the first five terms of the arithmetic sequence with \\(a_1=1\\) and \\(d=5\\).\n\nAnswer\n\n\\(\\{1, 6, 11, 16, 21\\}\\)",
+      "prompt": "Exercise \\(\\PageIndex{2}\\)\n\nList the first five terms of the arithmetic sequence with \\(a_1=1\\) and \\(d=5\\).",
+      "sourceAnswers": [
+        "\\(\\{1, 6, 11, 16, 21\\}\\)"
+      ],
+      "hasFigure": false,
+      "status": "draft",
+      "answerVerified": false,
+      "translationStatus": "pending",
+      "mappingStatus": "pending"
+    },
+    {
+      "ordinal": 10,
+      "sourceNumber": "1",
+      "sourceAnchor": "",
+      "kind": "exercise-candidate",
+      "context": "Analysis\n\nAs expected, the graph of the sequence consists of points on a line as shown in Figure \\(\\PageIndex{2}\\).",
+      "original": "1. Substitute the values given for \\(a_1\\), \\(a_n\\), \\(n\\) into the formula \\(a_n=a_1+(n−1)d\\) to solve for \\(d\\).",
+      "prompt": "1. Substitute the values given for \\(a_1\\), \\(a_n\\), \\(n\\) into the formula \\(a_n=a_1+(n−1)d\\) to solve for \\(d\\).",
+      "sourceAnswers": [],
+      "hasFigure": false,
+      "status": "draft",
+      "answerVerified": false,
+      "translationStatus": "pending",
+      "mappingStatus": "pending"
+    },
+    {
+      "ordinal": 11,
+      "sourceNumber": "2",
+      "sourceAnchor": "",
+      "kind": "exercise-candidate",
+      "context": "Analysis\n\nAs expected, the graph of the sequence consists of points on a line as shown in Figure \\(\\PageIndex{2}\\).",
+      "original": "2. Find a given term by substituting the appropriate values for \\(a_1\\), \\(n\\), and \\(d\\) into the formula \\(a_n=a_1+(n−1)d\\).",
+      "prompt": "2. Find a given term by substituting the appropriate values for \\(a_1\\), \\(n\\), and \\(d\\) into the formula \\(a_n=a_1+(n−1)d\\).",
+      "sourceAnswers": [],
+      "hasFigure": false,
+      "status": "draft",
+      "answerVerified": false,
+      "translationStatus": "pending",
+      "mappingStatus": "pending"
+    },
+    {
+      "ordinal": 12,
+      "sourceNumber": "",
+      "sourceAnchor": "",
+      "kind": "example-or-exercise",
+      "context": "Analysis\n\nAs expected, the graph of the sequence consists of points on a line as shown in Figure \\(\\PageIndex{2}\\).",
+      "original": "Example \\(\\PageIndex{3}\\): Writing Terms of Arithmetic Sequences\n\nGiven \\(a_1=8\\) and \\(a_4=14\\), find \\(a_5\\).\n\nSolution\n\nThe sequence can be written in terms of the initial term \\(8\\) and the common difference \\(d\\).\n\n\\(\\{8,8+d,8+2d,8+3d\\}\\)\n\nWe know the fourth term equals \\(14\\); we know the fourth term has the form \\(a_1+3d=8+3d\\).\n\nWe can find the common difference \\(d\\).\n\n\\[\\begin{align*} a_n&= a_1+(n-1)d \\\\ a_4&= a_1+3d \\\\ a_4&=8+3d\\qquad \\text{Write the fourth term of the sequence in terms of }a_1 \\text{ and } d. \\\\ 14&=8+3d\\qquad \\text{Substitute }14 \\text{ for } a_4. \\\\ d&=2\\qquad \\text{Solve for the common difference.} \\end{align*}\\]\n\nFind the fifth term by adding the common difference to the fourth term.\n\n\\(a_5=a_4+2=16\\)\n\nAnalysis\n\nNotice that the common difference is added to the first term once to find the second term, twice to find the third term, three times to find the fourth term, and so on. The tenth term could be found by adding the common difference to the first term nine times or by using the equation \\(a_n=a_1+(n−1)d\\).",
+      "prompt": "Example \\(\\PageIndex{3}\\): Writing Terms of Arithmetic Sequences\n\nGiven \\(a_1=8\\) and \\(a_4=14\\), find \\(a_5\\).\n\nSolution\n\nThe sequence can be written in terms of the initial term \\(8\\) and the common difference \\(d\\).\n\n\\(\\{8,8+d,8+2d,8+3d\\}\\)\n\nWe know the fourth term equals \\(14\\); we know the fourth term has the form \\(a_1+3d=8+3d\\).\n\nWe can find the common difference \\(d\\).\n\n\\[\\begin{align*} a_n&= a_1+(n-1)d \\\\ a_4&= a_1+3d \\\\ a_4&=8+3d\\qquad \\text{Write the fourth term of the sequence in terms of }a_1 \\text{ and } d. \\\\ 14&=8+3d\\qquad \\text{Substitute }14 \\text{ for } a_4. \\\\ d&=2\\qquad \\text{Solve for the common difference.} \\end{align*}\\]\n\nFind the fifth term by adding the common difference to the fourth term.\n\n\\(a_5=a_4+2=16\\)\n\nAnalysis\n\nNotice that the common difference is added to the first term once to find the second term, twice to find the third term, three times to find the fourth term, and so on. The tenth term could be found by adding the common difference to the first term nine times or by using the equation \\(a_n=a_1+(n−1)d\\).",
+      "sourceAnswers": [],
+      "hasFigure": false,
+      "status": "draft",
+      "answerVerified": false,
+      "translationStatus": "pending",
+      "mappingStatus": "pending"
+    },
+    {
+      "ordinal": 13,
+      "sourceNumber": "",
+      "sourceAnchor": "",
+      "kind": "exercise-candidate",
+      "context": "Analysis\n\nAs expected, the graph of the sequence consists of points on a line as shown in Figure \\(\\PageIndex{2}\\).",
+      "original": "Exercise \\(\\PageIndex{3}\\)\n\nGiven \\(a_3=7\\) and \\(a_5=17\\), find \\(a_2\\).\n\nAnswer\n\n\\(a_2=2\\)",
+      "prompt": "Exercise \\(\\PageIndex{3}\\)\n\nGiven \\(a_3=7\\) and \\(a_5=17\\), find \\(a_2\\).",
+      "sourceAnswers": [
+        "\\(a_2=2\\)"
+      ],
+      "hasFigure": false,
+      "status": "draft",
+      "answerVerified": false,
+      "translationStatus": "pending",
+      "mappingStatus": "pending"
+    },
+    {
+      "ordinal": 14,
+      "sourceNumber": "1",
+      "sourceAnchor": "",
+      "kind": "exercise-candidate",
+      "context": "The recursive formula for an arithmetic sequence with common difference \\(d\\) is:\n\n\\[a_n=a_n−1+d\\]\n\nfor \\(n≥2\\)",
+      "original": "1. Subtract any term from the subsequent term to find the common difference.",
+      "prompt": "1. Subtract any term from the subsequent term to find the common difference.",
+      "sourceAnswers": [],
+      "hasFigure": false,
+      "status": "draft",
+      "answerVerified": false,
+      "translationStatus": "pending",
+      "mappingStatus": "pending"
+    },
+    {
+      "ordinal": 15,
+      "sourceNumber": "2",
+      "sourceAnchor": "",
+      "kind": "exercise-candidate",
+      "context": "The recursive formula for an arithmetic sequence with common difference \\(d\\) is:\n\n\\[a_n=a_n−1+d\\]\n\nfor \\(n≥2\\)",
+      "original": "2. State the initial term and substitute the common difference into the recursive formula for arithmetic sequences.",
+      "prompt": "2. State the initial term and substitute the common difference into the recursive formula for arithmetic sequences.",
+      "sourceAnswers": [],
+      "hasFigure": false,
+      "status": "draft",
+      "answerVerified": false,
+      "translationStatus": "pending",
+      "mappingStatus": "pending"
+    },
+    {
+      "ordinal": 16,
+      "sourceNumber": "",
+      "sourceAnchor": "",
+      "kind": "example-or-exercise",
+      "context": "The recursive formula for an arithmetic sequence with common difference \\(d\\) is:\n\n\\[a_n=a_n−1+d\\]\n\nfor \\(n≥2\\)",
+      "original": "Example \\(\\PageIndex{4}\\):  Writing a Recursive Formula for an Arithmetic Sequence\n\nWrite a recursive formula for the arithmetic sequence.\n\n\\(\\{−18, −7, 4, 15, 26, …\\}\\)\n\nSolution\n\nThe first term is given as \\(−18\\). The common difference can be found by subtracting the first term from the second term.\n\n\\(d=−7−(−18)=11\\)\n\nSubstitute the initial term and the common difference into the recursive formula for arithmetic sequences.\n\n\\(a_1=−18\\)\n\n\\(a_n=a_{n−1}+11\\)\n\nfor \\(n≥2\\)",
+      "prompt": "Example \\(\\PageIndex{4}\\):  Writing a Recursive Formula for an Arithmetic Sequence\n\nWrite a recursive formula for the arithmetic sequence.\n\n\\(\\{−18, −7, 4, 15, 26, …\\}\\)\n\nSolution\n\nThe first term is given as \\(−18\\). The common difference can be found by subtracting the first term from the second term.\n\n\\(d=−7−(−18)=11\\)\n\nSubstitute the initial term and the common difference into the recursive formula for arithmetic sequences.\n\n\\(a_1=−18\\)\n\n\\(a_n=a_{n−1}+11\\)\n\nfor \\(n≥2\\)",
+      "sourceAnswers": [],
+      "hasFigure": false,
+      "status": "draft",
+      "answerVerified": false,
+      "translationStatus": "pending",
+      "mappingStatus": "pending"
+    },
+    {
+      "ordinal": 17,
+      "sourceNumber": "",
+      "sourceAnchor": "",
+      "kind": "exercise-candidate",
+      "context": "Do we have to subtract the first term from the second term to find the common difference?\n\nNo. We can subtract any term in the sequence from the subsequent term. It is, however, most common to subtract the first term from the second term because it is often the easiest method of finding the common difference.",
+      "original": "Exercise \\(\\PageIndex{4}\\)\n\nWrite a recursive formula for the arithmetic sequence.\n\n\\(\\{25, 37, 49, 61, …\\}\\)\n\nAnswer\n\n\\(\\begin{align*}a_1 &= 25 \\\\ a_n &= a_{n−1}+12 , \\text{ for }n≥2 \\end{align*}\\)",
+      "prompt": "Exercise \\(\\PageIndex{4}\\)\n\nWrite a recursive formula for the arithmetic sequence.\n\n\\(\\{25, 37, 49, 61, …\\}\\)",
+      "sourceAnswers": [
+        "\\(\\begin{align*}a_1 &= 25 \\\\ a_n &= a_{n−1}+12 , \\text{ for }n≥2 \\end{align*}\\)"
+      ],
+      "hasFigure": false,
+      "status": "draft",
+      "answerVerified": false,
+      "translationStatus": "pending",
+      "mappingStatus": "pending"
+    },
+    {
+      "ordinal": 18,
+      "sourceNumber": "1",
+      "sourceAnchor": "",
+      "kind": "exercise-candidate",
+      "context": "We do not need to find the vertical intercept to write an explicit formula for an arithmetic sequence. Another explicit formula for this sequence is \\(a_n=200−50(n−1)\\), which simplifies to \\(a_n=−50n+250\\).\n\nAn explicit formula for the \\(n^{th}\\) term of an arithmetic sequence is given by\n\n\\[a_n=a_1+d(n−1)\\]",
+      "original": "1. Find the common difference, \\(a_2−a_1\\).",
+      "prompt": "1. Find the common difference, \\(a_2−a_1\\).",
+      "sourceAnswers": [],
+      "hasFigure": false,
+      "status": "draft",
+      "answerVerified": false,
+      "translationStatus": "pending",
+      "mappingStatus": "pending"
+    },
+    {
+      "ordinal": 19,
+      "sourceNumber": "2",
+      "sourceAnchor": "",
+      "kind": "exercise-candidate",
+      "context": "We do not need to find the vertical intercept to write an explicit formula for an arithmetic sequence. Another explicit formula for this sequence is \\(a_n=200−50(n−1)\\), which simplifies to \\(a_n=−50n+250\\).\n\nAn explicit formula for the \\(n^{th}\\) term of an arithmetic sequence is given by\n\n\\[a_n=a_1+d(n−1)\\]",
+      "original": "2. Substitute the common difference and the first term into \\(a_n=a_1+d(n−1)\\).",
+      "prompt": "2. Substitute the common difference and the first term into \\(a_n=a_1+d(n−1)\\).",
+      "sourceAnswers": [],
+      "hasFigure": false,
+      "status": "draft",
+      "answerVerified": false,
+      "translationStatus": "pending",
+      "mappingStatus": "pending"
+    },
+    {
+      "ordinal": 20,
+      "sourceNumber": "",
+      "sourceAnchor": "",
+      "kind": "example-or-exercise",
+      "context": "We do not need to find the vertical intercept to write an explicit formula for an arithmetic sequence. Another explicit formula for this sequence is \\(a_n=200−50(n−1)\\), which simplifies to \\(a_n=−50n+250\\).\n\nAn explicit formula for the \\(n^{th}\\) term of an arithmetic sequence is given by\n\n\\[a_n=a_1+d(n−1)\\]",
+      "original": "Example \\(\\PageIndex{5}\\): Writing the nth Term Explicit Formula for an Arithmetic Sequence\n\nWrite an explicit formula for the arithmetic sequence.\n\n\\(\\{2, 12, 22, 32, 42, …\\}\\)\n\nSolution\n\nThe common difference can be found by subtracting the first term from the second term.\n\n\\[\\begin{align*} d &= a_2−a_1 \\\\ &= 12−2 \\\\ &= 10 \\end{align*}\\]\n\nThe common difference is \\(10\\). Substitute the common difference and the first term of the sequence into the formula and simplify.\n\n\\[\\begin{align*}a_n &= 2+10(n−1) \\\\ a_n &= 10n−8 \\end{align*}\\]",
+      "prompt": "Example \\(\\PageIndex{5}\\): Writing the nth Term Explicit Formula for an Arithmetic Sequence\n\nWrite an explicit formula for the arithmetic sequence.\n\n\\(\\{2, 12, 22, 32, 42, …\\}\\)\n\nSolution\n\nThe common difference can be found by subtracting the first term from the second term.\n\n\\[\\begin{align*} d &= a_2−a_1 \\\\ &= 12−2 \\\\ &= 10 \\end{align*}\\]\n\nThe common difference is \\(10\\). Substitute the common difference and the first term of the sequence into the formula and simplify.\n\n\\[\\begin{align*}a_n &= 2+10(n−1) \\\\ a_n &= 10n−8 \\end{align*}\\]",
+      "sourceAnswers": [],
+      "hasFigure": false,
+      "status": "draft",
+      "answerVerified": false,
+      "translationStatus": "pending",
+      "mappingStatus": "pending"
+    },
+    {
+      "ordinal": 21,
+      "sourceNumber": "",
+      "sourceAnchor": "",
+      "kind": "exercise-candidate",
+      "context": "Analysis\n\nThe graph of this sequence, represented in Figure \\(\\PageIndex{5}\\), shows a slope of \\(10\\) and a vertical intercept of \\(−8\\).",
+      "original": "Exercise \\(\\PageIndex{5}\\)\n\nWrite an explicit formula for the following arithmetic sequence.\n\n\\(\\{50,47,44,41,…\\}\\)\n\nAnswer\n\n\\(a_n=53−3n\\)",
+      "prompt": "Exercise \\(\\PageIndex{5}\\)\n\nWrite an explicit formula for the following arithmetic sequence.\n\n\\(\\{50,47,44,41,…\\}\\)",
+      "sourceAnswers": [
+        "\\(a_n=53−3n\\)"
+      ],
+      "hasFigure": false,
+      "status": "draft",
+      "answerVerified": false,
+      "translationStatus": "pending",
+      "mappingStatus": "pending"
+    },
+    {
+      "ordinal": 22,
+      "sourceNumber": "1",
+      "sourceAnchor": "",
+      "kind": "exercise-candidate",
+      "context": "Finding the Number of Terms in a Finite Arithmetic Sequence\n\nExplicit formulas can be used to determine the number of terms in a finite arithmetic sequence. We need to find the common difference, and then determine how many times the common difference must be added to the first term to obtain the final term of the sequence.",
+      "original": "1. Find the common difference \\(d\\).",
+      "prompt": "1. Find the common difference \\(d\\).",
+      "sourceAnswers": [],
+      "hasFigure": false,
+      "status": "draft",
+      "answerVerified": false,
+      "translationStatus": "pending",
+      "mappingStatus": "pending"
+    },
+    {
+      "ordinal": 23,
+      "sourceNumber": "2",
+      "sourceAnchor": "",
+      "kind": "exercise-candidate",
+      "context": "Finding the Number of Terms in a Finite Arithmetic Sequence\n\nExplicit formulas can be used to determine the number of terms in a finite arithmetic sequence. We need to find the common difference, and then determine how many times the common difference must be added to the first term to obtain the final term of the sequence.",
+      "original": "2. Substitute the common difference and the first term into \\(a_n=a_1+d(n–1)\\).",
+      "prompt": "2. Substitute the common difference and the first term into \\(a_n=a_1+d(n–1)\\).",
+      "sourceAnswers": [],
+      "hasFigure": false,
+      "status": "draft",
+      "answerVerified": false,
+      "translationStatus": "pending",
+      "mappingStatus": "pending"
+    },
+    {
+      "ordinal": 24,
+      "sourceNumber": "3",
+      "sourceAnchor": "",
+      "kind": "exercise-candidate",
+      "context": "Finding the Number of Terms in a Finite Arithmetic Sequence\n\nExplicit formulas can be used to determine the number of terms in a finite arithmetic sequence. We need to find the common difference, and then determine how many times the common difference must be added to the first term to obtain the final term of the sequence.",
+      "original": "3. Substitute the last term for \\(a_n\\) and solve for \\(n\\).",
+      "prompt": "3. Substitute the last term for \\(a_n\\) and solve for \\(n\\).",
+      "sourceAnswers": [],
+      "hasFigure": false,
+      "status": "draft",
+      "answerVerified": false,
+      "translationStatus": "pending",
+      "mappingStatus": "pending"
+    },
+    {
+      "ordinal": 25,
+      "sourceNumber": "",
+      "sourceAnchor": "",
+      "kind": "example-or-exercise",
+      "context": "Finding the Number of Terms in a Finite Arithmetic Sequence\n\nExplicit formulas can be used to determine the number of terms in a finite arithmetic sequence. We need to find the common difference, and then determine how many times the common difference must be added to the first term to obtain the final term of the sequence.",
+      "original": "Example \\(\\PageIndex{6}\\): Finding the Number of Terms in a Finite Arithmetic Sequence\n\nFind the number of terms in the finite arithmetic sequence.\n\n\\(\\{8, 1, –6, ..., –41\\}\\)\n\nSolution\n\nThe common difference can be found by subtracting the first term from the second term.\n\n\\(1−8=−7\\)\n\nThe common difference is \\(−7\\). Substitute the common difference and the initial term of the sequence into the nth term formula and simplify.\n\n\\[\\begin{align*} a_n &= a_1+d(n−1) \\\\ a_n &= 8+−7(n−1) \\\\ a_n &= 15−7n \\end{align*}\\]\n\nSubstitute \\(−41\\) for \\(a_n\\) and solve for \\(n\\)\n\n\\[\\begin{align*} -41&=15-7n\\\\ 8&=n \\end{align*}\\]\n\nThere are eight terms in the sequence.",
+      "prompt": "Example \\(\\PageIndex{6}\\): Finding the Number of Terms in a Finite Arithmetic Sequence\n\nFind the number of terms in the finite arithmetic sequence.\n\n\\(\\{8, 1, –6, ..., –41\\}\\)\n\nSolution\n\nThe common difference can be found by subtracting the first term from the second term.\n\n\\(1−8=−7\\)\n\nThe common difference is \\(−7\\). Substitute the common difference and the initial term of the sequence into the nth term formula and simplify.\n\n\\[\\begin{align*} a_n &= a_1+d(n−1) \\\\ a_n &= 8+−7(n−1) \\\\ a_n &= 15−7n \\end{align*}\\]\n\nSubstitute \\(−41\\) for \\(a_n\\) and solve for \\(n\\)\n\n\\[\\begin{align*} -41&=15-7n\\\\ 8&=n \\end{align*}\\]\n\nThere are eight terms in the sequence.",
+      "sourceAnswers": [],
+      "hasFigure": false,
+      "status": "draft",
+      "answerVerified": false,
+      "translationStatus": "pending",
+      "mappingStatus": "pending"
+    },
+    {
+      "ordinal": 26,
+      "sourceNumber": "",
+      "sourceAnchor": "",
+      "kind": "exercise-candidate",
+      "context": "Finding the Number of Terms in a Finite Arithmetic Sequence\n\nExplicit formulas can be used to determine the number of terms in a finite arithmetic sequence. We need to find the common difference, and then determine how many times the common difference must be added to the first term to obtain the final term of the sequence.",
+      "original": "Exercise \\(\\PageIndex{6}\\)\n\nFind the number of terms in the finite arithmetic sequence.\n\n\\(\\{6, 11, 16, ..., 56\\}\\)\n\nAnswer\n\nThere are \\(11\\) terms in the sequence.",
+      "prompt": "Exercise \\(\\PageIndex{6}\\)\n\nFind the number of terms in the finite arithmetic sequence.\n\n\\(\\{6, 11, 16, ..., 56\\}\\)",
+      "sourceAnswers": [
+        "There are \\(11\\) terms in the sequence."
+      ],
+      "hasFigure": false,
+      "status": "draft",
+      "answerVerified": false,
+      "translationStatus": "pending",
+      "mappingStatus": "pending"
+    },
+    {
+      "ordinal": 27,
+      "sourceNumber": "",
+      "sourceAnchor": "",
+      "kind": "example-or-exercise",
+      "context": "Solving Application Problems with Arithmetic Sequences\n\nIn many application problems, it often makes sense to use an initial term of \\(a_0\\) instead of \\(a_1\\). In these problems, we alter the explicit formula slightly to account for the difference in initial terms. We use the following formula:\n\n\\[a_n=a_0+dn\\]",
+      "original": "Example \\(\\PageIndex{7}\\): Solving Application Problems with Arithmetic Sequences\n\nA five-year old child receives an allowance of \\($1\\) each week. His parents promise him an annual increase of \\($2\\) per week.\n\n1. Write a formula for the child’s weekly allowance in a given year.\n\n2. What will the child’s allowance be when he is \\(16\\) years old?\n\nSolution\n\n1. The situation can be modeled by an arithmetic sequence with an initial term of \\(1\\) and a common difference of \\(2\\).\n\nLet \\(A\\) be the amount of the allowance and \\(n\\) be the number of years after age \\(5\\). Using the altered explicit formula for an arithmetic sequence we get:\n\n\\(A_n=1+2n\\)\n\n2. We can find the number of years since age \\(5\\) by subtracting.\n\n\\(16−5=11\\)\n\nWe are looking for the child’s allowance after \\(11\\) years. Substitute \\(11\\) into the formula to find the child’s allowance at age \\(16\\).\n\n\\(A_{11}=1+2(11)=23\\)\n\nThe child’s allowance at age \\(16\\) will be \\($23\\) per week.",
+      "prompt": "Example \\(\\PageIndex{7}\\): Solving Application Problems with Arithmetic Sequences\n\nA five-year old child receives an allowance of \\($1\\) each week. His parents promise him an annual increase of \\($2\\) per week.\n\n1. Write a formula for the child’s weekly allowance in a given year.\n\n2. What will the child’s allowance be when he is \\(16\\) years old?\n\nSolution\n\n1. The situation can be modeled by an arithmetic sequence with an initial term of \\(1\\) and a common difference of \\(2\\).\n\nLet \\(A\\) be the amount of the allowance and \\(n\\) be the number of years after age \\(5\\). Using the altered explicit formula for an arithmetic sequence we get:\n\n\\(A_n=1+2n\\)\n\n2. We can find the number of years since age \\(5\\) by subtracting.\n\n\\(16−5=11\\)\n\nWe are looking for the child’s allowance after \\(11\\) years. Substitute \\(11\\) into the formula to find the child’s allowance at age \\(16\\).\n\n\\(A_{11}=1+2(11)=23\\)\n\nThe child’s allowance at age \\(16\\) will be \\($23\\) per week.",
+      "sourceAnswers": [],
+      "hasFigure": false,
+      "status": "draft",
+      "answerVerified": false,
+      "translationStatus": "pending",
+      "mappingStatus": "pending"
+    },
+    {
+      "ordinal": 28,
+      "sourceNumber": "",
+      "sourceAnchor": "",
+      "kind": "exercise-candidate",
+      "context": "Solving Application Problems with Arithmetic Sequences\n\nIn many application problems, it often makes sense to use an initial term of \\(a_0\\) instead of \\(a_1\\). In these problems, we alter the explicit formula slightly to account for the difference in initial terms. We use the following formula:\n\n\\[a_n=a_0+dn\\]",
+      "original": "Exercise \\(\\PageIndex{7}\\)\n\nA woman decides to go for a \\(10\\)-minute run every day this week and plans to increase the time of her daily run by \\(4\\) minutes each week. Write a formula for the time of her run after \\(n\\) weeks. How long will her daily run be \\(8\\) weeks from today?\n\nAnswer\n\nThe formula is \\(T_n=10+4n\\), and it will take her \\(42\\) minutes.",
+      "prompt": "Exercise \\(\\PageIndex{7}\\)\n\nA woman decides to go for a \\(10\\)-minute run every day this week and plans to increase the time of her daily run by \\(4\\) minutes each week. Write a formula for the time of her run after \\(n\\) weeks. How long will her daily run be \\(8\\) weeks from today?",
+      "sourceAnswers": [
+        "The formula is \\(T_n=10+4n\\), and it will take her \\(42\\) minutes."
+      ],
+      "hasFigure": false,
+      "status": "draft",
+      "answerVerified": false,
+      "translationStatus": "pending",
+      "mappingStatus": "pending"
+    }
+  ],
+  "license": "CC BY 4.0",
+  "licenseEvidence": "This page titled 13.2: Arithmetic Sequences was last modified on Sun, 27 Apr 2025 18:28:26 GMT and is shared under a CC BY  4.0  license and was authored, remixed, and/or curated by OpenStax via source content that was edited to the style and standards of the LibreTexts platform.",
+  "url": "https://math.libretexts.org/Bookshelves/Algebra/Algebra_and_Trigonometry_1e_(OpenStax)/13:_Sequences_Probability_and_Counting_Theory/13.02:_Arithmetic_Sequences",
+  "sha256": "3c0a2ccd46623451d19be2b211f838dc2c2882931edd2186ea344db4cba15e52",
+  "checkedAt": "2026-10-07",
+  "id": "f90070d7236c796a4c85",
+  "bookId": "algebra-trigonometry",
+  "licenseInherited": false,
+  "licenseSource": "https://math.libretexts.org/Bookshelves/Algebra/Algebra_and_Trigonometry_1e_(OpenStax)/13:_Sequences_Probability_and_Counting_Theory/13.02:_Arithmetic_Sequences",
+  "licenseUrl": "https://creativecommons.org/licenses/by/4.0/",
+  "authors": "OpenStax / Jay Abramson et al.",
+  "book": "Algebra and Trigonometry 1e",
+  "reviewStatus": "unreviewed",
+  "sourceLanguage": "en",
+  "translationStatus": "pending"
+}

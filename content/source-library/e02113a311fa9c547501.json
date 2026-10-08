@@ -1,0 +1,603 @@
+{
+  "title": "12.2: The Hyperbola",
+  "originalText": "Learning Objectives\n\nLocate a hyperbola’s vertices and foci.\n\nWrite equations of hyperbolas in standard form.\n\nGraph hyperbolas centered at the origin.\n\nGraph hyperbolas not centered at the origin.\n\nSolve applied problems involving hyperbolas.\n\nWhat do paths of comets, supersonic booms, ancient Grecian pillars, and natural draft cooling towers have in common? They can all be modeled by the same type of conic. For instance, when something moves faster than the speed of sound, a shock wave in the form of a cone is created. A portion of a conic is formed when the wave intersects the ground, resulting in a sonic boom (Figure \\(\\PageIndex{1}\\)).\n\n[Figure: alt]\n\nFigure \\(\\PageIndex{1}\\): A shock wave intersecting the ground forms a portion of a conic and results in a sonic boom.\n\nMost people are familiar with the sonic boom created by supersonic aircraft, but humans were breaking the sound barrier long before the first supersonic flight. The crack of a whip occurs because the tip is exceeding the speed of sound. The bullets shot from many firearms also break the sound barrier, although the bang of the gun usually supersedes the sound of the sonic boom.\n\nLocating the Vertices and Foci of a Hyperbola\n\nIn analytic geometry, a hyperbola is a conic section formed by intersecting a right circular cone with a plane at an angle such that both halves of the cone are intersected. This intersection produces two separate unbounded curves that are mirror images of each other (Figure \\(\\PageIndex{2}\\)).\n\n[Figure: alt]\n\nFigure \\(\\PageIndex{2}\\): A hyperbola\n\nLike the ellipse, the hyperbola can also be defined as a set of points in the coordinate plane. A hyperbola is the set of all points \\((x,y)\\) in a plane such that the difference of the distances between \\((x,y)\\) and the foci is a positive constant.\n\nNotice that the definition of a hyperbola is very similar to that of an ellipse. The distinction is that the hyperbola is defined in terms of the difference of two distances, whereas the ellipse is defined in terms of the sum of two distances.\n\nAs with the ellipse, every hyperbola has two axes of symmetry. The transverse axis is a line segment that passes through the center of the hyperbola and has vertices as its endpoints. The foci lie on the line that contains the transverse axis. The conjugate axis is perpendicular to the transverse axis and has the co-vertices as its endpoints. The center of a hyperbola is the midpoint of both the transverse and conjugate axes, where they intersect. Every hyperbola also has two asymptotes that pass through its center. As a hyperbola recedes from the center, its branches approach these asymptotes. The central rectangle of the hyperbola is centered at the origin with sides that pass through each vertex and co-vertex; it is a useful tool for graphing the hyperbola and its asymptotes. To sketch the asymptotes of the hyperbola, simply sketch and extend the diagonals of the central rectangle (Figure \\(\\PageIndex{3}\\)).\n\n[Figure: alt]\n\nFigure \\(\\PageIndex{3}\\): Key features of the hyperbola\n\nIn this section, we will limit our discussion to hyperbolas that are positioned vertically or horizontally in the coordinate plane; the axes will either lie on or be parallel to the \\(x\\)- and \\(y\\)-axes. We will consider two cases: those that are centered at the origin, and those that are centered at a point other than the origin.\n\nDeriving the Equation of an Ellipse Centered at the Origin\n\nLet \\((−c,0)\\) and \\((c,0)\\) be the foci of a hyperbola centered at the origin. The hyperbola is the set of all points \\((x,y)\\) such that the difference of the distances from \\((x,y)\\) to the foci is constant. See Figure \\(\\PageIndex{4}\\).\n\n[Figure: A horizontal hyperbola in the x y coordinate system centered at (0, 0) with Vertices at (negative a, 0) and (a, 0) and Foci at (negative c, 0) and (c, 0), with lines of length d1 and d2 connecting a point on the right branch of the hyperbola to the foci.]\n\nFigure \\(\\PageIndex{4}\\)\n\nIf \\((a,0)\\) is a vertex of the hyperbola, the distance from \\((−c,0)\\) to \\((a,0)\\) is \\(a−(−c)=a+c\\). The distance from \\((c,0)\\) to \\((a,0)\\) is \\(c−a\\). The sum of the distances from the foci to the vertex is\n\n\\((a+c)−(c−a)=2a\\)\n\nIf \\((x,y)\\) is a point on the hyperbola, we can define the following variables:\n\n\\(d_2=\\) the distance from \\((−c,0)\\) to \\((x,y)\\)\n\n\\(d_1=\\) the distance from \\((c,0)\\) to \\((x,y)\\)\n\nBy definition of a hyperbola, \\(d_2−d_1\\) is constant for any point \\((x,y)\\) on the hyperbola. We know that the difference of these distances is \\(2a\\) for the vertex \\((a,0)\\). It follows that \\(d_2−d_1=2a\\) for any point on the hyperbola. As with the derivation of the equation of an ellipse, we will begin by applying the distance formula. The rest of the derivation is algebraic. Compare this derivation with the one from the previous section for ellipses.\n\n\\[\\begin{align*} d_2-d_1&=2a\\\\ \\sqrt{{(x-(-c))}^2+{(y-0)}^2}-\\sqrt{{(x-c)}^2+{(y-0)}^2}&=2a\\qquad \\text{Distance Formula}\\\\ \\sqrt{{(x+c)}^2+y^2}-\\sqrt{{(x-c)}^2+y^2}&=2a\\qquad \\text{Simplify expressions.}\\\\ \\sqrt{{(x+c)}^2+y^2}&=2a+\\sqrt{{(x-c)}^2+y^2}\\qquad \\text{Move radical to opposite side.}\\\\ {(x+c)}^2+y^2&={(2a+\\sqrt{{(x-c)}^2+y^2})}^2\\qquad \\text{Square both sides.}\\\\ x^2+2cx+c^2+y^2&=4a^2+4a\\sqrt{{(x-c)}^2+y^2}+{(x-c)}^2+y^2\\qquad \\text{Expand the squares.}\\\\ x^2+2cx+c^2+y^2&=4a^2+4a\\sqrt{{(x-c)}^2+y^2}+x^2-2cx+c^2+y^2\\qquad \\text{Expand remaining square.}\\\\ 2cx&=4a^2+4a\\sqrt{{(x-c)}^2+y^2}-2cx\\qquad \\text{Combine like terms.}\\\\ 4cx-4a^2&=4a\\sqrt{{(x-c)}^2+y^2}\\qquad \\text{Isolate the radical.}\\\\ cx-a^2&=a\\sqrt{{(x-c)}^2+y^2}\\qquad \\text{Divide by 4.}\\\\ {(cx-a^2)}^2&=a^2{\\left[\\sqrt{{(x-c)}^2+y^2}\\right]}^2\\qquad \\text{Square both sides.}\\\\ c^2x^2-2a^2cx+a^4&=a^2(x^2-2cx+c^2+y^2)\\qquad \\text{Expand the squares.}\\\\ c^2x^2-2a^2cx+a^4&=a^2x^2-2a^2cx+a^2c^2+a^2y^2\\qquad \\text{Distribute } a^2\\\\ a^4+c^2x^2&=a^2x^2+a^2c^2+a^2y^2\\qquad \\text{Combine like terms.}\\\\ c^2x^2-a^2x^2-a^2y^2&=a^2c^2-a^4\\qquad \\text{Rearrange terms.}\\\\ x^2(c^2-a^2)-a^2y^2&=a^2(c^2-a^2)\\qquad \\text{Factor common terms.}\\\\ x^2b^2-a^2y^2&=a^2b^2\\qquad \\text{Set } b^2=c^2−a^2\\\\. \\dfrac{x^2b^2}{a^2b^2}-\\dfrac{a^2y^2}{a^2b^2}&=\\dfrac{a^2b^2}{a^2b^2}\\qquad \\text{Divide both sides by } a^2b^2\\\\ \\dfrac{x^2}{a^2}-\\dfrac{y^2}{b^2}&=1\\\\ \\end{align*}\\]\n\nThis equation defines a hyperbola centered at the origin with vertices \\((\\pm a,0)\\) and co-vertices \\((0,\\pm b)\\).\n\nSTANDARD FORMS OF THE EQUATION OF A HYPERBOLA WITH CENTER \\((0,0)\\)\n\nThe standard form of the equation of a hyperbola with center \\((0,0)\\) and transverse axis on the \\(x\\)-axis is\n\n\\(\\dfrac{x^2}{a^2}−\\dfrac{y^2}{b^2}=1\\)\n\nwhere\n\nthe length of the transverse axis is \\(2a\\)\n\nthe coordinates of the vertices are \\((\\pm a,0)\\)\n\nthe length of the conjugate axis is \\(2b\\)\n\nthe coordinates of the co-vertices are \\((0,\\pm b)\\)\n\nthe distance between the foci is \\(2c\\), where \\(c^2=a^2+b^2\\)\n\nthe coordinates of the foci are \\((\\pm c,0)\\)\n\nthe equations of the asymptotes are \\(y=\\pm \\dfrac{b}{a}x\\)\n\nSee Figure \\(\\PageIndex{5a}\\).\n\nThe standard form of the equation of a hyperbola with center \\((0,0)\\) and transverse axis on the \\(y\\)-axis is\n\n\\(\\dfrac{y^2}{a^2}−\\dfrac{x^2}{b^2}=1\\)\n\nwhere\n\nthe length of the transverse axis is \\(2a\\)\n\nthe coordinates of the vertices are \\((0,\\pm a)\\)\n\nthe length of the conjugate axis is \\(2b\\)\n\nthe coordinates of the co-vertices are \\((\\pm b,0)\\)\n\nthe distance between the foci is \\(2c\\), where \\(c^2=a^2+b^2\\)\n\nthe coordinates of the foci are \\((0,\\pm c)\\)\n\nthe equations of the asymptotes are \\(y=\\pm \\dfrac{a}{b}x\\)\n\nSee Figure \\(\\PageIndex{5b}\\).\n\nNote that the vertices, co-vertices, and foci are related by the equation \\(c^2=a^2+b^2\\). When we are given the equation of a hyperbola, we can use this relationship to identify its vertices and foci.\n\n[Figure: alt]\n\nFigure \\(\\PageIndex{5}\\): (a) Horizontal hyperbola with center \\((0,0)\\) (b) Vertical hyperbola with center \\((0,0)\\)\n\nHow to: Given the equation of a hyperbola in standard form, locate its vertices and foci\n\n1. Determine whether the transverse axis lies on the \\(x\\)- or \\(y\\)-axis. Notice that \\(a^2\\) is always under the variable with the positive coefficient. So, if you set the other variable equal to zero, you can easily find the intercepts. In the case where the hyperbola is centered at the origin, the intercepts coincide with the vertices.\n\nIf the equation has the form \\(\\dfrac{x^2}{a^2}−\\dfrac{y^2}{b^2}=1\\), then the transverse axis lies on the \\(x\\)-axis. The vertices are located at \\((\\pm a,0)\\), and the foci are located at \\((\\pm c,0)\\).\n\nIf the equation has the form \\(\\dfrac{y^2}{a^2}−\\dfrac{x^2}{b^2}=1\\), then the transverse axis lies on the \\(y\\)-axis. The vertices are located at \\((0,\\pm a)\\), and the foci are located at \\((0,\\pm c)\\).\n\n2. Solve for \\(a\\) using the equation \\(a=\\sqrt{a^2}\\).\n\n3. Solve for \\(c\\) using the equation \\(c=\\sqrt{a^2+b^2}\\).\n\nExample \\(\\PageIndex{1}\\): Locating a Hyperbola’s Vertices and Foci\n\nIdentify the vertices and foci of the hyperbola with equation \\(\\dfrac{y^2}{49}−\\dfrac{x^2}{32}=1\\).\n\nSolution\n\nThe equation has the form \\(\\dfrac{y^2}{a^2}−\\dfrac{x^2}{b^2}=1\\), so the transverse axis lies on the \\(y\\)-axis. The hyperbola is centered at the origin, so the vertices serve as the y-intercepts of the graph. To find the vertices, set \\(x=0\\), and solve for \\(y\\).\n\n\\[\\begin{align*} 1&=\\dfrac{y^2}{49}-\\dfrac{x^2}{32}\\\\ 1&=\\dfrac{y^2}{49}-\\dfrac{0^2}{32}\\\\ 1&=\\dfrac{y^2}{49}\\\\ y^2&=49\\\\ y&=\\pm \\sqrt{49}\\\\ &=\\pm 7 \\end{align*}\\]\n\nThe foci are located at \\((0,\\pm c)\\). Solving for \\(c\\),\n\n\\[\\begin{align*} c&=\\sqrt{a^2+b^2}\\\\ &=\\sqrt{49+32}\\\\ &=\\sqrt{81}\\\\ &=9 \\end{align*}\\]\n\nTherefore, the vertices are located at \\((0,\\pm 7)\\), and the foci are located at \\((0,9)\\).\n\nExercise \\(\\PageIndex{1}\\)\n\nIdentify the vertices and foci of the hyperbola with equation \\(\\dfrac{x^2}{9}−\\dfrac{y^2}{25}=1\\).\n\nAnswer\n\nVertices: \\((\\pm 3,0)\\); Foci: \\((\\pm \\sqrt{34},0)\\)\n\nWriting Equations of Hyperbolas in Standard Form\n\nJust as with ellipses, writing the equation for a hyperbola in standard form allows us to calculate the key features: its center, vertices, co-vertices, foci, asymptotes, and the lengths and positions of the transverse and conjugate axes. Conversely, an equation for a hyperbola can be found given its key features. We begin by finding standard equations for hyperbolas centered at the origin. Then we will turn our attention to finding standard equations for hyperbolas centered at some point other than the origin.\n\nHyperbolas Centered at the Origin\n\nReviewing the standard forms given for hyperbolas centered at \\((0,0)\\),we see that the vertices, co-vertices, and foci are related by the equation \\(c^2=a^2+b^2\\). Note that this equation can also be rewritten as \\(b^2=c^2−a^2\\). This relationship is used to write the equation for a hyperbola when given the coordinates of its foci and vertices.\n\nHow to: Given the vertices and foci of a hyperbola centered at \\((0,0)\\), write its equation in standard form\n\n1. Determine whether the transverse axis lies on the \\(x\\)- or \\(y\\)-axis.\n\nIf the given coordinates of the vertices and foci have the form \\((\\pm a,0)\\) and \\((\\pm c,0)\\), respectively, then the transverse axis is the \\(x\\)-axis. Use the standard form \\(\\dfrac{x^2}{a^2}−\\dfrac{y^2}{b^2}=1\\).\n\nIf the given coordinates of the vertices and foci have the form \\((0,\\pm a)\\) and \\((0,\\pm c)\\), respectively, then the transverse axis is the \\(y\\)-axis. Use the standard form \\(\\dfrac{y^2}{a^2}−\\dfrac{x^2}{b^2}=1\\).\n\n2. Find \\(b^2\\) using the equation \\(b^2=c^2−a^2\\).\n\n3. Substitute the values for \\(a^2\\) and \\(b^2\\) into the standard form of the equation determined in Step 1.\n\nExample \\(\\PageIndex{2}\\): Finding the Equation of a Hyperbola Centered at \\((0,0)\\) Given its Foci and Vertices\n\nWhat is the standard form equation of the hyperbola that has vertices \\((\\pm 6,0)\\) and foci \\((\\pm 2\\sqrt{10},0)\\)?\n\nSolution\n\nThe vertices and foci are on the \\(x\\)-axis. Thus, the equation for the hyperbola will have the form \\(\\dfrac{x^2}{a^2}−\\dfrac{y^2}{b^2}=1\\).\n\nThe vertices are \\((\\pm 6,0)\\), so \\(a=6\\) and \\(a^2=36\\).\n\nThe foci are \\((\\pm 2\\sqrt{10},0)\\), so \\(c=2\\sqrt{10}\\) and \\(c^2=40\\).\n\nSolving for \\(b^2\\), we have\n\n\\[\\begin{align*} b^2&=c^2-a^2\\\\ b^2&=40-36\\qquad \\text{Substitute for } c^2 \\text{ and } a^2\\\\ b^2&=4\\qquad \\text{Subtract.} \\end{align*}\\]\n\nFinally, we substitute \\(a^2=36\\) and \\(b^2=4\\) into the standard form of the equation, \\(\\dfrac{x^2}{a^2}−\\dfrac{y^2}{b^2}=1\\). The equation of the hyperbola is \\(\\dfrac{x^2}{36}−\\dfrac{y^2}{4}=1\\), as shown in Figure \\(\\PageIndex{6}\\).\n\n[Figure: A horizontal hyperbola centered at (0, 0) in the x y coordinate system with Vertices at (negative 6, 0) and (6, 0).]\n\nFigure \\(\\PageIndex{6}\\)\n\nExercise \\(\\PageIndex{2}\\)\n\nWhat is the standard form equation of the hyperbola that has vertices \\((0,\\pm 2)\\) and foci \\((0,\\pm 2\\sqrt{5})\\)?\n\nAnswer\n\n\\(\\dfrac{y^2}{4}−\\dfrac{x^2}{16}=1\\)\n\nHyperbolas Not Centered at the Origin\n\nLike the graphs for other equations, the graph of a hyperbola can be translated. If a hyperbola is translated \\(h\\) units horizontally and \\(k\\) units vertically, the center of the hyperbola will be \\((h,k)\\). This translation results in the standard form of the equation we saw previously, with \\(x\\) replaced by \\((x−h)\\) and \\(y\\) replaced by \\((y−k)\\).\n\nSTANDARD FORMS OF THE EQUATION OF A HYPERBOLA WITH CENTER \\((H, K)\\)\n\nThe standard form of the equation of a hyperbola with center \\((h,k)\\) and transverse axis parallel to the \\(x\\)-axis is\n\n\\[\\dfrac{{(x−h)}^2}{a^2}−\\dfrac{{(y−k)}^2}{b^2}=1\\]\n\nwhere\n\nthe length of the transverse axis is \\(2a\\)\n\nthe coordinates of the vertices are \\((h\\pm a,k)\\)\n\nthe length of the conjugate axis is \\(2b\\)\n\nthe coordinates of the co-vertices are \\((h,k\\pm b)\\)\n\nthe distance between the foci is \\(2c\\), where \\(c^2=a^2+b^2\\)\n\nthe coordinates of the foci are \\((h\\pm c,k)\\)\n\nThe asymptotes of the hyperbola coincide with the diagonals of the central rectangle. The length of the rectangle is \\(2a\\) and its width is \\(2b\\). The slopes of the diagonals are \\(\\pm \\dfrac{b}{a}\\),and each diagonal passes through the center \\((h,k)\\). Using the point-slope formula, it is simple to show that the equations of the asymptotes are \\(y=\\pm \\dfrac{b}{a}(x−h)+k\\). See Figure \\(\\PageIndex{7a}\\).\n\nThe standard form of the equation of a hyperbola with center \\((h,k)\\) and transverse axis parallel to the \\(y\\)-axis is\n\n\\[\\dfrac{{(y−k)}^2}{a^2}−\\dfrac{{(x−h)}^2}{b^2}=1\\]\n\nwhere\n\nthe length of the transverse axis is \\(2a\\)\n\nthe coordinates of the vertices are \\((h,k\\pm a)\\)\n\nthe length of the conjugate axis is \\(2b\\)\n\nthe coordinates of the co-vertices are \\((h\\pm b,k)\\)\n\nthe distance between the foci is \\(2c\\), where \\(c^2=a^2+b^2\\)\n\nthe coordinates of the foci are \\((h,k\\pm c)\\)\n\nUsing the reasoning above, the equations of the asymptotes are \\(y=\\pm \\dfrac{a}{b}(x−h)+k\\). See Figure \\(\\PageIndex{7b}\\).\n\n[Figure: This is a horizontal parabola opening to the right with Vertex (0, 0), Focus (6, 0), and Directrix x = negative 6. The Latus Rectum is shown, a vertical line passing through the Focus and terminating on the parabola at (6, 12) and (6, negative 12).]\n\nFigure \\(\\PageIndex{7}\\): (a) Horizontal hyperbola with center \\((h,k)\\) (b) Vertical hyperbola with center \\((h,k)\\)\n\nLike hyperbolas centered at the origin, hyperbolas centered at a point \\((h,k)\\) have vertices, co-vertices, and foci that are related by the equation \\(c^2=a^2+b^2\\). We can use this relationship along with the midpoint and distance formulas to find the standard equation of a hyperbola when the vertices and foci are given.\n\nHow to: Given the vertices and foci of a hyperbola centered at \\((h,k)\\),write its equation in standard form\n\n1. Determine whether the transverse axis is parallel to the \\(x\\)- or \\(y\\)-axis.\n\nIf the \\(y\\)-coordinates of the given vertices and foci are the same, then the transverse axis is parallel to the \\(x\\)-axis. Use the standard form \\(\\dfrac{{(x−h)}^2}{a^2}−\\dfrac{{(y−k)}^2}{b^2}=1\\).\n\nIf the \\(x\\)-coordinates of the given vertices and foci are the same, then the transverse axis is parallel to the \\(y\\)-axis. Use the standard form \\(\\dfrac{{(y−k)}^2}{a^2}−\\dfrac{{(x−h)}^2}{b^2}=1\\).\n\n2. Identify the center of the hyperbola, \\((h,k)\\),using the midpoint formula and the given coordinates for the vertices.\n\n3. Find \\(a^2\\) by solving for the length of the transverse axis, \\(2a\\), which is the distance between the given vertices.\n\n4. Find \\(c^2\\) using \\(h\\) and \\(k\\) found in Step 2 along with the given coordinates for the foci.\n\n5. Solve for \\(b^2\\) using the equation \\(b^2=c^2−a^2\\).\n\n6. Substitute the values for \\(h\\), \\(k\\), \\(a^2\\), and \\(b^2\\) into the standard form of the equation determined in Step 1.\n\nExample \\(\\PageIndex{3}\\): Finding the Equation of a Hyperbola Centered at \\((h, k)\\) Given its Foci and Vertices\n\nWhat is the standard form equation of the hyperbola that has vertices at \\((0,−2)\\) and \\((6,−2)\\) and foci at \\((−2,−2)\\) and \\((8,−2)\\)?\n\nSolution\n\nThe \\(y\\)-coordinates of the vertices and foci are the same, so the transverse axis is parallel to the \\(x\\)-axis. Thus, the equation of the hyperbola will have the form\n\n\\(\\dfrac{{(x−h)}^2}{a^2}−\\dfrac{{(y−k)}^2}{b^2}=1\\)\n\nFirst, we identify the center, \\((h,k)\\). The center is halfway between the vertices \\((0,−2)\\) and \\((6,−2)\\). Applying the midpoint formula, we have\n\n\\((h,k)=(\\dfrac{0+6}{2},\\dfrac{−2+(−2)}{2})=(3,−2)\\)\n\nNext, we find \\(a^2\\). The length of the transverse axis, \\(2a\\),is bounded by the vertices. So, we can find \\(a^2\\) by finding the distance between the \\(x\\)-coordinates of the vertices.\n\n\\[\\begin{align*} 2a&=| 0-6 |\\\\ 2a&=6\\\\ a&=3\\\\ a^2&=9 \\end{align*}\\]\n\nNow we need to find \\(c^2\\). The coordinates of the foci are \\((h\\pm c,k)\\). So \\((h−c,k)=(−2,−2)\\) and \\((h+c,k)=(8,−2)\\). We can use the \\(x\\)-coordinate from either of these points to solve for \\(c\\). Using the point \\((8,−2)\\), and substituting \\(h=3\\),\n\n\\[\\begin{align*} h+c&=8\\\\ 3+c&=8\\\\ c&=5\\\\ c^2&=25 \\end{align*}\\]\n\nNext, solve for \\(b^2\\) using the equation \\(b^2=c^2−a^2\\):\n\n\\[\\begin{align*} b^2&=c^2-a^2\\\\ &=25-9\\\\ &=16 \\end{align*}\\]\n\nFinally, substitute the values found for \\(h\\), \\(k\\), \\(a^2\\),and \\(b^2\\) into the standard form of the equation.\n\n\\(\\dfrac{{(x−3)}^2}{9}−\\dfrac{{(y+2)}^2}{16}=1\\)\n\nExercise \\(\\PageIndex{3}\\)\n\nWhat is the standard form equation of the hyperbola that has vertices \\((1,−2)\\) and \\((1,8)\\) and foci \\((1,−10)\\) and \\((1,16)\\)?\n\nAnswer\n\n\\(\\dfrac{{(y−3)}^2}{25}+\\dfrac{{(x−1)}^2}{144}=1\\)\n\nGraphing Hyperbolas Centered at the Origin\n\nWhen we have an equation in standard form for a hyperbola centered at the origin, we can interpret its parts to identify the key features of its graph: the center, vertices, co-vertices, asymptotes, foci, and lengths and positions of the transverse and conjugate axes. To graph hyperbolas centered at the origin, we use the standard form \\(\\dfrac{x^2}{a^2}−\\dfrac{y^2}{b^2}=1\\) for horizontal hyperbolas and the standard form \\(\\dfrac{y^2}{a^2}−\\dfrac{x^2}{b^2}=1\\) for vertical hyperbolas.\n\nHow to: Given a standard form equation for a hyperbola centered at \\((0,0)\\), sketch the graph\n\n1. Determine which of the standard forms applies to the given equation.\n\n2. Use the standard form identified in Step 1 to determine the position of the transverse axis; coordinates for the vertices, co-vertices, and foci; and the equations for the asymptotes.\n\nIf the equation is in the form \\(\\dfrac{x^2}{a^2}−\\dfrac{y^2}{b^2}=1\\), then\n\nthe transverse axis is on the \\(x\\)-axis\n\nthe coordinates of the vertices are \\((\\pm a,0)\\0\n\nthe coordinates of the co-vertices are \\((0,\\pm b)\\)\n\nthe coordinates of the foci are \\((\\pm c,0)\\)\n\nthe equations of the asymptotes are \\(y=\\pm \\dfrac{b}{a}x\\)\n\nIf the equation is in the form \\(\\dfrac{y^2}{a^2}−\\dfrac{x^2}{b^2}=1\\), then\n\nthe transverse axis is on the \\(y\\)-axis\n\nthe coordinates of the vertices are \\((0,\\pm a)\\)\n\nthe coordinates of the co-vertices are \\((\\pm b,0)\\)\n\nthe coordinates of the foci are \\((0,\\pm c)\\)\n\nthe equations of the asymptotes are \\(y=\\pm \\dfrac{a}{b}x\\)\n\n3. Solve for the coordinates of the foci using the equation \\(c=\\pm \\sqrt{a^2+b^2}\\).\n\n4. Plot the vertices, co-vertices, foci, and asymptotes in the coordinate plane, and draw a smooth curve to form the hyperbola.\n\nExample \\(\\PageIndex{4}\\): Graphing a Hyperbola Centered at \\((0,0)\\) Given an Equation in Standard Form\n\nGraph the hyperbola given by the equation \\(\\dfrac{y^2}{64}−\\dfrac{x^2}{36}=1\\). Identify and label the vertices, co-vertices, foci, and asymptotes.\n\nSolution\n\nThe standard form that applies to the given equation is \\(\\dfrac{y^2}{a^2}−\\dfrac{x^2}{b^2}=1\\). Thus, the transverse axis is on the \\(y\\)-axis\n\nThe coordinates of the vertices are \\((0,\\pm a)=(0,\\pm \\sqrt{64})=(0,\\pm 8)\\)\n\nThe coordinates of the co-vertices are \\((\\pm b,0)=(\\pm \\sqrt{36}, 0)=(\\pm 6,0)\\)\n\nThe coordinates of the foci are \\((0,\\pm c)\\), where \\(c=\\pm \\sqrt{a^2+b^2}\\). Solving for \\(c\\), we have\n\n\\(c=\\pm \\sqrt{a^2+b^2}=\\pm \\sqrt{64+36}=\\pm \\sqrt{100}=\\pm 10\\)\n\nTherefore, the coordinates of the foci are \\((0,\\pm 10)\\)\n\nThe equations of the asymptotes are \\(y=\\pm \\dfrac{a}{b}x=\\pm \\dfrac{8}{6}x=\\pm \\dfrac{4}{3}x\\)\n\nPlot and label the vertices and co-vertices, and then sketch the central rectangle. Sides of the rectangle are parallel to the axes and pass through the vertices and co-vertices. Sketch and extend the diagonals of the central rectangle to show the asymptotes. The central rectangle and asymptotes provide the framework needed to sketch an accurate graph of the hyperbola. Label the foci and asymptotes, and draw a smooth curve to form the hyperbola, as shown in Figure \\(\\PageIndex{8}\\).\n\n[Figure: A vertical hyperbola centered at (0, 0) in the x y coordinate system with Vertices at (0, 8) and (0, negative 8) and Foci at (0, negative 10) and (0, 10). Also shown are the slant asymptotes, y = (4/3)x and y = (negative 4/3)x. The points (negative 6, 0) (6, 0) and (0, 0) are labeled.]\n\nFigure \\(\\PageIndex{8}\\)\n\nExercise \\(\\PageIndex{4}\\)\n\nGraph the hyperbola given by the equation \\(\\dfrac{x^2}{144}−\\dfrac{y^2}{81}=1\\). Identify and label the vertices, co-vertices, foci, and asymptotes.\n\nAnswer\n\nvertices: \\((\\pm 12,0)\\); co-vertices: \\((0,\\pm 9)\\); foci: \\((\\pm 15,0)\\); asymptotes: \\(y=\\pm \\dfrac{3}{4}x\\);\n\n[Figure: alt]\n\nFigure \\(\\PageIndex{9}\\)\n\nGraphing Hyperbolas Not Centered at the Origin\n\nGraphing hyperbolas centered at a point \\((h,k)\\) other than the origin is similar to graphing ellipses centered at a point other than the origin. We use the standard forms \\(\\dfrac{{(x−h)}^2}{a^2}−\\dfrac{{(y−k)}^2}{b^2}=1\\) for horizontal hyperbolas, and \\(\\dfrac{{(y−k)}^2}{a^2}−\\dfrac{{(x−h)}^2}{b^2}=1\\) for vertical hyperbolas. From these standard form equations we can easily calculate and plot key features of the graph: the coordinates of its center, vertices, co-vertices, and foci; the equations of its asymptotes; and the positions of the transverse and conjugate axes.\n\nHow to: Given a general form for a hyperbola centered at \\((h, k)\\), sketch the graph\n\n1. Convert the general form to that standard form. Determine which of the standard forms applies to the given equation.\n\n2. Use the standard form identified in Step 1 to determine the position of the transverse axis; coordinates for the center, vertices, co-vertices, foci; and equations for the asymptotes.\n\n1. If the equation is in the form \\(\\dfrac{{(x−h)}^2}{a^2}−\\dfrac{{(y−k)}^2}{b^2}=1\\), then\n\nthe transverse axis is parallel to the \\(x\\)-axis\n\nthe center is \\((h,k)\\)\n\nthe coordinates of the vertices are \\((h\\pm a,k)\\)\n\nthe coordinates of the co-vertices are \\((h,k\\pm b)\\)\n\nthe coordinates of the foci are \\((h\\pm c,k)\\)\n\nthe equations of the asymptotes are \\(y=\\pm \\dfrac{b}{a}(x−h)+k\\)\n\n2. If the equation is in the form \\(\\dfrac{{(y−k)}^2}{a^2}−\\dfrac{{(x−h)}^2}{b^2}=1\\), then\n\nthe transverse axis is parallel to the \\(y\\)-axis\n\nthe center is \\((h,k)\\)\n\nthe coordinates of the vertices are \\((h,k\\pm a)\\)\n\nthe coordinates of the co-vertices are \\((h\\pm b,k)\\)\n\nthe coordinates of the foci are \\((h,k\\pm c)\\)\n\nthe equations of the asymptotes are \\(y=\\pm \\dfrac{a}{b}(x−h)+k\\)\n\n3. Solve for the coordinates of the foci using the equation \\(c=\\pm \\sqrt{a^2+b^2}\\).\n\n4. Plot the center, vertices, co-vertices, foci, and asymptotes in the coordinate plane and draw a smooth curve to form the hyperbola.\n\nExample \\(\\PageIndex{5}\\): Graphing a Hyperbola Centered at \\((h, k)\\) Given an Equation in General Form\n\nGraph the hyperbola given by the equation \\(9x^2−4y^2−36x−40y−388=0\\). Identify and label the center, vertices, co-vertices, foci, and asymptotes.\n\nSolution\n\nStart by expressing the equation in standard form. Group terms that contain the same variable, and move the constant to the opposite side of the equation.\n\n\\((9x^2−36x)−(4y^2+40y)=388\\)\n\nFactor the leading coefficient of each expression.\n\n\\(9(x^2−4x)−4(y^2+10y)=388\\)\n\nComplete the square twice. Remember to balance the equation by adding the same constants to each side.\n\n\\(9(x^2−4x+4)−4(y^2+10y+25)=388+36−100\\)\n\nRewrite as perfect squares.\n\n\\(9{(x−2)}^2−4{(y+5)}^2=324\\)\n\nDivide both sides by the constant term to place the equation in standard form.\n\n\\(\\dfrac{{(x−2)}^2}{36}−\\dfrac{{(y+5)}^2}{81}=1\\)\n\nThe standard form that applies to the given equation is \\(\\dfrac{{(x−h)}^2}{a^2}−\\dfrac{{(y−k)}^2}{b^2}=1\\), where \\(a^2=36\\) and \\(b^2=81\\),or \\(a=6\\) and \\(b=9\\). Thus, the transverse axis is parallel to the \\(x\\)-axis. It follows that:\n\nthe center of the ellipse is \\((h,k)=(2,−5)\\)\n\nthe coordinates of the vertices are \\((h\\pm a,k)=(2\\pm 6,−5)\\), or \\((−4,−5)\\) and \\((8,−5)\\)\n\nthe coordinates of the co-vertices are \\((h,k\\pm b)=(2,−5\\pm 9)\\), or \\((2,−14)\\) and \\((2,4)\\)\n\nthe coordinates of the foci are \\((h\\pm c,k)\\), where \\(c=\\pm \\sqrt{a^2+b^2}\\). Solving for \\(c\\),we have\n\n\\(c=\\pm \\sqrt{36+81}=\\pm \\sqrt{117}=\\pm 3\\sqrt{13}\\)\n\nTherefore, the coordinates of the foci are \\((2−3\\sqrt{13},−5)\\) and \\((2+3\\sqrt{13},−5)\\).\n\nThe equations of the asymptotes are \\(y=\\pm \\dfrac{b}{a}(x−h)+k=\\pm \\dfrac{3}{2}(x−2)−5\\).\n\nNext, we plot and label the center, vertices, co-vertices, foci, and asymptotes and draw smooth curves to form the hyperbola, as shown in Figure \\(\\PageIndex{10}\\).\n\n[Figure: A horizontal hyperbola centered at (2, negative 5) with Vertices at (negative 4, negative 5) and (8, 5) and Foci at (2 minus 3 square root of 13, negative 5) and (2 + 3 square root of 13, negative 5). Also shown are the slant asymptotes, y = (3/2) times (x minus 2) minus 5 and y = (negative 3/2)times (x minus 2) minus 5. The points (2, negative 14), (2, 4) and (0, 0) are labeled.]\n\nFigure \\(\\PageIndex{10}\\)\n\nExercise \\(\\PageIndex{5}\\)\n\nGraph the hyperbola given by the standard form of an equation \\(\\dfrac{{(y+4)}^2}{100}−\\dfrac{{(x−3)}^2}{64}=1\\). Identify and label the center, vertices, co-vertices, foci, and asymptotes.\n\nAnswer\n\ncenter: \\((3,−4)\\); vertices: \\((3,−14)\\) and \\((3,6)\\); co-vertices: \\((−5,−4)\\); and \\((11,−4)\\); foci: \\((3,−4−2\\sqrt{41})\\) and \\((3,−4+2\\sqrt{41})\\); asymptotes: \\(y=\\pm \\dfrac{5}{4}(x−3)−4\\)\n\n[Figure: alt]\n\nFigure \\(\\PageIndex{11}\\)\n\nSolving Applied Problems Involving Hyperbolas\n\nAs we discussed at the beginning of this section, hyperbolas have real-world applications in many fields, such as astronomy, physics, engineering, and architecture. The design efficiency of hyperbolic cooling towers is particularly interesting. Cooling towers are used to transfer waste heat to the atmosphere and are often touted for their ability to generate power efficiently. Because of their hyperbolic form, these structures are able to withstand extreme winds while requiring less material than any other forms of their size and strength (Figure \\(\\PageIndex{12}\\)). For example, a \\(500\\)-foot tower can be made of a reinforced concrete shell only \\(6\\) or \\(8\\) inches wide!\n\n[Figure: alt]\n\nFigure \\(\\PageIndex{12}\\): Cooling towers at the Drax power station in North Yorkshire, United Kingdom (credit: Les Haines, Flickr)\n\nThe first hyperbolic towers were designed in 1914 and were \\(35\\) meters high. Today, the tallest cooling towers are in France, standing a remarkable \\(170\\) meters tall. In Example \\(\\PageIndex{6}\\) we will use the design layout of a cooling tower to find a hyperbolic equation that models its sides.\n\nExample \\(\\PageIndex{6}\\): Solving Applied Problems Involving Hyperbolas\n\nThe design layout of a cooling tower is shown in Figure \\(\\PageIndex{13}\\). The tower stands \\(179.6\\) meters tall. The diameter of the top is \\(72\\) meters. At their closest, the sides of the tower are \\(60\\) meters apart.\n\n[Figure: alt]\n\nFigure \\(\\PageIndex{13}\\): Project design for a natural draft cooling tower\n\nFind the equation of the hyperbola that models the sides of the cooling tower. Assume that the center of the hyperbola—indicated by the intersection of dashed perpendicular lines in the figure—is the origin of the coordinate plane. Round final values to four decimal places.\n\nSolution\n\nWe are assuming the center of the tower is at the origin, so we can use the standard form of a horizontal hyperbola centered at the origin: \\(\\dfrac{x^2}{a^2}−\\dfrac{y^2}{b^2}=1\\), where the branches of the hyperbola form the sides of the cooling tower. We must find the values of \\(a^2\\) and \\(b^2\\) to complete the model.\n\nFirst, we find \\(a^2\\). Recall that the length of the transverse axis of a hyperbola is \\(2a\\). This length is represented by the distance where the sides are closest, which is given as \\(65.3\\) meters. So, \\(2a=60\\). Therefore, \\(a=30\\) and \\(a^2=900\\).\n\nTo solve for \\(b^2\\),we need to substitute for \\(x\\) and \\(y\\) in our equation using a known point. To do this, we can use the dimensions of the tower to find some point \\((x,y)\\) that lies on the hyperbola. We will use the top right corner of the tower to represent that point. Since the \\(y\\)-axis bisects the tower, our \\(x\\)-value can be represented by the radius of the top, or \\(36\\) meters. The y-value is represented by the distance from the origin to the top, which is given as \\(79.6\\) meters. Therefore,\n\n\\[\\begin{align*} \\dfrac{x^2}{a^2}-\\dfrac{y^2}{b^2}&=1\\qquad \\text{Standard form of horizontal hyperbola.}\\\\ b^2&=\\dfrac{y^2}{\\dfrac{x^2}{a^2}-1}\\qquad \\text{Isolate } b^2\\\\ &=\\dfrac{{(79.6)}^2}{\\dfrac{{(36)}^2}{900}-1}\\qquad \\text{Substitute for } a^2,\\: x, \\text{ and } y\\\\ &\\approx 14400.3636\\qquad \\text{Round to four decimal places} \\end{align*}\\]\n\nThe sides of the tower can be modeled by the hyperbolic equation\n\n\\(\\dfrac{x^2}{900}−\\dfrac{y^2}{14400.3636}=1\\),or \\(\\dfrac{x^2}{{30}^2}−\\dfrac{y^2}{{120.0015}^2}=1\\)\n\nExercise \\(\\PageIndex{6}\\)\n\nA design for a cooling tower project is shown in Figure \\(\\PageIndex{14}\\). Find the equation of the hyperbola that models the sides of the cooling tower. Assume that the center of the hyperbola—indicated by the intersection of dashed perpendicular lines in the figure—is the origin of the coordinate plane. Round final values to four decimal places.\n\n[Figure: Project design for a natural draft cooling tower. The overall height is 167.082 meters. The diameter at the top is 60 meters, and at their closest, 79.6 meters from the top, the sides are 60 meters apart.]\n\nFigure \\(\\PageIndex{14}\\)\n\nAnswer\n\nThe sides of the tower can be modeled by the hyperbolic equation. \\(\\dfrac{x^2}{400}−\\dfrac{y^2}{3600}=1\\) or \\(\\dfrac{x^2}{{20}^2}−\\dfrac{y^2}{{60}^2}=1\\).\n\nMedia\n\nAccess these online resources for additional instruction and practice with hyperbolas.\n\nConic Sections: The Hyperbola Part 1 of 2\n\nConic Sections: The Hyperbola Part 2 of 2\n\nGraph a Hyperbola with Center at Origin\n\nGraph a Hyperbola with Center not at Origin\n\nKey Equations\n\n            Hyperbola, center at origin, transverse axis on x-axis\t\n            \\(\\dfrac{x^2}{a^2}−\\dfrac{y^2}{b^2}=1\\)\t\n\n            Hyperbola, center at origin, transverse axis on y-axis\t\n            \\(\\dfrac{y^2}{a^2}−\\dfrac{x^2}{b^2}=1\\)\t\n\n            Hyperbola, center at \\((h,k)\\),transverse axis parallel to x-axis\t\n            \\(\\dfrac{{(x−h)}^2}{a^2}−\\dfrac{{(y−k)}^2}{b^2}=1\\)\t\n\n            Hyperbola, center at \\((h,k)\\),transverse axis parallel to y-axis\t\n            \\(\\dfrac{{(y−k)}^2}{a^2}−\\dfrac{{(x−h)}^2}{b^2}=1\\)\t\n\nKey Concepts\n\nA hyperbola is the set of all points \\((x,y)\\) in a plane such that the difference of the distances between \\((x,y)\\) and the foci is a positive constant.\n\nThe standard form of a hyperbola can be used to locate its vertices and foci. See Example \\(\\PageIndex{1}\\).\n\nWhen given the coordinates of the foci and vertices of a hyperbola, we can write the equation of the hyperbola in standard form. See Example \\(\\PageIndex{2}\\) and Example \\(\\PageIndex{3}\\).\n\nWhen given an equation for a hyperbola, we can identify its vertices, co-vertices, foci, asymptotes, and lengths and positions of the transverse and conjugate axes in order to graph the hyperbola. See Example \\(\\PageIndex{4}\\) and Example \\(\\PageIndex{5}\\).\n\nReal-world situations can be modeled using the standard equations of hyperbolas. For instance, given the dimensions of a natural draft cooling tower, we can find a hyperbolic equation that models its sides. See Example \\(\\PageIndex{6}\\).\n\nThis page titled 12.2: The Hyperbola was last modified on Thu, 26 Dec 2024 22:30:49 GMT and is shared under a CC BY  4.0  license and was authored, remixed, and/or curated by OpenStax via source content that was edited to the style and standards of the LibreTexts platform.",
+  "figures": [
+    {
+      "url": "https://math.libretexts.org/@api/deki/files/7572/CNX_Precalc_Figure_10_02_001.jpg?revision=1",
+      "alt": "alt",
+      "credit": ""
+    },
+    {
+      "url": "https://math.libretexts.org/@api/deki/files/7573/CNX_Precalc_Figure_10_02_002.jpg?revision=1",
+      "alt": "alt",
+      "credit": ""
+    },
+    {
+      "url": "https://math.libretexts.org/@api/deki/files/7574/CNX_Precalc_Figure_10_02_003.jpg?revision=1",
+      "alt": "alt",
+      "credit": ""
+    },
+    {
+      "url": "https://math.libretexts.org/@api/deki/files/7575/CNX_Precalc_Figure_10_02_013.jpg?revision=1&size=bestfit&width=409&height=327",
+      "alt": "A horizontal hyperbola in the x y coordinate system centered at (0, 0) with Vertices at (negative a, 0) and (a, 0) and Foci at (negative c, 0) and (c, 0), with lines of length d1 and d2 connecting a point on the right branch of the hyperbola to the foci.",
+      "credit": ""
+    },
+    {
+      "url": "https://math.libretexts.org/@api/deki/files/7576/CNX_Precalc_Figure_10_02_004.jpg?revision=1&size=bestfit&width=704&height=318",
+      "alt": "alt",
+      "credit": ""
+    },
+    {
+      "url": "https://math.libretexts.org/@api/deki/files/7577/CNX_Precalc_Figure_10_02_014.jpg?revision=1&size=bestfit&width=439&height=262",
+      "alt": "A horizontal hyperbola centered at (0, 0) in the x y coordinate system with Vertices at (negative 6, 0) and (6, 0).",
+      "credit": ""
+    },
+    {
+      "url": "https://math.libretexts.org/@api/deki/files/7578/CNX_Precalc_Figure_10_02_005n.jpg?revision=1",
+      "alt": "This is a horizontal parabola opening to the right with Vertex (0, 0), Focus (6, 0), and Directrix x = negative 6. The Latus Rectum is shown, a vertical line passing through the Focus and terminating on the parabola at (6, 12) and (6, negative 12).",
+      "credit": ""
+    },
+    {
+      "url": "https://math.libretexts.org/@api/deki/files/7579/CNX_Precalc_Figure_10_02_006.jpg?revision=1&size=bestfit&width=500&height=405",
+      "alt": "A vertical hyperbola centered at (0, 0) in the x y coordinate system with Vertices at (0, 8) and (0, negative 8) and Foci at (0, negative 10) and (0, 10). Also shown are the slant asymptotes, y = (4/3)x and y = (negative 4/3)x. The points (negative 6, 0) (6, 0) and (0, 0) are labeled.",
+      "credit": ""
+    },
+    {
+      "url": "https://math.libretexts.org/@api/deki/files/7580/CNX_Precalc_Figure_10_02_007.jpg?revision=1",
+      "alt": "alt",
+      "credit": ""
+    },
+    {
+      "url": "https://math.libretexts.org/@api/deki/files/7581/CNX_Precalc_Figure_10_02_008.jpg?revision=1&size=bestfit&width=367&height=334",
+      "alt": "A horizontal hyperbola centered at (2, negative 5) with Vertices at (negative 4, negative 5) and (8, 5) and Foci at (2 minus 3 square root of 13, negative 5) and (2 + 3 square root of 13, negative 5). Also shown are the slant asymptotes, y = (3/2) times (x minus 2) minus 5 and y = (negative 3/2)times (x minus 2) minus 5. The points (2, negative 14), (2, 4) and (0, 0) are labeled.",
+      "credit": ""
+    },
+    {
+      "url": "https://math.libretexts.org/@api/deki/files/7582/CNX_Precalc_Figure_10_02_009.jpg?revision=1",
+      "alt": "alt",
+      "credit": ""
+    },
+    {
+      "url": "https://math.libretexts.org/@api/deki/files/7583/CNX_Precalc_Figure_10_02_010.jpg?revision=1",
+      "alt": "alt",
+      "credit": ""
+    },
+    {
+      "url": "https://math.libretexts.org/@api/deki/files/7584/CNX_Precalc_Figure_10_02_011n.jpg?revision=1",
+      "alt": "alt",
+      "credit": ""
+    },
+    {
+      "url": "https://math.libretexts.org/@api/deki/files/7585/CNX_Precalc_Figure_10_02_012n.jpg?revision=1",
+      "alt": "Project design for a natural draft cooling tower. The overall height is 167.082 meters. The diameter at the top is 60 meters, and at their closest, 79.6 meters from the top, the sides are 60 meters apart.",
+      "credit": ""
+    }
+  ],
+  "references": [
+    {
+      "text": "12.2: The Hyperbola",
+      "url": "https://math.libretexts.org/Bookshelves/Algebra/Algebra_and_Trigonometry_1e_(OpenStax)/12%3A_Analytic_Geometry/12.02%3A_The_Hyperbola"
+    },
+    {
+      "text": "CC BY  4.0",
+      "url": "https://creativecommons.org/licenses/by/4.0"
+    },
+    {
+      "text": "OpenStax",
+      "url": "https://openstax.org/"
+    },
+    {
+      "text": "source content",
+      "url": "https://openstax.org/details/books/precalculus"
+    }
+  ],
+  "exercises": [
+    {
+      "ordinal": 1,
+      "sourceNumber": "1",
+      "sourceAnchor": "",
+      "kind": "exercise-candidate",
+      "context": "where\n\nSee Figure \\(\\PageIndex{5b}\\).\n\nNote that the vertices, co-vertices, and foci are related by the equation \\(c^2=a^2+b^2\\). When we are given the equation of a hyperbola, we can use this relationship to identify its vertices and foci.",
+      "original": "1. Determine whether the transverse axis lies on the \\(x\\)- or \\(y\\)-axis. Notice that \\(a^2\\) is always under the variable with the positive coefficient. So, if you set the other variable equal to zero, you can easily find the intercepts. In the case where the hyperbola is centered at the origin, the intercepts coincide with the vertices.\n\nIf the equation has the form \\(\\dfrac{x^2}{a^2}−\\dfrac{y^2}{b^2}=1\\), then the transverse axis lies on the \\(x\\)-axis. The vertices are located at \\((\\pm a,0)\\), and the foci are located at \\((\\pm c,0)\\).\n\nIf the equation has the form \\(\\dfrac{y^2}{a^2}−\\dfrac{x^2}{b^2}=1\\), then the transverse axis lies on the \\(y\\)-axis. The vertices are located at \\((0,\\pm a)\\), and the foci are located at \\((0,\\pm c)\\).",
+      "prompt": "1. Determine whether the transverse axis lies on the \\(x\\)- or \\(y\\)-axis. Notice that \\(a^2\\) is always under the variable with the positive coefficient. So, if you set the other variable equal to zero, you can easily find the intercepts. In the case where the hyperbola is centered at the origin, the intercepts coincide with the vertices.\n\nIf the equation has the form \\(\\dfrac{x^2}{a^2}−\\dfrac{y^2}{b^2}=1\\), then the transverse axis lies on the \\(x\\)-axis. The vertices are located at \\((\\pm a,0)\\), and the foci are located at \\((\\pm c,0)\\).\n\nIf the equation has the form \\(\\dfrac{y^2}{a^2}−\\dfrac{x^2}{b^2}=1\\), then the transverse axis lies on the \\(y\\)-axis. The vertices are located at \\((0,\\pm a)\\), and the foci are located at \\((0,\\pm c)\\).",
+      "sourceAnswers": [],
+      "hasFigure": false,
+      "status": "draft",
+      "answerVerified": false,
+      "translationStatus": "pending",
+      "mappingStatus": "pending"
+    },
+    {
+      "ordinal": 2,
+      "sourceNumber": "2",
+      "sourceAnchor": "",
+      "kind": "exercise-candidate",
+      "context": "where\n\nSee Figure \\(\\PageIndex{5b}\\).\n\nNote that the vertices, co-vertices, and foci are related by the equation \\(c^2=a^2+b^2\\). When we are given the equation of a hyperbola, we can use this relationship to identify its vertices and foci.",
+      "original": "2. Solve for \\(a\\) using the equation \\(a=\\sqrt{a^2}\\).",
+      "prompt": "2. Solve for \\(a\\) using the equation \\(a=\\sqrt{a^2}\\).",
+      "sourceAnswers": [],
+      "hasFigure": false,
+      "status": "draft",
+      "answerVerified": false,
+      "translationStatus": "pending",
+      "mappingStatus": "pending"
+    },
+    {
+      "ordinal": 3,
+      "sourceNumber": "3",
+      "sourceAnchor": "",
+      "kind": "exercise-candidate",
+      "context": "where\n\nSee Figure \\(\\PageIndex{5b}\\).\n\nNote that the vertices, co-vertices, and foci are related by the equation \\(c^2=a^2+b^2\\). When we are given the equation of a hyperbola, we can use this relationship to identify its vertices and foci.",
+      "original": "3. Solve for \\(c\\) using the equation \\(c=\\sqrt{a^2+b^2}\\).",
+      "prompt": "3. Solve for \\(c\\) using the equation \\(c=\\sqrt{a^2+b^2}\\).",
+      "sourceAnswers": [],
+      "hasFigure": false,
+      "status": "draft",
+      "answerVerified": false,
+      "translationStatus": "pending",
+      "mappingStatus": "pending"
+    },
+    {
+      "ordinal": 4,
+      "sourceNumber": "",
+      "sourceAnchor": "",
+      "kind": "example-or-exercise",
+      "context": "where\n\nSee Figure \\(\\PageIndex{5b}\\).\n\nNote that the vertices, co-vertices, and foci are related by the equation \\(c^2=a^2+b^2\\). When we are given the equation of a hyperbola, we can use this relationship to identify its vertices and foci.",
+      "original": "Example \\(\\PageIndex{1}\\): Locating a Hyperbola’s Vertices and Foci\n\nIdentify the vertices and foci of the hyperbola with equation \\(\\dfrac{y^2}{49}−\\dfrac{x^2}{32}=1\\).\n\nSolution\n\nThe equation has the form \\(\\dfrac{y^2}{a^2}−\\dfrac{x^2}{b^2}=1\\), so the transverse axis lies on the \\(y\\)-axis. The hyperbola is centered at the origin, so the vertices serve as the y-intercepts of the graph. To find the vertices, set \\(x=0\\), and solve for \\(y\\).\n\n\\[\\begin{align*} 1&=\\dfrac{y^2}{49}-\\dfrac{x^2}{32}\\\\ 1&=\\dfrac{y^2}{49}-\\dfrac{0^2}{32}\\\\ 1&=\\dfrac{y^2}{49}\\\\ y^2&=49\\\\ y&=\\pm \\sqrt{49}\\\\ &=\\pm 7 \\end{align*}\\]\n\nThe foci are located at \\((0,\\pm c)\\). Solving for \\(c\\),\n\n\\[\\begin{align*} c&=\\sqrt{a^2+b^2}\\\\ &=\\sqrt{49+32}\\\\ &=\\sqrt{81}\\\\ &=9 \\end{align*}\\]\n\nTherefore, the vertices are located at \\((0,\\pm 7)\\), and the foci are located at \\((0,9)\\).",
+      "prompt": "Example \\(\\PageIndex{1}\\): Locating a Hyperbola’s Vertices and Foci\n\nIdentify the vertices and foci of the hyperbola with equation \\(\\dfrac{y^2}{49}−\\dfrac{x^2}{32}=1\\).\n\nSolution\n\nThe equation has the form \\(\\dfrac{y^2}{a^2}−\\dfrac{x^2}{b^2}=1\\), so the transverse axis lies on the \\(y\\)-axis. The hyperbola is centered at the origin, so the vertices serve as the y-intercepts of the graph. To find the vertices, set \\(x=0\\), and solve for \\(y\\).\n\n\\[\\begin{align*} 1&=\\dfrac{y^2}{49}-\\dfrac{x^2}{32}\\\\ 1&=\\dfrac{y^2}{49}-\\dfrac{0^2}{32}\\\\ 1&=\\dfrac{y^2}{49}\\\\ y^2&=49\\\\ y&=\\pm \\sqrt{49}\\\\ &=\\pm 7 \\end{align*}\\]\n\nThe foci are located at \\((0,\\pm c)\\). Solving for \\(c\\),\n\n\\[\\begin{align*} c&=\\sqrt{a^2+b^2}\\\\ &=\\sqrt{49+32}\\\\ &=\\sqrt{81}\\\\ &=9 \\end{align*}\\]\n\nTherefore, the vertices are located at \\((0,\\pm 7)\\), and the foci are located at \\((0,9)\\).",
+      "sourceAnswers": [],
+      "hasFigure": false,
+      "status": "draft",
+      "answerVerified": false,
+      "translationStatus": "pending",
+      "mappingStatus": "pending"
+    },
+    {
+      "ordinal": 5,
+      "sourceNumber": "",
+      "sourceAnchor": "",
+      "kind": "exercise-candidate",
+      "context": "where\n\nSee Figure \\(\\PageIndex{5b}\\).\n\nNote that the vertices, co-vertices, and foci are related by the equation \\(c^2=a^2+b^2\\). When we are given the equation of a hyperbola, we can use this relationship to identify its vertices and foci.",
+      "original": "Exercise \\(\\PageIndex{1}\\)\n\nIdentify the vertices and foci of the hyperbola with equation \\(\\dfrac{x^2}{9}−\\dfrac{y^2}{25}=1\\).\n\nAnswer\n\nVertices: \\((\\pm 3,0)\\); Foci: \\((\\pm \\sqrt{34},0)\\)",
+      "prompt": "Exercise \\(\\PageIndex{1}\\)\n\nIdentify the vertices and foci of the hyperbola with equation \\(\\dfrac{x^2}{9}−\\dfrac{y^2}{25}=1\\).",
+      "sourceAnswers": [
+        "Vertices: \\((\\pm 3,0)\\); Foci: \\((\\pm \\sqrt{34},0)\\)"
+      ],
+      "hasFigure": false,
+      "status": "draft",
+      "answerVerified": false,
+      "translationStatus": "pending",
+      "mappingStatus": "pending"
+    },
+    {
+      "ordinal": 6,
+      "sourceNumber": "1",
+      "sourceAnchor": "",
+      "kind": "exercise-candidate",
+      "context": "Hyperbolas Centered at the Origin\n\nReviewing the standard forms given for hyperbolas centered at \\((0,0)\\),we see that the vertices, co-vertices, and foci are related by the equation \\(c^2=a^2+b^2\\). Note that this equation can also be rewritten as \\(b^2=c^2−a^2\\). This relationship is used to write the equation for a hyperbola when given the coordinates of its foci and vertices.",
+      "original": "1. Determine whether the transverse axis lies on the \\(x\\)- or \\(y\\)-axis.\n\nIf the given coordinates of the vertices and foci have the form \\((\\pm a,0)\\) and \\((\\pm c,0)\\), respectively, then the transverse axis is the \\(x\\)-axis. Use the standard form \\(\\dfrac{x^2}{a^2}−\\dfrac{y^2}{b^2}=1\\).\n\nIf the given coordinates of the vertices and foci have the form \\((0,\\pm a)\\) and \\((0,\\pm c)\\), respectively, then the transverse axis is the \\(y\\)-axis. Use the standard form \\(\\dfrac{y^2}{a^2}−\\dfrac{x^2}{b^2}=1\\).",
+      "prompt": "1. Determine whether the transverse axis lies on the \\(x\\)- or \\(y\\)-axis.\n\nIf the given coordinates of the vertices and foci have the form \\((\\pm a,0)\\) and \\((\\pm c,0)\\), respectively, then the transverse axis is the \\(x\\)-axis. Use the standard form \\(\\dfrac{x^2}{a^2}−\\dfrac{y^2}{b^2}=1\\).\n\nIf the given coordinates of the vertices and foci have the form \\((0,\\pm a)\\) and \\((0,\\pm c)\\), respectively, then the transverse axis is the \\(y\\)-axis. Use the standard form \\(\\dfrac{y^2}{a^2}−\\dfrac{x^2}{b^2}=1\\).",
+      "sourceAnswers": [],
+      "hasFigure": false,
+      "status": "draft",
+      "answerVerified": false,
+      "translationStatus": "pending",
+      "mappingStatus": "pending"
+    },
+    {
+      "ordinal": 7,
+      "sourceNumber": "2",
+      "sourceAnchor": "",
+      "kind": "exercise-candidate",
+      "context": "Hyperbolas Centered at the Origin\n\nReviewing the standard forms given for hyperbolas centered at \\((0,0)\\),we see that the vertices, co-vertices, and foci are related by the equation \\(c^2=a^2+b^2\\). Note that this equation can also be rewritten as \\(b^2=c^2−a^2\\). This relationship is used to write the equation for a hyperbola when given the coordinates of its foci and vertices.",
+      "original": "2. Find \\(b^2\\) using the equation \\(b^2=c^2−a^2\\).",
+      "prompt": "2. Find \\(b^2\\) using the equation \\(b^2=c^2−a^2\\).",
+      "sourceAnswers": [],
+      "hasFigure": false,
+      "status": "draft",
+      "answerVerified": false,
+      "translationStatus": "pending",
+      "mappingStatus": "pending"
+    },
+    {
+      "ordinal": 8,
+      "sourceNumber": "3",
+      "sourceAnchor": "",
+      "kind": "exercise-candidate",
+      "context": "Hyperbolas Centered at the Origin\n\nReviewing the standard forms given for hyperbolas centered at \\((0,0)\\),we see that the vertices, co-vertices, and foci are related by the equation \\(c^2=a^2+b^2\\). Note that this equation can also be rewritten as \\(b^2=c^2−a^2\\). This relationship is used to write the equation for a hyperbola when given the coordinates of its foci and vertices.",
+      "original": "3. Substitute the values for \\(a^2\\) and \\(b^2\\) into the standard form of the equation determined in Step 1.",
+      "prompt": "3. Substitute the values for \\(a^2\\) and \\(b^2\\) into the standard form of the equation determined in Step 1.",
+      "sourceAnswers": [],
+      "hasFigure": false,
+      "status": "draft",
+      "answerVerified": false,
+      "translationStatus": "pending",
+      "mappingStatus": "pending"
+    },
+    {
+      "ordinal": 9,
+      "sourceNumber": "",
+      "sourceAnchor": "",
+      "kind": "example-or-exercise",
+      "context": "Hyperbolas Centered at the Origin\n\nReviewing the standard forms given for hyperbolas centered at \\((0,0)\\),we see that the vertices, co-vertices, and foci are related by the equation \\(c^2=a^2+b^2\\). Note that this equation can also be rewritten as \\(b^2=c^2−a^2\\). This relationship is used to write the equation for a hyperbola when given the coordinates of its foci and vertices.",
+      "original": "Example \\(\\PageIndex{2}\\): Finding the Equation of a Hyperbola Centered at \\((0,0)\\) Given its Foci and Vertices\n\nWhat is the standard form equation of the hyperbola that has vertices \\((\\pm 6,0)\\) and foci \\((\\pm 2\\sqrt{10},0)\\)?\n\nSolution\n\nThe vertices and foci are on the \\(x\\)-axis. Thus, the equation for the hyperbola will have the form \\(\\dfrac{x^2}{a^2}−\\dfrac{y^2}{b^2}=1\\).\n\nThe vertices are \\((\\pm 6,0)\\), so \\(a=6\\) and \\(a^2=36\\).\n\nThe foci are \\((\\pm 2\\sqrt{10},0)\\), so \\(c=2\\sqrt{10}\\) and \\(c^2=40\\).\n\nSolving for \\(b^2\\), we have\n\n\\[\\begin{align*} b^2&=c^2-a^2\\\\ b^2&=40-36\\qquad \\text{Substitute for } c^2 \\text{ and } a^2\\\\ b^2&=4\\qquad \\text{Subtract.} \\end{align*}\\]\n\nFinally, we substitute \\(a^2=36\\) and \\(b^2=4\\) into the standard form of the equation, \\(\\dfrac{x^2}{a^2}−\\dfrac{y^2}{b^2}=1\\). The equation of the hyperbola is \\(\\dfrac{x^2}{36}−\\dfrac{y^2}{4}=1\\), as shown in Figure \\(\\PageIndex{6}\\).\n\n[Figure: A horizontal hyperbola centered at (0, 0) in the x y coordinate system with Vertices at (negative 6, 0) and (6, 0).]\n\nFigure \\(\\PageIndex{6}\\)",
+      "prompt": "Example \\(\\PageIndex{2}\\): Finding the Equation of a Hyperbola Centered at \\((0,0)\\) Given its Foci and Vertices\n\nWhat is the standard form equation of the hyperbola that has vertices \\((\\pm 6,0)\\) and foci \\((\\pm 2\\sqrt{10},0)\\)?\n\nSolution\n\nThe vertices and foci are on the \\(x\\)-axis. Thus, the equation for the hyperbola will have the form \\(\\dfrac{x^2}{a^2}−\\dfrac{y^2}{b^2}=1\\).\n\nThe vertices are \\((\\pm 6,0)\\), so \\(a=6\\) and \\(a^2=36\\).\n\nThe foci are \\((\\pm 2\\sqrt{10},0)\\), so \\(c=2\\sqrt{10}\\) and \\(c^2=40\\).\n\nSolving for \\(b^2\\), we have\n\n\\[\\begin{align*} b^2&=c^2-a^2\\\\ b^2&=40-36\\qquad \\text{Substitute for } c^2 \\text{ and } a^2\\\\ b^2&=4\\qquad \\text{Subtract.} \\end{align*}\\]\n\nFinally, we substitute \\(a^2=36\\) and \\(b^2=4\\) into the standard form of the equation, \\(\\dfrac{x^2}{a^2}−\\dfrac{y^2}{b^2}=1\\). The equation of the hyperbola is \\(\\dfrac{x^2}{36}−\\dfrac{y^2}{4}=1\\), as shown in Figure \\(\\PageIndex{6}\\).\n\n[Figure: A horizontal hyperbola centered at (0, 0) in the x y coordinate system with Vertices at (negative 6, 0) and (6, 0).]\n\nFigure \\(\\PageIndex{6}\\)",
+      "sourceAnswers": [],
+      "hasFigure": true,
+      "status": "draft",
+      "answerVerified": false,
+      "translationStatus": "pending",
+      "mappingStatus": "pending"
+    },
+    {
+      "ordinal": 10,
+      "sourceNumber": "",
+      "sourceAnchor": "",
+      "kind": "exercise-candidate",
+      "context": "Hyperbolas Centered at the Origin\n\nReviewing the standard forms given for hyperbolas centered at \\((0,0)\\),we see that the vertices, co-vertices, and foci are related by the equation \\(c^2=a^2+b^2\\). Note that this equation can also be rewritten as \\(b^2=c^2−a^2\\). This relationship is used to write the equation for a hyperbola when given the coordinates of its foci and vertices.",
+      "original": "Exercise \\(\\PageIndex{2}\\)\n\nWhat is the standard form equation of the hyperbola that has vertices \\((0,\\pm 2)\\) and foci \\((0,\\pm 2\\sqrt{5})\\)?\n\nAnswer\n\n\\(\\dfrac{y^2}{4}−\\dfrac{x^2}{16}=1\\)",
+      "prompt": "Exercise \\(\\PageIndex{2}\\)\n\nWhat is the standard form equation of the hyperbola that has vertices \\((0,\\pm 2)\\) and foci \\((0,\\pm 2\\sqrt{5})\\)?",
+      "sourceAnswers": [
+        "\\(\\dfrac{y^2}{4}−\\dfrac{x^2}{16}=1\\)"
+      ],
+      "hasFigure": false,
+      "status": "draft",
+      "answerVerified": false,
+      "translationStatus": "pending",
+      "mappingStatus": "pending"
+    },
+    {
+      "ordinal": 11,
+      "sourceNumber": "1",
+      "sourceAnchor": "",
+      "kind": "exercise-candidate",
+      "context": "where\n\nUsing the reasoning above, the equations of the asymptotes are \\(y=\\pm \\dfrac{a}{b}(x−h)+k\\). See Figure \\(\\PageIndex{7b}\\).\n\nLike hyperbolas centered at the origin, hyperbolas centered at a point \\((h,k)\\) have vertices, co-vertices, and foci that are related by the equation \\(c^2=a^2+b^2\\). We can use this relationship along with the midpoint and distance formulas to find the standard equation of a hyperbola when the vertices and foci are given.",
+      "original": "1. Determine whether the transverse axis is parallel to the \\(x\\)- or \\(y\\)-axis.\n\nIf the \\(y\\)-coordinates of the given vertices and foci are the same, then the transverse axis is parallel to the \\(x\\)-axis. Use the standard form \\(\\dfrac{{(x−h)}^2}{a^2}−\\dfrac{{(y−k)}^2}{b^2}=1\\).\n\nIf the \\(x\\)-coordinates of the given vertices and foci are the same, then the transverse axis is parallel to the \\(y\\)-axis. Use the standard form \\(\\dfrac{{(y−k)}^2}{a^2}−\\dfrac{{(x−h)}^2}{b^2}=1\\).",
+      "prompt": "1. Determine whether the transverse axis is parallel to the \\(x\\)- or \\(y\\)-axis.\n\nIf the \\(y\\)-coordinates of the given vertices and foci are the same, then the transverse axis is parallel to the \\(x\\)-axis. Use the standard form \\(\\dfrac{{(x−h)}^2}{a^2}−\\dfrac{{(y−k)}^2}{b^2}=1\\).\n\nIf the \\(x\\)-coordinates of the given vertices and foci are the same, then the transverse axis is parallel to the \\(y\\)-axis. Use the standard form \\(\\dfrac{{(y−k)}^2}{a^2}−\\dfrac{{(x−h)}^2}{b^2}=1\\).",
+      "sourceAnswers": [],
+      "hasFigure": false,
+      "status": "draft",
+      "answerVerified": false,
+      "translationStatus": "pending",
+      "mappingStatus": "pending"
+    },
+    {
+      "ordinal": 12,
+      "sourceNumber": "2",
+      "sourceAnchor": "",
+      "kind": "exercise-candidate",
+      "context": "where\n\nUsing the reasoning above, the equations of the asymptotes are \\(y=\\pm \\dfrac{a}{b}(x−h)+k\\). See Figure \\(\\PageIndex{7b}\\).\n\nLike hyperbolas centered at the origin, hyperbolas centered at a point \\((h,k)\\) have vertices, co-vertices, and foci that are related by the equation \\(c^2=a^2+b^2\\). We can use this relationship along with the midpoint and distance formulas to find the standard equation of a hyperbola when the vertices and foci are given.",
+      "original": "2. Identify the center of the hyperbola, \\((h,k)\\),using the midpoint formula and the given coordinates for the vertices.",
+      "prompt": "2. Identify the center of the hyperbola, \\((h,k)\\),using the midpoint formula and the given coordinates for the vertices.",
+      "sourceAnswers": [],
+      "hasFigure": false,
+      "status": "draft",
+      "answerVerified": false,
+      "translationStatus": "pending",
+      "mappingStatus": "pending"
+    },
+    {
+      "ordinal": 13,
+      "sourceNumber": "3",
+      "sourceAnchor": "",
+      "kind": "exercise-candidate",
+      "context": "where\n\nUsing the reasoning above, the equations of the asymptotes are \\(y=\\pm \\dfrac{a}{b}(x−h)+k\\). See Figure \\(\\PageIndex{7b}\\).\n\nLike hyperbolas centered at the origin, hyperbolas centered at a point \\((h,k)\\) have vertices, co-vertices, and foci that are related by the equation \\(c^2=a^2+b^2\\). We can use this relationship along with the midpoint and distance formulas to find the standard equation of a hyperbola when the vertices and foci are given.",
+      "original": "3. Find \\(a^2\\) by solving for the length of the transverse axis, \\(2a\\), which is the distance between the given vertices.",
+      "prompt": "3. Find \\(a^2\\) by solving for the length of the transverse axis, \\(2a\\), which is the distance between the given vertices.",
+      "sourceAnswers": [],
+      "hasFigure": false,
+      "status": "draft",
+      "answerVerified": false,
+      "translationStatus": "pending",
+      "mappingStatus": "pending"
+    },
+    {
+      "ordinal": 14,
+      "sourceNumber": "4",
+      "sourceAnchor": "",
+      "kind": "exercise-candidate",
+      "context": "where\n\nUsing the reasoning above, the equations of the asymptotes are \\(y=\\pm \\dfrac{a}{b}(x−h)+k\\). See Figure \\(\\PageIndex{7b}\\).\n\nLike hyperbolas centered at the origin, hyperbolas centered at a point \\((h,k)\\) have vertices, co-vertices, and foci that are related by the equation \\(c^2=a^2+b^2\\). We can use this relationship along with the midpoint and distance formulas to find the standard equation of a hyperbola when the vertices and foci are given.",
+      "original": "4. Find \\(c^2\\) using \\(h\\) and \\(k\\) found in Step 2 along with the given coordinates for the foci.",
+      "prompt": "4. Find \\(c^2\\) using \\(h\\) and \\(k\\) found in Step 2 along with the given coordinates for the foci.",
+      "sourceAnswers": [],
+      "hasFigure": false,
+      "status": "draft",
+      "answerVerified": false,
+      "translationStatus": "pending",
+      "mappingStatus": "pending"
+    },
+    {
+      "ordinal": 15,
+      "sourceNumber": "5",
+      "sourceAnchor": "",
+      "kind": "exercise-candidate",
+      "context": "where\n\nUsing the reasoning above, the equations of the asymptotes are \\(y=\\pm \\dfrac{a}{b}(x−h)+k\\). See Figure \\(\\PageIndex{7b}\\).\n\nLike hyperbolas centered at the origin, hyperbolas centered at a point \\((h,k)\\) have vertices, co-vertices, and foci that are related by the equation \\(c^2=a^2+b^2\\). We can use this relationship along with the midpoint and distance formulas to find the standard equation of a hyperbola when the vertices and foci are given.",
+      "original": "5. Solve for \\(b^2\\) using the equation \\(b^2=c^2−a^2\\).",
+      "prompt": "5. Solve for \\(b^2\\) using the equation \\(b^2=c^2−a^2\\).",
+      "sourceAnswers": [],
+      "hasFigure": false,
+      "status": "draft",
+      "answerVerified": false,
+      "translationStatus": "pending",
+      "mappingStatus": "pending"
+    },
+    {
+      "ordinal": 16,
+      "sourceNumber": "6",
+      "sourceAnchor": "",
+      "kind": "exercise-candidate",
+      "context": "where\n\nUsing the reasoning above, the equations of the asymptotes are \\(y=\\pm \\dfrac{a}{b}(x−h)+k\\). See Figure \\(\\PageIndex{7b}\\).\n\nLike hyperbolas centered at the origin, hyperbolas centered at a point \\((h,k)\\) have vertices, co-vertices, and foci that are related by the equation \\(c^2=a^2+b^2\\). We can use this relationship along with the midpoint and distance formulas to find the standard equation of a hyperbola when the vertices and foci are given.",
+      "original": "6. Substitute the values for \\(h\\), \\(k\\), \\(a^2\\), and \\(b^2\\) into the standard form of the equation determined in Step 1.",
+      "prompt": "6. Substitute the values for \\(h\\), \\(k\\), \\(a^2\\), and \\(b^2\\) into the standard form of the equation determined in Step 1.",
+      "sourceAnswers": [],
+      "hasFigure": false,
+      "status": "draft",
+      "answerVerified": false,
+      "translationStatus": "pending",
+      "mappingStatus": "pending"
+    },
+    {
+      "ordinal": 17,
+      "sourceNumber": "",
+      "sourceAnchor": "",
+      "kind": "example-or-exercise",
+      "context": "where\n\nUsing the reasoning above, the equations of the asymptotes are \\(y=\\pm \\dfrac{a}{b}(x−h)+k\\). See Figure \\(\\PageIndex{7b}\\).\n\nLike hyperbolas centered at the origin, hyperbolas centered at a point \\((h,k)\\) have vertices, co-vertices, and foci that are related by the equation \\(c^2=a^2+b^2\\). We can use this relationship along with the midpoint and distance formulas to find the standard equation of a hyperbola when the vertices and foci are given.",
+      "original": "Example \\(\\PageIndex{3}\\): Finding the Equation of a Hyperbola Centered at \\((h, k)\\) Given its Foci and Vertices\n\nWhat is the standard form equation of the hyperbola that has vertices at \\((0,−2)\\) and \\((6,−2)\\) and foci at \\((−2,−2)\\) and \\((8,−2)\\)?\n\nSolution\n\nThe \\(y\\)-coordinates of the vertices and foci are the same, so the transverse axis is parallel to the \\(x\\)-axis. Thus, the equation of the hyperbola will have the form\n\n\\(\\dfrac{{(x−h)}^2}{a^2}−\\dfrac{{(y−k)}^2}{b^2}=1\\)\n\nFirst, we identify the center, \\((h,k)\\). The center is halfway between the vertices \\((0,−2)\\) and \\((6,−2)\\). Applying the midpoint formula, we have\n\n\\((h,k)=(\\dfrac{0+6}{2},\\dfrac{−2+(−2)}{2})=(3,−2)\\)\n\nNext, we find \\(a^2\\). The length of the transverse axis, \\(2a\\),is bounded by the vertices. So, we can find \\(a^2\\) by finding the distance between the \\(x\\)-coordinates of the vertices.\n\n\\[\\begin{align*} 2a&=| 0-6 |\\\\ 2a&=6\\\\ a&=3\\\\ a^2&=9 \\end{align*}\\]\n\nNow we need to find \\(c^2\\). The coordinates of the foci are \\((h\\pm c,k)\\). So \\((h−c,k)=(−2,−2)\\) and \\((h+c,k)=(8,−2)\\). We can use the \\(x\\)-coordinate from either of these points to solve for \\(c\\). Using the point \\((8,−2)\\), and substituting \\(h=3\\),\n\n\\[\\begin{align*} h+c&=8\\\\ 3+c&=8\\\\ c&=5\\\\ c^2&=25 \\end{align*}\\]\n\nNext, solve for \\(b^2\\) using the equation \\(b^2=c^2−a^2\\):\n\n\\[\\begin{align*} b^2&=c^2-a^2\\\\ &=25-9\\\\ &=16 \\end{align*}\\]\n\nFinally, substitute the values found for \\(h\\), \\(k\\), \\(a^2\\),and \\(b^2\\) into the standard form of the equation.\n\n\\(\\dfrac{{(x−3)}^2}{9}−\\dfrac{{(y+2)}^2}{16}=1\\)",
+      "prompt": "Example \\(\\PageIndex{3}\\): Finding the Equation of a Hyperbola Centered at \\((h, k)\\) Given its Foci and Vertices\n\nWhat is the standard form equation of the hyperbola that has vertices at \\((0,−2)\\) and \\((6,−2)\\) and foci at \\((−2,−2)\\) and \\((8,−2)\\)?\n\nSolution\n\nThe \\(y\\)-coordinates of the vertices and foci are the same, so the transverse axis is parallel to the \\(x\\)-axis. Thus, the equation of the hyperbola will have the form\n\n\\(\\dfrac{{(x−h)}^2}{a^2}−\\dfrac{{(y−k)}^2}{b^2}=1\\)\n\nFirst, we identify the center, \\((h,k)\\). The center is halfway between the vertices \\((0,−2)\\) and \\((6,−2)\\). Applying the midpoint formula, we have\n\n\\((h,k)=(\\dfrac{0+6}{2},\\dfrac{−2+(−2)}{2})=(3,−2)\\)\n\nNext, we find \\(a^2\\). The length of the transverse axis, \\(2a\\),is bounded by the vertices. So, we can find \\(a^2\\) by finding the distance between the \\(x\\)-coordinates of the vertices.\n\n\\[\\begin{align*} 2a&=| 0-6 |\\\\ 2a&=6\\\\ a&=3\\\\ a^2&=9 \\end{align*}\\]\n\nNow we need to find \\(c^2\\). The coordinates of the foci are \\((h\\pm c,k)\\). So \\((h−c,k)=(−2,−2)\\) and \\((h+c,k)=(8,−2)\\). We can use the \\(x\\)-coordinate from either of these points to solve for \\(c\\). Using the point \\((8,−2)\\), and substituting \\(h=3\\),\n\n\\[\\begin{align*} h+c&=8\\\\ 3+c&=8\\\\ c&=5\\\\ c^2&=25 \\end{align*}\\]\n\nNext, solve for \\(b^2\\) using the equation \\(b^2=c^2−a^2\\):\n\n\\[\\begin{align*} b^2&=c^2-a^2\\\\ &=25-9\\\\ &=16 \\end{align*}\\]\n\nFinally, substitute the values found for \\(h\\), \\(k\\), \\(a^2\\),and \\(b^2\\) into the standard form of the equation.\n\n\\(\\dfrac{{(x−3)}^2}{9}−\\dfrac{{(y+2)}^2}{16}=1\\)",
+      "sourceAnswers": [],
+      "hasFigure": false,
+      "status": "draft",
+      "answerVerified": false,
+      "translationStatus": "pending",
+      "mappingStatus": "pending"
+    },
+    {
+      "ordinal": 18,
+      "sourceNumber": "",
+      "sourceAnchor": "",
+      "kind": "exercise-candidate",
+      "context": "where\n\nUsing the reasoning above, the equations of the asymptotes are \\(y=\\pm \\dfrac{a}{b}(x−h)+k\\). See Figure \\(\\PageIndex{7b}\\).\n\nLike hyperbolas centered at the origin, hyperbolas centered at a point \\((h,k)\\) have vertices, co-vertices, and foci that are related by the equation \\(c^2=a^2+b^2\\). We can use this relationship along with the midpoint and distance formulas to find the standard equation of a hyperbola when the vertices and foci are given.",
+      "original": "Exercise \\(\\PageIndex{3}\\)\n\nWhat is the standard form equation of the hyperbola that has vertices \\((1,−2)\\) and \\((1,8)\\) and foci \\((1,−10)\\) and \\((1,16)\\)?\n\nAnswer\n\n\\(\\dfrac{{(y−3)}^2}{25}+\\dfrac{{(x−1)}^2}{144}=1\\)",
+      "prompt": "Exercise \\(\\PageIndex{3}\\)\n\nWhat is the standard form equation of the hyperbola that has vertices \\((1,−2)\\) and \\((1,8)\\) and foci \\((1,−10)\\) and \\((1,16)\\)?",
+      "sourceAnswers": [
+        "\\(\\dfrac{{(y−3)}^2}{25}+\\dfrac{{(x−1)}^2}{144}=1\\)"
+      ],
+      "hasFigure": false,
+      "status": "draft",
+      "answerVerified": false,
+      "translationStatus": "pending",
+      "mappingStatus": "pending"
+    },
+    {
+      "ordinal": 19,
+      "sourceNumber": "1",
+      "sourceAnchor": "",
+      "kind": "exercise-candidate",
+      "context": "Graphing Hyperbolas Centered at the Origin\n\nWhen we have an equation in standard form for a hyperbola centered at the origin, we can interpret its parts to identify the key features of its graph: the center, vertices, co-vertices, asymptotes, foci, and lengths and positions of the transverse and conjugate axes. To graph hyperbolas centered at the origin, we use the standard form \\(\\dfrac{x^2}{a^2}−\\dfrac{y^2}{b^2}=1\\) for horizontal hyperbolas and the standard form \\(\\dfrac{y^2}{a^2}−\\dfrac{x^2}{b^2}=1\\) for vertical hyperbolas.",
+      "original": "1. Determine which of the standard forms applies to the given equation.",
+      "prompt": "1. Determine which of the standard forms applies to the given equation.",
+      "sourceAnswers": [],
+      "hasFigure": false,
+      "status": "draft",
+      "answerVerified": false,
+      "translationStatus": "pending",
+      "mappingStatus": "pending"
+    },
+    {
+      "ordinal": 20,
+      "sourceNumber": "2",
+      "sourceAnchor": "",
+      "kind": "exercise-candidate",
+      "context": "Graphing Hyperbolas Centered at the Origin\n\nWhen we have an equation in standard form for a hyperbola centered at the origin, we can interpret its parts to identify the key features of its graph: the center, vertices, co-vertices, asymptotes, foci, and lengths and positions of the transverse and conjugate axes. To graph hyperbolas centered at the origin, we use the standard form \\(\\dfrac{x^2}{a^2}−\\dfrac{y^2}{b^2}=1\\) for horizontal hyperbolas and the standard form \\(\\dfrac{y^2}{a^2}−\\dfrac{x^2}{b^2}=1\\) for vertical hyperbolas.",
+      "original": "2. Use the standard form identified in Step 1 to determine the position of the transverse axis; coordinates for the vertices, co-vertices, and foci; and the equations for the asymptotes.\n\nIf the equation is in the form \\(\\dfrac{x^2}{a^2}−\\dfrac{y^2}{b^2}=1\\), then\n\nthe transverse axis is on the \\(x\\)-axis\n\nthe coordinates of the vertices are \\((\\pm a,0)\\0\n\nthe coordinates of the co-vertices are \\((0,\\pm b)\\)\n\nthe coordinates of the foci are \\((\\pm c,0)\\)\n\nthe equations of the asymptotes are \\(y=\\pm \\dfrac{b}{a}x\\)\n\nIf the equation is in the form \\(\\dfrac{y^2}{a^2}−\\dfrac{x^2}{b^2}=1\\), then\n\nthe transverse axis is on the \\(y\\)-axis\n\nthe coordinates of the vertices are \\((0,\\pm a)\\)\n\nthe coordinates of the co-vertices are \\((\\pm b,0)\\)\n\nthe coordinates of the foci are \\((0,\\pm c)\\)\n\nthe equations of the asymptotes are \\(y=\\pm \\dfrac{a}{b}x\\)",
+      "prompt": "2. Use the standard form identified in Step 1 to determine the position of the transverse axis; coordinates for the vertices, co-vertices, and foci; and the equations for the asymptotes.\n\nIf the equation is in the form \\(\\dfrac{x^2}{a^2}−\\dfrac{y^2}{b^2}=1\\), then\n\nthe transverse axis is on the \\(x\\)-axis\n\nthe coordinates of the vertices are \\((\\pm a,0)\\0\n\nthe coordinates of the co-vertices are \\((0,\\pm b)\\)\n\nthe coordinates of the foci are \\((\\pm c,0)\\)\n\nthe equations of the asymptotes are \\(y=\\pm \\dfrac{b}{a}x\\)\n\nIf the equation is in the form \\(\\dfrac{y^2}{a^2}−\\dfrac{x^2}{b^2}=1\\), then\n\nthe transverse axis is on the \\(y\\)-axis\n\nthe coordinates of the vertices are \\((0,\\pm a)\\)\n\nthe coordinates of the co-vertices are \\((\\pm b,0)\\)\n\nthe coordinates of the foci are \\((0,\\pm c)\\)\n\nthe equations of the asymptotes are \\(y=\\pm \\dfrac{a}{b}x\\)",
+      "sourceAnswers": [],
+      "hasFigure": false,
+      "status": "draft",
+      "answerVerified": false,
+      "translationStatus": "pending",
+      "mappingStatus": "pending"
+    },
+    {
+      "ordinal": 21,
+      "sourceNumber": "3",
+      "sourceAnchor": "",
+      "kind": "exercise-candidate",
+      "context": "Graphing Hyperbolas Centered at the Origin\n\nWhen we have an equation in standard form for a hyperbola centered at the origin, we can interpret its parts to identify the key features of its graph: the center, vertices, co-vertices, asymptotes, foci, and lengths and positions of the transverse and conjugate axes. To graph hyperbolas centered at the origin, we use the standard form \\(\\dfrac{x^2}{a^2}−\\dfrac{y^2}{b^2}=1\\) for horizontal hyperbolas and the standard form \\(\\dfrac{y^2}{a^2}−\\dfrac{x^2}{b^2}=1\\) for vertical hyperbolas.",
+      "original": "3. Solve for the coordinates of the foci using the equation \\(c=\\pm \\sqrt{a^2+b^2}\\).",
+      "prompt": "3. Solve for the coordinates of the foci using the equation \\(c=\\pm \\sqrt{a^2+b^2}\\).",
+      "sourceAnswers": [],
+      "hasFigure": false,
+      "status": "draft",
+      "answerVerified": false,
+      "translationStatus": "pending",
+      "mappingStatus": "pending"
+    },
+    {
+      "ordinal": 22,
+      "sourceNumber": "4",
+      "sourceAnchor": "",
+      "kind": "exercise-candidate",
+      "context": "Graphing Hyperbolas Centered at the Origin\n\nWhen we have an equation in standard form for a hyperbola centered at the origin, we can interpret its parts to identify the key features of its graph: the center, vertices, co-vertices, asymptotes, foci, and lengths and positions of the transverse and conjugate axes. To graph hyperbolas centered at the origin, we use the standard form \\(\\dfrac{x^2}{a^2}−\\dfrac{y^2}{b^2}=1\\) for horizontal hyperbolas and the standard form \\(\\dfrac{y^2}{a^2}−\\dfrac{x^2}{b^2}=1\\) for vertical hyperbolas.",
+      "original": "4. Plot the vertices, co-vertices, foci, and asymptotes in the coordinate plane, and draw a smooth curve to form the hyperbola.",
+      "prompt": "4. Plot the vertices, co-vertices, foci, and asymptotes in the coordinate plane, and draw a smooth curve to form the hyperbola.",
+      "sourceAnswers": [],
+      "hasFigure": false,
+      "status": "draft",
+      "answerVerified": false,
+      "translationStatus": "pending",
+      "mappingStatus": "pending"
+    },
+    {
+      "ordinal": 23,
+      "sourceNumber": "",
+      "sourceAnchor": "",
+      "kind": "example-or-exercise",
+      "context": "Graphing Hyperbolas Centered at the Origin\n\nWhen we have an equation in standard form for a hyperbola centered at the origin, we can interpret its parts to identify the key features of its graph: the center, vertices, co-vertices, asymptotes, foci, and lengths and positions of the transverse and conjugate axes. To graph hyperbolas centered at the origin, we use the standard form \\(\\dfrac{x^2}{a^2}−\\dfrac{y^2}{b^2}=1\\) for horizontal hyperbolas and the standard form \\(\\dfrac{y^2}{a^2}−\\dfrac{x^2}{b^2}=1\\) for vertical hyperbolas.",
+      "original": "Example \\(\\PageIndex{4}\\): Graphing a Hyperbola Centered at \\((0,0)\\) Given an Equation in Standard Form\n\nGraph the hyperbola given by the equation \\(\\dfrac{y^2}{64}−\\dfrac{x^2}{36}=1\\). Identify and label the vertices, co-vertices, foci, and asymptotes.\n\nSolution\n\nThe standard form that applies to the given equation is \\(\\dfrac{y^2}{a^2}−\\dfrac{x^2}{b^2}=1\\). Thus, the transverse axis is on the \\(y\\)-axis\n\nThe coordinates of the vertices are \\((0,\\pm a)=(0,\\pm \\sqrt{64})=(0,\\pm 8)\\)\n\nThe coordinates of the co-vertices are \\((\\pm b,0)=(\\pm \\sqrt{36}, 0)=(\\pm 6,0)\\)\n\nThe coordinates of the foci are \\((0,\\pm c)\\), where \\(c=\\pm \\sqrt{a^2+b^2}\\). Solving for \\(c\\), we have\n\n\\(c=\\pm \\sqrt{a^2+b^2}=\\pm \\sqrt{64+36}=\\pm \\sqrt{100}=\\pm 10\\)\n\nTherefore, the coordinates of the foci are \\((0,\\pm 10)\\)\n\nThe equations of the asymptotes are \\(y=\\pm \\dfrac{a}{b}x=\\pm \\dfrac{8}{6}x=\\pm \\dfrac{4}{3}x\\)\n\nPlot and label the vertices and co-vertices, and then sketch the central rectangle. Sides of the rectangle are parallel to the axes and pass through the vertices and co-vertices. Sketch and extend the diagonals of the central rectangle to show the asymptotes. The central rectangle and asymptotes provide the framework needed to sketch an accurate graph of the hyperbola. Label the foci and asymptotes, and draw a smooth curve to form the hyperbola, as shown in Figure \\(\\PageIndex{8}\\).\n\n[Figure: A vertical hyperbola centered at (0, 0) in the x y coordinate system with Vertices at (0, 8) and (0, negative 8) and Foci at (0, negative 10) and (0, 10). Also shown are the slant asymptotes, y = (4/3)x and y = (negative 4/3)x. The points (negative 6, 0) (6, 0) and (0, 0) are labeled.]\n\nFigure \\(\\PageIndex{8}\\)",
+      "prompt": "Example \\(\\PageIndex{4}\\): Graphing a Hyperbola Centered at \\((0,0)\\) Given an Equation in Standard Form\n\nGraph the hyperbola given by the equation \\(\\dfrac{y^2}{64}−\\dfrac{x^2}{36}=1\\). Identify and label the vertices, co-vertices, foci, and asymptotes.\n\nSolution\n\nThe standard form that applies to the given equation is \\(\\dfrac{y^2}{a^2}−\\dfrac{x^2}{b^2}=1\\). Thus, the transverse axis is on the \\(y\\)-axis\n\nThe coordinates of the vertices are \\((0,\\pm a)=(0,\\pm \\sqrt{64})=(0,\\pm 8)\\)\n\nThe coordinates of the co-vertices are \\((\\pm b,0)=(\\pm \\sqrt{36}, 0)=(\\pm 6,0)\\)\n\nThe coordinates of the foci are \\((0,\\pm c)\\), where \\(c=\\pm \\sqrt{a^2+b^2}\\). Solving for \\(c\\), we have\n\n\\(c=\\pm \\sqrt{a^2+b^2}=\\pm \\sqrt{64+36}=\\pm \\sqrt{100}=\\pm 10\\)\n\nTherefore, the coordinates of the foci are \\((0,\\pm 10)\\)\n\nThe equations of the asymptotes are \\(y=\\pm \\dfrac{a}{b}x=\\pm \\dfrac{8}{6}x=\\pm \\dfrac{4}{3}x\\)\n\nPlot and label the vertices and co-vertices, and then sketch the central rectangle. Sides of the rectangle are parallel to the axes and pass through the vertices and co-vertices. Sketch and extend the diagonals of the central rectangle to show the asymptotes. The central rectangle and asymptotes provide the framework needed to sketch an accurate graph of the hyperbola. Label the foci and asymptotes, and draw a smooth curve to form the hyperbola, as shown in Figure \\(\\PageIndex{8}\\).\n\n[Figure: A vertical hyperbola centered at (0, 0) in the x y coordinate system with Vertices at (0, 8) and (0, negative 8) and Foci at (0, negative 10) and (0, 10). Also shown are the slant asymptotes, y = (4/3)x and y = (negative 4/3)x. The points (negative 6, 0) (6, 0) and (0, 0) are labeled.]\n\nFigure \\(\\PageIndex{8}\\)",
+      "sourceAnswers": [],
+      "hasFigure": true,
+      "status": "draft",
+      "answerVerified": false,
+      "translationStatus": "pending",
+      "mappingStatus": "pending"
+    },
+    {
+      "ordinal": 24,
+      "sourceNumber": "",
+      "sourceAnchor": "",
+      "kind": "exercise-candidate",
+      "context": "Graphing Hyperbolas Centered at the Origin\n\nWhen we have an equation in standard form for a hyperbola centered at the origin, we can interpret its parts to identify the key features of its graph: the center, vertices, co-vertices, asymptotes, foci, and lengths and positions of the transverse and conjugate axes. To graph hyperbolas centered at the origin, we use the standard form \\(\\dfrac{x^2}{a^2}−\\dfrac{y^2}{b^2}=1\\) for horizontal hyperbolas and the standard form \\(\\dfrac{y^2}{a^2}−\\dfrac{x^2}{b^2}=1\\) for vertical hyperbolas.",
+      "original": "Exercise \\(\\PageIndex{4}\\)\n\nGraph the hyperbola given by the equation \\(\\dfrac{x^2}{144}−\\dfrac{y^2}{81}=1\\). Identify and label the vertices, co-vertices, foci, and asymptotes.\n\nAnswer\n\nvertices: \\((\\pm 12,0)\\); co-vertices: \\((0,\\pm 9)\\); foci: \\((\\pm 15,0)\\); asymptotes: \\(y=\\pm \\dfrac{3}{4}x\\);\n\n[Figure: alt]\n\nFigure \\(\\PageIndex{9}\\)",
+      "prompt": "Exercise \\(\\PageIndex{4}\\)\n\nGraph the hyperbola given by the equation \\(\\dfrac{x^2}{144}−\\dfrac{y^2}{81}=1\\). Identify and label the vertices, co-vertices, foci, and asymptotes.",
+      "sourceAnswers": [
+        "vertices: \\((\\pm 12,0)\\); co-vertices: \\((0,\\pm 9)\\); foci: \\((\\pm 15,0)\\); asymptotes: \\(y=\\pm \\dfrac{3}{4}x\\);\n\n[Figure: alt]\n\nFigure \\(\\PageIndex{9}\\)"
+      ],
+      "hasFigure": true,
+      "status": "draft",
+      "answerVerified": false,
+      "translationStatus": "pending",
+      "mappingStatus": "pending"
+    },
+    {
+      "ordinal": 25,
+      "sourceNumber": "1",
+      "sourceAnchor": "",
+      "kind": "exercise-candidate",
+      "context": "Graphing Hyperbolas Not Centered at the Origin\n\nGraphing hyperbolas centered at a point \\((h,k)\\) other than the origin is similar to graphing ellipses centered at a point other than the origin. We use the standard forms \\(\\dfrac{{(x−h)}^2}{a^2}−\\dfrac{{(y−k)}^2}{b^2}=1\\) for horizontal hyperbolas, and \\(\\dfrac{{(y−k)}^2}{a^2}−\\dfrac{{(x−h)}^2}{b^2}=1\\) for vertical hyperbolas. From these standard form equations we can easily calculate and plot key features of the graph: the coordinates of its center, vertices, co-vertices, and foci; the equations of its asymptotes; and the positions of the transverse and conjugate axes.",
+      "original": "1. Convert the general form to that standard form. Determine which of the standard forms applies to the given equation.",
+      "prompt": "1. Convert the general form to that standard form. Determine which of the standard forms applies to the given equation.",
+      "sourceAnswers": [],
+      "hasFigure": false,
+      "status": "draft",
+      "answerVerified": false,
+      "translationStatus": "pending",
+      "mappingStatus": "pending"
+    },
+    {
+      "ordinal": 26,
+      "sourceNumber": "2",
+      "sourceAnchor": "",
+      "kind": "exercise-candidate",
+      "context": "Graphing Hyperbolas Not Centered at the Origin\n\nGraphing hyperbolas centered at a point \\((h,k)\\) other than the origin is similar to graphing ellipses centered at a point other than the origin. We use the standard forms \\(\\dfrac{{(x−h)}^2}{a^2}−\\dfrac{{(y−k)}^2}{b^2}=1\\) for horizontal hyperbolas, and \\(\\dfrac{{(y−k)}^2}{a^2}−\\dfrac{{(x−h)}^2}{b^2}=1\\) for vertical hyperbolas. From these standard form equations we can easily calculate and plot key features of the graph: the coordinates of its center, vertices, co-vertices, and foci; the equations of its asymptotes; and the positions of the transverse and conjugate axes.",
+      "original": "2. Use the standard form identified in Step 1 to determine the position of the transverse axis; coordinates for the center, vertices, co-vertices, foci; and equations for the asymptotes.\n\n1. If the equation is in the form \\(\\dfrac{{(x−h)}^2}{a^2}−\\dfrac{{(y−k)}^2}{b^2}=1\\), then\n\nthe transverse axis is parallel to the \\(x\\)-axis\n\nthe center is \\((h,k)\\)\n\nthe coordinates of the vertices are \\((h\\pm a,k)\\)\n\nthe coordinates of the co-vertices are \\((h,k\\pm b)\\)\n\nthe coordinates of the foci are \\((h\\pm c,k)\\)\n\nthe equations of the asymptotes are \\(y=\\pm \\dfrac{b}{a}(x−h)+k\\)\n\n2. If the equation is in the form \\(\\dfrac{{(y−k)}^2}{a^2}−\\dfrac{{(x−h)}^2}{b^2}=1\\), then\n\nthe transverse axis is parallel to the \\(y\\)-axis\n\nthe center is \\((h,k)\\)\n\nthe coordinates of the vertices are \\((h,k\\pm a)\\)\n\nthe coordinates of the co-vertices are \\((h\\pm b,k)\\)\n\nthe coordinates of the foci are \\((h,k\\pm c)\\)\n\nthe equations of the asymptotes are \\(y=\\pm \\dfrac{a}{b}(x−h)+k\\)",
+      "prompt": "2. Use the standard form identified in Step 1 to determine the position of the transverse axis; coordinates for the center, vertices, co-vertices, foci; and equations for the asymptotes.\n\n1. If the equation is in the form \\(\\dfrac{{(x−h)}^2}{a^2}−\\dfrac{{(y−k)}^2}{b^2}=1\\), then\n\nthe transverse axis is parallel to the \\(x\\)-axis\n\nthe center is \\((h,k)\\)\n\nthe coordinates of the vertices are \\((h\\pm a,k)\\)\n\nthe coordinates of the co-vertices are \\((h,k\\pm b)\\)\n\nthe coordinates of the foci are \\((h\\pm c,k)\\)\n\nthe equations of the asymptotes are \\(y=\\pm \\dfrac{b}{a}(x−h)+k\\)\n\n2. If the equation is in the form \\(\\dfrac{{(y−k)}^2}{a^2}−\\dfrac{{(x−h)}^2}{b^2}=1\\), then\n\nthe transverse axis is parallel to the \\(y\\)-axis\n\nthe center is \\((h,k)\\)\n\nthe coordinates of the vertices are \\((h,k\\pm a)\\)\n\nthe coordinates of the co-vertices are \\((h\\pm b,k)\\)\n\nthe coordinates of the foci are \\((h,k\\pm c)\\)\n\nthe equations of the asymptotes are \\(y=\\pm \\dfrac{a}{b}(x−h)+k\\)",
+      "sourceAnswers": [],
+      "hasFigure": false,
+      "status": "draft",
+      "answerVerified": false,
+      "translationStatus": "pending",
+      "mappingStatus": "pending"
+    },
+    {
+      "ordinal": 27,
+      "sourceNumber": "3",
+      "sourceAnchor": "",
+      "kind": "exercise-candidate",
+      "context": "Graphing Hyperbolas Not Centered at the Origin\n\nGraphing hyperbolas centered at a point \\((h,k)\\) other than the origin is similar to graphing ellipses centered at a point other than the origin. We use the standard forms \\(\\dfrac{{(x−h)}^2}{a^2}−\\dfrac{{(y−k)}^2}{b^2}=1\\) for horizontal hyperbolas, and \\(\\dfrac{{(y−k)}^2}{a^2}−\\dfrac{{(x−h)}^2}{b^2}=1\\) for vertical hyperbolas. From these standard form equations we can easily calculate and plot key features of the graph: the coordinates of its center, vertices, co-vertices, and foci; the equations of its asymptotes; and the positions of the transverse and conjugate axes.",
+      "original": "3. Solve for the coordinates of the foci using the equation \\(c=\\pm \\sqrt{a^2+b^2}\\).",
+      "prompt": "3. Solve for the coordinates of the foci using the equation \\(c=\\pm \\sqrt{a^2+b^2}\\).",
+      "sourceAnswers": [],
+      "hasFigure": false,
+      "status": "draft",
+      "answerVerified": false,
+      "translationStatus": "pending",
+      "mappingStatus": "pending"
+    },
+    {
+      "ordinal": 28,
+      "sourceNumber": "4",
+      "sourceAnchor": "",
+      "kind": "exercise-candidate",
+      "context": "Graphing Hyperbolas Not Centered at the Origin\n\nGraphing hyperbolas centered at a point \\((h,k)\\) other than the origin is similar to graphing ellipses centered at a point other than the origin. We use the standard forms \\(\\dfrac{{(x−h)}^2}{a^2}−\\dfrac{{(y−k)}^2}{b^2}=1\\) for horizontal hyperbolas, and \\(\\dfrac{{(y−k)}^2}{a^2}−\\dfrac{{(x−h)}^2}{b^2}=1\\) for vertical hyperbolas. From these standard form equations we can easily calculate and plot key features of the graph: the coordinates of its center, vertices, co-vertices, and foci; the equations of its asymptotes; and the positions of the transverse and conjugate axes.",
+      "original": "4. Plot the center, vertices, co-vertices, foci, and asymptotes in the coordinate plane and draw a smooth curve to form the hyperbola.",
+      "prompt": "4. Plot the center, vertices, co-vertices, foci, and asymptotes in the coordinate plane and draw a smooth curve to form the hyperbola.",
+      "sourceAnswers": [],
+      "hasFigure": false,
+      "status": "draft",
+      "answerVerified": false,
+      "translationStatus": "pending",
+      "mappingStatus": "pending"
+    },
+    {
+      "ordinal": 29,
+      "sourceNumber": "",
+      "sourceAnchor": "",
+      "kind": "example-or-exercise",
+      "context": "Graphing Hyperbolas Not Centered at the Origin\n\nGraphing hyperbolas centered at a point \\((h,k)\\) other than the origin is similar to graphing ellipses centered at a point other than the origin. We use the standard forms \\(\\dfrac{{(x−h)}^2}{a^2}−\\dfrac{{(y−k)}^2}{b^2}=1\\) for horizontal hyperbolas, and \\(\\dfrac{{(y−k)}^2}{a^2}−\\dfrac{{(x−h)}^2}{b^2}=1\\) for vertical hyperbolas. From these standard form equations we can easily calculate and plot key features of the graph: the coordinates of its center, vertices, co-vertices, and foci; the equations of its asymptotes; and the positions of the transverse and conjugate axes.",
+      "original": "Example \\(\\PageIndex{5}\\): Graphing a Hyperbola Centered at \\((h, k)\\) Given an Equation in General Form\n\nGraph the hyperbola given by the equation \\(9x^2−4y^2−36x−40y−388=0\\). Identify and label the center, vertices, co-vertices, foci, and asymptotes.\n\nSolution\n\nStart by expressing the equation in standard form. Group terms that contain the same variable, and move the constant to the opposite side of the equation.\n\n\\((9x^2−36x)−(4y^2+40y)=388\\)\n\nFactor the leading coefficient of each expression.\n\n\\(9(x^2−4x)−4(y^2+10y)=388\\)\n\nComplete the square twice. Remember to balance the equation by adding the same constants to each side.\n\n\\(9(x^2−4x+4)−4(y^2+10y+25)=388+36−100\\)\n\nRewrite as perfect squares.\n\n\\(9{(x−2)}^2−4{(y+5)}^2=324\\)\n\nDivide both sides by the constant term to place the equation in standard form.\n\n\\(\\dfrac{{(x−2)}^2}{36}−\\dfrac{{(y+5)}^2}{81}=1\\)\n\nThe standard form that applies to the given equation is \\(\\dfrac{{(x−h)}^2}{a^2}−\\dfrac{{(y−k)}^2}{b^2}=1\\), where \\(a^2=36\\) and \\(b^2=81\\),or \\(a=6\\) and \\(b=9\\). Thus, the transverse axis is parallel to the \\(x\\)-axis. It follows that:\n\nthe center of the ellipse is \\((h,k)=(2,−5)\\)\n\nthe coordinates of the vertices are \\((h\\pm a,k)=(2\\pm 6,−5)\\), or \\((−4,−5)\\) and \\((8,−5)\\)\n\nthe coordinates of the co-vertices are \\((h,k\\pm b)=(2,−5\\pm 9)\\), or \\((2,−14)\\) and \\((2,4)\\)\n\nthe coordinates of the foci are \\((h\\pm c,k)\\), where \\(c=\\pm \\sqrt{a^2+b^2}\\). Solving for \\(c\\),we have\n\n\\(c=\\pm \\sqrt{36+81}=\\pm \\sqrt{117}=\\pm 3\\sqrt{13}\\)\n\nTherefore, the coordinates of the foci are \\((2−3\\sqrt{13},−5)\\) and \\((2+3\\sqrt{13},−5)\\).\n\nThe equations of the asymptotes are \\(y=\\pm \\dfrac{b}{a}(x−h)+k=\\pm \\dfrac{3}{2}(x−2)−5\\).\n\nNext, we plot and label the center, vertices, co-vertices, foci, and asymptotes and draw smooth curves to form the hyperbola, as shown in Figure \\(\\PageIndex{10}\\).\n\n[Figure: A horizontal hyperbola centered at (2, negative 5) with Vertices at (negative 4, negative 5) and (8, 5) and Foci at (2 minus 3 square root of 13, negative 5) and (2 + 3 square root of 13, negative 5). Also shown are the slant asymptotes, y = (3/2) times (x minus 2) minus 5 and y = (negative 3/2)times (x minus 2) minus 5. The points (2, negative 14), (2, 4) and (0, 0) are labeled.]\n\nFigure \\(\\PageIndex{10}\\)",
+      "prompt": "Example \\(\\PageIndex{5}\\): Graphing a Hyperbola Centered at \\((h, k)\\) Given an Equation in General Form\n\nGraph the hyperbola given by the equation \\(9x^2−4y^2−36x−40y−388=0\\). Identify and label the center, vertices, co-vertices, foci, and asymptotes.\n\nSolution\n\nStart by expressing the equation in standard form. Group terms that contain the same variable, and move the constant to the opposite side of the equation.\n\n\\((9x^2−36x)−(4y^2+40y)=388\\)\n\nFactor the leading coefficient of each expression.\n\n\\(9(x^2−4x)−4(y^2+10y)=388\\)\n\nComplete the square twice. Remember to balance the equation by adding the same constants to each side.\n\n\\(9(x^2−4x+4)−4(y^2+10y+25)=388+36−100\\)\n\nRewrite as perfect squares.\n\n\\(9{(x−2)}^2−4{(y+5)}^2=324\\)\n\nDivide both sides by the constant term to place the equation in standard form.\n\n\\(\\dfrac{{(x−2)}^2}{36}−\\dfrac{{(y+5)}^2}{81}=1\\)\n\nThe standard form that applies to the given equation is \\(\\dfrac{{(x−h)}^2}{a^2}−\\dfrac{{(y−k)}^2}{b^2}=1\\), where \\(a^2=36\\) and \\(b^2=81\\),or \\(a=6\\) and \\(b=9\\). Thus, the transverse axis is parallel to the \\(x\\)-axis. It follows that:\n\nthe center of the ellipse is \\((h,k)=(2,−5)\\)\n\nthe coordinates of the vertices are \\((h\\pm a,k)=(2\\pm 6,−5)\\), or \\((−4,−5)\\) and \\((8,−5)\\)\n\nthe coordinates of the co-vertices are \\((h,k\\pm b)=(2,−5\\pm 9)\\), or \\((2,−14)\\) and \\((2,4)\\)\n\nthe coordinates of the foci are \\((h\\pm c,k)\\), where \\(c=\\pm \\sqrt{a^2+b^2}\\). Solving for \\(c\\),we have\n\n\\(c=\\pm \\sqrt{36+81}=\\pm \\sqrt{117}=\\pm 3\\sqrt{13}\\)\n\nTherefore, the coordinates of the foci are \\((2−3\\sqrt{13},−5)\\) and \\((2+3\\sqrt{13},−5)\\).\n\nThe equations of the asymptotes are \\(y=\\pm \\dfrac{b}{a}(x−h)+k=\\pm \\dfrac{3}{2}(x−2)−5\\).\n\nNext, we plot and label the center, vertices, co-vertices, foci, and asymptotes and draw smooth curves to form the hyperbola, as shown in Figure \\(\\PageIndex{10}\\).\n\n[Figure: A horizontal hyperbola centered at (2, negative 5) with Vertices at (negative 4, negative 5) and (8, 5) and Foci at (2 minus 3 square root of 13, negative 5) and (2 + 3 square root of 13, negative 5). Also shown are the slant asymptotes, y = (3/2) times (x minus 2) minus 5 and y = (negative 3/2)times (x minus 2) minus 5. The points (2, negative 14), (2, 4) and (0, 0) are labeled.]\n\nFigure \\(\\PageIndex{10}\\)",
+      "sourceAnswers": [],
+      "hasFigure": true,
+      "status": "draft",
+      "answerVerified": false,
+      "translationStatus": "pending",
+      "mappingStatus": "pending"
+    },
+    {
+      "ordinal": 30,
+      "sourceNumber": "",
+      "sourceAnchor": "",
+      "kind": "exercise-candidate",
+      "context": "Graphing Hyperbolas Not Centered at the Origin\n\nGraphing hyperbolas centered at a point \\((h,k)\\) other than the origin is similar to graphing ellipses centered at a point other than the origin. We use the standard forms \\(\\dfrac{{(x−h)}^2}{a^2}−\\dfrac{{(y−k)}^2}{b^2}=1\\) for horizontal hyperbolas, and \\(\\dfrac{{(y−k)}^2}{a^2}−\\dfrac{{(x−h)}^2}{b^2}=1\\) for vertical hyperbolas. From these standard form equations we can easily calculate and plot key features of the graph: the coordinates of its center, vertices, co-vertices, and foci; the equations of its asymptotes; and the positions of the transverse and conjugate axes.",
+      "original": "Exercise \\(\\PageIndex{5}\\)\n\nGraph the hyperbola given by the standard form of an equation \\(\\dfrac{{(y+4)}^2}{100}−\\dfrac{{(x−3)}^2}{64}=1\\). Identify and label the center, vertices, co-vertices, foci, and asymptotes.\n\nAnswer\n\ncenter: \\((3,−4)\\); vertices: \\((3,−14)\\) and \\((3,6)\\); co-vertices: \\((−5,−4)\\); and \\((11,−4)\\); foci: \\((3,−4−2\\sqrt{41})\\) and \\((3,−4+2\\sqrt{41})\\); asymptotes: \\(y=\\pm \\dfrac{5}{4}(x−3)−4\\)\n\n[Figure: alt]\n\nFigure \\(\\PageIndex{11}\\)",
+      "prompt": "Exercise \\(\\PageIndex{5}\\)\n\nGraph the hyperbola given by the standard form of an equation \\(\\dfrac{{(y+4)}^2}{100}−\\dfrac{{(x−3)}^2}{64}=1\\). Identify and label the center, vertices, co-vertices, foci, and asymptotes.",
+      "sourceAnswers": [
+        "center: \\((3,−4)\\); vertices: \\((3,−14)\\) and \\((3,6)\\); co-vertices: \\((−5,−4)\\); and \\((11,−4)\\); foci: \\((3,−4−2\\sqrt{41})\\) and \\((3,−4+2\\sqrt{41})\\); asymptotes: \\(y=\\pm \\dfrac{5}{4}(x−3)−4\\)\n\n[Figure: alt]\n\nFigure \\(\\PageIndex{11}\\)"
+      ],
+      "hasFigure": true,
+      "status": "draft",
+      "answerVerified": false,
+      "translationStatus": "pending",
+      "mappingStatus": "pending"
+    },
+    {
+      "ordinal": 31,
+      "sourceNumber": "",
+      "sourceAnchor": "",
+      "kind": "example-or-exercise",
+      "context": "Solving Applied Problems Involving Hyperbolas\n\nAs we discussed at the beginning of this section, hyperbolas have real-world applications in many fields, such as astronomy, physics, engineering, and architecture. The design efficiency of hyperbolic cooling towers is particularly interesting. Cooling towers are used to transfer waste heat to the atmosphere and are often touted for their ability to generate power efficiently. Because of their hyperbolic form, these structures are able to withstand extreme winds while requiring less material than any other forms of their size and strength (Figure \\(\\PageIndex{12}\\)). For example, a \\(500\\)-foot tower can be made of a reinforced concrete shell only \\(6\\) or \\(8\\) inches wide!\n\nThe first hyperbolic towers were designed in 1914 and were \\(35\\) meters high. Today, the tallest cooling towers are in France, standing a remarkable \\(170\\) meters tall. In Example \\(\\PageIndex{6}\\) we will use the design layout of a cooling tower to find a hyperbolic equation that models its sides.",
+      "original": "Example \\(\\PageIndex{6}\\): Solving Applied Problems Involving Hyperbolas\n\nThe design layout of a cooling tower is shown in Figure \\(\\PageIndex{13}\\). The tower stands \\(179.6\\) meters tall. The diameter of the top is \\(72\\) meters. At their closest, the sides of the tower are \\(60\\) meters apart.\n\n[Figure: alt]\n\nFigure \\(\\PageIndex{13}\\): Project design for a natural draft cooling tower\n\nFind the equation of the hyperbola that models the sides of the cooling tower. Assume that the center of the hyperbola—indicated by the intersection of dashed perpendicular lines in the figure—is the origin of the coordinate plane. Round final values to four decimal places.\n\nSolution\n\nWe are assuming the center of the tower is at the origin, so we can use the standard form of a horizontal hyperbola centered at the origin: \\(\\dfrac{x^2}{a^2}−\\dfrac{y^2}{b^2}=1\\), where the branches of the hyperbola form the sides of the cooling tower. We must find the values of \\(a^2\\) and \\(b^2\\) to complete the model.\n\nFirst, we find \\(a^2\\). Recall that the length of the transverse axis of a hyperbola is \\(2a\\). This length is represented by the distance where the sides are closest, which is given as \\(65.3\\) meters. So, \\(2a=60\\). Therefore, \\(a=30\\) and \\(a^2=900\\).\n\nTo solve for \\(b^2\\),we need to substitute for \\(x\\) and \\(y\\) in our equation using a known point. To do this, we can use the dimensions of the tower to find some point \\((x,y)\\) that lies on the hyperbola. We will use the top right corner of the tower to represent that point. Since the \\(y\\)-axis bisects the tower, our \\(x\\)-value can be represented by the radius of the top, or \\(36\\) meters. The y-value is represented by the distance from the origin to the top, which is given as \\(79.6\\) meters. Therefore,\n\n\\[\\begin{align*} \\dfrac{x^2}{a^2}-\\dfrac{y^2}{b^2}&=1\\qquad \\text{Standard form of horizontal hyperbola.}\\\\ b^2&=\\dfrac{y^2}{\\dfrac{x^2}{a^2}-1}\\qquad \\text{Isolate } b^2\\\\ &=\\dfrac{{(79.6)}^2}{\\dfrac{{(36)}^2}{900}-1}\\qquad \\text{Substitute for } a^2,\\: x, \\text{ and } y\\\\ &\\approx 14400.3636\\qquad \\text{Round to four decimal places} \\end{align*}\\]\n\nThe sides of the tower can be modeled by the hyperbolic equation\n\n\\(\\dfrac{x^2}{900}−\\dfrac{y^2}{14400.3636}=1\\),or \\(\\dfrac{x^2}{{30}^2}−\\dfrac{y^2}{{120.0015}^2}=1\\)",
+      "prompt": "Example \\(\\PageIndex{6}\\): Solving Applied Problems Involving Hyperbolas\n\nThe design layout of a cooling tower is shown in Figure \\(\\PageIndex{13}\\). The tower stands \\(179.6\\) meters tall. The diameter of the top is \\(72\\) meters. At their closest, the sides of the tower are \\(60\\) meters apart.\n\n[Figure: alt]\n\nFigure \\(\\PageIndex{13}\\): Project design for a natural draft cooling tower\n\nFind the equation of the hyperbola that models the sides of the cooling tower. Assume that the center of the hyperbola—indicated by the intersection of dashed perpendicular lines in the figure—is the origin of the coordinate plane. Round final values to four decimal places.\n\nSolution\n\nWe are assuming the center of the tower is at the origin, so we can use the standard form of a horizontal hyperbola centered at the origin: \\(\\dfrac{x^2}{a^2}−\\dfrac{y^2}{b^2}=1\\), where the branches of the hyperbola form the sides of the cooling tower. We must find the values of \\(a^2\\) and \\(b^2\\) to complete the model.\n\nFirst, we find \\(a^2\\). Recall that the length of the transverse axis of a hyperbola is \\(2a\\). This length is represented by the distance where the sides are closest, which is given as \\(65.3\\) meters. So, \\(2a=60\\). Therefore, \\(a=30\\) and \\(a^2=900\\).\n\nTo solve for \\(b^2\\),we need to substitute for \\(x\\) and \\(y\\) in our equation using a known point. To do this, we can use the dimensions of the tower to find some point \\((x,y)\\) that lies on the hyperbola. We will use the top right corner of the tower to represent that point. Since the \\(y\\)-axis bisects the tower, our \\(x\\)-value can be represented by the radius of the top, or \\(36\\) meters. The y-value is represented by the distance from the origin to the top, which is given as \\(79.6\\) meters. Therefore,\n\n\\[\\begin{align*} \\dfrac{x^2}{a^2}-\\dfrac{y^2}{b^2}&=1\\qquad \\text{Standard form of horizontal hyperbola.}\\\\ b^2&=\\dfrac{y^2}{\\dfrac{x^2}{a^2}-1}\\qquad \\text{Isolate } b^2\\\\ &=\\dfrac{{(79.6)}^2}{\\dfrac{{(36)}^2}{900}-1}\\qquad \\text{Substitute for } a^2,\\: x, \\text{ and } y\\\\ &\\approx 14400.3636\\qquad \\text{Round to four decimal places} \\end{align*}\\]\n\nThe sides of the tower can be modeled by the hyperbolic equation\n\n\\(\\dfrac{x^2}{900}−\\dfrac{y^2}{14400.3636}=1\\),or \\(\\dfrac{x^2}{{30}^2}−\\dfrac{y^2}{{120.0015}^2}=1\\)",
+      "sourceAnswers": [],
+      "hasFigure": true,
+      "status": "draft",
+      "answerVerified": false,
+      "translationStatus": "pending",
+      "mappingStatus": "pending"
+    },
+    {
+      "ordinal": 32,
+      "sourceNumber": "",
+      "sourceAnchor": "",
+      "kind": "exercise-candidate",
+      "context": "Solving Applied Problems Involving Hyperbolas\n\nAs we discussed at the beginning of this section, hyperbolas have real-world applications in many fields, such as astronomy, physics, engineering, and architecture. The design efficiency of hyperbolic cooling towers is particularly interesting. Cooling towers are used to transfer waste heat to the atmosphere and are often touted for their ability to generate power efficiently. Because of their hyperbolic form, these structures are able to withstand extreme winds while requiring less material than any other forms of their size and strength (Figure \\(\\PageIndex{12}\\)). For example, a \\(500\\)-foot tower can be made of a reinforced concrete shell only \\(6\\) or \\(8\\) inches wide!\n\nThe first hyperbolic towers were designed in 1914 and were \\(35\\) meters high. Today, the tallest cooling towers are in France, standing a remarkable \\(170\\) meters tall. In Example \\(\\PageIndex{6}\\) we will use the design layout of a cooling tower to find a hyperbolic equation that models its sides.",
+      "original": "Exercise \\(\\PageIndex{6}\\)\n\nA design for a cooling tower project is shown in Figure \\(\\PageIndex{14}\\). Find the equation of the hyperbola that models the sides of the cooling tower. Assume that the center of the hyperbola—indicated by the intersection of dashed perpendicular lines in the figure—is the origin of the coordinate plane. Round final values to four decimal places.\n\n[Figure: Project design for a natural draft cooling tower. The overall height is 167.082 meters. The diameter at the top is 60 meters, and at their closest, 79.6 meters from the top, the sides are 60 meters apart.]\n\nFigure \\(\\PageIndex{14}\\)\n\nAnswer\n\nThe sides of the tower can be modeled by the hyperbolic equation. \\(\\dfrac{x^2}{400}−\\dfrac{y^2}{3600}=1\\) or \\(\\dfrac{x^2}{{20}^2}−\\dfrac{y^2}{{60}^2}=1\\).",
+      "prompt": "Exercise \\(\\PageIndex{6}\\)\n\nA design for a cooling tower project is shown in Figure \\(\\PageIndex{14}\\). Find the equation of the hyperbola that models the sides of the cooling tower. Assume that the center of the hyperbola—indicated by the intersection of dashed perpendicular lines in the figure—is the origin of the coordinate plane. Round final values to four decimal places.\n\n[Figure: Project design for a natural draft cooling tower. The overall height is 167.082 meters. The diameter at the top is 60 meters, and at their closest, 79.6 meters from the top, the sides are 60 meters apart.]\n\nFigure \\(\\PageIndex{14}\\)",
+      "sourceAnswers": [
+        "The sides of the tower can be modeled by the hyperbolic equation. \\(\\dfrac{x^2}{400}−\\dfrac{y^2}{3600}=1\\) or \\(\\dfrac{x^2}{{20}^2}−\\dfrac{y^2}{{60}^2}=1\\)."
+      ],
+      "hasFigure": true,
+      "status": "draft",
+      "answerVerified": false,
+      "translationStatus": "pending",
+      "mappingStatus": "pending"
+    }
+  ],
+  "license": "CC BY 4.0",
+  "licenseEvidence": "This page titled 12.2: The Hyperbola was last modified on Thu, 26 Dec 2024 22:30:49 GMT and is shared under a CC BY  4.0  license and was authored, remixed, and/or curated by OpenStax via source content that was edited to the style and standards of the LibreTexts platform.",
+  "url": "https://math.libretexts.org/Bookshelves/Algebra/Algebra_and_Trigonometry_1e_(OpenStax)/12:_Analytic_Geometry/12.02:_The_Hyperbola",
+  "sha256": "d5b77e10bd67681a4802e20ceb6ec8184f9e938e7266b983e8be60d31d9bfed1",
+  "checkedAt": "2026-10-07",
+  "id": "e02113a311fa9c547501",
+  "bookId": "algebra-trigonometry",
+  "licenseInherited": false,
+  "licenseSource": "https://math.libretexts.org/Bookshelves/Algebra/Algebra_and_Trigonometry_1e_(OpenStax)/12:_Analytic_Geometry/12.02:_The_Hyperbola",
+  "licenseUrl": "https://creativecommons.org/licenses/by/4.0/",
+  "authors": "OpenStax / Jay Abramson et al.",
+  "book": "Algebra and Trigonometry 1e",
+  "reviewStatus": "unreviewed",
+  "sourceLanguage": "en",
+  "translationStatus": "pending"
+}

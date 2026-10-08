@@ -1,0 +1,370 @@
+{
+  "title": "8.7: Applications of the Normal Distribution",
+  "originalText": "[Figure: A hand is holding a pencil and filling in the scantron sheet.]\n\nFigure \\(\\PageIndex{1}\\): Standardized test results generally adhere to the normal distribution. (credit: “Taking a Test” by Marco Verch Professional Photographer/Flickr, CC BY 2.0)\n\nLearning Objectives\n\nApply the normal distribution to real-world scenarios.\n\nAs we saw in The Normal Distribution, the word “standardized” is closely associated with the normal distribution. This is why tests like college entrance exams, state achievement tests for K–12 students, and Advanced Placement tests are often called “standardized tests”: scores are assigned in a way that forces them to follow a normal distribution, with a mean and standard deviation that are consistent from year to year. Standardization also allows people like college admissions officers to directly compare an applicant who took the ACT (a college entrance exam) to an applicant who instead chose to take the SAT (a different college entrance exam). Standardization allows us to compare individuals from different groups; this is among the most important applications of the normal distribution. We’ll explore this and other real-world uses of the normal distribution in this section.\n\nCollege Entrance Exams\n\nThere are two good ways to compare two data values from different groups: using \\(z\\)-scores and using percentiles. The two methods will always give consistent results (meaning that we won’t find, for example, that the first value is better using \\(z\\)-scores but the second value is better using percentiles), so use whichever method is more comfortable for you.\n\nExample \\(\\PageIndex{1}\\): Evaluating College Entrance Exam Scores\n\nAccording to the Digest of Education Statistics, composite scores on the SAT have mean 1060 and standard deviation 195, while composite scores on the ACT have mean 21 and standard deviation 5.\n\n1. At what percentile would an SAT score of 990 fall?\n\n2. What is the z-score of an ACT score of 27?\n\n3. Which is better: a score of 1450 on the SAT or 29 on the ACT?\n\nAnswer\n\n1. Using Google Sheets, we can answer this question with the formula \"=NORM.DIST(990, 1060, 195, TRUE)\". A score of 990 would fall at the 36 th percentile.\n\n    2. Using the formula \\(z=\\frac{x-\\mu}{s}\\), we get \\(z=\\frac{27-21}{5}=1.2\\).\n\n    3. Let's compare the values using both percentiles and \\(z\\)-values:\n\nPercentiles: Using \"=NORM.DIST(1450, 1060, 195, TRUE)\" we find that an SAT score of 1450 is at the 98th percentile. Meanwhile, by entering \"=NORM.DIST(29, 21, 5 , TRUE)\" we see that an ACT score of 29 is around the 95th percentile. Since it's at a higher percentile, we can conclude that an SAT score of 1450 is better than an ACT score of 29.\n\n    \\(\\boldsymbol{z}\\)-scores: Using the formula, we see that the \\(z\\)-score for an SAT score of 1450 is \\(z=\\frac{1450-1060}{195}=2\\), while the \\(z\\)-score for an ACT score of 29 is \\(z=\\frac{29-21}{5}=1.6\\). Since it has a higher \\(z\\)-score, an SAT score of 1450 is better than an ACT score of 29.\n\nYour Turn \\(\\PageIndex{1}\\)\n\nAccording to  the Graduate Management Admission Council (GMAC), the mean score on the GMAT (an entrance exam for graduate schools in business management) is 565, with standard deviation 116. For the LSAT (an entrance exam for law schools), Kaplan informs us that the mean score is 150 with standard deviation 10.\n\n1. What is the \\(z\\)-score for a GMAT score of 715?\n\n2. At what percentile is an LSAT score of 166?\n\n3. Which is better: a GMAT score of 650 or an LSAT score of 161?\n\nCoin flipping\n\nIn the opening of The Normal Distribution, we saw that the number of heads we get when we flip a coin 100 times is distributed normally. It can be shown that if \\(n\\) is the number of flips, then the mean of that distribution is \\(\\frac{n}{2}\\) and the standard deviation is \\(\\frac{\\sqrt{n}}{2}\\) (as long as \\(n≥20\\)). So, for 100 flips, the mean of the distribution is 50 and the standard deviation is 5. In that opening example, one of our early runs gave us 70 heads in 100 flips, which we noted seemed unusual. Using the normal distribution, we can identify exactly how unusual that really is. Using Google Sheets, the formula “=NORM.DIST(70, 50, 5, TRUE)” gives us 0.999968, which is the 99.997th percentile! How is that useful? Suppose you need to test whether a coin is fair, and so you flip it 100 times. While we might be suspicious if we get 70 heads out of the 100 flips, we now have a numerical measure for how unusual that is: If the coin were fair, we would expect to see 70 heads (or more) only \\(100-99.9968=0.0032%\\) of the time. That’s really unlikely! Analysis like this is related to hypothesis testing, an important application of statistics in the sciences and social sciences.\n\nExample \\(\\PageIndex{2}\\): Flipping a Coin\n\nLet’s say we flip a coin 64 times and count the number of heads.\n\n1. What would be the mean of the corresponding distribution?\n\n2. What would be the standard deviation of the corresponding distribution?\n\n3. Suppose we got 25 heads, which seems a little low. At what percentile would 25 heads fall?\n\nAnswer\n\n1. Since \\(n=64\\), the mean is \\(\\frac{64}{2}=32\\).\n\n    2. Again using \\(n=64\\), we get a standard deviation of \\(\\frac{\\sqrt{64}}{2}=4\\).\n\n    3. Using \"=NORM.DIST(25, 32, 4, TRUE)\", we see that 25 heads is at the 4th percentile. Reading and Interpreting Scatter Plots\n\nYour Turn \\(\\PageIndex{2}\\)\n\nYou flip a coin 144 times and count the number of heads.\n\n1. What is the mean of the corresponding distribution?\n\n2. What is the standard deviation of the corresponding distribution?\n\n3. You flipped 81 heads. At what percentile does that fall?\n\nAnalyzing Data That Are Normally Distributed\n\nWhenever we’re working with a dataset that has a distribution that looks symmetric and bell-shaped, we can use techniques associated with the normal distribution to analyze the data.\n\nExample \\(\\PageIndex{3}\\): Using Normal Techniques to Analyze Data\n\nThe data in “AvgSAT” contains the average SAT score for students attending every institution of higher learning in the United States for which data is available. We previously created a histogram for these data:\n\n[Figure: A histogram titled, average SAT scores at US institutions. The horizontal axis representing average SAT ranges from 750 to 1600, in increments of 50. The vertical axis representing frequency ranges from 0 to 300, in increments of 100. The histogram infers the following data. 750 to 800: 4. 800 to 850: 5. 850 to 900: 15. 900 to 950: 25. 950 to 1000: 85. 1000 to 1050: 170. 1050 to 1100: 230. 1100 to 1150: 275. 1150 to 1200: 230. 1200 to 1250: 110. 1250 to 1300: 70. 1300 to 1350: 50. 1350 to 1400: 40. 1400 to 1450: 40. 1450 to 1500: 20. 1500 to 1550: 25. 1550 to 1600: 5. Note: all values are approximate.]\n\nFigure \\(\\PageIndex{2}\\) (data source: https://data.ed.gov)\n\nThis distribution is fairly symmetric (it’s just a little right-skewed) and bell-shaped, so we can use normal distribution techniques to analyze the data.\n\n1. What is the mean of these average SAT scores?\n\n2. What is the standard deviation of these SAT scores?\n\n3. Using the answers to the previous two questions, use NORM.DIST in Google Sheets to estimate at what percentile the University at Buffalo in New York (average SAT: 1250) falls.\n\n4. Use PERCENTRANK to find the actual percentile of the University at Buffalo, and see how close the estimate in the previous question came.\n\nAnswer\n\n1. Using the AVERAGE function in Google Sheets, we find that the mean is 1141.174.\n\n2. Using the STDEV function, we get that the standard deviation is 125.517.\n\n3. Entering “=NORM.DIST(1250, 1141, 125.517, TRUE)” into Google Sheets, we estimate that the University at Buffalo is at the 81st percentile.\n\n4. Using PERCENTRANK, we find that the actual percentile is the 84th. These are close!\n\nYour Turn \\(\\PageIndex{3}\\)\n\nAgain using the data in “AvgSAT”, find the average SAT score of a school at the 35th percentile in two ways: using NORM.INV and using PERCENTILE.\n\nWho Knew?: Political Meddling Exposed\n\nThe normal distribution pops up in some unusual places. Recently, a team at Duke University has been using statistics to help identify partisan gerrymandering, where electoral districts have been carefully drawn in a way that benefits one political party over another. In their analysis, they found that hypothetical election results in randomly drawn districts are normally distributed. By using techniques similar to the ones we used above, they can quantify precisely how biased a particular electoral map is by finding the percentile rank of the actual election result on the normal distribution of the hypothetical results. You can find out more about their work at the \"Quantifying Gerrymandering\" site here.\n\nCheck Your Understanding\n\nFor the following problems, recall that the SAT exam has mean 1060 and standard deviation 195, and that composite scores on the ACT have mean 21 and standard deviation 5.\n\n1. At what percentile would an SAT score of 940 fall? Round to the nearest whole number.\n\n2. What score would be at the 67th percentile on the ACT?\n\n3. Which is a better score: 1300 on the SAT or 27 on the ACT?\n\nFor the following problems, recall that if we flip a coin at least 20 times, the distribution of the number of heads is approximately normal with mean equal to half the number of flips and standard deviation equal to half of the square root of the number of flips.\n\n4. Suppose we flip a coin 120 times. What are the mean and standard deviation of the corresponding distribution of heads?\n\n5. Let’s say you flip 70 heads in 120 flips. At what percentile would that fall?\n\n6. How many heads would be at the 30th percentile? Round to the nearest whole number.\n\nFor the following problems, use the data in “World Tax,” which gives the tax revenue of many countries of the world in 2017, expressed as a percentage of their gross domestic products. You can assume that the distribution is approximately normal (but you can make a histogram to check, if you want).\n\n7. What tax revenue percentage falls at the third quartile? Answer this question using Google Sheets in two ways: using PERCENTILE and using NORM.INV.\n\n8. What tax revenue percentage falls at the 20th percentile? Answer this question using Google Sheets in two ways: using PERCENTILE and using NORM.INV.\n\n9. At what percentile does the United Kingdom (25.62%, found on row 46 in the spreadsheet) fall? Answer this question using Google Sheets in two ways: using PERCENTRANK and using NORM.DIST.\n\n10. At what percentile does Kiribati (21.97%, found on row 62 in the spreadsheet) fall? Answer this question using Google Sheets in two ways: using PERCENTRANK and using NORM.DIST.\n\nThis page titled 8.7: Applications of the Normal Distribution was last modified on Thu, 02 Jan 2025 11:07:44 GMT and is shared under a CC BY  4.0  license and was authored, remixed, and/or curated by OpenStax via source content that was edited to the style and standards of the LibreTexts platform.",
+  "figures": [
+    {
+      "url": "https://math.libretexts.org/@api/deki/files/109422/baf85df29830ad1eb72419fc67f9ce83f19bf0a8?revision=1",
+      "alt": "A hand is holding a pencil and filling in the scantron sheet.",
+      "credit": ""
+    },
+    {
+      "url": "https://math.libretexts.org/@api/deki/files/109421/cb9654a8adfea138848de5cdb55a5068726023a9?revision=1&size=bestfit&width=700",
+      "alt": "A histogram titled, average SAT scores at US institutions. The horizontal axis representing average SAT ranges from 750 to 1600, in increments of 50. The vertical axis representing frequency ranges from 0 to 300, in increments of 100. The histogram infers the following data. 750 to 800: 4. 800 to 850: 5. 850 to 900: 15. 900 to 950: 25. 950 to 1000: 85. 1000 to 1050: 170. 1050 to 1100: 230. 1100 to 1150: 275. 1150 to 1200: 230. 1200 to 1250: 110. 1250 to 1300: 70. 1300 to 1350: 50. 1350 to 1400: 40. 1400 to 1450: 40. 1450 to 1500: 20. 1500 to 1550: 25. 1550 to 1600: 5. Note: all values are approximate.",
+      "credit": ""
+    }
+  ],
+  "references": [
+    {
+      "text": "Digest of Education Statistics",
+      "url": "https://openstax.org/r/nces_ed_gov"
+    },
+    {
+      "text": "the Graduate Management Admission Council (GMAC)",
+      "url": "https://openstax.org/r/mba_com"
+    },
+    {
+      "text": "“AvgSAT”",
+      "url": "https://docs.google.com/spreadsheets/d/1Esl2TEj_gsyteTp-XHq_aJsFC96zUgd1qxv68XuaYDQ/edit?gid=0#gid=0"
+    },
+    {
+      "text": "https://data.ed.gov",
+      "url": "https://data.ed.gov"
+    },
+    {
+      "text": "“AvgSAT”",
+      "url": "https://docs.google.com/spreadsheets/d/1Esl2TEj_gsyteTp-XHq_aJsFC96zUgd1qxv68XuaYDQ/edit?gid=0#gid=0"
+    },
+    {
+      "text": "\"Quantifying Gerrymandering\" site here.",
+      "url": "https://openstax.org/r/quantifying-gerrymandering"
+    },
+    {
+      "text": "“World Tax,”",
+      "url": "https://openstax.org/r/Chapter8_Data-Sets"
+    },
+    {
+      "text": "8.7: Applications of the Normal Distribution",
+      "url": "https://math.libretexts.org/Bookshelves/Applied_Mathematics/Contemporary_Mathematics_(OpenStax)/08%3A_Statistics/8.07%3A_Applications_of_the_Normal_Distribution"
+    },
+    {
+      "text": "CC BY  4.0",
+      "url": "https://creativecommons.org/licenses/by/4.0"
+    },
+    {
+      "text": "OpenStax",
+      "url": "https://openstax.org/"
+    },
+    {
+      "text": "source content",
+      "url": "https://openstax.org/details/books/contemporary-mathematics"
+    }
+  ],
+  "exercises": [
+    {
+      "ordinal": 1,
+      "sourceNumber": "",
+      "sourceAnchor": "",
+      "kind": "example-or-exercise",
+      "context": "College Entrance Exams\n\nThere are two good ways to compare two data values from different groups: using \\(z\\)-scores and using percentiles. The two methods will always give consistent results (meaning that we won’t find, for example, that the first value is better using \\(z\\)-scores but the second value is better using percentiles), so use whichever method is more comfortable for you.",
+      "original": "Example \\(\\PageIndex{1}\\): Evaluating College Entrance Exam Scores\n\nAccording to the Digest of Education Statistics, composite scores on the SAT have mean 1060 and standard deviation 195, while composite scores on the ACT have mean 21 and standard deviation 5.\n\n1. At what percentile would an SAT score of 990 fall?\n\n2. What is the z-score of an ACT score of 27?\n\n3. Which is better: a score of 1450 on the SAT or 29 on the ACT?\n\nAnswer\n\n1. Using Google Sheets, we can answer this question with the formula \"=NORM.DIST(990, 1060, 195, TRUE)\". A score of 990 would fall at the 36 th percentile.\n\n    2. Using the formula \\(z=\\frac{x-\\mu}{s}\\), we get \\(z=\\frac{27-21}{5}=1.2\\).\n\n    3. Let's compare the values using both percentiles and \\(z\\)-values:\n\nPercentiles: Using \"=NORM.DIST(1450, 1060, 195, TRUE)\" we find that an SAT score of 1450 is at the 98th percentile. Meanwhile, by entering \"=NORM.DIST(29, 21, 5 , TRUE)\" we see that an ACT score of 29 is around the 95th percentile. Since it's at a higher percentile, we can conclude that an SAT score of 1450 is better than an ACT score of 29.\n\n    \\(\\boldsymbol{z}\\)-scores: Using the formula, we see that the \\(z\\)-score for an SAT score of 1450 is \\(z=\\frac{1450-1060}{195}=2\\), while the \\(z\\)-score for an ACT score of 29 is \\(z=\\frac{29-21}{5}=1.6\\). Since it has a higher \\(z\\)-score, an SAT score of 1450 is better than an ACT score of 29.",
+      "prompt": "Example \\(\\PageIndex{1}\\): Evaluating College Entrance Exam Scores\n\nAccording to the Digest of Education Statistics, composite scores on the SAT have mean 1060 and standard deviation 195, while composite scores on the ACT have mean 21 and standard deviation 5.\n\n1. At what percentile would an SAT score of 990 fall?\n\n2. What is the z-score of an ACT score of 27?\n\n3. Which is better: a score of 1450 on the SAT or 29 on the ACT?",
+      "sourceAnswers": [
+        "1. Using Google Sheets, we can answer this question with the formula \"=NORM.DIST(990, 1060, 195, TRUE)\". A score of 990 would fall at the 36 th percentile.\n\n    2. Using the formula \\(z=\\frac{x-\\mu}{s}\\), we get \\(z=\\frac{27-21}{5}=1.2\\).\n\n    3. Let's compare the values using both percentiles and \\(z\\)-values:\n\nPercentiles: Using \"=NORM.DIST(1450, 1060, 195, TRUE)\" we find that an SAT score of 1450 is at the 98th percentile. Meanwhile, by entering \"=NORM.DIST(29, 21, 5 , TRUE)\" we see that an ACT score of 29 is around the 95th percentile. Since it's at a higher percentile, we can conclude that an SAT score of 1450 is better than an ACT score of 29.\n\n    \\(\\boldsymbol{z}\\)-scores: Using the formula, we see that the \\(z\\)-score for an SAT score of 1450 is \\(z=\\frac{1450-1060}{195}=2\\), while the \\(z\\)-score for an ACT score of 29 is \\(z=\\frac{29-21}{5}=1.6\\). Since it has a higher \\(z\\)-score, an SAT score of 1450 is better than an ACT score of 29."
+      ],
+      "hasFigure": false,
+      "status": "draft",
+      "answerVerified": false,
+      "translationStatus": "pending",
+      "mappingStatus": "pending"
+    },
+    {
+      "ordinal": 2,
+      "sourceNumber": "1",
+      "sourceAnchor": "",
+      "kind": "exercise-candidate",
+      "context": "College Entrance Exams\n\nThere are two good ways to compare two data values from different groups: using \\(z\\)-scores and using percentiles. The two methods will always give consistent results (meaning that we won’t find, for example, that the first value is better using \\(z\\)-scores but the second value is better using percentiles), so use whichever method is more comfortable for you.\n\nAccording to  the Graduate Management Admission Council (GMAC), the mean score on the GMAT (an entrance exam for graduate schools in business management) is 565, with standard deviation 116. For the LSAT (an entrance exam for law schools), Kaplan informs us that the mean score is 150 with standard deviation 10.",
+      "original": "1. What is the \\(z\\)-score for a GMAT score of 715?",
+      "prompt": "1. What is the \\(z\\)-score for a GMAT score of 715?",
+      "sourceAnswers": [],
+      "hasFigure": false,
+      "status": "draft",
+      "answerVerified": false,
+      "translationStatus": "pending",
+      "mappingStatus": "pending"
+    },
+    {
+      "ordinal": 3,
+      "sourceNumber": "2",
+      "sourceAnchor": "",
+      "kind": "exercise-candidate",
+      "context": "College Entrance Exams\n\nThere are two good ways to compare two data values from different groups: using \\(z\\)-scores and using percentiles. The two methods will always give consistent results (meaning that we won’t find, for example, that the first value is better using \\(z\\)-scores but the second value is better using percentiles), so use whichever method is more comfortable for you.\n\nAccording to  the Graduate Management Admission Council (GMAC), the mean score on the GMAT (an entrance exam for graduate schools in business management) is 565, with standard deviation 116. For the LSAT (an entrance exam for law schools), Kaplan informs us that the mean score is 150 with standard deviation 10.",
+      "original": "2. At what percentile is an LSAT score of 166?",
+      "prompt": "2. At what percentile is an LSAT score of 166?",
+      "sourceAnswers": [],
+      "hasFigure": false,
+      "status": "draft",
+      "answerVerified": false,
+      "translationStatus": "pending",
+      "mappingStatus": "pending"
+    },
+    {
+      "ordinal": 4,
+      "sourceNumber": "3",
+      "sourceAnchor": "",
+      "kind": "exercise-candidate",
+      "context": "College Entrance Exams\n\nThere are two good ways to compare two data values from different groups: using \\(z\\)-scores and using percentiles. The two methods will always give consistent results (meaning that we won’t find, for example, that the first value is better using \\(z\\)-scores but the second value is better using percentiles), so use whichever method is more comfortable for you.\n\nAccording to  the Graduate Management Admission Council (GMAC), the mean score on the GMAT (an entrance exam for graduate schools in business management) is 565, with standard deviation 116. For the LSAT (an entrance exam for law schools), Kaplan informs us that the mean score is 150 with standard deviation 10.",
+      "original": "3. Which is better: a GMAT score of 650 or an LSAT score of 161?",
+      "prompt": "3. Which is better: a GMAT score of 650 or an LSAT score of 161?",
+      "sourceAnswers": [],
+      "hasFigure": false,
+      "status": "draft",
+      "answerVerified": false,
+      "translationStatus": "pending",
+      "mappingStatus": "pending"
+    },
+    {
+      "ordinal": 5,
+      "sourceNumber": "",
+      "sourceAnchor": "",
+      "kind": "example-or-exercise",
+      "context": "Coin flipping\n\nIn the opening of The Normal Distribution, we saw that the number of heads we get when we flip a coin 100 times is distributed normally. It can be shown that if \\(n\\) is the number of flips, then the mean of that distribution is \\(\\frac{n}{2}\\) and the standard deviation is \\(\\frac{\\sqrt{n}}{2}\\) (as long as \\(n≥20\\)). So, for 100 flips, the mean of the distribution is 50 and the standard deviation is 5. In that opening example, one of our early runs gave us 70 heads in 100 flips, which we noted seemed unusual. Using the normal distribution, we can identify exactly how unusual that really is. Using Google Sheets, the formula “=NORM.DIST(70, 50, 5, TRUE)” gives us 0.999968, which is the 99.997th percentile! How is that useful? Suppose you need to test whether a coin is fair, and so you flip it 100 times. While we might be suspicious if we get 70 heads out of the 100 flips, we now have a numerical measure for how unusual that is: If the coin were fair, we would expect to see 70 heads (or more) only \\(100-99.9968=0.0032%\\) of the time. That’s really unlikely! Analysis like this is related to hypothesis testing, an important application of statistics in the sciences and social sciences.",
+      "original": "Example \\(\\PageIndex{2}\\): Flipping a Coin\n\nLet’s say we flip a coin 64 times and count the number of heads.\n\n1. What would be the mean of the corresponding distribution?\n\n2. What would be the standard deviation of the corresponding distribution?\n\n3. Suppose we got 25 heads, which seems a little low. At what percentile would 25 heads fall?\n\nAnswer\n\n1. Since \\(n=64\\), the mean is \\(\\frac{64}{2}=32\\).\n\n    2. Again using \\(n=64\\), we get a standard deviation of \\(\\frac{\\sqrt{64}}{2}=4\\).\n\n    3. Using \"=NORM.DIST(25, 32, 4, TRUE)\", we see that 25 heads is at the 4th percentile. Reading and Interpreting Scatter Plots",
+      "prompt": "Example \\(\\PageIndex{2}\\): Flipping a Coin\n\nLet’s say we flip a coin 64 times and count the number of heads.\n\n1. What would be the mean of the corresponding distribution?\n\n2. What would be the standard deviation of the corresponding distribution?\n\n3. Suppose we got 25 heads, which seems a little low. At what percentile would 25 heads fall?",
+      "sourceAnswers": [
+        "1. Since \\(n=64\\), the mean is \\(\\frac{64}{2}=32\\).\n\n    2. Again using \\(n=64\\), we get a standard deviation of \\(\\frac{\\sqrt{64}}{2}=4\\).\n\n    3. Using \"=NORM.DIST(25, 32, 4, TRUE)\", we see that 25 heads is at the 4th percentile. Reading and Interpreting Scatter Plots"
+      ],
+      "hasFigure": false,
+      "status": "draft",
+      "answerVerified": false,
+      "translationStatus": "pending",
+      "mappingStatus": "pending"
+    },
+    {
+      "ordinal": 6,
+      "sourceNumber": "1",
+      "sourceAnchor": "",
+      "kind": "exercise-candidate",
+      "context": "Coin flipping\n\nIn the opening of The Normal Distribution, we saw that the number of heads we get when we flip a coin 100 times is distributed normally. It can be shown that if \\(n\\) is the number of flips, then the mean of that distribution is \\(\\frac{n}{2}\\) and the standard deviation is \\(\\frac{\\sqrt{n}}{2}\\) (as long as \\(n≥20\\)). So, for 100 flips, the mean of the distribution is 50 and the standard deviation is 5. In that opening example, one of our early runs gave us 70 heads in 100 flips, which we noted seemed unusual. Using the normal distribution, we can identify exactly how unusual that really is. Using Google Sheets, the formula “=NORM.DIST(70, 50, 5, TRUE)” gives us 0.999968, which is the 99.997th percentile! How is that useful? Suppose you need to test whether a coin is fair, and so you flip it 100 times. While we might be suspicious if we get 70 heads out of the 100 flips, we now have a numerical measure for how unusual that is: If the coin were fair, we would expect to see 70 heads (or more) only \\(100-99.9968=0.0032%\\) of the time. That’s really unlikely! Analysis like this is related to hypothesis testing, an important application of statistics in the sciences and social sciences.\n\nYou flip a coin 144 times and count the number of heads.",
+      "original": "1. What is the mean of the corresponding distribution?",
+      "prompt": "1. What is the mean of the corresponding distribution?",
+      "sourceAnswers": [],
+      "hasFigure": false,
+      "status": "draft",
+      "answerVerified": false,
+      "translationStatus": "pending",
+      "mappingStatus": "pending"
+    },
+    {
+      "ordinal": 7,
+      "sourceNumber": "2",
+      "sourceAnchor": "",
+      "kind": "exercise-candidate",
+      "context": "Coin flipping\n\nIn the opening of The Normal Distribution, we saw that the number of heads we get when we flip a coin 100 times is distributed normally. It can be shown that if \\(n\\) is the number of flips, then the mean of that distribution is \\(\\frac{n}{2}\\) and the standard deviation is \\(\\frac{\\sqrt{n}}{2}\\) (as long as \\(n≥20\\)). So, for 100 flips, the mean of the distribution is 50 and the standard deviation is 5. In that opening example, one of our early runs gave us 70 heads in 100 flips, which we noted seemed unusual. Using the normal distribution, we can identify exactly how unusual that really is. Using Google Sheets, the formula “=NORM.DIST(70, 50, 5, TRUE)” gives us 0.999968, which is the 99.997th percentile! How is that useful? Suppose you need to test whether a coin is fair, and so you flip it 100 times. While we might be suspicious if we get 70 heads out of the 100 flips, we now have a numerical measure for how unusual that is: If the coin were fair, we would expect to see 70 heads (or more) only \\(100-99.9968=0.0032%\\) of the time. That’s really unlikely! Analysis like this is related to hypothesis testing, an important application of statistics in the sciences and social sciences.\n\nYou flip a coin 144 times and count the number of heads.",
+      "original": "2. What is the standard deviation of the corresponding distribution?",
+      "prompt": "2. What is the standard deviation of the corresponding distribution?",
+      "sourceAnswers": [],
+      "hasFigure": false,
+      "status": "draft",
+      "answerVerified": false,
+      "translationStatus": "pending",
+      "mappingStatus": "pending"
+    },
+    {
+      "ordinal": 8,
+      "sourceNumber": "3",
+      "sourceAnchor": "",
+      "kind": "exercise-candidate",
+      "context": "Coin flipping\n\nIn the opening of The Normal Distribution, we saw that the number of heads we get when we flip a coin 100 times is distributed normally. It can be shown that if \\(n\\) is the number of flips, then the mean of that distribution is \\(\\frac{n}{2}\\) and the standard deviation is \\(\\frac{\\sqrt{n}}{2}\\) (as long as \\(n≥20\\)). So, for 100 flips, the mean of the distribution is 50 and the standard deviation is 5. In that opening example, one of our early runs gave us 70 heads in 100 flips, which we noted seemed unusual. Using the normal distribution, we can identify exactly how unusual that really is. Using Google Sheets, the formula “=NORM.DIST(70, 50, 5, TRUE)” gives us 0.999968, which is the 99.997th percentile! How is that useful? Suppose you need to test whether a coin is fair, and so you flip it 100 times. While we might be suspicious if we get 70 heads out of the 100 flips, we now have a numerical measure for how unusual that is: If the coin were fair, we would expect to see 70 heads (or more) only \\(100-99.9968=0.0032%\\) of the time. That’s really unlikely! Analysis like this is related to hypothesis testing, an important application of statistics in the sciences and social sciences.\n\nYou flip a coin 144 times and count the number of heads.",
+      "original": "3. You flipped 81 heads. At what percentile does that fall?",
+      "prompt": "3. You flipped 81 heads. At what percentile does that fall?",
+      "sourceAnswers": [],
+      "hasFigure": false,
+      "status": "draft",
+      "answerVerified": false,
+      "translationStatus": "pending",
+      "mappingStatus": "pending"
+    },
+    {
+      "ordinal": 9,
+      "sourceNumber": "",
+      "sourceAnchor": "",
+      "kind": "example-or-exercise",
+      "context": "Analyzing Data That Are Normally Distributed\n\nWhenever we’re working with a dataset that has a distribution that looks symmetric and bell-shaped, we can use techniques associated with the normal distribution to analyze the data.",
+      "original": "Example \\(\\PageIndex{3}\\): Using Normal Techniques to Analyze Data\n\nThe data in “AvgSAT” contains the average SAT score for students attending every institution of higher learning in the United States for which data is available. We previously created a histogram for these data:\n\n[Figure: A histogram titled, average SAT scores at US institutions. The horizontal axis representing average SAT ranges from 750 to 1600, in increments of 50. The vertical axis representing frequency ranges from 0 to 300, in increments of 100. The histogram infers the following data. 750 to 800: 4. 800 to 850: 5. 850 to 900: 15. 900 to 950: 25. 950 to 1000: 85. 1000 to 1050: 170. 1050 to 1100: 230. 1100 to 1150: 275. 1150 to 1200: 230. 1200 to 1250: 110. 1250 to 1300: 70. 1300 to 1350: 50. 1350 to 1400: 40. 1400 to 1450: 40. 1450 to 1500: 20. 1500 to 1550: 25. 1550 to 1600: 5. Note: all values are approximate.]\n\nFigure \\(\\PageIndex{2}\\) (data source: https://data.ed.gov)\n\nThis distribution is fairly symmetric (it’s just a little right-skewed) and bell-shaped, so we can use normal distribution techniques to analyze the data.\n\n1. What is the mean of these average SAT scores?\n\n2. What is the standard deviation of these SAT scores?\n\n3. Using the answers to the previous two questions, use NORM.DIST in Google Sheets to estimate at what percentile the University at Buffalo in New York (average SAT: 1250) falls.\n\n4. Use PERCENTRANK to find the actual percentile of the University at Buffalo, and see how close the estimate in the previous question came.\n\nAnswer\n\n1. Using the AVERAGE function in Google Sheets, we find that the mean is 1141.174.\n\n2. Using the STDEV function, we get that the standard deviation is 125.517.\n\n3. Entering “=NORM.DIST(1250, 1141, 125.517, TRUE)” into Google Sheets, we estimate that the University at Buffalo is at the 81st percentile.\n\n4. Using PERCENTRANK, we find that the actual percentile is the 84th. These are close!",
+      "prompt": "Example \\(\\PageIndex{3}\\): Using Normal Techniques to Analyze Data\n\nThe data in “AvgSAT” contains the average SAT score for students attending every institution of higher learning in the United States for which data is available. We previously created a histogram for these data:\n\n[Figure: A histogram titled, average SAT scores at US institutions. The horizontal axis representing average SAT ranges from 750 to 1600, in increments of 50. The vertical axis representing frequency ranges from 0 to 300, in increments of 100. The histogram infers the following data. 750 to 800: 4. 800 to 850: 5. 850 to 900: 15. 900 to 950: 25. 950 to 1000: 85. 1000 to 1050: 170. 1050 to 1100: 230. 1100 to 1150: 275. 1150 to 1200: 230. 1200 to 1250: 110. 1250 to 1300: 70. 1300 to 1350: 50. 1350 to 1400: 40. 1400 to 1450: 40. 1450 to 1500: 20. 1500 to 1550: 25. 1550 to 1600: 5. Note: all values are approximate.]\n\nFigure \\(\\PageIndex{2}\\) (data source: https://data.ed.gov)\n\nThis distribution is fairly symmetric (it’s just a little right-skewed) and bell-shaped, so we can use normal distribution techniques to analyze the data.\n\n1. What is the mean of these average SAT scores?\n\n2. What is the standard deviation of these SAT scores?\n\n3. Using the answers to the previous two questions, use NORM.DIST in Google Sheets to estimate at what percentile the University at Buffalo in New York (average SAT: 1250) falls.\n\n4. Use PERCENTRANK to find the actual percentile of the University at Buffalo, and see how close the estimate in the previous question came.",
+      "sourceAnswers": [
+        "1. Using the AVERAGE function in Google Sheets, we find that the mean is 1141.174.\n\n2. Using the STDEV function, we get that the standard deviation is 125.517.\n\n3. Entering “=NORM.DIST(1250, 1141, 125.517, TRUE)” into Google Sheets, we estimate that the University at Buffalo is at the 81st percentile.\n\n4. Using PERCENTRANK, we find that the actual percentile is the 84th. These are close!"
+      ],
+      "hasFigure": true,
+      "status": "draft",
+      "answerVerified": false,
+      "translationStatus": "pending",
+      "mappingStatus": "pending"
+    },
+    {
+      "ordinal": 10,
+      "sourceNumber": "1",
+      "sourceAnchor": "",
+      "kind": "exercise-candidate",
+      "context": "Check Your Understanding\n\nFor the following problems, recall that the SAT exam has mean 1060 and standard deviation 195, and that composite scores on the ACT have mean 21 and standard deviation 5.",
+      "original": "1. At what percentile would an SAT score of 940 fall? Round to the nearest whole number.",
+      "prompt": "1. At what percentile would an SAT score of 940 fall? Round to the nearest whole number.",
+      "sourceAnswers": [],
+      "hasFigure": false,
+      "status": "draft",
+      "answerVerified": false,
+      "translationStatus": "pending",
+      "mappingStatus": "pending"
+    },
+    {
+      "ordinal": 11,
+      "sourceNumber": "2",
+      "sourceAnchor": "",
+      "kind": "exercise-candidate",
+      "context": "Check Your Understanding\n\nFor the following problems, recall that the SAT exam has mean 1060 and standard deviation 195, and that composite scores on the ACT have mean 21 and standard deviation 5.",
+      "original": "2. What score would be at the 67th percentile on the ACT?",
+      "prompt": "2. What score would be at the 67th percentile on the ACT?",
+      "sourceAnswers": [],
+      "hasFigure": false,
+      "status": "draft",
+      "answerVerified": false,
+      "translationStatus": "pending",
+      "mappingStatus": "pending"
+    },
+    {
+      "ordinal": 12,
+      "sourceNumber": "3",
+      "sourceAnchor": "",
+      "kind": "exercise-candidate",
+      "context": "Check Your Understanding\n\nFor the following problems, recall that the SAT exam has mean 1060 and standard deviation 195, and that composite scores on the ACT have mean 21 and standard deviation 5.",
+      "original": "3. Which is a better score: 1300 on the SAT or 27 on the ACT?",
+      "prompt": "3. Which is a better score: 1300 on the SAT or 27 on the ACT?",
+      "sourceAnswers": [],
+      "hasFigure": false,
+      "status": "draft",
+      "answerVerified": false,
+      "translationStatus": "pending",
+      "mappingStatus": "pending"
+    },
+    {
+      "ordinal": 13,
+      "sourceNumber": "4",
+      "sourceAnchor": "",
+      "kind": "exercise-candidate",
+      "context": "Check Your Understanding\n\nFor the following problems, recall that the SAT exam has mean 1060 and standard deviation 195, and that composite scores on the ACT have mean 21 and standard deviation 5.\n\nFor the following problems, recall that if we flip a coin at least 20 times, the distribution of the number of heads is approximately normal with mean equal to half the number of flips and standard deviation equal to half of the square root of the number of flips.",
+      "original": "4. Suppose we flip a coin 120 times. What are the mean and standard deviation of the corresponding distribution of heads?",
+      "prompt": "4. Suppose we flip a coin 120 times. What are the mean and standard deviation of the corresponding distribution of heads?",
+      "sourceAnswers": [],
+      "hasFigure": false,
+      "status": "draft",
+      "answerVerified": false,
+      "translationStatus": "pending",
+      "mappingStatus": "pending"
+    },
+    {
+      "ordinal": 14,
+      "sourceNumber": "5",
+      "sourceAnchor": "",
+      "kind": "exercise-candidate",
+      "context": "Check Your Understanding\n\nFor the following problems, recall that the SAT exam has mean 1060 and standard deviation 195, and that composite scores on the ACT have mean 21 and standard deviation 5.\n\nFor the following problems, recall that if we flip a coin at least 20 times, the distribution of the number of heads is approximately normal with mean equal to half the number of flips and standard deviation equal to half of the square root of the number of flips.",
+      "original": "5. Let’s say you flip 70 heads in 120 flips. At what percentile would that fall?",
+      "prompt": "5. Let’s say you flip 70 heads in 120 flips. At what percentile would that fall?",
+      "sourceAnswers": [],
+      "hasFigure": false,
+      "status": "draft",
+      "answerVerified": false,
+      "translationStatus": "pending",
+      "mappingStatus": "pending"
+    },
+    {
+      "ordinal": 15,
+      "sourceNumber": "6",
+      "sourceAnchor": "",
+      "kind": "exercise-candidate",
+      "context": "Check Your Understanding\n\nFor the following problems, recall that the SAT exam has mean 1060 and standard deviation 195, and that composite scores on the ACT have mean 21 and standard deviation 5.\n\nFor the following problems, recall that if we flip a coin at least 20 times, the distribution of the number of heads is approximately normal with mean equal to half the number of flips and standard deviation equal to half of the square root of the number of flips.",
+      "original": "6. How many heads would be at the 30th percentile? Round to the nearest whole number.",
+      "prompt": "6. How many heads would be at the 30th percentile? Round to the nearest whole number.",
+      "sourceAnswers": [],
+      "hasFigure": false,
+      "status": "draft",
+      "answerVerified": false,
+      "translationStatus": "pending",
+      "mappingStatus": "pending"
+    },
+    {
+      "ordinal": 16,
+      "sourceNumber": "7",
+      "sourceAnchor": "",
+      "kind": "exercise-candidate",
+      "context": "For the following problems, recall that the SAT exam has mean 1060 and standard deviation 195, and that composite scores on the ACT have mean 21 and standard deviation 5.\n\nFor the following problems, recall that if we flip a coin at least 20 times, the distribution of the number of heads is approximately normal with mean equal to half the number of flips and standard deviation equal to half of the square root of the number of flips.\n\nFor the following problems, use the data in “World Tax,” which gives the tax revenue of many countries of the world in 2017, expressed as a percentage of their gross domestic products. You can assume that the distribution is approximately normal (but you can make a histogram to check, if you want).",
+      "original": "7. What tax revenue percentage falls at the third quartile? Answer this question using Google Sheets in two ways: using PERCENTILE and using NORM.INV.",
+      "prompt": "7. What tax revenue percentage falls at the third quartile? Answer this question using Google Sheets in two ways: using PERCENTILE and using NORM.INV.",
+      "sourceAnswers": [],
+      "hasFigure": false,
+      "status": "draft",
+      "answerVerified": false,
+      "translationStatus": "pending",
+      "mappingStatus": "pending"
+    },
+    {
+      "ordinal": 17,
+      "sourceNumber": "8",
+      "sourceAnchor": "",
+      "kind": "exercise-candidate",
+      "context": "For the following problems, recall that the SAT exam has mean 1060 and standard deviation 195, and that composite scores on the ACT have mean 21 and standard deviation 5.\n\nFor the following problems, recall that if we flip a coin at least 20 times, the distribution of the number of heads is approximately normal with mean equal to half the number of flips and standard deviation equal to half of the square root of the number of flips.\n\nFor the following problems, use the data in “World Tax,” which gives the tax revenue of many countries of the world in 2017, expressed as a percentage of their gross domestic products. You can assume that the distribution is approximately normal (but you can make a histogram to check, if you want).",
+      "original": "8. What tax revenue percentage falls at the 20th percentile? Answer this question using Google Sheets in two ways: using PERCENTILE and using NORM.INV.",
+      "prompt": "8. What tax revenue percentage falls at the 20th percentile? Answer this question using Google Sheets in two ways: using PERCENTILE and using NORM.INV.",
+      "sourceAnswers": [],
+      "hasFigure": false,
+      "status": "draft",
+      "answerVerified": false,
+      "translationStatus": "pending",
+      "mappingStatus": "pending"
+    },
+    {
+      "ordinal": 18,
+      "sourceNumber": "9",
+      "sourceAnchor": "",
+      "kind": "exercise-candidate",
+      "context": "For the following problems, recall that the SAT exam has mean 1060 and standard deviation 195, and that composite scores on the ACT have mean 21 and standard deviation 5.\n\nFor the following problems, recall that if we flip a coin at least 20 times, the distribution of the number of heads is approximately normal with mean equal to half the number of flips and standard deviation equal to half of the square root of the number of flips.\n\nFor the following problems, use the data in “World Tax,” which gives the tax revenue of many countries of the world in 2017, expressed as a percentage of their gross domestic products. You can assume that the distribution is approximately normal (but you can make a histogram to check, if you want).",
+      "original": "9. At what percentile does the United Kingdom (25.62%, found on row 46 in the spreadsheet) fall? Answer this question using Google Sheets in two ways: using PERCENTRANK and using NORM.DIST.",
+      "prompt": "9. At what percentile does the United Kingdom (25.62%, found on row 46 in the spreadsheet) fall? Answer this question using Google Sheets in two ways: using PERCENTRANK and using NORM.DIST.",
+      "sourceAnswers": [],
+      "hasFigure": false,
+      "status": "draft",
+      "answerVerified": false,
+      "translationStatus": "pending",
+      "mappingStatus": "pending"
+    },
+    {
+      "ordinal": 19,
+      "sourceNumber": "10",
+      "sourceAnchor": "",
+      "kind": "exercise-candidate",
+      "context": "For the following problems, recall that the SAT exam has mean 1060 and standard deviation 195, and that composite scores on the ACT have mean 21 and standard deviation 5.\n\nFor the following problems, recall that if we flip a coin at least 20 times, the distribution of the number of heads is approximately normal with mean equal to half the number of flips and standard deviation equal to half of the square root of the number of flips.\n\nFor the following problems, use the data in “World Tax,” which gives the tax revenue of many countries of the world in 2017, expressed as a percentage of their gross domestic products. You can assume that the distribution is approximately normal (but you can make a histogram to check, if you want).",
+      "original": "10. At what percentile does Kiribati (21.97%, found on row 62 in the spreadsheet) fall? Answer this question using Google Sheets in two ways: using PERCENTRANK and using NORM.DIST.",
+      "prompt": "10. At what percentile does Kiribati (21.97%, found on row 62 in the spreadsheet) fall? Answer this question using Google Sheets in two ways: using PERCENTRANK and using NORM.DIST.",
+      "sourceAnswers": [],
+      "hasFigure": false,
+      "status": "draft",
+      "answerVerified": false,
+      "translationStatus": "pending",
+      "mappingStatus": "pending"
+    }
+  ],
+  "license": "CC BY 4.0",
+  "licenseEvidence": "This page titled 8.7: Applications of the Normal Distribution was last modified on Thu, 02 Jan 2025 11:07:44 GMT and is shared under a CC BY  4.0  license and was authored, remixed, and/or curated by OpenStax via source content that was edited to the style and standards of the LibreTexts platform.",
+  "url": "https://math.libretexts.org/Bookshelves/Applied_Mathematics/Contemporary_Mathematics_(OpenStax)/08:_Statistics/8.07:_Applications_of_the_Normal_Distribution",
+  "sha256": "e89edba30e4291eafeeeb4a687744fd0efc97603807d425cb958882bb46a3c57",
+  "checkedAt": "2026-10-07",
+  "id": "eddd67238c730ebe86a3",
+  "bookId": "contemporary",
+  "licenseInherited": false,
+  "licenseSource": "https://math.libretexts.org/Bookshelves/Applied_Mathematics/Contemporary_Mathematics_(OpenStax)/08:_Statistics/8.07:_Applications_of_the_Normal_Distribution",
+  "licenseUrl": "https://creativecommons.org/licenses/by/4.0/",
+  "authors": "OpenStax / Donna Kirk et al.",
+  "book": "Contemporary Mathematics",
+  "reviewStatus": "unreviewed",
+  "sourceLanguage": "en",
+  "translationStatus": "pending"
+}

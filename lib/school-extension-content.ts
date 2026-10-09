@@ -127,6 +127,32 @@ export const schoolExtensionTopics:Topic[]=definitions.map(d=>{
  return {id:d.id,module:'Дополнительная школьная математика',track:'base',spec:null,title:d.title,prerequisites:d.pre,minutes:12,description:d.goal,lesson:{goal:d.goal,explanation:d.theory,simpler:b(`${d.method.ru} Начнём: ${bank[0].prompt.ru} ${bank[0].solution.ru.join(' ')}`,`${d.method.kk} Бастайық: ${bank[0].prompt.kk} ${bank[0].solution.kk.join(' ')}`),formula:d.formula,terms:d.terms,blocks:[{title:b('Как действовать','Қалай әрекет ету керек'),body:d.method},{title:b('Почему это верно','Бұл неге дұрыс'),body:d.why},{title:b('Применение и проверка','Қолдану және тексеру'),body:d.use}],examples:[ex(bank[0]),ex(bank[5]),ex(bank[10])],guided:ex(bank[1]),checkpoint:{question:bank[2].prompt,answer:b(ex(bank[2]).answer,ex(bank[2]).answer),why:b(bank[2].solution.ru.join(' '),bank[2].solution.kk.join(' '))},mistakes:bs(d.error,b('Причина ошибки по одному ответу неизвестна; покажи ход решения.','Жалғыз жауаппен қате себебі белгісіз;шешу жолын көрсет.')),recap:bs(d.method,b('Новые самостоятельные задачи и отложенное повторение подтверждают освоение.','Жаңа өздік есептер мен кейінгі қайталау меңгеруді растайды.'))},tasks:bank};
 });
 export const schoolExtensionTasks:Task[]=schoolExtensionTopics.flatMap(t=>t.tasks);
+/** New practice parameters use the same authored conditions and an independent
+ * checker. Unsupported parameters fail closed; original lesson IDs stay intact. */
+export function generateSchoolExtensionPractice(topicId:string,param:number,level:1|2|3):Task|null{
+ if(!Number.isInteger(param)||param<6||param>25||![1,2,3].includes(level))return null;
+ const definition=definitions.find(d=>d.id===topicId);if(!definition)return null;
+ if(topicId==='school-combinatorics'&&level===2&&param>16)return null;
+ if(topicId==='school-repeating-decimals')return periodicPractice(param,level,definition.error);
+ try{
+  const task:Task={...definition.build(param,level),id:`supplement-${topicId}-${level}-${param}`,topicId,level,skill:topicId,commonError:definition.error};
+  if(topicId==='school-triangle-congruence'&&level===3)task.prompt=b(`${task.prompt.ru} В первой паре соответствующие стороны равны ${3*param}, ${4*param}, ${5*param}.`,`${task.prompt.kk} Бірінші жұптағы сәйкес қабырғалар ${3*param}, ${4*param}, ${5*param}.`);
+  return independentlyCheck(task,param,level)?task:null;
+ }catch{return null;}
+}
+function periodicPractice(param:number,level:1|2|3,error:Bilingual):Task{
+ const whole=param+1,pre=param%8+1,repeat=(param*3)%8+1,block=10*repeat+(param*5)%8+1;
+ const denominator=level===1?9:level===2?90:990;
+ const numerator=whole*denominator+(level===1?repeat:level===2?9*pre+repeat:99*pre+block);
+ const divisor=gcd(numerator,denominator),p=numerator/divisor,q=denominator/divisor;
+ const notation=level===1?`${whole},(${repeat})`:level===2?`${whole},${pre}(${repeat})`:`${whole},${pre}(${block})`;
+ const answer=level===1?q:p;
+ // Independently expand the decimal's first 10 digits instead of reusing the fraction formula.
+ const digits=level===1?String(repeat).repeat(10):String(pre)+(level===2?String(repeat).repeat(10):String(block).repeat(5));
+ const expansion=Number(`${whole}.${digits}`);
+ if(Math.abs(p/q-expansion)>1e-9||gcd(p,q)!==1)throw Error('Periodic decimal check failed');
+ return {...num(b(`Представь ${notation} несократимой дробью. Найди ${level===1?'знаменатель':'числитель'}.`,`${notation} санын қысқартылмайтын бөлшекпен жаз. ${level===1?'Бөлімін':'Алымын'} тап.`),answer,[b(`Период содержит ${level===3?2:1} цифры; предпериод содержит ${level===1?0:1} цифр.`,`Периодта ${level===3?2:1} цифр; период алдында ${level===1?0:1} цифр бар.`),b(`Вычитание сдвинутых записей даёт ${denominator}x=${numerator}.`,`Жылжытылған жазуларды азайту ${denominator}x=${numerator} береді.`),b(`Сокращаем на ${divisor}: x=${p}/${q}. ${level===1?'Знаменатель':'Числитель'} равен ${answer}.`,`${divisor} санына қысқартамыз: x=${p}/${q}. ${level===1?'Бөлімі':'Алымы'} ${answer}-ға тең.`)],b('Скобки отмечают повторяющийся блок. Целую часть тоже включи в числитель.','Жақша қайталанатын блокты көрсетеді. Бүтін бөлікті де алымға қос.')),id:`supplement-school-repeating-decimals-${level}-${param}`,topicId:'school-repeating-decimals',level,skill:'school-repeating-decimals',commonError:error};
+}
 export const schoolExtensionMetadata:SchoolExtensionMetadata[]=definitions.map(d=>({topicId:d.id,grade:d.grade,pathway:d.grade>=10?'natural-math':'common',quarter:d.quarter,quarterStatus:'author-suggestion',appendix:d.appendix,source:'https://old.adilet.zan.kz/rus/docs/V2200029767',checkedAt:'2026-10-06'}));
 /** The checker covers these fixed, authored templates, not arbitrary editor rewrites,
  * general symbolic identities, or unrestricted free-text proofs. Numeric limit checks
@@ -199,7 +225,13 @@ function independentlyCheck(task:Task,n:number,l:1|2|3):boolean{
   }
   case 'school-combinatorics':
    if(l===1){let count=0;for(let shirt=0;shirt<n+2;shirt++)for(let shoe=0;shoe<3;shoe++)count++;return a===count;}
-   if(l===2){const permute=(remaining:number[]):number=>remaining.length===0?1:remaining.reduce((sum,_,i)=>sum+permute(remaining.filter((_,j)=>j!==i)),0);return a===permute(Array.from({length:n+2},(_,i)=>i));}
+   if(l===2){
+    // Insert the next distinct book in every gap. The construction uses
+    // recursive factorial; this checker counts insertion possibilities.
+    let arrangements=1;
+    for(let books=1;books<=n+2;books++){const previous=arrangements;arrangements=0;for(let gap=0;gap<books;gap++)arrangements+=previous;}
+    return Number.isSafeInteger(a)&&a===arrangements;
+   }
    {let count=0;for(let i=0;i<n+4;i++)for(let j=i+1;j<n+4;j++)count++;return a===count;}
   case 'school-limits':{
    const point=l===3?n+1:n,delta=1e-4;

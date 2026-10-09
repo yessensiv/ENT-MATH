@@ -436,7 +436,7 @@ function scheduleErrorReview(state: LearnerState, task:Task, now: Date) {
 }
 
 export function sanitizeTask(task: Task) {
-  return { id: task.id, topicId: task.topicId, prompt: task.prompt, type: task.type, answerFormat:task.answerFormat,difficulty: task.difficulty, level: task.difficulty, options: task.options, pairs: task.pairs?.map(p => ({ left: p.left, right: "" })), skill: task.skill, skillIds:task.skillIds,curriculumSection:task.curriculumSection,units: task.units, unit: task.units, precision: task.precision, domain: task.domain, context: task.context, modelExample: Boolean(task.modelExample), reviewReserved: Boolean(task.reviewReserved),repairForErrorId:task.repairForErrorId,source:task.source,subtopic:task.subtopic,reviewStatus:task.reviewStatus };
+  return { id: task.id, topicId: task.topicId, prompt: task.prompt, type: task.type, answerFormat:task.answerFormat,difficulty: task.difficulty, level: task.difficulty, options: task.options, pairs: task.pairs?.map(p => ({ left: p.left, right: "" })), skill: task.skill, skillIds:task.skillIds,curriculumSection:task.curriculumSection,units: task.units, unit: task.units, precision: task.precision, domain: task.domain, context: task.context, modelExample: Boolean(task.modelExample), reviewReserved: Boolean(task.reviewReserved),repairForErrorId:task.repairForErrorId,source:task.source,practiceOrigin:task.practiceOrigin,subtopic:task.subtopic,reviewStatus:task.reviewStatus };
 }
 
 export function diagnosticTasks(track: Track, topics: Topic[], tasks: Task[], schoolGrade?: string,schoolPathway?:'natural-math'|'humanitarian') {

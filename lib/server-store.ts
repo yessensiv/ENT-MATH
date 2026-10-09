@@ -16,6 +16,7 @@ import {schoolAdvancedTopics,schoolAdvancedTasks} from '@/lib/school-advanced-co
 import * as curriculum from "@/lib/content";
 import {sourceExercises} from '@/lib/source-exercises';
 import {promotedExercises} from '@/lib/promoted-exercises';
+import {curriculumPracticeTasks} from '@/lib/curriculum-practice';
 import {withLessonEnrichment,validLessonEnrichment} from '@/lib/lesson-enrichment';
 import type {Topic as AuthoredTopic} from '@/lib/content';
 import { emptyState, sanitizeExam, makePlan, isModelExample, reservedReviewIds, calculate, checkAnswer,streakInfo, expireExam, diagnosticTasks, type LearnerState, type Topic, type Task } from "@/lib/engine";
@@ -34,7 +35,7 @@ export function baseContent() {
   const data = curriculum as unknown as ContentExports;
   const topics = ([...(data.topics || []), ...[...schoolTopics,...schoolExtensionTopics,...schoolAdvancedTopics].map(t=>({...t,schoolOnly:true}))] as AuthoredTopic[]).map(withLessonEnrichment) as unknown as Topic[];
   const rawTasks = data.tasks || data.allTasks || (data.getTasks ? topics.flatMap(t => data.getTasks!(t.id)) : topics.flatMap(t => Array.isArray(t.tasks) ? t.tasks : []));
-  const tasks = [...rawTasks, ...schoolTasks,...schoolExtensionTasks,...schoolAdvancedTasks,...sourceExercises,...promotedExercises].map(raw => { const t = raw as Task & { level?: number; unit?: string }; const topic = topics.find(p => p.id === t.topicId); return { ...t, difficulty: t.difficulty || t.level || 1, units: t.units || t.unit, modelExample: isModelExample(t, topic), reviewReserved: reservedReviewIds(topic).includes(t.id) }; }) as Task[];
+  const tasks = [...rawTasks, ...schoolTasks,...schoolExtensionTasks,...schoolAdvancedTasks,...sourceExercises,...promotedExercises,...curriculumPracticeTasks].map(raw => { const t = raw as Task & { level?: number; unit?: string }; const topic = topics.find(p => p.id === t.topicId); return { ...t, difficulty: t.difficulty || t.level || 1, units: t.units || t.unit, modelExample: isModelExample(t, topic), reviewReserved: Boolean(t.reviewReserved)||reservedReviewIds(topic).includes(t.id) }; }) as Task[];
   return { topics, tasks };
 }
 export async function publishedContent() {

@@ -17,7 +17,9 @@
     "sources:index": "node --experimental-transform-types scripts/build-source-library.mjs",
     "sources:promote": "node --experimental-transform-types scripts/promote-source-exercises.mjs",
     "sources:verify-practice": "python tests/source-promotion.test.py && node --experimental-transform-types --test tests/promoted-exercises.test.mjs",
-    "sources:test": "python tests/source-library-parser.test.py && node --experimental-transform-types --test tests/source-library.test.mjs"
+    "sources:test": "python tests/source-library-parser.test.py && node --experimental-transform-types --test tests/source-library.test.mjs",
+    "practice:build": "node --experimental-transform-types scripts/build-curriculum-practice.mjs",
+    "practice:verify": "node --experimental-transform-types --test tests/curriculum-practice.test.mjs"
   },
   "dependencies": {
     "@base-ui/react": "^1.7.0",

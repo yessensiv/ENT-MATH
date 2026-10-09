@@ -29,7 +29,7 @@ export function repairTopicSelection(s:PracticeSession,state:LearnerState,bank:T
 export function createPractice(state:LearnerState,topicId:string,bank:Task[],size=15,id=crypto.randomUUID()):PracticeSession{
  const seen=seenTaskIds(state),fingerprints=new Set<string>();
  const available=bank.filter(t=>t.topicId===topicId&&fitsPracticeTopic(t)&&!t.reviewReserved&&!t.modelExample&&!(state.diagnosticSession as {taskIds?:string[]})?.taskIds?.includes(t.id));
- const sorted=available.sort((a,b)=>Number(seen.has(a.id))-Number(seen.has(b.id))||Number(!!b.source)-Number(!!a.source));
+ const sorted=available.sort((a,b)=>Number(seen.has(a.id))-Number(seen.has(b.id))||Number(!!(b.source||b.curriculumPractice))-Number(!!(a.source||a.curriculumPractice)));
  const pool=sorted.filter(t=>{const f=taskFingerprint(t);if(fingerprints.has(f))return false;fingerprints.add(f);return true;});
  const progress=state.progress[topicId],beginner=!progress||progress.needsRecovery||(progress.confirmationTaskIds?.length??progress.independent)<4;
  const pattern=beginner?[1,1,2,1,2,1,1,2,1,3]:[1,2,1,3,1,2,1,3,1,2];

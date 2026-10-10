@@ -315,6 +315,9 @@ export function makePlan(state: LearnerState, topics: Topic[], now = new Date())
   const planned: PlanItem[] = [], seen = new Set<string>();
   function add(topic: Topic, type: PlanItem["type"], reason: LocalText) {
     if (seen.has(topic.id) || planned.length >= 7) return;
+    if(type==='lesson'&&(state.lessonCompletions as Record<string,{at:string}>|undefined)?.[topic.id]){
+      type='practice';reason={ru:'Урок завершён. Проверим понимание новыми самостоятельными задачами.',kk:'Сабақ аяқталды. Түсінгеніңді жаңа өздік тапсырмалармен тексереміз.'};
+    }
     seen.add(topic.id);
     const evidence=skillEvidence.filter(e=>e.topicId===topic.id&&e.incorrect>0);
     if(evidence.length){const descriptions=evidence.map(e=>({title:repairSkillTitle(e.skillId)!,e}));reason={ru:reason.ru+' Проверим конкретный способ: '+descriptions.map(({title,e})=>`${title.ru} (${e.correct} верно, ${e.incorrect} пока неверно, ${e.unknown} без вывода)`).join('; ')+'. Причину уточним по шагам решения.',kk:reason.kk+' Нақты тәсілді тексереміз: '+descriptions.map(({title,e})=>`${title.kk} (${e.correct} дұрыс, ${e.incorrect} әзірге қате, ${e.unknown} қорытындысыз)`).join('; ')+'. Себебін шешу қадамдары арқылы анықтаймыз.'};}

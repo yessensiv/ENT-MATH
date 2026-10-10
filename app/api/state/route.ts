@@ -4,7 +4,7 @@ import { diagnosticTasks, checkAnswer, recordAttempt, finishExam, sanitizeExam, 
 import { applyExamSnapshot } from "@/lib/exam-snapshot";
 import { snapshotTime, beginDraftSnapshot, finishDraftSnapshot } from "@/lib/draft-snapshot";
 import{submissionIdentity,submissionPayload}from'@/lib/submission';
-import{validateLessonWork,saveLessonWork,type LessonWork}from'@/lib/lesson-work';
+import{validateLessonWork,saveLessonWork,completeLesson,type LessonWork}from'@/lib/lesson-work';
 import{diagnosticEvidence}from'@/lib/diagnostic-evidence';
 import{assignedDiagnostic}from'@/lib/diagnostic-session';
 import{reservedExam}from'@/lib/exam-bank';
@@ -33,6 +33,16 @@ export async function POST(request: Request) {
       if (finished) return response({ ...clientState(user, state), result: finished, alreadyFinished: true, timedOut: Boolean(expired) || finished.finishReason === "time" });
     }
     switch (input.action) {
+      case 'complete-lesson': {
+        assertStudyAllowed(state);const topicId=textValue(input.topicId,120);
+        if(!topics.some(t=>t.id===topicId))throw new ApiError('Урок не найден.',404);
+        let draft:LessonWork;try{snapshotTime(input.updatedAt);draft=validateLessonWork(input);if(draft.stage!==3)throw Error('Final stage required');}catch{throw new ApiError('Завершите последний этап урока.',400,'INVALID_LESSON_COMPLETION');}
+        const work=(state.lessonWork||{}) as Record<string,LessonWork>;
+        saveLessonWork(work,topicId,draft);state.lessonWork=work;
+        const completions=(state.lessonCompletions||{}) as Record<string,{at:string}>;
+        completeLesson(completions,topicId,draft);state.lessonCompletions=completions;
+        state.lessonResume={topicId,stage:3};break;
+      }
       case 'save-lesson': {
         assertStudyAllowed(state);const topicId=textValue(input.topicId,120);if(!topics.some(t=>t.id===topicId))throw new ApiError('Урок не найден.',404);
         let draft:LessonWork;try{snapshotTime(input.updatedAt);draft=validateLessonWork(input);}catch{throw new ApiError('Проверьте сохранение урока.',400,'INVALID_LESSON_WORK');}

@@ -19,7 +19,8 @@
     "sources:verify-practice": "python tests/source-promotion.test.py && node --experimental-transform-types --test tests/promoted-exercises.test.mjs",
     "sources:test": "python tests/source-library-parser.test.py && node --experimental-transform-types --test tests/source-library.test.mjs",
     "practice:build": "node --experimental-transform-types scripts/build-curriculum-practice.mjs",
-    "practice:verify": "node --experimental-transform-types --test tests/curriculum-practice.test.mjs"
+    "practice:verify": "node --experimental-transform-types --test tests/curriculum-practice.test.mjs tests/curriculum-editorial.test.mjs",
+    "practice:audit": "node --experimental-transform-types scripts/audit-curriculum-editorial.mjs"
   },
   "dependencies": {
     "@base-ui/react": "^1.7.0",

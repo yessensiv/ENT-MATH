@@ -74,3 +74,9 @@ test('a beginner receives more foundations and a recovery session does not assum
  experienced.progress.linear.needsRecovery=true;const recovery=createPractice(experienced,'linear',bank,10);assert.equal(recovery.main.filter(i=>i.task.difficulty===1).length,6);
 });
 
+
+test('practice report replaces internal skill identifiers with bilingual display labels',()=>{
+ const state=emptyState(),task={...bank[0],skill:'radicals',skillIds:['unmapped-internal-method'],subtopic:undefined};
+ const session=createPractice(state,task.topicId,[task],10);
+ assert.deepEqual(practiceSummary(session).skills[0].title,{ru:'Навык текущей темы',kk:'Ағымдағы тақырып дағдысы'});
+});

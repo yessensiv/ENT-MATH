@@ -2,6 +2,15 @@ import{test}from'node:test';import assert from'node:assert/strict';
 // @ts-expect-error Native tests.
 import{emptyState,makePlan}from'../lib/engine.ts';
 const topics=[{id:'fractions',track:'base' as const,title:{ru:'Дроби',kk:'Бөлшектер'},minutes:12},{id:'linear',track:'profile' as const,title:{ru:'Уравнения',kk:'Теңдеулер'},prerequisites:['fractions'],minutes:12}];
+
+test('completed reading schedules independent practice without granting mastery',()=>{
+ const s=emptyState();s.profile={name:'Test',grade:'11',track:'base',examDate:'2027-06-01',target:40,dailyMinutes:20,language:'ru'};
+ s.lessonCompletions={fractions:{at:'2026-10-09T00:00:00Z'}};
+ const plan=makePlan(s,topics,new Date('2026-10-09T08:00:00Z'));
+ assert.equal(plan.find(item=>item.topicId==='fractions')?.type,'practice');
+ assert.match(plan.find(item=>item.topicId==='fractions')?.reason.ru??'',/Урок завершён/);
+ assert.deepEqual(s.progress,{});assert.equal(s.xp,0);
+});
 test('PLAN-01: each day fits 5–240 minute budgets within 20%, with short separate practice',()=>{
  for(const dailyMinutes of [5,7,10,15,20,30,45,60,120,240]){
   const s=emptyState();s.profile={name:'Local test',grade:'11',track:'profile',examDate:'2027-06-01',target:40,dailyMinutes,language:'ru'};

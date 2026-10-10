@@ -12,8 +12,10 @@ import {schoolAdvancedTopics,generateSchoolAdvancedPractice} from './school-adva
 import {generateSchoolReviewTask,validateSchoolReviewTask,schoolReviewCapacity} from './school-review-content.ts';
 // @ts-expect-error Native Node verification uses explicit extensions.
 import {calculate,type Task,type LocalText} from './engine.ts';
+// @ts-expect-error Native Node verification uses explicit extensions.
+import {editCurriculumPractice} from './curriculum-editorial.ts';
 
-export const curriculumPracticeVersion='author-practice-2026-10-09.1';
+export const curriculumPracticeVersion='author-practice-2026-10-09.2';
 export const practiceTopics=[...topics,...schoolTopics,...schoolExtensionTopics,...schoolAdvancedTopics];
 const b=(ru:string,kk:string):LocalText=>({ru,kk});
 type Level=1|2|3;
@@ -68,6 +70,7 @@ export function makeCurriculumPractice(topicId:string,serial:number,level:Level,
   if(raw&&!validateGeneratedTask(raw).valid)return null;
  }
  if(!raw)return null;
+ raw=editCurriculumPractice(raw,serial,level);
  // Matching exercises need their actual givens in the condition. A generic
  // heading alone can look identical to a worked lesson example.
  if(raw.type==='matching'&&raw.pairs){

@@ -17,6 +17,10 @@ test('HTTP all 121 topics expose the new bilingual bank and keep keys private',a
   for(const task of added){
    assert.equal(task.topicId,topic.id);assert.ok(task.prompt.ru&&task.prompt.kk);
    assert.equal(task.practiceOrigin.kind,'authored');
+   const expected=bank.find(item=>item.id===task.id);
+   assert.ok(expected,task.id);
+   assert.equal(task.practiceOrigin.version,expected.practiceOrigin.version);
+   assert.deepEqual(task.prompt,expected.prompt,'Server must expose the revised condition: '+task.id);
    for(const field of ['answer','solution','hints','generation','curriculumPractice'])assert.equal(task[field],undefined,topic.id+' leaks '+field);
   }
  }

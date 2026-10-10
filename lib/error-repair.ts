@@ -5,6 +5,8 @@ import{isModelExample,seenTaskIds,taskFingerprint,type LearnerState,type Task,ty
 // @ts-expect-error Native Node tests.
 import{repairSkillTitle,repairCatalogVersion}from'./repair-catalog.ts';
 import type{ReviewGenerator}from'./fresh-tasks.ts';
+// @ts-expect-error Native Node tests.
+import {makeImportedRepair} from './imported-repair-variants.ts';
 
 /** Assign new verified conditions of an explicitly reviewed method. A task
  * match checks the skill; it does not diagnose why the learner was wrong. */
@@ -27,6 +29,12 @@ export function assignErrorRepairs(state:LearnerState,error:ErrorEntry,bank:Task
    if(!(candidate.source||candidate.curriculumPractice)||candidate.purpose!=='practice'||candidate.topicId!==original.topicId||candidate.methodFamily!==original.methodFamily||candidate.difficulty!==original.difficulty||candidate.type!==original.type||isModelExample(candidate)||reserved.has(taskFingerprint(candidate)))continue;
    const task={...structuredClone(candidate),id:`repair-${error.id}-${candidate.id}`,reviewReserved:true,repairForErrorId:error.id,repairsTaskIds:[original.id]};
    selected.push(task);generated.push(task);reserved.add(taskFingerprint(candidate));changed=true;
+  }
+  if(original.source)for(let serial=1;selected.length<needed&&serial<=1000;serial++){
+   const candidate=makeImportedRepair(original,serial);
+   if(!candidate||reserved.has(taskFingerprint(candidate)))continue;
+   const task={...candidate,id:`repair-${error.id}-${candidate.id}`,repairForErrorId:error.id,repairsTaskIds:[original.id]};
+   selected.push(task);generated.push(task);reserved.add(taskFingerprint(task));changed=true;
   }
   const ids=[...new Set([...error.exerciseIds,...selected.map(t=>t.id)])];
   if(error.repairRequired!==2||JSON.stringify(ids)!==JSON.stringify(error.exerciseIds))changed=true;

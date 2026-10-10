@@ -1,4 +1,6 @@
 // @ts-expect-error Native Node tests use explicit extensions.
+import {repairSkillTitle} from './repair-catalog.ts';
+// @ts-expect-error Native Node tests use explicit extensions.
 import {deliverTask, seenTaskIds, taskFingerprint, recordAttempt, answerFitsTask, type LearnerState, type Task, type Topic, type Answer} from './engine.ts';
 // @ts-expect-error Native Node tests use explicit extensions.
 import {assignErrorRepairs} from './error-repair.ts';
@@ -69,7 +71,7 @@ export function submitPractice(state:LearnerState,s:PracticeSession,id:string,to
 export function practiceSummary(s:PracticeSession){
  const count=(items:PracticeItem[])=>({total:items.length,answered:items.filter(i=>i.feedback).length,correct:items.filter(i=>i.feedback?.correct).length,independent:items.filter(i=>i.feedback?.correct&&i.feedback.independentEligible).length,helped:items.filter(i=>i.feedback?.correct&&!i.feedback.independentEligible).length,incorrect:items.filter(i=>i.feedback&&!i.feedback.correct).length,skipped:items.filter(i=>!i.feedback).length});
  const skills=new Map<string,{id:string;title:Task['skill'];attempts:number;correct:number;independent:number;extraCorrect:number}>();
- for(const item of [...s.main,...s.extra]){const ids=Array.isArray(item.task.skillIds)&&item.task.skillIds.length?item.task.skillIds:[item.task.topicId];for(const id of ids){if(typeof id!=='string')continue;const row=skills.get(id)??{id,title:item.task.skill||item.task.prompt,attempts:0,correct:0,independent:0,extraCorrect:0};if(item.parentId){row.extraCorrect+=Number(item.feedback?.correct&&item.feedback.independentEligible);}else if(item.feedback){row.attempts++;row.correct+=Number(item.feedback.correct);row.independent+=Number(item.feedback.correct&&item.feedback.independentEligible);}skills.set(id,row);}}
+ for(const item of [...s.main,...s.extra]){const ids=Array.isArray(item.task.skillIds)&&item.task.skillIds.length?item.task.skillIds:[item.task.topicId];for(const id of ids){if(typeof id!=='string')continue;const row=skills.get(id)??{id,title:repairSkillTitle(id)||((item.task.subtopic as {title?:Task['skill']}|undefined)?.title)||((typeof item.task.skill==='string'&&/^[a-z0-9:_-]+$/i.test(item.task.skill))?{ru:'Навык текущей темы',kk:'Ағымдағы тақырып дағдысы'}:item.task.skill)||item.task.prompt,attempts:0,correct:0,independent:0,extraCorrect:0};if(item.parentId){row.extraCorrect+=Number(item.feedback?.correct&&item.feedback.independentEligible);}else if(item.feedback){row.attempts++;row.correct+=Number(item.feedback.correct);row.independent+=Number(item.feedback.correct&&item.feedback.independentEligible);}skills.set(id,row);}}
  return{main:count(s.main),extra:count(s.extra),skills:[...skills.values()],repairs:s.main.filter(i=>i.errorId).map(i=>({taskId:i.task.id,errorId:i.errorId,status:s.repairNotices[i.task.id],...count(s.extra.filter(e=>e.parentId===i.task.id))}))};
 }
 export function publicPractice(s:PracticeSession,state:LearnerState){

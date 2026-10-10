@@ -11,3 +11,10 @@ export function validateLessonWork(input:Record<string,unknown>):LessonWork {
 export function saveLessonWork(existing:Record<string,LessonWork>,topicId:string,draft:LessonWork){
  const prior=existing[topicId];if(prior&&prior.updatedAt>=draft.updatedAt)return false;existing[topicId]=draft;return true;
 }
+
+/** Reading completion is separate from mathematical mastery and draft position. */
+export function completeLesson(completions:Record<string,{at:string}>,topicId:string,draft:LessonWork,now=new Date()){
+ if(draft.stage!==3)throw Error('LESSON_NOT_AT_FINAL_STAGE');
+ if(completions[topicId])return false;
+ completions[topicId]={at:now.toISOString()};return true;
+}

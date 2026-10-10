@@ -1,3 +1,4 @@
+import {solutionText} from '@/lib/solution-text';
 import {sessions} from '@/lib/practice-session';
 import {tutorProvider} from '@/lib/tutor-provider';
 import { authenticate, loadCurrentState, saveState, publishedContent, response, failure, parseBody, textValue, ApiError, assertStudyAllowed, configuration, consumeTutorBudget, releaseFailedTutorBudget, settleTutorTokens, recordReport } from "@/lib/server-store";
@@ -61,7 +62,7 @@ export async function POST(request: Request) {
     if (/^(?:привет|здравствуй(?:те)?|сәлем|салем|hello|hi)[!.,\s]*$/i.test(message)) fallback=language==='ru'?'Привет! Я рядом. Можем разобрать открытую задачу по одному шагу. Нажми «С чего начать?» или напиши свой вопрос.':'Сәлем! Қасыңдамын. Ашық есепті бір қадамнан талдай аламыз. «Неден бастаймын?» батырмасын бас немесе сұрағыңды жаз.';
     else if (task && !providedSteps && /почему.*шаг|қадам.*неге|неге.*қадам/i.test(message)) fallback=language==='ru'?`Пока в поле «Мои шаги решения» нет записанного шага. Напиши переход, который хочешь понять, или нажми «С чего начать?» — покажу первое действие по этой задаче.`:'«Менің шешу қадамдарым» өрісінде қадам әлі жазылмаған. Түсінгің келген ауысуды жаз немесе «Неден бастаймын?» батырмасын бас — осы есептің алғашқы амалын көрсетемін.';
     else if (full&&selectedExample&&topic) fallback=lessonTutorReply(topic,selectedExample,language,true);
-    else if (full && task) fallback = `${task.solution[language].join("\n")}\n\n${language === "ru" ? "Ответ" : "Жауабы"}: ${Array.isArray(task.answer) ? task.answer.join(", ") : task.answer}${task.units ? " " + task.units : ""}.`;
+    else if (full && task) fallback = solutionText(task.solution[language],task.answer,language,task.units);
     else if (["sign", "calculation", "method"].includes(mistake.category)) fallback = mistake.explanation[language];
     else if(checkedLinearWork.status==='correct')fallback=language==='ru'?'Показанные переходы равносильны исходному линейному уравнению: этот способ допустим. Проверь найденное значение подстановкой в исходную строку. Если решение ещё не закончено, запиши следующий шаг.':'Көрсетілген ауысулар бастапқы сызықтық теңдеуге мәндес: бұл тәсілді қолдануға болады. Табылған мәнді бастапқы теңдеуге қойып тексер. Шешім аяқталмаса, келесі қадамды жаз.';
     else if(selectedExample&&topic)fallback=lessonTutorReply(topic,selectedExample,language,false);

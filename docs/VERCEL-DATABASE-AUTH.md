@@ -2,7 +2,7 @@
 
 Turso database `database-cobalt-cloud` is connected to the Vercel project `ent-math`. All existing SQLite migrations were applied to an empty target. The original Cloudflare database is unchanged.
 
-Google Cloud project: `infra-throne-511213-g8` (ENT Math). Web client: ENT Math Vercel. Callback: `https://ent-math-iv-8f66.vercel.app/api/auth/callback/google`.
+Google Cloud project: `infra-throne-511213-g8` (ENT Math). Web client: ENT Math Vercel. Callback: `https://ent-math.vercel.app/api/auth/callback/google`.
 
 Server settings: `TURSO_DATABASE_URL`, `TURSO_AUTH_TOKEN`, `AUTH_GOOGLE_ID`, `AUTH_GOOGLE_SECRET`, `AUTH_SECRET`, `AUTH_URL`. OAuth secrets are stored as Vercel secrets. Never add `.sites-runtime/google-oauth.json` or `.env.local` to Git.
 

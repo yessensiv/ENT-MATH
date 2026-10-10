@@ -14,4 +14,5 @@ Database schema/import tool: `node --env-file=.env.local --experimental-transfor
 
 The archive from 2026-10-06 was restored successfully into `.sites-runtime/backups/google-migration-rehearsal-2026-10-10.sqlite` with integrity `ok`. A current export and explicit identity linking are required before migration of old history. This archive is not presented as a current production export.
 
-Pending acceptance: actual Google login, profile write/reload, cross-device revision conflicts, logout, and final Google audience status. AI credentials have not been copied to Vercel in this change.
+Verified 2026-10-10: public domain https://ent-math.vercel.app, Google audience In production, real owner Google login, remote database write/read/rollback, two isolated adapter tests covering chunked state, immutable events, atomic rollback and stale revisions. Unauthenticated requests with forged Sites headers return 401. No owner learning results were added. Profile submission, real cross-device progress, logout and old-history linking still require acceptance checks. AI credentials were not copied to Vercel.
+

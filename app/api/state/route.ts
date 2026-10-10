@@ -11,7 +11,7 @@ import{reservedExam}from'@/lib/exam-bank';
 
 export async function GET() {
   try {
-    const user = await getChatGPTUser(); if (!user) return response({ user: null, profile: null, error: "Войдите через ChatGPT для сохранения результатов.", demo: false }, 401);
+    const user = await getChatGPTUser(); if (!user) return response({ user: null, profile: null, error: "Войдите в аккаунт для сохранения результатов.", demo: false }, 401);
     const { state, expired } = await loadCurrentState(user), { topics } = await publishedContent();
     updatePlan(state, topics);
     return response({ ...clientState(user, state), timedOut: Boolean(expired) });

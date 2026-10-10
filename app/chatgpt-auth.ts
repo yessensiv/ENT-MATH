@@ -20,7 +20,13 @@ const CALLBACK_PATH = "/callback";
 
 export async function getChatGPTUser(): Promise<ChatGPTUser | null> {
   // These headers are trusted only behind the Sites authentication gateway.
-  if(process.env.VERCEL==='1'||process.env.ENT_DEPLOY_TARGET==='vercel')return null;
+  if(process.env.VERCEL==='1'||process.env.ENT_DEPLOY_TARGET==='vercel') {
+    const { auth, googleAuthConfigured } = await import('../lib/google-auth');
+    if (!googleAuthConfigured()) return null;
+    const session = await auth();
+    if (!session?.user?.id || !session.user.email) return null;
+    return { userId: session.user.id, email: session.user.email, fullName: session.user.name ?? null, displayName: session.user.name ?? session.user.email };
+  }
   const requestHeaders = await headers();
   const userId = requestHeaders.get(USER_ID_HEADER);
   const email = requestHeaders.get(USER_EMAIL_HEADER);

@@ -18,7 +18,7 @@ export default function RootLayout({
   return (
     <html lang="ru">
       <body className="antialiased">
-        {(process.env.VERCEL==='1'||process.env.ENT_DEPLOY_TARGET==='vercel')&&<aside role="status" style={{padding:'12px 20px',background:'#fff3d9',color:'#594117',textAlign:'center'}}>Предварительная версия Vercel: уроки доступны. Вход, ИИ и сохранение прогресса пока не подключены. Учебная история основного сайта сохранена.</aside>}
+        {(process.env.VERCEL==='1'||process.env.ENT_DEPLOY_TARGET==='vercel')&&!(process.env.AUTH_GOOGLE_ID&&process.env.AUTH_GOOGLE_SECRET&&process.env.AUTH_SECRET&&process.env.TURSO_DATABASE_URL&&process.env.TURSO_AUTH_TOKEN)&&<aside role="status" style={{padding:'12px 20px',background:'#fff3d9',color:'#594117',textAlign:'center'}}>Подключаем вход Google и сохранение прогресса. Учебная история основного сайта сохранена.</aside>}
         {children}
       </body>
     </html>

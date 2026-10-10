@@ -27,7 +27,7 @@ const eventBaselines=new WeakMap<LearnerState,EventBaseline>();
 export const isAdmin = (user: ChatGPTUser) => (configuration().ADMIN_EMAILS || "").split(",").map(s => s.trim().toLowerCase()).filter(Boolean).includes(user.email.toLowerCase());
 export const editorPermissions=(user:ChatGPTUser)=>editorialPermissions(user.email,isAdmin(user),configuration().EDITOR_ROLES);
 export async function editorAuthenticate(){const user=await authenticate();if(!editorPermissions(user).access)throw new ApiError('Доступ разрешён только редакционной команде.',403);return user;}
-export async function authenticate() { const user = await getChatGPTUser(); if (!user) throw new ApiError("Войдите через ChatGPT, чтобы сохранять учебный прогресс.", 401); return user; }
+export async function authenticate() { const user = await getChatGPTUser(); if (!user) throw new ApiError("Войдите в аккаунт, чтобы сохранять учебный прогресс.", 401); return user; }
 export async function adminAuthenticate() { const user = await authenticate(); if (!isAdmin(user)) throw new ApiError("Доступ разрешён только администратору.", 403); return user; }
 
 type ContentExports = { topics?: unknown[]; tasks?: unknown[]; allTasks?: unknown[]; getTasks?: (topicId?: string) => unknown[] };

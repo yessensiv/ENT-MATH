@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import "./globals.css";
+import "./appearance.css";
 
 export const metadata: Metadata = {
   title: "ENT Math — математика 5–11 классов и ЕНТ",

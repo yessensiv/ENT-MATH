@@ -1,0 +1,273 @@
+/* Shared visual system. Learning state and page-specific interactions stay in globals.css. */
+:root {
+  --background: #f3f6f9;
+  --surface: #ffffff;
+  --ink: #19352f;
+  --muted: #566a64;
+  --green: #146b55;
+  --green-dark: #0e503f;
+  --mint: #eaf5ef;
+  --lavender: #f0ecf8;
+  --line: #dce5e2;
+  --radius: 20px;
+  --reader-paper: #ffffff;
+  --reader-muted: #566a64;
+  --reader-green: #146b55;
+}
+
+body { font-size: 16px; line-height: 1.65; }
+h1, h2, h3, h4 { text-wrap: balance; }
+h1 { font-size: clamp(28px, 2.7vw, 40px); line-height: 1.18; letter-spacing: -.035em; }
+h2 { font-size: 24px; line-height: 1.3; letter-spacing: -.025em; }
+h3 { font-size: 18px; line-height: 1.4; }
+h4 { font-size: 16px; line-height: 1.45; }
+p { text-wrap: pretty; }
+small, .small { font-size: 12px; }
+input, select, textarea { font-size: 16px; }
+input:not([type="checkbox"]):not([type="radio"]):not([type="range"]), select, textarea {
+  border-color: #cbdad3; border-radius: 12px; padding: 12px 14px;
+}
+:focus-visible { outline: 3px solid #7964b0; outline-offset: 4px; }
+.primary, .secondary, .quiet, .danger-button {
+  font-size: 14px; min-height: 46px; padding: 12px 18px; border-radius: 12px;
+}
+.primary { box-shadow: 0 2px 0 #0e503f18; }
+.secondary { border-color: #cedbd5; }
+.text-button, .back-button, .report-link { font-size: 14px; }
+.pill, .badge, .status-badge, .small-chip, .difficulty { font-size: 12px; line-height: 1.45; padding: 6px 10px; }
+.difficulty.level2 { color: #64478c; }
+.difficulty.level3 { color: #795616; }
+
+/* Navigation stays compact while labels remain readable in both languages. */
+.sidebar { padding: 26px 16px 18px; }
+.brand { font-size: 25px; padding-bottom: 26px; }
+.brand small { font-size: 10px; color: var(--muted); }
+.sidebar-label, .sidebar-caption, .nav-caption { font-size: 12px; color: var(--muted); }
+.nav-item { font-size: 14px; line-height: 1.45; padding: 12px; min-height: 48px; color: #52675e; }
+.nav-item.active { background: #e4f2eb; color: var(--green-dark); box-shadow: inset 3px 0 var(--green); }
+.nav-item .tiny-tag, .nav-count { font-size: 10px; }
+.sidebar-mentor { padding: 16px 14px 35px; background: #f0f7f4; }
+.sidebar-mentor .mentor-label, .sidebar-mentor p { font-size: 11px; color: var(--muted); }
+.sidebar-mentor strong { font-size: 14px; }
+.profile-button strong { font-size: 14px; }
+.profile-button small { font-size: 12px; }
+.topbar { background: #ffffff; }
+.topbar-breadcrumb, .topbar-breadcrumb strong { font-size: 13px; }
+.lang-switch button { min-height: 38px; min-width: 44px; font-size: 12px; }
+.main-content { max-width: 1600px; padding: 32px clamp(20px, 3vw, 44px) 48px; }
+.page-heading { margin-bottom: 28px; align-items: flex-start; gap: 20px; }
+.page-heading p { font-size: 15px; line-height: 1.65; max-width: 68ch; margin-top: 10px; }
+.date-line { font-size: 12px; margin-bottom: 12px; }
+.panel { padding: 26px; border-color: var(--line); box-shadow: 0 3px 16px #18392f03; }
+.panel p, .panel li { font-size: 15px; line-height: 1.75; }
+.panel small { font-size: 12px; line-height: 1.6; }
+.panel table { font-size: 14px; line-height: 1.6; }
+.section-heading button, .panel-heading button, .panel-title button, .section-heading > .text-button { font-size: 13px; }
+.section-heading > span, .section-heading small, .panel-title small { font-size: 12px; }
+.demo-bar, .local-notice { font-size: 13px; padding: 12px 16px; line-height: 1.6; }
+.demo-bar button { font-size: 13px; min-height: 44px; }
+.app-footer, .app-footer button { font-size: 12px; }
+
+/* Dashboard: clear reading order, genuine metrics kept separate from actions. */
+.dashboard-grid { grid-template-columns: minmax(0,1fr) 290px; gap: 24px; }
+.journey-hero { background: #12583f; padding: 32px; border-radius: 22px; }
+.hero-copy h2 { font-size: clamp(26px, 2.6vw, 36px); line-height: 1.22; max-width: 18ch; }
+.hero-copy p { font-size: 14px; line-height: 1.75; max-width: 38ch; }
+.hero-tag, .hero-kicker, .hero-footnote, .hero-meta { font-size: 12px; }
+.hero-copy .primary, .hero-copy .secondary { font-size: 14px; min-height: 46px; border-radius: 11px; }
+.stat-card { padding: 20px; gap: 14px; border-radius: 16px; }
+.stat-card strong { font-size: 26px; font-variant-numeric: tabular-nums; }
+.stat-card small, .stat-card p, .stat-card span:not(.stat-icon) { font-size: 12px; }
+.plan-item { min-height: 84px; gap: 14px; }
+.plan-text strong, .plan-item h3 { font-size: 15px; line-height: 1.4; }
+.plan-text small, .plan-item small, .plan-duration, .plan-time { font-size: 12px; }
+.plan-arrow { width: 32px; height: 32px; }
+.direction-card { padding: 22px 20px; border-radius: 18px; }
+.direction-card h3 { font-size: 16px; max-width: none; min-height: 0; margin-bottom: 8px; }
+.direction-card p, .course-footer small, .course-count { font-size: 12px; }
+.course-count { top: 26px; right: 18px; }
+.week-card h3, .mentor-card h3, .spec-card h3 { font-size: 18px; }
+.week-card > p, .week-note, .weekly-goal, .week-days small, .week-days > div > span { font-size: 12px; }
+.week-days > div > span { width: 30px; height: 34px; }
+.mentor-card p, .spec-card p, .spec-card small { font-size: 13px; line-height: 1.7; }
+.mentor-card p { max-width: 30ch; }
+.mentor-card button { font-size: 14px; }
+
+/* Course map, school catalogue, exam and adult/editor screens. */
+.track-tabs button, .filter-tabs button, .lesson-tabs button { font-size: 14px; }
+.section-description, .map-summary { font-size: 15px; line-height: 1.7; }
+.topic-card h3, .topic-row strong, .topic-title { font-size: 17px; line-height: 1.4; }
+.topic-card p, .topic-row p, .topic-prereq, .prerequisites, .topic-bottom, .topic-card-footer { font-size: 13px; line-height: 1.65; }
+.module-heading p { font-size: 13px; }
+.school-hero { background: #ecf5f1; border-color: #d3e4db; }
+.school-hero h2 { font-size: clamp(25px, 2.5vw, 34px); }
+.school-summary { font-size: 14px; gap: 12px 24px; }
+.school-lesson { padding: 24px; }
+.school-lesson-copy p, .school-lesson-copy small { font-size: 14px; line-height: 1.65; }
+.field { font-size: 14px; font-weight: 600; color: #3d5b50; gap: 8px; }
+.field small { font-size: 12px; font-weight: 400; }
+.exam-card h3, .achievement-card h3 { font-size: 18px; }
+.exam-meta, .exam-info p, .exam-info small, .exam-navigation p, .achievement-card p { font-size: 13px; line-height: 1.65; }
+.exam-card button, .exam-navigation .primary, .exam-history .plan-text { font-size: 14px; }
+.exam-info h3 { font-size: 18px; }
+.question-dots button { min-height: 44px; font-size: 14px; }
+.timer { color: var(--green-dark); font-size: 22px; font-variant-numeric: tabular-nums; }
+.analytics-stats small, .skill-row, .skill-row .muted { font-size: 13px; }
+.analytics-stats strong { font-variant-numeric: tabular-nums; }
+.level-panel small, .level-panel p, .level-mastery span { font-size: 13px; }
+.settings-grid .panel > p { font-size: 15px; }
+.error-card p, .error-footer > span, .error-card-head small { font-size: 13px; line-height: 1.65; }
+.error-footer button { font-size: 14px; }
+.onboard-modal > p { font-size: 15px; }
+.onboard-modal .signin, .signout { font-size: 14px; }
+
+/* Lessons read like a mathematics notebook, with measured rather than full-width prose. */
+.lesson-reader { --reader-paper: #fff; --reader-muted: #566a64; --reader-green: #146b55; }
+.reader-hero { background: #eaf3ef; border-color: #d1e2d8; border-radius: 22px; }
+.reader-hero h1 { font-size: clamp(28px, 3vw, 40px); }
+.reader-paper, .reader-aside-card { background: #fff; border-color: var(--line); }
+.reader-paper { padding: clamp(24px, 3vw, 40px); }
+.reader-section-intro { padding-bottom: 22px; margin-bottom: 26px; }
+.reader-section-intro h2 { font-size: clamp(25px, 2.3vw, 32px); }
+.reader-section-intro > p, .reader-hero-copy > p { font-size: 16px; line-height: 1.7; max-width: 66ch; }
+.reader-prose { max-width: 70ch; }
+.reader-prose p { font-size: 17px; line-height: 1.85; color: #2b463c; }
+.reader-paper h3 { font-size: 22px; }
+.reader-kicker, .reader-eyebrow { font-size: 12px; letter-spacing: 0; color: var(--muted); }
+.reader-small, .reader-aside-card p { font-size: 14px; line-height: 1.75; }
+.reader-route strong { font-size: 14px; }
+.reader-route small { font-size: 12px; }
+.reader-route > button[aria-current="step"] { background: var(--green-dark); }
+.reader-problem { background: #f3f7f5; border-color: #d7e5dc; border-radius: 14px; }
+.reader-worked > li { padding: 18px 0; border-bottom: 1px solid #e8eeeb; }
+.reader-worked > li:last-child { border-bottom: 0; }
+.reader-worked .reader-prose p { font-size: 17px; }
+.reader-answer { background: #e8f4ed; border-color: #c6dece; }
+.reader-rule { background: #f6f8fb; border-color: #dbe4eb; }
+.reader-formula { color: #18372e; font-size: 24px; line-height: 1.7; }
+.reader-aside-card { padding: 24px; }
+.reader-aside-card h3 { font-size: 18px; }
+.reader-prerequisite, .reader-mastery { font-size: 13px; }
+.reader-assistance { background: #f6f3eb; }
+.reader-definition summary, .reader-mistakes summary { font-size: 15px; }
+
+/* Practice and tutor: stable controls and comfortable line lengths. */
+.task-panel, .practice-session .practice-card { padding: 30px; }
+.task-prompt, .task-statement, .session-task-prompt { font-size: clamp(20px, 1.8vw, 25px); line-height: 1.6; font-weight: 650; letter-spacing: -.02em; }
+.session-task-prompt { margin: 28px 0; }
+.task-meta, .task-head, .task-header { font-size: 13px; }
+.answer-option { padding: 16px 18px; min-height: 58px; border-radius: 12px; font-size: 17px; }
+.answer-option > span:first-child { width: 30px; height: 30px; flex-shrink: 0; font-size: 13px; }
+.answer-option.selected { border-color: var(--green); box-shadow: inset 0 0 0 1px var(--green); }
+.math-answer > label, .math-answer small { font-size: 13px; }
+.math-answer > input { font-size: 24px; min-height: 60px !important; }
+.math-keypad { gap: 8px; }
+.math-keypad button { border-radius: 10px; color: #3c5c4f; }
+.solution-steps { margin: 28px 0; }
+.step-fields { gap: 12px; margin-top: 18px; }
+.step-fields input { font-size: 17px; min-height: 50px; }
+.solution-steps > small { font-size: 13px; color: var(--muted); }
+.task-actions .primary, .task-actions .secondary { font-size: 14px; }
+.feedback h3 { font-size: 18px; }
+.feedback p, .feedback details, .practice-feedback p { font-size: 15px; line-height: 1.75; }
+.practice-feedback { border-radius: 16px; }
+.practice-number-nav button { border-radius: 10px; font-size: 14px; }
+.tutor-panel-head { padding: 20px; }
+.tutor-panel-head strong { font-size: 15px; line-height: 1.45; }
+.tutor-panel-head small { font-size: 12px; }
+.tutor-task-context { font-size: 13px; line-height: 1.6; background: #f5f9f7; padding: 16px 20px; }
+.tutor-task-context small { font-size: 12px; }
+.tutor-panel .chat-messages { gap: 18px; padding: 20px; }
+.chat-message { font-size: 15px; line-height: 1.7; padding: 16px 18px; }
+.chat-message > small { display: block; font-size: 12px; margin-bottom: 8px; }
+.chat-message.assistant { background: #f2f7f4; border-color: #d7e5dc; border-radius: 16px 16px 16px 4px; color: #29473a; }
+.chat-message.user { background: #efeaf8; border-radius: 16px 16px 4px 16px; color: #594775; }
+.chat-message.user > small { color: #65537f; }
+.tutor-prose { font-size: 16px; line-height: 1.75; gap: 14px; }
+.tutor-prose h4 { font-size: 18px; margin-top: 8px; }
+.tutor-prose .tutor-formula { margin-left: 0; max-width: 100%; font-family: "Cambria Math", Georgia, serif; font-size: 22px; padding: 14px; }
+.tutor-prose .tutor-answer { background: #e2f0e7; border-color: var(--green); }
+.tutor-panel .chat-suggestions { gap: 8px; padding: 14px 16px; }
+.chat-suggestions button { font-size: 12px; min-height: 44px; padding: 9px 11px; }
+.chat-empty h3 { font-size: 20px; }
+.chat-empty p { font-size: 14px; line-height: 1.7; }
+.mint-note { font-size: 14px; line-height: 1.75; background: #eef5f0; }
+
+@media (min-width: 901px) {
+  .sidebar { width: 254px; }
+  .workspace { margin-left: 254px; }
+}
+@media (max-width: 1200px) {
+  .dashboard-grid { grid-template-columns: minmax(0,1fr) 250px; gap: 20px; }
+  .dashboard-rail { display: flex; flex-direction: column; }
+  .stat-row { grid-template-columns: 1fr; }
+  .direction-cards { grid-template-columns: 1fr; }
+  .direction-card { display: grid; grid-template-columns: 40px minmax(0,1fr); column-gap: 14px; }
+  .direction-card .course-icon { grid-row: 1 / 3; margin: 0; }
+  .direction-card h3, .direction-card p, .direction-card .progress-track, .direction-card .course-footer { grid-column: 2; }
+  .direction-card .course-count { position: static; grid-column: 2; margin-bottom: 6px; }
+  .hero-copy { max-width: 100%; }
+  .hero-art { display: none; }
+  .practice-session, .practice-grid { grid-template-columns: minmax(0,1fr) 310px; gap: 20px; }
+  .exam-cards { grid-template-columns: repeat(2,minmax(0,1fr)); }
+}
+@media (max-width: 1000px) {
+  .stat-row { grid-template-columns: 1fr; }
+  .stat-card { padding: 16px 20px; }
+  .practice-session, .practice-grid, .mentor-page { grid-template-columns: minmax(0,1fr); }
+}
+@media (max-width: 900px) {
+  .main-content { padding: 24px 20px 40px; }
+  .dashboard-grid { grid-template-columns: minmax(0,1fr); }
+  .dashboard-rail { display: grid; grid-template-columns: repeat(2,minmax(0,1fr)); }
+  .stat-row { grid-template-columns: repeat(3,minmax(0,1fr)); }
+  .direction-cards { grid-template-columns: repeat(3,minmax(0,1fr)); }
+  .direction-card { display: flex; }
+  .direction-card .course-icon { margin-bottom: 14px; }
+  .direction-card .course-count { margin-bottom: 8px; }
+}
+@media (max-width: 600px) {
+  .main-content { padding: 22px 14px 34px; }
+  .topbar { padding-inline: 14px; }
+  .page-heading { flex-wrap: wrap; gap: 14px; }
+  .page-heading h1 { font-size: 28px; }
+  .panel, .task-panel, .practice-session .practice-card { padding: 20px; border-radius: 16px; }
+  .journey-hero { padding: 24px; }
+  .hero-copy { max-width: 100%; width: 100%; }
+  .hero-copy h2 { font-size: 29px; }
+  .hero-copy p { max-width: 32ch; }
+  .hero-art { display: none; }
+  .stat-row { grid-template-columns: 1fr; gap: 10px; }
+  .dashboard-rail { grid-template-columns: minmax(0,1fr); }
+  .dashboard-rail .mentor-card { display: block; grid-column: auto; grid-row: auto; text-align: center; }
+  .stat-card { padding: 16px 18px; }
+  .direction-cards, .exam-cards { grid-template-columns: 1fr; }
+  .direction-card { padding: 20px; }
+  .direction-card h3 { min-height: 0; }
+  .school-lesson { padding: 20px 16px; }
+  .school-lesson-copy { min-width: 0; }
+  .school-lesson-actions { padding-left: 0; gap: 8px; flex-wrap: wrap; }
+  .school-lesson-actions button { min-width: 110px; }
+  .reader-paper { padding: 24px 18px; }
+  .reader-section-intro h2 { font-size: 25px; }
+  .reader-prose p, .reader-worked .reader-prose p { font-size: 16px; line-height: 1.8; }
+  .reader-route strong { font-size: 12px; }
+  .reader-route small { font-size: 11px; }
+  .reader-hero h1 { font-size: 28px; }
+  .reader-formula { font-size: 21px; }
+  .task-prompt, .session-task-prompt { font-size: 20px; }
+  .task-actions, .practice-actions { gap: 10px; }
+  .task-actions button, .practice-actions button { flex: 1 1 150px; text-align: center; }
+  .practice-number-nav { gap: 8px; }
+  .chat-message { padding: 14px; }
+  .tutor-panel .chat-messages { padding: 16px; }
+  .tutor-prose { font-size: 15px; }
+  .tutor-prose .tutor-formula { font-size: 20px; }
+  .analytics-stats { gap: 12px; }
+  .demo-bar { align-items: flex-start; flex-wrap: wrap; }
+  .onboard-modal { padding: 26px 20px; }
+  .reader-footer > div { width: 100%; }
+}
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after { scroll-behavior: auto !important; }
+}

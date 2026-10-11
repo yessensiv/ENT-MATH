@@ -11,7 +11,8 @@ export type LessonGuidedDraft={answer:string;steps:string;guidedHints?:number;gu
 
 type Props={completed?:boolean;completionBusy?:boolean;onComplete?:()=>void;captureRef?:RefObject<(()=>void)|null>;onReading?:(reading:LessonReading)=>void;guidedDraft?:LessonGuidedDraft;onGuidedDraft?:(draft:LessonGuidedDraft)=>void;topic:Topic;curriculum:Topic[];lang:Language;stage:number;onStage:(stage:number)=>void;onBack:()=>void;backLabel:string;originLabel:string;onPractice:()=>void;onTutor:(message?:string,selection?:LessonExampleSelection)=>void;onVisual:()=>void;onPrerequisite:(id:string)=>void;simple:boolean;onSimple:(value:boolean)=>void;exampleIndex:number;onExample:(index:number)=>void;mastered:boolean;needsRecovery?:boolean};
 function MathText({text}:{text:string}) {
-  return <>{text.split(/(\b\d+\s*\/\s*\d+\b)/g).map((part,i)=>{
+  return <>{text.split(/(\b\d+\s*\/\s*\d+\b|\^\([^\n()]+\)|\^-?\d+|\^[a-zA-Z])/g).map((part,i)=>{
+    if(part.startsWith('^'))return <sup key={i}>{part.slice(1).replace(/^\(|\)$/g,'')}</sup>;
     if(!/^\d+\s*\/\s*\d+$/.test(part))return part;
     const [top,bottom]=part.split('/').map(v=>v.trim());
     return <span className="reader-fraction" key={i}><span className="sr-only">{part}</span><span aria-hidden="true" className="reader-fraction-visual"><span>{top}</span><span>{bottom}</span></span></span>;

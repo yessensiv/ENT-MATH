@@ -4,7 +4,7 @@ import MathText from './formatted-math';
 function Inline({text}:{text:string}) {
   return <>{text.split(/(\*\*[^*]+\*\*|`[^`]+`)/g).map((part,i)=>{
     if(part.startsWith('**'))return <strong key={i}><MathText text={part.slice(2,-2)}/></strong>;
-    if(part.startsWith('`'))return <code key={i}>{part.slice(1,-1)}</code>;
+    if(part.startsWith('`'))return <code key={i}><MathText text={part.slice(1,-1)}/></code>;
     return <MathText key={i} text={part}/>;
   })}</>;
 }

@@ -11,6 +11,6 @@ function notation(node: MathNode): React.ReactNode {
 /** Native MathML, accessible and safe: text is never interpreted as HTML. */
 export default function FormattedMath({text}:{text:string}) {
   return <>{mathSegments(text).map((part,index)=>part.math
-    ? createElement('math',{key:index,className:'formatted-math',xmlns:'http://www.w3.org/1998/Math/MathML','aria-label':part.text},notation(part.math))
+    ? <span key={index} className="math-run">{createElement('math',{className:'formatted-math',xmlns:'http://www.w3.org/1998/Math/MathML','aria-label':part.text},notation(part.math))}</span>
     : <Fragment key={index}>{part.text}</Fragment>)}</>;
 }

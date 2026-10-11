@@ -15,7 +15,7 @@ export function mathematicalHtml(text:string):string {
 export function parseMath(source: string): MathNode | null {
   // A comma between two fractions separates values, rather than decimals.
   if (/\/\d+,\s*[-+]?\d+\//.test(source)) return null;
-  source = source.replace(/²/g, '^2').replace(/³/g, '^3');
+  source = source.replace(/²/g, '^2').replace(/³/g, '^3').replace(/(\d)[ \u00a0\u202f](?=\d{3}\b)/g,'$1');
   const tokens = source.match(/sqrt|\d+(?:[.,]\d+)?|[a-zA-Z]|[()+−\-*/×·÷^=<>≤≥√]/g);
   if (!tokens || tokens.join('') !== source.replace(/\s/g, '') || tokens.length > 160) return null;
   let position = 0;
@@ -103,7 +103,7 @@ function fallbackSegments(text: string): {text:string; math:MathNode|null}[] {
     if(text[start]==='('||text[start]==='{')return groupEnd(start);
     if(exponent&&text[start]==='?')return start+1;
     if(text[start]==='₸')return start+1;
-    const found=text.slice(start).match(exponent?/^[+−-]?(?:\d+(?:[.,]\d+)?|[\p{L}₀-₉⁰¹²³⁴⁵⁶⁷⁸⁹ⁿ⁺⁻₊₋ₐₑₒₓ]+(?:_[\p{L}\d]+)?)/u:/^(?:\d+(?:[.,]\d+(?![\d/]))?[⁰¹²³⁴⁵⁶⁷⁸⁹ⁿ⁺⁻°]*|[\p{L}₀-₉⁰¹²³⁴⁵⁶⁷⁸⁹ⁿ⁺⁻₊₋ₐₑₒₓ]+(?:_[\p{L}\d]+)?[⁰¹²³⁴⁵⁶⁷⁸⁹ⁿ⁺⁻°]*)/u);
+    const found=text.slice(start).match(exponent?/^[+−-]?(?:(?:\d{1,3}(?:[ \u00a0\u202f]\d{3})+|\d+)(?:[.,]\d+)?|[\p{L}₀-₉⁰¹²³⁴⁵⁶⁷⁸⁹ⁿ⁺⁻₊₋ₐₑₒₓ]+(?:_[\p{L}\d]+)?)/u:/^(?:(?:\d{1,3}(?:[ \u00a0\u202f]\d{3})+|\d+)(?:[.,]\d+(?![\d/]))?[⁰¹²³⁴⁵⁶⁷⁸⁹ⁿ⁺⁻°]*|[\p{L}₀-₉⁰¹²³⁴⁵⁶⁷⁸⁹ⁿ⁺⁻₊₋ₐₑₒₓ]+(?:_[\p{L}\d]+)?[⁰¹²³⁴⁵⁶⁷⁸⁹ⁿ⁺⁻°]*)/u);
     let end=found?start+found[0].length:start;
     if(text[end]==='^')end=right(end+1,true);
     return end;
@@ -116,7 +116,7 @@ function fallbackSegments(text: string): {text:string; math:MathNode|null}[] {
     }
     if(text[end-1]==='₸')return end-1;
     if(text[end-1]==='|'){const start=text.lastIndexOf('|',end-2);if(start>=0)return start;}
-    const found=text.slice(0,end).match(/(?:\d+(?:[.,]\d+)?|[\p{L}₀-₉⁰¹²³⁴⁵⁶⁷⁸⁹ⁿ⁺⁻₊₋ₐₑₒₓ]+(?:_[\p{L}\d]+)?)[⁰¹²³⁴⁵⁶⁷⁸⁹ⁿ⁺⁻°]*$/u);
+    const found=text.slice(0,end).match(/(?:(?:\d{1,3}(?:[ \u00a0\u202f]\d{3})+|\d+)(?:[.,]\d+)?|[\p{L}₀-₉⁰¹²³⁴⁵⁶⁷⁸⁹ⁿ⁺⁻₊₋ₐₑₒₓ]+(?:_[\p{L}\d]+)?)[⁰¹²³⁴⁵⁶⁷⁸⁹ⁿ⁺⁻°]*$/u);
     let start=found?end-found[0].length:end;
     if(start>0&&text[start-1]==='/'&&text.slice(start,end).includes(','))start+=text.slice(start,end).lastIndexOf(',')+1;
     if(start>0&&text[start-1]==='^')start=left(start-1);

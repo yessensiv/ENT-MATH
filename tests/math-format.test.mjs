@@ -38,3 +38,10 @@ test('downloaded formulas contain real math and escape untrusted text',()=>{
   assert.doesNotMatch(html,/<img|onerror="/);
   assert.match(html,/&lt;img/);
 });
+test('thousands separators stay inside the fraction operands',()=>{
+  for(const separator of [' ','\u00a0','\u202f']){
+    const node=mathSegments(`Экономия: 5${separator}600/20${separator}000 = 0,28`).find(s=>s.math).math;
+    assert.equal(node.kind,'fraction');
+    assert.deepEqual(node.children.map(visible),['5600','20000']);
+  }
+});

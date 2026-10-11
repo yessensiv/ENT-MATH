@@ -32,7 +32,11 @@ export function parseMath(source: string): MathNode | null {
   }
   function product(): MathNode {
     let left = power();
-    while (['/','÷','*','×','·'].includes(tokens![position])) {
+    while (['/','÷','*','×','·'].includes(tokens![position]) || /^(?:[a-zA-Z]|sqrt|\(|√)$/.test(tokens![position] ?? '')) {
+      if (!['/','÷','*','×','·'].includes(tokens![position])) {
+        left = row([left,power()]);
+        continue;
+      }
       const operator = tokens![position++];
       const right = power();
       if (operator === '/' || operator === '÷') {

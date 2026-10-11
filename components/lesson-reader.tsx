@@ -5,19 +5,13 @@ import {lessonViewKey,type LessonReading} from '@/lib/lesson-position';
 import {ArrowLeft,ArrowRight,BookOpen,Check,ChevronRight,CircleHelp,Clock3,Lightbulb,MapPin,PenLine,Shapes,Sparkles,Target} from 'lucide-react';
 import type {Example,Language,Topic} from '@/lib/content';
 import type {LessonExampleSelection} from '@/lib/tutor-context';
+import MathText from "./formatted-math";
 import MathInput from './math-input';
 import SolutionSteps from './solution-steps';
 export type LessonGuidedDraft={answer:string;steps:string;guidedHints?:number;guidedReveal?:boolean;checkpoint?:boolean;reading?:LessonReading};
 
 type Props={completed?:boolean;completionBusy?:boolean;onComplete?:()=>void;captureRef?:RefObject<(()=>void)|null>;onReading?:(reading:LessonReading)=>void;guidedDraft?:LessonGuidedDraft;onGuidedDraft?:(draft:LessonGuidedDraft)=>void;topic:Topic;curriculum:Topic[];lang:Language;stage:number;onStage:(stage:number)=>void;onBack:()=>void;backLabel:string;originLabel:string;onPractice:()=>void;onTutor:(message?:string,selection?:LessonExampleSelection)=>void;onVisual:()=>void;onPrerequisite:(id:string)=>void;simple:boolean;onSimple:(value:boolean)=>void;exampleIndex:number;onExample:(index:number)=>void;mastered:boolean;needsRecovery?:boolean};
-function MathText({text}:{text:string}) {
-  return <>{text.split(/(\b\d+\s*\/\s*\d+\b|\^\([^\n()]+\)|\^-?\d+|\^[a-zA-Z])/g).map((part,i)=>{
-    if(part.startsWith('^'))return <sup key={i}>{part.slice(1).replace(/^\(|\)$/g,'')}</sup>;
-    if(!/^\d+\s*\/\s*\d+$/.test(part))return part;
-    const [top,bottom]=part.split('/').map(v=>v.trim());
-    return <span className="reader-fraction" key={i}><span className="sr-only">{part}</span><span aria-hidden="true" className="reader-fraction-visual"><span>{top}</span><span>{bottom}</span></span></span>;
-  })}</>;
-}
+
 function Prose({text}:{text:string}) {
   // Paragraphs preserve complete sentences; formula punctuation and decimals stay intact.
   const paragraphs=text.split(/\n+/).filter(Boolean).flatMap(line=>{
@@ -63,7 +57,7 @@ export default function LessonReader(p:Props){
         {stage===0&&<>
           <section className="reader-intuition" data-reading-anchor="intuition"><Lightbulb size={22}/><div><h3>{tr('Главная мысль','Негізгі ой')}</h3><Prose text={extra?.intuition[lang]??lesson.simpler[lang]}/></div></section>
           <section className="reader-section" data-reading-anchor="explanation"><div className="reader-section-title"><span>01</span><h3>{tr('Разбираем с нуля','Басынан түсінеміз')}</h3></div><Prose text={p.simple?lesson.simpler[lang]:lesson.explanation[lang]}/><div className="reader-help-actions"><button className="secondary" aria-pressed={p.simple} onClick={()=>p.onSimple(!p.simple)}><CircleHelp size={17}/>{p.simple?tr('Вернуть подробности','Толық түсіндірмеге оралу'):tr('Объясни проще','Оңай түсіндір')}</button><button className="text-button" onClick={()=>{selectExample(0);move(1);}}>{tr('Сразу посмотреть пример','Бірден мысалды көру')}<ArrowRight size={16}/></button></div></section>
-          <section className="reader-rule" data-reading-anchor="rule"><span className="reader-kicker">{tr('Правило, которое используем','Қолданатын ереже')}</span><div className="reader-formula math-text">{lesson.formula[lang]}</div><details className="reader-definition" data-reading-detail="detail-1"><summary>{tr('Что означают слова и обозначения?','Сөздер мен белгілер нені білдіреді?')}</summary><Prose text={lesson.terms[lang]}/></details></section>
+          <section className="reader-rule" data-reading-anchor="rule"><span className="reader-kicker">{tr('Правило, которое используем','Қолданатын ереже')}</span><div className="reader-formula math-text"><MathText text={lesson.formula[lang]}/></div><details className="reader-definition" data-reading-detail="detail-1"><summary>{tr('Что означают слова и обозначения?','Сөздер мен белгілер нені білдіреді?')}</summary><Prose text={lesson.terms[lang]}/></details></section>
           <section className="reader-section" data-reading-anchor="details"><div className="reader-section-title"><span>02</span><h3>{tr('Как это работает — подробнее','Қалай жұмыс істейді — толығырақ')}</h3></div><div className="reader-detail-list">{(extra?.details??lesson.blocks).map((note,i)=><section key={i} className="reader-detail"><h4>{note.title[lang]}</h4><Prose text={note.body[lang]}/></section>)}</div>{extra&&lesson.blocks?.length>0&&<details className="reader-definition" data-reading-detail="detail-2"><summary>{tr('Ещё пояснения из урока','Сабақтан тағы түсіндірмелер')}</summary>{lesson.blocks.map((note,i)=><section className="reader-detail" key={i}><h4>{note.title[lang]}</h4><Prose text={note.body[lang]}/></section>)}</details>}</section>
           {extra&&<section className="reader-life" data-reading-anchor="life"><div className="reader-story-heading"><span><MapPin size={21}/>{tr('Математика в жизни','Өмірдегі математика')}</span><small>{tr('Учебная ситуация','Оқу жағдайы')}</small></div><h3>{extra.life.title[lang]}</h3><Prose text={extra.life.connection[lang]}/><div className="reader-problem"><span className="reader-kicker">{tr('Представь ситуацию','Жағдайды елестет')}</span><Prose text={extra.life.problem[lang]}/></div><details className="reader-definition" data-reading-detail="detail-3"><summary>{tr('Разобрать ситуацию по шагам','Жағдайды қадаммен талдау')}</summary>{worked(extra.life)}<div className="reader-takeaway"><strong>{tr('Что заметить','Нені байқау керек')}</strong><Prose text={extra.life.takeaway[lang]}/></div></details></section>}
           {extra&&<section className="reader-section" data-reading-anchor="hacks"><div className="reader-section-title"><span>03</span><h3>{tr('Полезные приёмы и лайфхаки','Пайдалы тәсілдер')}</h3></div>{extra.hacks.map((hack,i)=><div className="reader-hack" key={i}><Sparkles size={20}/><div><h4>{hack.title[lang]}</h4><Prose text={hack.body[lang]}/><p className="reader-caution"><strong>{tr('Когда применять:','Қашан қолдану керек:')}</strong> {hack.caution[lang]}</p></div></div>)}</section>}

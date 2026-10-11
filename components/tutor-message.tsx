@@ -1,12 +1,11 @@
-import {Fragment} from 'react';
+import MathText from './formatted-math';
 
 /** Render text as React nodes: model output never becomes executable HTML. */
 function Inline({text}:{text:string}) {
-  return <>{text.split(/(\*\*[^*]+\*\*|`[^`]+`|\^\([^\n()]+\)|\^-?\d+|\^[a-zA-Z])/g).map((part,i)=>{
-    if(part.startsWith('**'))return <strong key={i}>{part.slice(2,-2)}</strong>;
+  return <>{text.split(/(\*\*[^*]+\*\*|`[^`]+`)/g).map((part,i)=>{
+    if(part.startsWith('**'))return <strong key={i}><MathText text={part.slice(2,-2)}/></strong>;
     if(part.startsWith('`'))return <code key={i}>{part.slice(1,-1)}</code>;
-    if(part.startsWith('^'))return <sup key={i}>{part.slice(1).replace(/^\(|\)$/g,'')}</sup>;
-    return <Fragment key={i}>{part}</Fragment>;
+    return <MathText key={i} text={part}/>;
   })}</>;
 }
 export default function TutorMessage({text}:{text:string}) {

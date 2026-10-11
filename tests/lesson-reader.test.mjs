@@ -12,6 +12,10 @@ import {schoolExtensionTopics} from '../lib/school-extension-content.ts';
 import {schoolAdvancedTopics} from '../lib/school-advanced-content.ts';
 import {withLessonEnrichment} from '../lib/lesson-enrichment.ts';
 const require=createRequire(import.meta.url);
+const mathFormat = {};
+runInContext(ts.transpileModule(readFileSync(new URL('../lib/math-format.ts',import.meta.url),'utf8'),{compilerOptions:{module:ts.ModuleKind.CommonJS,target:ts.ScriptTarget.ES2022}}).outputText,createContext({exports:mathFormat}));
+const mathComponent = {};
+runInContext(ts.transpileModule(readFileSync(new URL('../components/formatted-math.tsx',import.meta.url),'utf8'),{compilerOptions:{module:ts.ModuleKind.CommonJS,target:ts.ScriptTarget.ES2022,jsx:ts.JsxEmit.ReactJSX}}).outputText,createContext({exports:mathComponent,require:id=>id==='../lib/math-format'?mathFormat:require(id)}));
 const compiled=ts.transpileModule(readFileSync(new URL('../components/lesson-reader.tsx',import.meta.url),'utf8'),{compilerOptions:{target:ts.ScriptTarget.ES2022,module:ts.ModuleKind.CommonJS,jsx:ts.JsxEmit.ReactJSX}}).outputText;
 function harness(sourceTopic=topics.find(t=>t.id==='fractions')){
   const state=[],refs=[];let cursor=0,refIndex=0;
@@ -19,7 +23,7 @@ function harness(sourceTopic=topics.find(t=>t.id==='fractions')){
   const calls={practice:0,stage:[],tutor:[],selection:[]};
   const props={topic,curriculum:topics,lang:'ru',stage:0,onStage:n=>{calls.stage.push(n);props.stage=n;},onBack(){},backLabel:'К карте',originLabel:'Школьная программа',onPractice:()=>calls.practice++,onTutor:(m,s)=>{calls.tutor.push(m);calls.selection.push(s);},onVisual(){},onPrerequisite(){},simple:false,onSimple:v=>props.simple=v,exampleIndex:0,onExample:n=>props.exampleIndex=n,mastered:false};
   const hooks={...React,useState:initial=>{const i=cursor++;if(!(i in state))state[i]=initial;return [state[i],v=>state[i]=typeof v==='function'?v(state[i]):v];},useRef:initial=>refs[refIndex++]??(refs[refIndex-1]={current:initial})};
-  const ctx=createContext({exports:{},require:id=>id==='react'?hooks:id==='./use-lesson-reading'?{useLessonReading(){}}:id==='@/lib/lesson-position'?{lessonViewKey:(s,e)=>s===1?'1:'+e:String(s)}:id==='./math-input'?{default:p=>React.createElement('input',{'aria-label':'Учебный ответ',value:p.value,onChange:e=>p.onChange(e.target.value)})}:id==='./solution-steps'?{default:p=>React.createElement('textarea',{'aria-label':'Учебные шаги',value:p.value,onChange:e=>p.onChange(e.target.value)})}:require(id),requestAnimationFrame:f=>f()});
+  const ctx=createContext({exports:{},require:id=>id==='./formatted-math'?mathComponent:id==='react'?hooks:id==='./use-lesson-reading'?{useLessonReading(){}}:id==='@/lib/lesson-position'?{lessonViewKey:(s,e)=>s===1?'1:'+e:String(s)}:id==='./math-input'?{default:p=>React.createElement('input',{'aria-label':'Учебный ответ',value:p.value,onChange:e=>p.onChange(e.target.value)})}:id==='./solution-steps'?{default:p=>React.createElement('textarea',{'aria-label':'Учебные шаги',value:p.value,onChange:e=>p.onChange(e.target.value)})}:require(id),requestAnimationFrame:f=>f()});
   runInContext(compiled,ctx);
   const render=()=>{cursor=0;refIndex=0;return ctx.exports.default(props);};
   const walk=(node,result=[])=>{if(React.isValidElement(node)){result.push(node);React.Children.forEach(node.props.children,c=>walk(c,result));}return result;};

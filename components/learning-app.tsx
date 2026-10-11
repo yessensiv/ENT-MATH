@@ -1,4 +1,5 @@
 "use client";
+import FormattedMath from "./formatted-math";
 import TutorMessage from "./tutor-message";
 import {TaskSource} from "./task-source";
 import SourceLibrary from "./source-library";
@@ -407,9 +408,9 @@ export default function LearningApp({ curriculum, loginProvider = 'ChatGPT' }: {
         change: (a: string | string[]) => void;
     }) {
         if (['single', 'context', 'multiple'].includes(task.type))
-            return <div className="answer-options">{practiceOptions(literal(task.prompt,lang),task.options??[]).options.map(({value:o,label}, i: number) => { const selected = Array.isArray(value) ? value.includes(o) : value === o; return <button type="button" key={i} aria-pressed={selected} className={`answer-option ${selected ? 'selected' : ''}`} onClick={() => change(task.type === 'multiple' ? (selected ? (value as string[]).filter(v => v !== o) : [...(Array.isArray(value) ? value : []), o]) : o)}><span className={task.type === 'multiple' ? 'option-square' : 'option-circle'}>{selected ? <Check size={14}/> : String.fromCharCode(65 + i)}</span><span className="math-text">{label}</span></button>; })}</div>;
+            return <div className="answer-options">{practiceOptions(literal(task.prompt,lang),task.options??[]).options.map(({value:o,label}, i: number) => { const selected = Array.isArray(value) ? value.includes(o) : value === o; return <button type="button" key={i} aria-pressed={selected} className={`answer-option ${selected ? 'selected' : ''}`} onClick={() => change(task.type === 'multiple' ? (selected ? (value as string[]).filter(v => v !== o) : [...(Array.isArray(value) ? value : []), o]) : o)}><span className={task.type === 'multiple' ? 'option-square' : 'option-circle'}>{selected ? <Check size={14}/> : String.fromCharCode(65 + i)}</span><span className="math-text"><FormattedMath text={label}/></span></button>; })}</div>;
         if (task.type === 'matching')
-            return <div className="matching">{task.pairs?.map((p: Data, i: number) => <label key={i}><span className="math-text">{p.left}</span><select aria-label={`${tr('Соответствие', 'Сәйкестік')} ${i + 1}`} value={Array.isArray(value) ? value[i] ?? '' : ''} onChange={e => { const a = Array.isArray(value) ? [...value] : []; a[i] = e.target.value; change(a); }}><option value="">{tr('Выбери ответ', 'Жауап таңда')}</option>{task.options?.map((o: string, j: number) => <option value={o} key={j}>{o}</option>)}</select></label>)}</div>;
+            return <div className="matching">{task.pairs?.map((p: Data, i: number) => <label key={i}><span className="math-text"><FormattedMath text={p.left}/></span><select aria-label={`${tr('Соответствие', 'Сәйкестік')} ${i + 1}`} value={Array.isArray(value) ? value[i] ?? '' : ''} onChange={e => { const a = Array.isArray(value) ? [...value] : []; a[i] = e.target.value; change(a); }}><option value="">{tr('Выбери ответ', 'Жауап таңда')}</option>{task.options?.map((o: string, j: number) => <option value={o} key={j}>{o}</option>)}</select></label>)}</div>;
         return <><MathInput key={`answer:${task.id}`} lang={lang} value={String(value)} onChange={change} numeric={task.type==='number'} unit={task.unit??task.units}/>{task.answerFormat&&<p className="muted">{tr('Формат ответа: ','Жауап пішімі: ')}{task.answerFormat==='interval'?'(-∞;1/2] ∪ [2;3)':task.answerFormat==='root-set'?'{1;2;3}':'(1;2)'}. {tr('Между числами ставь точку с запятой.','Сандар арасына нүктелі үтір қой.')}</p>}</>;
     }
     function renderTutorPanel({ compact = false }: {

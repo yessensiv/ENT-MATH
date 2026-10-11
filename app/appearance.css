@@ -271,3 +271,7 @@ input:not([type="checkbox"]):not([type="radio"]):not([type="range"]), select, te
 @media (prefers-reduced-motion: reduce) {
   *, *::before, *::after { scroll-behavior: auto !important; }
 }
+/* Native mathematical typography: fractions, roots and exponents keep meaning. */
+.formatted-math { font-family: "Cambria Math", "STIX Two Math", math; font-size: 1.08em; vertical-align: middle; margin-inline: .08em; math-style: normal; }
+.reader-formula .formatted-math, .tutor-formula .formatted-math { font-size: 1.15em; }
+.reader-formula, .tutor-formula { overflow-x: auto; max-width: 100%; }

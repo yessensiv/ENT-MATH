@@ -5,7 +5,7 @@ function notation(node: MathNode): React.ReactNode {
   if ('value' in node) return createElement(node.kind === 'number' ? 'mn' : node.kind === 'variable' ? 'mi' : 'mo', null, node.value);
   const children = node.children.map((child,index)=><Fragment key={index}>{notation(child)}</Fragment>);
   if (node.kind === 'group') return createElement('mrow',null,createElement('mo',null,'('),...children,createElement('mo',null,')'));
-  return createElement({fraction:'mfrac',power:'msup',root:'msqrt',row:'mrow'}[node.kind],null,...children);
+  return createElement({fraction:'mfrac',power:'msup',subscript:'msub',root:'msqrt',row:'mrow'}[node.kind],null,...children);
 }
 
 /** Native MathML, accessible and safe: text is never interpreted as HTML. */

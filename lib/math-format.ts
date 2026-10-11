@@ -1,4 +1,4 @@
-export type MathNode = { kind: 'number' | 'variable'; value: string } | { kind: 'fraction' | 'power' | 'root' | 'group'; children: MathNode[] } | { kind: 'row'; children: MathNode[] } | { kind: 'operator'; value: string };
+export type MathNode = { kind: 'number' | 'variable'; value: string } | { kind: 'fraction' | 'power' | 'subscript' | 'root' | 'group'; children: MathNode[] } | { kind: 'row'; children: MathNode[] } | { kind: 'operator'; value: string };
 
 /** Fixed tags and escaped text only, for downloadable lessons. */
 export function mathematicalHtml(text:string):string {
@@ -6,7 +6,7 @@ export function mathematicalHtml(text:string):string {
   const render=(node:MathNode):string=>{
     if('value' in node){const tag=node.kind==='number'?'mn':node.kind==='variable'?'mi':'mo';return `<${tag}>${escape(node.value)}</${tag}>`;}
     if(node.kind==='group')return `<mrow><mo>(</mo>${node.children.map(render).join('')}<mo>)</mo></mrow>`;
-    const tag={fraction:'mfrac',power:'msup',root:'msqrt',row:'mrow'}[node.kind];return `<${tag}>${node.children.map(render).join('')}</${tag}>`;
+    const tag={fraction:'mfrac',power:'msup',subscript:'msub',root:'msqrt',row:'mrow'}[node.kind];return `<${tag}>${node.children.map(render).join('')}</${tag}>`;
   };
   return mathSegments(text).map(part=>part.math?`<math xmlns="http://www.w3.org/1998/Math/MathML" aria-label="${escape(part.text)}">${render(part.math)}</math>`:escape(part.text)).join('');
 }
@@ -131,7 +131,20 @@ function fallbackSegments(text: string): {text:string; math:MathNode|null}[] {
     candidates.push({start,end,operator:i});
   }
   const selected=candidates.sort((a,b)=>(b.end-b.start)-(a.end-a.start))[0];
-  if(!selected)return [{text,math:null}];
+  if(!selected){
+    const scripts=/([A-Za-z]+|\d+)([₀₁₂₃₄₅₆₇₈₉ₐₑₕᵢⱼₖₗₘₙₒₚᵣₛₜᵤᵥₓ]+|[⁰¹²³⁴⁵⁶⁷⁸⁹ⁿ⁺⁻ᵃᵇᶜᵈᵉᶠᵍʰⁱʲᵏˡᵐᵒᵖʳˢᵗᵘᵛʷˣʸᶻ]+)/g;
+    let cursor=0;
+    for(const match of text.matchAll(scripts)){
+      if(protectedRanges.some(([a,b])=>match.index!>=a&&match.index!<b))continue;
+      parts.push({text:text.slice(cursor,match.index),math:null});
+      const sub=/[₀-₉ₐₑₕᵢⱼₖₗₘₙₒₚᵣₛₜᵤᵥₓ]/.test(match[2]);
+      const glyphs=sub?'₀₁₂₃₄₅₆₇₈₉ₐₑₕᵢⱼₖₗₘₙₒₚᵣₛₜᵤᵥₓ':'⁰¹²³⁴⁵⁶⁷⁸⁹ⁿ⁺⁻ᵃᵇᶜᵈᵉᶠᵍʰⁱʲᵏˡᵐᵒᵖʳˢᵗᵘᵛʷˣʸᶻ',normal=sub?'0123456789aehijklmnoprstuvx':'0123456789n+−abcdefghijklmoprstuvwxyz';
+      const value=Array.from(match[2],c=>normal[glyphs.indexOf(c)]).join('');
+      parts.push({text:match[0],math:{kind:sub?'subscript':'power',children:[{kind:/^\d/.test(match[1])?'number':'variable',value:match[1]},{kind:/^\d+$/.test(value)?'number':'variable',value}]}});
+      cursor=match.index!+match[0].length;
+    }
+    parts.push({text:text.slice(cursor),math:null});return parts;
+  }
   const {start,end,operator}=selected;
   const a=text.slice(start,operator).trim(),b=text.slice(operator+1,end).trim();
   const unwrap=(value:string)=>value.startsWith('(')&&value.endsWith(')')?value.slice(1,-1):value;

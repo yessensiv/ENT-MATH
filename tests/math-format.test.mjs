@@ -1,6 +1,15 @@
 import {test} from 'node:test';
 import assert from 'node:assert/strict';
 import {parseMath, mathSegments, mathematicalHtml} from '../lib/math-format.ts';
+test('roots embedded in Russian and Kazakh tutor explanations retain their full operand',()=>{
+ for(const text of ['Корень: sqrt(81) = 9.','Түбір: √(49) = 7.']){
+  const root=mathSegments(text).find(s=>s.math?.kind==='root')?.math;
+  assert.equal(root?.kind,'root');assert.equal(root.children[0].value,text.includes('81')?'81':'49');
+ }
+ const html=mathematicalHtml('Корень дроби: sqrt((x+1)/(x-1))');
+ assert.match(html,/<msqrt><mfrac>/);assert.doesNotMatch(html,/>sqrt/);
+ assert.equal(mathSegments('Ссылка https://example.com/sqrt(81)').filter(s=>s.math).length,0);
+});
 test('parenthesized division in actual lesson becomes a fraction',()=>{
   const segments=mathSegments('(9)/3=3.');
   assert.deepEqual(segments.find(s=>s.math)?.math,{kind:'fraction',children:[{kind:'number',value:'9'},{kind:'number',value:'3'}]});

@@ -131,7 +131,26 @@ function fallbackSegments(text: string): {text:string; math:MathNode|null}[] {
     candidates.push({start,end,operator:i});
   }
   const selected=candidates.sort((a,b)=>(b.end-b.start)-(a.end-a.start))[0];
+  if(selected){
+    for(const match of text.matchAll(/sqrt\s*\(|√/g)){
+      const start=match.index!,operandStart=match[0].startsWith('sqrt')?start+match[0].indexOf('('):start+1,end=right(operandStart);
+      if(start>selected.start||end<selected.end||protectedRanges.some(([a,b])=>start>=a&&start<b))continue;
+      const operand=text.slice(operandStart,end).trim(),value=operand.startsWith('(')&&operand.endsWith(')')?operand.slice(1,-1):operand;
+      return [...fallbackSegments(text.slice(0,start)),{text:text.slice(start,end),math:{kind:'root',children:[literal(value)]}},...fallbackSegments(text.slice(end))];
+    }
+  }
   if(!selected){
+    // Roots in prose and code spans must use the same native notation as fractions.
+    for(const match of text.matchAll(/sqrt\s*\(|√/g)){
+      const start=match.index!;
+      if(protectedRanges.some(([a,b])=>start>=a&&start<b))continue;
+      const operandStart=match[0].startsWith('sqrt')?start+match[0].indexOf('('):start+1;
+      const end=right(operandStart);
+      if(end<=operandStart)continue;
+      const operand=text.slice(operandStart,end).trim();
+      const value=operand.startsWith('(')&&operand.endsWith(')')?operand.slice(1,-1):operand;
+      return [...fallbackSegments(text.slice(0,start)),{text:text.slice(start,end),math:{kind:'root',children:[literal(value)]}},...fallbackSegments(text.slice(end))];
+    }
     const scripts=/([A-Za-z]+|\d+)([₀₁₂₃₄₅₆₇₈₉ₐₑₕᵢⱼₖₗₘₙₒₚᵣₛₜᵤᵥₓ]+|[⁰¹²³⁴⁵⁶⁷⁸⁹ⁿ⁺⁻ᵃᵇᶜᵈᵉᶠᵍʰⁱʲᵏˡᵐᵒᵖʳˢᵗᵘᵛʷˣʸᶻ]+)/g;
     let cursor=0;
     for(const match of text.matchAll(scripts)){
